@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/inter-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Nastaliq Urdu";
+  src: url("assets/fonts/noto-nastaliq-urdu-arabic.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  unicode-range: U+0600-06ff, U+0750-077f, U+0870-088e, U+0890-0891,
+    U+0897-08e1, U+08e3-08ff, U+200c-200e, U+2010-2011, U+204f,
+    U+2e41, U+fb50-fdff, U+fe70-fe74, U+fe76-fefc;
+}
+
 :root {
   --navy-950: #0b1f3a;
   --navy-900: #12366b;
@@ -18,6 +37,8 @@
   --radius-lg: 24px;
   --radius-md: 16px;
   --focus: 0 0 0 4px rgba(40, 112, 223, .24);
+  --font-ui: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --font-urdu: "Noto Nastaliq Urdu", "Noto Sans Arabic", Tahoma, serif;
 }
 
 * { box-sizing: border-box; }
@@ -28,7 +49,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--background);
-  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-ui);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -273,7 +294,7 @@ h2[tabindex="-1"]:focus {
 .icon-gold { color: #9a6a10; background: #fff4d9; }
 .icon-indigo { color: #4b5eb3; background: #e9ecfa; }
 .icon-slate { color: #526174; background: #edf0f4; }
-.urdu-icon { font-family: Tahoma, "Noto Nastaliq Urdu", serif; font-size: 1.25rem; }
+.urdu-icon { font-family: var(--font-urdu); font-size: 1.25rem; }
 .category-card:nth-child(1) .category-icon { color: #2368ca; background: #e9f2ff; }
 .category-card:nth-child(2) .category-icon { color: #138454; background: #e6f7ef; }
 .category-card:nth-child(3) .category-icon { color: #b96516; background: #fff1df; }
@@ -346,9 +367,17 @@ h2[tabindex="-1"]:focus {
 .details-heading-row { display: flex; align-items: center; gap: 9px; }
 .details-heading-row h3 { margin: 0; font-size: .95rem; }
 .details-bulb { width: 24px; height: 24px; display: grid; place-items: center; color: #fff; font-family: Georgia, serif; font-weight: 800; background: var(--blue-600); border-radius: 50%; }
-.urdu-explanation { margin: 14px 0 0; color: #26354c; font-family: Tahoma, "Noto Nastaliq Urdu", "Segoe UI", serif; font-size: 1rem; line-height: 2; }
+.urdu-explanation {
+  margin: 14px 0 0;
+  color: #26354c;
+  font-family: var(--font-urdu);
+  font-size: 1.14rem;
+  font-weight: 500;
+  line-height: 2.35;
+  text-wrap: pretty;
+}
 .option-rationales { margin-top: 12px; padding: 0; color: var(--muted); font-size: .86rem; list-style: none; }
-.option-rationales li { padding: 10px 0; line-height: 1.8; }
+.option-rationales li { padding: 10px 0; font-family: var(--font-urdu); font-size: 1rem; line-height: 2.15; }
 .option-rationales li + li { border-top: 1px solid var(--line); }
 .source-notes { margin: 14px 0 0; padding: 10px 12px; color: #714d0f; font-size: .8rem; line-height: 1.55; background: #fff8df; border: 1px solid #f1d78d; border-radius: 9px; }
 .details-source { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
@@ -388,6 +417,7 @@ h2[tabindex="-1"]:focus {
   .text-button { font-size: .8rem; }
   .question-card { padding: 23px 18px; border-radius: 18px; }
   .question-card h2 { margin-bottom: 21px; }
+  .urdu-explanation { font-size: 1.08rem; line-height: 2.25; }
   .option-button { padding: 10px 12px; }
   .question-actions { flex-direction: column-reverse; }
   .question-actions button { width: 100%; }

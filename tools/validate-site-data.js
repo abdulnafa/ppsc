@@ -7,6 +7,11 @@ const vm = require("vm");
 const projectDirectory = path.resolve(__dirname, "..");
 const dataPath = path.join(projectDirectory, "data", "questions.js");
 const htmlPath = path.join(projectDirectory, "index.html");
+const stylesPath = path.join(projectDirectory, "styles.css");
+const fontPaths = [
+  path.join(projectDirectory, "assets", "fonts", "inter-latin.woff2"),
+  path.join(projectDirectory, "assets", "fonts", "noto-nastaliq-urdu-arabic.woff2")
+];
 const errors = [];
 const warnings = [];
 
@@ -142,12 +147,33 @@ function validateHtml() {
   if (dataScript < 0 || appScript < 0 || dataScript > appScript) {
     error("index.html: data/questions.js must load before app.js");
   }
+  if (/fonts\.googleapis\.com|fonts\.gstatic\.com/i.test(html)) {
+    error("index.html: fonts must be self-hosted instead of loaded from Google Fonts");
+  }
+}
+
+function validateFonts() {
+  const styles = fs.readFileSync(stylesPath, "utf8");
+  for (const fontPath of fontPaths) {
+    if (!fs.existsSync(fontPath)) {
+      error(`${path.relative(projectDirectory, fontPath)}: font file is missing`);
+      continue;
+    }
+    if (fs.statSync(fontPath).size < 1000) {
+      error(`${path.relative(projectDirectory, fontPath)}: font file is unexpectedly small`);
+    }
+    const cssReference = path.relative(projectDirectory, fontPath).replace(/\\/g, "/");
+    if (!styles.includes(cssReference)) {
+      error(`styles.css: missing reference to ${cssReference}`);
+    }
+  }
 }
 
 const data = loadData();
 const result = validateData(data);
 validateKnownCorrections(result.questions);
 validateHtml();
+validateFonts();
 
 console.log(`Site data: ${result.categories.length} categories, ${result.questions.length} questions.`);
 const counts = Object.fromEntries(result.categories.map((category) => [

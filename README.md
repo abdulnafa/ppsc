@@ -32,7 +32,7 @@ ppsc-project/
 
 ## Preview locally
 
-The website has no package-install or build dependency. Open `index.html` directly, or run:
+The website has no package-install or build dependency. Inter and Noto Nastaliq Urdu are self-hosted in `assets/fonts/`, so the typography also works without a font CDN. Open `index.html` directly, or run:
 
 ```powershell
 cd "D:\My documents\PPSC\codex\ppsc-project"
@@ -91,7 +91,7 @@ Do not save a GitHub password or personal access token in the project.
 
 ## GitHub Pages
 
-The workflow at `.github/workflows/pages.yml` publishes only the four required site assets and `data/questions.js`; internal research/work files are not included in the deployed artifact.
+The workflow at `.github/workflows/pages.yml` publishes the required site files, `data/questions.js`, and the two local font assets; internal research/work files are not included in the deployed artifact.
 
 In the repository, open **Settings → Pages**, set **Source** to **GitHub Actions**, then push to `main`. The expected site URL is:
 

@@ -30,9 +30,10 @@ jobs:
 
       - name: Prepare static site
         run: |
-          mkdir -p _site/data
+          mkdir -p _site/data _site/assets/fonts
           cp index.html styles.css app.js _site/
           cp data/questions.js _site/data/
+          cp assets/fonts/*.woff2 _site/assets/fonts/
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4

@@ -120,6 +120,7 @@ async function main() {
       }, 50);
     })`);
     await client.evaluate("window.scrollTo(0, 0)");
+    await client.evaluate("document.fonts.ready.then(() => true)");
     await delay(500);
     const screenshot = await client.send("Page.captureScreenshot", { format: "png" });
     fs.writeFileSync(
@@ -159,6 +160,13 @@ async function main() {
       document.querySelector("#details-toggle").click();
       await pause();
       if (!/[\\u0600-\\u06ff]/u.test(document.querySelector("#explanation-text").textContent)) errors.push("Urdu detail did not render after an incorrect answer.");
+      const loadedFontFamilies = document.fonts
+        ? [...document.fonts].filter((font) => font.status === "loaded").map((font) => font.family.replace(/["']/g, ""))
+        : [];
+      if (!getComputedStyle(document.body).fontFamily.includes("Inter")) errors.push("Readable English font was not applied.");
+      if (document.fonts && !loadedFontFamilies.includes("Inter")) errors.push("Inter did not load.");
+      if (!getComputedStyle(document.querySelector("#explanation-text")).fontFamily.includes("Noto Nastaliq Urdu")) errors.push("Readable Urdu font was not applied.");
+      if (document.fonts && !loadedFontFamilies.includes("Noto Nastaliq Urdu")) errors.push("Noto Nastaliq Urdu did not load.");
       if (!/^https?:\\/\\//.test(document.querySelector("#source-link").href)) errors.push("Research link did not render.");
 
       document.querySelector("#action-button").click();
