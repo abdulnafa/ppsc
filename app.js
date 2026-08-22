@@ -32,6 +32,7 @@
     elements.resultScreen = firstElement(["#result-screen", "#results-screen", "[data-screen='results']"]);
     elements.categoryGrid = firstElement(["#category-grid", "[data-category-grid]"]);
     elements.quizCategory = firstElement(["#quiz-category", "[data-quiz-category]"]);
+    elements.questionKind = firstElement(["#question-kind", "[data-question-kind]"]);
     elements.questionText = firstElement(["#question-text", "[data-question-text]"]);
     elements.optionsList = firstElement(["#options-list", "#options-container", "[data-options-list]"]);
     elements.actionButton = firstElement(["#action-button", "#next-button", "[data-quiz-action]"]);
@@ -42,6 +43,10 @@
     elements.detailsPanel = firstElement(["#details-panel", "[data-details-panel]"]);
     elements.explanationText = firstElement(["#explanation-text", "[data-explanation]"]);
     elements.optionRationales = firstElement(["#option-rationales", "[data-option-rationales]"]);
+    elements.sourceNotes = firstElement(["#source-notes", "[data-source-notes]"]);
+    elements.detailsSource = firstElement(["#details-source", "[data-details-source]"]);
+    elements.sourceLabel = firstElement(["#source-label", "[data-source-label]"]);
+    elements.sourceLink = firstElement(["#source-link", "[data-source-link]"]);
     elements.questionCounter = firstElement(["#question-counter", "[data-question-counter]"]);
     elements.progressText = firstElement(["#progress-text", "[data-progress-text]"]);
     elements.progressBar = firstElement(["#progress-bar", "#progress-fill", "[data-progress-bar]"]);
@@ -183,6 +188,9 @@
     state.selectedIndex = null;
     state.submitted = false;
 
+    if (elements.questionKind) {
+      elements.questionKind.textContent = question.kind === "similar" ? "SIMILAR PRACTICE" : "SOURCE PAPER";
+    }
     if (elements.questionText) elements.questionText.textContent = question.question;
     renderOptions(question);
     updateProgress();
@@ -378,6 +386,27 @@
       elements.optionRationales.className = "option-rationales";
       elements.detailsPanel.appendChild(elements.optionRationales);
     }
+    if (!elements.sourceNotes) {
+      elements.sourceNotes = document.createElement("p");
+      elements.sourceNotes.id = "source-notes";
+      elements.sourceNotes.className = "source-notes";
+      elements.detailsPanel.appendChild(elements.sourceNotes);
+    }
+    if (!elements.detailsSource) {
+      elements.detailsSource = document.createElement("div");
+      elements.detailsSource.id = "details-source";
+      elements.detailsSource.className = "details-source";
+      elements.sourceLabel = document.createElement("span");
+      elements.sourceLabel.id = "source-label";
+      elements.sourceLink = document.createElement("a");
+      elements.sourceLink.id = "source-link";
+      elements.sourceLink.target = "_blank";
+      elements.sourceLink.rel = "noopener noreferrer";
+      elements.sourceLink.textContent = "Open research source";
+      elements.detailsSource.appendChild(elements.sourceLabel);
+      elements.detailsSource.appendChild(elements.sourceLink);
+      elements.detailsPanel.appendChild(elements.detailsSource);
+    }
   }
 
   function buildDetails(question) {
@@ -390,8 +419,15 @@
     elements.explanationText.dir = "rtl";
 
     elements.optionRationales.textContent = "";
-    question.options.forEach(function (rawOption, index) {
-      var option = normalizeOption(rawOption, index);
+    var optionsWithRationales = question.options
+      .map(function (rawOption, index) {
+        return normalizeOption(rawOption, index);
+      })
+      .filter(function (option) {
+        return Boolean(option.rationaleUrdu && option.rationaleUrdu.trim());
+      });
+
+    optionsWithRationales.forEach(function (option) {
       var item = document.createElement("li");
       item.lang = "ur";
       item.dir = "rtl";
@@ -399,9 +435,26 @@
       var prefix = document.createElement("strong");
       prefix.textContent = option.label + ". " + option.text + ": ";
       item.appendChild(prefix);
-      item.appendChild(document.createTextNode(option.rationaleUrdu || "مزید وضاحت جلد شامل کی جائے گی۔"));
+      item.appendChild(document.createTextNode(option.rationaleUrdu));
       elements.optionRationales.appendChild(item);
     });
+    setHidden(elements.optionRationales, optionsWithRationales.length === 0);
+
+    var sourceNotes = String(question.sourceNotes || "").trim();
+    if (elements.sourceNotes) {
+      elements.sourceNotes.textContent = sourceNotes ? "Source note: " + sourceNotes : "";
+      setHidden(elements.sourceNotes, !sourceNotes);
+    }
+
+    var source = question.source || {};
+    var hasSource = /^https?:\/\//.test(source.referenceUrl || "");
+    if (elements.detailsSource) setHidden(elements.detailsSource, !hasSource);
+    if (elements.sourceLabel) {
+      elements.sourceLabel.textContent = source.label || "Answer research";
+    }
+    if (elements.sourceLink && hasSource) {
+      elements.sourceLink.href = source.referenceUrl;
+    }
 
     setHidden(elements.detailsToggle, false);
     elements.detailsToggle.textContent = "View details (Urdu)";
@@ -436,6 +489,7 @@
       setHidden(elements.detailsToggle, true);
     }
     if (elements.detailsPanel) setHidden(elements.detailsPanel, true);
+    if (elements.sourceNotes) setHidden(elements.sourceNotes, true);
   }
 
   function updateProgress() {

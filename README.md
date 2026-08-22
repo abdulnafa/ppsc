@@ -1,160 +1,100 @@
 # PPSC MCQ Preparation
 
-A lightweight, no-build practice website for the PPSC General Ability syllabus. Questions and answer choices are written in English, while the answer details are explained in Urdu.
+A dependency-free, category-wise practice website for the PPSC General Ability test. It is designed for GitHub Pages and runs entirely in the browser.
 
-## What the website does
+## Question bank
 
-- Lets the learner choose a syllabus category before starting.
-- Shows one multiple-choice question with four options at a time.
-- Checks the selected option and clearly reports whether it is correct or incorrect.
-- Reveals the correct answer and an Urdu explanation after submission.
-- Provides detailed Urdu reasoning for the available options.
-- Runs entirely in the browser; there is no account, database, package installation, or build step.
+- 449 source MCQs transcribed from the supplied `PPSC 110 Edition` scan.
+- 449 original, researched PPSC-style questions—one related question for every source MCQ.
+- 898 website questions in total.
+- 10 advertised syllabus subjects, plus a separate **Finance, Taxation & Job-related** category for questions found in the supplied papers but outside that syllabus.
+- English question stems and four answer options. Urdu subject items keep essential Urdu test text under an English instruction.
+- Urdu answer explanations, visible after either a correct or incorrect attempt.
+- A direct research/evidence link and any necessary source correction note in the detail panel.
+
+The quiz flow is: choose a category → select an option → check the answer → view Urdu details/evidence → move to the next question → see the final score.
 
 ## Project structure
 
 ```text
 ppsc-project/
-├── .github/workflows/pages.yml  # Automatic GitHub Pages deployment
-├── data/questions.js            # Categories and MCQ data
+├── .github/workflows/pages.yml  # GitHub Pages deployment
+├── data/questions.js            # Generated browser question bank
+├── tools/                       # Build and validation scripts
+├── work/                        # Verified source/enrichment JSON
 ├── index.html                   # Website markup
-├── styles.css                   # Responsive visual design
+├── styles.css                   # Responsive design
 ├── app.js                       # Quiz behaviour
 └── README.md
 ```
 
+`data/questions.js` and the Markdown banks in the parent folder are generated outputs. The verified JSON files under `work/` are the source of truth.
+
 ## Preview locally
 
-The website does not use `fetch()` or a build tool, so it can be opened directly:
-
-In PowerShell:
+The website has no package-install or build dependency. Open `index.html` directly, or run:
 
 ```powershell
 cd "D:\My documents\PPSC\codex\ppsc-project"
 Start-Process .\index.html
 ```
 
-You can also double-click `index.html` in File Explorer. GitHub Pages will serve the same files over HTTPS after deployment.
+## Validate and rebuild
 
-## Add a category
-
-All quiz content lives in `data/questions.js`. Add a category to the `categories` array inside `window.PPSC_QUIZ_DATA`:
-
-```js
-{
-  id: "geography",
-  name: "Geography",
-  shortLabel: "GEO",
-  description: "Countries, capitals, landforms and world geography."
-}
-```
-
-The category `id` must be unique. Use the same value in every related question's `categoryId`. Keep `shortLabel` brief because it is used in compact parts of the interface.
-
-## Add an MCQ
-
-Add each new item to the `questions` array inside `window.PPSC_QUIZ_DATA`:
-
-```js
-{
-  id: "GEO-SRC-0001",
-  categoryId: "geography",
-  question: "Which is the smallest Muslim country by land area?",
-  options: [
-    {
-      label: "A",
-      text: "Brunei",
-      rationaleUrdu: "برونائی ایک چھوٹا ملک ہے، لیکن یہ درست جواب نہیں۔"
-    },
-    {
-      label: "B",
-      text: "Bahrain",
-      rationaleUrdu: "بحرین کا رقبہ مالدیپ سے زیادہ ہے۔"
-    },
-    {
-      label: "C",
-      text: "Maldives",
-      rationaleUrdu: "مالدیپ خشکی کے رقبے کے لحاظ سے سب سے چھوٹا مسلم ملک ہے۔"
-    },
-    {
-      label: "D",
-      text: "Qatar",
-      rationaleUrdu: "قطر کا رقبہ مالدیپ سے زیادہ ہے۔"
-    }
-  ],
-  correctOptionIndex: 2,
-  explanationUrdu: "مالدیپ کا خشکی کا رقبہ تقریباً 298 مربع کلومیٹر ہے، اس لیے دیے گئے ممالک میں یہ درست جواب ہے۔",
-  source: {
-    type: "book",
-    label: "PPSC 110 Edition, p.1 Q.1",
-    referenceUrl: "https://example.com/direct-source-page"
-  },
-  tags: ["countries", "area"]
-}
-```
-
-Data rules:
-
-- Keep `id` unique across all questions.
-- Write the question and four option texts in English.
-- Supply exactly four options labelled `A`, `B`, `C`, and `D`.
-- Write `rationaleUrdu` and `explanationUrdu` in Urdu.
-- `correctOptionIndex` is zero-based: `0` = A, `1` = B, `2` = C, `3` = D.
-- Use an existing `categoryId`, written exactly as it appears in `categories`.
-- Record provenance in `source`: use a clear `type` such as `"book"`, `"web"`, or `"practice"`; add a readable `label`; and put a direct verification link in `referenceUrl` when available.
-- Preserve commas, quotes, brackets, and braces because this is JavaScript data.
-
-The file publishes the complete object as `window.PPSC_QUIZ_DATA` with `version`, `categories`, and `questions` fields. It also exposes `window.PPSC_CATEGORIES` and `window.PPSC_QUESTIONS` as convenient aliases. Add content to the local `categories` and `questions` arrays rather than replacing these global assignments.
-
-After editing, refresh the local preview and test both a correct and an incorrect choice. Open the browser's developer console if the page does not load; a missing comma or quote in `questions.js` will usually be reported there.
-
-## First push to GitHub
-
-The target repository is <https://github.com/abdulnafa/ppsc>. It is currently intended to receive the contents of this `ppsc-project` folder as its repository root.
-
-Run these exact commands in PowerShell:
+Run from the project folder:
 
 ```powershell
-cd "D:\My documents\PPSC\codex\ppsc-project"
-git init
-git add .
-git commit -m "Initial PPSC preparation website"
-git branch -M main
-git remote add origin https://github.com/abdulnafa/ppsc.git
-git push -u origin main
+node tools/validate-extractions.js
+node tools/validate-enriched.js
+node tools/build-question-bank.js
+node tools/validate-site-data.js --expected=898
+node tools/browser-smoke.js
 ```
 
-If Git says that a remote named `origin` already exists, replace only the `git remote add origin ...` command with:
+The browser smoke test requires local Chrome or Edge. It exercises a complete mobile-width category session, including wrong/correct feedback, Urdu details, evidence links, Next, and the final score.
 
-```powershell
-git remote set-url origin https://github.com/abdulnafa/ppsc.git
-```
+The build script validates all six PDF papers, balances only the generated similar-question answer positions, and creates:
 
-GitHub may ask you to sign in. Do not put a GitHub password or access token in this project.
+- `data/questions.js` with the complete website bank.
+- `..\ppsc_mcqs.md` with all similar practice questions.
+- Eleven category Markdown files in the parent folder.
 
-## Publish with GitHub Pages
+The original PDF option order is never rearranged.
 
-This repository includes `.github/workflows/pages.yml`, so pushes to `main` can deploy the static site without a build command.
+## Add future user-supplied MCQs
 
-After the first push:
+Add each new user question and its independently researched similar question as one adjacent pair in `work/custom-questions.json`. Use IDs such as `USR-Q0001-SRC` and `USR-Q0001-SIM`, with the shared `pairId` `USR-Q0001`.
 
-1. Open <https://github.com/abdulnafa/ppsc>.
-2. Select **Settings** → **Pages**.
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-4. Open the repository's **Actions** tab and wait for **Deploy static site to GitHub Pages** to complete.
-5. Visit <https://abdulnafa.github.io/ppsc/>.
+Each pair must:
 
-The initial deployment can take a few minutes. If the repository is private, GitHub Pages availability depends on the account plan. See GitHub's official guides for [custom Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and [publishing sources](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+- Use an existing `categoryId`.
+- Contain exactly four options and a zero-based `correctOptionIndex` (`0` = A through `3` = D).
+- Use `kind: "source"` with `source.type: "user"` for the supplied MCQ.
+- Use `kind: "similar"` with `source.type: "practice"` for the original related MCQ.
+- Include a useful Urdu explanation and a direct researched `referenceUrl` for both items.
+- Record the verification date as `source.accessedOn` in `YYYY-MM-DD` format.
 
-## Push future MCQ updates
+After adding a pair, run the validation and build commands again. For a bank larger than 898, update the `--expected` value or omit that argument.
 
-After adding or correcting questions, run:
+## Push this update
+
+The repository is already initialized on branch `main`, with `origin` set to `https://github.com/abdulnafa/ppsc.git`.
 
 ```powershell
 cd "D:\My documents\PPSC\codex\ppsc-project"
 git add .
-git commit -m "Add new PPSC MCQs"
+git commit -m "Add complete researched PPSC MCQ bank"
 git push
 ```
 
-Every push to `main` starts a new Pages deployment automatically. Check the **Actions** tab if the live site does not update.
+Do not save a GitHub password or personal access token in the project.
+
+## GitHub Pages
+
+The workflow at `.github/workflows/pages.yml` publishes only the four required site assets and `data/questions.js`; internal research/work files are not included in the deployed artifact.
+
+In the repository, open **Settings → Pages**, set **Source** to **GitHub Actions**, then push to `main`. The expected site URL is:
+
+<https://abdulnafa.github.io/ppsc/>
+
+See GitHub's official guide to [custom Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).

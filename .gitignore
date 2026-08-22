@@ -16,3 +16,16 @@ Desktop.ini
 # Local HTTP-server cache
 __pycache__/
 
+# One-off extraction/enrichment generators and visual checks
+work/.build-*.js
+work/_build*.js
+work/build-enriched-*.js
+work/generate-paper*.js
+work/make-paper*.cjs
+work/.validate-*.js
+work/enriched-paper-*-q*.json
+work/extracted-paper-*-q*.json
+work/*-research-notes.md
+work/ocr/
+work/*.png
+work/*.mojibake-backup
