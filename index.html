@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free category-wise MCQ practice for the PPSC General Ability test.">
+  <meta name="theme-color" content="#12366b">
+  <title>PPSC Prep — Category-wise MCQ Practice</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data/questions.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="PPSC Prep home">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span>
+        <strong>PPSC Prep</strong>
+        <small>Practice with purpose</small>
+      </span>
+    </a>
+    <span class="header-badge">General Ability</span>
+  </header>
+
+  <main id="main-content" class="app-shell">
+    <section id="category-screen" class="screen is-active" aria-labelledby="category-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">PPSC EXAM PREPARATION</span>
+          <h1 id="category-title">Choose a subject.<br><span>Start getting better.</span></h1>
+          <p>Practice focused MCQs with instant checking and clear explanations in Urdu.</p>
+          <div class="exam-facts" aria-label="Exam pattern">
+            <span><strong>100</strong> Marks</span>
+            <span><strong>90</strong> Minutes</span>
+            <span><strong>10</strong> Subjects</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <span class="visual-ring"></span>
+          <div class="visual-card visual-card-one"><b>A</b><i></i></div>
+          <div class="visual-card visual-card-two"><b>B</b><i></i></div>
+          <div class="visual-card visual-card-three"><b>C</b><i></i></div>
+          <span class="visual-check">✓</span>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">SYLLABUS</span>
+          <h2>Select a category</h2>
+        </div>
+        <p>Pick a subject to begin your practice session.</p>
+      </div>
+
+      <div id="category-grid" class="category-grid">
+        <button class="category-card" type="button" data-category="general-knowledge">
+          <span class="category-icon icon-blue" aria-hidden="true">GK</span>
+          <span class="category-copy"><strong>General Knowledge</strong><small><span data-count-for="general-knowledge">0</span> questions</small></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="category-card" type="button" data-category="pakistan-studies">
+          <span class="category-icon icon-green" aria-hidden="true">PK</span>
+          <span class="category-copy"><strong>Pakistan Studies</strong><small><span data-count-for="pakistan-studies">0</span> questions</small></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="category-card" type="button" data-category="current-affairs">
+          <span class="category-icon icon-orange" aria-hidden="true">CA</span>
+          <span class="category-copy"><strong>Current Affairs</strong><small><span data-count-for="current-affairs">0</span> questions</small></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="category-card" type="button" data-category="islamic-studies">
+          <span class="category-icon icon-teal" aria-hidden="true">IS</span>
+          <span class="category-copy"><strong>Islamic Studies</strong><small><span data-count-for="islamic-studies">0</span> questions</small></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="category-card" type="button" data-category="geography">
+          <span class="category-icon icon-cyan" aria-hidden="true">GE</span>
+          <span class="category-copy"><strong>Geography</strong><small><span data-count-for="geography">0</span> questions</small></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="category-card" type="button" data-category="basic-mathematics">
+          <span class="category-icon icon-purple" aria-hidden="true">∑</span>
+          <span class="category-copy"><strong>Basic Mathematics</strong><small><span data-count-for="basic-mathematics">0</span> questions</small></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="category-card" type="button" data-category="english">
+          <span class="category-icon icon-rose" aria-hidden="true">EN</span>
+          <span class="category-copy"><strong>English</strong><small><span data-count-for="english">0</span> questions</small></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="category-card" type="button" data-category="urdu">
+          <span class="category-icon icon-gold urdu-icon" aria-hidden="true">اُ</span>
+          <span class="category-copy"><strong>Urdu</strong><small><span data-count-for="urdu">0</span> questions</small></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="category-card" type="button" data-category="everyday-science">
+          <span class="category-icon icon-indigo" aria-hidden="true">SC</span>
+          <span class="category-copy"><strong>Everyday Science</strong><small><span data-count-for="everyday-science">0</span> questions</small></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="category-card" type="button" data-category="basic-computer-studies">
+          <span class="category-icon icon-slate" aria-hidden="true">01</span>
+          <span class="category-copy"><strong>Basic Computer Studies</strong><small><span data-count-for="basic-computer-studies">0</span> questions</small></span>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="quiz-screen" class="screen quiz-screen" aria-labelledby="question-text" hidden>
+      <div class="quiz-topbar">
+        <button id="back-button" class="text-button" type="button"><span aria-hidden="true">←</span> Categories</button>
+        <span id="quiz-category" class="quiz-category">Geography</span>
+        <button id="restart-button" class="text-button" type="button">Restart <span aria-hidden="true">↻</span></button>
+      </div>
+
+      <div class="progress-header">
+        <span id="question-counter">Question 1 of 1</span>
+        <span id="score-text" aria-live="polite">Score: 0</span>
+      </div>
+      <div class="progress-track">
+        <span id="progress-fill" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></span>
+      </div>
+
+      <article class="question-card">
+        <span class="question-label">QUESTION</span>
+        <h2 id="question-text">Loading question…</h2>
+        <div id="options-container" class="options-container" role="radiogroup" aria-labelledby="question-text"></div>
+
+        <div id="feedback" class="feedback" role="status" aria-live="polite" hidden>
+          <span class="feedback-icon" aria-hidden="true"></span>
+          <div>
+            <strong id="feedback-title"></strong>
+            <p id="feedback-text"></p>
+          </div>
+        </div>
+
+        <div class="question-actions">
+          <button id="details-toggle" class="secondary-button" type="button" aria-expanded="false" aria-controls="details-panel" hidden>View Details</button>
+          <button id="action-button" class="primary-button" type="button" disabled>Check Answer</button>
+        </div>
+
+        <section id="details-panel" class="details-panel" aria-labelledby="details-heading" hidden>
+          <div class="details-heading-row">
+            <span class="details-bulb" aria-hidden="true">i</span>
+            <h3 id="details-heading">Answer explained</h3>
+          </div>
+          <p id="explanation-text" class="urdu-explanation" lang="ur" dir="rtl"></p>
+          <ul id="option-rationales" class="option-rationales"></ul>
+        </section>
+      </article>
+    </section>
+
+    <section id="results-screen" class="screen results-screen" aria-labelledby="results-title" hidden>
+      <div class="result-card">
+        <div class="result-emblem" aria-hidden="true">✓</div>
+        <span class="eyebrow">SESSION COMPLETE</span>
+        <h1 id="results-title">Practice complete!</h1>
+        <p id="result-summary">You completed this category.</p>
+        <div class="score-ring" aria-label="Final score">
+          <strong id="result-score">0/0</strong>
+          <span>Correct</span>
+        </div>
+        <div class="result-actions">
+          <button id="play-again-button" class="primary-button" type="button">Practice Again</button>
+          <button id="change-category-button" class="secondary-button" type="button">Choose Another Category</button>
+        </div>
+      </div>
+    </section>
+
+    <noscript><p class="noscript">Please enable JavaScript to use the quiz.</p></noscript>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for focused PPSC preparation.</p>
+    <p>Keep practicing. Keep improving.</p>
+  </footer>
+</body>
+</html>
