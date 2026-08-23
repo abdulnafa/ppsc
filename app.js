@@ -9,6 +9,7 @@
   var state = {
     category: null,
     questions: [],
+    mode: null,
     currentIndex: 0,
     selectedIndex: null,
     submitted: false,
@@ -28,9 +29,14 @@
 
   function collectElements() {
     elements.categoryScreen = firstElement(["#category-screen", "[data-screen='categories']"]);
+    elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
     elements.quizScreen = firstElement(["#quiz-screen", "[data-screen='quiz']"]);
     elements.resultScreen = firstElement(["#result-screen", "#results-screen", "[data-screen='results']"]);
     elements.categoryGrid = firstElement(["#category-grid", "[data-category-grid]"]);
+    elements.modeCategory = firstElement(["#mode-category", "[data-mode-category]"]);
+    elements.learnModeButton = firstElement(["#learn-mode-button", "[data-start-learn]"]);
+    elements.quizModeButton = firstElement(["#quiz-mode-button", "[data-start-quiz]"]);
+    elements.modeBackButton = firstElement(["#mode-back-button", "[data-mode-back]"]);
     elements.quizCategory = firstElement(["#quiz-category", "[data-quiz-category]"]);
     elements.questionKind = firstElement(["#question-kind", "[data-question-kind]"]);
     elements.questionText = firstElement(["#question-text", "[data-question-text]"]);
@@ -42,6 +48,8 @@
     elements.detailsToggle = firstElement(["#details-toggle", "[data-details-toggle]"]);
     elements.detailsPanel = firstElement(["#details-panel", "[data-details-panel]"]);
     elements.explanationText = firstElement(["#explanation-text", "[data-explanation]"]);
+    elements.memoryStory = firstElement(["#memory-story", "[data-memory-story]"]);
+    elements.memoryStoryText = firstElement(["#memory-story-text", "[data-memory-story-text]"]);
     elements.optionRationales = firstElement(["#option-rationales", "[data-option-rationales]"]);
     elements.sourceNotes = firstElement(["#source-notes", "[data-source-notes]"]);
     elements.detailsSource = firstElement(["#details-source", "[data-details-source]"]);
@@ -53,6 +61,7 @@
     elements.scoreText = firstElement(["#score-text", "[data-score-text]"]);
     elements.resultScore = firstElement(["#result-score", "[data-result-score]"]);
     elements.resultSummary = firstElement(["#result-summary", "#result-message", "[data-result-summary]"]);
+    elements.resultTitle = firstElement(["#results-title", "[data-result-title]"]);
     elements.backButton = firstElement(["#back-button", "[data-back-to-categories]"]);
     elements.restartButton = firstElement(["#restart-button", "[data-restart-quiz]"]);
     elements.playAgainButton = firstElement(["#play-again-button", "[data-play-again]"]);
@@ -68,11 +77,14 @@
 
   function showScreen(screenName) {
     setHidden(elements.categoryScreen, screenName !== "categories");
+    setHidden(elements.modeScreen, screenName !== "mode");
     setHidden(elements.quizScreen, screenName !== "quiz");
     setHidden(elements.resultScreen, screenName !== "results");
 
     var activeScreen = screenName === "quiz"
       ? elements.quizScreen
+      : screenName === "mode"
+        ? elements.modeScreen
       : screenName === "results"
         ? elements.resultScreen
         : elements.categoryScreen;
@@ -143,7 +155,32 @@
     }) || null;
   }
 
-  function startQuiz(categoryId) {
+  function chooseMode(categoryId) {
+    var category = findCategory(categoryId);
+    var count = questionCount(categoryId);
+    if (!category || count === 0) return;
+
+    state.category = category;
+    state.questions = [];
+    state.mode = null;
+    state.currentIndex = 0;
+    state.selectedIndex = null;
+    state.submitted = false;
+    state.score = 0;
+
+    if (elements.modeCategory) elements.modeCategory.textContent = category.name;
+
+    // Keep the site usable if an older cached page does not yet contain the
+    // mode chooser, while the current page always takes the explicit choice.
+    if (!elements.modeScreen) {
+      startQuiz(categoryId, "quiz");
+      return;
+    }
+
+    showScreen("mode");
+  }
+
+  function startQuiz(categoryId, mode) {
     var category = findCategory(categoryId);
     var filteredQuestions = allQuestions.filter(function (question) {
       return question.categoryId === categoryId;
@@ -153,12 +190,16 @@
 
     state.category = category;
     state.questions = filteredQuestions.slice();
+    state.mode = mode === "learn" ? "learn" : "quiz";
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
     state.score = 0;
 
-    if (elements.quizCategory) elements.quizCategory.textContent = category.name;
+    if (elements.quizCategory) {
+      elements.quizCategory.textContent = category.name + (state.mode === "learn" ? " · Learn" : "");
+    }
+    if (elements.quizScreen) elements.quizScreen.dataset.mode = state.mode;
     showScreen("quiz");
     renderQuestion();
   }
@@ -196,7 +237,9 @@
     updateProgress();
     resetFeedback();
 
-    if (elements.actionButton) {
+    if (state.mode === "learn") {
+      prepareLearnQuestion(question);
+    } else if (elements.actionButton) {
       setHidden(elements.actionButton, false);
       elements.actionButton.textContent = "Check Answer";
       elements.actionButton.disabled = false;
@@ -236,6 +279,34 @@
       button.appendChild(text);
       elements.optionsList.appendChild(button);
     });
+  }
+
+  function prepareLearnQuestion(question) {
+    state.selectedIndex = question.correctOptionIndex;
+
+    if (elements.optionsList) {
+      var buttons = elements.optionsList.querySelectorAll(".option-button, [data-option-index]");
+      buttons.forEach(function (button) {
+        var isCorrect = Number(button.dataset.optionIndex) === question.correctOptionIndex;
+        button.disabled = true;
+        button.classList.toggle("is-selected", isCorrect);
+        button.classList.toggle("is-correct", isCorrect);
+        button.setAttribute("aria-checked", isCorrect ? "true" : "false");
+      });
+    }
+
+    state.submitted = true;
+    showLearnFeedback();
+    buildDetails(question);
+    openDetails();
+
+    if (elements.actionButton) {
+      var isLast = state.currentIndex === state.questions.length - 1;
+      setHidden(elements.actionButton, false);
+      elements.actionButton.textContent = isLast ? "Finish Learning" : "Next Question";
+      elements.actionButton.disabled = false;
+      elements.actionButton.dataset.action = isLast ? "results" : "next";
+    }
   }
 
   function selectOption(index) {
@@ -360,6 +431,19 @@
       : "The correct answer is " + correctOption.label + ". " + correctOption.text + ".";
   }
 
+  function showLearnFeedback() {
+    if (!elements.feedback) return;
+    ensureFeedbackChildren();
+
+    elements.feedback.classList.remove("is-warning", "is-incorrect");
+    elements.feedback.classList.add("feedback", "is-correct");
+    elements.feedback.setAttribute("role", "status");
+    elements.feedback.setAttribute("aria-live", "polite");
+    setHidden(elements.feedback, false);
+    elements.feedbackTitle.textContent = "Correct answer";
+    elements.feedbackText.textContent = "Read the explanation and memory story, then continue when you are ready.";
+  }
+
   function ensureDetailsToggle() {
     if (elements.detailsToggle || !elements.detailsPanel) return;
     var button = document.createElement("button");
@@ -379,6 +463,30 @@
       elements.explanationText.id = "explanation-text";
       elements.explanationText.className = "urdu-explanation";
       elements.detailsPanel.appendChild(elements.explanationText);
+    }
+    if (!elements.memoryStory) {
+      elements.memoryStory = document.createElement("section");
+      elements.memoryStory.id = "memory-story";
+      elements.memoryStory.className = "memory-story";
+
+      var memoryHeading = document.createElement("h4");
+      memoryHeading.textContent = "Yaad rakhne ka waqiya";
+      elements.memoryStory.appendChild(memoryHeading);
+
+      elements.memoryStoryText = document.createElement("p");
+      elements.memoryStoryText.id = "memory-story-text";
+      elements.memoryStoryText.className = "memory-story-text";
+      elements.memoryStory.appendChild(elements.memoryStoryText);
+
+      elements.explanationText.parentNode.insertBefore(
+        elements.memoryStory,
+        elements.explanationText.nextSibling
+      );
+    } else if (!elements.memoryStoryText) {
+      elements.memoryStoryText = document.createElement("p");
+      elements.memoryStoryText.id = "memory-story-text";
+      elements.memoryStoryText.className = "memory-story-text";
+      elements.memoryStory.appendChild(elements.memoryStoryText);
     }
     if (!elements.optionRationales) {
       elements.optionRationales = document.createElement("ul");
@@ -417,6 +525,13 @@
     elements.explanationText.textContent = question.explanationUrdu || "تفصیلی وضاحت جلد شامل کی جائے گی۔";
     elements.explanationText.lang = "ur";
     elements.explanationText.dir = "rtl";
+
+    if (elements.memoryStoryText) {
+      elements.memoryStoryText.textContent = memoryStoryFor(question);
+      elements.memoryStoryText.lang = "ur";
+      elements.memoryStoryText.dir = "rtl";
+    }
+    if (elements.memoryStory) setHidden(elements.memoryStory, state.mode !== "learn");
 
     elements.optionRationales.textContent = "";
     var optionsWithRationales = question.options
@@ -465,6 +580,32 @@
     setHidden(elements.detailsPanel, true);
   }
 
+  function memoryStoryFor(question) {
+    var suppliedStory = String(question.memoryStoryUrdu || "").trim();
+    if (suppliedStory) return suppliedStory;
+
+    var correctOption = normalizeOption(
+      question.options[question.correctOptionIndex],
+      question.correctOptionIndex
+    );
+    var questionCue = String(question.question || "اس سوال").replace(/\s+/g, " ").trim();
+    if (questionCue.length > 120) questionCue = questionCue.slice(0, 117) + "…";
+
+    return "تصور کریں کہ امتحانی ہال میں آپ کو ایک کارڈ ملتا ہے جس پر \"" +
+      questionCue + "\" لکھا ہے۔ کارڈ پلٹتے ہی \"" + correctOption.text +
+      "\" روشن ہو جاتا ہے۔ اس منظر کو ذہن میں رکھیں: سوال کا اشارہ دیکھتے ہی یہی جواب یاد آئے گا۔";
+  }
+
+  function openDetails() {
+    if (!elements.detailsPanel) return;
+    setHidden(elements.detailsPanel, false);
+    if (elements.detailsToggle) {
+      setHidden(elements.detailsToggle, false);
+      elements.detailsToggle.textContent = "Hide details";
+      elements.detailsToggle.setAttribute("aria-expanded", "true");
+    }
+  }
+
   function toggleDetails() {
     if (!elements.detailsPanel || !state.submitted) return;
     var willOpen = elements.detailsPanel.hidden;
@@ -489,6 +630,7 @@
       setHidden(elements.detailsToggle, true);
     }
     if (elements.detailsPanel) setHidden(elements.detailsPanel, true);
+    if (elements.memoryStory) setHidden(elements.memoryStory, true);
     if (elements.sourceNotes) setHidden(elements.sourceNotes, true);
   }
 
@@ -510,7 +652,7 @@
       elements.progressBar.setAttribute("aria-valuenow", String(percent));
     }
     if (elements.scoreText) {
-      elements.scoreText.textContent = "Score: " + state.score;
+      elements.scoreText.textContent = state.mode === "learn" ? "Learn Mode" : "Score: " + state.score;
     }
   }
 
@@ -520,10 +662,32 @@
     showScreen("results");
 
     var scoreOutput = elements.resultScore || elements.scoreText;
-    if (scoreOutput) {
+    if (scoreOutput && state.mode === "learn") {
+      scoreOutput.textContent = String(total);
+    } else if (scoreOutput) {
       scoreOutput.textContent = state.score + " / " + total;
     }
-    if (elements.resultSummary) {
+
+    var scoreCaption = elements.resultScore && elements.resultScore.parentElement
+      ? elements.resultScore.parentElement.querySelector("span")
+      : null;
+    if (scoreCaption) scoreCaption.textContent = state.mode === "learn" ? "Learned" : "Correct";
+    if (elements.resultScore && elements.resultScore.parentElement) {
+      elements.resultScore.parentElement.setAttribute(
+        "aria-label",
+        state.mode === "learn" ? "Questions learned" : "Final score"
+      );
+    }
+    if (elements.playAgainButton) {
+      elements.playAgainButton.textContent = state.mode === "learn" ? "Learn Again" : "Practice Again";
+    }
+
+    if (elements.resultTitle) {
+      elements.resultTitle.textContent = state.mode === "learn" ? "Learning complete!" : "Practice complete!";
+    }
+    if (elements.resultSummary && state.mode === "learn") {
+      elements.resultSummary.textContent = "You studied all " + total + " questions in this category. Review them again to make the facts stick.";
+    } else if (elements.resultSummary) {
       elements.resultSummary.textContent = resultMessage(percent);
     }
   }
@@ -540,12 +704,13 @@
       returnToCategories();
       return;
     }
-    startQuiz(state.category.id);
+    startQuiz(state.category.id, state.mode);
   }
 
   function returnToCategories() {
     state.category = null;
     state.questions = [];
+    state.mode = null;
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -556,7 +721,15 @@
   function onCategoryClick(event) {
     var card = event.target.closest("[data-category], [data-category-id]");
     if (!card || !elements.categoryGrid.contains(card) || card.disabled) return;
-    startQuiz(card.dataset.category || card.dataset.categoryId);
+    chooseMode(card.dataset.category || card.dataset.categoryId);
+  }
+
+  function startSelectedMode(mode) {
+    if (!state.category) {
+      returnToCategories();
+      return;
+    }
+    startQuiz(state.category.id, mode);
   }
 
   function onOptionClick(event) {
@@ -567,6 +740,17 @@
 
   function bindEvents() {
     if (elements.categoryGrid) elements.categoryGrid.addEventListener("click", onCategoryClick);
+    if (elements.learnModeButton) {
+      elements.learnModeButton.addEventListener("click", function () {
+        startSelectedMode("learn");
+      });
+    }
+    if (elements.quizModeButton) {
+      elements.quizModeButton.addEventListener("click", function () {
+        startSelectedMode("quiz");
+      });
+    }
+    if (elements.modeBackButton) elements.modeBackButton.addEventListener("click", returnToCategories);
     if (elements.optionsList) elements.optionsList.addEventListener("click", onOptionClick);
     if (elements.actionButton) elements.actionButton.addEventListener("click", handleAction);
     if (elements.detailsToggle) elements.detailsToggle.addEventListener("click", toggleDetails);

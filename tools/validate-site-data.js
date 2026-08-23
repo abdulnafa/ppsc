@@ -72,6 +72,17 @@ function validateData(data) {
     if (!/[\u0600-\u06ff]/u.test(String(question.explanationUrdu || ""))) {
       error(`${location}: explanationUrdu must contain Urdu script`);
     }
+    const memoryStory = String(question.memoryStoryUrdu || "").trim();
+    if (memoryStory.length < 80 || !/[\u0600-\u06ff]/u.test(memoryStory)) {
+      error(`${location}: memoryStoryUrdu must be a useful Urdu memory scene`);
+    }
+    const correctOption = Array.isArray(question.options) && Number.isInteger(question.correctOptionIndex)
+      ? question.options[question.correctOptionIndex]
+      : "";
+    const correctText = String(typeof correctOption === "object" ? correctOption.text : correctOption).trim();
+    if (correctText && !memoryStory.includes(correctText)) {
+      error(`${location}: memoryStoryUrdu must associate the correct answer`);
+    }
     if (!question.source || !/^https?:\/\//i.test(question.source.referenceUrl || "")) {
       error(`${location}: missing direct research URL`);
     }
@@ -131,9 +142,11 @@ function validateKnownCorrections(questions) {
 function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
-    "category-screen", "quiz-screen", "results-screen", "category-grid",
+    "category-screen", "mode-screen", "quiz-screen", "results-screen", "category-grid",
+    "mode-category", "learn-mode-button", "quiz-mode-button", "mode-back-button",
     "question-kind", "question-text", "options-container", "action-button", "feedback",
-    "details-toggle", "details-panel", "explanation-text", "source-notes", "details-source",
+    "details-toggle", "details-panel", "explanation-text", "memory-story", "memory-story-text",
+    "source-notes", "details-source",
     "source-label", "source-link", "question-counter", "progress-fill",
     "score-text", "result-score", "back-button", "restart-button",
     "play-again-button", "change-category-button"

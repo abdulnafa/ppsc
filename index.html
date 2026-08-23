@@ -108,6 +108,39 @@
       </div>
     </section>
 
+    <section id="mode-screen" class="screen mode-screen" aria-labelledby="mode-title" hidden>
+      <button id="mode-back-button" class="text-button mode-back-button" type="button">
+        <span aria-hidden="true">&larr;</span> Categories
+      </button>
+
+      <article class="mode-card">
+        <span class="eyebrow">CHOOSE YOUR STUDY STYLE</span>
+        <span id="mode-category" class="mode-category">Selected category</span>
+        <h1 id="mode-title">How would you like to prepare?</h1>
+        <p class="mode-intro">Learn each answer with its explanation, or test yourself in quiz mode.</p>
+
+        <div class="mode-options" aria-label="Preparation mode">
+          <button id="learn-mode-button" class="mode-option mode-option-learn" type="button">
+            <span class="mode-option-icon" aria-hidden="true">L</span>
+            <span class="mode-option-copy">
+              <strong>Learn</strong>
+              <small>See the correct answer, Urdu explanation and memory story from the start.</small>
+            </span>
+            <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+
+          <button id="quiz-mode-button" class="mode-option mode-option-quiz" type="button">
+            <span class="mode-option-icon" aria-hidden="true">Q</span>
+            <span class="mode-option-copy">
+              <strong>Quiz</strong>
+              <small>Choose an option, check your answer and track your score.</small>
+            </span>
+            <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+      </article>
+    </section>
+
     <section id="quiz-screen" class="screen quiz-screen" aria-labelledby="question-text" hidden>
       <div class="quiz-topbar">
         <button id="back-button" class="text-button" type="button"><span aria-hidden="true">←</span> Categories</button>
@@ -147,6 +180,13 @@
             <h3 id="details-heading">Answer explained</h3>
           </div>
           <p id="explanation-text" class="urdu-explanation" lang="ur" dir="rtl"></p>
+          <section id="memory-story" class="memory-story" lang="ur" dir="rtl" aria-labelledby="memory-story-heading" hidden>
+            <div class="memory-story-heading">
+              <span class="memory-story-icon" aria-hidden="true">&#10022;</span>
+              <h4 id="memory-story-heading">یاد رکھنے کا واقعہ</h4>
+            </div>
+            <p id="memory-story-text"></p>
+          </section>
           <ul id="option-rationales" class="option-rationales"></ul>
           <p id="source-notes" class="source-notes" hidden></p>
           <div id="details-source" class="details-source">

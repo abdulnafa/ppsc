@@ -140,14 +140,49 @@ async function main() {
       if (data.questions.some((question) => !/^https?:\\/\\//.test(question.source.referenceUrl))) errors.push("A research URL is missing.");
 
       const categoryButton = document.querySelector("#category-grid .category-card:not([disabled])");
-      categoryButton.click();
-      await pause();
-      if (!visible(document.querySelector("#quiz-screen"))) errors.push("Quiz screen did not open.");
-
       const activeCategory = categoryButton.dataset.category || categoryButton.dataset.categoryId;
       const categoryQuestions = data.questions.filter((question) => question.categoryId === activeCategory);
       const findCurrent = () => categoryQuestions.find((question) => question.question === document.querySelector("#question-text").textContent);
+
+      categoryButton.click();
+      await pause();
+      if (!visible(document.querySelector("#mode-screen"))) errors.push("Mode chooser did not open after selecting a category.");
+
+      document.querySelector("#mode-back-button").click();
+      await pause();
+      if (!visible(document.querySelector("#category-screen"))) errors.push("Mode chooser back button failed.");
+
+      categoryButton.click();
+      document.querySelector("#learn-mode-button").click();
+      await pause();
+      if (!visible(document.querySelector("#quiz-screen"))) errors.push("Learn mode did not open.");
+
       let question = findCurrent();
+      let correctButton = document.querySelector('[data-option-index="' + question.correctOptionIndex + '"]');
+      if (!correctButton.disabled || !correctButton.classList.contains("is-correct")) errors.push("Learn mode did not reveal and lock the correct answer.");
+      if (document.querySelector("#score-text").textContent !== "Learn Mode") errors.push("Learn mode displayed a score.");
+      if (document.querySelector("#action-button").textContent !== "Next Question" && categoryQuestions.length > 1) errors.push("Learn mode did not offer the next question immediately.");
+      if (!visible(document.querySelector("#details-panel"))) errors.push("Learn details did not open automatically.");
+      if (!visible(document.querySelector("#memory-story"))) errors.push("Learn memory story did not open automatically.");
+      if (!/[\u0600-\u06ff]/u.test(document.querySelector("#memory-story-text").textContent)) errors.push("Urdu memory story did not render.");
+
+      document.querySelector("#restart-button").click();
+      await pause();
+      if (!document.querySelector("#question-counter").textContent.startsWith("Question 1 ")) errors.push("Learn restart failed.");
+      while (!visible(document.querySelector("#results-screen"))) {
+        document.querySelector("#action-button").click();
+        await pause();
+      }
+      if (document.querySelector("#results-title").textContent !== "Learning complete!") errors.push("Learn completion copy was not shown.");
+      if (document.querySelector("#result-score").textContent.trim() !== String(categoryQuestions.length)) errors.push("Learn completion total did not match.");
+
+      document.querySelector("#change-category-button").click();
+      categoryButton.click();
+      document.querySelector("#quiz-mode-button").click();
+      await pause();
+      if (!visible(document.querySelector("#quiz-screen"))) errors.push("Quiz screen did not open.");
+
+      question = findCurrent();
       if (!question) errors.push("First question did not render.");
       if (document.querySelectorAll("#options-container .option-button").length !== 4) errors.push("Four options did not render.");
 

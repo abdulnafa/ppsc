@@ -10,9 +10,10 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 - 10 advertised syllabus subjects, plus a separate **Finance, Taxation & Job-related** category for questions found in the supplied papers but outside that syllabus.
 - English question stems and four answer options. Urdu subject items keep essential Urdu test text under an English instruction.
 - Urdu answer explanations, visible after either a correct or incorrect attempt.
+- A Learn mode that reveals the correct answer, explanation and a short Urdu memory scene immediately.
 - A direct research/evidence link and any necessary source correction note in the detail panel.
 
-The quiz flow is: choose a category → select an option → check the answer → view Urdu details/evidence → move to the next question → see the final score.
+The flow is: choose a category → choose Learn or Quiz. Learn mode shows the answer, Urdu explanation and memory scene immediately; Quiz mode keeps option checking, feedback and scoring.
 
 ## Project structure
 
@@ -51,7 +52,7 @@ node tools/validate-site-data.js --expected=898
 node tools/browser-smoke.js
 ```
 
-The browser smoke test requires local Chrome or Edge. It exercises a complete mobile-width category session, including wrong/correct feedback, Urdu details, evidence links, Next, and the final score.
+The browser smoke test requires local Chrome or Edge. It exercises both Learn and Quiz at mobile width, including mode selection, pre-revealed learning answers, memory scenes, wrong/correct quiz feedback, evidence links, Next, and completion.
 
 The build script validates all six PDF papers, balances only the generated similar-question answer positions, and creates:
 
