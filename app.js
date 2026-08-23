@@ -48,8 +48,9 @@
     elements.detailsToggle = firstElement(["#details-toggle", "[data-details-toggle]"]);
     elements.detailsPanel = firstElement(["#details-panel", "[data-details-panel]"]);
     elements.explanationText = firstElement(["#explanation-text", "[data-explanation]"]);
-    elements.memoryStory = firstElement(["#memory-story", "[data-memory-story]"]);
-    elements.memoryStoryText = firstElement(["#memory-story-text", "[data-memory-story-text]"]);
+    elements.relatedHistory = firstElement(["#related-history", "[data-related-history]"]);
+    elements.relatedHistoryText = firstElement(["#related-history-text", "[data-related-history-text]"]);
+    elements.relatedHistorySourceLink = firstElement(["#related-history-source-link", "[data-related-history-source-link]"]);
     elements.optionRationales = firstElement(["#option-rationales", "[data-option-rationales]"]);
     elements.sourceNotes = firstElement(["#source-notes", "[data-source-notes]"]);
     elements.detailsSource = firstElement(["#details-source", "[data-details-source]"]);
@@ -441,7 +442,7 @@
     elements.feedback.setAttribute("aria-live", "polite");
     setHidden(elements.feedback, false);
     elements.feedbackTitle.textContent = "Correct answer";
-    elements.feedbackText.textContent = "Read the explanation and memory story, then continue when you are ready.";
+    elements.feedbackText.textContent = "Read the explanation and related history, then continue when you are ready.";
   }
 
   function ensureDetailsToggle() {
@@ -464,29 +465,14 @@
       elements.explanationText.className = "urdu-explanation";
       elements.detailsPanel.appendChild(elements.explanationText);
     }
-    if (!elements.memoryStory) {
-      elements.memoryStory = document.createElement("section");
-      elements.memoryStory.id = "memory-story";
-      elements.memoryStory.className = "memory-story";
-
-      var memoryHeading = document.createElement("h4");
-      memoryHeading.textContent = "Yaad rakhne ka waqiya";
-      elements.memoryStory.appendChild(memoryHeading);
-
-      elements.memoryStoryText = document.createElement("p");
-      elements.memoryStoryText.id = "memory-story-text";
-      elements.memoryStoryText.className = "memory-story-text";
-      elements.memoryStory.appendChild(elements.memoryStoryText);
-
-      elements.explanationText.parentNode.insertBefore(
-        elements.memoryStory,
-        elements.explanationText.nextSibling
-      );
-    } else if (!elements.memoryStoryText) {
-      elements.memoryStoryText = document.createElement("p");
-      elements.memoryStoryText.id = "memory-story-text";
-      elements.memoryStoryText.className = "memory-story-text";
-      elements.memoryStory.appendChild(elements.memoryStoryText);
+    if (elements.relatedHistory && !elements.relatedHistorySourceLink) {
+      elements.relatedHistorySourceLink = document.createElement("a");
+      elements.relatedHistorySourceLink.id = "related-history-source-link";
+      elements.relatedHistorySourceLink.className = "related-history-source-link";
+      elements.relatedHistorySourceLink.target = "_blank";
+      elements.relatedHistorySourceLink.rel = "noopener noreferrer";
+      elements.relatedHistorySourceLink.textContent = "Open background source";
+      elements.relatedHistory.appendChild(elements.relatedHistorySourceLink);
     }
     if (!elements.optionRationales) {
       elements.optionRationales = document.createElement("ul");
@@ -526,12 +512,28 @@
     elements.explanationText.lang = "ur";
     elements.explanationText.dir = "rtl";
 
-    if (elements.memoryStoryText) {
-      elements.memoryStoryText.textContent = memoryStoryFor(question);
-      elements.memoryStoryText.lang = "ur";
-      elements.memoryStoryText.dir = "rtl";
+    var relatedHistory = String(question.relatedHistoryUrdu || "").trim();
+    if (elements.relatedHistoryText) {
+      elements.relatedHistoryText.textContent = relatedHistory;
+      elements.relatedHistoryText.lang = "ur";
+      elements.relatedHistoryText.dir = "rtl";
     }
-    if (elements.memoryStory) setHidden(elements.memoryStory, state.mode !== "learn");
+    if (elements.relatedHistory) {
+      setHidden(elements.relatedHistory, state.mode !== "learn" || !relatedHistory);
+    }
+    var relatedHistorySource = String(question.relatedHistorySource || "").trim();
+    var hasRelatedHistorySource = /^https?:\/\//i.test(relatedHistorySource);
+    if (elements.relatedHistorySourceLink) {
+      if (hasRelatedHistorySource) {
+        elements.relatedHistorySourceLink.href = relatedHistorySource;
+      } else {
+        elements.relatedHistorySourceLink.removeAttribute("href");
+      }
+      setHidden(
+        elements.relatedHistorySourceLink,
+        state.mode !== "learn" || !relatedHistory || !hasRelatedHistorySource
+      );
+    }
 
     elements.optionRationales.textContent = "";
     var optionsWithRationales = question.options
@@ -580,22 +582,6 @@
     setHidden(elements.detailsPanel, true);
   }
 
-  function memoryStoryFor(question) {
-    var suppliedStory = String(question.memoryStoryUrdu || "").trim();
-    if (suppliedStory) return suppliedStory;
-
-    var correctOption = normalizeOption(
-      question.options[question.correctOptionIndex],
-      question.correctOptionIndex
-    );
-    var questionCue = String(question.question || "اس سوال").replace(/\s+/g, " ").trim();
-    if (questionCue.length > 120) questionCue = questionCue.slice(0, 117) + "…";
-
-    return "تصور کریں کہ امتحانی ہال میں آپ کو ایک کارڈ ملتا ہے جس پر \"" +
-      questionCue + "\" لکھا ہے۔ کارڈ پلٹتے ہی \"" + correctOption.text +
-      "\" روشن ہو جاتا ہے۔ اس منظر کو ذہن میں رکھیں: سوال کا اشارہ دیکھتے ہی یہی جواب یاد آئے گا۔";
-  }
-
   function openDetails() {
     if (!elements.detailsPanel) return;
     setHidden(elements.detailsPanel, false);
@@ -630,7 +616,7 @@
       setHidden(elements.detailsToggle, true);
     }
     if (elements.detailsPanel) setHidden(elements.detailsPanel, true);
-    if (elements.memoryStory) setHidden(elements.memoryStory, true);
+    if (elements.relatedHistory) setHidden(elements.relatedHistory, true);
     if (elements.sourceNotes) setHidden(elements.sourceNotes, true);
   }
 

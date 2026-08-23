@@ -163,8 +163,19 @@ async function main() {
       if (document.querySelector("#score-text").textContent !== "Learn Mode") errors.push("Learn mode displayed a score.");
       if (document.querySelector("#action-button").textContent !== "Next Question" && categoryQuestions.length > 1) errors.push("Learn mode did not offer the next question immediately.");
       if (!visible(document.querySelector("#details-panel"))) errors.push("Learn details did not open automatically.");
-      if (!visible(document.querySelector("#memory-story"))) errors.push("Learn memory story did not open automatically.");
-      if (!/[\u0600-\u06ff]/u.test(document.querySelector("#memory-story-text").textContent)) errors.push("Urdu memory story did not render.");
+      if (!visible(document.querySelector("#related-history"))) errors.push("Learn related history did not open automatically.");
+      if (!/[\u0600-\u06ff]/u.test(document.querySelector("#related-history-text").textContent)) errors.push("Urdu related history did not render.");
+      const relatedHistorySourceLink = document.querySelector("#related-history-source-link");
+      if (!visible(relatedHistorySourceLink) || !/^https?:\\/\\//.test(relatedHistorySourceLink.href)) {
+        errors.push("Direct related-history source did not render.");
+      }
+
+      const savedRelatedHistory = question.relatedHistoryUrdu;
+      question.relatedHistoryUrdu = "";
+      document.querySelector("#restart-button").click();
+      await pause();
+      if (visible(document.querySelector("#related-history"))) errors.push("Missing related history was fabricated instead of hidden.");
+      question.relatedHistoryUrdu = savedRelatedHistory;
 
       document.querySelector("#restart-button").click();
       await pause();

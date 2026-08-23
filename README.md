@@ -10,10 +10,10 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 - 10 advertised syllabus subjects, plus a separate **Finance, Taxation & Job-related** category for questions found in the supplied papers but outside that syllabus.
 - English question stems and four answer options. Urdu subject items keep essential Urdu test text under an English instruction.
 - Urdu answer explanations, visible after either a correct or incorrect attempt.
-- A Learn mode that reveals the correct answer, explanation and a short Urdu memory scene immediately.
+- A Learn mode that reveals the correct answer, explanation and verified Urdu related history/background immediately.
 - A direct research/evidence link and any necessary source correction note in the detail panel.
 
-The flow is: choose a category → choose Learn or Quiz. Learn mode shows the answer, Urdu explanation and memory scene immediately; Quiz mode keeps option checking, feedback and scoring.
+The flow is: choose a category → choose Learn or Quiz. Learn mode shows the answer, Urdu explanation, related factual background and its evidence link immediately; Quiz mode keeps option checking, feedback and scoring.
 
 ## Project structure
 
@@ -52,7 +52,7 @@ node tools/validate-site-data.js --expected=898
 node tools/browser-smoke.js
 ```
 
-The browser smoke test requires local Chrome or Edge. It exercises both Learn and Quiz at mobile width, including mode selection, pre-revealed learning answers, memory scenes, wrong/correct quiz feedback, evidence links, Next, and completion.
+The browser smoke test requires local Chrome or Edge. It exercises both Learn and Quiz at mobile width, including mode selection, pre-revealed learning answers, related-history text and source links, wrong/correct quiz feedback, Next, and completion.
 
 The build script validates all six PDF papers, balances only the generated similar-question answer positions, and creates:
 
@@ -74,6 +74,7 @@ Each pair must:
 - Use `kind: "similar"` with `source.type: "practice"` for the original related MCQ.
 - Include a useful Urdu explanation and a direct researched `referenceUrl` for both items.
 - Record the verification date as `source.accessedOn` in `YYYY-MM-DD` format.
+- Be closely related: the builder uses each paired question's verified explanation and evidence link as the other question's factual Learn-mode background.
 
 After adding a pair, run the validation and build commands again. For a bank larger than 898, update the `--expected` value or omit that argument.
 

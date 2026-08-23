@@ -40,19 +40,6 @@ const markdownFiles = {
 const expectedPaperCounts = { 234: 20, 235: 100, 236: 78, 237: 76, 238: 89, 239: 86 };
 const categoryIds = new Set(categories.map((category) => category.id));
 const optionLabels = ["A", "B", "C", "D"];
-const memoryScenes = {
-  "general-knowledge": "ایک طالب علم معلومات کے عجائب گھر میں دنیا کے اہم حقائق والی روشن دیوار کے سامنے کھڑا ہے۔",
-  "pakistan-studies": "ایک طالب علم پاکستان کے بڑے نقشے اور سبز پرچم کے سامنے تاریخ کا سبق دہرا رہا ہے۔",
-  "current-affairs": "ایک طالب علم نیوز روم میں تازہ سرخیوں اور تاریخوں والی اسکرین غور سے دیکھ رہا ہے۔",
-  "islamic-studies": "ایک طالب علم پُرسکون مطالعہ گاہ میں اسلامی تاریخ کی زمانی لکیر کے سامنے بیٹھا ہے۔",
-  geography: "ایک طالب علم بڑے گلوب اور رنگین نقشے کے سامنے ممالک اور مقامات کا ربط بنا رہا ہے۔",
-  "basic-mathematics": "ایک طالب علم کلاس کے تختے پر سوال کو مرحلہ وار حل کر رہا ہے۔",
-  english: "ایک طالب علم لغت اور جملوں کے کارڈ میز پر رکھ کر درست لفظ چن رہا ہے۔",
-  urdu: "ایک طالب علم اردو کتاب اور الفاظ کے کارڈ سامنے رکھ کر قاعدہ دہرا رہا ہے۔",
-  "everyday-science": "ایک طالب علم سائنس لیبارٹری میں روزمرہ چیزوں کے ذریعے تصور سمجھ رہا ہے۔",
-  "basic-computer-studies": "ایک طالب علم کمپیوٹر اسکرین پر متعلقہ کمانڈ اور اصطلاح کو نمایاں دیکھ رہا ہے۔",
-  "job-related-finance-taxation": "ایک طالب علم دفتر میں حسابی رجسٹر، کیلکولیٹر اور قواعد کی فائل سامنے رکھے بیٹھا ہے۔"
-};
 
 function fail(message) {
   throw new Error(message);
@@ -197,7 +184,11 @@ function rebalanceSimilarOptions(questions) {
   });
 }
 
-function websiteQuestion(question) {
+function websiteQuestion(question, pairsById) {
+  const pair = pairsById.get(question.pairId) || [];
+  const relatedQuestion = pair.find((item) => item.id !== question.id);
+  if (!relatedQuestion) fail(`${question.id} has no related pair for background history.`);
+
   return {
     id: question.id,
     pairId: question.pairId,
@@ -207,7 +198,9 @@ function websiteQuestion(question) {
     options: question.options,
     correctOptionIndex: question.correctOptionIndex,
     explanationUrdu: question.explanationUrdu,
-    memoryStoryUrdu: buildMemoryStory(question),
+    relatedHistoryUrdu: buildRelatedHistory(question, relatedQuestion),
+    relatedHistorySource: relatedQuestion.source.referenceUrl,
+    relatedHistoryAccessedOn: relatedQuestion.source.accessedOn,
     source: question.source,
     tags: Array.isArray(question.tags) ? question.tags : [],
     verificationStatus: question.verificationStatus || "verified",
@@ -215,19 +208,20 @@ function websiteQuestion(question) {
   };
 }
 
-function conciseExplanation(explanation) {
+function conciseBackground(explanation) {
   const clean = String(explanation || "").replace(/\s+/g, " ").trim();
-  const firstSentence = clean.split(/(?<=[۔.!?؟])\s+/u)[0] || clean;
-  if (firstSentence.length <= 240) return firstSentence.replace(/[۔.!?؟]+$/u, "");
-  const shortened = firstSentence.slice(0, 237).replace(/\s+\S*$/u, "").trim();
+  const sentences = clean.split(/(?<=[۔.!?؟])\s+/u).filter(Boolean);
+  const usefulContext = sentences.slice(0, 2).join(" ") || clean;
+  if (usefulContext.length <= 420) return usefulContext;
+  const shortened = usefulContext.slice(0, 417).replace(/\s+\S*$/u, "").trim();
   return `${shortened}…`;
 }
 
-function buildMemoryStory(question) {
-  const scene = memoryScenes[question.categoryId] || memoryScenes["general-knowledge"];
+function buildRelatedHistory(question, relatedQuestion) {
   const correctAnswer = optionText(question.options[question.correctOptionIndex]);
-  const reason = conciseExplanation(question.explanationUrdu);
-  return `یادداشت کا منظر: ${scene} وہ سوال حل کرتے ہوئے ایک نمایاں کارڈ پر ”${correctAnswer}“ لکھتا ہے۔ وہ ساتھ یہ وجہ نوٹ کرتا ہے: ${reason}۔ اب اس منظر کو ”${correctAnswer}“ کے ساتھ جوڑ لیں؛ امتحان میں یہی ذہنی تصویر جواب یاد دلائے گی۔`;
+  const relatedAnswer = optionText(relatedQuestion.options[relatedQuestion.correctOptionIndex]);
+  const background = conciseBackground(relatedQuestion.explanationUrdu);
+  return `${background} موجودہ سوال کے جواب ”${correctAnswer}“ کو اس متعلقہ مستند حقیقت ”${relatedAnswer}“ کے ساتھ جوڑ کر یاد رکھیں۔`;
 }
 
 function buildJavaScript(questions) {
@@ -235,7 +229,14 @@ function buildJavaScript(questions) {
     .map((question) => question.source.accessedOn)
     .sort()
     .at(-1) || "2026-08-22";
-  return `(function () {\n  "use strict";\n\n  var categories = ${JSON.stringify(categories, null, 2)};\n\n  var questions = ${JSON.stringify(questions.map(websiteQuestion), null, 2)};\n\n  window.PPSC_QUIZ_DATA = {\n    version: 3,\n    generatedOn: ${JSON.stringify(generatedOn)},\n    categories: categories,\n    questions: questions\n  };\n  window.PPSC_CATEGORIES = categories;\n  window.PPSC_QUESTIONS = questions;\n})();\n`;
+  const pairsById = new Map();
+  questions.forEach((question) => {
+    const pair = pairsById.get(question.pairId) || [];
+    pair.push(question);
+    pairsById.set(question.pairId, pair);
+  });
+  const websiteQuestions = questions.map((question) => websiteQuestion(question, pairsById));
+  return `(function () {\n  "use strict";\n\n  var categories = ${JSON.stringify(categories, null, 2)};\n\n  var questions = ${JSON.stringify(websiteQuestions, null, 2)};\n\n  window.PPSC_QUIZ_DATA = {\n    version: 4,\n    generatedOn: ${JSON.stringify(generatedOn)},\n    categories: categories,\n    questions: questions\n  };\n  window.PPSC_CATEGORIES = categories;\n  window.PPSC_QUESTIONS = questions;\n})();\n`;
 }
 
 function optionText(option) {

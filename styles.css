@@ -444,25 +444,25 @@ h2[tabindex="-1"]:focus {
   line-height: 2.35;
   text-wrap: pretty;
 }
-.memory-story {
+.related-history {
   margin-top: 18px;
   padding: 16px 18px 18px;
-  color: #34452e;
+  color: #32445b;
   text-align: right;
-  background: #f6f8e9;
-  border: 1px solid #dce4b4;
+  background: #f1f5fa;
+  border: 1px solid #cfdae8;
   border-radius: 11px;
 }
-.memory-story-heading { display: flex; align-items: center; gap: 9px; }
-.memory-story-heading h4 {
+.related-history-heading { display: flex; align-items: center; gap: 9px; }
+.related-history-heading h4 {
   margin: 0;
-  color: #456422;
+  color: var(--navy-900);
   font-family: var(--font-urdu);
   font-size: 1rem;
   font-weight: 700;
   line-height: 2;
 }
-.memory-story-icon {
+.related-history-icon {
   width: 27px;
   height: 27px;
   flex: 0 0 27px;
@@ -471,13 +471,14 @@ h2[tabindex="-1"]:focus {
   color: #fff;
   font-family: var(--font-ui);
   font-size: .85rem;
-  background: #79943e;
+  font-weight: 800;
+  background: #607892;
   border-radius: 9px;
 }
-.memory-story-text,
-#memory-story-text {
+.related-history-text,
+#related-history-text {
   margin: 8px 0 0;
-  color: #35452f;
+  color: #32445b;
   font-family: var(--font-urdu);
   font-size: 1.08rem;
   font-weight: 500;
@@ -485,6 +486,19 @@ h2[tabindex="-1"]:focus {
   white-space: pre-line;
   text-wrap: pretty;
 }
+.related-history-source-link {
+  width: fit-content;
+  margin-top: 10px;
+  display: inline-flex;
+  color: var(--blue-700);
+  font-family: var(--font-urdu);
+  font-size: .88rem;
+  font-weight: 700;
+  line-height: 2;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.related-history-source-link:hover { color: var(--navy-900); }
 .option-rationales { margin-top: 12px; padding: 0; color: var(--muted); font-size: .86rem; list-style: none; }
 .option-rationales li { padding: 10px 0; font-family: var(--font-urdu); font-size: 1rem; line-height: 2.15; }
 .option-rationales li + li { border-top: 1px solid var(--line); }
@@ -531,9 +545,9 @@ h2[tabindex="-1"]:focus {
   .question-card { padding: 23px 18px; border-radius: 18px; }
   .question-card h2 { margin-bottom: 21px; }
   .urdu-explanation { font-size: 1.08rem; line-height: 2.25; }
-  .memory-story { padding: 14px; }
-  .memory-story-text,
-  #memory-story-text { font-size: 1.04rem; line-height: 2.2; }
+  .related-history { padding: 14px; }
+  .related-history-text,
+  #related-history-text { font-size: 1.04rem; line-height: 2.2; }
   .option-button { padding: 10px 12px; }
   .question-actions { flex-direction: column-reverse; }
   .question-actions button { width: 100%; }

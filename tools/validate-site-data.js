@@ -72,16 +72,19 @@ function validateData(data) {
     if (!/[\u0600-\u06ff]/u.test(String(question.explanationUrdu || ""))) {
       error(`${location}: explanationUrdu must contain Urdu script`);
     }
-    const memoryStory = String(question.memoryStoryUrdu || "").trim();
-    if (memoryStory.length < 80 || !/[\u0600-\u06ff]/u.test(memoryStory)) {
-      error(`${location}: memoryStoryUrdu must be a useful Urdu memory scene`);
+    const relatedHistory = String(question.relatedHistoryUrdu || "").trim();
+    if (relatedHistory.length < 80 || !/[\u0600-\u06ff]/u.test(relatedHistory)) {
+      error(`${location}: relatedHistoryUrdu must contain useful factual Urdu background`);
     }
     const correctOption = Array.isArray(question.options) && Number.isInteger(question.correctOptionIndex)
       ? question.options[question.correctOptionIndex]
       : "";
     const correctText = String(typeof correctOption === "object" ? correctOption.text : correctOption).trim();
-    if (correctText && !memoryStory.includes(correctText)) {
-      error(`${location}: memoryStoryUrdu must associate the correct answer`);
+    if (correctText && !relatedHistory.includes(correctText)) {
+      error(`${location}: relatedHistoryUrdu must associate the correct answer`);
+    }
+    if (!/^https?:\/\//i.test(question.relatedHistorySource || "")) {
+      error(`${location}: relatedHistorySource must contain a direct research URL`);
     }
     if (!question.source || !/^https?:\/\//i.test(question.source.referenceUrl || "")) {
       error(`${location}: missing direct research URL`);
@@ -145,7 +148,8 @@ function validateHtml() {
     "category-screen", "mode-screen", "quiz-screen", "results-screen", "category-grid",
     "mode-category", "learn-mode-button", "quiz-mode-button", "mode-back-button",
     "question-kind", "question-text", "options-container", "action-button", "feedback",
-    "details-toggle", "details-panel", "explanation-text", "memory-story", "memory-story-text",
+    "details-toggle", "details-panel", "explanation-text", "related-history", "related-history-text",
+    "related-history-source-link",
     "source-notes", "details-source",
     "source-label", "source-link", "question-counter", "progress-fill",
     "score-text", "result-score", "back-button", "restart-button",
