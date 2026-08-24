@@ -5,6 +5,8 @@
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
+  var previousQuestionOrders = Object.create(null);
+  var previousOptionOrders = Object.create(null);
 
   var state = {
     category: null,
@@ -183,6 +185,77 @@
     showScreen("mode");
   }
 
+  function orderKey(items, itemKey) {
+    return items.map(function (item) {
+      return String(itemKey(item));
+    }).join("|");
+  }
+
+  function fisherYates(items) {
+    var result = items.slice();
+    for (var index = result.length - 1; index > 0; index -= 1) {
+      var randomIndex = Math.floor(Math.random() * (index + 1));
+      var temporary = result[index];
+      result[index] = result[randomIndex];
+      result[randomIndex] = temporary;
+    }
+    return result;
+  }
+
+  function shuffledOrder(items, itemKey, previousOrderKey) {
+    var source = items.slice();
+    if (source.length < 2) return source;
+
+    var originalOrderKey = orderKey(source, itemKey);
+    var candidate = source;
+    var attempt;
+
+    for (attempt = 0; attempt < 12; attempt += 1) {
+      candidate = fisherYates(source);
+      var candidateKey = orderKey(candidate, itemKey);
+      if (candidateKey !== originalOrderKey && candidateKey !== previousOrderKey) {
+        return candidate;
+      }
+    }
+
+    for (var offset = 1; offset < source.length; offset += 1) {
+      candidate = source.slice(offset).concat(source.slice(0, offset));
+      var rotatedKey = orderKey(candidate, itemKey);
+      if (rotatedKey !== originalOrderKey && rotatedKey !== previousOrderKey) {
+        return candidate;
+      }
+    }
+
+    return source.slice().reverse();
+  }
+
+  function shuffledQuizQuestion(question) {
+    var optionEntries = question.options.map(function (option, originalIndex) {
+      return { option: option, originalIndex: originalIndex };
+    });
+    var shuffledEntries = shuffledOrder(
+      optionEntries,
+      function (entry) { return entry.originalIndex; },
+      previousOptionOrders[question.id]
+    );
+    previousOptionOrders[question.id] = orderKey(shuffledEntries, function (entry) {
+      return entry.originalIndex;
+    });
+
+    var shuffledOptions = shuffledEntries.map(function (entry, index) {
+      if (!entry.option || typeof entry.option !== "object") return entry.option;
+      return Object.assign({}, entry.option, { label: OPTION_LABELS[index] });
+    });
+    var shuffledCorrectIndex = shuffledEntries.findIndex(function (entry) {
+      return entry.originalIndex === question.correctOptionIndex;
+    });
+
+    return Object.assign({}, question, {
+      options: shuffledOptions,
+      correctOptionIndex: shuffledCorrectIndex
+    });
+  }
+
   function startQuiz(categoryId, mode) {
     var category = findCategory(categoryId);
     var filteredQuestions = allQuestions.filter(function (question) {
@@ -191,9 +264,22 @@
 
     if (!category || filteredQuestions.length === 0) return;
 
+    var selectedMode = mode === "learn" ? "learn" : "quiz";
+    var sessionQuestions = shuffledOrder(
+      filteredQuestions,
+      function (question) { return question.id; },
+      previousQuestionOrders[categoryId]
+    );
+    previousQuestionOrders[categoryId] = orderKey(sessionQuestions, function (question) {
+      return question.id;
+    });
+    if (selectedMode === "quiz") {
+      sessionQuestions = sessionQuestions.map(shuffledQuizQuestion);
+    }
+
     state.category = category;
-    state.questions = filteredQuestions.slice();
-    state.mode = mode === "learn" ? "learn" : "quiz";
+    state.questions = sessionQuestions;
+    state.mode = selectedMode;
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -235,7 +321,10 @@
     if (elements.questionKind) {
       elements.questionKind.textContent = question.kind === "similar" ? "SIMILAR PRACTICE" : "SOURCE PAPER";
     }
-    if (elements.questionText) elements.questionText.textContent = question.question;
+    if (elements.questionText) {
+      elements.questionText.textContent = question.question;
+      elements.questionText.dataset.questionId = question.id;
+    }
     var questionUrdu = String(question.questionUrdu || "").trim();
     if (elements.questionTextUrdu) elements.questionTextUrdu.textContent = questionUrdu;
     if (elements.questionUrduBlock) setHidden(elements.questionUrduBlock, !questionUrdu);
@@ -569,6 +658,12 @@
     setHidden(elements.optionRationales, optionsWithRationales.length === 0);
 
     var sourceNotes = String(question.sourceNotes || "").trim();
+    if (
+      state.mode === "quiz" &&
+      /(?:option|choice|answer|key)\s*[:=\-]?\s*[“”"']?[A-D]\b/i.test(sourceNotes)
+    ) {
+      sourceNotes += " Quiz options are shuffled; option letters in this source note refer to the original paper order.";
+    }
     if (elements.sourceNotes) {
       elements.sourceNotes.textContent = sourceNotes ? "Source note: " + sourceNotes : "";
       setHidden(elements.sourceNotes, !sourceNotes);

@@ -172,7 +172,26 @@ async function main() {
       const categoryButton = document.querySelector("#category-grid .category-card:not([disabled])");
       const activeCategory = categoryButton.dataset.category || categoryButton.dataset.categoryId;
       const categoryQuestions = data.questions.filter((question) => question.categoryId === activeCategory);
-      const findCurrent = () => categoryQuestions.find((question) => question.question === document.querySelector("#question-text").textContent);
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const findCurrent = () => {
+        const questionId = document.querySelector("#question-text").dataset.questionId;
+        return categoryQuestions.find((question) => question.id === questionId);
+      };
+      const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
+        .map((element) => element.textContent);
+      const correctRenderedIndex = (question) => renderedOptionTexts().indexOf(
+        optionText(question.options[question.correctOptionIndex])
+      );
+      const verifyQuizOptionShuffle = (question) => {
+        const original = question.options.map(optionText);
+        const rendered = renderedOptionTexts();
+        if (JSON.stringify(rendered) === JSON.stringify(original)) {
+          errors.push("Quiz options were not shuffled for " + question.id + ".");
+        }
+        const correctIndex = correctRenderedIndex(question);
+        if (correctIndex < 0) errors.push("Shuffled correct answer could not be mapped for " + question.id + ".");
+        return correctIndex < 0 ? 0 : correctIndex;
+      };
 
       categoryButton.click();
       await pause();
@@ -188,8 +207,9 @@ async function main() {
       if (!visible(document.querySelector("#quiz-screen"))) errors.push("Learn mode did not open.");
 
       let question = findCurrent();
-      let correctButton = document.querySelector('[data-option-index="' + question.correctOptionIndex + '"]');
+      let correctButton = document.querySelector('[data-option-index="' + correctRenderedIndex(question) + '"]');
       if (!correctButton.disabled || !correctButton.classList.contains("is-correct")) errors.push("Learn mode did not reveal and lock the correct answer.");
+      if (JSON.stringify(renderedOptionTexts()) !== JSON.stringify(question.options.map(optionText))) errors.push("Learn mode changed the source option order.");
       if (!visible(document.querySelector("#question-urdu-block")) || document.querySelector("#question-text-urdu").textContent !== question.questionUrdu) errors.push("Urdu question translation did not render in Learn mode.");
       if (document.querySelector("#score-text").textContent !== "Learn Mode") errors.push("Learn mode displayed a score.");
       if (document.querySelector("#action-button").textContent !== "Next Question" && categoryQuestions.length > 1) errors.push("Learn mode did not offer the next question immediately.");
@@ -201,20 +221,30 @@ async function main() {
         errors.push("Direct related-history source did not render.");
       }
 
-      const savedRelatedHistory = question.relatedHistoryUrdu;
-      question.relatedHistoryUrdu = "";
+      const savedRelatedHistories = categoryQuestions.map((item) => item.relatedHistoryUrdu);
+      categoryQuestions.forEach((item) => { item.relatedHistoryUrdu = ""; });
       document.querySelector("#restart-button").click();
       await pause();
       if (visible(document.querySelector("#related-history"))) errors.push("Missing related history was fabricated instead of hidden.");
-      question.relatedHistoryUrdu = savedRelatedHistory;
+      categoryQuestions.forEach((item, index) => { item.relatedHistoryUrdu = savedRelatedHistories[index]; });
 
       document.querySelector("#restart-button").click();
       await pause();
       if (!document.querySelector("#question-counter").textContent.startsWith("Question 1 ")) errors.push("Learn restart failed.");
+      const learnOrder = [];
       while (!visible(document.querySelector("#results-screen"))) {
+        question = findCurrent();
+        if (!question) {
+          errors.push("Could not identify a shuffled Learn question.");
+          break;
+        }
+        learnOrder.push(question.id);
         document.querySelector("#action-button").click();
         await pause();
       }
+      const canonicalOrder = categoryQuestions.map((item) => item.id);
+      if (learnOrder.length !== categoryQuestions.length || new Set(learnOrder).size !== categoryQuestions.length) errors.push("Learn question shuffle lost or duplicated a question.");
+      if (JSON.stringify(learnOrder) === JSON.stringify(canonicalOrder)) errors.push("Learn questions remained in source order.");
       if (document.querySelector("#results-title").textContent !== "Learning complete!") errors.push("Learn completion copy was not shown.");
       if (document.querySelector("#result-score").textContent.trim() !== String(categoryQuestions.length)) errors.push("Learn completion total did not match.");
       if (document.querySelector("#play-again-button").textContent !== "Start Quiz") errors.push("Learn completion did not offer Start Quiz.");
@@ -228,12 +258,17 @@ async function main() {
       if (!visible(document.querySelector("#question-urdu-block")) || document.querySelector("#question-text-urdu").textContent !== question.questionUrdu) errors.push("Urdu question translation did not render in Quiz mode.");
       if (document.querySelectorAll("#options-container .option-button").length !== 4) errors.push("Four options did not render.");
 
-      const wrongIndex = (question.correctOptionIndex + 1) % 4;
+      const quizOrder = [question.id];
+      const firstQuizOptionOrders = Object.create(null);
+      let renderedCorrectIndex = verifyQuizOptionShuffle(question);
+      firstQuizOptionOrders[question.id] = JSON.stringify(renderedOptionTexts());
+      const wrongIndex = (renderedCorrectIndex + 1) % 4;
       document.querySelector('[data-option-index="' + wrongIndex + '"]').click();
       document.querySelector("#action-button").click();
       await pause();
       if (document.querySelector("#feedback-title").textContent !== "Incorrect") errors.push("Incorrect feedback failed.");
       if (!document.querySelector("#feedback-text").textContent.includes("The correct answer is")) errors.push("Correct answer was not revealed.");
+      if (!document.querySelector('[data-option-index="' + renderedCorrectIndex + '"]').classList.contains("is-correct")) errors.push("Shuffled correct option was not revealed after an incorrect answer.");
       document.querySelector("#details-toggle").click();
       await pause();
       if (!/[\\u0600-\\u06ff]/u.test(document.querySelector("#explanation-text").textContent)) errors.push("Urdu detail did not render after an incorrect answer.");
@@ -249,11 +284,15 @@ async function main() {
       document.querySelector("#action-button").click();
       await pause();
       question = findCurrent();
+      quizOrder.push(question.id);
+      renderedCorrectIndex = verifyQuizOptionShuffle(question);
+      firstQuizOptionOrders[question.id] = JSON.stringify(renderedOptionTexts());
       if (!visible(document.querySelector("#question-urdu-block")) || document.querySelector("#question-text-urdu").textContent !== question.questionUrdu) errors.push("Urdu translation did not update with the next question.");
-      document.querySelector('[data-option-index="' + question.correctOptionIndex + '"]').click();
+      document.querySelector('[data-option-index="' + renderedCorrectIndex + '"]').click();
       document.querySelector("#action-button").click();
       await pause();
       if (document.querySelector("#feedback-title").textContent !== "Correct!") errors.push("Correct feedback failed.");
+      if (!document.querySelector('[data-option-index="' + renderedCorrectIndex + '"]').classList.contains("is-correct")) errors.push("Shuffled correct option was not scored correctly.");
       document.querySelector("#details-toggle").click();
       await pause();
       if (!/[\\u0600-\\u06ff]/u.test(document.querySelector("#explanation-text").textContent)) errors.push("Urdu detail did not render after a correct answer.");
@@ -266,7 +305,10 @@ async function main() {
           errors.push("Could not match a later question.");
           break;
         }
-        document.querySelector('[data-option-index="' + question.correctOptionIndex + '"]').click();
+        quizOrder.push(question.id);
+        renderedCorrectIndex = verifyQuizOptionShuffle(question);
+        firstQuizOptionOrders[question.id] = JSON.stringify(renderedOptionTexts());
+        document.querySelector('[data-option-index="' + renderedCorrectIndex + '"]').click();
         document.querySelector("#action-button").click();
         document.querySelector("#action-button").click();
         await pause();
@@ -276,6 +318,33 @@ async function main() {
       if (document.querySelector("#result-score").textContent.replace(/\\s/g, "") !== expectedScore + "/" + categoryQuestions.length) {
         errors.push("Final score did not match the completed session.");
       }
+      if (quizOrder.length !== categoryQuestions.length || new Set(quizOrder).size !== categoryQuestions.length) errors.push("Quiz question shuffle lost or duplicated a question.");
+      if (JSON.stringify(quizOrder) === JSON.stringify(canonicalOrder)) errors.push("Quiz questions remained in source order.");
+      if (JSON.stringify(quizOrder) === JSON.stringify(learnOrder)) errors.push("Quiz reused the previous Learn question order.");
+      const firstQuizScore = document.querySelector("#result-score").textContent;
+
+      if (document.querySelector("#play-again-button").textContent !== "Practice Again") errors.push("Quiz completion did not offer Practice Again.");
+      document.querySelector("#play-again-button").click();
+      await pause();
+      const repeatedQuizOrder = [];
+      while (!visible(document.querySelector("#results-screen"))) {
+        question = findCurrent();
+        if (!question) {
+          errors.push("Could not identify a Practice Again question.");
+          break;
+        }
+        repeatedQuizOrder.push(question.id);
+        renderedCorrectIndex = verifyQuizOptionShuffle(question);
+        if (firstQuizOptionOrders[question.id] === JSON.stringify(renderedOptionTexts())) {
+          errors.push("Practice Again reused the previous option order for " + question.id + ".");
+        }
+        document.querySelector('[data-option-index="' + renderedCorrectIndex + '"]').click();
+        document.querySelector("#action-button").click();
+        document.querySelector("#action-button").click();
+        await pause();
+      }
+      if (repeatedQuizOrder.length !== categoryQuestions.length || new Set(repeatedQuizOrder).size !== categoryQuestions.length) errors.push("Practice Again lost or duplicated a question.");
+      if (JSON.stringify(repeatedQuizOrder) === JSON.stringify(quizOrder)) errors.push("Practice Again reused the previous question order.");
 
       return {
         errors,
@@ -283,7 +352,11 @@ async function main() {
         totalQuestions: data.questions.length,
         testedCategory: activeCategory,
         testedCategoryQuestions: categoryQuestions.length,
-        finalScore: document.querySelector("#result-score").textContent,
+        learnedOrderShuffled: JSON.stringify(learnOrder) !== JSON.stringify(canonicalOrder),
+        quizOrderShuffledAgain: JSON.stringify(quizOrder) !== JSON.stringify(learnOrder),
+        practiceAgainShuffled: JSON.stringify(repeatedQuizOrder) !== JSON.stringify(quizOrder),
+        firstQuizScore,
+        repeatedQuizScore: document.querySelector("#result-score").textContent,
         sourceNotesAvailable: data.questions.filter((item) => item.sourceNotes).length
       };
     })()`);
