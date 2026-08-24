@@ -38,8 +38,18 @@ function connect(webSocketUrl) {
   let sequence = 0;
 
   const ready = new Promise((resolve, reject) => {
-    socket.addEventListener("open", resolve, { once: true });
-    socket.addEventListener("error", () => reject(new Error("Could not connect to Chrome DevTools.")), { once: true });
+    const timer = setTimeout(
+      () => reject(new Error("Chrome DevTools WebSocket did not connect in time.")),
+      15000
+    );
+    socket.addEventListener("open", () => {
+      clearTimeout(timer);
+      resolve();
+    }, { once: true });
+    socket.addEventListener("error", () => {
+      clearTimeout(timer);
+      reject(new Error("Could not connect to Chrome DevTools."));
+    }, { once: true });
   });
 
   socket.addEventListener("message", (event) => {
@@ -47,16 +57,35 @@ function connect(webSocketUrl) {
     if (!message.id || !callbacks.has(message.id)) return;
     const callback = callbacks.get(message.id);
     callbacks.delete(message.id);
+    clearTimeout(callback.timer);
     if (message.error) callback.reject(new Error(message.error.message));
     else callback.resolve(message.result);
+  });
+
+  socket.addEventListener("close", () => {
+    for (const [id, callback] of callbacks) {
+      clearTimeout(callback.timer);
+      callback.reject(new Error(`Chrome DevTools closed before command ${id} completed.`));
+    }
+    callbacks.clear();
   });
 
   async function send(method, params = {}) {
     await ready;
     const id = ++sequence;
     return new Promise((resolve, reject) => {
-      callbacks.set(id, { resolve, reject });
-      socket.send(JSON.stringify({ id, method, params }));
+      const timer = setTimeout(() => {
+        callbacks.delete(id);
+        reject(new Error(`Chrome DevTools command ${method} timed out.`));
+      }, 15000);
+      callbacks.set(id, { resolve, reject, timer });
+      try {
+        socket.send(JSON.stringify({ id, method, params }));
+      } catch (error) {
+        clearTimeout(timer);
+        callbacks.delete(id);
+        reject(error);
+      }
     });
   }
 
@@ -135,6 +164,7 @@ async function main() {
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
       if (!data || data.questions.length < 898) errors.push("Expected at least the 898-question PDF bank.");
+      if (data && data.questions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) errors.push("A question is missing its Urdu translation.");
       if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("Category cards did not render.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Mobile layout has horizontal overflow.");
       if (data.questions.some((question) => !/^https?:\\/\\//.test(question.source.referenceUrl))) errors.push("A research URL is missing.");
@@ -160,6 +190,7 @@ async function main() {
       let question = findCurrent();
       let correctButton = document.querySelector('[data-option-index="' + question.correctOptionIndex + '"]');
       if (!correctButton.disabled || !correctButton.classList.contains("is-correct")) errors.push("Learn mode did not reveal and lock the correct answer.");
+      if (!visible(document.querySelector("#question-urdu-block")) || document.querySelector("#question-text-urdu").textContent !== question.questionUrdu) errors.push("Urdu question translation did not render in Learn mode.");
       if (document.querySelector("#score-text").textContent !== "Learn Mode") errors.push("Learn mode displayed a score.");
       if (document.querySelector("#action-button").textContent !== "Next Question" && categoryQuestions.length > 1) errors.push("Learn mode did not offer the next question immediately.");
       if (!visible(document.querySelector("#details-panel"))) errors.push("Learn details did not open automatically.");
@@ -186,15 +217,15 @@ async function main() {
       }
       if (document.querySelector("#results-title").textContent !== "Learning complete!") errors.push("Learn completion copy was not shown.");
       if (document.querySelector("#result-score").textContent.trim() !== String(categoryQuestions.length)) errors.push("Learn completion total did not match.");
-
-      document.querySelector("#change-category-button").click();
-      categoryButton.click();
-      document.querySelector("#quiz-mode-button").click();
+      if (document.querySelector("#play-again-button").textContent !== "Start Quiz") errors.push("Learn completion did not offer Start Quiz.");
+      document.querySelector("#play-again-button").click();
       await pause();
-      if (!visible(document.querySelector("#quiz-screen"))) errors.push("Quiz screen did not open.");
+      if (!visible(document.querySelector("#quiz-screen"))) errors.push("Start Quiz did not open the quiz screen.");
+      if (document.querySelector("#score-text").textContent !== "Score: 0") errors.push("Start Quiz did not switch from Learn to Quiz mode.");
 
       question = findCurrent();
       if (!question) errors.push("First question did not render.");
+      if (!visible(document.querySelector("#question-urdu-block")) || document.querySelector("#question-text-urdu").textContent !== question.questionUrdu) errors.push("Urdu question translation did not render in Quiz mode.");
       if (document.querySelectorAll("#options-container .option-button").length !== 4) errors.push("Four options did not render.");
 
       const wrongIndex = (question.correctOptionIndex + 1) % 4;
@@ -218,6 +249,7 @@ async function main() {
       document.querySelector("#action-button").click();
       await pause();
       question = findCurrent();
+      if (!visible(document.querySelector("#question-urdu-block")) || document.querySelector("#question-text-urdu").textContent !== question.questionUrdu) errors.push("Urdu translation did not update with the next question.");
       document.querySelector('[data-option-index="' + question.correctOptionIndex + '"]').click();
       document.querySelector("#action-button").click();
       await pause();

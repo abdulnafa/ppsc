@@ -67,6 +67,52 @@ function loadBatches() {
   return paperQuestions.concat(customQuestions);
 }
 
+function loadQuestionTranslations(questions) {
+  const files = fs.readdirSync(workDirectory)
+    .filter((name) => /^question-translations-ur(?:-[a-z0-9-]+)?\.json$/i.test(name))
+    .sort();
+  const questionIds = new Set(questions.map((question) => question.id));
+  const translations = new Map();
+
+  for (const name of files) {
+    const value = JSON.parse(fs.readFileSync(path.join(workDirectory, name), "utf8"));
+    if (!value || Array.isArray(value) || typeof value !== "object") {
+      fail(`${name} must contain a JSON object keyed by question ID.`);
+    }
+    for (const [id, translation] of Object.entries(value)) {
+      if (!questionIds.has(id)) fail(`${name} contains unknown question ID ${id}.`);
+      if (translations.has(id)) fail(`${id} has duplicate Urdu translations.`);
+      const text = String(translation || "").trim();
+      if (text.length < 5 || !/[\u0600-\u06ff]/u.test(text)) {
+        fail(`${id} needs a useful Urdu question translation.`);
+      }
+      if (/[ÃƒÃ‚Ã¢Ã˜Ã™Ã›�]/u.test(text)) fail(`${id} Urdu translation contains likely mojibake.`);
+      translations.set(id, text);
+    }
+  }
+
+  for (const question of questions) {
+    const embedded = String(question.questionUrdu || "").trim();
+    if (embedded) {
+      if (!/[\u0600-\u06ff]/u.test(embedded)) fail(`${question.id} embedded questionUrdu needs Urdu script.`);
+      translations.set(question.id, embedded);
+    }
+    if (!translations.has(question.id)) fail(`${question.id} is missing its Urdu question translation.`);
+
+    const translation = translations.get(question.id);
+    const numericTokens = [...new Set(String(question.question).match(/\d+(?:[.,]\d+)*/g) || [])];
+    for (const token of numericTokens) {
+      if (!translation.includes(token)) {
+        fail(`${question.id} Urdu translation must preserve the numeric token ${token}.`);
+      }
+    }
+    if (String(question.question).includes("____") && !translation.includes("____")) {
+      fail(`${question.id} Urdu translation must preserve the question blank (____).`);
+    }
+  }
+  return translations;
+}
+
 function validate(questions) {
   const ids = new Set();
   const pairs = new Map();
@@ -184,7 +230,7 @@ function rebalanceSimilarOptions(questions) {
   });
 }
 
-function websiteQuestion(question, pairsById) {
+function websiteQuestion(question, pairsById, translations) {
   const pair = pairsById.get(question.pairId) || [];
   const relatedQuestion = pair.find((item) => item.id !== question.id);
   if (!relatedQuestion) fail(`${question.id} has no related pair for background history.`);
@@ -195,6 +241,7 @@ function websiteQuestion(question, pairsById) {
     kind: question.kind,
     categoryId: question.categoryId,
     question: question.question,
+    questionUrdu: translations.get(question.id),
     options: question.options,
     correctOptionIndex: question.correctOptionIndex,
     explanationUrdu: question.explanationUrdu,
@@ -224,7 +271,7 @@ function buildRelatedHistory(question, relatedQuestion) {
   return `${background} موجودہ سوال کے جواب ”${correctAnswer}“ کو اس متعلقہ مستند حقیقت ”${relatedAnswer}“ کے ساتھ جوڑ کر یاد رکھیں۔`;
 }
 
-function buildJavaScript(questions) {
+function buildJavaScript(questions, translations) {
   const generatedOn = questions
     .map((question) => question.source.accessedOn)
     .sort()
@@ -235,7 +282,7 @@ function buildJavaScript(questions) {
     pair.push(question);
     pairsById.set(question.pairId, pair);
   });
-  const websiteQuestions = questions.map((question) => websiteQuestion(question, pairsById));
+  const websiteQuestions = questions.map((question) => websiteQuestion(question, pairsById, translations));
   return `(function () {\n  "use strict";\n\n  var categories = ${JSON.stringify(categories, null, 2)};\n\n  var questions = ${JSON.stringify(websiteQuestions, null, 2)};\n\n  window.PPSC_QUIZ_DATA = {\n    version: 4,\n    generatedOn: ${JSON.stringify(generatedOn)},\n    categories: categories,\n    questions: questions\n  };\n  window.PPSC_CATEGORIES = categories;\n  window.PPSC_QUESTIONS = questions;\n})();\n`;
 }
 
@@ -277,7 +324,8 @@ function writeMarkdown(questions) {
 
 const questions = rebalanceSimilarOptions(loadBatches());
 validate(questions);
-fs.writeFileSync(outputFile, buildJavaScript(questions), "utf8");
+const translations = loadQuestionTranslations(questions);
+fs.writeFileSync(outputFile, buildJavaScript(questions, translations), "utf8");
 writeMarkdown(questions);
 
 const counts = Object.fromEntries(categories.map((category) => [

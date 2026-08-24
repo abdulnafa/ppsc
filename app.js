@@ -40,6 +40,8 @@
     elements.quizCategory = firstElement(["#quiz-category", "[data-quiz-category]"]);
     elements.questionKind = firstElement(["#question-kind", "[data-question-kind]"]);
     elements.questionText = firstElement(["#question-text", "[data-question-text]"]);
+    elements.questionUrduBlock = firstElement(["#question-urdu-block", "[data-question-urdu-block]"]);
+    elements.questionTextUrdu = firstElement(["#question-text-urdu", "[data-question-text-urdu]"]);
     elements.optionsList = firstElement(["#options-list", "#options-container", "[data-options-list]"]);
     elements.actionButton = firstElement(["#action-button", "#next-button", "[data-quiz-action]"]);
     elements.feedback = firstElement(["#feedback", "[data-feedback]"]);
@@ -234,6 +236,15 @@
       elements.questionKind.textContent = question.kind === "similar" ? "SIMILAR PRACTICE" : "SOURCE PAPER";
     }
     if (elements.questionText) elements.questionText.textContent = question.question;
+    var questionUrdu = String(question.questionUrdu || "").trim();
+    if (elements.questionTextUrdu) elements.questionTextUrdu.textContent = questionUrdu;
+    if (elements.questionUrduBlock) setHidden(elements.questionUrduBlock, !questionUrdu);
+    if (elements.optionsList) {
+      elements.optionsList.setAttribute(
+        "aria-labelledby",
+        questionUrdu ? "question-text question-text-urdu" : "question-text"
+      );
+    }
     renderOptions(question);
     updateProgress();
     resetFeedback();
@@ -665,14 +676,14 @@
       );
     }
     if (elements.playAgainButton) {
-      elements.playAgainButton.textContent = state.mode === "learn" ? "Learn Again" : "Practice Again";
+      elements.playAgainButton.textContent = state.mode === "learn" ? "Start Quiz" : "Practice Again";
     }
 
     if (elements.resultTitle) {
       elements.resultTitle.textContent = state.mode === "learn" ? "Learning complete!" : "Practice complete!";
     }
     if (elements.resultSummary && state.mode === "learn") {
-      elements.resultSummary.textContent = "You studied all " + total + " questions in this category. Review them again to make the facts stick.";
+      elements.resultSummary.textContent = "You studied all " + total + " questions in this category. Now test yourself with the quiz.";
     } else if (elements.resultSummary) {
       elements.resultSummary.textContent = resultMessage(percent);
     }
@@ -691,6 +702,18 @@
       return;
     }
     startQuiz(state.category.id, state.mode);
+  }
+
+  function handlePlayAgain() {
+    if (!state.category) {
+      returnToCategories();
+      return;
+    }
+    if (state.mode === "learn") {
+      startQuiz(state.category.id, "quiz");
+      return;
+    }
+    restartQuiz();
   }
 
   function returnToCategories() {
@@ -742,7 +765,7 @@
     if (elements.detailsToggle) elements.detailsToggle.addEventListener("click", toggleDetails);
     if (elements.backButton) elements.backButton.addEventListener("click", returnToCategories);
     if (elements.restartButton) elements.restartButton.addEventListener("click", restartQuiz);
-    if (elements.playAgainButton) elements.playAgainButton.addEventListener("click", restartQuiz);
+    if (elements.playAgainButton) elements.playAgainButton.addEventListener("click", handlePlayAgain);
     if (elements.changeCategoryButton) elements.changeCategoryButton.addEventListener("click", returnToCategories);
   }
 

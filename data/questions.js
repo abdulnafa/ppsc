@@ -77,6 +77,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Which is the smallest Muslim-majority country in the world by land area?",
+    "questionUrdu": "زمینی رقبے کے لحاظ سے دنیا کا سب سے چھوٹا مسلم اکثریتی ملک کون سا ہے؟",
     "options": [
       "Brunei",
       "Bahrain",
@@ -108,6 +109,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Which is the smallest sovereign state in the world by territory?",
+    "questionUrdu": "رقبے کے لحاظ سے دنیا کی سب سے چھوٹی خود مختار ریاست کون سی ہے؟",
     "options": [
       "Monaco",
       "Nauru",
@@ -139,6 +141,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Who was the first Law Minister of Pakistan?",
+    "questionUrdu": "پاکستان کے پہلے وزیرِ قانون کون تھے؟",
     "options": [
       "Liaquat Ali Khan",
       "Khawaja Nazimuddin",
@@ -170,6 +173,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Who served as Pakistan's first Foreign Minister?",
+    "questionUrdu": "پاکستان کے پہلے وزیرِ خارجہ کی حیثیت سے کس نے خدمات انجام دیں؟",
     "options": [
       "Muhammad Ali Bogra",
       "Sir Muhammad Zafarullah Khan",
@@ -201,6 +205,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "How many Sustainable Development Goals are included in the UN 2030 Agenda?",
+    "questionUrdu": "اقوامِ متحدہ کے 2030 ایجنڈا میں پائیدار ترقی کے کتنے اہداف شامل ہیں؟",
     "options": [
       "15",
       "17",
@@ -232,6 +237,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "How many targets are associated with the 17 Sustainable Development Goals?",
+    "questionUrdu": "پائیدار ترقی کے 17 اہداف کے ساتھ مجموعی طور پر کتنے ذیلی اہداف منسلک ہیں؟",
     "options": [
       "150",
       "169",
@@ -263,6 +269,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Which Mughal emperor rebuilt Lahore Fort in the form that established its major Mughal character?",
+    "questionUrdu": "کس مغل بادشاہ نے لاہور قلعہ کو اس صورت میں دوبارہ تعمیر کرایا جس سے اس کی نمایاں مغلیہ شناخت قائم ہوئی؟",
     "options": [
       "Babur",
       "Akbar",
@@ -294,6 +301,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "In which year were Lahore Fort and the Shalamar Gardens inscribed together on the UNESCO World Heritage List?",
+    "questionUrdu": "لاہور قلعہ اور شالامار باغ کو ایک ساتھ یونیسکو کے عالمی ثقافتی ورثے کی فہرست میں کس سال شامل کیا گیا؟",
     "options": [
       "1975",
       "1990",
@@ -325,6 +333,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "Which listed men's player has won the most Grand Slam singles titles?",
+    "questionUrdu": "دیے گئے مرد ٹینس کھلاڑیوں میں سب سے زیادہ گرینڈ سلیم سنگلز ٹائٹل کس نے جیتے ہیں؟",
     "options": [
       "Roger Federer",
       "Novak Djokovic",
@@ -356,6 +365,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "Which of the four Grand Slam tennis tournaments is played on clay courts?",
+    "questionUrdu": "ٹینس کے چار گرینڈ سلیم مقابلوں میں سے کون سا مٹی کے کورٹ پر کھیلا جاتا ہے؟",
     "options": [
       "Roland Garros",
       "Australian Open",
@@ -387,6 +397,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which of the following is a non-renewable energy source?",
+    "questionUrdu": "درج ذیل میں سے کون سا توانائی کا ناقابلِ تجدید ذریعہ ہے؟",
     "options": [
       "Wind energy",
       "Solar energy",
@@ -418,6 +429,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which of the following is a renewable energy source?",
+    "questionUrdu": "درج ذیل میں سے کون سا توانائی کا قابلِ تجدید ذریعہ ہے؟",
     "options": [
       "Wind",
       "Petroleum",
@@ -449,6 +461,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Solar cells are mainly made from which semiconductor material?",
+    "questionUrdu": "شمسی خلیے بنیادی طور پر کس نیم موصل مادے سے بنائے جاتے ہیں؟",
     "options": [
       "Copper",
       "Aluminium",
@@ -480,6 +493,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which material is also the most common semiconductor used in computer chips?",
+    "questionUrdu": "کمپیوٹر چپس میں سب سے زیادہ استعمال ہونے والا نیم موصل مادہ بھی کون سا ہے؟",
     "options": [
       "Silver",
       "Silicon",
@@ -511,6 +525,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the best antonym of 'profane'.",
+    "questionUrdu": "لفظ 'profane' کا بہترین متضاد منتخب کریں۔",
     "options": [
       "Irreligious",
       "Disrespectful",
@@ -542,6 +557,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the antonym of 'reverent'.",
+    "questionUrdu": "لفظ 'reverent' کا متضاد منتخب کریں۔",
     "options": [
       "Devout",
       "Respectful",
@@ -573,6 +589,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the synonym of 'jealous'.",
+    "questionUrdu": "لفظ 'jealous' کا مترادف منتخب کریں۔",
     "options": [
       "Kind",
       "Generous",
@@ -604,6 +621,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the synonym of 'diligent'.",
+    "questionUrdu": "لفظ 'diligent' کا مترادف منتخب کریں۔",
     "options": [
       "Careless",
       "Idle",
@@ -635,6 +653,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Fill in the blank: Each of the boys ___ rewarded.",
+    "questionUrdu": "خالی جگہ پُر کریں: Each of the boys ___ rewarded.",
     "options": [
       "were",
       "are",
@@ -666,6 +685,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Fill in the blank: Neither of the two candidates ___ absent.",
+    "questionUrdu": "خالی جگہ پُر کریں: Neither of the two candidates ___ absent.",
     "options": [
       "were",
       "was",
@@ -697,6 +717,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the correct passive form of the imperative idea 'Let me do this.'",
+    "questionUrdu": "امریہ مفہوم 'Let me do this.' کی درست مجہول صورت منتخب کریں۔",
     "options": [
       "This is done by me.",
       "Let this be done by me.",
@@ -728,6 +749,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the passive form of the command 'Close the door.'",
+    "questionUrdu": "حکمیہ جملے 'Close the door.' کی مجہول صورت منتخب کریں۔",
     "options": [
       "Let the door be closed.",
       "Let the door closed.",
@@ -759,6 +781,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What did '.com' originally denote in the Internet domain-name system?",
+    "questionUrdu": "انٹرنیٹ کے ڈومین ناموں کے ابتدائی نظام میں '.com' اصل میں کس چیز کی علامت تھا؟",
     "options": [
       "Communication",
       "Commercial",
@@ -790,6 +813,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What did '.org' originally denote in the Internet domain-name system?",
+    "questionUrdu": "انٹرنیٹ کے ڈومین ناموں کے ابتدائی نظام میں '.org' اصل میں کس چیز کی علامت تھا؟",
     "options": [
       "Origin",
       "Oracle",
@@ -821,6 +845,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "What does NCOC stand for in Pakistan's COVID-19 response?",
+    "questionUrdu": "پاکستان کے کووڈ-19 ردِعمل میں NCOC کا مکمل نام کیا ہے؟",
     "options": [
       "National Command and Operation Centre",
       "National Council of Operations Committee",
@@ -852,6 +877,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "What does NDMA stand for in Pakistan?",
+    "questionUrdu": "پاکستان میں NDMA کا مکمل نام کیا ہے؟",
     "options": [
       "National Disaster Management Authority",
       "National Development Monitoring Agency",
@@ -883,6 +909,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What is the default file extension for a modern Microsoft Word document?",
+    "questionUrdu": "جدید مائیکروسافٹ ورڈ دستاویز کی طے شدہ فائل ایکسٹینشن کیا ہے؟",
     "options": [
       ".xls",
       ".docx",
@@ -914,6 +941,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What is the default file extension for a modern Microsoft Excel workbook?",
+    "questionUrdu": "جدید مائیکروسافٹ ایکسل ورک بک کی طے شدہ فائل ایکسٹینشن کیا ہے؟",
     "options": [
       ".accdb",
       ".docx",
@@ -945,6 +973,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Which of the following barrages is not located in Punjab Province?",
+    "questionUrdu": "درج ذیل میں سے کون سا بیراج صوبہ پنجاب میں واقع نہیں ہے؟",
     "options": [
       "Trimmu Barrage",
       "Balloki Barrage",
@@ -976,6 +1005,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Guddu Barrage is located on which river?",
+    "questionUrdu": "گڈو بیراج کس دریا پر واقع ہے؟",
     "options": [
       "Jhelum",
       "Indus",
@@ -1007,6 +1037,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In which year did Allama Iqbal deliver the Allahabad Address?",
+    "questionUrdu": "علامہ اقبال نے خطبۂ الہ آباد کس سال دیا؟",
     "options": [
       "1928",
       "1929",
@@ -1038,6 +1069,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "In which year was the Lahore Resolution adopted?",
+    "questionUrdu": "قراردادِ لاہور کس سال منظور کی گئی؟",
     "options": [
       "1930",
       "1940",
@@ -1069,6 +1101,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What is the intended meaning of the Urdu proverb 'آگ نہ اُگل، پھول اُگل'?",
+    "questionUrdu": "اردو کہاوت 'آگ نہ اُگل، پھول اُگل' کا مطلوبہ مفہوم کیا ہے؟",
     "options": [
       "Spend wealth",
       "Remain completely silent",
@@ -1100,6 +1133,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the Urdu proverb 'مُنہ میں رام، بَغَل میں چُھری' describe?",
+    "questionUrdu": "اردو کہاوت 'مُنہ میں رام، بَغَل میں چُھری' کس کیفیت کو بیان کرتی ہے؟",
     "options": [
       "Open courage",
       "Generosity to a stranger",
@@ -1131,6 +1165,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What does the Urdu-Persian expression 'گوہرِ غلطاں' mean?",
+    "questionUrdu": "اردو فارسی ترکیب 'گوہرِ غلطاں' کا کیا مطلب ہے؟",
     "options": [
       "Minerals",
       "A rolling or lustrous precious pearl",
@@ -1162,6 +1197,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the Urdu expression 'دُرِ نایاب' mean?",
+    "questionUrdu": "اردو ترکیب 'دُرِ نایاب' کا کیا مطلب ہے؟",
     "options": [
       "A common stone",
       "A rare or invaluable pearl",
@@ -1193,6 +1229,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "In a corrected consistent version of the printed exponent problem, if x²y² = 4 and x³y³ = 8, what is x⁵y⁵?",
+    "questionUrdu": "طبع شدہ قوت نما سوال کی درست اور باہم موافق صورت میں، اگر x²y² = 4 اور x³y³ = 8 ہو تو x⁵y⁵ کیا ہوگا؟",
     "options": [
       "16",
       "24",
@@ -1224,6 +1261,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "If a²b² = 9 and a³b³ = 27, what is a⁵b⁵?",
+    "questionUrdu": "اگر a²b² = 9 اور a³b³ = 27 ہو تو a⁵b⁵ کیا ہوگا؟",
     "options": [
       "243",
       "162",
@@ -1255,6 +1293,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "The area of a circle inscribed in an equilateral triangle is 154 cm². Using π = 22/7, find the triangle's perimeter to one decimal place.",
+    "questionUrdu": "ایک مساوی الاضلاع مثلث کے اندر بنائے گئے دائرے کا رقبہ 154 مربع سینٹی میٹر ہے۔ π = 22/7 استعمال کرتے ہوئے مثلث کا محیط ایک اعشاری مقام تک معلوم کریں۔",
     "options": [
       "72.7 cm",
       "71.5 cm",
@@ -1286,6 +1325,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "An equilateral triangle has an inradius of 4 cm. What is its exact perimeter?",
+    "questionUrdu": "ایک مساوی الاضلاع مثلث کے اندرونی دائرے کا رداس 4 سینٹی میٹر ہے۔ اس کا درست محیط کیا ہے؟",
     "options": [
       "12√3 cm",
       "18√3 cm",
@@ -1317,6 +1357,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "What is the capital of South Korea?",
+    "questionUrdu": "جنوبی کوریا کا دارالحکومت کیا ہے؟",
     "options": [
       "Busan",
       "Seoul",
@@ -1348,6 +1389,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Which currency is used in South Korea?",
+    "questionUrdu": "جنوبی کوریا میں کون سی کرنسی استعمال ہوتی ہے؟",
     "options": [
       "Yen",
       "Won",
@@ -1379,6 +1421,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "Who became President of the United States after Donald Trump's first term ended in January 2021?",
+    "questionUrdu": "جنوری 2021 میں ڈونلڈ ٹرمپ کی پہلی صدارتی مدت ختم ہونے کے بعد امریکا کا صدر کون بنا؟",
     "options": [
       "Barack Obama",
       "George W. Bush",
@@ -1410,6 +1453,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "Who succeeded Joe Biden as U.S. President on January 20, 2025?",
+    "questionUrdu": "20 جنوری 2025 کو جو بائیڈن کے بعد امریکا کا صدر کون بنا؟",
     "options": [
       "Mike Pence",
       "Kamala Harris",
@@ -1441,6 +1485,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Who was the Viceroy of India when the All-India Muslim League was established in 1906?",
+    "questionUrdu": "1906 میں آل انڈیا مسلم لیگ کے قیام کے وقت ہندوستان کا وائسرائے کون تھا؟",
     "options": [
       "Lord Curzon",
       "Lord Minto",
@@ -1472,6 +1517,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "In which city was the All-India Muslim League founded in December 1906?",
+    "questionUrdu": "دسمبر 1906 میں آل انڈیا مسلم لیگ کس شہر میں قائم ہوئی؟",
     "options": [
       "Lahore",
       "Aligarh",
@@ -1503,6 +1549,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In which year was the Nehru Report presented?",
+    "questionUrdu": "نہرو رپورٹ کس سال پیش کی گئی؟",
     "options": [
       "1927",
       "1928",
@@ -1534,6 +1581,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Which constitutional demands were formulated by Muhammad Ali Jinnah in response to the Nehru Report?",
+    "questionUrdu": "نہرو رپورٹ کے جواب میں محمد علی جناح نے کون سے آئینی مطالبات مرتب کیے؟",
     "options": [
       "Delhi Proposals",
       "Fourteen Points",
@@ -1565,6 +1613,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "What was the name of the Indian military operation used to annex Hyderabad in 1948?",
+    "questionUrdu": "1948 میں حیدرآباد کو بھارت میں ضم کرنے کے لیے استعمال ہونے والی بھارتی فوجی کارروائی کا نام کیا تھا؟",
     "options": [
       "Operation Gibraltar",
       "Operation Polo",
@@ -1596,6 +1645,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "Which operation is officially associated with the liberation of Goa in 1961?",
+    "questionUrdu": "1961 میں گوا کی آزادی سے سرکاری طور پر کون سا آپریشن منسلک ہے؟",
     "options": [
       "Operation Trident",
       "Operation Shakti",
@@ -1627,6 +1677,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Whom did Muhammad bin Qasim defeat during the conquest of Sindh?",
+    "questionUrdu": "فتحِ سندھ کے دوران محمد بن قاسم نے کس کو شکست دی؟",
     "options": [
       "Raja Porus",
       "Raja Jaipal",
@@ -1658,6 +1709,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Which region of the subcontinent was subdued by Muhammad bin Qasim in the early eighth century?",
+    "questionUrdu": "آٹھویں صدی کے اوائل میں محمد بن قاسم نے برصغیر کے کس خطے کو فتح کیا؟",
     "options": [
       "Bengal",
       "Kashmir",
@@ -1689,6 +1741,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "Which of the following is not an emirate of the United Arab Emirates?",
+    "questionUrdu": "درج ذیل میں سے کون سی متحدہ عرب امارات کی امارت نہیں ہے؟",
     "options": [
       "Abu Dhabi",
       "Dubai",
@@ -1720,6 +1773,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "Which is the smallest of the seven emirates of the UAE?",
+    "questionUrdu": "متحدہ عرب امارات کی سات امارات میں سب سے چھوٹی کون سی ہے؟",
     "options": [
       "Fujairah",
       "Ajman",
@@ -1751,6 +1805,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "In which city is NATO Headquarters located?",
+    "questionUrdu": "نیٹو کا صدر دفتر کس شہر میں واقع ہے؟",
     "options": [
       "Paris",
       "Geneva",
@@ -1782,6 +1837,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "In which city was NATO's first headquarters established in 1949?",
+    "questionUrdu": "1949 میں نیٹو کا پہلا صدر دفتر کس شہر میں قائم کیا گیا؟",
     "options": [
       "Washington, D.C.",
       "Paris",
@@ -1813,6 +1869,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "Which of the following countries does not use the euro as its currency?",
+    "questionUrdu": "درج ذیل ممالک میں سے کون سا یورو کو اپنی کرنسی کے طور پر استعمال نہیں کرتا؟",
     "options": [
       "Germany",
       "France",
@@ -1844,6 +1901,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "Which EU country has a treaty opt-out from adopting the euro?",
+    "questionUrdu": "یورپی یونین کے کس ملک کو معاہدے کے تحت یورو اپنانے سے استثنا حاصل ہے؟",
     "options": [
       "Poland",
       "Sweden",
@@ -1875,6 +1933,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Which is the largest island in the world, excluding continents?",
+    "questionUrdu": "براعظموں کو چھوڑ کر دنیا کا سب سے بڑا جزیرہ کون سا ہے؟",
     "options": [
       "New Guinea",
       "Borneo",
@@ -1906,6 +1965,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Approximately what is the total area of Greenland?",
+    "questionUrdu": "گرین لینڈ کا کل رقبہ تقریباً کتنا ہے؟",
     "options": [
       "216,608 km²",
       "2,166,086 km²",
@@ -1937,6 +1997,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Who was the third Prime Minister of Pakistan?",
+    "questionUrdu": "پاکستان کے تیسرے وزیرِ اعظم کون تھے؟",
     "options": [
       "Liaquat Ali Khan",
       "Khawaja Nazimuddin",
@@ -1968,6 +2029,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Who was the second Prime Minister of Pakistan?",
+    "questionUrdu": "پاکستان کے دوسرے وزیرِ اعظم کون تھے؟",
     "options": [
       "Liaquat Ali Khan",
       "Mohammad Ali Bogra",
@@ -1999,6 +2061,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "Who won the Olympic gold medal for Pakistan in the men’s javelin throw at Paris 2024?",
+    "questionUrdu": "پیرس 2024 میں مردوں کے جیولن تھرو میں پاکستان کے لیے اولمپک طلائی تمغہ کس نے جیتا؟",
     "options": [
       "Munir Sadiq",
       "Abdul Khaliq",
@@ -2030,6 +2093,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "What distance did Arshad Nadeem throw to set the Olympic record at Paris 2024?",
+    "questionUrdu": "ارشد ندیم نے پیرس 2024 میں اولمپک ریکارڈ قائم کرنے کے لیے کتنے فاصلے تک نیزہ پھینکا؟",
     "options": [
       "89.45 m",
       "90.57 m",
@@ -2061,6 +2125,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In which year was the first population census held in Pakistan?",
+    "questionUrdu": "پاکستان میں پہلی مردم شماری کس سال ہوئی؟",
     "options": [
       "1949",
       "1951",
@@ -2092,6 +2157,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "The 2023 population census was which numbered census of Pakistan?",
+    "questionUrdu": "2023 کی مردم شماری، شمار کے لحاظ سے پاکستان کی کون سی مردم شماری تھی؟",
     "options": [
       "Fifth",
       "Seventh",
@@ -2123,6 +2189,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Under which Article of the Constitution of Pakistan is Urdu declared the national language?",
+    "questionUrdu": "پاکستان کے آئین کے کس آرٹیکل کے تحت اردو کو قومی زبان قرار دیا گیا ہے؟",
     "options": [
       "Article 240",
       "Article 251",
@@ -2154,6 +2221,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Under Article 251(2), which language may be used for official purposes until arrangements are made to replace it with Urdu?",
+    "questionUrdu": "آرٹیکل 251(2) کے تحت اردو کے نفاذ کے انتظامات مکمل ہونے تک سرکاری مقاصد کے لیے کون سی زبان استعمال کی جا سکتی ہے؟",
     "options": [
       "Arabic",
       "Persian",
@@ -2185,6 +2253,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Pakistan served as a non-permanent member of which United Nations body during 2025–2026?",
+    "questionUrdu": "پاکستان 2025–2026 کے دوران اقوامِ متحدہ کے کس ادارے کا غیر مستقل رکن رہا؟",
     "options": [
       "UN General Assembly",
       "UN Human Rights Council",
@@ -2216,6 +2285,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "For how long are elected non-permanent members of the UN Security Council normally chosen?",
+    "questionUrdu": "اقوامِ متحدہ کی سلامتی کونسل کے منتخب غیر مستقل ارکان عام طور پر کتنی مدت کے لیے منتخب ہوتے ہیں؟",
     "options": [
       "One year",
       "Two years",
@@ -2247,6 +2317,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Which agreement did Pakistan and Saudi Arabia sign on September 17, 2025?",
+    "questionUrdu": "پاکستان اور سعودی عرب نے 17 ستمبر 2025 کو کون سا معاہدہ کیا؟",
     "options": [
       "Strategic Mutual Defence Agreement",
       "Trade Expansion Treaty",
@@ -2278,6 +2349,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "In which city was the Pakistan–Saudi Strategic Mutual Defence Agreement signed in September 2025?",
+    "questionUrdu": "پاکستان اور سعودی عرب کے درمیان تزویراتی باہمی دفاعی معاہدہ ستمبر 2025 میں کس شہر میں طے پایا؟",
     "options": [
       "Islamabad",
       "Jeddah",
@@ -2309,6 +2381,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Who was the Federal Minister for Finance and Revenue of Pakistan on August 22, 2026?",
+    "questionUrdu": "22 اگست 2026 کو پاکستان کے وفاقی وزیرِ خزانہ و محصولات کون تھے؟",
     "options": [
       "Ishaq Dar",
       "Asad Umar",
@@ -2340,6 +2413,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "In which month and year was Muhammad Aurangzeb appointed Federal Minister for Finance and Revenue?",
+    "questionUrdu": "محمد اورنگزیب کو کس مہینے اور سال میں وفاقی وزیرِ خزانہ و محصولات مقرر کیا گیا؟",
     "options": [
       "January 2024",
       "March 2025",
@@ -2371,6 +2445,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Which club won the 2024–25 UEFA Champions League?",
+    "questionUrdu": "2024–25 کی یوئیفا چیمپئنز لیگ کس کلب نے جیتی؟",
     "options": [
       "Barcelona",
       "Real Madrid",
@@ -2402,6 +2477,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "Which club did Paris Saint-Germain defeat in the 2025 UEFA Champions League final?",
+    "questionUrdu": "پیرس سینٹ جرمین نے 2025 کی یوئیفا چیمپئنز لیگ کے فائنل میں کس کلب کو شکست دی؟",
     "options": [
       "Arsenal",
       "Barcelona",
@@ -2433,6 +2509,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Who was the Governor of Punjab, Pakistan, on August 22, 2026?",
+    "questionUrdu": "22 اگست 2026 کو پنجاب، پاکستان کے گورنر کون تھے؟",
     "options": [
       "Baligh Ur Rehman",
       "Sardar Saleem Haider Khan",
@@ -2464,6 +2541,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "In which month and year did Sardar Saleem Haider Khan take oath as Governor of Punjab?",
+    "questionUrdu": "سردار سلیم حیدر خان نے کس مہینے اور سال میں گورنر پنجاب کا حلف اٹھایا؟",
     "options": [
       "March 2024",
       "January 2025",
@@ -2495,6 +2573,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which radioactive isotope of hydrogen is used in nuclear studies?",
+    "questionUrdu": "ہائیڈروجن کا کون سا تابکار آئسوٹوپ جوہری تحقیق میں استعمال ہوتا ہے؟",
     "options": [
       "Protium",
       "Deuterium",
@@ -2526,6 +2605,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "What is the approximate half-life of tritium?",
+    "questionUrdu": "ٹریٹیم کی نصف عمر تقریباً کتنی ہے؟",
     "options": [
       "1.2 years",
       "12.3 years",
@@ -2557,6 +2637,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Who discovered the circulation of blood through the body?",
+    "questionUrdu": "جسم میں خون کی گردش کس نے دریافت کی؟",
     "options": [
       "Louis Pasteur",
       "William Harvey",
@@ -2588,6 +2669,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "In which year was William Harvey's work De Motu Cordis, explaining blood circulation, published?",
+    "questionUrdu": "خون کی گردش کی وضاحت کرنے والی ولیم ہاروے کی کتاب De Motu Cordis کس سال شائع ہوئی؟",
     "options": [
       "1518",
       "1628",
@@ -2619,6 +2701,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which is the outermost main layer of the Earth?",
+    "questionUrdu": "زمین کی سب سے بیرونی بنیادی تہہ کون سی ہے؟",
     "options": [
       "Mantle",
       "Crust",
@@ -2650,6 +2733,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Approximately how thick is the Earth’s mantle?",
+    "questionUrdu": "زمین کا مینٹل تقریباً کتنا موٹا ہے؟",
     "options": [
       "290 km",
       "2,900 km",
@@ -2681,6 +2765,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "In which organ is urea formed in the human body?",
+    "questionUrdu": "انسانی جسم میں یوریا کس عضو میں بنتا ہے؟",
     "options": [
       "Kidney",
       "Liver",
@@ -2712,6 +2797,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which organs excrete most of the urea produced by the liver?",
+    "questionUrdu": "جگر میں بننے والے زیادہ تر یوریا کو جسم سے کون سے اعضا خارج کرتے ہیں؟",
     "options": [
       "Lungs",
       "Skin",
@@ -2743,6 +2829,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Carbon monoxide has a particularly strong affinity for which substance in blood?",
+    "questionUrdu": "کاربن مونو آکسائیڈ خون میں موجود کس مادے کے ساتھ خاص طور پر مضبوطی سے جڑتی ہے؟",
     "options": [
       "Nitrogen",
       "Haemoglobin",
@@ -2774,6 +2861,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "What is the compound formed when carbon monoxide binds with haemoglobin called?",
+    "questionUrdu": "کاربن مونو آکسائیڈ کے ہیموگلوبن سے جڑنے پر بننے والے مرکب کو کیا کہتے ہیں؟",
     "options": [
       "Oxyhaemoglobin",
       "Methaemoglobin",
@@ -2805,6 +2893,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In which area of Pakistan are the largest known low-grade iron-ore deposits located?",
+    "questionUrdu": "پاکستان میں کم درجے کے لوہے کے سب سے بڑے معلوم ذخائر کس علاقے میں واقع ہیں؟",
     "options": [
       "Swat",
       "Chiniot",
@@ -2836,6 +2925,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Approximately how large are the historically estimated iron-ore reserves at Kalabagh?",
+    "questionUrdu": "کالا باغ میں لوہے کے تاریخی طور پر تخمینہ شدہ ذخائر تقریباً کتنے ہیں؟",
     "options": [
       "30 million tonnes",
       "298 million tonnes",
@@ -2867,6 +2957,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Caps Lock and Num Lock are examples of which type of keys?",
+    "questionUrdu": "Caps Lock اور Num Lock کس قسم کی کلیدوں کی مثالیں ہیں؟",
     "options": [
       "Function keys",
       "Toggle keys",
@@ -2898,6 +2989,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which of the following is also commonly treated as a toggle key?",
+    "questionUrdu": "درج ذیل میں سے کس کلید کو بھی عام طور پر ٹوگل کلید سمجھا جاتا ہے؟",
     "options": [
       "Enter",
       "Backspace",
@@ -2929,6 +3021,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which term describes the rules that govern data transfer between computers?",
+    "questionUrdu": "کمپیوٹروں کے درمیان ڈیٹا کی منتقلی کو منظم کرنے والے قواعد کو کیا کہتے ہیں؟",
     "options": [
       "Cable",
       "Router",
@@ -2960,6 +3053,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which protocol suite is used extensively for communication over the Internet?",
+    "questionUrdu": "انٹرنیٹ پر رابطے کے لیے کون سا پروٹوکول مجموعہ بڑے پیمانے پر استعمال ہوتا ہے؟",
     "options": [
       "ASCII",
       "TCP/IP",
@@ -2991,6 +3085,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What is the primary function of an operating system?",
+    "questionUrdu": "آپریٹنگ سسٹم کا بنیادی کام کیا ہے؟",
     "options": [
       "To create documents and spreadsheets",
       "To manage hardware and software resources",
@@ -3022,6 +3117,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which component is the central core of an operating system?",
+    "questionUrdu": "آپریٹنگ سسٹم کا مرکزی بنیادی جزو کون سا ہے؟",
     "options": [
       "Compiler",
       "Browser",
@@ -3053,6 +3149,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which keyboard shortcut centers a paragraph in Microsoft Word?",
+    "questionUrdu": "مائیکروسافٹ ورڈ میں پیراگراف کو درمیان میں کرنے کے لیے کون سا کی بورڈ شارٹ کٹ استعمال ہوتا ہے؟",
     "options": [
       "Ctrl+L",
       "Ctrl+R",
@@ -3084,6 +3181,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which keyboard shortcut justifies a paragraph in Microsoft Word?",
+    "questionUrdu": "مائیکروسافٹ ورڈ میں پیراگراف کو دونوں کناروں سے برابر کرنے کے لیے کون سا کی بورڈ شارٹ کٹ استعمال ہوتا ہے؟",
     "options": [
       "Ctrl+M",
       "Ctrl+K",
@@ -3115,6 +3213,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Factorize: x² + 16x + 63.",
+    "questionUrdu": "تجزیہ کریں: x² + 16x + 63۔",
     "options": [
       "(x + 7)(x + 9)",
       "(x + 7)(x + 8)",
@@ -3146,6 +3245,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Factorize: x² + 13x + 40.",
+    "questionUrdu": "تجزیہ کریں: x² + 13x + 40۔",
     "options": [
       "(x + 4)(x + 10)",
       "(x + 2)(x + 20)",
@@ -3177,6 +3277,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A high-speed train travels at 200 km/h. It leaves Station A at 12:24 and reaches Station B at 14:12. What distance does it travel?",
+    "questionUrdu": "ایک تیز رفتار ٹرین 200 کلومیٹر فی گھنٹہ سے سفر کرتی ہے۔ وہ اسٹیشن A سے 12:24 پر روانہ ہو کر اسٹیشن B پر 14:12 پر پہنچتی ہے۔ ٹرین کتنا فاصلہ طے کرتی ہے؟",
     "options": [
       "320 km",
       "360 km",
@@ -3208,6 +3309,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "A bus moves at a constant speed of 90 km/h for 2.5 hours. How far does it travel?",
+    "questionUrdu": "ایک بس 90 کلومیٹر فی گھنٹہ کی مستقل رفتار سے 2.5 گھنٹے چلتی ہے۔ وہ کتنا فاصلہ طے کرے گی؟",
     "options": [
       "180 km",
       "225 km",
@@ -3239,6 +3341,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "If 30 workers make 3,000 units in 20 days at 8 hours per day, how many days will 32 workers need to make 2,000 units at 10 hours per day, assuming equal productivity?",
+    "questionUrdu": "اگر 30 مزدور روزانہ 8 گھنٹے کام کرکے 20 دن میں 3,000 یونٹ بناتے ہیں تو یکساں پیداواری صلاحیت کے ساتھ 32 مزدور روزانہ 10 گھنٹے کام کرکے 2,000 یونٹ کتنے دن میں بنائیں گے؟",
     "options": [
       "8 days",
       "10 days",
@@ -3270,6 +3373,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Ten workers working 8 hours a day for 5 days produce 400 units. At the same rate, how many days will 20 workers working 10 hours a day need to produce 1,000 units?",
+    "questionUrdu": "دس مزدور روزانہ 8 گھنٹے کام کرکے 5 دن میں 400 یونٹ بناتے ہیں۔ اسی شرح سے 20 مزدور روزانہ 10 گھنٹے کام کرکے 1,000 یونٹ کتنے دن میں بنائیں گے؟",
     "options": [
       "4 days",
       "5 days",
@@ -3301,6 +3405,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A bond has a $1,000 face value, a 5% annual coupon, a price of $950, and 10 years to maturity. Which offered rate is closest to its yield to maturity?",
+    "questionUrdu": "ایک بانڈ کی اسمی قدر (face value) 1,000 ڈالر، سالانہ کوپن 5 فیصد، موجودہ قیمت 950 ڈالر اور میعاد ختم ہونے میں 10 سال ہیں۔ دی گئی شرحوں میں سے کون سی اس کی شرحِ منافع تا میعاد (yield to maturity) کے قریب ترین ہے؟",
     "options": [
       "4.53%",
       "5.53%",
@@ -3332,6 +3437,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "For an otherwise comparable bond trading below face value, how does yield generally move relative to price?",
+    "questionUrdu": "دیگر لحاظ سے یکساں بانڈ اگر اسمی قدر سے کم پر فروخت ہو رہا ہو تو قیمت کے مقابلے میں اس کی شرحِ منافع عموماً کس طرح بدلتی ہے؟",
     "options": [
       "Yield rises as price falls",
       "Yield falls as price falls",
@@ -3363,6 +3469,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A rectangle is 58.7 m long and 23.2 m wide. What is its perimeter, rounded to the nearest metre?",
+    "questionUrdu": "ایک مستطیل کی لمبائی 58.7 میٹر اور چوڑائی 23.2 میٹر ہے۔ قریب ترین میٹر تک اس کا محیط کیا ہے؟",
     "options": [
       "151 m",
       "161 m",
@@ -3394,6 +3501,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "What is the perimeter of a rectangle measuring 12.5 m by 7.5 m?",
+    "questionUrdu": "12.5 میٹر ضرب 7.5 میٹر کے مستطیل کا محیط کیا ہے؟",
     "options": [
       "20 m",
       "32.5 m",
@@ -3425,6 +3533,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "If y = 2x and z = 5y, then x + 3y + z equals:",
+    "questionUrdu": "اگر y = 2x اور z = 5y ہو تو x + 3y + z کس کے برابر ہوگا؟",
     "options": [
       "17x",
       "5x",
@@ -3456,6 +3565,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "If y = 3x and z = 2y, then x + 2y + z equals:",
+    "questionUrdu": "اگر y = 3x اور z = 2y ہو تو x + 2y + z کس کے برابر ہوگا؟",
     "options": [
       "13x",
       "10x",
@@ -3487,6 +3597,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Which of the following is a modal verb?",
+    "questionUrdu": "درج ذیل میں سے کون سا modal verb ہے؟",
     "options": [
       "Run",
       "Must",
@@ -3518,6 +3629,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is a modal verb used to express ability?",
+    "questionUrdu": "کون سا لفظ قابلیت ظاہر کرنے کے لیے استعمال ہونے والا modal verb ہے؟",
     "options": [
       "Able",
       "Ability",
@@ -3549,6 +3661,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the closest synonym of MELD.",
+    "questionUrdu": "MELD کا قریب ترین مترادف منتخب کریں۔",
     "options": [
       "Blend",
       "Separate",
@@ -3580,6 +3693,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the closest antonym of MELD.",
+    "questionUrdu": "MELD کا قریب ترین متضاد منتخب کریں۔",
     "options": [
       "Combine",
       "Integrate",
@@ -3611,6 +3725,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the analogy: Moccasin : Snake :: ___ : Shoe",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Moccasin : Snake :: ___ : Shoe",
     "options": [
       "Alligator",
       "Asp",
@@ -3642,6 +3757,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the analogy: Salmon : Fish :: Loafer : ___",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Salmon : Fish :: Loafer : ___",
     "options": [
       "Shoe",
       "Hat",
@@ -3673,6 +3789,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the best passive form of the imperative sentence: “Bring the chair into the room.”",
+    "questionUrdu": "امریہ جملے 'Bring the chair into the room.' کی بہترین مجہول صورت منتخب کریں۔",
     "options": [
       "The chair be brought into the room.",
       "Let the chair be brought into the room.",
@@ -3704,6 +3821,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the passive form of the imperative: “Close the window.”",
+    "questionUrdu": "امریہ جملے 'Close the window.' کی مجہول صورت منتخب کریں۔",
     "options": [
       "The window has close.",
       "The window closing.",
@@ -3735,6 +3853,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the best antonym of IRASCIBLE.",
+    "questionUrdu": "IRASCIBLE کا بہترین متضاد منتخب کریں۔",
     "options": [
       "Angry",
       "Irritable",
@@ -3766,6 +3885,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the closest synonym of IRASCIBLE.",
+    "questionUrdu": "IRASCIBLE کا قریب ترین مترادف منتخب کریں۔",
     "options": [
       "Serene",
       "Irritable",
@@ -3797,6 +3917,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the sentence: “A black plum is as sweet as a ___ one.”",
+    "questionUrdu": "جملہ مکمل کریں: 'A black plum is as sweet as a ___ one.'",
     "options": [
       "White",
       "Sugar",
@@ -3828,6 +3949,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the sentence: “I prefer the red shirt to the blue ___.”",
+    "questionUrdu": "جملہ مکمل کریں: 'I prefer the red shirt to the blue ___.'",
     "options": [
       "Some",
       "It",
@@ -3859,6 +3981,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the sentence: “They picked them up ___ the airport.”",
+    "questionUrdu": "جملہ مکمل کریں: 'They picked them up ___ the airport.'",
     "options": [
       "to",
       "of",
@@ -3890,6 +4013,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the sentence: “Meet me ___ the station entrance.”",
+    "questionUrdu": "جملہ مکمل کریں: 'Meet me ___ the station entrance.'",
     "options": [
       "on",
       "in",
@@ -3921,6 +4045,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the sentence: “There is no need for us to disturb them; we ___ disturb them.”",
+    "questionUrdu": "جملہ مکمل کریں: 'There is no need for us to disturb them; we ___ disturb them.'",
     "options": [
       "Should",
       "Must",
@@ -3952,6 +4077,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the sentence: “You ___ bring lunch; food will be provided.”",
+    "questionUrdu": "جملہ مکمل کریں: 'You ___ bring lunch; food will be provided.'",
     "options": [
       "needn't",
       "must",
@@ -3983,6 +4109,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the correct present-simple question.",
+    "questionUrdu": "درست present-simple سوال منتخب کریں۔",
     "options": [
       "Does Ahsan play football?",
       "Does Ahsan plays football?",
@@ -4014,6 +4141,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which sentence correctly asks about Sara's regular report-writing habit?",
+    "questionUrdu": "کون سا جملہ سارہ کی باقاعدگی سے رپورٹ لکھنے کی عادت کے بارے میں درست سوال کرتا ہے؟",
     "options": [
       "Does Sara writes reports?",
       "Is Sara write reports?",
@@ -4045,6 +4173,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Which Urdu tense is illustrated by “وہ آیا تھا”?",
+    "questionUrdu": "'وہ آیا تھا' سے اردو کا کون سا زمانہ ظاہر ہوتا ہے؟",
     "options": [
       "ماضی قریب",
       "ماضی بعید",
@@ -4076,6 +4205,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which Urdu tense is illustrated by “میں نے کھانا کھایا تھا”?",
+    "questionUrdu": "'میں نے کھانا کھایا تھا' سے اردو کا کون سا زمانہ ظاہر ہوتا ہے؟",
     "options": [
       "حال مطلق",
       "ماضی قریب",
@@ -4107,6 +4237,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Which Urdu punctuation mark is used for a short pause (مختصر وقفہ)?",
+    "questionUrdu": "مختصر وقفے کے لیے اردو کی کون سی علامتِ وقف استعمال ہوتی ہے؟",
     "options": [
       "؛",
       "،",
@@ -4138,6 +4269,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which Urdu punctuation mark normally ends a complete declarative sentence?",
+    "questionUrdu": "مکمل خبریہ جملے کے اختتام پر عموماً اردو کی کون سی علامتِ وقف لگتی ہے؟",
     "options": [
       "۔",
       "،",
@@ -4169,6 +4301,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Choose the closest Urdu synonym of “سکونت”.",
+    "questionUrdu": "'سکونت' کا قریب ترین اردو مترادف منتخب کریں۔",
     "options": [
       "سفر",
       "حرکت",
@@ -4200,6 +4333,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Choose the closest Urdu synonym of “اقامت”.",
+    "questionUrdu": "'اقامت' کا قریب ترین اردو مترادف منتخب کریں۔",
     "options": [
       "سکونت",
       "حرکت",
@@ -4231,6 +4365,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "In Urdu grammar, what is a noun derived from a مصدر but not used to derive further words called?",
+    "questionUrdu": "اردو قواعد میں مصدر سے بننے والے مگر مزید الفاظ بنانے کے لیے استعمال نہ ہونے والے اسم کو کیا کہتے ہیں؟",
     "options": [
       "اسم مشتق",
       "مصدر",
@@ -4262,6 +4397,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which Urdu grammatical term means a base noun, often ending in “نا”, from which verbs and other nouns may be formed?",
+    "questionUrdu": "اردو قواعد کی کون سی اصطلاح ایسے بنیادی اسم کے لیے ہے جو عموماً 'نا' پر ختم ہوتا ہے اور جس سے افعال اور دوسرے اسم بن سکتے ہیں؟",
     "options": [
       "ضمیر",
       "صفت",
@@ -4293,6 +4429,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What does the Urdu idiom “آپے سے باہر ہونا” mean?",
+    "questionUrdu": "اردو محاورے 'آپے سے باہر ہونا' کا کیا مطلب ہے؟",
     "options": [
       "سخت غصہ آنا",
       "مل جل کر رہنا",
@@ -4324,6 +4461,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the Urdu idiom “آسمان سر پر ٹوٹنا” mean?",
+    "questionUrdu": "اردو محاورے 'آسمان سر پر ٹوٹنا' کا کیا مطلب ہے؟",
     "options": [
       "خاموش رہنا",
       "بہت خوش ہونا",
@@ -4355,6 +4493,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What is the literal meaning of the Urdu word “مطلع”?",
+    "questionUrdu": "اردو لفظ 'مطلع' کے لغوی معنی کیا ہیں؟",
     "options": [
       "طلوع ہونے کی جگہ",
       "غروب ہونے کے بعد",
@@ -4386,6 +4525,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "In Urdu poetry, what is the opening couplet of a ghazal, in which both lines rhyme, called?",
+    "questionUrdu": "اردو شاعری میں غزل کے اس پہلے شعر کو کیا کہتے ہیں جس کے دونوں مصرعے ہم قافیہ ہوں؟",
     "options": [
       "مقطع",
       "مطلع",
@@ -4417,6 +4557,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Hazrat Hafsa (R.A.) was the daughter of:",
+    "questionUrdu": "حضرت حفصہ رضی اللہ عنہا کس کی بیٹی تھیں؟",
     "options": [
       "Hazrat Abu Bakr (R.A.)",
       "Hazrat Umar (R.A.)",
@@ -4447,6 +4588,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Who was the mother of Hazrat Hafsa (R.A.)?",
+    "questionUrdu": "حضرت حفصہ رضی اللہ عنہا کی والدہ کون تھیں؟",
     "options": [
       "Zaynab bint Maz'un",
       "Asma bint Abi Bakr",
@@ -4477,6 +4619,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "During the caliphate of Hazrat Abu Bakr (R.A.), Hazrat Zaid bin Thabit (R.A.) was given responsibility for:",
+    "questionUrdu": "حضرت ابوبکر رضی اللہ عنہ کے دورِ خلافت میں حضرت زید بن ثابت رضی اللہ عنہ کو کس کام کی ذمہ داری دی گئی؟",
     "options": [
       "Compilation of the Quran",
       "Compilation of Hadith",
@@ -4507,6 +4650,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Which battle prompted Hazrat Umar (R.A.) to urge the collection of the Quran during Hazrat Abu Bakr's caliphate?",
+    "questionUrdu": "کس جنگ کے بعد حضرت عمر رضی اللہ عنہ نے حضرت ابوبکر رضی اللہ عنہ کے دور میں قرآن جمع کرنے کی تجویز دی؟",
     "options": [
       "Battle of Badr",
       "Battle of Uhud",
@@ -4537,6 +4681,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Which fort did Hazrat Ali (R.A.) conquer in the Battle of Khaybar?",
+    "questionUrdu": "حضرت علی رضی اللہ عنہ نے جنگِ خیبر میں کون سا قلعہ فتح کیا؟",
     "options": [
       "Al-Qamus Fort",
       "Khaybar Fort",
@@ -4567,6 +4712,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "To whom did the Prophet Muhammad ﷺ give the banner before the decisive advance at Khaybar?",
+    "questionUrdu": "خیبر میں فیصلہ کن پیش قدمی سے پہلے نبی کریم ﷺ نے جھنڈا کس کو دیا؟",
     "options": [
       "Hazrat Ali (R.A.)",
       "Hazrat Khalid bin Walid (R.A.)",
@@ -4597,6 +4743,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "What are the isolated letters such as الم at the beginnings of certain Quranic surahs called?",
+    "questionUrdu": "قرآن کی بعض سورتوں کے آغاز میں آنے والے الم جیسے الگ الگ حروف کو کیا کہتے ہیں؟",
     "options": [
       "حروفِ مقطعات",
       "محکمات",
@@ -4627,6 +4774,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "How many surahs of the Quran begin with حروفِ مقطعات?",
+    "questionUrdu": "قرآن کی کتنی سورتیں حروفِ مقطعات سے شروع ہوتی ہیں؟",
     "options": [
       "14",
       "19",
@@ -4657,6 +4805,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "In which of the following fields is machine learning widely used?",
+    "questionUrdu": "درج ذیل شعبوں میں سے کس میں مشین لرننگ بڑے پیمانے پر استعمال ہوتی ہے؟",
     "options": [
       "Agriculture only",
       "Financial analytics",
@@ -4687,6 +4836,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which financial task is a well-established application of machine learning?",
+    "questionUrdu": "مالیات کا کون سا کام مشین لرننگ کا ایک معروف استعمال ہے؟",
     "options": [
       "Handwriting every ledger",
       "Assessing credit risk",
@@ -4717,6 +4867,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What does the zero-rating principle mean?",
+    "questionUrdu": "زیرو ریٹنگ کے اصول سے کیا مراد ہے؟",
     "options": [
       "The supply is fully exempt from tax",
       "The supply is taxable but charged at 0%",
@@ -4747,6 +4898,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which statement correctly distinguishes a zero-rated supply from an exempt supply?",
+    "questionUrdu": "کون سا بیان زیرو ریٹڈ سپلائی اور ٹیکس سے مستثنیٰ سپلائی کے فرق کو درست طور پر واضح کرتا ہے؟",
     "options": [
       "A zero-rated supply remains taxable at 0%",
       "Both are always outside the tax system",
@@ -4777,6 +4929,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Under Pakistan's Companies Act, what is meant by a company?",
+    "questionUrdu": "پاکستان کے کمپنیز ایکٹ کے تحت کمپنی سے کیا مراد ہے؟",
     "options": [
       "A group of friends doing business",
       "A sole-trader business",
@@ -4807,6 +4960,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Under the Companies Act, 2017, how many or more persons may ordinarily form a private company other than a single-member company?",
+    "questionUrdu": "کمپنیز ایکٹ 2017 کے تحت سنگل ممبر کمپنی کے علاوہ نجی کمپنی عام طور پر کم از کم کتنے افراد قائم کر سکتے ہیں؟",
     "options": [
       "One",
       "Two",
@@ -4837,6 +4991,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Under section 7 of the Punjab Sales Tax on Services Act, what is generally the value of a taxable service?",
+    "questionUrdu": "پنجاب سیلز ٹیکس آن سروسز ایکٹ کی دفعہ 7 کے تحت قابلِ ٹیکس خدمت کی عمومی قدر کیا ہوتی ہے؟",
     "options": [
       "Cost of production",
       "Market price only",
@@ -4867,6 +5022,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "If consideration for a taxable service is wholly or partly in kind, which value is generally used under section 7?",
+    "questionUrdu": "اگر قابلِ ٹیکس خدمت کا معاوضہ مکمل یا جزوی طور پر جنس کی صورت میں ہو تو دفعہ 7 کے تحت عموماً کون سی قدر استعمال ہوتی ہے؟",
     "options": [
       "Historical cost of the provider",
       "Zero value in every case",
@@ -4897,6 +5053,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "On the paper date, 7 June 2026, what was the maximum input-tax adjustment allowed under section 16C of the Punjab Sales Tax on Services Act?",
+    "questionUrdu": "پرچے کی تاریخ 7 جون 2026 کو پنجاب سیلز ٹیکس آن سروسز ایکٹ کی دفعہ 16C کے تحت ان پٹ ٹیکس کی زیادہ سے زیادہ کتنی ایڈجسٹمنٹ کی اجازت تھی؟",
     "options": [
       "50% of output tax",
       "75% of output tax",
@@ -4928,6 +5085,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "From 1 July 2026, what is the maximum input-tax adjustment under amended section 16C of the Punjab Sales Tax on Services Act?",
+    "questionUrdu": "ترمیم شدہ دفعہ 16C کے تحت یکم جولائی 2026 سے ان پٹ ٹیکس کی زیادہ سے زیادہ کتنی ایڈجسٹمنٹ ہے؟",
     "options": [
       "70% of output tax",
       "90% of output tax",
@@ -4958,6 +5116,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "In a simplified unadjusted calculation, a bank has assets with a five-year duration and liabilities with a two-year duration. What is the duration gap?",
+    "questionUrdu": "ایک سادہ غیر ایڈجسٹ شدہ حساب میں بینک کے اثاثوں کی مدت پانچ سال اور واجبات کی مدت دو سال ہے۔ مدت کا فرق کیا ہے؟",
     "options": [
       "1 year",
       "2 years",
@@ -4988,6 +5147,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "A bank has an asset duration of 5 years, a liability duration of 3 years, and liabilities equal to 90% of assets. What is its leverage-adjusted duration gap?",
+    "questionUrdu": "ایک بینک کے اثاثوں کی مدت 5 سال، واجبات کی مدت 3 سال اور واجبات اثاثوں کے 90 فیصد کے برابر ہیں۔ اس کا لیوریج سے ایڈجسٹ شدہ مدت کا فرق کیا ہے؟",
     "options": [
       "1.7 years",
       "2.0 years",
@@ -5018,6 +5178,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "If a U.S. firm has €3 million payable, which option should it buy to hedge a rise in the euro?",
+    "questionUrdu": "اگر کسی امریکی کمپنی کو 30 لاکھ یورو ادا کرنے ہوں تو یورو کی قدر بڑھنے کے خطرے سے بچنے کے لیے اسے کون سا آپشن خریدنا چاہیے؟",
     "options": [
       "Euro put option",
       "Euro call option",
@@ -5049,6 +5210,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "A Pakistani exporter expects to receive U.S. dollars in three months and fears that the dollar will fall. Which option on dollars provides a suitable hedge?",
+    "questionUrdu": "ایک پاکستانی برآمد کنندہ کو تین ماہ بعد امریکی ڈالر ملنے ہیں اور اسے ڈالر کی قدر گرنے کا خدشہ ہے۔ ڈالر پر کون سا آپشن مناسب تحفظ فراہم کرتا ہے؟",
     "options": [
       "Buy a dollar put",
       "Buy a dollar call",
@@ -5080,6 +5242,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "According to the G20/OECD Principles of Corporate Governance, what should institutional investors disclose?",
+    "questionUrdu": "G20/OECD کے اصولِ کارپوریٹ گورننس کے مطابق ادارہ جاتی سرمایہ کاروں کو کیا ظاہر کرنا چاہیے؟",
     "options": [
       "Personal income details",
       "Corporate-governance and voting policies, including management of material conflicts of interest",
@@ -5111,6 +5274,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which disclosure is identified as good practice for institutional investors that exercise shareholder voting rights?",
+    "questionUrdu": "حصص داروں کے ووٹنگ حقوق استعمال کرنے والے ادارہ جاتی سرمایہ کاروں کے لیے کس انکشاف کو اچھی روایت قرار دیا گیا ہے؟",
     "options": [
       "Competitors' tax returns",
       "Employees' private bank statements",
@@ -5142,6 +5306,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What happens to unpaid dividends on non-cumulative preferred stock?",
+    "questionUrdu": "غیر مجموعی ترجیحی حصص کے ادا نہ کیے گئے منافع کا کیا ہوتا ہے؟",
     "options": [
       "They are carried forward",
       "They do not accumulate",
@@ -5172,6 +5337,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which feature distinguishes cumulative preferred dividends from non-cumulative preferred dividends?",
+    "questionUrdu": "مجموعی ترجیحی منافع کو غیر مجموعی ترجیحی منافع سے کون سی خصوصیت ممتاز کرتی ہے؟",
     "options": [
       "Missed cumulative dividends accrue as arrears",
       "Cumulative shares never receive dividends",
@@ -5202,6 +5368,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "In a variable-costing segment report, how is segment margin calculated?",
+    "questionUrdu": "متغیر لاگت والی شعبہ جاتی رپورٹ میں شعبہ جاتی مارجن کیسے نکالا جاتا ہے؟",
     "options": [
       "Sales minus all variable and fixed expenses",
       "Contribution margin minus traceable fixed costs",
@@ -5233,6 +5400,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "A segment has a contribution margin of Rs. 800,000 and traceable fixed costs of Rs. 250,000. What is its segment margin?",
+    "questionUrdu": "ایک شعبے کا کنٹری بیوشن مارجن 800,000 روپے اور قابلِ شناخت مستقل لاگت 250,000 روپے ہے۔ اس کا شعبہ جاتی مارجن کیا ہے؟",
     "options": [
       "Rs. 250,000",
       "Rs. 1,050,000",
@@ -5263,6 +5431,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is capital expenditure?",
+    "questionUrdu": "سرمایہ جاتی خرچ کیا ہے؟",
     "options": [
       "A routine day-to-day expense",
       "Expenditure to acquire or improve a long-term asset",
@@ -5293,6 +5462,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which of the following is normally treated as a current operating expense rather than capital expenditure?",
+    "questionUrdu": "درج ذیل میں سے کس کو عموماً سرمایہ جاتی خرچ کے بجائے موجودہ عملی خرچ سمجھا جاتا ہے؟",
     "options": [
       "Routine repair that does not extend an asset's useful life",
       "Installing a new production line",
@@ -5324,6 +5494,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is the principal purpose of hedging?",
+    "questionUrdu": "ہیجنگ کا بنیادی مقصد کیا ہے؟",
     "options": [
       "To guarantee profit without risk",
       "To eliminate every possible loss",
@@ -5354,6 +5525,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which statement best describes an options-based hedge?",
+    "questionUrdu": "کون سا بیان آپشنز پر مبنی ہیج کی بہترین وضاحت کرتا ہے؟",
     "options": [
       "It converts every exposure into tax-free income",
       "It guarantees unlimited profit",
@@ -5384,6 +5556,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is net working capital?",
+    "questionUrdu": "خالص ورکنگ کیپیٹل کیا ہے؟",
     "options": [
       "Fixed assets minus current liabilities",
       "Current assets minus current liabilities",
@@ -5414,6 +5587,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "A company has current assets of Rs. 1.20 million and current liabilities of Rs. 0.75 million. What is its net working capital?",
+    "questionUrdu": "ایک کمپنی کے موجودہ اثاثے 1.20 ملین روپے اور موجودہ واجبات 0.75 ملین روپے ہیں۔ اس کا خالص ورکنگ کیپیٹل کیا ہے؟",
     "options": [
       "Rs. 0.45 million",
       "Rs. 0.75 million",
@@ -5444,6 +5618,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Tangible resources expected to provide benefits for more than one period are commonly called:",
+    "questionUrdu": "ایک سے زیادہ مدت تک فائدہ دینے کی توقع والے مادی وسائل کو عام طور پر کیا کہتے ہیں؟",
     "options": [
       "Current assets",
       "Fixed assets",
@@ -5474,6 +5649,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which item is normally classified as property, plant and equipment rather than a current asset?",
+    "questionUrdu": "کون سی چیز عام طور پر موجودہ اثاثے کے بجائے جائیداد، پلانٹ اور آلات میں شمار ہوتی ہے؟",
     "options": [
       "Cash in bank",
       "Production machinery used for five years",
@@ -5504,6 +5680,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is the basic accounting equation?",
+    "questionUrdu": "بنیادی حسابی مساوات کیا ہے؟",
     "options": [
       "Assets = Liabilities + Equity",
       "Assets = Equity − Liabilities",
@@ -5534,6 +5711,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "If total assets are Rs. 1.5 million and total liabilities are Rs. 0.9 million, what is owner's equity?",
+    "questionUrdu": "اگر کل اثاثے 1.5 ملین روپے اور کل واجبات 0.9 ملین روپے ہوں تو مالک کی ایکویٹی کتنی ہوگی؟",
     "options": [
       "Rs. 0.4 million",
       "Rs. 2.4 million",
@@ -5564,6 +5742,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is contribution margin?",
+    "questionUrdu": "کنٹری بیوشن مارجن کیا ہے؟",
     "options": [
       "Sales minus fixed cost",
       "Sales minus variable cost",
@@ -5594,6 +5773,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "A product sells for Rs. 100 per unit and has variable cost of Rs. 60 per unit. What is its unit contribution margin?",
+    "questionUrdu": "ایک مصنوع کی فی یونٹ فروخت قیمت 100 روپے اور متغیر لاگت 60 روپے ہے۔ اس کا فی یونٹ کنٹری بیوشن مارجن کیا ہے؟",
     "options": [
       "Rs. 40",
       "Rs. 60",
@@ -5624,6 +5804,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is a contingent liability?",
+    "questionUrdu": "ممکنہ ذمہ داری کیا ہے؟",
     "options": [
       "A liability that is always recorded in the balance sheet",
       "An obligation that may or may not materialize",
@@ -5654,6 +5835,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Under IAS 37, how is a contingent liability normally treated when the possibility of an outflow is not remote?",
+    "questionUrdu": "IAS 37 کے تحت اگر وسائل کے اخراج کا امکان بعید نہ ہو تو ممکنہ ذمہ داری کے ساتھ عموماً کیا سلوک کیا جاتا ہے؟",
     "options": [
       "Disclosed in the notes but not recognized",
       "Recognized as a fixed asset",
@@ -5684,6 +5866,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is treasury stock?",
+    "questionUrdu": "ٹریژری اسٹاک کیا ہے؟",
     "options": [
       "Shares issued to the public and permanently outstanding",
       "Shares issued only to employees as a bonus",
@@ -5714,6 +5897,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which statement about treasury shares is correct?",
+    "questionUrdu": "ٹریژری حصص کے بارے میں کون سا بیان درست ہے؟",
     "options": [
       "They are authorized but never issued",
       "They remain issued but are not outstanding while held by the company",
@@ -5744,6 +5928,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is the time value of money (TVM)?",
+    "questionUrdu": "رقم کی زمانی قدر کیا ہے؟",
     "options": [
       "Money today is worth more than the same amount in the future",
       "Money loses value over time due to inflation only",
@@ -5774,6 +5959,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "What is the main financial reason Rs. 10,000 received today is preferable to Rs. 10,000 received one year later?",
+    "questionUrdu": "آج ملنے والے 10,000 روپے ایک سال بعد ملنے والے 10,000 روپے سے مالی طور پر بہتر کیوں ہیں؟",
     "options": [
       "All prices must fall over time",
       "Future money is legally invalid",
@@ -5804,6 +5990,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Which of the following is a source of inherent risk?",
+    "questionUrdu": "درج ذیل میں سے کون سا موروثی یا فطری خطرے (inherent risk) کا ذریعہ ہے؟",
     "options": [
       "A strong internal audit system",
       "Human error",
@@ -5834,6 +6021,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "In audit risk, what is control risk?",
+    "questionUrdu": "آڈٹ رسک میں کنٹرول رسک کیا ہوتا ہے؟",
     "options": [
       "The risk that the auditor charges a high fee",
       "The risk that internal control will not prevent or detect and correct a material misstatement",
@@ -5864,6 +6052,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is financial-statement manipulation commonly called?",
+    "questionUrdu": "مالی گوشواروں میں ردوبدل کو عام طور پر کیا کہا جاتا ہے؟",
     "options": [
       "Financial analysis",
       "Financial reporting",
@@ -5894,6 +6083,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which action is an example of earnings manipulation?",
+    "questionUrdu": "کون سا عمل آمدنی میں ردوبدل کی مثال ہے؟",
     "options": [
       "Disclosing an accounting policy",
       "Reconciling the bank statement",
@@ -5924,6 +6114,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is the cost of capital?",
+    "questionUrdu": "سرمائے کی لاگت کیا ہے؟",
     "options": [
       "Total profit earned by a business",
       "Required rate of return on investments",
@@ -5954,6 +6145,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "A project is expected to return 11%, while the firm's appropriate cost of capital is 13%. Based only on this comparison, what should the firm do?",
+    "questionUrdu": "ایک منصوبے سے 11 فیصد منافع متوقع ہے جبکہ کمپنی کے لیے مناسب سرمائے کی لاگت 13 فیصد ہے۔ صرف اس تقابل کی بنیاد پر کمپنی کو کیا کرنا چاہیے؟",
     "options": [
       "Accept because 11% is positive",
       "Accept because cost of capital is irrelevant",
@@ -5984,6 +6176,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is appreciation of a currency?",
+    "questionUrdu": "کسی کرنسی کی قدر میں اضافہ کیا ہوتا ہے؟",
     "options": [
       "A decrease in the value of the domestic currency",
       "An increase in the value of the domestic currency against a foreign currency",
@@ -6014,6 +6207,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "If the exchange rate changes from PKR 300 per US dollar to PKR 280 per US dollar, what has happened to the Pakistani rupee against the dollar?",
+    "questionUrdu": "اگر شرحِ مبادلہ ایک امریکی ڈالر کے بدلے 300 پاکستانی روپے سے بدل کر 280 روپے ہو جائے تو ڈالر کے مقابلے میں پاکستانی روپے کے ساتھ کیا ہوا؟",
     "options": [
       "Its value is unchanged",
       "It has depreciated",
@@ -6044,6 +6238,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What does the Security Market Line (SML) represent?",
+    "questionUrdu": "سکیورٹی مارکیٹ لائن کیا ظاہر کرتی ہے؟",
     "options": [
       "The relationship between risk and return for all possible portfolios",
       "The relationship between systematic risk (beta) and expected return",
@@ -6074,6 +6269,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "In the CAPM, which measure appears on the horizontal axis of the Security Market Line?",
+    "questionUrdu": "CAPM میں سکیورٹی مارکیٹ لائن کے افقی محور پر کون سی پیمائش ہوتی ہے؟",
     "options": [
       "Standard deviation of total return",
       "Beta",
@@ -6104,6 +6300,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is the risk-return trade-off?",
+    "questionUrdu": "خطرے اور منافع کے درمیان تعلق سے کیا مراد ہے؟",
     "options": [
       "Higher risk leads to lower return",
       "Risk and return are unrelated",
@@ -6134,6 +6331,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which type of risk can a well-diversified investor largely reduce?",
+    "questionUrdu": "ایک اچھی طرح متنوع سرمایہ کاری رکھنے والا سرمایہ کار کس قسم کے خطرے کو بڑی حد تک کم کر سکتا ہے؟",
     "options": [
       "Market-wide recession risk",
       "Systematic market risk",
@@ -6164,6 +6362,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Which authority collects sales tax on services in Punjab?",
+    "questionUrdu": "پنجاب میں خدمات پر سیلز ٹیکس کون سا ادارہ وصول کرتا ہے؟",
     "options": [
       "Federal Board of Revenue (FBR)",
       "State Bank of Pakistan (SBP)",
@@ -6194,6 +6393,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which tax is administered by the Punjab Revenue Authority?",
+    "questionUrdu": "پنجاب ریونیو اتھارٹی کون سا ٹیکس چلاتی ہے؟",
     "options": [
       "Punjab sales tax on services",
       "Federal customs duty",
@@ -6224,6 +6424,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Under the Punjab Sales Tax on Services Act, what happens when the tax rate changes during a tax period?",
+    "questionUrdu": "پنجاب سیلز ٹیکس آن سروسز ایکٹ کے تحت ٹیکس مدت کے دوران شرح بدل جائے تو کیا ہوتا ہے؟",
     "options": [
       "No action is required",
       "A separate return is filed for each affected portion of the tax period",
@@ -6254,6 +6455,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "If the Punjab sales-tax rate changes, which rate applies to a taxable service?",
+    "questionUrdu": "اگر پنجاب سیلز ٹیکس کی شرح بدل جائے تو قابلِ ٹیکس خدمت پر کون سی شرح لاگو ہوگی؟",
     "options": [
       "No rate applies during the transition",
       "The oldest rate ever notified",
@@ -6284,6 +6486,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Which concept divides the continuous life of a business into equal time periods to measure performance?",
+    "questionUrdu": "کاروبار کی مسلسل زندگی کو کارکردگی ناپنے کے لیے برابر زمانی ادوار میں تقسیم کرنے والا تصور کون سا ہے؟",
     "options": [
       "Going-concern concept",
       "Accounting-period concept",
@@ -6314,6 +6517,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which is a valid reporting period under the accounting-period assumption?",
+    "questionUrdu": "حسابی مدت کے مفروضے کے تحت کون سی مدت جائز رپورٹنگ مدت ہو سکتی ہے؟",
     "options": [
       "An unlimited period with no closing date",
       "Only the full life of the business",
@@ -6344,6 +6548,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is synergy?",
+    "questionUrdu": "سنرجی (Synergy) کیا ہے؟",
     "options": [
       "A decrease in company value after a merger",
       "The combined effect being greater than the sum of the individual effects",
@@ -6374,6 +6579,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which situation is an example of cost synergy after a merger?",
+    "questionUrdu": "انضمام کے بعد کون سی صورت لاگت میں ہم آہنگی سے حاصل فائدے کی مثال ہے؟",
     "options": [
       "Reducing revenue without reducing cost",
       "Paying twice for the same warehouse",
@@ -6404,6 +6610,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Which manager primarily makes financing and investment decisions rather than production decisions?",
+    "questionUrdu": "پیداواری فیصلوں کے بجائے مالی اعانت اور سرمایہ کاری کے فیصلے بنیادی طور پر کون سا منیجر کرتا ہے؟",
     "options": [
       "Production manager",
       "Operations manager",
@@ -6434,6 +6641,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which decision is a core responsibility of a financial manager?",
+    "questionUrdu": "کون سا فیصلہ مالی منیجر کی بنیادی ذمہ داری ہے؟",
     "options": [
       "Inspecting every finished unit",
       "Scheduling factory workers for tomorrow's shift",
@@ -6464,6 +6672,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Under the general rule in Punjab, who is liable to pay sales tax on a locally provided taxable service?",
+    "questionUrdu": "پنجاب میں عمومی اصول کے تحت مقامی طور پر فراہم کی گئی قابلِ ٹیکس خدمت پر سیلز ٹیکس ادا کرنے کا ذمہ دار کون ہے؟",
     "options": [
       "The buyer of the service",
       "The registered service provider",
@@ -6494,6 +6703,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Who is liable for Punjab sales tax when a listed service is provided by a non-resident person to a resident person under section 3(2)?",
+    "questionUrdu": "دفعہ 3(2) کے تحت اگر فہرست شدہ خدمت کوئی غیر مقیم شخص کسی مقیم شخص کو فراہم کرے تو پنجاب سیلز ٹیکس کا ذمہ دار کون ہے؟",
     "options": [
       "The State Bank of Pakistan",
       "The foreign provider in every case",
@@ -6524,6 +6734,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Which activity is not considered an economic activity under the Punjab Sales Tax on Services Act?",
+    "questionUrdu": "پنجاب سیلز ٹیکس آن سروسز ایکٹ کے تحت کون سی سرگرمی معاشی سرگرمی نہیں سمجھی جاتی؟",
     "options": [
       "Farming",
       "Trading",
@@ -6554,6 +6765,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Can a one-time transaction be an economic activity under the Punjab Sales Tax on Services Act?",
+    "questionUrdu": "کیا ایک مرتبہ کیا جانے والا لین دین پنجاب سیلز ٹیکس آن سروسز ایکٹ کے تحت معاشی سرگرمی ہو سکتا ہے؟",
     "options": [
       "Yes, if it is in the nature of trade or business",
       "No, because every activity must continue for five years",
@@ -6584,6 +6796,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Small and medium enterprises (SMEs) contribute to:",
+    "questionUrdu": "چھوٹے اور درمیانے درجے کے کاروبار کن چیزوں میں حصہ ڈالتے ہیں؟",
     "options": [
       "Only large-scale exports",
       "Employment and economic growth",
@@ -6614,6 +6827,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Why are SMEs especially important in many developing economies?",
+    "questionUrdu": "بہت سی ترقی پذیر معیشتوں میں چھوٹے اور درمیانے درجے کے کاروبار خاص طور پر اہم کیوں ہیں؟",
     "options": [
       "They eliminate the need for all large firms",
       "They provide a large share of employment",
@@ -6644,6 +6858,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Which expense may be tax-deductible when it is incurred for business purposes?",
+    "questionUrdu": "کاروباری مقصد کے لیے کیے جانے پر کون سا خرچ ٹیکس سے منہا ہو سکتا ہے؟",
     "options": [
       "Personal expenses",
       "Interest expense",
@@ -6674,6 +6889,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which payment is generally not deductible in computing business income?",
+    "questionUrdu": "کاروباری آمدنی کا حساب کرتے وقت کون سی ادائیگی عموماً قابلِ کٹوتی نہیں ہوتی؟",
     "options": [
       "Office rent incurred for the business",
       "Interest on debt used wholly in the business, subject to law",
@@ -6704,6 +6920,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Tax on salary is categorized under:",
+    "questionUrdu": "تنخواہ پر ٹیکس کس زمرے میں آتا ہے؟",
     "options": [
       "Sales tax",
       "Excise duty",
@@ -6734,6 +6951,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Under Pakistan's Income Tax Ordinance, when is salary generally Pakistan-source income?",
+    "questionUrdu": "پاکستان کے انکم ٹیکس آرڈیننس کے تحت تنخواہ عموماً کب پاکستان سے حاصل شدہ آمدنی سمجھی جاتی ہے؟",
     "options": [
       "Whenever the employee buys imported goods",
       "Only when paid in cash",
@@ -6764,6 +6982,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Net assets equal:",
+    "questionUrdu": "خالص اثاثے کس کے برابر ہوتے ہیں؟",
     "options": [
       "Total liabilities minus total assets",
       "Total assets minus total liabilities",
@@ -6794,6 +7013,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "A business has total assets of Rs. 900,000 and total liabilities of Rs. 340,000. What are its net assets?",
+    "questionUrdu": "ایک کاروبار کے کل اثاثے 900,000 روپے اور کل واجبات 340,000 روپے ہیں۔ اس کے خالص اثاثے کتنے ہیں؟",
     "options": [
       "Rs. 1,240,000",
       "Rs. 560,000",
@@ -6824,6 +7044,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Prime cost consists of:",
+    "questionUrdu": "بنیادی لاگت کن اجزا پر مشتمل ہوتی ہے؟",
     "options": [
       "Direct materials + direct labour + direct expenses",
       "Indirect materials + indirect labour",
@@ -6854,6 +7075,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "A product has direct material cost of Rs. 40, direct labour cost of Rs. 25, and direct expenses of Rs. 5 per unit. What is its prime cost per unit?",
+    "questionUrdu": "ایک مصنوع کی فی یونٹ براہِ راست مواد لاگت 40 روپے، براہِ راست محنت 25 روپے اور براہِ راست اخراجات 5 روپے ہیں۔ اس کی فی یونٹ بنیادی لاگت کیا ہے؟",
     "options": [
       "Rs. 70",
       "Rs. 65",
@@ -6884,6 +7106,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "In a common-size income statement, each line item is normally expressed as a percentage of:",
+    "questionUrdu": "کامن سائز آمدنی کے گوشوارے میں ہر مد کو عموماً کس کے فیصد کے طور پر ظاہر کیا جاتا ہے؟",
     "options": [
       "Net sales",
       "Total liabilities",
@@ -6914,6 +7137,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "In vertical analysis of a balance sheet, asset accounts are normally expressed as a percentage of:",
+    "questionUrdu": "بیلنس شیٹ کے عمودی تجزیے میں اثاثوں کے کھاتوں کو عموماً کس کے فیصد کے طور پر ظاہر کیا جاتا ہے؟",
     "options": [
       "Closing cash only",
       "Net sales",
@@ -6944,6 +7168,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What does net profit margin indicate?",
+    "questionUrdu": "خالص منافع کا مارجن کیا ظاہر کرتا ہے؟",
     "options": [
       "Total sales",
       "Profitability",
@@ -6974,6 +7199,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "A company reports net income of Rs. 20,000 and net sales of Rs. 200,000. What is its net profit margin?",
+    "questionUrdu": "ایک کمپنی 20,000 روپے خالص آمدنی اور 200,000 روپے خالص فروخت ظاہر کرتی ہے۔ اس کا خالص منافع مارجن کتنا ہے؟",
     "options": [
       "10%",
       "5%",
@@ -7004,6 +7230,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is short-paid tax?",
+    "questionUrdu": "کم ادا شدہ ٹیکس کیا ہے؟",
     "options": [
       "Tax paid in excess to the government",
       "Tax paid more than the liability",
@@ -7034,6 +7261,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "A registered person has actual tax liability of Rs. 150,000 but pays Rs. 125,000 because of a miscalculation. How much tax is short-paid?",
+    "questionUrdu": "ایک رجسٹرڈ شخص کی اصل ٹیکس ذمہ داری 150,000 روپے ہے مگر غلط حساب کی وجہ سے وہ 125,000 روپے ادا کرتا ہے۔ کتنا ٹیکس کم ادا ہوا؟",
     "options": [
       "Rs. 25,000",
       "Rs. 125,000",
@@ -7064,6 +7292,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What does a VaR of Rs. 5 million at 99% confidence mean for the stated holding period?",
+    "questionUrdu": "مقررہ مدت کے لیے 99 فیصد اعتماد پر 50 لاکھ روپے VaR کا کیا مطلب ہے؟",
     "options": [
       "The loss will always be Rs. 5 million",
       "The profit will be Rs. 5 million",
@@ -7094,6 +7323,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Under a correctly specified model, a one-day VaR of Rs. 2 million at 99% confidence leaves approximately what probability that the one-day loss will exceed Rs. 2 million?",
+    "questionUrdu": "درست طور پر متعین ماڈل میں 99 فیصد اعتماد پر ایک دن کا 20 لاکھ روپے VaR تقریباً کتنا امکان چھوڑتا ہے کہ ایک دن کا نقصان 20 لاکھ روپے سے بڑھ جائے؟",
     "options": [
       "50%",
       "1%",
@@ -7124,6 +7354,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "A company that does not want to dilute ownership may issue:",
+    "questionUrdu": "جو کمپنی ملکیت میں حصص کی کمی نہیں چاہتی وہ کیا جاری کر سکتی ہے؟",
     "options": [
       "Equity shares",
       "Preference shares",
@@ -7154,6 +7385,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "What is a key trade-off when a company uses debt instead of issuing new ordinary shares to avoid ownership dilution?",
+    "questionUrdu": "ملکیت میں حصص کی کمی سے بچنے کے لیے نئے عام حصص کے بجائے قرض استعمال کرنے کا بنیادی سمجھوتا کیا ہے؟",
     "options": [
       "It eliminates all financial risk",
       "It assumes fixed interest and repayment obligations",
@@ -7184,6 +7416,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is capital budgeting?",
+    "questionUrdu": "سرمایہ جاتی بجٹ سازی کیا ہے؟",
     "options": [
       "Day-to-day expense management",
       "Planning and evaluation of long-term investment projects",
@@ -7214,6 +7447,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which decision is a capital-budgeting decision?",
+    "questionUrdu": "کون سا فیصلہ سرمایہ جاتی بجٹ سازی کا فیصلہ ہے؟",
     "options": [
       "Whether to purchase a new production plant",
       "How much petty cash to keep today",
@@ -7244,6 +7478,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "Which business characteristic is cash-flow information especially useful for assessing?",
+    "questionUrdu": "نقد بہاؤ کی معلومات کاروبار کی کس خصوصیت کا اندازہ لگانے میں خاص طور پر مفید ہیں؟",
     "options": [
       "Profitability alone",
       "Liquidity",
@@ -7274,6 +7509,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Which three classifications appear in a statement of cash flows?",
+    "questionUrdu": "نقد بہاؤ کے گوشوارے میں کون سی تین درجہ بندیاں شامل ہوتی ہیں؟",
     "options": [
       "Revenue, expense, and drawings",
       "Assets, liabilities, and equity",
@@ -7304,6 +7540,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "What is the payback period?",
+    "questionUrdu": "واپسی کی مدت کیا ہے؟",
     "options": [
       "The time required to recover the initial investment cost from cash inflows",
       "The time required to earn profit after tax",
@@ -7334,6 +7571,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "A project costs Rs. 100,000 and generates equal annual cash inflows of Rs. 25,000. What is its simple payback period?",
+    "questionUrdu": "ایک منصوبے کی لاگت 100,000 روپے ہے اور اس سے ہر سال 25,000 روپے کے برابر نقد بہاؤ آتا ہے۔ اس کی سادہ واپسی مدت کتنی ہے؟",
     "options": [
       "2 years",
       "4 years",
@@ -7364,6 +7602,7 @@
     "kind": "source",
     "categoryId": "job-related-finance-taxation",
     "question": "If an advance payment was initially recorded entirely as an expense, which adjusting entry recognizes the unexpired portion as a prepaid expense?",
+    "questionUrdu": "اگر پیشگی ادائیگی کو ابتدا میں مکمل طور پر خرچ درج کیا گیا ہو تو غیر استعمال شدہ حصے کو پیشگی ادا شدہ خرچ تسلیم کرنے کے لیے کون سی ایڈجسٹنگ انٹری ہوگی؟",
     "options": [
       "Debit Expense Account and credit Cash Account",
       "Debit Prepaid Expense Account and credit Expense Account",
@@ -7394,6 +7633,7 @@
     "kind": "similar",
     "categoryId": "job-related-finance-taxation",
     "question": "Under the asset-first method, what adjusting entry records the portion of prepaid insurance that has expired?",
+    "questionUrdu": "اثاثہ پہلے درج کرنے کے طریقے کے تحت پیشگی بیمہ کے استعمال شدہ حصے کو ریکارڈ کرنے کے لیے کون سی ایڈجسٹنگ انٹری ہوگی؟",
     "options": [
       "Debit Prepaid Insurance and credit Cash",
       "Debit Prepaid Insurance and credit Insurance Expense",
@@ -7424,6 +7664,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "According to verified reporting after the December 2025 Bondi Beach attack, Naveed Akram was a citizen of which country?",
+    "questionUrdu": "دسمبر 2025 کے بونڈائی بیچ حملے کے بعد کی تصدیق شدہ رپورٹنگ کے مطابق نوید اکرم کس ملک کا شہری تھا؟",
     "options": [
       "Pakistan",
       "India",
@@ -7455,6 +7696,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "On which date did the Bondi Beach shootings connected with Operation Arques occur?",
+    "questionUrdu": "آپریشن آرکس سے منسلک بونڈائی بیچ فائرنگ کس تاریخ کو ہوئی؟",
     "options": [
       "14 December 2025",
       "17 December 2025",
@@ -7486,6 +7728,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "Which of the following countries belongs to both the Scandinavian and Nordic regions?",
+    "questionUrdu": "درج ذیل ممالک میں سے کون سا اسکینڈے نیوین اور نارڈک دونوں خطوں میں شامل ہے؟",
     "options": [
       "Finland",
       "Uruguay",
@@ -7517,6 +7760,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "How many sovereign countries form the core Nordic group?",
+    "questionUrdu": "بنیادی نارڈک گروپ کتنے خود مختار ممالک پر مشتمل ہے؟",
     "options": [
       "Three",
       "Four",
@@ -7548,6 +7792,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "In which country was the 1955 Bandung Conference held?",
+    "questionUrdu": "1955 کی بانڈونگ کانفرنس کس ملک میں منعقد ہوئی؟",
     "options": [
       "Pakistan",
       "India",
@@ -7579,6 +7824,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "Which city hosted the Asian-African Conference in April 1955?",
+    "questionUrdu": "اپریل 1955 کی ایشیائی افریقی کانفرنس کی میزبانی کس شہر نے کی؟",
     "options": [
       "Jakarta",
       "Bandung",
@@ -7610,6 +7856,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Which listed Pakistani fertilizer group states that it is Pakistan's sole producer of ammonium nitrate crystal?",
+    "questionUrdu": "دیے گئے پاکستانی کھاد گروپوں میں سے کون سا خود کو پاکستان میں امونیم نائٹریٹ کرسٹل کا واحد پیدا کنندہ قرار دیتا ہے؟",
     "options": [
       "Engro",
       "Fatima Fertilizer",
@@ -7641,6 +7888,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "What nitrogen percentage is stated for Sarsabz Calcium Ammonium Nitrate (CAN)?",
+    "questionUrdu": "سرسبز کیلشیم امونیم نائٹریٹ کھاد میں نائٹروجن کی کتنی شرح بیان کی گئی ہے؟",
     "options": [
       "22%",
       "46%",
@@ -7672,6 +7920,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Islam was declared the state religion of Pakistan in which Constitution?",
+    "questionUrdu": "پاکستان کے کس آئین میں اسلام کو ریاستی مذہب قرار دیا گیا؟",
     "options": [
       "Constitution of 1956",
       "Constitution of 1973",
@@ -7703,6 +7952,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Which article of Pakistan's 1973 Constitution declares Islam the state religion?",
+    "questionUrdu": "پاکستان کے 1973 کے آئین کا کون سا آرٹیکل اسلام کو ریاستی مذہب قرار دیتا ہے؟",
     "options": [
       "Article 2",
       "Article 1",
@@ -7734,6 +7984,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "What official name did Pakistan adopt under the 1956 Constitution?",
+    "questionUrdu": "1956 کے آئین کے تحت پاکستان نے کون سا سرکاری نام اختیار کیا؟",
     "options": [
       "Republic of Pakistan",
       "Islamic Republic of Pakistan",
@@ -7765,6 +8016,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "On which date did Pakistan's 1956 Constitution come into force?",
+    "questionUrdu": "پاکستان کا 1956 کا آئین کس تاریخ کو نافذ ہوا؟",
     "options": [
       "14 August 1947",
       "8 June 1962",
@@ -7796,6 +8048,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In which year were Pakistan's non-party general elections held?",
+    "questionUrdu": "پاکستان کے غیر جماعتی عام انتخابات کس سال ہوئے؟",
     "options": [
       "1980",
       "1983",
@@ -7827,6 +8080,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "On what date was polling held for Pakistan's 1985 National Assembly election?",
+    "questionUrdu": "پاکستان کی قومی اسمبلی کے 1985 کے انتخابات کے لیے ووٹنگ کس تاریخ کو ہوئی؟",
     "options": [
       "24 March 1985",
       "28 February 1985",
@@ -7858,6 +8112,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In which year were Pakistan's first direct general elections held?",
+    "questionUrdu": "پاکستان کے پہلے براہِ راست عام انتخابات کس سال ہوئے؟",
     "options": [
       "1970",
       "1985",
@@ -7889,6 +8144,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "On which date was polling held for Pakistan's National Assembly in the 1970 general election?",
+    "questionUrdu": "1970 کے عام انتخابات میں پاکستان کی قومی اسمبلی کے لیے ووٹنگ کس تاریخ کو ہوئی؟",
     "options": [
       "17 December 1970",
       "7 December 1970",
@@ -7920,6 +8176,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "How many seats are in the Senate of Pakistan under the current post-merger composition?",
+    "questionUrdu": "انضمام کے بعد موجودہ ترکیب کے تحت سینیٹ آف پاکستان میں کتنی نشستیں ہیں؟",
     "options": [
       "88",
       "92",
@@ -7951,6 +8208,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "What is the constitutional term of a Senator in Pakistan?",
+    "questionUrdu": "پاکستان میں سینیٹر کی آئینی مدت کتنی ہوتی ہے؟",
     "options": [
       "Three years",
       "Six years",
@@ -7982,6 +8240,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In which year did Fatima Jinnah die?",
+    "questionUrdu": "فاطمہ جناح کا انتقال کس سال ہوا؟",
     "options": [
       "1965",
       "1966",
@@ -8013,6 +8272,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "On which date is Fatima Jinnah's death anniversary observed?",
+    "questionUrdu": "فاطمہ جناح کی برسی کس تاریخ کو منائی جاتی ہے؟",
     "options": [
       "31 July",
       "25 December",
@@ -8044,6 +8304,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Which constitutional framework governed Pakistan at independence until a new constitution was adopted?",
+    "questionUrdu": "آزادی کے وقت سے نیا آئین اپنانے تک پاکستان کس آئینی نظام کے تحت چلتا رہا؟",
     "options": [
       "Constitution of 1956",
       "Constitution of 1962",
@@ -8075,6 +8336,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Where did Pakistan's first Constituent Assembly hold its first session on 10 August 1947?",
+    "questionUrdu": "پاکستان کی پہلی دستور ساز اسمبلی نے 10 اگست 1947 کو اپنا پہلا اجلاس کہاں منعقد کیا؟",
     "options": [
       "Punjab Assembly Building, Lahore",
       "Governor House, Peshawar",
@@ -8106,6 +8368,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Which country, working with Qatar, helped mediate the April 2026 de-escalation between the United States and Iran?",
+    "questionUrdu": "قطر کے ساتھ مل کر کس ملک نے اپریل 2026 میں امریکا اور ایران کے درمیان کشیدگی کم کرنے میں ثالثی کی؟",
     "options": [
       "Saudi Arabia",
       "Turkey",
@@ -8137,6 +8400,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "Which city gave its name to the June 2026 memorandum used for U.S.-Iran technical talks?",
+    "questionUrdu": "جون 2026 میں امریکا اور ایران کے تکنیکی مذاکرات کے لیے استعمال ہونے والی یادداشت کا نام کس شہر پر رکھا گیا؟",
     "options": [
       "Islamabad",
       "Doha",
@@ -8168,6 +8432,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Who was President of the World Bank Group during the first official visit to Pakistan in February 2026?",
+    "questionUrdu": "فروری 2026 میں پاکستان کے پہلے سرکاری دورے کے وقت عالمی بینک گروپ کے صدر کون تھے؟",
     "options": [
       "Kristalina Georgieva",
       "Ajay Banga",
@@ -8199,6 +8464,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "On which date did Ajay Banga begin his five-year term as World Bank Group President?",
+    "questionUrdu": "اجے بانگا نے عالمی بینک گروپ کے صدر کی پانچ سالہ مدت کس تاریخ کو شروع کی؟",
     "options": [
       "2 June 2023",
       "1 July 2023",
@@ -8230,6 +8496,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Who is the U.S. Secretary of State as of 22 August 2026?",
+    "questionUrdu": "22 اگست 2026 تک امریکا کے وزیرِ خارجہ کون ہیں؟",
     "options": [
       "Antony Blinken",
       "Marco Rubio",
@@ -8261,6 +8528,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "Whom did Marco Rubio succeed as U.S. Secretary of State in January 2025?",
+    "questionUrdu": "جنوری 2025 میں مارکو روبیو نے کس کی جگہ امریکا کے وزیرِ خارجہ کا عہدہ سنبھالا؟",
     "options": [
       "Antony Blinken",
       "Mike Pompeo",
@@ -8292,6 +8560,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Nicolás Maduro served as President of which country?",
+    "questionUrdu": "نکولس مادورو کس ملک کے صدر رہے؟",
     "options": [
       "Brazil",
       "Canada",
@@ -8323,6 +8592,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "Who was listed as Acting President of Venezuela by the CIA World Leaders directory on 30 July 2026?",
+    "questionUrdu": "CIA ورلڈ لیڈرز ڈائریکٹری میں 30 جولائی 2026 کو وینزویلا کا قائم مقام صدر کس کو درج کیا گیا؟",
     "options": [
       "Nicolás Maduro",
       "Delcy Rodríguez",
@@ -8354,6 +8624,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Which country hosted the G20 Leaders' Summit in 2023?",
+    "questionUrdu": "2023 میں جی 20 سربراہ اجلاس کی میزبانی کس ملک نے کی؟",
     "options": [
       "China",
       "United States",
@@ -8385,6 +8656,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "In which city did G20 leaders meet on 9–10 September 2023?",
+    "questionUrdu": "جی 20 رہنما 9–10 ستمبر 2023 کو کس شہر میں جمع ہوئے؟",
     "options": [
       "Mumbai",
       "New Delhi",
@@ -8416,6 +8688,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "According to Pakistan's 7th Population and Housing Census (2023), the population was approximately:",
+    "questionUrdu": "پاکستان کی ساتویں (7th) مردم و خانہ شماری 2023 کے مطابق آبادی تقریباً کتنی تھی؟",
     "options": [
       "220 million",
       "230 million",
@@ -8447,6 +8720,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "What annual population growth rate did Pakistan's 2023 Census report for 2017–2023?",
+    "questionUrdu": "پاکستان کی 2023 کی مردم شماری نے 2017–2023 کے لیے آبادی کی سالانہ شرحِ نمو کتنی بتائی؟",
     "options": [
       "2.55%",
       "2.40%",
@@ -8478,6 +8752,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Who led the consortium whose Rs 135 billion bid for a 75% stake in PIA was recommended for approval in December 2025?",
+    "questionUrdu": "دسمبر 2025 میں پی آئی اے کے 75 فیصد حصص کے لیے 135 ارب روپے کی جس بولی کی منظوری کی سفارش ہوئی، اس کنسورشیم کی قیادت کس نے کی؟",
     "options": [
       "Malik Riaz",
       "Mian Mansha",
@@ -8509,6 +8784,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "What percentage of PIA's shares was covered by the successful December 2025 privatisation bid?",
+    "questionUrdu": "دسمبر 2025 کی کامیاب نجکاری بولی میں پی آئی اے کے کتنے فیصد حصص شامل تھے؟",
     "options": [
       "51%",
       "60%",
@@ -8540,6 +8816,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Trimmu Barrage is built on which river?",
+    "questionUrdu": "تریموں بیراج کس دریا پر بنایا گیا ہے؟",
     "options": [
       "Indus",
       "Jhelum",
@@ -8571,6 +8848,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Trimmu Barrage lies just below the confluence of the Chenab with which river?",
+    "questionUrdu": "تریموں بیراج دریائے چناب کے کس دریا سے سنگم کے بالکل نیچے واقع ہے؟",
     "options": [
       "Ravi",
       "Jhelum",
@@ -8602,6 +8880,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "In which year were Gwadar Port's first CPEC connectivity and opening of trade activities inaugurated?",
+    "questionUrdu": "گوادر بندرگاہ کے پہلے سی پیک رابطے اور تجارتی سرگرمیوں کے آغاز کا افتتاح کس سال ہوا؟",
     "options": [
       "2014",
       "2016",
@@ -8633,6 +8912,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "According to an official National Assembly record, in which year did Gwadar Port originally become operational?",
+    "questionUrdu": "قومی اسمبلی کے سرکاری ریکارڈ کے مطابق گوادر بندرگاہ اصل میں کس سال فعال ہوئی؟",
     "options": [
       "2002",
       "2007",
@@ -8664,6 +8944,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Hume Dam is located on which river?",
+    "questionUrdu": "ہیوم ڈیم کس دریا پر واقع ہے؟",
     "options": [
       "Darling River",
       "Murrumbidgee River",
@@ -8695,6 +8976,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Hume Dam lies just downstream of the Murray River's confluence with which river?",
+    "questionUrdu": "ہیوم ڈیم دریائے مرے کے کس دریا سے سنگم کے بالکل نیچے واقع ہے؟",
     "options": [
       "Mitta Mitta River",
       "Darling River",
@@ -8726,6 +9008,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Which listed province shares the Hub Dam project with Sindh?",
+    "questionUrdu": "دیے گئے صوبوں میں سے کون سا صوبہ سندھ کے ساتھ حب ڈیم منصوبے میں شریک ہے؟",
     "options": [
       "Punjab",
       "Khyber Pakhtunkhwa",
@@ -8757,6 +9040,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Hub Dam is constructed across which river?",
+    "questionUrdu": "حب ڈیم کس دریا پر تعمیر کیا گیا ہے؟",
     "options": [
       "Porali River",
       "Hingol River",
@@ -8788,6 +9072,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Which of the following countries is geographically nearest to Pakistan?",
+    "questionUrdu": "درج ذیل ممالک میں سے جغرافیائی طور پر پاکستان کے سب سے قریب کون سا ہے؟",
     "options": [
       "Iraq",
       "Syria",
@@ -8819,6 +9104,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Which narrow Afghan region separates Pakistan from Tajikistan?",
+    "questionUrdu": "افغانستان کا کون سا تنگ خطہ پاکستان کو تاجکستان سے جدا کرتا ہے؟",
     "options": [
       "Registan Desert",
       "Panjshir Valley",
@@ -8850,6 +9136,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "The Sor Range of Balochistan is associated with which mineral resource?",
+    "questionUrdu": "بلوچستان کا سور رینج کس معدنی وسیلے سے وابستہ ہے؟",
     "options": [
       "Coal",
       "Gold",
@@ -8881,6 +9168,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "The Degari–Sor Range coalfield is located in which province of Pakistan?",
+    "questionUrdu": "ڈیگاری–سور رینج کوئلہ میدان پاکستان کے کس صوبے میں واقع ہے؟",
     "options": [
       "Punjab",
       "Sindh",
@@ -8912,6 +9200,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Who discovered cosmic rays?",
+    "questionUrdu": "کائناتی شعاعیں کس نے دریافت کیں؟",
     "options": [
       "Ernest Rutherford",
       "Victor Hess",
@@ -8943,6 +9232,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Victor Hess received the Nobel Prize in Physics for the discovery of cosmic radiation in which year?",
+    "questionUrdu": "وکٹر ہیس کو کائناتی تابکاری کی دریافت پر طبیعیات کا نوبیل انعام کس سال ملا؟",
     "options": [
       "1912",
       "1928",
@@ -8974,6 +9264,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "At constant volume and a fixed amount of gas, pressure increases when which quantity increases?",
+    "questionUrdu": "مستقل حجم اور گیس کی مقررہ مقدار میں کس مقدار کے بڑھنے پر دباؤ بڑھتا ہے؟",
     "options": [
       "Volume",
       "Absolute temperature",
@@ -9005,6 +9296,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "If the Kelvin temperature of a fixed gas at constant volume doubles, its ideal pressure will approximately:",
+    "questionUrdu": "اگر مستقل حجم میں مقررہ گیس کا کیلون درجہ حرارت دوگنا ہو جائے تو اس کا مثالی دباؤ تقریباً کیا ہوگا؟",
     "options": [
       "Halve",
       "Double",
@@ -9036,6 +9328,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which part of the brain chiefly coordinates balance and movement?",
+    "questionUrdu": "دماغ کا کون سا حصہ بنیادی طور پر توازن اور حرکت کو ہم آہنگ کرتا ہے؟",
     "options": [
       "Cerebrum",
       "Cerebellum",
@@ -9067,6 +9360,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Damage to the cerebellum most directly impairs which ability?",
+    "questionUrdu": "سیری بیلم کو نقصان پہنچنے سے براہِ راست کون سی صلاحیت متاثر ہوتی ہے؟",
     "options": [
       "Coordinating voluntary movement",
       "Producing insulin",
@@ -9098,6 +9392,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Diamond is best classified as:",
+    "questionUrdu": "ہیرے کی بہترین درجہ بندی کیا ہے؟",
     "options": [
       "An isotope of carbon",
       "A carbon compound",
@@ -9129,6 +9424,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which carbon allotrope has a giant three-dimensional covalent lattice and is extremely hard?",
+    "questionUrdu": "کاربن کی کون سی ہم شکلی صورت ایک بہت بڑی سہ جہتی اشتراکی جالی رکھتی اور انتہائی سخت ہوتی ہے؟",
     "options": [
       "Graphite",
       "Fullerene C60",
@@ -9160,6 +9456,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which substance forms the writing core of an ordinary pencil?",
+    "questionUrdu": "عام پنسل کے لکھنے والے اندرونی حصے میں کون سا مادہ ہوتا ہے؟",
     "options": [
       "Coal",
       "Graphite",
@@ -9191,6 +9488,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Why can graphite leave a mark on paper?",
+    "questionUrdu": "گریفائٹ کاغذ پر نشان کیوں چھوڑ سکتا ہے؟",
     "options": [
       "Its layers slide off easily",
       "It melts at room temperature",
@@ -9222,6 +9520,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Who is most closely associated with presenting the scientific theory of evolution by natural selection?",
+    "questionUrdu": "قدرتی انتخاب کے ذریعے ارتقا کا سائنسی نظریہ پیش کرنے سے سب سے زیادہ کس کا نام وابستہ ہے؟",
     "options": [
       "Gregor Mendel",
       "Jean-Baptiste Lamarck",
@@ -9253,6 +9552,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which naturalist independently developed natural selection and presented work jointly with Darwin in 1858?",
+    "questionUrdu": "کس ماہرِ فطرت نے آزادانہ طور پر قدرتی انتخاب کا تصور پیش کیا اور 1858 میں ڈارون کے ساتھ مشترکہ طور پر کام پیش کیا؟",
     "options": [
       "Alfred Russel Wallace",
       "Gregor Mendel",
@@ -9284,6 +9584,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which of the following substances dissolves readily in water?",
+    "questionUrdu": "درج ذیل مادوں میں سے کون سا پانی میں آسانی سے حل ہو جاتا ہے؟",
     "options": [
       "Ethanol",
       "Cooking oil",
@@ -9315,6 +9616,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which pair of liquids is normally immiscible?",
+    "questionUrdu": "مائعات کا کون سا جوڑا عام طور پر باہم حل نہیں ہوتا؟",
     "options": [
       "Ethanol and water",
       "Vinegar and water",
@@ -9346,6 +9648,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Who discovered gamma rays?",
+    "questionUrdu": "گاما شعاعیں کس نے دریافت کیں؟",
     "options": [
       "Wilhelm Röntgen",
       "Henri Becquerel",
@@ -9377,6 +9680,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Who introduced the name 'gamma rays' for the highly penetrating radiation discovered by Paul Villard?",
+    "questionUrdu": "پال ویلارڈ کی دریافت کردہ انتہائی نفوذ پذیر تابکاری کے لیے 'گاما شعاعیں' کا نام کس نے متعارف کرایا؟",
     "options": [
       "Niels Bohr",
       "Ernest Rutherford",
@@ -9408,6 +9712,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which type of volatile RAM is generally faster?",
+    "questionUrdu": "غیر مستقل RAM کی کون سی قسم عموماً زیادہ تیز ہوتی ہے؟",
     "options": [
       "DRAM",
       "SRAM",
@@ -9439,6 +9744,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "SRAM is most commonly used for which high-speed computer component?",
+    "questionUrdu": "SRAM سب سے زیادہ کمپیوٹر کے کس تیز رفتار جزو میں استعمال ہوتی ہے؟",
     "options": [
       "Optical disc",
       "CPU cache",
@@ -9470,6 +9776,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which network protocol automatically assigns IP configuration to devices?",
+    "questionUrdu": "کون سا نیٹ ورک پروٹوکول آلات کو خودکار طور پر IP ترتیب فراہم کرتا ہے؟",
     "options": [
       "ISP",
       "ICANN",
@@ -9501,6 +9808,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which UDP ports are conventionally used by DHCP servers and clients, respectively?",
+    "questionUrdu": "DHCP سرور اور کلائنٹ بالترتیب روایتی طور پر کون سی UDP پورٹس استعمال کرتے ہیں؟",
     "options": [
       "53 and 54",
       "20 and 21",
@@ -9532,6 +9840,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What is the primary purpose of virtual memory?",
+    "questionUrdu": "ورچوئل میموری کا بنیادی مقصد کیا ہے؟",
     "options": [
       "Increase CPU clock speed",
       "Store files permanently",
@@ -9563,6 +9872,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "In Windows, which disk-based file supports committed virtual memory?",
+    "questionUrdu": "ونڈوز میں ڈسک پر موجود کون سی فائل committed virtual memory کو سہارا دیتی ہے؟",
     "options": [
       "Cookie file",
       "Page file",
@@ -9594,6 +9904,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "How many bits are in an IPv4 address?",
+    "questionUrdu": "IPv4 پتے میں کتنے بٹس ہوتے ہیں؟",
     "options": [
       "32",
       "24",
@@ -9625,6 +9936,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "An IPv4 address is conventionally written as how many decimal octets?",
+    "questionUrdu": "IPv4 پتے کو روایتی طور پر کتنے اعشاری آکٹیٹس میں لکھا جاتا ہے؟",
     "options": [
       "Two",
       "Four",
@@ -9656,6 +9968,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "How many bits are in an IPv6 address?",
+    "questionUrdu": "IPv6 پتے میں کتنے بٹس ہوتے ہیں؟",
     "options": [
       "128",
       "64",
@@ -9687,6 +10000,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "IPv6 addresses are normally represented using which number system?",
+    "questionUrdu": "IPv6 پتوں کو عموماً کس عددی نظام میں ظاہر کیا جاتا ہے؟",
     "options": [
       "Binary-only groups",
       "Hexadecimal groups",
@@ -9718,6 +10032,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which Microsoft Word feature creates many personalized letters from one template?",
+    "questionUrdu": "مائیکروسافٹ ورڈ کی کون سی سہولت ایک ہی سانچے سے بہت سے ذاتی نوعیت کے خطوط بناتی ہے؟",
     "options": [
       "Mail Merge",
       "Theme",
@@ -9749,6 +10064,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "In a Word mail merge, where are recipient names and addresses normally stored?",
+    "questionUrdu": "ورڈ میل مرج میں وصول کنندگان کے نام اور پتے عموماً کہاں محفوظ ہوتے ہیں؟",
     "options": [
       "A video file",
       "The clipboard only",
@@ -9780,6 +10096,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which protocol is used for encrypted web data transfer?",
+    "questionUrdu": "ویب ڈیٹا کی خفیہ اور محفوظ منتقلی کے لیے کون سا پروٹوکول استعمال ہوتا ہے؟",
     "options": [
       "HTTP",
       "HTTPS",
@@ -9811,6 +10128,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What is the default TCP port associated with HTTPS?",
+    "questionUrdu": "HTTPS کے ساتھ کون سی طے شدہ TCP پورٹ منسلک ہے؟",
     "options": [
       "21",
       "25",
@@ -9842,6 +10160,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What is the primary function of a network firewall?",
+    "questionUrdu": "نیٹ ورک فائر وال کا بنیادی کام کیا ہے؟",
     "options": [
       "Increase processor speed",
       "Create user passwords",
@@ -9873,6 +10192,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "A firewall primarily makes allow-or-block decisions by applying:",
+    "questionUrdu": "فائر وال بنیادی طور پر کن چیزوں کا اطلاق کرکے اجازت دینے یا روکنے کے فیصلے کرتی ہے؟",
     "options": [
       "Screen brightness levels",
       "Spreadsheet formulas",
@@ -9904,6 +10224,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What is phishing in cybersecurity?",
+    "questionUrdu": "سائبر سکیورٹی میں فشنگ کیا ہے؟",
     "options": [
       "A hardware virus scanner",
       "A social-engineering attack",
@@ -9935,6 +10256,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What is phishing conducted through SMS text messages commonly called?",
+    "questionUrdu": "SMS پیغامات کے ذریعے کی جانے والی فشنگ کو عام طور پر کیا کہتے ہیں؟",
     "options": [
       "Smishing",
       "Vishing",
@@ -9966,6 +10288,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What are macros in Microsoft Excel?",
+    "questionUrdu": "مائیکروسافٹ ایکسل میں میکروز کیا ہوتے ہیں؟",
     "options": [
       "Automated scripts or recorded actions",
       "Cell borders",
@@ -9997,6 +10320,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which programming language is used to edit recorded Excel macros?",
+    "questionUrdu": "ریکارڈ کیے گئے ایکسل میکروز میں ترمیم کے لیے کون سی پروگرامنگ زبان استعمال ہوتی ہے؟",
     "options": [
       "Cascading Style Sheets",
       "Structured Query Language",
@@ -10028,6 +10352,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which network model can operate without a central server?",
+    "questionUrdu": "کون سا نیٹ ورک ماڈل مرکزی سرور کے بغیر کام کر سکتا ہے؟",
     "options": [
       "Client-server",
       "Peer-to-peer",
@@ -10059,6 +10384,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "In a peer-to-peer network, a participating computer may act as:",
+    "questionUrdu": "پیئر ٹو پیئر نیٹ ورک میں شریک کمپیوٹر کون کون سا کردار ادا کر سکتا ہے؟",
     "options": [
       "Both client and server",
       "Only a printer",
@@ -10090,6 +10416,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "DevOps is formed from which two words?",
+    "questionUrdu": "DevOps کن دو الفاظ سے مل کر بنا ہے؟",
     "options": [
       "Development and Operations",
       "Debugging and Operating",
@@ -10121,6 +10448,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "A central DevOps goal is to improve collaboration between developers and which team?",
+    "questionUrdu": "DevOps کا ایک بنیادی مقصد ڈویلپرز اور کس ٹیم کے درمیان تعاون بہتر بنانا ہے؟",
     "options": [
       "Graphic printing",
       "Legal transcription",
@@ -10152,6 +10480,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which of the following is Microsoft's cloud-storage service?",
+    "questionUrdu": "درج ذیل میں سے مائیکروسافٹ کی کلاؤڈ اسٹوریج سروس کون سی ہے؟",
     "options": [
       "Google Drive",
       "OneDrive",
@@ -10183,6 +10512,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which Microsoft 365 feature keeps files synchronized across devices through the cloud?",
+    "questionUrdu": "مائیکروسافٹ 365 کی کون سی سہولت کلاؤڈ کے ذریعے مختلف آلات میں فائلیں ہم وقت رکھتی ہے؟",
     "options": [
       "Notepad",
       "OneDrive",
@@ -10214,6 +10544,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which protocol is primarily responsible for reliable data delivery over the Internet?",
+    "questionUrdu": "انٹرنیٹ پر ڈیٹا کی قابلِ اعتماد ترسیل کی بنیادی ذمہ داری کس پروٹوکول کی ہے؟",
     "options": [
       "HTTP",
       "TCP",
@@ -10245,6 +10576,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which transport protocol is connectionless and does not itself guarantee delivery?",
+    "questionUrdu": "کون سا ٹرانسپورٹ پروٹوکول بغیر کنکشن کے کام کرتا اور خود ترسیل کی ضمانت نہیں دیتا؟",
     "options": [
       "TCP",
       "ARP",
@@ -10276,6 +10608,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which Microsoft application was designed for newsletters and desktop publishing?",
+    "questionUrdu": "مائیکروسافٹ کی کون سی ایپلی کیشن نیوز لیٹر اور ڈیسک ٹاپ پبلشنگ کے لیے بنائی گئی تھی؟",
     "options": [
       "Word",
       "Publisher",
@@ -10307,6 +10640,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "In Microsoft Publisher, which publication type provides ready-made newsletter layouts?",
+    "questionUrdu": "مائیکروسافٹ پبلشر میں کس قسم کی اشاعت نیوز لیٹر کے تیار شدہ خاکے فراہم کرتی ہے؟",
     "options": [
       "Slide Shows",
       "Databases",
@@ -10338,6 +10672,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A 13 m ladder rests with its foot 5 m from a vertical wall. How high up the wall does it reach?",
+    "questionUrdu": "13 میٹر لمبی سیڑھی کا نچلا سرا عمودی دیوار سے 5 میٹر دور ہے۔ وہ دیوار پر کتنی اونچائی تک پہنچتی ہے؟",
     "options": [
       "10 m",
       "12 m",
@@ -10369,6 +10704,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "A 15 m ladder has its foot 9 m from a wall. What vertical height does it reach?",
+    "questionUrdu": "15 میٹر لمبی سیڑھی کا نچلا سرا دیوار سے 9 میٹر دور ہے۔ وہ کتنی عمودی اونچائی تک پہنچتی ہے؟",
     "options": [
       "6 m",
       "9 m",
@@ -10400,6 +10736,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A circle is inscribed in a square of area 64 cm². What is the circle's area, to two decimal places?",
+    "questionUrdu": "64 مربع سینٹی میٹر رقبے والے مربع میں ایک دائرہ بنایا گیا ہے۔ دو اعشاری مقامات تک دائرے کا رقبہ کیا ہے؟",
     "options": [
       "50.27 cm²",
       "54.24 cm²",
@@ -10431,6 +10768,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "A circle is inscribed in a square of side 10 cm. What is its exact area?",
+    "questionUrdu": "10 سینٹی میٹر ضلع والے مربع میں ایک دائرہ بنایا گیا ہے۔ اس دائرے کا درست رقبہ کیا ہے؟",
     "options": [
       "25π cm²",
       "20π cm²",
@@ -10462,6 +10800,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Solve 2x² − 3x − 2 = 0.",
+    "questionUrdu": "مساوات 2x² − 3x − 2 = 0 حل کریں۔",
     "options": [
       "x = 1, −2",
       "x = −1, 2",
@@ -10493,6 +10832,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "What are the roots of 2x² + x − 3 = 0?",
+    "questionUrdu": "مساوات 2x² + x − 3 = 0 کی جڑیں کیا ہیں؟",
     "options": [
       "x = 3, −1/2",
       "x = −1, 3/2",
@@ -10524,6 +10864,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A population is 8,000 and 75% attended an event. How many did not attend?",
+    "questionUrdu": "آبادی 8,000 ہے اور 75 فیصد افراد نے ایک تقریب میں شرکت کی۔ کتنے افراد شریک نہیں ہوئے؟",
     "options": [
       "1,500",
       "1,800",
@@ -10555,6 +10896,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "If 80% of 3,000 registered candidates attend a test, how many are absent?",
+    "questionUrdu": "اگر 3,000 رجسٹرڈ امیدواروں میں سے 80 فیصد امتحان میں شریک ہوں تو کتنے غیر حاضر ہیں؟",
     "options": [
       "400",
       "500",
@@ -10586,6 +10928,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "If x > 0 and y > 0, the point (−x, y) lies in which quadrant?",
+    "questionUrdu": "اگر x > 0 اور y > 0 ہو تو نقطہ (−x, y) کس ربع میں واقع ہوگا؟",
     "options": [
       "First",
       "Second",
@@ -10617,6 +10960,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "If a > 0 and b > 0, in which quadrant does the point (a, −b) lie?",
+    "questionUrdu": "اگر a > 0 اور b > 0 ہو تو نقطہ (a, −b) کس ربع میں واقع ہوگا؟",
     "options": [
       "First",
       "Second",
@@ -10648,6 +10992,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "The ratio of sugar to flour is 2:3. If sugar is 18 kg, how much flour is required?",
+    "questionUrdu": "چینی اور آٹے کا تناسب 2:3 ہے۔ اگر چینی 18 کلوگرام ہو تو کتنا آٹا درکار ہوگا؟",
     "options": [
       "24 kg",
       "25 kg",
@@ -10679,6 +11024,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "The ratio of red balls to blue balls is 3:5. If there are 21 red balls, how many blue balls are there?",
+    "questionUrdu": "سرخ اور نیلی گیندوں کا تناسب 3:5 ہے۔ اگر سرخ گیندیں 21 ہوں تو نیلی گیندیں کتنی ہیں؟",
     "options": [
       "35",
       "30",
@@ -10710,6 +11056,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Which option is the best contextual antonym of 'gumption'?",
+    "questionUrdu": "'gumption' کا سیاق کے لحاظ سے بہترین متضاد کون سا ہے؟",
     "options": [
       "Courage",
       "Apathy",
@@ -10741,6 +11088,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is closest in meaning to 'gumption' in the phrase 'the gumption to begin'?",
+    "questionUrdu": "فقرے 'the gumption to begin' میں کون سا لفظ 'gumption' کے معنی کے قریب ترین ہے؟",
     "options": [
       "Silence",
       "Indifference",
@@ -10772,6 +11120,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Which option is closest in meaning to 'termagant'?",
+    "questionUrdu": "کون سا انتخاب 'termagant' کے معنی کے قریب ترین ہے؟",
     "options": [
       "Shy person",
       "Vixen",
@@ -10803,6 +11152,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is a direct synonym of 'termagant'?",
+    "questionUrdu": "کون سا لفظ 'termagant' کا براہِ راست مترادف ہے؟",
     "options": [
       "Introvert",
       "Peacemaker",
@@ -10834,6 +11184,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Which word is the antonym of 'malodorous'?",
+    "questionUrdu": "کون سا لفظ 'malodorous' کا متضاد ہے؟",
     "options": [
       "Fragrant",
       "Rotten",
@@ -10865,6 +11216,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is a synonym of 'malodorous'?",
+    "questionUrdu": "کون سا لفظ 'malodorous' کا مترادف ہے؟",
     "options": [
       "Foul-smelling",
       "Perfumed",
@@ -10896,6 +11248,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the analogy: Blind : Eye :: Deaf : ____.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Blind : Eye :: Deaf : ____۔",
     "options": [
       "Mouth",
       "Nose",
@@ -10927,6 +11280,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the analogy: Sight : Eye :: Hearing : ____.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Sight : Eye :: Hearing : ____۔",
     "options": [
       "Nose",
       "Tongue",
@@ -10958,6 +11312,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the synonym analogy: Arid : Parched :: Droughty : ____.",
+    "questionUrdu": "مترادف نسبت مکمل کریں: Arid : Parched :: Droughty : ____۔",
     "options": [
       "Draft",
       "Earth",
@@ -10989,6 +11344,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the synonym analogy: Arid : Dry :: Humid : ____.",
+    "questionUrdu": "مترادف نسبت مکمل کریں: Arid : Dry :: Humid : ____۔",
     "options": [
       "Frozen",
       "Barren",
@@ -11020,6 +11376,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the printed analogy: Coif : Hair :: ____ : Musical.",
+    "questionUrdu": "طبع شدہ نسبت مکمل کریں: Coif : Hair :: ____ : Musical۔",
     "options": [
       "Shower",
       "Praise",
@@ -11051,6 +11408,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the analogy: Script : Play :: Score : ____.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Script : Play :: Score : ____۔",
     "options": [
       "Musical",
       "Novel",
@@ -11082,6 +11440,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the synonym of 'stubborn'.",
+    "questionUrdu": "'stubborn' کا مترادف منتخب کریں۔",
     "options": [
       "Flexible",
       "Obstinate",
@@ -11113,6 +11472,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is an antonym of 'obstinate'?",
+    "questionUrdu": "کون سا لفظ 'obstinate' کا متضاد ہے؟",
     "options": [
       "Headstrong",
       "Flexible",
@@ -11144,6 +11504,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Fill in the blank: He parted ____ his family.",
+    "questionUrdu": "خالی جگہ پُر کریں: He parted ____ his family.",
     "options": [
       "with",
       "to",
@@ -11175,6 +11536,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Fill in the blank: She refused to part ____ her old letters.",
+    "questionUrdu": "خالی جگہ پُر کریں: She refused to part ____ her old letters.",
     "options": [
       "from",
       "with",
@@ -11206,6 +11568,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete John Donne's famous line: 'No man is ____ entire of itself.'",
+    "questionUrdu": "جان ڈن کا مشہور مصرع مکمل کریں: 'No man is ____ entire of itself.'",
     "options": [
       "a pond",
       "a sea",
@@ -11237,6 +11600,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Who wrote the meditation containing the line 'No man is an island'?",
+    "questionUrdu": "'No man is an island' والا مراقبہ کس نے لکھا؟",
     "options": [
       "Alexander Pope",
       "William Blake",
@@ -11268,6 +11632,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the best modal for general moral advice: We ____ respect our elders.",
+    "questionUrdu": "عمومی اخلاقی نصیحت کے لیے بہترین modal منتخب کریں: We ____ respect our elders.",
     "options": [
       "must",
       "will",
@@ -11299,6 +11664,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the best modal for advice: You ____ consult a doctor if the pain continues.",
+    "questionUrdu": "نصیحت کے لیے بہترین modal منتخب کریں: You ____ consult a doctor if the pain continues.",
     "options": [
       "will",
       "should",
@@ -11330,6 +11696,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "The book key links a report about Uthman ibn Affan's martyrdom while reciting the Qur'an to which surah?",
+    "questionUrdu": "کتاب کی کلید، قرآن پڑھتے ہوئے حضرت عثمان بن عفان رضی اللہ عنہ کی شہادت کی ایک رپورٹ کو کس سورت سے جوڑتی ہے؟",
     "options": [
       "Surah Al Imran",
       "Surah Al-Ma'idah",
@@ -11361,6 +11728,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "How do the cited hadith critics grade the claim that Uthman was martyred while reciting Surah Al-Baqarah?",
+    "questionUrdu": "حوالہ دیے گئے محدثین اس دعوے کو کس درجے میں رکھتے ہیں کہ حضرت عثمان رضی اللہ عنہ سورۃ البقرہ پڑھتے ہوئے شہید ہوئے؟",
     "options": [
       "Mutawatir",
       "Fabricated",
@@ -11392,6 +11760,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "According to Sahih al-Bukhari's account of Khaybar, who received the flag before Allah granted victory?",
+    "questionUrdu": "صحیح بخاری کے بیانِ خیبر کے مطابق اللہ کی طرف سے فتح ملنے سے پہلے جھنڈا کس کو دیا گیا؟",
     "options": [
       "Umar ibn al-Khattab",
       "Ali ibn Abi Talib",
@@ -11423,6 +11792,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "What ailment did Ali ibn Abi Talib have when he joined the Prophet at Khaybar?",
+    "questionUrdu": "خیبر میں رسول اللہ ﷺ سے ملنے کے وقت حضرت علی بن ابی طالب رضی اللہ عنہ کو کون سی تکلیف تھی؟",
     "options": [
       "A leg wound",
       "A broken arm",
@@ -11454,6 +11824,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Shah Wali Allah completed his full Qur'an translation in North India in which language?",
+    "questionUrdu": "شاہ ولی اللہ نے شمالی ہندوستان میں قرآن کا مکمل ترجمہ کس زبان میں کیا؟",
     "options": [
       "Arabic",
       "Sindhi",
@@ -11485,6 +11856,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Which Delhi scholar completed a full Persian translation of the Qur'an in 1738?",
+    "questionUrdu": "دہلی کے کس عالم نے 1738 میں قرآن کا مکمل فارسی ترجمہ کیا؟",
     "options": [
       "Shah Abdul Qadir",
       "Shah Wali Allah",
@@ -11516,6 +11888,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "What is the Islamic legal term for a contract through which an enslaved person could obtain freedom by agreed payment?",
+    "questionUrdu": "اسلامی قانون میں اس معاہدے کو کیا کہتے ہیں جس کے ذریعے غلام طے شدہ رقم ادا کرکے آزادی حاصل کر سکتا تھا؟",
     "options": [
       "Nadhr",
       "Mukatabat",
@@ -11547,6 +11920,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Which Qur'anic verse is commonly called the mukataba verse because it mentions an emancipation contract?",
+    "questionUrdu": "قرآن کی کون سی آیت آزادی کے معاہدے کے ذکر کی وجہ سے آیتِ مکاتبت کہلاتی ہے؟",
     "options": [
       "2:275",
       "4:3",
@@ -11578,6 +11952,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Which of the following was prohibited by Islam?",
+    "questionUrdu": "درج ذیل میں سے کس چیز کو اسلام نے ممنوع قرار دیا؟",
     "options": [
       "Usury (riba)",
       "Hajj",
@@ -11609,6 +11984,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Which surah contains the statement that trade is permitted and riba is forbidden?",
+    "questionUrdu": "کون سی سورت میں یہ بیان آیا ہے کہ تجارت حلال اور ربا حرام ہے؟",
     "options": [
       "Al-Baqarah",
       "Al-Fatihah",
@@ -11640,6 +12016,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu proverb: بچے بغل میں، ڈھنڈورا ____ میں۔",
+    "questionUrdu": "اردو کہاوت مکمل کریں: بچے بغل میں، ڈھنڈورا ____ میں۔",
     "options": [
       "گھر",
       "گاؤں",
@@ -11671,6 +12048,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What is the correct meaning of the Urdu proverb 'بچے بغل میں، ڈھنڈورا شہر میں'?",
+    "questionUrdu": "اردو کہاوت 'بچے بغل میں، ڈھنڈورا شہر میں' کا درست مفہوم کیا ہے؟",
     "options": [
       "شہر میں اعلان کرنا",
       "قریب کی چیز کو دور تلاش کرنا",
@@ -11702,6 +12080,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "In Urdu grammar, what is a word called that is not derived from another noun or verb?",
+    "questionUrdu": "اردو قواعد میں ایسے لفظ کو کیا کہتے ہیں جو کسی دوسرے اسم یا فعل سے مشتق نہ ہو؟",
     "options": [
       "اسمِ معرفہ",
       "اسمِ جامد",
@@ -11733,6 +12112,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which of the following is an example of اسمِ جامد (a primitive noun)?",
+    "questionUrdu": "درج ذیل میں سے کون سا اسمِ جامد کی مثال ہے؟",
     "options": [
       "پتھر",
       "لکھائی",
@@ -11764,6 +12144,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu proverb: غریب کی جورو سب کی ____۔",
+    "questionUrdu": "اردو کہاوت مکمل کریں: غریب کی جورو سب کی ____۔",
     "options": [
       "بہن",
       "پھوپھی",
@@ -11795,6 +12176,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What is the basic meaning of the Urdu proverb 'غریب کی جورو سب کی بھابھی'?",
+    "questionUrdu": "اردو کہاوت 'غریب کی جورو سب کی بھابھی' کا بنیادی مفہوم کیا ہے؟",
     "options": [
       "غریب سب سے طاقت ور ہے",
       "رشتے دار ہمیشہ مدد کرتے ہیں",
@@ -11826,6 +12208,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu sentence: جب میں نے اس سے سو روپے ادھار مانگے تو اس نے ہاتھ ____ کر کے دکھا دیے۔",
+    "questionUrdu": "اردو جملہ مکمل کریں: جب میں نے اس سے سو روپے ادھار مانگے تو اس نے ہاتھ ____ کر کے دکھا دیے۔",
     "options": [
       "کھول",
       "پھیلا",
@@ -11857,6 +12240,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What is one correct meaning of the Urdu idiom 'ہاتھ جوڑنا'?",
+    "questionUrdu": "اردو محاورے 'ہاتھ جوڑنا' کا ایک درست مفہوم کیا ہے؟",
     "options": [
       "سامان چھپانا",
       "تیز دوڑنا",
@@ -11888,6 +12272,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What is the correct meaning of the Urdu idiom 'ہیرے کی کنی کھانا'?",
+    "questionUrdu": "اردو محاورے 'ہیرے کی کنی کھانا' کا درست مفہوم کیا ہے؟",
     "options": [
       "خود کشی کرنا",
       "امیر ہونا",
@@ -11919,6 +12304,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which Urdu idiom has the same meaning as 'ہیرے کی کنی نگلنا'?",
+    "questionUrdu": "کون سا اردو محاورہ 'ہیرے کی کنی نگلنا' کے ہم معنی ہے؟",
     "options": [
       "ہیرے کی کنی کھانا",
       "ہاتھ پاؤں پھولنا",
@@ -11950,6 +12336,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Which punctuation mark is used to ask a question in Urdu?",
+    "questionUrdu": "اردو میں سوال پوچھنے کے لیے کون سی علامتِ وقف استعمال ہوتی ہے؟",
     "options": [
       "وقفہ",
       "علامتِ استفہام",
@@ -11981,6 +12368,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which symbol represents علامتِ استفہام (the question mark) in Urdu?",
+    "questionUrdu": "اردو میں علامتِ استفہام کو کون سی نشانی ظاہر کرتی ہے؟",
     "options": [
       "!",
       "؟",
@@ -12012,6 +12400,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "According to the book's convention, how is 'روز' classified in the Urdu compound 'نیم روز'?",
+    "questionUrdu": "کتاب کے قاعدے کے مطابق اردو مرکب 'نیم روز' میں 'روز' کی کیا درجہ بندی ہے؟",
     "options": [
       "سابقہ",
       "فعل",
@@ -12043,6 +12432,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "In the Urdu word 'بے کار', how is 'بے' classified?",
+    "questionUrdu": "اردو لفظ 'بے کار' میں 'بے' کی کیا درجہ بندی ہے؟",
     "options": [
       "فعل",
       "لاحقہ",
@@ -12074,6 +12464,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Which punctuation mark is used to divide a long Urdu sentence into shorter parts?",
+    "questionUrdu": "طویل اردو جملے کو چھوٹے حصوں میں تقسیم کرنے کے لیے کون سی علامتِ وقف استعمال ہوتی ہے؟",
     "options": [
       "سکتہ",
       "وقفہ",
@@ -12105,6 +12496,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which Urdu punctuation mark normally ends a complete sentence or statement?",
+    "questionUrdu": "مکمل اردو جملے یا بیان کے اختتام پر عموماً کون سی علامتِ وقف لگتی ہے؟",
     "options": [
       "سکتہ",
       "ختمہ",
@@ -12136,6 +12528,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Which Urdu literary device first lists several things and then explains their separate relationships?",
+    "questionUrdu": "اردو کی کون سی ادبی صنعت میں پہلے کئی چیزیں بیان کی جاتی اور پھر ان کے الگ الگ تعلقات کی وضاحت کی جاتی ہے؟",
     "options": [
       "صنعتِ تجنیس",
       "صنعتِ ایہام",
@@ -12167,6 +12560,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What is the form of لف و نشر called when the explanation follows the order of the listed items?",
+    "questionUrdu": "لف و نشر کی اس صورت کو کیا کہتے ہیں جس میں وضاحت درج چیزوں ہی کی ترتیب سے آئے؟",
     "options": [
       "لف و نشرِ مرتب",
       "لف و نشرِ غیر مرتب",
@@ -12198,6 +12592,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What is the correct meaning of the Urdu proverb 'پڑھے نہ لکھے، نام محمد فاضل'?",
+    "questionUrdu": "اردو کہاوت 'پڑھے نہ لکھے، نام محمد فاضل' کا درست مفہوم کیا ہے؟",
     "options": [
       "قرینے سے مطلب پہچان لینا",
       "بڑے آدمیوں کی بات مان لینا",
@@ -12229,6 +12624,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "In the proverb 'پڑھے نہ لکھے، نام محمد فاضل', which meaning of 'فاضل' creates the irony?",
+    "questionUrdu": "کہاوت 'پڑھے نہ لکھے، نام محمد فاضل' میں 'فاضل' کا کون سا مفہوم طنز پیدا کرتا ہے؟",
     "options": [
       "عالم یا صاحبِ علم",
       "تاجر",
@@ -12260,6 +12656,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "Where is the headquarters (seat) of the International Court of Justice?",
+    "questionUrdu": "بین الاقوامی عدالتِ انصاف کا صدر مقام کہاں ہے؟",
     "options": [
       "Geneva",
       "New York",
@@ -12291,6 +12688,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "Which are the two official languages of the International Court of Justice?",
+    "questionUrdu": "بین الاقوامی عدالتِ انصاف کی دو سرکاری زبانیں کون سی ہیں؟",
     "options": [
       "English and French",
       "English and Spanish",
@@ -12322,6 +12720,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "On which date did Pakistani forces surrender in Dhaka in 1971, marking Bangladesh's victory?",
+    "questionUrdu": "1971 میں پاکستانی افواج نے کس تاریخ کو ڈھاکا میں ہتھیار ڈالے، جسے بنگلہ دیش کی فتح قرار دیا جاتا ہے؟",
     "options": [
       "14 December 1971",
       "15 December 1971",
@@ -12353,6 +12752,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "What does Bangladesh commemorate on Victory Day, observed on 16 December?",
+    "questionUrdu": "بنگلہ دیش 16 دسمبر کو منائے جانے والے یومِ فتح پر کس واقعے کی یاد مناتا ہے؟",
     "options": [
       "Adoption of its constitution",
       "First general election",
@@ -12384,6 +12784,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Who was Pakistan's first civilian Chief Martial Law Administrator?",
+    "questionUrdu": "پاکستان کے پہلے سویلین چیف مارشل لا ایڈمنسٹریٹر کون تھے؟",
     "options": [
       "Liaquat Ali Khan",
       "Ayub Khan",
@@ -12415,6 +12816,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "On which date did Zulfikar Ali Bhutto assume office as President and Chief Martial Law Administrator?",
+    "questionUrdu": "ذوالفقار علی بھٹو نے صدر اور چیف مارشل لا ایڈمنسٹریٹر کا عہدہ کس تاریخ کو سنبھالا؟",
     "options": [
       "16 December 1971",
       "18 December 1971",
@@ -12446,6 +12848,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Who is the Chief Justice of Pakistan as of 22 August 2026?",
+    "questionUrdu": "22 اگست 2026 تک پاکستان کے چیف جسٹس کون ہیں؟",
     "options": [
       "Qazi Faez Isa",
       "Umar Ata Bandial",
@@ -12477,6 +12880,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "On which date did Justice Yahya Afridi assume office as Chief Justice of Pakistan?",
+    "questionUrdu": "جسٹس یحییٰ آفریدی نے پاکستان کے چیف جسٹس کا عہدہ کس تاریخ کو سنبھالا؟",
     "options": [
       "26 October 2024",
       "25 October 2023",
@@ -12508,6 +12912,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Which Constitution of Pakistan contains the constitutional definition of a Muslim?",
+    "questionUrdu": "پاکستان کے کس آئین میں مسلمان کی آئینی تعریف موجود ہے؟",
     "options": [
       "Constitution of 1956",
       "Constitution of 1960",
@@ -12539,6 +12944,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "In which Article of Pakistan's Constitution are the definitions of 'Muslim' and 'non-Muslim' provided?",
+    "questionUrdu": "پاکستان کے آئین کے کس آرٹیکل میں 'مسلمان' اور 'غیر مسلم' کی تعریفیں دی گئی ہیں؟",
     "options": [
       "Article 260",
       "Article 2A",
@@ -12570,6 +12976,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "How many provinces of Pakistan are named in Article 1 of the 1973 Constitution?",
+    "questionUrdu": "1973 کے آئین کے آرٹیکل 1 میں پاکستان کے کتنے صوبوں کے نام درج ہیں؟",
     "options": [
       "3",
       "4",
@@ -12601,6 +13008,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Which Article of the Constitution describes the Republic and territories of Pakistan?",
+    "questionUrdu": "آئین کا کون سا آرٹیکل جمہوریہ اور پاکستان کے علاقوں کی وضاحت کرتا ہے؟",
     "options": [
       "Article 25",
       "Article 8",
@@ -12632,6 +13040,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "On which date did Pervez Musharraf resign as President of Pakistan?",
+    "questionUrdu": "پرویز مشرف نے پاکستان کے صدر کے عہدے سے کس تاریخ کو استعفیٰ دیا؟",
     "options": [
       "15 August 2008",
       "16 August 2008",
@@ -12663,6 +13072,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Which President of Pakistan resigned on 18 August 2008?",
+    "questionUrdu": "پاکستان کے کس صدر نے 18 اگست 2008 کو استعفیٰ دیا؟",
     "options": [
       "Rafiq Tarar",
       "Mamnoon Hussain",
@@ -12694,6 +13104,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "On which date was Liaquat Ali Khan assassinated?",
+    "questionUrdu": "لیاقت علی خان کو کس تاریخ کو قتل کیا گیا؟",
     "options": [
       "16 October 1951",
       "20 October 1951",
@@ -12725,6 +13136,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "In which city was Prime Minister Liaquat Ali Khan assassinated?",
+    "questionUrdu": "وزیرِ اعظم لیاقت علی خان کو کس شہر میں قتل کیا گیا؟",
     "options": [
       "Karachi",
       "Lahore",
@@ -12756,6 +13168,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Who dismissed the government of Prime Minister Khawaja Nazimuddin in 1953?",
+    "questionUrdu": "1953 میں وزیرِ اعظم خواجہ ناظم الدین کی حکومت کو کس نے برطرف کیا؟",
     "options": [
       "Ayub Khan",
       "Governor-General Ghulam Muhammad",
@@ -12787,6 +13200,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "What office did Ghulam Muhammad hold when he dismissed Khawaja Nazimuddin's ministry?",
+    "questionUrdu": "خواجہ ناظم الدین کی وزارت برطرف کرتے وقت غلام محمد کس عہدے پر تھے؟",
     "options": [
       "Prime Minister",
       "Chief Justice",
@@ -12818,6 +13232,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "In which year was the Pakistan-Saudi Strategic Mutual Defense Agreement signed?",
+    "questionUrdu": "پاکستان سعودی تزویراتی باہمی دفاعی معاہدہ کس سال طے پایا؟",
     "options": [
       "2023",
       "2024",
@@ -12849,6 +13264,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "On which date was the Pakistan-Saudi Strategic Mutual Defense Agreement signed?",
+    "questionUrdu": "پاکستان سعودی تزویراتی باہمی دفاعی معاہدہ کس تاریخ کو طے پایا؟",
     "options": [
       "14 August 2025",
       "9 September 2025",
@@ -12880,6 +13296,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "How many Rafale-Marine aircraft did India contract to procure from France in April 2025?",
+    "questionUrdu": "بھارت نے اپریل 2025 میں فرانس سے کتنے رافیل میرین طیارے خریدنے کا معاہدہ کیا؟",
     "options": [
       "26",
       "36",
@@ -12911,6 +13328,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "How many of India's 26 Rafale-Marine aircraft in the April 2025 agreement are single-seaters?",
+    "questionUrdu": "اپریل 2025 کے معاہدے میں بھارت کے 26 رافیل میرین طیاروں میں کتنے یک نشستہ ہیں؟",
     "options": [
       "4",
       "18",
@@ -12942,6 +13360,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Including the 2024 contest, how many United States presidential elections had been held?",
+    "questionUrdu": "2024 کے مقابلے سمیت امریکا میں کتنے صدارتی انتخابات ہو چکے تھے؟",
     "options": [
       "58",
       "60",
@@ -12973,6 +13392,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "How often is a United States presidential election normally held?",
+    "questionUrdu": "امریکا میں صدارتی انتخاب عموماً کتنے عرصے بعد ہوتا ہے؟",
     "options": [
       "Every two years",
       "Every four years",
@@ -13004,6 +13424,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "The Sulu Sea is a marginal sea of which ocean?",
+    "questionUrdu": "بحیرہ سولو کس سمندر کا حاشیائی سمندر ہے؟",
     "options": [
       "Atlantic Ocean",
       "Indian Ocean",
@@ -13035,6 +13456,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Which sea lies between Palawan, Borneo and the Sulu Archipelago?",
+    "questionUrdu": "کون سا سمندر پالاوان، بورنیو اور جزائر سولو کے درمیان واقع ہے؟",
     "options": [
       "Celebes Sea",
       "Java Sea",
@@ -13066,6 +13488,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Which of these glaciers is the longest and lies in the Karakoram range?",
+    "questionUrdu": "دیے گئے گلیشیئرز میں سب سے طویل اور سلسلہ قراقرم میں واقع گلیشیئر کون سا ہے؟",
     "options": [
       "Baltoro",
       "Biafo",
@@ -13097,6 +13520,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "How does NASA rank Siachen Glacier by length among Earth's midlatitude glaciers?",
+    "questionUrdu": "ناسا لمبائی کے لحاظ سے سیاچن گلیشیئر کو زمین کے وسط عرض بلد کے گلیشیئرز میں کیا درجہ دیتا ہے؟",
     "options": [
       "Longest",
       "Second-longest",
@@ -13128,6 +13552,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "The Alps are located on which continent?",
+    "questionUrdu": "الپس پہاڑی سلسلہ کس براعظم میں واقع ہے؟",
     "options": [
       "Asia",
       "Africa",
@@ -13159,6 +13584,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Which is the highest peak of the Alps?",
+    "questionUrdu": "الپس کی سب سے بلند چوٹی کون سی ہے؟",
     "options": [
       "Mont Blanc",
       "Monte Rosa",
@@ -13190,6 +13616,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Tarbela Dam is built on which river?",
+    "questionUrdu": "تربیلا ڈیم کس دریا پر بنایا گیا ہے؟",
     "options": [
       "Jhelum",
       "Indus",
@@ -13221,6 +13648,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "What type of dam is Tarbela Dam?",
+    "questionUrdu": "تربیلا ڈیم کس قسم کا ڈیم ہے؟",
     "options": [
       "Arch dam",
       "Earth-filled dam",
@@ -13252,6 +13680,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Which traditional irrigation method is especially associated with Balochistan?",
+    "questionUrdu": "آب پاشی کا کون سا روایتی طریقہ خاص طور پر بلوچستان سے منسلک ہے؟",
     "options": [
       "Tube well",
       "Canal",
@@ -13283,6 +13712,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "In a traditional karez system, water is mainly conveyed to the surface by: ",
+    "questionUrdu": "روایتی کاریز نظام میں پانی بنیادی طور پر کس ذریعے سے سطح تک پہنچایا جاتا ہے؟",
     "options": [
       "Diesel pumps",
       "Electric turbines",
@@ -13314,6 +13744,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Nurek Dam is located in which country?",
+    "questionUrdu": "نوریک ڈیم کس ملک میں واقع ہے؟",
     "options": [
       "Pakistan",
       "Afghanistan",
@@ -13345,6 +13776,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Nurek Dam controls which river?",
+    "questionUrdu": "نوریک ڈیم کس دریا کو قابو کرتا ہے؟",
     "options": [
       "Vakhsh",
       "Panj",
@@ -13376,6 +13808,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which listed aviation pioneer developed the first successful practical helicopter?",
+    "questionUrdu": "دیے گئے ہوا بازی کے موجدوں میں سے کس نے پہلا کامیاب عملی ہیلی کاپٹر تیار کیا؟",
     "options": [
       "Igor Sikorsky",
       "The Wright brothers",
@@ -13407,6 +13840,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which Sikorsky model became the world's first mass-produced helicopter?",
+    "questionUrdu": "سیکورسکی کا کون سا ماڈل دنیا کا پہلا بڑے پیمانے پر تیار ہونے والا ہیلی کاپٹر بنا؟",
     "options": [
       "R-4",
       "VS-300",
@@ -13438,6 +13872,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "What is the rest mass of a photon?",
+    "questionUrdu": "فوٹون کی سکونی کمیت کتنی ہے؟",
     "options": [
       "1",
       "0.5",
@@ -13469,6 +13904,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "What is the electric charge of a photon?",
+    "questionUrdu": "فوٹون کا برقی بار کتنا ہے؟",
     "options": [
       "Variable",
       "+1 elementary charge",
@@ -13500,6 +13936,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "In a biochemical reaction, an enzyme acts as a: ",
+    "questionUrdu": "حیاتی کیمیائی ردِعمل میں انزائم کس کے طور پر کام کرتا ہے؟",
     "options": [
       "Inhibitor",
       "Reactant",
@@ -13531,6 +13968,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "What do enzymes lower to speed up biochemical reactions?",
+    "questionUrdu": "حیاتی کیمیائی ردِعمل تیز کرنے کے لیے انزائم کس چیز کو کم کرتے ہیں؟",
     "options": [
       "Product concentration",
       "Temperature to absolute zero",
@@ -13562,6 +14000,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "A genetic disorder caused by an abnormal number or structure of chromosomes is a: ",
+    "questionUrdu": "کروموسوم کی غیر معمولی تعداد یا ساخت سے پیدا ہونے والی جینیاتی خرابی کو کیا کہتے ہیں؟",
     "options": [
       "DNA-free disorder",
       "Plasma disorder",
@@ -13593,6 +14032,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Down syndrome is most commonly associated with an extra copy of which chromosome?",
+    "questionUrdu": "ڈاؤن سنڈروم عموماً کس کروموسوم کی اضافی نقل سے منسلک ہے؟",
     "options": [
       "Chromosome 7",
       "Chromosome 21",
@@ -13624,6 +14064,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which part of the brain primarily coordinates body-temperature regulation?",
+    "questionUrdu": "دماغ کا کون سا حصہ بنیادی طور پر جسمانی درجہ حرارت کے نظم کو ہم آہنگ کرتا ہے؟",
     "options": [
       "Pituitary gland",
       "Thyroid gland",
@@ -13655,6 +14096,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Besides temperature regulation, which function is also coordinated by the hypothalamus?",
+    "questionUrdu": "درجہ حرارت کے نظم کے علاوہ ہائپوتھیلمس کون سا کام بھی ہم آہنگ کرتا ہے؟",
     "options": [
       "Lens focusing",
       "Blood clotting only",
@@ -13686,6 +14128,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which listed scientist co-discovered neon with Morris Travers?",
+    "questionUrdu": "دیے گئے سائنس دانوں میں سے کس نے مورس ٹریورس کے ساتھ نیون دریافت کیا؟",
     "options": [
       "Isaac Newton",
       "Thomas Edison",
@@ -13717,6 +14160,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "In which year was neon discovered by William Ramsay and Morris Travers?",
+    "questionUrdu": "ولیم ریمزے اور مورس ٹریورس نے نیون کس سال دریافت کیا؟",
     "options": [
       "1894",
       "1904",
@@ -13748,6 +14192,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "HTML is primarily used to: ",
+    "questionUrdu": "HTML بنیادی طور پر کس کام کے لیے استعمال ہوتی ہے؟",
     "options": [
       "Structure and develop web pages",
       "Manage a relational database",
@@ -13779,6 +14224,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which technology is normally used to control the visual presentation of an HTML page?",
+    "questionUrdu": "HTML صفحے کی بصری پیشکش کو قابو کرنے کے لیے عموماً کون سی ٹیکنالوجی استعمال ہوتی ہے؟",
     "options": [
       "CSS",
       "SQL",
@@ -13810,6 +14256,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "In a typical ransomware attack, the victim's files are: ",
+    "questionUrdu": "عام رینسم ویئر حملے میں متاثرہ شخص کی فائلوں کے ساتھ کیا کیا جاتا ہے؟",
     "options": [
       "Permanently deleted in every case",
       "Encrypted",
@@ -13841,6 +14288,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What do ransomware attackers commonly demand in exchange for attempted data recovery?",
+    "questionUrdu": "رینسم ویئر حملہ آور ڈیٹا واپس دلانے کی کوشش کے بدلے عام طور پر کیا مطالبہ کرتے ہیں؟",
     "options": [
       "A software update",
       "A password change only",
@@ -13872,6 +14320,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What is the main function of Direct Memory Access (DMA)?",
+    "questionUrdu": "براہِ راست میموری رسائی کا بنیادی کام کیا ہے؟",
     "options": [
       "Store data permanently",
       "Transfer data between an I/O device and memory with minimal CPU involvement",
@@ -13903,6 +14352,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "DMA mainly reduces the transfer workload of which component?",
+    "questionUrdu": "DMA بنیادی طور پر کس جزو کا ڈیٹا منتقلی کا بوجھ کم کرتی ہے؟",
     "options": [
       "Keyboard",
       "Monitor",
@@ -13934,6 +14384,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Multiprogramming is an operating-system technique that allows: ",
+    "questionUrdu": "ملٹی پروگرامنگ آپریٹنگ سسٹم کی ایسی تکنیک ہے جو کس چیز کی اجازت دیتی ہے؟",
     "options": [
       "More than one program to make progress concurrently",
       "Only one fixed task",
@@ -13965,6 +14416,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "In multiprogramming, what can the processor do when one job is waiting for I/O?",
+    "questionUrdu": "ملٹی پروگرامنگ میں جب ایک کام ان پٹ یا آؤٹ پٹ کا منتظر ہو تو پروسیسر کیا کر سکتا ہے؟",
     "options": [
       "Run another ready job",
       "Shut down permanently",
@@ -13996,6 +14448,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Database normalization is mainly used to: ",
+    "questionUrdu": "ڈیٹا بیس نارملائزیشن بنیادی طور پر کس مقصد کے لیے استعمال ہوتی ہے؟",
     "options": [
       "Minimize data redundancy",
       "Delete all data",
@@ -14027,6 +14480,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which problem is database normalization designed to reduce?",
+    "questionUrdu": "ڈیٹا بیس نارملائزیشن کس مسئلے کو کم کرنے کے لیے بنائی گئی ہے؟",
     "options": [
       "Screen brightness",
       "Update anomalies",
@@ -14058,6 +14512,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which email field hides recipient addresses from the other recipients?",
+    "questionUrdu": "ای میل کا کون سا خانہ وصول کنندگان کے پتے دوسرے وصول کنندگان سے چھپاتا ہے؟",
     "options": [
       "To",
       "Bcc",
@@ -14089,6 +14544,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What does Bcc stand for in email?",
+    "questionUrdu": "ای میل میں Bcc کا مکمل نام کیا ہے؟",
     "options": [
       "Basic contact copy",
       "Binary carbon code",
@@ -14120,6 +14576,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Who created the C programming language?",
+    "questionUrdu": "C پروگرامنگ زبان کس نے بنائی؟",
     "options": [
       "James Gosling",
       "Dennis Ritchie",
@@ -14151,6 +14608,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which programming language was the direct predecessor that Dennis Ritchie developed into C?",
+    "questionUrdu": "وہ براہِ راست پیش رو پروگرامنگ زبان کون سی تھی جسے ڈینس رچی نے ترقی دے کر C بنایا؟",
     "options": [
       "B",
       "Pascal",
@@ -14182,6 +14640,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which type of primary memory is used for fast, temporary access by a computer?",
+    "questionUrdu": "کمپیوٹر میں تیز اور عارضی رسائی کے لیے کس قسم کی بنیادی میموری استعمال ہوتی ہے؟",
     "options": [
       "ROM",
       "HDD",
@@ -14213,6 +14672,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which memory is normally volatile?",
+    "questionUrdu": "کون سی میموری عموماً غیر مستقل ہوتی ہے؟",
     "options": [
       "ROM",
       "Flash drive",
@@ -14244,6 +14704,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which of the following is a cloud-storage service?",
+    "questionUrdu": "درج ذیل میں سے کون سی کلاؤڈ اسٹوریج سروس ہے؟",
     "options": [
       "Microsoft Word",
       "Microsoft Excel",
@@ -14275,6 +14736,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which Google service is specifically designed for storing and sharing files in the cloud?",
+    "questionUrdu": "گوگل کی کون سی سروس خاص طور پر کلاؤڈ میں فائلیں محفوظ اور شیئر کرنے کے لیے بنائی گئی ہے؟",
     "options": [
       "Google Translate",
       "Google Maps",
@@ -14306,6 +14768,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Who designed the Kenbak-1, recognized by the Computer History Museum as the earliest personal computer?",
+    "questionUrdu": "کمپیوٹر ہسٹری میوزیم کے مطابق اولین ذاتی کمپیوٹر Kenbak-1 کس نے ڈیزائن کیا؟",
     "options": [
       "John Blankenbaker",
       "Bill Gates",
@@ -14337,6 +14800,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What was the name of John Blankenbaker's early personal computer?",
+    "questionUrdu": "جان بلینکن بیکر کے ابتدائی ذاتی کمپیوٹر کا نام کیا تھا؟",
     "options": [
       "Altair 8800",
       "Apple I",
@@ -14368,6 +14832,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A number is multiplied by 9 and then decreased by 12 to give 72. What is the number?",
+    "questionUrdu": "ایک عدد کو 9 سے ضرب دے کر 12 کم کرنے پر 72 حاصل ہوتا ہے۔ وہ عدد کیا ہے؟",
     "options": [
       "8",
       "84/9",
@@ -14399,6 +14864,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "A number is multiplied by 7 and then increased by 5 to give 54. What is the number?",
+    "questionUrdu": "ایک عدد کو 7 سے ضرب دے کر 5 جمع کرنے پر 54 حاصل ہوتا ہے۔ وہ عدد کیا ہے؟",
     "options": [
       "6",
       "9",
@@ -14430,6 +14896,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Simplify (9x² − 6x)/(3x), where x ≠ 0.",
+    "questionUrdu": "جہاں x ≠ 0 ہو، (9x² − 6x)/(3x) کو سادہ کریں۔",
     "options": [
       "2x + 3",
       "3x − 2",
@@ -14461,6 +14928,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Simplify (8y² + 4y)/(4y), where y ≠ 0.",
+    "questionUrdu": "جہاں y ≠ 0 ہو، (8y² + 4y)/(4y) کو سادہ کریں۔",
     "options": [
       "4y + 1",
       "2y + 1",
@@ -14492,6 +14960,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "How many real solutions does 2x² − √5x + 1 = 0 have?",
+    "questionUrdu": "مساوات 2x² − √5x + 1 = 0 کے کتنے حقیقی حل ہیں؟",
     "options": [
       "One",
       "Two distinct real solutions",
@@ -14523,6 +14992,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "How many real solutions does x² + 4x + 5 = 0 have?",
+    "questionUrdu": "مساوات x² + 4x + 5 = 0 کے کتنے حقیقی حل ہیں؟",
     "options": [
       "No real solution",
       "Exactly one",
@@ -14554,6 +15024,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Evaluate 1/3 × 3/2 ÷ 1/2.",
+    "questionUrdu": "1/3 × 3/2 ÷ 1/2 کی قیمت معلوم کریں۔",
     "options": [
       "1/2",
       "1",
@@ -14585,6 +15056,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Evaluate 2/5 × 5/3 ÷ 2/3.",
+    "questionUrdu": "2/5 × 5/3 ÷ 2/3 کی قیمت معلوم کریں۔",
     "options": [
       "1/2",
       "1",
@@ -14616,6 +15088,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "For a tower of fixed height, if the length of its shadow increases, the Sun's angle of elevation: ",
+    "questionUrdu": "مقررہ اونچائی کے مینار کے سائے کی لمبائی بڑھے تو سورج کا زاویۂ ارتفاع کیا ہوتا ہے؟",
     "options": [
       "Increases",
       "Decreases",
@@ -14647,6 +15120,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "For a pole of fixed height, a shorter shadow indicates that the Sun's angle of elevation is: ",
+    "questionUrdu": "مقررہ اونچائی کے کھمبے کا چھوٹا سایہ ظاہر کرتا ہے کہ سورج کا زاویۂ ارتفاع کیسا ہے؟",
     "options": [
       "Smaller",
       "Always 0°",
@@ -14678,6 +15152,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "At 24 chocolates per box, how many box-equivalents are needed for 30 chocolates?",
+    "questionUrdu": "اگر ایک ڈبے میں 24 چاکلیٹس آتی ہوں تو 30 چاکلیٹس کے لیے کتنے ڈبوں کے برابر گنجائش درکار ہے؟",
     "options": [
       "3",
       "5",
@@ -14709,6 +15184,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "At 16 chocolates per box, how many full boxes can be filled with 48 chocolates?",
+    "questionUrdu": "اگر ایک ڈبے میں 16 چاکلیٹس آتی ہوں تو 48 چاکلیٹس سے کتنے مکمل ڈبے بھر سکتے ہیں؟",
     "options": [
       "3",
       "2",
@@ -14740,6 +15216,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "John ate 20 lb of chicken wings and 15 lb of hot dogs. Kyle ate 20% more wings and 40% more hot dogs. Approximately what percent more total food did Kyle eat?",
+    "questionUrdu": "جان نے 20 پاؤنڈ چکن ونگز اور 15 پاؤنڈ ہاٹ ڈاگز کھائے۔ کائل نے 20 فیصد زیادہ ونگز اور 40 فیصد زیادہ ہاٹ ڈاگز کھائے۔ کائل نے مجموعی طور پر تقریباً کتنے فیصد زیادہ کھانا کھایا؟",
     "options": [
       "20%",
       "30%",
@@ -14771,6 +15248,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "A total rises from 50 kg to 65 kg. What is the percentage increase?",
+    "questionUrdu": "ایک مجموعی مقدار 50 کلوگرام سے بڑھ کر 65 کلوگرام ہو جاتی ہے۔ فیصد اضافہ کتنا ہے؟",
     "options": [
       "15%",
       "25%",
@@ -14802,6 +15280,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "In an exam, 20% of boys and 15% of girls failed. Boys who passed were 70 more than girls who passed, and 90 students failed. How many students appeared?",
+    "questionUrdu": "ایک امتحان میں 20 فیصد لڑکے اور 15 فیصد لڑکیاں ناکام ہوئیں۔ کامیاب لڑکے کامیاب لڑکیوں سے 70 زیادہ تھے اور 90 طلبہ ناکام ہوئے۔ کل کتنے طلبہ امتحان میں شریک ہوئے؟",
     "options": [
       "350",
       "400",
@@ -14833,6 +15312,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "In a test, 10% of 300 boys and 20% of 200 girls failed. How many students failed in total?",
+    "questionUrdu": "ایک امتحان میں 300 لڑکوں میں سے 10 فیصد اور 200 لڑکیوں میں سے 20 فیصد ناکام ہوئے۔ مجموعی طور پر کتنے طلبہ ناکام ہوئے؟",
     "options": [
       "50",
       "60",
@@ -14864,6 +15344,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Find the volume of a cone with radius 10 cm and height 30 cm.",
+    "questionUrdu": "10 سینٹی میٹر رداس اور 30 سینٹی میٹر اونچائی والے مخروط کا حجم معلوم کریں۔",
     "options": [
       "500π cm³",
       "1000π cm³",
@@ -14895,6 +15376,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "What is the volume of a cone with radius 6 cm and height 12 cm?",
+    "questionUrdu": "6 سینٹی میٹر رداس اور 12 سینٹی میٹر اونچائی والے مخروط کا حجم کیا ہے؟",
     "options": [
       "72π cm³",
       "144π cm³",
@@ -14926,6 +15408,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A car travels 30 km in 50 minutes. What is its average speed in km/h?",
+    "questionUrdu": "ایک گاڑی 50 منٹ میں 30 کلومیٹر سفر کرتی ہے۔ کلومیٹر فی گھنٹہ میں اس کی اوسط رفتار کیا ہے؟",
     "options": [
       "30 km/h",
       "36 km/h",
@@ -14957,6 +15440,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "A bus covers 45 km in 45 minutes. What is its average speed?",
+    "questionUrdu": "ایک بس 45 منٹ میں 45 کلومیٹر طے کرتی ہے۔ اس کی اوسط رفتار کیا ہے؟",
     "options": [
       "45 km/h",
       "50 km/h",
@@ -14988,6 +15472,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Find the distance between the points (0, 5) and (−5, 0).",
+    "questionUrdu": "نقاط (0, 5) اور (−5, 0) کے درمیان فاصلہ معلوم کریں۔",
     "options": [
       "4",
       "5√2",
@@ -15019,6 +15504,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "What is the distance between (1, 2) and (4, 6)?",
+    "questionUrdu": "نقاط (1, 2) اور (4, 6) کے درمیان فاصلہ کیا ہے؟",
     "options": [
       "4",
       "5",
@@ -15050,6 +15536,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "The ratio of rice to wheat is 3:4. If the amount of rice is 21, what is the amount of wheat?",
+    "questionUrdu": "چاول اور گندم کا تناسب 3:4 ہے۔ اگر چاول کی مقدار 21 ہو تو گندم کی مقدار کیا ہوگی؟",
     "options": [
       "24",
       "26",
@@ -15081,6 +15568,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "The ratio of apples to oranges is 5:7. If there are 25 apples, how many oranges are there?",
+    "questionUrdu": "سیب اور سنترے کا تناسب 5:7 ہے۔ اگر 25 سیب ہوں تو سنترے کتنے ہیں؟",
     "options": [
       "30",
       "35",
@@ -15112,6 +15600,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Evaluate 100^1.5.",
+    "questionUrdu": "100^1.5 کی قیمت معلوم کریں۔",
     "options": [
       "100",
       "1000",
@@ -15143,6 +15632,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Evaluate 64^(2/3).",
+    "questionUrdu": "64^(2/3) کی قیمت معلوم کریں۔",
     "options": [
       "8",
       "16",
@@ -15174,6 +15664,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Which word is closest in meaning to ‘picayune’?",
+    "questionUrdu": "کون سا لفظ 'picayune' کے معنی کے قریب ترین ہے؟",
     "options": [
       "Paltry",
       "Rich",
@@ -15205,6 +15696,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is closest in meaning to ‘paltry’?",
+    "questionUrdu": "کون سا لفظ 'paltry' کے معنی کے قریب ترین ہے؟",
     "options": [
       "Splendid",
       "Insignificant",
@@ -15236,6 +15728,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the analogy: Outrage : Peeve :: Strive : ____.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Outrage : Peeve :: Strive : ____۔",
     "options": [
       "Fail",
       "Attempt",
@@ -15267,6 +15760,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the synonym analogy: Irritate : Annoy :: Endeavor : ____.",
+    "questionUrdu": "مترادف نسبت مکمل کریں: Irritate : Annoy :: Endeavor : ____۔",
     "options": [
       "Abandon",
       "Attempt",
@@ -15298,6 +15792,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the analogy: Gerrymander : Divide :: Filibuster : ____.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Gerrymander : Divide :: Filibuster : ____۔",
     "options": [
       "Speak",
       "Delay",
@@ -15329,6 +15824,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which Senate procedure can limit debate and overcome a filibuster?",
+    "questionUrdu": "سینیٹ کا کون سا طریقۂ کار بحث کو محدود کرکے filibuster پر قابو پا سکتا ہے؟",
     "options": [
       "Impeachment",
       "Cloture",
@@ -15360,6 +15856,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "He was walking along the pavement when I saw him. What part of speech is ‘when’?",
+    "questionUrdu": "جملے 'He was walking along the pavement when I saw him.' میں 'when' کون سا جزوِ کلام ہے؟",
     "options": [
       "Adverb",
       "Preposition",
@@ -15391,6 +15888,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "I stayed indoors because it was raining. What part of speech is ‘because’?",
+    "questionUrdu": "جملے 'I stayed indoors because it was raining.' میں 'because' کون سا جزوِ کلام ہے؟",
     "options": [
       "Pronoun",
       "Interjection",
@@ -15422,6 +15920,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "He has been sleeping ____ half past nine.",
+    "questionUrdu": "خالی جگہ پُر کریں: He has been sleeping ____ half past nine.",
     "options": [
       "For",
       "Since",
@@ -15454,6 +15953,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "They have lived in Lahore ____ five years.",
+    "questionUrdu": "خالی جگہ پُر کریں: They have lived in Lahore ____ five years.",
     "options": [
       "For",
       "At",
@@ -15486,6 +15986,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the analogy: Chagrin : Criticism :: Sag : ____.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Chagrin : Criticism :: Sag : ____۔",
     "options": [
       "Cringe",
       "Redress",
@@ -15517,6 +16018,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which condition is most likely to make a shelf sag?",
+    "questionUrdu": "کون سی حالت کسی شیلف کے جھکنے کا سب سے زیادہ امکان پیدا کرتی ہے؟",
     "options": [
       "Bright light",
       "Excessive weight",
@@ -15548,6 +16050,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Which word is closest in meaning to ‘stentorian’?",
+    "questionUrdu": "کون سا لفظ 'stentorian' کے معنی کے قریب ترین ہے؟",
     "options": [
       "Soft",
       "Loud",
@@ -15579,6 +16082,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is an antonym of ‘stentorian’?",
+    "questionUrdu": "کون سا لفظ 'stentorian' کا متضاد ہے؟",
     "options": [
       "Booming",
       "Thunderous",
@@ -15610,6 +16114,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "She has no match ____ you.",
+    "questionUrdu": "خالی جگہ پُر کریں: She has no match ____ you.",
     "options": [
       "With",
       "To",
@@ -15641,6 +16146,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "The novice was no match ____ the experienced champion.",
+    "questionUrdu": "خالی جگہ پُر کریں: The novice was no match ____ the experienced champion.",
     "options": [
       "For",
       "At",
@@ -15672,6 +16178,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the proverb: It takes ____ to tango.",
+    "questionUrdu": "کہاوت مکمل کریں: It takes ____ to tango.",
     "options": [
       "One",
       "Two",
@@ -15703,6 +16210,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "What does the idiom ‘It takes two to tango’ usually imply?",
+    "questionUrdu": "محاورہ 'It takes two to tango' عموماً کیا مفہوم دیتا ہے؟",
     "options": [
       "Both parties are involved",
       "One person is always innocent",
@@ -15734,6 +16242,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "A thick cloud has formed close to the ground. What function does ‘A thick cloud’ perform?",
+    "questionUrdu": "زمین کے قریب ایک گھنا بادل بن گیا ہے۔ جملے میں 'A thick cloud' کیا نحوی کام انجام دیتا ہے؟",
     "options": [
       "Object",
       "Subject",
@@ -15765,6 +16274,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Bright stars filled the night sky. What function does ‘Bright stars’ perform?",
+    "questionUrdu": "جملے 'Bright stars filled the night sky.' میں 'Bright stars' کیا نحوی کام انجام دیتا ہے؟",
     "options": [
       "Adverb",
       "Object",
@@ -15796,6 +16306,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Change into active voice: Let the chair be arranged.",
+    "questionUrdu": "معلوم صورت میں تبدیل کریں: Let the chair be arranged.",
     "options": [
       "Let someone arrange the chair",
       "Arrange the chair",
@@ -15827,6 +16338,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Change into active voice: Let the door be closed.",
+    "questionUrdu": "معلوم صورت میں تبدیل کریں: Let the door be closed.",
     "options": [
       "The door closed",
       "Close the door",
@@ -15858,6 +16370,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "You cannot teach an old ____ new tricks.",
+    "questionUrdu": "جملہ مکمل کریں: You cannot teach an old ____ new tricks.",
     "options": [
       "Cat",
       "Fox",
@@ -15889,6 +16402,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "What is the main meaning of ‘You cannot teach an old dog new tricks’?",
+    "questionUrdu": "کہاوت 'You cannot teach an old dog new tricks' کا بنیادی مفہوم کیا ہے؟",
     "options": [
       "Established habits are hard to change",
       "Old animals cannot hear",
@@ -15920,6 +16434,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Which word is an antonym of ‘demur’?",
+    "questionUrdu": "کون سا لفظ 'demur' کا متضاد ہے؟",
     "options": [
       "Refuse",
       "Accept",
@@ -15951,6 +16466,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is closest in meaning to the verb ‘demur’?",
+    "questionUrdu": "کون سا لفظ فعل 'demur' کے معنی کے قریب ترین ہے؟",
     "options": [
       "Permit",
       "Approve",
@@ -15982,6 +16498,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Which wife of Prophet Muhammad (PBUH) was the daughter of al-Harith ibn Abi Dirar of Banu Mustaliq?",
+    "questionUrdu": "نبی کریم ﷺ کی کون سی زوجہ، بنو مصطلق کے حارث بن ابی ضرار کی بیٹی تھیں؟",
     "options": [
       "Hazrat Juwayriya (RA)",
       "Hazrat Aisha (RA)",
@@ -16013,6 +16530,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Who was the father of Hazrat Juwayriya bint al-Harith (RA)?",
+    "questionUrdu": "حضرت جویریہ بنت الحارث رضی اللہ عنہا کے والد کون تھے؟",
     "options": [
       "Zayd ibn Harithah",
       "Abu Sufyan ibn Harb",
@@ -16044,6 +16562,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "In which city was Hazrat Ali (RA) martyred?",
+    "questionUrdu": "حضرت علی رضی اللہ عنہ کس شہر میں شہید ہوئے؟",
     "options": [
       "Medina",
       "Makkah",
@@ -16075,6 +16594,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Who struck Hazrat Ali (RA) in the fatal attack at Kufa?",
+    "questionUrdu": "کوفہ میں جان لیوا حملے کے دوران حضرت علی رضی اللہ عنہ پر کس نے ضرب لگائی؟",
     "options": [
       "Marwan ibn al-Hakam",
       "Abu Sufyan",
@@ -16106,6 +16626,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "What is a Hadith collection arranged according to chapters of fiqh generally called?",
+    "questionUrdu": "فقہی ابواب کے مطابق مرتب کی گئی احادیث کی کتاب کو عموماً کیا کہتے ہیں؟",
     "options": [
       "Sunan",
       "Musnad",
@@ -16137,6 +16658,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Which of the following is a well-known Sunan collection?",
+    "questionUrdu": "درج ذیل میں سے کون سی ایک معروف سنن کی کتاب ہے؟",
     "options": [
       "Musnad Ahmad",
       "Sunan Abi Dawud",
@@ -16168,6 +16690,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "In which region was the main political centre of the Umayyad Caliphate?",
+    "questionUrdu": "اموی خلافت کا مرکزی سیاسی مرکز کس خطے میں تھا؟",
     "options": [
       "Iraq",
       "Syria",
@@ -16199,6 +16722,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "What was the capital of the Umayyad Caliphate under the Sufyanid and Marwanid caliphs?",
+    "questionUrdu": "سفیانی اور مروانی خلفا کے دور میں اموی خلافت کا دارالحکومت کیا تھا؟",
     "options": [
       "Baghdad",
       "Cairo",
@@ -16230,6 +16754,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Whom did Prophet Muhammad (PBUH) leave in charge of Medina during the expedition of Tabuk?",
+    "questionUrdu": "غزوۂ تبوک کے دوران نبی کریم ﷺ نے مدینہ کا انتظام کس کے سپرد کیا؟",
     "options": [
       "Hazrat Umar (RA)",
       "Hazrat Ali (RA)",
@@ -16261,6 +16786,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "During which expedition was Hazrat Ali (RA) left as the Prophet’s deputy in Medina?",
+    "questionUrdu": "کس غزوے کے دوران حضرت علی رضی اللہ عنہ کو مدینہ میں رسول اللہ ﷺ کا نائب مقرر کیا گیا؟",
     "options": [
       "Tabuk",
       "Uhud",
@@ -16292,6 +16818,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "In which Hijri year did the conquest of Makkah take place?",
+    "questionUrdu": "فتح مکہ کس ہجری سال میں ہوئی؟",
     "options": [
       "7 AH",
       "8 AH",
@@ -16323,6 +16850,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Approximately how many Muslims marched from Medina for the conquest of Makkah in 8 AH?",
+    "questionUrdu": "8 ہجری میں فتح مکہ کے لیے مدینہ سے تقریباً کتنے مسلمان روانہ ہوئے؟",
     "options": [
       "1,000",
       "3,000",
@@ -16354,6 +16882,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu proverb: ڈائن بھی ____ گھر چھوڑ کر کھاتی ہے۔",
+    "questionUrdu": "اردو کہاوت مکمل کریں: ڈائن بھی ____ گھر چھوڑ کر کھاتی ہے۔",
     "options": [
       "دس",
       "نو",
@@ -16385,6 +16914,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Complete the Urdu proverb: اونچی دکان، ____ پکوان۔",
+    "questionUrdu": "اردو کہاوت مکمل کریں: اونچی دکان، ____ پکوان۔",
     "options": [
       "میٹھا",
       "پھیکا",
@@ -16416,6 +16946,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What is the idiomatic meaning of ہاتھ ملنا?",
+    "questionUrdu": "'ہاتھ ملنا' کا محاوراتی مفہوم کیا ہے؟",
     "options": [
       "عزت دینا",
       "تکلیف دینا",
@@ -16447,6 +16978,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What is the idiomatic meaning of کفِ افسوس ملنا?",
+    "questionUrdu": "'کفِ افسوس ملنا' کا محاوراتی مفہوم کیا ہے؟",
     "options": [
       "پچھتانا",
       "خوشی منانا",
@@ -16478,6 +17010,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "In the Urdu expression پانی وانی, how is the word وانی classified?",
+    "questionUrdu": "اردو ترکیب 'پانی وانی' میں لفظ 'وانی' کی کیا درجہ بندی ہے؟",
     "options": [
       "اسم",
       "مہمل",
@@ -16509,6 +17042,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which description best fits the construction پانی وانی?",
+    "questionUrdu": "ترکیب 'پانی وانی' کی بہترین وضاحت کون سی ہے؟",
     "options": [
       "Two unrelated meaningful nouns",
       "A verb followed by an adjective",
@@ -16540,6 +17074,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "In Urdu grammar and naming conventions, محسن الملک is what kind of name?",
+    "questionUrdu": "اردو قواعد اور نام رکھنے کی روایت میں 'محسن الملک' کس قسم کا نام ہے؟",
     "options": [
       "خطاب",
       "لقب",
@@ -16571,6 +17106,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "In Urdu literary terminology, غالب in the name مرزا غالب is a:",
+    "questionUrdu": "اردو ادبی اصطلاح میں 'مرزا غالب' کے نام میں 'غالب' کیا ہے؟",
     "options": [
       "خطاب",
       "کنیت",
@@ -16602,6 +17138,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Which Urdu sentence is written correctly?",
+    "questionUrdu": "اردو کا کون سا جملہ درست لکھا گیا ہے؟",
     "options": [
       "اسلام و علیکم کے بعد عرض ہے۔",
       "السلام علیکم کے بعد عرض ہے۔",
@@ -16633,6 +17170,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which is the correctly written conventional reply to السلام علیکم?",
+    "questionUrdu": "'السلام علیکم' کا روایتی جواب درست طور پر کیسے لکھا جاتا ہے؟",
     "options": [
       "و علیکم اسلام",
       "وعلیکم السلام",
@@ -16664,6 +17202,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu saying: کیا زمانہ تھا، شیر اور بکری ایک ہی ____ پر پانی پیتے تھے۔",
+    "questionUrdu": "اردو کہاوت مکمل کریں: کیا زمانہ تھا، شیر اور بکری ایک ہی ____ پر پانی پیتے تھے۔",
     "options": [
       "دریا",
       "گھاٹ",
@@ -16695,6 +17234,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the expression شیر اور بکری ایک گھاٹ پانی پیتے ہیں imply?",
+    "questionUrdu": "'شیر اور بکری ایک گھاٹ پانی پیتے ہیں' سے کیا مفہوم نکلتا ہے؟",
     "options": [
       "عدل و امن کا دور",
       "قحط کا زمانہ",
@@ -16726,6 +17266,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu idiom: بے پیندے کا ____.",
+    "questionUrdu": "اردو محاورہ مکمل کریں: بے پیندے کا ____۔",
     "options": [
       "جھکا",
       "پکا",
@@ -16757,6 +17298,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What kind of person is called بے پیندے کا لوٹا?",
+    "questionUrdu": "کس قسم کے شخص کو 'بے پیندے کا لوٹا' کہا جاتا ہے؟",
     "options": [
       "غیر مستقل مزاج",
       "بہت بہادر",
@@ -16788,6 +17330,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Which Urdu grammatical term denotes a verb construction that negates an action?",
+    "questionUrdu": "اردو قواعد کی کون سی اصطلاح ایسے فعلی مرکب کے لیے ہے جو کسی عمل کی نفی کرے؟",
     "options": [
       "فعل نفی",
       "فعل مطلق",
@@ -16819,6 +17362,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which verb category is illustrated by the Urdu sentence وہ آج اسکول نہیں گیا؟",
+    "questionUrdu": "اردو جملہ 'وہ آج اسکول نہیں گیا' فعل کی کس قسم کی مثال ہے؟",
     "options": [
       "فعل امر",
       "فعل نفی",
@@ -16850,6 +17394,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu proverb: چیل کے گھونسلے میں ____ کہاں؟",
+    "questionUrdu": "اردو کہاوت مکمل کریں: چیل کے گھونسلے میں ____ کہاں؟",
     "options": [
       "کپاس",
       "گوشت",
@@ -16881,6 +17426,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does چیل کے گھونسلے میں ماس کہاں suggest?",
+    "questionUrdu": "'چیل کے گھونسلے میں ماس کہاں' کیا مفہوم ظاہر کرتی ہے؟",
     "options": [
       "شکار ہمیشہ آسان ہوتا ہے",
       "محنت سے دولت بڑھتی ہے",
@@ -16912,6 +17458,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu proverb: خدا کی باتیں ____ ہی جانے۔",
+    "questionUrdu": "اردو کہاوت مکمل کریں: خدا کی باتیں ____ ہی جانے۔",
     "options": [
       "بندہ",
       "فرشتہ",
@@ -16943,6 +17490,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which interpretation best matches خدا کی باتیں خدا ہی جانے?",
+    "questionUrdu": "کون سی تشریح 'خدا کی باتیں خدا ہی جانے' کے مفہوم کے مطابق ہے؟",
     "options": [
       "خدائی راز بشر کے علم سے باہر ہیں",
       "ہر راز انسان جان سکتا ہے",
@@ -16974,6 +17522,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "In which Pakistani city is the Wazir Khan Mosque located?",
+    "questionUrdu": "وزیر خان مسجد پاکستان کے کس شہر میں واقع ہے؟",
     "options": [
       "Thatta",
       "Karachi",
@@ -17004,6 +17553,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "In which Pakistani city is the Badshahi Mosque located?",
+    "questionUrdu": "بادشاہی مسجد پاکستان کے کس شہر میں واقع ہے؟",
     "options": [
       "Multan",
       "Lahore",
@@ -17034,6 +17584,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In which year was Pakistan's first nationwide martial law imposed?",
+    "questionUrdu": "پاکستان میں ملک گیر پہلا مارشل لا کس سال نافذ ہوا؟",
     "options": [
       "1958",
       "1960",
@@ -17064,6 +17615,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Who proclaimed Pakistan's first nationwide martial law on 7 October 1958?",
+    "questionUrdu": "7 اکتوبر 1958 کو پاکستان میں ملک گیر پہلے مارشل لا کا اعلان کس نے کیا؟",
     "options": [
       "Ayub Khan",
       "Iskander Mirza",
@@ -17094,6 +17646,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "When was the Tashkent Declaration signed by Pakistan and India?",
+    "questionUrdu": "پاکستان اور بھارت نے اعلانِ تاشقند پر کب دستخط کیے؟",
     "options": [
       "July 1960",
       "Jan 1966",
@@ -17124,6 +17677,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "The Tashkent Declaration followed which armed conflict?",
+    "questionUrdu": "اعلانِ تاشقند کس مسلح تنازع کے بعد طے پایا؟",
     "options": [
       "The 1965 India–Pakistan war",
       "The 1971 India–Pakistan war",
@@ -17154,6 +17708,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In which year did Pakistan join the Non-Aligned Movement?",
+    "questionUrdu": "پاکستان غیر وابستہ تحریک میں کس سال شامل ہوا؟",
     "options": [
       "1979",
       "1981",
@@ -17185,6 +17740,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "In which year did Pakistan withdraw from CENTO as the alliance collapsed?",
+    "questionUrdu": "اتحاد کے خاتمے کے دوران پاکستان سینٹو سے کس سال الگ ہوا؟",
     "options": [
       "1979",
       "1971",
@@ -17216,6 +17772,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "Which city of Punjab is famous for camel-skin art?",
+    "questionUrdu": "پنجاب کا کون سا شہر اونٹ کی کھال کے فن کے لیے مشہور ہے؟",
     "options": [
       "Multan",
       "Bahawalpur",
@@ -17246,6 +17803,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "Which Punjab city is especially associated with blue pottery?",
+    "questionUrdu": "پنجاب کا کون سا شہر خاص طور پر نیلی مٹی کے برتنوں سے منسلک ہے؟",
     "options": [
       "Sialkot",
       "Gujranwala",
@@ -17276,6 +17834,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Who was the first foreign minister of Pakistan?",
+    "questionUrdu": "پاکستان کے پہلے وزیرِ خارجہ کون تھے؟",
     "options": [
       "Hamid-ul-Haq",
       "Khawaja Nazimuddin",
@@ -17306,6 +17865,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Until which year did Sir Muhammad Zafarullah Khan serve his first term as Pakistan's foreign minister?",
+    "questionUrdu": "سر محمد ظفر اللہ خان پاکستان کے وزیرِ خارجہ کی پہلی مدت میں کس سال تک خدمات انجام دیتے رہے؟",
     "options": [
       "1951",
       "1958",
@@ -17336,6 +17896,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "What is the minimum voting age in Pakistan?",
+    "questionUrdu": "پاکستان میں ووٹ دینے کی کم از کم عمر کیا ہے؟",
     "options": [
       "16 years",
       "17 years",
@@ -17366,6 +17927,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "What is the minimum age required to be elected President of Pakistan?",
+    "questionUrdu": "پاکستان کا صدر منتخب ہونے کے لیے کم از کم عمر کیا ہے؟",
     "options": [
       "30 years",
       "35 years",
@@ -17396,6 +17958,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Who was the first Chief Justice of Pakistan's Federal Constitutional Court?",
+    "questionUrdu": "پاکستان کی وفاقی آئینی عدالت کے پہلے چیف جسٹس کون تھے؟",
     "options": [
       "Justice Yahya Afridi",
       "Justice Qazi Faez Isa",
@@ -17427,6 +17990,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "What is the official name of the court first headed by Justice Amin-ud-Din Khan?",
+    "questionUrdu": "جسٹس امین الدین خان کی سربراہی میں پہلی بار قائم ہونے والی عدالت کا سرکاری نام کیا ہے؟",
     "options": [
       "Supreme Judicial Court",
       "National Constitutional Tribunal",
@@ -17458,6 +18022,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In which year did the Kargil conflict occur?",
+    "questionUrdu": "کارگل تنازع کس سال ہوا؟",
     "options": [
       "1996",
       "1997",
@@ -17489,6 +18054,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "The 1999 Kargil conflict was fought mainly near which boundary?",
+    "questionUrdu": "1999 کا کارگل تنازع بنیادی طور پر کس سرحدی لکیر کے قریب لڑا گیا؟",
     "options": [
       "Radcliffe Line",
       "Durand Line",
@@ -17520,6 +18086,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In which year was the Indus Waters Treaty signed by Pakistan and India?",
+    "questionUrdu": "پاکستان اور بھارت کے درمیان سندھ طاس معاہدہ کس سال طے پایا؟",
     "options": [
       "1956",
       "1958",
@@ -17550,6 +18117,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Which three rivers are principally allocated to Pakistan under the Indus Waters Treaty?",
+    "questionUrdu": "سندھ طاس معاہدے کے تحت بنیادی طور پر کون سے تین دریا پاکستان کے لیے مختص ہیں؟",
     "options": [
       "Ravi, Beas and Sutlej",
       "Kabul, Swat and Kurram",
@@ -17580,6 +18148,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "What is the minimum age required to be elected a Senator in Pakistan?",
+    "questionUrdu": "پاکستان میں سینیٹر منتخب ہونے کے لیے کم از کم عمر کیا ہے؟",
     "options": [
       "25 years",
       "30 years",
@@ -17610,6 +18179,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "What is the minimum age required to be elected to Pakistan's National Assembly?",
+    "questionUrdu": "پاکستان کی قومی اسمبلی کا رکن منتخب ہونے کے لیے کم از کم عمر کیا ہے؟",
     "options": [
       "18 years",
       "21 years",
@@ -17640,6 +18210,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "Which is one of the world's busiest artificial waterways for shipping trade?",
+    "questionUrdu": "جہاز رانی کی تجارت کے لیے دنیا کی مصروف ترین مصنوعی آبی گزرگاہوں میں سے ایک کون سی ہے؟",
     "options": [
       "Panama Canal",
       "Suez Canal",
@@ -17670,6 +18241,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "Which two bodies of water are connected by the Suez Canal?",
+    "questionUrdu": "نہر سویز کن دو سمندروں کو ملاتی ہے؟",
     "options": [
       "Atlantic and Pacific oceans",
       "Black Sea and Caspian Sea",
@@ -17700,6 +18272,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Who was the Deputy Chairman of the Senate of Pakistan on 22 August 2026?",
+    "questionUrdu": "22 اگست 2026 کو سینیٹ آف پاکستان کے ڈپٹی چیئرمین کون تھے؟",
     "options": [
       "Syed Yousaf Raza Gilani",
       "Mirza Muhammad Afridi",
@@ -17731,6 +18304,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "Who was serving as Chairman of the Senate of Pakistan on 22 August 2026?",
+    "questionUrdu": "22 اگست 2026 کو سینیٹ آف پاکستان کے چیئرمین کون تھے؟",
     "options": [
       "Syed Yousaf Raza Gilani",
       "Syedaal Khan Nasar",
@@ -17762,6 +18336,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Which objective was officially stated for Exercise Will for Peace 2026?",
+    "questionUrdu": "مشق Will for Peace 2026 کے لیے سرکاری طور پر کون سا مقصد بیان کیا گیا؟",
     "options": [
       "Improving maritime safety and protecting shipping routes",
       "Preparing a strike against NATO",
@@ -17793,6 +18368,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "What was the name of the BRICS+ naval exercise held off South Africa in January 2026?",
+    "questionUrdu": "جنوری 2026 میں جنوبی افریقہ کے ساحل کے قریب منعقد ہونے والی BRICS+ بحری مشق کا نام کیا تھا؟",
     "options": [
       "Will for Peace 2026",
       "Sea Guardians 2026",
@@ -17824,6 +18400,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Who was the Prime Minister of Bangladesh on 22 August 2026?",
+    "questionUrdu": "22 اگست 2026 کو بنگلہ دیش کے وزیرِ اعظم کون تھے؟",
     "options": [
       "Sheikh Hasina",
       "Khalilur Rahman",
@@ -17855,6 +18432,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "Which additional portfolio was held by Bangladesh Prime Minister Tarique Rahman on 22 August 2026?",
+    "questionUrdu": "22 اگست 2026 کو بنگلہ دیش کے وزیرِ اعظم طارق رحمٰن کے پاس کون سا اضافی قلم دان تھا؟",
     "options": [
       "Finance",
       "Foreign Affairs",
@@ -17886,6 +18464,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Under the amended State Bank of Pakistan law, what is the term of the SBP Governor?",
+    "questionUrdu": "ترمیم شدہ اسٹیٹ بینک آف پاکستان قانون کے تحت گورنر اسٹیٹ بینک کی مدت کتنی ہے؟",
     "options": [
       "2 years",
       "3 years",
@@ -17916,6 +18495,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "How many times may an SBP Governor's five-year term be renewed under the amended law?",
+    "questionUrdu": "ترمیم شدہ قانون کے تحت گورنر اسٹیٹ بینک کی پانچ سالہ مدت کتنی مرتبہ دوبارہ دی جا سکتی ہے؟",
     "options": [
       "It cannot be renewed",
       "Twice",
@@ -17946,6 +18526,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Mazar-e-Sharif is a major city of which country?",
+    "questionUrdu": "مزارِ شریف کس ملک کا ایک بڑا شہر ہے؟",
     "options": [
       "Iran",
       "Turkey",
@@ -17976,6 +18557,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "What is the capital city of Afghanistan?",
+    "questionUrdu": "افغانستان کا دارالحکومت کون سا ہے؟",
     "options": [
       "Herat",
       "Kandahar",
@@ -18006,6 +18588,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Which precious gemstone is notably found in Gilgit-Baltistan?",
+    "questionUrdu": "گلگت بلتستان میں کون سا قیمتی جواہر نمایاں طور پر پایا جاتا ہے؟",
     "options": [
       "Diamond",
       "Ruby",
@@ -18037,6 +18620,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Which area of Gilgit-Baltistan is particularly associated with ruby deposits?",
+    "questionUrdu": "گلگت بلتستان کا کون سا علاقہ خاص طور پر یاقوت کے ذخائر سے منسلک ہے؟",
     "options": [
       "Diamer only",
       "Hunza-Nagar",
@@ -18068,6 +18652,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Which pair of countries borders the Aral Sea?",
+    "questionUrdu": "بحیرہ ارال کی سرحد کن دو ممالک سے ملتی ہے؟",
     "options": [
       "Kazakhstan and Russia",
       "Iran and Tajikistan",
@@ -18098,6 +18683,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Which two rivers historically supplied most of the water to the Aral Sea?",
+    "questionUrdu": "تاریخی طور پر کون سے دو دریا بحیرہ ارال کو زیادہ تر پانی فراہم کرتے تھے؟",
     "options": [
       "Amu Darya and Syr Darya",
       "Indus and Jhelum",
@@ -18128,6 +18714,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "What is the capital city of Sierra Leone?",
+    "questionUrdu": "سیرالیون کا دارالحکومت کیا ہے؟",
     "options": [
       "Freetown",
       "Helsinki",
@@ -18158,6 +18745,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "What is the capital of Liberia?",
+    "questionUrdu": "لائبیریا کا دارالحکومت کیا ہے؟",
     "options": [
       "Freetown",
       "Monrovia",
@@ -18188,6 +18776,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "What is the highest mountain peak in Canada?",
+    "questionUrdu": "کینیڈا کی سب سے بلند پہاڑی چوٹی کون سی ہے؟",
     "options": [
       "Mount Robson",
       "Mount Saint Elias",
@@ -18218,6 +18807,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "In which Canadian territory is Mount Logan located?",
+    "questionUrdu": "ماؤنٹ لوگن کینیڈا کے کس علاقے میں واقع ہے؟",
     "options": [
       "Nunavut",
       "Northwest Territories",
@@ -18248,6 +18838,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which material is most commonly used to make solar photovoltaic cells?",
+    "questionUrdu": "شمسی فوٹو وولٹائک خلیے بنانے کے لیے سب سے زیادہ کون سا مادہ استعمال ہوتا ہے؟",
     "options": [
       "Lithium",
       "Graphite",
@@ -18278,6 +18869,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which physical effect enables a solar cell to convert light directly into electricity?",
+    "questionUrdu": "کون سا طبیعی اثر شمسی خلیے کو روشنی براہِ راست بجلی میں بدلنے کے قابل بناتا ہے؟",
     "options": [
       "Photoelectric heating",
       "Nuclear fission",
@@ -18308,6 +18900,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "What is the smallest planet in our solar system?",
+    "questionUrdu": "ہمارے نظامِ شمسی کا سب سے چھوٹا سیارہ کون سا ہے؟",
     "options": [
       "Mercury",
       "Pluto",
@@ -18338,6 +18931,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Approximately how long does Mercury take to orbit the Sun?",
+    "questionUrdu": "عطارد سورج کا ایک چکر تقریباً کتنے وقت میں مکمل کرتا ہے؟",
     "options": [
       "24 Earth days",
       "88 Earth days",
@@ -18368,6 +18962,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which metal is liquid at ordinary room temperature?",
+    "questionUrdu": "عام کمرے کے درجہ حرارت پر کون سی دھات مائع ہوتی ہے؟",
     "options": [
       "Gold",
       "Lead",
@@ -18398,6 +18993,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which non-metal is liquid at ordinary room temperature?",
+    "questionUrdu": "عام کمرے کے درجہ حرارت پر کون سا غیر دھاتی عنصر مائع ہوتا ہے؟",
     "options": [
       "Iodine",
       "Sulfur",
@@ -18428,6 +19024,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Approximately what percentage of an average adult human body is water?",
+    "questionUrdu": "اوسط بالغ انسانی جسم کا تقریباً کتنا فیصد پانی ہوتا ہے؟",
     "options": [
       "50%",
       "60%",
@@ -18458,6 +19055,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Approximately what percentage of an infant's body weight may consist of water?",
+    "questionUrdu": "شیر خوار بچے کے جسمانی وزن کا تقریباً کتنا فیصد پانی ہو سکتا ہے؟",
     "options": [
       "25%",
       "75%",
@@ -18488,6 +19086,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which scientist gave the first accurate account of systemic blood circulation?",
+    "questionUrdu": "کس سائنس دان نے جسم میں خون کی عمومی گردش کی پہلی درست وضاحت پیش کی؟",
     "options": [
       "Thomas Edison",
       "Robert Boyle",
@@ -18518,6 +19117,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which organ pumps blood through the human circulatory system?",
+    "questionUrdu": "انسانی دورانِ خون کے نظام میں خون کو کون سا عضو پمپ کرتا ہے؟",
     "options": [
       "Liver",
       "Heart",
@@ -18548,6 +19148,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "What is the approximate audible frequency range for a healthy young human ear?",
+    "questionUrdu": "ایک صحت مند نوجوان انسان کے کان کے لیے قابلِ سماعت فریکوئنسی کی تقریباً حد کیا ہے؟",
     "options": [
       "10 Hz - 10 kHz",
       "20 Hz - 20 kHz",
@@ -18578,6 +19179,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "What is the approximate upper frequency limit of normal young human hearing?",
+    "questionUrdu": "عام نوجوان انسان کی سماعت کی تقریباً بالائی فریکوئنسی حد کیا ہے؟",
     "options": [
       "2 kHz",
       "10 kHz",
@@ -18608,6 +19210,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which member of the cat family normally lives and hunts in social groups?",
+    "questionUrdu": "بلی کے خاندان کا کون سا جانور عموماً سماجی گروہوں میں رہتا اور شکار کرتا ہے؟",
     "options": [
       "Fox",
       "Tiger",
@@ -18638,6 +19241,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "What is a social group of lions called?",
+    "questionUrdu": "شیروں کے سماجی گروہ کو کیا کہتے ہیں؟",
     "options": [
       "Pack",
       "Herd",
@@ -18668,6 +19272,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Approximately what percentage of alcohol does rectified spirit contain?",
+    "questionUrdu": "ریکٹیفائیڈ اسپرٹ میں الکحل کی مقدار تقریباً کتنے فیصد ہوتی ہے؟",
     "options": [
       "90%",
       "92%",
@@ -18698,6 +19303,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Why can ordinary fractional distillation not easily produce completely pure ethanol from rectified spirit?",
+    "questionUrdu": "عام جزوی کشید کے ذریعے ریکٹیفائیڈ اسپرٹ سے مکمل خالص ایتھانول آسانی سے کیوں حاصل نہیں کیا جا سکتا؟",
     "options": [
       "Ethanol freezes immediately",
       "Ethanol decomposes at room temperature",
@@ -18728,6 +19334,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What is phishing?",
+    "questionUrdu": "فشنگ کیا ہے؟",
     "options": [
       "A fraudulent message designed to steal information",
       "Upgrading an operating system",
@@ -18758,6 +19365,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What is spear phishing?",
+    "questionUrdu": "اسپیئر فشنگ کیا ہے؟",
     "options": [
       "A broad software update",
       "A method of file compression",
@@ -18788,6 +19396,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "In a relational database table, what is a row commonly called?",
+    "questionUrdu": "رشتہ جاتی ڈیٹا بیس کی جدول میں ایک قطار کو عام طور پر کیا کہتے ہیں؟",
     "options": [
       "Record",
       "Field",
@@ -18818,6 +19427,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "In a relational database table, what is a column commonly called?",
+    "questionUrdu": "رشتہ جاتی ڈیٹا بیس کی جدول میں ایک کالم کو عام طور پر کیا کہتے ہیں؟",
     "options": [
       "Record",
       "Field",
@@ -18848,6 +19458,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What did Tim Berners-Lee invent?",
+    "questionUrdu": "ٹم برنرز لی نے کیا ایجاد کیا؟",
     "options": [
       "Email",
       "Linux",
@@ -18878,6 +19489,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "At which research organization was the World Wide Web invented?",
+    "questionUrdu": "ورلڈ وائڈ ویب کس تحقیقی ادارے میں ایجاد ہوئی؟",
     "options": [
       "NASA",
       "Bell Labs",
@@ -18908,6 +19520,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which of the following is NOT a characteristic of cloud computing?",
+    "questionUrdu": "درج ذیل میں سے کون سی کلاؤڈ کمپیوٹنگ کی خصوصیت نہیں ہے؟",
     "options": [
       "Rapid elasticity",
       "Local-only access",
@@ -18938,6 +19551,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which of the following is an essential characteristic of cloud computing?",
+    "questionUrdu": "درج ذیل میں سے کون سی کلاؤڈ کمپیوٹنگ کی لازمی خصوصیت ہے؟",
     "options": [
       "Manual provisioning only",
       "Fixed capacity",
@@ -18968,6 +19582,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which AI application is used to recognize spoken human language?",
+    "questionUrdu": "بولی جانے والی انسانی زبان پہچاننے کے لیے AI کی کون سی ایپلی کیشن استعمال ہوتی ہے؟",
     "options": [
       "Data mining",
       "Robotics",
@@ -18998,6 +19613,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which branch of AI is central to understanding and processing human language?",
+    "questionUrdu": "انسانی زبان کو سمجھنے اور پراسیس کرنے میں AI کی کون سی شاخ بنیادی حیثیت رکھتی ہے؟",
     "options": [
       "Disk formatting",
       "Computer graphics",
@@ -19028,6 +19644,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What is an error or defect in a computer program commonly called?",
+    "questionUrdu": "کمپیوٹر پروگرام میں غلطی یا نقص کو عام طور پر کیا کہتے ہیں؟",
     "options": [
       "Bug",
       "Chip",
@@ -19059,6 +19676,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What is the process of locating and correcting software bugs called?",
+    "questionUrdu": "سافٹ ویئر کے bugs تلاش اور درست کرنے کے عمل کو کیا کہتے ہیں؟",
     "options": [
       "Compiling",
       "Encrypting",
@@ -19090,6 +19708,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which pair of companies is Elon Musk best known for leading?",
+    "questionUrdu": "ایلون مسک کن دو کمپنیوں کی قیادت کے لیے سب سے زیادہ مشہور ہیں؟",
     "options": [
       "Meta and WhatsApp",
       "Lenovo and IBM",
@@ -19121,6 +19740,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which executive role did Elon Musk hold at Tesla according to Tesla's corporate profile?",
+    "questionUrdu": "ٹیسلا کے کارپوریٹ تعارف کے مطابق ایلون مسک ٹیسلا میں کون سا انتظامی عہدہ رکھتے تھے؟",
     "options": [
       "Chief Financial Officer",
       "Chief Auditor",
@@ -19152,6 +19772,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which protocol dynamically assigns IP addresses to devices on a network?",
+    "questionUrdu": "کون سا پروٹوکول نیٹ ورک پر آلات کو متحرک طور پر IP پتے دیتا ہے؟",
     "options": [
       "DHCP",
       "FTP",
@@ -19182,6 +19803,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What does DHCP stand for?",
+    "questionUrdu": "DHCP کا مکمل نام کیا ہے؟",
     "options": [
       "Digital Hardware Communication Program",
       "Direct Hypertext Control Process",
@@ -19212,6 +19834,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which pair of protocols is associated with sending and retrieving email?",
+    "questionUrdu": "پروٹوکولز کا کون سا جوڑا ای میل بھیجنے اور وصول کرنے سے منسلک ہے؟",
     "options": [
       "SMTP and POP",
       "POP and FTP",
@@ -19243,6 +19866,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which protocol is primarily used to transfer outgoing email between mail servers?",
+    "questionUrdu": "میل سرورز کے درمیان باہر جانے والی ای میل منتقل کرنے کے لیے بنیادی طور پر کون سا پروٹوکول استعمال ہوتا ہے؟",
     "options": [
       "FTP",
       "SNMP",
@@ -19274,6 +19898,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which PowerPoint view displays the presentation while hiding editing controls?",
+    "questionUrdu": "پاورپوائنٹ کا کون سا منظر ایڈیٹنگ کنٹرولز چھپا کر پریزنٹیشن دکھاتا ہے؟",
     "options": [
       "Normal view",
       "Outline view",
@@ -19304,6 +19929,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which key starts a PowerPoint slide show from the beginning in desktop PowerPoint?",
+    "questionUrdu": "ڈیسک ٹاپ پاورپوائنٹ میں شروع سے سلائیڈ شو چلانے کے لیے کون سی کلید استعمال ہوتی ہے؟",
     "options": [
       "F5",
       "F1",
@@ -19334,6 +19960,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which statement best describes a Turing machine?",
+    "questionUrdu": "کون سا بیان ٹورنگ مشین کی بہترین وضاحت کرتا ہے؟",
     "options": [
       "A commercial AI product",
       "A physical modelling package",
@@ -19364,6 +19991,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "In a Turing machine, what serves as the model's unbounded memory?",
+    "questionUrdu": "ٹورنگ مشین میں ماڈل کی لامحدود میموری کا کام کیا چیز کرتی ہے؟",
     "options": [
       "A finite register only",
       "A graphics card",
@@ -19394,6 +20022,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What is the usual effect of data compression on a file?",
+    "questionUrdu": "ڈیٹا کمپریشن سے فائل پر عموماً کیا اثر پڑتا ہے؟",
     "options": [
       "It increases file size",
       "It always damages data",
@@ -19424,6 +20053,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which type of compression allows the original data to be reconstructed exactly?",
+    "questionUrdu": "کمپریشن کی کون سی قسم اصل ڈیٹا کو بالکل درست دوبارہ بنانے کی اجازت دیتی ہے؟",
     "options": [
       "Lossy compression",
       "Lossless compression",
@@ -19454,6 +20084,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which of the following is NOT an essential characteristic of cloud computing?",
+    "questionUrdu": "درج ذیل میں سے کون سی کلاؤڈ کمپیوٹنگ کی لازمی خصوصیت نہیں ہے؟",
     "options": [
       "On-demand self-service",
       "Resource pooling",
@@ -19484,6 +20115,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "How many essential characteristics are listed in NIST's definition of cloud computing?",
+    "questionUrdu": "NIST کی کلاؤڈ کمپیوٹنگ کی تعریف میں کتنی لازمی خصوصیات درج ہیں؟",
     "options": [
       "Three",
       "Four",
@@ -19514,6 +20146,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which test checks that recent software changes have not broken existing functionality?",
+    "questionUrdu": "کون سا ٹیسٹ جانچتا ہے کہ سافٹ ویئر کی حالیہ تبدیلیوں نے موجودہ فعالیت کو خراب نہیں کیا؟",
     "options": [
       "Regression test",
       "Unit test",
@@ -19544,6 +20177,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which testing level examines an individual software component in isolation?",
+    "questionUrdu": "ٹیسٹنگ کی کون سی سطح سافٹ ویئر کے ایک انفرادی جزو کو الگ کرکے جانچتی ہے؟",
     "options": [
       "Component testing",
       "Acceptance testing",
@@ -19574,6 +20208,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which combination is characteristic of many hydrophytes?",
+    "questionUrdu": "کون سا مجموعہ بہت سے آبی پودوں کی خصوصیت ہے؟",
     "options": [
       "Reduced mechanical tissue only",
       "Prominent aerenchyma only",
@@ -19604,6 +20239,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "What is the air-space tissue common in many aquatic plants called?",
+    "questionUrdu": "بہت سے آبی پودوں میں پائے جانے والے ہوا کی جگہوں والے بافتے کو کیا کہتے ہیں؟",
     "options": [
       "Xylem",
       "Cambium",
@@ -19634,6 +20270,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Complete the series: 7, 13, 21, __, 43, 57.",
+    "questionUrdu": "سلسلہ مکمل کریں: 7, 13, 21, __, 43, 57۔",
     "options": [
       "31",
       "32",
@@ -19664,6 +20301,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Find the next term: 3, 8, 15, 24, 35, __.",
+    "questionUrdu": "اگلی حد معلوم کریں: 3, 8, 15, 24, 35, __۔",
     "options": [
       "44",
       "48",
@@ -19694,6 +20332,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "An equilateral triangle has a perimeter of 60 cm. What is its area?",
+    "questionUrdu": "ایک مساوی الاضلاع مثلث کا محیط 60 سینٹی میٹر ہے۔ اس کا رقبہ کیا ہے؟",
     "options": [
       "√3 cm²",
       "100√3 cm²",
@@ -19724,6 +20363,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "What is the area of an equilateral triangle whose perimeter is 36 cm?",
+    "questionUrdu": "اس مساوی الاضلاع مثلث کا رقبہ کیا ہے جس کا محیط 36 سینٹی میٹر ہو؟",
     "options": [
       "36√3 cm²",
       "24√3 cm²",
@@ -19754,6 +20394,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A cube has a volume of 343 m³. What is the area of one face?",
+    "questionUrdu": "ایک مکعب کا حجم 343 مکعب میٹر ہے۔ اس کے ایک رخ کا رقبہ کیا ہے؟",
     "options": [
       "43 m²",
       "49 m²",
@@ -19785,6 +20426,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "A cube has a volume of 512 m³. What is the area of one face?",
+    "questionUrdu": "ایک مکعب کا حجم 512 مکعب میٹر ہے۔ اس کے ایک رخ کا رقبہ کیا ہے؟",
     "options": [
       "48 m²",
       "56 m²",
@@ -19816,6 +20458,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Which value is incorrect in the series 2, 4, 7, 14, 17, 34, 37, 64?",
+    "questionUrdu": "سلسلے 2, 4, 7, 14, 17, 34, 37, 64 میں کون سی قیمت غلط ہے؟",
     "options": [
       "17",
       "64",
@@ -19846,6 +20489,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Which term is incorrect in the series 3, 6, 9, 18, 21, 42, 45, 80?",
+    "questionUrdu": "سلسلے 3, 6, 9, 18, 21, 42, 45, 80 میں کون سی حد غلط ہے؟",
     "options": [
       "80",
       "42",
@@ -19876,6 +20520,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "The ratio of sugar to water is 5:7. If there are 35 units of sugar, how many units of water are there?",
+    "questionUrdu": "چینی اور پانی کا تناسب 5:7 ہے۔ اگر چینی کے 35 یونٹ ہوں تو پانی کے کتنے یونٹ ہوں گے؟",
     "options": [
       "42",
       "49",
@@ -19906,6 +20551,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "The ratio of boys to girls is 3:5. If there are 24 boys, how many girls are there?",
+    "questionUrdu": "لڑکوں اور لڑکیوں کا تناسب 3:5 ہے۔ اگر لڑکے 24 ہوں تو لڑکیاں کتنی ہیں؟",
     "options": [
       "32",
       "36",
@@ -19936,6 +20582,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "An arithmetic progression starts at 5 and has common difference 7. What are its first four terms?",
+    "questionUrdu": "ایک حسابی سلسلہ 5 سے شروع ہوتا اور اس کا مشترک فرق 7 ہے۔ اس کی پہلی چار حدود کیا ہیں؟",
     "options": [
       "4,11,18,24",
       "5,12,19,26",
@@ -19966,6 +20613,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "An arithmetic progression starts at −2 and has common difference 6. What are its first four terms?",
+    "questionUrdu": "ایک حسابی سلسلہ −2 سے شروع ہوتا اور اس کا مشترک فرق 6 ہے۔ اس کی پہلی چار حدود کیا ہیں؟",
     "options": [
       "2, 8, 14, 20",
       "−2, 6, 12, 18",
@@ -19996,6 +20644,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Find x if 7:8 = 196:x.",
+    "questionUrdu": "اگر 7:8 = 196:x ہو تو x معلوم کریں۔",
     "options": [
       "224",
       "226",
@@ -20026,6 +20675,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Solve the proportion 5:9 = 45:x.",
+    "questionUrdu": "تناسب 5:9 = 45:x حل کریں۔",
     "options": [
       "72",
       "75",
@@ -20056,6 +20706,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Evaluate 201 × 199.",
+    "questionUrdu": "201 × 199 کی قیمت معلوم کریں۔",
     "options": [
       "2999",
       "3999",
@@ -20086,6 +20737,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Evaluate 301 × 299.",
+    "questionUrdu": "301 × 299 کی قیمت معلوم کریں۔",
     "options": [
       "89,699",
       "89,899",
@@ -20116,6 +20768,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A ladder makes a 45° angle with a vertical wall, and its foot is 5 m from the wall. How high up the wall does it reach?",
+    "questionUrdu": "ایک سیڑھی عمودی دیوار کے ساتھ 45 درجے کا زاویہ بناتی ہے اور اس کا نچلا سرا دیوار سے 5 میٹر دور ہے۔ وہ دیوار پر کتنی اونچائی تک پہنچتی ہے؟",
     "options": [
       "10 m",
       "15 m",
@@ -20146,6 +20799,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "A ladder makes a 45° angle with the ground and its foot is 8 m from a wall. How high up the wall does it reach?",
+    "questionUrdu": "ایک سیڑھی زمین کے ساتھ 45 درجے کا زاویہ بناتی ہے اور اس کا نچلا سرا دیوار سے 8 میٹر دور ہے۔ وہ دیوار پر کتنی اونچائی تک پہنچتی ہے؟",
     "options": [
       "4 m",
       "8 m",
@@ -20176,6 +20830,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "What is the remainder when x⁵¹ + 51 is divided by x + 1?",
+    "questionUrdu": "x⁵¹ + 51 کو x + 1 سے تقسیم کرنے پر باقی کیا بچے گا؟",
     "options": [
       "49",
       "50",
@@ -20206,6 +20861,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "What is the remainder when x³ + 10 is divided by x + 1?",
+    "questionUrdu": "x³ + 10 کو x + 1 سے تقسیم کرنے پر باقی کیا بچے گا؟",
     "options": [
       "9",
       "0",
@@ -20236,6 +20892,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Evaluate 3⁰ × 5⁰ × 7⁰.",
+    "questionUrdu": "3⁰ × 5⁰ × 7⁰ کی قیمت معلوم کریں۔",
     "options": [
       "0",
       "105",
@@ -20266,6 +20923,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Evaluate (2 × 11)⁰.",
+    "questionUrdu": "(2 × 11)⁰ کی قیمت معلوم کریں۔",
     "options": [
       "1",
       "0",
@@ -20296,6 +20954,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Three years ago, C was three times D's age. Four years from now, C will be twice D's age. What is C's present age?",
+    "questionUrdu": "تین سال پہلے C کی عمر D سے تین گنا تھی۔ چار سال بعد C کی عمر D سے دوگنی ہوگی۔ C کی موجودہ عمر کیا ہے؟",
     "options": [
       "20",
       "24",
@@ -20326,6 +20985,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Two years ago, A was three times B's age; four years from now, A will be twice B's age. What is A's present age?",
+    "questionUrdu": "دو سال پہلے A کی عمر B سے تین گنا تھی؛ چار سال بعد A کی عمر B سے دوگنی ہوگی۔ A کی موجودہ عمر کیا ہے؟",
     "options": [
       "20 years",
       "18 years",
@@ -20356,6 +21016,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Which option is one root of 2x² + 5x − 12 = 0?",
+    "questionUrdu": "درج اختیارات میں سے کون سا 2x² + 5x − 12 = 0 کی ایک جڑ ہے؟",
     "options": [
       "2",
       "−3/2",
@@ -20386,6 +21047,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "What is the positive root of 3x² − x − 2 = 0?",
+    "questionUrdu": "3x² − x − 2 = 0 کی مثبت جڑ کیا ہے؟",
     "options": [
       "−1",
       "−2/3",
@@ -20416,6 +21078,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Which is the perfect-square form of 16x² + 24x + 9?",
+    "questionUrdu": "16x² + 24x + 9 کی مکمل مربع صورت کون سی ہے؟",
     "options": [
       "4x−3",
       "4x+3",
@@ -20446,6 +21109,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Write 9x² − 12x + 4 as a perfect square.",
+    "questionUrdu": "9x² − 12x + 4 کو مکمل مربع کی صورت میں لکھیں۔",
     "options": [
       "(3x+2)²",
       "(3x−4)²",
@@ -20476,6 +21140,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Find the roots of x² − 3x − 10 = 0.",
+    "questionUrdu": "x² − 3x − 10 = 0 کی جڑیں معلوم کریں۔",
     "options": [
       "−8, −3",
       "9, 4",
@@ -20506,6 +21171,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Find the roots of x² + x − 12 = 0.",
+    "questionUrdu": "x² + x − 12 = 0 کی جڑیں معلوم کریں۔",
     "options": [
       "4 and −3",
       "3 and −4",
@@ -20536,6 +21202,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Evaluate 2³ × 3² − 5².",
+    "questionUrdu": "2³ × 3² − 5² کی قیمت معلوم کریں۔",
     "options": [
       "42",
       "47",
@@ -20566,6 +21233,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Evaluate 3³ + 2⁴ − 5.",
+    "questionUrdu": "3³ + 2⁴ − 5 کی قیمت معلوم کریں۔",
     "options": [
       "32",
       "36",
@@ -20596,6 +21264,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the idiom: One hand ____ the other.",
+    "questionUrdu": "محاورہ مکمل کریں: One hand ____ the other.",
     "options": [
       "hits",
       "pushes",
@@ -20626,6 +21295,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the proverb: Many hands make ____ work.",
+    "questionUrdu": "کہاوت مکمل کریں: Many hands make ____ work.",
     "options": [
       "heavy",
       "slow",
@@ -20656,6 +21326,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the antonym of 'éclat'.",
+    "questionUrdu": "'éclat' کا متضاد منتخب کریں۔",
     "options": [
       "Fame",
       "Dullness",
@@ -20687,6 +21358,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is closest in meaning to 'éclat'?",
+    "questionUrdu": "کون سا لفظ 'éclat' کے معنی کے قریب ترین ہے؟",
     "options": [
       "Weakness",
       "Silence",
@@ -20718,6 +21390,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the synonym of 'lissome'.",
+    "questionUrdu": "'lissome' کا مترادف منتخب کریں۔",
     "options": [
       "Stiff",
       "Heavy",
@@ -20749,6 +21422,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the antonym of 'lissome'.",
+    "questionUrdu": "'lissome' کا متضاد منتخب کریں۔",
     "options": [
       "Stiff",
       "Supple",
@@ -20780,6 +21454,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the proverb: A drowning ____ will clutch at a straw.",
+    "questionUrdu": "کہاوت مکمل کریں: A drowning ____ will clutch at a straw.",
     "options": [
       "Child",
       "Man",
@@ -20811,6 +21486,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "What does 'a drowning man will clutch at a straw' mean?",
+    "questionUrdu": "'a drowning man will clutch at a straw' کا کیا مطلب ہے؟",
     "options": [
       "Help should never be accepted",
       "A swimmer should avoid rivers",
@@ -20842,6 +21518,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "In the sentence 'The black rose is blooming in the garden,' what part of speech is 'rose'?",
+    "questionUrdu": "جملے 'The black rose is blooming in the garden' میں 'rose' کون سا جزوِ کلام ہے؟",
     "options": [
       "Adjective",
       "Verb",
@@ -20872,6 +21549,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "In the sentence 'The black rose is blooming,' what part of speech is 'black'?",
+    "questionUrdu": "جملے 'The black rose is blooming' میں 'black' کون سا جزوِ کلام ہے؟",
     "options": [
       "Noun",
       "Verb",
@@ -20902,6 +21580,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the correct phrase: 'Gwadar, ____, is a beautiful coastal place.'",
+    "questionUrdu": "درست فقرہ منتخب کریں: 'Gwadar, ____, is a beautiful coastal place.'",
     "options": [
       "that I visited last month",
       "where I visited last month",
@@ -20932,6 +21611,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the correct relative phrase: 'The teacher, ____ helped me, was very patient.'",
+    "questionUrdu": "درست relative phrase منتخب کریں: 'The teacher, ____ helped me, was very patient.'",
     "options": [
       "who",
       "where",
@@ -20962,6 +21642,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the sentence: 'He refuses to eat any of the food. He will eat ____.'",
+    "questionUrdu": "جملہ مکمل کریں: 'He refuses to eat any of the food. He will eat ____.'",
     "options": [
       "Anything",
       "Nothing",
@@ -20992,6 +21673,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the standard negative sentence: 'She did not buy ____.'",
+    "questionUrdu": "معیاری منفی جملہ مکمل کریں: 'She did not buy ____.'",
     "options": [
       "nothing",
       "something always",
@@ -21022,6 +21704,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the sentence: 'He was annoyed ____ her remarks.'",
+    "questionUrdu": "جملہ مکمل کریں: 'He was annoyed ____ her remarks.'",
     "options": [
       "at",
       "on",
@@ -21052,6 +21735,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the correct preposition: 'She was annoyed ____ her colleague for arriving late.'",
+    "questionUrdu": "درست حرفِ جار منتخب کریں: 'She was annoyed ____ her colleague for arriving late.'",
     "options": [
       "at",
       "on",
@@ -21082,6 +21766,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the sentence: 'He visited Skardu in June and has returned. He has ____ to Skardu.'",
+    "questionUrdu": "جملہ مکمل کریں: 'He visited Skardu in June and has returned. He has ____ to Skardu.'",
     "options": [
       "been",
       "went",
@@ -21112,6 +21797,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the correct form: 'Ali is not here; he has ____ to Lahore.'",
+    "questionUrdu": "درست صورت منتخب کریں: 'Ali is not here; he has ____ to Lahore.'",
     "options": [
       "been",
       "go",
@@ -21142,6 +21828,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the analogy: Whoop : Exuberance :: Keen : ____.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Whoop : Exuberance :: Keen : ____۔",
     "options": [
       "Joy",
       "Anger",
@@ -21173,6 +21860,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the analogy: Giggle : Amusement :: Sob : ____.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Giggle : Amusement :: Sob : ____۔",
     "options": [
       "Victory",
       "Sorrow",
@@ -21204,6 +21892,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the analogy: Break : Shift :: Minute : ____.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Break : Shift :: Minute : ____۔",
     "options": [
       "Hour",
       "Day",
@@ -21234,6 +21923,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the analogy: Chapter : Book :: Scene : ____.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Chapter : Book :: Scene : ____۔",
     "options": [
       "Actor",
       "Sentence",
@@ -21264,6 +21954,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "In a clause such as 'the person who called,' what part of speech is 'who'?",
+    "questionUrdu": "'the person who called' جیسے فقرے میں 'who' کون سا جزوِ کلام ہے؟",
     "options": [
       "Noun",
       "Verb",
@@ -21294,6 +21985,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which relative pronoun is normally used for things rather than people?",
+    "questionUrdu": "اشیا کے لیے لوگوں کے بجائے عموماً کون سا relative pronoun استعمال ہوتا ہے؟",
     "options": [
       "who",
       "whom",
@@ -21324,6 +22016,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the correctly punctuated direct question.",
+    "questionUrdu": "درست رموزِ اوقاف والا براہِ راست سوال منتخب کریں۔",
     "options": [
       "What is it about cricket that you enjoy.",
       "What is it about cricket that you enjoy?",
@@ -21354,6 +22047,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which punctuation mark normally ends a direct exclamation?",
+    "questionUrdu": "براہِ راست تعجبیہ جملے کے اختتام پر عموماً کون سی علامتِ وقف آتی ہے؟",
     "options": [
       "Full stop",
       "Exclamation mark",
@@ -21384,6 +22078,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Which sentence is correctly punctuated?",
+    "questionUrdu": "رموزِ اوقاف کے لحاظ سے درست جملہ کون سا ہے؟",
     "options": [
       "He was completely exhausted yet, he continued studying for his exam.",
       "He was completely exhausted, when he continued studying for his exam.",
@@ -21415,6 +22110,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Choose the correctly punctuated compound sentence.",
+    "questionUrdu": "رموزِ اوقاف کے لحاظ سے درست مرکب جملہ منتخب کریں۔",
     "options": [
       "She was tired yet, she continued.",
       "She was tired, yet she continued.",
@@ -21446,6 +22142,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Which later specialized diwan was responsible for land-tax revenue (kharaj) in early Islamic administration?",
+    "questionUrdu": "ابتدائی اسلامی انتظام میں بعد میں قائم ہونے والا کون سا مخصوص دیوان زمینی محصول یعنی خراج کا ذمہ دار تھا؟",
     "options": [
       "Diwan al-Kharaj",
       "Diwan al-Rasa'il",
@@ -21477,6 +22174,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Which early Islamic bureau maintained registers of soldiers and military stipends?",
+    "questionUrdu": "ابتدائی اسلامی دور کا کون سا دفتر فوجیوں اور فوجی وظائف کے رجسٹر رکھتا تھا؟",
     "options": [
       "Diwan al-Khatam",
       "Diwan al-Barid",
@@ -21508,6 +22206,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "After the death of Khadijah (RA), whom did Prophet Muhammad (PBUH) marry first?",
+    "questionUrdu": "حضرت خدیجہ رضی اللہ عنہا کے انتقال کے بعد نبی کریم ﷺ نے سب سے پہلے کس سے نکاح کیا؟",
     "options": [
       "Safiyyah (RA)",
       "Sawdah (RA)",
@@ -21538,6 +22237,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Who was the first wife of Prophet Muhammad (PBUH)?",
+    "questionUrdu": "نبی کریم ﷺ کی پہلی زوجہ کون تھیں؟",
     "options": [
       "Aishah bint Abi Bakr (RA)",
       "Khadijah bint Khuwaylid (RA)",
@@ -21568,6 +22268,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "The Incident of Ifk concerned which Mother of the Believers?",
+    "questionUrdu": "واقعۂ افک کا تعلق کس ام المؤمنین سے تھا؟",
     "options": [
       "Khadijah (RA)",
       "Aishah (RA)",
@@ -21599,6 +22300,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "In which Surah are the verses concerning the Incident of Ifk found?",
+    "questionUrdu": "واقعۂ افک سے متعلق آیات کس سورت میں ہیں؟",
     "options": [
       "Al-Baqarah",
       "An-Nur",
@@ -21630,6 +22332,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Who presented a coat of chainmail to Prophet Muhammad (PBUH) before the Battle of Badr?",
+    "questionUrdu": "غزوۂ بدر سے پہلے نبی کریم ﷺ کو زرہ کس نے پیش کی؟",
     "options": [
       "Khalid bin al-Walid (RA)",
       "Zubayr bin al-Awwam (RA)",
@@ -21660,6 +22363,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Which Companion is described as carrying the standard of the Ansar in battles?",
+    "questionUrdu": "کس صحابی کو جنگوں میں انصار کا جھنڈا اٹھانے والا بیان کیا گیا ہے؟",
     "options": [
       "Abu Ubaydah (RA)",
       "Khalid bin al-Walid (RA)",
@@ -21690,6 +22394,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Which force overthrew the Baghdad-based Abbasid Caliphate in 1258?",
+    "questionUrdu": "1258 میں بغداد میں قائم عباسی خلافت کو کس قوت نے ختم کیا؟",
     "options": [
       "Seljuk",
       "Umayyad",
@@ -21721,6 +22426,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Which Mongol leader captured Baghdad in 1258?",
+    "questionUrdu": "1258 میں بغداد کس منگول رہنما نے فتح کیا؟",
     "options": [
       "Genghis Khan",
       "Babur",
@@ -21752,6 +22458,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu proverb: 'رات گئی ____ گئی۔'",
+    "questionUrdu": "اردو کہاوت مکمل کریں: 'رات گئی ____ گئی۔'",
     "options": [
       "بات",
       "یاد",
@@ -21782,6 +22489,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the Urdu proverb 'رات گئی بات گئی' mean?",
+    "questionUrdu": "اردو کہاوت 'رات گئی بات گئی' کا کیا مطلب ہے؟",
     "options": [
       "گزری بات کو بھلا دینا",
       "رات کو سفر کرنا",
@@ -21812,6 +22520,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What does the verified Urdu proverb 'کھودا پہاڑ نکلا چوہا' mean?",
+    "questionUrdu": "مستند اردو کہاوت 'کھودا پہاڑ نکلا چوہا' کا کیا مطلب ہے؟",
     "options": [
       "وقت کا ضیاع",
       "بہت زیادہ منافع ہونا",
@@ -21842,6 +22551,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the Urdu proverb 'نو دن چلے اڑھائی کوس' imply?",
+    "questionUrdu": "اردو کہاوت 'نو دن چلے اڑھائی کوس' کیا مفہوم دیتی ہے؟",
     "options": [
       "مشکل کام کی فوری تکمیل",
       "بہت تیز سفر",
@@ -21872,6 +22582,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu proverb: 'جھوٹ کے ____ نہیں ہوتے۔'",
+    "questionUrdu": "اردو کہاوت مکمل کریں: 'جھوٹ کے ____ نہیں ہوتے۔'",
     "options": [
       "ہاتھ",
       "پاؤں",
@@ -21902,6 +22613,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the Urdu proverb 'جھوٹ کے پاؤں نہیں ہوتے' imply?",
+    "questionUrdu": "اردو کہاوت 'جھوٹ کے پاؤں نہیں ہوتے' کیا مفہوم دیتی ہے؟",
     "options": [
       "جھوٹ زیادہ دیر قائم نہیں رہتا",
       "جھوٹ ہمیشہ کامیاب ہوتا ہے",
@@ -21932,6 +22644,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What does the Urdu idiom 'ٹسوے بہانا' mean?",
+    "questionUrdu": "اردو محاورے 'ٹسوے بہانا' کا کیا مطلب ہے؟",
     "options": [
       "سچ مچ کا رونا",
       "جھوٹ موٹ کا رونا",
@@ -21962,6 +22675,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which meaning best matches the Urdu expression 'مگرمچھ کے آنسو بہانا'?",
+    "questionUrdu": "اردو ترکیب 'مگرمچھ کے آنسو بہانا' کے لیے کون سا مفہوم بہترین ہے؟",
     "options": [
       "سچے غم میں رونا",
       "آنکھ کا علاج کرنا",
@@ -21992,6 +22706,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "How many basic constituents, or 'ارکان', does 'استعارہ' have?",
+    "questionUrdu": "'استعارہ' کے بنیادی اجزا یا ارکان کتنے ہیں؟",
     "options": [
       "دو",
       "چار",
@@ -22022,6 +22737,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which of the following is NOT one of the three basic constituents of 'استعارہ'?",
+    "questionUrdu": "درج ذیل میں سے کون سا 'استعارہ' کے تین بنیادی ارکان میں شامل نہیں ہے؟",
     "options": [
       "مستعار لہ",
       "مستعار منہ",
@@ -22052,6 +22768,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What does the Urdu idiom 'پانی پانی کرنا' mean?",
+    "questionUrdu": "اردو محاورے 'پانی پانی کرنا' کا کیا مطلب ہے؟",
     "options": [
       "نہلانا",
       "پیاس بجھانا",
@@ -22082,6 +22799,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the Urdu expression 'شرم سے پانی پانی ہونا' mean?",
+    "questionUrdu": "اردو ترکیب 'شرم سے پانی پانی ہونا' کا کیا مطلب ہے؟",
     "options": [
       "شدید شرمندہ ہونا",
       "بارش میں بھیگنا",
@@ -22112,6 +22830,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "In the Urdu sentence 'وہ بہت رو رہا تھا', what part of speech is 'وہ'?",
+    "questionUrdu": "اردو جملے 'وہ بہت رو رہا تھا' میں 'وہ' کون سا جزوِ کلام ہے؟",
     "options": [
       "اسم ضمیر",
       "اسم اشارہ",
@@ -22142,6 +22861,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "In Urdu grammar, what type of pronoun is 'میں'?",
+    "questionUrdu": "اردو قواعد میں 'میں' کس قسم کی ضمیر ہے؟",
     "options": [
       "ضمیر مخاطب",
       "ضمیر متکلم",
@@ -22172,6 +22892,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What does the Urdu idiom 'جلے پاؤں کی بلی' mean?",
+    "questionUrdu": "اردو محاورے 'جلے پاؤں کی بلی' کا کیا مطلب ہے؟",
     "options": [
       "آرام کرنے والا شخص",
       "بہت تھکا ہوا شخص",
@@ -22202,6 +22923,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the Urdu proverb 'گھر کی مرغی دال برابر' mean?",
+    "questionUrdu": "اردو کہاوت 'گھر کی مرغی دال برابر' کا کیا مطلب ہے؟",
     "options": [
       "گھر میں کھانا ختم ہونا",
       "اپنی یا آسانی سے دستیاب اچھی چیز کی قدر نہ کرنا",
@@ -22232,6 +22954,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu proverb: 'سانجھے کی ہنڈیا چوراہے پر ____۔'",
+    "questionUrdu": "اردو کہاوت مکمل کریں: 'سانجھے کی ہنڈیا چوراہے پر ____۔'",
     "options": [
       "پھوٹے",
       "چلے",
@@ -22262,6 +22985,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the Urdu proverb 'سانجھے کی ہنڈیا چوراہے پر پھوٹتی ہے' suggest?",
+    "questionUrdu": "اردو کہاوت 'سانجھے کی ہنڈیا چوراہے پر پھوٹتی ہے' کیا مفہوم دیتی ہے؟",
     "options": [
       "بے ذمہ دار مشترکہ کام اکثر ناکام ہوتا ہے",
       "مشترکہ کام ہمیشہ فوراً کامیاب ہوتا ہے",
@@ -22292,6 +23016,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu expression: 'دل پر ____ رکھ کر مشکل فیصلہ کرنا۔'",
+    "questionUrdu": "اردو ترکیب مکمل کریں: 'دل پر ____ رکھ کر مشکل فیصلہ کرنا۔'",
     "options": [
       "کانچ",
       "پتھر",
@@ -22322,6 +23047,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the Urdu idiom 'دل پر پتھر رکھنا' mean?",
+    "questionUrdu": "اردو محاورے 'دل پر پتھر رکھنا' کا کیا مطلب ہے؟",
     "options": [
       "بے رحمی سے ہنسنا",
       "فوراً بدلہ لینا",
@@ -22352,6 +23078,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "Kyoto is a famous city of which country?",
+    "questionUrdu": "کیوٹو کس ملک کا مشہور شہر ہے؟",
     "options": [
       "China",
       "Japan",
@@ -22383,6 +23110,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "In which year was Heian-kyo, the city now known as Kyoto, established as Japan's imperial capital?",
+    "questionUrdu": "ہیان کیو، جو آج کیوٹو کے نام سے جانا جاتا ہے، جاپان کے شاہی دارالحکومت کے طور پر کس سال قائم ہوا؟",
     "options": [
       "710",
       "794",
@@ -22414,6 +23142,7 @@
     "kind": "source",
     "categoryId": "general-knowledge",
     "question": "Which of these buildings holds the record for the tallest twisting tower?",
+    "questionUrdu": "ان عمارتوں میں سے سب سے بلند بل کھاتی عمارت کا ریکارڈ کس کے پاس ہے؟",
     "options": [
       "Tokyo Skytree, Japan",
       "Shanghai Tower, China",
@@ -22445,6 +23174,7 @@
     "kind": "similar",
     "categoryId": "general-knowledge",
     "question": "What is the architectural height of Shanghai Tower?",
+    "questionUrdu": "شنگھائی ٹاور کی تعمیراتی اونچائی کتنی ہے؟",
     "options": [
       "492 metres",
       "555 metres",
@@ -22476,6 +23206,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "On which date did Pakistan conduct its first nuclear device tests?",
+    "questionUrdu": "پاکستان نے جوہری آلات کے پہلے تجربات کس تاریخ کو کیے؟",
     "options": [
       "11 May 1998",
       "30 May 1998",
@@ -22507,6 +23238,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "What national day does Pakistan observe on 28 May to commemorate the 1998 nuclear tests?",
+    "questionUrdu": "پاکستان 1998 کے جوہری تجربات کی یاد میں 28 مئی کو کون سا قومی دن مناتا ہے؟",
     "options": [
       "Defence Day",
       "Pakistan Day",
@@ -22538,6 +23270,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Who represented Pakistan as its leader at the first Islamic Summit in Rabat in 1969?",
+    "questionUrdu": "1969 کے پہلے اسلامی سربراہ اجلاس میں پاکستانی وفد کی قیادت کس نے کی؟",
     "options": [
       "Zulfiqar Ali Bhutto",
       "Ayub Khan",
@@ -22569,6 +23302,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "In which city was the first Islamic Summit Conference held in September 1969?",
+    "questionUrdu": "ستمبر 1969 میں پہلی اسلامی سربراہ کانفرنس کس شہر میں منعقد ہوئی؟",
     "options": [
       "Jeddah",
       "Rabat",
@@ -22600,6 +23334,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Who was the second Governor-General of Pakistan?",
+    "questionUrdu": "پاکستان کے دوسرے گورنر جنرل کون تھے؟",
     "options": [
       "Muhammad Ali Jinnah",
       "Khawaja Nazimuddin",
@@ -22631,6 +23366,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Who was the third Governor-General of Pakistan?",
+    "questionUrdu": "پاکستان کے تیسرے گورنر جنرل کون تھے؟",
     "options": [
       "Khawaja Nazimuddin",
       "Liaquat Ali Khan",
@@ -22662,6 +23398,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Whom did Quaid-e-Azam appoint as the first Governor of the State Bank of Pakistan?",
+    "questionUrdu": "قائداعظم نے اسٹیٹ بینک آف پاکستان کا پہلا گورنر کس کو مقرر کیا؟",
     "options": [
       "Mian Iftikharuddin",
       "Zahid Hussain",
@@ -22693,6 +23430,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "On which date was the State Bank of Pakistan formally inaugurated by Quaid-e-Azam?",
+    "questionUrdu": "قائداعظم نے اسٹیٹ بینک آف پاکستان کا باقاعدہ افتتاح کس تاریخ کو کیا؟",
     "options": [
       "14 August 1947",
       "10 June 1948",
@@ -22724,6 +23462,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Who was President of the United States when Pakistan gained independence in August 1947?",
+    "questionUrdu": "اگست 1947 میں پاکستان کی آزادی کے وقت امریکا کے صدر کون تھے؟",
     "options": [
       "Franklin D. Roosevelt",
       "Harry S. Truman",
@@ -22755,6 +23494,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "In which year did President Harry S. Truman announce the policy known as the Truman Doctrine?",
+    "questionUrdu": "صدر ہیری ایس ٹرومین نے ٹرومین ڈاکٹرائن کے نام سے معروف پالیسی کا اعلان کس سال کیا؟",
     "options": [
       "1945",
       "1953",
@@ -22786,6 +23526,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Who wrote the book 'Friends Not Masters: A Political Autobiography'?",
+    "questionUrdu": "کتاب 'Friends Not Masters: A Political Autobiography' کس نے لکھی؟",
     "options": [
       "Zulfiqar Ali Bhutto",
       "Liaquat Ali Khan",
@@ -22817,6 +23558,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "In which year was 'Friends Not Masters' first published by Oxford University Press?",
+    "questionUrdu": "آکسفورڈ یونیورسٹی پریس نے 'Friends Not Masters' پہلی مرتبہ کس سال شائع کی؟",
     "options": [
       "1967",
       "1962",
@@ -22848,6 +23590,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Which agreement was signed by Pakistan and India after the 1971 war?",
+    "questionUrdu": "1971 کی جنگ کے بعد پاکستان اور بھارت کے درمیان کون سا معاہدہ ہوا؟",
     "options": [
       "Tashkent Agreement",
       "Lahore Declaration",
@@ -22879,6 +23622,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "On which date was the Simla Agreement signed?",
+    "questionUrdu": "شملہ معاہدے پر کس تاریخ کو دستخط ہوئے؟",
     "options": [
       "10 January 1966",
       "21 February 1999",
@@ -22910,6 +23654,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Which Constitution of Pakistan established a presidential system of government?",
+    "questionUrdu": "پاکستان کے کس آئین نے صدارتی نظامِ حکومت قائم کیا؟",
     "options": [
       "1956 Constitution",
       "1973 Constitution",
@@ -22941,6 +23686,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Under which Constitution did Pakistan adopt the present federal parliamentary and bicameral system?",
+    "questionUrdu": "پاکستان نے موجودہ وفاقی پارلیمانی اور دو ایوانی نظام کس آئین کے تحت اپنایا؟",
     "options": [
       "1973 Constitution",
       "1962 Constitution",
@@ -22972,6 +23718,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "Who introduced the Basic Democracies system in Pakistan?",
+    "questionUrdu": "پاکستان میں بنیادی جمہوریتوں کا نظام کس نے متعارف کرایا؟",
     "options": [
       "Liaquat Ali Khan",
       "Yahya Khan",
@@ -23003,6 +23750,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "What electoral role did the Basic Democrats perform under the 1962 constitutional system?",
+    "questionUrdu": "1962 کے آئینی نظام میں بنیادی جمہوریتوں کے ارکان نے کون سا انتخابی کردار ادا کیا؟",
     "options": [
       "They appointed provincial governors",
       "They drafted the annual budget",
@@ -23034,6 +23782,7 @@
     "kind": "source",
     "categoryId": "pakistan-studies",
     "question": "In the conventional Pakistan Studies classification used by the source, Pakistan's national culture is described primarily as:",
+    "questionUrdu": "ماخذ میں استعمال ہونے والی روایتی پاکستان اسٹڈیز درجہ بندی کے مطابق پاکستان کی قومی ثقافت بنیادی طور پر کیسی بیان کی جاتی ہے؟",
     "options": [
       "Western culture",
       "Indian culture",
@@ -23065,6 +23814,7 @@
     "kind": "similar",
     "categoryId": "pakistan-studies",
     "question": "Which religion is declared the State religion of Pakistan by Article 2 of the Constitution?",
+    "questionUrdu": "آئین کے آرٹیکل 2 کے تحت پاکستان کا ریاستی مذہب کون سا ہے؟",
     "options": [
       "Buddhism",
       "Islam",
@@ -23096,6 +23846,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "As of 22 August 2026, who is the Director General of Pakistan's Federal Investigation Agency (FIA)?",
+    "questionUrdu": "22 اگست 2026 تک پاکستان کی وفاقی تحقیقاتی ایجنسی کے ڈائریکٹر جنرل کون ہیں؟",
     "options": [
       "Sanaullah Abbasi",
       "Dr Usman Anwar",
@@ -23127,6 +23878,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "On what date did Dr Usman Anwar's current Director General message appear on the FIA website?",
+    "questionUrdu": "ڈاکٹر عثمان انور کا موجودہ ڈائریکٹر جنرل پیغام FIA کی ویب سائٹ پر کس تاریخ کو شائع ہوا؟",
     "options": [
       "3 January 2026",
       "16 July 2026",
@@ -23158,6 +23910,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "As of 22 August 2026, who is the Chief Justice of the High Court of Balochistan?",
+    "questionUrdu": "22 اگست 2026 تک بلوچستان ہائی کورٹ کے چیف جسٹس کون ہیں؟",
     "options": [
       "Jamal Khan Mandokhail",
       "Justice Muhammad Kamran Khan Malakhail",
@@ -23189,6 +23942,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "On which date did Justice Muhammad Kamran Khan Malakhail take oath as Chief Justice of the High Court of Balochistan?",
+    "questionUrdu": "جسٹس محمد کامران خان ملاخیل نے بلوچستان ہائی کورٹ کے چیف جسٹس کا حلف کس تاریخ کو اٹھایا؟",
     "options": [
       "17 November 2025",
       "8 December 2025",
@@ -23220,6 +23974,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "How many IMF lending arrangements had Pakistan entered since membership, as reported by the IMF on 22 August 2026?",
+    "questionUrdu": "22 اگست 2026 کو IMF کی رپورٹ کے مطابق رکنیت کے بعد پاکستان قرض کے کتنے پروگراموں یا معاہدوں میں شامل ہوا تھا؟",
     "options": [
       "22",
       "23",
@@ -23251,6 +24006,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "On what date did Pakistan become a member of the International Monetary Fund?",
+    "questionUrdu": "پاکستان بین الاقوامی مالیاتی فنڈ کا رکن کس تاریخ کو بنا؟",
     "options": [
       "11 July 1950",
       "14 August 1947",
@@ -23282,6 +24038,7 @@
     "kind": "source",
     "categoryId": "current-affairs",
     "question": "Which President of Azad Jammu and Kashmir died on 31 January 2026?",
+    "questionUrdu": "آزاد جموں و کشمیر کے کس صدر کا 31 جنوری 2026 کو انتقال ہوا؟",
     "options": [
       "Sardar Masood Khan",
       "Barrister Sultan Mahmood Chaudhry",
@@ -23313,6 +24070,7 @@
     "kind": "similar",
     "categoryId": "current-affairs",
     "question": "How old was Barrister Sultan Mahmood Chaudhry when he died in January 2026?",
+    "questionUrdu": "جنوری 2026 میں انتقال کے وقت بیرسٹر سلطان محمود چوہدری کی عمر کتنی تھی؟",
     "options": [
       "71",
       "66",
@@ -23344,6 +24102,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "What is the commonly cited average height range of the Balochistan Plateau?",
+    "questionUrdu": "سطح مرتفع بلوچستان کی عام طور پر بیان کی جانے والی اوسط اونچائی کی حد کیا ہے؟",
     "options": [
       "300–500 metres",
       "1,000–1,500 metres",
@@ -23375,6 +24134,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "The Balochistan Plateau lies mainly west of which two mountain ranges?",
+    "questionUrdu": "سطح مرتفع بلوچستان بنیادی طور پر کن دو پہاڑی سلسلوں کے مغرب میں واقع ہے؟",
     "options": [
       "Himalaya and Karakoram",
       "Sulaiman and Kirthar",
@@ -23406,6 +24166,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Which major mineral deposit is found at Chiniot in Punjab?",
+    "questionUrdu": "پنجاب کے چنیوٹ میں کون سا بڑا معدنی ذخیرہ پایا جاتا ہے؟",
     "options": [
       "Coal",
       "Gold",
@@ -23437,6 +24198,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "The Chiniot Iron Ore Resource Project is intended to support which downstream industry?",
+    "questionUrdu": "چنیوٹ لوہے کے معدنی وسائل کا منصوبہ کس ذیلی صنعت کو سہارا دینے کے لیے بنایا گیا ہے؟",
     "options": [
       "Textile weaving",
       "Steel manufacturing",
@@ -23468,6 +24230,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Trimmu Barrage is built on which river?",
+    "questionUrdu": "تریموں بیراج کس دریا پر بنایا گیا ہے؟",
     "options": [
       "Indus",
       "Jhelum",
@@ -23499,6 +24262,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "What is the main function of Trimmu Barrage?",
+    "questionUrdu": "تریموں بیراج کا بنیادی کام کیا ہے؟",
     "options": [
       "To regulate and divert water for irrigation",
       "To generate nuclear power",
@@ -23530,6 +24294,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "Which of the following countries is landlocked and located in South Asia?",
+    "questionUrdu": "درج ذیل میں سے کون سا ملک خشکی سے گھرا ہوا اور جنوبی ایشیا میں واقع ہے؟",
     "options": [
       "Myanmar",
       "Laos",
@@ -23561,6 +24326,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Which other South Asian country in the following list is landlocked?",
+    "questionUrdu": "درج فہرست میں جنوبی ایشیا کا دوسرا کون سا ملک خشکی سے گھرا ہوا ہے؟",
     "options": [
       "Bangladesh",
       "Bhutan",
@@ -23592,6 +24358,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "The Makran Coast lies along which sea?",
+    "questionUrdu": "مکران کا ساحل کس سمندر کے ساتھ واقع ہے؟",
     "options": [
       "Caspian Sea",
       "Red Sea",
@@ -23623,6 +24390,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "Which sea forms Pakistan's southern maritime boundary?",
+    "questionUrdu": "کون سا سمندر پاکستان کی جنوبی بحری سرحد بناتا ہے؟",
     "options": [
       "Black Sea",
       "Arabian Sea",
@@ -23654,6 +24422,7 @@
     "kind": "source",
     "categoryId": "geography",
     "question": "What is the boundary line between Pakistan and Afghanistan commonly called?",
+    "questionUrdu": "پاکستان اور افغانستان کے درمیان سرحدی لکیر کو عام طور پر کیا کہا جاتا ہے؟",
     "options": [
       "Durand Line",
       "Radcliffe Line",
@@ -23685,6 +24454,7 @@
     "kind": "similar",
     "categoryId": "geography",
     "question": "The Durand Line is named after which British diplomat?",
+    "questionUrdu": "ڈیورنڈ لائن کا نام کس برطانوی سفارت کار کے نام پر رکھا گیا؟",
     "options": [
       "Cyril Radcliffe",
       "Mortimer Durand",
@@ -23716,6 +24486,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which of the following is an established medical use of ultrasound?",
+    "questionUrdu": "درج ذیل میں سے کون سا الٹراساؤنڈ کا تسلیم شدہ طبی استعمال ہے؟",
     "options": [
       "Long-distance radio communication",
       "AM radio transmission",
@@ -23747,6 +24518,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "What type of waves does a prenatal ultrasound scan use to form an image?",
+    "questionUrdu": "پیدائش سے پہلے الٹراساؤنڈ اسکین تصویر بنانے کے لیے کس قسم کی لہریں استعمال کرتا ہے؟",
     "options": [
       "Gamma rays",
       "X-rays",
@@ -23778,6 +24550,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Approximately how old is Earth?",
+    "questionUrdu": "زمین کی عمر تقریباً کتنی ہے؟",
     "options": [
       "1.5 billion years",
       "3.5 billion years",
@@ -23809,6 +24582,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which scientific method is central to estimating Earth's age?",
+    "questionUrdu": "زمین کی عمر کا اندازہ لگانے میں کون سا سائنسی طریقہ بنیادی ہے؟",
     "options": [
       "Weather forecasting",
       "Radiometric dating",
@@ -23840,6 +24614,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which is the fastest land animal?",
+    "questionUrdu": "خشکی پر سب سے تیز دوڑنے والا جانور کون سا ہے؟",
     "options": [
       "Lion",
       "Cheetah",
@@ -23871,6 +24646,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "What is the approximate top-speed range reported for a cheetah?",
+    "questionUrdu": "چیتے کی بتائی جانے والی زیادہ سے زیادہ رفتار کی تقریباً حد کیا ہے؟",
     "options": [
       "20–30 km/h",
       "45–55 km/h",
@@ -23902,6 +24678,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "An object weighs 200 N at Earth's surface. What would its weight be at the exact centre of an ideal, spherically symmetric Earth?",
+    "questionUrdu": "زمین کی سطح پر ایک جسم کا وزن 200 نیوٹن ہے۔ ایک مثالی اور کروی طور پر متناسب زمین کے بالکل مرکز میں اس کا وزن کیا ہوگا؟",
     "options": [
       "66 N",
       "200 N",
@@ -23933,6 +24710,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Why is the net gravitational force zero at the exact centre of an ideal spherical Earth?",
+    "questionUrdu": "ایک مثالی کروی زمین کے بالکل مرکز میں مجموعی کششِ ثقل صفر کیوں ہوتی ہے؟",
     "options": [
       "Earth has no mass",
       "Equal pulls act in all directions and cancel",
@@ -23964,6 +24742,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Who developed the first cholera vaccine used in humans?",
+    "questionUrdu": "انسانوں میں استعمال ہونے والی پہلی ہیضہ ویکسین کس نے تیار کی؟",
     "options": [
       "Louis Pasteur",
       "Jaime Ferrán",
@@ -23995,6 +24774,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "In which year was Jaime Ferrán's early cholera vaccine used in mass vaccination campaigns in Spain?",
+    "questionUrdu": "خائمے فیران کی ابتدائی ہیضہ ویکسین اسپین میں بڑے پیمانے کی ویکسین مہمات میں کس سال استعمال ہوئی؟",
     "options": [
       "1885",
       "1796",
@@ -24026,6 +24806,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "Which printed range most reasonably covers the roughly 40–42% efficiency often cited for a diesel engine?",
+    "questionUrdu": "طبع شدہ حدود میں سے کون سی ڈیزل انجن کے لیے عموماً بیان کی جانے والی تقریباً 40–42 فیصد کارکردگی کو مناسب طور پر شامل کرتی ہے؟",
     "options": [
       "20–25%",
       "25–30%",
@@ -24057,6 +24838,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "According to a U.S. Department of Energy technical primer, about what share of fuel energy can current diesel engines convert into useful work?",
+    "questionUrdu": "امریکی محکمہ توانائی کے تکنیکی تعارف کے مطابق موجودہ ڈیزل انجن ایندھن کی توانائی کا تقریباً کتنا حصہ مفید کام میں بدل سکتے ہیں؟",
     "options": [
       "10–20%",
       "40–50%",
@@ -24088,6 +24870,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "One mechanical horsepower is approximately equal to how many watts?",
+    "questionUrdu": "ایک میکانی ہارس پاور تقریباً کتنے واٹ کے برابر ہے؟",
     "options": [
       "646 W",
       "846 W",
@@ -24119,6 +24902,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Approximately how much power is two mechanical horsepower?",
+    "questionUrdu": "دو میکانی ہارس پاور تقریباً کتنی طاقت ہے؟",
     "options": [
       "746 W",
       "1,000 W",
@@ -24150,6 +24934,7 @@
     "kind": "source",
     "categoryId": "everyday-science",
     "question": "HLA class I molecules are expressed on which cells?",
+    "questionUrdu": "HLA کلاس I سالمات کن خلیات پر ظاہر ہوتے ہیں؟",
     "options": [
       "Virtually all nucleated cells",
       "Only B and T lymphocytes",
@@ -24181,6 +24966,7 @@
     "kind": "similar",
     "categoryId": "everyday-science",
     "question": "Which mature human blood cell normally lacks MHC class I because it has no nucleus?",
+    "questionUrdu": "انسانی خون کا کون سا بالغ خلیہ مرکزہ نہ ہونے کی وجہ سے عموماً MHC کلاس I نہیں رکھتا؟",
     "options": [
       "Neutrophil",
       "B lymphocyte",
@@ -24212,6 +24998,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Who is commonly credited as the first computer programmer?",
+    "questionUrdu": "عام طور پر پہلے کمپیوٹر پروگرامر کا اعزاز کس کو دیا جاتا ہے؟",
     "options": [
       "Charles Babbage",
       "Alan Turing",
@@ -24243,6 +25030,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Ada Lovelace's famous 1843 notes concerned which proposed machine?",
+    "questionUrdu": "ایڈا لولیس کے مشہور 1843 کے نوٹس کس مجوزہ مشین کے بارے میں تھے؟",
     "options": [
       "ENIAC",
       "Analytical Engine",
@@ -24274,6 +25062,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which networking device connects multiple computers and other devices within the same local network?",
+    "questionUrdu": "ایک ہی مقامی نیٹ ورک میں متعدد کمپیوٹر اور دوسرے آلات کو کون سا نیٹ ورک آلہ جوڑتا ہے؟",
     "options": [
       "Printer",
       "Plotter",
@@ -24305,6 +25094,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which address does an Ethernet switch primarily use to forward a frame to the correct port within a LAN?",
+    "questionUrdu": "ایتھرنیٹ سوئچ LAN میں فریم کو درست پورٹ تک بھیجنے کے لیے بنیادی طور پر کون سا پتہ استعمال کرتا ہے؟",
     "options": [
       "Web-page title",
       "Postal address",
@@ -24336,6 +25126,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which listed platform is primarily associated with online video sharing and live streaming?",
+    "questionUrdu": "درج پلیٹ فارمز میں سے کون سا بنیادی طور پر آن لائن ویڈیو شیئرنگ اور براہِ راست نشریات سے منسلک ہے؟",
     "options": [
       "Microsoft PowerPoint",
       "YouTube",
@@ -24367,6 +25158,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What does live streaming on YouTube allow a creator to do?",
+    "questionUrdu": "یوٹیوب پر لائیو اسٹریمنگ تخلیق کار کو کیا کرنے دیتی ہے؟",
     "options": [
       "Edit spreadsheet formulas offline",
       "Broadcast a video feed and interact in real time",
@@ -24398,6 +25190,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which of the following is an example of non-volatile storage?",
+    "questionUrdu": "درج ذیل میں سے کون سی غیر فرّار (non-volatile) اسٹوریج کی مثال ہے؟",
     "options": [
       "RAM",
       "CPU cache",
@@ -24429,6 +25222,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which memory technology is most commonly used for data storage inside an SSD?",
+    "questionUrdu": "SSD کے اندر ڈیٹا محفوظ کرنے کے لیے سب سے زیادہ کون سی میموری ٹیکنالوجی استعمال ہوتی ہے؟",
     "options": [
       "NAND flash",
       "Magnetic tape",
@@ -24460,6 +25254,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which non-volatile memory type is often used to store firmware?",
+    "questionUrdu": "فرم ویئر محفوظ کرنے کے لیے غیر فرّار میموری کی کون سی قسم اکثر استعمال ہوتی ہے؟",
     "options": [
       "Flash memory",
       "DRAM",
@@ -24491,6 +25286,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Why is non-volatile memory suitable for storing firmware?",
+    "questionUrdu": "غیر فرّار میموری فرم ویئر محفوظ کرنے کے لیے موزوں کیوں ہے؟",
     "options": [
       "It retains information when power is off",
       "It can only store decimal numbers",
@@ -24522,6 +25318,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "A storage drive that uses solid-state memory and has no moving parts is called what?",
+    "questionUrdu": "ٹھوس حالت کی میموری استعمال کرنے والی اور متحرک پرزوں کے بغیر اسٹوریج ڈرائیو کو کیا کہتے ہیں؟",
     "options": [
       "HDD",
       "Optical disc",
@@ -24553,6 +25350,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which component is characteristic of a traditional hard disk drive but absent from an SSD?",
+    "questionUrdu": "کون سا جزو روایتی ہارڈ ڈسک ڈرائیو میں ہوتا مگر SSD میں موجود نہیں ہوتا؟",
     "options": [
       "File system",
       "NAND flash cell",
@@ -24584,6 +25382,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Who invented the World Wide Web?",
+    "questionUrdu": "ورلڈ وائڈ ویب کس نے ایجاد کی؟",
     "options": [
       "Tim Berners-Lee",
       "Steve Jobs",
@@ -24615,6 +25414,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "At which research organization was the World Wide Web invented?",
+    "questionUrdu": "ورلڈ وائڈ ویب کس تحقیقی ادارے میں ایجاد ہوئی؟",
     "options": [
       "WHO",
       "NASA",
@@ -24646,6 +25446,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What does HTTPS stand for?",
+    "questionUrdu": "HTTPS کا مکمل نام کیا ہے؟",
     "options": [
       "HyperText Transfer Protocol Secure",
       "HyperText Transfer Protocol Service",
@@ -24677,6 +25478,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which protocol is used by HTTPS to encrypt communication between a client and a server?",
+    "questionUrdu": "کلائنٹ اور سرور کے درمیان رابطہ خفیہ کرنے کے لیے HTTPS کون سا پروٹوکول استعمال کرتا ہے؟",
     "options": [
       "FTP",
       "DHCP",
@@ -24708,6 +25510,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What is non-human traffic to a website commonly called?",
+    "questionUrdu": "ویب سائٹ پر غیر انسانی ٹریفک کو عام طور پر کیا کہتے ہیں؟",
     "options": [
       "Human traffic",
       "Organic traffic",
@@ -24739,6 +25542,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which of the following is an example of potentially beneficial bot traffic?",
+    "questionUrdu": "درج ذیل میں سے کون سی ممکنہ طور پر مفید bot ٹریفک کی مثال ہے؟",
     "options": [
       "A spam bot submitting fake forms",
       "A credential-stuffing attack",
@@ -24770,6 +25574,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What are web cookies?",
+    "questionUrdu": "ویب کوکیز کیا ہوتی ہیں؟",
     "options": [
       "Malware programs",
       "Small pieces of data stored by a browser for a website",
@@ -24801,6 +25606,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What does the Secure attribute on a web cookie require?",
+    "questionUrdu": "ویب کوکی پر Secure خصوصیت کیا شرط عائد کرتی ہے؟",
     "options": [
       "The cookie must be stored on a USB drive",
       "The cookie can never expire",
@@ -24832,6 +25638,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Bluetooth technology is commonly associated with which type of network?",
+    "questionUrdu": "بلوٹوتھ ٹیکنالوجی عموماً کس قسم کے نیٹ ورک سے منسلک ہے؟",
     "options": [
       "Wide Area Network",
       "Local Area Network",
@@ -24863,6 +25670,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "According to the Bluetooth PAN profile, how many Bluetooth-enabled devices are needed to form an ad-hoc network?",
+    "questionUrdu": "بلوٹوتھ PAN پروفائل کے مطابق عارضی نیٹ ورک بنانے کے لیے کتنے بلوٹوتھ فعال آلات درکار ہوتے ہیں؟",
     "options": [
       "Two or more",
       "Exactly one",
@@ -24894,6 +25702,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "What does B2C stand for in e-commerce?",
+    "questionUrdu": "ای کامرس میں B2C کا مکمل نام کیا ہے؟",
     "options": [
       "Business to Business",
       "Business to Consumer",
@@ -24925,6 +25734,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What does B2B stand for in e-commerce?",
+    "questionUrdu": "ای کامرس میں B2B کا مکمل نام کیا ہے؟",
     "options": [
       "Buyer to Bank",
       "Browser to Browser",
@@ -24956,6 +25766,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which ribbon path can delete an entire table in desktop Microsoft Word?",
+    "questionUrdu": "ڈیسک ٹاپ مائیکروسافٹ ورڈ میں کون سا ربن راستہ پوری جدول حذف کر سکتا ہے؟",
     "options": [
       "Table Layout > Delete > Delete Table",
       "View > Delete",
@@ -24987,6 +25798,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "In Microsoft Word, what usually happens if you select only the contents inside a table and press Delete?",
+    "questionUrdu": "مائیکروسافٹ ورڈ میں اگر آپ صرف جدول کے اندر کا مواد منتخب کرکے Delete دبائیں تو عموماً کیا ہوتا ہے؟",
     "options": [
       "The table contents are cleared but rows and columns remain",
       "The entire document closes",
@@ -25018,6 +25830,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "A node in a binary tree can have at most how many children?",
+    "questionUrdu": "بائنری ٹری کے ایک نوڈ کے زیادہ سے زیادہ کتنے چائلڈ نوڈز ہو سکتے ہیں؟",
     "options": [
       "1",
       "2",
@@ -25048,6 +25861,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "What are the two child subtrees of a binary-tree node conventionally called?",
+    "questionUrdu": "بائنری درخت کے نوڈ کے دو ذیلی درختوں کو روایتی طور پر کیا کہا جاتا ہے؟",
     "options": [
       "Upper and lower",
       "First and last",
@@ -25078,6 +25892,7 @@
     "kind": "source",
     "categoryId": "basic-computer-studies",
     "question": "Which SQL command removes a table definition together with its data?",
+    "questionUrdu": "کون سی SQL کمانڈ جدول کی تعریف کو اس کے ڈیٹا سمیت حذف کر دیتی ہے؟",
     "options": [
       "DROP TABLE",
       "DELETE",
@@ -25109,6 +25924,7 @@
     "kind": "similar",
     "categoryId": "basic-computer-studies",
     "question": "Which SQL command can quickly empty a table while retaining the table itself?",
+    "questionUrdu": "کون سی SQL کمانڈ جدول کو برقرار رکھتے ہوئے اسے تیزی سے خالی کر سکتی ہے؟",
     "options": [
       "CREATE TABLE",
       "ALTER TABLE",
@@ -25140,6 +25956,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the best antonym of “droll.”",
+    "questionUrdu": "'droll' کا بہترین متضاد منتخب کریں۔",
     "options": [
       "Funny",
       "Solemn",
@@ -25171,6 +25988,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is closest in meaning to “droll”?",
+    "questionUrdu": "کون سا لفظ 'droll' کے معنی کے قریب ترین ہے؟",
     "options": [
       "Amusing",
       "Grave",
@@ -25202,6 +26020,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the proverb: A burnt child ____ the fire.",
+    "questionUrdu": "کہاوت مکمل کریں: A burnt child ____ the fire.",
     "options": [
       "Loves",
       "Dreads",
@@ -25233,6 +26052,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "What does the proverb “A burnt child dreads the fire” imply?",
+    "questionUrdu": "کہاوت 'A burnt child dreads the fire' کیا مفہوم دیتی ہے؟",
     "options": [
       "Painful experience produces caution",
       "Failure should be ignored",
@@ -25264,6 +26084,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the analogy: Smear : Libel :: Heed : ____.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Smear : Libel :: Heed : ____۔",
     "options": [
       "Ignore",
       "Consider",
@@ -25295,6 +26116,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which verb is closest in meaning to “heed” in the sentence “Heed the warning”?",
+    "questionUrdu": "جملے 'Heed the warning' میں کون سا فعل 'heed' کے معنی کے قریب ترین ہے؟",
     "options": [
       "Disregard",
       "Erase",
@@ -25326,6 +26148,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the best antonym of “malodorous.”",
+    "questionUrdu": "'malodorous' کا بہترین متضاد منتخب کریں۔",
     "options": [
       "Fragrant",
       "Rotten",
@@ -25357,6 +26180,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is closest in meaning to “malodorous”?",
+    "questionUrdu": "کون سا لفظ 'malodorous' کے معنی کے قریب ترین ہے؟",
     "options": [
       "Aromatic",
       "Foul-smelling",
@@ -25388,6 +26212,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the correct sentence.",
+    "questionUrdu": "درست جملہ منتخب کریں۔",
     "options": [
       "When have your friends come?",
       "When did your friends came?",
@@ -25419,6 +26244,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the past-simple question: Did she ____ to the office yesterday?",
+    "questionUrdu": "ماضی سادہ کا سوال مکمل کریں: Did she ____ to the office yesterday?",
     "options": [
       "went",
       "going",
@@ -25450,6 +26276,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "In reported speech with a past reporting verb, “can” normally changes to ____.",
+    "questionUrdu": "ماضی کے reporting verb کے ساتھ reported speech میں 'can' عموماً ____ میں بدلتا ہے۔",
     "options": [
       "will",
       "shall",
@@ -25481,6 +26308,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "In the usual backshift of reported speech, “will” changes to which modal?",
+    "questionUrdu": "reported speech کی عام backshift میں 'will' کس modal میں بدلتا ہے؟",
     "options": [
       "Could",
       "Would",
@@ -25512,6 +26340,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Despite discussing the issue, he could not ____ with the manager.",
+    "questionUrdu": "مسئلے پر گفتگو کے باوجود وہ منیجر کے ساتھ ____ نہ کر سکا۔",
     "options": [
       "get up",
       "get on",
@@ -25543,6 +26372,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which phrasal verb means “to have a friendly relationship with someone”?",
+    "questionUrdu": "کس phrasal verb کا مطلب 'کسی کے ساتھ دوستانہ تعلق رکھنا' ہے؟",
     "options": [
       "Get along",
       "Get away",
@@ -25574,6 +26404,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the proverb: Charity begins at ____.",
+    "questionUrdu": "کہاوت مکمل کریں: Charity begins at ____۔",
     "options": [
       "School",
       "Home",
@@ -25605,6 +26436,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which idea is expressed by “Charity begins at home”?",
+    "questionUrdu": "'Charity begins at home' کون سا تصور بیان کرتی ہے؟",
     "options": [
       "Help distant people only",
       "Never give to charity",
@@ -25636,6 +26468,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the reconstructed sentence: The old town lay far away; nothing like this had happened to ____ city before.",
+    "questionUrdu": "دوبارہ تشکیل دیا گیا جملہ مکمل کریں: The old town lay far away; nothing like this had happened to ____ city before.",
     "options": [
       "this",
       "those",
@@ -25667,6 +26500,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the sentence: Look at ____ flowers here beside me.",
+    "questionUrdu": "جملہ مکمل کریں: Look at ____ flowers here beside me.",
     "options": [
       "that",
       "these",
@@ -25698,6 +26532,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "In the sentence “This table is heavy,” what part of speech is “heavy”?",
+    "questionUrdu": "جملے 'This table is heavy' میں 'heavy' کون سا جزوِ کلام ہے؟",
     "options": [
       "Verb",
       "Adverb",
@@ -25729,6 +26564,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "In the sentence “The box feels light,” what part of speech is “light”?",
+    "questionUrdu": "جملے 'The box feels light' میں 'light' کون سا جزوِ کلام ہے؟",
     "options": [
       "Adverb",
       "Pronoun",
@@ -25760,6 +26596,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the sentence: Is he a party ____ the crime?",
+    "questionUrdu": "جملہ مکمل کریں: Is he a party ____ the crime?",
     "options": [
       "through",
       "to",
@@ -25791,6 +26628,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the formal phrase: All signatories are parties ____ the agreement.",
+    "questionUrdu": "رسمی فقرہ مکمل کریں: All signatories are parties ____ the agreement.",
     "options": [
       "to",
       "by",
@@ -25822,6 +26660,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the analogy: Folderol : ____ :: Benevolence : Charity.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Folderol : ____ :: Benevolence : Charity۔",
     "options": [
       "Cash",
       "Greed",
@@ -25853,6 +26692,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which sentence uses “folderol” in its dictionary sense?",
+    "questionUrdu": "کون سا جملہ 'folderol' کو اس کے لغوی معنی میں استعمال کرتا ہے؟",
     "options": [
       "The folderol measured ten metres",
       "Ignore that empty folderol",
@@ -25884,6 +26724,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Complete the analogy: Glade : ____ :: Castle : Moat.",
+    "questionUrdu": "تشبیہی نسبت مکمل کریں: Glade : ____ :: Castle : Moat۔",
     "options": [
       "Woods",
       "Royalty",
@@ -25915,6 +26756,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "An oasis is most naturally associated with which surrounding landscape?",
+    "questionUrdu": "نخلستان فطری طور پر اپنے گرد کس قسم کے خطے سے منسلک ہوتا ہے؟",
     "options": [
       "Desert",
       "Glacier",
@@ -25946,6 +26788,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Choose the best general antonym of “truculent.”",
+    "questionUrdu": "'truculent' کا بہترین عمومی متضاد منتخب کریں۔",
     "options": [
       "Flattering",
       "Gentle",
@@ -25977,6 +26820,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which description best matches a truculent person?",
+    "questionUrdu": "کون سی وضاحت ایک truculent شخص کی بہترین تصویر پیش کرتی ہے؟",
     "options": [
       "Calmly cooperative",
       "Aggressively defiant",
@@ -26008,6 +26852,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "What part of speech is “honesty” in “Honesty is the best policy”?",
+    "questionUrdu": "جملے 'Honesty is the best policy' میں 'honesty' کون سا جزوِ کلام ہے؟",
     "options": [
       "Verb",
       "Adjective",
@@ -26039,6 +26884,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is an abstract noun?",
+    "questionUrdu": "کون سا لفظ اسمِ کیفیت ہے؟",
     "options": [
       "Become",
       "Kind",
@@ -26070,6 +26916,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "We did not like this house at first, but now we ____ living here.",
+    "questionUrdu": "شروع میں ہمیں یہ گھر پسند نہیں تھا، مگر اب ہم یہاں رہنے کے ____ ہیں۔",
     "options": [
       "are used to",
       "used to",
@@ -26101,6 +26948,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Complete the sentence about a past habit: I ____ walk to school every day.",
+    "questionUrdu": "ماضی کی عادت والا جملہ مکمل کریں: I ____ walk to school every day.",
     "options": [
       "am used to",
       "used to",
@@ -26132,6 +26980,7 @@
     "kind": "source",
     "categoryId": "english",
     "question": "Which option names courage in the face of danger?",
+    "questionUrdu": "کون سا انتخاب خطرے کے سامنے بہادری کا نام ہے؟",
     "options": [
       "Vice",
       "Valor",
@@ -26163,6 +27012,7 @@
     "kind": "similar",
     "categoryId": "english",
     "question": "Which word is closest in meaning to “valor”?",
+    "questionUrdu": "کون سا لفظ 'valor' کے معنی کے قریب ترین ہے؟",
     "options": [
       "Cowardice",
       "Courage",
@@ -26194,6 +27044,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "What is the value of (−1)³⁰⁰?",
+    "questionUrdu": "(−1)³⁰⁰ کی قیمت کیا ہے؟",
     "options": [
       "−1",
       "1",
@@ -26225,6 +27076,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "What is the value of (−1)³⁰¹?",
+    "questionUrdu": "(−1)³⁰¹ کی قیمت کیا ہے؟",
     "options": [
       "1",
       "−1",
@@ -26256,6 +27108,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Simplify (m^(1/3) · n^(−2))^(3/5).",
+    "questionUrdu": "(m^(1/3) · n^(−2))^(3/5) کو سادہ کریں۔",
     "options": [
       "m^(1/5) · n^(−6/5)",
       "m^(−1/5) · n^(−6/5)",
@@ -26287,6 +27140,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Simplify (a^(2/3) · b^(−1))³.",
+    "questionUrdu": "(a^(2/3) · b^(−1))³ کو سادہ کریں۔",
     "options": [
       "a³b⁻¹",
       "a²b³",
@@ -26318,6 +27172,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "In the sequence 2, 6, 18, 54, 162, 486, what is the fourth term from the end?",
+    "questionUrdu": "سلسلے 2, 6, 18, 54, 162, 486 میں آخر سے چوتھی حد کون سی ہے؟",
     "options": [
       "20",
       "22",
@@ -26349,6 +27204,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "In the sequence 3, 9, 27, 81, 243, 729, what is the third term from the end?",
+    "questionUrdu": "سلسلے 3, 9, 27, 81, 243, 729 میں آخر سے تیسری حد کون سی ہے؟",
     "options": [
       "81",
       "27",
@@ -26380,6 +27236,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "If x = 5 and y = 2, what is x + y?",
+    "questionUrdu": "اگر x = 5 اور y = 2 ہو تو x + y کیا ہے؟",
     "options": [
       "9",
       "7",
@@ -26411,6 +27268,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "If a = 9 and b = 4, what is a − b?",
+    "questionUrdu": "اگر a = 9 اور b = 4 ہو تو a − b کیا ہے؟",
     "options": [
       "3",
       "4",
@@ -26442,6 +27300,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A rectangle's height is 6 units more than its width w. What is its perimeter?",
+    "questionUrdu": "ایک مستطیل کی اونچائی اس کی چوڑائی w سے 6 یونٹ زیادہ ہے۔ اس کا محیط کیا ہے؟",
     "options": [
       "4p + 12",
       "4a + 12",
@@ -26473,6 +27332,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "A rectangle's length is 5 units more than its width w. Which expression gives its perimeter?",
+    "questionUrdu": "ایک مستطیل کی لمبائی اس کی چوڑائی w سے 5 یونٹ زیادہ ہے۔ کون سا اظہار اس کا محیط دیتا ہے؟",
     "options": [
       "2w + 5",
       "4w + 5",
@@ -26504,6 +27364,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "If the diameter of a circle is 12 cm, what is its radius?",
+    "questionUrdu": "اگر دائرے کا قطر 12 سینٹی میٹر ہو تو اس کا رداس کیا ہے؟",
     "options": [
       "9 cm",
       "6 cm",
@@ -26535,6 +27396,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "A circle has a radius of 7 cm. What is its diameter?",
+    "questionUrdu": "ایک دائرے کا رداس 7 سینٹی میٹر ہے۔ اس کا قطر کیا ہے؟",
     "options": [
       "14 cm",
       "7 cm",
@@ -26566,6 +27428,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Simplify 3x² + xy + √x + 7x².",
+    "questionUrdu": "3x² + xy + √x + 7x² کو سادہ کریں۔",
     "options": [
       "10x + √25x + xy",
       "10x + √(25x) + xy",
@@ -26597,6 +27460,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Simplify 4y² + 3xy + √y + 6y².",
+    "questionUrdu": "4y² + 3xy + √y + 6y² کو سادہ کریں۔",
     "options": [
       "10y + 3xy + √y",
       "10y² + 3xy + √y",
@@ -26628,6 +27492,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "What kind of roots does 2x² + 5x − 6 = 0 have?",
+    "questionUrdu": "مساوات 2x² + 5x − 6 = 0 کی جڑیں کس نوعیت کی ہیں؟",
     "options": [
       "Two equal real roots",
       "Two distinct real roots",
@@ -26659,6 +27524,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "What kind of roots does x² + 6x + 9 = 0 have?",
+    "questionUrdu": "مساوات x² + 6x + 9 = 0 کی جڑیں کس نوعیت کی ہیں؟",
     "options": [
       "Two distinct real roots",
       "Two non-real roots",
@@ -26690,6 +27556,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "What are the roots of 2x² − 5x − 12 = 0?",
+    "questionUrdu": "مساوات 2x² − 5x − 12 = 0 کی جڑیں کیا ہیں؟",
     "options": [
       "4 and −3/2",
       "−4 and 3/2",
@@ -26721,6 +27588,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "What are the roots of 2x² + x − 3 = 0?",
+    "questionUrdu": "مساوات 2x² + x − 3 = 0 کی جڑیں کیا ہیں؟",
     "options": [
       "1 and −3/2",
       "−1 and 3/2",
@@ -26752,6 +27620,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "Which monic quadratic equation has sum of roots −4 and product of roots 3?",
+    "questionUrdu": "کون سی یک ضریبی مربعی مساوات کی جڑوں کا مجموعہ −4 اور حاصل ضرب 3 ہے؟",
     "options": [
       "x² + 4x + 3 = 0",
       "x² − 4x + 3 = 0",
@@ -26783,6 +27652,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "Which monic quadratic has sum of roots 5 and product of roots 6?",
+    "questionUrdu": "کون سی یک ضریبی مربعی مساوات کی جڑوں کا مجموعہ 5 اور حاصل ضرب 6 ہے؟",
     "options": [
       "x² − 5x + 6 = 0",
       "x² + 5x + 6 = 0",
@@ -26814,6 +27684,7 @@
     "kind": "source",
     "categoryId": "basic-mathematics",
     "question": "A square has a side length of 12 cm. What is its area?",
+    "questionUrdu": "ایک مربع کے ضلع کی لمبائی 12 سینٹی میٹر ہے۔ اس کا رقبہ کیا ہے؟",
     "options": [
       "144 cm²",
       "145 cm²",
@@ -26845,6 +27716,7 @@
     "kind": "similar",
     "categoryId": "basic-mathematics",
     "question": "A square has a side length of 9 cm. What is its area?",
+    "questionUrdu": "ایک مربع کے ضلع کی لمبائی 9 سینٹی میٹر ہے۔ اس کا رقبہ کیا ہے؟",
     "options": [
       "18 cm²",
       "36 cm²",
@@ -26876,6 +27748,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "The false report of which Companion's martyrdom led to Bay'at al-Ridwan?",
+    "questionUrdu": "کس صحابی کی شہادت کی جھوٹی خبر بیعتِ رضوان کا سبب بنی؟",
     "options": [
       "Uthman ibn Affan",
       "Abu Bakr al-Siddiq",
@@ -26907,6 +27780,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Which Qur'anic verse explicitly mentions the believers pledging allegiance under the tree?",
+    "questionUrdu": "قرآن کی کون سی آیت درخت کے نیچے اہلِ ایمان کی بیعت کا واضح ذکر کرتی ہے؟",
     "options": [
       "Al-Ikhlas 112:1",
       "Al-Baqarah 2:255",
@@ -26938,6 +27812,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Mithaq al-Madinah is commonly described in Islamic-studies texts as the world's first ____.",
+    "questionUrdu": "اسلامیات کی کتابوں میں میثاقِ مدینہ کو عام طور پر دنیا کا پہلا ____ قرار دیا جاتا ہے۔",
     "options": [
       "postal letter",
       "written constitutional charter",
@@ -26969,6 +27844,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Around which year CE was the Charter of Medina drawn up after the Hijrah?",
+    "questionUrdu": "ہجرت کے بعد میثاقِ مدینہ تقریباً کس عیسوی سال میں مرتب ہوا؟",
     "options": [
       "622 CE",
       "610 CE",
@@ -27000,6 +27876,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Which Mother of the Believers married the Prophet Muhammad (PBUH) after the expedition against Banu al-Mustaliq?",
+    "questionUrdu": "بنو مصطلق کے خلاف مہم کے بعد نبی کریم ﷺ نے کس ام المؤمنین سے نکاح کیا؟",
     "options": [
       "Umm Salamah",
       "Juwayriyah bint al-Harith",
@@ -27031,6 +27908,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "Juwayriyah bint al-Harith belonged by birth to which tribe?",
+    "questionUrdu": "حضرت جویریہ بنت الحارث رضی اللہ عنہا پیدائشی طور پر کس قبیلے سے تعلق رکھتی تھیں؟",
     "options": [
       "Banu Hashim",
       "Banu Thaqif",
@@ -27062,6 +27940,7 @@
     "kind": "source",
     "categoryId": "islamic-studies",
     "question": "Which pair of places is explicitly invoked in the opening oaths of Surah At-Tin?",
+    "questionUrdu": "سورۃ التین کی ابتدائی قسموں میں کن دو مقامات کا واضح ذکر ہے؟",
     "options": [
       "Najran and Mount Uhud",
       "Mount Sinai and the secure city of Makkah",
@@ -27093,6 +27972,7 @@
     "kind": "similar",
     "categoryId": "islamic-studies",
     "question": "In Surah At-Tin, what does “this secure city” refer to?",
+    "questionUrdu": "سورۃ التین میں 'اس امن والے شہر' سے کون سا شہر مراد ہے؟",
     "options": [
       "Madinah",
       "Jerusalem",
@@ -27124,6 +28004,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What does the Urdu proverb بلی کے بھاگوں چھینکا ٹوٹا mean?",
+    "questionUrdu": "اردو کہاوت 'بلی کے بھاگوں چھینکا ٹوٹا' کا کیا مطلب ہے؟",
     "options": [
       "متوقع فائدہ",
       "غیر متوقع فائدہ",
@@ -27155,6 +28036,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which situation best illustrates بلی کے بھاگوں چھینکا ٹوٹا?",
+    "questionUrdu": "کون سی صورت 'بلی کے بھاگوں چھینکا ٹوٹا' کی بہترین مثال ہے؟",
     "options": [
       "بغیر توقع انعام مل جانا",
       "روزانہ محنت کرنا",
@@ -27186,6 +28068,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What is the intended meaning of کوّے کے بھی پر نکل آئے?",
+    "questionUrdu": "'کوّے کے بھی پر نکل آئے' کا مطلوبہ مفہوم کیا ہے؟",
     "options": [
       "مصیبت میں آنا",
       "اوقات سے باہر ہونا",
@@ -27217,6 +28100,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "In Urdu idiom, کسی کے پر و بال نکلنا most nearly suggests what?",
+    "questionUrdu": "اردو محاورے میں 'کسی کے پر و بال نکلنا' کس مفہوم کے قریب ترین ہے؟",
     "options": [
       "شریر یا خود سر ہو جانا",
       "بیمار پڑ جانا",
@@ -27248,6 +28132,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What does the Urdu idiom سونے کی چڑیا ہاتھ لگنا mean?",
+    "questionUrdu": "اردو محاورے 'سونے کی چڑیا ہاتھ لگنا' کا کیا مطلب ہے؟",
     "options": [
       "ہاتھ سے کھونا",
       "وقت کی قدر نہ کرنا",
@@ -27279,6 +28164,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which expression means that a valuable opportunity or prize has been obtained?",
+    "questionUrdu": "کون سی ترکیب کا مطلب ہے کہ کوئی قیمتی موقع یا انعام حاصل ہوگیا ہے؟",
     "options": [
       "دانت کھٹے کرنا",
       "آگ بگولا ہونا",
@@ -27310,6 +28196,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What does ڈوبتے کو تنکے کا سہارا mean?",
+    "questionUrdu": "'ڈوبتے کو تنکے کا سہارا' کا کیا مطلب ہے؟",
     "options": [
       "پانی میں ڈوبنا",
       "تنکے سے تیرنا",
@@ -27341,6 +28228,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "When is the proverb ڈوبتے کو تنکے کا سہارا most appropriate?",
+    "questionUrdu": "کہاوت 'ڈوبتے کو تنکے کا سہارا' کس موقع پر سب سے موزوں ہے؟",
     "options": [
       "جب کامیابی یقینی ہو",
       "جب مشکل میں معمولی مدد ملے",
@@ -27372,6 +28260,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "In the line اک چراغ تمام شہر میں تنہا رہا, how is چراغ classified in the prescribed school-level convention?",
+    "questionUrdu": "مصرع 'اک چراغ تمام شہر میں تنہا رہا' میں اسکول کی مقررہ روایت کے مطابق 'چراغ' کی کیا درجہ بندی ہے؟",
     "options": [
       "کنایہ",
       "قافیہ",
@@ -27403,6 +28292,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "In the line ایک روشن دماغ تھا، نہ رہا؛ شہر میں اک چراغ تھا، نہ رہا, which device is identified in the FBISE model-paper convention?",
+    "questionUrdu": "مصرعوں 'ایک روشن دماغ تھا، نہ رہا؛ شہر میں اک چراغ تھا، نہ رہا' میں FBISE ماڈل پیپر کی روایت کے مطابق کون سی صنعت ہے؟",
     "options": [
       "تشبیہ",
       "استعارہ",
@@ -27434,6 +28324,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Which Urdu grammatical term denotes a word showing an action or state in relation to time?",
+    "questionUrdu": "اردو قواعد کی کون سی اصطلاح ایسے لفظ کے لیے ہے جو وقت کے تعلق سے کسی عمل یا حالت کو ظاہر کرے؟",
     "options": [
       "اسم",
       "حرف",
@@ -27465,6 +28356,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "In the Urdu sentence علی کتاب پڑھتا ہے, which word is the فعل?",
+    "questionUrdu": "اردو جملے 'علی کتاب پڑھتا ہے' میں کون سا لفظ فعل ہے؟",
     "options": [
       "علی",
       "کتاب",
@@ -27496,6 +28388,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What does the proverb تالی دونوں ہاتھوں سے بجتی ہے mean?",
+    "questionUrdu": "کہاوت 'تالی دونوں ہاتھوں سے بجتی ہے' کا کیا مطلب ہے؟",
     "options": [
       "صرف ایک شخص قصوروار ہوتا ہے",
       "ہاتھ خالی رہتے ہیں",
@@ -27527,6 +28420,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which English saying is closest to تالی دونوں ہاتھوں سے بجتی ہے?",
+    "questionUrdu": "کون سی انگریزی کہاوت 'تالی دونوں ہاتھوں سے بجتی ہے' کے مفہوم کے قریب ترین ہے؟",
     "options": [
       "Every cloud has a silver lining",
       "Time is money",
@@ -27558,6 +28452,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "What is meant by لاتوں کے بھوت باتوں سے نہیں مانتے?",
+    "questionUrdu": "'لاتوں کے بھوت باتوں سے نہیں مانتے' سے کیا مراد ہے؟",
     "options": [
       "ہر شخص محبت سے مان جاتا ہے",
       "کمزور آدمی حد سے بڑھتا ہے",
@@ -27589,6 +28484,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "Which situation best fits لاتوں کے بھوت باتوں سے نہیں مانتے?",
+    "questionUrdu": "کون سی صورت 'لاتوں کے بھوت باتوں سے نہیں مانتے' کی بہترین مثال ہے؟",
     "options": [
       "طالب علم کا پہلی بار سمجھ جانا",
       "سرکش شخص کا بار بار سمجھانے پر بھی نہ ماننا",
@@ -27620,6 +28516,7 @@
     "kind": "source",
     "categoryId": "urdu",
     "question": "Complete the Urdu saying: وقت آنے پر ____ کے بھی پر نکل آئے۔",
+    "questionUrdu": "اردو کہاوت مکمل کریں: وقت آنے پر ____ کے بھی پر نکل آئے۔",
     "options": [
       "مکھی",
       "سانپ",
@@ -27651,6 +28548,7 @@
     "kind": "similar",
     "categoryId": "urdu",
     "question": "What does the idiom چیونٹی کے پر نکلنا usually imply?",
+    "questionUrdu": "محاورہ 'چیونٹی کے پر نکلنا' عموماً کیا مفہوم دیتا ہے؟",
     "options": [
       "بڑی دولت ملنا",
       "شامت یا زوال قریب آنا",

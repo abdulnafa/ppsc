@@ -61,6 +61,9 @@ function validateData(data) {
     if (String(question.question || "").trim() && !/[A-Za-z]/.test(question.question)) {
       error(`${location}: question needs an English instruction`);
     }
+    if (!/[\u0600-\u06ff]/u.test(String(question.questionUrdu || ""))) {
+      error(`${location}: questionUrdu must contain an Urdu translation`);
+    }
     if (!Array.isArray(question.options) || question.options.length !== 4) {
       error(`${location}: must have exactly four options`);
     } else if (question.options.some((option) => !String(typeof option === "object" ? option.text : option).trim())) {
@@ -147,7 +150,8 @@ function validateHtml() {
   const requiredIds = [
     "category-screen", "mode-screen", "quiz-screen", "results-screen", "category-grid",
     "mode-category", "learn-mode-button", "quiz-mode-button", "mode-back-button",
-    "question-kind", "question-text", "options-container", "action-button", "feedback",
+    "question-kind", "question-text", "question-urdu-block", "question-text-urdu",
+    "options-container", "action-button", "feedback",
     "details-toggle", "details-panel", "explanation-text", "related-history", "related-history-text",
     "related-history-source-link",
     "source-notes", "details-source",

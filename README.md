@@ -8,12 +8,12 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 - 449 original, researched PPSC-style questions—one related question for every source MCQ.
 - 898 website questions in total.
 - 10 advertised syllabus subjects, plus a separate **Finance, Taxation & Job-related** category for questions found in the supplied papers but outside that syllabus.
-- English question stems and four answer options. Urdu subject items keep essential Urdu test text under an English instruction.
+- English question stems and four answer options, with a readable Urdu translation directly below every question.
 - Urdu answer explanations, visible after either a correct or incorrect attempt.
 - A Learn mode that reveals the correct answer, explanation and verified Urdu related history/background immediately.
 - A direct research/evidence link and any necessary source correction note in the detail panel.
 
-The flow is: choose a category → choose Learn or Quiz. Learn mode shows the answer, Urdu explanation, related factual background and its evidence link immediately; Quiz mode keeps option checking, feedback and scoring.
+The flow is: choose a category → choose Learn or Quiz. Learn mode shows the answer, Urdu explanation, related factual background and its evidence link immediately. After the category is learned, **Start Quiz** opens the same category in scored Quiz mode. Quiz mode keeps option checking, feedback and scoring.
 
 ## Project structure
 
@@ -29,7 +29,7 @@ ppsc-project/
 └── README.md
 ```
 
-`data/questions.js` and the Markdown banks in the parent folder are generated outputs. The verified JSON files under `work/` are the source of truth.
+`data/questions.js` and the Markdown banks in the parent folder are generated outputs. The verified enrichment JSON and `question-translations-ur*.json` files under `work/` are the source of truth.
 
 ## Preview locally
 
@@ -52,7 +52,7 @@ node tools/validate-site-data.js --expected=898
 node tools/browser-smoke.js
 ```
 
-The browser smoke test requires local Chrome or Edge. It exercises both Learn and Quiz at mobile width, including mode selection, pre-revealed learning answers, related-history text and source links, wrong/correct quiz feedback, Next, and completion.
+The browser smoke test requires local Chrome or Edge. It exercises both Learn and Quiz at mobile width, including Urdu question rendering, mode selection, pre-revealed learning answers, related-history text and source links, the Learn-complete **Start Quiz** transition, wrong/correct quiz feedback, Next, and completion.
 
 The build script validates all six PDF papers, balances only the generated similar-question answer positions, and creates:
 
@@ -73,6 +73,7 @@ Each pair must:
 - Use `kind: "source"` with `source.type: "user"` for the supplied MCQ.
 - Use `kind: "similar"` with `source.type: "practice"` for the original related MCQ.
 - Include a useful Urdu explanation and a direct researched `referenceUrl` for both items.
+- Include a clear `questionUrdu` translation for both English question stems; the four options remain in English.
 - Record the verification date as `source.accessedOn` in `YYYY-MM-DD` format.
 - Be closely related: the builder uses each paired question's verified explanation and evidence link as the other question's factual Learn-mode background.
 
@@ -85,7 +86,7 @@ The repository is already initialized on branch `main`, with `origin` set to `ht
 ```powershell
 cd "D:\My documents\PPSC\codex\ppsc-project"
 git add .
-git commit -m "Add complete researched PPSC MCQ bank"
+git commit -m "Add Urdu question translations and Start Quiz flow"
 git push
 ```
 
