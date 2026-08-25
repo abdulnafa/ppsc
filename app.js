@@ -63,17 +63,6 @@
     elements.feedback = firstElement(["#feedback", "[data-feedback]"]);
     elements.feedbackTitle = firstElement(["#feedback-title", "[data-feedback-title]"]);
     elements.feedbackText = firstElement(["#feedback-text", "[data-feedback-text]"]);
-    elements.detailsToggle = firstElement(["#details-toggle", "[data-details-toggle]"]);
-    elements.detailsPanel = firstElement(["#details-panel", "[data-details-panel]"]);
-    elements.explanationText = firstElement(["#explanation-text", "[data-explanation]"]);
-    elements.relatedHistory = firstElement(["#related-history", "[data-related-history]"]);
-    elements.relatedHistoryText = firstElement(["#related-history-text", "[data-related-history-text]"]);
-    elements.relatedHistorySourceLink = firstElement(["#related-history-source-link", "[data-related-history-source-link]"]);
-    elements.optionRationales = firstElement(["#option-rationales", "[data-option-rationales]"]);
-    elements.sourceNotes = firstElement(["#source-notes", "[data-source-notes]"]);
-    elements.detailsSource = firstElement(["#details-source", "[data-details-source]"]);
-    elements.sourceLabel = firstElement(["#source-label", "[data-source-label]"]);
-    elements.sourceLink = firstElement(["#source-link", "[data-source-link]"]);
     elements.difficultControl = firstElement(["#difficult-control", "[data-difficult-control]"]);
     elements.difficultCheckbox = firstElement(["#difficult-checkbox", "[data-difficult-checkbox]"]);
     elements.difficultStatus = firstElement(["#difficult-mark-status", "#difficult-status", "[data-difficult-status]"]);
@@ -209,7 +198,7 @@
       elements.difficultEmpty.className = "difficult-empty";
       elements.difficultEmpty.dataset.difficultEmpty = "";
       elements.difficultEmpty.setAttribute("role", "status");
-      elements.difficultEmpty.textContent = "No difficult questions marked yet. Start Learn or Quiz and mark questions below their details.";
+      elements.difficultEmpty.textContent = "No difficult questions marked yet. Start Learn or Quiz and mark questions below each MCQ.";
 
       elements.difficultLearnButton = createModeOption(
         "difficult-learn-button",
@@ -249,34 +238,45 @@
   }
 
   function ensureDifficultControl() {
-    if (!elements.detailsPanel) return;
-
     if (!elements.difficultControl) {
+      var questionCard = firstElement([".question-card"], elements.quizScreen);
+      if (!questionCard) return;
+
       var control = document.createElement("div");
       control.id = "difficult-control";
       control.className = "difficult-control";
       control.dataset.difficultControl = "";
 
-      var label = document.createElement("label");
-      label.className = "difficult-checkbox-label";
       elements.difficultCheckbox = document.createElement("input");
       elements.difficultCheckbox.id = "difficult-checkbox";
       elements.difficultCheckbox.type = "checkbox";
+      elements.difficultCheckbox.className = "difficult-checkbox";
       elements.difficultCheckbox.dataset.difficultCheckbox = "";
-      var labelText = document.createElement("span");
+
+      var label = document.createElement("label");
+      label.className = "difficult-mark-label";
+      label.setAttribute("for", elements.difficultCheckbox.id);
+      var labelText = document.createElement("strong");
       labelText.textContent = "Mark as difficult";
-      label.appendChild(elements.difficultCheckbox);
       label.appendChild(labelText);
+
+      var help = document.createElement("small");
+      help.id = "difficult-mark-help";
+      help.className = "difficult-mark-help";
+      help.textContent = "Save this question for focused practice later.";
+      label.appendChild(help);
 
       elements.difficultStatus = document.createElement("span");
       elements.difficultStatus.id = "difficult-mark-status";
       elements.difficultStatus.className = "difficult-mark-status";
       elements.difficultStatus.dataset.difficultStatus = "";
       elements.difficultStatus.setAttribute("aria-live", "polite");
+      elements.difficultCheckbox.setAttribute("aria-describedby", "difficult-mark-help difficult-mark-status");
 
+      control.appendChild(elements.difficultCheckbox);
       control.appendChild(label);
       control.appendChild(elements.difficultStatus);
-      elements.detailsPanel.appendChild(control);
+      questionCard.appendChild(control);
       elements.difficultControl = control;
     }
 
@@ -672,6 +672,7 @@
     updateProgress();
     resetFeedback();
     syncDifficultCheckbox(question);
+    setHidden(elements.difficultControl, false);
 
     if (state.mode === "learn") {
       prepareLearnQuestion(question);
@@ -733,8 +734,6 @@
 
     state.submitted = true;
     showLearnFeedback();
-    buildDetails(question);
-    openDetails();
 
     if (elements.actionButton) {
       var isLast = state.currentIndex === state.questions.length - 1;
@@ -799,7 +798,6 @@
 
     markSubmittedOptions(question);
     showFeedback(question, isCorrect);
-    buildDetails(question);
     updateProgress();
 
     if (elements.actionButton) {
@@ -877,173 +875,7 @@
     elements.feedback.setAttribute("aria-live", "polite");
     setHidden(elements.feedback, false);
     elements.feedbackTitle.textContent = "Correct answer";
-    elements.feedbackText.textContent = "Read the explanation and related history, then continue when you are ready.";
-  }
-
-  function ensureDetailsToggle() {
-    if (elements.detailsToggle || !elements.detailsPanel) return;
-    var button = document.createElement("button");
-    button.type = "button";
-    button.id = "details-toggle";
-    button.className = "details-toggle";
-    button.dataset.detailsToggle = "";
-    elements.detailsPanel.parentNode.insertBefore(button, elements.detailsPanel);
-    elements.detailsToggle = button;
-  }
-
-  function ensureDetailsContent() {
-    if (!elements.detailsPanel) return;
-    if (!elements.explanationText) {
-      elements.explanationText = document.createElement("p");
-      elements.explanationText.id = "explanation-text";
-      elements.explanationText.className = "urdu-explanation";
-      elements.detailsPanel.appendChild(elements.explanationText);
-    }
-    if (elements.relatedHistory && !elements.relatedHistorySourceLink) {
-      elements.relatedHistorySourceLink = document.createElement("a");
-      elements.relatedHistorySourceLink.id = "related-history-source-link";
-      elements.relatedHistorySourceLink.className = "related-history-source-link";
-      elements.relatedHistorySourceLink.target = "_blank";
-      elements.relatedHistorySourceLink.rel = "noopener noreferrer";
-      elements.relatedHistorySourceLink.textContent = "Open background source";
-      elements.relatedHistory.appendChild(elements.relatedHistorySourceLink);
-    }
-    if (!elements.optionRationales) {
-      elements.optionRationales = document.createElement("ul");
-      elements.optionRationales.id = "option-rationales";
-      elements.optionRationales.className = "option-rationales";
-      elements.detailsPanel.appendChild(elements.optionRationales);
-    }
-    if (!elements.sourceNotes) {
-      elements.sourceNotes = document.createElement("p");
-      elements.sourceNotes.id = "source-notes";
-      elements.sourceNotes.className = "source-notes";
-      elements.detailsPanel.appendChild(elements.sourceNotes);
-    }
-    if (!elements.detailsSource) {
-      elements.detailsSource = document.createElement("div");
-      elements.detailsSource.id = "details-source";
-      elements.detailsSource.className = "details-source";
-      elements.sourceLabel = document.createElement("span");
-      elements.sourceLabel.id = "source-label";
-      elements.sourceLink = document.createElement("a");
-      elements.sourceLink.id = "source-link";
-      elements.sourceLink.target = "_blank";
-      elements.sourceLink.rel = "noopener noreferrer";
-      elements.sourceLink.textContent = "Open research source";
-      elements.detailsSource.appendChild(elements.sourceLabel);
-      elements.detailsSource.appendChild(elements.sourceLink);
-      elements.detailsPanel.appendChild(elements.detailsSource);
-    }
-  }
-
-  function buildDetails(question) {
-    if (!elements.detailsPanel) return;
-    ensureDetailsToggle();
-    ensureDetailsContent();
-    ensureDifficultControl();
-
-    elements.explanationText.textContent = question.explanationUrdu || "تفصیلی وضاحت جلد شامل کی جائے گی۔";
-    elements.explanationText.lang = "ur";
-    elements.explanationText.dir = "rtl";
-
-    var relatedHistory = String(question.relatedHistoryUrdu || "").trim();
-    if (elements.relatedHistoryText) {
-      elements.relatedHistoryText.textContent = relatedHistory;
-      elements.relatedHistoryText.lang = "ur";
-      elements.relatedHistoryText.dir = "rtl";
-    }
-    if (elements.relatedHistory) {
-      setHidden(elements.relatedHistory, state.mode !== "learn" || !relatedHistory);
-    }
-    var relatedHistorySource = String(question.relatedHistorySource || "").trim();
-    var hasRelatedHistorySource = /^https?:\/\//i.test(relatedHistorySource);
-    if (elements.relatedHistorySourceLink) {
-      if (hasRelatedHistorySource) {
-        elements.relatedHistorySourceLink.href = relatedHistorySource;
-      } else {
-        elements.relatedHistorySourceLink.removeAttribute("href");
-      }
-      setHidden(
-        elements.relatedHistorySourceLink,
-        state.mode !== "learn" || !relatedHistory || !hasRelatedHistorySource
-      );
-    }
-
-    elements.optionRationales.textContent = "";
-    var optionsWithRationales = question.options
-      .map(function (rawOption, index) {
-        return normalizeOption(rawOption, index);
-      })
-      .filter(function (option) {
-        return Boolean(option.rationaleUrdu && option.rationaleUrdu.trim());
-      });
-
-    optionsWithRationales.forEach(function (option) {
-      var item = document.createElement("li");
-      item.lang = "ur";
-      item.dir = "rtl";
-
-      var prefix = document.createElement("strong");
-      prefix.textContent = option.label + ". " + option.text + ": ";
-      item.appendChild(prefix);
-      item.appendChild(document.createTextNode(option.rationaleUrdu));
-      elements.optionRationales.appendChild(item);
-    });
-    setHidden(elements.optionRationales, optionsWithRationales.length === 0);
-
-    var sourceNotes = String(question.sourceNotes || "").trim();
-    if (
-      state.mode === "quiz" &&
-      /(?:option|choice|answer|key)\s*[:=\-]?\s*[“”"']?[A-D]\b/i.test(sourceNotes)
-    ) {
-      sourceNotes += " Quiz options are shuffled; option letters in this source note refer to the original paper order.";
-    }
-    if (elements.sourceNotes) {
-      elements.sourceNotes.textContent = sourceNotes ? "Source note: " + sourceNotes : "";
-      setHidden(elements.sourceNotes, !sourceNotes);
-    }
-
-    var source = question.source || {};
-    var hasSource = /^https?:\/\//.test(source.referenceUrl || "");
-    if (elements.detailsSource) setHidden(elements.detailsSource, !hasSource);
-    if (elements.sourceLabel) {
-      elements.sourceLabel.textContent = source.label || "Answer research";
-    }
-    if (elements.sourceLink && hasSource) {
-      elements.sourceLink.href = source.referenceUrl;
-    }
-
-    syncDifficultCheckbox(question);
-    setHidden(elements.difficultControl, false);
-
-    setHidden(elements.detailsToggle, false);
-    elements.detailsToggle.textContent = "View details (Urdu)";
-    elements.detailsToggle.setAttribute("aria-expanded", "false");
-    if (elements.detailsPanel.id) {
-      elements.detailsToggle.setAttribute("aria-controls", elements.detailsPanel.id);
-    }
-    setHidden(elements.detailsPanel, true);
-  }
-
-  function openDetails() {
-    if (!elements.detailsPanel) return;
-    setHidden(elements.detailsPanel, false);
-    if (elements.detailsToggle) {
-      setHidden(elements.detailsToggle, false);
-      elements.detailsToggle.textContent = "Hide details";
-      elements.detailsToggle.setAttribute("aria-expanded", "true");
-    }
-  }
-
-  function toggleDetails() {
-    if (!elements.detailsPanel || !state.submitted) return;
-    var willOpen = elements.detailsPanel.hidden;
-    setHidden(elements.detailsPanel, !willOpen);
-    if (elements.detailsToggle) {
-      elements.detailsToggle.textContent = willOpen ? "Hide details" : "View details (Urdu)";
-      elements.detailsToggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
-    }
+    elements.feedbackText.textContent = "The correct option is selected. Mark it as difficult if needed, then continue.";
   }
 
   function resetFeedback() {
@@ -1054,15 +886,6 @@
     }
     if (elements.feedbackTitle) elements.feedbackTitle.textContent = "";
     if (elements.feedbackText) elements.feedbackText.textContent = "";
-    if (elements.detailsToggle) {
-      elements.detailsToggle.textContent = "View details (Urdu)";
-      elements.detailsToggle.setAttribute("aria-expanded", "false");
-      setHidden(elements.detailsToggle, true);
-    }
-    if (elements.detailsPanel) setHidden(elements.detailsPanel, true);
-    if (elements.difficultControl) setHidden(elements.difficultControl, true);
-    if (elements.relatedHistory) setHidden(elements.relatedHistory, true);
-    if (elements.sourceNotes) setHidden(elements.sourceNotes, true);
   }
 
   function updateProgress() {
@@ -1139,9 +962,9 @@
 
   function resultMessage(percent) {
     if (percent === 100) return "Excellent — a perfect score!";
-    if (percent >= 70) return "Great work. Review the details once and keep practising.";
-    if (percent >= 50) return "Good attempt. A quick review will make these facts stick.";
-    return "Keep going. Review the explanations and try this category again.";
+    if (percent >= 70) return "Great work. Keep practising to make the facts stick.";
+    if (percent >= 50) return "Good attempt. Mark difficult questions and practise them again.";
+    return "Keep going. Mark difficult questions and try this category again.";
   }
 
   function restartQuiz() {
@@ -1227,7 +1050,6 @@
     if (elements.modeBackButton) elements.modeBackButton.addEventListener("click", returnToCategories);
     if (elements.optionsList) elements.optionsList.addEventListener("click", onOptionClick);
     if (elements.actionButton) elements.actionButton.addEventListener("click", handleAction);
-    if (elements.detailsToggle) elements.detailsToggle.addEventListener("click", toggleDetails);
     if (elements.backButton) elements.backButton.addEventListener("click", returnToCategories);
     if (elements.restartButton) elements.restartButton.addEventListener("click", restartQuiz);
     if (elements.playAgainButton) elements.playAgainButton.addEventListener("click", handlePlayAgain);
@@ -1243,7 +1065,6 @@
     ensureDifficultControl();
     difficultQuestionIds = loadDifficultQuestionIds();
     renderCategories();
-    ensureDetailsToggle();
     bindEvents();
     resetFeedback();
     updateDifficultModeUI();

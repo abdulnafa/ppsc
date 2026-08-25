@@ -173,6 +173,7 @@ async function main() {
       if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("Category cards did not render.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Mobile layout has horizontal overflow.");
       if (data.questions.some((question) => !/^https?:\\/\\//.test(question.source.referenceUrl))) errors.push("A research URL is missing.");
+      if (document.querySelector("#details-toggle, #details-panel, #explanation-text, #related-history, #option-rationales, #source-notes, #details-source")) errors.push("Removed answer-explanation UI is still present.");
 
       const categoryButton = document.querySelector("#category-grid .category-card:not([disabled])");
       const activeCategory = categoryButton.dataset.category || categoryButton.dataset.categoryId;
@@ -229,21 +230,6 @@ async function main() {
       if (!visible(document.querySelector("#question-urdu-block")) || document.querySelector("#question-text-urdu").textContent !== question.questionUrdu) errors.push("Urdu question translation did not render in Learn mode.");
       if (document.querySelector("#score-text").textContent !== "Learn Mode") errors.push("Learn mode displayed a score.");
       if (document.querySelector("#action-button").textContent !== "Next Question" && categoryQuestions.length > 1) errors.push("Learn mode did not offer the next question immediately.");
-      if (!visible(document.querySelector("#details-panel"))) errors.push("Learn details did not open automatically.");
-      if (!visible(document.querySelector("#related-history"))) errors.push("Learn related history did not open automatically.");
-      if (!/[\u0600-\u06ff]/u.test(document.querySelector("#related-history-text").textContent)) errors.push("Urdu related history did not render.");
-      const relatedHistorySourceLink = document.querySelector("#related-history-source-link");
-      if (!visible(relatedHistorySourceLink) || !/^https?:\\/\\//.test(relatedHistorySourceLink.href)) {
-        errors.push("Direct related-history source did not render.");
-      }
-
-      const savedRelatedHistories = categoryQuestions.map((item) => item.relatedHistoryUrdu);
-      categoryQuestions.forEach((item) => { item.relatedHistoryUrdu = ""; });
-      document.querySelector("#restart-button").click();
-      await pause();
-      if (visible(document.querySelector("#related-history"))) errors.push("Missing related history was fabricated instead of hidden.");
-      categoryQuestions.forEach((item, index) => { item.relatedHistoryUrdu = savedRelatedHistories[index]; });
-
       document.querySelector("#restart-button").click();
       await pause();
       if (!document.querySelector("#question-counter").textContent.startsWith("Question 1 ")) errors.push("Learn restart failed.");
@@ -256,10 +242,10 @@ async function main() {
           break;
         }
         learnOrder.push(question.id);
+        const difficultCheckbox = document.querySelector("#difficult-checkbox");
+        if (!visible(document.querySelector("#difficult-control"))) errors.push("Difficult checkbox was not visible on the Learn question.");
+        if (difficultCheckbox.dataset.questionId !== question.id) errors.push("Difficult checkbox was attached to the wrong Learn question.");
         if (markedQuestionIds.length < 2) {
-          const difficultCheckbox = document.querySelector("#difficult-checkbox");
-          if (!visible(document.querySelector("#difficult-control"))) errors.push("Difficult checkbox was not visible below Learn details.");
-          if (difficultCheckbox.dataset.questionId !== question.id) errors.push("Difficult checkbox was attached to the wrong Learn question.");
           if (difficultCheckbox.checked) errors.push("An unmarked Learn question started checked.");
           difficultCheckbox.click();
           await pause();
@@ -288,6 +274,7 @@ async function main() {
       if (!question) errors.push("First question did not render.");
       if (!visible(document.querySelector("#question-urdu-block")) || document.querySelector("#question-text-urdu").textContent !== question.questionUrdu) errors.push("Urdu question translation did not render in Quiz mode.");
       if (document.querySelectorAll("#options-container .option-button").length !== 4) errors.push("Four options did not render.");
+      if (!visible(document.querySelector("#difficult-control")) || document.querySelector("#difficult-checkbox").dataset.questionId !== question.id) errors.push("Difficult checkbox was not immediately available on the Quiz question.");
 
       const quizOrder = [question.id];
       const firstQuizOptionOrders = Object.create(null);
@@ -300,17 +287,13 @@ async function main() {
       if (document.querySelector("#feedback-title").textContent !== "Incorrect") errors.push("Incorrect feedback failed.");
       if (!document.querySelector("#feedback-text").textContent.includes("The correct answer is")) errors.push("Correct answer was not revealed.");
       if (!document.querySelector('[data-option-index="' + renderedCorrectIndex + '"]').classList.contains("is-correct")) errors.push("Shuffled correct option was not revealed after an incorrect answer.");
-      document.querySelector("#details-toggle").click();
-      await pause();
-      if (!/[\\u0600-\\u06ff]/u.test(document.querySelector("#explanation-text").textContent)) errors.push("Urdu detail did not render after an incorrect answer.");
       const loadedFontFamilies = document.fonts
         ? [...document.fonts].filter((font) => font.status === "loaded").map((font) => font.family.replace(/["']/g, ""))
         : [];
       if (!getComputedStyle(document.body).fontFamily.includes("Inter")) errors.push("Readable English font was not applied.");
       if (document.fonts && !loadedFontFamilies.includes("Inter")) errors.push("Inter did not load.");
-      if (!getComputedStyle(document.querySelector("#explanation-text")).fontFamily.includes("Noto Nastaliq Urdu")) errors.push("Readable Urdu font was not applied.");
+      if (!getComputedStyle(document.querySelector("#question-text-urdu")).fontFamily.includes("Noto Nastaliq Urdu")) errors.push("Readable Urdu font was not applied.");
       if (document.fonts && !loadedFontFamilies.includes("Noto Nastaliq Urdu")) errors.push("Noto Nastaliq Urdu did not load.");
-      if (!/^https?:\\/\\//.test(document.querySelector("#source-link").href)) errors.push("Research link did not render.");
 
       document.querySelector("#action-button").click();
       await pause();
@@ -324,9 +307,6 @@ async function main() {
       await pause();
       if (document.querySelector("#feedback-title").textContent !== "Correct!") errors.push("Correct feedback failed.");
       if (!document.querySelector('[data-option-index="' + renderedCorrectIndex + '"]').classList.contains("is-correct")) errors.push("Shuffled correct option was not scored correctly.");
-      document.querySelector("#details-toggle").click();
-      await pause();
-      if (!/[\\u0600-\\u06ff]/u.test(document.querySelector("#explanation-text").textContent)) errors.push("Urdu detail did not render after a correct answer.");
 
       document.querySelector("#action-button").click();
       await pause();
@@ -496,10 +476,8 @@ async function main() {
         await pause();
         if (document.querySelector("#feedback-title").textContent !== "Correct!") errors.push("Difficult Quiz correct answer remapping failed.");
         if (!removedId) {
-          document.querySelector("#details-toggle").click();
-          await pause();
           const checkbox = document.querySelector("#difficult-checkbox");
-          if (!visible(document.querySelector("#difficult-control")) || !checkbox.checked) errors.push("Difficult marker was not available below Quiz details.");
+          if (!visible(document.querySelector("#difficult-control")) || !checkbox.checked) errors.push("Difficult marker was not available on the Difficult Quiz question.");
           removedId = quizQuestion.id;
           checkbox.click();
           await pause();
@@ -524,10 +502,8 @@ async function main() {
       document.querySelector('[data-option-index="' + finalCorrectIndex + '"]').click();
       document.querySelector("#action-button").click();
       await pause();
-      document.querySelector("#details-toggle").click();
-      await pause();
       const finalCheckbox = document.querySelector("#difficult-checkbox");
-      if (!visible(document.querySelector("#difficult-control")) || !finalCheckbox.checked) errors.push("Remaining Difficult marker was not available below Quiz details.");
+      if (!visible(document.querySelector("#difficult-control")) || !finalCheckbox.checked) errors.push("Remaining Difficult marker was not available on the Difficult Quiz question.");
       finalCheckbox.click();
       await pause();
       document.querySelector("#action-button").click();

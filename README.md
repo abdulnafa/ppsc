@@ -9,13 +9,13 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 - 898 website questions in total.
 - 10 advertised syllabus subjects, plus a separate **Finance, Taxation & Job-related** category for questions found in the supplied papers but outside that syllabus.
 - English question stems and four answer options, with a readable Urdu translation directly below every question.
-- Urdu answer explanations, visible after either a correct or incorrect attempt.
-- A Learn mode that reveals the correct answer, explanation and verified Urdu related history/background immediately.
+- A Learn mode that preselects and highlights the correct answer immediately.
+- A Quiz mode with instant Correct/Incorrect feedback after an answer is submitted.
 - A fresh question order for every Learn or Quiz session; Quiz options are also reshuffled without changing the correct answer.
-- A persistent **Mark as difficult** checkbox below each question's details, plus category-wise Difficult Learn and Difficult Quiz sessions containing only marked questions.
-- A direct research/evidence link and any necessary source correction note in the detail panel.
+- A persistent, always-visible **Mark as difficult** checkbox below every question, plus category-wise Difficult Learn and Difficult Quiz sessions containing only marked questions.
+- A focused question screen without Answer explained, View details, related-history or research-source panels.
 
-The flow is: choose a category → choose Learn, Quiz or Difficult. Difficult opens its own Learn/Quiz choice and uses only questions marked difficult in that category. Learn mode shows the answer, Urdu explanation, related factual background and its evidence link immediately. After a learning session, **Start Quiz** opens the same full-category or difficult-only scope in scored Quiz mode. Every start, restart and repeat creates a fresh question order; Quiz also creates a new four-option order and remaps the correct answer safely.
+The flow is: choose a category → choose Learn, Quiz or Difficult. Difficult opens its own Learn/Quiz choice and uses only questions marked difficult in that category. Learn mode preselects the correct answer. After a learning session, **Start Quiz** opens the same full-category or difficult-only scope in scored Quiz mode. Quiz gives instant Correct/Incorrect feedback. Every start, restart and repeat creates a fresh question order; Quiz also creates a new four-option order and remaps the correct answer safely.
 
 Difficult marks are stored in that browser and device using local storage. They survive normal reloads and visits; clearing the site's browser data removes them.
 
@@ -56,7 +56,7 @@ node tools/validate-site-data.js --expected=898
 node tools/browser-smoke.js
 ```
 
-The browser smoke test requires local Chrome or Edge. It exercises Learn, Quiz and Difficult practice at mobile width, including persistent mark/unmark controls, difficult-only filtering and empty state, Urdu question rendering, changing question/option orders, answer remapping, the Learn-complete **Start Quiz** transition, wrong/correct quiz feedback, Restart/Practice Again, Next, and completion.
+The browser smoke test requires local Chrome or Edge. It exercises Learn, Quiz and Difficult practice at mobile width, including the always-visible persistent mark/unmark control, difficult-only filtering and empty state, English and Urdu question rendering, changing question/option orders, answer remapping, the Learn-complete **Start Quiz** transition, wrong/correct quiz feedback, Restart/Practice Again, Next, and completion.
 
 The build script validates all six PDF papers, balances only the generated similar-question answer positions, and creates:
 
@@ -79,7 +79,9 @@ Each pair must:
 - Include a useful Urdu explanation and a direct researched `referenceUrl` for both items.
 - Include a clear `questionUrdu` translation for both English question stems; the four options remain in English.
 - Record the verification date as `source.accessedOn` in `YYYY-MM-DD` format.
-- Be closely related: the builder uses each paired question's verified explanation and evidence link as the other question's factual Learn-mode background.
+- Be closely related and keep the paired question's explanation and evidence link verified in the research data.
+
+Explanations, source notes and evidence links remain in the verified data for research and validation, but the website does not display per-question explanation, history or source-detail panels.
 
 After adding a pair, run the validation and build commands again. For a bank larger than 898, update the `--expected` value or omit that argument.
 
@@ -90,7 +92,7 @@ The repository is already initialized on branch `main`, with `origin` set to `ht
 ```powershell
 cd "D:\My documents\PPSC\codex\ppsc-project"
 git add .
-git commit -m "Add persistent difficult-question practice"
+git commit -m "Remove answer explanation panels"
 git push
 ```
 

@@ -30,7 +30,7 @@
         <div class="hero-copy">
           <span class="eyebrow">PPSC EXAM PREPARATION</span>
           <h1 id="category-title">Choose a subject.<br><span>Start getting better.</span></h1>
-          <p>Practice focused MCQs with instant checking and clear explanations in Urdu.</p>
+          <p>Practice focused MCQs with instant checking, Urdu translations and difficult-question practice.</p>
           <div class="exam-facts" aria-label="Exam pattern">
             <span><strong>100</strong> Marks</span>
             <span><strong>90</strong> Minutes</span>
@@ -124,7 +124,7 @@
             <span class="mode-option-icon" aria-hidden="true">L</span>
             <span class="mode-option-copy">
               <strong>Learn</strong>
-              <small>Study questions in a fresh order with the answer, Urdu explanation and verified background shown.</small>
+              <small>Study questions in a fresh order with the correct answer shown.</small>
             </span>
             <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
           </button>
@@ -172,7 +172,7 @@
               <span class="mode-option-icon" aria-hidden="true">DL</span>
               <span class="mode-option-copy">
                 <strong>Learn Difficult</strong>
-                <small>Study your marked questions with the correct answer and Urdu explanation shown.</small>
+                <small>Study your marked questions with the correct answer shown.</small>
               </span>
               <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
             </button>
@@ -223,40 +223,17 @@
         </div>
 
         <div class="question-actions">
-          <button id="details-toggle" class="secondary-button" type="button" aria-expanded="false" aria-controls="details-panel" hidden>View Details</button>
           <button id="action-button" class="primary-button" type="button" disabled>Check Answer</button>
         </div>
 
-        <section id="details-panel" class="details-panel" aria-labelledby="details-heading" hidden>
-          <div class="details-heading-row">
-            <span class="details-bulb" aria-hidden="true">i</span>
-            <h3 id="details-heading">Answer explained</h3>
-          </div>
-          <p id="explanation-text" class="urdu-explanation" lang="ur" dir="rtl"></p>
-          <section id="related-history" class="related-history" lang="ur" dir="rtl" aria-labelledby="related-history-heading" hidden>
-            <div class="related-history-heading">
-              <span class="related-history-icon" aria-hidden="true">i</span>
-              <h4 id="related-history-heading">متعلقہ تاریخ اور پس منظر</h4>
-            </div>
-            <p id="related-history-text"></p>
-            <a id="related-history-source-link" class="related-history-source-link" href="#" target="_blank" rel="noopener noreferrer" hidden>مستند پس منظر کا ماخذ کھولیں</a>
-          </section>
-          <ul id="option-rationales" class="option-rationales"></ul>
-          <p id="source-notes" class="source-notes" hidden></p>
-          <div id="details-source" class="details-source">
-            <span id="source-label"></span>
-            <a id="source-link" href="#" target="_blank" rel="noopener noreferrer">Open research source</a>
-          </div>
-
-          <div id="difficult-control" class="difficult-control">
-            <input id="difficult-checkbox" class="difficult-checkbox" type="checkbox" aria-describedby="difficult-mark-help difficult-mark-status">
-            <label class="difficult-mark-label" for="difficult-checkbox">
-              <strong>Mark as difficult</strong>
-              <small id="difficult-mark-help">Save this MCQ so you can practise it separately later.</small>
-            </label>
-            <span id="difficult-mark-status" class="difficult-mark-status" aria-live="polite"></span>
-          </div>
-        </section>
+        <div id="difficult-control" class="difficult-control">
+          <input id="difficult-checkbox" class="difficult-checkbox" type="checkbox" aria-describedby="difficult-mark-help difficult-mark-status">
+          <label class="difficult-mark-label" for="difficult-checkbox">
+            <strong>Mark as difficult</strong>
+            <small id="difficult-mark-help">Save this MCQ so you can practise it separately later.</small>
+          </label>
+          <span id="difficult-mark-status" class="difficult-mark-status" aria-live="polite"></span>
+        </div>
       </article>
     </section>
 

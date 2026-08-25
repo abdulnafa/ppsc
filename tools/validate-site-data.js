@@ -155,17 +155,25 @@ function validateHtml() {
     "mode-back-button",
     "question-kind", "question-text", "question-urdu-block", "question-text-urdu",
     "options-container", "action-button", "feedback",
-    "details-toggle", "details-panel", "explanation-text", "related-history", "related-history-text",
-    "related-history-source-link",
-    "source-notes", "details-source", "difficult-control", "difficult-checkbox",
+    "difficult-control", "difficult-checkbox",
     "difficult-mark-help", "difficult-mark-status",
-    "source-label", "source-link", "question-counter", "progress-fill",
+    "question-counter", "progress-fill",
     "score-text", "result-score", "back-button", "restart-button",
     "play-again-button", "change-category-button"
   ];
   for (const id of requiredIds) {
     const matches = html.match(new RegExp(`\\bid=["']${id}["']`, "g")) || [];
     if (matches.length !== 1) error(`index.html: expected one #${id}, found ${matches.length}`);
+  }
+  const removedDetailIds = [
+    "details-toggle", "details-panel", "explanation-text", "related-history",
+    "related-history-text", "related-history-source-link", "option-rationales",
+    "source-notes", "details-source", "source-label", "source-link"
+  ];
+  for (const id of removedDetailIds) {
+    if (new RegExp(`\\bid=["']${id}["']`).test(html)) {
+      error(`index.html: removed answer-detail control #${id} must not be present`);
+    }
   }
   const dataScript = html.indexOf('src="data/questions.js"');
   const appScript = html.indexOf('src="app.js"');
