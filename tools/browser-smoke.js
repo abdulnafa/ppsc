@@ -157,9 +157,14 @@ async function main() {
       Buffer.from(screenshot.data, "base64")
     );
 
-    const result = await client.evaluate(`(async () => {
+    const normalResult = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
-      const visible = (element) => Boolean(element && !element.hidden);
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
       const errors = [];
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
@@ -196,6 +201,17 @@ async function main() {
       categoryButton.click();
       await pause();
       if (!visible(document.querySelector("#mode-screen"))) errors.push("Mode chooser did not open after selecting a category.");
+      if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 3) errors.push("Mode chooser did not show Learn, Quiz and Difficult.");
+
+      document.querySelector("#difficult-mode-button").click();
+      await pause();
+      if (!visible(document.querySelector("#difficult-mode-options"))) errors.push("Difficult preparation chooser did not open.");
+      if (document.querySelector("#difficult-count").textContent.trim() !== "0") errors.push("Fresh profile did not start with zero difficult questions.");
+      if (!visible(document.querySelector("#difficult-empty"))) errors.push("Zero-difficult empty state was not shown.");
+      if (!document.querySelector("#difficult-learn-button").disabled || !document.querySelector("#difficult-quiz-button").disabled) errors.push("Empty Difficult Learn/Quiz actions were not disabled.");
+      document.querySelector("#difficult-back-button").click();
+      await pause();
+      if (!visible(document.querySelector("#standard-mode-options"))) errors.push("Difficult chooser back button failed.");
 
       document.querySelector("#mode-back-button").click();
       await pause();
@@ -232,6 +248,7 @@ async function main() {
       await pause();
       if (!document.querySelector("#question-counter").textContent.startsWith("Question 1 ")) errors.push("Learn restart failed.");
       const learnOrder = [];
+      const markedQuestionIds = [];
       while (!visible(document.querySelector("#results-screen"))) {
         question = findCurrent();
         if (!question) {
@@ -239,12 +256,26 @@ async function main() {
           break;
         }
         learnOrder.push(question.id);
+        if (markedQuestionIds.length < 2) {
+          const difficultCheckbox = document.querySelector("#difficult-checkbox");
+          if (!visible(document.querySelector("#difficult-control"))) errors.push("Difficult checkbox was not visible below Learn details.");
+          if (difficultCheckbox.dataset.questionId !== question.id) errors.push("Difficult checkbox was attached to the wrong Learn question.");
+          if (difficultCheckbox.checked) errors.push("An unmarked Learn question started checked.");
+          difficultCheckbox.click();
+          await pause();
+          if (!difficultCheckbox.checked) errors.push("Difficult checkbox did not mark the question.");
+          if (!document.querySelector("#difficult-mark-status").textContent.includes("Marked")) errors.push("Difficult mark status was not announced.");
+          markedQuestionIds.push(question.id);
+        }
         document.querySelector("#action-button").click();
         await pause();
       }
       const canonicalOrder = categoryQuestions.map((item) => item.id);
       if (learnOrder.length !== categoryQuestions.length || new Set(learnOrder).size !== categoryQuestions.length) errors.push("Learn question shuffle lost or duplicated a question.");
       if (JSON.stringify(learnOrder) === JSON.stringify(canonicalOrder)) errors.push("Learn questions remained in source order.");
+      const savedDifficultPayload = JSON.parse(localStorage.getItem("ppsc-prep:difficult-question-ids:v1") || "{}");
+      if (savedDifficultPayload.version !== 1 || !Array.isArray(savedDifficultPayload.questionIds)) errors.push("Difficult marks were not stored with the versioned schema.");
+      if (markedQuestionIds.some((id) => !savedDifficultPayload.questionIds.includes(id))) errors.push("A marked question ID was not persisted.");
       if (document.querySelector("#results-title").textContent !== "Learning complete!") errors.push("Learn completion copy was not shown.");
       if (document.querySelector("#result-score").textContent.trim() !== String(categoryQuestions.length)) errors.push("Learn completion total did not match.");
       if (document.querySelector("#play-again-button").textContent !== "Start Quiz") errors.push("Learn completion did not offer Start Quiz.");
@@ -352,6 +383,7 @@ async function main() {
         totalQuestions: data.questions.length,
         testedCategory: activeCategory,
         testedCategoryQuestions: categoryQuestions.length,
+        markedQuestionIds,
         learnedOrderShuffled: JSON.stringify(learnOrder) !== JSON.stringify(canonicalOrder),
         quizOrderShuffledAgain: JSON.stringify(quizOrder) !== JSON.stringify(learnOrder),
         practiceAgainShuffled: JSON.stringify(repeatedQuizOrder) !== JSON.stringify(quizOrder),
@@ -361,6 +393,174 @@ async function main() {
       };
     })()`);
 
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload in time."));
+        }
+      }, 50);
+    })`);
+
+    const difficultResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
+      const errors = [];
+      const data = window.PPSC_QUIZ_DATA;
+      const expectedCategoryId = ${JSON.stringify(normalResult.testedCategory)};
+      const expectedMarkedIds = ${JSON.stringify(normalResult.markedQuestionIds)};
+      const categoryQuestions = data.questions.filter((question) => question.categoryId === expectedCategoryId);
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
+        .map((element) => element.textContent);
+      const findCurrent = () => {
+        const questionId = document.querySelector("#question-text").dataset.questionId;
+        return categoryQuestions.find((question) => question.id === questionId);
+      };
+      const correctRenderedIndex = (question) => renderedOptionTexts().indexOf(
+        optionText(question.options[question.correctOptionIndex])
+      );
+
+      const storedAfterReload = JSON.parse(localStorage.getItem("ppsc-prep:difficult-question-ids:v1") || "{}");
+      if (!Array.isArray(storedAfterReload.questionIds) || expectedMarkedIds.some((id) => !storedAfterReload.questionIds.includes(id))) {
+        errors.push("Difficult marks did not survive a page reload.");
+      }
+
+      const categoryButton = [...document.querySelectorAll("#category-grid .category-card")]
+        .find((button) => (button.dataset.category || button.dataset.categoryId) === expectedCategoryId);
+      categoryButton.click();
+      document.querySelector("#difficult-mode-button").click();
+      await pause();
+      if (!visible(document.querySelector("#difficult-mode-options"))) errors.push("Reloaded Difficult chooser did not open.");
+      if (document.querySelector("#difficult-count").textContent.trim() !== String(expectedMarkedIds.length)) errors.push("Reloaded Difficult count was incorrect.");
+      if (visible(document.querySelector("#difficult-empty"))) errors.push("Difficult empty state remained visible with saved questions.");
+      if (document.querySelector("#difficult-learn-button").disabled || document.querySelector("#difficult-quiz-button").disabled) errors.push("Saved Difficult Learn/Quiz actions were disabled.");
+
+      document.querySelector("#difficult-learn-button").click();
+      await pause();
+      if (document.querySelector("#quiz-screen").dataset.scope !== "difficult") errors.push("Difficult Learn did not retain difficult scope.");
+      if (document.querySelector("#quiz-screen").dataset.mode !== "learn") errors.push("Difficult Learn did not enter Learn mode.");
+      if (!document.querySelector("#question-counter").textContent.endsWith("of " + expectedMarkedIds.length)) errors.push("Difficult Learn total did not match marked questions.");
+
+      const difficultLearnIds = [];
+      while (!visible(document.querySelector("#results-screen"))) {
+        const question = findCurrent();
+        if (!question) {
+          errors.push("Could not identify a Difficult Learn question.");
+          break;
+        }
+        difficultLearnIds.push(question.id);
+        const checkbox = document.querySelector("#difficult-checkbox");
+        if (!visible(document.querySelector("#difficult-control")) || !checkbox.checked) errors.push("Marked Difficult Learn question was not checked.");
+        if (checkbox.dataset.questionId !== question.id) errors.push("Difficult Learn checkbox targeted the wrong question.");
+        document.querySelector("#action-button").click();
+        await pause();
+      }
+      if (difficultLearnIds.length !== expectedMarkedIds.length || expectedMarkedIds.some((id) => !difficultLearnIds.includes(id))) {
+        errors.push("Difficult Learn did not use a stable marked-question snapshot.");
+      }
+      if (document.querySelector("#results-title").textContent !== "Difficult learning complete!") errors.push("Difficult Learn completion copy was incorrect.");
+      if (document.querySelector("#play-again-button").textContent !== "Start Quiz" || document.querySelector("#play-again-button").disabled) errors.push("Difficult Learn did not offer Start Quiz.");
+
+      document.querySelector("#play-again-button").click();
+      await pause();
+      if (document.querySelector("#quiz-screen").dataset.scope !== "difficult" || document.querySelector("#quiz-screen").dataset.mode !== "quiz") errors.push("Start Quiz left Difficult scope.");
+      if (!document.querySelector("#question-counter").textContent.endsWith("of " + expectedMarkedIds.length)) errors.push("Difficult Quiz total did not match both marked questions.");
+
+      const difficultQuizIds = [];
+      const difficultQuizOptionOrders = Object.create(null);
+      let removedId = "";
+      while (!visible(document.querySelector("#results-screen"))) {
+        const quizQuestion = findCurrent();
+        if (!quizQuestion || !expectedMarkedIds.includes(quizQuestion.id)) {
+          errors.push("Difficult Quiz rendered an unmarked question.");
+          break;
+        }
+        difficultQuizIds.push(quizQuestion.id);
+        const renderedOrder = JSON.stringify(renderedOptionTexts());
+        difficultQuizOptionOrders[quizQuestion.id] = renderedOrder;
+        if (renderedOrder === JSON.stringify(quizQuestion.options.map(optionText))) errors.push("Difficult Quiz options were not shuffled.");
+        const correctIndex = correctRenderedIndex(quizQuestion);
+        document.querySelector('[data-option-index="' + correctIndex + '"]').click();
+        document.querySelector("#action-button").click();
+        await pause();
+        if (document.querySelector("#feedback-title").textContent !== "Correct!") errors.push("Difficult Quiz correct answer remapping failed.");
+        if (!removedId) {
+          document.querySelector("#details-toggle").click();
+          await pause();
+          const checkbox = document.querySelector("#difficult-checkbox");
+          if (!visible(document.querySelector("#difficult-control")) || !checkbox.checked) errors.push("Difficult marker was not available below Quiz details.");
+          removedId = quizQuestion.id;
+          checkbox.click();
+          await pause();
+          if (checkbox.checked) errors.push("Difficult Quiz question could not be unmarked.");
+        }
+        document.querySelector("#action-button").click();
+        await pause();
+      }
+      if (difficultQuizIds.length !== expectedMarkedIds.length || expectedMarkedIds.some((id) => !difficultQuizIds.includes(id))) errors.push("Difficult Quiz did not keep its two-question session snapshot.");
+      if (JSON.stringify(difficultQuizIds) === JSON.stringify(difficultLearnIds)) errors.push("Two-question Difficult Quiz reused the Difficult Learn order.");
+      if (document.querySelector("#result-score").textContent.replace(/\\s/g, "") !== expectedMarkedIds.length + "/" + expectedMarkedIds.length) errors.push("Difficult Quiz score was incorrect.");
+      if (document.querySelector("#play-again-button").textContent !== "Practice Again" || document.querySelector("#play-again-button").disabled) errors.push("Difficult Quiz did not offer Practice Again for the remaining mark.");
+
+      const remainingId = expectedMarkedIds.find((id) => id !== removedId);
+      document.querySelector("#play-again-button").click();
+      await pause();
+      if (!document.querySelector("#question-counter").textContent.endsWith("of 1")) errors.push("Practice Again did not filter Difficult Quiz to the remaining mark.");
+      const finalQuizQuestion = findCurrent();
+      if (!finalQuizQuestion || finalQuizQuestion.id !== remainingId) errors.push("Repeated Difficult Quiz rendered the wrong question.");
+      if (difficultQuizOptionOrders[remainingId] === JSON.stringify(renderedOptionTexts())) errors.push("Repeated Difficult Quiz reused the previous option order.");
+      const finalCorrectIndex = correctRenderedIndex(finalQuizQuestion);
+      document.querySelector('[data-option-index="' + finalCorrectIndex + '"]').click();
+      document.querySelector("#action-button").click();
+      await pause();
+      document.querySelector("#details-toggle").click();
+      await pause();
+      const finalCheckbox = document.querySelector("#difficult-checkbox");
+      if (!visible(document.querySelector("#difficult-control")) || !finalCheckbox.checked) errors.push("Remaining Difficult marker was not available below Quiz details.");
+      finalCheckbox.click();
+      await pause();
+      document.querySelector("#action-button").click();
+      await pause();
+      if (document.querySelector("#play-again-button").textContent !== "No Marked Questions" || !document.querySelector("#play-again-button").disabled) errors.push("All-unmarked Difficult result did not disable repeat practice.");
+
+      document.querySelector("#change-category-button").click();
+      await pause();
+      categoryButton.click();
+      document.querySelector("#difficult-mode-button").click();
+      await pause();
+      if (document.querySelector("#difficult-count").textContent.trim() !== "0") errors.push("Difficult count did not return to zero after unmarking all.");
+      if (!visible(document.querySelector("#difficult-empty"))) errors.push("Difficult empty state did not return after unmarking all.");
+      if (!document.querySelector("#difficult-learn-button").disabled || !document.querySelector("#difficult-quiz-button").disabled) errors.push("Empty Difficult actions were not disabled after unmarking all.");
+
+      const finalStored = JSON.parse(localStorage.getItem("ppsc-prep:difficult-question-ids:v1") || "{}");
+      if (!Array.isArray(finalStored.questionIds) || finalStored.questionIds.length !== 0) errors.push("Unmarked Difficult IDs remained in local storage.");
+
+      return {
+        errors,
+        persistedAcrossReload: true,
+        difficultLearnCount: difficultLearnIds.length,
+        difficultQuizCount: difficultQuizIds.length,
+        twoQuestionOrderChanged: JSON.stringify(difficultQuizIds) !== JSON.stringify(difficultLearnIds),
+        emptyStateRestored: visible(document.querySelector("#difficult-empty"))
+      };
+    })()`);
+
+    const result = {
+      ...normalResult,
+      errors: normalResult.errors.concat(difficultResult.errors),
+      difficult: difficultResult
+    };
     console.log(JSON.stringify(result, null, 2));
     if (result.errors.length) process.exitCode = 1;
   } finally {

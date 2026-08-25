@@ -117,9 +117,9 @@
         <span class="eyebrow">CHOOSE YOUR STUDY STYLE</span>
         <span id="mode-category" class="mode-category">Selected category</span>
         <h1 id="mode-title">How would you like to prepare?</h1>
-        <p class="mode-intro">Learn each answer with its explanation, or test yourself in quiz mode.</p>
+        <p class="mode-intro">Learn each answer, test yourself in quiz mode, or practise only the questions you marked as difficult.</p>
 
-        <div class="mode-options" aria-label="Preparation mode">
+        <div id="standard-mode-options" class="mode-options" aria-label="Preparation mode">
           <button id="learn-mode-button" class="mode-option mode-option-learn" type="button">
             <span class="mode-option-icon" aria-hidden="true">L</span>
             <span class="mode-option-copy">
@@ -137,7 +137,56 @@
             </span>
             <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
           </button>
+
+          <button id="difficult-mode-button" class="mode-option mode-option-difficult" type="button" aria-controls="difficult-mode-options" aria-expanded="false">
+            <span class="mode-option-icon" aria-hidden="true">D</span>
+            <span class="mode-option-copy">
+              <strong>Difficult</strong>
+              <small>Review only the questions you have marked as difficult in this category.</small>
+            </span>
+            <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
+          </button>
         </div>
+
+        <section id="difficult-mode-options" class="difficult-mode-options" aria-labelledby="difficult-mode-title" hidden>
+          <button id="difficult-back-button" class="text-button difficult-mode-back" type="button">
+            <span aria-hidden="true">&larr;</span> All modes
+          </button>
+
+          <div class="difficult-mode-heading">
+            <span class="eyebrow">DIFFICULT QUESTIONS</span>
+            <h2 id="difficult-mode-title">How would you like to practise them?</h2>
+            <p><strong id="difficult-count">0</strong> questions marked as difficult in this category.</p>
+          </div>
+
+          <div id="difficult-empty" class="difficult-empty" role="status" aria-live="polite" hidden>
+            <span class="difficult-empty-icon" aria-hidden="true">D</span>
+            <div>
+              <strong>No difficult questions yet</strong>
+              <p>Open Learn or Quiz and use “Mark as difficult” on any question you want to practise again.</p>
+            </div>
+          </div>
+
+          <div class="mode-options difficult-study-options" aria-label="Difficult question preparation mode">
+            <button id="difficult-learn-button" class="mode-option mode-option-learn" type="button">
+              <span class="mode-option-icon" aria-hidden="true">DL</span>
+              <span class="mode-option-copy">
+                <strong>Learn Difficult</strong>
+                <small>Study your marked questions with the correct answer and Urdu explanation shown.</small>
+              </span>
+              <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
+            </button>
+
+            <button id="difficult-quiz-button" class="mode-option mode-option-quiz" type="button">
+              <span class="mode-option-icon" aria-hidden="true">DQ</span>
+              <span class="mode-option-copy">
+                <strong>Quiz Difficult</strong>
+                <small>Test yourself using only the difficult questions you have marked.</small>
+              </span>
+              <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </section>
       </article>
     </section>
 
@@ -197,6 +246,15 @@
           <div id="details-source" class="details-source">
             <span id="source-label"></span>
             <a id="source-link" href="#" target="_blank" rel="noopener noreferrer">Open research source</a>
+          </div>
+
+          <div id="difficult-control" class="difficult-control">
+            <input id="difficult-checkbox" class="difficult-checkbox" type="checkbox" aria-describedby="difficult-mark-help difficult-mark-status">
+            <label class="difficult-mark-label" for="difficult-checkbox">
+              <strong>Mark as difficult</strong>
+              <small id="difficult-mark-help">Save this MCQ so you can practise it separately later.</small>
+            </label>
+            <span id="difficult-mark-status" class="difficult-mark-status" aria-live="polite"></span>
           </div>
         </section>
       </article>

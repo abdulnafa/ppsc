@@ -12,9 +12,12 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 - Urdu answer explanations, visible after either a correct or incorrect attempt.
 - A Learn mode that reveals the correct answer, explanation and verified Urdu related history/background immediately.
 - A fresh question order for every Learn or Quiz session; Quiz options are also reshuffled without changing the correct answer.
+- A persistent **Mark as difficult** checkbox below each question's details, plus category-wise Difficult Learn and Difficult Quiz sessions containing only marked questions.
 - A direct research/evidence link and any necessary source correction note in the detail panel.
 
-The flow is: choose a category → choose Learn or Quiz. Learn mode shows the answer, Urdu explanation, related factual background and its evidence link immediately. After the category is learned, **Start Quiz** opens the same category in scored Quiz mode. Every start, restart and repeat creates a fresh question order; Quiz also creates a new four-option order and remaps the correct answer safely.
+The flow is: choose a category → choose Learn, Quiz or Difficult. Difficult opens its own Learn/Quiz choice and uses only questions marked difficult in that category. Learn mode shows the answer, Urdu explanation, related factual background and its evidence link immediately. After a learning session, **Start Quiz** opens the same full-category or difficult-only scope in scored Quiz mode. Every start, restart and repeat creates a fresh question order; Quiz also creates a new four-option order and remaps the correct answer safely.
+
+Difficult marks are stored in that browser and device using local storage. They survive normal reloads and visits; clearing the site's browser data removes them.
 
 ## Project structure
 
@@ -53,7 +56,7 @@ node tools/validate-site-data.js --expected=898
 node tools/browser-smoke.js
 ```
 
-The browser smoke test requires local Chrome or Edge. It exercises both Learn and Quiz at mobile width, including Urdu question rendering, changing question/option orders, answer remapping, mode selection, pre-revealed learning answers, related-history text and source links, the Learn-complete **Start Quiz** transition, wrong/correct quiz feedback, Restart/Practice Again, Next, and completion.
+The browser smoke test requires local Chrome or Edge. It exercises Learn, Quiz and Difficult practice at mobile width, including persistent mark/unmark controls, difficult-only filtering and empty state, Urdu question rendering, changing question/option orders, answer remapping, the Learn-complete **Start Quiz** transition, wrong/correct quiz feedback, Restart/Practice Again, Next, and completion.
 
 The build script validates all six PDF papers, balances only the generated similar-question answer positions, and creates:
 
@@ -87,7 +90,7 @@ The repository is already initialized on branch `main`, with `origin` set to `ht
 ```powershell
 cd "D:\My documents\PPSC\codex\ppsc-project"
 git add .
-git commit -m "Shuffle PPSC questions and quiz options"
+git commit -m "Add persistent difficult-question practice"
 git push
 ```
 

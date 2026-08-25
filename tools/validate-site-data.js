@@ -149,12 +149,16 @@ function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
     "category-screen", "mode-screen", "quiz-screen", "results-screen", "category-grid",
-    "mode-category", "learn-mode-button", "quiz-mode-button", "mode-back-button",
+    "mode-category", "standard-mode-options", "learn-mode-button", "quiz-mode-button",
+    "difficult-mode-button", "difficult-mode-options", "difficult-back-button",
+    "difficult-count", "difficult-empty", "difficult-learn-button", "difficult-quiz-button",
+    "mode-back-button",
     "question-kind", "question-text", "question-urdu-block", "question-text-urdu",
     "options-container", "action-button", "feedback",
     "details-toggle", "details-panel", "explanation-text", "related-history", "related-history-text",
     "related-history-source-link",
-    "source-notes", "details-source",
+    "source-notes", "details-source", "difficult-control", "difficult-checkbox",
+    "difficult-mark-help", "difficult-mark-status",
     "source-label", "source-link", "question-counter", "progress-fill",
     "score-text", "result-score", "back-button", "restart-button",
     "play-again-button", "change-category-button"

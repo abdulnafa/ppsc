@@ -2,9 +2,14 @@
   "use strict";
 
   var OPTION_LABELS = ["A", "B", "C", "D"];
+  var DIFFICULT_STORAGE_KEY = "ppsc-prep:difficult-question-ids:v1";
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
+  var knownQuestionIds = new Set(allQuestions.map(function (question) {
+    return String(question.id);
+  }));
+  var difficultQuestionIds = new Set();
   var previousQuestionOrders = Object.create(null);
   var previousOptionOrders = Object.create(null);
 
@@ -12,6 +17,7 @@
     category: null,
     questions: [],
     mode: null,
+    scope: "all",
     currentIndex: 0,
     selectedIndex: null,
     submitted: false,
@@ -38,6 +44,14 @@
     elements.modeCategory = firstElement(["#mode-category", "[data-mode-category]"]);
     elements.learnModeButton = firstElement(["#learn-mode-button", "[data-start-learn]"]);
     elements.quizModeButton = firstElement(["#quiz-mode-button", "[data-start-quiz]"]);
+    elements.standardModeOptions = firstElement(["#standard-mode-options", "[data-standard-mode-options]", ".mode-options"]);
+    elements.difficultModeButton = firstElement(["#difficult-mode-button", "[data-open-difficult]", "[data-difficult-mode]"]);
+    elements.difficultModeOptions = firstElement(["#difficult-mode-options", "[data-difficult-mode-options]"]);
+    elements.difficultLearnButton = firstElement(["#difficult-learn-button", "[data-start-difficult-learn]"]);
+    elements.difficultQuizButton = firstElement(["#difficult-quiz-button", "[data-start-difficult-quiz]"]);
+    elements.difficultBackButton = firstElement(["#difficult-back-button", "[data-difficult-back]"]);
+    elements.difficultCount = firstElement(["#difficult-count", "[data-difficult-count]"]);
+    elements.difficultEmpty = firstElement(["#difficult-empty", "[data-difficult-empty]"]);
     elements.modeBackButton = firstElement(["#mode-back-button", "[data-mode-back]"]);
     elements.quizCategory = firstElement(["#quiz-category", "[data-quiz-category]"]);
     elements.questionKind = firstElement(["#question-kind", "[data-question-kind]"]);
@@ -60,6 +74,9 @@
     elements.detailsSource = firstElement(["#details-source", "[data-details-source]"]);
     elements.sourceLabel = firstElement(["#source-label", "[data-source-label]"]);
     elements.sourceLink = firstElement(["#source-link", "[data-source-link]"]);
+    elements.difficultControl = firstElement(["#difficult-control", "[data-difficult-control]"]);
+    elements.difficultCheckbox = firstElement(["#difficult-checkbox", "[data-difficult-checkbox]"]);
+    elements.difficultStatus = firstElement(["#difficult-mark-status", "#difficult-status", "[data-difficult-status]"]);
     elements.questionCounter = firstElement(["#question-counter", "[data-question-counter]"]);
     elements.progressText = firstElement(["#progress-text", "[data-progress-text]"]);
     elements.progressBar = firstElement(["#progress-bar", "#progress-fill", "[data-progress-bar]"]);
@@ -78,6 +95,194 @@
     element.hidden = hidden;
     element.setAttribute("aria-hidden", hidden ? "true" : "false");
     element.classList.toggle("is-active", !hidden);
+  }
+
+  function loadDifficultQuestionIds() {
+    try {
+      var rawValue = window.localStorage.getItem(DIFFICULT_STORAGE_KEY);
+      if (!rawValue) return new Set();
+
+      var savedValue = JSON.parse(rawValue);
+      var savedIds = Array.isArray(savedValue)
+        ? savedValue
+        : savedValue && Array.isArray(savedValue.questionIds)
+          ? savedValue.questionIds
+          : savedValue && Array.isArray(savedValue.ids)
+            ? savedValue.ids
+            : [];
+
+      return new Set(savedIds.map(String).filter(function (questionId) {
+        return knownQuestionIds.has(questionId);
+      }));
+    } catch (error) {
+      // Browsers can block storage, and a user may have stale/corrupt data.
+      // Difficult marking still works in memory for the current page visit.
+      return new Set();
+    }
+  }
+
+  function saveDifficultQuestionIds() {
+    try {
+      window.localStorage.setItem(DIFFICULT_STORAGE_KEY, JSON.stringify({
+        version: 1,
+        questionIds: Array.from(difficultQuestionIds)
+      }));
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function difficultQuestionCount(categoryId) {
+    return allQuestions.filter(function (question) {
+      return question.categoryId === categoryId && difficultQuestionIds.has(String(question.id));
+    }).length;
+  }
+
+  function createModeOption(id, titleText, descriptionText) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.id = id;
+    button.className = "mode-option mode-option-difficult";
+
+    var icon = document.createElement("span");
+    icon.className = "mode-option-icon";
+    icon.setAttribute("aria-hidden", "true");
+    icon.textContent = titleText.slice(0, 1);
+
+    var copy = document.createElement("span");
+    copy.className = "mode-option-copy";
+    var title = document.createElement("strong");
+    title.textContent = titleText;
+    var description = document.createElement("small");
+    description.textContent = descriptionText;
+    copy.appendChild(title);
+    copy.appendChild(description);
+
+    var arrow = document.createElement("span");
+    arrow.className = "mode-option-arrow";
+    arrow.setAttribute("aria-hidden", "true");
+    arrow.textContent = "\u2192";
+
+    button.appendChild(icon);
+    button.appendChild(copy);
+    button.appendChild(arrow);
+    return button;
+  }
+
+  function ensureDifficultModeUI() {
+    if (!elements.modeScreen) return;
+
+    if (!elements.standardModeOptions) {
+      elements.standardModeOptions = firstElement([".mode-options"], elements.modeScreen);
+    }
+
+    if (!elements.difficultModeButton && elements.standardModeOptions) {
+      elements.difficultModeButton = createModeOption(
+        "difficult-mode-button",
+        "Difficult",
+        "Practise only the questions you have marked as difficult."
+      );
+      elements.difficultModeButton.dataset.openDifficult = "";
+      elements.standardModeOptions.appendChild(elements.difficultModeButton);
+    }
+
+    if (!elements.difficultModeOptions) {
+      var difficultOptions = document.createElement("div");
+      difficultOptions.id = "difficult-mode-options";
+      difficultOptions.className = "difficult-mode-options";
+      difficultOptions.dataset.difficultModeOptions = "";
+      difficultOptions.hidden = true;
+
+      var heading = document.createElement("h2");
+      heading.textContent = "Difficult questions";
+      var summary = document.createElement("p");
+      summary.className = "difficult-mode-summary";
+      elements.difficultCount = document.createElement("span");
+      elements.difficultCount.id = "difficult-count";
+      elements.difficultCount.dataset.difficultCount = "";
+      summary.appendChild(elements.difficultCount);
+      summary.appendChild(document.createTextNode(" marked in this category"));
+
+      elements.difficultEmpty = document.createElement("p");
+      elements.difficultEmpty.id = "difficult-empty";
+      elements.difficultEmpty.className = "difficult-empty";
+      elements.difficultEmpty.dataset.difficultEmpty = "";
+      elements.difficultEmpty.setAttribute("role", "status");
+      elements.difficultEmpty.textContent = "No difficult questions marked yet. Start Learn or Quiz and mark questions below their details.";
+
+      elements.difficultLearnButton = createModeOption(
+        "difficult-learn-button",
+        "Learn",
+        "Study only your marked difficult questions."
+      );
+      elements.difficultLearnButton.dataset.startDifficultLearn = "";
+      elements.difficultQuizButton = createModeOption(
+        "difficult-quiz-button",
+        "Quiz",
+        "Test yourself using only your marked difficult questions."
+      );
+      elements.difficultQuizButton.dataset.startDifficultQuiz = "";
+      elements.difficultBackButton = document.createElement("button");
+      elements.difficultBackButton.id = "difficult-back-button";
+      elements.difficultBackButton.className = "text-button difficult-back-button";
+      elements.difficultBackButton.type = "button";
+      elements.difficultBackButton.dataset.difficultBack = "";
+      elements.difficultBackButton.textContent = "\u2190 All modes";
+
+      difficultOptions.appendChild(heading);
+      difficultOptions.appendChild(summary);
+      difficultOptions.appendChild(elements.difficultEmpty);
+      difficultOptions.appendChild(elements.difficultLearnButton);
+      difficultOptions.appendChild(elements.difficultQuizButton);
+      difficultOptions.appendChild(elements.difficultBackButton);
+
+      var modeCard = firstElement([".mode-card"], elements.modeScreen) || elements.modeScreen;
+      modeCard.appendChild(difficultOptions);
+      elements.difficultModeOptions = difficultOptions;
+    }
+
+    if (elements.difficultModeButton && elements.difficultModeOptions.id) {
+      elements.difficultModeButton.setAttribute("aria-controls", elements.difficultModeOptions.id);
+      elements.difficultModeButton.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  function ensureDifficultControl() {
+    if (!elements.detailsPanel) return;
+
+    if (!elements.difficultControl) {
+      var control = document.createElement("div");
+      control.id = "difficult-control";
+      control.className = "difficult-control";
+      control.dataset.difficultControl = "";
+
+      var label = document.createElement("label");
+      label.className = "difficult-checkbox-label";
+      elements.difficultCheckbox = document.createElement("input");
+      elements.difficultCheckbox.id = "difficult-checkbox";
+      elements.difficultCheckbox.type = "checkbox";
+      elements.difficultCheckbox.dataset.difficultCheckbox = "";
+      var labelText = document.createElement("span");
+      labelText.textContent = "Mark as difficult";
+      label.appendChild(elements.difficultCheckbox);
+      label.appendChild(labelText);
+
+      elements.difficultStatus = document.createElement("span");
+      elements.difficultStatus.id = "difficult-mark-status";
+      elements.difficultStatus.className = "difficult-mark-status";
+      elements.difficultStatus.dataset.difficultStatus = "";
+      elements.difficultStatus.setAttribute("aria-live", "polite");
+
+      control.appendChild(label);
+      control.appendChild(elements.difficultStatus);
+      elements.detailsPanel.appendChild(control);
+      elements.difficultControl = control;
+    }
+
+    if (!elements.difficultCheckbox && elements.difficultControl) {
+      elements.difficultCheckbox = firstElement(["input[type='checkbox']"], elements.difficultControl);
+    }
   }
 
   function showScreen(screenName) {
@@ -107,6 +312,85 @@
     return allQuestions.filter(function (question) {
       return question.categoryId === categoryId;
     }).length;
+  }
+
+  function updateDifficultModeUI() {
+    var categoryId = state.category ? state.category.id : "";
+    var count = categoryId ? difficultQuestionCount(categoryId) : 0;
+    var hasQuestions = count > 0;
+
+    if (elements.difficultCount) {
+      elements.difficultCount.textContent = String(count);
+      elements.difficultCount.dataset.count = String(count);
+    }
+    if (elements.difficultLearnButton) elements.difficultLearnButton.disabled = !hasQuestions;
+    if (elements.difficultQuizButton) elements.difficultQuizButton.disabled = !hasQuestions;
+    if (elements.difficultEmpty) setHidden(elements.difficultEmpty, hasQuestions);
+    if (elements.difficultModeButton) {
+      elements.difficultModeButton.dataset.difficultCount = String(count);
+      elements.difficultModeButton.setAttribute(
+        "aria-label",
+        "Difficult questions, " + count + " marked in " + (state.category ? state.category.name : "this category")
+      );
+    }
+  }
+
+  function setDifficultModeChoiceOpen(open) {
+    setHidden(elements.standardModeOptions, open);
+    setHidden(elements.difficultModeOptions, !open);
+    if (elements.difficultModeButton) {
+      elements.difficultModeButton.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+    if (open) updateDifficultModeUI();
+  }
+
+  function openDifficultModeChoice() {
+    if (!state.category) return;
+    setDifficultModeChoiceOpen(true);
+
+    var count = difficultQuestionCount(state.category.id);
+    var focusTarget = count > 0 ? elements.difficultLearnButton : elements.difficultEmpty;
+    if (focusTarget && typeof focusTarget.focus === "function") {
+      if (focusTarget === elements.difficultEmpty) focusTarget.setAttribute("tabindex", "-1");
+      focusTarget.focus({ preventScroll: true });
+    }
+  }
+
+  function closeDifficultModeChoice() {
+    setDifficultModeChoiceOpen(false);
+    if (elements.difficultModeButton && typeof elements.difficultModeButton.focus === "function") {
+      elements.difficultModeButton.focus({ preventScroll: true });
+    }
+  }
+
+  function syncDifficultCheckbox(question) {
+    if (!elements.difficultCheckbox) return;
+    var questionId = question && question.id ? String(question.id) : "";
+    elements.difficultCheckbox.checked = Boolean(questionId && difficultQuestionIds.has(questionId));
+    elements.difficultCheckbox.disabled = !questionId;
+    elements.difficultCheckbox.dataset.questionId = questionId;
+    if (elements.difficultStatus) elements.difficultStatus.textContent = "";
+  }
+
+  function handleDifficultCheckboxChange() {
+    var question = currentQuestion();
+    if (!question || !elements.difficultCheckbox) return;
+
+    var questionId = String(question.id);
+    var isMarked = elements.difficultCheckbox.checked;
+    if (isMarked) {
+      difficultQuestionIds.add(questionId);
+    } else {
+      difficultQuestionIds.delete(questionId);
+    }
+
+    var persisted = saveDifficultQuestionIds();
+    if (elements.difficultStatus) {
+      elements.difficultStatus.textContent = isMarked
+        ? (persisted ? "Marked as difficult." : "Marked for this visit only.")
+        : (persisted ? "Removed from difficult questions." : "Removed for this visit only.");
+    }
+    updateDifficultModeUI();
   }
 
   function renderCategories() {
@@ -168,17 +452,20 @@
     state.category = category;
     state.questions = [];
     state.mode = null;
+    state.scope = "all";
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
     state.score = 0;
 
     if (elements.modeCategory) elements.modeCategory.textContent = category.name;
+    setDifficultModeChoiceOpen(false);
+    updateDifficultModeUI();
 
     // Keep the site usable if an older cached page does not yet contain the
     // mode chooser, while the current page always takes the explicit choice.
     if (!elements.modeScreen) {
-      startQuiz(categoryId, "quiz");
+      startQuiz(categoryId, "quiz", "all");
       return;
     }
 
@@ -207,21 +494,32 @@
     if (source.length < 2) return source;
 
     var originalOrderKey = orderKey(source, itemKey);
+    var canReuseOriginalOrder = source.length === 2 && Boolean(previousOrderKey);
     var candidate = source;
     var attempt;
 
     for (attempt = 0; attempt < 12; attempt += 1) {
       candidate = fisherYates(source);
       var candidateKey = orderKey(candidate, itemKey);
-      if (candidateKey !== originalOrderKey && candidateKey !== previousOrderKey) {
+      if (
+        candidateKey !== previousOrderKey &&
+        (candidateKey !== originalOrderKey || canReuseOriginalOrder)
+      ) {
         return candidate;
       }
+    }
+
+    if (canReuseOriginalOrder && originalOrderKey !== previousOrderKey) {
+      return source;
     }
 
     for (var offset = 1; offset < source.length; offset += 1) {
       candidate = source.slice(offset).concat(source.slice(0, offset));
       var rotatedKey = orderKey(candidate, itemKey);
-      if (rotatedKey !== originalOrderKey && rotatedKey !== previousOrderKey) {
+      if (
+        rotatedKey !== previousOrderKey &&
+        (rotatedKey !== originalOrderKey || canReuseOriginalOrder)
+      ) {
         return candidate;
       }
     }
@@ -256,21 +554,50 @@
     });
   }
 
-  function startQuiz(categoryId, mode) {
+  function startQuiz(categoryId, mode, scope) {
     var category = findCategory(categoryId);
+    var selectedScope = scope === "difficult" ? "difficult" : "all";
     var filteredQuestions = allQuestions.filter(function (question) {
-      return question.categoryId === categoryId;
+      return question.categoryId === categoryId && (
+        selectedScope !== "difficult" || difficultQuestionIds.has(String(question.id))
+      );
     });
 
-    if (!category || filteredQuestions.length === 0) return;
+    if (!category) return false;
+    if (filteredQuestions.length === 0) {
+      if (selectedScope === "difficult") {
+        state.category = category;
+        state.questions = [];
+        state.mode = null;
+        state.scope = "difficult";
+        state.currentIndex = 0;
+        state.selectedIndex = null;
+        state.submitted = false;
+        state.score = 0;
+        if (elements.modeScreen) {
+          showScreen("mode");
+          setDifficultModeChoiceOpen(true);
+        }
+        updateDifficultModeUI();
+        if (elements.difficultEmpty) {
+          setHidden(elements.difficultEmpty, false);
+          elements.difficultEmpty.setAttribute("tabindex", "-1");
+          if (typeof elements.difficultEmpty.focus === "function") {
+            elements.difficultEmpty.focus({ preventScroll: true });
+          }
+        }
+      }
+      return false;
+    }
 
     var selectedMode = mode === "learn" ? "learn" : "quiz";
+    var sessionOrderKey = categoryId + "::" + selectedScope;
     var sessionQuestions = shuffledOrder(
       filteredQuestions,
       function (question) { return question.id; },
-      previousQuestionOrders[categoryId]
+      previousQuestionOrders[sessionOrderKey]
     );
-    previousQuestionOrders[categoryId] = orderKey(sessionQuestions, function (question) {
+    previousQuestionOrders[sessionOrderKey] = orderKey(sessionQuestions, function (question) {
       return question.id;
     });
     if (selectedMode === "quiz") {
@@ -280,17 +607,24 @@
     state.category = category;
     state.questions = sessionQuestions;
     state.mode = selectedMode;
+    state.scope = selectedScope;
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
     state.score = 0;
 
     if (elements.quizCategory) {
-      elements.quizCategory.textContent = category.name + (state.mode === "learn" ? " · Learn" : "");
+      elements.quizCategory.textContent = category.name
+        + (state.scope === "difficult" ? " · Difficult" : "")
+        + (state.mode === "learn" ? " · Learn" : "");
     }
-    if (elements.quizScreen) elements.quizScreen.dataset.mode = state.mode;
+    if (elements.quizScreen) {
+      elements.quizScreen.dataset.mode = state.mode;
+      elements.quizScreen.dataset.scope = state.scope;
+    }
     showScreen("quiz");
     renderQuestion();
+    return true;
   }
 
   function currentQuestion() {
@@ -337,6 +671,7 @@
     renderOptions(question);
     updateProgress();
     resetFeedback();
+    syncDifficultCheckbox(question);
 
     if (state.mode === "learn") {
       prepareLearnQuestion(question);
@@ -554,7 +889,6 @@
     button.dataset.detailsToggle = "";
     elements.detailsPanel.parentNode.insertBefore(button, elements.detailsPanel);
     elements.detailsToggle = button;
-    elements.detailsToggle.addEventListener("click", toggleDetails);
   }
 
   function ensureDetailsContent() {
@@ -607,6 +941,7 @@
     if (!elements.detailsPanel) return;
     ensureDetailsToggle();
     ensureDetailsContent();
+    ensureDifficultControl();
 
     elements.explanationText.textContent = question.explanationUrdu || "تفصیلی وضاحت جلد شامل کی جائے گی۔";
     elements.explanationText.lang = "ur";
@@ -679,6 +1014,9 @@
       elements.sourceLink.href = source.referenceUrl;
     }
 
+    syncDifficultCheckbox(question);
+    setHidden(elements.difficultControl, false);
+
     setHidden(elements.detailsToggle, false);
     elements.detailsToggle.textContent = "View details (Urdu)";
     elements.detailsToggle.setAttribute("aria-expanded", "false");
@@ -722,6 +1060,7 @@
       setHidden(elements.detailsToggle, true);
     }
     if (elements.detailsPanel) setHidden(elements.detailsPanel, true);
+    if (elements.difficultControl) setHidden(elements.difficultControl, true);
     if (elements.relatedHistory) setHidden(elements.relatedHistory, true);
     if (elements.sourceNotes) setHidden(elements.sourceNotes, true);
   }
@@ -751,6 +1090,10 @@
   function showResults() {
     var total = state.questions.length;
     var percent = total > 0 ? Math.round((state.score / total) * 100) : 0;
+    var remainingInScope = state.category && state.scope === "difficult"
+      ? difficultQuestionCount(state.category.id)
+      : total;
+    var canRepeatScope = state.scope !== "difficult" || remainingInScope > 0;
     showScreen("results");
 
     var scoreOutput = elements.resultScore || elements.scoreText;
@@ -771,13 +1114,23 @@
       );
     }
     if (elements.playAgainButton) {
-      elements.playAgainButton.textContent = state.mode === "learn" ? "Start Quiz" : "Practice Again";
+      elements.playAgainButton.textContent = canRepeatScope
+        ? (state.mode === "learn" ? "Start Quiz" : "Practice Again")
+        : "No Marked Questions";
+      elements.playAgainButton.disabled = !canRepeatScope;
     }
 
     if (elements.resultTitle) {
-      elements.resultTitle.textContent = state.mode === "learn" ? "Learning complete!" : "Practice complete!";
+      elements.resultTitle.textContent = state.mode === "learn"
+        ? (state.scope === "difficult" ? "Difficult learning complete!" : "Learning complete!")
+        : (state.scope === "difficult" ? "Difficult practice complete!" : "Practice complete!");
     }
-    if (elements.resultSummary && state.mode === "learn") {
+    if (elements.resultSummary && !canRepeatScope) {
+      elements.resultSummary.textContent = "You removed all difficult marks in this category. Mark a question again before starting another difficult session.";
+    } else if (elements.resultSummary && state.mode === "learn" && state.scope === "difficult") {
+      elements.resultSummary.textContent = "You studied " + total + " questions from this difficult session. The quiz will use "
+        + remainingInScope + (remainingInScope === 1 ? " question" : " questions") + " still marked difficult.";
+    } else if (elements.resultSummary && state.mode === "learn") {
       elements.resultSummary.textContent = "You studied all " + total + " questions in this category. Now test yourself with the quiz.";
     } else if (elements.resultSummary) {
       elements.resultSummary.textContent = resultMessage(percent);
@@ -796,7 +1149,7 @@
       returnToCategories();
       return;
     }
-    startQuiz(state.category.id, state.mode);
+    startQuiz(state.category.id, state.mode, state.scope);
   }
 
   function handlePlayAgain() {
@@ -805,7 +1158,7 @@
       return;
     }
     if (state.mode === "learn") {
-      startQuiz(state.category.id, "quiz");
+      startQuiz(state.category.id, "quiz", state.scope);
       return;
     }
     restartQuiz();
@@ -815,6 +1168,7 @@
     state.category = null;
     state.questions = [];
     state.mode = null;
+    state.scope = "all";
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -828,12 +1182,12 @@
     chooseMode(card.dataset.category || card.dataset.categoryId);
   }
 
-  function startSelectedMode(mode) {
+  function startSelectedMode(mode, scope) {
     if (!state.category) {
       returnToCategories();
       return;
     }
-    startQuiz(state.category.id, mode);
+    startQuiz(state.category.id, mode, scope);
   }
 
   function onOptionClick(event) {
@@ -846,12 +1200,28 @@
     if (elements.categoryGrid) elements.categoryGrid.addEventListener("click", onCategoryClick);
     if (elements.learnModeButton) {
       elements.learnModeButton.addEventListener("click", function () {
-        startSelectedMode("learn");
+        startSelectedMode("learn", "all");
       });
     }
     if (elements.quizModeButton) {
       elements.quizModeButton.addEventListener("click", function () {
-        startSelectedMode("quiz");
+        startSelectedMode("quiz", "all");
+      });
+    }
+    if (elements.difficultModeButton) {
+      elements.difficultModeButton.addEventListener("click", openDifficultModeChoice);
+    }
+    if (elements.difficultBackButton) {
+      elements.difficultBackButton.addEventListener("click", closeDifficultModeChoice);
+    }
+    if (elements.difficultLearnButton) {
+      elements.difficultLearnButton.addEventListener("click", function () {
+        startSelectedMode("learn", "difficult");
+      });
+    }
+    if (elements.difficultQuizButton) {
+      elements.difficultQuizButton.addEventListener("click", function () {
+        startSelectedMode("quiz", "difficult");
       });
     }
     if (elements.modeBackButton) elements.modeBackButton.addEventListener("click", returnToCategories);
@@ -862,14 +1232,21 @@
     if (elements.restartButton) elements.restartButton.addEventListener("click", restartQuiz);
     if (elements.playAgainButton) elements.playAgainButton.addEventListener("click", handlePlayAgain);
     if (elements.changeCategoryButton) elements.changeCategoryButton.addEventListener("click", returnToCategories);
+    if (elements.difficultCheckbox) {
+      elements.difficultCheckbox.addEventListener("change", handleDifficultCheckboxChange);
+    }
   }
 
   function init() {
     collectElements();
+    ensureDifficultModeUI();
+    ensureDifficultControl();
+    difficultQuestionIds = loadDifficultQuestionIds();
     renderCategories();
     ensureDetailsToggle();
     bindEvents();
     resetFeedback();
+    updateDifficultModeUI();
     showScreen("categories");
 
     if (categories.length === 0 || allQuestions.length === 0) {
