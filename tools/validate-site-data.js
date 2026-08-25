@@ -175,8 +175,8 @@ function validateHtml() {
       error(`index.html: removed answer-detail control #${id} must not be present`);
     }
   }
-  const dataScript = html.indexOf('src="data/questions.js"');
-  const appScript = html.indexOf('src="app.js"');
+  const dataScript = html.search(/src=["']data\/questions\.js(?:\?[^"']*)?["']/);
+  const appScript = html.search(/src=["']app\.js(?:\?[^"']*)?["']/);
   if (dataScript < 0 || appScript < 0 || dataScript > appScript) {
     error("index.html: data/questions.js must load before app.js");
   }
