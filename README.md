@@ -5,8 +5,8 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 ## Question bank
 
 - 449 source MCQs transcribed from the supplied `PPSC 110 Edition` scan.
-- 449 original, researched PPSC-style questions—one related question for every source MCQ.
-- 898 website questions in total.
+- 1,295 source-present MCQs extracted from `IBES CAPSULE Computer 2025`; 207 semantic repeats were excluded and 1,088 unique MCQs were retained. Printed Q254 is absent from the supplied scan and was not fabricated.
+- **1,537 retained source MCQs + 1,537 original researched PPSC-style related questions = 3,074 website questions.**
 - 10 advertised syllabus subjects, plus a separate **Finance, Taxation & Job-related** category for questions found in the supplied papers but outside that syllabus.
 - English question stems and four answer options, with a readable Urdu translation directly below every question.
 - A Learn mode that preselects and highlights the correct answer immediately.
@@ -51,14 +51,17 @@ Run from the project folder:
 ```powershell
 node tools/validate-extractions.js
 node tools/validate-enriched.js
+node tools/validate-ibes-verification.js --complete
+node tools/validate-ibes-final.js --complete
+node tools/audit-ibes-similar-duplicates.js
 node tools/build-question-bank.js
-node tools/validate-site-data.js --expected=898
+node tools/validate-site-data.js --expected=3074
 node tools/browser-smoke.js
 ```
 
 The browser smoke test requires local Chrome or Edge. It exercises Learn, Quiz and Difficult practice at mobile width, including the always-visible persistent mark/unmark control, difficult-only filtering and empty state, English and Urdu question rendering, changing question/option orders, answer remapping, the Learn-complete **Start Quiz** transition, wrong/correct quiz feedback, Restart/Practice Again, Next, and completion.
 
-The build script validates all six PDF papers, balances only the generated similar-question answer positions, and creates:
+The build script validates all six `PPSC 110 Edition` papers and all 1,088 retained IBES source/similar pairs, balances only the generated similar-question answer positions, and creates:
 
 - `data/questions.js` with the complete website bank.
 - `..\ppsc_mcqs.md` with all similar practice questions.
@@ -83,7 +86,7 @@ Each pair must:
 
 Explanations, source notes and evidence links remain in the verified data for research and validation, but the website does not display per-question explanation, history or source-detail panels.
 
-After adding a pair, run the validation and build commands again. For a bank larger than 898, update the `--expected` value or omit that argument.
+After adding a pair, run the validation and build commands again. For a bank larger than 3,074, update the `--expected` value or omit that argument.
 
 ## Push this update
 
@@ -92,7 +95,7 @@ The repository is already initialized on branch `main`, with `origin` set to `ht
 ```powershell
 cd "D:\My documents\PPSC\codex\ppsc-project"
 git add .
-git commit -m "Remove answer explanation panels"
+git commit -m "Add verified IBES computer MCQ bank"
 git push
 ```
 

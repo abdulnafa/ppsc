@@ -1,0 +1,3845 @@
+[
+  {
+    "id": "IBES-Q1101-SRC",
+    "pairId": "IBES-Q1101",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which is a valid Excel column name rather than a cell address?",
+    "questionUrdu": "درج options میں کون سا valid Excel column name ہے، cell address نہیں؟",
+    "options": [
+      "AA",
+      "30A",
+      "3B",
+      "B3"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب AA ہے۔ AA ایک valid column label ہے؛ B3 column B اور row 3 کا cell address ہے، جبکہ 30A اور 3B valid A1-style labels نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1101; Microsoft Support — Create or change a cell reference in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/create-or-change-a-cell-reference",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "column-label",
+      "a1-reference"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the grammar and distinguished column labels from a cell address such as B3."
+  },
+  {
+    "id": "IBES-Q1101-SIM",
+    "pairId": "IBES-Q1101",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel column label corresponds to column number 52?",
+    "questionUrdu": "Excel میں column number 52 کا label کیا ہے؟",
+    "options": [
+      "AZ",
+      "BA",
+      "AX",
+      "ZZ"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب AZ ہے۔ A سے Z پہلے 26 columns ہیں؛ اگلے 26 AA سے AZ تک ہوتے ہیں، اس لیے 52واں column AZ ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create or change a cell reference in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/create-or-change-a-cell-reference",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "column-label",
+      "a1-reference",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1102-SRC",
+    "pairId": "IBES-Q1102",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the Excel address of the cell in column 27 and row 30?",
+    "questionUrdu": "Excel میں column 27 اور row 30 والے cell کا address کیا ہے؟",
+    "options": [
+      "AA30",
+      "AZ26",
+      "Z30",
+      "AB30"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب AA30 ہے۔ Column 26 کا label Z اور column 27 کا AA ہے؛ row 30 ملانے سے address AA30 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1102; Microsoft Support — Create or change a cell reference in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/create-or-change-a-cell-reference",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "r1c1-reference",
+      "cell-address"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the grammar and replaced “None of these.” Column 27 is AA, so the address is AA30."
+  },
+  {
+    "id": "IBES-Q1102-SIM",
+    "pairId": "IBES-Q1102",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In Excel's R1C1 reference style, how is A1-style cell `AB12` written?",
+    "questionUrdu": "Excel کے R1C1 reference style میں A1-style cell `AB12` کیسے لکھا جاتا ہے؟",
+    "options": [
+      "R12C28",
+      "R28C12",
+      "C12R28",
+      "RAB12"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب R12C28 ہے۔ AB column number 28 اور row 12 ہے؛ R1C1 notation row پہلے `R12` اور column بعد میں `C28` لکھتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create or change a cell reference in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/create-or-change-a-cell-reference",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "r1c1-reference",
+      "cell-address",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1103-SRC",
+    "pairId": "IBES-Q1103",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which bar at the top of Excel displays the workbook name?",
+    "questionUrdu": "Excel کے اوپر کون سی bar workbook کا نام دکھاتی ہے؟",
+    "options": [
+      "Title bar",
+      "Menu bar",
+      "Formula bar",
+      "Status bar"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Title bar ہے۔ Title bar application window کے اوپر current workbook کا نام دکھاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1103; Microsoft Support — Basic tasks in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/basic-tasks-in-excel-dc775dd1-fa52-430f-9c3c-d998d1735fca",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "status-bar",
+      "interface"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source phrase “we open the new worksheet which is at the top” was not grammatical or uniquely interpretable. Reconstructed as a Title bar question."
+  },
+  {
+    "id": "IBES-Q1103-SIM",
+    "pairId": "IBES-Q1103",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel bar near the bottom commonly shows worksheet status and zoom controls?",
+    "questionUrdu": "Excel window کے نیچے کون سی bar worksheet status اور zoom controls دکھاتی ہے؟",
+    "options": [
+      "Status bar",
+      "Formula bar",
+      "Title bar",
+      "Name Box"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Status bar ہے۔ Status bar window کے نچلے حصے میں Ready جیسے status indicators، view buttons اور zoom control دکھاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Basic tasks in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/basic-tasks-in-excel-dc775dd1-fa52-430f-9c3c-d998d1735fca",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "status-bar",
+      "interface",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1104-SRC",
+    "pairId": "IBES-Q1104",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel keyboard shortcut moves the active cell to the beginning of a worksheet?",
+    "questionUrdu": "کون سا Excel shortcut active cell کو worksheet کے آغاز پر لے جاتا ہے؟",
+    "options": [
+      "Ctrl+Home",
+      "Home",
+      "Shift+Home",
+      "Alt+Home"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ctrl+Home ہے۔ Ctrl+Home selection کو worksheet کے شروع، عموماً cell A1، پر لے جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1104; Microsoft Support — Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "ctrl-end",
+      "navigation"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Replaced the fill-in-the-blank grammar, removed unnecessary Excel 2016 scope, and linked Microsoft’s keyboard-shortcut reference."
+  },
+  {
+    "id": "IBES-Q1104-SIM",
+    "pairId": "IBES-Q1104",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut moves to the last used cell on a worksheet?",
+    "questionUrdu": "Excel میں worksheet کے last used cell پر جانے کا shortcut کیا ہے؟",
+    "options": [
+      "Ctrl+End",
+      "Ctrl+Home",
+      "Shift+End",
+      "Alt+End"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ctrl+End ہے۔ Ctrl+End worksheet کے used range کی آخری used row اور column کے intersection پر جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "ctrl-end",
+      "navigation",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1105-SRC",
+    "pairId": "IBES-Q1105",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What uniquely identifies one worksheet cell from another?",
+    "questionUrdu": "ایک worksheet cell کو دوسرے cell سے uniquely کیا شناخت دیتا ہے؟",
+    "options": [
+      "Its cell address",
+      "Its displayed value",
+      "Its formula result",
+      "Its fill color"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Its cell address ہے۔ ہر cell کا address اس کے column اور row کی unique position بیان کرتا ہے، مثلاً B7۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1105; Microsoft Support — Create or change a cell reference in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/create-or-change-a-cell-reference",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "row-number",
+      "cell-reference"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source included “All of these,” but values, formulas, and formatting need not be unique. Reconstructed around the cell address."
+  },
+  {
+    "id": "IBES-Q1105-SIM",
+    "pairId": "IBES-Q1105",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In the cell address `B7`, which part identifies the row?",
+    "questionUrdu": "cell address `B7` میں row کی شناخت کون سا حصہ کرتا ہے؟",
+    "options": [
+      "7",
+      "B",
+      "B7",
+      "The letter and number equally as a row label"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 7 ہے۔ A1 style میں letters columns اور numbers rows کو ظاہر کرتے ہیں؛ اس لیے B7 کی row 7 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create or change a cell reference in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/create-or-change-a-cell-reference",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "row-number",
+      "cell-reference",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1106-SRC",
+    "pairId": "IBES-Q1106",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "On which Excel tab do you start a new workbook from a ready-made template?",
+    "questionUrdu": "ready-made template سے نئی workbook شروع کرنے کے لیے Excel کی کون سی tab کھولی جاتی ہے؟",
+    "options": [
+      "File",
+      "Insert",
+      "Design",
+      "Data"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب File ہے۔ File tab Backstage view کھولتی ہے، جہاں New page پر blank workbook اور templates دستیاب ہوتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1106; Microsoft Support — Download and use pre-built Office templates",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/foundations-experiences/download-free-pre-built-templates",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "templates",
+      "backstage-view"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the grammar and replaced “None of these”; templates are accessed through File > New."
+  },
+  {
+    "id": "IBES-Q1106-SIM",
+    "pairId": "IBES-Q1106",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Backstage page displays available templates for creating a workbook?",
+    "questionUrdu": "workbook بنانے کے لیے available templates کون سا Backstage page دکھاتا ہے؟",
+    "options": [
+      "New",
+      "Print",
+      "Info",
+      "Close"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب New ہے۔ File > New page template gallery اور blank workbook choices دکھاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Download and use pre-built Office templates",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/foundations-experiences/download-free-pre-built-templates",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "templates",
+      "backstage-view",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1107-SRC",
+    "pairId": "IBES-Q1107",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "By default, how often does Excel save AutoRecover information?",
+    "questionUrdu": "Excel default طور پر AutoRecover information کتنی دیر بعد save کرتا ہے؟",
+    "options": [
+      "Every 10 minutes",
+      "Every 20 minutes",
+      "Every 30 minutes",
+      "Every 40 minutes"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Every 10 minutes ہے۔ Default AutoRecover interval 10 minutes ہے، اگر user setting تبدیل نہ کرے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1107; Microsoft Support — Help protect files in case of a crash",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/help-protect-your-files-in-case-of-a-crash-551c29b1-6a4b-4415-a3ff-a80415b92f99",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "autorecover",
+      "save-options"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source incorrectly called this AutoSave. AutoRecover has a configurable interval whose default is 10 minutes; AutoSave is a separate cloud-file feature."
+  },
+  {
+    "id": "IBES-Q1107-SIM",
+    "pairId": "IBES-Q1107",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Where can the AutoRecover save interval be changed in desktop Excel?",
+    "questionUrdu": "desktop Excel میں AutoRecover save interval کہاں تبدیل کیا جا سکتا ہے؟",
+    "options": [
+      "File > Options > Save",
+      "Insert > Charts",
+      "Data > Sort",
+      "Review > Spelling"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب File > Options > Save ہے۔ Save options میں AutoRecover information save کرنے کا minute interval مقرر کیا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Help protect files in case of a crash",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/help-protect-your-files-in-case-of-a-crash-551c29b1-6a4b-4415-a3ff-a80415b92f99",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "autorecover",
+      "save-options",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1108-SRC",
+    "pairId": "IBES-Q1108",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "When applying conditional formatting, you can check the conditions against:",
+    "questionUrdu": "conditional formatting لگاتے وقت conditions کو کس کے مقابل check کیا جا سکتا ہے؟",
+    "options": [
+      "A formula only",
+      "A cell value only",
+      "A cell value or a formula",
+      "Neither values nor formulas"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب A cell value or a formula ہے۔ Conditional formatting cell value یا formula-based rule دونوں استعمال کر سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1108; Microsoft Support — Use conditional formatting in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/use-conditional-formatting-to-highlight-information-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "conditional-formatting",
+      "formula-rule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Replaced the answer-encoding “Both A & B” with the direct documented alternatives used by conditional-formatting rules."
+  },
+  {
+    "id": "IBES-Q1108-SIM",
+    "pairId": "IBES-Q1108",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "For a formula-based conditional-formatting rule to apply a format, what should its formula evaluate to?",
+    "questionUrdu": "formula-based conditional-formatting rule format لگانے کے لیے formula کو کس result پر evaluate ہونا چاہیے؟",
+    "options": [
+      "TRUE",
+      "A file name",
+      "A chart title",
+      "A printer status"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب TRUE ہے۔ Excel ہر relevant cell کے لیے formula evaluate کرتا ہے؛ TRUE result آنے پر chosen format apply ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Use conditional formatting in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/use-conditional-formatting-to-highlight-information-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "conditional-formatting",
+      "formula-rule",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1109-SRC",
+    "pairId": "IBES-Q1109",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "On Excel’s Home tab, which group contains the Conditional Formatting command?",
+    "questionUrdu": "Excel کی Home tab پر Conditional Formatting command کس group میں ہے؟",
+    "options": [
+      "Styles",
+      "Theme",
+      "Quick Styles",
+      "Template"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Styles ہے۔ Home tab کے Styles group میں Conditional Formatting، Format as Table اور Cell Styles commands ہوتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1109; Microsoft Support — Use conditional formatting in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/use-conditional-formatting-to-highlight-information-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "conditional-formatting",
+      "cell-format"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked which feature applies predefined rules, where Conditional Formatting itself was absent. Reconstructed as the stable Ribbon-group location; the correct group is Styles."
+  },
+  {
+    "id": "IBES-Q1109-SIM",
+    "pairId": "IBES-Q1109",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Does conditional formatting normally change the underlying value stored in a cell?",
+    "questionUrdu": "کیا conditional formatting عموماً cell میں محفوظ underlying value تبدیل کرتی ہے؟",
+    "options": [
+      "No, it changes the displayed format when conditions are met",
+      "Yes, it always replaces the value",
+      "Yes, it deletes formulas",
+      "No, because it closes the workbook"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب No, it changes the displayed format when conditions are met ہے۔ Conditional formatting appearance بدلتی ہے؛ cell کی value یا formula برقرار رہتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Use conditional formatting in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/use-conditional-formatting-to-highlight-information-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "conditional-formatting",
+      "cell-format",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1110-SRC",
+    "pairId": "IBES-Q1110",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel command displays long cell text on multiple lines within the same cell?",
+    "questionUrdu": "کون سی Excel command لمبے cell text کو اسی cell میں کئی lines پر دکھاتی ہے؟",
+    "options": [
+      "Wrap Text",
+      "Enter key by itself",
+      "Shrink to Fit",
+      "Merge Cells"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Wrap Text ہے۔ Wrap Text available column width کے مطابق text کو multiple display lines میں لپیٹتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1110; Microsoft Support — Wrap text in an Excel cell",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/wrap-text-in-a-cell-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "wrap-text",
+      "row-height"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source’s first choice described Wrap Text indirectly, while Enter alone moves to another cell and Shrink to Fit does not create multiple lines. Reconstructed with the actual command. Replaced “All of these” with a genuine formatting-command distractor."
+  },
+  {
+    "id": "IBES-Q1110-SIM",
+    "pairId": "IBES-Q1110",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What can Excel automatically adjust to display all lines after Wrap Text is applied?",
+    "questionUrdu": "Wrap Text لگانے کے بعد تمام lines دکھانے کے لیے Excel کیا automatically adjust کر سکتا ہے؟",
+    "options": [
+      "Row height",
+      "Workbook password",
+      "Column name",
+      "Formula result"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Row height ہے۔ Wrapped text کی متعدد lines دکھانے کے لیے row height عموماً AutoFit ہو کر بڑھ جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Wrap text in an Excel cell",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/wrap-text-in-a-cell-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "wrap-text",
+      "row-height",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1111-SRC",
+    "pairId": "IBES-Q1111",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Excel 2016, on which Ribbon tab is Conditional Formatting located?",
+    "questionUrdu": "Excel 2016 میں Conditional Formatting کس Ribbon tab پر ہوتی ہے؟",
+    "options": [
+      "Insert",
+      "Page Layout",
+      "Formulas",
+      "Home"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Home ہے۔ Conditional Formatting desktop Excel کی Home tab کے Styles group میں ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1111; Microsoft Support — Use conditional formatting in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/use-conditional-formatting-to-highlight-information-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "conditional-formatting",
+      "new-rule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Changed “menu” to Ribbon tab and corrected the incomplete stem."
+  },
+  {
+    "id": "IBES-Q1111-SIM",
+    "pairId": "IBES-Q1111",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Conditional Formatting command opens a dialog for defining a custom rule?",
+    "questionUrdu": "custom conditional-formatting rule بنانے کے لیے کون سی command dialog کھولتی ہے؟",
+    "options": [
+      "New Rule",
+      "Freeze Panes",
+      "Text to Columns",
+      "Goal Seek"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب New Rule ہے۔ New Rule مختلف rule types، formula اور format settings منتخب کرنے دیتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Use conditional formatting in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/use-conditional-formatting-to-highlight-information-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "conditional-formatting",
+      "new-rule",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1112-SRC",
+    "pairId": "IBES-Q1112",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which procedure highlights duplicate values in an Excel range?",
+    "questionUrdu": "Excel range میں duplicate values highlight کرنے کا درست طریقہ کیا ہے؟",
+    "options": [
+      "Select the range only",
+      "Change the workbook theme",
+      "Select the range, then choose Conditional Formatting > Highlight Cells Rules > Duplicate Values",
+      "Sort the range without a rule"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Select the range, then choose Conditional Formatting > Highlight Cells Rules > Duplicate Values ہے۔ Range select کر کے Conditional Formatting > Highlight Cells Rules > Duplicate Values استعمال کیا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1112; Microsoft Support — Use conditional formatting in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/use-conditional-formatting-to-highlight-information-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "unique-values",
+      "conditional-formatting"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says selecting the range alone (A), which does not highlight duplicates. The procedure and choices were reconstructed with the actual Duplicate Values rule."
+  },
+  {
+    "id": "IBES-Q1112-SIM",
+    "pairId": "IBES-Q1112",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In the Duplicate Values dialog, which choice highlights values that occur only once?",
+    "questionUrdu": "Duplicate Values dialog میں کون سی choice صرف ایک بار آنے والی values highlight کرتی ہے؟",
+    "options": [
+      "Unique",
+      "Duplicate",
+      "Top 10",
+      "Below Average"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Unique ہے۔ Dialog کی drop-down میں Duplicate کے بجائے Unique منتخب کرنے سے non-repeated values format ہوتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Use conditional formatting in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/use-conditional-formatting-to-highlight-information-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "unique-values",
+      "conditional-formatting",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1113-SRC",
+    "pairId": "IBES-Q1113",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "How can you quickly display the text of a legacy Excel note attached to a cell?",
+    "questionUrdu": "cell کے ساتھ لگی legacy Excel note کا text جلد دیکھنے کا طریقہ کیا ہے؟",
+    "options": [
+      "Point to the cell with the mouse",
+      "Open the View menu only",
+      "Use Insert > Edit Comment",
+      "Use the Window menu"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Point to the cell with the mouse ہے۔ Mouse pointer note والے cell پر لے جانے سے legacy note عموماً pop-up میں دکھائی دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1113; Microsoft Support — Insert comments and notes in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/insert-comments-and-notes-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "legacy-notes",
+      "cell-indicator"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Modern Excel distinguishes threaded comments from legacy notes. The source behavior—display on hover—applies to a note, so the terminology was corrected."
+  },
+  {
+    "id": "IBES-Q1113-SIM",
+    "pairId": "IBES-Q1113",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which visual marker commonly indicates that an Excel cell contains a legacy note?",
+    "questionUrdu": "کون سا visual marker عموماً بتاتا ہے کہ Excel cell میں legacy note موجود ہے؟",
+    "options": [
+      "A small red triangle in the cell corner",
+      "A dollar sign in the formula bar",
+      "A padlock over the Ribbon",
+      "A full blue row"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A small red triangle in the cell corner ہے۔ Legacy notes عموماً cell کے upper-right corner میں چھوٹے red indicator سے ظاہر ہوتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Insert comments and notes in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/insert-comments-and-notes-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "legacy-notes",
+      "cell-indicator",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1114-SRC",
+    "pairId": "IBES-Q1114",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "When the pointer becomes a thin black cross over Excel’s fill handle, what operation can you perform?",
+    "questionUrdu": "fill handle پر pointer thin black cross بن جائے تو کون سا operation کیا جا سکتا ہے؟",
+    "options": [
+      "Complete lists and fill patterns",
+      "Move a group of cells",
+      "Resize",
+      "Highlight duplicate cells"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Complete lists and fill patterns ہے۔ Fill handle values، formulas، lists اور patterns کو adjacent cells میں extend کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1114; Microsoft Support — Fill data automatically in worksheet cells",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/fill-data-automatically-in-worksheet-cells-74e31bdd-d993-45da-aa82-35a236c5b5db",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "fill-handle",
+      "autofill"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Added the fill-handle location so the cross-shaped pointer is uniquely associated with filling series and patterns."
+  },
+  {
+    "id": "IBES-Q1114-SIM",
+    "pairId": "IBES-Q1114",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does double-clicking an Excel fill handle commonly do when adjacent data defines the extent?",
+    "questionUrdu": "جب adjacent data range کی حد بتا رہا ہو تو Excel fill handle کو double-click کرنے سے عموماً کیا ہوتا ہے؟",
+    "options": [
+      "Copies the formula or pattern down the adjacent range",
+      "Deletes the whole column",
+      "Opens Page Setup",
+      "Creates a chart sheet"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Copies the formula or pattern down the adjacent range ہے۔ Double-click fill handle adjacent filled column کے مطابق formula یا pattern کو نیچے تک fill کر سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Fill data automatically in worksheet cells",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/fill-data-automatically-in-worksheet-cells-74e31bdd-d993-45da-aa82-35a236c5b5db",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "fill-handle",
+      "autofill",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1115-SRC",
+    "pairId": "IBES-Q1115",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which dialog lets you display a date in a custom pattern such as yyyy/mm/dd in Excel?",
+    "questionUrdu": "date کو yyyy/mm/dd جیسے custom pattern میں دکھانے کے لیے کون سا Excel dialog استعمال ہوتا ہے؟",
+    "options": [
+      "View Options",
+      "Format Cells",
+      "Data Validation",
+      "Insert Object"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Format Cells ہے۔ Format Cells dialog کی Number tab پر Custom category سے date display code مقرر کیا جا سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1115; Microsoft Support — Format a date in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/format-a-date-the-way-you-want-8e10019e-d5d8-47a1-ba95-db95123d273e",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "date-format",
+      "number-format"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source referred to a legacy “Format Menu.” Reconstructed around the current Format Cells dialog."
+  },
+  {
+    "id": "IBES-Q1115-SIM",
+    "pairId": "IBES-Q1115",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Does applying a different date number format normally change Excel's stored date value?",
+    "questionUrdu": "کیا مختلف date number format لگانے سے Excel کی stored date value عموماً بدل جاتی ہے؟",
+    "options": [
+      "No, it changes the display format",
+      "Yes, it creates a different day",
+      "Yes, it deletes the serial number",
+      "No, because dates are images"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب No, it changes the display format ہے۔ Number format صرف presentation بدلتی ہے؛ underlying date serial value وہی رہتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Format a date in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/format-a-date-the-way-you-want-8e10019e-d5d8-47a1-ba95-db95123d273e",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "date-format",
+      "number-format",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1116-SRC",
+    "pairId": "IBES-Q1116",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel feature extends values, series, or formulas across a selected range?",
+    "questionUrdu": "کون سی Excel feature values، series یا formulas کو selected range میں extend کرتی ہے؟",
+    "options": [
+      "AutoFill",
+      "Data Validation",
+      "AutoSum",
+      "Remove Duplicates"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب AutoFill ہے۔ AutoFill fill handle یا Fill command سے series اور formulas adjacent cells میں پھیلاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1116; Microsoft Support — Fill data automatically in worksheet cells",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/fill-data-automatically-in-worksheet-cells-74e31bdd-d993-45da-aa82-35a236c5b5db",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "autofill",
+      "number-series"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source phrase “fill data in respect of” was unclear. Reconstructed with Microsoft’s documented AutoFill purpose."
+  },
+  {
+    "id": "IBES-Q1116-SIM",
+    "pairId": "IBES-Q1116",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Dragging a fill handle from cells containing 1 and 2 will normally continue which series?",
+    "questionUrdu": "1 اور 2 والے cells سے fill handle drag کرنے پر عموماً کون سی series جاری ہوتی ہے؟",
+    "options": [
+      "3, 4, 5, ...",
+      "1, 1, 1, ...",
+      "2, 2, 2, ...",
+      "10, 20, 30, ..."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 3, 4, 5, ... ہے۔ دو initial values 1 کا increment ظاہر کرتی ہیں، اس لیے AutoFill 3، 4، 5 آگے بناتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Fill data automatically in worksheet cells",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/fill-data-automatically-in-worksheet-cells-74e31bdd-d993-45da-aa82-35a236c5b5db",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "autofill",
+      "number-series",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1117-SRC",
+    "pairId": "IBES-Q1117",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which method pastes an independent copy of Excel cells into Word without a live link to the workbook?",
+    "questionUrdu": "Excel cells کو Word میں live workbook link کے بغیر independent copy کے طور پر paste کرنے کا طریقہ کیا ہے؟",
+    "options": [
+      "Insert an ordinary web hyperlink",
+      "Use Paste Link",
+      "Insert a linked picture",
+      "Use Copy, then ordinary Paste"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Use Copy, then ordinary Paste ہے۔ Ordinary Copy اور Paste static independent copy بناتے ہیں؛ Paste Link source workbook سے connection رکھتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1117; Microsoft Support — Paste options in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/paste-options",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "paste-as-picture",
+      "microsoft-word"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source answer referred to a legacy Standard toolbar. Modernized it to ordinary Copy and Paste and contrasted it with explicitly linked methods."
+  },
+  {
+    "id": "IBES-Q1117-SIM",
+    "pairId": "IBES-Q1117",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which paste choice places copied Excel cells in Word as a static image?",
+    "questionUrdu": "کون سی paste choice copied Excel cells کو Word میں static image کے طور پر رکھتی ہے؟",
+    "options": [
+      "Paste as Picture",
+      "Paste Link",
+      "Refresh Link",
+      "Edit Source"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Paste as Picture ہے۔ Paste as Picture cell content کو image بنا دیتی ہے؛ Word میں اس کے individual cells formulas کی طرح edit نہیں ہوتے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Paste options in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/paste-options",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "paste-as-picture",
+      "microsoft-word",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1118-SRC",
+    "pairId": "IBES-Q1118",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the currently selected cell in an Excel worksheet called?",
+    "questionUrdu": "Excel worksheet میں currently selected cell کو کیا کہتے ہیں؟",
+    "options": [
+      "Frozen cell",
+      "Filtered cell",
+      "Validated cell",
+      "Active cell"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Active cell ہے۔ Active cell وہ selected cell ہے جس میں typing یا formula entry جائے گی۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1118; Microsoft Support — Basic tasks in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/basic-tasks-in-excel-dc775dd1-fa52-430f-9c3c-d998d1735fca",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "active-cell",
+      "data-entry"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source answer “Active Cell Highlighting” is not the standard feature name. Reconstructed around the documented term Active cell."
+  },
+  {
+    "id": "IBES-Q1118-SIM",
+    "pairId": "IBES-Q1118",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "If cell D5 is active and the user types 42 then presses Enter, where is 42 entered?",
+    "questionUrdu": "اگر D5 active cell ہو اور user 42 لکھ کر Enter دبائے تو 42 کہاں داخل ہوگا؟",
+    "options": [
+      "Cell D5",
+      "Cell A1",
+      "The title bar",
+      "The worksheet tab"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Cell D5 ہے۔ Keyboard entry active cell میں محفوظ ہوتی ہے؛ اس scenario میں active location D5 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Basic tasks in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/basic-tasks-in-excel-dc775dd1-fa52-430f-9c3c-d998d1735fca",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "active-cell",
+      "data-entry",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1119-SRC",
+    "pairId": "IBES-Q1119",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which command lets you choose specific attributes when copying data from one Excel sheet to another?",
+    "questionUrdu": "ایک Excel sheet سے دوسری پر copy کرتے وقت specific attributes منتخب کرنے والی command کون سی ہے؟",
+    "options": [
+      "Referencing",
+      "Paste Special",
+      "Formulas",
+      "Flash Fill"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Paste Special ہے۔ Paste Special user کو values، formulas، formats یا دوسرے selected attributes paste کرنے دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1119; Microsoft Support — Paste options in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/paste-options",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "paste-special",
+      "values"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source implied Paste Special is the only way to copy between sheets. It is specifically used when selected attributes or transformations are required, so the stem was narrowed. Replaced “None of these” with a genuine Excel feature."
+  },
+  {
+    "id": "IBES-Q1119-SIM",
+    "pairId": "IBES-Q1119",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Paste Special choice pastes calculated results without copying their formulas?",
+    "questionUrdu": "کون سی Paste Special choice formulas کے بجائے ان کے calculated results paste کرتی ہے؟",
+    "options": [
+      "Values",
+      "Formulas",
+      "Formats",
+      "Validation"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Values ہے۔ Values option displayed results کو constants کے طور پر paste کرتی ہے، underlying formulas کو نہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Paste options in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/paste-options",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "paste-special",
+      "values",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1120-SRC",
+    "pairId": "IBES-Q1120",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word command can add a visible border around selected text or a paragraph?",
+    "questionUrdu": "selected text یا paragraph کے گرد visible border لگانے والی Word command کون سی ہے؟",
+    "options": [
+      "Borders",
+      "WordArt",
+      "Drop Cap",
+      "Track Changes"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Borders ہے۔ Borders command selection کے چاروں طرف lines بنا سکتی ہے اور Borders and Shading settings سے style مقرر ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1120; Microsoft Support — Add a border to some text in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/add-a-border-to-some-text-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "shading",
+      "paragraph-formatting"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The earlier repair listed table cells, tables, and paragraphs while its reference addressed text/paragraph borders. Reconstructed as one directly supported Borders-command question."
+  },
+  {
+    "id": "IBES-Q1120-SIM",
+    "pairId": "IBES-Q1120",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word formatting feature adds a background color behind selected text or a paragraph?",
+    "questionUrdu": "کون سی Word formatting feature selected text یا paragraph کے پیچھے background color لگاتی ہے؟",
+    "options": [
+      "Shading",
+      "Track Changes",
+      "Drop Cap",
+      "Mail Merge"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Shading ہے۔ Shading selection کے background کو color یا pattern دیتی ہے، جبکہ Border اس کے گرد line بناتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Add a border to some text in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/add-a-border-to-some-text-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "shading",
+      "paragraph-formatting",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1121-SRC",
+    "pairId": "IBES-Q1121",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "How can you AutoFit a selected Excel column to its contents with the mouse?",
+    "questionUrdu": "mouse سے selected Excel column کو contents کے مطابق AutoFit کیسے کیا جاتا ہے؟",
+    "options": [
+      "Double-click the left edge of any cell",
+      "Double-click the boundary to the right of the column heading",
+      "Double-click inside the column heading",
+      "Single-click the worksheet tab"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Double-click the boundary to the right of the column heading ہے۔ Column heading کے دائیں boundary پر double-click کرنے سے column width longest visible content کے مطابق AutoFit ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1121; Microsoft Support — Change column width or row height in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/change-column-width-or-row-height",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "autofit-row",
+      "row-height"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source’s “All of the above” overlapped with imprecise border wording. Reconstructed using Microsoft’s exact AutoFit mouse action."
+  },
+  {
+    "id": "IBES-Q1121-SIM",
+    "pairId": "IBES-Q1121",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "How can a user AutoFit an Excel row to its contents with the mouse?",
+    "questionUrdu": "mouse سے Excel row کو contents کے مطابق AutoFit کیسے کیا جا سکتا ہے؟",
+    "options": [
+      "Double-click the boundary below the row heading",
+      "Double-click the title bar",
+      "Drag the worksheet tab",
+      "Single-click the formula bar"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Double-click the boundary below the row heading ہے۔ Row heading کی lower boundary پر double-click کرنے سے Excel row height کو contents کے مطابق fit کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Change column width or row height in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/change-column-width-or-row-height",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "autofit-row",
+      "row-height",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1122-SRC",
+    "pairId": "IBES-Q1122",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel command combines selected adjacent cells into one larger cell?",
+    "questionUrdu": "selected adjacent cells کو ایک بڑے cell میں ملانے والی Excel command کون سی ہے؟",
+    "options": [
+      "Merge Cells",
+      "Combine File",
+      "Unify Workbook",
+      "Group Sheets"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Merge Cells ہے۔ Merge Cells selected adjacent cells کو ایک cell area بناتی ہے؛ merge سے پہلے صرف upper-left cell کا content برقرار رکھا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1122; Microsoft Support — Merge and unmerge cells in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/merge-and-unmerge-cells-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "merge-cells",
+      "upper-left-cell"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the OCR error “mixed” to merged and replaced “None of these” with genuine distractors."
+  },
+  {
+    "id": "IBES-Q1122-SIM",
+    "pairId": "IBES-Q1122",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "When cells containing different values are merged, which cell's content does Excel retain?",
+    "questionUrdu": "مختلف values والے cells merge کرنے پر Excel کس cell کا content برقرار رکھتا ہے؟",
+    "options": [
+      "The upper-left cell",
+      "The lower-right cell",
+      "Every value in separate lines",
+      "No cell's content"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The upper-left cell ہے۔ Excel merge operation upper-left cell کی value رکھتی اور باقی selected cells کا content discard کر دیتی ہے، اس لیے warning دیتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Merge and unmerge cells in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/merge-and-unmerge-cells-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "merge-cells",
+      "upper-left-cell",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1124-SRC",
+    "pairId": "IBES-Q1124",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which settings can be selected when applying Excel’s Currency number format?",
+    "questionUrdu": "Excel Currency number format میں کون سی settings منتخب کی جا سکتی ہیں؟",
+    "options": [
+      "Decimal places only",
+      "Currency symbol only",
+      "Decimal places and currency symbol",
+      "Neither setting"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Decimal places and currency symbol ہے۔ Currency format decimal places اور currency symbol دونوں منتخب کرنے دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1124; Microsoft Support — Format numbers as currency in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/format-numbers-as-currency-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "currency-format",
+      "keyboard-shortcut"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Replaced the answer-encoding “Both A & B” with the direct combined currency-format settings. Corrected the grammar and linked Microsoft’s Currency-format instructions directly."
+  },
+  {
+    "id": "IBES-Q1124-SIM",
+    "pairId": "IBES-Q1124",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which keyboard shortcut applies the Currency number format in desktop Excel?",
+    "questionUrdu": "desktop Excel میں Currency number format لگانے کا keyboard shortcut کیا ہے؟",
+    "options": [
+      "Ctrl+Shift+$",
+      "Ctrl+Shift+%",
+      "Ctrl+Shift+#",
+      "Ctrl+Shift+@"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ctrl+Shift+$ ہے۔ Ctrl+Shift+$ selected cells پر Currency format apply کرتا ہے؛ دوسرے shortcuts percentage، date یا time formats سے متعلق ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Format numbers as currency in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/format-numbers-as-currency-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "currency-format",
+      "keyboard-shortcut",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1125-SRC",
+    "pairId": "IBES-Q1125",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function changes a vertical range into a horizontal range, or vice versa?",
+    "questionUrdu": "کون سا Excel function vertical range کو horizontal یا horizontal کو vertical بناتا ہے؟",
+    "options": [
+      "HYPERLINK",
+      "INDEX",
+      "TRANSPOSE",
+      "ROWS"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب TRANSPOSE ہے۔ TRANSPOSE rows کو columns اور columns کو rows میں بدل کر array کی orientation تبدیل کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1125; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "transpose",
+      "array-dimensions"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the grammar and used the documented TRANSPOSE array-orientation behavior."
+  },
+  {
+    "id": "IBES-Q1125-SIM",
+    "pairId": "IBES-Q1125",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "If a 2-row by 3-column range is transposed, what are the output dimensions?",
+    "questionUrdu": "اگر 2-row by 3-column range transpose ہو تو output dimensions کیا ہوں گی؟",
+    "options": [
+      "3 rows by 2 columns",
+      "2 rows by 3 columns",
+      "6 rows by 6 columns",
+      "1 row by 6 columns"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 3 rows by 2 columns ہے۔ Transpose row اور column counts بدل دیتا ہے؛ 2×3 input کا output 3×2 ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "transpose",
+      "array-dimensions",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1126-SRC",
+    "pairId": "IBES-Q1126",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel button quickly inserts a SUM formula for an adjacent series of numbers?",
+    "questionUrdu": "adjacent numbers کے لیے SUM formula جلد insert کرنے والا Excel button کون سا ہے؟",
+    "options": [
+      "AutoSum",
+      "Formula Button",
+      "Total Button",
+      "AutoFormat"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب AutoSum ہے۔ AutoSum nearby numeric range detect کر کے SUM formula تجویز اور insert کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1126; Microsoft Support — Use AutoSum in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/use-autosum-to-sum-numbers-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "autosum",
+      "keyboard-shortcut"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Clarified that AutoSum inserts a SUM formula and replaced “None of these.”"
+  },
+  {
+    "id": "IBES-Q1126-SIM",
+    "pairId": "IBES-Q1126",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel keyboard shortcut invokes AutoSum?",
+    "questionUrdu": "Excel میں AutoSum چلانے کا keyboard shortcut کیا ہے؟",
+    "options": [
+      "Alt+=",
+      "Ctrl+=",
+      "Shift+=",
+      "Alt+S"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Alt+= ہے۔ Alt+= active cell میں AutoSum شروع کرتا ہے اور adjacent range کے لیے SUM formula تجویز کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Use AutoSum in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/use-autosum-to-sum-numbers-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "autosum",
+      "keyboard-shortcut",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1127-SRC",
+    "pairId": "IBES-Q1127",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which of the following is a valid Excel worksheet function?",
+    "questionUrdu": "درج options میں valid Excel worksheet function کون سا ہے؟",
+    "options": [
+      "SUM",
+      "TOTALIZE",
+      "MAXIMUMVALUE",
+      "ADDALL"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب SUM ہے۔ SUM built-in function numeric arguments یا ranges کو جمع کرتا ہے؛ باقی names standard built-in functions نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1127; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sumif",
+      "conditional-sum"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "All four source choices—SUM, MAX, MIN, and COS—are valid Excel functions, so the printed key COS was false and the distractors were reconstructed."
+  },
+  {
+    "id": "IBES-Q1127-SIM",
+    "pairId": "IBES-Q1127",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function adds values only when they meet one specified criterion?",
+    "questionUrdu": "کون سا Excel function صرف ایک مقررہ criterion پورا کرنے والی values کو جمع کرتا ہے؟",
+    "options": [
+      "SUMIF",
+      "SUM",
+      "COUNT",
+      "MAX"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب SUMIF ہے۔ SUMIF range پر ایک criterion check کر کے matching values کا sum دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sumif",
+      "conditional-sum",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1128-SRC",
+    "pairId": "IBES-Q1128",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which is not the name of a built-in Excel worksheet function?",
+    "questionUrdu": "درج options میں کون سا built-in Excel worksheet function کا نام نہیں؟",
+    "options": [
+      "MAX",
+      "MIN",
+      "MEAN",
+      "MEDIAN"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب MEAN ہے۔ Excel arithmetic mean کے لیے AVERAGE function استعمال کرتا ہے، MEAN نام کا built-in worksheet function نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1128; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "average",
+      "worksheet-function"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected grammar and capitalization. Excel uses AVERAGE rather than a worksheet function named MEAN."
+  },
+  {
+    "id": "IBES-Q1128-SIM",
+    "pairId": "IBES-Q1128",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function returns the arithmetic mean of its numeric arguments?",
+    "questionUrdu": "کون سا Excel function numeric arguments کا arithmetic mean دیتا ہے؟",
+    "options": [
+      "AVERAGE",
+      "MEAN",
+      "MID",
+      "MODE.TEXT"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب AVERAGE ہے۔ AVERAGE values کا sum ان کی numeric count سے divide کر کے arithmetic mean واپس کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "average",
+      "worksheet-function",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1129-SRC",
+    "pairId": "IBES-Q1129",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function adds numeric values?",
+    "questionUrdu": "کون سا Excel function numeric values کو add کرتا ہے؟",
+    "options": [
+      "ADD",
+      "COUNT",
+      "SUM",
+      "PRODUCT"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب SUM ہے۔ SUM specified numbers، cells یا ranges کی numeric values جمع کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1129; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "product-function",
+      "multiplication"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source phrase “add data” was overly broad. Narrowed to numeric values, which is the documented purpose of SUM. Replaced “None of these” with the genuine PRODUCT function."
+  },
+  {
+    "id": "IBES-Q1129-SIM",
+    "pairId": "IBES-Q1129",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function multiplies all numeric arguments supplied to it?",
+    "questionUrdu": "کون سا Excel function دیے گئے تمام numeric arguments کو multiply کرتا ہے؟",
+    "options": [
+      "PRODUCT",
+      "SUM",
+      "COUNT",
+      "AVERAGE"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب PRODUCT ہے۔ PRODUCT function arguments کو آپس میں ضرب دیتا ہے، جبکہ SUM انہیں جمع کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "product-function",
+      "multiplication",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1130-SRC",
+    "pairId": "IBES-Q1130",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function returns the largest value in a specified set of values?",
+    "questionUrdu": "کون سا Excel function specified set میں سب سے بڑی value دیتا ہے؟",
+    "options": [
+      "MAX",
+      "AVERAGE",
+      "LARGE only with no argument",
+      "MIN"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب MAX ہے۔ MAX اپنے numeric arguments میں highest value واپس کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1130; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "min-function",
+      "minimum"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the grammar, replaced non-function abbreviations AVG/LRG, and removed “None of these.”"
+  },
+  {
+    "id": "IBES-Q1130-SIM",
+    "pairId": "IBES-Q1130",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function returns the smallest numeric value in a range?",
+    "questionUrdu": "کون سا Excel function range میں سب سے چھوٹی numeric value واپس کرتا ہے؟",
+    "options": [
+      "MIN",
+      "MAX",
+      "MEDIAN",
+      "MODE.SNGL"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب MIN ہے۔ MIN supplied numbers یا range میں minimum value دیتا ہے؛ MAX اس کے برعکس maximum دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "min-function",
+      "minimum",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1132-SRC",
+    "pairId": "IBES-Q1132",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which is not the name of an Excel worksheet function?",
+    "questionUrdu": "درج options میں کون سا Excel worksheet function کا نام نہیں؟",
+    "options": [
+      "SUM",
+      "MAX",
+      "MIN",
+      "AVG"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب AVG ہے۔ AVG built-in Excel function نہیں؛ arithmetic mean کے لیے AVERAGE استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1132; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "name-error",
+      "invalid-function"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Minor wording and capitalization repair. Excel uses AVERAGE, not a worksheet function named AVG."
+  },
+  {
+    "id": "IBES-Q1132-SIM",
+    "pairId": "IBES-Q1132",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What error will Excel normally show if `=AVG(A1:A3)` uses the unrecognized function name AVG?",
+    "questionUrdu": "اگر `=AVG(A1:A3)` میں unrecognized function name AVG استعمال ہو تو Excel عموماً کون سا error دکھائے گا؟",
+    "options": [
+      "#NAME?",
+      "#DIV/0!",
+      "#REF!",
+      "#NUM!"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب #NAME? ہے۔ Excel نامعلوم function یا defined name کو recognize نہ کرے تو #NAME? error دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "name-error",
+      "invalid-function",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1133-SRC",
+    "pairId": "IBES-Q1133",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In an Excel chart, what is a data series?",
+    "questionUrdu": "Excel chart میں data series کیا ہوتی ہے؟",
+    "options": [
+      "A related set of data points plotted in the chart",
+      "A collection of formulas only",
+      "Workbook metadata",
+      "The chart title"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A related set of data points plotted in the chart ہے۔ Data series related data points کا set ہے جو chart میں ایک ہی visual pattern یا legend entry کے تحت plot ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1133; Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "data-point",
+      "charts"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source answer “Collection of Series data” was circular and imprecise. Reconstructed using Microsoft’s chart terminology."
+  },
+  {
+    "id": "IBES-Q1133-SIM",
+    "pairId": "IBES-Q1133",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is one individual plotted value in an Excel chart called?",
+    "questionUrdu": "Excel chart میں ایک individual plotted value کو کیا کہتے ہیں؟",
+    "options": [
+      "Data point",
+      "Workbook field",
+      "Formula bar",
+      "Print title"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Data point ہے۔ Data point series کی ایک individual value ہے؛ کئی related data points مل کر data series بناتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "data-point",
+      "charts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1134-SRC",
+    "pairId": "IBES-Q1134",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which chart displays a frequency distribution using adjacent rectangular bins for numeric intervals?",
+    "questionUrdu": "numeric intervals کی frequency distribution adjacent rectangular bins سے دکھانے والا chart کون سا ہے؟",
+    "options": [
+      "Pictograph",
+      "Histogram",
+      "Pie Chart",
+      "Bar Chart"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Histogram ہے۔ Histogram continuous numeric data کو intervals یا bins میں group کر کے ان کی frequencies دکھاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1134; Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "histogram",
+      "bins"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Shortened the textbook definition and added adjacent bins/numeric intervals to distinguish a histogram from an ordinary bar chart."
+  },
+  {
+    "id": "IBES-Q1134-SIM",
+    "pairId": "IBES-Q1134",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In a histogram, what does each bin represent?",
+    "questionUrdu": "histogram میں ہر bin کیا represent کرتا ہے؟",
+    "options": [
+      "A numeric interval used to group observations",
+      "A worksheet password",
+      "A separate workbook",
+      "A text-only paragraph"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A numeric interval used to group observations ہے۔ ہر bin values کا interval ہے؛ bar کی height اس interval میں آنے والے observations کی frequency دکھاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "histogram",
+      "bins",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1136-SRC",
+    "pairId": "IBES-Q1136",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel feature summarizes and analyzes source data in an interactive report?",
+    "questionUrdu": "source data کو interactive report میں summarize اور analyze کرنے والی Excel feature کون سی ہے؟",
+    "options": [
+      "Pivot Chart",
+      "Pivot Filter",
+      "Pivot Table",
+      "Pivot Field"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Pivot Table ہے۔ PivotTable fields کو rows، columns، values اور filters میں arrange کر کے large data summarize کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1136; Microsoft Support — Overview of PivotTables and PivotCharts",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/overview-of-pivottables-and-pivotcharts",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "pivottable",
+      "slicer"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Removed the vague “present data” wording; PivotTable is Microsoft’s documented interactive summary/report feature."
+  },
+  {
+    "id": "IBES-Q1136-SIM",
+    "pairId": "IBES-Q1136",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which visual control can filter a PivotTable by clicking labeled buttons?",
+    "questionUrdu": "کون سا visual control labeled buttons پر click کر کے PivotTable filter کر سکتا ہے؟",
+    "options": [
+      "Slicer",
+      "Formula bar",
+      "Name Box",
+      "Page break"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Slicer ہے۔ Slicer field items کے clickable buttons دیتی ہے اور current filtering state بھی واضح دکھاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of PivotTables and PivotCharts",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/overview-of-pivottables-and-pivotcharts",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "pivottable",
+      "slicer",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1137-SRC",
+    "pairId": "IBES-Q1137",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Before creating a PivotChart, what should you do with the source data?",
+    "questionUrdu": "PivotChart بنانے سے پہلے source data کے ساتھ کیا کرنا چاہیے؟",
+    "options": [
+      "Insert an empty chart first",
+      "Organize the source data in columns with headers",
+      "Format every cell as currency",
+      "Delete all field names"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Organize the source data in columns with headers ہے۔ Source data کو consistent columns میں organize کرنا اور ہر column کو unique header دینا PivotTable/PivotChart field recognition بہتر بناتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1137; Microsoft Support — Overview of PivotTables and PivotCharts",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/overview-of-pivottables-and-pivotcharts",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "pivot-source-data",
+      "data-layout"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source’s “first step” was workflow-dependent. Reframed around Microsoft’s prerequisite that source data be organized in columns with headers."
+  },
+  {
+    "id": "IBES-Q1137-SIM",
+    "pairId": "IBES-Q1137",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which source-data layout should be avoided before creating a PivotTable?",
+    "questionUrdu": "PivotTable بنانے سے پہلے source data میں کون سا layout avoid کرنا چاہیے؟",
+    "options": [
+      "Blank rows and blank columns inside the data",
+      "One header for each column",
+      "Consistent data types within a column",
+      "A tabular list"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Blank rows and blank columns inside the data ہے۔ Blank internal rows یا columns source range توڑ سکتی ہیں؛ clean contiguous table زیادہ قابلِ اعتماد analysis دیتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of PivotTables and PivotCharts",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/overview-of-pivottables-and-pivotcharts",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "pivot-source-data",
+      "data-layout",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1138-SRC",
+    "pairId": "IBES-Q1138",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which chart is suitable for comparing the 2016 values of two employees side by side?",
+    "questionUrdu": "دو employees کی 2016 values side by side compare کرنے کے لیے کون سا chart مناسب ہے؟",
+    "options": [
+      "Pivot Chart",
+      "Pie Chart",
+      "Line Chart",
+      "Column Chart"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Column Chart ہے۔ Column chart categories کے درمیان values کو vertical columns کی height سے compare کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1138; Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "line-chart",
+      "time-trend"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Added “side by side” and “values” to remove the subjective wording and identify a column chart as the comparison chart."
+  },
+  {
+    "id": "IBES-Q1138-SIM",
+    "pairId": "IBES-Q1138",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which chart type is generally best for showing a trend across successive time periods?",
+    "questionUrdu": "مسلسل time periods کے دوران trend دکھانے کے لیے عموماً کون سا chart بہتر ہے؟",
+    "options": [
+      "Line chart",
+      "Pie chart",
+      "Doughnut chart",
+      "Radar chart"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Line chart ہے۔ Line chart ordered time points کو lines سے جوڑتا ہے، اس لیے rise، fall اور trend واضح ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "line-chart",
+      "time-trend",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1139-SRC",
+    "pairId": "IBES-Q1139",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Ribbon path inserts a new embedded Word document object into an Excel worksheet?",
+    "questionUrdu": "Excel worksheet میں نیا embedded Word document object insert کرنے کا Ribbon path کیا ہے؟",
+    "options": [
+      "Insert > Text > Object",
+      "Data > Queries & Connections",
+      "Home > Format Painter",
+      "Review > Protect Sheet"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Insert > Text > Object ہے۔ Insert > Text > Object سے Word document کو worksheet کے اندر embedded OLE object کے طور پر بنایا جا سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1139; Microsoft Support — Linked objects and embedded objects",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/linked-objects-and-embedded-objects",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "embedded-object",
+      "ole"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source used the obsolete Insert menu and malformed toolbar distractors. Reconstructed with the current Object command and an embedding-specific source."
+  },
+  {
+    "id": "IBES-Q1139-SIM",
+    "pairId": "IBES-Q1139",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Where is the data for an embedded object stored?",
+    "questionUrdu": "embedded object کا data کہاں محفوظ ہوتا ہے؟",
+    "options": [
+      "Inside the destination file",
+      "Only in an external source file",
+      "Only in the printer queue",
+      "Inside the Windows clipboard forever"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Inside the destination file ہے۔ Embedded object کی copy destination document یا workbook میں شامل ہوتی ہے، اس لیے اسے دیکھنے کے لیے original source file link لازمی نہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Linked objects and embedded objects",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/linked-objects-and-embedded-objects",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "embedded-object",
+      "ole",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1140-SRC",
+    "pairId": "IBES-Q1140",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which command is available on Excel’s Insert tab?",
+    "questionUrdu": "Excel کی Insert tab پر کون سی command دستیاب ہے؟",
+    "options": [
+      "Charts",
+      "Alignment",
+      "Cell Styles",
+      "Conditional Formatting"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Charts ہے۔ Charts commands Insert tab پر ہوتی ہیں؛ Alignment، Cell Styles اور Conditional Formatting Home tab سے متعلق ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1140; Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sparkline",
+      "insert-tab"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the grammar and removed “All of these.” Alignment, Cell Styles, and Conditional Formatting are Home-tab groups/commands, while Charts is on Insert."
+  },
+  {
+    "id": "IBES-Q1140-SIM",
+    "pairId": "IBES-Q1140",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel feature places a small chart inside a single worksheet cell?",
+    "questionUrdu": "کون سی Excel feature ایک چھوٹا chart ایک ہی worksheet cell کے اندر دکھاتی ہے؟",
+    "options": [
+      "Sparkline",
+      "PivotTable",
+      "WordArt",
+      "Page Break"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sparkline ہے۔ Sparkline ایک compact in-cell chart ہے جو row یا column کے trend کو cell کے اندر دکھاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sparkline",
+      "insert-tab",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1141-SRC",
+    "pairId": "IBES-Q1141",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In a standard Excel column chart, where are category labels normally displayed?",
+    "questionUrdu": "standard Excel column chart میں category labels عموماً کہاں دکھائی جاتی ہیں؟",
+    "options": [
+      "A chart plot area",
+      "A horizontal axis",
+      "The organization of the individual values with a chart's data series",
+      "The data range that supply chart data"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب A horizontal axis ہے۔ Column chart categories horizontal axis پر اور numeric scale عموماً vertical axis پر دکھاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1141; Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "vertical-axis",
+      "column-chart"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source used obsolete Chart Wizard terminology and an awkward definition. Reconstructed around the category (horizontal) axis. Added column-chart scope because bar charts place categories on the vertical axis."
+  },
+  {
+    "id": "IBES-Q1141-SIM",
+    "pairId": "IBES-Q1141",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In a standard column chart, which axis normally shows the numeric value scale?",
+    "questionUrdu": "standard column chart میں numeric value scale عموماً کون سی axis دکھاتی ہے؟",
+    "options": [
+      "Vertical axis",
+      "Horizontal axis",
+      "Chart title",
+      "Legend only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Vertical axis ہے۔ Column heights vertical value scale کے مقابل ناپی جاتی ہیں؛ categories horizontal axis پر ہوتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "vertical-axis",
+      "column-chart",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1142-SRC",
+    "pairId": "IBES-Q1142",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Where can an Excel chart be placed?",
+    "questionUrdu": "Excel chart کہاں رکھا جا سکتا ہے؟",
+    "options": [
+      "On a new chart sheet or embedded in a worksheet",
+      "Only on a new chart sheet",
+      "Only on a blank worksheet",
+      "Only outside the workbook"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب On a new chart sheet or embedded in a worksheet ہے۔ Chart worksheet کے اندر embedded object یا الگ chart sheet پر رکھا جا سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1142; Microsoft Support — Move a chart to a chart sheet in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/move-or-resize-a-chart",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "move-chart",
+      "chart-placement"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source used obsolete Chart Wizard wording. Reconstructed around the supported chart-sheet and embedded-chart placement choices."
+  },
+  {
+    "id": "IBES-Q1142-SIM",
+    "pairId": "IBES-Q1142",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel command transfers an existing embedded chart to its own chart sheet?",
+    "questionUrdu": "کون سی Excel command موجودہ embedded chart کو اس کی اپنی chart sheet پر منتقل کرتی ہے؟",
+    "options": [
+      "Move Chart",
+      "Text to Columns",
+      "Goal Seek",
+      "Consolidate"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Move Chart ہے۔ Move Chart dialog chart کو New sheet پر منتقل یا کسی existing worksheet میں embed کرنے دیتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Move a chart to a chart sheet in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/move-or-resize-a-chart",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "move-chart",
+      "chart-placement",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1143-SRC",
+    "pairId": "IBES-Q1143",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What general term does Excel use for a graphical representation of worksheet data?",
+    "questionUrdu": "worksheet data کی graphical representation کے لیے Excel کی عمومی اصطلاح کیا ہے؟",
+    "options": [
+      "Chart",
+      "Formula",
+      "Filter",
+      "Query"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Chart ہے۔ Excel data کو bars، lines، slices یا دوسرے graphical forms میں دکھانے والی object کو chart کہتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1143; Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "chart-legend",
+      "data-series"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked for the general term but offered only specific chart types and keyed Bar Chart. Reconstructed with “Chart” as the unique general answer."
+  },
+  {
+    "id": "IBES-Q1143-SIM",
+    "pairId": "IBES-Q1143",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which chart element identifies data series by their colors or symbols?",
+    "questionUrdu": "کون سا chart element data series کو ان کے colors یا symbols سے identify کرتا ہے؟",
+    "options": [
+      "Legend",
+      "Formula bar",
+      "Status bar",
+      "Name Box"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Legend ہے۔ Legend ہر plotted series کے visual color، line یا marker کو اس کے name سے ملاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "chart-legend",
+      "data-series",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1144-SRC",
+    "pairId": "IBES-Q1144",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which chart displays values as slices of a circle?",
+    "questionUrdu": "values کو circle کے slices کی صورت میں دکھانے والا chart کون سا ہے؟",
+    "options": [
+      "Line chart",
+      "Bar chart",
+      "Pie chart",
+      "Scatter chart"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Pie chart ہے۔ Pie chart ایک data series کے values کو whole کے proportional slices کے طور پر دکھاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1144; Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "pie-chart",
+      "proportion"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source described a pie-shaped graph but keyed Scatter plot, which is incorrect. Reconstructed as the standard definition of a pie chart."
+  },
+  {
+    "id": "IBES-Q1144-SIM",
+    "pairId": "IBES-Q1144",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "A pie chart is most appropriate for showing what relationship?",
+    "questionUrdu": "pie chart کس relationship کو دکھانے کے لیے سب سے مناسب ہے؟",
+    "options": [
+      "Parts of one whole",
+      "Detailed trends over hundreds of dates",
+      "Correlation between two numeric variables",
+      "Several independent worksheets"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Parts of one whole ہے۔ Pie slices ایک total کے proportions دکھاتی ہیں؛ بہت زیادہ categories یا time-series trend کے لیے یہ مناسب نہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Available chart types in Office",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/available-chart-types-in-office-a6187218-807e-4103-9e0a-27cdb19afb90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "pie-chart",
+      "proportion",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1147-SRC",
+    "pairId": "IBES-Q1147",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In desktop Excel 2016, on which Ribbon tab is the Print Titles command located?",
+    "questionUrdu": "desktop Excel 2016 میں Print Titles command کس Ribbon tab پر ہے؟",
+    "options": [
+      "Review",
+      "View",
+      "Insert",
+      "Page Layout"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Page Layout ہے۔ Print Titles، Page Layout tab کے Page Setup group میں ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1147; Microsoft Support — Excel Page Setup",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/page-setup",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "print-titles",
+      "repeating-rows"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Changed “menu” to Ribbon tab and linked Excel Page Setup documentation."
+  },
+  {
+    "id": "IBES-Q1147-SIM",
+    "pairId": "IBES-Q1147",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Page Setup setting repeats selected header rows at the top of every printed page?",
+    "questionUrdu": "کون سی Page Setup setting selected header rows کو ہر printed page کے اوپر repeat کرتی ہے؟",
+    "options": [
+      "Rows to repeat at top",
+      "Print Area",
+      "Page Order",
+      "Black and white"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Rows to repeat at top ہے۔ Print Titles dialog میں Rows to repeat at top field header row reference رکھتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel Page Setup",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/page-setup",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "print-titles",
+      "repeating-rows",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1148-SRC",
+    "pairId": "IBES-Q1148",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In desktop Excel 2016, which Ribbon tab contains the Print Area command?",
+    "questionUrdu": "desktop Excel 2016 میں Print Area command کون سی Ribbon tab پر ہے؟",
+    "options": [
+      "Insert",
+      "Page Layout",
+      "Data",
+      "Review"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Page Layout ہے۔ Print Area، Page Layout tab کے Page Setup group میں ملتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1148; Microsoft Support — Excel Page Setup",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/page-setup",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "print-area",
+      "page-layout"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Replaced “which option” with the precise Print Area command and linked Page Setup documentation."
+  },
+  {
+    "id": "IBES-Q1148-SIM",
+    "pairId": "IBES-Q1148",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Set Print Area do in Excel?",
+    "questionUrdu": "Excel میں Set Print Area کیا کرتی ہے؟",
+    "options": [
+      "Limits printing to the selected worksheet range",
+      "Deletes cells outside the selection",
+      "Protects the workbook with a password",
+      "Changes every formula to values"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Limits printing to the selected worksheet range ہے۔ Set Print Area selected cells کو وہ range بناتی ہے جو worksheet print کرتے وقت شامل ہوگی؛ باقی cells delete نہیں ہوتے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel Page Setup",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/page-setup",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "print-area",
+      "page-layout",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1149-SRC",
+    "pairId": "IBES-Q1149",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "How many page-orientation choices does desktop Excel provide?",
+    "questionUrdu": "desktop Excel کتنی page-orientation choices دیتا ہے؟",
+    "options": [
+      "Two: Portrait and Landscape",
+      "Three",
+      "Four",
+      "Five"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Two: Portrait and Landscape ہے۔ Excel دو standard choices دیتا ہے: Portrait اور Landscape۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1149; Microsoft Support — Excel Page Setup",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/page-setup",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "portrait",
+      "page-orientation"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked only for a count and used “None of these.” The two documented choices are now named explicitly."
+  },
+  {
+    "id": "IBES-Q1149-SIM",
+    "pairId": "IBES-Q1149",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which page orientation is normally taller than it is wide?",
+    "questionUrdu": "کون سی page orientation عموماً width سے زیادہ height رکھتی ہے؟",
+    "options": [
+      "Portrait",
+      "Landscape",
+      "Square",
+      "Panoramic"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Portrait ہے۔ Portrait page عمودی orientation رکھتا ہے؛ Landscape page horizontally wider ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel Page Setup",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/page-setup",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "portrait",
+      "page-orientation",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1150-SRC",
+    "pairId": "IBES-Q1150",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which page orientation generally fits more worksheet columns across one printed page?",
+    "questionUrdu": "کون سی page orientation ایک printed page پر زیادہ worksheet columns fit کرنے میں عموماً مدد دیتی ہے؟",
+    "options": [
+      "Portrait",
+      "Landscape",
+      "Either always fits exactly the same number",
+      "Orientation does not affect page width"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Landscape ہے۔ Landscape page کو horizontally wide کرتی ہے، اس لیے wide worksheet کے زیادہ columns ایک page پر fit ہو سکتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1150; Microsoft Support — Excel Page Setup",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/page-setup",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "landscape",
+      "page-layout"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Replaced “Both” and “None” answer-encoding choices and changed subjective “best” to the specific wider-page effect."
+  },
+  {
+    "id": "IBES-Q1150-SIM",
+    "pairId": "IBES-Q1150",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What physical change does Landscape orientation make to the printed page layout?",
+    "questionUrdu": "Landscape orientation printed page layout میں کیا physical تبدیلی کرتی ہے؟",
+    "options": [
+      "It makes the page wider than it is tall",
+      "It makes the page taller than it is wide",
+      "It removes all margins",
+      "It changes cells into charts"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب It makes the page wider than it is tall ہے۔ Landscape orientation page کو horizontal direction میں گھماتی ہے، جس سے available width height سے زیادہ ہو جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel Page Setup",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/page-setup",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "landscape",
+      "page-layout",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1151-SRC",
+    "pairId": "IBES-Q1151",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which items can an Excel formula contain?",
+    "questionUrdu": "Excel formula میں کون سی items شامل ہو سکتی ہیں؟",
+    "options": [
+      "Only text labels",
+      "Only numeric constants",
+      "Numeric constants and cell references",
+      "Neither constants nor references"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Numeric constants and cell references ہے۔ Formula numeric constants اور cell references دونوں رکھ سکتی ہے، اور انہیں operators یا functions سے combine کر سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1151; Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "exponentiation",
+      "formula-operator"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source’s “Label” terminology made the answer misleading. Formulas can combine numeric constants and cell references, so the choices were repaired."
+  },
+  {
+    "id": "IBES-Q1151-SIM",
+    "pairId": "IBES-Q1151",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel arithmetic operator raises a number to a power?",
+    "questionUrdu": "کون سا Excel arithmetic operator کسی number کو power تک raise کرتا ہے؟",
+    "options": [
+      "Caret (^)",
+      "Ampersand (&)",
+      "Slash (/)",
+      "Percent sign (%)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Caret (^) ہے۔ Excel formulas میں caret exponentiation operator ہے؛ مثلاً `=3^2` کا result 9 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "exponentiation",
+      "formula-operator",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1152-SRC",
+    "pairId": "IBES-Q1152",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Before typing an Excel formula, which cell should you select?",
+    "questionUrdu": "Excel formula لکھنے سے پہلے کون سا cell select کرنا چاہیے؟",
+    "options": [
+      "The cell where the formula result should appear",
+      "Any hidden cell",
+      "Only cell A1",
+      "A worksheet tab"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The cell where the formula result should appear ہے۔ وہ cell select کیا جاتا ہے جہاں calculated result دکھانا مقصود ہو؛ formula اسی active cell میں enter ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1152; Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "formula-result",
+      "active-cell"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked for the “first” formula step but also listed a later equals-sign step, making sequence interpretation awkward. Narrowed to selecting the destination cell."
+  },
+  {
+    "id": "IBES-Q1152-SIM",
+    "pairId": "IBES-Q1152",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "If C4 is selected before `=A4+B4` is entered, which cell displays the calculated result?",
+    "questionUrdu": "اگر `=A4+B4` enter کرنے سے پہلے C4 selected ہو تو calculated result کس cell میں دکھے گا؟",
+    "options": [
+      "C4",
+      "A4",
+      "B4",
+      "A1"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب C4 ہے۔ Formula selected active cell میں محفوظ ہوتی ہے؛ referenced cells A4 اور B4 inputs ہیں، result C4 میں آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "formula-result",
+      "active-cell",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1153-SRC",
+    "pairId": "IBES-Q1153",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which leading character makes Excel treat a numeric-looking entry as text?",
+    "questionUrdu": "کون سا leading character numeric-looking entry کو Excel میں text بناتا ہے؟",
+    "options": [
+      "Hash (#)",
+      "Equal sign (=)",
+      "Apostrophe (')",
+      "Tilde (~)"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Apostrophe (') ہے۔ Leading apostrophe Excel کو entry literal text کے طور پر محفوظ کرنے کا اشارہ دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1153; Microsoft Support — Enter numbers as text or fractions in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/stop-automatically-changing-numbers-to-dates",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "leading-zeros",
+      "text-format"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source called the result a “label,” which is legacy terminology. Microsoft documents that a leading apostrophe stores the entry as text."
+  },
+  {
+    "id": "IBES-Q1153-SIM",
+    "pairId": "IBES-Q1153",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which preparation helps preserve leading zeros in an identifier such as `00123` before it is entered?",
+    "questionUrdu": "`00123` جیسے identifier کے leading zeros محفوظ رکھنے کے لیے entry سے پہلے کیا کرنا چاہیے؟",
+    "options": [
+      "Format the cell as Text",
+      "Format the cell as Percentage",
+      "Apply AutoSum",
+      "Merge the cell"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Format the cell as Text ہے۔ Text format Excel کو identifier کو number میں convert کرنے اور leading zeros ہٹانے سے روکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Enter numbers as text or fractions in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/stop-automatically-changing-numbers-to-dates",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "leading-zeros",
+      "text-format",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1154-SRC",
+    "pairId": "IBES-Q1154",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which entry will Excel not calculate as a formula because it lacks the initial equals sign?",
+    "questionUrdu": "کون سی entry initial equals sign نہ ہونے کی وجہ سے Excel formula کے طور پر calculate نہیں ہوگی؟",
+    "options": [
+      "SUM(Sales)-A3",
+      "=SUM(A1:A5)*-5",
+      "=SUM(A1:A5)/(10+10)",
+      "=SUM(A1:A5)-10"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب SUM(Sales)-A3 ہے۔ `SUM(Sales)-A3` equals sign کے بغیر literal text یا name-like entry رہتی ہے؛ formula کو `=` سے شروع ہونا چاہیے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1154; Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sum-formula",
+      "subtraction"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source formula in option A was visually uncertain but clearly lacked “=”. The stem now states the precise reason it is invalid; the other entries begin with equals signs."
+  },
+  {
+    "id": "IBES-Q1154-SIM",
+    "pairId": "IBES-Q1154",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does the formula `=SUM(A1:A5)-10` calculate?",
+    "questionUrdu": "formula `=SUM(A1:A5)-10` کیا calculate کرتی ہے؟",
+    "options": [
+      "The sum of A1:A5 minus 10",
+      "Only cell A5 minus 10",
+      "Ten times the sum",
+      "The text SUM(A1:A5)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The sum of A1:A5 minus 10 ہے۔ SUM پہلے A1 سے A5 تک values جمع کرتا ہے، پھر subtraction operator result سے 10 کم کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sum-formula",
+      "subtraction",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1155-SRC",
+    "pairId": "IBES-Q1155",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function calculates a periodic loan payment from a constant interest rate and payment schedule?",
+    "questionUrdu": "constant interest rate اور payment schedule والے loan کی periodic payment کون سا Excel function calculate کرتا ہے؟",
+    "options": [
+      "PMT",
+      "GMT",
+      "PST",
+      "RATEONLY"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب PMT ہے۔ PMT constant rate، number of periods اور present value کی بنیاد پر periodic payment دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1155; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "pmt",
+      "financial-function"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Changed “formula” to function, stated the documented PMT purpose, and replaced “None of these.”"
+  },
+  {
+    "id": "IBES-Q1155-SIM",
+    "pairId": "IBES-Q1155",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In the Excel PMT function, what does the `nper` argument represent?",
+    "questionUrdu": "Excel کے PMT function میں `nper` argument کیا ظاہر کرتا ہے؟",
+    "options": [
+      "The total number of payment periods",
+      "The payment made each period",
+      "The future value only",
+      "The annual text label"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The total number of payment periods ہے۔ `nper` loan یا annuity کے پورے payment periods کی تعداد ہے؛ مثلاً پانچ سال کے monthly loan کے لیے 60۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "pmt",
+      "financial-function",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1156-SRC",
+    "pairId": "IBES-Q1156",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is a nested Excel function?",
+    "questionUrdu": "nested Excel function کیا ہوتی ہے؟",
+    "options": [
+      "A function stored in another workbook",
+      "A function used as an argument inside another function",
+      "A function next to another cell",
+      "A function with no arguments"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب A function used as an argument inside another function ہے۔ Nested formula میں ایک function دوسرے function کے argument کے طور پر استعمال ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1156; Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "nested-function",
+      "evaluation-order"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source definition was vague and used “None of these.” Reconstructed using the standard function-within-function relationship."
+  },
+  {
+    "id": "IBES-Q1156-SIM",
+    "pairId": "IBES-Q1156",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In a nested Excel formula, which function is evaluated first?",
+    "questionUrdu": "nested Excel formula میں کون سا function پہلے evaluate ہوتا ہے؟",
+    "options": [
+      "The innermost function",
+      "The outermost function",
+      "Every function only after printing",
+      "No function is evaluated"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The innermost function ہے۔ Excel inner function کا result پہلے نکالتا ہے، پھر اسے outer function کے argument کے طور پر استعمال کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "nested-function",
+      "evaluation-order",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1157-SRC",
+    "pairId": "IBES-Q1157",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel dialog helps you choose a function and enter its arguments in a formula?",
+    "questionUrdu": "کون سا Excel dialog function منتخب کرنے اور formula arguments enter کرنے میں مدد دیتا ہے؟",
+    "options": [
+      "Insert Function dialog",
+      "Format Cells dialog",
+      "Page Setup dialog",
+      "Sort dialog"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Insert Function dialog ہے۔ Insert Function dialog functions search/select کرنے اور required arguments بھرنے کا interface دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1157; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "insert-function",
+      "fx-button"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The legacy “formula palette” terminology is not used in current Excel. Reconstructed around the supported Insert Function dialog."
+  },
+  {
+    "id": "IBES-Q1157-SIM",
+    "pairId": "IBES-Q1157",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which button beside the Formula Bar opens Excel's Insert Function dialog?",
+    "questionUrdu": "Formula Bar کے ساتھ کون سا button Excel کا Insert Function dialog کھولتا ہے؟",
+    "options": [
+      "fx",
+      "Σ only",
+      "%",
+      "$"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب fx ہے۔ fx button Insert Function dialog کھولتا ہے، جہاں function اور اس کے arguments منتخب کیے جا سکتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "insert-function",
+      "fx-button",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1158-SRC",
+    "pairId": "IBES-Q1158",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What kind of function summarizes many values into one result, as SUM or AVERAGE does?",
+    "questionUrdu": "SUM یا AVERAGE کی طرح بہت سی values کو ایک result میں summarize کرنے والا function کیا کہلاتا ہے؟",
+    "options": [
+      "Format row",
+      "Criteria row",
+      "Aggregate function",
+      "Layout format"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Aggregate function ہے۔ Aggregate function متعدد input values پر summary calculation کر کے ایک نتیجہ دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1158; Microsoft Learn — Aggregate functions",
+      "referenceUrl": "https://learn.microsoft.com/en-us/windows/win32/search/-search-sql-aggregates",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "aggregate-function",
+      "summary-calculation"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source mixed database-query wording with Excel. The stem was repaired to define an aggregate function clearly. Re-linked to Microsoft Learn’s direct definition of an aggregate function as operating on a set of values and returning one value."
+  },
+  {
+    "id": "IBES-Q1158-SIM",
+    "pairId": "IBES-Q1158",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which statement best describes an aggregate calculation?",
+    "questionUrdu": "aggregate calculation کی بہترین وضاحت کون سی ہے؟",
+    "options": [
+      "It reduces multiple input values to a summary result",
+      "It renames every worksheet",
+      "It draws only page borders",
+      "It converts a workbook into a video"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب It reduces multiple input values to a summary result ہے۔ SUM، COUNT اور AVERAGE بہت سی rows یا values سے total، count یا mean جیسا summary result بناتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Learn — Aggregate functions",
+      "referenceUrl": "https://learn.microsoft.com/en-us/windows/win32/search/-search-sql-aggregates",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "aggregate-function",
+      "summary-calculation",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1159-SRC",
+    "pairId": "IBES-Q1159",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is =2010/58 rounded to three decimal places?",
+    "questionUrdu": "=2010/58 کو تین decimal places تک round کرنے پر کیا result آتا ہے؟",
+    "options": [
+      "34.655",
+      "6.250",
+      "320.000",
+      "232.000"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 34.655 ہے۔ 2010 کو 58 سے divide کرنے پر 34.655172... آتا ہے، جو تین decimals تک 34.655 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1159; Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "round-function",
+      "decimal-places"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The exact Excel result is approximately 34.6551724; the source option 34.655 was only a rounded value. Added the three-decimal-place scope."
+  },
+  {
+    "id": "IBES-Q1159-SIM",
+    "pairId": "IBES-Q1159",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does `=ROUND(12.3456,2)` return in Excel?",
+    "questionUrdu": "Excel میں `=ROUND(12.3456,2)` کیا result دیتی ہے؟",
+    "options": [
+      "12.35",
+      "12.34",
+      "12.346",
+      "1234.56"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 12.35 ہے۔ ROUND دوسری argument کے مطابق دو decimal places رکھتا ہے؛ تیسرا decimal 5 ہونے سے 12.34 بڑھ کر 12.35 ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "round-function",
+      "decimal-places",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1160-SRC",
+    "pairId": "IBES-Q1160",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Excel’s Undo command normally do?",
+    "questionUrdu": "Excel کی Undo command عموماً کیا کرتی ہے؟",
+    "options": [
+      "Repeats the last action",
+      "Reverses the most recent reversible change",
+      "Permanently locks the workbook",
+      "Recalculates every formula"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Reverses the most recent reversible change ہے۔ Undo most recent reversible change کو واپس کرتی ہے؛ کچھ actions undo نہیں ہو سکتے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1160; Microsoft Support — Undo, redo, or repeat an action",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/foundations-experiences/undo-redo-or-repeat-an-action",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "undo-list",
+      "multiple-actions"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source stem and one-word choices were malformed. Reconstructed using the documented purpose of Undo."
+  },
+  {
+    "id": "IBES-Q1160-SIM",
+    "pairId": "IBES-Q1160",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does selecting several entries from the Undo list allow an Excel user to do?",
+    "questionUrdu": "Undo list سے کئی entries select کرنے سے Excel user کیا کر سکتا ہے؟",
+    "options": [
+      "Reverse several recent actions together",
+      "Delete every worksheet permanently",
+      "Convert formulas to charts",
+      "Protect the workbook with a password"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Reverse several recent actions together ہے۔ Undo drop-down recent reversible actions کی history دکھاتی ہے اور selected point تک متعدد actions ایک ساتھ واپس کیے جا سکتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Undo, redo, or repeat an action",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/foundations-experiences/undo-redo-or-repeat-an-action",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "undo-list",
+      "multiple-actions",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1161-SRC",
+    "pairId": "IBES-Q1161",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function counts cells containing numbers in a range?",
+    "questionUrdu": "range میں numbers رکھنے والے cells count کرنے والا Excel function کون سا ہے؟",
+    "options": [
+      "TOTAL",
+      "ADD",
+      "COUNT",
+      "SUM"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب COUNT ہے۔ COUNT numeric entries اور dates جیسے stored numbers والے cells شمار کرتا ہے؛ text-only cells شمار نہیں ہوتے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1161; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "counta",
+      "count-functions"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Changed “keyword” and vague “number of values” to the documented COUNT behavior: counting numeric cells."
+  },
+  {
+    "id": "IBES-Q1161-SIM",
+    "pairId": "IBES-Q1161",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function counts nonblank cells, including cells containing text?",
+    "questionUrdu": "کون سا Excel function text سمیت تمام nonblank cells count کرتا ہے؟",
+    "options": [
+      "COUNTA",
+      "COUNT",
+      "SUM",
+      "PRODUCT"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب COUNTA ہے۔ COUNTA range میں empty نہ ہونے والے cells count کرتا ہے، جبکہ COUNT صرف numeric cells شمار کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "counta",
+      "count-functions",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1163-SRC",
+    "pairId": "IBES-Q1163",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which actions can make a different cell active in an Excel worksheet?",
+    "questionUrdu": "کون سے actions Excel worksheet میں دوسرے cell کو active بنا سکتے ہیں؟",
+    "options": [
+      "Press Tab",
+      "Click the cell",
+      "Use an arrow key",
+      "Press Tab, click the cell, or use an arrow key"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Press Tab, click the cell, or use an arrow key ہے۔ Tab، arrow key یا mouse click selection کو دوسرے cell پر لے جا سکتے ہیں؛ اس لیے combined option درست ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1163; Microsoft Support — Basic tasks in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/basic-tasks-in-excel-dc775dd1-fa52-430f-9c3c-d998d1735fca",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "tab-key",
+      "cell-navigation"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Replaced “All of these” with the direct combined methods for making another cell active. Replaced the sentence fragment with a complete question."
+  },
+  {
+    "id": "IBES-Q1163-SIM",
+    "pairId": "IBES-Q1163",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "By default, pressing Tab after completing an Excel cell entry moves the active cell in which direction?",
+    "questionUrdu": "default طور پر Excel cell entry مکمل کرنے کے بعد Tab دبانے سے active cell کس direction میں جاتا ہے؟",
+    "options": [
+      "One cell to the right",
+      "One cell to the left",
+      "One row upward",
+      "To cell A1"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب One cell to the right ہے۔ Normal left-to-right worksheet entry میں Tab selection کو اگلے column یعنی ایک cell دائیں لے جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Basic tasks in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/basic-tasks-in-excel-dc775dd1-fa52-430f-9c3c-d998d1735fca",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "tab-key",
+      "cell-navigation",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1165-SRC",
+    "pairId": "IBES-Q1165",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "How do you begin editing an embedded Excel worksheet object in a Word document?",
+    "questionUrdu": "Word document میں embedded Excel worksheet object edit کرنا کیسے شروع کیا جاتا ہے؟",
+    "options": [
+      "Double-click it, then use Excel commands within Word",
+      "Edit a web hyperlink",
+      "Edit only the original source workbook",
+      "Use Word text commands only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Double-click it, then use Excel commands within Word ہے۔ Embedded worksheet پر double-click کرنے سے Word کے اندر Excel editing commands فعال ہو جاتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1165; Microsoft Support — Linked objects and embedded objects",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/linked-objects-and-embedded-objects",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "embedded-excel",
+      "object-selection"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source’s first option was awkward and its prior generic Excel reference did not directly support embedding. Microsoft states that double-clicking an embedded Excel object starts Excel commands for editing within Word."
+  },
+  {
+    "id": "IBES-Q1165-SIM",
+    "pairId": "IBES-Q1165",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does a single click on an embedded Excel object in Word normally do before editing begins?",
+    "questionUrdu": "Word میں embedded Excel object پر single click عموماً editing شروع ہونے سے پہلے کیا کرتا ہے؟",
+    "options": [
+      "Selects the object for moving or resizing",
+      "Deletes the source workbook",
+      "Opens Print Preview",
+      "Converts it into plain text immediately"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Selects the object for moving or resizing ہے۔ Single click object کو select کر کے sizing handles دکھاتی ہے؛ content editing عموماً double-click سے شروع ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Linked objects and embedded objects",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/linked-objects-and-embedded-objects",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "embedded-excel",
+      "object-selection",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1167-SRC",
+    "pairId": "IBES-Q1167",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "How does Excel internally store a valid date such as July 16, 2016?",
+    "questionUrdu": "Excel valid date، مثلاً July 16, 2016، internally کیسے store کرتا ہے؟",
+    "options": [
+      "As a serial number",
+      "As a formula name",
+      "As a Boolean value",
+      "As an error code"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب As a serial number ہے۔ Excel dates کو serial numbers کے طور پر رکھتا ہے اور date format ان serials کو readable calendar form میں دکھاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1167; Microsoft Support — Format a date in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/format-a-date-the-way-you-want-8e10019e-d5d8-47a1-ba95-db95123d273e",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "date-serial",
+      "consecutive-dates"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source options Number and Value overlapped. Reconstructed around Microsoft’s documented internal date serial number."
+  },
+  {
+    "id": "IBES-Q1167-SIM",
+    "pairId": "IBES-Q1167",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In Excel's date system, what is the usual numeric difference between two consecutive dates?",
+    "questionUrdu": "Excel کے date system میں مسلسل دو dates کے serial numbers کا عام فرق کتنا ہوتا ہے؟",
+    "options": [
+      "1",
+      "7",
+      "24",
+      "100"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 1 ہے۔ Excel date serial میں ہر پورا integer ایک دن represent کرتا ہے، اس لیے اگلے دن کا serial ایک زیادہ ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Format a date in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/format-a-date-the-way-you-want-8e10019e-d5d8-47a1-ba95-db95123d273e",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "date-serial",
+      "consecutive-dates",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1168-SRC",
+    "pairId": "IBES-Q1168",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Excel, what is a worksheet function?",
+    "questionUrdu": "Excel میں worksheet function کیا ہے؟",
+    "options": [
+      "A separate application",
+      "A predefined formula that performs a calculation",
+      "A workbook file format",
+      "A chart style"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب A predefined formula that performs a calculation ہے۔ Worksheet function predefined formula ہے جو supplied arguments پر مخصوص calculation کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1168; Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "function-name",
+      "formula-syntax"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source definition was grammatically malformed and used “None of these.” Reconstructed with Microsoft’s formula/function terminology."
+  },
+  {
+    "id": "IBES-Q1168-SIM",
+    "pairId": "IBES-Q1168",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In the formula `=SUM(A1:A3)`, what is the function name?",
+    "questionUrdu": "formula `=SUM(A1:A3)` میں function name کیا ہے؟",
+    "options": [
+      "SUM",
+      "A1:A3",
+      "Equals sign",
+      "Colon"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب SUM ہے۔ Function name opening parenthesis سے پہلے آتا ہے؛ یہاں SUM function ہے اور A1:A3 اس کا range argument ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "function-name",
+      "formula-syntax",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1169-SRC",
+    "pairId": "IBES-Q1169",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel feature calculates from values and returns a result in a cell?",
+    "questionUrdu": "کون سی Excel feature values سے calculate کر کے cell میں result واپس کرتی ہے؟",
+    "options": [
+      "Formulas",
+      "Formatting",
+      "Filters",
+      "Insertions"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Formulas ہے۔ Formulas constants، references، operators اور functions سے calculations کر کے result دیتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1169; Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "recalculation",
+      "formula-dependency"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Replaced vague “evaluate values” with the documented calculation role of formulas."
+  },
+  {
+    "id": "IBES-Q1169-SIM",
+    "pairId": "IBES-Q1169",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What normally happens to a dependent Excel formula when a referenced cell value changes?",
+    "questionUrdu": "referenced cell کی value بدلنے پر dependent Excel formula کے ساتھ عموماً کیا ہوتا ہے؟",
+    "options": [
+      "It recalculates and updates its result",
+      "It permanently becomes text",
+      "It deletes the referenced cell",
+      "It closes the workbook"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب It recalculates and updates its result ہے۔ Automatic calculation mode میں Excel dependency chain follow کر کے affected formulas دوبارہ calculate کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "recalculation",
+      "formula-dependency",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  }
+]

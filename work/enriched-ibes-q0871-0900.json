@@ -1,0 +1,1766 @@
+[
+  {
+    "id": "IBES-Q0871-SRC",
+    "pairId": "IBES-Q0871",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is Microsoft OneNote primarily used for?",
+    "questionUrdu": "Microsoft OneNote بنیادی طور پر کس کام کے لیے استعمال ہوتی ہے؟",
+    "options": [
+      "Compiling source code",
+      "Managing business accounts",
+      "Web browsing",
+      "Taking and organizing digital notes"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Taking and organizing digital notes ہے۔ OneNote digital notebooks میں notes لکھنے، collect کرنے اور organize کرنے کی application ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q871; Microsoft Support - Introducing OneNote",
+      "referenceUrl": "https://support.microsoft.com/en-US/OneNote/onenote-help-and-learning/introducing-onenote",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-onenote",
+      "sections",
+      "digital-notes"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The real answer was hidden in \"None of these (Notebook).\" It is now stated directly using Microsoft's description."
+  },
+  {
+    "id": "IBES-Q0871-SIM",
+    "pairId": "IBES-Q0871",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which OneNote structure groups related pages within a notebook?",
+    "questionUrdu": "OneNote notebook میں related pages کو کون سا structure group کرتا ہے؟",
+    "options": [
+      "Section",
+      "Worksheet",
+      "Slide Master",
+      "Database query"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Section ہے۔ OneNote notebook sections میں تقسیم ہوتا ہے اور ہر section کے اندر related pages رکھی جاتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Introducing OneNote",
+      "referenceUrl": "https://support.microsoft.com/en-US/OneNote/onenote-help-and-learning/introducing-onenote",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-onenote",
+      "sections",
+      "digital-notes",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0872-SRC",
+    "pairId": "IBES-Q0872",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the primary purpose of Document Inspector in Word?",
+    "questionUrdu": "Word میں Document Inspector کا بنیادی مقصد کیا ہے؟",
+    "options": [
+      "To format text",
+      "To check spelling",
+      "To find and remove hidden data and personal information",
+      "To create charts"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب To find and remove hidden data and personal information ہے۔ Document Inspector hidden metadata، comments، personal information اور دوسری غیر نمایاں content تلاش کر کے remove کرنے میں مدد دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q872; Microsoft Support - Remove hidden data with Document Inspector",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/collab-files/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "document-inspector",
+      "privacy"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0872-SIM",
+    "pairId": "IBES-Q0872",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Why is it wise to inspect a saved copy rather than the only original document?",
+    "questionUrdu": "صرف original document کے بجائے saved copy inspect کرنا کیوں بہتر ہے؟",
+    "options": [
+      "Some hidden-data removals may not be reversible",
+      "Inspection always deletes the operating system",
+      "A copy cannot contain metadata",
+      "The original cannot be opened"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Some hidden-data removals may not be reversible ہے۔ Document Inspector کی بعض removals undo یا آسانی سے restore نہیں ہوتیں، اس لیے original محفوظ رکھنا بہتر ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Remove hidden data with Document Inspector",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/collab-files/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "document-inspector",
+      "privacy",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0873-SRC",
+    "pairId": "IBES-Q0873",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What type of file is created when you make a new Access desktop database?",
+    "questionUrdu": "نئی Access desktop database بنانے پر کس type کی file بنتی ہے؟",
+    "options": [
+      "A worksheet",
+      "A presentation",
+      "A database",
+      "A text document"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب A database ہے۔ Microsoft Access نئی desktop database file بناتی ہے، جس میں tables، queries، forms، reports اور دوسرے database objects رکھے جا سکتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q873; Microsoft Support - Access default file format",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/change-the-default-file-format",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "blank-database",
+      "table"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The default name Database1 is version- and workflow-dependent and OCR rendered it incorrectly. The item was reconstructed around the stable file type."
+  },
+  {
+    "id": "IBES-Q0873-SIM",
+    "pairId": "IBES-Q0873",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Access normally create first inside a new blank desktop database?",
+    "questionUrdu": "نئی blank Access desktop database کے اندر Access عموماً سب سے پہلے کیا بناتی ہے؟",
+    "options": [
+      "An empty table",
+      "A PowerPoint slide",
+      "An Excel chart sheet",
+      "A Word mail merge"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب An empty table ہے۔ Blank desktop database کھولنے پر Access عموماً Table1 جیسی empty table Datasheet View میں تیار کرتی ہے تاکہ fields اور records درج کیے جا سکیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Access default file format",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/change-the-default-file-format",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "blank-database",
+      "table",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0874-SRC",
+    "pairId": "IBES-Q0874",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What type of file does PowerPoint create?",
+    "questionUrdu": "PowerPoint کس type کی file بناتی ہے؟",
+    "options": [
+      "A worksheet",
+      "A presentation",
+      "A database",
+      "A text document"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب A presentation ہے۔ PowerPoint slides پر مشتمل presentation file create اور edit کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q874; Microsoft Support - Create a PowerPoint presentation",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-a-presentation-in-powerpoint-42229250-6c66-44cd-8275-2f5802c7cfa7",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "speaker-notes",
+      "presenter"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source's default name Presentation1 is version- and session-dependent. It was reconstructed around the stable PowerPoint file type."
+  },
+  {
+    "id": "IBES-Q0874-SIM",
+    "pairId": "IBES-Q0874",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the main purpose of speaker notes in a PowerPoint presentation?",
+    "questionUrdu": "PowerPoint presentation میں speaker notes کا بنیادی مقصد کیا ہے؟",
+    "options": [
+      "Give the presenter private supporting information",
+      "Replace every slide with a worksheet",
+      "Store database records",
+      "Set the Windows password"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Give the presenter private supporting information ہے۔ Speaker notes presenter کے لیے prompts یا extra detail رکھتی ہیں اور عام slide view میں audience کو لازماً دکھائی نہیں دیتیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Create a PowerPoint presentation",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-a-presentation-in-powerpoint-42229250-6c66-44cd-8275-2f5802c7cfa7",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "speaker-notes",
+      "presenter",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0875-SRC",
+    "pairId": "IBES-Q0875",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is an Excel file containing one or more worksheets called?",
+    "questionUrdu": "ایک یا زیادہ worksheets رکھنے والی Excel file کو کیا کہتے ہیں؟",
+    "options": [
+      "A slide",
+      "A database",
+      "A workbook",
+      "A document template"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب A workbook ہے۔ Excel file workbook کہلاتی ہے اور اس کے اندر worksheets سمیت مختلف sheet objects ہو سکتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q875; Microsoft Support - Basic tasks in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/basic-tasks-in-excel-dc775dd1-fa52-430f-9c3c-d998d1735fca",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "new-sheet-button",
+      "workbook"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked for the version-dependent default filename Book1. It was reconstructed around Microsoft's stable workbook terminology."
+  },
+  {
+    "id": "IBES-Q0875-SIM",
+    "pairId": "IBES-Q0875",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which control beside the Excel sheet tabs inserts a new worksheet with a mouse click?",
+    "questionUrdu": "Excel sheet tabs کے ساتھ کون سا control mouse click سے نئی worksheet insert کرتا ہے؟",
+    "options": [
+      "New Sheet (+) button",
+      "Formula Bar",
+      "Name Box",
+      "Zoom slider"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب New Sheet (+) button ہے۔ Sheet-tab bar پر plus نشان والا New Sheet button workbook میں نئی worksheet شامل کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Basic tasks in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/basic-tasks-in-excel-dc775dd1-fa52-430f-9c3c-d998d1735fca",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "new-sheet-button",
+      "workbook",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0876-SRC",
+    "pairId": "IBES-Q0876",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which tab opens Backstage view in current Word?",
+    "questionUrdu": "current Word میں Backstage view کون سی tab کھولتی ہے؟",
+    "options": [
+      "Home",
+      "Insert",
+      "View",
+      "File"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب File ہے۔ File tab Backstage view کھولتی ہے، جہاں document file سے متعلق commands اور information ملتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q876; Microsoft Support - Start Backstage with the File tab",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/collab-files/start-backstage-with-the-file-tab",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "backstage-view",
+      "file-management"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The legacy Office Button from Word 2007 was replaced by the current File tab."
+  },
+  {
+    "id": "IBES-Q0876-SIM",
+    "pairId": "IBES-Q0876",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which type of task is chiefly handled in Office Backstage view?",
+    "questionUrdu": "Office Backstage view بنیادی طور پر کس قسم کا کام سنبھالتی ہے؟",
+    "options": [
+      "File-level tasks such as saving, printing, and sharing",
+      "Typing ordinary paragraph text",
+      "Drawing only inside a table cell",
+      "Moving the insertion point one character"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب File-level tasks such as saving, printing, and sharing ہے۔ Backstage view content editing کے بجائے file management، permissions، printing اور sharing جیسے tasks کے لیے ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Start Backstage with the File tab",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/collab-files/start-backstage-with-the-file-tab",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "backstage-view",
+      "file-management",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0878-SRC",
+    "pairId": "IBES-Q0878",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word tab contains the Open command?",
+    "questionUrdu": "Word میں Open command کون سی tab پر ہوتی ہے؟",
+    "options": [
+      "Home",
+      "Help",
+      "View",
+      "File"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب File ہے۔ File tab کی Backstage view میں Open page existing documents تلاش اور کھولنے دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q878; Microsoft Support - Start Backstage with the File tab",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/collab-files/start-backstage-with-the-file-tab",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "open-document",
+      "browse"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The real answer was hidden in \"None of these (File).\" It is now a direct option."
+  },
+  {
+    "id": "IBES-Q0878-SIM",
+    "pairId": "IBES-Q0878",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Open-page choice lets a Word user select a file that is not shown in the Recent list?",
+    "questionUrdu": "Word کے Open page پر Recent list میں نہ دکھنے والی file select کرنے کے لیے کون سی choice استعمال ہوتی ہے؟",
+    "options": [
+      "Browse",
+      "Export",
+      "Inspect Document",
+      "Account"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Browse ہے۔ Browse standard file-selection dialog کھولتا ہے، جہاں user drive اور folders سے document منتخب کر سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Start Backstage with the File tab",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/collab-files/start-backstage-with-the-file-tab",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "open-document",
+      "browse",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0879-SRC",
+    "pairId": "IBES-Q0879",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel interface element displays and lets you edit the contents of the active cell?",
+    "questionUrdu": "Excel کا کون سا interface element active cell کے contents دکھاتا اور edit کرنے دیتا ہے؟",
+    "options": [
+      "Status bar",
+      "Formula bar",
+      "Title bar",
+      "Scroll bar"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Formula bar ہے۔ Formula Bar selected cell کی value یا underlying formula دکھاتی ہے اور وہیں editing بھی کی جا سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q879; Microsoft Support - Edit Excel cell contents",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/edit-cell-contents",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "formula-bar",
+      "keyboard-shortcut"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says Menu Bar, but Microsoft identifies the Formula bar as a place to view or edit active-cell contents. The printed key is C; the independently verified answer is B."
+  },
+  {
+    "id": "IBES-Q0879-SIM",
+    "pairId": "IBES-Q0879",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut expands or collapses the Formula Bar?",
+    "questionUrdu": "Excel میں Formula Bar expand یا collapse کرنے کا shortcut کیا ہے؟",
+    "options": [
+      "Ctrl+Shift+U",
+      "Ctrl+Shift+F",
+      "Alt+U",
+      "Ctrl+Alt+B"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ctrl+Shift+U ہے۔ Ctrl+Shift+U Formula Bar کی expanded اور collapsed states toggle کرتا ہے تاکہ long formulas کے لیے زیادہ جگہ مل سکے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Edit Excel cell contents",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/edit-cell-contents",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "formula-bar",
+      "keyboard-shortcut",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0880-SRC",
+    "pairId": "IBES-Q0880",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which set contains commands available from the Office File tab/Backstage view?",
+    "questionUrdu": "Office File tab یا Backstage view میں کون سی commands available ہوتی ہیں؟",
+    "options": [
+      "Open only",
+      "Print only",
+      "Save only",
+      "Open, Print, and Save"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Open, Print, and Save ہے۔ Open، Print اور Save تینوں file-level commands Backstage view میں ملتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q880; Microsoft Support - Start Backstage with the File tab",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/collab-files/start-backstage-with-the-file-tab",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-office",
+      "backstage-info",
+      "document-properties"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The answer-encoding \"All of these\" was replaced with one direct combined option, and legacy Office Button wording was updated."
+  },
+  {
+    "id": "IBES-Q0880-SIM",
+    "pairId": "IBES-Q0880",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Backstage page commonly shows document properties and protection options?",
+    "questionUrdu": "کون سا Backstage page عموماً document properties اور protection options دکھاتا ہے؟",
+    "options": [
+      "Info",
+      "New",
+      "Open",
+      "Print"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Info ہے۔ Info page file properties، permissions/protection اور document-management information دکھاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Start Backstage with the File tab",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/collab-files/start-backstage-with-the-file-tab",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-office",
+      "backstage-info",
+      "document-properties",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0881-SRC",
+    "pairId": "IBES-Q0881",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word command creates another copy of a document under a different filename or format?",
+    "questionUrdu": "Word میں document کی دوسری copy مختلف filename یا format سے بنانے والی command کون سی ہے؟",
+    "options": [
+      "Save",
+      "Save As",
+      "Print",
+      "Close"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Save As ہے۔ Save As نئی name، location یا format کے ساتھ document کی الگ file بنا سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q881; Microsoft Support - File formats for saving Word documents",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/file-formats-for-saving-documents-88de3863-c9e5-4f89-be60-906f9065e43c",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "save-as",
+      "file-format"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0881-SIM",
+    "pairId": "IBES-Q0881",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In the Save As dialog, which field chooses the output file format?",
+    "questionUrdu": "Save As dialog میں output file format کون سی field منتخب کرتی ہے؟",
+    "options": [
+      "Save as type",
+      "File name only",
+      "Author",
+      "Page number"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Save as type ہے۔ Save as type drop-down DOCX، PDF، RTF یا دوسری supported format منتخب کرتی ہے؛ File name field صرف نام دیتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - File formats for saving Word documents",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/file-formats-for-saving-documents-88de3863-c9e5-4f89-be60-906f9065e43c",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "save-as",
+      "file-format",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0882-SRC",
+    "pairId": "IBES-Q0882",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In current Microsoft 365, which File command should you use before editing a cloud-stored document when the original must remain unchanged?",
+    "questionUrdu": "current Microsoft 365 میں cloud document edit کرنے سے پہلے original محفوظ رکھنا ہو تو کون سی File command استعمال کرنی چاہیے؟",
+    "options": [
+      "Save",
+      "Save As",
+      "Save a Copy",
+      "Close"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Save a Copy ہے۔ Save a Copy نئی copy بناتی ہے تاکہ AutoSave کے تحت original cloud file میں changes فوراً محفوظ نہ ہوں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q882; Microsoft Support - Save a copy before editing",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/collab-files/save-a-copy-before-editing-to-prevent-changing-the-original-file",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-365",
+      "autosave",
+      "save-a-copy"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source duplicated the preceding legacy Save As question. Microsoft now recommends Save a Copy before editing an AutoSave-enabled cloud file so the original remains unchanged. The printed key is B; the independently verified answer is C."
+  },
+  {
+    "id": "IBES-Q0882-SIM",
+    "pairId": "IBES-Q0882",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Why can editing a cloud file with AutoSave on change the original immediately?",
+    "questionUrdu": "AutoSave on ہونے پر cloud file edit کرنے سے original فوراً کیوں بدل سکتی ہے؟",
+    "options": [
+      "Changes are saved automatically to the open cloud file",
+      "AutoSave converts every file to PDF",
+      "Cloud files cannot have copies",
+      "The keyboard deletes the original"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Changes are saved automatically to the open cloud file ہے۔ AutoSave OneDrive یا SharePoint پر open file کی edits مسلسل save کرتی ہے؛ original بچانے کے لیے پہلے Save a Copy ضروری ہو سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Save a copy before editing",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/collab-files/save-a-copy-before-editing-to-prevent-changing-the-original-file",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-365",
+      "autosave",
+      "save-a-copy",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0883-SRC",
+    "pairId": "IBES-Q0883",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word workflow can create a PDF copy of a document?",
+    "questionUrdu": "کون سا Word workflow document کی PDF copy بنا سکتا ہے؟",
+    "options": [
+      "Open",
+      "New",
+      "Inspect Document",
+      "Save As or Export to PDF"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Save As or Export to PDF ہے۔ Save As یا Export میں PDF format منتخب کر کے fixed-layout copy بنائی جا سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q883; Microsoft Support - Save or convert to PDF or XPS",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/save-or-convert-to-pdf-or-xps-in-office-desktop-apps-d85416c5-7d77-4fd6-a216-6f4bf7c7c110",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "pdf",
+      "fixed-layout"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The answer was hidden in \"None of these (Save as).\" Word supports both Save As and Export paths, so the complete answer is stated directly."
+  },
+  {
+    "id": "IBES-Q0883-SIM",
+    "pairId": "IBES-Q0883",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Why is PDF often chosen when sharing a finished Word document?",
+    "questionUrdu": "finished Word document share کرتے وقت PDF اکثر کیوں منتخب کی جاتی ہے؟",
+    "options": [
+      "It helps preserve layout across devices",
+      "It guarantees that every reader can edit the source",
+      "It turns text into a database",
+      "It removes all images"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب It helps preserve layout across devices ہے۔ PDF fixed-layout format ہے، اس لیے fonts اور page arrangement مختلف systems پر زیادہ consistent رہتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Save or convert to PDF or XPS",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/save-or-convert-to-pdf-or-xps-in-office-desktop-apps-d85416c5-7d77-4fd6-a216-6f4bf7c7c110",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "pdf",
+      "fixed-layout",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0884-SRC",
+    "pairId": "IBES-Q0884",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What type of file is created by Microsoft Word?",
+    "questionUrdu": "Microsoft Word کس type کی file بناتی ہے؟",
+    "options": [
+      "A workbook",
+      "A presentation",
+      "A document",
+      "A database"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب A document ہے۔ Word text اور دوسرے document content کے لیے document file بناتی ہے، نہ کہ workbook، presentation یا database۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q884; Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "word-count",
+      "keyboard-shortcut"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked for the version-dependent unsaved name Document1. It was reconstructed around the stable file type."
+  },
+  {
+    "id": "IBES-Q0884-SIM",
+    "pairId": "IBES-Q0884",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word shortcut opens the Word Count dialog box?",
+    "questionUrdu": "Word Count dialog box کھولنے کا Word shortcut کیا ہے؟",
+    "options": [
+      "Ctrl+Shift+G",
+      "Ctrl+Shift+W",
+      "Ctrl+Alt+G",
+      "Alt+Shift+C"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ctrl+Shift+G ہے۔ Ctrl+Shift+G Word Count dialog کھولتا ہے، جہاں words، characters، paragraphs اور lines کی statistics دیکھی جا سکتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "word-count",
+      "keyboard-shortcut",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0885-SRC",
+    "pairId": "IBES-Q0885",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which software can directly create a PDF from an open Word document without a third-party converter?",
+    "questionUrdu": "کون سا software open Word document سے third-party converter کے بغیر PDF بنا سکتا ہے؟",
+    "options": [
+      "Adobe Photoshop only",
+      "Adobe Reader only",
+      "Microsoft Word's Save As/Export feature",
+      "Microsoft Paint"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Microsoft Word's Save As/Export feature ہے۔ Microsoft Word کی built-in Save As یا Export feature براہِ راست PDF publish کر سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q885; Microsoft Support - Save or convert to PDF or XPS",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/save-or-convert-to-pdf-or-xps-in-office-desktop-apps-d85416c5-7d77-4fd6-a216-6f4bf7c7c110",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "pdf",
+      "minimum-size"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed source named \"Adobe Writer,\" an obsolete/inaccurate product choice. Modern Word has built-in PDF export."
+  },
+  {
+    "id": "IBES-Q0885-SIM",
+    "pairId": "IBES-Q0885",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word PDF optimization choice favors a smaller file for online publishing?",
+    "questionUrdu": "Word PDF export میں کون سی optimization choice online publishing کے لیے چھوٹی file کو ترجیح دیتی ہے؟",
+    "options": [
+      "Minimum size",
+      "Standard",
+      "Document Inspector",
+      "Track Changes"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Minimum size ہے۔ Minimum size option file size کم کرنے کے لیے output optimize کرتی ہے؛ Standard higher-quality printing اور online publishing کے لیے ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Save or convert to PDF or XPS",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/save-or-convert-to-pdf-or-xps-in-office-desktop-apps-d85416c5-7d77-4fd6-a216-6f4bf7c7c110",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "pdf",
+      "minimum-size",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0886-SRC",
+    "pairId": "IBES-Q0886",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word feature periodically saves recovery information to help restore work after an unexpected shutdown?",
+    "questionUrdu": "unexpected shutdown کے بعد work restore کرنے کے لیے recovery information periodically save کرنے والی Word feature کون سی ہے؟",
+    "options": [
+      "AutoSave",
+      "Save As",
+      "Manual Save",
+      "AutoRecover"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب AutoRecover ہے۔ AutoRecover مقررہ وقفوں پر recovery information save کرتی ہے تاکہ crash کے بعد unsaved work recover ہونے کا امکان بڑھے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q886; Microsoft Support - Recover Word files with AutoRecover",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/recover-your-word-files-and-documents",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "document-recovery",
+      "autorecover"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says AutoSave. Periodic recovery copies are AutoRecover; current AutoSave continuously saves eligible cloud files. The printed key is A; the independently verified answer is D."
+  },
+  {
+    "id": "IBES-Q0886-SIM",
+    "pairId": "IBES-Q0886",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word pane normally appears after a crash when recoverable document versions are available?",
+    "questionUrdu": "crash کے بعد recoverable document versions available ہوں تو عموماً کون سا Word pane ظاہر ہوتا ہے؟",
+    "options": [
+      "Document Recovery pane",
+      "Navigation pane",
+      "Styles pane",
+      "Clipboard pane"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Document Recovery pane ہے۔ Word دوبارہ start ہونے پر Document Recovery pane available recovered versions دکھا سکتی ہے تاکہ user مناسب copy save کرے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Recover Word files with AutoRecover",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/recover-your-word-files-and-documents",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "document-recovery",
+      "autorecover",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0887-SRC",
+    "pairId": "IBES-Q0887",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word Backstage command includes Create PDF/XPS in desktop Word?",
+    "questionUrdu": "desktop Word میں Create PDF/XPS کس Backstage command کے اندر ہوتی ہے؟",
+    "options": [
+      "Open",
+      "Print",
+      "Save",
+      "Export"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Export ہے۔ Export page میں Create PDF/XPS command fixed-layout output publish کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q887; Microsoft Support - Save or convert to PDF or XPS",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/save-or-convert-to-pdf-or-xps-in-office-desktop-apps-d85416c5-7d77-4fd6-a216-6f4bf7c7c110",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "xps",
+      "export"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source made both Save As and Export plausible. The stem now asks specifically for Create PDF/XPS, which is under Export. The printed key is C; the independently verified answer is D."
+  },
+  {
+    "id": "IBES-Q0887-SIM",
+    "pairId": "IBES-Q0887",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which filename extension identifies an XPS document?",
+    "questionUrdu": "XPS document کی filename extension کون سی ہے؟",
+    "options": [
+      ".xps",
+      ".xlsx",
+      ".pps",
+      ".rtf"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب .xps ہے۔ XML Paper Specification files عام طور پر `.xps` extension استعمال کرتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Save or convert to PDF or XPS",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/save-or-convert-to-pdf-or-xps-in-office-desktop-apps-d85416c5-7d77-4fd6-a216-6f4bf7c7c110",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "xps",
+      "export",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0888-SRC",
+    "pairId": "IBES-Q0888",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Where do you start when choosing a ready-made Word template?",
+    "questionUrdu": "ready-made Word template منتخب کرنے کے لیے کہاں سے آغاز کیا جاتا ہے؟",
+    "options": [
+      "Home tab",
+      "File > New",
+      "Insert tab",
+      "Data tab"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب File > New ہے۔ File > New template gallery اور search options دکھاتا ہے، جہاں سے نئی document template پر بنائی جا سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q888; Microsoft Support - Create a template in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/create-a-template",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "dotm",
+      "macro-enabled-template"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0888-SIM",
+    "pairId": "IBES-Q0888",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which modern Word template extension can contain VBA macros?",
+    "questionUrdu": "کون سی modern Word template extension VBA macros رکھ سکتی ہے؟",
+    "options": [
+      ".dotm",
+      ".dotx",
+      ".docx",
+      ".txt"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب .dotm ہے۔ `.dotm` macro-enabled Word template ہے؛ `.dotx` macro-free template format ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Word file formats",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/file-formats-for-saving-documents-88de3863-c9e5-4f89-be60-906f9065e43c",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "dotm",
+      "macro-enabled-template",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0889-SRC",
+    "pairId": "IBES-Q0889",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is a reusable file containing prepared design and content for a new presentation called?",
+    "questionUrdu": "نئی presentation کے لیے prepared design اور content رکھنے والی reusable file کو کیا کہتے ہیں؟",
+    "options": [
+      "AutoStyle",
+      "A spell-check wizard",
+      "A template",
+      "A print queue"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب A template ہے۔ Template theme، layouts اور optional prepared content کو نئی presentations کے لیے reusable starting point بناتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q889; Microsoft Support - Create a PowerPoint presentation",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-a-presentation-in-powerpoint-42229250-6c66-44cd-8275-2f5802c7cfa7",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "templates",
+      "file-new"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR damage was corrected and the source's vague \"ready-made styles\" wording was expanded to the documented template concept."
+  },
+  {
+    "id": "IBES-Q0889-SIM",
+    "pairId": "IBES-Q0889",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Where can a PowerPoint user search Microsoft's ready-made presentation templates?",
+    "questionUrdu": "PowerPoint user Microsoft کی ready-made presentation templates کہاں search کر سکتا ہے؟",
+    "options": [
+      "File > New",
+      "Review > Spelling",
+      "Slide Show > Rehearse",
+      "View > Ruler"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب File > New ہے۔ File > New template gallery اور online template search دکھاتا ہے، جہاں سے نئی presentation شروع کی جا سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Create a PowerPoint presentation",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-a-presentation-in-powerpoint-42229250-6c66-44cd-8275-2f5802c7cfa7",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "templates",
+      "file-new",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0890-SRC",
+    "pairId": "IBES-Q0890",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which File-tab command closes the current Word document?",
+    "questionUrdu": "current Word document بند کرنے والی File-tab command کون سی ہے؟",
+    "options": [
+      "New",
+      "Quit",
+      "Close",
+      "Export"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Close ہے۔ Close active document بند کرتی ہے؛ Word application دوسرے open documents کے ساتھ چلتی رہ سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q890; Microsoft Support - Start Backstage with the File tab",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/collab-files/start-backstage-with-the-file-tab",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "close-document",
+      "unsaved-changes"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0890-SIM",
+    "pairId": "IBES-Q0890",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Word normally do if Close is chosen while the document has unsaved changes?",
+    "questionUrdu": "اگر document میں unsaved changes ہوں اور Close منتخب کیا جائے تو Word عموماً کیا کرتی ہے؟",
+    "options": [
+      "Prompts the user to save or discard the changes",
+      "Deletes Windows",
+      "Prints automatically",
+      "Converts the file to Excel"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Prompts the user to save or discard the changes ہے۔ Word data loss سے بچانے کے لیے save confirmation دیتی ہے، جس میں changes save، discard یا close cancel کیا جا سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Start Backstage with the File tab",
+      "referenceUrl": "https://support.microsoft.com/en-US/Office/collab-files/start-backstage-with-the-file-tab",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "close-document",
+      "unsaved-changes",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0891-SRC",
+    "pairId": "IBES-Q0891",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut closes the active Word document without necessarily exiting the Word application?",
+    "questionUrdu": "active Word document کو Word application لازماً exit کیے بغیر بند کرنے کا shortcut کیا ہے؟",
+    "options": [
+      "Alt+F4",
+      "Ctrl+S",
+      "Ctrl+W",
+      "Ctrl+N"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Ctrl+W ہے۔ Ctrl+W active document window بند کرتا ہے؛ اگر دوسرے documents open ہوں تو Word چلتا رہتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q891; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "close-document",
+      "document-windows"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Legacy Office-menu wording was replaced by Microsoft's current documented Ctrl+W behavior."
+  },
+  {
+    "id": "IBES-Q0891-SIM",
+    "pairId": "IBES-Q0891",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "If three Word documents are open and Ctrl+W closes only the active one, how many remain open?",
+    "questionUrdu": "اگر تین Word documents open ہوں اور Ctrl+W صرف active document بند کرے تو کتنے open رہیں گے؟",
+    "options": [
+      "Two",
+      "One",
+      "Three",
+      "None"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Two ہے۔ Ctrl+W ایک active document بند کرتا ہے؛ تین میں سے ایک بند ہونے پر باقی دو documents open رہتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "close-document",
+      "document-windows",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0893-SRC",
+    "pairId": "IBES-Q0893",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Windows File Explorer folder is intended for a user's personal documents?",
+    "questionUrdu": "Windows File Explorer میں personal documents کے لیے مقرر folder کون سا ہے؟",
+    "options": [
+      "Documents",
+      "Control Panel",
+      "Task Manager",
+      "Device Manager"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Documents ہے۔ Documents user profile کا standard folder ہے، جو personal document files رکھنے کے لیے بنایا گیا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q893; Microsoft Support - File Explorer in Windows",
+      "referenceUrl": "https://support.microsoft.com/en-us/windows/file-explorer-in-windows-ef370130-1cca-9dc5-e0df-2f7416fe1cb1",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "windows",
+      "downloads-folder",
+      "file-explorer"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The legacy negative question about My Documents and Control Panel applets was reconstructed as a current positive File Explorer fact."
+  },
+  {
+    "id": "IBES-Q0893-SIM",
+    "pairId": "IBES-Q0893",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which standard user folder is intended primarily for files downloaded from the Internet?",
+    "questionUrdu": "Internet سے download ہونے والی files کے لیے بنیادی standard user folder کون سا ہے؟",
+    "options": [
+      "Downloads",
+      "Documents",
+      "Pictures",
+      "Desktop"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Downloads ہے۔ Browsers اور دوسری apps عام طور پر downloaded files کو user کے Downloads folder میں رکھتی ہیں، اگر location نہ بدلی جائے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - File Explorer in Windows",
+      "referenceUrl": "https://support.microsoft.com/en-us/windows/file-explorer-in-windows-ef370130-1cca-9dc5-e0df-2f7416fe1cb1",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "windows",
+      "downloads-folder",
+      "file-explorer",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0894-SRC",
+    "pairId": "IBES-Q0894",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word Home-tab group contains the Bullets, Numbering, and Multilevel List commands?",
+    "questionUrdu": "Word Home tab کا کون سا group Bullets، Numbering اور Multilevel List commands رکھتا ہے؟",
+    "options": [
+      "Styles",
+      "Font",
+      "Paragraph",
+      "Editing"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Paragraph ہے۔ یہ list controls Home tab کے Paragraph group میں ہوتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q894; Microsoft Support - Define multilevel lists in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/define-new-bullets-numbers-and-multilevel-lists",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "paragraph-group",
+      "show-hide"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The number of Home-tab groups is version/customization-dependent. The item was reconstructed around a stable command location."
+  },
+  {
+    "id": "IBES-Q0894-SIM",
+    "pairId": "IBES-Q0894",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which control in Word's Paragraph group displays nonprinting marks such as paragraph symbols?",
+    "questionUrdu": "Word کے Paragraph group میں کون سا control paragraph symbols جیسے nonprinting marks دکھاتا ہے؟",
+    "options": [
+      "Show/Hide ¶",
+      "Format Painter",
+      "Text Highlight Color",
+      "Change Case"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Show/Hide ¶ ہے۔ Show/Hide ¶ formatting marks، spaces، tabs اور paragraph endings کو visible یا hidden کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Define multilevel lists in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/define-new-bullets-numbers-and-multilevel-lists",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "paragraph-group",
+      "show-hide",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0895-SRC",
+    "pairId": "IBES-Q0895",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Paste do in Word?",
+    "questionUrdu": "Word میں Paste کیا کرتی ہے؟",
+    "options": [
+      "Repeats the last command",
+      "Deletes selected data",
+      "Inserts Clipboard content at the insertion point",
+      "Creates a folder"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Inserts Clipboard content at the insertion point ہے۔ Paste Clipboard کے current content کو insertion point یا selection کی جگہ insert کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q895; Microsoft Support - Copy and paste with the Office Clipboard",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/copy-and-paste-using-the-office-clipboard",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-office",
+      "office-clipboard",
+      "clipboard-capacity"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says \"Repeated data,\" which is incorrect. Paste inserts Clipboard content. The printed key is A; the independently verified answer is C."
+  },
+  {
+    "id": "IBES-Q0895-SIM",
+    "pairId": "IBES-Q0895",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "How many items can the Office Clipboard pane hold at one time?",
+    "questionUrdu": "Office Clipboard pane ایک وقت میں کتنی items رکھ سکتی ہے؟",
+    "options": [
+      "24",
+      "1",
+      "4",
+      "100"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 24 ہے۔ Office Clipboard زیادہ سے زیادہ 24 copied یا cut items collect کر سکتی ہے، جنہیں بعد میں paste کیا جا سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Copy and paste with the Office Clipboard",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/copy-and-paste-using-the-office-clipboard",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-office",
+      "office-clipboard",
+      "clipboard-capacity",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0896-SRC",
+    "pairId": "IBES-Q0896",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which command is not in Word's Clipboard group?",
+    "questionUrdu": "کون سی command Word کے Clipboard group میں نہیں ہوتی؟",
+    "options": [
+      "Paste",
+      "Cut",
+      "Format Painter",
+      "Page Setup"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Page Setup ہے۔ Paste، Cut اور Format Painter Clipboard group میں ہیں؛ Page Setup layout-related commands کے group میں ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q896; Microsoft Support - Copy and paste with the Office Clipboard",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/copy-and-paste-using-the-office-clipboard",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "clipboard-pane",
+      "dialog-box-launcher"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0896-SIM",
+    "pairId": "IBES-Q0896",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Clipboard-group control opens the Office Clipboard task pane?",
+    "questionUrdu": "Clipboard group کا کون سا control Office Clipboard task pane کھولتا ہے؟",
+    "options": [
+      "The dialog box launcher",
+      "The font-size box",
+      "The zoom slider",
+      "The ruler tab selector"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The dialog box launcher ہے۔ Clipboard group کے lower corner میں dialog box launcher Office Clipboard pane display کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Copy and paste with the Office Clipboard",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/copy-and-paste-using-the-office-clipboard",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "clipboard-pane",
+      "dialog-box-launcher",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0897-SRC",
+    "pairId": "IBES-Q0897",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which operation is most directly associated with the Clipboard?",
+    "questionUrdu": "Clipboard کے ساتھ سب سے براہِ راست کون سا operation وابستہ ہے؟",
+    "options": [
+      "Printing",
+      "Copying and pasting data",
+      "Changing page margins",
+      "Creating folders"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Copying and pasting data ہے۔ Clipboard cut یا copied data عارضی طور پر رکھتی ہے تاکہ اسے paste کیا جا سکے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q897; Microsoft Support - Copy and paste with the Office Clipboard",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/copy-and-paste-using-the-office-clipboard",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "clipboard",
+      "copy",
+      "temporary-storage"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0897-SIM",
+    "pairId": "IBES-Q0897",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What happens to source content when it is copied to the Clipboard?",
+    "questionUrdu": "source content Clipboard پر copy کرنے سے اس کے ساتھ کیا ہوتا ہے؟",
+    "options": [
+      "It remains in place while a copy is stored",
+      "It is always deleted",
+      "It is printed immediately",
+      "It becomes a folder"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب It remains in place while a copy is stored ہے۔ Copy source کو برقرار رکھتی ہے اور duplicate Clipboard میں رکھتی ہے؛ Cut source selection کو remove کرنے کے لیے ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Copy and paste with the Office Clipboard",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/copy-and-paste-using-the-office-clipboard",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "clipboard",
+      "copy",
+      "temporary-storage",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0898-SRC",
+    "pairId": "IBES-Q0898",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which attributes can Excel Paste Special paste selectively?",
+    "questionUrdu": "Excel Paste Special کون کون سے attributes selectively paste کر سکتی ہے؟",
+    "options": [
+      "Validation rules only",
+      "Formats only",
+      "Formulas only",
+      "Validation rules, formats, and formulas"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Validation rules, formats, and formulas ہے۔ Paste Special validation rules، formats اور formulas سمیت مختلف attributes الگ الگ paste کرنے دیتی ہے؛ اس لیے combined option درست ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q898; Microsoft Support - Paste options and Paste Special",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/paste-options",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "paste-special",
+      "formats"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The answer-encoding \"All of these\" was replaced with the direct combined answer."
+  },
+  {
+    "id": "IBES-Q0898-SIM",
+    "pairId": "IBES-Q0898",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Paste Special choice copies cell appearance without copying values or formulas?",
+    "questionUrdu": "کون سی Paste Special choice values یا formulas کے بغیر cell appearance copy کرتی ہے؟",
+    "options": [
+      "Formats",
+      "Values",
+      "Formulas",
+      "Validation"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Formats ہے۔ Formats choice fonts، fills، borders اور number formatting paste کرتی ہے، مگر source values یا formulas نہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Paste options and Paste Special",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/paste-options",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "paste-special",
+      "formats",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0899-SRC",
+    "pairId": "IBES-Q0899",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Microsoft applications include Format Painter?",
+    "questionUrdu": "کون سی Microsoft applications Format Painter رکھتی ہیں؟",
+    "options": [
+      "Word only",
+      "Excel only",
+      "PowerPoint only",
+      "Word, Excel, and PowerPoint"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Word, Excel, and PowerPoint ہے۔ Word، Excel اور PowerPoint تینوں Format Painter فراہم کرتی ہیں، اس لیے combined option درست ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q899; Microsoft Support - Use the Format Painter",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-the-format-painter-4bb415a9-d4e4-42b7-b579-170adc594e40",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-office",
+      "format-painter",
+      "escape-key"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says Word only, but Microsoft documents Format Painter across Word, Excel, and PowerPoint. The printed key is A; the independently verified answer is D."
+  },
+  {
+    "id": "IBES-Q0899-SIM",
+    "pairId": "IBES-Q0899",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which key turns off Format Painter after it has been locked on for repeated use?",
+    "questionUrdu": "Format Painter repeated use کے لیے locked ہو تو کون سی key اسے بند کرتی ہے؟",
+    "options": [
+      "Esc",
+      "Enter",
+      "Tab",
+      "F1"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Esc ہے۔ Double-click سے locked Format Painter متعدد targets پر چلتا ہے؛ Esc دبانے سے painting mode ختم ہو جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Use the Format Painter",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-the-format-painter-4bb415a9-d4e4-42b7-b579-170adc594e40",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-office",
+      "format-painter",
+      "escape-key",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0900-SRC",
+    "pairId": "IBES-Q0900",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "How do you apply the same formatting from one Word selection to another?",
+    "questionUrdu": "ایک Word selection کی formatting دوسری selection پر کیسے لگائی جاتی ہے؟",
+    "options": [
+      "Retype the source text",
+      "Use Print Preview",
+      "Select the source, choose Format Painter, then select the target",
+      "Change page orientation"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Select the source, choose Format Painter, then select the target ہے۔ Source text select کر کے Format Painter activate اور پھر target select کرنے سے formatting copy ہوتی ہے، wording نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q900; Microsoft Support - Use the Format Painter",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-the-format-painter-4bb415a9-d4e4-42b7-b579-170adc594e40",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "format-painter",
+      "single-use"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0900-SIM",
+    "pairId": "IBES-Q0900",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What normally happens after a single-click Format Painter is applied to one target?",
+    "questionUrdu": "single-click Format Painter ایک target پر لگنے کے بعد عموماً کیا ہوتا ہے؟",
+    "options": [
+      "Format Painter turns off",
+      "It remains locked for unlimited targets",
+      "The source text is deleted",
+      "Word closes"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Format Painter turns off ہے۔ Single-click Format Painter ایک target کے لیے active رہتی ہے اور application کے بعد خود بند ہو جاتی ہے؛ multiple targets کے لیے double-click کیا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Use the Format Painter",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-the-format-painter-4bb415a9-d4e4-42b7-b579-170adc594e40",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "format-painter",
+      "single-use",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  }
+]

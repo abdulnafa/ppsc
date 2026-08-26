@@ -1,0 +1,3772 @@
+[
+  {
+    "id": "IBES-Q0801-SRC",
+    "pairId": "IBES-Q0801",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which key copies an image of the entire screen to the Windows Clipboard?",
+    "questionUrdu": "ونڈوز کلپ بورڈ پر پوری اسکرین کی تصویر کاپی کرنے کے لیے کون سی کلید استعمال ہوتی ہے؟",
+    "options": [
+      "Alt",
+      "Shift",
+      "Print Screen",
+      "F12"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Print Screen” ہے۔ یہ پوری موجودہ اسکرین کا screenshot کلپ بورڈ پر رکھتی ہے، جسے بعد میں کسی ایپ میں paste کیا جا سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q801, PDF p.41; Microsoft Support - Keyboard shortcuts in Windows",
+      "referenceUrl": "https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR split \"Print Screen Key\" across two options. The scan confirms Print Screen as one option."
+  },
+  {
+    "id": "IBES-Q0801-SIM",
+    "pairId": "IBES-Q0801",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut copies an image of only the active Windows window to the Clipboard?",
+    "questionUrdu": "صرف فعال ونڈوز window کی تصویر کلپ بورڈ پر کاپی کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Alt+Print Screen",
+      "Shift+Print Screen",
+      "Ctrl+Print Screen",
+      "Windows logo key+Print Screen"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Alt+Print Screen” ہے۔ یہ پوری desktop کے بجائے صرف active window کا screenshot کلپ بورڈ پر رکھتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Windows",
+      "referenceUrl": "https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0802-SRC",
+    "pairId": "IBES-Q0802",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word command divides one document window into two panes?",
+    "questionUrdu": "ورڈ کی ایک document window کو دو panes میں تقسیم کرنے کے لیے کون سی کمانڈ استعمال ہوتی ہے؟",
+    "options": [
+      "Review > Window",
+      "View > View Side by Side",
+      "View > Split",
+      "Layout > Columns"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “View > Split” ہے۔ Split ایک ہی دستاویز کے دو مختلف حصے بیک وقت دیکھنے اور edit کرنے دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q802, PDF p.41; Microsoft Support - Split a Word window into two panes",
+      "referenceUrl": "https://support.microsoft.com/en-au/office/view-two-parts-of-a-document-at-the-same-time-in-word-for-mac-1adf3317-0ec4-4568-ad32-6f68b3e4b386",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source contained overlapping and malformed menu paths. Microsoft documents the Split command on View/Arrange; a single unique current answer was supplied. The printed key is B; the independently verified answer is C."
+  },
+  {
+    "id": "IBES-Q0802-SIM",
+    "pairId": "IBES-Q0802",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word command returns a split document window to a single pane?",
+    "questionUrdu": "تقسیم شدہ ورڈ document window کو دوبارہ ایک pane بنانے کے لیے کون سی کمانڈ استعمال ہوتی ہے؟",
+    "options": [
+      "View > Remove Split",
+      "Review > Reject",
+      "Layout > Breaks",
+      "Insert > Blank Page"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “View > Remove Split” ہے۔ یہ split bar ہٹا کر document window کو ایک ہی editing pane میں واپس لاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Split a Word window into two panes",
+      "referenceUrl": "https://support.microsoft.com/en-au/office/view-two-parts-of-a-document-at-the-same-time-in-word-for-mac-1adf3317-0ec4-4568-ad32-6f68b3e4b386",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0803-SRC",
+    "pairId": "IBES-Q0803",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "To start a Word document from a template, which File-tab command do you choose first?",
+    "questionUrdu": "کسی template سے ورڈ دستاویز شروع کرنے کے لیے File tab پر سب سے پہلے کون سی کمانڈ منتخب کی جاتی ہے؟",
+    "options": [
+      "New",
+      "Display",
+      "Open",
+      "Search"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “New” ہے۔ File > New کھولنے کے بعد خالی دستاویز، موجودہ template یا online template منتخب کیا جا سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q803, PDF p.41; Microsoft Support - Create a template in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/create-a-template",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0803-SIM",
+    "pairId": "IBES-Q0803",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Where can you search for an online Word template after choosing File > New?",
+    "questionUrdu": "File > New منتخب کرنے کے بعد online ورڈ template کہاں تلاش کیا جاتا ہے؟",
+    "options": [
+      "The Search for online templates box",
+      "The Status bar",
+      "The Formula bar",
+      "The Review comments pane"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “The Search for online templates box” ہے۔ اس خانے میں مطلوبہ template کی قسم یا موضوع لکھ کر دستیاب online designs تلاش کیے جاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Create a template in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/create-a-template",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0804-SRC",
+    "pairId": "IBES-Q0804",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What can a Word template preserve for reuse?",
+    "questionUrdu": "ورڈ template دوبارہ استعمال کے لیے کیا محفوظ رکھ سکتا ہے؟",
+    "options": [
+      "Only graphics",
+      "Only typed text",
+      "Only one AutoText entry",
+      "Prepared content, styles, and other reusable settings"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “Prepared content, styles, and other reusable settings” ہے۔ Template نئی دستاویزات میں یکساں design، styles، layout اور پہلے سے تیار مواد مہیا کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q804, PDF p.41; Microsoft Support - Create a template in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/create-a-template",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The answer-encoding \"All of these\" option was replaced by one direct description supported by Microsoft."
+  },
+  {
+    "id": "IBES-Q0804-SIM",
+    "pairId": "IBES-Q0804",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which modern file extension identifies a Word template that does not contain macros?",
+    "questionUrdu": "macro کے بغیر جدید ورڈ template کی فائل extension کون سی ہے؟",
+    "options": [
+      ".dotx",
+      ".docx",
+      ".xlsx",
+      ".potx"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “.dotx” ہے۔ .dotx جدید Word template format ہے؛ عام document عموماً .docx میں محفوظ ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Word file formats",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/file-formats-for-saving-documents-88de3863-6e4c-4a2b-a6b7-30c90fae8dc6",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0805-SRC",
+    "pairId": "IBES-Q0805",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In which PowerPoint view can you edit a slide, type speaker notes, and open the Comments pane?",
+    "questionUrdu": "PowerPoint کی کس view میں slide edit، speaker notes type اور Comments pane کھولا جا سکتا ہے؟",
+    "options": [
+      "Presenter View",
+      "Normal view",
+      "Reading view",
+      "Slide Show view"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “Normal view” ہے۔ یہ بنیادی editing view ہے جس میں slide canvas، thumbnail pane اور notes area دستیاب ہوتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q805, PDF p.41; Microsoft Support - Add and view PowerPoint comments",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/training/add-change-hide-or-delete-comments-in-a-presentation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source incorrectly referred to footnotes and its printed key pointed to Reading view. PowerPoint uses speaker notes; Microsoft documents Normal view for notes and comments. The printed key is C; the independently verified answer is B."
+  },
+  {
+    "id": "IBES-Q0805-SIM",
+    "pairId": "IBES-Q0805",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What can a PowerPoint reviewer do inside a comment thread?",
+    "questionUrdu": "PowerPoint reviewer کسی comment thread کے اندر کیا کر سکتا ہے؟",
+    "options": [
+      "Reply to the comment",
+      "Change every slide size automatically",
+      "Compile source code",
+      "Create an Access table"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Reply to the comment” ہے۔ Comments pane میں feedback کے جواب دے کر اسی thread میں گفتگو جاری رکھی جا سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Add and view PowerPoint comments",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/training/add-change-hide-or-delete-comments-in-a-presentation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0806-SRC",
+    "pairId": "IBES-Q0806",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Microsoft application is designed for creating presentations?",
+    "questionUrdu": "presentations بنانے کے لیے کون سی Microsoft application بنائی گئی ہے؟",
+    "options": [
+      "Word",
+      "Excel",
+      "PowerPoint",
+      "Access"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “PowerPoint” ہے۔ PowerPoint میں slides پر متن، تصاویر، charts، audio، video اور animations کے ذریعے presentation تیار کی جاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q806, PDF p.41; Microsoft Support - Create a PowerPoint presentation",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-a-presentation-in-powerpoint-42229250-6c66-44cd-8275-2f5802c7cfa7",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0806-SIM",
+    "pairId": "IBES-Q0806",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint feature suggests professionally arranged slide designs based on content?",
+    "questionUrdu": "slide کے مواد کی بنیاد پر پیشہ ورانہ ترتیب کے مشورے کون سا PowerPoint feature دیتا ہے؟",
+    "options": [
+      "Designer",
+      "Formula Bar",
+      "Mail Merge",
+      "Query Design"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Designer” ہے۔ PowerPoint Designer slide کے موجودہ مواد کو دیکھ کر مختلف visual layout ideas تجویز کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - PowerPoint Designer",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/get-design-ideas-for-slides-with-powerpoint-designer-6f0ec776-cc58-4d0c-baab-051ba837b7a0",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0807-SRC",
+    "pairId": "IBES-Q0807",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What are the individual pages of a PowerPoint presentation called?",
+    "questionUrdu": "PowerPoint presentation کے انفرادی صفحات کو کیا کہا جاتا ہے؟",
+    "options": [
+      "Documents",
+      "Pages",
+      "Slides",
+      "Worksheets"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Slides” ہے۔ Presentation کئی slides پر مشتمل ہوتی ہے، اور ہر slide الگ موضوع یا visual حصہ دکھا سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q807, PDF p.41; Microsoft Support - Create a PowerPoint presentation",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-a-presentation-in-powerpoint-42229250-6c66-44cd-8275-2f5802c7cfa7",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0807-SIM",
+    "pairId": "IBES-Q0807",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the main purpose of speaker notes attached to a PowerPoint slide?",
+    "questionUrdu": "PowerPoint slide کے ساتھ speaker notes کا بنیادی مقصد کیا ہے؟",
+    "options": [
+      "Guide the presenter during delivery",
+      "Replace the slide with a database",
+      "Rename the presentation file",
+      "Set Windows passwords"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Guide the presenter during delivery” ہے۔ Notes مقرر کے لیے اضافی اشارے اور تفصیل رکھتے ہیں جو عام slide content سے الگ ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Add speaker notes",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/add-speaker-notes-to-your-slides-26985155-35f5-45ba-812b-e1bd3c48928e",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0808-SRC",
+    "pairId": "IBES-Q0808",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut duplicates a selected PowerPoint slide?",
+    "questionUrdu": "منتخب PowerPoint slide کی نقل بنانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+D",
+      "Ctrl+Shift+C",
+      "Ctrl+Shift+D",
+      "Ctrl+J"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Ctrl+Shift+D” ہے۔ یہ selected slide کو duplicate کر کے اسی presentation میں اس کی نئی copy بناتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q808, PDF p.41; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says Ctrl+D. Microsoft documents Ctrl+Shift+D for duplicating the selected slide. The printed key is A; the independently verified answer is C."
+  },
+  {
+    "id": "IBES-Q0808-SIM",
+    "pairId": "IBES-Q0808",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut duplicates a selected object on a PowerPoint slide?",
+    "questionUrdu": "PowerPoint slide پر منتخب object کی نقل بنانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+D",
+      "Ctrl+Shift+D",
+      "Ctrl+M",
+      "Alt+D"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+D” ہے۔ PowerPoint میں selected object کو duplicate کرنے کے لیے Ctrl+D استعمال ہوتا ہے، جبکہ selected slide کے لیے Ctrl+Shift+D درج ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0809-SRC",
+    "pairId": "IBES-Q0809",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut starts Presenter View in PowerPoint?",
+    "questionUrdu": "PowerPoint میں Presenter View شروع کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Alt+F5",
+      "Ctrl+F5",
+      "Shift+F5",
+      "Alt+Enter"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Alt+F5” ہے۔ Presenter View مقرر کو current/next slide، notes اور presentation controls دکھا سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q809, PDF p.42; Microsoft Support - Keyboard shortcuts for PowerPoint slide shows",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-keyboard-shortcuts-to-deliver-powerpoint-presentations-1524ffce-bd2a-45f4-9a7f-f18b992b93a0",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0809-SIM",
+    "pairId": "IBES-Q0809",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which information can Presenter View show to the presenter while the audience sees the slide show?",
+    "questionUrdu": "audience کو slide show دکھاتے وقت Presenter View مقرر کو کون سی معلومات دکھا سکتی ہے؟",
+    "options": [
+      "Speaker notes and a preview of the next slide",
+      "Excel formulas only",
+      "Access table relationships",
+      "Windows device drivers"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Speaker notes and a preview of the next slide” ہے۔ Presenter View delivery controls کے ساتھ notes اور آنے والی slide کا preview مقرر کو دکھا سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts for PowerPoint slide shows",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-keyboard-shortcuts-to-deliver-powerpoint-presentations-1524ffce-bd2a-45f4-9a7f-f18b992b93a0",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0810-SRC",
+    "pairId": "IBES-Q0810",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut opens an existing PowerPoint presentation?",
+    "questionUrdu": "موجودہ PowerPoint presentation کھولنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+N",
+      "Ctrl+O",
+      "Ctrl+M",
+      "Ctrl+Shift+O"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “Ctrl+O” ہے۔ یہ Open page یا dialog کھولتا ہے جہاں محفوظ شدہ presentation منتخب کی جا سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q810, PDF p.42; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source duplicated Ctrl+O in two options because zero and letter O were confused. Four distinct choices were restored."
+  },
+  {
+    "id": "IBES-Q0810-SIM",
+    "pairId": "IBES-Q0810",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut saves the current PowerPoint presentation?",
+    "questionUrdu": "موجودہ PowerPoint presentation محفوظ کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+S",
+      "Ctrl+O",
+      "Ctrl+P",
+      "Ctrl+N"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+S” ہے۔ یہ موجودہ presentation میں کی گئی تازہ تبدیلیاں محفوظ کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0811-SRC",
+    "pairId": "IBES-Q0811",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut inserts a new slide in PowerPoint?",
+    "questionUrdu": "PowerPoint میں نئی slide داخل کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+S",
+      "Ctrl+M",
+      "Ctrl+N",
+      "F9"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “Ctrl+M” ہے۔ یہ موجودہ presentation میں نئی slide شامل کرتا ہے، نئی presentation نہیں بناتا۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q811, PDF p.42; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0811-SIM",
+    "pairId": "IBES-Q0811",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint command changes the arrangement of placeholders on an existing slide?",
+    "questionUrdu": "موجودہ PowerPoint slide پر placeholders کی ترتیب بدلنے کے لیے کون سی کمانڈ استعمال ہوتی ہے؟",
+    "options": [
+      "Home > Layout",
+      "Review > Spelling",
+      "File > Print",
+      "View > Notes Master"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Home > Layout” ہے۔ Layout gallery سے title، content اور دوسرے placeholders کی تیار ترتیب منتخب کی جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Apply a slide layout",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/apply-a-slide-layout-158e6dba-e53e-479b-a6fc-caab72609689",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0813-SRC",
+    "pairId": "IBES-Q0813",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut starts a PowerPoint slide show from the current slide?",
+    "questionUrdu": "PowerPoint slide show موجودہ slide سے شروع کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "F5",
+      "Shift+F5",
+      "Ctrl+F5",
+      "Alt+F5"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “Shift+F5” ہے۔ یہ editing کے دوران selected/current slide سے show چلاتا ہے، ابتدا سے نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q813, PDF p.42; Microsoft Support - Keyboard shortcuts for PowerPoint slide shows",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-keyboard-shortcuts-to-deliver-powerpoint-presentations-1524ffce-bd2a-45f4-9a7f-f18b992b93a0",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0813-SIM",
+    "pairId": "IBES-Q0813",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which key ends a running PowerPoint slide show?",
+    "questionUrdu": "چلتا ہوا PowerPoint slide show ختم کرنے کے لیے کون سی کلید استعمال ہوتی ہے؟",
+    "options": [
+      "Esc",
+      "Tab",
+      "Insert",
+      "Home"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Esc” ہے۔ Slide show کے دوران Escape دبانے سے presentation mode بند ہو کر editing view واپس آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts for PowerPoint slide shows",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-keyboard-shortcuts-to-deliver-powerpoint-presentations-1524ffce-bd2a-45f4-9a7f-f18b992b93a0",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0814-SRC",
+    "pairId": "IBES-Q0814",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut redoes or repeats the previous PowerPoint action when possible?",
+    "questionUrdu": "ممکن ہونے پر پچھلا PowerPoint عمل redo یا repeat کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+R",
+      "Ctrl+Z",
+      "Ctrl+Y",
+      "Ctrl+N"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Ctrl+Y” ہے۔ یہ Undo کیا ہوا قابلِ واپسی عمل دوبارہ لگاتا یا بعض حالتوں میں آخری action repeat کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q814, PDF p.42; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0814-SIM",
+    "pairId": "IBES-Q0814",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint shortcut ungroups selected grouped objects?",
+    "questionUrdu": "PowerPoint میں selected grouped objects کو ungroup کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Shift+G",
+      "Ctrl+G",
+      "Ctrl+Shift+U",
+      "Alt+G"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+Shift+G” ہے۔ یہ selected group کو اس کے الگ objects میں واپس تقسیم کرتا ہے، جبکہ Ctrl+G objects کو group کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0815-SRC",
+    "pairId": "IBES-Q0815",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut opens PowerPoint's Print page?",
+    "questionUrdu": "PowerPoint کا Print page کھولنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+A",
+      "Ctrl+Shift+P",
+      "Ctrl+P",
+      "Ctrl+O"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Ctrl+P” ہے۔ اس page پر printer، copies، slide range اور print layout منتخب کیے جاتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q815, PDF p.42; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0815-SIM",
+    "pairId": "IBES-Q0815",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint print layout prints one slide together with its speaker notes?",
+    "questionUrdu": "کون سا PowerPoint print layout ایک slide کو اس کے speaker notes کے ساتھ پرنٹ کرتا ہے؟",
+    "options": [
+      "Notes Pages",
+      "Handouts",
+      "Outline only",
+      "Full Page Slides without notes"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Notes Pages” ہے۔ یہ ہر printed page پر slide image کے ساتھ اس slide کے notes شامل کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Print slides, handouts, or notes",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/print-your-powerpoint-slides-handouts-or-notes-194d4320-aa03-478b-9300-df25f0d15dc4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0816-SRC",
+    "pairId": "IBES-Q0816",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut opens PowerPoint's Font dialog box?",
+    "questionUrdu": "PowerPoint کا Font dialog box کھولنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+C",
+      "Ctrl+R",
+      "Ctrl+E",
+      "Ctrl+T"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “Ctrl+T” ہے۔ یہ selected text کے فونٹ، style، size اور دستیاب effects بدلنے کا dialog کھولتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q816, PDF p.42; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0816-SIM",
+    "pairId": "IBES-Q0816",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint command changes every instance of one font to another throughout a presentation?",
+    "questionUrdu": "PowerPoint presentation میں ایک فونٹ کی تمام جگہوں کو دوسرے فونٹ سے بدلنے کے لیے کون سی کمانڈ استعمال ہوتی ہے؟",
+    "options": [
+      "Replace Fonts",
+      "Format Painter",
+      "Slide Sorter",
+      "Record Slide Show"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Replace Fonts” ہے۔ یہ پوری presentation میں منتخب source font کی تمام occurrences کو replacement font سے بدلتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Change fonts in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/change-the-fonts-in-a-presentation-8e93c947-c160-4790-9380-916edc3b13ad",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0817-SRC",
+    "pairId": "IBES-Q0817",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint shortcut opens the Insert Hyperlink dialog?",
+    "questionUrdu": "PowerPoint میں Insert Hyperlink dialog کھولنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Alt+K",
+      "Ctrl+K",
+      "Ctrl+H",
+      "Shift+K"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “Ctrl+K” ہے۔ اس dialog سے selected text یا object کو web page، file، email یا presentation location سے link کیا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q817, PDF p.42; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source encoded two methods as \"Both A & B.\" It was reconstructed as one documented shortcut with four distinct choices. The printed key is C; the independently verified answer is B."
+  },
+  {
+    "id": "IBES-Q0817-SIM",
+    "pairId": "IBES-Q0817",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint shortcut removes a hyperlink while keeping its display text?",
+    "questionUrdu": "PowerPoint میں display text برقرار رکھتے ہوئے hyperlink ہٹانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Shift+F9",
+      "Ctrl+K",
+      "Ctrl+Shift+K",
+      "Alt+F9"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+Shift+F9” ہے۔ یہ selected hyperlink کا link ختم کر کے دکھائی دینے والا متن برقرار رکھتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0818-SRC",
+    "pairId": "IBES-Q0818",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut creates a new PowerPoint presentation?",
+    "questionUrdu": "نئی PowerPoint presentation بنانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+O",
+      "Ctrl+P",
+      "Ctrl+N",
+      "Ctrl+M"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Ctrl+N” ہے۔ یہ نئی presentation بناتا ہے، جبکہ Ctrl+M موجودہ presentation میں صرف نئی slide شامل کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q818, PDF p.42; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0818-SIM",
+    "pairId": "IBES-Q0818",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which key sequence opens PowerPoint's File page by using a Ribbon KeyTip?",
+    "questionUrdu": "Ribbon KeyTip استعمال کر کے PowerPoint کا File page کھولنے کے لیے کون سی key sequence ہے؟",
+    "options": [
+      "Alt, F",
+      "Alt, H",
+      "Alt, N",
+      "Alt, R"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Alt, F” ہے۔ Alt KeyTips دکھاتا ہے اور پھر F دبانے سے File/Backstage page کھلتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/use-keyboard-shortcuts-to-create-powerpoint-presentations-ebb3d20e-dcd4-444f-a38e-bb5c5ed180f4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-powerpoint",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0819-SRC",
+    "pairId": "IBES-Q0819",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut creates a new Excel workbook?",
+    "questionUrdu": "نئی Excel workbook بنانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Shift+Enter",
+      "Alt+Enter",
+      "Ctrl+N",
+      "Ctrl+Shift+A"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Ctrl+N” ہے۔ یہ نئی خالی workbook بناتا ہے، موجودہ workbook میں صرف worksheet شامل نہیں کرتا۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q819, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says Alt+Enter, which inserts a line break within an Excel cell. Microsoft documents Ctrl+N for a new workbook. The printed key is B; the independently verified answer is C."
+  },
+  {
+    "id": "IBES-Q0819-SIM",
+    "pairId": "IBES-Q0819",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut closes the active Excel workbook window?",
+    "questionUrdu": "فعال Excel workbook window بند کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+W",
+      "Ctrl+N",
+      "Ctrl+M",
+      "Alt+Enter"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+W” ہے۔ یہ current workbook window بند کرتا ہے؛ اگر تبدیلیاں محفوظ نہ ہوں تو Excel save کرنے کا پوچھ سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0820-SRC",
+    "pairId": "IBES-Q0820",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which key completes an Excel cell entry and normally selects the cell below?",
+    "questionUrdu": "کون سی کلید Excel cell entry مکمل کر کے عموماً نیچے والا cell منتخب کرتی ہے؟",
+    "options": [
+      "Tab",
+      "Ctrl+Enter",
+      "Spacebar",
+      "Enter"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “Enter” ہے۔ Data entry مکمل ہونے کے بعد Enter عام طور پر selection کو اسی column کے اگلے cell پر لے جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q820, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source was grammatically incomplete and keyed Spacebar. It was reconstructed around Microsoft's documented Enter behavior. The printed key is C; the independently verified answer is D."
+  },
+  {
+    "id": "IBES-Q0820-SIM",
+    "pairId": "IBES-Q0820",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut completes an Excel cell entry and selects the cell above?",
+    "questionUrdu": "Excel cell entry مکمل کر کے اوپر والا cell منتخب کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Shift+Enter",
+      "Ctrl+Enter",
+      "Alt+Enter",
+      "Tab"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Shift+Enter” ہے۔ یہ entry قبول کر کے selection کو ایک cell اوپر منتقل کرتا ہے، جبکہ Enter عموماً نیچے جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0821-SRC",
+    "pairId": "IBES-Q0821",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut inserts a new line within the same Excel cell?",
+    "questionUrdu": "اسی Excel cell کے اندر نئی سطر شروع کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Alt+Shift",
+      "Ctrl+Enter",
+      "Alt+Enter",
+      "Shift+Enter"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Alt+Enter” ہے۔ یہ cell کی entry ختم کیے بغیر اسی cell کے متن میں line break داخل کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q821, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0821-SIM",
+    "pairId": "IBES-Q0821",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut fills every selected Excel cell with the current entry?",
+    "questionUrdu": "تمام selected Excel cells میں موجودہ entry بھرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Enter",
+      "Alt+Enter",
+      "Shift+Enter",
+      "Ctrl+Shift+Enter"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+Enter” ہے۔ پہلے range منتخب کر کے value یا formula لکھنے کے بعد Ctrl+Enter وہ entry پوری selection میں بھر دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0822-SRC",
+    "pairId": "IBES-Q0822",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which entry is a valid Excel formula that adds cells A1 and B1?",
+    "questionUrdu": "cells A1 اور B1 کو جمع کرنے والی درست Excel formula کون سی ہے؟",
+    "options": [
+      "=A1+B1",
+      "add(A1:A2)",
+      "A1+B1",
+      "SUM(A1:A2)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “=A1+B1” ہے۔ Excel formula equals sign سے شروع ہوتی ہے اور plus operator دونوں cell values کو جمع کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q822, PDF p.42; Microsoft Support - Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Spacing and capitalization were normalized; the leading equals sign makes the correct entry a formula."
+  },
+  {
+    "id": "IBES-Q0822-SIM",
+    "pairId": "IBES-Q0822",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel formula multiplies the values in cells A1 and B1?",
+    "questionUrdu": "cells A1 اور B1 کی values ضرب دینے والی Excel formula کون سی ہے؟",
+    "options": [
+      "=A1*B1",
+      "=A1xB1",
+      "A1*B1",
+      "=A1+B1"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “=A1*B1” ہے۔ Excel میں multiplication کے لیے asterisk (*) operator استعمال ہوتا ہے اور formula = سے شروع ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Excel calculation operators",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/using-calculation-operators-in-excel-formulas-78be92ad-563c-4d62-b081-ae6da5c2ca69",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0823-SRC",
+    "pairId": "IBES-Q0823",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut copies the formula from the cell above into the active cell?",
+    "questionUrdu": "اوپر والے cell کی formula کو active Excel cell میں copy کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+;",
+      "Ctrl+:",
+      "Ctrl+'",
+      "Ctrl+D"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Ctrl+'” ہے۔ یہ اوپر والے cell کی formula active cell یا Formula Bar میں نقل کرتا ہے تاکہ reference structure برقرار رہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q823, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0823-SIM",
+    "pairId": "IBES-Q0823",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel command copies the top cell of a selected range down through the remaining cells?",
+    "questionUrdu": "selected Excel range کے اوپری cell کو باقی cells میں نیچے copy کرنے کے لیے کون سی کمانڈ استعمال ہوتی ہے؟",
+    "options": [
+      "Fill Down (Ctrl+D)",
+      "Fill Right (Ctrl+R)",
+      "Flash Fill (Ctrl+E)",
+      "Clear All"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Fill Down (Ctrl+D)” ہے۔ Selected range کے سب سے اوپر cell کا content یا formula نیچے کے cells میں بھرا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0824-SRC",
+    "pairId": "IBES-Q0824",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut copies the value from the cell above into the active cell?",
+    "questionUrdu": "اوپر والے cell کی value کو active Excel cell میں copy کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Shift+\"",
+      "Ctrl+;",
+      "Ctrl+'",
+      "Ctrl+D"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+Shift+\"” ہے۔ یہ اوپر والے cell کی دکھائی دینے والی value نقل کرتا ہے، formula نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q824, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says Ctrl+D, which fills down and can copy a formula. Microsoft documents Ctrl+Shift+quotation mark for copying the value above. The printed key is D; the independently verified answer is A."
+  },
+  {
+    "id": "IBES-Q0824-SIM",
+    "pairId": "IBES-Q0824",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut switches between displaying formula results and displaying formulas in worksheet cells?",
+    "questionUrdu": "worksheet cells میں formula results اور اصل formulas کی display بدلنے کے لیے کون سا Excel shortcut ہے؟",
+    "options": [
+      "Ctrl+Grave accent (`)",
+      "Ctrl+Semicolon (;) ",
+      "Ctrl+Apostrophe (')",
+      "Ctrl+Shift+Quotation mark (\")"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+Grave accent (`)” ہے۔ یہ Show Formulas حالت کو toggle کر کے calculated results کے بجائے formulas دکھاتا یا واپس results دکھاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0825-SRC",
+    "pairId": "IBES-Q0825",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which key creates a chart from the current Excel range on a separate chart sheet?",
+    "questionUrdu": "موجودہ Excel range سے الگ chart sheet پر chart بنانے کے لیے کون سی کلید استعمال ہوتی ہے؟",
+    "options": [
+      "F2",
+      "F4",
+      "F8",
+      "F11"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “F11” ہے۔ یہ selected data کی chart بنا کر اسے worksheet کے اندر نہیں بلکہ الگ chart sheet پر رکھتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q825, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The chart-sheet scope was added because Alt+F1 creates an embedded chart."
+  },
+  {
+    "id": "IBES-Q0825-SIM",
+    "pairId": "IBES-Q0825",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "While editing an Excel formula, which key cycles a cell reference through relative, absolute, and mixed forms?",
+    "questionUrdu": "Excel formula edit کرتے وقت cell reference کو relative، absolute اور mixed forms میں بدلنے کے لیے کون سی کلید استعمال ہوتی ہے؟",
+    "options": [
+      "F4",
+      "F2",
+      "F7",
+      "F11"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “F4” ہے۔ Formula میں reference منتخب ہو تو F4 dollar signs کی مختلف ترتیبوں کے ذریعے reference type بدلتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0826-SRC",
+    "pairId": "IBES-Q0826",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does F2 do when a cell is active in Excel?",
+    "questionUrdu": "Excel میں cell فعال ہونے پر F2 کیا کرتا ہے؟",
+    "options": [
+      "Opens Help",
+      "Edits the active cell",
+      "Checks spelling",
+      "Opens Save As"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “Edits the active cell” ہے۔ F2 cell کے موجودہ content کے آخر میں insertion point رکھ کر edit mode شروع کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q826, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source said only \"rename,\" which is true in File Explorer but not in the surrounding Excel context. It was corrected to Excel's documented F2 action."
+  },
+  {
+    "id": "IBES-Q0826-SIM",
+    "pairId": "IBES-Q0826",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which key cancels an Excel cell edit without committing the new entry?",
+    "questionUrdu": "نئی entry قبول کیے بغیر Excel cell edit منسوخ کرنے کے لیے کون سی کلید استعمال ہوتی ہے؟",
+    "options": [
+      "Esc",
+      "Enter",
+      "Tab",
+      "F4"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Esc” ہے۔ یہ cell یا Formula Bar میں جاری entry کو cancel کر کے پچھلا content برقرار رکھتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0827-SRC",
+    "pairId": "IBES-Q0827",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Ctrl+F9 do in desktop Excel?",
+    "questionUrdu": "desktop Excel میں Ctrl+F9 کیا کرتا ہے؟",
+    "options": [
+      "Restores a workbook window",
+      "Moves a workbook window",
+      "Minimizes a workbook window to an icon",
+      "Creates a chart"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Minimizes a workbook window to an icon” ہے۔ یہ selected workbook window کو minimize کرتا ہے، نئی workbook نہیں بناتا۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q827, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "\"Minimize Excel Worksheet\" was corrected to Microsoft's precise workbook-window wording."
+  },
+  {
+    "id": "IBES-Q0827-SIM",
+    "pairId": "IBES-Q0827",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Ctrl+F10 do to a selected desktop Excel workbook window?",
+    "questionUrdu": "desktop Excel میں selected workbook window پر Ctrl+F10 کیا کرتا ہے؟",
+    "options": [
+      "Maximizes or restores it",
+      "Deletes it",
+      "Creates a chart",
+      "Starts spell check"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Maximizes or restores it” ہے۔ Ctrl+F10 workbook window کو maximize حالت اور پچھلے window size کے درمیان بدلتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0828-SRC",
+    "pairId": "IBES-Q0828",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Shift+F11 insert in Excel?",
+    "questionUrdu": "Excel میں Shift+F11 کیا داخل کرتا ہے؟",
+    "options": [
+      "A cell",
+      "A worksheet",
+      "A row",
+      "A column"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “A worksheet” ہے۔ یہ current workbook میں نئی worksheet tab شامل کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q828, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0828-SIM",
+    "pairId": "IBES-Q0828",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which alternative Excel shortcut also inserts a new worksheet?",
+    "questionUrdu": "نئی Excel worksheet داخل کرنے کا متبادل شارٹ کٹ کون سا ہے؟",
+    "options": [
+      "Alt+Shift+F1",
+      "Ctrl+Shift+F1",
+      "Alt+F11",
+      "Shift+F2"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Alt+Shift+F1” ہے۔ Excel کی documented shortcuts میں یہ بھی workbook میں نئی worksheet داخل کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0829-SRC",
+    "pairId": "IBES-Q0829",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut creates an embedded chart in the current worksheet?",
+    "questionUrdu": "current Excel worksheet کے اندر embedded chart بنانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "F1",
+      "F5",
+      "Alt+F1",
+      "F12"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Alt+F1” ہے۔ یہ selected data کی chart اسی worksheet پر object کی صورت میں داخل کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q829, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source duplicated the F11 chart-sheet question. It was reconstructed around Microsoft's distinct Alt+F1 embedded-chart shortcut."
+  },
+  {
+    "id": "IBES-Q0829-SIM",
+    "pairId": "IBES-Q0829",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut cycles between showing objects, hiding objects, and showing object placeholders?",
+    "questionUrdu": "Excel میں objects دکھانے، چھپانے اور ان کے placeholders دکھانے کی حالت بدلنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+6",
+      "Ctrl+9",
+      "Alt+F1",
+      "F11"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+6” ہے۔ یہ workbook کے graphic objects کی تین display states کے درمیان toggle کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Shortcuts for shapes and objects",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-for-working-with-shapes-text-boxes-and-wordart-7a3b5e25-8b8d-4e4e-a1ad-6ff0b7ae43d7",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0830-SRC",
+    "pairId": "IBES-Q0830",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Shift+F2 do to the active Excel cell in current versions?",
+    "questionUrdu": "موجودہ Excel versions میں active cell پر Shift+F2 کیا کرتا ہے؟",
+    "options": [
+      "Adds or edits a cell note",
+      "Opens Save As",
+      "Edits the formula bar only",
+      "Pastes data"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Adds or edits a cell note” ہے۔ Modern Excel threaded comments اور legacy-style notes میں فرق کرتا ہے؛ Shift+F2 note کے لیے ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q830, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Modern Excel distinguishes threaded comments from legacy notes. The source was updated to Microsoft's current Shift+F2 terminology."
+  },
+  {
+    "id": "IBES-Q0830-SIM",
+    "pairId": "IBES-Q0830",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel annotation supports a threaded conversation with replies?",
+    "questionUrdu": "Excel کی کون سی annotation replies کے ساتھ threaded conversation کی سہولت دیتی ہے؟",
+    "options": [
+      "A comment",
+      "A note",
+      "A cell border",
+      "A number format"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “A comment” ہے۔ Modern comments collaboration threads کے لیے ہیں؛ notes پرانے explanatory annotations ہیں اور threaded replies نہیں رکھتے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0831-SRC",
+    "pairId": "IBES-Q0831",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function returns the current date and time?",
+    "questionUrdu": "کون سا Excel function موجودہ date اور time واپس کرتا ہے؟",
+    "options": [
+      "DATE()",
+      "YEAR()",
+      "NOW()",
+      "TIME()"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “NOW()” ہے۔ NOW volatile function ہے جو workbook recalculate ہونے پر current system date اور time کو serial value کی صورت میں دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q831, PDF p.42; Microsoft Support - NOW function",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/now-function",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0831-SIM",
+    "pairId": "IBES-Q0831",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "If a cell contains =NOW()+7, what date-time does it represent?",
+    "questionUrdu": "اگر Excel cell میں =NOW()+7 ہو تو وہ کس date-time کی نمائندگی کرتا ہے؟",
+    "options": [
+      "The current date-time plus seven days",
+      "Seven minutes ago",
+      "Only the current year",
+      "A text label"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “The current date-time plus seven days” ہے۔ Excel date serial میں 1 پورا دن ہوتا ہے، اس لیے 7 جمع کرنے سے ایک ہفتہ آگے کا date-time ملتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - NOW function",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/now-function",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0832-SRC",
+    "pairId": "IBES-Q0832",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Excel's TODAY() function return?",
+    "questionUrdu": "Excel کا TODAY() function کیا واپس کرتا ہے؟",
+    "options": [
+      "The current time only",
+      "The current year only",
+      "The current date",
+      "The current weather"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “The current date” ہے۔ TODAY موجودہ system date دیتا ہے اور وقت کا الگ fractional حصہ شامل نہیں کرتا۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q832, PDF p.42; Microsoft Support - TODAY function",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/today-function",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0832-SIM",
+    "pairId": "IBES-Q0832",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "How many arguments does Excel's TODAY function require?",
+    "questionUrdu": "Excel کا TODAY function کتنے arguments مانگتا ہے؟",
+    "options": [
+      "None",
+      "One",
+      "Two",
+      "Three"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “None” ہے۔ TODAY کی syntax TODAY() ہے؛ خالی parentheses استعمال ہوتے ہیں اور کوئی argument نہیں دیا جاتا۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - TODAY function",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/today-function",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0833-SRC",
+    "pairId": "IBES-Q0833",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut inserts the current time as a static value in Excel?",
+    "questionUrdu": "Excel میں موجودہ time کو static value کے طور پر داخل کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Shift",
+      "Ctrl+;",
+      "Ctrl+1",
+      "Ctrl+Shift+;"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “Ctrl+Shift+;” ہے۔ یہ current time کو مستقل value کی صورت میں لکھتا ہے، NOW() کی طرح بعد میں خود نہیں بدلتا۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q833, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The real answer was hidden inside \"None of these.\" It is now stated directly as Ctrl+Shift+semicolon."
+  },
+  {
+    "id": "IBES-Q0833-SIM",
+    "pairId": "IBES-Q0833",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut inserts the current date as a static value?",
+    "questionUrdu": "Excel میں موجودہ date کو static value کے طور پر داخل کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Semicolon (;)",
+      "Ctrl+Shift+Semicolon (;)",
+      "Alt+Semicolon (;)",
+      "Ctrl+D"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+Semicolon (;)” ہے۔ یہ current date کو cell value کے طور پر درج کرتا ہے، جبکہ Ctrl+Shift+; current time کے لیے ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0834-SRC",
+    "pairId": "IBES-Q0834",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut selects the entire active column?",
+    "questionUrdu": "Excel میں پورا active column منتخب کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Spacebar",
+      "Ctrl+A",
+      "Ctrl+C",
+      "Shift+Spacebar"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+Spacebar” ہے۔ یہ active cell کے پورے worksheet column کو selection میں شامل کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q834, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0834-SIM",
+    "pairId": "IBES-Q0834",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut selects the entire active row?",
+    "questionUrdu": "Excel میں پوری active row منتخب کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Shift+Spacebar",
+      "Ctrl+Spacebar",
+      "Alt+Spacebar",
+      "Ctrl+A"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Shift+Spacebar” ہے۔ یہ active cell کی پوری row منتخب کرتا ہے، جبکہ Ctrl+Spacebar پورا column چنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0835-SRC",
+    "pairId": "IBES-Q0835",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel entry is a text constant rather than a number, date, or formula?",
+    "questionUrdu": "کون سی Excel entry number، date یا formula کے بجائے text constant ہے؟",
+    "options": [
+      "125",
+      "=A1+B1",
+      "Quarterly sales",
+      "16-Aug-2026"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Quarterly sales” ہے۔ یہ حروفی label ہے؛ 125 number، 16-Aug-2026 date اور =A1+B1 formula ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q835, PDF p.42; Microsoft Support - Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source mixed obsolete and non-equivalent data-type labels such as \"Label\" and \"Character.\" It was reconstructed around Microsoft's documented number, date, text, and formula examples."
+  },
+  {
+    "id": "IBES-Q0835-SIM",
+    "pairId": "IBES-Q0835",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which prefix can force a number-like Excel entry to be stored as text?",
+    "questionUrdu": "number جیسی Excel entry کو text کی صورت میں محفوظ کرنے کے لیے شروع میں کون سی علامت لگائی جا سکتی ہے؟",
+    "options": [
+      "An apostrophe (')",
+      "An equals sign (=)",
+      "A percent sign (%)",
+      "A colon (:)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “An apostrophe (')” ہے۔ ابتدائی apostrophe entry کو text سمجھنے پر مجبور کرتی ہے اور عموماً cell display میں خود نظر نہیں آتی۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Format numbers as text",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/format-numbers-as-text-583160db-936b-4e52-bdff-6f1863518ba4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0836-SRC",
+    "pairId": "IBES-Q0836",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which list contains, in order, a text label, a numeric value, and an Excel formula?",
+    "questionUrdu": "کون سی فہرست بالترتیب text label، numeric value اور Excel formula رکھتی ہے؟",
+    "options": [
+      "Sales, 125, =SUM(A1:A3)",
+      "125, Sales, SUM(A1:A3)",
+      "=SUM(A1:A3), Sales, 125",
+      "Sales, =SUM(A1:A3), 125"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Sales, 125, =SUM(A1:A3)” ہے۔ Sales متن، 125 number اور equals sign سے شروع ہونے والی SUM entry formula ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q836, PDF p.42; Microsoft Support - Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source had duplicate options A and C. Concrete examples make all four options distinct and the classification unique."
+  },
+  {
+    "id": "IBES-Q0836-SIM",
+    "pairId": "IBES-Q0836",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In Excel, TRUE and FALSE are examples of which kind of values?",
+    "questionUrdu": "Excel میں TRUE اور FALSE کس قسم کی values کی مثالیں ہیں؟",
+    "options": [
+      "Logical values",
+      "File extensions",
+      "Cell addresses",
+      "Chart sheets"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Logical values” ہے۔ TRUE اور FALSE Boolean یا logical values ہیں جو conditions اور logical formulas میں استعمال ہوتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - IS functions",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/functions/is-functions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0837-SRC",
+    "pairId": "IBES-Q0837",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut moves to the previous cell in a Word table?",
+    "questionUrdu": "ورڈ table میں پچھلے cell پر جانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Alt+Tab",
+      "Ctrl+Tab",
+      "Shift+Tab",
+      "Backspace"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Shift+Tab” ہے۔ یہ table row کی ترتیب میں previous cell کو منتخب کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q837, PDF p.42; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0837-SIM",
+    "pairId": "IBES-Q0837",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word table shortcut moves to the first cell in the current row?",
+    "questionUrdu": "ورڈ table کی موجودہ row کے پہلے cell پر جانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Alt+Home",
+      "Ctrl+Home",
+      "Shift+Home",
+      "Alt+Page Up"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Alt+Home” ہے۔ Word table navigation میں یہ current row کے پہلے cell پر لے جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0838-SRC",
+    "pairId": "IBES-Q0838",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which key moves to the next cell in a Word table?",
+    "questionUrdu": "ورڈ table میں اگلے cell پر جانے کے لیے کون سی کلید استعمال ہوتی ہے؟",
+    "options": [
+      "Tab",
+      "Ctrl+Tab",
+      "Shift+Tab",
+      "Backspace"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Tab” ہے۔ Table کے اندر Tab next cell منتخب کرتا ہے؛ آخری cell پر اس کا اضافی table behavior ہو سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q838, PDF p.42; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0838-SIM",
+    "pairId": "IBES-Q0838",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut inserts a tab character inside a Word table cell instead of moving to the next cell?",
+    "questionUrdu": "اگلے cell پر جانے کے بجائے موجودہ ورڈ table cell میں tab character داخل کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Tab",
+      "Tab",
+      "Shift+Tab",
+      "Alt+Tab"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+Tab” ہے۔ Table میں Tab navigation کے لیے مخصوص ہے، اس لیے اصل tab character داخل کرنے کو Ctrl ساتھ دبایا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0839-SRC",
+    "pairId": "IBES-Q0839",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut moves to the next worksheet in an Excel workbook?",
+    "questionUrdu": "Excel workbook میں اگلی worksheet پر جانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Page Down",
+      "Ctrl+Page Up",
+      "Ctrl+Home",
+      "Shift+Right Arrow"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+Page Down” ہے۔ یہ sheet tabs کی ترتیب میں next worksheet کو active کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q839, PDF p.42; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0839-SIM",
+    "pairId": "IBES-Q0839",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut selects the current and next worksheets together?",
+    "questionUrdu": "Excel میں موجودہ اور اگلی worksheets کو ایک ساتھ منتخب کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Shift+Page Down",
+      "Ctrl+Page Down",
+      "Shift+Page Down",
+      "Alt+Page Down"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+Shift+Page Down” ہے۔ Ctrl+Page Down صرف اگلی sheet پر جاتا ہے، جبکہ Shift شامل ہونے سے دونوں sheets group selection میں آتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0840-SRC",
+    "pairId": "IBES-Q0840",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut moves to the previous worksheet in an Excel workbook?",
+    "questionUrdu": "Excel workbook میں پچھلی worksheet پر جانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Alt+Page Up",
+      "Ctrl+F9",
+      "Ctrl+Tab",
+      "Ctrl+Page Up"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “Ctrl+Page Up” ہے۔ یہ sheet tabs کی ترتیب میں previous worksheet کو active کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q840, PDF p.43; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source said only \"move between worksheets.\" Previous-sheet scope was added so Ctrl+Page Up is unique."
+  },
+  {
+    "id": "IBES-Q0840-SIM",
+    "pairId": "IBES-Q0840",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel shortcut moves the worksheet view one screen to the left?",
+    "questionUrdu": "Excel worksheet view کو ایک screen بائیں منتقل کرنے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Alt+Page Up",
+      "Ctrl+Page Up",
+      "Shift+Page Up",
+      "Alt+Left Arrow"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Alt+Page Up” ہے۔ یہ worksheet کے visible columns کو تقریباً ایک screen بائیں scroll کرتا ہے، sheet tab نہیں بدلتا۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-excel",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0842-SRC",
+    "pairId": "IBES-Q0842",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut applies Word's Normal style to the current paragraph?",
+    "questionUrdu": "موجودہ ورڈ پیراگراف پر Normal style لگانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Delete",
+      "Ctrl+Enter",
+      "Ctrl+Shift+N",
+      "Shift+F3"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Ctrl+Shift+N” ہے۔ یہ direct paragraph formatting کے بجائے built-in Normal style کو current paragraph پر نافذ کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q842, PDF p.43; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-word",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source duplicated an earlier Ctrl+Spacebar question and overstated it as clearing all formatting. It was reconstructed around the distinct documented Normal-style shortcut."
+  },
+  {
+    "id": "IBES-Q0842-SIM",
+    "pairId": "IBES-Q0842",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word shortcut applies the Heading 2 style to a paragraph?",
+    "questionUrdu": "ورڈ پیراگراف پر Heading 2 style لگانے کے لیے کون سا شارٹ کٹ ہے؟",
+    "options": [
+      "Ctrl+Alt+2",
+      "Ctrl+Shift+2",
+      "Alt+2",
+      "Ctrl+2"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ctrl+Alt+2” ہے۔ یہ دوسری سطح کی heading style لگاتا ہے؛ Ctrl+2 double line spacing کے لیے ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-word",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0843-SRC",
+    "pairId": "IBES-Q0843",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which operator joins text from two Excel cells?",
+    "questionUrdu": "دو Excel cells کے متن کو جوڑنے کے لیے کون سا operator استعمال ہوتا ہے؟",
+    "options": [
+      "Ampersand (&)",
+      "Colon (:)",
+      "Space",
+      "Percent sign (%)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Ampersand (&)” ہے۔ & operator دو یا زیادہ text values کو ایک مسلسل text result میں concatenate کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q843, PDF p.43; Microsoft Support - Combine text and numbers in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/combine-text-and-numbers",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-word",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0843-SIM",
+    "pairId": "IBES-Q0843",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function can combine many text values while inserting a chosen delimiter and optionally ignoring empty cells?",
+    "questionUrdu": "کون سا Excel function کئی text values کو منتخب delimiter کے ساتھ جوڑ کر empty cells نظر انداز بھی کر سکتا ہے؟",
+    "options": [
+      "TEXTJOIN",
+      "SUM",
+      "COUNT",
+      "ROUND"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “TEXTJOIN” ہے۔ یہ delimiter اور ignore_empty arguments کے ساتھ متعدد text items یا ranges کو ایک result میں جوڑتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - TEXTJOIN function",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/textjoin-function-357b449a-ec91-49d0-80c3-0e8fc845691c",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-word",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0844-SRC",
+    "pairId": "IBES-Q0844",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the thin blinking vertical line that shows where Word will insert the next character?",
+    "questionUrdu": "ورڈ میں اگلا حرف کہاں داخل ہوگا یہ دکھانے والی باریک blinking vertical line کیا کہلاتی ہے؟",
+    "options": [
+      "A moving image",
+      "The insertion point",
+      "The mouse pointer",
+      "A selection box"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “The insertion point” ہے۔ Typing، paste یا line break اسی blinking cursor کے مقام پر داخل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q844, PDF p.43; Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-word",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The generic word \"cursor\" was replaced with Word's precise insertion-point concept."
+  },
+  {
+    "id": "IBES-Q0844-SIM",
+    "pairId": "IBES-Q0844",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which mouse-pointer shape commonly appears when the pointer is over editable Word text?",
+    "questionUrdu": "editable ورڈ متن پر mouse pointer عموماً کس شکل میں دکھائی دیتا ہے؟",
+    "options": [
+      "An I-beam",
+      "A paint bucket",
+      "A speaker icon",
+      "An hourglass only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “An I-beam” ہے۔ I-beam pointer متن میں insertion point رکھنے یا text selection شروع کرنے کی جگہ ظاہر کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-word",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0845-SRC",
+    "pairId": "IBES-Q0845",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word page setting changes a document between Portrait and Landscape?",
+    "questionUrdu": "ورڈ document کو Portrait اور Landscape کے درمیان بدلنے والی page setting کون سی ہے؟",
+    "options": [
+      "Orientation",
+      "Print Preview",
+      "Margins",
+      "Zoom"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Orientation” ہے۔ Portrait میں صفحہ عموماً لمبا اور Landscape میں چوڑا دکھائی دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q845, PDF p.43; Microsoft Support - Change document layout in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/training/change-document-layout",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-word",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source stem was incoherent and keyed Preview. It was reconstructed around the documented Orientation setting. The printed key is B; the independently verified answer is A."
+  },
+  {
+    "id": "IBES-Q0845-SIM",
+    "pairId": "IBES-Q0845",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word Layout command changes the blank space around the edges of a page?",
+    "questionUrdu": "ورڈ page کے کناروں کے گرد خالی جگہ بدلنے کے لیے Layout کی کون سی کمانڈ استعمال ہوتی ہے؟",
+    "options": [
+      "Margins",
+      "Orientation",
+      "Zoom",
+      "Comments"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Margins” ہے۔ Margins page edge اور document content کے درمیان blank boundary مقرر کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Change margins",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/change-margins-da21a474-99d8-4e54-b12d-a8a14ea7ce02",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-word",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0846-SRC",
+    "pairId": "IBES-Q0846",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is a Word master document?",
+    "questionUrdu": "ورڈ master document کیا ہے؟",
+    "options": [
+      "A chart container",
+      "A container used to manage separate subdocuments as one multipart document",
+      "A tool that resizes every document",
+      "A password-protection feature"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “A container used to manage separate subdocuments as one multipart document” ہے۔ یہ بڑی تحریر کے الگ subdocuments کو ایک مشترک ساخت میں منظم کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q846, PDF p.43; Microsoft Support - Create a cross-reference and use a master document",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/create-a-cross-reference",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-word",
+      "office",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The wording was normalized to Microsoft's direct definition of a master document."
+  },
+  {
+    "id": "IBES-Q0846-SIM",
+    "pairId": "IBES-Q0846",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the purpose of a cross-reference in Word?",
+    "questionUrdu": "ورڈ میں cross-reference کا مقصد کیا ہے؟",
+    "options": [
+      "Refer readers to another item or location in the document",
+      "Delete every heading",
+      "Encrypt the operating system",
+      "Create an Excel workbook"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Refer readers to another item or location in the document” ہے۔ Cross-reference heading، figure، table یا دوسرے numbered item کی طرف dynamic حوالہ دے سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Create a cross-reference and use a master document",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/create-a-cross-reference",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-word",
+      "office",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0849-SRC",
+    "pairId": "IBES-Q0849",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the standard modern PowerPoint presentation extension?",
+    "questionUrdu": "جدید PowerPoint presentation کی standard extension کون سی ہے؟",
+    "options": [
+      ".xlsx",
+      ".mdb",
+      ".pptx",
+      ".accdb"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “.pptx” ہے۔ یہ Office Open XML presentation format ہے اور عام modern PowerPoint files اسی extension میں محفوظ ہوتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q849, PDF p.43; Microsoft Support - PowerPoint file formats",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/file-formats-that-are-supported-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "file-extensions",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0849-SIM",
+    "pairId": "IBES-Q0849",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which modern extension identifies a PowerPoint template?",
+    "questionUrdu": "جدید PowerPoint template کی extension کون سی ہے؟",
+    "options": [
+      ".potx",
+      ".pptx",
+      ".ppsx",
+      ".docx"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “.potx” ہے۔ .potx reusable PowerPoint template کے لیے، جبکہ .pptx عام editable presentation کے لیے استعمال ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - PowerPoint file formats",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/file-formats-that-are-supported-in-powerpoint-252c6fa0-a4bc-41be-ac82-b77c9773f9dc",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "file-extensions",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0850-SRC",
+    "pairId": "IBES-Q0850",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the default modern Access desktop-database extension?",
+    "questionUrdu": "modern Access desktop database کی default extension کون سی ہے؟",
+    "options": [
+      ".xls",
+      ".accdb",
+      ".docx",
+      ".pst"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “.accdb” ہے۔ Access 2007 سے جدید desktop databases عام طور پر ACCDB format استعمال کرتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q850, PDF p.43; Microsoft Support - Access default file format",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/change-the-default-file-format",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "file-extensions",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0850-SIM",
+    "pairId": "IBES-Q0850",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which legacy extension was used by Access databases before the .accdb format?",
+    "questionUrdu": ".accdb سے پہلے Access databases کے لیے کون سی legacy extension استعمال ہوتی تھی؟",
+    "options": [
+      ".mdb",
+      ".ppt",
+      ".doc",
+      ".ost"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “.mdb” ہے۔ MDB پرانا Access database format تھا، جبکہ جدید default ACCDB ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Access default file format",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/change-the-default-file-format",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "file-extensions",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0851-SRC",
+    "pairId": "IBES-Q0851",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which extension was used by Outlook Express 6 folder-database files?",
+    "questionUrdu": "Outlook Express 6 کے folder-database files کی extension کون سی تھی؟",
+    "options": [
+      ".pst",
+      ".msg",
+      ".ost",
+      ".dbx"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “.dbx” ہے۔ Outlook Express ہر mail folder کا data DBX file میں محفوظ کر سکتا تھا۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q851, PDF p.43; Microsoft Learn - Outlook Express database files",
+      "referenceUrl": "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/oe/oe-database-ref-entry",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "file-extensions",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR read the final x as s. Microsoft Learn confirms the legacy Outlook Express extension is .dbx."
+  },
+  {
+    "id": "IBES-Q0851-SIM",
+    "pairId": "IBES-Q0851",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which extension identifies a personal Outlook Data File?",
+    "questionUrdu": "personal Outlook Data File کی extension کون سی ہے؟",
+    "options": [
+      ".pst",
+      ".dbx",
+      ".pptx",
+      ".accdb"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “.pst” ہے۔ PST modern Outlook میں mail، contacts اور دوسرے personal data کی local data file ہو سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Outlook data files",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/introduction-to-outlook-data-files-pst-and-ost-6d4197ec-1304-4b81-a17d-66d4eef30b78",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "file-extensions",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0852-SRC",
+    "pairId": "IBES-Q0852",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "The .psd extension identifies the native document format of which application?",
+    "questionUrdu": "پی ایس ڈی فائل extension کس تصویری application کا بنیادی document format ہے؟",
+    "options": [
+      "PowerPoint",
+      "Adobe Photoshop",
+      "Publisher",
+      "Premiere Pro"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “Adobe Photoshop” ہے۔ PSD Photoshop کی layers، masks اور دوسرے editable image features محفوظ کر سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q852, PDF p.43; Adobe Help - Photoshop file formats",
+      "referenceUrl": "https://helpx.adobe.com/photoshop/desktop/save-and-export/export-files-to-different-formats/photoshop-file-formats-overview.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "file-extensions",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0852-SIM",
+    "pairId": "IBES-Q0852",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Photoshop format is intended for very large documents beyond the usual PSD limits?",
+    "questionUrdu": "عام PSD limits سے بڑے Photoshop documents کے لیے کون سا format استعمال ہوتا ہے؟",
+    "options": [
+      "PSB",
+      "PPTX",
+      "ACCDB",
+      "DBX"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “PSB” ہے۔ Photoshop Large Document Format یا PSB بہت بڑی dimensions اور file data کے لیے بنایا گیا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Adobe Help - Photoshop file formats",
+      "referenceUrl": "https://helpx.adobe.com/photoshop/desktop/save-and-export/export-files-to-different-formats/photoshop-file-formats-overview.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "file-extensions",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0853-SRC",
+    "pairId": "IBES-Q0853",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What normally determines a new Word document's default proofing language?",
+    "questionUrdu": "نئی ورڈ دستاویز کی default proofing language عموماً کس چیز سے مقرر ہوتی ہے؟",
+    "options": [
+      "The computer or configured Office language settings",
+      "It is always US English",
+      "It is always UK English",
+      "It is always Canadian English"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “The computer or configured Office language settings” ہے۔ Proofing language ہمیشہ ایک مخصوص English variant پر fixed نہیں ہوتی۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q853, PDF p.43; Microsoft Support - Set the proofing language in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source incorrectly treated US English as universal. Microsoft states that the document default is typically the operating-system/default language and can be changed."
+  },
+  {
+    "id": "IBES-Q0853-SIM",
+    "pairId": "IBES-Q0853",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word command sets the proofing language for selected text?",
+    "questionUrdu": "selected ورڈ متن کی proofing language مقرر کرنے کے لیے کون سی کمانڈ استعمال ہوتی ہے؟",
+    "options": [
+      "Review > Language > Set Proofing Language",
+      "Layout > Margins",
+      "Insert > Chart",
+      "File > Print"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Review > Language > Set Proofing Language” ہے۔ پہلے متن منتخب کر کے اس dialog سے spelling/grammar کے لیے مطلوبہ language چنی جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Set the proofing language in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0854-SRC",
+    "pairId": "IBES-Q0854",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which application is most appropriate for writing and formatting a biography?",
+    "questionUrdu": "biography لکھنے اور format کرنے کے لیے سب سے مناسب application کون سی ہے؟",
+    "options": [
+      "Excel",
+      "Microsoft Edge",
+      "Microsoft Word",
+      "Access"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Microsoft Word” ہے۔ Word طویل متن، headings، page layout، references اور editing tools کے لیے word-processing application ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q854, PDF p.43; Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The broad \"word processor\" wording and unrelated distractors were replaced with a concrete document-authoring task."
+  },
+  {
+    "id": "IBES-Q0854-SIM",
+    "pairId": "IBES-Q0854",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word feature helps keep chapter headings consistently formatted throughout a biography?",
+    "questionUrdu": "biography میں تمام chapter headings کی formatting یکساں رکھنے میں کون سا ورڈ feature مدد دیتا ہے؟",
+    "options": [
+      "Styles",
+      "Formula Bar",
+      "Slide Master",
+      "Database relationships"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Styles” ہے۔ ایک heading style بار بار لگانے سے فونٹ، spacing اور hierarchy پوری document میں consistent رہتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0855-SRC",
+    "pairId": "IBES-Q0855",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Microsoft application is a word processor?",
+    "questionUrdu": "کون سی Microsoft application ایک word processor ہے؟",
+    "options": [
+      "Microsoft Word",
+      "Microsoft Access",
+      "Microsoft Excel",
+      "Microsoft Paint"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Microsoft Word” ہے۔ Word documents لکھنے، edit کرنے، format کرنے اور print یا share کرنے کے لیے بنایا گیا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q855, PDF p.43; Microsoft - History and timeline of Microsoft Word",
+      "referenceUrl": "https://www.microsoft.com/en-us/microsoft-365/word/history-of-microsoft-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source incorrectly identified the discontinued Microsoft Office InterConnect product as a word processor. It was reconstructed around the verified Microsoft Word product category."
+  },
+  {
+    "id": "IBES-Q0855-SIM",
+    "pairId": "IBES-Q0855",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which extension identifies a macro-enabled Word document?",
+    "questionUrdu": "macro-enabled Word document کی extension کون سی ہے؟",
+    "options": [
+      ".docm",
+      ".docx",
+      ".dotx",
+      ".xlsx"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “.docm” ہے۔ DOCM Word document format VBA macros محفوظ کر سکتا ہے، جبکہ DOCX macro-enabled format نہیں ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Word file formats",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/file-formats-for-saving-documents-88de3863-6e4c-4a2b-a6b7-30c90fae8dc6",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0856-SRC",
+    "pairId": "IBES-Q0856",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Word, Excel, and PowerPoint are included in which Microsoft productivity suite?",
+    "questionUrdu": "Word، Excel اور PowerPoint کس Microsoft productivity suite میں شامل ہیں؟",
+    "options": [
+      "Adobe Creative Cloud",
+      "Microsoft Office/Microsoft 365",
+      "OpenOffice only",
+      "Windows Accessories"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “Microsoft Office/Microsoft 365” ہے۔ یہ suite documents، spreadsheets اور presentations کے لیے مربوط productivity applications فراہم کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q856, PDF p.43; Microsoft Support - Office suites and included apps",
+      "referenceUrl": "https://support.microsoft.com/en-US/office/system-requirements/office-suites-for-individuals-and-families",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The product name was normalized to reflect current Microsoft 365 and perpetual Office suites."
+  },
+  {
+    "id": "IBES-Q0856-SIM",
+    "pairId": "IBES-Q0856",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Microsoft 365 application primarily manages email and calendars?",
+    "questionUrdu": "Microsoft 365 کی کون سی application بنیادی طور پر email اور calendars منظم کرتی ہے؟",
+    "options": [
+      "Outlook",
+      "PowerPoint",
+      "Paint",
+      "Access"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Outlook” ہے۔ Outlook email، calendar، contacts اور meeting scheduling کے لیے استعمال ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Office suites and included apps",
+      "referenceUrl": "https://support.microsoft.com/en-US/office/system-requirements/office-suites-for-individuals-and-families",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0857-SRC",
+    "pairId": "IBES-Q0857",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Microsoft application provides Editor for checking spelling and grammar in documents?",
+    "questionUrdu": "documents میں spelling اور grammar check کرنے کے لیے Editor کون سی Microsoft application فراہم کرتی ہے؟",
+    "options": [
+      "Notepad",
+      "Paint",
+      "Excel only",
+      "Word"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “Word” ہے۔ Microsoft Editor Word میں spelling، grammar، clarity اور writing suggestions دکھاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q857, PDF p.43; Microsoft Support - Check grammar, spelling, and more in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/training/check-grammar-spelling-and-more-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0857-SIM",
+    "pairId": "IBES-Q0857",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does the Editor pane group Word writing suggestions into?",
+    "questionUrdu": "ورڈ کا Editor pane writing suggestions کو کن حصوں میں منظم کرتا ہے؟",
+    "options": [
+      "Categories such as spelling, grammar, and refinements",
+      "Only printer queues",
+      "Database tables",
+      "Slide timings only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Categories such as spelling, grammar, and refinements” ہے۔ Editor مختلف writing issues کو categories میں دکھاتا ہے تاکہ ہر قسم الگ review کی جا سکے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Check grammar, spelling, and more in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/training/check-grammar-spelling-and-more-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0858-SRC",
+    "pairId": "IBES-Q0858",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the Windows startup executable name for Microsoft Word?",
+    "questionUrdu": "Microsoft Word کا Windows startup executable نام کیا ہے؟",
+    "options": [
+      "win.exe",
+      "word.exe",
+      "winword.exe",
+      "msword.com"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “winword.exe” ہے۔ Word کو command line یا Run سے شروع کرتے وقت executable base name WINWORD استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q858, PDF p.43; Microsoft Support - Office startup command names",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/lifecycle/command-line-switches-for-microsoft-office-products",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0858-SIM",
+    "pairId": "IBES-Q0858",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which command-line switch starts a Microsoft Office application in Safe Mode?",
+    "questionUrdu": "Microsoft Office application کو Safe Mode میں شروع کرنے کے لیے کون سا command-line switch استعمال ہوتا ہے؟",
+    "options": [
+      "/safe",
+      "/printall",
+      "/database",
+      "/slide"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “/safe” ہے۔ Executable کے ساتھ /safe switch Office app کو محدود startup configuration میں چلاتا ہے، جو troubleshooting میں مفید ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Office startup command names",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/lifecycle/command-line-switches-for-microsoft-office-products",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0859-SRC",
+    "pairId": "IBES-Q0859",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which category describes business software used across many industries rather than tailored to one industry?",
+    "questionUrdu": "کئی industries میں استعمال ہونے والے عام business software کو کون سی category بیان کرتی ہے؟",
+    "options": [
+      "Vertical-market software",
+      "Horizontal-market software",
+      "Firmware",
+      "Device-driver software"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “Horizontal-market software” ہے۔ یہ ایک industry تک محدود ہونے کے بجائے مختلف شعبوں میں مشترک business needs پوری کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q859, PDF p.43; Oracle Database - Broad horizontal and industry-specific application scope",
+      "referenceUrl": "https://docs.oracle.com/database/121/ADDCI/introduction.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The subjective claim that this is the \"most commonly used\" software was removed. Oracle defines broad horizontal scope as cross-industry and contrasts it with software specialized for a particular business."
+  },
+  {
+    "id": "IBES-Q0859-SIM",
+    "pairId": "IBES-Q0859",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "A hospital information system designed specifically for healthcare is an example of which market category?",
+    "questionUrdu": "خاص healthcare کے لیے بنایا گیا hospital information system کس market category کی مثال ہے؟",
+    "options": [
+      "Vertical-market software",
+      "Horizontal-market software",
+      "Firmware",
+      "Device-driver software"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Vertical-market software” ہے۔ Vertical solution کسی مخصوص industry کے workflows اور requirements کے لیے بنایا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Oracle Database - Broad horizontal and industry-specific application scope",
+      "referenceUrl": "https://docs.oracle.com/database/121/ADDCI/introduction.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0860-SRC",
+    "pairId": "IBES-Q0860",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "On what date was Microsoft Word 1.0 first released?",
+    "questionUrdu": "Microsoft Word 1.0 پہلی بار کس تاریخ کو جاری ہوا؟",
+    "options": [
+      "25 October 1981",
+      "25 October 1982",
+      "25 October 1984",
+      "25 October 1983"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “25 October 1983” ہے۔ Microsoft کی Word history timeline کے مطابق پہلی release اسی تاریخ سے منسوب ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q860, PDF p.43; Microsoft - History and timeline of Microsoft Word",
+      "referenceUrl": "https://www.microsoft.com/en-us/microsoft-365/word/history-of-microsoft-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked for an earlier product name (Multi-Tool Word), which Microsoft's current official history page does not directly support. It was reconstructed around the official release date."
+  },
+  {
+    "id": "IBES-Q0860-SIM",
+    "pairId": "IBES-Q0860",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What was Microsoft Word originally called during its early development?",
+    "questionUrdu": "ابتدائی development کے دوران Microsoft Word کو اصل میں کیا کہا جاتا تھا؟",
+    "options": [
+      "Multi-Tool Word",
+      "Excel Writer",
+      "Office Paint",
+      "Access Text"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Multi-Tool Word” ہے۔ Product کا ابتدائی نام Multi-Tool Word تھا، جسے بعد میں Microsoft Word کہا گیا۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft - History and timeline of Microsoft Word",
+      "referenceUrl": "https://www.microsoft.com/en-us/microsoft-365/word/history-of-microsoft-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0862-SRC",
+    "pairId": "IBES-Q0862",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In common entity-relationship diagram notation, which shape represents an entity?",
+    "questionUrdu": "عام entity-relationship diagram notation میں entity کس shape سے ظاہر ہوتی ہے؟",
+    "options": [
+      "A diamond",
+      "A line",
+      "A rectangle",
+      "An oval"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “A rectangle” ہے۔ ER diagram میں rectangle entity type دکھاتا ہے، جیسے Student یا Course۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q862, PDF p.43; IBM - Entity-relationship diagrams",
+      "referenceUrl": "https://www.ibm.com/think/topics/entity-relationship-diagram",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source omitted the ER component being represented. \"Entity\" was added so Rectangle is uniquely correct; relationships and attributes use other symbols."
+  },
+  {
+    "id": "IBES-Q0862-SIM",
+    "pairId": "IBES-Q0862",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In classic Chen ER notation, which shape represents a relationship?",
+    "questionUrdu": "classic Chen ER notation میں relationship کس shape سے ظاہر ہوتی ہے؟",
+    "options": [
+      "A diamond",
+      "A rectangle",
+      "An oval",
+      "A triangle"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “A diamond” ہے۔ Chen notation میں entities rectangles، attributes ovals اور relationships diamonds سے دکھائے جاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; IBM - Entity-relationship diagrams",
+      "referenceUrl": "https://www.ibm.com/think/topics/entity-relationship-diagram",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0863-SRC",
+    "pairId": "IBES-Q0863",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "A handheld physical computing device is classified as what?",
+    "questionUrdu": "ہاتھ میں پکڑا جانے والا physical computing device کس category میں آتا ہے؟",
+    "options": [
+      "Software",
+      "Hardware",
+      "A programming language",
+      "A data file"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب “Hardware” ہے۔ Hardware کمپیوٹر یا device کے جسمانی، چھوئے جا سکنے والے اجزا کو کہا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q863, PDF p.43; NIST CSRC - Hardware definition",
+      "referenceUrl": "https://csrc.nist.gov/glossary/term/hardware",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source used the vague phrase \"handheld devices are called\" and an answer-encoding combined choice. It was tied to NIST's definition of hardware as physical components."
+  },
+  {
+    "id": "IBES-Q0863-SIM",
+    "pairId": "IBES-Q0863",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which item is computer hardware?",
+    "questionUrdu": "کون سی چیز computer hardware ہے؟",
+    "options": [
+      "A keyboard",
+      "A formula",
+      "A file name",
+      "A programming syntax rule"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “A keyboard” ہے۔ Keyboard ایک physical input device ہے، اس لیے hardware میں شمار ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; NIST CSRC - Hardware definition",
+      "referenceUrl": "https://csrc.nist.gov/glossary/term/hardware",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0864-SRC",
+    "pairId": "IBES-Q0864",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Intel Pentium is the name of a family of what?",
+    "questionUrdu": "Intel Pentium کس چیز کے خاندان کا نام ہے؟",
+    "options": [
+      "Hard disks",
+      "DVDs",
+      "Printers",
+      "Processors"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “Processors” ہے۔ Pentium Intel کے مختلف generations میں استعمال ہونے والا processor brand رہا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q864, PDF p.43; Intel - Processor names and numbers",
+      "referenceUrl": "https://www.intel.com/content/www/us/en/processors/processor-numbers.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "\"Microprocessor\" was normalized to Intel's current processor terminology."
+  },
+  {
+    "id": "IBES-Q0864-SIM",
+    "pairId": "IBES-Q0864",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Intel brand name is also associated with families of PC processors?",
+    "questionUrdu": "کون سا Intel brand name بھی PC processors کے خاندانوں سے وابستہ ہے؟",
+    "options": [
+      "Intel Core",
+      "Adobe Acrobat",
+      "Microsoft Word",
+      "PowerPoint Designer"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Intel Core” ہے۔ Intel Core بھی consumer PC processors کے معروف brand families میں شامل ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Intel - Processor names and numbers",
+      "referenceUrl": "https://www.intel.com/content/www/us/en/processors/processor-numbers.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0865-SRC",
+    "pairId": "IBES-Q0865",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which machine can perform mechanical or electrical tasks on its own?",
+    "questionUrdu": "کون سی machine mechanical یا electrical tasks خود انجام دے سکتی ہے؟",
+    "options": [
+      "A text document",
+      "A barcode label",
+      "A spreadsheet formula",
+      "A robot"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “A robot” ہے۔ Robot programmed control کے ذریعے environment میں physical tasks انجام دے سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q865, PDF p.43; NASA - What is a robot?",
+      "referenceUrl": "https://ntrs.nasa.gov/api/citations/20140012763/downloads/20140012763.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The undefined term \"mechanical agent\" was replaced by NASA's direct robot definition."
+  },
+  {
+    "id": "IBES-Q0865-SIM",
+    "pairId": "IBES-Q0865",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which robot component helps detect conditions in its environment?",
+    "questionUrdu": "robot کو اپنے environment کی حالت معلوم کرنے میں کون سا component مدد دیتا ہے؟",
+    "options": [
+      "A sensor",
+      "A paragraph mark",
+      "A file extension",
+      "A slide footer"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “A sensor” ہے۔ Sensors روشنی، distance، touch یا دوسری environmental information robot کے control system تک پہنچاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; NASA - What is a robot?",
+      "referenceUrl": "https://ntrs.nasa.gov/api/citations/20140012763/downloads/20140012763.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0866-SRC",
+    "pairId": "IBES-Q0866",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In a paged-memory system, wasted space inside a partly used allocated page is called what?",
+    "questionUrdu": "paged-memory system میں partly used allocated page کے اندر ضائع جگہ کیا کہلاتی ہے؟",
+    "options": [
+      "Internal fragmentation",
+      "External fragmentation",
+      "A page fault",
+      "Thrashing"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Internal fragmentation” ہے۔ Fixed-size page allocation کے اندر unused حصہ allocated block ہی میں بند رہتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q866, PDF p.43; NIST - Storage fragmentation within pages",
+      "referenceUrl": "https://nvlpubs.nist.gov/nistpubs/Legacy/MONO/nbsmonograph113v2.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asserted that increasing page size always increases fragmentation without stating an allocation model. It was reconstructed around the stable definition of fragmentation within pages."
+  },
+  {
+    "id": "IBES-Q0866-SIM",
+    "pairId": "IBES-Q0866",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is free memory split into small noncontiguous holes between allocated blocks called?",
+    "questionUrdu": "allocated blocks کے درمیان چھوٹے غیر مسلسل holes میں بٹی free memory کیا کہلاتی ہے؟",
+    "options": [
+      "External fragmentation",
+      "Internal fragmentation",
+      "A page hit",
+      "Caching"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “External fragmentation” ہے۔ Free space موجود تو ہوتی ہے مگر مختلف جگہوں پر چھوٹے holes کی صورت میں بٹی ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; NIST - Storage fragmentation within pages",
+      "referenceUrl": "https://nvlpubs.nist.gov/nistpubs/Legacy/MONO/nbsmonograph113v2.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0867-SRC",
+    "pairId": "IBES-Q0867",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which choice does not describe text position relative to Word's baseline?",
+    "questionUrdu": "کون سا choice ورڈ baseline کے مقابل text position بیان نہیں کرتا؟",
+    "options": [
+      "Normal",
+      "Raised",
+      "Lowered",
+      "Centered"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب “Centered” ہے۔ Normal، Raised اور Lowered character baseline positions ہیں، جبکہ Centered paragraph alignment ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q867, PDF p.43; Microsoft Learn - Word Font.Position property",
+      "referenceUrl": "https://learn.microsoft.com/en-us/office/vba/api/word.font.position",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source omitted the Font-dialog context. Microsoft documents that positive position values raise text and negative values lower it relative to the baseline; Centered is paragraph alignment, not a baseline position."
+  },
+  {
+    "id": "IBES-Q0867-SIM",
+    "pairId": "IBES-Q0867",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In Word's character-position setting, what does a positive Position value do?",
+    "questionUrdu": "ورڈ character-position setting میں positive Position value کیا کرتی ہے؟",
+    "options": [
+      "Raises text above the baseline",
+      "Lowers text below the baseline",
+      "Centers the paragraph",
+      "Deletes the text"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Raises text above the baseline” ہے۔ Positive position text کو baseline سے اوپر اٹھاتی ہے، جبکہ negative value نیچے کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Learn - Word Font.Position property",
+      "referenceUrl": "https://learn.microsoft.com/en-us/office/vba/api/word.font.position",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0868-SRC",
+    "pairId": "IBES-Q0868",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which name is not a released Microsoft Word version or service?",
+    "questionUrdu": "کون سا نام released Microsoft Word version یا service نہیں ہے؟",
+    "options": [
+      "Word 2013",
+      "Word 2016",
+      "Word 1020",
+      "Word for Microsoft 365"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Word 1020” ہے۔ Word 2013، Word 2016 اور Word for Microsoft 365 حقیقی product names ہیں، Word 1020 نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q868, PDF p.43; Microsoft - History and timeline of Microsoft Word",
+      "referenceUrl": "https://www.microsoft.com/en-us/microsoft-365/word/history-of-microsoft-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "\"Word 365\" was normalized to Word for Microsoft 365; the fabricated Word 1020 remains the unique answer."
+  },
+  {
+    "id": "IBES-Q0868-SIM",
+    "pairId": "IBES-Q0868",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word offering uses a subscription-service name rather than a year in its title?",
+    "questionUrdu": "کون سی Word offering اپنے نام میں year کے بجائے subscription service کا نام استعمال کرتی ہے؟",
+    "options": [
+      "Word for Microsoft 365",
+      "Word 2016",
+      "Word 2013",
+      "Word 2010"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Word for Microsoft 365” ہے۔ یہ Microsoft 365 subscription کے ساتھ مسلسل update ہونے والی Word offering ہے، year-numbered perpetual release نہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft - History and timeline of Microsoft Word",
+      "referenceUrl": "https://www.microsoft.com/en-us/microsoft-365/word/history-of-microsoft-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0869-SRC",
+    "pairId": "IBES-Q0869",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which device is normally used as a pointing device for selecting text in Word?",
+    "questionUrdu": "ورڈ میں متن منتخب کرنے کے لیے عموماً کون سا pointing device استعمال ہوتا ہے؟",
+    "options": [
+      "Keyboard",
+      "Joystick",
+      "Mouse",
+      "Printer"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب “Mouse” ہے۔ Mouse pointer کو text پر drag کر کے حروف، الفاظ، سطریں یا بڑے passages منتخب کیے جا سکتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q869, PDF p.44; Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked which device is \"not used\" in Word, a negative claim that could vary with accessibility setups. It was reconstructed as a positive pointing-device question. The printed key is B; the independently verified answer is C."
+  },
+  {
+    "id": "IBES-Q0869-SIM",
+    "pairId": "IBES-Q0869",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does double-clicking a word normally select in Word?",
+    "questionUrdu": "ورڈ میں کسی لفظ پر double-click کرنے سے عموماً کیا منتخب ہوتا ہے؟",
+    "options": [
+      "The entire word",
+      "The entire document",
+      "Only one pixel",
+      "The printer"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “The entire word” ہے۔ Word میں text پر double-click اس مکمل لفظ کو selection میں شامل کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Select text",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/select-text-5ae24034-1c93-4805-bc2d-00aaf6235c97",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  },
+  {
+    "id": "IBES-Q0870-SRC",
+    "pairId": "IBES-Q0870",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What was Microsoft Office Accounting designed to help manage?",
+    "questionUrdu": "Microsoft Office Accounting کس چیز کے انتظام میں مدد کے لیے بنایا گیا تھا؟",
+    "options": [
+      "Business finances",
+      "Gantt charts",
+      "Word-processing documents",
+      "Flowcharts"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Business finances” ہے۔ یہ small-business accounting، sales، expenses اور related financial records سنبھالنے کے لیے بنایا گیا تھا۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025 — Q870, PDF p.44; Microsoft Support - Microsoft Office Accounting Help",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/account-management/microsoft-office-accounting-help",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "ibes-capsule"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0870-SIM",
+    "pairId": "IBES-Q0870",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which task best fits small-business accounting software?",
+    "questionUrdu": "small-business accounting software کے لیے کون سا task سب سے موزوں ہے؟",
+    "options": [
+      "Tracking invoices and expenses",
+      "Drawing slide animations",
+      "Editing video pixels",
+      "Compiling a device driver"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب “Tracking invoices and expenses” ہے۔ Accounting software business income، bills، invoices اور expenses جیسے مالی records منظم کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original related practice question; Microsoft Support - Microsoft Office Accounting Help",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/account-management/microsoft-office-accounting-help",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "microsoft-office",
+      "basic-computing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related PPSC-style question independently checked against the cited authoritative primary source."
+  }
+]

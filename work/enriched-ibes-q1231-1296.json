@@ -1,0 +1,3089 @@
+[
+  {
+    "id": "IBES-Q1231-SRC",
+    "pairId": "IBES-Q1231",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint Ribbon tab contains presentation themes?",
+    "questionUrdu": "PowerPoint Ribbon کی کون سی tab میں presentation themes موجود ہوتی ہیں؟",
+    "options": [
+      "Home",
+      "Insert",
+      "Design",
+      "Review"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Design ہے۔ Design tab میں Themes gallery اور related Variants controls ہوتے ہیں جن سے presentation کا coordinated appearance منتخب کیا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1231; Microsoft Support — Remove or change the current PowerPoint theme",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/remove-or-change-the-current-theme",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "design-tab",
+      "theme-variants"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked which “option” applies a theme to all slides, although scope can also be selected from a theme’s context menu. Reconstructed around the stable Design-tab location and corrected the inherited Slide Master reference."
+  },
+  {
+    "id": "IBES-Q1231-SIM",
+    "pairId": "IBES-Q1231",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Design-tab group lets you choose a variation of the current PowerPoint theme?",
+    "questionUrdu": "PowerPoint کی Design tab میں موجودہ theme کی variation کس group سے منتخب ہوتی ہے؟",
+    "options": [
+      "Variants",
+      "Clipboard",
+      "Proofing",
+      "Media"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Variants ہے۔ Variants group current theme کے coordinated colors، fonts، effects اور background styles کے متبادل دکھاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Remove or change the current PowerPoint theme",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/remove-or-change-the-current-theme",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "design-tab",
+      "theme-variants",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1233-SRC",
+    "pairId": "IBES-Q1233",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which theme component changes coordinated colors without changing slide content?",
+    "questionUrdu": "کون سا theme component slide content بدلے بغیر coordinated colors تبدیل کرتا ہے؟",
+    "options": [
+      "Color scheme / theme colors",
+      "Slide layout",
+      "Font size only",
+      "Object deletion"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Color scheme / theme colors ہے۔ Theme Colors پوری presentation کے لیے coordinated color palette بدلتے ہیں، مگر slide کا اصل text اور objects برقرار رہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1233; Microsoft Support — Remove or change the current PowerPoint theme",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/remove-or-change-the-current-theme",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "theme-colors",
+      "theme-fonts"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The legacy “Color Scheme” wording was retained as theme colors and scoped to changing coordinated colors without changing content."
+  },
+  {
+    "id": "IBES-Q1233-SIM",
+    "pairId": "IBES-Q1233",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint theme component coordinates heading and body typefaces?",
+    "questionUrdu": "PowerPoint theme کا کون سا component heading اور body typefaces کو coordinate کرتا ہے؟",
+    "options": [
+      "Theme Fonts",
+      "Slide Numbers",
+      "Speaker Notes",
+      "Media Controls"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Theme Fonts ہے۔ Theme Fonts عام طور پر heading font اور body font کا coordinated pair مقرر کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Remove or change the current PowerPoint theme",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/remove-or-change-the-current-theme",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "theme-colors",
+      "theme-fonts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1234-SRC",
+    "pairId": "IBES-Q1234",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "How does a PowerPoint template differ from a theme?",
+    "questionUrdu": "PowerPoint template اور theme میں بنیادی فرق کیا ہے؟",
+    "options": [
+      "They are identical",
+      "A theme includes purpose-specific sample content",
+      "A template can include a theme, layouts, and purpose-specific sample content",
+      "A template controls only animations"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب A template can include a theme, layouts, and purpose-specific sample content ہے۔ Template theme کے ساتھ layouts اور purpose-specific sample content بھی رکھ سکتی ہے، جبکہ theme بنیادی visual design coordinates دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1234; Microsoft Support — Difference between PowerPoint templates and themes",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/understand-the-difference-between-powerpoint-templates-and-themes",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "templates",
+      "themes"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source compared Slide Design with the removed AutoContent Wizard. Reconstructed using Microsoft’s current distinction: a template is a theme plus purpose-specific content."
+  },
+  {
+    "id": "IBES-Q1234-SIM",
+    "pairId": "IBES-Q1234",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What happens to a reusable .potx file when a new presentation is created from it?",
+    "questionUrdu": "Reusable .potx file سے نئی presentation بنانے پر اصل template کے ساتھ کیا ہوتا ہے؟",
+    "options": [
+      "The template remains reusable while a new presentation is created",
+      "The template is automatically deleted",
+      "The template becomes a video",
+      "Every placeholder is permanently locked"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The template remains reusable while a new presentation is created ہے۔ Template starting design دیتی ہے؛ PowerPoint اس سے نئی presentation بناتا ہے اور اصل .potx file دوبارہ استعمال کی جا سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create and save a PowerPoint template",
+      "referenceUrl": "https://support.microsoft.com/en-us/PowerPoint/create-and-save-a-powerpoint-template",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "templates",
+      "themes",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1236-SRC",
+    "pairId": "IBES-Q1236",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint file type is designed to be reused as the starting point for new presentations?",
+    "questionUrdu": "نئی presentations کے starting point کے طور پر دوبارہ استعمال ہونے والی PowerPoint file type کون سی ہے؟",
+    "options": [
+      "PowerPoint Template (.potx)",
+      "Slide Master view",
+      "Theme color only",
+      "Animation scheme"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب PowerPoint Template (.potx) ہے۔ PowerPoint Template کی .potx file reusable design، layouts اور optional sample content محفوظ کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1236; Microsoft Support — Create and save a PowerPoint template",
+      "referenceUrl": "https://support.microsoft.com/en-us/PowerPoint/create-and-save-a-powerpoint-template",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "templates",
+      "file-extensions"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source stem “What lets you to create a new presentation by” was malformed and confused templates with design themes. Reconstructed around the documented .potx template type."
+  },
+  {
+    "id": "IBES-Q1236-SIM",
+    "pairId": "IBES-Q1236",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which extension identifies a macro-enabled PowerPoint template?",
+    "questionUrdu": "Macro-enabled PowerPoint template کو کون سی file extension شناخت دیتی ہے؟",
+    "options": [
+      ".potm",
+      ".potx",
+      ".pptx",
+      ".ppsx"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب .potm ہے۔ .potm PowerPoint macro-enabled template format ہے، جبکہ .potx macro-free template format ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create and save a PowerPoint template",
+      "referenceUrl": "https://support.microsoft.com/en-us/PowerPoint/create-and-save-a-powerpoint-template",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "templates",
+      "file-extensions",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1237-SRC",
+    "pairId": "IBES-Q1237",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In desktop PowerPoint, to which scope can a theme be applied?",
+    "questionUrdu": "Desktop PowerPoint میں theme کس scope پر apply کی جا سکتی ہے؟",
+    "options": [
+      "Only the current slide",
+      "Selected slides or every slide",
+      "Only future presentations",
+      "Only the slide master and never slides"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Selected slides or every slide ہے۔ Theme پوری presentation یا صرف selected slides پر apply ہو سکتی ہے، اس لیے ایک file میں مختلف themed sections ممکن ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1237; Microsoft Support — Remove or change the current PowerPoint theme",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/remove-or-change-the-current-theme",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "themes",
+      "selected-slides"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source keyed “All of these,” but a selected theme is not automatically applied to every future presentation. Microsoft documents Apply to All Slides and Apply to Selected Slides. Reworded the correct combined scope without the answer-encoding word “All.”"
+  },
+  {
+    "id": "IBES-Q1237-SIM",
+    "pairId": "IBES-Q1237",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which context-menu command applies a chosen theme only to highlighted slides?",
+    "questionUrdu": "منتخب slides پر ہی chosen theme لگانے کے لیے کون سی context-menu command استعمال ہوتی ہے؟",
+    "options": [
+      "Apply to Selected Slides",
+      "Apply to All Documents",
+      "Merge All Shapes",
+      "Hide Background Graphics"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Apply to Selected Slides ہے۔ Theme thumbnail پر right-click کرکے Apply to Selected Slides منتخب کرنے سے باقی slides کا theme نہیں بدلتا۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Remove or change the current PowerPoint theme",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/remove-or-change-the-current-theme",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "themes",
+      "selected-slides",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1239-SRC",
+    "pairId": "IBES-Q1239",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What are the visual effects between one PowerPoint slide and the next called?",
+    "questionUrdu": "ایک PowerPoint slide سے اگلی slide تک visual effects کو کیا کہتے ہیں؟",
+    "options": [
+      "Object animations",
+      "Slide transitions",
+      "Presenter notes",
+      "Theme variants"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Slide transitions ہے۔ Slide transitions outgoing اور incoming slides کے درمیان visual change کو control کرتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1239; Microsoft Support — Difference between animations and transitions",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/the-difference-between-animations-and-transitions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "transitions",
+      "duration"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Shortened the stem and replaced malformed distractors. Microsoft distinguishes slide transitions from object animations."
+  },
+  {
+    "id": "IBES-Q1239-SIM",
+    "pairId": "IBES-Q1239",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint transition setting controls how long the visual change lasts?",
+    "questionUrdu": "PowerPoint transition کی کون سی setting visual change کا دورانیہ control کرتی ہے؟",
+    "options": [
+      "Duration",
+      "Slide Size",
+      "Font Size",
+      "Proofing Language"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Duration ہے۔ Duration transition effect کے چلنے کا وقت مقرر کرتی ہے؛ کم duration سے change زیادہ تیز دکھائی دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Difference between animations and transitions",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/the-difference-between-animations-and-transitions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "transitions",
+      "duration",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1243-SRC",
+    "pairId": "IBES-Q1243",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "On which PowerPoint tab can the “On Mouse Click” transition-advance option be set?",
+    "questionUrdu": "PowerPoint کی کس tab پر On Mouse Click transition-advance option مقرر ہوتی ہے؟",
+    "options": [
+      "Insert",
+      "Format",
+      "Transitions",
+      "Home"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Transitions ہے۔ Transitions tab کے Timing controls سے slide mouse click یا مقررہ time کے بعد advance کی جا سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1243; Microsoft Support — Difference between animations and transitions",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/the-difference-between-animations-and-transitions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "transitions",
+      "slide-advance"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source options were malformed command phrases. Reconstructed around the documented transition timing control."
+  },
+  {
+    "id": "IBES-Q1243-SIM",
+    "pairId": "IBES-Q1243",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which transition-advance option changes a slide automatically after a specified delay?",
+    "questionUrdu": "مقررہ delay کے بعد slide خود بدلنے کے لیے کون سا transition-advance option استعمال ہوتا ہے؟",
+    "options": [
+      "After",
+      "On Mouse Click only",
+      "Loop Until Stopped",
+      "Rewind After Playing"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب After ہے۔ After checkbox کے ساتھ time مقرر کرنے پر slide اس interval کے بعد automatically advance ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Difference between animations and transitions",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/the-difference-between-animations-and-transitions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "transitions",
+      "slide-advance",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1244-SRC",
+    "pairId": "IBES-Q1244",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint tab is used to apply motion effects to individual objects on a slide?",
+    "questionUrdu": "Slide کے individual objects پر motion effects لگانے کے لیے PowerPoint کی کون سی tab استعمال ہوتی ہے؟",
+    "options": [
+      "Transitions",
+      "Design",
+      "Animations",
+      "Slide Master"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Animations ہے۔ Animations tab text، shapes، pictures اور دوسرے slide objects پر motion اور emphasis effects apply کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1244; Microsoft Support — Difference between animations and transitions",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/the-difference-between-animations-and-transitions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "animations",
+      "animation-pane"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key selected legacy Animation Scheme (D). Current PowerPoint applies effects to slide objects from the Animations tab."
+  },
+  {
+    "id": "IBES-Q1244-SIM",
+    "pairId": "IBES-Q1244",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint pane displays animation order and timing for objects on a slide?",
+    "questionUrdu": "Slide objects کی animation order اور timing کون سا PowerPoint pane دکھاتا ہے؟",
+    "options": [
+      "Animation Pane",
+      "Selection Bar",
+      "Notes Master",
+      "Theme Gallery"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Animation Pane ہے۔ Animation Pane effects کی sequence، trigger، duration اور delay inspect اور rearrange کرنے دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Difference between animations and transitions",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/the-difference-between-animations-and-transitions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "animations",
+      "animation-pane",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1246-SRC",
+    "pairId": "IBES-Q1246",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In PowerPoint, an animation effect is applied to:",
+    "questionUrdu": "PowerPoint میں animation effect کس چیز پر apply ہوتی ہے؟",
+    "options": [
+      "Only the entire presentation file",
+      "An individual element such as text, a shape, or an image",
+      "Only printer settings",
+      "Only a slide theme"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب An individual element such as text, a shape, or an image ہے۔ Animation ایک individual element جیسے text، shape یا image پر لگتی ہے، پوری slides کے درمیان نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1246; Microsoft Support — Difference between animations and transitions",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/the-difference-between-animations-and-transitions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "animations",
+      "entrance-effects"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked about legacy Animation Schemes and made several slide scopes plausible. Reconstructed using Microsoft’s current definition of animation."
+  },
+  {
+    "id": "IBES-Q1246-SIM",
+    "pairId": "IBES-Q1246",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which animation category controls how an object first appears on a slide?",
+    "questionUrdu": "Object پہلی بار slide پر کیسے ظاہر ہو، یہ کون سی animation category control کرتی ہے؟",
+    "options": [
+      "Entrance",
+      "Exit",
+      "Emphasis",
+      "Motion Path only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Entrance ہے۔ Entrance effects object کو slide show کے دوران ظاہر کرتے ہیں؛ Exit effects اسے غائب کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Difference between animations and transitions",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/the-difference-between-animations-and-transitions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "animations",
+      "entrance-effects",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1248-SRC",
+    "pairId": "IBES-Q1248",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In PowerPoint 2016, on which Ribbon tab is Rehearse Timings located?",
+    "questionUrdu": "PowerPoint 2016 میں Rehearse Timings کس Ribbon tab پر موجود ہے؟",
+    "options": [
+      "Home Tab",
+      "Slide Show Tab",
+      "Review Tab",
+      "Design Tab"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Slide Show Tab ہے۔ Slide Show tab کی Rehearse Timings command presentation delivery practice اور slide timing record کرنے کے لیے ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1248; Microsoft Support — Rehearse and time a PowerPoint presentation",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/training/rehearse-and-time-the-delivery-of-a-presentation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "rehearse-timings",
+      "slide-show"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Minor wording repair; the documented command is on the Slide Show tab."
+  },
+  {
+    "id": "IBES-Q1248-SIM",
+    "pairId": "IBES-Q1248",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does PowerPoint record while Rehearse Timings is running?",
+    "questionUrdu": "Rehearse Timings چلتے وقت PowerPoint بنیادی طور پر کیا record کرتا ہے؟",
+    "options": [
+      "Time spent presenting each slide",
+      "Only the slide background color",
+      "Printer ink usage",
+      "Database field sizes"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Time spent presenting each slide ہے۔ Rehearsal کے دوران ہر slide پر گزارا گیا time محفوظ ہو سکتا ہے اور automatic slide advancement میں استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Rehearse and time a PowerPoint presentation",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/training/rehearse-and-time-the-delivery-of-a-presentation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "rehearse-timings",
+      "slide-show",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1249-SRC",
+    "pairId": "IBES-Q1249",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which item is not defined by a PowerPoint slide layout?",
+    "questionUrdu": "PowerPoint slide layout درج ذیل میں کون سی چیز define نہیں کرتی؟",
+    "options": [
+      "Lists",
+      "Animations",
+      "Titles",
+      "Charts"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Animations ہے۔ Slide layout placeholders کی positions اور formatting define کرتی ہے؛ animations الگ effects ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1249; Microsoft Support — What is a slide layout?",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/what-is-a-slide-layout",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-layouts",
+      "placeholders"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Clarified the source stem. Slide layouts define placeholders for titles, lists/content, charts, and other objects; animations are separate effects."
+  },
+  {
+    "id": "IBES-Q1249-SIM",
+    "pairId": "IBES-Q1249",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does a PowerPoint slide layout primarily define?",
+    "questionUrdu": "PowerPoint slide layout بنیادی طور پر کس چیز کی ترتیب مقرر کرتی ہے؟",
+    "options": [
+      "Placeholder positions and arrangement",
+      "The computer's boot order",
+      "Database passwords",
+      "Printer toner level"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Placeholder positions and arrangement ہے۔ Layout title، text، picture اور chart placeholders کی جگہ، size اور arrangement مقرر کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — What is a slide layout?",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/what-is-a-slide-layout",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-layouts",
+      "placeholders",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1250-SRC",
+    "pairId": "IBES-Q1250",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint tab contains commands to start, set up, and rehearse a slide show?",
+    "questionUrdu": "Slide show start، set up اور rehearse کرنے کی commands PowerPoint کی کس tab میں ہیں؟",
+    "options": [
+      "Home",
+      "Insert",
+      "Slide Show",
+      "Review"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Slide Show ہے۔ Slide Show tab presentation چلانے، custom shows، setup اور rehearsal کے مرکزی commands رکھتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1250; Microsoft Support — Rehearse and time a PowerPoint presentation",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/training/rehearse-and-time-the-delivery-of-a-presentation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-show",
+      "hide-slide"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source answer “preview and control” was vague and used “None of these.” Reconstructed around the documented Slide Show tab commands."
+  },
+  {
+    "id": "IBES-Q1250-SIM",
+    "pairId": "IBES-Q1250",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Slide Show command excludes a selected slide from normal playback without deleting it?",
+    "questionUrdu": "Selected slide کو delete کیے بغیر normal playback سے نکالنے والی Slide Show command کون سی ہے؟",
+    "options": [
+      "Hide Slide",
+      "Delete Slide",
+      "Crop Slide",
+      "Lock Aspect Ratio"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Hide Slide ہے۔ Hide Slide selected slide کو file میں برقرار رکھتی ہے مگر عام sequential slide show میں skip کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Hide or show a slide",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/hide-or-show-a-slide-8313e1ec-3e20-4464-952f-387931554d69",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-show",
+      "hide-slide",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1251-SRC",
+    "pairId": "IBES-Q1251",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the maximum magnification available when zooming into a slide in supported PowerPoint Slide Show view?",
+    "questionUrdu": "Supported PowerPoint Slide Show view میں maximum zoom magnification کتنی ہے؟",
+    "options": [
+      "200%",
+      "400%",
+      "600%",
+      "800%"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 400% ہے۔ Magnify feature supported slide-show environments میں slide کے حصے کو 400% تک بڑا دکھا سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1251; Microsoft Support — Magnify a slide in Slide Show view",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/magnify-a-slide-in-slide-show-view",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-show",
+      "magnification"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Added Slide Show view and supported-version scope. Microsoft documents magnification up to 400%."
+  },
+  {
+    "id": "IBES-Q1251-SIM",
+    "pairId": "IBES-Q1251",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Does magnifying a slide during a PowerPoint show change the slide's saved physical size?",
+    "questionUrdu": "PowerPoint show کے دوران slide magnify کرنے سے کیا saved physical size بدلتا ہے؟",
+    "options": [
+      "No, it only changes the viewing magnification",
+      "Yes, it permanently quadruples the slide",
+      "Yes, it changes paper size",
+      "No, because it deletes the slide"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب No, it only changes the viewing magnification ہے۔ Slide-show magnification صرف audience view کو zoom کرتی ہے؛ presentation کی stored slide dimensions نہیں بدلتی۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Magnify a slide in Slide Show view",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/magnify-a-slide-in-slide-show-view",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-show",
+      "magnification",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1252-SRC",
+    "pairId": "IBES-Q1252",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which set contains only supported PowerPoint views?",
+    "questionUrdu": "کون سا set صرف supported PowerPoint views پر مشتمل ہے؟",
+    "options": [
+      "Outline, Orientation, and Slide Show",
+      "Slide Sorter, Orientation, and Normal",
+      "Normal, Design, and Orientation",
+      "Outline, Slide Sorter, and Slide Show"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Outline, Slide Sorter, and Slide Show ہے۔ Outline، Slide Sorter اور Slide Show PowerPoint کے named working یا presentation views ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1252; Microsoft Support — Choose the right view in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/choose-the-right-view-for-the-task-in-powerpoint-21332d8d-adbc-4717-a2c6-e25a697b40e9",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "views",
+      "outline-view"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key selected Slide Show (C) as an unsupported view, but Microsoft documents Outline, Slide Sorter, and Slide Show. The earlier “None of these” repair was replaced with a direct supported-view set."
+  },
+  {
+    "id": "IBES-Q1252-SIM",
+    "pairId": "IBES-Q1252",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint view displays slide text as a hierarchical outline?",
+    "questionUrdu": "Slide text کو hierarchical outline کی صورت میں کون سا PowerPoint view دکھاتا ہے؟",
+    "options": [
+      "Outline view",
+      "Handout Master",
+      "Animation Pane",
+      "Orientation view"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Outline view ہے۔ Outline view titles اور main text کو hierarchy میں دکھاتی ہے تاکہ presentation structure جلد edit کیا جا سکے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Choose the right view in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/choose-the-right-view-for-the-task-in-powerpoint-21332d8d-adbc-4717-a2c6-e25a697b40e9",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "views",
+      "outline-view",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1253-SRC",
+    "pairId": "IBES-Q1253",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "On which PowerPoint Ribbon tab can you switch to Slide Sorter view?",
+    "questionUrdu": "Slide Sorter view پر switch کرنے کے لیے PowerPoint Ribbon کی کون سی tab استعمال ہوتی ہے؟",
+    "options": [
+      "Insert",
+      "View",
+      "Review",
+      "File"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب View ہے۔ View tab presentation views بدلنے کے commands دیتی ہے، جن میں Slide Sorter بھی شامل ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1253; Microsoft Support — Choose the right view in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/choose-the-right-view-for-the-task-in-powerpoint-21332d8d-adbc-4717-a2c6-e25a697b40e9",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "views",
+      "status-bar"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Modernized legacy “menu” wording to Ribbon tab and replaced the obsolete Edit distractor."
+  },
+  {
+    "id": "IBES-Q1253-SIM",
+    "pairId": "IBES-Q1253",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Where are shortcuts for common PowerPoint views also normally displayed?",
+    "questionUrdu": "Common PowerPoint views کے shortcut buttons عام طور پر اور کہاں دکھائی دیتے ہیں؟",
+    "options": [
+      "On the status bar",
+      "Inside the formula bar",
+      "On the printer cartridge",
+      "In the database schema"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب On the status bar ہے۔ PowerPoint status bar کے قریب Normal، Slide Sorter اور Reading view کے shortcut buttons دکھاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Choose the right view in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/choose-the-right-view-for-the-task-in-powerpoint-21332d8d-adbc-4717-a2c6-e25a697b40e9",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "views",
+      "status-bar",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1254-SRC",
+    "pairId": "IBES-Q1254",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which of the following is not a named PowerPoint view?",
+    "questionUrdu": "درج ذیل میں کون سا PowerPoint کا named view نہیں ہے؟",
+    "options": [
+      "Slide Sorter view",
+      "Slide Show view",
+      "Orientation view",
+      "Normal view"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Orientation view ہے۔ Orientation view کوئی named PowerPoint view نہیں؛ orientation slide-size setting ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1254; Microsoft Support — Choose the right view in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/choose-the-right-view-for-the-task-in-powerpoint-21332d8d-adbc-4717-a2c6-e25a697b40e9",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "views",
+      "notes-page"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key selected Slide Show view (B), which is valid; “Presentation view” was also nonstandard. Replaced it with Normal view so Orientation view is the only invalid choice."
+  },
+  {
+    "id": "IBES-Q1254-SIM",
+    "pairId": "IBES-Q1254",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which named PowerPoint view shows a slide together with its speaker notes?",
+    "questionUrdu": "Slide کے ساتھ speaker notes کون سا named PowerPoint view دکھاتا ہے؟",
+    "options": [
+      "Notes Page view",
+      "Orientation view",
+      "Transition view",
+      "Theme view"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Notes Page view ہے۔ Notes Page view ہر slide کو اس کے speaker notes area کے ساتھ page format میں دکھاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Choose the right view in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/choose-the-right-view-for-the-task-in-powerpoint-21332d8d-adbc-4717-a2c6-e25a697b40e9",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "views",
+      "notes-page",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1257-SRC",
+    "pairId": "IBES-Q1257",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint view shows thumbnail versions of all slides for easy reordering?",
+    "questionUrdu": "تمام slides کی thumbnails آسان reordering کے لیے کون سا PowerPoint view دکھاتا ہے؟",
+    "options": [
+      "Slide Sorter view",
+      "Normal view",
+      "Reading view",
+      "Slide Master view"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Slide Sorter view ہے۔ Slide Sorter view پوری presentation کی thumbnails grid میں دکھا کر sequence manage کرنا آسان بناتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1257; Microsoft Support — Choose the right view in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/choose-the-right-view-for-the-task-in-powerpoint-21332d8d-adbc-4717-a2c6-e25a697b40e9",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-sorter",
+      "reordering"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected “watch all slide” and removed the invalid “Slide open,” “Both,” and “None” choices. Added Slide Sorter’s documented reordering purpose."
+  },
+  {
+    "id": "IBES-Q1257-SIM",
+    "pairId": "IBES-Q1257",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "How is a slide normally moved to a new position in Slide Sorter view?",
+    "questionUrdu": "Slide Sorter view میں slide کو نئی position پر عام طور پر کیسے منتقل کیا جاتا ہے؟",
+    "options": [
+      "Drag its thumbnail to the new position",
+      "Edit the database schema",
+      "Change the printer driver",
+      "Press Caps Lock"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Drag its thumbnail to the new position ہے۔ Thumbnail کو drag اور drop کرنے سے slide presentation sequence میں مطلوبہ جگہ move ہو جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Choose the right view in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/choose-the-right-view-for-the-task-in-powerpoint-21332d8d-adbc-4717-a2c6-e25a697b40e9",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-sorter",
+      "reordering",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1259-SRC",
+    "pairId": "IBES-Q1259",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which media can be inserted into a supported desktop PowerPoint presentation?",
+    "questionUrdu": "Supported desktop PowerPoint presentation میں کون سا media insert کیا جا سکتا ہے؟",
+    "options": [
+      "Audio only, not video",
+      "Video only, not audio",
+      "Neither audio nor video",
+      "Audio and video"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Audio and video ہے۔ Desktop PowerPoint slides میں supported audio اور video files insert اور playback کی جا سکتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1259; Microsoft Support — Insert audio or video in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/Accessibility/powerpoint/use-a-screen-reader-to-insert-audio-or-video-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "media",
+      "audio-playback"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Modernized “movie clips” to video and replaced the answer wording with the direct supported media types. Reworded the combined correct answer without “Both.”"
+  },
+  {
+    "id": "IBES-Q1259-SIM",
+    "pairId": "IBES-Q1259",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint audio command is designed to continue music across several slides?",
+    "questionUrdu": "Music کو کئی slides پر جاری رکھنے کے لیے کون سی PowerPoint audio command بنائی گئی ہے؟",
+    "options": [
+      "Play in Background",
+      "Rewind after Printing",
+      "Crop to Shape",
+      "Hide Slide"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Play in Background ہے۔ Play in Background audio کو automatically start، slides کے across play اور loop settings کے ساتھ configure کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Play music across multiple slides",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/play-music-across-multiple-slides-in-your-slide-show-4b8e23a2-0d11-4d4b-8ef2-6de3efcd1cfd",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "media",
+      "audio-playback",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1262-SRC",
+    "pairId": "IBES-Q1262",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "On which PowerPoint Ribbon tab is Slide Master view opened?",
+    "questionUrdu": "Slide Master view PowerPoint Ribbon کی کون سی tab سے کھلتا ہے؟",
+    "options": [
+      "Home",
+      "Insert",
+      "View",
+      "Design"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب View ہے۔ View tab کی Slide Master command master اور related layouts edit کرنے کے لیے special view کھولتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1262; Microsoft Support — What is a slide master in PowerPoint?",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/training/what-is-a-slide-master-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-master",
+      "consistent-design"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the grammar and clarified that Slide Master is a view opened from the View tab."
+  },
+  {
+    "id": "IBES-Q1262-SIM",
+    "pairId": "IBES-Q1262",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Why is Slide Master useful when the same design change is needed on many slides?",
+    "questionUrdu": "بہت سی slides پر ایک جیسی design change کے لیے Slide Master کیوں مفید ہے؟",
+    "options": [
+      "One master change can flow to associated layouts and slides",
+      "It converts slides into database records",
+      "It increases CPU clock speed",
+      "It deletes all placeholders"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب One master change can flow to associated layouts and slides ہے۔ Master پر logo، font یا placeholder change associated layouts اور ان پر مبنی slides تک propagate ہو سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — What is a slide master in PowerPoint?",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/training/what-is-a-slide-master-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-master",
+      "consistent-design",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1263-SRC",
+    "pairId": "IBES-Q1263",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint print layout places multiple slide thumbnails on one printed page?",
+    "questionUrdu": "Multiple slide thumbnails ایک printed page پر رکھنے والا PowerPoint print layout کون سا ہے؟",
+    "options": [
+      "Notepad",
+      "Handout",
+      "Slide",
+      "Outline"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Handout ہے۔ Handout layout ایک page پر منتخب تعداد میں slide thumbnails audience کے لیے print کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1263; Microsoft Support — Print PowerPoint slides, handouts, or notes",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/print-your-powerpoint-slides-handouts-or-notes-194d4320-aa03-478b-9300-df25f0d15dc4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "handouts",
+      "printing"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Clarified that the question concerns a print layout; the documented answer is Handout."
+  },
+  {
+    "id": "IBES-Q1263-SIM",
+    "pairId": "IBES-Q1263",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint handout layout provides lines beside each slide for audience notes?",
+    "questionUrdu": "Audience notes کے لیے ہر slide کے ساتھ lines کون سا PowerPoint handout layout دیتا ہے؟",
+    "options": [
+      "3 Slides",
+      "1 Slide",
+      "6 Slides horizontal",
+      "9 Slides vertical"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 3 Slides ہے۔ Three-slides-per-page handout ہر slide thumbnail کے ساتھ ruled note-taking lines فراہم کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Print PowerPoint slides, handouts, or notes",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/print-your-powerpoint-slides-handouts-or-notes-194d4320-aa03-478b-9300-df25f0d15dc4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "handouts",
+      "printing",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1264-SRC",
+    "pairId": "IBES-Q1264",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint master controls the appearance and layout of printed handouts?",
+    "questionUrdu": "Printed handouts کی appearance اور layout کون سا PowerPoint master control کرتا ہے؟",
+    "options": [
+      "Handout Master",
+      "Slide Master",
+      "Notes Master",
+      "Title Master"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Handout Master ہے۔ Handout Master printed handout کی slide arrangement، background اور header/footer placeholders control کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1264; Microsoft Support — Create or change a PowerPoint handout",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-or-change-a-presentation-s-handout-c86f1231-abfd-48de-8d76-807f668512d2",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "handout-master",
+      "headers-footers"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source stem “Layout of handout defines” was grammatically malformed. Reconstructed around the documented Handout Master. Replaced “None of these” and invented Handout design/slave labels with genuine PowerPoint master-view distractors."
+  },
+  {
+    "id": "IBES-Q1264-SIM",
+    "pairId": "IBES-Q1264",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which elements can be positioned or formatted in PowerPoint Handout Master view?",
+    "questionUrdu": "PowerPoint Handout Master view میں کن elements کو position یا format کیا جا سکتا ہے؟",
+    "options": [
+      "Header, footer, date, and page-number placeholders",
+      "CPU registers",
+      "Database records",
+      "Audio wave samples"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Header, footer, date, and page-number placeholders ہے۔ Handout Master printed pages کے header، footer، date اور page-number placeholders کی placement اور formatting manage کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create or change a PowerPoint handout",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-or-change-a-presentation-s-handout-c86f1231-abfd-48de-8d76-807f668512d2",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "handout-master",
+      "headers-footers",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1265-SRC",
+    "pairId": "IBES-Q1265",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In the relational model, what is the set of permitted values for an attribute called?",
+    "questionUrdu": "Relational model میں attribute کے permitted values کے set کو کیا کہتے ہیں؟",
+    "options": [
+      "Tuple",
+      "Degree",
+      "Attribute",
+      "Domain"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Domain ہے۔ Domain کسی attribute کے valid values، data type اور applicable restrictions کا set بیان کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1265; Oracle Database Concepts — Relational model",
+      "referenceUrl": "https://docs.oracle.com/database/121/CNCPT/E41396-15.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "relational-model",
+      "degree"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Added relational-model and attribute context so Domain is uniquely correct."
+  },
+  {
+    "id": "IBES-Q1265-SIM",
+    "pairId": "IBES-Q1265",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In relational terminology, what is the number of attributes in a relation called?",
+    "questionUrdu": "Relational terminology میں relation کے attributes کی تعداد کو کیا کہتے ہیں؟",
+    "options": [
+      "Degree (arity)",
+      "Cardinality",
+      "Domain",
+      "Tuple value"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Degree (arity) ہے۔ Relation کی degree یا arity اس کے columns یعنی attributes کی count ہے، جبکہ cardinality rows کی count ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Oracle Database Concepts — Relational model",
+      "referenceUrl": "https://docs.oracle.com/database/121/CNCPT/E41396-15.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "relational-model",
+      "degree",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1266-SRC",
+    "pairId": "IBES-Q1266",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In a database record, which unit stores one item of information such as a surname?",
+    "questionUrdu": "Database record میں surname جیسی ایک information item کون سی unit میں store ہوتی ہے؟",
+    "options": [
+      "Character",
+      "Record",
+      "Field",
+      "Byte"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Field ہے۔ Field ایک record کے ایک attribute یا item، مثلاً surname یا date، کو محفوظ کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1266; Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "fields",
+      "attributes"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The phrase “smallest meaningful unit of data” can mean a character in other contexts. Reconstructed around one item of information within a record, which is a field."
+  },
+  {
+    "id": "IBES-Q1266-SIM",
+    "pairId": "IBES-Q1266",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In relational-model terminology, a table field corresponds most closely to what?",
+    "questionUrdu": "Relational-model terminology میں table field کس چیز کے برابر سمجھی جاتی ہے؟",
+    "options": [
+      "An attribute",
+      "A transaction",
+      "A database server",
+      "A report footer"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب An attribute ہے۔ Relational table کا column attribute ہوتا ہے؛ Access اور عام database terminology میں اسی کو field بھی کہتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "fields",
+      "attributes",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1268-SRC",
+    "pairId": "IBES-Q1268",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "A field is one unit of information within a:",
+    "questionUrdu": "Field information کی ایک unit کس بڑی database unit کے اندر ہوتی ہے؟",
+    "options": [
+      "Database server",
+      "Field name",
+      "Record",
+      "Report layout"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Record ہے۔ Related fields مل کر ایک record بناتے ہیں، جو کسی ایک entity یا item کی مکمل row بیان کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1268; Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "records",
+      "tuples"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source stem and paired options were grammatically malformed. Reconstructed using the documented field-within-record relationship."
+  },
+  {
+    "id": "IBES-Q1268-SIM",
+    "pairId": "IBES-Q1268",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is a row in a relational table formally called?",
+    "questionUrdu": "Relational table کی ایک row کو رسمی طور پر کیا کہا جاتا ہے؟",
+    "options": [
+      "Tuple",
+      "Domain",
+      "Schema",
+      "Index page"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Tuple ہے۔ Relational model میں table relation اور اس کی ہر row tuple کہلاتی ہے؛ columns attributes ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "records",
+      "tuples",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1269-SRC",
+    "pairId": "IBES-Q1269",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Access object formats, summarizes, and presents database output?",
+    "questionUrdu": "Database output کو format، summarize اور present کرنے والا Access object کون سا ہے؟",
+    "options": [
+      "Form",
+      "Query",
+      "Table",
+      "Report"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Report ہے۔ Report database data کو grouped، calculated اور print-ready presentation میں organize کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1269; Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "reports",
+      "queries"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Added the documented function so Report is uniquely identified as the presentation/output object."
+  },
+  {
+    "id": "IBES-Q1269-SIM",
+    "pairId": "IBES-Q1269",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Access object retrieves, filters, or combines data based on specified criteria?",
+    "questionUrdu": "Specified criteria کے مطابق data retrieve، filter یا combine کرنے والا Access object کون سا ہے؟",
+    "options": [
+      "Query",
+      "Report",
+      "Macro button only",
+      "Theme"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Query ہے۔ Query tables یا دوسری queries سے matching records منتخب، calculate یا combine کر سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "reports",
+      "queries",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1270-SRC",
+    "pairId": "IBES-Q1270",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is an organized collection of related data called?",
+    "questionUrdu": "Related data کے organized collection کو کیا کہتے ہیں؟",
+    "options": [
+      "File manager",
+      "Field",
+      "Database",
+      "Report"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Database ہے۔ Database related information کو structured form میں رکھتا ہے تاکہ اسے store، search، update اور manage کیا جا سکے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1270; Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "database-design",
+      "normalization"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source defined a database as “interrelated files,” which is implementation-dependent, and used “None of these.” Reconstructed with Microsoft’s general database definition."
+  },
+  {
+    "id": "IBES-Q1270-SIM",
+    "pairId": "IBES-Q1270",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which database-design process organizes tables to reduce unnecessary data repetition?",
+    "questionUrdu": "Unnecessary data repetition کم کرنے کے لیے tables organize کرنے کا database-design process کیا ہے؟",
+    "options": [
+      "Normalization",
+      "Animation",
+      "Defragmentation",
+      "Rasterization"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Normalization ہے۔ Normalization attributes کو related tables میں تقسیم کرکے redundancy اور update anomalies کم کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "database-design",
+      "normalization",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1272-SRC",
+    "pairId": "IBES-Q1272",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Data that can take any value within a continuous interval are called:",
+    "questionUrdu": "Continuous interval میں کوئی بھی value لینے والے data کو کیا کہتے ہیں؟",
+    "options": [
+      "Continuous data",
+      "Categorical data",
+      "Discrete data",
+      "Binary data"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Continuous data ہے۔ Continuous data measurement scale پر interval کے اندر fractional سمیت بے شمار possible values لے سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1272; NIST/SEMATECH e-Handbook — Continuous distributions",
+      "referenceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda361.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "data-types",
+      "continuous-data",
+      "statistics"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source offered both Continuous Data and Analogue Data and keyed “Both,” so more than one option described the concept. Reconstructed with mutually exclusive statistical data types. Re-linked to NIST material that directly describes values over a continuous interval."
+  },
+  {
+    "id": "IBES-Q1272-SIM",
+    "pairId": "IBES-Q1272",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which variable is a typical example of continuous data?",
+    "questionUrdu": "درج ذیل میں کون سا variable continuous data کی عام مثال ہے؟",
+    "options": [
+      "Measured temperature",
+      "Number of students",
+      "Count of books",
+      "Number of printers"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Measured temperature ہے۔ Temperature measurement precision کے مطابق interval میں decimal values لے سکتی ہے، جبکہ counts discrete ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with NIST/SEMATECH e-Handbook — Continuous distributions",
+      "referenceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda361.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "data-types",
+      "continuous-data",
+      "statistics",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1273-SRC",
+    "pairId": "IBES-Q1273",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which of the following is a database management system?",
+    "questionUrdu": "درج ذیل میں کون سا database management system ہے؟",
+    "options": [
+      "Windows",
+      "Oracle Database",
+      "DOS",
+      "PowerPoint"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Oracle Database ہے۔ Oracle Database relational database management system ہے جو data storage، querying، security اور transactions manage کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1273; Oracle Database Concepts — Database management system",
+      "referenceUrl": "https://docs.oracle.com/en/database/oracle/oracle-database/26/cncpt/database-concepts.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "dbms",
+      "transactions"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The verified answer is Oracle. Added an Oracle primary-source reference defining a DBMS and Oracle Database. Replaced “None of these,” corrected product capitalization, and used parallel software distractors."
+  },
+  {
+    "id": "IBES-Q1273-SIM",
+    "pairId": "IBES-Q1273",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which DBMS feature groups several operations so they can succeed or be rolled back as one unit?",
+    "questionUrdu": "کون سی DBMS feature کئی operations کو ایک unit کی طرح commit یا rollback کرتی ہے؟",
+    "options": [
+      "Transaction",
+      "Slide transition",
+      "Screen saver",
+      "Print preview"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Transaction ہے۔ Transaction related database operations کو logical unit بناتی ہے؛ failure پر rollback consistency برقرار رکھ سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Oracle Database Concepts — Database management system",
+      "referenceUrl": "https://docs.oracle.com/en/database/oracle/oracle-database/26/cncpt/database-concepts.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "dbms",
+      "transactions",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1274-SRC",
+    "pairId": "IBES-Q1274",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Access object provides a user interface for entering and editing data?",
+    "questionUrdu": "Data enter اور edit کرنے کی user interface دینے والا Access object کون سا ہے؟",
+    "options": [
+      "Query",
+      "Pages",
+      "Form",
+      "Report"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Form ہے۔ Form controls اور labels کے ذریعے records دیکھنے، enter کرنے اور edit کرنے کے لیے user-friendly interface دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1274; Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "forms",
+      "tables"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source phrase “get data from user” was vague. Reconstructed using the documented purpose of Forms."
+  },
+  {
+    "id": "IBES-Q1274-SIM",
+    "pairId": "IBES-Q1274",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Access object stores records in rows and fields in columns?",
+    "questionUrdu": "Records کو rows اور fields کو columns میں store کرنے والا Access object کون سا ہے؟",
+    "options": [
+      "Table",
+      "Form",
+      "Report",
+      "Module"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Table ہے۔ Table database data کا بنیادی storage object ہے؛ forms اور reports عموماً table یا query data استعمال کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "forms",
+      "tables",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1275-SRC",
+    "pairId": "IBES-Q1275",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Access table-creation method lets you define field names, data types, and properties explicitly?",
+    "questionUrdu": "Field names، data types اور properties واضح define کرنے والی Access table-creation method کون سی ہے؟",
+    "options": [
+      "Create the table in Design View",
+      "Use only a legacy wizard",
+      "Enter records without defining fields",
+      "Print a report"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Create the table in Design View ہے۔ Design View ہر field کا name، data type، description اور detailed properties manually مقرر کرنے دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1275; Microsoft Support — Create a table and add fields in Access",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/create-a-table-and-add-fields",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "design-view",
+      "field-properties"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source referred to choosing standard fields with an obsolete table wizard. Reconstructed around the supported Design View method."
+  },
+  {
+    "id": "IBES-Q1275-SIM",
+    "pairId": "IBES-Q1275",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Where are detailed settings for the selected field shown in Access Table Design View?",
+    "questionUrdu": "Access Table Design View میں selected field کی detailed settings کہاں دکھائی جاتی ہیں؟",
+    "options": [
+      "Field Properties pane",
+      "Slide Sorter",
+      "Status queue",
+      "Theme Variants"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Field Properties pane ہے۔ Design grid کے نیچے Field Properties pane Field Size، Format، Default Value اور Required جیسی settings دکھاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create a table and add fields in Access",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/create-a-table-and-add-fields",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "design-view",
+      "field-properties",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1277-SRC",
+    "pairId": "IBES-Q1277",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What term describes the defined structure of a database, including its tables, fields, and relationships?",
+    "questionUrdu": "Tables، fields اور relationships سمیت database کی defined structure کو کیا کہتے ہیں؟",
+    "options": [
+      "Syntax",
+      "Semantics",
+      "Schema",
+      "Sort order"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Schema ہے۔ Schema database objects، their structure، constraints اور relationships کی logical definition ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1277; Oracle Database Concepts — Relational model",
+      "referenceUrl": "https://docs.oracle.com/database/121/CNCPT/E41396-15.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "schema",
+      "ddl"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says Syntax (A), but the structure of a database is its schema. The missing correct term was added explicitly."
+  },
+  {
+    "id": "IBES-Q1277-SIM",
+    "pairId": "IBES-Q1277",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which SQL language category contains commands that create or alter database schema objects?",
+    "questionUrdu": "Database schema objects create یا alter کرنے والی SQL language category کون سی ہے؟",
+    "options": [
+      "Data Definition Language (DDL)",
+      "Data Query Language only",
+      "Presentation Markup",
+      "Device Driver Logic"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Data Definition Language (DDL) ہے۔ CREATE، ALTER اور DROP جیسے DDL commands tables اور دوسرے schema objects define یا modify کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Oracle Database Concepts — Relational model",
+      "referenceUrl": "https://docs.oracle.com/database/121/CNCPT/E41396-15.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "schema",
+      "ddl",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1278-SRC",
+    "pairId": "IBES-Q1278",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the defining purpose of a table’s primary key?",
+    "questionUrdu": "Table کی primary key کا defining purpose کیا ہے؟",
+    "options": [
+      "Uniquely identify each record",
+      "Store duplicate values deliberately",
+      "Automatically make every AutoNumber field a key",
+      "Format a report"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Uniquely identify each record ہے۔ Primary key کی value ہر record کو uniquely identify کرتی ہے اور duplicate identities روکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1278; Microsoft Support — Introduction to tables in Access",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/introduction-to-tables-78ff21ea-2f76-4fb0-8af6-c318d1ee0ea7",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "primary-key",
+      "null-values"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source used overlapping A/B claims and incorrectly implied AutoNumber is inherently a primary key. Reconstructed around the defining uniqueness purpose."
+  },
+  {
+    "id": "IBES-Q1278-SIM",
+    "pairId": "IBES-Q1278",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which value is not allowed in any field that forms part of a primary key?",
+    "questionUrdu": "Primary key کا حصہ بننے والے field میں کون سی value allowed نہیں ہوتی؟",
+    "options": [
+      "NULL",
+      "A unique number",
+      "A unique text code",
+      "A nonzero date"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب NULL ہے۔ Primary key ہر row کو identify کرتی ہے، اس لیے اس کے component fields NULL نہیں ہو سکتے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Introduction to tables in Access",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/introduction-to-tables-78ff21ea-2f76-4fb0-8af6-c318d1ee0ea7",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "primary-key",
+      "null-values",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1279-SRC",
+    "pairId": "IBES-Q1279",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Windows scheduler queue contains executable threads waiting for processor time?",
+    "questionUrdu": "Processor time کا انتظار کرنے والے executable threads کس Windows scheduler queue میں ہوتے ہیں؟",
+    "options": [
+      "Job queue",
+      "Device queue",
+      "Ready queue",
+      "PCB queue"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Ready queue ہے۔ Ready queue runnable threads رکھتی ہے؛ scheduler priority کے مطابق ان میں سے اگلا thread select کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1279; Microsoft Learn — Context Switches and ready queues",
+      "referenceUrl": "https://learn.microsoft.com/en-us/windows/win32/procthread/context-switches",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "windows",
+      "thread-scheduling",
+      "waiting-state"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked which named queue did not belong and relied on textbook terminology not directly supported by one source. Reconstructed using Microsoft’s documented ready-thread queues."
+  },
+  {
+    "id": "IBES-Q1279-SIM",
+    "pairId": "IBES-Q1279",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which thread state indicates that execution is paused until an event such as I/O completion occurs?",
+    "questionUrdu": "I/O completion جیسے event تک execution رکنے والی thread کس state میں ہوتی ہے؟",
+    "options": [
+      "Waiting",
+      "Running",
+      "Ready",
+      "Terminated and executing"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Waiting ہے۔ Waiting thread فی الحال runnable نہیں ہوتی؛ required event signal ہونے پر وہ دوبارہ ready state میں جا سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Learn — Context Switches and ready queues",
+      "referenceUrl": "https://learn.microsoft.com/en-us/windows/win32/procthread/context-switches",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "windows",
+      "thread-scheduling",
+      "waiting-state",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1280-SRC",
+    "pairId": "IBES-Q1280",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which of the following is not a named Access desktop field data type?",
+    "questionUrdu": "درج ذیل میں کون سا Access desktop field data type کا named type نہیں ہے؟",
+    "options": [
+      "Short Text",
+      "Picture",
+      "Number",
+      "Date/Time"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Picture ہے۔ Picture کوئی named Access field data type نہیں؛ images عموماً Attachment یا OLE Object field سے متعلق ہوتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1280; Microsoft Support — Data types for Access desktop databases",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/data-types-for-access-desktop-databases",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "data-types",
+      "attachment"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source used informal names Text, Numeric, and Time. Updated them to current Access data-type names; Picture is not a field data type (pictures use Attachment or OLE Object)."
+  },
+  {
+    "id": "IBES-Q1280-SIM",
+    "pairId": "IBES-Q1280",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Access data type can store one or more files, such as images, with a record?",
+    "questionUrdu": "Record کے ساتھ images جیسی ایک یا زیادہ files کون سا Access data type store کر سکتا ہے؟",
+    "options": [
+      "Attachment",
+      "Short Text only",
+      "Currency",
+      "Yes/No"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Attachment ہے۔ Attachment field database record کے ساتھ supported documents اور image files attach کرنے کے لیے بنایا گیا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Data types for Access desktop databases",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/data-types-for-access-desktop-databases",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "data-types",
+      "attachment",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1281-SRC",
+    "pairId": "IBES-Q1281",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does SQL stand for?",
+    "questionUrdu": "SQL کا مکمل نام کیا ہے؟",
+    "options": [
+      "System Query Language",
+      "Software Quality Language",
+      "Structured Query Language",
+      "Syntax Query Language"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Structured Query Language ہے۔ Structured Query Language relational databases میں data define، query اور modify کرنے کی standardized language ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1281; Microsoft Learn — Structured Query Language (SQL)",
+      "referenceUrl": "https://learn.microsoft.com/en-us/sql/odbc/reference/structured-query-language-sql?view=sql-server-ver17",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "sql",
+      "select",
+      "queries"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Minor wording repair; the verified expansion is Structured Query Language. Re-linked to Microsoft Learn’s Access SQL reference."
+  },
+  {
+    "id": "IBES-Q1281-SIM",
+    "pairId": "IBES-Q1281",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which SQL statement retrieves rows from a table?",
+    "questionUrdu": "Table سے rows retrieve کرنے کے لیے کون سا SQL statement استعمال ہوتا ہے؟",
+    "options": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "DROP"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب SELECT ہے۔ SELECT specified columns اور conditions کے مطابق result set واپس کرتا ہے؛ یہ source data کو لازماً modify نہیں کرتا۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Learn — Structured Query Language (SQL)",
+      "referenceUrl": "https://learn.microsoft.com/en-us/sql/odbc/reference/structured-query-language-sql?view=sql-server-ver17",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "sql",
+      "select",
+      "queries",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1282-SRC",
+    "pairId": "IBES-Q1282",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which SQL constraint can enforce uniqueness on a column or column combination that is not the table’s primary key?",
+    "questionUrdu": "Primary key کے علاوہ column یا column combination پر uniqueness کون سا SQL constraint enforce کرتا ہے؟",
+    "options": [
+      "PRIMARY KEY",
+      "UNIQUE",
+      "FOREIGN KEY",
+      "NOT NULL"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب UNIQUE ہے۔ UNIQUE constraint specified values یا value combinations کو duplicate ہونے سے روکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1282; Microsoft Learn — CONSTRAINT clause (Microsoft Access SQL)",
+      "referenceUrl": "https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/constraint-clause-microsoft-access-sql",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "sql",
+      "constraints",
+      "not-null"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source said duplicate rows, and the earlier wording still allowed PRIMARY KEY because it also prevents duplicate key values. Added the non-primary-key condition so UNIQUE is uniquely correct."
+  },
+  {
+    "id": "IBES-Q1282-SIM",
+    "pairId": "IBES-Q1282",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which SQL constraint requires a column to contain a value rather than NULL?",
+    "questionUrdu": "Column میں NULL کے بجائے لازماً value رکھنے والا SQL constraint کون سا ہے؟",
+    "options": [
+      "NOT NULL",
+      "UNIQUE",
+      "DEFAULT",
+      "CHECKSUM"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب NOT NULL ہے۔ NOT NULL constraint ہر inserted یا updated row میں اس column کے لیے non-NULL value require کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Learn — CONSTRAINT clause (Microsoft Access SQL)",
+      "referenceUrl": "https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/constraint-clause-microsoft-access-sql",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "sql",
+      "constraints",
+      "not-null",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1283-SRC",
+    "pairId": "IBES-Q1283",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "A functional dependency describes a relationship between:",
+    "questionUrdu": "Functional dependency کن database elements کے درمیان relationship بیان کرتی ہے؟",
+    "options": [
+      "A determinant column set and dependent column(s)",
+      "Only a file name and extension",
+      "A chart and its color",
+      "A printer and page size"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A determinant column set and dependent column(s) ہے۔ Functional dependency میں determinant columns کی values dependent columns کی values uniquely determine کرتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1283; Microsoft Learn — Functional Dependency Profile Request Options",
+      "referenceUrl": "https://learn.microsoft.com/en-us/sql/integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task?view=sql-server-ver17",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "functional-dependency",
+      "determinant"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source keyed the vague answer “Key.” Microsoft defines functional dependency in terms of determinant columns determining dependent columns, so the choices were reconstructed."
+  },
+  {
+    "id": "IBES-Q1283-SIM",
+    "pairId": "IBES-Q1283",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In the notation A → B, which side is the determinant?",
+    "questionUrdu": "Functional dependency notation A → B میں determinant کون سی side ہوتی ہے؟",
+    "options": [
+      "A, on the left",
+      "B, on the right",
+      "Both are always primary keys",
+      "Neither side"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A, on the left ہے۔ A → B کا مطلب ہے A کی value B کو determine کرتی ہے، اس لیے A determinant اور B dependent ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Learn — Functional Dependency Profile Request Options",
+      "referenceUrl": "https://learn.microsoft.com/en-us/sql/integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task?view=sql-server-ver17",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "functional-dependency",
+      "determinant",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1284-SRC",
+    "pairId": "IBES-Q1284",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "After an Access table has been created, what can you do with its fields?",
+    "questionUrdu": "Access table بننے کے بعد اس کے fields کے ساتھ کیا کیا جا سکتا ہے؟",
+    "options": [
+      "Fields can never be added",
+      "Fields can never be deleted",
+      "A field can be added only once",
+      "Fields can be added or deleted as needed"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Fields can be added or deleted as needed ہے۔ Table design بدلنے پر fields ضرورت کے مطابق add یا delete کیے جا سکتے ہیں، مگر deletion data loss پیدا کر سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1284; Microsoft Support — Create a table and add fields in Access",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/create-a-table-and-add-fields",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "table-design",
+      "delete-field"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source encoded the real answer inside “None of these.” The documented ability to add and remove fields is now an explicit option."
+  },
+  {
+    "id": "IBES-Q1284-SIM",
+    "pairId": "IBES-Q1284",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is a direct consequence of deleting a populated field from an Access table?",
+    "questionUrdu": "Populated field کو Access table سے delete کرنے کا براہ راست نتیجہ کیا ہوتا ہے؟",
+    "options": [
+      "Stored values in that field are removed",
+      "Every other table is duplicated",
+      "The database becomes a slide show",
+      "All records gain a second primary key"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Stored values in that field are removed ہے۔ Field delete ہونے سے اس column کی definition اور تمام records میں موجود values ختم ہو جاتی ہیں؛ dependent objects بھی متاثر ہو سکتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create a table and add fields in Access",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/create-a-table-and-add-fields",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "table-design",
+      "delete-field",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1285-SRC",
+    "pairId": "IBES-Q1285",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Microsoft Access is primarily used for:",
+    "questionUrdu": "Microsoft Access بنیادی طور پر کس کام کے لیے استعمال ہوتا ہے؟",
+    "options": [
+      "Web-page drawing only",
+      "Operating-system development",
+      "Creating and managing databases",
+      "Video editing"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Creating and managing databases ہے۔ Access desktop relational databases create اور manage کرنے کے لیے tables، queries، forms اور reports فراہم کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1285; Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "relationships",
+      "database-management"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source answer “Data table” was too narrow and ungrammatical. Access is a database management application used to create and manage databases."
+  },
+  {
+    "id": "IBES-Q1285-SIM",
+    "pairId": "IBES-Q1285",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Access window is used to define links between tables?",
+    "questionUrdu": "Tables کے درمیان links define کرنے کے لیے کون سی Access window استعمال ہوتی ہے؟",
+    "options": [
+      "Relationships window",
+      "Animation Pane",
+      "Slide Master",
+      "Print Queue"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Relationships window ہے۔ Relationships window related fields کو connect کرکے referential-integrity options اور table relationships define کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Database basics",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/database-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "relationships",
+      "database-management",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1286-SRC",
+    "pairId": "IBES-Q1286",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which current Access data type is intended for large amounts of alphanumeric text?",
+    "questionUrdu": "Large amounts of alphanumeric text کے لیے current Access data type کون سا ہے؟",
+    "options": [
+      "Short Text",
+      "Long Text (formerly Memo)",
+      "OLE Object",
+      "AutoNumber"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Long Text (formerly Memo) ہے۔ Long Text، جسے پہلے Memo کہا جاتا تھا، lengthy notes اور paragraphs محفوظ کرنے کے لیے ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1286; Microsoft Support — Data types for Access desktop databases",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/data-types-for-access-desktop-databases",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "long-text",
+      "rich-text"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source used the legacy name Memo. Updated it to Long Text while noting the former name documented by Microsoft."
+  },
+  {
+    "id": "IBES-Q1286-SIM",
+    "pairId": "IBES-Q1286",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Access field property enables formatted text in a Long Text field?",
+    "questionUrdu": "Long Text field میں formatted text enable کرنے والی Access field property کون سی ہے؟",
+    "options": [
+      "Text Format set to Rich Text",
+      "Decimal Places",
+      "Indexed set to No Duplicates",
+      "Caption only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Text Format set to Rich Text ہے۔ Long Text field کی Text Format property کو Rich Text کرنے سے supported font emphasis اور formatting محفوظ ہو سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Data types for Access desktop databases",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/data-types-for-access-desktop-databases",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "long-text",
+      "rich-text",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1287-SRC",
+    "pairId": "IBES-Q1287",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Access data type is appropriate for short alphanumeric values containing letters, numbers, and symbols?",
+    "questionUrdu": "Letters، numbers اور symbols والے short alphanumeric values کے لیے کون سا Access data type مناسب ہے؟",
+    "options": [
+      "Short Text",
+      "Long Text only",
+      "AutoNumber",
+      "Attachment"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Short Text ہے۔ Short Text names، codes اور identifiers جیسے limited-length alphanumeric values کے لیے استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1287; Microsoft Support — Data types for Access desktop databases",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/data-types-for-access-desktop-databases",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "short-text",
+      "field-size"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source used the legacy generic name Text. Updated it to the current Short Text data type and clarified the value length/type."
+  },
+  {
+    "id": "IBES-Q1287-SIM",
+    "pairId": "IBES-Q1287",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the maximum Field Size commonly available for an Access Short Text field?",
+    "questionUrdu": "Access Short Text field کے لیے commonly available maximum Field Size کتنی ہے؟",
+    "options": [
+      "255 characters",
+      "64 characters",
+      "1,024 characters",
+      "65,535 characters"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 255 characters ہے۔ Access desktop database میں Short Text field 1 سے 255 characters تک configured ہو سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Data types for Access desktop databases",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/data-types-for-access-desktop-databases",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "short-text",
+      "field-size",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1288-SRC",
+    "pairId": "IBES-Q1288",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "How many data types can be assigned to one ordinary field in an Access table?",
+    "questionUrdu": "Access table کے ایک ordinary field کو کتنے data types assign کیے جا سکتے ہیں؟",
+    "options": [
+      "One",
+      "Two",
+      "Six",
+      "Ten"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب One ہے۔ ہر ordinary field کی ایک data type ہوتی ہے جو اس column کی values اور supported operations control کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1288; Microsoft Support — Data types for Access desktop databases",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/data-types-for-access-desktop-databases",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "data-types",
+      "field-properties"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says 10 (C), confusing the number of fields allowed in a composite primary key with field data types. Each field is assigned one data type. Corrected the subject–verb grammar. Smoothed the final grammar so the field and its single assigned data type are unambiguous."
+  },
+  {
+    "id": "IBES-Q1288-SIM",
+    "pairId": "IBES-Q1288",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does an Access field's data type primarily determine?",
+    "questionUrdu": "Access field کی data type بنیادی طور پر کیا determine کرتی ہے؟",
+    "options": [
+      "The kind of values and operations the field supports",
+      "The monitor's resolution",
+      "The slide transition duration",
+      "The printer's paper size"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The kind of values and operations the field supports ہے۔ Data type storage representation، valid values، sorting، calculations اور available field properties پر اثر ڈالتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Data types for Access desktop databases",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/data-types-for-access-desktop-databases",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "data-types",
+      "field-properties",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1289-SRC",
+    "pairId": "IBES-Q1289",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "The Access Form Wizard can include fields from how many related tables or queries?",
+    "questionUrdu": "Access Form Wizard کتنی related tables یا queries سے fields شامل کر سکتی ہے؟",
+    "options": [
+      "Exactly one only",
+      "Exactly two only",
+      "Exactly three only",
+      "More than one, when relationships are defined"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب More than one, when relationships are defined ہے۔ Defined relationships ہونے پر Form Wizard ایک سے زیادہ related tables یا queries کے fields شامل کر سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1289; Microsoft Support — Create a form by using the Form Wizard",
+      "referenceUrl": "https://support.microsoft.com/en-us/access/create-a-form-by-using-the-form-wizard",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "form-wizard",
+      "form-layouts"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source answer “Many” was vague. Microsoft documents that Form Wizard can use fields from more than one related table or query."
+  },
+  {
+    "id": "IBES-Q1289-SIM",
+    "pairId": "IBES-Q1289",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which of these is a layout choice offered by the Access Form Wizard?",
+    "questionUrdu": "درج ذیل میں کون سی Access Form Wizard کی layout choice ہے؟",
+    "options": [
+      "Columnar",
+      "Slide Sorter",
+      "Page Break Preview",
+      "Outline Numbering"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Columnar ہے۔ Form Wizard Columnar، Tabular، Datasheet اور Justified جیسے layouts میں fields arrange کرنے کی choices دیتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create a form by using the Form Wizard",
+      "referenceUrl": "https://support.microsoft.com/en-us/access/create-a-form-by-using-the-form-wizard",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "form-wizard",
+      "form-layouts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1290-SRC",
+    "pairId": "IBES-Q1290",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the essential purpose of an electronic database backup?",
+    "questionUrdu": "Electronic database backup کا essential purpose کیا ہے؟",
+    "options": [
+      "Create a separate known-good copy that can restore lost or damaged data",
+      "Replace the database with a paper-only record",
+      "Hash the file without keeping a copy",
+      "Increase the database size"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Create a separate known-good copy that can restore lost or damaged data ہے۔ Backup original data خراب یا lost ہونے پر restore کرنے کے لیے الگ known-good copy مہیا کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1290; Microsoft Support — Protect Access data with backup and restore",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/protect-your-data-with-backup-and-restore-processes-96539a81-5984-4d56-99ca-ee81f8d6356c",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "backup",
+      "disaster-recovery"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source answer “duplicate the data” was too vague. Reconstructed using Microsoft’s definition of a backup copy used for restoration."
+  },
+  {
+    "id": "IBES-Q1290-SIM",
+    "pairId": "IBES-Q1290",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Why should a database backup be kept separately from the original storage device?",
+    "questionUrdu": "Database backup کو original storage device سے الگ کیوں رکھنا چاہیے؟",
+    "options": [
+      "One device failure should not destroy both copies",
+      "To make every query slower",
+      "To remove all passwords",
+      "To convert tables into slides"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب One device failure should not destroy both copies ہے۔ Same device پر دونوں copies ہونے سے disk failure، theft یا damage original اور backup دونوں ختم کر سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Protect Access data with backup and restore",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/protect-your-data-with-backup-and-restore-processes-96539a81-5984-4d56-99ca-ee81f8d6356c",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "databases",
+      "backup",
+      "disaster-recovery",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1291-SRC",
+    "pairId": "IBES-Q1291",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which measure directly protects an Access database from unauthorized reading?",
+    "questionUrdu": "Access database کو unauthorized reading سے براہ راست بچانے والا measure کون سا ہے؟",
+    "options": [
+      "Encrypt the database with a password",
+      "Apply graphic design",
+      "Increase the database size",
+      "Change a report layout"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Encrypt the database with a password ہے۔ Database password encryption file content کو correct password کے بغیر پڑھنے سے روکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1291; Microsoft Support — Encrypt an Access database with a password",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/encrypt-a-database-by-using-a-database-password",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "encryption",
+      "exclusive-mode"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source mixed encryption with general maintenance. Narrowed to unauthorized reading; Microsoft documents database encryption with a password. Replaced the generic “Implementing encryption” with Microsoft’s documented database-password encryption measure and removed a broad maintenance distractor."
+  },
+  {
+    "id": "IBES-Q1291-SIM",
+    "pairId": "IBES-Q1291",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In which mode must an Access database be opened before setting a database password?",
+    "questionUrdu": "Database password مقرر کرنے سے پہلے Access database کس mode میں کھولنی چاہیے؟",
+    "options": [
+      "Exclusive mode",
+      "Read-only shared mode",
+      "Slide Show mode",
+      "Print Preview mode"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Exclusive mode ہے۔ Access database password set یا remove کرنے کے لیے file کو Open Exclusive mode میں کھولنے کی ضرورت ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Encrypt an Access database with a password",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/encrypt-a-database-by-using-a-database-password",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "encryption",
+      "exclusive-mode",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1292-SRC",
+    "pairId": "IBES-Q1292",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "When creating an Access table by entering data in Datasheet View, what can Access infer from the entered values?",
+    "questionUrdu": "Datasheet View میں data enter کرکے Access table بناتے وقت Access کیا infer کر سکتا ہے؟",
+    "options": [
+      "Only the report layout",
+      "Only a primary-key relationship",
+      "A suitable field data type",
+      "A slide theme"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب A suitable field data type ہے۔ Access entered sample values دیکھ کر field کے لیے suitable data type infer اور assign کرنے کی کوشش کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1292; Microsoft Support — Create a table and add fields in Access",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/create-a-table-and-add-fields",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "datasheet-view",
+      "type-inference"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source referred to the legacy “Create Table by Entering Data” method and said no field type or size is specified. Reconstructed around current Datasheet View’s ability to infer a field data type."
+  },
+  {
+    "id": "IBES-Q1292-SIM",
+    "pairId": "IBES-Q1292",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "If a new Access column contains only recognizable dates, which data type is it likely to infer?",
+    "questionUrdu": "نئے Access column میں صرف recognizable dates ہوں تو کون سی data type infer ہونے کا امکان ہے؟",
+    "options": [
+      "Date/Time",
+      "Attachment",
+      "OLE Object",
+      "Yes/No only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Date/Time ہے۔ Recognizable date entries Access کو Date/Time field type منتخب کرنے کا signal دیتی ہیں، جس سے date operations ممکن ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create a table and add fields in Access",
+      "referenceUrl": "https://support.microsoft.com/en-US/Access/create-a-table-and-add-fields",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "datasheet-view",
+      "type-inference",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1294-SRC",
+    "pairId": "IBES-Q1294",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Access expression returns 4 for the string \"PPSC\"?",
+    "questionUrdu": "String PPSC کے لیے 4 واپس کرنے والی Access expression کون سی ہے؟",
+    "options": [
+      "Len(\"PPSC\")",
+      "Length(\"PPSC\")",
+      "Strl(\"PPSC\")",
+      "Count(\"PPSC\")"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Len(\"PPSC\") ہے۔ Len function string میں موجود characters کی count واپس کرتا ہے؛ PPSC میں چار letters ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1294; Microsoft Support — Len function in Access",
+      "referenceUrl": "https://support.microsoft.com/en-us/access/len-function",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "len-function",
+      "text-functions"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source scan included a stray comma in the quoted string and a malformed Strl option. Microsoft documents Len(string) as returning the number of characters."
+  },
+  {
+    "id": "IBES-Q1294-SIM",
+    "pairId": "IBES-Q1294",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does the Access expression Len(\"P P\") return?",
+    "questionUrdu": "Access expression Len(\"P P\") کیا result واپس کرتی ہے؟",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "4"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 3 ہے۔ Len spaces کو بھی character count میں شامل کرتا ہے؛ P، space اور P مل کر تین characters ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Len function in Access",
+      "referenceUrl": "https://support.microsoft.com/en-us/access/len-function",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "len-function",
+      "text-functions",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1295-SRC",
+    "pairId": "IBES-Q1295",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Access’s Cascade Delete Related Records option do?",
+    "questionUrdu": "Access کا Cascade Delete Related Records option کیا کرتا ہے؟",
+    "options": [
+      "Delete every record in every table",
+      "Repeat the latest delete within the same table",
+      "Delete child records related to a deleted parent record",
+      "Delete only the parent while always retaining child records"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Delete child records related to a deleted parent record ہے۔ Parent record delete ہونے پر Cascade Delete اس سے related child records بھی automatically delete کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1295; Microsoft Support — Create, edit, or delete an Access relationship",
+      "referenceUrl": "https://support.microsoft.com/en-us/Access/create-edit-or-delete-a-relationship",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "relationships",
+      "cascade-update"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Minor wording repair. When a parent/primary record is deleted, Access automatically deletes records that reference its primary key in related tables. Replaced “None of these” and shortened the choices while retaining the documented cascade behavior."
+  },
+  {
+    "id": "IBES-Q1295-SIM",
+    "pairId": "IBES-Q1295",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which relationship option automatically changes matching foreign-key values when a parent key is updated?",
+    "questionUrdu": "Parent key update ہونے پر matching foreign-key values خود بدلنے والا relationship option کون سا ہے؟",
+    "options": [
+      "Cascade Update Related Fields",
+      "Cascade Delete Related Records",
+      "Compact and Repair",
+      "Filter by Selection"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Cascade Update Related Fields ہے۔ Cascade Update Related Fields parent key کی نئی value کو related child foreign-key fields تک propagate کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create, edit, or delete an Access relationship",
+      "referenceUrl": "https://support.microsoft.com/en-us/Access/create-edit-or-delete-a-relationship",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "relationships",
+      "cascade-update",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1296-SRC",
+    "pairId": "IBES-Q1296",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In the five-phase SDLC model described by NIST, what is the first phase?",
+    "questionUrdu": "NIST کے بیان کردہ five-phase SDLC model کا پہلا phase کون سا ہے؟",
+    "options": [
+      "Initiation",
+      "Operations/Maintenance",
+      "Analysis",
+      "Design"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Initiation ہے۔ NIST model میں Initiation phase system کی need، purpose، goals اور high-level security requirements establish کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1296; NIST — The System Development Life Cycle (SDLC)",
+      "referenceUrl": "https://csrc.nist.gov/files/pubs/shared/itlb/itlbul2009-04.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "sdlc",
+      "nist",
+      "disposal-phase"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says Systems analysis (C), but SDLC phase names vary by model. Under the explicitly cited five-phase NIST model, the first phase is Initiation."
+  },
+  {
+    "id": "IBES-Q1296-SIM",
+    "pairId": "IBES-Q1296",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the final phase in NIST's five-phase SDLC model?",
+    "questionUrdu": "NIST کے five-phase SDLC model کا آخری phase کون سا ہے؟",
+    "options": [
+      "Disposal",
+      "Initiation",
+      "Development/Acquisition",
+      "Implementation"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Disposal ہے۔ Disposal phase system information، hardware اور software کو archive، migrate، discard یا destroy کرنے کی controlled planning کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with NIST — The System Development Life Cycle (SDLC)",
+      "referenceUrl": "https://csrc.nist.gov/files/pubs/shared/itlb/itlbul2009-04.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "sdlc",
+      "nist",
+      "disposal-phase",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  }
+]

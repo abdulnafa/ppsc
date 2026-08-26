@@ -38,6 +38,7 @@ const markdownFiles = {
 };
 
 const expectedPaperCounts = { 234: 20, 235: 100, 236: 78, 237: 76, 238: 89, 239: 86 };
+const expectedIbesSourceCount = 1088;
 const categoryIds = new Set(categories.map((category) => category.id));
 const optionLabels = ["A", "B", "C", "D"];
 
@@ -46,7 +47,8 @@ function fail(message) {
 }
 
 function loadBatches() {
-  const files = fs.readdirSync(workDirectory)
+  const allNames = fs.readdirSync(workDirectory);
+  const files = allNames
     .filter((name) => /^enriched-paper-23[4-9]\.json$/i.test(name))
     .sort();
 
@@ -54,7 +56,11 @@ function loadBatches() {
     fail(`Expected 6 enriched paper files, found ${files.length}: ${files.join(", ") || "none"}`);
   }
 
-  const paperQuestions = files.flatMap((name) => {
+  const ibesFiles = allNames
+    .filter((name) => /^enriched-ibes-[a-z0-9-]+\.json$/i.test(name))
+    .sort();
+  const batchFiles = files.concat(ibesFiles);
+  const paperQuestions = batchFiles.flatMap((name) => {
     const value = JSON.parse(fs.readFileSync(path.join(workDirectory, name), "utf8"));
     if (!Array.isArray(value)) fail(`${name} must contain a JSON array.`);
     return value;
@@ -106,8 +112,12 @@ function loadQuestionTranslations(questions) {
         fail(`${question.id} Urdu translation must preserve the numeric token ${token}.`);
       }
     }
-    if (String(question.question).includes("____") && !translation.includes("____")) {
-      fail(`${question.id} Urdu translation must preserve the question blank (____).`);
+    if (
+      String(question.question).includes("____") &&
+      !translation.includes("____") &&
+      !/[؟?]/u.test(translation)
+    ) {
+      fail(`${question.id} Urdu translation must preserve the blank or render it as a direct question.`);
     }
   }
   return translations;
@@ -124,8 +134,8 @@ function validate(questions) {
     if (/[ÃÂâØÙÛ]/u.test(JSON.stringify(question))) fail(`${question.id || location} contains likely UTF-8 mojibake.`);
     if (!question.id || ids.has(question.id)) fail(`${location} has a missing/duplicate id: ${question.id}`);
     ids.add(question.id);
-    if (!/^(?:P23[4-9]-Q\d{3}|USR-Q\d{4})-(SRC|SIM)$/.test(question.id)) fail(`${question.id} has an invalid id format.`);
-    if (!/^(?:P23[4-9]-Q\d{3}|USR-Q\d{4})$/.test(question.pairId || "")) fail(`${question.id} has an invalid pairId.`);
+    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})-(SRC|SIM)$/.test(question.id)) fail(`${question.id} has an invalid id format.`);
+    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})$/.test(question.pairId || "")) fail(`${question.id} has an invalid pairId.`);
     if (!categoryIds.has(question.categoryId)) fail(`${question.id} has unknown category ${question.categoryId}.`);
     if (!question.question || !String(question.question).trim()) fail(`${question.id} has no question text.`);
     if (question.question && !/[A-Za-z]/.test(question.question)) {
@@ -151,7 +161,7 @@ function validate(questions) {
     if (question.kind === "similar" && question.source.type !== "practice") {
       fail(`${question.id} similar item must use source.type practice.`);
     }
-    if (question.kind === "source" && question.id.startsWith("P") && question.source.type !== "book") {
+    if (question.kind === "source" && /^(?:P23|IBES-)/.test(question.id) && question.source.type !== "book") {
       fail(`${question.id} PDF source item must use source.type book.`);
     }
     if (question.kind === "source" && question.id.startsWith("USR-") && question.source.type !== "user") {
@@ -164,7 +174,7 @@ function validate(questions) {
 
     if (question.kind === "source") {
       const match = question.id.match(/^P(23[4-9])-/);
-      sourcePaperCounts[match[1]] = (sourcePaperCounts[match[1]] || 0) + 1;
+      if (match) sourcePaperCounts[match[1]] = (sourcePaperCounts[match[1]] || 0) + 1;
     }
   }
 
@@ -185,6 +195,11 @@ function validate(questions) {
   if (pdfQuestionCount !== expectedSourceCount * 2) {
     fail(`PDF question bank has ${pdfQuestionCount} items; expected ${expectedSourceCount * 2}.`);
   }
+
+  const ibesSourceCount = questions.filter((question) => question.kind === "source" && question.id.startsWith("IBES-")).length;
+  if (ibesSourceCount !== expectedIbesSourceCount) {
+    fail(`IBES bank has ${ibesSourceCount} retained source items; expected ${expectedIbesSourceCount}.`);
+  }
 }
 
 function desiredSimilarAnswerIndex(questionId) {
@@ -196,7 +211,7 @@ function desiredSimilarAnswerIndex(questionId) {
 }
 
 function rebalanceSimilarOptions(questions) {
-  const letterReference = /(?:\b(?:option|answer|jawab)\s*[A-D]\b|جواب\s*[A-D]|آپشن\s*[A-D])/iu;
+  const letterReference = /(?:\b(?:option|answer|jawab)\s*[A-D](?=\s*(?:is\b|was\b|would\b|[.):,\-–—]|$))|(?:جواب|آپشن)\s*[A-D](?=\s*(?:ہے|تھا|ہوگا|درست|[۔،:)\-–—]|$)))/iu;
 
   return questions.map((question) => {
     if (question.kind !== "similar") return question;
@@ -303,7 +318,7 @@ function writeMarkdown(questions) {
   const master = [
     "# PPSC Similar Practice MCQs",
     "",
-    `This generated bank contains ${practiceQuestions.length} original practice MCQs, one for each source question in the supplied PDF. Questions/options are in English; explanations are in Urdu.`,
+    `This generated bank contains ${practiceQuestions.length} original practice MCQs, one for each retained source question in the supplied study PDFs. Questions/options are in English; explanations are in Urdu.`,
     "",
     ...practiceQuestions.map(renderPracticeItem)
   ].join("\n");
@@ -314,7 +329,7 @@ function writeMarkdown(questions) {
     const content = [
       `# ${category.name} — Similar Practice MCQs`,
       "",
-      `${items.length} original practice questions generated from the supplied PPSC papers.`,
+      `${items.length} original practice questions generated from the supplied PPSC study sources.`,
       "",
       ...items.map(renderPracticeItem)
     ].join("\n");

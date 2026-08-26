@@ -1,0 +1,2018 @@
+[
+  {
+    "id": "IBES-Q0901-SRC",
+    "pairId": "IBES-Q0901",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word tool copies formatting without copying the selected wording?",
+    "questionUrdu": "Selected wording copy کیے بغیر صرف formatting نقل کرنے والا Word tool کون سا ہے؟",
+    "options": [
+      "Copy",
+      "Paste",
+      "Format Painter",
+      "Paste Special"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Format Painter ہے۔ Format Painter source selection کی font اور paragraph formatting لے کر target text پر apply کرتا ہے، مگر source wording نہیں بدلتا۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q901; Microsoft Support - Use the Format Painter",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-the-format-painter-4bb415a9-d4e4-42b7-b579-170adc594e40",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "format-painter",
+      "paragraph-mark"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0901-SIM",
+    "pairId": "IBES-Q0901",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What should be included in a Word source selection to copy its paragraph formatting reliably?",
+    "questionUrdu": "Word میں paragraph formatting درست copy کرنے کے لیے source selection میں کیا شامل ہونا چاہیے؟",
+    "options": [
+      "The paragraph mark",
+      "The page number only",
+      "The printer name",
+      "The document password"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The paragraph mark ہے۔ Paragraph mark paragraph-level properties جیسے alignment، indents اور spacing رکھتی ہے، اس لیے اسے select کرنا مکمل paragraph formatting capture کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Use the Format Painter",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-the-format-painter-4bb415a9-d4e4-42b7-b579-170adc594e40",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "format-painter",
+      "paragraph-mark",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0902-SRC",
+    "pairId": "IBES-Q0902",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "How can Format Painter remain active for multiple target selections?",
+    "questionUrdu": "Format Painter کو multiple target selections کے لیے active کیسے رکھا جاتا ہے؟",
+    "options": [
+      "Single-click it once",
+      "Double-click Format Painter",
+      "Hold Ctrl while closing Word",
+      "Press Delete"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Double-click Format Painter ہے۔ Format Painter کو double-click کرنے سے وہ locked mode میں رہتا ہے اور کئی targets پر formatting apply کی جا سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q902; Microsoft Support - Use the Format Painter",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-the-format-painter-4bb415a9-d4e4-42b7-b579-170adc594e40",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "format-painter",
+      "multiple-documents"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0902-SIM",
+    "pairId": "IBES-Q0902",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Can Word's Format Painter apply copied formatting to text in another open Word document?",
+    "questionUrdu": "کیا Word Format Painter copied formatting دوسری open Word document کے text پر بھی لگا سکتا ہے؟",
+    "options": [
+      "Yes, by switching to the other document and selecting the target",
+      "No, it works only within one paragraph",
+      "No, it can format only pictures",
+      "Yes, but only after printing"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Yes, by switching to the other document and selecting the target ہے۔ Source formatting copy کرنے کے بعد دوسری open Word window میں switch کرکے target selection پر Format Painter apply کیا جا سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Use the Format Painter",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/use-the-format-painter-4bb415a9-d4e4-42b7-b579-170adc594e40",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "format-painter",
+      "multiple-documents",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0905-SRC",
+    "pairId": "IBES-Q0905",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which settings are available from Word's Home tab?",
+    "questionUrdu": "Word کی Home tab سے کون سی settings دستیاب ہوتی ہیں؟",
+    "options": [
+      "Font size only",
+      "Bullets only",
+      "Styles only",
+      "Font size, bullets, and styles"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Font size, bullets, and styles ہے۔ Home tab common editing اور formatting commands دیتی ہے، جن میں font size، bullets اور styles شامل ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q905; Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "home-tab",
+      "styles-group"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The answer-encoding \"All of these\" was replaced with a direct combined option."
+  },
+  {
+    "id": "IBES-Q0905-SIM",
+    "pairId": "IBES-Q0905",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word Home-tab group contains the gallery of paragraph and character styles?",
+    "questionUrdu": "Paragraph اور character styles کی gallery Word Home tab کے کس group میں ہوتی ہے؟",
+    "options": [
+      "Styles",
+      "Clipboard",
+      "Editing",
+      "Voice"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Styles ہے۔ Styles group built-in styles جیسے Normal، Heading 1 اور Title جلد apply کرنے کی gallery فراہم کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "home-tab",
+      "styles-group",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0906-SRC",
+    "pairId": "IBES-Q0906",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word Home-tab control changes the typeface of selected text?",
+    "questionUrdu": "Selected text کا typeface بدلنے والا Word Home-tab control کون سا ہے؟",
+    "options": [
+      "Margins",
+      "Zoom",
+      "Orientation",
+      "Font box"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Font box ہے۔ Font box available typeface families کی list دکھاتا ہے اور selected text پر chosen family apply کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q906; Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-box",
+      "live-preview"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says the legacy Format menu. In current Word the typeface is selected from the Font box on Home. The printed key is A; the independently verified answer is D."
+  },
+  {
+    "id": "IBES-Q0906-SIM",
+    "pairId": "IBES-Q0906",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Word's live font preview show while you point to a font name?",
+    "questionUrdu": "Font name پر pointer رکھنے سے Word کا live font preview کیا دکھاتا ہے؟",
+    "options": [
+      "How the selected text would look in that font",
+      "The document's file size",
+      "The printer's toner level",
+      "The page's database schema"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب How the selected text would look in that font ہے۔ Live Preview selection کو temporarily hovered font میں دکھاتا ہے، اس لیے apply کرنے سے پہلے appearance دیکھی جا سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-box",
+      "live-preview",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0907-SRC",
+    "pairId": "IBES-Q0907",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which AutoFormat As You Type option makes typed web and network addresses clickable in Word?",
+    "questionUrdu": "Typed web اور network addresses کو clickable بنانے والی AutoFormat As You Type option کون سی ہے؟",
+    "options": [
+      "Automatic numbered lists",
+      "Border lines",
+      "Ordinals with superscript",
+      "Internet and network paths with hyperlinks"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Internet and network paths with hyperlinks ہے۔ Internet and network paths with hyperlinks option recognized addresses کو automatically clickable links میں بدلتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q907; Microsoft Support - AutoFormat As You Type automatic hyperlinks",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/remove-or-turn-off-hyperlinks",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "hyperlinks",
+      "autoformat"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source combined several version-dependent behaviors under \"All of these.\" It was reconstructed around one directly documented AutoFormat option."
+  },
+  {
+    "id": "IBES-Q0907-SIM",
+    "pairId": "IBES-Q0907",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word command removes a hyperlink while keeping its displayed text?",
+    "questionUrdu": "Displayed text برقرار رکھتے ہوئے hyperlink ختم کرنے والی Word command کون سی ہے؟",
+    "options": [
+      "Remove Hyperlink",
+      "Delete Paragraph",
+      "Break Link to Printer",
+      "Clear Clipboard"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Remove Hyperlink ہے۔ Remove Hyperlink link destination اور hyperlink formatting ہٹاتی ہے مگر visible wording document میں رہتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - AutoFormat As You Type automatic hyperlinks",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/remove-or-turn-off-hyperlinks",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "hyperlinks",
+      "autoformat",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0908-SRC",
+    "pairId": "IBES-Q0908",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Word, superscript, subscript, and strikethrough are examples of what?",
+    "questionUrdu": "Word میں superscript، subscript اور strikethrough کس چیز کی examples ہیں؟",
+    "options": [
+      "Font effects",
+      "Font families",
+      "File formats",
+      "Paragraph margins"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Font effects ہے۔ یہ Font effects ہیں جو selected characters کی position یا visual treatment بدلتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q908; Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-effects",
+      "strikethrough"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0908-SIM",
+    "pairId": "IBES-Q0908",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word font effect draws a line through the middle of selected characters?",
+    "questionUrdu": "Selected characters کے درمیان line کھینچنے والا Word font effect کون سا ہے؟",
+    "options": [
+      "Strikethrough",
+      "Superscript",
+      "Subscript",
+      "Small Caps"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Strikethrough ہے۔ Strikethrough text کے وسط سے horizontal line گزارتی ہے اور wording کو delete کیے بغیر crossed-out دکھاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-effects",
+      "strikethrough",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0909-SRC",
+    "pairId": "IBES-Q0909",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which current Word Text Effects choices add decorative appearance to text?",
+    "questionUrdu": "Current Word میں کون سے Text Effects decorative appearance add کرتے ہیں؟",
+    "options": [
+      "Page margins and gutters",
+      "Line and paragraph spacing",
+      "Shadow, reflection, and glow",
+      "Headers and footers"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Shadow, reflection, and glow ہے۔ Shadow، reflection اور glow text کے اردگرد یا نیچے visual effects بنا کر decorative appearance دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q909; Microsoft Support - Add or remove text effects",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/add-or-remove-text-effects",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "text-effects",
+      "text-outline"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source listed obsolete animated-text effects such as Shimmer and Blinking Background. It was updated to supported Text Effects."
+  },
+  {
+    "id": "IBES-Q0909-SIM",
+    "pairId": "IBES-Q0909",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word Text Effects option traces a visible border around the edges of letters?",
+    "questionUrdu": "Letters کے edges کے گرد visible border بنانے والا Word Text Effects option کون سا ہے؟",
+    "options": [
+      "Text Outline",
+      "Text Highlight",
+      "Change Case",
+      "Line Spacing"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Text Outline ہے۔ Text Outline glyphs کے outer edges پر chosen color، weight اور dash-style کا border لگاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Add or remove text effects",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/add-or-remove-text-effects",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "text-effects",
+      "text-outline",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0910-SRC",
+    "pairId": "IBES-Q0910",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is a character raised above the normal text baseline called?",
+    "questionUrdu": "Normal text baseline سے اوپر اٹھے ہوئے character کو کیا کہتے ہیں؟",
+    "options": [
+      "Subscript",
+      "Superscript",
+      "An ordinary baseline character",
+      "A paragraph mark"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Superscript ہے۔ Superscript character کو چھوٹا کرکے baseline سے اوپر position کرتی ہے، جیسے exponent یا reference mark۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q910; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "superscript",
+      "footnotes"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0910-SIM",
+    "pairId": "IBES-Q0910",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which document element is commonly displayed as a superscript reference number?",
+    "questionUrdu": "Document کا کون سا element عام طور پر superscript reference number کے طور پر دکھایا جاتا ہے؟",
+    "options": [
+      "A footnote reference mark",
+      "A page margin",
+      "A paragraph border",
+      "A table gridline"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A footnote reference mark ہے۔ Footnote reference mark متن میں raised number یا symbol ہوتی ہے جو page کے footnote سے تعلق ظاہر کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "superscript",
+      "footnotes",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0911-SRC",
+    "pairId": "IBES-Q0911",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which choice names the non-bold, non-italic member of a Microsoft font family?",
+    "questionUrdu": "Microsoft font family کے non-bold اور non-italic member کو کیا کہتے ہیں؟",
+    "options": [
+      "Superscript",
+      "Subscript",
+      "Regular",
+      "Strikethrough"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Regular ہے۔ Regular face font family کی normal weight اور upright style ہوتی ہے، جس پر bold یا italic variation apply نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q911; Microsoft Learn - Calibri font family",
+      "referenceUrl": "https://learn.microsoft.com/en-us/typography/font-list/calibri",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-faces",
+      "italic"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The vague source wording was repaired. Microsoft lists Calibri as the regular family member alongside Bold, Italic, and Bold Italic styles."
+  },
+  {
+    "id": "IBES-Q0911-SIM",
+    "pairId": "IBES-Q0911",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which font face normally slants letterforms while keeping ordinary stroke weight?",
+    "questionUrdu": "Ordinary stroke weight رکھتے ہوئے letterforms کو slant کرنے والا font face کون سا ہے؟",
+    "options": [
+      "Italic",
+      "Bold",
+      "Regular",
+      "Double underline"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Italic ہے۔ Italic face letterforms کو angled یا specially redrawn style میں دکھاتی ہے، جبکہ weight عموماً bold نہیں ہوتی۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Learn - Calibri font family",
+      "referenceUrl": "https://learn.microsoft.com/en-us/typography/font-list/calibri",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-faces",
+      "italic",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0912-SRC",
+    "pairId": "IBES-Q0912",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word command changes selected text between lowercase, uppercase, and other capitalization forms?",
+    "questionUrdu": "Selected text کو lowercase، uppercase اور دوسری capitalization forms میں بدلنے والی Word command کون سی ہے؟",
+    "options": [
+      "Change Case",
+      "Spell Check",
+      "Align Text",
+      "Translate"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Change Case ہے۔ Change Case command selected text کو Sentence case، lowercase، UPPERCASE اور دوسری supported forms میں convert کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q912; Microsoft Support - Change capitalization or case in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/change-the-capitalization-or-case-of-text",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "change-case",
+      "capitalization"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The broad answer \"Formatting\" was replaced with the specific Change Case command."
+  },
+  {
+    "id": "IBES-Q0912-SIM",
+    "pairId": "IBES-Q0912",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Change Case option capitalizes the first letter of every word?",
+    "questionUrdu": "ہر word کا پہلا letter capital کرنے والا Change Case option کون سا ہے؟",
+    "options": [
+      "Capitalize Each Word",
+      "Sentence case",
+      "lowercase",
+      "tOGGLE cASE"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Capitalize Each Word ہے۔ Capitalize Each Word selection کے ہر word کو initial capital letter کے ساتھ format کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Change capitalization or case in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/change-the-capitalization-or-case-of-text",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "change-case",
+      "capitalization",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0913-SRC",
+    "pairId": "IBES-Q0913",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which unit is used for font size in Word?",
+    "questionUrdu": "Word میں font size کس unit میں measure کی جاتی ہے؟",
+    "options": [
+      "Points",
+      "Inches",
+      "Pixels only",
+      "Centimeters"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Points ہے۔ Font size typographic points میں دی جاتی ہے؛ point print typography کی standard measurement unit ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q913; Microsoft Support - Change the font size",
+      "referenceUrl": "https://support.microsoft.com/en-au/office/change-the-font-size-931e064e-f99f-4ba4-a1bf-8047a35552be",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-size",
+      "typographic-points"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked for a version/template-dependent default size of 11. It was reconstructed around the stable documented measurement unit."
+  },
+  {
+    "id": "IBES-Q0913-SIM",
+    "pairId": "IBES-Q0913",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "How many typographic points are equal to one inch?",
+    "questionUrdu": "ایک inch میں کتنے typographic points برابر ہوتے ہیں؟",
+    "options": [
+      "72",
+      "12",
+      "96",
+      "144"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 72 ہے۔ Standard desktop-publishing measurement میں 72 points ایک inch کے برابر ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Change the font size",
+      "referenceUrl": "https://support.microsoft.com/en-au/office/change-the-font-size-931e064e-f99f-4ba4-a1bf-8047a35552be",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-size",
+      "typographic-points",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0914-SRC",
+    "pairId": "IBES-Q0914",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which typeface became the default font in Microsoft Office in 2007?",
+    "questionUrdu": "2007 میں Microsoft Office کا default font بننے والا typeface کون سا تھا؟",
+    "options": [
+      "Times New Roman",
+      "Calibri",
+      "Verdana",
+      "Helvetica"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Calibri ہے۔ Calibri کو Office 2007 میں default typeface بنایا گیا اور یہ کئی subsequent releases میں default رہا۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q914; Microsoft Learn - Calibri font family",
+      "referenceUrl": "https://learn.microsoft.com/en-us/typography/font-list/calibri",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "calibri",
+      "typography-history"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source treated Calibri as Word's universal current default, but current Microsoft 365 uses Aptos. The item was accurately scoped to Office 2007."
+  },
+  {
+    "id": "IBES-Q0914-SIM",
+    "pairId": "IBES-Q0914",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Who designed the Calibri typeface family?",
+    "questionUrdu": "Calibri typeface family کس designer نے تیار کی؟",
+    "options": [
+      "Luc(as) de Groot",
+      "Claude Garamond",
+      "Stanley Morison",
+      "Adrian Frutiger"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Luc(as) de Groot ہے۔ Microsoft کی Calibri documentation designer Luc(as) de Groot کو اس font family کا creator بتاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Learn - Calibri font family",
+      "referenceUrl": "https://learn.microsoft.com/en-us/typography/font-list/calibri",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "calibri",
+      "typography-history",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0915-SRC",
+    "pairId": "IBES-Q0915",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Times New Roman and Arial are examples of what?",
+    "questionUrdu": "Times New Roman اور Arial کس چیز کی examples ہیں؟",
+    "options": [
+      "Font styles",
+      "Paragraph formats",
+      "File formats",
+      "Font families"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Font families ہے۔ یہ font families ہیں؛ ہر family میں Regular، Bold اور Italic جیسے related faces شامل ہو سکتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q915; Microsoft Learn - Font library and font families",
+      "referenceUrl": "https://learn.microsoft.com/typography/font-list",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-families",
+      "font-faces"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says Font style. Times New Roman and Arial are font families/typefaces; Regular, Italic, and Bold are styles. The printed key is A; the independently verified answer is D."
+  },
+  {
+    "id": "IBES-Q0915-SIM",
+    "pairId": "IBES-Q0915",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What can a font family contain besides its regular face?",
+    "questionUrdu": "Regular face کے علاوہ ایک font family میں کیا شامل ہو سکتا ہے؟",
+    "options": [
+      "Related bold and italic faces",
+      "Database records only",
+      "Slide transitions only",
+      "Printer drivers only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Related bold and italic faces ہے۔ Font family related designs کا set ہے جو weight، width یا posture میں variations رکھ سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Learn - Font library and font families",
+      "referenceUrl": "https://learn.microsoft.com/typography/font-list",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-families",
+      "font-faces",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0916-SRC",
+    "pairId": "IBES-Q0916",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which font category includes Arial and Calibri?",
+    "questionUrdu": "Arial اور Calibri کس font category میں شامل ہیں؟",
+    "options": [
+      "Serif",
+      "Sans serif",
+      "Monospace only",
+      "Symbol"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Sans serif ہے۔ Arial اور Calibri sans-serif typefaces ہیں جن کے strokes کے ends پر decorative serifs نہیں ہوتے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q916; Microsoft Learn - Windows typography and sans-serif fonts",
+      "referenceUrl": "https://learn.microsoft.com/en-us/windows/apps/design/signature-experiences/typography",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "sans-serif",
+      "typography"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The subjective claim that a category is \"suitable for titles\" was replaced with a directly verifiable Microsoft typography classification."
+  },
+  {
+    "id": "IBES-Q0916-SIM",
+    "pairId": "IBES-Q0916",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What feature generally distinguishes a sans-serif typeface?",
+    "questionUrdu": "Sans-serif typeface کو عام طور پر کون سی feature distinguish کرتی ہے؟",
+    "options": [
+      "It lacks finishing serifs at stroke ends",
+      "It contains only numbers",
+      "It must always be italic",
+      "It can be used only in tables"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب It lacks finishing serifs at stroke ends ہے۔ Sans serif کا مطلب strokes کے ends پر چھوٹے decorative terminal serifs کی عدم موجودگی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Learn - Windows typography and sans-serif fonts",
+      "referenceUrl": "https://learn.microsoft.com/en-us/windows/apps/design/signature-experiences/typography",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "sans-serif",
+      "typography",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0917-SRC",
+    "pairId": "IBES-Q0917",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which choice is not a font style?",
+    "questionUrdu": "درج choices میں کون سی چیز font style نہیں ہے؟",
+    "options": [
+      "Bold",
+      "Italic",
+      "Superscript",
+      "Regular"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Superscript ہے۔ Superscript character-position effect ہے، جبکہ Regular، Bold اور Italic font faces یا styles ہو سکتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q917; Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-styles",
+      "bold"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption in Bold, Italic, and Superscript was repaired. Superscript is an effect/position, not a style."
+  },
+  {
+    "id": "IBES-Q0917-SIM",
+    "pairId": "IBES-Q0917",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which font style uses heavier strokes to emphasize text?",
+    "questionUrdu": "Text emphasize کرنے کے لیے heavier strokes استعمال کرنے والا font style کون سا ہے؟",
+    "options": [
+      "Bold",
+      "Regular",
+      "Superscript",
+      "Subscript"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Bold ہے۔ Bold face glyph strokes کا weight بڑھا کر selected wording کو surrounding text سے زیادہ prominent بناتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-styles",
+      "bold",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0918-SRC",
+    "pairId": "IBES-Q0918",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which choice is not a documented Word character-spacing control?",
+    "questionUrdu": "کون سی choice documented Word character-spacing control نہیں ہے؟",
+    "options": [
+      "Expanded",
+      "Loosely",
+      "Condensed",
+      "Kerning"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Loosely ہے۔ Word Normal، Expanded اور Condensed character spacing دیتی ہے؛ Loosely اس control کا named option نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q918; Microsoft Support - Change character spacing in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/change-the-spaces-between-text-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "character-spacing",
+      "expanded"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Microsoft documents Expanded, Condensed, and Kerning controls for character spacing; \"Loosely\" is not one of them."
+  },
+  {
+    "id": "IBES-Q0918-SIM",
+    "pairId": "IBES-Q0918",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word character-spacing setting increases the space between characters?",
+    "questionUrdu": "Characters کے درمیان space بڑھانے والی Word character-spacing setting کون سی ہے؟",
+    "options": [
+      "Expanded",
+      "Condensed",
+      "Normal",
+      "Lowered"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Expanded ہے۔ Expanded spacing selected point amount کے مطابق characters کو farther apart کرتی ہے؛ Condensed انہیں closer کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Change character spacing in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/change-the-spaces-between-text-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "character-spacing",
+      "expanded",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0919-SRC",
+    "pairId": "IBES-Q0919",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word Ribbon group contains the Font, Font Size, Bold, and Italic controls?",
+    "questionUrdu": "Font، Font Size، Bold اور Italic controls کس Word Ribbon group میں ہوتے ہیں؟",
+    "options": [
+      "Font",
+      "Page Setup",
+      "Clipboard",
+      "Editing"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Font ہے۔ Home tab کا Font group typeface، size، emphasis، color اور related character-formatting controls رکھتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q919; Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-group",
+      "dialog-launcher"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source stem was vague. It was reconstructed around the directly documented Font group and its controls."
+  },
+  {
+    "id": "IBES-Q0919-SIM",
+    "pairId": "IBES-Q0919",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does the small dialog-box launcher in Word's Font group open?",
+    "questionUrdu": "Word Font group کا چھوٹا dialog-box launcher کیا کھولتا ہے؟",
+    "options": [
+      "The full Font dialog",
+      "The Print pane",
+      "The Navigation pane",
+      "The Mail Merge Wizard"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The full Font dialog ہے۔ Font group launcher detailed Font dialog کھولتا ہے جس میں effects، character spacing اور advanced settings ملتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-for-new-users",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-group",
+      "dialog-launcher",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0921-SRC",
+    "pairId": "IBES-Q0921",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut applies single line spacing to a Word paragraph?",
+    "questionUrdu": "Word paragraph پر single line spacing لگانے والا shortcut Ctrl+1 ہے؛ یہ کیا apply کرتا ہے؟",
+    "options": [
+      "Ctrl+5",
+      "Ctrl+1",
+      "Ctrl+2",
+      "Ctrl+M"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Ctrl+1 ہے۔ Ctrl+1 current یا selected paragraphs کو single line spacing پر set کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q921; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "line-spacing",
+      "exactly"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source incorrectly equated single spacing with a fixed 12-point distance. Actual line height depends on font metrics; Ctrl+1 is the stable command."
+  },
+  {
+    "id": "IBES-Q0921-SIM",
+    "pairId": "IBES-Q0921",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word line-spacing setting keeps every line at one fixed point value?",
+    "questionUrdu": "ہر line کو ایک fixed point value پر رکھنے والی Word line-spacing setting کون سی ہے؟",
+    "options": [
+      "Exactly",
+      "At least",
+      "Multiple",
+      "Double"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Exactly ہے۔ Exactly setting line box کو specified fixed point measurement دیتی ہے، چاہے content taller ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Change line spacing in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/change-the-line-spacing-in-word-1970e24a-441c-473d-918f-c6805237fbf4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "line-spacing",
+      "exactly",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0922-SRC",
+    "pairId": "IBES-Q0922",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut applies double line spacing to a Word paragraph?",
+    "questionUrdu": "Word paragraph پر double line spacing لگانے والا shortcut Ctrl+2 ہے؛ یہ کیا apply کرتا ہے؟",
+    "options": [
+      "Ctrl+2",
+      "Ctrl+1",
+      "Ctrl+5",
+      "Ctrl+M"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ctrl+2 ہے۔ Ctrl+2 selected paragraphs کے line spacing کو double setting پر تبدیل کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q922; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "line-spacing",
+      "at-least"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked for version-dependent minimum and maximum items in a dropdown. It was reconstructed around a stable spacing shortcut."
+  },
+  {
+    "id": "IBES-Q0922-SIM",
+    "pairId": "IBES-Q0922",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word line-spacing setting defines a minimum value but can expand for taller content?",
+    "questionUrdu": "Minimum value مقرر کرکے taller content کے لیے expand ہونے والی Word spacing setting کون سی ہے؟",
+    "options": [
+      "At least",
+      "Exactly",
+      "Single",
+      "Condensed"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب At least ہے۔ At least minimum line height رکھتی ہے مگر large fonts یا inline objects fit کرنے کے لیے spacing بڑھا سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Change line spacing in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/change-the-line-spacing-in-word-1970e24a-441c-473d-918f-c6805237fbf4",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "line-spacing",
+      "at-least",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0923-SRC",
+    "pairId": "IBES-Q0923",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut changes selected Word text to the next larger preset font size?",
+    "questionUrdu": "Selected Word text کو next larger preset font size پر لے جانے والا shortcut کون سا ہے؟",
+    "options": [
+      "Ctrl+]",
+      "Ctrl+[",
+      "Ctrl+Shift+>",
+      "Ctrl+Shift+<"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Ctrl+Shift+> ہے۔ Ctrl+Shift+> selected text کو Font Size list کی next larger preset value پر لے جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q923; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-size",
+      "custom-size"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked for the version-dependent largest visible dropdown value. It was reconstructed around the distinct, stable shortcut for the next larger preset font size."
+  },
+  {
+    "id": "IBES-Q0923-SIM",
+    "pairId": "IBES-Q0923",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Where can a user type a custom Word font size that is not shown in the preset list?",
+    "questionUrdu": "Preset list میں نہ دکھنے والی custom Word font size کہاں type کی جا سکتی ہے؟",
+    "options": [
+      "The Font Size box",
+      "The status bar",
+      "The ruler's tab selector",
+      "The Navigation pane"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The Font Size box ہے۔ Font Size box numeric entry قبول کرتی ہے، اس لیے supported custom size type کرکے Enter دبایا جا سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-size",
+      "custom-size",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0924-SRC",
+    "pairId": "IBES-Q0924",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which shortcut decreases selected Word text by exactly one point?",
+    "questionUrdu": "Selected Word text کو exactly one point کم کرنے والا shortcut کون سا ہے؟",
+    "options": [
+      "Ctrl+[",
+      "Ctrl+Shift+<",
+      "Ctrl+]",
+      "Ctrl+Shift+>"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ctrl+[ ہے۔ Ctrl+[ selected text کی font size ایک point کم کرتا ہے، نہ کہ صرف next preset تک۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q924; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-size",
+      "minimum-size"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked for the largest font size shown in a Word 2016 dropdown. It was replaced with the distinct, version-stable one-point decrease shortcut."
+  },
+  {
+    "id": "IBES-Q0924-SIM",
+    "pairId": "IBES-Q0924",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the smallest whole-point font size that current desktop Word accepts in the Font Size box?",
+    "questionUrdu": "Current desktop Word کے Font Size box میں smallest whole-point size کتنی accept ہوتی ہے؟",
+    "options": [
+      "1 point",
+      "0 points",
+      "6 points",
+      "8 points"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 1 point ہے۔ Word Font Size box میں supported typed range 1 point سے شروع ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Change the font size",
+      "referenceUrl": "https://support.microsoft.com/en-au/office/change-the-font-size-931e064e-f99f-4ba4-a1bf-8047a35552be",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-size",
+      "minimum-size",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0925-SRC",
+    "pairId": "IBES-Q0925",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the largest font size that current desktop Word allows you to type in the Font Size box?",
+    "questionUrdu": "Current desktop Word کے Font Size box میں type ہونے والی largest size 1638 points ہے؛ وہ کتنی ہے؟",
+    "options": [
+      "163 points",
+      "1628 points",
+      "1635 points",
+      "1638 points"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 1638 points ہے۔ Desktop Word supported range میں Font Size box کے ذریعے maximum 1638 points تک value accept کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q925; Microsoft Support - Change the font size",
+      "referenceUrl": "https://support.microsoft.com/en-au/office/change-the-font-size-931e064e-f99f-4ba4-a1bf-8047a35552be",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-size",
+      "custom-size"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says 1628. Microsoft Support documents a Word range of 1 through 1638 points. The printed key is B; the independently verified answer is D."
+  },
+  {
+    "id": "IBES-Q0925-SIM",
+    "pairId": "IBES-Q0925",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "How can a user apply a supported custom size such as 100 points in Word?",
+    "questionUrdu": "Word میں 100 points جیسی supported custom size کیسے apply کی جا سکتی ہے؟",
+    "options": [
+      "Type 100 in the Font Size box and press Enter",
+      "Set zoom to 100%",
+      "Type 100 in the status bar",
+      "Insert 100 spaces"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Type 100 in the Font Size box and press Enter ہے۔ Custom supported size Font Size box میں directly type کرکے Enter سے selected text پر apply ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Change the font size",
+      "referenceUrl": "https://support.microsoft.com/en-au/office/change-the-font-size-931e064e-f99f-4ba4-a1bf-8047a35552be",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "font-size",
+      "custom-size",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0926-SRC",
+    "pairId": "IBES-Q0926",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Word text highlighting color?",
+    "questionUrdu": "Word text highlighting selected text کے کس حصے کو color کرتی ہے؟",
+    "options": [
+      "Only the character strokes",
+      "The entire page background",
+      "The area immediately behind selected text",
+      "The font family"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب The area immediately behind selected text ہے۔ Highlight marker-like color selected characters کے immediately behind area پر لگتی ہے، پورے page background پر نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q926; Microsoft Support - Apply or remove highlighting",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/apply-or-remove-highlighting",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "text-highlight",
+      "font-color"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The wording was normalized to distinguish text highlighting from font color and page shading."
+  },
+  {
+    "id": "IBES-Q0926-SIM",
+    "pairId": "IBES-Q0926",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "If the font color is changed, what normally happens to an existing Word text highlight?",
+    "questionUrdu": "Font color بدلنے پر existing Word text highlight کے ساتھ عام طور پر کیا ہوتا ہے؟",
+    "options": [
+      "It remains as separate background formatting",
+      "It automatically becomes the font color",
+      "It deletes the paragraph",
+      "It turns into a page border"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب It remains as separate background formatting ہے۔ Font Color glyphs کا color اور Text Highlight Color ان کے پیچھے marker-like background separately control کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Apply or remove highlighting",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/apply-or-remove-highlighting",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "text-highlight",
+      "font-color",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0927-SRC",
+    "pairId": "IBES-Q0927",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "To what can Word highlighting be applied?",
+    "questionUrdu": "Word highlighting کس مقدار کے selected text پر apply ہو سکتی ہے؟",
+    "options": [
+      "Only one word",
+      "Only one sentence",
+      "Any selected text, from part of a word to longer passages",
+      "Only the first word of a paragraph"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Any selected text, from part of a word to longer passages ہے۔ Highlighting ایک character یا word کے حصے سے لے کر longer selected passages تک apply کی جا سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q927; Microsoft Support - Apply or remove highlighting",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/apply-or-remove-highlighting",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "text-highlight",
+      "copy-formatting"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The printed key says only the selected word. Microsoft allows highlighting of any selected text. The printed key is A; the independently verified answer is C."
+  },
+  {
+    "id": "IBES-Q0927-SIM",
+    "pairId": "IBES-Q0927",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "When highlighted Word text is copied with its formatting, what normally accompanies the text?",
+    "questionUrdu": "Highlighted Word text formatting سمیت copy ہو تو متن کے ساتھ عام طور پر کیا جاتا ہے؟",
+    "options": [
+      "The highlight formatting",
+      "The printer driver",
+      "The document password",
+      "The page orientation only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The highlight formatting ہے۔ Ordinary formatted copy text کے ساتھ character formatting بھی رکھتی ہے، جس میں highlight background شامل ہو سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Apply or remove highlighting",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/apply-or-remove-highlighting",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "text-highlight",
+      "copy-formatting",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0928-SRC",
+    "pairId": "IBES-Q0928",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word Ribbon tab contains the Multilevel List command?",
+    "questionUrdu": "Multilevel List command Word Ribbon کی کون سی tab میں ہوتی ہے؟",
+    "options": [
+      "Home",
+      "Design",
+      "Layout",
+      "Insert"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Home ہے۔ Multilevel List Home tab کے Paragraph group میں Bullets اور Numbering کے ساتھ دستیاب ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q928; Microsoft Support - Define multilevel lists in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/define-new-bullets-numbers-and-multilevel-lists",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "multilevel-list",
+      "outlines"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR corruption, spelling, and punctuation were normalized; the answer was independently checked against the cited primary source."
+  },
+  {
+    "id": "IBES-Q0928-SIM",
+    "pairId": "IBES-Q0928",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the main purpose of a multilevel list in Word?",
+    "questionUrdu": "Word میں multilevel list کا بنیادی مقصد کیا ہوتا ہے؟",
+    "options": [
+      "Create a hierarchical outline with nested levels",
+      "Encrypt the document",
+      "Insert a video",
+      "Change the printer tray"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Create a hierarchical outline with nested levels ہے۔ Multilevel list main items اور subordinate items کو different indented levels اور numbering schemes میں organize کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Define multilevel lists in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/define-new-bullets-numbers-and-multilevel-lists",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "multilevel-list",
+      "outlines",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0929-SRC",
+    "pairId": "IBES-Q0929",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which choice is not a Word Change Case option?",
+    "questionUrdu": "درج choices میں کون سی چیز Word Change Case option نہیں ہے؟",
+    "options": [
+      "Sentence case",
+      "UPPERCASE",
+      "Indent Case",
+      "lowercase"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Indent Case ہے۔ Indent Case کوئی capitalization option نہیں؛ indentation paragraph layout سے متعلق ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q929; Microsoft Support - Change capitalization or case in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/change-the-capitalization-or-case-of-text",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "change-case",
+      "toggle-case"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "OCR rendered the false option as \"Ident Case.\" It was normalized to \"Indent Case,\" which is not among Word's documented Change Case choices."
+  },
+  {
+    "id": "IBES-Q0929-SIM",
+    "pairId": "IBES-Q0929",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Word's tOGGLE cASE option do to selected letters?",
+    "questionUrdu": "Word کا tOGGLE cASE option selected letters کے ساتھ کیا کرتا ہے؟",
+    "options": [
+      "Reverses uppercase and lowercase forms",
+      "Adds paragraph indentation",
+      "Deletes punctuation",
+      "Changes the font family"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Reverses uppercase and lowercase forms ہے۔ tOGGLE cASE uppercase letters کو lowercase اور lowercase letters کو uppercase میں بدلتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Change capitalization or case in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/change-the-capitalization-or-case-of-text",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "change-case",
+      "toggle-case",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0930-SRC",
+    "pairId": "IBES-Q0930",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which paragraph alignment makes text flush with both the left and right margins?",
+    "questionUrdu": "Text کو left اور right دونوں margins کے ساتھ flush کرنے والی paragraph alignment کون سی ہے؟",
+    "options": [
+      "Center",
+      "Justify",
+      "Left",
+      "Right"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Justify ہے۔ Justify spacing adjust کرکے paragraph کی زیادہ تر lines کو دونوں margins کے ساتھ align کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q930; Microsoft Support - Align or justify text in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/align-text-left-or-right-center-text-or-justify-text-on-a-page",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "paragraph-alignment",
+      "justify"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source offered \"Full justification\" and \"Justification\" as overlapping answers. One standard Justify option now makes the answer unique. The printed key is A; the independently verified answer is B."
+  },
+  {
+    "id": "IBES-Q0930-SIM",
+    "pairId": "IBES-Q0930",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Why can word spacing vary across a fully justified paragraph?",
+    "questionUrdu": "Fully justified paragraph میں words کے درمیان spacing مختلف کیوں ہو سکتی ہے؟",
+    "options": [
+      "Word adjusts spaces to align both margins",
+      "Every word changes font family",
+      "The page becomes a table",
+      "The paragraph is encrypted"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Word adjusts spaces to align both margins ہے۔ Justification ہر line کی width fit کرنے کے لیے word spacing بڑھا یا گھٹا سکتی ہے تاکہ دونوں edges align ہوں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Align or justify text in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/align-text-left-or-right-center-text-or-justify-text-on-a-page",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "paragraph-alignment",
+      "justify",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0931-SRC",
+    "pairId": "IBES-Q0931",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which paragraph alignment places each line midway between the left and right margins?",
+    "questionUrdu": "ہر line کو left اور right margins کے درمیان midway رکھنے والی alignment کون سی ہے؟",
+    "options": [
+      "Center",
+      "Justify",
+      "Left",
+      "Right"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Center ہے۔ Center alignment paragraph lines کو horizontally available width کے middle میں رکھتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q931; Microsoft Support - Align or justify text in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/align-text-left-or-right-center-text-or-justify-text-on-a-page",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "paragraph-alignment",
+      "center"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source incorrectly described a \"merge\" option. It was reconstructed around Microsoft's documented Center alignment."
+  },
+  {
+    "id": "IBES-Q0931-SIM",
+    "pairId": "IBES-Q0931",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Does Center paragraph alignment vertically center text on the page?",
+    "questionUrdu": "کیا Center paragraph alignment text کو page پر vertically بھی center کرتی ہے؟",
+    "options": [
+      "No, it controls horizontal paragraph alignment",
+      "Yes, always",
+      "Only in tables",
+      "Only after printing"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب No, it controls horizontal paragraph alignment ہے۔ Center alignment left-to-right placement بدلتی ہے؛ vertical page alignment الگ Page Setup setting ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Align or justify text in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/align-text-left-or-right-center-text-or-justify-text-on-a-page",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "paragraph-alignment",
+      "center",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0932-SRC",
+    "pairId": "IBES-Q0932",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word alignment makes text flush with the left margin and ragged at the right margin?",
+    "questionUrdu": "Text کو left margin کے ساتھ flush اور right margin پر ragged رکھنے والی Word alignment کون سی ہے؟",
+    "options": [
+      "Left",
+      "Right",
+      "Center",
+      "Justify"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Left ہے۔ Left alignment lines کو left edge پر align کرتی ہے اور different line lengths کی وجہ سے right edge uneven رہتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q932; Microsoft Support - Align or justify text in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/align-text-left-or-right-center-text-or-justify-text-on-a-page",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "paragraph-alignment",
+      "left-indent"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source's default-alignment claim can vary with language and templates. It was reconstructed around the stable definition of Left alignment."
+  },
+  {
+    "id": "IBES-Q0932-SIM",
+    "pairId": "IBES-Q0932",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which paragraph setting moves left-aligned text inward from the left margin without centering it?",
+    "questionUrdu": "Left-aligned text کو center کیے بغیر left margin سے اندر لے جانے والی paragraph setting کون سی ہے؟",
+    "options": [
+      "Left indent",
+      "Font size",
+      "Text highlight",
+      "Page color"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Left indent ہے۔ Left indent paragraph کا starting position margin سے inward shift کرتا ہے جبکہ alignment left ہی رہ سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Adjust indents and spacing",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/adjust-indents-and-spacing-36239d98-14c5-411e-a880-1ddf25d65cd6",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "paragraph-alignment",
+      "left-indent",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0933-SRC",
+    "pairId": "IBES-Q0933",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word dialog contains the Find, Replace, and Go To tabs?",
+    "questionUrdu": "Find، Replace اور Go To tabs رکھنے والا Word dialog کون سا ہے؟",
+    "options": [
+      "Find and Replace",
+      "Font",
+      "Paragraph",
+      "Page Setup"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Find and Replace ہے۔ Find and Replace dialog text search، substitution اور specific document locations تک navigation combine کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q933; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "find-replace",
+      "wildcards"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source stem ended at \"part of which\" and offered overlapping Find/Search terms. The dialog name was made explicit."
+  },
+  {
+    "id": "IBES-Q0933-SIM",
+    "pairId": "IBES-Q0933",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Find and Replace option enables pattern matching with characters such as ? and *?",
+    "questionUrdu": "? اور * جیسے characters سے pattern matching enable کرنے والا Find and Replace option کون سا ہے؟",
+    "options": [
+      "Use wildcards",
+      "Match printer",
+      "Track Moves",
+      "Smart Lookup"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Use wildcards ہے۔ Use wildcards search pattern میں special characters اور expressions interpret کرکے flexible matches تلاش کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "find-replace",
+      "wildcards",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0934-SRC",
+    "pairId": "IBES-Q0934",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word command opens the Navigation pane for searching document content?",
+    "questionUrdu": "Document content search کرنے کے لیے Navigation pane کون سی Word command کھولتی ہے؟",
+    "options": [
+      "Find (Ctrl+F)",
+      "Open (Ctrl+O)",
+      "Save (Ctrl+S)",
+      "Replace (Ctrl+H)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Find (Ctrl+F) ہے۔ Find command یا Ctrl+F Navigation pane کھولتا ہے اور document میں matching text دکھاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q934; Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "navigation-pane",
+      "headings"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source phrase \"Advance dialogue boxes are same as Search\" was incoherent. It was reconstructed around the documented Find command. The printed key is C; the independently verified answer is A."
+  },
+  {
+    "id": "IBES-Q0934-SIM",
+    "pairId": "IBES-Q0934",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Navigation pane view lets a user jump among paragraphs formatted with heading styles?",
+    "questionUrdu": "Heading styles والے paragraphs کے درمیان jump کرنے کے لیے Navigation pane کا کون سا view استعمال ہوتا ہے؟",
+    "options": [
+      "Headings",
+      "Pages only",
+      "Results only",
+      "Mailings"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Headings ہے۔ Headings view document outline میں heading-style paragraphs دکھاتی ہے اور click کرنے پر متعلقہ location پر لے جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/word/keyboard-shortcuts-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "navigation-pane",
+      "headings",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q0935-SRC",
+    "pairId": "IBES-Q0935",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which choice is not a Word tab-stop alignment type?",
+    "questionUrdu": "درج choices میں کون سی چیز Word tab-stop alignment type نہیں ہے؟",
+    "options": [
+      "Decimal",
+      "Bar",
+      "Center",
+      "Justified"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Justified ہے۔ Justified tab stop type نہیں؛ standard types Left، Center، Right، Decimal اور Bar ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q935; Microsoft Support - Using the ruler and tab stops in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/using-the-ruler-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "tab-stops",
+      "decimal-tab"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Microsoft documents left, center, right, decimal, and bar tab stops; Justified is paragraph alignment, not a tab-stop type."
+  },
+  {
+    "id": "IBES-Q0935-SIM",
+    "pairId": "IBES-Q0935",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Word tab stop aligns numbers around their decimal separator?",
+    "questionUrdu": "Numbers کو decimal separator کے گرد align کرنے والا Word tab stop کون سا ہے؟",
+    "options": [
+      "Decimal tab",
+      "Bar tab",
+      "Left tab",
+      "First-line indent"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Decimal tab ہے۔ Decimal tab numbers کے decimal points کو ایک vertical position پر align کرتی ہے، چاہے digits کی count مختلف ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support - Using the ruler and tab stops in Word",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/using-the-ruler-in-word",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-word",
+      "tab-stops",
+      "decimal-tab",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  }
+]

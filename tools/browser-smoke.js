@@ -168,12 +168,41 @@ async function main() {
       const errors = [];
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
-      if (!data || data.questions.length < 898) errors.push("Expected at least the 898-question PDF bank.");
+      if (!data || data.questions.length !== 3074) errors.push("Expected the complete 3,074-question bank.");
       if (data && data.questions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) errors.push("A question is missing its Urdu translation.");
       if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("Category cards did not render.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Mobile layout has horizontal overflow.");
       if (data.questions.some((question) => !/^https?:\\/\\//.test(question.source.referenceUrl))) errors.push("A research URL is missing.");
       if (document.querySelector("#details-toggle, #details-panel, #explanation-text, #related-history, #option-rationales, #source-notes, #details-source")) errors.push("Removed answer-explanation UI is still present.");
+
+      const ibesQuestions = data.questions.filter((question) => question.id.startsWith("IBES-"));
+      const ibesSourceQuestions = ibesQuestions.filter((question) => question.kind === "source");
+      if (ibesQuestions.length !== 2176 || ibesSourceQuestions.length !== 1088) errors.push("IBES retained source/similar counts are incomplete.");
+      if (ibesQuestions.some((question) => question.categoryId !== "basic-computer-studies")) errors.push("An IBES question is outside Basic Computer Studies.");
+
+      // Render one deterministic IBES item without traversing all 2,296 Basic
+      // Computer questions. A zero-valued Fisher-Yates sequence brings the
+      // second source-order item to the front of the new session.
+      const ibesRenderTarget = ibesQuestions.find((question) => question.kind === "source");
+      const firstComputerIndex = data.questions.findIndex((question) => question.categoryId === "basic-computer-studies");
+      const ibesTargetIndex = data.questions.indexOf(ibesRenderTarget);
+      if (!ibesRenderTarget || firstComputerIndex < 0 || ibesTargetIndex < 0) {
+        errors.push("Could not locate a Basic Computer IBES render target.");
+      } else {
+        data.questions.splice(ibesTargetIndex, 1);
+        data.questions.splice(firstComputerIndex + 1, 0, ibesRenderTarget);
+        const originalRandom = Math.random;
+        Math.random = () => 0;
+        document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]').click();
+        document.querySelector("#learn-mode-button").click();
+        Math.random = originalRandom;
+        await pause();
+        const renderedIbesId = document.querySelector("#question-text").dataset.questionId;
+        if (renderedIbesId !== ibesRenderTarget.id) errors.push("The deterministic IBES question did not render in Basic Computer Learn mode.");
+        if (document.querySelector("#question-text-urdu").textContent !== ibesRenderTarget.questionUrdu) errors.push("The rendered IBES Urdu translation did not match its data.");
+        document.querySelector("#back-button").click();
+        await pause();
+      }
 
       const categoryButton = document.querySelector("#category-grid .category-card:not([disabled])");
       const activeCategory = categoryButton.dataset.category || categoryButton.dataset.categoryId;

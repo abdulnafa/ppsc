@@ -145,6 +145,34 @@ function validateKnownCorrections(questions) {
   }
 }
 
+function validateIbesBank(questions) {
+  const ibesQuestions = questions.filter((question) => String(question.id || "").startsWith("IBES-"));
+  const sourceQuestions = ibesQuestions.filter((question) => question.kind === "source");
+  const similarQuestions = ibesQuestions.filter((question) => question.kind === "similar");
+  if (sourceQuestions.length !== 1088) error(`IBES source count is ${sourceQuestions.length}; expected 1088`);
+  if (similarQuestions.length !== 1088) error(`IBES similar count is ${similarQuestions.length}; expected 1088`);
+  if (ibesQuestions.some((question) => question.categoryId !== "basic-computer-studies")) {
+    error("every IBES question must use the Basic Computer Studies category");
+  }
+  if (ibesQuestions.some((question) => /^IBES-Q0254-/i.test(question.id))) {
+    error("IBES Q254 must not exist because it is absent from the supplied scan");
+  }
+
+  if (sourceQuestions.some((question) => question.id === "IBES-Q1218-SRC")) {
+    error("IBES-Q1218-SRC must remain excluded as a semantic duplicate of IBES-Q0901-SRC");
+  }
+  const formatPainter = sourceQuestions.find((question) => question.id === "IBES-Q0901-SRC");
+  if (!formatPainter) {
+    error("IBES-Q0901-SRC Format Painter canonical item is missing");
+  } else {
+    const option = formatPainter.options[formatPainter.correctOptionIndex];
+    const answer = String(typeof option === "object" ? option.text : option);
+    if (answer !== "Format Painter") {
+      error(`IBES-Q0901-SRC corrected answer regressed to ${JSON.stringify(answer)}`);
+    }
+  }
+}
+
 function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
@@ -205,6 +233,7 @@ function validateFonts() {
 const data = loadData();
 const result = validateData(data);
 validateKnownCorrections(result.questions);
+validateIbesBank(result.questions);
 validateHtml();
 validateFonts();
 

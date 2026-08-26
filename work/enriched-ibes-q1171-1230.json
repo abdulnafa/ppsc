@@ -1,0 +1,2837 @@
+[
+  {
+    "id": "IBES-Q1171-SRC",
+    "pairId": "IBES-Q1171",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does Excel’s #VALUE! error usually indicate?",
+    "questionUrdu": "Excel کا #VALUE! error عام طور پر کیا ظاہر کرتا ہے؟",
+    "options": [
+      "A formula has the wrong type of argument or operand",
+      "The workbook is out of memory",
+      "A referenced cell was deleted",
+      "A number was divided by zero"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A formula has the wrong type of argument or operand ہے۔ #VALUE! بتاتا ہے کہ formula کو غلط type کا argument یا operand ملا ہے، مثلاً number کی جگہ incompatible text۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1171; Microsoft Support — Detect errors in formulas",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/detect-errors-in-formulas-3a8acca5-1d61-4702-80e0-99a36a2822c1",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "formula-errors",
+      "iferror"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source answer “Invalid Input” was too vague. Reconstructed with Microsoft’s specific #VALUE! meaning and distinct error distractors."
+  },
+  {
+    "id": "IBES-Q1171-SIM",
+    "pairId": "IBES-Q1171",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function can replace a formula error with a specified fallback value?",
+    "questionUrdu": "Excel کا کون سا function formula error کی جگہ مقررہ fallback value دکھا سکتا ہے؟",
+    "options": [
+      "IFERROR",
+      "MATCH",
+      "PROPER",
+      "SUBTOTAL"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب IFERROR ہے۔ IFERROR(value, value_if_error) calculation صحیح ہو تو result اور error ہو تو alternative value واپس کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Detect errors in formulas",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/detect-errors-in-formulas-3a8acca5-1d61-4702-80e0-99a36a2822c1",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "formula-errors",
+      "iferror",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1173-SRC",
+    "pairId": "IBES-Q1173",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which formula correctly adds the contents of cells A1 and A2 using the addition operator?",
+    "questionUrdu": "کون سا formula addition operator سے A1 اور A2 کے contents کو درست طور پر جمع کرتا ہے؟",
+    "options": [
+      "=A1+A2",
+      "A1+A2",
+      "#NAME?",
+      "=A1/A2"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب =A1+A2 ہے۔ Excel formula equal sign سے شروع ہوتا اور `+` operator دونوں referenced values کو add کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1173; Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sum-function",
+      "formulas"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Both =SUM(A1,A2) and =A1+A2 in the source were valid, so the original had two correct answers. Reconstructed to request the addition operator specifically."
+  },
+  {
+    "id": "IBES-Q1173-SIM",
+    "pairId": "IBES-Q1173",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel formula adds every value from A1 through A2 by using a function?",
+    "questionUrdu": "کون سا Excel formula function کے ذریعے A1 سے A2 تک تمام values جمع کرتا ہے؟",
+    "options": [
+      "=SUM(A1:A2)",
+      "=ADD(A1-A2)",
+      "=TOTAL(A1;A2)",
+      "SUM=A1:A2"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب =SUM(A1:A2) ہے۔ SUM function colon سے دی گئی contiguous range A1:A2 کے numbers کو جمع کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sum-function",
+      "formulas",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1175-SRC",
+    "pairId": "IBES-Q1175",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What result does Excel return for =(7-3)*(6+1)/4?",
+    "questionUrdu": "Excel formula `=(7-3)*(6+1)/4` کیا result دیتی ہے؟",
+    "options": [
+      "5",
+      "3",
+      "7",
+      "8"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 7 ہے۔ Parentheses پہلے حل ہوتے ہیں: 4 ضرب 7 تقسیم 4 کا result 7 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1175; Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "operator-precedence",
+      "formulas"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source scan omitted the multiplication operator between the parenthesized factors. It was restored as “*”; the evaluated result is 7."
+  },
+  {
+    "id": "IBES-Q1175-SIM",
+    "pairId": "IBES-Q1175",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What result does Excel return for `=2+3*4`?",
+    "questionUrdu": "Excel formula `=2+3*4` کیا result دیتی ہے؟",
+    "options": [
+      "14",
+      "20",
+      "24",
+      "9"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 14 ہے۔ Excel multiplication کو addition سے پہلے کرتا ہے: 3×4=12، پھر 2 شامل کرکے 14 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "operator-precedence",
+      "formulas",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1176-SRC",
+    "pairId": "IBES-Q1176",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which kind of Excel formula can return multiple results that spill into neighboring cells?",
+    "questionUrdu": "کون سی Excel formula کئی results دے کر ساتھ والے cells میں spill کر سکتی ہے؟",
+    "options": [
+      "Scalar value only",
+      "Text formatting rule",
+      "Dynamic array formula",
+      "Page layout formula"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Dynamic array formula ہے۔ Dynamic array formula ایک formula سے متعدد values پیدا کرتی اور انہیں neighboring spill range میں رکھتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1176; Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "dynamic-arrays",
+      "spill-error"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source appears to say “Area formula” and its choices did not define a verifiable Excel concept. Reconstructed as a current, documented dynamic-array formula question."
+  },
+  {
+    "id": "IBES-Q1176-SIM",
+    "pairId": "IBES-Q1176",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel error appears when something blocks a dynamic-array spill range?",
+    "questionUrdu": "Dynamic-array spill range میں رکاوٹ ہو تو Excel کون سا error دکھاتا ہے؟",
+    "options": [
+      "#SPILL!",
+      "#NULL!",
+      "#NUM!",
+      "#N/A"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب #SPILL! ہے۔ اگر intended spill cells خالی نہ ہوں یا دوسری رکاوٹ ہو تو dynamic array #SPILL! error دیتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/overview-of-formulas-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "dynamic-arrays",
+      "spill-error",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1177-SRC",
+    "pairId": "IBES-Q1177",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does the Excel formula `=PROPER(text)` do?",
+    "questionUrdu": "Excel function `=PROPER(text)` کیا کرتی ہے؟",
+    "options": [
+      "Capitalizes the first letter of each word and lowercases the remaining letters",
+      "Capitalizes only the first letter of the entire sentence",
+      "Converts all letters to uppercase",
+      "Removes all spaces"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Capitalizes the first letter of each word and lowercases the remaining letters ہے۔ PROPER ہر word کے پہلے حرف کو uppercase اور باقی حروف کو lowercase کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1177; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "proper-function",
+      "text-functions"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected function capitalization and replaced “None of the above.” Added the documented lowercasing behavior for the remaining letters."
+  },
+  {
+    "id": "IBES-Q1177-SIM",
+    "pairId": "IBES-Q1177",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does `=PROPER(\"mICROSOFT excel\")` return?",
+    "questionUrdu": "Excel formula `=PROPER(\"mICROSOFT excel\")` کیا واپس کرتی ہے؟",
+    "options": [
+      "Microsoft Excel (title case)",
+      "MICROSOFT EXCEL (all uppercase)",
+      "microsoft excel (all lowercase)",
+      "Microsoft excel (first word only)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Microsoft Excel (title case) ہے۔ PROPER دونوں words کا ابتدائی حرف بڑا اور باقی letters چھوٹے کرکے Microsoft Excel بناتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "proper-function",
+      "text-functions",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1178-SRC",
+    "pairId": "IBES-Q1178",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function searches for an item in a range and returns its relative position?",
+    "questionUrdu": "کون سا Excel function range میں item تلاش کرکے اس کی relative position واپس کرتا ہے؟",
+    "options": [
+      "CONTRAST",
+      "MATCH",
+      "NEGATE",
+      "COMPARE"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب MATCH ہے۔ MATCH lookup value کی range میں position number دیتا ہے، خود matched value نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1178; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "index-function",
+      "lookup-functions"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source offered verb phrases rather than function names. Reconstructed with the documented MATCH function."
+  },
+  {
+    "id": "IBES-Q1178-SIM",
+    "pairId": "IBES-Q1178",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function returns a value from a range at a specified row or column position?",
+    "questionUrdu": "Excel کا کون سا function مقررہ row یا column position سے range کی value واپس کرتا ہے؟",
+    "options": [
+      "INDEX",
+      "MATCH",
+      "MOD",
+      "PROPER"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب INDEX ہے۔ INDEX array یا range میں دی گئی row اور column number سے value حاصل کرتا ہے اور اکثر MATCH کے ساتھ استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "index-function",
+      "lookup-functions",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1179-SRC",
+    "pairId": "IBES-Q1179",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which two wildcard characters can represent text in many Excel searches and criteria?",
+    "questionUrdu": "Excel searches اور criteria میں text کو represent کرنے والے دو wildcard characters کون سے ہیں؟",
+    "options": [
+      "Asterisk (*) and question mark (?)",
+      "Plus (+) and minus (-)",
+      "Slash (/) and backslash (\\)",
+      "Greater-than (>) and less-than (<)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Asterisk (*) and question mark (?) ہے۔ Asterisk کسی بھی تعداد کے characters اور question mark ایک character کو match کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1179; Microsoft Support — Find or replace text and numbers in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/find-or-replace-text-and-numbers-on-a-worksheet-0e304ca5-ecef-4808-b90f-fdb42f892e90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "wildcards",
+      "find-replace"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the malformed “* And?” option and named both wildcard characters explicitly."
+  },
+  {
+    "id": "IBES-Q1179-SIM",
+    "pairId": "IBES-Q1179",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which character is placed before `*` or `?` to search for that wildcard literally in Excel?",
+    "questionUrdu": "Excel میں `*` یا `?` wildcard کو literal طور پر تلاش کرنے کے لیے اس سے پہلے کون سا character لگایا جاتا ہے؟",
+    "options": [
+      "Tilde (~)",
+      "Dollar sign ($)",
+      "Colon (:)",
+      "Ampersand (&)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Tilde (~) ہے۔ Tilde escape character ہے؛ `~*` actual asterisk اور `~?` actual question mark کو match کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Find or replace text and numbers in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/find-or-replace-text-and-numbers-on-a-worksheet-0e304ca5-ecef-4808-b90f-fdb42f892e90",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "wildcards",
+      "find-replace",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1181-SRC",
+    "pairId": "IBES-Q1181",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function returns the remainder after division?",
+    "questionUrdu": "Division کے بعد remainder واپس کرنے والا Excel function کون سا ہے؟",
+    "options": [
+      "DIVIDE",
+      "MOD",
+      "ACOT",
+      "QUOTIENT"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب MOD ہے۔ MOD(number, divisor) division کا باقی حصہ واپس کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1181; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "quotient-function",
+      "math-functions"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the grammar and replaced “None of these” with a genuine function distractor."
+  },
+  {
+    "id": "IBES-Q1181-SIM",
+    "pairId": "IBES-Q1181",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function returns the integer portion of a division?",
+    "questionUrdu": "Excel کا کون سا function division کا integer quotient واپس کرتا ہے؟",
+    "options": [
+      "QUOTIENT",
+      "MOD",
+      "REMAINDER",
+      "MATCH"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب QUOTIENT ہے۔ QUOTIENT division کے fractional یا remainder حصے کو چھوڑ کر integer quotient دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "quotient-function",
+      "math-functions",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1182-SRC",
+    "pairId": "IBES-Q1182",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel formula returns the remainder after a number is divided by a divisor?",
+    "questionUrdu": "Number کو divisor سے divide کرنے کے بعد remainder واپس کرنے والی Excel formula کون سی ہے؟",
+    "options": [
+      "=SUM(number,divisor)",
+      "=AVERAGE(number,divisor)",
+      "=MAX(number,divisor)",
+      "=MOD(number,divisor)"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب =MOD(number,divisor) ہے۔ `=MOD(number,divisor)` MOD function کی درست syntax ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1182; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "mod-function",
+      "remainder"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source hid MOD inside “None of these” and misspelled remainder. The actual function was made explicit."
+  },
+  {
+    "id": "IBES-Q1182-SIM",
+    "pairId": "IBES-Q1182",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does the Excel formula `=MOD(17,5)` return?",
+    "questionUrdu": "Excel formula `=MOD(17,5)` کیا واپس کرتی ہے؟",
+    "options": [
+      "2",
+      "3",
+      "3.4",
+      "5"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 2 ہے۔ 17 کو 5 سے تقسیم کرنے پر quotient 3 اور remainder 2 رہتا ہے، اس لیے MOD result 2 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "mod-function",
+      "remainder",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1185-SRC",
+    "pairId": "IBES-Q1185",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel function searches the first column of a table and returns a related value from the same row?",
+    "questionUrdu": "کون سا Excel function table کے پہلے column میں search کرکے اسی row سے متعلقہ value واپس کرتا ہے؟",
+    "options": [
+      "VLOOKUP",
+      "FLOOKUP",
+      "RLOOKUP",
+      "HLOOKUP"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب VLOOKUP ہے۔ VLOOKUP vertically first column میں lookup value ڈھونڈتا اور column index کے مطابق result دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1185; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "vlookup",
+      "exact-match"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source’s “find related data” wording could also fit HLOOKUP. Added the first-column/same-row definition that uniquely identifies VLOOKUP."
+  },
+  {
+    "id": "IBES-Q1185-SIM",
+    "pairId": "IBES-Q1185",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which VLOOKUP fourth argument requests an exact match?",
+    "questionUrdu": "VLOOKUP کا کون سا چوتھا argument exact match طلب کرتا ہے؟",
+    "options": [
+      "FALSE",
+      "TRUE",
+      "1 only",
+      "Blank text"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب FALSE ہے۔ FALSE یا 0 exact matching مانگتا ہے؛ TRUE یا omitted argument approximate match استعمال کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "vlookup",
+      "exact-match",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1187-SRC",
+    "pairId": "IBES-Q1187",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does the Excel function `NOW()` return?",
+    "questionUrdu": "Excel function `NOW()` کیا واپس کرتی ہے؟",
+    "options": [
+      "The weekday name",
+      "Only the current time",
+      "Only the current date",
+      "The current date and time"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب The current date and time ہے۔ NOW system clock کے مطابق current date اور current time دونوں کا serial value دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1187; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "now-function",
+      "recalculation"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Removed unnecessary Excel 2016 scope and corrected function formatting; NOW returns the current date and time. Changed the correct option from an infinitive purpose phrase to the value that NOW actually returns."
+  },
+  {
+    "id": "IBES-Q1187-SIM",
+    "pairId": "IBES-Q1187",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "When is an Excel `NOW()` result normally refreshed?",
+    "questionUrdu": "Excel میں `NOW()` کا result عام طور پر کب refresh ہوتا ہے؟",
+    "options": [
+      "When the worksheet recalculates",
+      "Every second without recalculation",
+      "Only when the cell is printed",
+      "Never after first entry"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب When the worksheet recalculates ہے۔ NOW ایک volatile function ہے؛ workbook کھلنے یا worksheet recalculation کے وقت current system date/time سے دوبارہ evaluate ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "now-function",
+      "recalculation",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1189-SRC",
+    "pairId": "IBES-Q1189",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Data collected directly from respondents through a questionnaire are classified as:",
+    "questionUrdu": "Questionnaire کے ذریعے respondents سے براہ راست جمع کیا گیا data کس قسم کا ہوتا ہے؟",
+    "options": [
+      "Primary data",
+      "Secondary data",
+      "Administrative metadata only",
+      "A database name"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Primary data ہے۔ Researcher جب اصل respondents سے پہلی بار data لیتا ہے تو اسے primary data کہا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1189; Statistics Canada — Primary and secondary data sources",
+      "referenceUrl": "https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch2/5214779-eng.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "statistics",
+      "secondary-data",
+      "data-collection"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source omitted the “directly from respondents” condition needed to distinguish primary data. The Census Bureau describes the questionnaire as the survey instrument used to collect data. Re-linked to Statistics Canada’s direct explanation of data from primary sources."
+  },
+  {
+    "id": "IBES-Q1189-SIM",
+    "pairId": "IBES-Q1189",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Data obtained from an already published government census report are classified as what?",
+    "questionUrdu": "پہلے سے published government census report سے لیا گیا data کس قسم میں آتا ہے؟",
+    "options": [
+      "Secondary data",
+      "Primary experimental data",
+      "Random error",
+      "Metadata only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Secondary data ہے۔ Published census کسی دوسرے ادارے نے پہلے جمع کیا ہوتا ہے، اس لیے بعد کے researcher کے لیے secondary source ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Statistics Canada — Primary and secondary data sources",
+      "referenceUrl": "https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch2/5214779-eng.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "statistics",
+      "secondary-data",
+      "data-collection",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1190-SRC",
+    "pairId": "IBES-Q1190",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Access query type retrieves employees whose monthly salary exceeds $5,000?",
+    "questionUrdu": "Monthly salary $5,000 سے زیادہ رکھنے والے employees retrieve کرنے کے لیے کون سی Access query استعمال ہوگی؟",
+    "options": [
+      "Select query",
+      "Search query",
+      "Search-tab query",
+      "Form query"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Select query ہے۔ Select query records دکھاتی ہے اور criteria row کے ذریعے salary جیسے conditions لگا سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1190; Microsoft Support — Introduction to queries in Access",
+      "referenceUrl": "https://support.microsoft.com/en-us/access/introduction-to-queries",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "select-query",
+      "criteria"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Added Access scope, described the filtering criterion directly, and replaced “None of these.”"
+  },
+  {
+    "id": "IBES-Q1190-SIM",
+    "pairId": "IBES-Q1190",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In an Access Select query, in which design-grid row is `>5000` entered to filter a Salary field?",
+    "questionUrdu": "Access Select query میں Salary field filter کرنے کے لیے `>5000` design grid کی کس row میں لکھا جاتا ہے؟",
+    "options": [
+      "Criteria",
+      "Sort",
+      "Show",
+      "Field"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Criteria ہے۔ Criteria row field کے records پر condition لاگو کرتی ہے؛ `>5000` صرف زیادہ salary والے records رکھتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Introduction to queries in Access",
+      "referenceUrl": "https://support.microsoft.com/en-us/access/introduction-to-queries",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-access",
+      "select-query",
+      "criteria",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1191-SRC",
+    "pairId": "IBES-Q1191",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "On which Excel Ribbon tab is the Remove Duplicates command located?",
+    "questionUrdu": "Excel Ribbon کے کس tab پر Remove Duplicates command ہوتی ہے؟",
+    "options": [
+      "File",
+      "Data",
+      "Review",
+      "View"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Data ہے۔ Remove Duplicates، Data tab کے Data Tools area میں duplicate rows کو مستقل ہٹانے کے لیے ملتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1191; Microsoft Support — Filter unique values or remove duplicates in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/get-started/filter-for-unique-values-or-remove-duplicate-values",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "advanced-filter",
+      "unique-values"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Modernized “menu” to Ribbon tab, replaced obsolete Edit with Review, and linked Microsoft’s Remove Duplicates instructions directly."
+  },
+  {
+    "id": "IBES-Q1191-SIM",
+    "pairId": "IBES-Q1191",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel feature can copy only unique records to another location without deleting the original rows?",
+    "questionUrdu": "Excel کی کون سی feature original rows delete کیے بغیر صرف unique records دوسری جگہ copy کر سکتی ہے؟",
+    "options": [
+      "Advanced Filter",
+      "Remove Duplicates",
+      "Goal Seek",
+      "Text to Columns"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Advanced Filter ہے۔ Advanced Filter میں Unique records only اور Copy to another location استعمال کرکے اصل range محفوظ رکھی جا سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Filter unique values or remove duplicates in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/get-started/filter-for-unique-values-or-remove-duplicate-values",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "advanced-filter",
+      "unique-values",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1192-SRC",
+    "pairId": "IBES-Q1192",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which item is not one of Excel’s three built-in What-If Analysis tools?",
+    "questionUrdu": "کون سی چیز Excel کے تین built-in What-If Analysis tools میں شامل نہیں ہے؟",
+    "options": [
+      "Goal Seek",
+      "Data Table",
+      "Scenario Manager",
+      "Auto Outline"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Auto Outline ہے۔ Scenarios، Goal Seek اور Data Tables built-in What-If tools ہیں؛ Auto Outline نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1192; Microsoft Support — Introduction to What-If Analysis in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/introduction-to-what-if-analysis",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "goal-seek",
+      "what-if-analysis"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Changed “functions” to tools. Microsoft lists Goal Seek, Data Tables, and Scenarios as the three What-If Analysis tools; Auto Outline is not one."
+  },
+  {
+    "id": "IBES-Q1192-SIM",
+    "pairId": "IBES-Q1192",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which What-If Analysis tool changes one input value to make a formula reach a specified result?",
+    "questionUrdu": "کون سا What-If Analysis tool ایک input value بدل کر formula کو مقررہ result تک پہنچاتا ہے؟",
+    "options": [
+      "Goal Seek",
+      "Scenario Manager",
+      "Data Table",
+      "Auto Outline"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Goal Seek ہے۔ Goal Seek desired formula result، formula cell اور ایک changing input cell استعمال کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Introduction to What-If Analysis in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/introduction-to-what-if-analysis",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "goal-seek",
+      "what-if-analysis",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1193-SRC",
+    "pairId": "IBES-Q1193",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Excel, what does the IF function evaluate?",
+    "questionUrdu": "Excel میں IF function کس چیز کو evaluate کرتا ہے؟",
+    "options": [
+      "A logical test",
+      "Only a page margin",
+      "Only a chart color",
+      "A database table name"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A logical test ہے۔ IF logical test کو TRUE یا FALSE evaluate کرکے دو ممکنہ results میں سے ایک واپس کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1193; Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "if-function",
+      "logical-functions"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked which broad field uses an IF function; programming, spreadsheets, and databases can all use conditional logic. Reconstructed around Excel’s documented logical test."
+  },
+  {
+    "id": "IBES-Q1193-SIM",
+    "pairId": "IBES-Q1193",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which part of `IF(logical_test, value_if_true, value_if_false)` is returned when the test is false?",
+    "questionUrdu": "`IF(logical_test, value_if_true, value_if_false)` میں test false ہو تو کون سا حصہ واپس ہوتا ہے؟",
+    "options": [
+      "value_if_false",
+      "logical_test",
+      "value_if_true",
+      "function name"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب value_if_false ہے۔ IF کی تیسری argument false condition کے لیے result مقرر کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Excel functions (alphabetical)",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/excel-functions-alphabetical",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "if-function",
+      "logical-functions",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1194-SRC",
+    "pairId": "IBES-Q1194",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel tool restricts cell entries to rules you define?",
+    "questionUrdu": "Excel کا کون سا tool cell entries کو user-defined rules تک محدود کرتا ہے؟",
+    "options": [
+      "Scenario Manager",
+      "Goal Seek",
+      "Data Validation",
+      "PivotTable"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Data Validation ہے۔ Data Validation whole numbers، dates، lists یا custom formulas جیسے rules سے invalid input روک سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1194; Microsoft Support — Apply data validation to cells",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/apply-data-validation-to-cells",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "data-validation",
+      "input-message"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Removed the vague “ensuring accuracy and consistency in your analysis” wording and stated Data Validation’s documented entry-control function."
+  },
+  {
+    "id": "IBES-Q1194-SIM",
+    "pairId": "IBES-Q1194",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Data Validation setting displays guidance when a validated Excel cell is selected?",
+    "questionUrdu": "Validated Excel cell select ہونے پر رہنمائی دکھانے والی Data Validation setting کون سی ہے؟",
+    "options": [
+      "Input Message",
+      "Error Alert",
+      "Circle Invalid Data",
+      "Clear All"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Input Message ہے۔ Input Message cell select ہونے پر title اور instructions دکھاتی ہے، entry reject ہونے کا message نہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Apply data validation to cells",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/apply-data-validation-to-cells",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "data-validation",
+      "input-message",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1195-SRC",
+    "pairId": "IBES-Q1195",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel command is used to create an in-cell drop-down list?",
+    "questionUrdu": "Excel میں in-cell drop-down list بنانے کے لیے کون سی command استعمال ہوتی ہے؟",
+    "options": [
+      "Data Validation",
+      "Conditional Formatting",
+      "Remove Duplicates",
+      "Text to Columns"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Data Validation ہے۔ Data Validation میں Allow: List اور Source values مقرر کرکے cell drop-down بنایا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1195; Microsoft Support — Apply data validation to cells",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/apply-data-validation-to-cells",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "data-validation",
+      "drop-down-list"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked for a tab, but “Data Validation” is a command on the Data tab. The stem now asks for the command. Replaced “None of these” and corrected Remove Duplicates to its standard command name."
+  },
+  {
+    "id": "IBES-Q1195-SIM",
+    "pairId": "IBES-Q1195",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which value is selected in Data Validation's Allow box to create an in-cell list?",
+    "questionUrdu": "In-cell list بنانے کے لیے Data Validation کے Allow box میں کون سی value منتخب ہوتی ہے؟",
+    "options": [
+      "List",
+      "Whole number",
+      "Custom",
+      "Date"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب List ہے۔ Allow: List، source range یا comma-separated items کو drop-down choices میں بدلتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Apply data validation to cells",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/apply-data-validation-to-cells",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "data-validation",
+      "drop-down-list",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1197-SRC",
+    "pairId": "IBES-Q1197",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel feature temporarily shows only rows that meet selected criteria?",
+    "questionUrdu": "Excel کی کون سی feature صرف selected criteria پر پورا اترنے والی rows عارضی طور پر دکھاتی ہے؟",
+    "options": [
+      "Filtering",
+      "Sorting",
+      "Highlighting",
+      "Find"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Filtering ہے۔ Filtering nonmatching rows کو hide کرتی ہے؛ data delete یا permanent rearrange نہیں ہوتا۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1197; Microsoft Support — Filter data in a range or table",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/filter-data-in-a-range-or-table-01832226-31b5-4568-8806-38c37dcc180e",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "filtering",
+      "clear-filter"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source phrase “access restricted data by applying limits” was unclear and its inherited Data Validation source was wrong. Reconstructed using Microsoft’s documented Filter behavior."
+  },
+  {
+    "id": "IBES-Q1197-SIM",
+    "pairId": "IBES-Q1197",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What happens to hidden nonmatching rows when an Excel filter is cleared?",
+    "questionUrdu": "Excel filter clear کرنے پر hidden nonmatching rows کے ساتھ کیا ہوتا ہے؟",
+    "options": [
+      "They become visible again",
+      "They are permanently deleted",
+      "They move to another workbook",
+      "They become columns"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب They become visible again ہے۔ Clear Filter restrictions ہٹاتا ہے، اس لیے تمام original rows دوبارہ نظر آتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Filter data in a range or table",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/filter-data-in-a-range-or-table-01832226-31b5-4568-8806-38c37dcc180e",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "filtering",
+      "clear-filter",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1198-SRC",
+    "pairId": "IBES-Q1198",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Data Validation feature presents users with a predefined set of choices in a cell?",
+    "questionUrdu": "Data Validation کی کون سی feature user کو cell میں predefined choices دیتی ہے؟",
+    "options": [
+      "Sorting",
+      "Goal Seek",
+      "Conditional Formatting",
+      "Drop-down list"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Drop-down list ہے۔ Drop-down list approved values دکھاتی ہے اور consistent entry آسان بناتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1198; Microsoft Support — Apply data validation to cells",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/apply-data-validation-to-cells",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "data-validation",
+      "error-alert"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source’s customer-preference scenario did not establish a unique answer and hid the answer in “None of these.” Reconstructed around the documented list validation feature."
+  },
+  {
+    "id": "IBES-Q1198-SIM",
+    "pairId": "IBES-Q1198",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Data Validation feature explains why an entered value is rejected?",
+    "questionUrdu": "Data Validation کی کون سی feature بتاتی ہے کہ entered value کیوں reject ہوئی؟",
+    "options": [
+      "Error Alert",
+      "Input Message",
+      "Sort Warning",
+      "Quick Analysis"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Error Alert ہے۔ Error Alert invalid entry کے بعد message دکھاتی اور Stop، Warning یا Information behavior استعمال کر سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Apply data validation to cells",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/get-started/apply-data-validation-to-cells",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "data-validation",
+      "error-alert",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1199-SRC",
+    "pairId": "IBES-Q1199",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel command arranges data in ascending or descending order?",
+    "questionUrdu": "Excel کی کون سی command data کو ascending یا descending order میں ترتیب دیتی ہے؟",
+    "options": [
+      "Data > Filter",
+      "Data > Forecast",
+      "Data > Sort",
+      "Review > Protect"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Data > Sort ہے۔ Data > Sort selected range یا table کو chosen column values کے مطابق reorder کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1199; Microsoft Support — Sort data in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/sort-data-in-a-range-or-table-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sorting",
+      "multi-level-sort"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Replaced malformed menu-path options and “None of these” with current Ribbon paths."
+  },
+  {
+    "id": "IBES-Q1199-SIM",
+    "pairId": "IBES-Q1199",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel Sort feature lets you sort first by one column and then by another?",
+    "questionUrdu": "Excel Sort کی کون سی feature پہلے ایک column اور پھر دوسرے column کے لحاظ سے sorting دیتی ہے؟",
+    "options": [
+      "Add Level",
+      "Freeze Panes",
+      "Remove Duplicates",
+      "Consolidate"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Add Level ہے۔ Custom Sort dialog میں Add Level سے primary، secondary اور مزید sort keys مقرر ہوتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Sort data in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/sort-data-in-a-range-or-table-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sorting",
+      "multi-level-sort",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1201-SRC",
+    "pairId": "IBES-Q1201",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is arranging data into a chosen logical order called?",
+    "questionUrdu": "Data کو منتخب logical order میں arrange کرنے کو کیا کہتے ہیں؟",
+    "options": [
+      "Sorting",
+      "Classifying",
+      "Reproducing",
+      "Summarizing"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sorting ہے۔ Sorting values کو alphabetic، numeric، date یا custom sequence میں مرتب کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1201; Microsoft Support — Sort data in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/sort-data-in-a-range-or-table-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sorting",
+      "ascending-order"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Minor grammar repair; the documented operation is Sorting."
+  },
+  {
+    "id": "IBES-Q1201-SIM",
+    "pairId": "IBES-Q1201",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which numeric sort order places 2 before 10?",
+    "questionUrdu": "کون سا numeric sort order 2 کو 10 سے پہلے رکھتا ہے؟",
+    "options": [
+      "Smallest to Largest",
+      "Largest to Smallest",
+      "Z to A",
+      "Newest to Oldest"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Smallest to Largest ہے۔ Ascending numeric sorting چھوٹی value سے بڑی value کی طرف جاتی ہے، اس لیے 2 پہلے آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Sort data in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/sort-data-in-a-range-or-table-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sorting",
+      "ascending-order",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1202-SRC",
+    "pairId": "IBES-Q1202",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Excel, you can sort data in _____:",
+    "questionUrdu": "Excel میں data کن directions میں sort کیا جا سکتا ہے؟",
+    "options": [
+      "Ascending order only",
+      "Descending order only",
+      "Ascending or descending order",
+      "Neither order"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Ascending or descending order ہے۔ Excel ascending یا descending ترتیب، اور custom multi-level ترتیب support کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1202; Microsoft Support — Sort data in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/sort-data-in-a-range-or-table-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sorting",
+      "descending-order"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Replaced the answer-encoding “Both A & B” with the direct documented sort directions."
+  },
+  {
+    "id": "IBES-Q1202-SIM",
+    "pairId": "IBES-Q1202",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which text sort order places Z before A?",
+    "questionUrdu": "کون سا text sort order Z کو A سے پہلے رکھتا ہے؟",
+    "options": [
+      "Descending (Z to A)",
+      "Ascending (A to Z)",
+      "Oldest to Newest",
+      "Smallest to Largest"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Descending (Z to A) ہے۔ Descending alphabetic order Z سے شروع ہوکر A کی طرف جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Sort data in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-US/Excel/sort-data-in-a-range-or-table-in-excel",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "sorting",
+      "descending-order",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1203-SRC",
+    "pairId": "IBES-Q1203",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel action removes a selected cell’s contents while leaving the cell and its formatting in place?",
+    "questionUrdu": "Selected Excel cell کا content ہٹا کر cell اور formatting برقرار رکھنے والا action کون سا ہے؟",
+    "options": [
+      "Hide the column",
+      "Press Delete or choose Clear Contents",
+      "Change the column width",
+      "Change the font color"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Press Delete or choose Clear Contents ہے۔ Delete key یا Clear Contents value/formula مٹاتے ہیں مگر cell structure اور formatting باقی رہتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1203; Microsoft Support — Clear cells of contents or formats in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/clear-cells-of-contents-or-formats-9ff6b8ff-1afd-495f-8ad8-8c1f6f82a9d6",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "delete-cells",
+      "clear-contents"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The earlier repair used the tautological option “Deleting the cell data.” Reconstructed with Microsoft’s documented Delete/Clear Contents behavior and a direct source."
+  },
+  {
+    "id": "IBES-Q1203-SIM",
+    "pairId": "IBES-Q1203",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Excel action removes cells themselves and asks how surrounding cells should shift?",
+    "questionUrdu": "Excel کا کون سا action cells کو خود ہٹاتا اور پوچھتا ہے کہ آس پاس کے cells کس طرح shift ہوں؟",
+    "options": [
+      "Delete Cells",
+      "Clear Contents",
+      "Clear Comments",
+      "Clear Formats"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Delete Cells ہے۔ Delete Cells cell structure ہٹاتا ہے اور shift left/up یا entire row/column choices دے سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Clear cells of contents or formats in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/clear-cells-of-contents-or-formats-9ff6b8ff-1afd-495f-8ad8-8c1f6f82a9d6",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-excel",
+      "delete-cells",
+      "clear-contents",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1204-SRC",
+    "pairId": "IBES-Q1204",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Microsoft PowerPoint is primarily what type of software?",
+    "questionUrdu": "Microsoft PowerPoint بنیادی طور پر کس قسم کا software ہے؟",
+    "options": [
+      "Presentation software",
+      "Spreadsheet software",
+      "Database software",
+      "Operating-system software"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Presentation software ہے۔ PowerPoint slides پر مبنی presentations بنانے اور دکھانے والا presentation software ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1204; Microsoft Support — Create a presentation in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-a-presentation-in-powerpoint-42229250-6c66-44cd-8275-2f5802c7cfa7",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "presentation-software",
+      "multimedia"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source classified PowerPoint broadly as “multimedia software.” It is specifically presentation software, so the choices were reconstructed."
+  },
+  {
+    "id": "IBES-Q1204-SIM",
+    "pairId": "IBES-Q1204",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which kinds of content can be combined on a PowerPoint slide?",
+    "questionUrdu": "PowerPoint slide پر کن اقسام کے content کو اکٹھا کیا جا سکتا ہے؟",
+    "options": [
+      "Text, pictures, charts, audio, and video",
+      "Only plain text",
+      "Only database tables",
+      "Only operating-system files"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Text, pictures, charts, audio, and video ہے۔ PowerPoint multimedia presentation tool ہے اور متعدد text، visual اور media objects support کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Create a presentation in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-a-presentation-in-powerpoint-42229250-6c66-44cd-8275-2f5802c7cfa7",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "presentation-software",
+      "multimedia",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1205-SRC",
+    "pairId": "IBES-Q1205",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint feature is a coordinated set of colors, fonts, and visual effects applied across slides?",
+    "questionUrdu": "PowerPoint میں slides پر لاگو coordinated colors، fonts اور visual effects کے set کو کیا کہتے ہیں؟",
+    "options": [
+      "Design tab",
+      "Animation",
+      "Layout",
+      "Theme"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Theme ہے۔ Theme presentation کے design elements کو پوری slide deck میں مربوط رکھتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1205; Microsoft Support — Remove or change the current PowerPoint theme",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/remove-or-change-the-current-theme",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "themes",
+      "variants"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Removed the fill-in-the-blank wording and distinguished a theme from the tab that contains themes."
+  },
+  {
+    "id": "IBES-Q1205-SIM",
+    "pairId": "IBES-Q1205",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does choosing a different PowerPoint theme variant commonly change?",
+    "questionUrdu": "PowerPoint کی مختلف theme variant منتخب کرنے سے عام طور پر کیا بدلتا ہے؟",
+    "options": [
+      "The theme's colors, fonts, or effects",
+      "The number of slides is deleted",
+      "Every chart becomes a video",
+      "The printer driver"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The theme's colors, fonts, or effects ہے۔ Variants ایک theme کے alternate color، font یا effect combinations فراہم کرتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Remove or change the current PowerPoint theme",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/remove-or-change-the-current-theme",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "themes",
+      "variants",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1206-SRC",
+    "pairId": "IBES-Q1206",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the automatic/default slide orientation in supported desktop versions of PowerPoint?",
+    "questionUrdu": "Supported desktop PowerPoint versions میں automatic/default slide orientation کیا ہے؟",
+    "options": [
+      "Landscape",
+      "Portrait",
+      "Vertical",
+      "Square"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Landscape ہے۔ PowerPoint slides default طور پر Landscape ہوتی ہیں، یعنی width height سے زیادہ ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1206; Microsoft Support — Change PowerPoint page orientation",
+      "referenceUrl": "https://support.microsoft.com/en-us/PowerPoint/training/change-the-page-orientation-in-powerpoint-between-landscape-and-portrait",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-orientation",
+      "slide-size"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Added supported desktop-version scope. Microsoft states that PowerPoint slides are automatically set up in landscape orientation. Replaced “None of the above” with a direct invalid-orientation distractor."
+  },
+  {
+    "id": "IBES-Q1206-SIM",
+    "pairId": "IBES-Q1206",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Where is slide orientation changed in desktop PowerPoint?",
+    "questionUrdu": "Desktop PowerPoint میں slide orientation کہاں تبدیل کی جاتی ہے؟",
+    "options": [
+      "Design > Slide Size > Custom Slide Size",
+      "Home > Font",
+      "Review > Comments",
+      "Insert > WordArt"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Design > Slide Size > Custom Slide Size ہے۔ Custom Slide Size dialog میں Slides orientation کے لیے Landscape یا Portrait منتخب کیا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Change PowerPoint page orientation",
+      "referenceUrl": "https://support.microsoft.com/en-us/PowerPoint/training/change-the-page-orientation-in-powerpoint-between-landscape-and-portrait",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-orientation",
+      "slide-size",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1207-SRC",
+    "pairId": "IBES-Q1207",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "If slides 1 and 2 are selected as a consecutive range and you choose New Slide after slide 2, where is the new slide inserted?",
+    "questionUrdu": "Slides 1 اور 2 selected ہوں اور slide 2 کے بعد New Slide منتخب کریں تو نئی slide کہاں insert ہوگی؟",
+    "options": [
+      "Before slide 1",
+      "Between slides 1 and 2",
+      "After slide 2, becoming slide 3",
+      "After slide 3, becoming slide 4"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب After slide 2, becoming slide 3 ہے۔ New slide selection کے آخری slide کے فوراً بعد آتی ہے، اس لیے slide 3 بنتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1207; Microsoft Support — Add, rearrange, duplicate, and delete slides",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/add-rearrange-duplicate-and-delete-slides-in-powerpoint-e35a232d-3fd0-4ee1-abee-d7d4d6da92fc",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "rearrange-slides",
+      "thumbnail-pane"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source did not identify which selected slide was active. Reworded around the documented rule that a new slide follows the selected slide; after slide 2 it becomes slide 3. Replaced “None of these” and shortened the location choices."
+  },
+  {
+    "id": "IBES-Q1207-SIM",
+    "pairId": "IBES-Q1207",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "How can slides be rearranged quickly in PowerPoint's thumbnail pane?",
+    "questionUrdu": "PowerPoint کے thumbnail pane میں slides کو جلد کیسے rearrange کیا جا سکتا ہے؟",
+    "options": [
+      "Drag their thumbnails to new positions",
+      "Change the font size",
+      "Edit the footer",
+      "Move the zoom slider"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Drag their thumbnails to new positions ہے۔ Thumbnail کو drag-and-drop کرنے سے slide deck میں اس کا sequence بدل جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Add, rearrange, duplicate, and delete slides",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/add-rearrange-duplicate-and-delete-slides-in-powerpoint-e35a232d-3fd0-4ee1-abee-d7d4d6da92fc",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "rearrange-slides",
+      "thumbnail-pane",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1208-SRC",
+    "pairId": "IBES-Q1208",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which executable name starts desktop Microsoft PowerPoint from a command line?",
+    "questionUrdu": "Command line سے desktop Microsoft PowerPoint شروع کرنے والی executable کا نام کیا ہے؟",
+    "options": [
+      "ppt.exe",
+      "powerpnt.exe",
+      "winword.exe",
+      "excel.exe"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب powerpnt.exe ہے۔ Windows desktop installation میں PowerPoint executable `powerpnt.exe` ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1208; Microsoft Support — Command-line switches for Microsoft Office products",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/lifecycle/command-line-switches-for-microsoft-office-products",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "command-line",
+      "slide-show"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Clarified that the question asks for PowerPoint’s executable/startup command. Microsoft lists powerpnt.exe. Replaced “None of these” with another real Office executable distractor and normalized lowercase executable names."
+  },
+  {
+    "id": "IBES-Q1208-SIM",
+    "pairId": "IBES-Q1208",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint command-line switch opens a specified presentation as a slide show?",
+    "questionUrdu": "PowerPoint کی کون سی command-line switch specified presentation کو slide show کے طور پر کھولتی ہے؟",
+    "options": [
+      "/s",
+      "/safe",
+      "/p",
+      "/n"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب /s ہے۔ `powerpnt.exe /s filename.pptx` specified file کو Slide Show view میں شروع کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Command-line switches for Microsoft Office products",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/lifecycle/command-line-switches-for-microsoft-office-products",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "command-line",
+      "slide-show",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1209-SRC",
+    "pairId": "IBES-Q1209",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What happens when you delete a selected text-box object from a PowerPoint slide?",
+    "questionUrdu": "PowerPoint slide سے selected text-box object delete کرنے پر کیا ہوتا ہے؟",
+    "options": [
+      "Only the border is deleted",
+      "The text remains without its text box",
+      "The text box and its text are deleted",
+      "Only the text-box formatting is deleted"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب The text box and its text are deleted ہے۔ Object selected ہو تو Delete اس کا border، text اور پورا text box slide سے ہٹا دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1209; Microsoft Support — Add, copy, or delete a text box in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/add-copy-or-delete-a-text-box",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "text-box",
+      "delete-text"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source stem was grammatically incomplete. Repaired to clarify that deleting the selected object removes both its text box and the text it contains. Replaced “None of these” and made the deletion outcomes parallel. Re-linked to Microsoft’s direct text-box deletion instructions."
+  },
+  {
+    "id": "IBES-Q1209-SIM",
+    "pairId": "IBES-Q1209",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What happens if only characters inside a PowerPoint text box are selected and Delete is pressed?",
+    "questionUrdu": "اگر PowerPoint text box کے اندر صرف characters selected ہوں اور Delete دبایا جائے تو کیا ہوتا ہے؟",
+    "options": [
+      "Only the selected text is removed",
+      "The entire slide is deleted",
+      "The presentation closes",
+      "Every text box is removed"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Only the selected text is removed ہے۔ Text-edit mode میں Delete selected characters ہٹاتی ہے؛ پورا object تب حذف ہوتا ہے جب text box border select ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Add, copy, or delete a text box in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/add-copy-or-delete-a-text-box",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "text-box",
+      "delete-text",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1211-SRC",
+    "pairId": "IBES-Q1211",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which extension identifies a legacy PowerPoint 97–2003 presentation?",
+    "questionUrdu": "Legacy PowerPoint 97–2003 presentation کی extension کون سی ہے؟",
+    "options": [
+      ".xls",
+      ".ppt",
+      ".txt",
+      ".pptx"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب .ppt ہے۔ `.ppt` پرانا binary presentation format ہے؛ modern default Open XML format `.pptx` ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1211; Microsoft Support — File formats supported in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/file-formats-that-are-supported-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "file-formats",
+      "pptm"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked for “the extension of PowerPoint” without version scope. Added the legacy PowerPoint 97–2003 qualification for .ppt."
+  },
+  {
+    "id": "IBES-Q1211-SIM",
+    "pairId": "IBES-Q1211",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which extension identifies a macro-enabled modern PowerPoint presentation?",
+    "questionUrdu": "Macro-enabled modern PowerPoint presentation کی extension کون سی ہے؟",
+    "options": [
+      ".pptm",
+      ".pptx",
+      ".ppsx",
+      ".potx"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب .pptm ہے۔ `.pptm` Open XML presentation میں VBA macros محفوظ کر سکتا ہے؛ `.pptx` macro-free default ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — File formats supported in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/file-formats-that-are-supported-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "file-formats",
+      "pptm",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1213-SRC",
+    "pairId": "IBES-Q1213",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which actions can advance to the next slide during a PowerPoint Slide Show?",
+    "questionUrdu": "PowerPoint Slide Show میں next slide پر جانے کے کون سے actions استعمال ہو سکتے ہیں؟",
+    "options": [
+      "Press Enter only",
+      "Press Spacebar only",
+      "Click the mouse only",
+      "Press Enter, press Spacebar, or click the mouse"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Press Enter, press Spacebar, or click the mouse ہے۔ Enter، Spacebar اور mouse click default navigation میں اگلی slide دکھا سکتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1213; Microsoft Support — Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/powerpoint/use-keyboard-shortcuts-to-create-powerpoint-presentations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-show",
+      "navigation"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the grammar and explicitly scoped the navigation methods to Slide Show view."
+  },
+  {
+    "id": "IBES-Q1213-SIM",
+    "pairId": "IBES-Q1213",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which key commonly returns to the previous slide during a PowerPoint Slide Show?",
+    "questionUrdu": "PowerPoint Slide Show میں پچھلی slide پر واپس جانے کے لیے عام طور پر کون سی key استعمال ہوتی ہے؟",
+    "options": [
+      "Backspace",
+      "Enter",
+      "Spacebar",
+      "N"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Backspace ہے۔ Backspace یا Left Arrow پچھلی animation یا slide کی طرف واپس لے جا سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/powerpoint/use-keyboard-shortcuts-to-create-powerpoint-presentations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-show",
+      "navigation",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1214-SRC",
+    "pairId": "IBES-Q1214",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint interface area shows the current slide number or slide position?",
+    "questionUrdu": "PowerPoint interface کا کون سا area current slide number یا position دکھاتا ہے؟",
+    "options": [
+      "Ribbon",
+      "Title bar",
+      "Status bar",
+      "Quick Access Toolbar"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Status bar ہے۔ Status bar window کے نیچے slide position، notes، view اور zoom controls رکھتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1214; Microsoft Support — Show slide numbers and locate the slide count in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/show-the-slide-number-and-total-number-of-slides-on-every-slide",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "status-bar",
+      "view-buttons"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source’s “current position” was vague and used obsolete Menu/Toolbar distractors. Clarified that slide-number/status information appears on the status bar."
+  },
+  {
+    "id": "IBES-Q1214-SIM",
+    "pairId": "IBES-Q1214",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which controls near the right side of PowerPoint's status bar switch presentation views?",
+    "questionUrdu": "PowerPoint status bar کے دائیں طرف کون سے controls presentation views بدلتے ہیں؟",
+    "options": [
+      "View buttons",
+      "Font gallery",
+      "Clipboard pane",
+      "Header controls"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب View buttons ہے۔ View buttons Normal، Slide Sorter اور Reading View جیسی displays میں فوری تبدیلی دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Show slide numbers and locate the slide count in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/show-the-slide-number-and-total-number-of-slides-on-every-slide",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "status-bar",
+      "view-buttons",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1215-SRC",
+    "pairId": "IBES-Q1215",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which keyboard shortcut applies bold formatting to selected text in PowerPoint?",
+    "questionUrdu": "PowerPoint میں selected text کو bold کرنے کا keyboard shortcut کون سا ہے؟",
+    "options": [
+      "Ctrl+B",
+      "Ctrl+U",
+      "Ctrl+K",
+      "Ctrl+P"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ctrl+B ہے۔ Ctrl+B selected text پر bold font formatting toggle کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1215; Microsoft Support — Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/powerpoint/use-keyboard-shortcuts-to-create-powerpoint-presentations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "text-formatting",
+      "keyboard-shortcuts"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source asked which effect was absent from a version-dependent Font dialog and combined “Shadow & Emboss” into one choice. Reconstructed as a stable font-formatting shortcut question."
+  },
+  {
+    "id": "IBES-Q1215-SIM",
+    "pairId": "IBES-Q1215",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint shortcut toggles underline formatting on selected text?",
+    "questionUrdu": "PowerPoint میں selected text پر underline formatting toggle کرنے والا shortcut کون سا ہے؟",
+    "options": [
+      "Ctrl+U",
+      "Ctrl+B",
+      "Ctrl+E",
+      "Ctrl+K"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ctrl+U ہے۔ Ctrl+U selected text کو underline یا موجود underline کو remove کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/powerpoint/use-keyboard-shortcuts-to-create-powerpoint-presentations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "text-formatting",
+      "keyboard-shortcuts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1216-SRC",
+    "pairId": "IBES-Q1216",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint command inserts stylized decorative text?",
+    "questionUrdu": "PowerPoint کی کون سی command stylized decorative text insert کرتی ہے؟",
+    "options": [
+      "Clip Art",
+      "Search Results",
+      "WordArt",
+      "Notes"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب WordArt ہے۔ WordArt predefined decorative styles اور text effects کے ساتھ stylized text object بناتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1216; Microsoft Support — Insert WordArt in Office",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/insert-wordart",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "wordart",
+      "text-effects"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source claimed that a WordArt “pane” cannot be found, mixing an inserted object with legacy task panes. Reconstructed around WordArt’s current purpose."
+  },
+  {
+    "id": "IBES-Q1216-SIM",
+    "pairId": "IBES-Q1216",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which visual effect can be added to PowerPoint WordArt to create a soft light around the letters?",
+    "questionUrdu": "PowerPoint WordArt کے حروف کے گرد نرم روشنی بنانے کے لیے کون سا visual effect لگایا جاتا ہے؟",
+    "options": [
+      "Glow",
+      "Indent",
+      "Crop",
+      "Hyphenation"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Glow ہے۔ Glow، Text Effects میں سے ہے اور letters کے باہر colored soft edge بناتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Insert WordArt in Office",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/insert-wordart",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "wordart",
+      "text-effects",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1220-SRC",
+    "pairId": "IBES-Q1220",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In PowerPoint, what are the dotted boxes in a slide layout that hold content called?",
+    "questionUrdu": "PowerPoint slide layout کے dotted boxes جو content رکھتے ہیں کیا کہلاتے ہیں؟",
+    "options": [
+      "Template",
+      "Theme",
+      "Layout",
+      "Placeholders"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Placeholders ہے۔ Placeholders title، text، pictures، charts یا دوسرے content کے لیے پہلے سے مقرر containers ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1220; Microsoft Support — What is a slide layout?",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/what-is-a-slide-layout",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "placeholders",
+      "slide-layouts"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Added slide-layout and content context so Placeholders is uniquely correct."
+  },
+  {
+    "id": "IBES-Q1220-SIM",
+    "pairId": "IBES-Q1220",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What determines the type and position of placeholders on a PowerPoint slide?",
+    "questionUrdu": "PowerPoint slide پر placeholders کی type اور position کیا مقرر کرتی ہے؟",
+    "options": [
+      "The slide layout",
+      "The spelling language",
+      "The printer queue",
+      "The file password"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The slide layout ہے۔ Slide layout placeholder arrangement اور allowed content types define کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — What is a slide layout?",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/what-is-a-slide-layout",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "placeholders",
+      "slide-layouts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1222-SRC",
+    "pairId": "IBES-Q1222",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which command adds a new slide in current desktop PowerPoint?",
+    "questionUrdu": "Current desktop PowerPoint میں نئی slide شامل کرنے والی command کون سی ہے؟",
+    "options": [
+      "View tab",
+      "Home > New Slide",
+      "Slide Sorter view only",
+      "File > Print"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Home > New Slide ہے۔ Home > New Slide current selection کے بعد نئی slide insert کرتی اور layout چننے دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1222; Microsoft Support — Add, rearrange, duplicate, and delete slides",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/add-rearrange-duplicate-and-delete-slides-in-powerpoint-e35a232d-3fd0-4ee1-abee-d7d4d6da92fc",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "new-slide",
+      "layout-gallery"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source keyed a generic Insert option, but supported desktop PowerPoint places New Slide on the Home tab. The options were modernized."
+  },
+  {
+    "id": "IBES-Q1222-SIM",
+    "pairId": "IBES-Q1222",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does the arrow beside PowerPoint's New Slide button open?",
+    "questionUrdu": "PowerPoint کے New Slide button کے ساتھ arrow کیا کھولتا ہے؟",
+    "options": [
+      "A gallery of slide layouts",
+      "The print queue",
+      "A list of fonts only",
+      "The Windows registry"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A gallery of slide layouts ہے۔ New Slide drop-down available layouts دکھاتا ہے تاکہ نئی slide مناسب placeholders کے ساتھ بنے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Add, rearrange, duplicate, and delete slides",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/add-rearrange-duplicate-and-delete-slides-in-powerpoint-e35a232d-3fd0-4ee1-abee-d7d4d6da92fc",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "new-slide",
+      "layout-gallery",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1223-SRC",
+    "pairId": "IBES-Q1223",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint slide layout is normally used to introduce a presentation’s topic?",
+    "questionUrdu": "Presentation topic متعارف کرانے کے لیے عام PowerPoint slide layout کون سی ہے؟",
+    "options": [
+      "Table slide",
+      "Comparison slide",
+      "Title Slide",
+      "Chart slide"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Title Slide ہے۔ Title Slide layout عموماً presentation title اور subtitle کے placeholders دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1223; Microsoft Support — What is a slide layout?",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/what-is-a-slide-layout",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-layouts",
+      "title-and-content"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Added layout context and used the documented Title Slide label; replaced the obsolete “Bullet slide” distractor."
+  },
+  {
+    "id": "IBES-Q1223-SIM",
+    "pairId": "IBES-Q1223",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which common PowerPoint layout provides a title placeholder and one main content placeholder?",
+    "questionUrdu": "کون سی عام PowerPoint layout ایک title placeholder اور ایک main content placeholder دیتی ہے؟",
+    "options": [
+      "Title and Content",
+      "Title Slide",
+      "Blank",
+      "Section Header"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Title and Content ہے۔ Title and Content layout heading کے نیچے text، table، chart یا media رکھنے والا بڑا placeholder دیتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — What is a slide layout?",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/what-is-a-slide-layout",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-layouts",
+      "title-and-content",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1224-SRC",
+    "pairId": "IBES-Q1224",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In PowerPoint 2016, the Header & Footer command on the Insert tab is in which group?",
+    "questionUrdu": "PowerPoint 2016 میں Insert tab کی Header & Footer command کس group میں ہوتی ہے؟",
+    "options": [
+      "Tables",
+      "Illustrations",
+      "Links",
+      "Text"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Text ہے۔ PowerPoint 2016 میں Header & Footer command Insert tab کے Text group میں ملتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1224; Microsoft Support — Insert slide numbers, date, or footer in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/insert-or-change-the-slide-numbers-date-or-footer-for-on-screen-slides-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "header-footer",
+      "notes-handouts"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source encoded the answer as “None of these (Text).” Text is now an explicit option, and the desktop PowerPoint 2016 scope is stated."
+  },
+  {
+    "id": "IBES-Q1224-SIM",
+    "pairId": "IBES-Q1224",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which item is available for notes and handouts but not as a true header on ordinary PowerPoint slides?",
+    "questionUrdu": "کون سی چیز notes اور handouts کے لیے دستیاب مگر عام PowerPoint slides پر true header کے طور پر موجود نہیں؟",
+    "options": [
+      "Header text",
+      "Footer text",
+      "Slide number",
+      "Date and time"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Header text ہے۔ Slides کے Header and Footer dialog میں footer، date اور slide number ہوتے ہیں؛ header field notes/handouts کے لیے ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Insert slide numbers, date, or footer in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/insert-or-change-the-slide-numbers-date-or-footer-for-on-screen-slides-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "header-footer",
+      "notes-handouts",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1225-SRC",
+    "pairId": "IBES-Q1225",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Ribbon path inserts a picture from a file into a PowerPoint slide?",
+    "questionUrdu": "File سے picture کو PowerPoint slide میں insert کرنے کا Ribbon path کون سا ہے؟",
+    "options": [
+      "Insert > Add > Picture",
+      "Insert > Pictures",
+      "Upload > Picture",
+      "File > Print"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Insert > Pictures ہے۔ Insert > Pictures local file یا supported picture source سے image object slide پر لاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1225; Microsoft Support — Insert a picture in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/training/insert-a-picture-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "pictures",
+      "accessibility"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected the grammar and updated the documented command label from Picture to Pictures."
+  },
+  {
+    "id": "IBES-Q1225-SIM",
+    "pairId": "IBES-Q1225",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint picture property provides a text description for screen-reader users?",
+    "questionUrdu": "PowerPoint picture کی کون سی property screen-reader users کے لیے text description فراہم کرتی ہے؟",
+    "options": [
+      "Alt Text",
+      "Crop",
+      "Transparency",
+      "Artistic Effects"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Alt Text ہے۔ Alt Text تصویر کے مقصد یا content کو assistive technology کے لیے بیان کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Insert a picture in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/training/insert-a-picture-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "pictures",
+      "accessibility",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1226-SRC",
+    "pairId": "IBES-Q1226",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which current PowerPoint command imports slides from another presentation?",
+    "questionUrdu": "دوسری presentation سے slides import کرنے والی current PowerPoint command کون سی ہے؟",
+    "options": [
+      "Insert > Object",
+      "Home > New Slide > Reuse Slides",
+      "Design > Variants",
+      "Review > Compare only"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Home > New Slide > Reuse Slides ہے۔ Reuse Slides source presentation browse کرکے selected slides current deck میں insert کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1226; Microsoft Support — Reuse slides from another presentation",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/reuse-import-slides-from-another-presentation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "reuse-slides",
+      "source-formatting"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source used the obsolete Insert > Slides from File path. Reconstructed with the supported Reuse Slides command."
+  },
+  {
+    "id": "IBES-Q1226-SIM",
+    "pairId": "IBES-Q1226",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Reuse Slides option preserves the imported slide's original theme formatting?",
+    "questionUrdu": "Reuse Slides کا کون سا option imported slide کی original theme formatting برقرار رکھتا ہے؟",
+    "options": [
+      "Keep source formatting",
+      "Use Destination Theme",
+      "Reset Background",
+      "Hide Slide"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Keep source formatting ہے۔ Keep source formatting source deck کے colors، fonts اور design کو imported slide کے ساتھ محفوظ رکھتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Reuse slides from another presentation",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/reuse-import-slides-from-another-presentation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "reuse-slides",
+      "source-formatting",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1227-SRC",
+    "pairId": "IBES-Q1227",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint command inserts slide numbers?",
+    "questionUrdu": "PowerPoint میں slide numbers insert کرنے والی command کون سی ہے؟",
+    "options": [
+      "Home > New Slide",
+      "Design > Slide Size",
+      "Insert > Slide Number",
+      "Review > Comments"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Insert > Slide Number ہے۔ Insert > Slide Number Header and Footer dialog کھول کر slide-number placeholder فعال کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1227; Microsoft Support — Insert slide numbers, date, or footer in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/insert-or-change-the-slide-numbers-date-or-footer-for-on-screen-slides-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-numbers",
+      "title-slide"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "The source included three overlapping text-box/number paths and confused Page Number with Slide Number. Reconstructed with one current command path."
+  },
+  {
+    "id": "IBES-Q1227-SIM",
+    "pairId": "IBES-Q1227",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint option prevents the slide number from appearing on the title slide?",
+    "questionUrdu": "PowerPoint کا کون سا option title slide پر slide number ظاہر ہونے سے روکتا ہے؟",
+    "options": [
+      "Don't show on title slide",
+      "Hide background graphics",
+      "Use Timings",
+      "Lock aspect ratio"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Don't show on title slide ہے۔ Don't show on title slide checkbox numbering کو باقی slides پر رکھ کر title slide سے ہٹا دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Insert slide numbers, date, or footer in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/insert-or-change-the-slide-numbers-date-or-footer-for-on-screen-slides-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "slide-numbers",
+      "title-slide",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1228-SRC",
+    "pairId": "IBES-Q1228",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint Ribbon tab contains the Chart command?",
+    "questionUrdu": "PowerPoint Ribbon کے کس tab پر Chart command ہوتی ہے؟",
+    "options": [
+      "Home",
+      "Insert",
+      "Design",
+      "View"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Insert ہے۔ Chart، Insert tab سے slide میں graphical data visualization شامل کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1228; Microsoft Support — Use charts and graphs in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/training/use-charts-and-graphs-in-your-presentation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "charts",
+      "chart-data"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Changed the vague “go to” wording to the specific Chart-command location."
+  },
+  {
+    "id": "IBES-Q1228-SIM",
+    "pairId": "IBES-Q1228",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What opens for editing the sample values after a chart is inserted in PowerPoint?",
+    "questionUrdu": "PowerPoint میں chart insert ہونے کے بعد sample values edit کرنے کے لیے کیا کھلتا ہے؟",
+    "options": [
+      "An Excel-style worksheet",
+      "The Slide Master only",
+      "The print dialog",
+      "The spell checker"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب An Excel-style worksheet ہے۔ Inserted chart کے ساتھ spreadsheet data window کھلتی ہے جہاں categories اور series values بدلی جاتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Use charts and graphs in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/training/use-charts-and-graphs-in-your-presentation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "charts",
+      "chart-data",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1229-SRC",
+    "pairId": "IBES-Q1229",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which methods can insert a hyperlink into a PowerPoint slide?",
+    "questionUrdu": "PowerPoint slide میں hyperlink insert کرنے کے کون سے طریقے درست ہیں؟",
+    "options": [
+      "Choose Insert > Link",
+      "Press Ctrl+K",
+      "Hyperlinks cannot be inserted",
+      "Choose Insert > Link or press Ctrl+K"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Choose Insert > Link or press Ctrl+K ہے۔ Insert > Link اور Ctrl+K دونوں selected text یا object کے لیے hyperlink dialog کھولتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1229; Microsoft Support — Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/powerpoint/use-keyboard-shortcuts-to-create-powerpoint-presentations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "hyperlinks",
+      "slide-navigation"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Replaced “Both A & B” with the direct pair of supported methods and updated Hyperlink to the current Link terminology. Completed the source stem as a direct question."
+  },
+  {
+    "id": "IBES-Q1229-SIM",
+    "pairId": "IBES-Q1229",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint hyperlink destination jumps to another slide in the same presentation?",
+    "questionUrdu": "PowerPoint کا کون سا hyperlink destination اسی presentation کی دوسری slide پر لے جاتا ہے؟",
+    "options": [
+      "Place in This Document",
+      "Create New Workbook",
+      "Printer Properties",
+      "Font Theme"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Place in This Document ہے۔ Place in This Document current presentation کی slide titles یا positions میں سے destination منتخب کرنے دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Keyboard shortcuts to create PowerPoint presentations",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/powerpoint/use-keyboard-shortcuts-to-create-powerpoint-presentations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "hyperlinks",
+      "slide-navigation",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  },
+  {
+    "id": "IBES-Q1230-SRC",
+    "pairId": "IBES-Q1230",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "On which PowerPoint Ribbon tab is the Header & Footer command located?",
+    "questionUrdu": "PowerPoint Ribbon کے کس tab پر Header & Footer command ہوتی ہے؟",
+    "options": [
+      "Home",
+      "Insert",
+      "Draw",
+      "Review"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Insert ہے۔ Header & Footer dialog Insert tab سے date/time، slide number اور footer settings فراہم کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "IBES CAPSULE Computer 2025, source Q1230; Microsoft Support — Insert slide numbers, date, or footer in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/insert-or-change-the-slide-numbers-date-or-footer-for-on-screen-slides-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "date-time",
+      "header-footer"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Corrected “Power Point,” removed “None of these,” and linked Microsoft’s Header & Footer documentation."
+  },
+  {
+    "id": "IBES-Q1230-SIM",
+    "pairId": "IBES-Q1230",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which date-and-time choice makes a PowerPoint slide show the current date whenever the presentation is opened?",
+    "questionUrdu": "PowerPoint میں کون سا date-and-time choice presentation کھلنے پر current date دکھاتا ہے؟",
+    "options": [
+      "Update automatically",
+      "Fixed",
+      "Don't show on title slide",
+      "Apply only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Update automatically ہے۔ Update automatically system date کے مطابق field refresh کرتا ہے؛ Fixed ہمیشہ typed date رکھتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Original PPSC-style related practice; verified with Microsoft Support — Insert slide numbers, date, or footer in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/insert-or-change-the-slide-numbers-date-or-footer-for-on-screen-slides-in-powerpoint",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "ibes-2025",
+      "basic-computer-studies",
+      "microsoft-powerpoint",
+      "date-time",
+      "header-footer",
+      "related-practice"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Original related practice question; it tests an adjacent fact or application rather than repeating the source wording."
+  }
+]
