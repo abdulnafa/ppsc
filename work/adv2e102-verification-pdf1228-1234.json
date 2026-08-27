@@ -1,0 +1,5234 @@
+[
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q001",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 1,
+    "question": "Which task best describes natural language processing (NLP) in a text conversation with ChatGPT?",
+    "options": [
+      "Recognizing only photographs",
+      "Understanding prompts and generating human-language text",
+      "Manufacturing computer hardware",
+      "Encoding video files"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openai.com/policies/how-chatgpt-and-our-foundation-models-are-developed/",
+        "label": "How ChatGPT and our foundation models are developed",
+        "publisher": "OpenAI",
+        "authorityId": "openai",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenAI explains that ChatGPT understands questions and instructions and generates responses word by word."
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/natural-language-processing",
+        "label": "What is natural language processing?",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM defines NLP as enabling computers to recognize, understand and generate human text and speech."
+      }
+    ],
+    "referenceUrl": "https://openai.com/policies/how-chatgpt-and-our-foundation-models-are-developed/",
+    "referenceLabel": "How ChatGPT and our foundation models are developed",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's broad 'primary function' wording was narrowed to a text-conversation task so the answer is unique despite ChatGPT's multimodal capabilities."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q002",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 2,
+    "question": "What is the study of the origin and historical development of words called?",
+    "options": [
+      "Lexicology",
+      "Semantics",
+      "Etymology",
+      "Phonology"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/etymology",
+        "label": "Etymology",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines etymology as the study of the origin and history of words."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/etymology",
+        "label": "Etymology",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines etymology through a word's history and origin."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/etymology",
+    "referenceLabel": "Etymology",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The wording was tightened to match the standard dictionary definition."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q003",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 3,
+    "question": "Which combination consists entirely of documented business uses of artificial intelligence?",
+    "options": [
+      "Recommendations, data insights, and process automation",
+      "Only paper filing and manual typing",
+      "Only office construction and furniture repair",
+      "None of these activities"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.ibm.com/think/topics/artificial-intelligence-business",
+        "label": "Artificial intelligence in business",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM describes AI business uses including recommendations, analytics-driven insights and automation."
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/ai/",
+        "label": "AI adoption scenario",
+        "publisher": "Microsoft Learn",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft's AI adoption guidance covers business insights, intelligent applications and process automation."
+      }
+    ],
+    "referenceUrl": "https://www.ibm.com/think/topics/artificial-intelligence-business",
+    "referenceLabel": "Artificial intelligence in business",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The source vaguely asked for the role of 'Meta AI' and encoded three broad claims as 'All of these.' It was reconstructed as a vendor-neutral, uniquely answerable question about established business uses of AI."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q004",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 4,
+    "question": "The GPT model family used for ChatGPT is based on which neural-network architecture?",
+    "options": [
+      "Recurrent neural network only",
+      "Transformer",
+      "Convolutional neural network only",
+      "Decision tree"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
+        "label": "Improving Language Understanding by Generative Pre-Training",
+        "publisher": "OpenAI",
+        "authorityId": "openai",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenAI's original GPT paper states that the model uses a multi-layer Transformer decoder."
+      },
+      {
+        "url": "https://research.google/pubs/attention-is-all-you-need/",
+        "label": "Attention Is All You Need",
+        "publisher": "Google Research",
+        "authorityId": "google-research",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The foundational Google research paper introduces the Transformer architecture used by GPT models."
+      }
+    ],
+    "referenceUrl": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
+    "referenceLabel": "Improving Language Understanding by Generative Pre-Training",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The question was phrased around the GPT model family rather than implying that every ChatGPT product configuration has one immutable implementation."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q005",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 5,
+    "question": "As of 2026, which office is held by Ketanji Brown Jackson?",
+    "options": [
+      "Associate Justice of the U.S. Supreme Court",
+      "United States Senator",
+      "Governor of New York",
+      "U.S. Attorney General"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.supremecourt.gov/about/biographies.aspx",
+        "label": "Current Members",
+        "publisher": "Supreme Court of the United States",
+        "authorityId": "us-supreme-court",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Court's current-members page lists Ketanji Brown Jackson as an Associate Justice."
+      },
+      {
+        "url": "https://www.fjc.gov/history/judges/jackson-ketanji-brown",
+        "label": "Jackson, Ketanji Brown",
+        "publisher": "Federal Judicial Center",
+        "authorityId": "federal-judicial-center",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The federal judicial biography records Jackson's appointment and service as an Associate Justice of the Supreme Court."
+      }
+    ],
+    "referenceUrl": "https://www.supremecourt.gov/about/biographies.aspx",
+    "referenceLabel": "Current Members",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": null,
+      "asOf": "2026-08-27",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-08-27"
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's identity wording and racial descriptor were replaced with a precise office-holding question, and the dynamic claim was dated."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q006",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 6,
+    "question": "Which set lists recognized applications of deep learning?",
+    "options": [
+      "Image recognition, natural-language processing, and speech recognition",
+      "Only spreadsheet printing",
+      "Only mechanical drafting",
+      "Only database backups"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.ibm.com/think/topics/deep-learning",
+        "label": "What is deep learning?",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM identifies computer vision, natural-language processing and speech-related systems among deep-learning applications."
+      },
+      {
+        "url": "https://cloud.google.com/discover/what-is-deep-learning",
+        "label": "What is deep learning?",
+        "publisher": "Google Cloud",
+        "authorityId": "google-cloud",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Google Cloud describes deep-learning uses in image, language and speech tasks."
+      }
+    ],
+    "referenceUrl": "https://www.ibm.com/think/topics/deep-learning",
+    "referenceLabel": "What is deep learning?",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The three true source options were combined into one explicit answer instead of retaining an 'All of these' encoding choice."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q007",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 7,
+    "question": "Who is conventionally credited with inventing the first practical sewing machine?",
+    "options": [
+      "Thomas Saint",
+      "Elias Howe",
+      "Isaac Singer",
+      "George Stephenson"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.loc.gov/item/today-in-history/july-09/",
+        "label": "Inventor of the Sewing Machine",
+        "publisher": "Library of Congress",
+        "authorityId": "library-of-congress",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Library of Congress calls Elias Howe the inventor of the first practical sewing machine."
+      },
+      {
+        "url": "https://www.invent.org/inductees/elias-howe",
+        "label": "Elias Howe",
+        "publisher": "National Inventors Hall of Fame",
+        "authorityId": "national-inventors-hall-of-fame",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Hall of Fame independently credits Howe with the first practical sewing machine."
+      }
+    ],
+    "referenceUrl": "https://www.loc.gov/item/today-in-history/july-09/",
+    "referenceLabel": "Inventor of the Sewing Machine",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The criterion 'conventionally credited' was added because earlier patents and multiple later improvements make an unqualified invention claim misleading."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q008",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 8,
+    "question": "Which air-pollution process can chemically deteriorate carbonate stone such as marble?",
+    "options": [
+      "Acid deposition reacting with the stone",
+      "Harmless visible light",
+      "Pure distilled water at neutral pH",
+      "Earth's magnetic field"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.epa.gov/acidrain/effects-acid-rain",
+        "label": "Effects of Acid Rain",
+        "publisher": "United States Environmental Protection Agency",
+        "authorityId": "us-epa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "EPA explains that acid deposition damages stone and other materials through chemical reactions."
+      },
+      {
+        "url": "https://pubs.usgs.gov/gip/acidrain/2.html",
+        "label": "Acid Rain and Our Nation's Capital",
+        "publisher": "United States Geological Survey",
+        "authorityId": "usgs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USGS explains how acidic deposition attacks carbonate building stone such as marble and limestone."
+      }
+    ],
+    "referenceUrl": "https://www.epa.gov/acidrain/effects-acid-rain",
+    "referenceLabel": "Effects of Acid Rain",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The popular and imprecise phrase 'stone cancer in the Taj Mahal' was replaced with the supported chemical mechanism: acid deposition can deteriorate marble."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q009",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 9,
+    "question": "What is the Persian New Year festival celebrated around the spring equinox called?",
+    "options": [
+      "Equinox",
+      "Nowruz",
+      "Mehregan",
+      "Yalda"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.un.org/en/observances/international-nowruz-day",
+        "label": "International Nowruz Day",
+        "publisher": "United Nations",
+        "authorityId": "united-nations",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The United Nations identifies Nowruz as a Persian-rooted new-year celebration at the spring equinox."
+      },
+      {
+        "url": "https://www.unesco.org/en/articles/nowruz-seeds-new-day-0",
+        "label": "Nowruz: The seeds of a new day",
+        "publisher": "UNESCO",
+        "authorityId": "unesco",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO describes Nowruz as the New Year of peoples linked to the Persian cultural region."
+      }
+    ],
+    "referenceUrl": "https://www.un.org/en/observances/international-nowruz-day",
+    "referenceLabel": "International Nowruz Day",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The solar-Hijri wording was simplified to the well-supported festival and season association."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q010",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 10,
+    "question": "Which film won Best Picture at the 2022 Academy Awards ceremony?",
+    "options": [
+      "Dune",
+      "The Power of the Dog",
+      "CODA",
+      "King Richard"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.oscars.org/oscars/ceremonies/2022",
+        "label": "2022 Academy Awards",
+        "publisher": "Academy of Motion Picture Arts and Sciences",
+        "authorityId": "academy-motion-picture-arts",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Academy's 2022 ceremony record lists CODA as the Best Picture winner."
+      },
+      {
+        "url": "https://www.apple.com/newsroom/2022/03/apples-coda-wins-historic-oscar-for-best-picture-at-the-academy-awards/",
+        "label": "CODA wins Oscar for Best Picture",
+        "publisher": "Apple Newsroom",
+        "authorityId": "apple",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Apple's contemporaneous release independently records CODA winning Best Picture at the 2022 ceremony."
+      }
+    ],
+    "referenceUrl": "https://www.oscars.org/oscars/ceremonies/2022",
+    "referenceLabel": "2022 Academy Awards",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2022",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The question now explicitly says the 2022 ceremony, eliminating ambiguity with a film's release year."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q011",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 11,
+    "question": "According to the U.S. Census Bureau estimate for 1 January 2025, which listed figure is closest to the world population?",
+    "options": [
+      "7 billion",
+      "8 billion",
+      "8.8 billion",
+      "10.2 billion"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.census.gov/content/dam/Census/library/visualizations/2024/comm/2025-new-years-day.pdf",
+        "label": "2025 New Year's Day population estimate",
+        "publisher": "United States Census Bureau",
+        "authorityId": "us-census-bureau",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Census Bureau estimated 8,092,034,511 people worldwide on 1 January 2025, closest to 8 billion."
+      },
+      {
+        "url": "https://www.un.org/sustainabledevelopment/blog/2024/07/press-release-wpp2024/",
+        "label": "UN projects world population to peak within this century",
+        "publisher": "United Nations",
+        "authorityId": "united-nations",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The United Nations reported a global population of about 8.2 billion in 2024, independently supporting the eight-billion scale."
+      }
+    ],
+    "referenceUrl": "https://www.census.gov/content/dam/Census/library/visualizations/2024/comm/2025-new-years-day.pdf",
+    "referenceLabel": "2025 New Year's Day population estimate",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's undated rounded estimate was anchored to the Census Bureau's 1 January 2025 estimate and asks for the closest listed figure."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q012",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 12,
+    "question": "Which listed place is inscribed as a UNESCO World Heritage Site in Pakistan?",
+    "options": [
+      "Minar-e-Pakistan",
+      "Rohtas Fort",
+      "Lahore Museum",
+      "Faisal Mosque"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://whc.unesco.org/en/list/586",
+        "label": "Rohtas Fort",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco-world-heritage-centre",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO's property record identifies Rohtas Fort in Pakistan as World Heritage property 586."
+      },
+      {
+        "url": "https://doam.gov.pk/public/world-heritage-sites/18",
+        "label": "Rohtas Fort",
+        "publisher": "Department of Archaeology and Museums, Government of Pakistan",
+        "authorityId": "pakistan-doam",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's archaeology department lists Rohtas Fort among the country's World Heritage Sites."
+      }
+    ],
+    "referenceUrl": "https://whc.unesco.org/en/list/586",
+    "referenceLabel": "Rohtas Fort",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source wording is retained with a minor clarity edit."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q013",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 13,
+    "question": "Which Pakistani poet was nominated for the Nobel Prize in Literature?",
+    "options": [
+      "Faiz Ahmed Faiz",
+      "Habib Jalib",
+      "Allama Iqbal",
+      "Parveen Shakir"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "The printed answer is Faiz Ahmed Faiz, but Nobel nominations remain secret for 50 years and the source supplies no nomination year. The available official Nobel nomination database did not yield a uniquely auditable record for this exact claim, so it is held rather than inferred from repeated secondary claims."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q014",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 14,
+    "question": "In which city is the CPEC Allama Iqbal Industrial City special economic zone located?",
+    "options": [
+      "Lahore",
+      "Faisalabad",
+      "Rawalpindi",
+      "Multan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://cpec.gov.pk/project-details/56",
+        "label": "Allama Iqbal Industrial City",
+        "publisher": "China-Pakistan Economic Corridor Secretariat",
+        "authorityId": "cpec-secretariat",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official CPEC project page locates Allama Iqbal Industrial City in Faisalabad."
+      },
+      {
+        "url": "https://fiedmc.com.pk/special-economic-zone/",
+        "label": "Special Economic Zones",
+        "publisher": "Faisalabad Industrial Estate Development and Management Company",
+        "authorityId": "fiedmc",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "FIEDMC independently identifies Allama Iqbal Industrial City as its Faisalabad-area special economic zone."
+      }
+    ],
+    "referenceUrl": "https://cpec.gov.pk/project-details/56",
+    "referenceLabel": "Allama Iqbal Industrial City",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague phrase about a city receiving 'significant CPEC investment' was anchored to the named Allama Iqbal Industrial City project. Previously verified CPEC Secretariat and FIEDMC references were reused; Faisalabad remains option B."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q015",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 15,
+    "question": "Which article of Pakistan's Constitution guarantees the right to a fair trial and due process?",
+    "options": [
+      "Article 10",
+      "Article 10A",
+      "Article 19",
+      "Article 25"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/documents/6926e060076ed_467.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Constitution labels Article 10A as the right to a fair trial and due process."
+      },
+      {
+        "url": "https://pakistancode.gov.pk/english/sHyuRsF?query=Article+10A&results=10&search=1",
+        "label": "Pakistan Code search: Article 10A",
+        "publisher": "Ministry of Law and Justice, Pakistan Code",
+        "authorityId": "pakistan-code",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan Code reproduces Article 10A and its guarantee of fair trial and due process."
+      }
+    ],
+    "referenceUrl": "https://na.gov.pk/uploads/documents/6926e060076ed_467.pdf",
+    "referenceLabel": "Constitution of the Islamic Republic of Pakistan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The typographic form was normalized from 10-A to the Constitution's 10A."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q016",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 16,
+    "question": "As of 2026, which service can be requested through Punjab's e-Khidmat construction-services system?",
+    "options": [
+      "Building-plan approval",
+      "Private payroll management",
+      "Construction-equipment rental",
+      "Virtual tours of completed buildings"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://ekhidmat.punjab.gov.pk/",
+        "label": "e-Khidmat Markaz services",
+        "publisher": "e-Khidmat Markaz, Government of Punjab",
+        "authorityId": "punjab-ekhidmat",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official service catalogue includes Building Plan Approval among construction services."
+      },
+      {
+        "url": "https://pitb.gov.pk/node/10813",
+        "label": "LGCD Building Plan Approval Now Made Easy",
+        "publisher": "Punjab Information Technology Board",
+        "authorityId": "punjab-it-board",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PITB states that residential, commercial and industrial building-plan approvals are available through e-Khidmat."
+      }
+    ],
+    "referenceUrl": "https://ekhidmat.punjab.gov.pk/",
+    "referenceLabel": "e-Khidmat Markaz services",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": null,
+      "asOf": "2026-08-27",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-08-27"
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's loosely named E-Construction portal was repaired to the documented e-Khidmat construction-services system and dated because service availability can change."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q017",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 17,
+    "question": "Which service, launched in 2009, is documented as Pakistan's first mobile money or branchless-banking service?",
+    "options": [
+      "JazzCash",
+      "Easypaisa",
+      "UPaisa",
+      "NayaPay"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.gsma.com/mobilefordevelopment/wp-content/uploads/2020/06/GSMA_Tracking-the-journey-towards-mobile-money-interoperability-1.pdf",
+        "label": "Tracking the journey towards mobile-money interoperability",
+        "publisher": "GSMA",
+        "authorityId": "gsma",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "GSMA records Easypaisa as Pakistan's first mobile-money service, launched in 2009."
+      },
+      {
+        "url": "https://easypaisa.com.pk/FinancialStatementsAnnualReport/Annual/2016-Annual-Report.pdf",
+        "label": "Telenor Microfinance Bank Annual Report 2016",
+        "publisher": "Telenor Microfinance Bank",
+        "authorityId": "telenor-microfinance-bank",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The bank's annual report identifies Easypaisa, launched in 2009, as Pakistan's first branchless-banking service."
+      }
+    ],
+    "referenceUrl": "https://www.gsma.com/mobilefordevelopment/wp-content/uploads/2020/06/GSMA_Tracking-the-journey-towards-mobile-money-interoperability-1.pdf",
+    "referenceLabel": "Tracking the journey towards mobile-money interoperability",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2009",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The dynamic, unsupported superlative 'most used' was replaced with a stable and independently documented launch milestone."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q018",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1228,
+    "sourceBookPage": 1207,
+    "sourceQuestionNumber": 18,
+    "question": "As of 2026, which app is used for booking railway tickets in Pakistan?",
+    "options": [
+      "Pakistan Railways Official",
+      "Book Karu",
+      "Ticket Shop App",
+      "Rail App"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": null,
+      "asOf": "2026-08-27",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-08-27"
+    },
+    "confidence": "low",
+    "sourceNotes": "Pakistan Railways officially documents online e-ticketing, but the scan's exact app title and current branding could not be confirmed from two independent authoritative sources. The item is held rather than treating an app-store label as timeless official evidence."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q019",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 19,
+    "question": "What is the central purpose of Punjab's Maryam Ki Dastak service as of 2026?",
+    "options": [
+      "Only registering complaints",
+      "Operating a private marketplace",
+      "Providing government services online and at citizens' doorsteps",
+      "Providing commercial bank accounts"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://dastak.punjab.gov.pk/eng-site",
+        "label": "Dastak",
+        "publisher": "Dastak Services, Government of Punjab",
+        "authorityId": "punjab-dastak",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Dastak platform says citizens can apply online and choose doorstep delivery of government services."
+      },
+      {
+        "url": "https://punjab.gov.pk/index.php/maryam-ke-dastak",
+        "label": "Maryam Ke Dastak",
+        "publisher": "Punjab Portal",
+        "authorityId": "punjab-portal",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Punjab's portal describes Dastak as bringing public services directly to citizens' doorsteps."
+      }
+    ],
+    "referenceUrl": "https://dastak.punjab.gov.pk/eng-site",
+    "referenceLabel": "Dastak",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": null,
+      "asOf": "2026-08-27",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-08-27"
+    },
+    "confidence": "high",
+    "sourceNotes": "The answer wording was expanded to cover both the online application channel and doorstep delivery, and the current service claim was dated."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q020",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 20,
+    "question": "Which listed service is officially documented for receiving international money transfers in Pakistan?",
+    "options": [
+      "PayPal",
+      "Western Union",
+      "Google Pay",
+      "Alipay"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.westernunion.com/pk/en/receive-money.html",
+        "label": "Receive money in Pakistan",
+        "publisher": "Western Union",
+        "authorityId": "western-union",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Western Union gives official instructions and agent locations for receiving international transfers in Pakistan."
+      },
+      {
+        "url": "https://pakpost.gov.pk/internation_Money.php",
+        "label": "Western Union Money Transfer",
+        "publisher": "Pakistan Post",
+        "authorityId": "pakistan-post",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan Post independently documents disbursement in Pakistan of payments received through Western Union worldwide."
+      }
+    ],
+    "referenceUrl": "https://www.westernunion.com/pk/en/receive-money.html",
+    "referenceLabel": "Receive money in Pakistan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The dynamic phrase 'commonly used' was replaced with an objective availability claim for the listed services."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q021",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 21,
+    "question": "Which listed Punjab citizen-service platform provides a domicile-certificate service as of 2026?",
+    "options": [
+      "NADRA e-Sahulat",
+      "e-Khidmat Markaz",
+      "Pakistan Citizen Portal",
+      "City Islamabad App"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://ekhidmat.punjab.gov.pk/services/e-khidmat-marakaz/domicile-certificate",
+        "label": "Domicile certificate",
+        "publisher": "e-Khidmat Markaz, Government of Punjab",
+        "authorityId": "punjab-ekhidmat",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official e-Khidmat service page lists requirements and processing details for a domicile certificate."
+      },
+      {
+        "url": "https://pitb.gov.pk/cfsc",
+        "label": "Citizen Facilitation and Service Centers",
+        "publisher": "Punjab Information Technology Board",
+        "authorityId": "punjab-it-board",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PITB states that e-Khidmat Markaz centres provide domicile certification among their citizen services."
+      }
+    ],
+    "referenceUrl": "https://ekhidmat.punjab.gov.pk/services/e-khidmat-marakaz/domicile-certificate",
+    "referenceLabel": "Domicile certificate",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": null,
+      "asOf": "2026-08-27",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-08-27"
+    },
+    "confidence": "high",
+    "sourceNotes": "The source said 'online platform used to apply'; the verified wording asks which service platform provides the certificate and dates availability."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q022",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 22,
+    "question": "What is ePay Punjab designed to let citizens pay?",
+    "options": [
+      "Online-shopping orders",
+      "Government taxes and fees",
+      "Social-media subscriptions",
+      "Online-game credits"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.epay.punjab.gov.pk/",
+        "label": "Online Payment of Government Receipts",
+        "publisher": "ePay Punjab",
+        "authorityId": "epay-punjab",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official portal states that ePay Punjab enables cashless payment of government taxes and fees."
+      },
+      {
+        "url": "https://pitb.gov.pk/node/7902",
+        "label": "e-Pay Punjab: A Reliable e-Payment Gateway",
+        "publisher": "Punjab Information Technology Board",
+        "authorityId": "punjab-it-board",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PITB independently describes ePay Punjab as a government payment aggregator for paying taxes electronically."
+      }
+    ],
+    "referenceUrl": "https://www.epay.punjab.gov.pk/",
+    "referenceLabel": "Online Payment of Government Receipts",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source wording is retained in a more direct form."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q023",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 23,
+    "question": "In which year did the first India-Pakistan war over Jammu and Kashmir begin?",
+    "options": [
+      "1947",
+      "1948",
+      "1965",
+      "1971"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://history.state.gov/milestones/1961-1968/india-pakistan-war",
+        "label": "The India-Pakistan War of 1965",
+        "publisher": "Office of the Historian, U.S. Department of State",
+        "authorityId": "us-state-historian",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official history calls the 1947-48 conflict the first India-Pakistan war."
+      },
+      {
+        "url": "https://oios.un.org/system/files/confidential-files/Reports/2022_059_pd.pdf",
+        "label": "Audit of UNMOGIP",
+        "publisher": "United Nations Office of Internal Oversight Services",
+        "authorityId": "un-oios",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UN background records Partition in August 1947 and hostilities breaking out over Jammu and Kashmir thereafter."
+      }
+    ],
+    "referenceUrl": "https://history.state.gov/milestones/1961-1968/india-pakistan-war",
+    "referenceLabel": "The India-Pakistan War of 1965",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The scan says 'economic war' and its printed answer is 1948. The intended military conflict was reconstructed; authoritative chronologies identify it as the 1947-48 war, so 1947 was added and selected."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q024",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 24,
+    "question": "According to SIPRI data for 2020-24, which listed country supplied the largest share of Pakistan's imported major arms?",
+    "options": [
+      "Russia",
+      "United Kingdom",
+      "United States",
+      "China"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.sipri.org/media/press-release/2025/ukraine-worlds-biggest-arms-importer-united-states-dominance-global-arms-exports-grows-russian",
+        "label": "Trends in international arms transfers 2020-24",
+        "publisher": "Stockholm International Peace Research Institute",
+        "authorityId": "sipri",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "SIPRI reports that China accounted for 81 percent of Pakistan's arms imports in 2020-24."
+      },
+      {
+        "url": "https://www.congress.gov/crs_external_products/R/PDF/R47565/R47565.7.pdf",
+        "label": "Pakistan and U.S.-Pakistan Relations",
+        "publisher": "Congressional Research Service",
+        "authorityId": "us-congressional-research-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CRS independently describes China as Pakistan's primary international arms supplier."
+      }
+    ],
+    "referenceUrl": "https://www.sipri.org/media/press-release/2025/ukraine-worlds-biggest-arms-importer-united-states-dominance-global-arms-exports-grows-russian",
+    "referenceLabel": "Trends in international arms transfers 2020-24",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2020",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The undated superlative was scoped to SIPRI's 2020-24 major-arms transfer dataset."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q025",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 25,
+    "question": "Which 1950 India-Pakistan agreement chiefly sought to protect minorities and assist migrants after Partition?",
+    "options": [
+      "Tashkent Declaration",
+      "Simla Agreement",
+      "Liaquat-Nehru Pact",
+      "Indus Waters Treaty"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.mea.gov.in/Images/pdf/India-Pakistan-std.pdf",
+        "label": "India-Pakistan Relations, 1947-1955",
+        "publisher": "Ministry of External Affairs, Government of India",
+        "authorityId": "india-mea",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official documentary collection records implementation of the 1950 Nehru-Liaquat agreement for minorities and migrants."
+      },
+      {
+        "url": "https://nehruarchive.in/documents/cable-to-v-k-krishna-menon-8-april-1950-l5vzd7",
+        "label": "Cable to V. K. Krishna Menon, 8 April 1950",
+        "publisher": "Nehru Archive",
+        "authorityId": "nehru-archive",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Nehru's contemporaneous cable states that the signed agreement addressed minority security, migrants, property and rehabilitation."
+      }
+    ],
+    "referenceUrl": "https://www.mea.gov.in/Images/pdf/India-Pakistan-std.pdf",
+    "referenceLabel": "India-Pakistan Relations, 1947-1955",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1950",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's broad refugee wording was made precise: the 1950 Liaquat-Nehru Pact focused on minority security and migrant protections. A vague Inter-Dominion distractor was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q026",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 26,
+    "question": "For Pakistan's 2024 general election, how many total seats comprised the National Assembly?",
+    "options": [
+      "272",
+      "336",
+      "342",
+      "372"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.ecp.gov.pk/storage/files/3/General%20Election%20Report%202024%20Vol-II-compressed.pdf",
+        "label": "General Election Report 2024, Volume II",
+        "publisher": "Election Commission of Pakistan",
+        "authorityId": "pakistan-election-commission",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ECP's official 2024 report gives 266 general, 60 women-reserved and 10 non-Muslim seats, totaling 336."
+      },
+      {
+        "url": "https://na.gov.pk/en/content.php?id=246",
+        "label": "National Assembly composition and elections",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly's explanatory page states that the House consists of 336 members under the post-merger allocation."
+      }
+    ],
+    "referenceUrl": "https://www.ecp.gov.pk/storage/files/3/General%20Election%20Report%202024%20Vol-II-compressed.pdf",
+    "referenceLabel": "General Election Report 2024, Volume II",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's undated post-FATA wording was anchored to the 2024 general election. Some stale official pages still display the pre-merger 342-seat composition; the ECP's election report and the Assembly's explanatory page support 336 for 2024."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q027",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 27,
+    "question": "Who became the first Chief Minister of West Punjab after Pakistan's independence in 1947?",
+    "options": [
+      "Feroz Khan Noon",
+      "Nawab Sadiq Hussain Qureshi",
+      "Ghulam Haider Wyne",
+      "Iftikhar Hussain Khan Mamdot"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.pap.gov.pk/uploads/downloads/golden_jubillee_of_punjab_assembly_1937-1987.pdf",
+        "label": "Golden Jubilee of the Punjab Assembly 1937-1987",
+        "publisher": "Provincial Assembly of the Punjab",
+        "authorityId": "punjab-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Assembly history states that West Punjab chose Nawab Iftikhar Hussain Mamdot as its leader and first Chief Minister."
+      },
+      {
+        "url": "https://cm.punjab.gov.pk/node/80",
+        "label": "Former Chief Ministers of Punjab",
+        "publisher": "Chief Minister's Office, Government of Punjab",
+        "authorityId": "punjab-chief-minister-office",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official chronology begins the post-independence chief-ministerial record with Iftikhar Hussain Khan Mamdot."
+      }
+    ],
+    "referenceUrl": "https://www.pap.gov.pk/uploads/downloads/golden_jubillee_of_punjab_assembly_1937-1987.pdf",
+    "referenceLabel": "Golden Jubilee of the Punjab Assembly 1937-1987",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1947",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "West Punjab and the independence year were added to make the historical office unambiguous."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q028",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 28,
+    "question": "After which conflict did the East India Company fully annex Punjab in 1849?",
+    "options": [
+      "First Anglo-Afghan War",
+      "Second Anglo-Sikh War",
+      "Indian Rebellion of 1857",
+      "Third Anglo-Maratha War"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.nam.ac.uk/explore/second-sikh-war",
+        "label": "Second Sikh War",
+        "publisher": "National Army Museum",
+        "authorityId": "uk-national-army-museum",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The museum records that the 1848-49 Second Sikh War ended with full British annexation of Punjab."
+      },
+      {
+        "url": "https://www.punjab.gov.pk/about_punjab_history",
+        "label": "History of Punjab",
+        "publisher": "Punjab Portal, Government of Punjab",
+        "authorityId": "punjab-portal",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Punjab's official history states that Britain annexed Punjab in 1849 after the Anglo-Sikh Wars."
+      }
+    ],
+    "referenceUrl": "https://www.nam.ac.uk/explore/second-sikh-war",
+    "referenceLabel": "Second Sikh War",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1849",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The scan's proposed motive, 'control over trade routes,' was too broad to establish as the single reason for annexation. It was reconstructed as the directly documented conflict-and-annexation fact."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q029",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 29,
+    "question": "How many princely states joined Pakistan after the independence of British India in 1947?",
+    "options": [
+      "5",
+      "7",
+      "10",
+      "13"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1947",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "The printed answer is 13, but the count changes with the definition of princely state, whether frontier entities are included, and whether accession or later administrative integration is meant. The scan supplies no counting rule or date beyond 1947, so the item is held rather than presenting a disputed total as unique."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q030",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 30,
+    "question": "Who became the first woman Chief Justice of any High Court in Pakistan in 2018?",
+    "options": [
+      "Justice Fatima Jinnah",
+      "Justice Musarrat Hilali",
+      "Justice Aalia Neelum",
+      "Justice Tahira Safdar"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://bhc.gov.pk/judges/former-judges/former-chief-justices/justice-syeda-tahira-safdar",
+        "label": "Justice Syeda Tahira Safdar",
+        "publisher": "High Court of Balochistan",
+        "authorityId": "balochistan-high-court",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The court biography records Tahira Safdar taking oath as Chief Justice on 1 September 2018."
+      },
+      {
+        "url": "https://www.app.com.pk/national/tahira-safdar-sworn-in-as-first-female-chief-justice-of-bhc/",
+        "label": "Tahira Safdar sworn in as first female chief justice of BHC",
+        "publisher": "Associated Press of Pakistan",
+        "authorityId": "associated-press-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "APP reports that Tahira Safdar became the first woman appointed Chief Justice of any High Court in Pakistan."
+      }
+    ],
+    "referenceUrl": "https://bhc.gov.pk/judges/former-judges/former-chief-justices/justice-syeda-tahira-safdar",
+    "referenceLabel": "Justice Syeda Tahira Safdar",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2018",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague phrase 'first female Chief Justice in Pakistan' was narrowed to the first woman to head any Pakistani High Court; Pakistan has not had a woman Chief Justice of Pakistan."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q031",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 31,
+    "question": "Which civil-service post serves as the administrative head of a provincial government in Pakistan?",
+    "options": [
+      "Chief Minister",
+      "Inspector General of Police",
+      "Chief Secretary",
+      "Governor"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://e-epd.punjab.gov.pk/resilientpunjab",
+        "label": "Climate Resilient Punjab Vision and Action Plan",
+        "publisher": "Environment Protection Department, Government of Punjab",
+        "authorityId": "punjab-environment-department",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Chief Secretary of Punjab describes the office as the province's administrative head."
+      },
+      {
+        "url": "https://www.establishment.gov.pk/SiteImage/Downloads/Secretariat%20Instructions%20Edition%202021.pdf",
+        "label": "Secretariat Instructions, Edition 2021",
+        "publisher": "Establishment Division, Government of Pakistan",
+        "authorityId": "pakistan-establishment-division",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official status table equates a provincial Chief Secretary with a federal Secretary, above provincial secretaries and additional chief secretaries."
+      }
+    ],
+    "referenceUrl": "https://e-epd.punjab.gov.pk/resilientpunjab",
+    "referenceLabel": "Climate Resilient Punjab Vision and Action Plan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The stem was changed from the subjective phrase 'highest-ranking civil servant responsible for provincial administration' to the documented role of administrative head."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q032",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 32,
+    "question": "Which of the following was an impact of British colonialism in Punjab?",
+    "options": [
+      "Promotion of local handicrafts and traditions",
+      "Suppression of local crafts and traditions",
+      "Encouragement of indigenous education",
+      "Establishment of equal trade relations"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "The choices reduce a complex and period-dependent social history to broad value judgments. No precise policy, date, industry or measurable effect is named, so a single answer cannot be verified without inventing scope. The item is held for reconstruction from a specific primary historical record."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q033",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 33,
+    "question": "Which Mughal emperor commissioned Lahore's Badshahi Mosque, completed in 1673?",
+    "options": [
+      "Akbar",
+      "Jahangir",
+      "Aurangzeb",
+      "Shah Jahan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://auqaf.punjab.gov.pk/badshahi-mosque",
+        "label": "Badshahi Mosque, Lahore",
+        "publisher": "Auqaf and Religious Affairs Department, Government of Punjab",
+        "authorityId": "punjab-auqaf",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Punjab Auqaf states that Mughal Emperor Aurangzeb Alamgir commissioned the mosque in 1671 and that it was completed in 1673."
+      },
+      {
+        "url": "https://walledcitylahore.gop.pk/monuments2/",
+        "label": "Badshahi Masjid",
+        "publisher": "Walled City of Lahore Authority",
+        "authorityId": "walled-city-lahore-authority",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Walled City authority independently states that the mosque was built under Aurangzeb Alamgir's patronage and completed in 1673."
+      }
+    ],
+    "referenceUrl": "https://auqaf.punjab.gov.pk/badshahi-mosque",
+    "referenceLabel": "Badshahi Mosque, Lahore",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1673",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The completion year was added to distinguish the monument precisely. The initial reused references primarily supported the date, so they were replaced in the final audit by two Punjab authorities that directly identify Aurangzeb as patron or commissioner."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q034",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 34,
+    "question": "Who became Pakistan's first President when the country became a republic in 1956?",
+    "options": [
+      "Ayub Khan",
+      "Liaquat Ali Khan",
+      "Iskander Mirza",
+      "Zulfikar Ali Bhutto"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://na.gov.pk/en/content.php/content.php?id=75",
+        "label": "Constitutional history of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly records Iskander Mirza as Pakistan's first President in March 1956."
+      },
+      {
+        "url": "https://president.gov.pk/index.php/former-presidents",
+        "label": "Former Presidents",
+        "publisher": "President of Pakistan",
+        "authorityId": "pakistan-president",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official chronology lists Iskander Mirza first, beginning 23 March 1956."
+      }
+    ],
+    "referenceUrl": "https://na.gov.pk/en/content.php/content.php?id=75",
+    "referenceLabel": "Constitutional history of Pakistan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1956",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The constitutional milestone and year were added. Previously verified National Assembly and Presidency references were reused; Iskander Mirza remains option C."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q035",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 35,
+    "question": "Which listed city is the largest contributor to Punjab's GDP?",
+    "options": [
+      "Lahore",
+      "Rawalpindi",
+      "Multan",
+      "Faisalabad"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "The printed answer is Lahore, but the source provides no year, geographic definition, price basis or official city-level GDP series. City GDP is a dynamic estimate and cannot be ranked reproducibly from two authoritative sources as written, so the item is held."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q036",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1229,
+    "sourceBookPage": 1208,
+    "sourceQuestionNumber": 36,
+    "question": "In which year was Rawal Dam completed?",
+    "options": [
+      "1955",
+      "1962",
+      "1971",
+      "1980"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://ffc.gov.pk/wp-content/uploads/2022/03/Final-National-Register-of-Dams-Sep.-2018.pdf",
+        "label": "National Register of Dams",
+        "publisher": "Federal Flood Commission, Government of Pakistan",
+        "authorityId": "pakistan-federal-flood-commission",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The national dam register lists Rawal Dam with a completion year of 1962."
+      },
+      {
+        "url": "https://wapda.gov.pk/wp-content/uploads/2025/12/Annual-Report-2022-23_compressed-latest.pdf",
+        "label": "WAPDA Annual Report 2022-23",
+        "publisher": "Water and Power Development Authority",
+        "authorityId": "wapda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WAPDA records that Rawal Dam construction began in July 1959 and was completed in February 1962."
+      }
+    ],
+    "referenceUrl": "https://ffc.gov.pk/wp-content/uploads/2022/03/Final-National-Register-of-Dams-Sep.-2018.pdf",
+    "referenceLabel": "National Register of Dams",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "'Constructed' was replaced with the auditable completion milestone."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q037",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 37,
+    "question": "Under Article 177 (2025), what minimum period as an advocate of a High Court is required for the advocacy route to appointment as a Supreme Court judge, in addition to being an advocate of the Supreme Court?",
+    "options": [
+      "10 years",
+      "15 years",
+      "20 years",
+      "25 years"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/documents/6926e060076ed_467.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan, amended through 21 November 2025",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Current Article 177(2)(b) requires at least fifteen years as a High Court advocate and current Supreme Court advocacy."
+      },
+      {
+        "url": "https://www.na.gov.pk/uploads/documents/671f74b8da9e0_263.pdf",
+        "label": "Constitution (Twenty-sixth Amendment) Bill, 2024 as passed by the National Assembly",
+        "publisher": "National Assembly Secretariat",
+        "authorityId": "pakistan-national-assembly-secretariat",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The amendment text substituted Article 177(2) with the fifteen-year High Court advocacy requirement plus Supreme Court advocate status."
+      }
+    ],
+    "referenceUrl": "https://na.gov.pk/uploads/documents/6926e060076ed_467.pdf",
+    "referenceLabel": "Constitution of the Islamic Republic of Pakistan, amended through 21 November 2025",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "Article 177 (2025)",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source omitted the additional current requirement that the person also be an advocate of the Supreme Court. The stem now states that condition and scopes the amended provision."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q038",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 38,
+    "question": "Under section 172 of Pakistan's Code of Criminal Procedure, which details must an investigating police officer enter in the case diary each day?",
+    "options": [
+      "Only suspects' names",
+      "Personal opinions unrelated to evidence",
+      "Times, places visited, and circumstances ascertained in the investigation",
+      "Information unrelated to the case"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator7db1e56f0f1d39a6e67573ec6b0944e2.pdf",
+        "label": "Code of Criminal Procedure, 1898",
+        "publisher": "Ministry of Law and Justice, Pakistan Code",
+        "authorityId": "pakistan-code",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Section 172 requires the diary to state when information arrived, when investigation began and ended, places visited and circumstances ascertained."
+      },
+      {
+        "url": "https://www.dscmansehra.gov.pk/books/CrPC.pdf",
+        "label": "Code of Criminal Procedure, 1898",
+        "publisher": "District and Sessions Court Mansehra",
+        "authorityId": "mansehra-district-court",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The court-hosted statutory text independently reproduces section 172's prescribed diary particulars."
+      }
+    ],
+    "referenceUrl": "https://pakistancode.gov.pk/pdffiles/administrator7db1e56f0f1d39a6e67573ec6b0944e2.pdf",
+    "referenceLabel": "Code of Criminal Procedure, 1898",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's vague 'summary, actions and progress' answer was replaced with the particulars expressly required by section 172."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q039",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 39,
+    "question": "What is the punishment under the relevant source law for lodging frivolous or false whistleblower information?",
+    "options": [
+      "Imprisonment for up to one year",
+      "Imprisonment for up to two years or a fine up to two hundred thousand rupees, or both",
+      "Fine up to one hundred thousand rupees only",
+      "No punishment if the information is false"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "The source does not name the enactment. Its printed penalty appears in a federal Whistleblower Protection and Vigilance Commission bill, while section 59 of the enacted Punjab Enforcement and Regulation Act 2024 prescribes up to one year, Rs 100,000, or both. Because the governing instrument is unspecified and the choices mix incompatible provisions, the item is held."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q040",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 40,
+    "question": "Which article of Pakistan's Constitution is titled 'Safeguards as to arrest and detention'?",
+    "options": [
+      "Article 10",
+      "Article 57",
+      "Article 93",
+      "Article 107"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/documents/6926e060076ed_467.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Constitution gives Article 10 the heading 'Safeguards as to arrest and detention.'"
+      },
+      {
+        "url": "https://www.sindhlaws.gov.pk/setup/NewsDocuments/NID-000362.pdf",
+        "label": "Constitution of Pakistan",
+        "publisher": "Law Department, Government of Sindh",
+        "authorityId": "sindh-law-department",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Sindh government copy independently reproduces Article 10 and its arrest-and-detention safeguards."
+      }
+    ],
+    "referenceUrl": "https://na.gov.pk/uploads/documents/6926e060076ed_467.pdf",
+    "referenceLabel": "Constitution of the Islamic Republic of Pakistan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The stem was aligned with the Constitution's exact article heading."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q041",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 41,
+    "question": "Under the Punjab Enforcement and Regulation Act 2024, which set consists of statutory investigation powers of a PERA Investigation Officer?",
+    "options": [
+      "Entry, inspection, search, seizure and arrest subject to the Act",
+      "Levying provincial taxes without legislation",
+      "Making foreign-trade policy",
+      "Issuing private professional licences"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://pera.gop.pk/legal-framework",
+        "label": "PERA Legal Framework",
+        "publisher": "Punjab Enforcement and Regulatory Authority",
+        "authorityId": "punjab-pera",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PERA's official legal-framework page identifies the Punjab Enforcement and Regulation Act 2024 as its primary legislation."
+      },
+      {
+        "url": "https://citylaws.pk/wp-content/uploads/2025/02/Punjab-Enforcement-and-Regulation-Act-2024.pdf",
+        "label": "Punjab Enforcement and Regulation Act 2024",
+        "publisher": "Punjab Gazette reproduced by City Laws",
+        "authorityId": "punjab-gazette",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Section 26 lists entry, inspection, search, seizure and arrest among an Investigation Officer's statutory powers, with stated conditions."
+      }
+    ],
+    "referenceUrl": "https://pera.gop.pk/legal-framework",
+    "referenceLabel": "PERA Legal Framework",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "Punjab Enforcement and Regulation Act 2024",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The scan attributed powers loosely to the Authority. The question now names the Investigation Officer and notes that the powers remain subject to the Act's warrants, grounds and reporting safeguards."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q042",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 42,
+    "question": "Which section of Pakistan's Code of Criminal Procedure, 1898 is titled 'Security for keeping the peace on conviction'?",
+    "options": [
+      "Section 105",
+      "Section 106",
+      "Section 109",
+      "Section 111"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator7db1e56f0f1d39a6e67573ec6b0944e2.pdf",
+        "label": "Code of Criminal Procedure, 1898",
+        "publisher": "Ministry of Law and Justice, Pakistan Code",
+        "authorityId": "pakistan-code",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official statutory text gives section 106 the heading 'Security for keeping the peace on conviction.'"
+      },
+      {
+        "url": "https://statutes.pk/crpc/II",
+        "label": "Code of Criminal Procedure, 1898, Chapter VIII",
+        "publisher": "Statutes.pk",
+        "authorityId": "statutes-pk",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The consolidated statute index independently lists section 106 under that exact heading."
+      }
+    ],
+    "referenceUrl": "https://pakistancode.gov.pk/pdffiles/administrator7db1e56f0f1d39a6e67573ec6b0944e2.pdf",
+    "referenceLabel": "Code of Criminal Procedure, 1898",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The statute year and exact section heading were added."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q043",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 43,
+    "question": "Which section of Pakistan's Code of Criminal Procedure, 1898 governs recording information about a cognizable offence, commonly forming the FIR?",
+    "options": [
+      "Section 302",
+      "Section 144",
+      "Section 154",
+      "Section 182"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator7db1e56f0f1d39a6e67573ec6b0944e2.pdf",
+        "label": "Code of Criminal Procedure, 1898",
+        "publisher": "Ministry of Law and Justice, Pakistan Code",
+        "authorityId": "pakistan-code",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Section 154 governs information in cognizable cases and its reduction to writing and registration."
+      },
+      {
+        "url": "https://www.punjablaws.gov.pk/laws/483.html",
+        "label": "Punjab Criminal Prosecution Service Act 2006",
+        "publisher": "Punjab Laws",
+        "authorityId": "punjab-laws",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Punjab statute defines a first information report as information recorded under section 154 of the Code."
+      }
+    ],
+    "referenceUrl": "https://pakistancode.gov.pk/pdffiles/administrator7db1e56f0f1d39a6e67573ec6b0944e2.pdf",
+    "referenceLabel": "Code of Criminal Procedure, 1898",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The popular shorthand 'an FIR is recorded under' was tied to section 154's precise subject: information relating to a cognizable offence."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q044",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 44,
+    "question": "In which U.S. state did the assassination attempt on Donald Trump occur at a campaign rally on 13 July 2024?",
+    "options": [
+      "Texas",
+      "Florida",
+      "Pennsylvania",
+      "Ohio"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.fbi.gov/news/press-releases/butler-investigation-updates",
+        "label": "Butler Investigation Updates",
+        "publisher": "Federal Bureau of Investigation",
+        "authorityId": "us-fbi",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The FBI identifies the 13 July 2024 rally shooting and assassination attempt as occurring in Butler, Pennsylvania."
+      },
+      {
+        "url": "https://www.secretservice.gov/sites/default/files/reports/2024-11/Mission-Assurance-Inquiry-Summary.pdf",
+        "label": "Mission Assurance Inquiry: July 13 Butler rally",
+        "publisher": "United States Secret Service",
+        "authorityId": "us-secret-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Secret Service inquiry states that the assassination attempt occurred at the campaign rally in Butler, Pennsylvania."
+      }
+    ],
+    "referenceUrl": "https://www.fbi.gov/news/press-releases/butler-investigation-updates",
+    "referenceLabel": "Butler Investigation Updates",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-07-13",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The exact event date and Butler rally context were added."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q045",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 45,
+    "question": "Under Article 7 of Pakistan's Constitution, which bodies are included in 'the State' for Part II?",
+    "options": [
+      "The Federal Government, Parliament, Provincial Governments, Provincial Assemblies, and legally empowered local or other authorities",
+      "Only the Prime Minister and President",
+      "Only the Federal Government",
+      "The judiciary, press, and international organizations"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/documents/6926e060076ed_467.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Article 7 defines the State to include the listed federal, parliamentary, provincial and legally empowered local or other authorities."
+      },
+      {
+        "url": "https://www.sindhlaws.gov.pk/setup/NewsDocuments/NID-000362.pdf",
+        "label": "Constitution of Pakistan",
+        "publisher": "Law Department, Government of Sindh",
+        "authorityId": "sindh-law-department",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government-hosted constitutional text independently reproduces Article 7's complete definition."
+      }
+    ],
+    "referenceUrl": "https://na.gov.pk/uploads/documents/6926e060076ed_467.pdf",
+    "referenceLabel": "Constitution of the Islamic Republic of Pakistan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's first choice omitted Parliament and Provincial Assemblies. The option was repaired to reproduce the complete constitutional categories."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q046",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 46,
+    "question": "Which listed basin contains Pakistan's largest contiguous surface-water irrigation system?",
+    "options": [
+      "Indus Basin",
+      "Thar Desert",
+      "Balochistan Plateau",
+      "Karakoram Range"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.worldbank.org/en/news/feature/2021/03/25/managing-groundwater-resources-in-pakistan-indus-basin",
+        "label": "Managing Groundwater Resources in Pakistan's Indus Basin",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The World Bank calls the Indus Basin Irrigation System the world's largest contiguous surface-water irrigation system."
+      },
+      {
+        "url": "https://www.fao.org/4/y4263e/y4263e0c.htm",
+        "label": "Pakistan irrigation case-study summary",
+        "publisher": "Food and Agriculture Organization of the United Nations",
+        "authorityId": "fao",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "FAO states that Pakistan's surface irrigation is essentially confined to the Indus Plain and covers the world's largest contiguous irrigated area."
+      }
+    ],
+    "referenceUrl": "https://www.worldbank.org/en/news/feature/2021/03/25/managing-groundwater-resources-in-pakistan-indus-basin",
+    "referenceLabel": "Managing Groundwater Resources in Pakistan's Indus Basin",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The subjective phrase 'most fertile region' was replaced with the measurable irrigation-system fact that distinguishes the Indus Basin."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q047",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 47,
+    "question": "In which desert is Derawar Fort located?",
+    "options": [
+      "Thar Desert",
+      "Cholistan Desert",
+      "Sulaiman Range",
+      "Kharan Desert"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://punjab.gov.pk/historical-landmarks",
+        "label": "Historical Landmarks: Derawar Fort",
+        "publisher": "Punjab Portal, Government of Punjab",
+        "authorityId": "punjab-portal",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Punjab's official landmarks page places Derawar Fort in the Cholistan Desert of Bahawalpur."
+      },
+      {
+        "url": "https://whc.unesco.org/en/tentativelists/6108/",
+        "label": "Derawar and the Desert Forts of Cholistan",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco-world-heritage-centre",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO's tentative-list record identifies Derawar as the best surviving fort in the Cholistan desert landscape."
+      }
+    ],
+    "referenceUrl": "https://punjab.gov.pk/historical-landmarks",
+    "referenceLabel": "Historical Landmarks: Derawar Fort",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source wording is retained with minor normalization."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q048",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 48,
+    "question": "The Khunjerab Pass border crossing connects Pakistan with which country?",
+    "options": [
+      "India",
+      "Afghanistan",
+      "China",
+      "Iran"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://tourism.gov.pk/ptdc-tourism-projects.html",
+        "label": "Pakistan tourism routes and passes",
+        "publisher": "Pakistan Tourism Development Corporation",
+        "authorityId": "pakistan-tourism-development-corporation",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's tourism authority identifies Khunjerab Pass as the border crossing between Pakistan and China."
+      },
+      {
+        "url": "https://www.fmprc.gov.cn/eng/zy/jj/2024zt/kjgzbdfyyq/202406/t20240606_11378025.html",
+        "label": "China-Pakistan border and Khunjerab Pass",
+        "publisher": "Ministry of Foreign Affairs of China",
+        "authorityId": "china-mfa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "China's foreign ministry describes Khunjerab Pass as the land port on the China-Pakistan border."
+      }
+    ],
+    "referenceUrl": "https://tourism.gov.pk/ptdc-tourism-projects.html",
+    "referenceLabel": "Pakistan tourism routes and passes",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "This is the same verified crossing fact as an earlier source item. Prior official Pakistan-China and Gilgit-Baltistan references were reused; deduplication will determine canonical retention."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q049",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 49,
+    "question": "Which weather system commonly brings winter precipitation to Punjab and other northern parts of Pakistan?",
+    "options": [
+      "Summer monsoon only",
+      "Western disturbances",
+      "Local sea breeze",
+      "Tropical cyclones"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://weather.gov.pk/storage/uploads/cdpc/pakistan_climates/pdf/Pakistan_Climate_2024.pdf",
+        "label": "Pakistan Climate 2024",
+        "publisher": "Pakistan Meteorological Department",
+        "authorityId": "pakistan-met-department",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PMD documents western disturbances producing winter rain and snow, including precipitation over Punjab."
+      },
+      {
+        "url": "https://mausam.imd.gov.in/met-oly/Met-Olympiad-Study-Material-Senior.pdf",
+        "label": "Meteorological Olympiad Study Material",
+        "publisher": "India Meteorological Department",
+        "authorityId": "india-met-department",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IMD explains that western disturbances bring winter rain to northern plains, particularly Punjab and Haryana."
+      }
+    ],
+    "referenceUrl": "https://weather.gov.pk/storage/uploads/cdpc/pakistan_climates/pdf/Pakistan_Climate_2024.pdf",
+    "referenceLabel": "Pakistan Climate 2024",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The stem was changed from the vague 'affects Punjab' to the characteristic winter-precipitation role."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q050",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 50,
+    "question": "How many pairs of spinal nerves does the typical human nervous system have?",
+    "options": [
+      "12 pairs",
+      "24 pairs",
+      "31 pairs",
+      "33 pairs"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/mesh/68013127",
+        "label": "Spinal Nerves",
+        "publisher": "National Library of Medicine",
+        "authorityId": "us-national-library-medicine",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NLM Medical Subject Headings record defines spinal nerves as 31 paired peripheral nerves."
+      },
+      {
+        "url": "https://www.msdmanuals.com/home/quick-facts-brain-spinal-cord-and-nerve-disorders/biology-of-the-nervous-system/the-spinal-cord",
+        "label": "The Spinal Cord",
+        "publisher": "MSD Manual",
+        "authorityId": "msd-manual",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The MSD Manual independently states that 31 pairs of spinal nerves emerge from the spinal cord."
+      }
+    ],
+    "referenceUrl": "https://www.ncbi.nlm.nih.gov/mesh/68013127",
+    "referenceLabel": "Spinal Nerves",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "'Typical human body' was added to acknowledge rare anatomical variation while preserving the standard count."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q051",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 51,
+    "question": "What is the science of field-crop production and soil management called?",
+    "options": [
+      "Agronomy",
+      "Botany",
+      "Entomology",
+      "Zoology"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.nrcs.usda.gov/about/careers/agronomist",
+        "label": "Agronomist",
+        "publisher": "USDA Natural Resources Conservation Service",
+        "authorityId": "usda-nrcs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USDA NRCS defines agronomy as the science of crop production and soil management."
+      },
+      {
+        "url": "https://extension.psu.edu/business-and-operations/starting-a-farm/introduction-to-agronomy",
+        "label": "Introduction to Agronomy",
+        "publisher": "Penn State Extension",
+        "authorityId": "penn-state-extension",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Penn State Extension independently defines agronomy as the science of soil management and crop production."
+      }
+    ],
+    "referenceUrl": "https://www.nrcs.usda.gov/about/careers/agronomist",
+    "referenceLabel": "Agronomist",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source wording is retained with punctuation normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q052",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 52,
+    "question": "Which listed substance is normally the principal ingredient and solvent in a carbonated soft drink?",
+    "options": [
+      "Water",
+      "Acetone",
+      "Ether",
+      "Sodium metal"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.fda.gov/food/buy-store-serve-safe-food/carbonated-soft-drinks-what-you-should-know",
+        "label": "Carbonated soft drinks: what you should know",
+        "publisher": "US Food and Drug Administration",
+        "authorityId": "us-fda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "FDA says carbonated water is usually the first ingredient by weight in carbonated soft drinks."
+      },
+      {
+        "url": "https://openstax.org/books/chemistry-atoms-first/pages/11-1-the-dissolution-process",
+        "label": "The Dissolution Process",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that the component present in the greatest amount is the solvent and uses aqueous solutions to illustrate water as solvent."
+      }
+    ],
+    "referenceUrl": "https://www.fda.gov/food/buy-store-serve-safe-food/carbonated-soft-drinks-what-you-should-know",
+    "referenceLabel": "Carbonated soft drinks: what you should know",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source asked vaguely which solvent is 'commonly used.' The stem now identifies the principal solvent in the drink, and 'Sodium' was repaired to the chemically distinct distractor 'Sodium metal.'"
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q053",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 53,
+    "question": "Which listed expression belongs primarily to finance rather than to introductory mechanics?",
+    "options": [
+      "Acceleration",
+      "Stock value",
+      "Inertia",
+      "Motion"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.investor.gov/better-understanding-your-brokerage-account-statement",
+        "label": "Better Understanding Your Brokerage Account Statement",
+        "publisher": "US Securities and Exchange Commission, Investor.gov",
+        "authorityId": "us-sec-investor-gov",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Investor.gov defines market value for securities and explains that it is based on transaction prices."
+      },
+      {
+        "url": "https://www.finra.org/investors/insights/market-cap",
+        "label": "Market Cap Explained",
+        "publisher": "Financial Industry Regulatory Authority",
+        "authorityId": "finra",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "FINRA describes the market value of a company's outstanding stock through market capitalization."
+      }
+    ],
+    "referenceUrl": "https://www.investor.gov/better-understanding-your-brokerage-account-statement",
+    "referenceLabel": "Better Understanding Your Brokerage Account Statement",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The absolute claim that a term is 'not used in physics' was unsound because ordinary words can occur in many disciplines. It was reconstructed as a discipline-classification question for which stock value is uniquely financial."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q054",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 54,
+    "question": "What vector quantity gives the directed straight-line change from an object's initial position to its final position?",
+    "options": [
+      "Distance travelled",
+      "Speed",
+      "Velocity",
+      "Displacement"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/2-1-displacement",
+        "label": "Displacement",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines displacement as change in position and states that it has both magnitude and direction."
+      },
+      {
+        "url": "https://www.britannica.com/science/displacement-mechanics",
+        "label": "Displacement in mechanics",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica describes displacement as the directed distance from an initial to a final position."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/college-physics-2e/pages/2-1-displacement",
+    "referenceLabel": "Displacement",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source phrase 'directed shortest distance between two points' was made physically precise by naming initial and final positions and a straight-line change."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q055",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 55,
+    "question": "Which option gives three documented indicators or consequences of a warming climate?",
+    "options": [
+      "Falling sea level, expanding land ice, and fewer heatwaves",
+      "Rising sea level, expanding glaciers, and unchanged extremes",
+      "Stable sea level, increasing polar ice, and fewer floods",
+      "Rising sea level, loss of polar ice, and changes in extreme weather"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://science.nasa.gov/climate-change/what-is-climate-change/",
+        "label": "What Is Climate Change?",
+        "publisher": "NASA Science",
+        "authorityId": "nasa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA lists rising seas, polar and glacier ice loss, and changes in the frequency or severity of extreme weather among climate-change indicators."
+      },
+      {
+        "url": "https://oceanservice.noaa.gov/facts/sealevelclimate.html",
+        "label": "How is sea level rise related to climate change?",
+        "publisher": "National Oceanic and Atmospheric Administration",
+        "authorityId": "noaa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NOAA explains that warming expands seawater and melts land ice, producing sea-level rise."
+      }
+    ],
+    "referenceUrl": "https://science.nasa.gov/climate-change/what-is-climate-change/",
+    "referenceLabel": "What Is Climate Change?",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The answer-encoding choice 'All of these' was removed. The repaired options make only one complete set consistent with the cited evidence."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q056",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1230,
+    "sourceBookPage": 1209,
+    "sourceQuestionNumber": 56,
+    "question": "Which listed human activity is the main global driver of deforestation?",
+    "options": [
+      "Agricultural expansion",
+      "Natural volcanic eruptions",
+      "Wildlife migration",
+      "Ocean tides"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.fao.org/newsroom/detail/cop26-agricultural-expansion-drives-almost-90-percent-of-global-deforestation/en",
+        "label": "Agricultural expansion drives almost 90 percent of global deforestation",
+        "publisher": "Food and Agriculture Organization of the United Nations",
+        "authorityId": "fao",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "FAO reports that agricultural expansion drives almost 90 percent of global deforestation."
+      },
+      {
+        "url": "https://www.unep.org/news-and-stories/story/five-drivers-nature-crisis",
+        "label": "Five drivers of the nature crisis",
+        "publisher": "United Nations Environment Programme",
+        "authorityId": "unep",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNEP independently identifies agricultural expansion as the main driver of deforestation and forest biodiversity loss."
+      }
+    ],
+    "referenceUrl": "https://www.fao.org/newsroom/detail/cop26-agricultural-expansion-drives-almost-90-percent-of-global-deforestation/en",
+    "referenceLabel": "Agricultural expansion drives almost 90 percent of global deforestation",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The combined source option 'Urbanization and agriculture' was split. Global evidence identifies agricultural expansion, not the combined phrase, as the uniquely dominant driver; the repaired answer is now option A rather than the printed option B."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q057",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 57,
+    "question": "Who demonstrated the role of mosquitoes in transmitting malaria parasites?",
+    "options": [
+      "Louis Pasteur",
+      "Robert Koch",
+      "Sir Ronald Ross",
+      "Edward Jenner"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/medicine/1902/ross/biographical/",
+        "label": "Ronald Ross — Biographical",
+        "publisher": "Nobel Prize Outreach",
+        "authorityId": "nobel-prize",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Nobel biography states that Ronald Ross demonstrated the malaria parasite's life cycle in mosquitoes and established mosquito transmission."
+      },
+      {
+        "url": "https://collection.sciencemuseumgroup.org.uk/people/cp38864/ronald-ross",
+        "label": "Ronald Ross",
+        "publisher": "Science Museum Group",
+        "authorityId": "science-museum-group",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Science Museum records that Ross proved the link between mosquitoes and malaria in 1897."
+      }
+    ],
+    "referenceUrl": "https://www.nobelprize.org/prizes/medicine/1902/ross/biographical/",
+    "referenceLabel": "Ronald Ross — Biographical",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The stem was qualified as the demonstrated role of mosquitoes because later work identified the human-transmitting Anopheles species more precisely."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q058",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 58,
+    "question": "Which cellular structure is the site of protein synthesis?",
+    "options": [
+      "Mitochondrion",
+      "Ribosome",
+      "Golgi apparatus",
+      "Lysosome"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK9849/",
+        "label": "Translation of mRNA: The Ribosome",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NCBI textbook states that ribosomes are the sites of protein synthesis in prokaryotic and eukaryotic cells."
+      },
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Ribosome",
+        "label": "Ribosome",
+        "publisher": "National Human Genome Research Institute",
+        "authorityId": "nhgri",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NHGRI defines a ribosome as the cellular structure where proteins are made."
+      }
+    ],
+    "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK9849/",
+    "referenceLabel": "Translation of mRNA: The Ribosome",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "'Organelle' was changed to 'cellular structure' because free ribosomes are not membrane-bound organelles, while the tested answer remains ribosome."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q059",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 59,
+    "question": "Which listed value is closest to the commonly cited resting blood-flow velocity in capillaries?",
+    "options": [
+      "0.01 mm/s",
+      "1 mm/s",
+      "10 mm/s",
+      "100 mm/s"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK54123/?report=reader",
+        "label": "Structure and Function of Exchange Microvessels",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NCBI chapter gives capillary blood-flow velocities of about 0.3 to 1 mm/s."
+      },
+      {
+        "url": "https://www.sciencedirect.com/topics/neuroscience/arteriole",
+        "label": "Capillary blood-flow velocity",
+        "publisher": "Elsevier ScienceDirect Topics",
+        "authorityId": "elsevier",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The cited physiology text gives an average capillary blood-flow velocity of approximately 1 mm/s while noting variation."
+      }
+    ],
+    "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK54123/?report=reader",
+    "referenceLabel": "Structure and Function of Exchange Microvessels",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The source's single approximate value was explicitly framed as the closest listed resting value. Capillary velocity varies by tissue, vessel and measurement method."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q060",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 60,
+    "question": "Through the bite of which infected vector is malaria ordinarily transmitted to humans?",
+    "options": [
+      "A female Aedes mosquito",
+      "A tsetse fly",
+      "A female Anopheles mosquito",
+      "A sand fly"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.who.int/news-room/questions-and-answers/item/malaria",
+        "label": "Malaria questions and answers",
+        "publisher": "World Health Organization",
+        "authorityId": "who",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WHO states that Plasmodium parasites are spread through bites of infected female Anopheles mosquitoes."
+      },
+      {
+        "url": "https://www.cdc.gov/malaria/causes/index.html",
+        "label": "How Malaria Spreads",
+        "publisher": "US Centers for Disease Control and Prevention",
+        "authorityId": "us-cdc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CDC independently states that only female Anopheles mosquitoes spread mosquito-transmitted malaria between people."
+      }
+    ],
+    "referenceUrl": "https://www.who.int/news-room/questions-and-answers/item/malaria",
+    "referenceLabel": "Malaria questions and answers",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source mixed the causal parasite with its vector and therefore allowed two related readings. It was reconstructed to ask explicitly for the vector; the correct choice moves from printed option D to repaired option C."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q061",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 61,
+    "question": "Which gland secretes digestive enzymes for carbohydrates, proteins and fats, together with bicarbonate that helps neutralize stomach acid in the duodenum?",
+    "options": [
+      "Pancreas",
+      "Gallbladder",
+      "Thyroid",
+      "Liver"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.hopkinsmedicine.org/health/conditions-and-diseases/the-pancreas",
+        "label": "The Pancreas",
+        "publisher": "Johns Hopkins Medicine",
+        "authorityId": "johns-hopkins-medicine",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Johns Hopkins explains that pancreatic exocrine tissue supplies enzymes for carbohydrates, fats and proteins and bicarbonate to neutralize acid."
+      },
+      {
+        "url": "https://www.msdmanuals.com/home/digestive-disorders/biology-of-the-digestive-system/pancreas",
+        "label": "Pancreas",
+        "publisher": "MSD Manual",
+        "authorityId": "msd-manual",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "MSD independently identifies pancreatic amylase, lipase and trypsin and the pancreas's bicarbonate secretion."
+      }
+    ],
+    "referenceUrl": "https://www.hopkinsmedicine.org/health/conditions-and-diseases/the-pancreas",
+    "referenceLabel": "The Pancreas",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source wording was retained with the destination of the bicarbonate action added for precision."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q062",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 62,
+    "question": "What does the IF function do in Microsoft Excel?",
+    "options": [
+      "Tests a condition and returns one value for TRUE and another for FALSE",
+      "Adds every number in a range",
+      "Calculates the arithmetic mean of a range",
+      "Counts every nonblank cell in a range"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/excel/get-started/if-function",
+        "label": "IF function",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft documents IF as testing a logical condition and returning values according to TRUE or FALSE."
+      },
+      {
+        "url": "https://support.google.com/docs/answer/3093364?hl=en",
+        "label": "IF function",
+        "publisher": "Google Docs Editors Help",
+        "authorityId": "google",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Google's independent spreadsheet documentation gives the same IF semantics: one value for TRUE and another for FALSE."
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-us/excel/get-started/if-function",
+    "referenceLabel": "IF function",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The answer was rewritten to state both possible logical outcomes precisely."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q063",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 63,
+    "question": "In desktop Microsoft PowerPoint 2016–2024, on which ribbon tab is the Themes gallery found?",
+    "options": [
+      "Home",
+      "Design",
+      "Insert",
+      "View"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-US/PowerPoint/create-your-own-theme-in-powerpoint",
+        "label": "Create your own theme in PowerPoint",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft states that PowerPoint themes are located in the Themes gallery on the Design tab."
+      },
+      {
+        "url": "https://uomustansiriyah.edu.iq/media/lectures/4/4_2023_09_22%2102_35_31_PM.pdf",
+        "label": "Microsoft Office Specialist PowerPoint 2016",
+        "publisher": "Mustansiriyah University",
+        "authorityId": "mustansiriyah-university",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university-hosted PowerPoint 2016 course identifies built-in themes on the Design tab."
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-US/PowerPoint/create-your-own-theme-in-powerpoint",
+    "referenceLabel": "Create your own theme in PowerPoint",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "PowerPoint 2016–2024",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The desktop version range was added because ribbon placement is interface-specific."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q064",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 64,
+    "question": "In desktop Microsoft Word 2016–2024, which ribbon tab contains the Header and Footer commands?",
+    "options": [
+      "Home",
+      "Insert",
+      "Layout",
+      "View"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-US/Word/training/insert-a-header-or-footer",
+        "label": "Insert a header or footer",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft instructs desktop Word users to choose Insert and then Header or Footer."
+      },
+      {
+        "url": "https://oakland.edu/media/Oakland/Assets/Grad/files/Thesis-Dissertations/Microsoft-Office-Tutorials/Microsoft20Office20Tutorials.pdf",
+        "label": "Microsoft Office Tutorials: Setting the Header and Footer",
+        "publisher": "Oakland University",
+        "authorityId": "oakland-university",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oakland University's Word tutorial shows Header and Footer commands reached from the Insert tab."
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-US/Word/training/insert-a-header-or-footer",
+    "referenceLabel": "Insert a header or footer",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "Word 2016–2024",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The desktop version range was added because ribbon placement is interface-specific."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q065",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 65,
+    "question": "With its installed default settings, how many worksheets does a new blank workbook contain in Excel 2013?",
+    "options": [
+      "1",
+      "3",
+      "5",
+      "10"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.microsoftpressstore.com/content/images/9780735681019/samplepages/9780735681019.pdf",
+        "label": "Microsoft Excel 2013 Step by Step sample",
+        "publisher": "Microsoft Press",
+        "authorityId": "microsoft-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft Press states that the default workbook in Excel 2013 has one worksheet."
+      },
+      {
+        "url": "https://ils.unc.edu/cws/Handouts/Microsoft%20Office/Excel%20Basics/2013/Excel-Basics-2013.pdf",
+        "label": "Excel Basics: Microsoft Office 2013",
+        "publisher": "University of North Carolina at Chapel Hill",
+        "authorityId": "unc-chapel-hill",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently states that one worksheet tab appears by default in a new workbook."
+      }
+    ],
+    "referenceUrl": "https://www.microsoftpressstore.com/content/images/9780735681019/samplepages/9780735681019.pdf",
+    "referenceLabel": "Microsoft Excel 2013 Step by Step sample",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "Excel 2013",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's phrase 'Excel 2013 and later' was too broad because defaults can be changed and future behavior is not fixed. It is limited to Excel 2013 with installed defaults."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q066",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 66,
+    "question": "In desktop Microsoft Word 2016–2024, which ribbon tab contains the New Comment command?",
+    "options": [
+      "Home",
+      "Insert",
+      "Review",
+      "View"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/video-add-and-review-comments-07083ba8-0e36-4d9d-aba8-d9ebfd84d6d4",
+        "label": "Add and review comments",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft's Word instructions say to select Review and then New Comment."
+      },
+      {
+        "url": "https://portal.lancaster.ac.uk/ask/word-review/",
+        "label": "Reviewing and revising a Microsoft Word document",
+        "publisher": "Lancaster University",
+        "authorityId": "lancaster-university",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Lancaster University's Word guide independently directs users to Review > New Comment."
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-us/office/video-add-and-review-comments-07083ba8-0e36-4d9d-aba8-d9ebfd84d6d4",
+    "referenceLabel": "Add and review comments",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "Word 2016–2024",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The desktop version range was added because ribbon placement is interface-specific."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q067",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 67,
+    "question": "If one-fifth of 3,000 keyboards are not working, how many are working?",
+    "options": [
+      "600",
+      "1,500",
+      "2,000",
+      "2,400"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-2-multiply-and-divide-fractions",
+        "label": "Multiply and Divide Fractions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the fraction-multiplication rule used to calculate one-fifth of 3,000."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/algebra-basics/basic-alg-foundations/alg-basics-decimals/v/taking-a-percentage-example",
+        "label": "Percent of a whole number",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently demonstrates finding a fractional or percentage part of a whole before subtracting from the total."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-2-multiply-and-divide-fractions",
+    "referenceLabel": "Multiply and Divide Fractions",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Direct calculation: (1/5) × 3,000 = 600 are not working, so 3,000 − 600 = 2,400 are working. Thousands separators were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q068",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 68,
+    "question": "If the principal is $1,000, the annual simple-interest rate is 2%, and the time is 3 years, what is the simple interest?",
+    "options": [
+      "$20",
+      "$30",
+      "$60",
+      "$120"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-3-simple-interest",
+        "label": "Simple Interest",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the simple-interest relationship I = Prt."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/up-class-6/x2ec1f0ce05d75c9d%3Acommercial-math/x2ec1f0ce05d75c9d%3Acommercial-math-12-j/v/finding-simple-interest-for-many-years-comparing-quantities-class-7-india-khan-academy",
+        "label": "Finding simple interest for many years",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently derives simple interest as principal times annual rate times years."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/6-3-simple-interest",
+    "referenceLabel": "Simple Interest",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Using I = Prt gives 1,000 × 0.02 × 3 = $60."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q069",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 69,
+    "question": "What is (1 + 1/x)(1 + 1/(x+1))(1 + 1/(x+2))(1 + 1/(x+3)) equal to, where x, x+1, x+2 and x+3 are nonzero?",
+    "options": [
+      "1/x",
+      "(x+4)/x",
+      "x+4",
+      "1 + 1/(x+4)"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions",
+        "label": "Multiply and Divide Rational Expressions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains factoring, multiplying and cancelling common factors in rational expressions."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/engageny-precalc/precalc-3/precalc-3b-mul-div-rational/a/multiplying-rational-expressions",
+        "label": "Multiplying rational expressions",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently demonstrates factoring and cancelling common numerator and denominator factors."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions",
+    "referenceLabel": "Multiply and Divide Rational Expressions",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Rewrite the factors as (x+1)/x, (x+2)/(x+1), (x+3)/(x+2), and (x+4)/(x+3). The intervening factors cancel, leaving (x+4)/x. Domain restrictions were stated explicitly."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q070",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1231,
+    "sourceBookPage": 1210,
+    "sourceQuestionNumber": 70,
+    "question": "If p = a cos(θ) + b sin(θ) and q = a sin(θ) − b cos(θ), what is p² + q²?",
+    "options": [
+      "a² + b²",
+      "a² − b²",
+      "2a² + 2b²",
+      "a² + 2ab + b²"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry/pages/a-proofs-identities-and-toolkit-functions",
+        "label": "Trigonometric Identities",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax lists the Pythagorean identity cos²θ + sin²θ = 1 used in the simplification."
+      },
+      {
+        "url": "https://www.khanacademy.org/v/pythagorean-trig-identity-from-unit-circle",
+        "label": "Proof of the Pythagorean trig identity",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently proves sin²θ + cos²θ = 1."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry/pages/a-proofs-identities-and-toolkit-functions",
+    "referenceLabel": "Trigonometric Identities",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Expansion gives a²(cos²θ+sin²θ) + b²(sin²θ+cos²θ); the cross terms cancel, so the result is a²+b². Mathematical symbols were restored from OCR prose."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q071",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1232,
+    "sourceBookPage": 1211,
+    "sourceQuestionNumber": 71,
+    "question": "What is the simplified ratio of 2 km to 400 m?",
+    "options": [
+      "10:1",
+      "5:1",
+      "2:1",
+      "1:2"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.nist.gov/pml/owm/si-units-length",
+        "label": "SI Units: Length",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST documents the SI kilo prefix, enabling 2 km to be converted to 2,000 m."
+      },
+      {
+        "url": "https://www.mathsisfun.com/numbers/ratio.html",
+        "label": "Ratios",
+        "publisher": "Math Is Fun",
+        "authorityId": "math-is-fun",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ratio guide explains comparing like units and simplifying both terms by a common factor."
+      }
+    ],
+    "referenceUrl": "https://www.nist.gov/pml/owm/si-units-length",
+    "referenceLabel": "SI Units: Length",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Convert 2 km to 2,000 m; 2,000:400 simplifies by 400 to 5:1."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q072",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1232,
+    "sourceBookPage": 1211,
+    "sourceQuestionNumber": 72,
+    "question": "From a point on level ground 20 m from a vertical tower's base, the angle of elevation to the top is 45°. Ignoring observer height, what is the tower's height?",
+    "options": [
+      "10 m",
+      "20 m",
+      "30 m",
+      "40 m"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+        "label": "Right Triangle Trigonometry",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines tangent as opposite divided by adjacent for a right triangle."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/ncert-class-10/xd6a17b08edbd2443%3Asome-applications-of-trigonometry-ncert-new/xd6a17b08edbd2443%3Aheights-and-distances/v/intro-to-heights-and-distances",
+        "label": "Introduction to heights and distances",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy applies right-triangle trigonometry to angles of elevation and notes tan 45° = 1."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+    "referenceLabel": "Right Triangle Trigonometry",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "tan 45° = height/20 = 1, so height = 20 m. Level ground, a vertical tower and ignored observer height were added to make the geometry complete."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q073",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1232,
+    "sourceBookPage": 1211,
+    "sourceQuestionNumber": 73,
+    "question": "If y is directly proportional to x² and y = 20 when x = 2, what is y when x = 3?",
+    "options": [
+      "20",
+      "35",
+      "45",
+      "55"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/8-9-use-direct-and-inverse-variation",
+        "label": "Use Direct and Inverse Variation",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax states that direct variation with the square has the form y = kx²."
+      },
+      {
+        "url": "https://www.mathsisfun.com/algebra/directly-inversely-proportional.html",
+        "label": "Directly and Inversely Proportional",
+        "publisher": "Math Is Fun",
+        "authorityId": "math-is-fun",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent guide explains proportional relationships and notes that a quantity may be proportional to a square."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/8-9-use-direct-and-inverse-variation",
+    "referenceLabel": "Use Direct and Inverse Variation",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "From 20 = k(2²), k = 5; therefore y = 5(3²) = 45. Mathematical notation was restored."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q074",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1232,
+    "sourceBookPage": 1211,
+    "sourceQuestionNumber": 74,
+    "question": "At the start of a three-year interval, the average age of five family members was 17. A baby was born during the interval, and at its end the average age of all six was 17. How old was the baby at the end of the interval?",
+    "options": [
+      "2 years",
+      "1.5 years",
+      "2.5 years",
+      "3 years"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra/pages/5-5-averages-and-probability",
+        "label": "Averages and Probability",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines mean as the sum of the values divided by their count and illustrates age-average calculations."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/statistics-probability/statistical-basics/mean/v/mean",
+        "label": "Mean",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently defines mean as the sum of all values divided by the number of values."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra/pages/5-5-averages-and-probability",
+    "referenceLabel": "Averages and Probability",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "At the interval's start the five ages totaled 5×17=85; three years later those five totaled 100. The six-person total was 6×17=102, leaving the baby aged 2. The relative timing was rewritten without tying the arithmetic to the access date."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q075",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1232,
+    "sourceBookPage": 1211,
+    "sourceQuestionNumber": 75,
+    "question": "If a square has side length 5 units, what is its area?",
+    "options": [
+      "10 square units",
+      "20 square units",
+      "25 square units",
+      "30 square units"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/10-6-area",
+        "label": "Area of Quadrilaterals",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the area of a square with side s as A = s × s."
+      },
+      {
+        "url": "https://www.mathsisfun.com/geometry/square.html",
+        "label": "Square",
+        "publisher": "Math Is Fun",
+        "authorityId": "math-is-fun",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent geometry reference gives a square's area as side length squared."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/10-6-area",
+    "referenceLabel": "Area of Quadrilaterals",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Using A = s² gives 5² = 25 square units."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q076",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 76,
+    "question": "What is the distance of the point (2, 3) from the x-axis?",
+    "options": [
+      "2 units",
+      "3 units",
+      "5 units",
+      "0 units"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra/pages/2-1-the-rectangular-coordinate-systems-and-graphs",
+        "label": "The Rectangular Coordinate Systems and Graphs",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that an ordered pair gives horizontal and vertical coordinates and that the y-coordinate locates a point vertically from the x-axis."
+      },
+      {
+        "url": "https://www.mathsisfun.com/data/cartesian-coordinates.html",
+        "label": "Cartesian Coordinates",
+        "publisher": "Math Is Fun",
+        "authorityId": "math-is-fun",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The coordinate guide independently identifies the ordinate, or y-coordinate, as the vertical distance above or below the horizontal axis."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/college-algebra/pages/2-1-the-rectangular-coordinate-systems-and-graphs",
+    "referenceLabel": "The Rectangular Coordinate Systems and Graphs",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The point's y-coordinate is 3, so its perpendicular distance from the x-axis is |3| = 3 units. Spacing and units were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q077",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 77,
+    "question": "She was confident ____ her success.",
+    "options": [
+      "of",
+      "to",
+      "with",
+      "for"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/confident",
+        "label": "confident adjective",
+        "publisher": "Oxford Learner's Dictionaries",
+        "authorityId": "oxford-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford records the construction 'confident of something' and gives confident of victory as an example."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/confident",
+        "label": "confident",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge independently gives 'confident of victory' as the relevant adjective-plus-preposition pattern."
+      }
+    ],
+    "referenceUrl": "https://www.oxfordlearnersdictionaries.com/us/definition/english/confident",
+    "referenceLabel": "confident adjective",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The scan's printed key label says B, but its printed answer text says 'of', which is source option A. Independent dictionaries confirm option A, so the verified index corrects the internally inconsistent key."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q078",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 78,
+    "question": "Which phrase is closest in meaning to 'scathing'?",
+    "options": [
+      "Severely critical",
+      "Gentle and mild",
+      "Strongly supportive",
+      "Quietly respectful"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/scathing",
+        "label": "scathing",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines scathing language as criticizing someone or something severely and unkindly."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/scathing",
+        "label": "scathing",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines scathing as bitterly severe."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/scathing",
+    "referenceLabel": "scathing",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source answer 'Scornful' was related but less exact. The correct option was repaired to the directly supported phrase 'Severely critical' and the distractors were made parallel."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q079",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 79,
+    "question": "What does the expression 'bandy words' mean?",
+    "options": [
+      "To tell a deliberate lie",
+      "To hint without speaking plainly",
+      "To speak incoherently",
+      "To argue or exchange angry words"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/bandy%20words",
+        "label": "bandy words",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines bandy words as exchanging words, especially in an angry argument."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english/bandy",
+        "label": "bandy",
+        "publisher": "Collins English Dictionary",
+        "authorityId": "collins",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently explains that people who bandy words argue with each other."
+      }
+    ],
+    "referenceUrl": "https://www.merriam-webster.com/dictionary/bandy%20words",
+    "referenceLabel": "bandy words",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source meaning was retained and sharpened to match the established expression."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q080",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 80,
+    "question": "What is the seat behind a motorcycle rider for a passenger called?",
+    "options": [
+      "Saddle",
+      "Cushion",
+      "Bridle",
+      "Pillion"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/pillion",
+        "label": "pillion",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a pillion as a seat or place behind the rider of a motorcycle for a passenger."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/pillion",
+        "label": "pillion",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines pillion as a motorcycle or bicycle seat for a passenger behind the operator."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/pillion",
+    "referenceLabel": "pillion",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source wording was simplified without changing the tested fact."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q081",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 81,
+    "question": "Which word is the direct antonym of 'zenith'?",
+    "options": [
+      "Peak",
+      "Summit",
+      "Nadir",
+      "Pinnacle"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/zenith",
+        "label": "Synonyms and antonyms of zenith",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge lists nadir as an antonym of zenith."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/nadir",
+        "label": "nadir",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines nadir as the lowest point and identifies it as the point opposite the zenith."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/us/thesaurus/zenith",
+    "referenceLabel": "Synonyms and antonyms of zenith",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The broad source answer 'Bottom' was replaced by the exact lexical antonym 'Nadir.' The verified index remains C."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q082",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 82,
+    "question": "Which action is the clearest opposite of robbing someone of property?",
+    "options": [
+      "Stealing the property",
+      "Taking the property",
+      "Returning the property",
+      "Hiding the property"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/rob",
+        "label": "rob",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines rob as taking money or property illegally from a person or place."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/restore",
+        "label": "restore",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines restore as giving back or returning something, supporting return as the opposite action."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/rob",
+    "referenceLabel": "rob",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's one-word antonym set was imprecise: 'give' is much broader than the inverse of taking property. The stem and options now test the uniquely opposite action, returning the property."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q083",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 83,
+    "question": "Which preposition completes the standard phrase: 'Let us sit ____ the shade of a tree for some time'?",
+    "options": [
+      "under",
+      "in",
+      "on",
+      "at"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/shade",
+        "label": "shade",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge uses 'in the shade' for a place protected from direct sunlight."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/shade",
+        "label": "shade",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently illustrates the idiomatic construction 'sit in the shade.'"
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/shade",
+    "referenceLabel": "shade",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source asked which whole sentence was grammatically correct, although regional use could make 'under the shade' debatable. It was narrowed to the standard dictionary-attested prepositional phrase."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q084",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 84,
+    "question": "Which word is closest in meaning to 'vulgar' when it describes rude or offensive language or behaviour?",
+    "options": [
+      "Decent",
+      "Indecent",
+      "Elegant",
+      "Respectful"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/vulgar",
+        "label": "vulgar",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines vulgar language or behaviour as rude and likely to upset or anger people."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/vulgar",
+        "label": "vulgar",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines vulgar as offensive in language or conduct and lacking good taste."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/vulgar",
+    "referenceLabel": "vulgar",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source referred to an absent context. The repaired stem supplies the relevant language-and-behaviour sense, under which 'Indecent' is the uniquely closest listed choice."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q085",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 85,
+    "question": "What does the adjective 'sartorial' mean?",
+    "options": [
+      "Relating to clothes or tailoring",
+      "Relating to stars and planets",
+      "Relating to rocks and minerals",
+      "Relating to cooking methods"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/sartorial",
+        "label": "sartorial",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines sartorial as relating to a tailor, tailored clothes, or dress."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english/sartorial",
+        "label": "sartorial",
+        "publisher": "Collins English Dictionary",
+        "authorityId": "collins",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently defines sartorial as relating to clothes, dress, or tailoring."
+      }
+    ],
+    "referenceUrl": "https://www.merriam-webster.com/dictionary/sartorial",
+    "referenceLabel": "sartorial",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source incorrectly presented 'Homespun' as a general antonym of sartorial. Because sartorial is about clothing or tailoring rather than elegance, the item was reconstructed as a definition question and the answer changes from printed D to repaired A."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q086",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 86,
+    "question": "Which word is closest in meaning to 'groundbreaking'?",
+    "options": [
+      "Ordinary",
+      "Innovative",
+      "Common",
+      "Traditional"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/groundbreaking",
+        "label": "groundbreaking",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines groundbreaking as using new methods or achieving new results."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/groundbreaking",
+        "label": "groundbreaking",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines groundbreaking as introducing new ideas or methods."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/groundbreaking",
+    "referenceLabel": "groundbreaking",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source answer 'Innovative' is independently supported; wording was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q087",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 87,
+    "question": "Which word is an antonym of 'concord' in the sense of agreement?",
+    "options": [
+      "Harmony",
+      "Agreement",
+      "Unity",
+      "Discord"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/concord",
+        "label": "concord",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines concord as agreement or peace between people or groups."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/discord",
+        "label": "discord",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines discord as lack of agreement or harmony."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/concord",
+    "referenceLabel": "concord",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The relevant 'agreement' sense of concord was stated explicitly; the printed answer Discord is correct."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q088",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 88,
+    "question": "Those people always ____ to find something positive in every event.",
+    "options": [
+      "try",
+      "tries",
+      "is trying",
+      "has tried"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/subject-verb-agreement",
+        "label": "Subject-verb agreement",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that the number of the subject determines the verb and illustrates plural subjects with the base present-tense form."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple",
+        "label": "Present simple",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council shows that plural subjects use the base present-simple verb, while -s or -es is added only for he, she, or it."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/subject-verb-agreement",
+    "referenceLabel": "Subject-verb agreement",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "In the scan, the relative clause modifies plural 'people,' so the needed verb would be 'try,' but every listed option used a different verb and the printed key chose singular 'tries.' The sentence and options were repaired to test unambiguous plural subject-verb agreement."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q089",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 89,
+    "question": "An ____ person cannot read or write.",
+    "options": [
+      "Illegible",
+      "Legible",
+      "Literate",
+      "Illiterate"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/illiterate",
+        "label": "illiterate",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines an illiterate person as unable to read and write."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/illiterate",
+        "label": "illiterate",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines illiterate as having little or no education, especially being unable to read or write."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/illiterate",
+    "referenceLabel": "illiterate",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source item and printed answer were retained with punctuation normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q090",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 90,
+    "question": "Which word is closest in meaning to 'scot-free'?",
+    "options": [
+      "Captured",
+      "Punished",
+      "Unpunished",
+      "Guilty"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/scot-free",
+        "label": "scot-free",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines getting away scot-free as escaping punishment for wrongdoing."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/scot-free",
+        "label": "scot-free",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines scot-free as completely free from obligation, harm, or penalty."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/scot-free",
+    "referenceLabel": "scot-free",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The printed answer 'Unpunished' is the closest listed equivalent; wording was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q091",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 91,
+    "question": "Which word correctly completes the sentence: 'A giraffe is ____ than a goat'?",
+    "options": [
+      "taller",
+      "more tall",
+      "tall",
+      "tallest"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/comparison-adjectives-bigger-biggest-more-interesting",
+        "label": "Comparison: adjectives",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that one-syllable adjectives such as tall normally form the comparative with -er and gives taller as an example."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/sites/podcasts/files/learnenglish-podcasts-elementary-02-06-support-pack-transcript_1.pdf",
+        "label": "Comparative adjectives: support materials",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council explicitly identifies taller as the comparative form of tall and uses it with than."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/us/grammar/british-grammar/comparison-adjectives-bigger-biggest-more-interesting",
+    "referenceLabel": "Comparison: adjectives",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source used 'clever,' for which both cleverer and more clever are accepted, so two choices could be correct. It was reconstructed with the regular one-syllable adjective tall, leaving one correct comparative."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q092",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 92,
+    "question": "What does the idiom 'on cloud nine' mean?",
+    "options": [
+      "To be lost in thought",
+      "To travel in space",
+      "To be extremely happy",
+      "To be far from home"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/on-cloud-nine",
+        "label": "on cloud nine",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines being on cloud nine as being extremely happy and excited."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/cloud%20nine",
+        "label": "cloud nine",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines cloud nine as a feeling of well-being or elation."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/on-cloud-nine",
+    "referenceLabel": "on cloud nine",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source item and printed answer were retained with wording normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0170-Q093",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0170",
+    "sourcePdfPage": 1233,
+    "sourceBookPage": 1212,
+    "sourceQuestionNumber": 93,
+    "question": "An infant depends ____ its mother for food.",
+    "options": [
+      "at",
+      "on",
+      "for",
+      "to"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/depend",
+        "label": "depend",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge documents the phrasal construction depend on someone or something."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/depend",
+        "label": "depend",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently records depend on or depend upon as the established construction."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/depend",
+    "referenceLabel": "depend",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The scan included both 'on' and 'upon,' which are accepted variants and therefore made two answers possible. 'Upon' was replaced by a non-equivalent distractor so that 'on' is uniquely correct."
+  }
+]

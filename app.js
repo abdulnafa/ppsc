@@ -3,13 +3,20 @@
 
   var OPTION_LABELS = ["A", "B", "C", "D"];
   var DIFFICULT_STORAGE_KEY = "ppsc-prep:difficult-question-ids:v1";
+  var SESSION_STORAGE_KEY = "ppsc-prep:active-session:v1";
+  var SESSION_STORAGE_VERSION = 1;
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
   var knownQuestionIds = new Set(allQuestions.map(function (question) {
     return String(question.id);
   }));
+  var questionsById = new Map(allQuestions.map(function (question) {
+    return [String(question.id), question];
+  }));
+  var questionBankSignature = buildQuestionBankSignature();
   var difficultQuestionIds = new Set();
+  var activeSessionSnapshot = null;
   var previousQuestionOrders = Object.create(null);
   var previousOptionOrders = Object.create(null);
 
@@ -41,6 +48,10 @@
     elements.quizScreen = firstElement(["#quiz-screen", "[data-screen='quiz']"]);
     elements.resultScreen = firstElement(["#result-screen", "#results-screen", "[data-screen='results']"]);
     elements.categoryGrid = firstElement(["#category-grid", "[data-category-grid]"]);
+    elements.continueSessionCard = firstElement(["#continue-session-card", "[data-continue-session-card]"]);
+    elements.continueSessionButton = firstElement(["#continue-session-button", "[data-continue-session]"]);
+    elements.continueSessionTitle = firstElement(["#continue-session-title", "[data-continue-session-title]"]);
+    elements.continueSessionMeta = firstElement(["#continue-session-meta", "[data-continue-session-meta]"]);
     elements.modeCategory = firstElement(["#mode-category", "[data-mode-category]"]);
     elements.learnModeButton = firstElement(["#learn-mode-button", "[data-start-learn]"]);
     elements.quizModeButton = firstElement(["#quiz-mode-button", "[data-start-quiz]"]);
@@ -84,6 +95,258 @@
     element.hidden = hidden;
     element.setAttribute("aria-hidden", hidden ? "true" : "false");
     element.classList.toggle("is-active", !hidden);
+  }
+
+  function hashText(hash, value) {
+    var text = String(value);
+    for (var index = 0; index < text.length; index += 1) {
+      hash ^= text.charCodeAt(index);
+      hash = Math.imul(hash, 16777619);
+    }
+    return hash;
+  }
+
+  function buildQuestionBankSignature() {
+    var hash = 2166136261;
+    allQuestions.forEach(function (question) {
+      hash = hashText(hash, JSON.stringify([
+        question.id,
+        question.categoryId,
+        question.question,
+        question.correctOptionIndex,
+        question.options
+      ]));
+      hash = hashText(hash, "\n");
+    });
+    return "v1:" + allQuestions.length + ":" + (hash >>> 0).toString(16);
+  }
+
+  function isIndexPermutation(value) {
+    return Array.isArray(value)
+      && value.length === OPTION_LABELS.length
+      && value.every(function (index) {
+        return Number.isInteger(index) && index >= 0 && index < OPTION_LABELS.length;
+      })
+      && new Set(value).size === OPTION_LABELS.length;
+  }
+
+  function sessionModeLabel(mode, scope) {
+    var modeName = mode === "learn" ? "Learn" : "Quiz";
+    return scope === "difficult" ? "Difficult " + modeName : modeName;
+  }
+
+  function updateContinueSessionUI() {
+    var snapshot = activeSessionSnapshot;
+    var category = snapshot ? findCategory(snapshot.categoryId) : null;
+    if (!snapshot || !category) {
+      setHidden(elements.continueSessionCard, true);
+      return;
+    }
+
+    var currentNumber = Math.min(snapshot.currentIndex + 1, snapshot.questionIds.length);
+    var modeLabel = sessionModeLabel(snapshot.mode, snapshot.scope);
+    if (elements.continueSessionTitle) {
+      elements.continueSessionTitle.textContent = "Continue " + category.name;
+    }
+    if (elements.continueSessionMeta) {
+      elements.continueSessionMeta.textContent = modeLabel + " \u00b7 Question "
+        + currentNumber + " of " + snapshot.questionIds.length;
+    }
+    if (elements.continueSessionButton) {
+      elements.continueSessionButton.setAttribute(
+        "aria-label",
+        "Continue " + category.name + " " + modeLabel + ", question "
+          + currentNumber + " of " + snapshot.questionIds.length
+      );
+    }
+    setHidden(elements.continueSessionCard, false);
+  }
+
+  function removeStoredActiveSession() {
+    try {
+      window.localStorage.removeItem(SESSION_STORAGE_KEY);
+    } catch (error) {
+      // Storage can be unavailable. The in-memory state is still cleared.
+    }
+    activeSessionSnapshot = null;
+    updateContinueSessionUI();
+  }
+
+  function normalizeStoredSession(savedValue) {
+    if (!savedValue || typeof savedValue !== "object" || Array.isArray(savedValue)) return null;
+    if (savedValue.version !== SESSION_STORAGE_VERSION) return null;
+    if (savedValue.bankSignature !== questionBankSignature) return null;
+    if (savedValue.mode !== "learn" && savedValue.mode !== "quiz") return null;
+    if (savedValue.scope !== "all" && savedValue.scope !== "difficult") return null;
+
+    var category = findCategory(String(savedValue.categoryId || ""));
+    if (!category) return null;
+    if (!Array.isArray(savedValue.questionIds) || savedValue.questionIds.length === 0) return null;
+
+    var questionIds = savedValue.questionIds.map(String);
+    if (new Set(questionIds).size !== questionIds.length) return null;
+    var canonicalQuestions = questionIds.map(function (questionId) {
+      return questionsById.get(questionId) || null;
+    });
+    if (canonicalQuestions.some(function (question) {
+      return !question || question.categoryId !== category.id;
+    })) return null;
+
+    var allCategoryIds = allQuestions.filter(function (question) {
+      return question.categoryId === category.id;
+    }).map(function (question) {
+      return String(question.id);
+    });
+    if (savedValue.scope === "all") {
+      var savedIdSet = new Set(questionIds);
+      if (
+        questionIds.length !== allCategoryIds.length
+        || allCategoryIds.some(function (questionId) { return !savedIdSet.has(questionId); })
+      ) return null;
+    }
+
+    if (savedValue.mode === "learn") {
+      var includedIds = new Set(questionIds);
+      var expectedLearnOrder = allCategoryIds.filter(function (questionId) {
+        return includedIds.has(questionId);
+      });
+      if (orderKey(questionIds, function (questionId) { return questionId; })
+        !== orderKey(expectedLearnOrder, function (questionId) { return questionId; })) return null;
+    }
+
+    var sessionQuestions = canonicalQuestions;
+    var optionOrders = null;
+    if (savedValue.mode === "quiz") {
+      if (!Array.isArray(savedValue.optionOrders) || savedValue.optionOrders.length !== questionIds.length) return null;
+      optionOrders = savedValue.optionOrders.map(function (optionOrder) {
+        return Array.isArray(optionOrder) ? optionOrder.slice() : optionOrder;
+      });
+      if (optionOrders.some(function (optionOrder) { return !isIndexPermutation(optionOrder); })) return null;
+      sessionQuestions = canonicalQuestions.map(function (question, index) {
+        return quizQuestionWithOrder(question, optionOrders[index]);
+      });
+    }
+
+    var currentIndex = savedValue.currentIndex;
+    var selectedIndex = savedValue.selectedIndex;
+    var submitted = savedValue.submitted;
+    var score = savedValue.score;
+    if (!Number.isInteger(currentIndex) || currentIndex < 0 || currentIndex >= sessionQuestions.length) return null;
+    if (selectedIndex !== null && (!Number.isInteger(selectedIndex) || selectedIndex < 0 || selectedIndex >= OPTION_LABELS.length)) return null;
+    if (typeof submitted !== "boolean") return null;
+    if (!Number.isInteger(score) || score < 0) return null;
+
+    if (savedValue.mode === "learn") {
+      if (!submitted || score !== 0 || selectedIndex !== sessionQuestions[currentIndex].correctOptionIndex) return null;
+    } else {
+      if (submitted && selectedIndex === null) return null;
+      var currentPoint = submitted && selectedIndex === sessionQuestions[currentIndex].correctOptionIndex ? 1 : 0;
+      var previousScore = score - currentPoint;
+      if (previousScore < 0 || previousScore > currentIndex) return null;
+    }
+
+    var snapshot = {
+      version: SESSION_STORAGE_VERSION,
+      bankSignature: questionBankSignature,
+      categoryId: category.id,
+      mode: savedValue.mode,
+      scope: savedValue.scope,
+      questionIds: questionIds,
+      optionOrders: optionOrders,
+      currentIndex: currentIndex,
+      selectedIndex: selectedIndex,
+      submitted: submitted,
+      score: score,
+      savedAt: Number.isFinite(savedValue.savedAt) ? savedValue.savedAt : 0
+    };
+
+    return { snapshot: snapshot, category: category, questions: sessionQuestions };
+  }
+
+  function loadActiveSession() {
+    try {
+      var rawValue = window.localStorage.getItem(SESSION_STORAGE_KEY);
+      if (!rawValue) {
+        activeSessionSnapshot = null;
+        return null;
+      }
+      var normalized = normalizeStoredSession(JSON.parse(rawValue));
+      if (!normalized) {
+        removeStoredActiveSession();
+        return null;
+      }
+      activeSessionSnapshot = normalized.snapshot;
+      return normalized;
+    } catch (error) {
+      removeStoredActiveSession();
+      return null;
+    }
+  }
+
+  function saveActiveSession() {
+    if (!state.category || !state.mode || state.questions.length === 0) return false;
+
+    var optionOrders = null;
+    if (state.mode === "quiz") {
+      optionOrders = state.questions.map(function (question) {
+        return Array.isArray(question._sessionOptionOrder)
+          ? question._sessionOptionOrder.slice()
+          : null;
+      });
+      if (optionOrders.some(function (optionOrder) { return !isIndexPermutation(optionOrder); })) {
+        removeStoredActiveSession();
+        return false;
+      }
+    }
+
+    var snapshot = {
+      version: SESSION_STORAGE_VERSION,
+      bankSignature: questionBankSignature,
+      categoryId: state.category.id,
+      mode: state.mode,
+      scope: state.scope,
+      questionIds: state.questions.map(function (question) { return String(question.id); }),
+      optionOrders: optionOrders,
+      currentIndex: state.currentIndex,
+      selectedIndex: state.selectedIndex,
+      submitted: state.submitted,
+      score: state.score,
+      savedAt: Date.now()
+    };
+
+    try {
+      window.localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(snapshot));
+      activeSessionSnapshot = snapshot;
+      updateContinueSessionUI();
+      return true;
+    } catch (error) {
+      activeSessionSnapshot = null;
+      updateContinueSessionUI();
+      return false;
+    }
+  }
+
+  function restoreActiveSession() {
+    var normalized = loadActiveSession();
+    if (!normalized) {
+      showScreen("categories");
+      updateContinueSessionUI();
+      return false;
+    }
+
+    state.category = normalized.category;
+    state.questions = normalized.questions;
+    state.mode = normalized.snapshot.mode;
+    state.scope = normalized.snapshot.scope;
+    state.currentIndex = normalized.snapshot.currentIndex;
+    state.selectedIndex = normalized.snapshot.selectedIndex;
+    state.submitted = normalized.snapshot.submitted;
+    state.score = normalized.snapshot.score;
+
+    setQuizSessionLabel();
+    showScreen("quiz");
+    renderQuestion(true);
+    return true;
   }
 
   function loadDifficultQuestionIds() {
@@ -391,6 +654,7 @@
         : (persisted ? "Removed from difficult questions." : "Removed for this visit only.");
     }
     updateDifficultModeUI();
+    saveActiveSession();
   }
 
   function renderCategories() {
@@ -527,6 +791,22 @@
     return source.slice().reverse();
   }
 
+  function quizQuestionWithOrder(question, optionOrder) {
+    if (!isIndexPermutation(optionOrder)) return null;
+    var shuffledOptions = optionOrder.map(function (originalIndex, index) {
+      var option = question.options[originalIndex];
+      if (!option || typeof option !== "object") return option;
+      return Object.assign({}, option, { label: OPTION_LABELS[index] });
+    });
+    var shuffledCorrectIndex = optionOrder.indexOf(question.correctOptionIndex);
+
+    return Object.assign({}, question, {
+      options: shuffledOptions,
+      correctOptionIndex: shuffledCorrectIndex,
+      _sessionOptionOrder: optionOrder.slice()
+    });
+  }
+
   function shuffledQuizQuestion(question) {
     var optionEntries = question.options.map(function (option, originalIndex) {
       return { option: option, originalIndex: originalIndex };
@@ -536,22 +816,25 @@
       function (entry) { return entry.originalIndex; },
       previousOptionOrders[question.id]
     );
-    previousOptionOrders[question.id] = orderKey(shuffledEntries, function (entry) {
+    var optionOrder = shuffledEntries.map(function (entry) {
       return entry.originalIndex;
     });
-
-    var shuffledOptions = shuffledEntries.map(function (entry, index) {
-      if (!entry.option || typeof entry.option !== "object") return entry.option;
-      return Object.assign({}, entry.option, { label: OPTION_LABELS[index] });
-    });
-    var shuffledCorrectIndex = shuffledEntries.findIndex(function (entry) {
-      return entry.originalIndex === question.correctOptionIndex;
+    previousOptionOrders[question.id] = orderKey(optionOrder, function (originalIndex) {
+      return originalIndex;
     });
 
-    return Object.assign({}, question, {
-      options: shuffledOptions,
-      correctOptionIndex: shuffledCorrectIndex
-    });
+    return quizQuestionWithOrder(question, optionOrder);
+  }
+
+  function setQuizSessionLabel() {
+    if (elements.quizCategory && state.category) {
+      elements.quizCategory.textContent = state.category.name + " \u00b7 "
+        + sessionModeLabel(state.mode, state.scope);
+    }
+    if (elements.quizScreen) {
+      elements.quizScreen.dataset.mode = state.mode || "";
+      elements.quizScreen.dataset.scope = state.scope || "all";
+    }
   }
 
   function startQuiz(categoryId, mode, scope) {
@@ -591,16 +874,17 @@
     }
 
     var selectedMode = mode === "learn" ? "learn" : "quiz";
-    var sessionOrderKey = categoryId + "::" + selectedScope;
-    var sessionQuestions = shuffledOrder(
-      filteredQuestions,
-      function (question) { return question.id; },
-      previousQuestionOrders[sessionOrderKey]
-    );
-    previousQuestionOrders[sessionOrderKey] = orderKey(sessionQuestions, function (question) {
-      return question.id;
-    });
+    var sessionQuestions = filteredQuestions.slice();
     if (selectedMode === "quiz") {
+      var sessionOrderKey = categoryId + "::" + selectedScope;
+      sessionQuestions = shuffledOrder(
+        filteredQuestions,
+        function (question) { return question.id; },
+        previousQuestionOrders[sessionOrderKey]
+      );
+      previousQuestionOrders[sessionOrderKey] = orderKey(sessionQuestions, function (question) {
+        return question.id;
+      });
       sessionQuestions = sessionQuestions.map(shuffledQuizQuestion);
     }
 
@@ -613,15 +897,7 @@
     state.submitted = false;
     state.score = 0;
 
-    if (elements.quizCategory) {
-      elements.quizCategory.textContent = category.name
-        + (state.scope === "difficult" ? " · Difficult" : "")
-        + (state.mode === "learn" ? " · Learn" : "");
-    }
-    if (elements.quizScreen) {
-      elements.quizScreen.dataset.mode = state.mode;
-      elements.quizScreen.dataset.scope = state.scope;
-    }
+    setQuizSessionLabel();
     showScreen("quiz");
     renderQuestion();
     return true;
@@ -642,15 +918,17 @@
     };
   }
 
-  function renderQuestion() {
+  function renderQuestion(restoringCurrentState) {
     var question = currentQuestion();
     if (!question) {
       showResults();
       return;
     }
 
-    state.selectedIndex = null;
-    state.submitted = false;
+    if (!restoringCurrentState) {
+      state.selectedIndex = null;
+      state.submitted = false;
+    }
 
     if (elements.questionKind) {
       elements.questionKind.textContent = question.kind === "similar" ? "SIMILAR PRACTICE" : "SOURCE PAPER";
@@ -676,12 +954,26 @@
 
     if (state.mode === "learn") {
       prepareLearnQuestion(question);
-    } else if (elements.actionButton) {
-      setHidden(elements.actionButton, false);
-      elements.actionButton.textContent = "Check Answer";
-      elements.actionButton.disabled = false;
-      elements.actionButton.dataset.action = "check";
+    } else {
+      if (state.selectedIndex !== null) markSelectedOption(state.selectedIndex);
+      if (state.submitted) {
+        markSubmittedOptions(question);
+        showFeedback(question, state.selectedIndex === question.correctOptionIndex);
+      }
+      if (elements.actionButton) {
+        var isLast = state.currentIndex === state.questions.length - 1;
+        setHidden(elements.actionButton, false);
+        elements.actionButton.textContent = state.submitted
+          ? (isLast ? "View Results" : "Next Question")
+          : "Check Answer";
+        elements.actionButton.disabled = false;
+        elements.actionButton.dataset.action = state.submitted
+          ? (isLast ? "results" : "next")
+          : "check";
+      }
     }
+
+    saveActiveSession();
 
     if (elements.questionText && typeof elements.questionText.focus === "function") {
       elements.questionText.setAttribute("tabindex", "-1");
@@ -718,6 +1010,17 @@
     });
   }
 
+  function markSelectedOption(index) {
+    var buttons = elements.optionsList
+      ? elements.optionsList.querySelectorAll(".option-button, [data-option-index]")
+      : [];
+    buttons.forEach(function (button) {
+      var isSelected = Number(button.dataset.optionIndex) === index;
+      button.classList.toggle("is-selected", isSelected);
+      button.setAttribute("aria-checked", isSelected ? "true" : "false");
+    });
+  }
+
   function prepareLearnQuestion(question) {
     state.selectedIndex = question.correctOptionIndex;
 
@@ -749,17 +1052,10 @@
     if (!question || state.submitted || index < 0 || index >= question.options.length) return;
 
     state.selectedIndex = index;
-    var buttons = elements.optionsList
-      ? elements.optionsList.querySelectorAll(".option-button, [data-option-index]")
-      : [];
-
-    buttons.forEach(function (button) {
-      var isSelected = Number(button.dataset.optionIndex) === index;
-      button.classList.toggle("is-selected", isSelected);
-      button.setAttribute("aria-checked", isSelected ? "true" : "false");
-    });
+    markSelectedOption(index);
 
     clearSelectionPrompt();
+    saveActiveSession();
   }
 
   function clearSelectionPrompt() {
@@ -806,6 +1102,7 @@
       elements.actionButton.dataset.action = isLast ? "results" : "next";
       elements.actionButton.focus({ preventScroll: true });
     }
+    saveActiveSession();
   }
 
   function showSelectionPrompt() {
@@ -917,6 +1214,7 @@
       ? difficultQuestionCount(state.category.id)
       : total;
     var canRepeatScope = state.scope !== "difficult" || remainingInScope > 0;
+    removeStoredActiveSession();
     showScreen("results");
 
     var scoreOutput = elements.resultScore || elements.scoreText;
@@ -997,6 +1295,7 @@
     state.submitted = false;
     state.score = 0;
     showScreen("categories");
+    updateContinueSessionUI();
   }
 
   function onCategoryClick(event) {
@@ -1021,6 +1320,9 @@
 
   function bindEvents() {
     if (elements.categoryGrid) elements.categoryGrid.addEventListener("click", onCategoryClick);
+    if (elements.continueSessionButton) {
+      elements.continueSessionButton.addEventListener("click", restoreActiveSession);
+    }
     if (elements.learnModeButton) {
       elements.learnModeButton.addEventListener("click", function () {
         startSelectedMode("learn", "all");
@@ -1064,11 +1366,13 @@
     ensureDifficultModeUI();
     ensureDifficultControl();
     difficultQuestionIds = loadDifficultQuestionIds();
+    loadActiveSession();
     renderCategories();
     bindEvents();
     resetFeedback();
     updateDifficultModeUI();
     showScreen("categories");
+    updateContinueSessionUI();
 
     if (categories.length === 0 || allQuestions.length === 0) {
       // This only appears if questions.js was not loaded before app.js.

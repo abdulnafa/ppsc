@@ -1,0 +1,5505 @@
+[
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q001",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 881,
+    "sourceBookPage": 882,
+    "sourceQuestionNumber": 1,
+    "question": "Kashmir is a city of which country?",
+    "options": [
+      "China",
+      "Nepal",
+      "Bhutan",
+      "Sri Lanka"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "The source calls Kashmir a city but does not identify which settlement is intended. Kashmir is principally a geographic region divided among administrations, so none of the choices can be verified as the unique answer without inventing context."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q002",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 881,
+    "sourceBookPage": 882,
+    "sourceQuestionNumber": 2,
+    "question": "Which country has the longest coastline in the world?",
+    "options": [
+      "United States",
+      "Russia",
+      "Canada",
+      "China"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.canada.ca/en/services/environment/our-environment/nature-based-climate-solutions/coastlines.html",
+        "label": "Coastlines",
+        "publisher": "Government of Canada",
+        "authorityId": "canada-government",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Government of Canada identifies Canada as having the world's longest coastline."
+      },
+      {
+        "url": "https://tc.canada.ca/en/marine-transportation/marine-safety-canada",
+        "label": "Marine safety in Canada",
+        "publisher": "Transport Canada",
+        "authorityId": "transport-canada",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Transport Canada independently states that Canada's coastline is the world's longest."
+      }
+    ],
+    "referenceUrl": "https://www.canada.ca/en/services/environment/our-environment/nature-based-climate-solutions/coastlines.html",
+    "referenceLabel": "Coastlines",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "US was expanded to United States and grammar was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q003",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 881,
+    "sourceBookPage": 882,
+    "sourceQuestionNumber": 3,
+    "question": "Waterloo is a municipality in which country?",
+    "options": [
+      "Poland",
+      "Spain",
+      "Belgium",
+      "Italy"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.waterloo.be/",
+        "label": "Official website of Waterloo",
+        "publisher": "Commune de Waterloo",
+        "authorityId": "waterloo-municipality",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official municipal website identifies Waterloo as a Belgian commune."
+      },
+      {
+        "url": "https://www.britannica.com/place/Waterloo-Belgium",
+        "label": "Waterloo, Belgium",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently locates Waterloo in Belgium."
+      }
+    ],
+    "referenceUrl": "https://www.waterloo.be/",
+    "referenceLabel": "Official website of Waterloo",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The generic located-in stem was clarified as a municipality question."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q004",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 881,
+    "sourceBookPage": 882,
+    "sourceQuestionNumber": 4,
+    "question": "In which Indian city is the Taj Mahal located?",
+    "options": [
+      "Lucknow",
+      "Agra",
+      "Delhi",
+      "Hyderabad"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.tajmahal.gov.in/",
+        "label": "Taj Mahal",
+        "publisher": "Archaeological Survey of India",
+        "authorityId": "asi",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "India's official Taj Mahal portal locates the monument in Agra."
+      },
+      {
+        "url": "https://whc.unesco.org/en/list/252/",
+        "label": "Taj Mahal",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO independently identifies the Taj Mahal at Agra."
+      }
+    ],
+    "referenceUrl": "https://www.tajmahal.gov.in/",
+    "referenceLabel": "Taj Mahal",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The country context and complete punctuation were added."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q005",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 5,
+    "question": "What is the official residence of the President of France?",
+    "options": [
+      "Buckingham Palace",
+      "10 Downing Street",
+      "Elysee Palace",
+      "Palace of Versailles"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.elysee.fr/en/cultural-space/evreux-300",
+        "label": "The Elysee Palace: 300 years of history",
+        "publisher": "Presidency of France",
+        "authorityId": "elysee-palace",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The French Presidency records the Elysee as the residence of the head of state."
+      },
+      {
+        "url": "https://www.britannica.com/topic/Elysee-Palace",
+        "label": "Elysee Palace",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently identifies the Elysee Palace as the official residence of the French president."
+      }
+    ],
+    "referenceUrl": "https://www.elysee.fr/en/cultural-space/evreux-300",
+    "referenceLabel": "The Elysee Palace: 300 years of history",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The none-of-these distractor was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q006",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 6,
+    "question": "In which city is the headquarters of the Organisation of Islamic Cooperation located?",
+    "options": [
+      "Mecca",
+      "Medina",
+      "Jeddah",
+      "Riyadh"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.oic-oci.org/upload/documents/charter/en/oic_charter_2018_en.pdf",
+        "label": "Charter of the OIC",
+        "publisher": "Organisation of Islamic Cooperation",
+        "authorityId": "oic",
+        "sourceClass": "primary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The OIC Charter states that the General Secretariat is headquartered in Jeddah."
+      },
+      {
+        "url": "https://www.un.org/ungifts/content/organisation-islamic-cooperation",
+        "label": "Organisation of Islamic Cooperation",
+        "publisher": "United Nations",
+        "authorityId": "united-nations",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UN independently lists the OIC headquarters in Jeddah."
+      }
+    ],
+    "referenceUrl": "https://www.oic-oci.org/upload/documents/charter/en/oic_charter_2018_en.pdf",
+    "referenceLabel": "Charter of the OIC",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Organization spelling was standardized to the institution's official British-English name."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q007",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 7,
+    "question": "Which field is not a standalone Nobel Prize category?",
+    "options": [
+      "Physics",
+      "Chemistry",
+      "Astronomy",
+      "Physiology or Medicine"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/about/the-nobel-prize/",
+        "label": "About the Nobel Prize",
+        "publisher": "Nobel Prize Outreach",
+        "authorityId": "nobel-prize",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Nobel Prize's official category list does not contain a standalone astronomy prize."
+      },
+      {
+        "url": "https://www.britannica.com/topic/Nobel-Prize",
+        "label": "Nobel Prize",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently lists the Nobel disciplines without astronomy."
+      }
+    ],
+    "referenceUrl": "https://www.nobelprize.org/prizes/about/the-nobel-prize/",
+    "referenceLabel": "About the Nobel Prize",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source options Biochemistry, Biology and Astronomy were all outside the formal category names, so the item was rebuilt with one unique answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q008",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 8,
+    "question": "In which year did the International Monetary Fund formally come into existence when its Articles of Agreement entered into force?",
+    "options": [
+      "1944",
+      "1945",
+      "1946",
+      "1948"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.imf.org/external/about/histcoop.htm",
+        "label": "Cooperation and reconstruction: 1944-71",
+        "publisher": "International Monetary Fund",
+        "authorityId": "imf",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The IMF's history dates its formal establishment to December 1945."
+      },
+      {
+        "url": "https://www.imf.org/external/pubs/ft/aa/",
+        "label": "Articles of Agreement of the IMF",
+        "publisher": "International Monetary Fund Legal Department",
+        "authorityId": "imf-legal",
+        "sourceClass": "primary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Articles of Agreement record their entry into force on 27 December 1945."
+      }
+    ],
+    "referenceUrl": "https://www.imf.org/external/about/histcoop.htm",
+    "referenceLabel": "Cooperation and reconstruction: 1944-71",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague founded wording was scoped to the formal entry into force; Bretton Woods negotiations occurred in 1944."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q009",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 9,
+    "question": "Which two leaders jointly issued the Atlantic Charter in August 1941?",
+    "options": [
+      "Franklin D. Roosevelt and Winston Churchill",
+      "Winston Churchill and Harry S. Truman",
+      "Clement Attlee and Franklin D. Roosevelt",
+      "Neville Chamberlain and Harry S. Truman"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.fdrlibrary.org/atlantic-charter",
+        "label": "The Atlantic Charter",
+        "publisher": "Franklin D. Roosevelt Presidential Library",
+        "authorityId": "fdr-library",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Roosevelt Library identifies Roosevelt and Churchill as the leaders who issued the Atlantic Charter."
+      },
+      {
+        "url": "https://www.nationalarchives.gov.uk/education/resources/atlantic-charter/",
+        "label": "The Atlantic Charter",
+        "publisher": "The National Archives (UK)",
+        "authorityId": "uk-national-archives",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UK National Archives independently documents the Roosevelt-Churchill declaration."
+      }
+    ],
+    "referenceUrl": "https://www.fdrlibrary.org/atlantic-charter",
+    "referenceLabel": "The Atlantic Charter",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1941-08-14",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source verb signed was replaced because the Charter was a joint declaration rather than a formally signed treaty."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q010",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 10,
+    "question": "Which generation of warfare is conducted primarily through non-kinetic military action?",
+    "options": [
+      "Third-generation warfare",
+      "Fourth-generation warfare",
+      "Fifth-generation warfare",
+      "Seventh-generation warfare"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Numbered generations of warfare, especially fifth- and seventh-generation labels, do not have a single authoritative definition. The non-kinetic description cannot support one unique choice without selecting a contested framework."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q011",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 11,
+    "question": "Which country won the maximum number of Olympic titles?",
+    "options": [
+      "United States",
+      "Russia",
+      "China",
+      "Japan"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Olympic titles is undefined: it may mean medals, gold medals, team-event titles, Summer Games, Winter Games or a particular date. The source lacks the scope needed for a unique stable answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q012",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 12,
+    "question": "According to SoftWear Automation's reported Sewbot demonstration, about how long did the automated line take to produce one T-shirt?",
+    "options": [
+      "12 seconds",
+      "22 seconds",
+      "32 seconds",
+      "42 seconds"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://softwearautomation.com/",
+        "label": "Sewbot robotic sewing technology",
+        "publisher": "SoftWear Automation",
+        "authorityId": "softwear-automation",
+        "sourceClass": "primary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The company presents Sewbot as its automated sewn-product technology."
+      },
+      {
+        "url": "https://spectrum.ieee.org/your-next-tshirt-will-be-made-by-a-robot",
+        "label": "Your next T-shirt will be made by a robot",
+        "publisher": "IEEE Spectrum",
+        "authorityId": "ieee-spectrum",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IEEE Spectrum independently reported the company's claim of a T-shirt approximately every 22 seconds."
+      }
+    ],
+    "referenceUrl": "https://softwearautomation.com/",
+    "referenceLabel": "Sewbot robotic sewing technology",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The OCR spelling seeboat was corrected to Sewbot and the reported-company-claim scope was made explicit."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q013",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 13,
+    "question": "Who plans, organizes and delivers sports activities and programmes for individuals and teams?",
+    "options": [
+      "Sports manager",
+      "Sports coach",
+      "Sports statistician",
+      "Sports journalist"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://nationalcareers.service.gov.uk/job-profiles/sports-coach",
+        "label": "Sports coach",
+        "publisher": "UK National Careers Service",
+        "authorityId": "uk-national-careers",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UK careers service describes sports coaches as planning and delivering training and activity programmes."
+      },
+      {
+        "url": "https://www.ausport.gov.au/coaching/community/coaching",
+        "label": "Community coaching",
+        "publisher": "Australian Sports Commission",
+        "authorityId": "australian-sports-commission",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Australian Sports Commission independently describes coaches as planning and conducting sport sessions."
+      }
+    ],
+    "referenceUrl": "https://nationalcareers.service.gov.uk/job-profiles/sports-coach",
+    "referenceLabel": "Sports coach",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The overlapping trainer choice and none-of-these were replaced to leave one occupational answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q014",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 14,
+    "question": "In which Indian city is the Taj Mahal located?",
+    "options": [
+      "Agra",
+      "Lucknow",
+      "Delhi",
+      "Hyderabad"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.tajmahal.gov.in/",
+        "label": "Taj Mahal",
+        "publisher": "Archaeological Survey of India",
+        "authorityId": "asi",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "India's official Taj Mahal portal locates the monument in Agra."
+      },
+      {
+        "url": "https://whc.unesco.org/en/list/252/",
+        "label": "Taj Mahal",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO independently identifies the Taj Mahal at Agra."
+      }
+    ],
+    "referenceUrl": "https://www.tajmahal.gov.in/",
+    "referenceLabel": "Taj Mahal",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "This is an exact source duplicate of Q004 with a different option order."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q015",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 15,
+    "question": "What name is commonly given to Kyrgyzstan's 2005 revolution?",
+    "options": [
+      "Orange Revolution",
+      "Social Revolution",
+      "Tulip Revolution",
+      "Red Revolution"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.britannica.com/event/Tulip-Revolution",
+        "label": "Tulip Revolution",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies Kyrgyzstan's 2005 uprising as the Tulip Revolution."
+      },
+      {
+        "url": "https://www.osce.org/files/f/documents/1/3/15113.pdf",
+        "label": "Kyrgyzstan after the Tulip Revolution",
+        "publisher": "OSCE",
+        "authorityId": "osce",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "An OSCE publication independently uses the name Tulip Revolution for the 2005 Kyrgyz events."
+      }
+    ],
+    "referenceUrl": "https://www.britannica.com/event/Tulip-Revolution",
+    "referenceLabel": "Tulip Revolution",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2005",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The year was added to distinguish the event."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q016",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 16,
+    "question": "The Bundestag is the federal parliament of which country?",
+    "options": [
+      "Russia",
+      "Germany",
+      "New Zealand",
+      "Italy"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.bundestag.de/en/parliament/function",
+        "label": "Functions of the German Bundestag",
+        "publisher": "German Bundestag",
+        "authorityId": "german-bundestag",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Bundestag's official site identifies it as Germany's parliament."
+      },
+      {
+        "url": "https://www.gesetze-im-internet.de/englisch_gg/englisch_gg.html",
+        "label": "Basic Law for the Federal Republic of Germany",
+        "publisher": "Federal Ministry of Justice, Germany",
+        "authorityId": "germany-justice",
+        "sourceClass": "primary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Germany's Basic Law establishes the Bundestag as the federal representative chamber."
+      }
+    ],
+    "referenceUrl": "https://www.bundestag.de/en/parliament/function",
+    "referenceLabel": "Functions of the German Bundestag",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The oversimplified lower-house label was replaced with the institution's accurate federal-parliament description."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q017",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 17,
+    "question": "Which four countries formed the core route named in the source for the International North-South Transport Corridor?",
+    "options": [
+      "India, Iran, Russia and Afghanistan",
+      "India, Iran, Russia and Azerbaijan",
+      "India, Iran, China and Azerbaijan",
+      "India, Iraq, Russia and Azerbaijan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://commerce.gov.in/international-trade/trade-promotion-programmes-and-schemes/trade-promotion-programme-focus-cis/international-north-south-transport-corridor-instc/",
+        "label": "International North-South Transport Corridor",
+        "publisher": "Department of Commerce, Government of India",
+        "authorityId": "india-commerce",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "India's Commerce Department identifies India, Iran and Russia as original signatories and documents Azerbaijan's participation in the corridor."
+      },
+      {
+        "url": "https://www.unescap.org/sites/default/d8files/knowledge-products/International%20North-South%20Transport%20Corridor.pdf",
+        "label": "International North-South Transport Corridor",
+        "publisher": "UN ESCAP",
+        "authorityId": "un-escap",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UN ESCAP documents the India-Iran-Russia route and Azerbaijan's participation in the INSTC."
+      }
+    ],
+    "referenceUrl": "https://commerce.gov.in/international-trade/trade-promotion-programmes-and-schemes/trade-promotion-programme-focus-cis/international-north-south-transport-corridor-instc/",
+    "referenceLabel": "International North-South Transport Corridor",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The original agreement had three initial signatories, while the corridor now has more members; the source's intended four-country route was made explicit."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q018",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 882,
+    "sourceBookPage": 883,
+    "sourceQuestionNumber": 18,
+    "question": "Which subsistence activity predates agriculture in human history?",
+    "options": [
+      "Industrial fishing",
+      "Hunting and gathering",
+      "Mechanized farming",
+      "Factory work"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://humanorigins.si.edu/human-characteristics/tools-food",
+        "label": "Tools and food",
+        "publisher": "Smithsonian Human Origins Program",
+        "authorityId": "smithsonian",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Smithsonian evidence describes hunting and gathering among early human food strategies long before farming."
+      },
+      {
+        "url": "https://www.britannica.com/topic/agriculture/Earliest-beginnings",
+        "label": "Origins of agriculture",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica dates the beginnings of agriculture much later than human hunting and gathering."
+      }
+    ],
+    "referenceUrl": "https://humanorigins.si.edu/human-characteristics/tools-food",
+    "referenceLabel": "Tools and food",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The claim oldest occupation is culturally imprecise and all-of-these made the source non-unique; it was repaired to a well-supported chronological comparison."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q019",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 19,
+    "question": "Near which city is the Makli necropolis located?",
+    "options": [
+      "Hyderabad",
+      "Jamshoro",
+      "Thatta",
+      "Larkana"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://whc.unesco.org/en/list/143/",
+        "label": "Historical Monuments at Makli, Thatta",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO places the Makli necropolis at Thatta."
+      },
+      {
+        "url": "https://antiquities.sindhculture.gov.pk/index.php/makli-necropolis/",
+        "label": "Makli Necropolis",
+        "publisher": "Sindh Department of Antiquities",
+        "authorityId": "sindh-antiquities",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Sindh's Department of Antiquities independently identifies the Makli site at Thatta."
+      }
+    ],
+    "referenceUrl": "https://whc.unesco.org/en/list/143/",
+    "referenceLabel": "Historical Monuments at Makli, Thatta",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Graveyard was normalized to necropolis."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q020",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 20,
+    "question": "On which date was the constitutional accord signed?",
+    "options": [
+      "March 1972",
+      "August 1972",
+      "October 1972",
+      "December 1972"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "The source does not name the country, parties or accord. Its printed key also conflicts with the associated prose. A unique historical event cannot be identified without adding unsupported context."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q021",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 21,
+    "question": "Who wrote the book 'The Emergence of Pakistan'?",
+    "options": [
+      "Muhammad Ali Bogra",
+      "Chaudhri Muhammad Ali",
+      "Ayesha Jalal",
+      "K. K. Aziz"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openlibrary.org/works/OL5876637W/The_emergence_of_Pakistan",
+        "label": "The Emergence of Pakistan",
+        "publisher": "Open Library, Internet Archive",
+        "authorityId": "open-library",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Open Library attributes The Emergence of Pakistan to Chaudhri Muhammad Ali."
+      },
+      {
+        "url": "https://search.worldcat.org/title/243377",
+        "label": "The Emergence of Pakistan catalogue record",
+        "publisher": "WorldCat",
+        "authorityId": "worldcat",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WorldCat independently catalogues Chaudhri Muhammad Ali as the author."
+      }
+    ],
+    "referenceUrl": "https://openlibrary.org/works/OL5876637W/The_emergence_of_Pakistan",
+    "referenceLabel": "The Emergence of Pakistan",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The author's name was standardized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q022",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 22,
+    "question": "In which province is the Bara Bagh Cemetery in Lasbela located?",
+    "options": [
+      "Punjab",
+      "Sindh",
+      "Khyber Pakhtunkhwa",
+      "Balochistan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://paktourismportal.com/bara-bagh-cemetery/",
+        "label": "Bara Bagh Cemetery",
+        "publisher": "Pakistan Tourism Portal",
+        "authorityId": "pakistan-tourism-portal",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The tourism portal locates Bara Bagh Cemetery in Lasbela, Balochistan."
+      },
+      {
+        "url": "https://doam.gov.pk/public/sites/10144",
+        "label": "Bara Bagh archaeological site",
+        "publisher": "Department of Archaeology and Museums Pakistan",
+        "authorityId": "pakistan-archaeology",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's archaeology department independently catalogues the site in Balochistan."
+      }
+    ],
+    "referenceUrl": "https://paktourismportal.com/bara-bagh-cemetery/",
+    "referenceLabel": "Bara Bagh Cemetery",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The province and Lasbela context were added; province names were standardized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q023",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 23,
+    "question": "In which year did India refer the Jammu and Kashmir dispute to the United Nations Security Council?",
+    "options": [
+      "1947",
+      "1948",
+      "1949",
+      "1950"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://digitallibrary.un.org/record/467866",
+        "label": "Letter from India concerning Jammu and Kashmir",
+        "publisher": "United Nations Digital Library",
+        "authorityId": "un-digital-library",
+        "sourceClass": "primary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UN catalogue dates India's Security Council letter to 1 January 1948."
+      },
+      {
+        "url": "https://unmogip.unmissions.org/background",
+        "label": "Background of UNMOGIP",
+        "publisher": "United Nations",
+        "authorityId": "unmogip",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNMOGIP's official history independently states that India brought the dispute to the Security Council in January 1948."
+      }
+    ],
+    "referenceUrl": "https://digitallibrary.un.org/record/467866",
+    "referenceLabel": "Letter from India concerning Jammu and Kashmir",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The formal reference and territory name were clarified."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q024",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 24,
+    "question": "Who wrote the book 'The Making of Pakistan'?",
+    "options": [
+      "Waheed-uz-Zaman",
+      "Aitzaz Ahsan",
+      "K. K. Aziz",
+      "Ayesha Jalal"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openlibrary.org/works/OL4624967W/The_making_of_Pakistan",
+        "label": "The Making of Pakistan",
+        "publisher": "Open Library, Internet Archive",
+        "authorityId": "open-library",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Open Library attributes The Making of Pakistan to K. K. Aziz."
+      },
+      {
+        "url": "https://search.worldcat.org/title/3160644",
+        "label": "The Making of Pakistan catalogue record",
+        "publisher": "WorldCat",
+        "authorityId": "worldcat",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WorldCat independently catalogues K. K. Aziz as the author."
+      }
+    ],
+    "referenceUrl": "https://openlibrary.org/works/OL4624967W/The_making_of_Pakistan",
+    "referenceLabel": "The Making of Pakistan",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Title punctuation was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q025",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 25,
+    "question": "How many provincial assembly seats did the All-India Muslim League win in the 1945-46 elections?",
+    "options": [
+      "412",
+      "421",
+      "428",
+      "425"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Published historical summaries use materially different denominators and totals (including 423, 425, 428 and 429) depending on the included provinces, uncontested seats and election stage. The source supplies no counting convention, so its keyed total cannot be uniquely verified."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q026",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 26,
+    "question": "According to Pakistan's 2017 Population Census, which city was the country's third-largest by population?",
+    "options": [
+      "Sialkot",
+      "Lahore",
+      "Rawalpindi",
+      "Faisalabad"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.pbs.gov.pk/sites/default/files/population/2017/results/02021.pdf",
+        "label": "Population of major cities, Census 2017",
+        "publisher": "Pakistan Bureau of Statistics",
+        "authorityId": "pakistan-statistics",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's census tables place Faisalabad third after Karachi and Lahore among the major cities."
+      },
+      {
+        "url": "https://www.britannica.com/place/Faisalabad",
+        "label": "Faisalabad",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently describes Faisalabad as Pakistan's third most populous city."
+      }
+    ],
+    "referenceUrl": "https://www.pbs.gov.pk/sites/default/files/population/2017/results/02021.pdf",
+    "referenceLabel": "Population of major cities, Census 2017",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2017",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The correct city was absent from the source options and encoded as None of these; Faisalabad was added explicitly."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q027",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 27,
+    "question": "Bushra Rahman was best known for which profession?",
+    "options": [
+      "Physician",
+      "Novelist",
+      "Scientist",
+      "Painter"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.rekhta.org/authors/bushra-rahman/profile",
+        "label": "Bushra Rahman profile",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta identifies Bushra Rahman as an Urdu novelist and writer."
+      },
+      {
+        "url": "https://na.gov.pk/uploads/former-members/11th%20National%20Assembly.pdf",
+        "label": "Former members of the National Assembly",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly record independently identifies the parliamentarian and writer Bushra Rahman."
+      }
+    ],
+    "referenceUrl": "https://www.rekhta.org/authors/bushra-rahman/profile",
+    "referenceLabel": "Bushra Rahman profile",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The expected answer was narrowed to her principal literary profession."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q028",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 28,
+    "question": "The Rawalpindi Conspiracy of 1951 was an attempted coup against the government of which prime minister?",
+    "options": [
+      "Khawaja Nazimuddin",
+      "Liaquat Ali Khan",
+      "Chaudhri Muhammad Ali",
+      "Nurul Amin"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.britannica.com/event/Rawalpindi-conspiracy",
+        "label": "Rawalpindi conspiracy",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies the conspiracy as a plot against Liaquat Ali Khan's government."
+      },
+      {
+        "url": "https://nihcr.edu.pk/Latest_English_Journal/Pjhc%2027-2%202006/6-The%20Rawalpindi%20Conspiracy%20Case.pdf",
+        "label": "The Rawalpindi Conspiracy Case",
+        "publisher": "National Institute of Historical and Cultural Research",
+        "authorityId": "nihcr",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIHCR's historical study independently places the plot during Liaquat Ali Khan's premiership."
+      }
+    ],
+    "referenceUrl": "https://www.britannica.com/event/Rawalpindi-conspiracy",
+    "referenceLabel": "Rawalpindi conspiracy",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1951",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The year and prime-minister scope were added; names were standardized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q029",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 29,
+    "question": "What percentage of Pakistan's total area is covered by forests?",
+    "options": [
+      "3.7%",
+      "4.9%",
+      "6.2%",
+      "7%"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Forest-cover percentages change by year and differ by whether official forest land, tree cover or FAO-defined forest area is measured. The source gives no reference year or definition, so none of its values is a stable uniquely verifiable answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q030",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 30,
+    "question": "Who was the first Chairman of the Senate of Pakistan?",
+    "options": [
+      "Syeda Abida Hussain",
+      "Tasleem Jalil",
+      "Habibullah Khan",
+      "Abdul Malik Baloch"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.senate.gov.pk/uploads/documents/Senate-Manual.pdf",
+        "label": "Senate Manual",
+        "publisher": "Senate of Pakistan",
+        "authorityId": "pakistan-senate",
+        "sourceClass": "primary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Senate Manual lists Habibullah Khan as the first chairman in 1973."
+      },
+      {
+        "url": "https://senate.gov.pk/uploads/documents/SenatorsDirectory.pdf",
+        "label": "Senators Directory",
+        "publisher": "Senate Secretariat Pakistan",
+        "authorityId": "pakistan-senate-secretariat",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Senate Secretariat directory independently records Habibullah Khan's chairmanship."
+      }
+    ],
+    "referenceUrl": "https://www.senate.gov.pk/uploads/documents/Senate-Manual.pdf",
+    "referenceLabel": "Senate Manual",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The answer's spelling was standardized to Habibullah Khan."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q031",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 31,
+    "question": "Which listed Pakistani university was founded earliest?",
+    "options": [
+      "University of the Punjab",
+      "Bahauddin Zakariya University",
+      "University of Agriculture Faisalabad",
+      "University of Sindh"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://pu.edu.pk/home/history",
+        "label": "History of the University",
+        "publisher": "University of the Punjab",
+        "authorityId": "punjab-university",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of the Punjab dates its establishment to 1882."
+      },
+      {
+        "url": "https://www.hec.gov.pk/english/universities/pages/punjab/university-of-the-punjab.aspx",
+        "label": "University of the Punjab",
+        "publisher": "Higher Education Commission Pakistan",
+        "authorityId": "pakistan-hec",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's Higher Education Commission independently records the university's 1882 establishment."
+      }
+    ],
+    "referenceUrl": "https://pu.edu.pk/home/history",
+    "referenceLabel": "History of the University",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The dynamic oldest-university wording was repaired to a stable comparison among the listed institutions, and institution names were expanded."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q032",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 32,
+    "question": "In which city was the All-India Muslim League founded in December 1906?",
+    "options": [
+      "Dhaka",
+      "Lucknow",
+      "Kolkata",
+      "Lahore"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.britannica.com/topic/Muslim-League",
+        "label": "Muslim League",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica dates the Muslim League's founding to December 1906 at Dacca (Dhaka)."
+      },
+      {
+        "url": "https://www.pakistan.gov.pk/Quaid/political_history.html",
+        "label": "Political history of the Pakistan Movement",
+        "publisher": "Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Government of Pakistan's historical account independently identifies Dhaka and December 1906."
+      }
+    ],
+    "referenceUrl": "https://www.britannica.com/topic/Muslim-League",
+    "referenceLabel": "Muslim League",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1906-12-30",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's September date is historically incorrect. The question was repaired to the founding meeting in December 1906."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q033",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 33,
+    "question": "In which year was the Battle of Plassey fought?",
+    "options": [
+      "1723",
+      "1749",
+      "1757",
+      "1773"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.nam.ac.uk/explore/battle-plassey",
+        "label": "Battle of Plassey",
+        "publisher": "National Army Museum",
+        "authorityId": "uk-national-army-museum",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Army Museum dates the Battle of Plassey to 23 June 1757."
+      },
+      {
+        "url": "https://www.britannica.com/event/Battle-of-Plassey",
+        "label": "Battle of Plassey",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently dates the battle to 1757."
+      }
+    ],
+    "referenceUrl": "https://www.nam.ac.uk/explore/battle-plassey",
+    "referenceLabel": "Battle of Plassey",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The stem was converted from awkward passive wording to a complete question."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q034",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 34,
+    "question": "Who founded Jamaat-e-Islami in 1941?",
+    "options": [
+      "Yasser Arafat",
+      "Muhammad Ilyas Kandhlawi",
+      "Abul A'la Maududi",
+      "Muhammad Ali Jinnah"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://jamaat.org/en/about-us",
+        "label": "About Jamaat-e-Islami",
+        "publisher": "Jamaat-e-Islami Pakistan",
+        "authorityId": "jamaat-e-islami",
+        "sourceClass": "primary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Jamaat-e-Islami's official history identifies Abul A'la Maududi as its founder."
+      },
+      {
+        "url": "https://www.britannica.com/biography/Abul-Ala-Mawdudi",
+        "label": "Abul A'la Mawdudi",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently states that Maududi founded Jamaat-e-Islami in 1941."
+      }
+    ],
+    "referenceUrl": "https://jamaat.org/en/about-us",
+    "referenceLabel": "About Jamaat-e-Islami",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1941",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The date was added and names were standardized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q035",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 883,
+    "sourceBookPage": 884,
+    "sourceQuestionNumber": 35,
+    "question": "Against which country had Pakistan fought the 1971 war shortly before it formally withdrew from SEATO in 1973?",
+    "options": [
+      "China",
+      "India",
+      "Afghanistan",
+      "Iran"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://history.state.gov/historicaldocuments/frus1969-76ve08/d60",
+        "label": "Pakistan and SEATO",
+        "publisher": "Office of the Historian, U.S. Department of State",
+        "authorityId": "us-state-frus",
+        "sourceClass": "primary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Contemporary U.S. diplomatic records discuss Pakistan's post-1971 reassessment of SEATO after the war with India."
+      },
+      {
+        "url": "https://www.britannica.com/event/Indo-Pakistani-War-of-1971",
+        "label": "Indo-Pakistani War of 1971",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently identifies India and Pakistan as the combatants in the 1971 war."
+      }
+    ],
+    "referenceUrl": "https://history.state.gov/historicaldocuments/frus1969-76ve08/d60",
+    "referenceLabel": "Pakistan and SEATO",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The source asserted a single causal explanation for withdrawal. It was repaired to a supported chronological identification of the 1971 opponent while retaining the intended answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q036",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 36,
+    "question": "Which Pakistani scientist received China's International Science and Technology Cooperation Award in January 2020?",
+    "options": [
+      "Atta-ur-Rahman",
+      "Abdul Qadeer Khan",
+      "Samar Mubarakmand",
+      "Abdus Salam"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://mofa.gov.pk/president-of-china-confers-highest-chinese-scientific-award-on-prof-atta-ur-rahman",
+        "label": "China's science award for Atta-ur-Rahman",
+        "publisher": "Ministry of Foreign Affairs Pakistan",
+        "authorityId": "pakistan-mofa",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's Foreign Ministry records that Atta-ur-Rahman received the Chinese international science-cooperation award in January 2020."
+      },
+      {
+        "url": "https://www.nosta.gov.cn/pc/zh/gjkjjl/gjkxjshzj/index.shtml",
+        "label": "International Science and Technology Cooperation Award",
+        "publisher": "National Office for Science and Technology Awards, China",
+        "authorityId": "china-nosta",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "China's national science-awards office independently describes the state award and its foreign-recipient programme."
+      }
+    ],
+    "referenceUrl": "https://mofa.gov.pk/president-of-china-confers-highest-chinese-scientific-award-on-prof-atta-ur-rahman",
+    "referenceLabel": "China's science award for Atta-ur-Rahman",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2020-01-10",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The award and date were named precisely; none-of-these was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q037",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 37,
+    "question": "The Inter-Services Intelligence and Federal Investigation Agency are institutions of which country?",
+    "options": [
+      "Pakistan",
+      "China",
+      "Iran",
+      "Afghanistan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.fia.gov.pk/",
+        "label": "Federal Investigation Agency",
+        "publisher": "Federal Investigation Agency Pakistan",
+        "authorityId": "pakistan-fia",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The FIA's official website identifies it as Pakistan's federal investigation institution."
+      },
+      {
+        "url": "https://cabinet.gov.pk/SiteImage/Misc/files/Rules%20of%20Business%2C%201973/ROB%2C%201973%20%28as%20amended%20upto%202nd%20June%2C%202021%29.pdf",
+        "label": "Rules of Business, 1973",
+        "publisher": "Cabinet Division, Government of Pakistan",
+        "authorityId": "pakistan-cabinet",
+        "sourceClass": "primary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's Rules of Business list the Inter-Services Intelligence under the country's federal governmental arrangements."
+      }
+    ],
+    "referenceUrl": "https://www.fia.gov.pk/",
+    "referenceLabel": "Federal Investigation Agency",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "FIA is a federal law-enforcement agency rather than simply a secret agency, so the stem was repaired to the neutral term institutions."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q038",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 38,
+    "question": "In which language does Shakir Shuja Abadi principally write poetry?",
+    "options": [
+      "Punjabi",
+      "Saraiki",
+      "Pashto",
+      "Sindhi"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.iub.edu.pk/the-syndicate-of-iub-has-approved-the-awarding-of-an-honorary-phd-degree-to-the-renowned-poet-shakir-shuja-abadi",
+        "label": "Honorary doctorate for Shakir Shuja Abadi",
+        "publisher": "Islamia University of Bahawalpur",
+        "authorityId": "iub",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Islamia University of Bahawalpur identifies Shakir Shuja Abadi as a renowned Saraiki poet."
+      },
+      {
+        "url": "https://saraikiculture.com/skr/poetry/shakir-shujaabadi/",
+        "label": "Shakir Shuja Abadi",
+        "publisher": "Saraiki Culture",
+        "authorityId": "saraiki-culture",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent Saraiki cultural profile likewise identifies his language and poetry."
+      }
+    ],
+    "referenceUrl": "https://www.iub.edu.pk/the-syndicate-of-iub-has-approved-the-awarding-of-an-honorary-phd-degree-to-the-renowned-poet-shakir-shuja-abadi",
+    "referenceLabel": "Honorary doctorate for Shakir Shuja Abadi",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The none-of-these option was replaced and the occupational label was made language-specific."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q039",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 39,
+    "question": "Which office did Shaukat Aziz hold in Pakistan from 2004 to 2007?",
+    "options": [
+      "President",
+      "Prime Minister",
+      "Chief Minister",
+      "Chairman of the Senate"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://na.gov.pk/en/primeministers.php",
+        "label": "Prime Ministers of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's National Assembly lists Shaukat Aziz among the country's prime ministers."
+      },
+      {
+        "url": "https://www.britannica.com/biography/Shaukat-Aziz",
+        "label": "Shaukat Aziz",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently identifies Aziz as Pakistan's prime minister from 2004 to 2007."
+      }
+    ],
+    "referenceUrl": "https://na.gov.pk/en/primeministers.php",
+    "referenceLabel": "Prime Ministers of Pakistan",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The years were added to make the identity question precise."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q040",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 40,
+    "question": "Takht-e-Sulaiman is a peak in which mountain range?",
+    "options": [
+      "Karakoram Range",
+      "Salt Range",
+      "Sulaiman Range",
+      "Safed Koh Range"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.britannica.com/place/Sulaiman-Range",
+        "label": "Sulaiman Range",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica describes the Sulaiman Range and its Takht-e-Sulaiman massif."
+      },
+      {
+        "url": "https://www.pbs.gov.pk/sites/default/files//tables/rename-as-per-table-type/Administrative%20Units.pdf",
+        "label": "Administrative and geographic units",
+        "publisher": "Pakistan Bureau of Statistics",
+        "authorityId": "pakistan-statistics",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's official geographic material independently places the feature in the Sulaiman mountain system."
+      }
+    ],
+    "referenceUrl": "https://www.britannica.com/place/Sulaiman-Range",
+    "referenceLabel": "Sulaiman Range",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The unsupported superlative highest was removed; the stable range-membership fact was retained."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q041",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 41,
+    "question": "Which listed country bordering Pakistan is landlocked?",
+    "options": [
+      "Iran",
+      "China",
+      "India",
+      "Afghanistan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.worldbank.org/en/country/afghanistan/overview",
+        "label": "Afghanistan overview",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The World Bank describes Afghanistan as a landlocked country."
+      },
+      {
+        "url": "https://www.un.org/ohrlls/content/list-ll-dcs",
+        "label": "List of landlocked developing countries",
+        "publisher": "United Nations OHRLLS",
+        "authorityId": "un-ohrlls",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The United Nations independently lists Afghanistan among landlocked developing countries."
+      }
+    ],
+    "referenceUrl": "https://www.worldbank.org/en/country/afghanistan/overview",
+    "referenceLabel": "Afghanistan overview",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q042",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 42,
+    "question": "Which is the highest volcano in Asia?",
+    "options": [
+      "Mount Sinabung",
+      "Mount Damavand",
+      "Mount Ararat",
+      "Mount Bromo"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://volcano.si.edu/volcano.cfm?vn=231020",
+        "label": "Damavand",
+        "publisher": "Smithsonian Global Volcanism Program",
+        "authorityId": "smithsonian",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Smithsonian catalogues Damavand as a 5,609-metre volcano in western Asia."
+      },
+      {
+        "url": "https://www.britannica.com/place/Mount-Damavand",
+        "label": "Mount Damavand",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently describes Mount Damavand as Asia's highest volcanic peak."
+      }
+    ],
+    "referenceUrl": "https://volcano.si.edu/volcano.cfm?vn=231020",
+    "referenceLabel": "Damavand",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Mount was added consistently to option names."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q043",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 43,
+    "question": "Which listed strait is the narrowest at its minimum width?",
+    "options": [
+      "Strait of Malacca",
+      "Strait of Gibraltar",
+      "Bosphorus Strait",
+      "Mozambique Channel"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.britannica.com/place/Bosporus",
+        "label": "Bosporus",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica gives the Bosporus a minimum width of about 750 metres."
+      },
+      {
+        "url": "https://www.ktb.gov.tr/EN-117667/istanbul.html",
+        "label": "Istanbul and the Bosphorus",
+        "publisher": "Republic of Turkiye Ministry of Culture and Tourism",
+        "authorityId": "turkiye-culture",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Turkiye's culture ministry independently describes the exceptionally narrow Bosphorus passage."
+      }
+    ],
+    "referenceUrl": "https://www.britannica.com/place/Bosporus",
+    "referenceLabel": "Bosporus",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The absolute narrowest strait in the world is definition-dependent. The item was scoped to the listed choices and malformed place names were corrected."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q044",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 44,
+    "question": "What is the rate of change of displacement with respect to time called?",
+    "options": [
+      "Speed",
+      "Acceleration",
+      "Velocity",
+      "Retardation"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and velocity",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines velocity as the rate of change of displacement with time."
+      },
+      {
+        "url": "https://physics.nist.gov/cuu/Units/units.html",
+        "label": "SI units",
+        "publisher": "NIST",
+        "authorityId": "nist",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST's SI guidance distinguishes velocity as displacement per unit time."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+    "referenceLabel": "Speed and velocity",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The sentence fragment was converted to a complete question."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q045",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 45,
+    "question": "Which animal gave formic acid its name because the acid was first isolated from it?",
+    "options": [
+      "Vinegar eel",
+      "Orange butterfly",
+      "Ant",
+      "Fat-tailed sheep"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Formic-Acid",
+        "label": "Formic acid",
+        "publisher": "PubChem, U.S. National Library of Medicine",
+        "authorityId": "pubchem",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PubChem records formic acid's association and name origin with ants."
+      },
+      {
+        "url": "https://www.britannica.com/science/formic-acid",
+        "label": "Formic acid",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently explains that formic acid was first isolated from ants."
+      }
+    ],
+    "referenceUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/Formic-Acid",
+    "referenceLabel": "Formic acid",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source wording obtained from was too broad because formic acid has many production routes; it was repaired to the historical name origin."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q046",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 46,
+    "question": "Which field test uses stepping exercise and recovery pulse to estimate cardiorespiratory fitness?",
+    "options": [
+      "Dyer test",
+      "Macdonald test",
+      "Harvard step test",
+      "Rorschach test"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15054646/",
+        "label": "Harvard step test and cardiorespiratory fitness",
+        "publisher": "PubMed",
+        "authorityId": "pubmed",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The PubMed-indexed study describes the Harvard step test as an assessment of cardiorespiratory fitness."
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10225679/",
+        "label": "Harvard step test study",
+        "publisher": "National Library of Medicine",
+        "authorityId": "nih-pmc",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "An independent NLM-hosted study describes its stepping and recovery-pulse method."
+      }
+    ],
+    "referenceUrl": "https://pubmed.ncbi.nlm.nih.gov/15054646/",
+    "referenceLabel": "Harvard step test and cardiorespiratory fitness",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "None of these was replaced and the procedure was specified."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q047",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 47,
+    "question": "In which decade were the first human coronaviruses identified?",
+    "options": [
+      "1880s",
+      "1920s",
+      "1960s",
+      "1990s"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.cdc.gov/coronavirus/about/index.html",
+        "label": "About coronaviruses",
+        "publisher": "Centers for Disease Control and Prevention",
+        "authorityId": "cdc",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CDC's coronavirus history places the discovery of human coronaviruses in the 1960s."
+      },
+      {
+        "url": "https://www.britannica.com/science/coronavirus-virus-group",
+        "label": "Coronavirus",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently records the first human coronavirus isolations in the 1960s."
+      }
+    ],
+    "referenceUrl": "https://www.cdc.gov/coronavirus/about/index.html",
+    "referenceLabel": "About coronaviruses",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source incorrectly combined animals with the 1960s date; animal coronaviruses were identified earlier. It was repaired to human coronaviruses."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q048",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 48,
+    "question": "Myopia primarily affects which organ?",
+    "options": [
+      "Ear",
+      "Eye",
+      "Heart",
+      "Brain"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/nearsightedness-myopia",
+        "label": "Nearsightedness (myopia)",
+        "publisher": "National Eye Institute",
+        "authorityId": "us-nei",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Eye Institute defines myopia as an eye condition causing distant objects to appear blurry."
+      },
+      {
+        "url": "https://www.aao.org/eye-health/diseases/myopia-nearsightedness",
+        "label": "Myopia",
+        "publisher": "American Academy of Ophthalmology",
+        "authorityId": "aao",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The American Academy of Ophthalmology independently describes myopia as nearsightedness of the eye."
+      }
+    ],
+    "referenceUrl": "https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/nearsightedness-myopia",
+    "referenceLabel": "Nearsightedness (myopia)",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Eyesight was normalized to the organ eye."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q049",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 49,
+    "question": "What is Microsoft Excel primarily used to do?",
+    "options": [
+      "Create web pages",
+      "Organize and analyze spreadsheet data",
+      "Create slide presentations",
+      "Increase computer processor speed"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.microsoft.com/en-us/microsoft-365/excel",
+        "label": "Microsoft Excel",
+        "publisher": "Microsoft",
+        "authorityId": "microsoft",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft describes Excel as spreadsheet software for organizing, analyzing and visualizing data."
+      },
+      {
+        "url": "https://edu.gcfglobal.org/en/excel/",
+        "label": "Excel tutorial",
+        "publisher": "GCFGlobal",
+        "authorityId": "gcfglobal",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "GCFGlobal independently teaches Excel as a spreadsheet tool for storing and working with data."
+      }
+    ],
+    "referenceUrl": "https://www.microsoft.com/en-us/microsoft-365/excel",
+    "referenceLabel": "Microsoft Excel",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The correct option was expanded to include Excel's analytical role."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q050",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 50,
+    "question": "Which keyboard shortcut selects all content in a Microsoft Word document?",
+    "options": [
+      "Ctrl+A",
+      "Ctrl+B",
+      "Ctrl+T",
+      "Ctrl+D"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+        "label": "Keyboard shortcuts in Word",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft lists Ctrl+A for selecting all document content."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/shared/04/01010000.html",
+        "label": "General shortcut keys",
+        "publisher": "The Document Foundation",
+        "authorityId": "document-foundation",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice independently documents Ctrl+A as Select All."
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+    "referenceLabel": "Keyboard shortcuts in Word",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The application context was added."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q051",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 51,
+    "question": "Which technology reads data from a compact disc?",
+    "options": [
+      "Electrical contacts",
+      "Mechanical stylus",
+      "Magnetic head",
+      "Laser light"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.britannica.com/technology/optical-storage",
+        "label": "Optical storage",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica explains that optical discs are read with a laser beam."
+      },
+      {
+        "url": "https://www.ibm.com/docs/en/i/7.4.0?topic=solutions-optical-storage",
+        "label": "Optical storage",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM independently describes optical storage as laser-read media."
+      }
+    ],
+    "referenceUrl": "https://www.britannica.com/technology/optical-storage",
+    "referenceLabel": "Optical storage",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Electromagnetic was replaced by a distinct magnetic-head distractor and LASER capitalization was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q052",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 884,
+    "sourceBookPage": 885,
+    "sourceQuestionNumber": 52,
+    "question": "What does WWW stand for?",
+    "options": [
+      "World Wide Web",
+      "Wide World Web",
+      "World Whole Web",
+      "World Wide Webpage"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.w3.org/History/1989/proposal.html",
+        "label": "Information Management: A Proposal",
+        "publisher": "World Wide Web Consortium",
+        "authorityId": "w3c",
+        "sourceClass": "primary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The W3C's foundational proposal names the World Wide Web."
+      },
+      {
+        "url": "https://home.cern/science/computing/birth-web",
+        "label": "The birth of the Web",
+        "publisher": "CERN",
+        "authorityId": "cern",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CERN independently documents the birth and full name of the World Wide Web."
+      }
+    ],
+    "referenceUrl": "https://www.w3.org/History/1989/proposal.html",
+    "referenceLabel": "Information Management: A Proposal",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source abbreviation question was normalized as a complete sentence."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q053",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 53,
+    "question": "What is software called when its copyright has expired or been explicitly waived so that nobody owns exclusive rights in it?",
+    "options": [
+      "Proprietary software",
+      "Customized software",
+      "Public-domain software",
+      "Firmware"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.copyright.gov/help/faq/faq-definitions.html",
+        "label": "Copyright definitions",
+        "publisher": "U.S. Copyright Office",
+        "authorityId": "us-copyright",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The U.S. Copyright Office explains that public-domain works are not protected by copyright."
+      },
+      {
+        "url": "https://www.gnu.org/philosophy/categories.html#PublicDomainSoftware",
+        "label": "Categories of free and nonfree software",
+        "publisher": "GNU Project",
+        "authorityId": "gnu",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "GNU distinguishes public-domain software from copyrighted free software."
+      }
+    ],
+    "referenceUrl": "https://www.copyright.gov/help/faq/faq-definitions.html",
+    "referenceLabel": "Copyright definitions",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Free software is not synonymous with public-domain software because free software may remain copyrighted. The stem was rebuilt around the public-domain definition."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q054",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 54,
+    "question": "Which activity can be part of cyber operations?",
+    "options": [
+      "Disrupting digital infrastructure",
+      "Cyber espionage",
+      "Defending computer networks",
+      "All of these"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/cyber_operations",
+        "label": "Cyber operations",
+        "publisher": "NIST",
+        "authorityId": "nist",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST's cyber-operations terminology encompasses activities performed through cyberspace, including offensive and defensive actions."
+      },
+      {
+        "url": "https://www.cisa.gov/topics/cyber-threats-and-advisories",
+        "label": "Cyber threats and advisories",
+        "publisher": "CISA",
+        "authorityId": "cisa",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CISA separately documents cyber threats, espionage, disruption and network defence."
+      }
+    ],
+    "referenceUrl": "https://csrc.nist.gov/glossary/term/cyber_operations",
+    "referenceLabel": "Cyber operations",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague Cyber Technology label and physical-only infrastructure wording were repaired; the three listed activities are all within cyber operations."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q055",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 55,
+    "question": "In Microsoft Word, what line spacing does Ctrl+5 apply to a paragraph?",
+    "options": [
+      "Single spacing",
+      "1.25-line spacing",
+      "1.5-line spacing",
+      "1.75-line spacing"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+        "label": "Keyboard shortcuts in Word",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft lists Ctrl+5 for setting 1.5-line spacing."
+      },
+      {
+        "url": "https://www.westernsydney.edu.au/content/dam/digital/pdf/teaching-and-research/word-keyboard-shortcuts.pdf",
+        "label": "Microsoft Word keyboard shortcuts",
+        "publisher": "Western Sydney University",
+        "authorityId": "western-sydney-university",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Western Sydney University's Word shortcut guide independently lists Ctrl+5 for 1.5 spacing."
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+    "referenceLabel": "Keyboard shortcuts in Word",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source incorrectly called the value points; it is a line-spacing multiple."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q056",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 56,
+    "question": "What does Excel's AutoSum command do by default?",
+    "options": [
+      "Adds values in a nearby cell range",
+      "Extends a sequential data series",
+      "Applies cell borders",
+      "Sorts a worksheet"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/use-autosum-to-sum-numbers-543941e7-e783-44ef-8317-7d1bb85fe706",
+        "label": "Use AutoSum to sum numbers",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft states that AutoSum inserts a SUM formula for a row or column of numbers."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/scalc/01/04060106.html",
+        "label": "SUM function",
+        "publisher": "The Document Foundation",
+        "authorityId": "document-foundation",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice independently documents the SUM operation over cell ranges."
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-us/office/use-autosum-to-sum-numbers-543941e7-e783-44ef-8317-7d1bb85fe706",
+    "referenceLabel": "Use AutoSum to sum numbers",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "None of these was replaced and nearby was added because Excel proposes an adjacent range."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q057",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 57,
+    "question": "A 5 cm by 7 cm photograph is enlarged by a linear scale factor of 7/5. What are the new dimensions?",
+    "options": [
+      "7 cm by 9 cm",
+      "7.6 cm by 9.8 cm",
+      "7 cm by 9.8 cm",
+      "7 cm by 8.8 cm"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+        "label": "Prealgebra 2e",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax's ratio and proportion rules give 5 x 7/5 = 7 and 7 x 7/5 = 9.8."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/arithmetic",
+        "label": "Arithmetic",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently teaches the arithmetic used here: openstax's ratio and proportion rules give 5 x 7/5 = 7 and 7 x 7/5 = 9.8."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+    "referenceLabel": "Prealgebra 2e",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source printed key selects A, but direct scaling yields 7 cm by 9.8 cm; the verified key is C."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q058",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 58,
+    "question": "One number is 20% greater than a base number and another is 50% greater than the same base. What is their ratio?",
+    "options": [
+      "2:3",
+      "3:4",
+      "4:5",
+      "5:6"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+        "label": "Prealgebra 2e",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax's percent rules give 1.2:1.5, which simplifies to 4:5."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/arithmetic",
+        "label": "Arithmetic",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently teaches the arithmetic used here: openstax's percent rules give 1.2:1.5, which simplifies to 4:5."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+    "referenceLabel": "Prealgebra 2e",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The common third number was described as a base to make the ratio calculation explicit."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q059",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 59,
+    "question": "Each square tile is 2 feet by 2 feet. What is the minimum number of whole tiles needed to cover a 17-foot by 12-foot rectangular floor if edge tiles may be cut?",
+    "options": [
+      "47",
+      "51",
+      "59",
+      "63"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+        "label": "Prealgebra 2e",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax's rectangle-area rule gives 204 square feet, and each tile covers 4 square feet, so 51 tiles are required."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/arithmetic",
+        "label": "Arithmetic",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently teaches the arithmetic used here: openstax's rectangle-area rule gives 204 square feet, and each tile covers 4 square feet, so 51 tiles are required."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+    "referenceLabel": "Prealgebra 2e",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source misspells single as singlet and its printed key letter conflicts with the key text. The area calculation verifies 51 tiles."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q060",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 60,
+    "question": "If x:y = 7:3, what is the value of (xy + x^2)/(x^2 - y^2)?",
+    "options": [
+      "7/4",
+      "5/4",
+      "3/4",
+      "1/5"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+        "label": "Prealgebra 2e",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Substituting x=7k and y=3k gives (21+49)/(49-9)=70/40=7/4."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/arithmetic",
+        "label": "Arithmetic",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently teaches the arithmetic used here: substituting x=7k and y=3k gives (21+49)/(49-9)=70/40=7/4."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+    "referenceLabel": "Prealgebra 2e",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source omitted grouping parentheses and none of its options equals the expression's value. Parentheses and a correct 7/4 option were added; the printed key is rejected."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q061",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 61,
+    "question": "How many prime numbers are there between 64 and 81?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+        "label": "Prealgebra 2e",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Testing divisibility identifies 67, 71, 73 and 79, for a total of four primes."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/arithmetic",
+        "label": "Arithmetic",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently teaches the arithmetic used here: testing divisibility identifies 67, 71, 73 and 79, for a total of four primes."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+    "referenceLabel": "Prealgebra 2e",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The four primes are 67, 71, 73 and 79."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q062",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 62,
+    "question": "The angles of a triangle are in the ratio 2:7:11. What are the angles?",
+    "options": [
+      "20 degrees, 70 degrees, 90 degrees",
+      "20 degrees, 70 degrees, 110 degrees",
+      "18 degrees, 63 degrees, 99 degrees",
+      "23 degrees, 54 degrees, 103 degrees"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+        "label": "Prealgebra 2e",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Triangle angles total 180 degrees; 20 ratio parts make 9 degrees each, yielding 18, 63 and 99 degrees."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/arithmetic",
+        "label": "Arithmetic",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently teaches the arithmetic used here: triangle angles total 180 degrees; 20 ratio parts make 9 degrees each, yielding 18, 63 and 99 degrees."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+    "referenceLabel": "Prealgebra 2e",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The malformed final distractor was normalized while preserving the unique answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q063",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 63,
+    "question": "One third of one fourth of a number is 15. What is three tenths of that number?",
+    "options": [
+      "42",
+      "54",
+      "66",
+      "98"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+        "label": "Prealgebra 2e",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "If n/12=15 then n=180, and 3n/10=54."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/arithmetic",
+        "label": "Arithmetic",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently teaches the arithmetic used here: if n/12=15 then n=180, and 3n/10=54."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+    "referenceLabel": "Prealgebra 2e",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source printed key identifies 42, but direct algebra gives 54; the verified key is B."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q064",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 64,
+    "question": "Solve 3^(x+3) + 7 = 250 for x.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+        "label": "Prealgebra 2e",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Subtracting 7 gives 3^(x+3)=243=3^5, so x=2."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/arithmetic",
+        "label": "Arithmetic",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently teaches the arithmetic used here: subtracting 7 gives 3^(x+3)=243=3^5, so x=2."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+    "referenceLabel": "Prealgebra 2e",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Mathematical typography was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q065",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 65,
+    "question": "Which mathematical quantity measures the total distance around the boundary of a shape?",
+    "options": [
+      "Angle",
+      "Perimeter",
+      "Factor",
+      "Probability"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+        "label": "Prealgebra 2e",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines perimeter as the distance around a two-dimensional figure."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/arithmetic",
+        "label": "Arithmetic",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently teaches the arithmetic used here: openstax defines perimeter as the distance around a two-dimensional figure."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+    "referenceLabel": "Prealgebra 2e",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Concept was replaced by the more precise term quantity."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q066",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 885,
+    "sourceBookPage": 886,
+    "sourceQuestionNumber": 66,
+    "question": "One litre is approximately 33.8 fluid ounces. At most how many 12-ounce cups can be completely filled from a two-litre bottle?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+        "label": "Prealgebra 2e",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Two litres are about 67.6 ounces; floor(67.6/12) equals five completely filled cups."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/arithmetic",
+        "label": "Arithmetic",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently teaches the arithmetic used here: two litres are about 67.6 ounces; floor(67.6/12) equals five completely filled cups."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+    "referenceLabel": "Prealgebra 2e",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source key selects six, which counts a partially filled cup. The word completely makes the maximum whole-cup count five."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q067",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 67,
+    "question": "Which word is the best antonym of 'transparent'?",
+    "options": [
+      "Flimsy",
+      "Opaque",
+      "Thin",
+      "Delicate"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/transparent",
+        "label": "transparent and opaque definition",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's entry supports opaque as the opposite of transparent."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/opaque",
+        "label": "transparent and opaque definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently supports opaque as the opposite of transparent."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/transparent",
+    "referenceLabel": "transparent and opaque definition",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The instruction was incorporated into a complete question."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q068",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 68,
+    "question": "Which word is the best synonym of 'entice'?",
+    "options": [
+      "Repulse",
+      "Weary",
+      "Lure",
+      "Disgust"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/entice",
+        "label": "entice and lure definition",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's entry supports lure as a synonym of entice."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/lure",
+        "label": "entice and lure definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently supports lure as a synonym of entice."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/entice",
+    "referenceLabel": "entice and lure definition",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source instruction was converted to a complete question."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q069",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 69,
+    "question": "Which pair has the same relationship as 'guile : ingenious'?",
+    "options": [
+      "Wise : crammed",
+      "Courage : timorous",
+      "Desolate : burden",
+      "None of these"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "The source pair itself has no clear lexical relation: guile is a noun meaning deceitful cunning, while ingenious is an adjective meaning cleverly inventive. None of the alternatives supplies a defensible matching relation, so the analogy remains unresolved."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q070",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 70,
+    "question": "Which word is the best antonym of 'pulchritude'?",
+    "options": [
+      "Ugliness",
+      "Beauty",
+      "Elegance",
+      "Allure"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/pulchritude",
+        "label": "pulchritude and ugliness definition",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's entry supports pulchritude as beauty and ugliness as its opposite."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/ugliness",
+        "label": "pulchritude and ugliness definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently supports pulchritude as beauty and ugliness as its opposite."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/pulchritude",
+    "referenceLabel": "pulchritude and ugliness definition",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source instruction was converted to a complete question."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q071",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 71,
+    "question": "Complete the sentence: 'My friend and benefactor ____ died.'",
+    "options": [
+      "was",
+      "were",
+      "has",
+      "have"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/and",
+        "label": "And in coordinated subjects",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that coordinated nouns can refer to one person or unit; here one person is both friend and benefactor."
+      },
+      {
+        "url": "https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html",
+        "label": "Subject-verb agreement",
+        "publisher": "Purdue Online Writing Lab",
+        "authorityId": "purdue-owl",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Purdue explains that a singular subject takes a singular verb, so has agrees with the single referent."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/and",
+    "referenceLabel": "And in coordinated subjects",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The singular compound referent takes has; the simple-past verb died remains the lexical verb of the sentence."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q072",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 72,
+    "question": "Choose the correct indirect-speech form of: He said to me, 'Will you accompany me?'",
+    "options": [
+      "He said me if I will accompany him.",
+      "He asked me if I would accompany him.",
+      "He asked me that I would accompany him.",
+      "He told me if I would accompany him."
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-questions",
+        "label": "Reported questions",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that yes/no reported questions use ask plus if/whether and statement word order."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/reported-speech-statements",
+        "label": "Reported speech",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently explains tense backshift in reported speech."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-questions",
+    "referenceLabel": "Reported questions",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Capitalization and punctuation were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q073",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 73,
+    "question": "What does the phrasal verb 'knock down' mean in this sentence: 'The wind knocked the fence down'?",
+    "options": [
+      "Refuse",
+      "Accept",
+      "Proceed",
+      "Cause something to fall"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/knock-down",
+        "label": "knock down definition",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's entry supports the meaning cause something to fall."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/knockdown",
+        "label": "knock down definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently supports the meaning cause something to fall."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/knock-down",
+    "referenceLabel": "knock down definition",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source option 'to fell something' was repaired to the idiomatic meaning and a context sentence was added."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q074",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 74,
+    "question": "Complete the sentence: 'When the little boy grabbed the lizard, ____ tail broke off in ____ hand.'",
+    "options": [
+      "it / him",
+      "its / his",
+      "it / one's",
+      "the / his"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/pronouns-possessive-my-mine-your-yours-etc",
+        "label": "Possessive pronouns and determiners",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge lists its and his as possessive determiners before nouns."
+      },
+      {
+        "url": "https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html",
+        "label": "Pronouns",
+        "publisher": "Purdue Online Writing Lab",
+        "authorityId": "purdue-owl",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Purdue independently explains possessive pronoun agreement and use."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/pronouns-possessive-my-mine-your-yours-etc",
+    "referenceLabel": "Possessive pronouns and determiners",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Spacing and capitalization were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q075",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 75,
+    "question": "Choose the correct passive transformation of: 'They say you did it.'",
+    "options": [
+      "You are advised to sit by them.",
+      "You did it said by them.",
+      "You are told to sit by them.",
+      "None of these"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "The source choices repeatedly substitute sit for did it and none expresses the normal passive reporting construction 'You are said to have done it.' The intended correction cannot be selected without replacing the entire option set."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q076",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 76,
+    "question": "Complete the analogy: condone is to offence as overlook is to ____.",
+    "options": [
+      "Aberration",
+      "Criminal",
+      "Omission",
+      "Penitence"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/condone",
+        "label": "Condone",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines condone as accepting or allowing behaviour considered wrong."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/overlook",
+        "label": "Overlook",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster gives overlook in the sense of disregarding a fault; aberration is the listed fault-like object."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/condone",
+    "referenceLabel": "Condone",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The pair-to-pair formatting was repaired so the verb-to-wrongdoing relation is explicit."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q077",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 77,
+    "question": "Which word is the best synonym of 'haughty'?",
+    "options": [
+      "Quiet",
+      "Proud",
+      "Talkative",
+      "Humble"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/haughty",
+        "label": "haughty and proud definition",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's entry supports proud in the arrogant sense as the closest listed synonym."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/haughty",
+        "label": "haughty and proud definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently supports proud in the arrogant sense as the closest listed synonym."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/haughty",
+    "referenceLabel": "haughty and proud definition",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source instruction was converted to a complete question."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q078",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 78,
+    "question": "Choose the correct indirect-speech form of the command: The captain said to his men, 'Stand at ease.'",
+    "options": [
+      "The captain urged his men to stand at ease.",
+      "The captain commanded his men to stand at ease.",
+      "The captain wanted his men to stand at ease.",
+      "The captain told his men that they should stand at ease."
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-orders-requests-advice-and-suggestions",
+        "label": "Reported orders and requests",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that commands are commonly reported with an ordering verb plus object plus to-infinitive."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/reported-speech",
+        "label": "Reported speech",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently documents the to-infinitive pattern for reported commands."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-orders-requests-advice-and-suggestions",
+    "referenceLabel": "Reported orders and requests",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Captain capitalization was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q079",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 79,
+    "question": "In the sentence 'There is beautiful scenery along the roads,' what part of speech is 'roads'?",
+    "options": [
+      "Noun",
+      "Adverb",
+      "Adjective",
+      "Conjunction"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/road",
+        "label": "Road",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge classifies road as a noun."
+      },
+      {
+        "url": "https://owl.purdue.edu/owl/general_writing/mechanics/parts_of_speech/prepositions.html",
+        "label": "Prepositions",
+        "publisher": "Purdue Online Writing Lab",
+        "authorityId": "purdue-owl",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Purdue explains that a preposition such as along takes a noun phrase as its object."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/road",
+    "referenceLabel": "Road",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's phrase 'the preposition relates with' is nonstandard and could ask either relation or object. It was repaired to the unambiguous part of speech of roads."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q080",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 80,
+    "question": "Complete the sentence: 'As ____ is ready to help me, I have to do ____ by myself.'",
+    "options": [
+      "no one / everything",
+      "someone / all",
+      "no one / all",
+      "everyone / nothing"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/no-one-nobody-nothing-nowhere",
+        "label": "No one and nobody",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains no one as not a single person, fitting the absence of help."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/everything",
+        "label": "Everything",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines everything as all that exists or is relevant, fitting doing all tasks alone."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/no-one-nobody-nothing-nowhere",
+    "referenceLabel": "No one and nobody",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "A comma was added and the final none-of-these distractor was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q081",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 81,
+    "question": "Complete the proverb: 'Barking dogs seldom ____.'",
+    "options": [
+      "bark",
+      "bite",
+      "bit",
+      "munch"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/barking-dogs-seldom-bite",
+        "label": "Barking dogs seldom bite",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records the proverb with bite."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/barking-dogs-seldom-bite",
+        "label": "Barking dogs seldom bite",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently records the same proverb."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/barking-dogs-seldom-bite",
+    "referenceLabel": "Barking dogs seldom bite",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The instruction was incorporated into the stem and option capitalization was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q082",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 82,
+    "question": "Which Urdu poet's birth name was Wali Muhammad?",
+    "options": [
+      "Josh Malihabadi",
+      "Akbar Allahabadi",
+      "Nazeer Akbarabadi",
+      "Mir Taqi Mir"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://sufinama.org/poets/nazeer-akbarabadi/profile",
+        "label": "Nazeer Akbarabadi profile",
+        "publisher": "Sufinama",
+        "authorityId": "sufinama",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Sufinama records Nazeer Akbarabadi's original name as Wali Muhammad."
+      },
+      {
+        "url": "https://www.rekhta.org/poets/nazeer-akbarabadi/profile",
+        "label": "Nazeer Akbarabadi",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta independently identifies the poet's birth name."
+      }
+    ],
+    "referenceUrl": "https://sufinama.org/poets/nazeer-akbarabadi/profile",
+    "referenceLabel": "Nazeer Akbarabadi profile",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The Urdu source was translated into English and none-of-these was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q083",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 83,
+    "question": "Who wrote the book 'Urdu-e-Latif'?",
+    "options": [
+      "Hasan Askari",
+      "Jamil Jalibi",
+      "Akhtar Husain",
+      "None of these"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "The scan title and author choices could not be matched to two authoritative library or literary catalogues. Search results instead surfaced similarly named periodicals and unrelated works, so the keyed attribution is not retained without fabrication."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q084",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 886,
+    "sourceBookPage": 887,
+    "sourceQuestionNumber": 84,
+    "question": "Which is the standard form of the Urdu proverb meaning that everyone follows a separate course?",
+    "options": [
+      "Apni apni dafli, apna apna raag",
+      "Apni apni dafli par apna apna raag",
+      "Apni apni dholki, apna apna raag",
+      "Apna apna daf, apni apni taal"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-apnii-apnii-daflii-apnaa-apnaa-raag?lang=ur",
+        "label": "Apni apni dafli, apna apna raag",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary records the proverb in the form 'apni apni dafli, apna apna raag'."
+      },
+      {
+        "url": "https://www.jahan-e-urdu.com/?p=1877",
+        "label": "Selected Urdu idioms",
+        "publisher": "Jahan-e-Urdu",
+        "authorityId": "jahan-e-urdu",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Jahan-e-Urdu independently gives and explains the same standard wording."
+      }
+    ],
+    "referenceUrl": "https://rekhtadictionary.com/meaning-of-apnii-apnii-daflii-apnaa-apnaa-raag?lang=ur",
+    "referenceLabel": "Apni apni dafli, apna apna raag",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The Urdu-script options were transliterated into English and the final distractor was made explicit."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q085",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 85,
+    "question": "To which Urdu literary genre does the book 'Ghaur-o-Fikr' belong?",
+    "options": [
+      "Ghazal",
+      "Nazm",
+      "Letters",
+      "Biography"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "The source choices omit the catalogue classification: Rekhta records Talha Rizvi Barq's Ghaur-o-Fikr as Research & Criticism, not ghazal, nazm, letters or biography. A second independent authoritative catalogue record could not be established, so the source item is held rather than silently replacing its fact."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q086",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 86,
+    "question": "Which Arabic broken plural is traditionally used for the singular word 'khabar'?",
+    "options": [
+      "Khabrein",
+      "Akhbarat",
+      "Akhbar",
+      "Khabarat"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.rekhta.org/urdudictionary?keyword=%D8%AE%D8%A8%D8%B1",
+        "label": "Khabar",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta records akhbar as the Arabic-derived plural of khabar."
+      },
+      {
+        "url": "https://www.almaany.com/en/dict/ar-en/%D8%AE%D8%A8%D8%B1/",
+        "label": "Arabic dictionary entry for khabar",
+        "publisher": "Almaany",
+        "authorityId": "almaany",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Almaany independently gives akhbar as the broken plural."
+      }
+    ],
+    "referenceUrl": "https://www.rekhta.org/urdudictionary?keyword=%D8%AE%D8%A8%D8%B1",
+    "referenceLabel": "Khabar",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The unqualified Urdu question was ambiguous because khabrein is also an ordinary Urdu plural. It was narrowed to the Arabic broken-plural form and all choices were reconstructed."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q087",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 87,
+    "question": "Which poet's work is widely associated with the transition from classical to modern Urdu poetry?",
+    "options": [
+      "Mirza Ghalib",
+      "Mir Taqi Mir",
+      "Altaf Hussain Hali",
+      "Dagh Dehlvi"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://soas-repository.worktribe.com/output/395571/hali-the-poet-the-critic-and-the-biographer-and-his-influence-on-urdu-literature",
+        "label": "Hali and his influence on Urdu literature",
+        "publisher": "SOAS University of London",
+        "authorityId": "soas",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The SOAS thesis explains that Hali's poetry and prose mark the advent of the modern against classical traditionalism."
+      },
+      {
+        "url": "https://rekhta.su.edu.pk/article/240",
+        "label": "Maulana Altaf Hussain Hali and modern Urdu literature",
+        "publisher": "University of Sargodha",
+        "authorityId": "university-sargodha",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Sargodha journal independently identifies Hali as a modernizing figure in Urdu poetry."
+      }
+    ],
+    "referenceUrl": "https://soas-repository.worktribe.com/output/395571/hali-the-poet-the-critic-and-the-biographer-and-his-influence-on-urdu-literature",
+    "referenceLabel": "Hali and his influence on Urdu literature",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The metaphor old and new poetry's confluence was replaced with an academically supportable transition claim; none-of-these was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q088",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 88,
+    "question": "Who compiled the book 'Iqbal: Muasirin Ki Nazar Mein'?",
+    "options": [
+      "Syed Waqar Azim",
+      "Sajjad Zaheer",
+      "Yunus Muhammad",
+      "Jamil Jalibi"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/iqbal-muasrin-ki-nazar-mein-waqar-azeem-ebooks?lang=ur",
+        "label": "Iqbal: Muasirin Ki Nazar Mein",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta attributes the compilation to Waqar Azim."
+      },
+      {
+        "url": "https://ci.nii.ac.jp/ncid/BA67108925",
+        "label": "Iqbal: Muasirin ki nazar men catalogue record",
+        "publisher": "CiNii Research, National Institute of Informatics Japan",
+        "authorityId": "cinii",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CiNii's independent library catalogue record identifies Waqar Azim with the work."
+      }
+    ],
+    "referenceUrl": "https://www.rekhta.org/ebooks/detail/iqbal-muasrin-ki-nazar-mein-waqar-azeem-ebooks?lang=ur",
+    "referenceLabel": "Iqbal: Muasirin Ki Nazar Mein",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source mixes the title with the Progressive Writers' Movement and has a malformed third option. It was repaired to the book's compiler."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q089",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 89,
+    "question": "Which expression is an Urdu coordinative compound (murakkab-e-atfi) joined by 'o'?",
+    "options": [
+      "subh shaam",
+      "din raat",
+      "zauq-o-shauq",
+      "raat din"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://epgp.inflibnet.ac.in/epgpdata/uploads/epgp_content/S000776UR/P001183/M031385/ET/1527835815LAGUCG15.pdf",
+        "label": "Urdu coordinative compounds",
+        "publisher": "INFLIBNET Centre",
+        "authorityId": "inflibnet",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "INFLIBNET's Urdu-language unit defines murakkab-e-atfi as two words joined by the conjunction o."
+      },
+      {
+        "url": "https://affiliation.iub.edu.pk/portal/uploads/institute_notification/1649136896-Course%20Contents%20of%20ADP%204th%20Semester%282020-2022%29.pdf",
+        "label": "Urdu grammar curriculum",
+        "publisher": "Islamia University of Bahawalpur",
+        "authorityId": "iub",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IUB's Urdu grammar curriculum independently recognizes coordinative compounds as a formal compound class."
+      }
+    ],
+    "referenceUrl": "https://epgp.inflibnet.ac.in/epgpdata/uploads/epgp_content/S000776UR/P001183/M031385/ET/1527835815LAGUCG15.pdf",
+    "referenceLabel": "Urdu coordinative compounds",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The Urdu-script source was transliterated; zauq-o-shauq visibly contains the coordinative conjunction."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q090",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 90,
+    "question": "Who wrote the Urdu novels 'Khuda Ki Basti' and 'Jangloos'?",
+    "options": [
+      "Shaukat Thanvi",
+      "Shaukat Siddiqui",
+      "Naseem Hijazi",
+      "Qurratulain Hyder"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/khuda-ki-basti-shaukat-siddiqui-ebooks-4",
+        "label": "Khuda Ki Basti",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta identifies Shaukat Siddiqui as author of Khuda Ki Basti and lists Jangloos among his novels."
+      },
+      {
+        "url": "https://openlibrary.org/books/OL20741044M/Khuda_ki_basti",
+        "label": "Khuda ki basti catalogue record",
+        "publisher": "Open Library, Internet Archive",
+        "authorityId": "open-library",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Open Library independently catalogues Khuda Ki Basti under Shaukat Siddiqui."
+      }
+    ],
+    "referenceUrl": "https://www.rekhta.org/ebooks/detail/khuda-ki-basti-shaukat-siddiqui-ebooks-4",
+    "referenceLabel": "Khuda Ki Basti",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The Urdu source was translated and none-of-these was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q091",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 91,
+    "question": "Which early collection by Premchand, published under the name Nawab Rai, was confiscated by the colonial government?",
+    "options": [
+      "Akhir-e-Shab",
+      "Zad-e-Rah",
+      "Soz-e-Watan",
+      "Wardat"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/soz-e-watan-premchand-ebooks-1",
+        "label": "Soz-e-Watan",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta identifies Soz-e-Watan as Premchand's first story collection under Nawab Rai and describes its confiscation and burning."
+      },
+      {
+        "url": "https://www.rekhta.org/University_Syllabus/BHU_MA.pdf",
+        "label": "Premchand studies syllabus",
+        "publisher": "Banaras Hindu University",
+        "authorityId": "bhu",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Banaras Hindu University's Premchand syllabus independently treats Soz-e-Watan as the early canonical work."
+      }
+    ],
+    "referenceUrl": "https://www.rekhta.org/ebooks/detail/soz-e-watan-premchand-ebooks-1",
+    "referenceLabel": "Soz-e-Watan",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The source calls Soz-e-Watan a single short story; it was repaired to the historically documented collection."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q092",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 92,
+    "question": "Which Companion purchased the Well of Rumah and made its water available to the Muslims?",
+    "options": [
+      "Abu Bakr al-Siddiq",
+      "Umar ibn al-Khattab",
+      "Uthman ibn Affan",
+      "Ali ibn Abi Talib"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://sunnah.com/tirmidhi:3703",
+        "label": "Jami at-Tirmidhi 3703",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Tirmidhi report records Uthman stating that he purchased the Well of Rumah for the Muslims."
+      },
+      {
+        "url": "https://hadeethenc.com/en/browse/hadith/65081",
+        "label": "Uthman's purchase of the Well of Rumah",
+        "publisher": "HadeethEnc",
+        "authorityId": "hadeethenc",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "HadeethEnc independently presents the same report and identifies Uthman."
+      }
+    ],
+    "referenceUrl": "https://sunnah.com/tirmidhi:3703",
+    "referenceLabel": "Jami at-Tirmidhi 3703",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The Urdu source was translated and honorifics were represented through full names."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q093",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 93,
+    "question": "Which Companion was known by the title Dhun-Nurayn ('Possessor of the Two Lights')?",
+    "options": [
+      "Abu Bakr al-Siddiq",
+      "Umar ibn al-Khattab",
+      "Uthman ibn Affan",
+      "Ali ibn Abi Talib"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://sunnah.com/narrator/5543",
+        "label": "Uthman ibn Affan narrator profile",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Sunnah.com's biographical profile records Dhun-Nurayn as Uthman's title."
+      },
+      {
+        "url": "https://www.britannica.com/biography/Uthman-ibn-Affan",
+        "label": "Uthman ibn Affan",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently identifies Uthman and explains his marriage to two daughters of the Prophet, the basis of the title."
+      }
+    ],
+    "referenceUrl": "https://sunnah.com/narrator/5543",
+    "referenceLabel": "Uthman ibn Affan narrator profile",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The title was transliterated and translated."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q094",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 94,
+    "question": "When did Abu Quhafa, the father of Abu Bakr, accept Islam according to the traditional seerah account?",
+    "options": [
+      "At the Battle of Badr",
+      "At the Treaty of Hudaybiyyah",
+      "At the conquest of Mecca",
+      "Before the first revelation"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/ebu-kuhafe",
+        "label": "Abu Quhafa",
+        "publisher": "TDV Encyclopedia of Islam",
+        "authorityId": "tdv-islam-encyclopedia",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "TDV's scholarly encyclopedia identifies Abu Quhafa and records his late conversion."
+      },
+      {
+        "url": "https://www.islamoutreach.org/books/Imam-AlBayhaqi/Dalail-an-Nubuwwah/5/17",
+        "label": "Conversion of Abu Quhafa during the conquest",
+        "publisher": "Islam Outreach edition of al-Bayhaqi",
+        "authorityId": "islam-outreach",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The translated al-Bayhaqi chapter explicitly narrates his conversion during the conquest of Mecca."
+      }
+    ],
+    "referenceUrl": "https://islamansiklopedisi.org.tr/ebu-kuhafe",
+    "referenceLabel": "Abu Quhafa",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The traditional-source scope was added because this is a seerah report."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q095",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 95,
+    "question": "Which surah contains the Quranic legal passages on zina and false accusation of zina (qadhf)?",
+    "options": [
+      "Al-Baqarah",
+      "An-Nur",
+      "Al-Ma'idah",
+      "Al-Anfal"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://quran.com/24/2-4",
+        "label": "Quran 24:2-4",
+        "publisher": "Quran.com",
+        "authorityId": "quran-com",
+        "sourceClass": "primary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Quran 24:2 addresses zina and 24:4 addresses accusations against chaste persons."
+      },
+      {
+        "url": "https://corpus.quran.com/translation.jsp?chapter=24&verse=4",
+        "label": "Translations of Quran 24:4",
+        "publisher": "Quranic Arabic Corpus, University of Leeds",
+        "authorityId": "quranic-arabic-corpus",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Leeds corpus independently presents the verse on the qadhf accusation in Surah An-Nur."
+      }
+    ],
+    "referenceUrl": "https://quran.com/24/2-4",
+    "referenceLabel": "Quran 24:2-4",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The Urdu source was translated and the final none-of-these option was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q096",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 96,
+    "question": "According to the report of Umm al-Fadl, which prayer was the last one the Prophet Muhammad led before his death?",
+    "options": [
+      "Fajr",
+      "Asr",
+      "Maghrib",
+      "Isha"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://sunnah.com/bukhari:4429",
+        "label": "Sahih al-Bukhari 4429",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Bukhari report says the Prophet led Maghrib and led no prayer after it before his death."
+      },
+      {
+        "url": "https://www.alim.org/hadith/sahih-bukhari/5/64/4429/",
+        "label": "Sahih al-Bukhari 4429",
+        "publisher": "Alim.org",
+        "authorityId": "alim",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Alim's independent rendering presents the same Umm al-Fadl report."
+      }
+    ],
+    "referenceUrl": "https://sunnah.com/bukhari:4429",
+    "referenceLabel": "Sahih al-Bukhari 4429",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The narrator and report scope were added because other reports discuss Abu Bakr leading prayers during the final illness."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q097",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 97,
+    "question": "Halima al-Sa'diyya, the Prophet Muhammad's foster mother, belonged to Banu Sa'd, a branch of which larger tribal grouping?",
+    "options": [
+      "Banu Asad",
+      "Quraysh",
+      "Hawazin",
+      "Thaqif"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://yaqeeninstitute.ca/watch/series/the-firsts/the-mothers-of-the-prophet-amina-halima-al-sadiyya-the-firsts-omar-suleiman",
+        "label": "Amina and Halima al-Sadiyya",
+        "publisher": "Yaqeen Institute for Islamic Research",
+        "authorityId": "yaqeen-institute",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Yaqeen identifies Halima with Banu Sa'd and relates that group to Hawazin."
+      },
+      {
+        "url": "https://isamveri.org/pdfdkm/08/DKM080604.pdf",
+        "label": "Sirat-un-Nabi",
+        "publisher": "ISAM Library",
+        "authorityId": "isam-library",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent Sirat-un-Nabi text describes Banu Sa'd as also known within Banu Hawazin."
+      }
+    ],
+    "referenceUrl": "https://yaqeeninstitute.ca/watch/series/the-firsts/the-mothers-of-the-prophet-amina-halima-al-sadiyya-the-firsts-omar-suleiman",
+    "referenceLabel": "Amina and Halima al-Sadiyya",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "The source's expected broad tribe Hawazin was clarified by naming her immediate clan, Banu Sa'd."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q098",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 98,
+    "question": "Which pledge was taken under the tree during the events at Hudaybiyyah?",
+    "options": [
+      "Bay'at al-Aqabah",
+      "Bay'at al-Nisa",
+      "Bay'at al-Ridwan",
+      "Bay'at al-Khilafah"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://quran.com/48/18",
+        "label": "Quran 48:18",
+        "publisher": "Quran.com",
+        "authorityId": "quran-com",
+        "sourceClass": "primary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Quran 48:18 refers to the believers' pledge under the tree, traditionally named Bay'at al-Ridwan."
+      },
+      {
+        "url": "https://www.britannica.com/event/Pact-of-Al-Hudaybiyah",
+        "label": "Pact of Al-Hudaybiyah",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently places the pledge at Hudaybiyyah."
+      }
+    ],
+    "referenceUrl": "https://quran.com/48/18",
+    "referenceLabel": "Quran 48:18",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Malformed source distractors were replaced with recognized pledge names."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q099",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 99,
+    "question": "Whom did the Prophet Muhammad leave in Medina when he departed for the Tabuk expedition?",
+    "options": [
+      "Abu Bakr al-Siddiq",
+      "Umar ibn al-Khattab",
+      "Uthman ibn Affan",
+      "Ali ibn Abi Talib"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://sunnah.com/bukhari:4416",
+        "label": "Sahih al-Bukhari 4416",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Bukhari report states that the Prophet left Ali in Medina during the Tabuk expedition."
+      },
+      {
+        "url": "https://www.alim.org/hadith/sahih-muslim/31/2404/",
+        "label": "Sahih Muslim 2404",
+        "publisher": "Alim.org",
+        "authorityId": "alim",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Alim's rendering of the independent Muslim transmission corroborates Ali's appointment."
+      }
+    ],
+    "referenceUrl": "https://sunnah.com/bukhari:4416",
+    "referenceLabel": "Sahih al-Bukhari 4416",
+    "accessedOn": "2026-08-26",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The Urdu source was translated and the administrative-negligence wording was clarified."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0121-Q100",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0121",
+    "sourcePdfPage": 887,
+    "sourceBookPage": 888,
+    "sourceQuestionNumber": 100,
+    "question": "While in the Cave of Hira, what kind of sound came from the stone against which the Prophet Muhammad leaned?",
+    "options": [
+      "Singing",
+      "Talbiyah",
+      "Horse sounds",
+      "Donkey sounds"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "No identifiable Quranic passage, canonical hadith or established seerah report could be matched to this highly specific stone-and-sound narrative. The printed key is not retained without traceable evidence."
+  }
+]

@@ -1,0 +1,776 @@
+[
+  {
+    "id": "ADV2E102-U0111-Q003-SRC",
+    "pairId": "ADV2E102-U0111-Q003",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Which algebraic law is represented by x(yz) = (xy)z?",
+    "questionUrdu": "کون سا الجبری قانون x(yz) = (xy)z سے ظاہر ہوتا ہے؟",
+    "options": [
+      "Associative law",
+      "Distributive law",
+      "Commutative law",
+      "Identity law"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Associative law ہے۔ اس قانون میں اعداد یا متغیرات کی ترتیب وہی رہتی ہے، صرف grouping یعنی قوسین کی جگہ بدلتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Associative property",
+      "referenceUrl": "https://mathworld.wolfram.com/Associative.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q003"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://mathworld.wolfram.com/Associative.html",
+        "label": "Associative property",
+        "publisher": "Wolfram MathWorld",
+        "authorityId": "wolfram-mathworld",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "MathWorld defines associativity by regrouping operands without changing their order."
+      },
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/7-1-rational-expressions",
+        "label": "Properties of multiplication",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax states the associative property of multiplication using regrouped factors."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The scan printed a minus sign between the two expressions. It was repaired to the equality required by the associative law, and distractors were made distinct."
+  },
+  {
+    "id": "ADV2E102-U0111-Q003-SIM",
+    "pairId": "ADV2E102-U0111-Q003",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Which equation shows the associative law of addition?",
+    "questionUrdu": "کون سی مساوات جمع کا associative law ظاہر کرتی ہے؟",
+    "options": [
+      "(a + b) + c = a + (b + c)",
+      "a + b = b + a",
+      "a(b + c) = ab + ac",
+      "a + 0 = a"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب (a + b) + c = a + (b + c) ہے۔ یہاں terms کی ترتیب نہیں بدلی، صرف grouping تبدیل ہوئی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Associative property",
+      "referenceUrl": "https://mathworld.wolfram.com/Associative.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q003",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://mathworld.wolfram.com/Associative.html",
+        "label": "Associative property",
+        "publisher": "Wolfram MathWorld",
+        "authorityId": "wolfram-mathworld",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram MathWorld supports that the associative law permits regrouping operands without changing their order."
+      },
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/7-1-rational-expressions",
+        "label": "Properties of multiplication",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the associative law permits regrouping operands without changing their order."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0111-Q007-SRC",
+    "pairId": "ADV2E102-U0111-Q007",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which property requires an algorithm to terminate after a finite number of steps?",
+    "questionUrdu": "algorithm کی کون سی خاصیت تقاضا کرتی ہے کہ وہ محدود steps کے بعد ختم ہو؟",
+    "options": [
+      "Finiteness",
+      "Ambiguity",
+      "Randomness",
+      "Recursion"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Finiteness ہے۔ ایک درست algorithm کے steps لامحدود طور پر نہیں چلتے بلکہ کسی مقرر نتیجے یا اختتام تک پہنچتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Algorithm",
+      "referenceUrl": "https://csrc.nist.gov/glossary/term/algorithm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q007"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/algorithm",
+        "label": "Algorithm",
+        "publisher": "NIST",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST defines an algorithm as a clearly specified process or set of rules yielding a prescribed result."
+      },
+      {
+        "url": "https://www.iso.org/obp/ui/#iso:std:iso-iec:2382:ed-1:v1:en:term:2121317",
+        "label": "Algorithm terminology",
+        "publisher": "ISO",
+        "authorityId": "iso",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ISO computer terminology describes an algorithm as a finite ordered set of well-defined rules."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The yes/no source stem was replaced by the named defining property; 'None of these' was removed."
+  },
+  {
+    "id": "ADV2E102-U0111-Q007-SIM",
+    "pairId": "ADV2E102-U0111-Q007",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which algorithm property means that every step must be stated clearly and unambiguously?",
+    "questionUrdu": "algorithm کی کون سی خاصیت کا مطلب ہے کہ ہر step واضح اور غیر مبہم ہو؟",
+    "options": [
+      "Definiteness",
+      "Randomness",
+      "Infinity",
+      "Redundancy"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Definiteness ہے۔ اس خاصیت کے تحت ہر instruction اتنی واضح ہوتی ہے کہ اسے ایک ہی معنی میں execute کیا جا سکے۔",
+    "source": {
+      "type": "practice",
+      "label": "Algorithm",
+      "referenceUrl": "https://csrc.nist.gov/glossary/term/algorithm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q007",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/algorithm",
+        "label": "Algorithm",
+        "publisher": "NIST",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST supports that an algorithm is a clearly specified set of rules, so its steps must be definite."
+      },
+      {
+        "url": "https://www.iso.org/obp/ui/#iso:std:iso-iec:2382:ed-1:v1:en:term:2121317",
+        "label": "Algorithm terminology",
+        "publisher": "ISO",
+        "authorityId": "iso",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ISO supports that an algorithm is a clearly specified set of rules, so its steps must be definite."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0111-Q009-SRC",
+    "pairId": "ADV2E102-U0111-Q009",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What does CPU stand for?",
+    "questionUrdu": "CPU کا مکمل نام کیا ہے؟",
+    "options": [
+      "Central Processing Unit",
+      "Computer Power Utility",
+      "Central Program User",
+      "Control Processing Utility"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Central Processing Unit ہے۔ CPU program instructions کو execute کرتا، calculations چلاتا اور computer کے دوسرے components کی کارروائی coordinate کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "What is computer hardware?",
+      "referenceUrl": "https://www.ibm.com/think/topics/hardware",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q009"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ibm.com/think/topics/hardware",
+        "label": "What is computer hardware?",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM expands CPU as central processing unit and describes its processing role."
+      },
+      {
+        "url": "https://www.intel.com/content/www/us/en/gaming/resources/how-cpus-are-made.html",
+        "label": "How CPUs are made",
+        "publisher": "Intel",
+        "authorityId": "intel",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Intel uses CPU to mean central processing unit throughout its processor overview."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague alias question was converted to the standard expansion of CPU."
+  },
+  {
+    "id": "ADV2E102-U0111-Q009-SIM",
+    "pairId": "ADV2E102-U0111-Q009",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "A CPU clock rate of 1 GHz represents approximately how many cycles per second?",
+    "questionUrdu": "CPU کی 1 GHz clock rate تقریباً کتنے cycles per second کو ظاہر کرتی ہے؟",
+    "options": [
+      "One billion",
+      "One million",
+      "One thousand",
+      "One trillion"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب One billion ہے۔ Hertz cycles per second کی unit ہے اور prefix giga ایک ارب کو ظاہر کرتا ہے، اس لیے 1 GHz تقریباً ایک ارب cycles فی second ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "History of the central processing unit",
+      "referenceUrl": "https://www.ibm.com/think/topics/central-processing-unit-history",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q009",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ibm.com/think/topics/central-processing-unit-history",
+        "label": "History of the central processing unit",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM supports that a clock rate of 1 GHz represents one billion cycles per second."
+      },
+      {
+        "url": "https://www.intel.com/content/www/us/en/gaming/resources/cpu-clock-speed.html",
+        "label": "What is CPU clock speed?",
+        "publisher": "Intel",
+        "authorityId": "intel",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Intel supports that a clock rate of 1 GHz represents one billion cycles per second."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0111-Q020-SRC",
+    "pairId": "ADV2E102-U0111-Q020",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "The Cray T90 belongs to which class of computer?",
+    "questionUrdu": "Cray T90 کس class کے computer کی مثال ہے؟",
+    "options": [
+      "Personal computer",
+      "Hybrid controller",
+      "Supercomputer",
+      "Mainframe terminal"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Supercomputer ہے۔ Cray T90 ایک high-performance vector system تھا جسے بڑے سائنسی اور عددی workloads کے لیے استعمال کیا گیا۔",
+    "source": {
+      "type": "book",
+      "label": "Cray T90 system",
+      "referenceUrl": "https://www.computerhistory.org/collections/catalog/102711497",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q020"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.computerhistory.org/collections/catalog/102711497",
+        "label": "Cray T90 system",
+        "publisher": "Computer History Museum",
+        "authorityId": "computer-history-museum",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The museum catalogue identifies the Cray T90 as a Cray supercomputer system."
+      },
+      {
+        "url": "https://ntrs.nasa.gov/citations/19970009648",
+        "label": "Cray T90 at NASA",
+        "publisher": "NASA Technical Reports Server",
+        "authorityId": "nasa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA documentation describes use and performance of the Cray T90 supercomputer."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source typo 'Cary' was corrected to Cray and distractors were normalized."
+  },
+  {
+    "id": "ADV2E102-U0111-Q020-SIM",
+    "pairId": "ADV2E102-U0111-Q020",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which processing design was a defining feature of the Cray T90 supercomputer?",
+    "questionUrdu": "Cray T90 supercomputer کی نمایاں processing design کون سی تھی؟",
+    "options": [
+      "Vector processing",
+      "Mechanical relay processing",
+      "Vacuum-tube-only processing",
+      "Single-user word processing"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Vector processing ہے۔ T90 نے بڑے numerical datasets پر ایک ہی operation کو تیزی سے چلانے کے لیے vector architecture استعمال کی۔",
+    "source": {
+      "type": "practice",
+      "label": "Cray T90 system",
+      "referenceUrl": "https://www.computerhistory.org/collections/catalog/102711497",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q020",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.computerhistory.org/collections/catalog/102711497",
+        "label": "Cray T90 system",
+        "publisher": "Computer History Museum",
+        "authorityId": "computer-history-museum",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Computer History Museum supports that the Cray T90 was a vector-processing high-performance supercomputer."
+      },
+      {
+        "url": "https://ntrs.nasa.gov/citations/19970009648",
+        "label": "Cray T90 at NASA",
+        "publisher": "NASA Technical Reports Server",
+        "authorityId": "nasa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA Technical Reports Server supports that the Cray T90 was a vector-processing high-performance supercomputer."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0111-Q022-SRC",
+    "pairId": "ADV2E102-U0111-Q022",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which listed programming language is historically associated with artificial-intelligence research?",
+    "questionUrdu": "درج ذیل میں سے کون سی programming language تاریخی طور پر artificial-intelligence research سے وابستہ ہے؟",
+    "options": [
+      "COBOL",
+      "Lisp",
+      "Assembly language",
+      "Fortran"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Lisp ہے۔ Lisp symbolic expressions اور list processing کے لیے بنائی گئی اور ابتدائی AI research میں بہت نمایاں رہی۔",
+    "source": {
+      "type": "book",
+      "label": "History of Lisp",
+      "referenceUrl": "https://www-formal.stanford.edu/jmc/history/lisp/lisp.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q022"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www-formal.stanford.edu/jmc/history/lisp/lisp.html",
+        "label": "History of Lisp",
+        "publisher": "Stanford University",
+        "authorityId": "stanford",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "John McCarthy's Stanford history describes Lisp's development for symbolic computation and AI research."
+      },
+      {
+        "url": "https://www.ibm.com/history/lisp",
+        "label": "Lisp and artificial intelligence",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM's history associates Lisp with early artificial-intelligence programming."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was historically scoped because many modern languages are used for AI."
+  },
+  {
+    "id": "ADV2E102-U0111-Q022-SIM",
+    "pairId": "ADV2E102-U0111-Q022",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Who created the Lisp programming language?",
+    "questionUrdu": "Lisp programming language کس نے بنائی؟",
+    "options": [
+      "John McCarthy",
+      "Dennis Ritchie",
+      "James Gosling",
+      "Guido van Rossum"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب John McCarthy ہے۔ انہوں نے 1950s کے آخر میں Lisp تیار کی، جو AI research کی اہم زبان بنی۔",
+    "source": {
+      "type": "practice",
+      "label": "History of Lisp",
+      "referenceUrl": "https://www-formal.stanford.edu/jmc/history/lisp/lisp.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q022",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www-formal.stanford.edu/jmc/history/lisp/lisp.html",
+        "label": "History of Lisp",
+        "publisher": "Stanford University",
+        "authorityId": "stanford",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Stanford University supports that John McCarthy created Lisp for symbolic computation and artificial-intelligence research."
+      },
+      {
+        "url": "https://www.ibm.com/history/lisp",
+        "label": "Lisp and artificial intelligence",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM supports that John McCarthy created Lisp for symbolic computation and artificial-intelligence research."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0111-Q025-SRC",
+    "pairId": "ADV2E102-U0111-Q025",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the decimal value of 2^-1?",
+    "questionUrdu": "2^-1 کی decimal value کیا ہے؟",
+    "options": [
+      "0.5",
+      "0.25",
+      "0.05",
+      "0.1"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 0.5 ہے۔ negative exponent reciprocal بناتا ہے، اس لیے 2^-1 = 1/2 = 0.5 ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Negative exponent",
+      "referenceUrl": "https://mathworld.wolfram.com/NegativeExponent.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q025"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://mathworld.wolfram.com/NegativeExponent.html",
+        "label": "Negative exponent",
+        "publisher": "Wolfram MathWorld",
+        "authorityId": "wolfram-mathworld",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "MathWorld gives a^-n as the reciprocal 1/a^n, so 2^-1 equals 1/2."
+      },
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/10-2-use-multiplication-properties-of-exponents",
+        "label": "Negative exponents",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines a negative exponent as a reciprocal, yielding 1/2 or 0.5 here."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Mathematical typography was normalized."
+  },
+  {
+    "id": "ADV2E102-U0111-Q025-SIM",
+    "pairId": "ADV2E102-U0111-Q025",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the decimal value of 2^-3?",
+    "questionUrdu": "2^-3 کی decimal value کیا ہے؟",
+    "options": [
+      "0.125",
+      "0.25",
+      "0.5",
+      "8"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 0.125 ہے۔ 2^-3 = 1/2^3 = 1/8 اور 1/8 کی decimal value 0.125 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Negative exponent",
+      "referenceUrl": "https://mathworld.wolfram.com/NegativeExponent.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q025",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://mathworld.wolfram.com/NegativeExponent.html",
+        "label": "Negative exponent",
+        "publisher": "Wolfram MathWorld",
+        "authorityId": "wolfram-mathworld",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram MathWorld supports that a negative exponent gives the reciprocal, so 2^-3 equals 1/8 or 0.125."
+      },
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/10-2-use-multiplication-properties-of-exponents",
+        "label": "Negative exponents",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that a negative exponent gives the reciprocal, so 2^-3 equals 1/8 or 0.125."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

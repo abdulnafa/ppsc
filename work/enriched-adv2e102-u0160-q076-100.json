@@ -1,0 +1,2622 @@
+[
+  {
+    "id": "ADV2E102-U0160-Q076-SRC",
+    "pairId": "ADV2E102-U0160-Q076",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "A photovoltaic solar cell directly converts sunlight into which form of energy?",
+    "questionUrdu": "photovoltaic solar cell دھوپ کو براہِ راست کس قسم کی energy میں تبدیل کرتا ہے؟",
+    "options": [
+      "Chemical energy",
+      "Electrical energy",
+      "Thermal energy only",
+      "Kinetic energy"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Electrical energy ہے۔ روشنی semiconductor میں charges کو حرکت دیتی ہے اور cell سے electric current حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solar photovoltaic cell basics",
+      "referenceUrl": "https://www.energy.gov/cmei/systems/solar-photovoltaic-cell-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.energy.gov/cmei/systems/solar-photovoltaic-cell-basics",
+        "label": "Solar photovoltaic cell basics",
+        "publisher": "US Department of Energy",
+        "authorityId": "us-department-energy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Department of Energy states that a photovoltaic cell absorbs sunlight and converts it to electricity."
+      },
+      {
+        "url": "https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php",
+        "label": "Photovoltaics and electricity",
+        "publisher": "US Energy Information Administration",
+        "authorityId": "us-energy-information-administration",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "EIA independently explains that photovoltaic cells convert sunlight into electricity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The question was narrowed to photovoltaic conversion so that solar-thermal technologies do not create ambiguity."
+  },
+  {
+    "id": "ADV2E102-U0160-Q076-SIM",
+    "pairId": "ADV2E102-U0160-Q076",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What form of electrical output does a photovoltaic cell produce directly?",
+    "questionUrdu": "photovoltaic cell براہِ راست کس قسم کی electrical output پیدا کرتا ہے؟",
+    "options": [
+      "Direct-current electricity",
+      "Alternating-current electricity",
+      "Sound energy",
+      "Hydraulic pressure"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Direct-current electricity ہے۔ solar cells پہلے DC بجلی پیدا کرتے ہیں جسے grid یا household use کے لیے inverter AC میں بدل سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solar photovoltaic cell basics",
+      "referenceUrl": "https://www.energy.gov/cmei/systems/solar-photovoltaic-cell-basics",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.energy.gov/cmei/systems/solar-photovoltaic-cell-basics",
+        "label": "Solar photovoltaic cell basics",
+        "publisher": "US Department of Energy",
+        "authorityId": "us-department-energy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "US Department of Energy supports that photovoltaic cells directly produce direct-current electricity."
+      },
+      {
+        "url": "https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php",
+        "label": "Photovoltaics and electricity",
+        "publisher": "US Energy Information Administration",
+        "authorityId": "us-energy-information-administration",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "US Energy Information Administration supports that photovoltaic cells directly produce direct-current electricity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q077-SRC",
+    "pairId": "ADV2E102-U0160-Q077",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A stone is a traditional imperial unit of which physical quantity?",
+    "questionUrdu": "stone روایتی imperial system میں کس physical quantity کی unit ہے؟",
+    "options": [
+      "Length",
+      "Time",
+      "Mass",
+      "Area"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Mass ہے۔ عام بول چال میں اسے weight کہا جاتا ہے مگر سائنسی لحاظ سے stone جسمانی mass کی پیمائش ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Weights and Measures Act 1963",
+      "referenceUrl": "https://www.legislation.gov.uk/ukpga/1963/31/pdfs/ukpga_19630031_en.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q077"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/1963/31/pdfs/ukpga_19630031_en.pdf",
+        "label": "Weights and Measures Act 1963",
+        "publisher": "UK Legislation",
+        "authorityId": "uk-legislation",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The statutory imperial-units schedule defines one stone as 14 pounds."
+      },
+      {
+        "url": "https://www.britannica.com/science/stone-unit-of-weight",
+        "label": "Stone",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently identifies the stone as a British unit of weight equal to 14 pounds, i.e. a mass measure in scientific terminology."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The colloquial option 'weight' was replaced by the scientifically correct quantity, mass."
+  },
+  {
+    "id": "ADV2E102-U0160-Q077-SIM",
+    "pairId": "ADV2E102-U0160-Q077",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "One imperial stone is equal to how many pounds?",
+    "questionUrdu": "ایک imperial stone کتنے pounds کے برابر ہوتا ہے؟",
+    "options": [
+      "8 pounds",
+      "12 pounds",
+      "14 pounds",
+      "16 pounds"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 14 pounds ہے۔ برطانوی imperial conversion میں ایک stone کی مقررہ مقدار چودہ pounds ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Weights and Measures Act 1963",
+      "referenceUrl": "https://www.legislation.gov.uk/ukpga/1963/31/pdfs/ukpga_19630031_en.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q077",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/1963/31/pdfs/ukpga_19630031_en.pdf",
+        "label": "Weights and Measures Act 1963",
+        "publisher": "UK Legislation",
+        "authorityId": "uk-legislation",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UK Legislation supports that one imperial stone equals 14 pounds."
+      },
+      {
+        "url": "https://www.britannica.com/science/stone-unit-of-weight",
+        "label": "Stone",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Britannica supports that one imperial stone equals 14 pounds."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q078-SRC",
+    "pairId": "ADV2E102-U0160-Q078",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "A Brix refractometer is commonly used to estimate what property of fruit juice?",
+    "questionUrdu": "Brix refractometer fruit juice کی کس property کا اندازہ لگاتا ہے؟",
+    "options": [
+      "Soluble-solids concentration, mainly sugars",
+      "Fat concentration",
+      "Protein concentration",
+      "Vitamin concentration"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب soluble-solids concentration ہے جس میں زیادہ حصہ sugars کا ہوتا ہے۔ refracted light سے Brix reading حاصل کی جاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "General Market Manual: Soluble Solids (Brix)",
+      "referenceUrl": "https://www.ams.usda.gov/sites/default/files/media/GeneralMarketManual.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q078"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ams.usda.gov/sites/default/files/media/GeneralMarketManual.pdf",
+        "label": "General Market Manual: Soluble Solids (Brix)",
+        "publisher": "US Department of Agriculture",
+        "authorityId": "usda-agricultural-marketing-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USDA instructs inspectors to use a refractometer to determine soluble solids measured in Brix."
+      },
+      {
+        "url": "https://vegetables.wsu.edu/measuring-brix-using-an-electronic-refractometer/",
+        "label": "Measuring Brix using an electronic refractometer",
+        "publisher": "Washington State University Extension",
+        "authorityId": "washington-state-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WSU independently explains that Brix refractometry measures total soluble solids, primarily sugars in fruit and vegetable juices."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A general refractometer actually measures refractive index. The source item was repaired to the documented food-testing use of a Brix refractometer."
+  },
+  {
+    "id": "ADV2E102-U0160-Q078-SIM",
+    "pairId": "ADV2E102-U0160-Q078",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "In which unit are fruit-juice readings from a Brix refractometer commonly expressed?",
+    "questionUrdu": "Brix refractometer سے fruit juice کی reading عام طور پر کس unit میں ظاہر کی جاتی ہے؟",
+    "options": [
+      "Degrees Brix",
+      "Pascals",
+      "Newtons",
+      "Lumens"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Degrees Brix ہے۔ یہ reading juice میں dissolved soluble solids کی concentration کا عملی اندازہ دیتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "General Market Manual: Soluble Solids (Brix)",
+      "referenceUrl": "https://www.ams.usda.gov/sites/default/files/media/GeneralMarketManual.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q078",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ams.usda.gov/sites/default/files/media/GeneralMarketManual.pdf",
+        "label": "General Market Manual: Soluble Solids (Brix)",
+        "publisher": "US Department of Agriculture",
+        "authorityId": "usda-agricultural-marketing-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "US Department of Agriculture supports that fruit-juice refractometer readings are commonly expressed in degrees Brix."
+      },
+      {
+        "url": "https://vegetables.wsu.edu/measuring-brix-using-an-electronic-refractometer/",
+        "label": "Measuring Brix using an electronic refractometer",
+        "publisher": "Washington State University Extension",
+        "authorityId": "washington-state-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Washington State University Extension supports that fruit-juice refractometer readings are commonly expressed in degrees Brix."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q079-SRC",
+    "pairId": "ADV2E102-U0160-Q079",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "For which discovery was James Chadwick awarded the 1935 Nobel Prize in Physics?",
+    "questionUrdu": "James Chadwick کو 1935 کا Nobel Prize in Physics کس دریافت پر ملا؟",
+    "options": [
+      "The electron",
+      "The neutron",
+      "The theory of relativity",
+      "The microscope"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب The neutron ہے۔ Chadwick نے بے بار ذرے neutron کی دریافت کے ثبوت فراہم کیے اور 1935 میں Nobel Prize حاصل کیا۔",
+    "source": {
+      "type": "book",
+      "label": "The Nobel Prize in Physics 1935",
+      "referenceUrl": "https://www.nobelprize.org/prizes/physics/1935/summary/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q079"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/physics/1935/summary/",
+        "label": "The Nobel Prize in Physics 1935",
+        "publisher": "Nobel Prize Outreach",
+        "authorityId": "nobel-prize",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Nobel record says Chadwick received the 1935 Physics Prize for the discovery of the neutron."
+      },
+      {
+        "url": "https://www.britannica.com/biography/James-Chadwick",
+        "label": "James Chadwick",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently records Chadwick's neutron discovery and 1935 Nobel Prize."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1935",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The award category was added and the dated achievement was retained."
+  },
+  {
+    "id": "ADV2E102-U0160-Q079-SIM",
+    "pairId": "ADV2E102-U0160-Q079",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "In which year did James Chadwick announce the discovery of the neutron?",
+    "questionUrdu": "James Chadwick نے neutron کی دریافت کا اعلان کس سال کیا؟",
+    "options": [
+      "1928",
+      "1930",
+      "1932",
+      "1935"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 1932 ہے۔ Chadwick نے 1932 میں neutron کی شناخت کی جبکہ Nobel Prize انہیں 1935 میں ملا۔",
+    "source": {
+      "type": "practice",
+      "label": "The Nobel Prize in Physics 1935",
+      "referenceUrl": "https://www.nobelprize.org/prizes/physics/1935/summary/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q079",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/physics/1935/summary/",
+        "label": "The Nobel Prize in Physics 1935",
+        "publisher": "Nobel Prize Outreach",
+        "authorityId": "nobel-prize",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Nobel Prize Outreach supports that James Chadwick announced the discovery of the neutron in 1932."
+      },
+      {
+        "url": "https://www.britannica.com/biography/James-Chadwick",
+        "label": "James Chadwick",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Britannica supports that James Chadwick announced the discovery of the neutron in 1932."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q080-SRC",
+    "pairId": "ADV2E102-U0160-Q080",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "What is a community of organisms interacting with one another and with their nonliving environment called?",
+    "questionUrdu": "organisms اور ان کے nonliving environment کے باہمی تعامل والی community کو کیا کہتے ہیں؟",
+    "options": [
+      "Ecosystem",
+      "Atmosphere",
+      "Lithosphere",
+      "Hydrosphere"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ecosystem ہے۔ ecosystem میں living organisms کے ساتھ water، air، soil اور دوسری nonliving conditions بھی شامل ہوتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Energy flow through ecosystems",
+      "referenceUrl": "https://openstax.org/books/concepts-biology/pages/20-1-energy-flow-through-ecosystems",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q080"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/concepts-biology/pages/20-1-energy-flow-through-ecosystems",
+        "label": "Energy flow through ecosystems",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines an ecosystem as a community of living organisms and their abiotic environment."
+      },
+      {
+        "url": "https://www.britannica.com/science/ecosystem",
+        "label": "Ecosystem",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently defines an ecosystem through interacting organisms and physical environmental components."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The ornamental phrase 'bubble of life' was removed in favour of the scientific definition."
+  },
+  {
+    "id": "ADV2E102-U0160-Q080-SIM",
+    "pairId": "ADV2E102-U0160-Q080",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What term describes the nonliving components of an ecosystem?",
+    "questionUrdu": "ecosystem کے nonliving components کو کیا کہا جاتا ہے؟",
+    "options": [
+      "Abiotic factors",
+      "Biotic factors",
+      "Consumers",
+      "Producers"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Abiotic factors ہے۔ پانی، روشنی، درجۂ حرارت اور مٹی ecosystem کے غیر جاندار عوامل ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Energy flow through ecosystems",
+      "referenceUrl": "https://openstax.org/books/concepts-biology/pages/20-1-energy-flow-through-ecosystems",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q080",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/concepts-biology/pages/20-1-energy-flow-through-ecosystems",
+        "label": "Energy flow through ecosystems",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that nonliving ecosystem components are called abiotic factors."
+      },
+      {
+        "url": "https://www.britannica.com/science/ecosystem",
+        "label": "Ecosystem",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Britannica supports that nonliving ecosystem components are called abiotic factors."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q081-SRC",
+    "pairId": "ADV2E102-U0160-Q081",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "What is the synthesis of an RNA molecule from a DNA template called?",
+    "questionUrdu": "DNA template سے RNA molecule بننے کے عمل کو کیا کہتے ہیں؟",
+    "options": [
+      "Translation",
+      "Replication",
+      "Transcription",
+      "Transformation"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Transcription ہے۔ اس عمل میں DNA کی genetic information کے مطابق complementary RNA strand تیار ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Transcription",
+      "referenceUrl": "https://www.genome.gov/genetics-glossary/Transcription",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q081"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Transcription",
+        "label": "Transcription",
+        "publisher": "National Human Genome Research Institute",
+        "authorityId": "national-human-genome-research-institute",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NHGRI defines transcription as making an RNA copy from a gene's DNA sequence."
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/",
+        "label": "From DNA to RNA",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NCBI independently describes RNA synthesis from a DNA template as transcription."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was normalized to specify a DNA template and RNA product."
+  },
+  {
+    "id": "ADV2E102-U0160-Q081-SIM",
+    "pairId": "ADV2E102-U0160-Q081",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which enzyme synthesizes RNA during transcription?",
+    "questionUrdu": "transcription کے دوران RNA کس enzyme کے ذریعے بنتا ہے؟",
+    "options": [
+      "RNA polymerase",
+      "DNA ligase",
+      "Pepsin",
+      "Amylase"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب RNA polymerase ہے۔ یہ enzyme DNA template کو پڑھ کر complementary RNA nucleotides جوڑتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Transcription",
+      "referenceUrl": "https://www.genome.gov/genetics-glossary/Transcription",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q081",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.genome.gov/genetics-glossary/Transcription",
+        "label": "Transcription",
+        "publisher": "National Human Genome Research Institute",
+        "authorityId": "national-human-genome-research-institute",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Human Genome Research Institute supports that RNA polymerase synthesizes RNA from a DNA template during transcription."
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/",
+        "label": "From DNA to RNA",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Center for Biotechnology Information supports that RNA polymerase synthesizes RNA from a DNA template during transcription."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q082-SRC",
+    "pairId": "ADV2E102-U0160-Q082",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "What is the process in which a cell engulfs a large particle or another cell?",
+    "questionUrdu": "cell جب کسی بڑے particle یا دوسرے cell کو نگلتا ہے تو اس process کو کیا کہتے ہیں؟",
+    "options": [
+      "Pinocytosis",
+      "Phagocytosis",
+      "Exocytosis",
+      "Diffusion"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Phagocytosis ہے۔ cell membrane بڑے solid particle کو گھیر کر اندر vesicle بناتی ہے، اسی لیے اسے cell eating بھی کہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Molecular Biology of the Cell glossary",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/sites/books/NBK21052/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q082"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK21052/",
+        "label": "Molecular Biology of the Cell glossary",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NCBI defines phagocytosis as cellular uptake or 'eating' of particulate material."
+      },
+      {
+        "url": "https://www.britannica.com/science/phagocytosis",
+        "label": "Phagocytosis",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently describes phagocytosis as engulfment of solid particles by a cell."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "'Another cell' was broadened to the scientifically standard category of large particles, which can include cells."
+  },
+  {
+    "id": "ADV2E102-U0160-Q082-SIM",
+    "pairId": "ADV2E102-U0160-Q082",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which endocytic process is often called 'cell drinking' because it takes in extracellular fluid?",
+    "questionUrdu": "extracellular fluid اندر لینے والی کس endocytic process کو اکثر 'cell drinking' کہا جاتا ہے؟",
+    "options": [
+      "Pinocytosis",
+      "Phagocytosis",
+      "Exocytosis",
+      "Osmosis"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Pinocytosis ہے۔ اس میں cell چھوٹے vesicles کے ذریعے surrounding fluid اور dissolved substances اندر لیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Molecular Biology of the Cell glossary",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/sites/books/NBK21052/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q082",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK21052/",
+        "label": "Molecular Biology of the Cell glossary",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Center for Biotechnology Information supports that pinocytosis is endocytosis of extracellular fluid and is often called cell drinking."
+      },
+      {
+        "url": "https://www.britannica.com/science/phagocytosis",
+        "label": "Phagocytosis",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Britannica supports that pinocytosis is endocytosis of extracellular fluid and is often called cell drinking."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q083-SRC",
+    "pairId": "ADV2E102-U0160-Q083",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Thalassemia primarily results from reduced production of which blood protein or one of its globin components?",
+    "questionUrdu": "thalassemia بنیادی طور پر کس blood protein یا اس کے globin components کی کم پیداوار سے ہوتی ہے؟",
+    "options": [
+      "A white-cell antibody",
+      "A platelet receptor",
+      "Plasma albumin",
+      "Hemoglobin"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Hemoglobin ہے۔ globin chains کی کم پیداوار سے normal hemoglobin اور صحت مند red blood cells کی مقدار متاثر ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "About thalassemia",
+      "referenceUrl": "https://www.cdc.gov/thalassemia/about/index.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cdc.gov/thalassemia/about/index.html",
+        "label": "About thalassemia",
+        "publisher": "US Centers for Disease Control and Prevention",
+        "authorityId": "us-cdc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CDC explains that thalassemia causes the body to make insufficient hemoglobin or one of its globin components."
+      },
+      {
+        "url": "https://medlineplus.gov/genetics/condition/alpha-thalassemia/",
+        "label": "Alpha thalassemia",
+        "publisher": "MedlinePlus Genetics",
+        "authorityId": "medlineplus",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "MedlinePlus independently explains that thalassemia impairs production of hemoglobin's globin chains."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague word 'abnormality' was repaired to the characteristic reduced globin/hemoglobin production."
+  },
+  {
+    "id": "ADV2E102-U0160-Q083-SIM",
+    "pairId": "ADV2E102-U0160-Q083",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "The two major inherited forms of thalassemia are named after which globin chains?",
+    "questionUrdu": "thalassemia کی دو بڑی inherited forms کن globin chains کے نام پر ہیں؟",
+    "options": [
+      "Alpha and beta",
+      "Gamma and delta only",
+      "Kappa and lambda",
+      "Actin and myosin"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Alpha and beta ہے۔ alpha-thalassemia اور beta-thalassemia متعلقہ globin chain کی کم پیداوار کو ظاہر کرتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "About thalassemia",
+      "referenceUrl": "https://www.cdc.gov/thalassemia/about/index.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cdc.gov/thalassemia/about/index.html",
+        "label": "About thalassemia",
+        "publisher": "US Centers for Disease Control and Prevention",
+        "authorityId": "us-cdc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "US Centers for Disease Control and Prevention supports that the main thalassemia forms are alpha and beta thalassemia, named for affected globin chains."
+      },
+      {
+        "url": "https://medlineplus.gov/genetics/condition/alpha-thalassemia/",
+        "label": "Alpha thalassemia",
+        "publisher": "MedlinePlus Genetics",
+        "authorityId": "medlineplus",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "MedlinePlus Genetics supports that the main thalassemia forms are alpha and beta thalassemia, named for affected globin chains."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q084-SRC",
+    "pairId": "ADV2E102-U0160-Q084",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "What is the annual number of live births per 1,000 people in a population called?",
+    "questionUrdu": "آبادی میں سالانہ live births فی 1,000 افراد کی شرح کو کیا کہتے ہیں؟",
+    "options": [
+      "Dispersion",
+      "Crude birth rate",
+      "Mortality rate",
+      "Population growth rate"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Crude birth rate ہے۔ ایک سال کے live births کو آبادی کے مقابل رکھ کر اسے فی 1,000 افراد ظاہر کیا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Crude birth rate metadata",
+      "referenceUrl": "https://www.who.int/data/gho/indicator-metadata-registry/imr-details/2978",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q084"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.who.int/data/gho/indicator-metadata-registry/imr-details/2978",
+        "label": "Crude birth rate metadata",
+        "publisher": "World Health Organization",
+        "authorityId": "world-health-organization",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WHO defines crude birth rate as annual live births per 1,000 population."
+      },
+      {
+        "url": "https://data.worldbank.org/indicator/SP.DYN.CBRT.IN",
+        "label": "Birth rate, crude",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The World Bank independently defines the indicator as live births during the year per 1,000 people."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source used the broader ecological term natality. The demographic measure stated in the stem is specifically crude birth rate, so the option and key were corrected."
+  },
+  {
+    "id": "ADV2E102-U0160-Q084-SIM",
+    "pairId": "ADV2E102-U0160-Q084",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which population figure is normally used as the denominator when estimating a crude birth rate for one year?",
+    "questionUrdu": "ایک سال کی crude birth rate نکالتے وقت denominator میں عام طور پر کون سی population figure استعمال ہوتی ہے؟",
+    "options": [
+      "Mid-year population",
+      "Only newborn population",
+      "Only female population",
+      "Population at century end"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Mid-year population ہے۔ سال بھر کے live births کو اسی مدت کی average یا mid-year population کے مقابل رکھا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Crude birth rate metadata",
+      "referenceUrl": "https://www.who.int/data/gho/indicator-metadata-registry/imr-details/2978",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q084",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.who.int/data/gho/indicator-metadata-registry/imr-details/2978",
+        "label": "Crude birth rate metadata",
+        "publisher": "World Health Organization",
+        "authorityId": "world-health-organization",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "World Health Organization supports that crude birth rate uses the mid-year population or equivalent person-years as its denominator."
+      },
+      {
+        "url": "https://data.worldbank.org/indicator/SP.DYN.CBRT.IN",
+        "label": "Birth rate, crude",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "World Bank supports that crude birth rate uses the mid-year population or equivalent person-years as its denominator."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q085-SRC",
+    "pairId": "ADV2E102-U0160-Q085",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which organisms ingest particles of dead organic matter and waste?",
+    "questionUrdu": "dead organic matter اور waste کے particles کھانے والے organisms کیا کہلاتے ہیں؟",
+    "options": [
+      "Herbivores",
+      "Detritivores",
+      "Carnivores",
+      "Producers"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Detritivores ہے۔ یہ organisms مردہ مادہ کو براہِ راست ingest کرتے ہیں، جبکہ microbial decomposers اسے chemically توڑتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Energy flow through ecosystems",
+      "referenceUrl": "https://openstax.org/books/concepts-biology/pages/20-1-energy-flow-through-ecosystems",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q085"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/concepts-biology/pages/20-1-energy-flow-through-ecosystems",
+        "label": "Energy flow through ecosystems",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax distinguishes detritivores, which consume organic detritus, from decomposers that chemically break it down."
+      },
+      {
+        "url": "https://education.nationalgeographic.org/resource/decomposers/",
+        "label": "Decomposers and detritivores",
+        "publisher": "National Geographic Society",
+        "authorityId": "national-geographic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Geographic independently states that detritivores eat dead organisms and wastes."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source treated detritivores as simply another name for decomposers. The repaired item tests the distinguishing ingestion behaviour instead."
+  },
+  {
+    "id": "ADV2E102-U0160-Q085-SIM",
+    "pairId": "ADV2E102-U0160-Q085",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which of the following is a common detritivore?",
+    "questionUrdu": "درج ذیل میں سے کون سا common detritivore ہے؟",
+    "options": [
+      "Earthworm",
+      "Eagle",
+      "Green plant",
+      "Shark"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Earthworm ہے۔ earthworm مردہ پودوں اور organic debris کو کھا کر nutrient cycling میں حصہ لیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Energy flow through ecosystems",
+      "referenceUrl": "https://openstax.org/books/concepts-biology/pages/20-1-energy-flow-through-ecosystems",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q085",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/concepts-biology/pages/20-1-energy-flow-through-ecosystems",
+        "label": "Energy flow through ecosystems",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that earthworms are common detritivores that ingest dead organic material."
+      },
+      {
+        "url": "https://education.nationalgeographic.org/resource/decomposers/",
+        "label": "Decomposers and detritivores",
+        "publisher": "National Geographic Society",
+        "authorityId": "national-geographic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Geographic Society supports that earthworms are common detritivores that ingest dead organic material."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q086-SRC",
+    "pairId": "ADV2E102-U0160-Q086",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which listed energy source is classified as nonrenewable because its fuel, uranium, is finite?",
+    "questionUrdu": "کون سا listed energy source nonrenewable ہے کیونکہ اس کا fuel uranium محدود ہے؟",
+    "options": [
+      "Solar energy",
+      "Wind energy",
+      "Geothermal energy",
+      "Nuclear energy"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Nuclear energy ہے۔ موجودہ fission reactors mined uranium استعمال کرتے ہیں، اس لیے fuel renewable انداز میں فوری واپس نہیں بنتا۔",
+    "source": {
+      "type": "book",
+      "label": "Nuclear explained",
+      "referenceUrl": "https://www.eia.gov/energyexplained/nuclear/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.eia.gov/energyexplained/nuclear/",
+        "label": "Nuclear explained",
+        "publisher": "US Energy Information Administration",
+        "authorityId": "us-energy-information-administration",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "EIA explicitly classifies uranium used for nuclear power as a nonrenewable energy source."
+      },
+      {
+        "url": "https://education.nationalgeographic.org/resource/non-renewable-energy/",
+        "label": "Non-renewable energy",
+        "publisher": "National Geographic Society",
+        "authorityId": "national-geographic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Geographic independently includes nuclear energy based on finite uranium among nonrenewable sources."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The reason for the classification was added because some discussions distinguish the reactor process from the finite mined fuel."
+  },
+  {
+    "id": "ADV2E102-U0160-Q086-SIM",
+    "pairId": "ADV2E102-U0160-Q086",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which uranium isotope is the principal fissile fuel used in most nuclear power reactors?",
+    "questionUrdu": "زیادہ تر nuclear power reactors میں بنیادی fissile fuel کون سا uranium isotope ہوتا ہے؟",
+    "options": [
+      "Uranium-235",
+      "Uranium-238 only",
+      "Carbon-14",
+      "Cobalt-60"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Uranium-235 ہے۔ U-235 کا nucleus neutron جذب کر کے آسانی سے fission کرتا اور chain reaction برقرار رکھتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Nuclear explained",
+      "referenceUrl": "https://www.eia.gov/energyexplained/nuclear/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.eia.gov/energyexplained/nuclear/",
+        "label": "Nuclear explained",
+        "publisher": "US Energy Information Administration",
+        "authorityId": "us-energy-information-administration",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "US Energy Information Administration supports that uranium-235 is the principal fissile isotope used as nuclear-reactor fuel."
+      },
+      {
+        "url": "https://education.nationalgeographic.org/resource/non-renewable-energy/",
+        "label": "Non-renewable energy",
+        "publisher": "National Geographic Society",
+        "authorityId": "national-geographic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Geographic Society supports that uranium-235 is the principal fissile isotope used as nuclear-reactor fuel."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q088-SRC",
+    "pairId": "ADV2E102-U0160-Q088",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "What are animals that eat both plant and animal matter called?",
+    "questionUrdu": "plants اور animals دونوں کھانے والے جانور کیا کہلاتے ہیں؟",
+    "options": [
+      "Carnivores",
+      "Omnivores",
+      "Herbivores",
+      "Detritivores"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Omnivores ہے۔ omnivores پودوں سے حاصل خوراک کے ساتھ animal-derived food بھی استعمال کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Digestive systems",
+      "referenceUrl": "https://openstax.org/books/biology-2e/pages/34-1-digestive-systems",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q088"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/biology-2e/pages/34-1-digestive-systems",
+        "label": "Digestive systems",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines omnivores as animals that eat both plant- and animal-derived food."
+      },
+      {
+        "url": "https://education.nationalgeographic.org/resource/food-chain/",
+        "label": "Food chain",
+        "publisher": "National Geographic Society",
+        "authorityId": "national-geographic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Geographic independently describes omnivores as consumers of both plants and animals."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The definition was normalized to plant and animal matter."
+  },
+  {
+    "id": "ADV2E102-U0160-Q088-SIM",
+    "pairId": "ADV2E102-U0160-Q088",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which listed animal is commonly classified as an omnivore?",
+    "questionUrdu": "درج جانوروں میں سے کون سا عام طور پر omnivore شمار ہوتا ہے؟",
+    "options": [
+      "Brown bear",
+      "Cow",
+      "Lion",
+      "Koala"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Brown bear ہے۔ brown bears پھل، جڑیں، insects، fish اور دوسرے animal foods سب کھا سکتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Digestive systems",
+      "referenceUrl": "https://openstax.org/books/biology-2e/pages/34-1-digestive-systems",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q088",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/biology-2e/pages/34-1-digestive-systems",
+        "label": "Digestive systems",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that brown bears are omnivores that consume both plant and animal matter."
+      },
+      {
+        "url": "https://education.nationalgeographic.org/resource/food-chain/",
+        "label": "Food chain",
+        "publisher": "National Geographic Society",
+        "authorityId": "national-geographic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Geographic Society supports that brown bears are omnivores that consume both plant and animal matter."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q089-SRC",
+    "pairId": "ADV2E102-U0160-Q089",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which ingredient is usually listed first by weight in a carbonated soft drink?",
+    "questionUrdu": "carbonated soft drink میں وزن کے لحاظ سے عموماً پہلا listed ingredient کون سا ہوتا ہے؟",
+    "options": [
+      "Carbonated water",
+      "Sugar",
+      "Caramel colour",
+      "Citric acid"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Carbonated water ہے۔ ingredient list میں سب سے زیادہ وزن والا جز پہلے آتا ہے اور عام soft drinks میں وہ carbonated water ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Carbonated soft drinks: what you should know",
+      "referenceUrl": "https://www.fda.gov/food/buy-store-serve-safe-food/carbonated-soft-drinks-what-you-should-know",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q089"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.fda.gov/food/buy-store-serve-safe-food/carbonated-soft-drinks-what-you-should-know",
+        "label": "Carbonated soft drinks: what you should know",
+        "publisher": "US Food and Drug Administration",
+        "authorityId": "us-fda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "FDA states that carbonated water will usually be the first ingredient by weight in carbonated soft drinks."
+      },
+      {
+        "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/original",
+        "label": "Coca-Cola Original Taste product information",
+        "publisher": "The Coca-Cola Company",
+        "authorityId": "coca-cola-company",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The manufacturer's ingredient list independently places carbonated water first for its standard carbonated cola."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's fixed 92% water claim is formulation-dependent. It was replaced with the FDA-supported ingredient-order fact."
+  },
+  {
+    "id": "ADV2E102-U0160-Q089-SIM",
+    "pairId": "ADV2E102-U0160-Q089",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Packaged-food ingredients are generally listed in what order on a label?",
+    "questionUrdu": "packaged food کے ingredients label پر عام طور پر کس ترتیب میں لکھے جاتے ہیں؟",
+    "options": [
+      "Descending order by weight",
+      "Alphabetical order",
+      "Increasing price order",
+      "Colour order"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Descending order by weight ہے۔ جس ingredient کا وزن سب سے زیادہ ہو اسے پہلے اور سب سے کم کو آخر میں لکھا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Carbonated soft drinks: what you should know",
+      "referenceUrl": "https://www.fda.gov/food/buy-store-serve-safe-food/carbonated-soft-drinks-what-you-should-know",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q089",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.fda.gov/food/buy-store-serve-safe-food/carbonated-soft-drinks-what-you-should-know",
+        "label": "Carbonated soft drinks: what you should know",
+        "publisher": "US Food and Drug Administration",
+        "authorityId": "us-fda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "US Food and Drug Administration supports that packaged-food ingredients are listed in descending order of predominance by weight."
+      },
+      {
+        "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/original",
+        "label": "Coca-Cola Original Taste product information",
+        "publisher": "The Coca-Cola Company",
+        "authorityId": "coca-cola-company",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Coca-Cola Company supports that packaged-food ingredients are listed in descending order of predominance by weight."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q094-SRC",
+    "pairId": "ADV2E102-U0160-Q094",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Silicon Valley is especially associated with which industry cluster?",
+    "questionUrdu": "Silicon Valley خاص طور پر کس industry cluster سے وابستہ ہے؟",
+    "options": [
+      "Film production",
+      "Semiconductors, computers and high technology",
+      "Textile manufacturing",
+      "Automobile assembly"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Semiconductors, computers and high technology ہے۔ اس خطے نے chip، computer اور software companies کی عالمی ترقی میں نمایاں کردار ادا کیا۔",
+    "source": {
+      "type": "book",
+      "label": "San Jose modernism historic context",
+      "referenceUrl": "https://www.sanjoseca.gov/home/showpublisheddocument/77217/637686152613970000",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q094"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.sanjoseca.gov/home/showpublisheddocument/77217/637686152613970000",
+        "label": "San Jose modernism historic context",
+        "publisher": "City of San Jose",
+        "authorityId": "city-san-jose",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The City of San Jose history documents Silicon Valley's growth around semiconductor, electronics and computer firms."
+      },
+      {
+        "url": "https://www.britannica.com/place/Silicon-Valley-region-California",
+        "label": "Silicon Valley",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently describes Silicon Valley as a global centre of high technology and computing industries."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague one-word answer 'Computers' was expanded to the documented technology cluster."
+  },
+  {
+    "id": "ADV2E102-U0160-Q094-SIM",
+    "pairId": "ADV2E102-U0160-Q094",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "Silicon Valley takes its name from which material central to semiconductor manufacturing?",
+    "questionUrdu": "Silicon Valley کا نام semiconductor manufacturing میں استعمال ہونے والے کس material سے نکلا؟",
+    "options": [
+      "Silicon",
+      "Copper",
+      "Graphite",
+      "Titanium"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Silicon ہے۔ silicon semiconductor chips بنانے کا بنیادی material رہا، اسی سے خطے کا معروف نام بنا۔",
+    "source": {
+      "type": "practice",
+      "label": "San Jose modernism historic context",
+      "referenceUrl": "https://www.sanjoseca.gov/home/showpublisheddocument/77217/637686152613970000",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q094",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.sanjoseca.gov/home/showpublisheddocument/77217/637686152613970000",
+        "label": "San Jose modernism historic context",
+        "publisher": "City of San Jose",
+        "authorityId": "city-san-jose",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "City of San Jose supports that Silicon Valley's name refers to silicon used in semiconductor devices."
+      },
+      {
+        "url": "https://www.britannica.com/place/Silicon-Valley-region-California",
+        "label": "Silicon Valley",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Britannica supports that Silicon Valley's name refers to silicon used in semiconductor devices."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q095-SRC",
+    "pairId": "ADV2E102-U0160-Q095",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If the arithmetic mean of 7 values is 40, what is their sum?",
+    "questionUrdu": "اگر 7 values کا arithmetic mean 40 ہو تو ان کا sum کیا ہوگا؟",
+    "options": [
+      "280",
+      "400",
+      "320",
+      "140"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 280 ہے۔ sum معلوم کرنے کے لیے mean کو values کی تعداد سے ضرب دیتے ہیں، یعنی 40 × 7 = 280۔",
+    "source": {
+      "type": "book",
+      "label": "Measures of the centre of data",
+      "referenceUrl": "https://openstax.org/books/introductory-statistics/pages/2-5-measures-of-the-center-of-the-data",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q095"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/introductory-statistics/pages/2-5-measures-of-the-center-of-the-data",
+        "label": "Measures of the centre of data",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the arithmetic mean as the sum of values divided by their count; hence sum equals mean times count."
+      },
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "label": "Measures of location",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST independently gives the sample mean as the sum of observations divided by the number of observations."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Using sum = 40 x 7 gives 280."
+  },
+  {
+    "id": "ADV2E102-U0160-Q095-SIM",
+    "pairId": "ADV2E102-U0160-Q095",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the median of 3, 7, 9, 11 and 15?",
+    "questionUrdu": "3، 7، 9، 11 اور 15 کا median کیا ہے؟",
+    "options": [
+      "7",
+      "9",
+      "10",
+      "11"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 9 ہے۔ پانچ مرتب values میں درمیان یعنی تیسری value 9 ہوتی ہے، اس لیے یہی median ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Measures of the centre of data",
+      "referenceUrl": "https://openstax.org/books/introductory-statistics/pages/2-5-measures-of-the-center-of-the-data",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q095",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/introductory-statistics/pages/2-5-measures-of-the-center-of-the-data",
+        "label": "Measures of the centre of data",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the median is the middle ordered value, so the median of 3, 7, 9, 11 and 15 is 9."
+      },
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "label": "Measures of location",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Institute of Standards and Technology supports that the median is the middle ordered value, so the median of 3, 7, 9, 11 and 15 is 9."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q096-SRC",
+    "pairId": "ADV2E102-U0160-Q096",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A train travels for 5 hours at 45 km/h. What constant speed would cover the same distance in 3 hours?",
+    "questionUrdu": "ایک train 5 hours تک 45 km/h سے چلتی ہے۔ یہی distance 3 hours میں طے کرنے کے لیے constant speed کتنی ہوگی؟",
+    "options": [
+      "60 km/h",
+      "70 km/h",
+      "75 km/h",
+      "85 km/h"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 75 km/h ہے۔ پہلے distance 45 × 5 = 225 km بنتا ہے، پھر 225 ÷ 3 = 75 km/h حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Models and applications",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry/pages/2-3-models-and-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q096"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry/pages/2-3-models-and-applications",
+        "label": "Models and applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the distance relation d = rt; the original trip covers 225 km and 225/3 = 75 km/h."
+      },
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and velocity",
+        "publisher": "OpenStax Physics",
+        "authorityId": "openstax-physics",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent physics text defines average speed as distance divided by elapsed time, supporting 225 km / 3 h = 75 km/h."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source arithmetic is correct: 45 x 5 = 225 km, and 225 / 3 = 75 km/h."
+  },
+  {
+    "id": "ADV2E102-U0160-Q096-SIM",
+    "pairId": "ADV2E102-U0160-Q096",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "How far does a vehicle travel in 2.5 hours at a constant speed of 60 km/h?",
+    "questionUrdu": "60 km/h کی constant speed سے 2.5 hours میں vehicle کتنا distance طے کرے گا؟",
+    "options": [
+      "120 km",
+      "150 km",
+      "180 km",
+      "240 km"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 150 km ہے۔ distance = speed × time کے مطابق 60 × 2.5 = 150 km بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Models and applications",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry/pages/2-3-models-and-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q096",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry/pages/2-3-models-and-applications",
+        "label": "Models and applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that distance equals speed multiplied by time, so 60 km/h for 2.5 hours gives 150 km."
+      },
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and velocity",
+        "publisher": "OpenStax Physics",
+        "authorityId": "openstax-physics",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax Physics supports that distance equals speed multiplied by time, so 60 km/h for 2.5 hours gives 150 km."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q097-SRC",
+    "pairId": "ADV2E102-U0160-Q097",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Three batches contain 55, 60 and 45 students with average marks 50, 55 and 60 respectively. What is the combined average, rounded to two decimal places?",
+    "questionUrdu": "تین batches میں بالترتیب 55، 60 اور 45 students ہیں اور ان کے average marks 50، 55 اور 60 ہیں۔ دو decimal places تک combined average کیا ہے؟",
+    "options": [
+      "53.33",
+      "54.69",
+      "55.00",
+      "56.25"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 54.69 ہے۔ weighted total 8,750 اور students 160 ہیں، لہٰذا 8,750 ÷ 160 = 54.6875 کو round کر کے 54.69 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Weighted mean",
+      "referenceUrl": "https://openstax.org/books/introductory-statistics/pages/2-5-measures-of-the-center-of-the-data",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q097"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/introductory-statistics/pages/2-5-measures-of-the-center-of-the-data",
+        "label": "Weighted mean",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains weighted means; weighting each batch average by its student count gives 8,750/160 = 54.6875."
+      },
+      {
+        "url": "https://www.nist.gov/pml/owm/si-units-mass",
+        "label": "SI measurement and rounding guidance",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST measurement guidance supports standard rounding of the computed value 54.6875 to 54.69 at two decimal places."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed 54.68 truncates rather than rounds 54.6875. The option and verified answer were corrected to 54.69; 'None of these' was replaced with a genuine distractor."
+  },
+  {
+    "id": "ADV2E102-U0160-Q097-SIM",
+    "pairId": "ADV2E102-U0160-Q097",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A class of 20 students averages 60 marks and another class of 30 averages 70. What is their combined average?",
+    "questionUrdu": "20 students کی class کا average 60 اور 30 students کی class کا average 70 ہے۔ combined average کیا ہوگا؟",
+    "options": [
+      "64",
+      "65",
+      "66",
+      "68"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 66 ہے۔ weighted total 20 × 60 + 30 × 70 = 3,300 ہے اور 3,300 ÷ 50 = 66 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Weighted mean",
+      "referenceUrl": "https://openstax.org/books/introductory-statistics/pages/2-5-measures-of-the-center-of-the-data",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q097",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/introductory-statistics/pages/2-5-measures-of-the-center-of-the-data",
+        "label": "Weighted mean",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the weighted combined average of 20 students at 60 and 30 students at 70 is 66."
+      },
+      {
+        "url": "https://www.nist.gov/pml/owm/si-units-mass",
+        "label": "SI measurement and rounding guidance",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Institute of Standards and Technology supports that the weighted combined average of 20 students at 60 and 30 students at 70 is 66."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q098-SRC",
+    "pairId": "ADV2E102-U0160-Q098",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which description best fits Ibn-e-Insha?",
+    "questionUrdu": "کون سی description Ibn-e-Insha کے لیے سب سے درست ہے؟",
+    "options": [
+      "An Urdu poet, humorist, columnist and travel writer",
+      "A physicist and university rector",
+      "A classical Arabic grammarian",
+      "A military commander and diplomat"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Urdu poet, humorist, columnist and travel writer ہے۔ ابنِ انشا نے شاعری، مزاحیہ نثر، کالم اور سفرنامے سب لکھے۔",
+    "source": {
+      "type": "book",
+      "label": "Ibn-e-Insha profile",
+      "referenceUrl": "https://www.rekhta.org/poets/ibn-e-insha/profile",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q098"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/poets/ibn-e-insha/profile",
+        "label": "Ibn-e-Insha profile",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta describes Ibn-e-Insha as a Pakistani Urdu poet, columnist, humorist and author of travelogues."
+      },
+      {
+        "url": "https://www.dawn.com/2010/02/07/in-memoriam-immense-talent-little-reward/",
+        "label": "In memoriam: Ibn-e-Insha",
+        "publisher": "Dawn",
+        "authorityId": "dawn",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Dawn independently describes Ibn-e-Insha as a noted poet, satirist, columnist and travelogue writer."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The answer-encoding choice 'All of these' was replaced with a direct, uniquely answerable description."
+  },
+  {
+    "id": "ADV2E102-U0160-Q098-SIM",
+    "pairId": "ADV2E102-U0160-Q098",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "What was the real name of the Urdu writer known as Ibn-e-Insha?",
+    "questionUrdu": "Ibn-e-Insha کے نام سے مشہور Urdu writer کا اصل نام کیا تھا؟",
+    "options": [
+      "Sher Muhammad Khan",
+      "Patras Bokhari",
+      "Mushtaq Ahmad Yusufi",
+      "Saadat Hasan Manto"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sher Muhammad Khan ہے۔ ادبی دنیا میں انہوں نے Ibn-e-Insha کا pen name اختیار کیا اور اسی نام سے شہرت پائی۔",
+    "source": {
+      "type": "practice",
+      "label": "Ibn-e-Insha profile",
+      "referenceUrl": "https://www.rekhta.org/poets/ibn-e-insha/profile",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q098",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/poets/ibn-e-insha/profile",
+        "label": "Ibn-e-Insha profile",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Foundation supports that Ibn-e-Insha's real name was Sher Muhammad Khan."
+      },
+      {
+        "url": "https://www.dawn.com/2010/02/07/in-memoriam-immense-talent-little-reward/",
+        "label": "In memoriam: Ibn-e-Insha",
+        "publisher": "Dawn",
+        "authorityId": "dawn",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Dawn supports that Ibn-e-Insha's real name was Sher Muhammad Khan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q099-SRC",
+    "pairId": "ADV2E102-U0160-Q099",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which city did Caliph Ali ibn Abi Talib make the capital of his caliphate?",
+    "questionUrdu": "Caliph Ali ibn Abi Talib نے کس شہر کو اپنی caliphate کا دارالحکومت بنایا؟",
+    "options": [
+      "Baghdad",
+      "Medina",
+      "Kufa",
+      "Jerusalem"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Kufa ہے۔ حضرت علی نے سیاسی اور عسکری حالات کے باعث مرکزِ حکومت مدینہ سے کوفہ منتقل کیا۔",
+    "source": {
+      "type": "book",
+      "label": "Transfer of the capital to Kufa",
+      "referenceUrl": "https://journal.uokufa.edu.iq/index.php/ksc/article/view/18580",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q099"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://journal.uokufa.edu.iq/index.php/ksc/article/view/18580",
+        "label": "Transfer of the capital to Kufa",
+        "publisher": "University of Kufa",
+        "authorityId": "university-kufa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Kufa study states that Ali made Kufa the capital of his state instead of Medina."
+      },
+      {
+        "url": "https://www.iranicaonline.org/articles/kufa/",
+        "label": "Kufa",
+        "publisher": "Encyclopaedia Iranica",
+        "authorityId": "encyclopaedia-iranica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Iranica independently states that Caliph Ali chose Kufa as his capital."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The scan asks an unclear sequence question and keys Baghdad while its explanation suggests Medina. The item was reconstructed around the well-documented transfer of Ali's capital to Kufa; the verified key is C."
+  },
+  {
+    "id": "ADV2E102-U0160-Q099-SIM",
+    "pairId": "ADV2E102-U0160-Q099",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "In which year CE did Caliph Ali move the capital of his caliphate to Kufa?",
+    "questionUrdu": "Caliph Ali نے کس سال CE اپنی caliphate کا دارالحکومت Kufa منتقل کیا؟",
+    "options": [
+      "632 CE",
+      "644 CE",
+      "657 CE",
+      "661 CE"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 657 CE ہے۔ Battle of the Camel کے بعد حضرت علی نے 657 CE میں کوفہ کو حکومتی مرکز بنایا۔",
+    "source": {
+      "type": "practice",
+      "label": "Ali ibn Abi Talib",
+      "referenceUrl": "https://www.worldhistory.org/Ali_ibn_Abi_Talib/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q099",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.worldhistory.org/Ali_ibn_Abi_Talib/",
+        "label": "Ali ibn Abi Talib",
+        "publisher": "World History Encyclopedia",
+        "authorityId": "world-history-encyclopedia",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "World History Encyclopedia supports that Caliph Ali moved his capital to Kufa in 657 CE."
+      },
+      {
+        "url": "https://www.iranicaonline.org/articles/kufa/",
+        "label": "Kufa",
+        "publisher": "Encyclopaedia Iranica",
+        "authorityId": "encyclopaedia-iranica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Iranica supports that Caliph Ali moved his capital to Kufa in 657 CE."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0160-Q100-SRC",
+    "pairId": "ADV2E102-U0160-Q100",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Who wrote the biography 'Muhammad: His Life Based on the Earliest Sources'?",
+    "questionUrdu": "biography 'Muhammad: His Life Based on the Earliest Sources' کس نے لکھی؟",
+    "options": [
+      "Karen Armstrong",
+      "Martin Lings",
+      "W. Montgomery Watt",
+      "Reza Aslan"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Martin Lings ہے۔ یہ Prophet Muhammad کی سیرت پر مبنی انگریزی biography ہے جو ابتدائی عربی مصادر سے اخذ کی گئی۔",
+    "source": {
+      "type": "book",
+      "label": "Muhammad by Martin Lings",
+      "referenceUrl": "https://www.simonandschuster.com/books/Muhammad/Martin-Lings/9781594771538",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q100"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.simonandschuster.com/books/Muhammad/Martin-Lings/9781594771538",
+        "label": "Muhammad by Martin Lings",
+        "publisher": "Simon and Schuster",
+        "authorityId": "simon-schuster",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official publisher page attributes Muhammad: His Life Based on the Earliest Sources to Martin Lings."
+      },
+      {
+        "url": "https://lib.riifs.org/bib/538",
+        "label": "Muhammad: His Life Based on the Earliest Sources",
+        "publisher": "Royal Institute for Inter-Faith Studies Library",
+        "authorityId": "royal-institute-interfaith-studies",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The institute library's independent bibliographic record lists Martin Lings as author."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The unnecessary and potentially distracting conversion descriptor was removed; the item now tests authorship directly."
+  },
+  {
+    "id": "ADV2E102-U0160-Q100-SIM",
+    "pairId": "ADV2E102-U0160-Q100",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "What type of book is Martin Lings' 'Muhammad: His Life Based on the Earliest Sources'?",
+    "questionUrdu": "Martin Lings کی 'Muhammad: His Life Based on the Earliest Sources' کس قسم کی کتاب ہے؟",
+    "options": [
+      "A biography of Prophet Muhammad",
+      "A book of modern physics",
+      "A collection of English plays",
+      "A manual of commercial law"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A biography of Prophet Muhammad ہے۔ کتاب سیرت کے ابتدائی عربی مصادر کی بنیاد پر زندگی کے واقعات بیان کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Muhammad by Martin Lings",
+      "referenceUrl": "https://www.simonandschuster.com/books/Muhammad/Martin-Lings/9781594771538",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "model-paper-160",
+      "u0160-q100",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.simonandschuster.com/books/Muhammad/Martin-Lings/9781594771538",
+        "label": "Muhammad by Martin Lings",
+        "publisher": "Simon and Schuster",
+        "authorityId": "simon-schuster",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Simon and Schuster supports that Martin Lings' book is a biography of Prophet Muhammad."
+      },
+      {
+        "url": "https://lib.riifs.org/bib/538",
+        "label": "Muhammad: His Life Based on the Earliest Sources",
+        "publisher": "Royal Institute for Inter-Faith Studies Library",
+        "authorityId": "royal-institute-interfaith-studies",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Royal Institute for Inter-Faith Studies Library supports that Martin Lings' book is a biography of Prophet Muhammad."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  }
+]

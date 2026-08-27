@@ -1,0 +1,3098 @@
+[
+  {
+    "id": "ADV2E102-U0032-Q026-SRC",
+    "pairId": "ADV2E102-U0032-Q026",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "Which listed country does not share a land border with Syria?",
+    "questionUrdu": "درج ذیل میں سے کون سا ملک Syria کے ساتھ زمینی سرحد نہیں رکھتا؟",
+    "options": [
+      "Iraq",
+      "Iran",
+      "Türkiye",
+      "Israel"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Iran ہے۔ Syria کی زمینی سرحدیں Türkiye, Iraq, Jordan, Israel اور Lebanon سے ملتی ہیں، ایران سے نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Syria Travel Advisory: About Syria",
+      "referenceUrl": "https://travel.state.gov/en/international-travel/travel-advisories/syria.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q026"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://travel.state.gov/en/international-travel/travel-advisories/syria.html",
+        "label": "Syria Travel Advisory: About Syria",
+        "publisher": "US Department of State",
+        "authorityId": "us-state-department",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The advisory lists Syria's land borders as Iraq, Israel, Jordan, Lebanon and Türkiye; Iran is not listed."
+      },
+      {
+        "url": "https://assets.publishing.service.gov.uk/media/5f9c27d5d3bf7f03a6550d6e/Syria_toponymic_factfile-May11.pdf",
+        "label": "Syria Toponymic Factfile",
+        "publisher": "United Kingdom Permanent Committee on Geographical Names",
+        "authorityId": "uk-pcgn",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official UK factfile identifies Syria's neighboring states as Türkiye, Iraq, Jordan, Lebanon and Israel, excluding Iran."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake spelling of Türkiye in the scan extraction was repaired; the stem now specifies a land border."
+  },
+  {
+    "id": "ADV2E102-U0032-Q026-SIM",
+    "pairId": "ADV2E102-U0032-Q026",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "How many countries share a land border with Syria?",
+    "questionUrdu": "Syria کے ساتھ کتنے ممالک کی زمینی سرحد ملتی ہے؟",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 5 ہے۔ Syria کی زمینی سرحد Türkiye, Iraq, Jordan, Israel اور Lebanon سے ملتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Syria Travel Advisory: About Syria",
+      "referenceUrl": "https://travel.state.gov/en/international-travel/travel-advisories/syria.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q026",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://travel.state.gov/en/international-travel/travel-advisories/syria.html",
+        "label": "Syria Travel Advisory: About Syria",
+        "publisher": "US Department of State",
+        "authorityId": "us-state-department",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The US State Department lists five states on Syria's land borders."
+      },
+      {
+        "url": "https://assets.publishing.service.gov.uk/media/5f9c27d5d3bf7f03a6550d6e/Syria_toponymic_factfile-May11.pdf",
+        "label": "Syria Toponymic Factfile",
+        "publisher": "United Kingdom Permanent Committee on Geographical Names",
+        "authorityId": "uk-pcgn",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UK geographical factfile independently lists the same five neighboring states."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q027-SRC",
+    "pairId": "ADV2E102-U0032-Q027",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Vasco da Gama was a navigator from which country?",
+    "questionUrdu": "Vasco da Gama کس ملک کا ملاح تھا؟",
+    "options": [
+      "Portugal",
+      "Spain",
+      "France",
+      "Italy"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Portugal ہے۔ پرتگالی ملاح Vasco da Gama نے یورپ سے سمندری راستے کے ذریعے بھارت پہنچنے والی مشہور مہم کی قیادت کی۔",
+    "source": {
+      "type": "book",
+      "label": "Vasco da Gama",
+      "referenceUrl": "https://www.panteaonacional.gov.pt/en/homenageados/vasco-da-gama",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q027"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.panteaonacional.gov.pt/en/homenageados/vasco-da-gama",
+        "label": "Vasco da Gama",
+        "publisher": "National Pantheon of Portugal",
+        "authorityId": "portugal-national-pantheon",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Portugal's National Pantheon identifies Vasco da Gama as a Portuguese navigator."
+      },
+      {
+        "url": "https://www.visitportugal.com/en/content/sines",
+        "label": "Sines",
+        "publisher": "Turismo de Portugal",
+        "authorityId": "turismo-de-portugal",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Portugal's official tourism portal identifies Sines as Vasco da Gama's birthplace, supporting his Portuguese origin."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The dated phrase 'native of' was replaced by the precise, directly supported description 'navigator from'."
+  },
+  {
+    "id": "ADV2E102-U0032-Q027-SIM",
+    "pairId": "ADV2E102-U0032-Q027",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "At which Indian port did Vasco da Gama arrive in 1498 after sailing around Africa?",
+    "questionUrdu": "Africa کے گرد سفر کے بعد Vasco da Gama 1498 میں بھارت کی کس بندرگاہ پہنچا؟",
+    "options": [
+      "Calicut",
+      "Bombay",
+      "Goa",
+      "Madras"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Calicut ہے۔ Vasco da Gama May 1498 میں Malabar Coast کے Calicut، موجودہ Kozhikode، کے قریب پہنچا۔",
+    "source": {
+      "type": "practice",
+      "label": "Vasco da Gama",
+      "referenceUrl": "https://www.panteaonacional.gov.pt/en/homenageados/vasco-da-gama",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q027",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.panteaonacional.gov.pt/en/homenageados/vasco-da-gama",
+        "label": "Vasco da Gama",
+        "publisher": "National Pantheon of Portugal",
+        "authorityId": "portugal-national-pantheon",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Portugal's National Pantheon biography records Vasco da Gama's 1498 arrival at Calicut after the sea voyage to India."
+      },
+      {
+        "url": "https://www.visitportugal.com/en/content/sines",
+        "label": "Sines",
+        "publisher": "Turismo de Portugal",
+        "authorityId": "turismo-de-portugal",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Portugal's official tourism history independently links the navigator's route to Calicut in 1498."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q028-SRC",
+    "pairId": "ADV2E102-U0032-Q028",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "Which listed earth-filled dam is located on the Indus River?",
+    "questionUrdu": "درج ذیل میں سے کون سا earth-filled dam دریائے Indus پر واقع ہے؟",
+    "options": [
+      "Tarbela",
+      "Warsak",
+      "Mangla",
+      "Swan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Tarbela ہے۔ Tarbela Dam پاکستان میں دریائے سندھ پر تعمیر کیا گیا ایک بہت بڑا earth-filled dam ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Tarbela Dam",
+      "referenceUrl": "https://wapda.gov.pk/hydro-power-and-water-projects/tarbela-dam/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q028"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://wapda.gov.pk/hydro-power-and-water-projects/tarbela-dam/",
+        "label": "Tarbela Dam",
+        "publisher": "Water and Power Development Authority, Pakistan",
+        "authorityId": "pakistan-wapda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WAPDA identifies Tarbela as an earth-filled dam on the Indus River."
+      },
+      {
+        "url": "https://www.worldbank.org/en/news/factsheet/2020/02/25/tarbela-fourth-hydropower-extension-project-t4hp",
+        "label": "Tarbela Fourth Hydropower Extension Project",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The World Bank independently describes Tarbela as an earth-filled dam on the Indus River in Pakistan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A changing global superlative was replaced by the stable location-and-type fact while retaining Tarbela as the answer."
+  },
+  {
+    "id": "ADV2E102-U0032-Q028-SIM",
+    "pairId": "ADV2E102-U0032-Q028",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "In which Pakistani province is Tarbela Dam located?",
+    "questionUrdu": "Tarbela Dam پاکستان کے کس صوبے میں واقع ہے؟",
+    "options": [
+      "Punjab",
+      "Sindh",
+      "Khyber Pakhtunkhwa",
+      "Balochistan"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Khyber Pakhtunkhwa ہے۔ Tarbela دریائے سندھ پر Haripur/Swabi کے قریب خیبر پختونخوا میں واقع ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Tarbela Dam",
+      "referenceUrl": "https://wapda.gov.pk/hydro-power-and-water-projects/tarbela-dam/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q028",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://wapda.gov.pk/hydro-power-and-water-projects/tarbela-dam/",
+        "label": "Tarbela Dam",
+        "publisher": "Water and Power Development Authority, Pakistan",
+        "authorityId": "pakistan-wapda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WAPDA locates Tarbela Dam in Khyber Pakhtunkhwa on the Indus River."
+      },
+      {
+        "url": "https://www.worldbank.org/en/news/factsheet/2020/02/25/tarbela-fourth-hydropower-extension-project-t4hp",
+        "label": "Tarbela Fourth Hydropower Extension Project",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The World Bank independently locates the Tarbela project in Khyber Pakhtunkhwa, Pakistan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q029-SRC",
+    "pairId": "ADV2E102-U0032-Q029",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "In which country did the Arab Spring begin in December 2010?",
+    "questionUrdu": "Arab Spring کا آغاز December 2010 میں کس ملک سے ہوا؟",
+    "options": [
+      "Tunisia",
+      "Egypt",
+      "Syria",
+      "Sudan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Tunisia ہے۔ Sidi Bouzid میں Mohamed Bouazizi کے واقعے کے بعد شروع ہونے والے احتجاج نے پورے خطے کی تحریک کو جنم دیا۔",
+    "source": {
+      "type": "book",
+      "label": "Tunisia: consulting on the way forward",
+      "referenceUrl": "https://www.iiep.unesco.org/en/articles/tunisia-consulting-way-forward",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q029"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.iiep.unesco.org/en/articles/tunisia-consulting-way-forward",
+        "label": "Tunisia: consulting on the way forward",
+        "publisher": "UNESCO International Institute for Educational Planning",
+        "authorityId": "unesco-iiep",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO IIEP states that the Arab Spring began in Tunisia in December 2010."
+      },
+      {
+        "url": "https://www.un.org/sg/en/content/former-secretary-general/press-events/2011-03-22/secretary-generals-press-conference-full-transcript",
+        "label": "Secretary-General's press conference in Tunis",
+        "publisher": "United Nations Secretary-General",
+        "authorityId": "un-secretary-general",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UN Secretary-General's Tunis press conference says the regional movement began in Tunisia."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2010-12-17",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The option 'Tunis' named a city, not a country. It was corrected to Tunisia and the historically relevant month and year were added."
+  },
+  {
+    "id": "ADV2E102-U0032-Q029-SIM",
+    "pairId": "ADV2E102-U0032-Q029",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "In which Tunisian town did the event that triggered the Arab Spring occur?",
+    "questionUrdu": "Arab Spring کو جنم دینے والا واقعہ Tunisia کے کس شہر میں پیش آیا؟",
+    "options": [
+      "Tunis",
+      "Sidi Bouzid",
+      "Sfax",
+      "Sousse"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Sidi Bouzid ہے۔ Mohamed Bouazizi کے احتجاجی اقدام کے بعد اسی شہر سے مظاہرے پھیلے۔",
+    "source": {
+      "type": "practice",
+      "label": "Tunisia: consulting on the way forward",
+      "referenceUrl": "https://www.iiep.unesco.org/en/articles/tunisia-consulting-way-forward",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q029",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.iiep.unesco.org/en/articles/tunisia-consulting-way-forward",
+        "label": "Tunisia: consulting on the way forward",
+        "publisher": "UNESCO International Institute for Educational Planning",
+        "authorityId": "unesco-iiep",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO IIEP traces Tunisia's uprising to events in Sidi Bouzid in December 2010."
+      },
+      {
+        "url": "https://www.un.org/sg/en/content/former-secretary-general/press-events/2011-03-22/secretary-generals-press-conference-full-transcript",
+        "label": "Secretary-General's press conference in Tunis",
+        "publisher": "United Nations Secretary-General",
+        "authorityId": "un-secretary-general",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UN Secretary-General's Tunisia account independently identifies Sidi Bouzid as the starting point of the movement."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q030-SRC",
+    "pairId": "ADV2E102-U0032-Q030",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "Timbuktu is a historic city in which country?",
+    "questionUrdu": "تاریخی شہر Timbuktu کس ملک میں واقع ہے؟",
+    "options": [
+      "Mali",
+      "Egypt",
+      "Spain",
+      "Iraq"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Mali ہے۔ Timbuktu صحرائے Sahara کے کنارے واقع علم، تجارت اور اسلامی مخطوطات کا قدیم مرکز ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Timbuktu",
+      "referenceUrl": "https://whc.unesco.org/en/list/119",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q030"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://whc.unesco.org/en/list/119",
+        "label": "Timbuktu",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco-whc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO lists the World Heritage property Timbuktu under the State Party Mali."
+      },
+      {
+        "url": "https://apimali.gov.ml/diversite-et-richesse-culturelle/",
+        "label": "Cultural Diversity and Richness",
+        "publisher": "Investment Promotion Agency of Mali",
+        "authorityId": "mali-investment-promotion-agency",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mali's official investment agency identifies Tombouctou as the historic 'city of 333 saints' in its national cultural heritage."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The adjective 'famous' was unnecessary; the repaired question asks the exact country location."
+  },
+  {
+    "id": "ADV2E102-U0032-Q030-SIM",
+    "pairId": "ADV2E102-U0032-Q030",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "Timbuktu is traditionally known in Mali as the city of how many saints?",
+    "questionUrdu": "Mali میں Timbuktu کو روایتی طور پر کتنے saints کا شہر کہا جاتا ہے؟",
+    "options": [
+      "7",
+      "40",
+      "99",
+      "333"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 333 ہے۔ Timbuktu کو اس کے صوفی علما، مزارات اور علمی روایت کی وجہ سے City of 333 Saints کہا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Timbuktu",
+      "referenceUrl": "https://whc.unesco.org/en/list/119",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q030",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://whc.unesco.org/en/list/119",
+        "label": "Timbuktu",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco-whc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO describes Timbuktu's historic mosques and saintly scholarly heritage."
+      },
+      {
+        "url": "https://apimali.gov.ml/diversite-et-richesse-culturelle/",
+        "label": "Cultural Diversity and Richness",
+        "publisher": "Investment Promotion Agency of Mali",
+        "authorityId": "mali-investment-promotion-agency",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mali's official investment agency explicitly calls Tombouctou the city of 333 saints."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q031-SRC",
+    "pairId": "ADV2E102-U0032-Q031",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "The Three Gorges Dam is located in which country?",
+    "questionUrdu": "Three Gorges Dam کس ملک میں واقع ہے؟",
+    "options": [
+      "USA",
+      "India",
+      "China",
+      "Canada"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب China ہے۔ یہ بڑا پن بجلی منصوبہ Hubei Province میں دریائے Yangtze پر تعمیر کیا گیا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Three Gorges Hydropower Station",
+      "referenceUrl": "https://dam.nea.gov.cn/overview/1249",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q031"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dam.nea.gov.cn/overview/1249",
+        "label": "Three Gorges Hydropower Station",
+        "publisher": "Dam Safety Center, National Energy Administration of China",
+        "authorityId": "china-nea-dam-safety",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "China's national dam-safety centre identifies the Three Gorges hydropower station at Yichang on the Yangtze River in China."
+      },
+      {
+        "url": "https://www.gov.cn/test/2006-05/12/content_278989.htm",
+        "label": "Overview of the Three Gorges Project",
+        "publisher": "State Council of the People's Republic of China",
+        "authorityId": "china-state-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The State Council's official project overview locates the Three Gorges Project in Hubei Province, China."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The generic preposition was replaced by an explicit country-location question."
+  },
+  {
+    "id": "ADV2E102-U0032-Q031-SIM",
+    "pairId": "ADV2E102-U0032-Q031",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "The Three Gorges Dam is built on which river?",
+    "questionUrdu": "Three Gorges Dam کس دریا پر تعمیر کیا گیا ہے؟",
+    "options": [
+      "Yellow River",
+      "Yangtze River",
+      "Mekong River",
+      "Pearl River"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Yangtze River ہے۔ یہ منصوبہ Hubei Province میں Yangtze کے مرکزی دھارے پر واقع ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Three Gorges Hydropower Station",
+      "referenceUrl": "https://dam.nea.gov.cn/overview/1249",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q031",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dam.nea.gov.cn/overview/1249",
+        "label": "Three Gorges Hydropower Station",
+        "publisher": "Dam Safety Center, National Energy Administration of China",
+        "authorityId": "china-nea-dam-safety",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "China's national dam-safety centre locates the Three Gorges station on the Yangtze River."
+      },
+      {
+        "url": "https://www.gov.cn/test/2006-05/12/content_278989.htm",
+        "label": "Overview of the Three Gorges Project",
+        "publisher": "State Council of the People's Republic of China",
+        "authorityId": "china-state-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The State Council's project overview independently identifies the Yangtze as the dam's river."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q032-SRC",
+    "pairId": "ADV2E102-U0032-Q032",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Rudyard Kipling, the 1907 Nobel Prize in Literature laureate, resided in which listed country at the time of the award?",
+    "questionUrdu": "1907 کے Nobel Prize in Literature کے وقت Rudyard Kipling کس درج شدہ ملک میں رہتے تھے؟",
+    "options": [
+      "United Kingdom",
+      "Russia",
+      "France",
+      "Germany"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب United Kingdom ہے۔ Nobel record میں ان کی award-time residence United Kingdom درج ہے، اگرچہ وہ Bombay میں پیدا ہوئے تھے۔",
+    "source": {
+      "type": "book",
+      "label": "Rudyard Kipling: Facts",
+      "referenceUrl": "https://www.nobelprize.org/prizes/literature/1907/kipling/facts/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q032"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/literature/1907/kipling/facts/",
+        "label": "Rudyard Kipling: Facts",
+        "publisher": "Nobel Prize Outreach",
+        "authorityId": "nobel-prize",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Nobel Prize facts page records Kipling's residence at the time of the 1907 award as the United Kingdom."
+      },
+      {
+        "url": "https://torridge.gov.uk/kipling",
+        "label": "Rudyard Kipling (1865-1936)",
+        "publisher": "Torridge District Council",
+        "authorityId": "torridge-district-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The council biography identifies Kipling as an English writer and the 1907 Nobel literature laureate."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1907-12-10",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "National Nobel-laureate totals depend on citizenship, birthplace, institutional affiliation and the date counted. That unstable ranking was replaced by Nobel's documented residence field for a named laureate while preserving the United Kingdom answer."
+  },
+  {
+    "id": "ADV2E102-U0032-Q032-SIM",
+    "pairId": "ADV2E102-U0032-Q032",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "In which city was Rudyard Kipling born?",
+    "questionUrdu": "Rudyard Kipling کس شہر میں پیدا ہوئے؟",
+    "options": [
+      "London",
+      "Bombay",
+      "Lahore",
+      "Dublin"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Bombay ہے۔ Kipling 1865 میں Bombay، موجودہ Mumbai، میں پیدا ہوئے اور بعد میں United Kingdom میں رہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Rudyard Kipling: Facts",
+      "referenceUrl": "https://www.nobelprize.org/prizes/literature/1907/kipling/facts/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q032",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/literature/1907/kipling/facts/",
+        "label": "Rudyard Kipling: Facts",
+        "publisher": "Nobel Prize Outreach",
+        "authorityId": "nobel-prize",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Nobel Prize biography records Rudyard Kipling's birthplace as Bombay in British India."
+      },
+      {
+        "url": "https://torridge.gov.uk/kipling",
+        "label": "Rudyard Kipling (1865-1936)",
+        "publisher": "Torridge District Council",
+        "authorityId": "torridge-district-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Torridge District Council's biography independently identifies Bombay as Kipling's birthplace."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q033-SRC",
+    "pairId": "ADV2E102-U0032-Q033",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "The original Pakistan-China Karakoram Highway was completed in which year, ending its 1966-1978 construction period?",
+    "questionUrdu": "اصل Pakistan-China Karakoram Highway کس سال مکمل ہوا، جس کی تعمیر 1966-1978 تک جاری رہی؟",
+    "options": [
+      "1975",
+      "1976",
+      "1977",
+      "1978"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 1978 ہے۔ دونوں ممالک کے انجینئروں اور کارکنوں نے دشوار گزار پہاڑی علاقے میں اس شاہراہ کو 1966 سے 1978 کے دوران مکمل کیا۔",
+    "source": {
+      "type": "book",
+      "label": "Karakoram Highway construction history",
+      "referenceUrl": "https://eng.yidaiyilu.gov.cn/p/201214.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q033"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://eng.yidaiyilu.gov.cn/p/201214.html",
+        "label": "Karakoram Highway construction history",
+        "publisher": "Belt and Road Portal, China",
+        "authorityId": "china-belt-road-portal",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official portal states that construction of the Pakistan-China road ran from 1966 to 1978."
+      },
+      {
+        "url": "https://xjdrc.xinjiang.gov.cn/xjfgw/c112380/202303/b71a8f1562c347cc86844272ed39fca7.shtml",
+        "label": "History of the China-Pakistan Highway",
+        "publisher": "Xinjiang Development and Reform Commission",
+        "authorityId": "xinjiang-drc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The regional government account records the highway's construction period as 1966-1978."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1978-01-01",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The word 'original' distinguishes the 1978 completion from later reconstruction, extension and formal opening milestones."
+  },
+  {
+    "id": "ADV2E102-U0032-Q033-SIM",
+    "pairId": "ADV2E102-U0032-Q033",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "The Karakoram Highway directly connects Pakistan with which country?",
+    "questionUrdu": "Karakoram Highway پاکستان کو براہ راست کس ملک سے ملاتی ہے؟",
+    "options": [
+      "India",
+      "Afghanistan",
+      "China",
+      "Iran"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب China ہے۔ یہ شاہراہ Khunjerab Pass کے راستے پاکستان اور چین کے درمیان زمینی رابطہ فراہم کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Karakoram Highway construction history",
+      "referenceUrl": "https://eng.yidaiyilu.gov.cn/p/201214.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q033",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://eng.yidaiyilu.gov.cn/p/201214.html",
+        "label": "Karakoram Highway construction history",
+        "publisher": "Belt and Road Portal, China",
+        "authorityId": "china-belt-road-portal",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "China's Belt and Road portal describes the highway as the Pakistan-China road."
+      },
+      {
+        "url": "https://xjdrc.xinjiang.gov.cn/xjfgw/c112380/202303/b71a8f1562c347cc86844272ed39fca7.shtml",
+        "label": "History of the China-Pakistan Highway",
+        "publisher": "Xinjiang Development and Reform Commission",
+        "authorityId": "xinjiang-drc",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Xinjiang's development authority independently describes it as the highway linking China and Pakistan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q034-SRC",
+    "pairId": "ADV2E102-U0032-Q034",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "The shrine of Hazrat Khawaja Ghulam Farid is located at which listed place?",
+    "questionUrdu": "Hazrat Khawaja Ghulam Farid کا مزار کہاں واقع ہے؟",
+    "options": [
+      "Kot Mithan",
+      "Pak Pattan",
+      "Multan",
+      "Jhang"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Kot Mithan ہے۔ یہ معروف صوفی شاعر کا مزار ضلع Rajanpur کے تاریخی مقام Kot Mithan میں واقع ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Shrine of Hazrat Khawaja Ghulam Farid",
+      "referenceUrl": "https://auqaf.punjab.gov.pk/shrine-ghulam-farid-korejo",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q034"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://auqaf.punjab.gov.pk/shrine-ghulam-farid-korejo",
+        "label": "Shrine of Hazrat Khawaja Ghulam Farid",
+        "publisher": "Auqaf and Religious Affairs Department, Government of Punjab",
+        "authorityId": "punjab-auqaf",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Punjab Auqaf locates the shrine of Khawaja Ghulam Farid at Kot Mithan."
+      },
+      {
+        "url": "https://rajanpur.punjab.gov.pk/important-places",
+        "label": "Important Places in Rajanpur",
+        "publisher": "District Administration Rajanpur, Government of Punjab",
+        "authorityId": "rajanpur-district-government",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Rajanpur district portal independently lists the shrine of Hazrat Khawaja Ghulam Farid at Kot Mithan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem now names the shrine rather than loosely calling it only a tomb."
+  },
+  {
+    "id": "ADV2E102-U0032-Q034-SIM",
+    "pairId": "ADV2E102-U0032-Q034",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Khawaja Ghulam Farid is especially associated with poetry in which language?",
+    "questionUrdu": "Khawaja Ghulam Farid خاص طور پر کس زبان کی شاعری سے وابستہ ہیں؟",
+    "options": [
+      "Punjabi",
+      "Saraiki",
+      "Sindhi",
+      "Pashto"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Saraiki ہے۔ ان کی کافیوں نے Saraiki زبان اور جنوبی پنجاب کی صوفی روایت میں بنیادی مقام حاصل کیا۔",
+    "source": {
+      "type": "practice",
+      "label": "Shrine of Hazrat Khawaja Ghulam Farid",
+      "referenceUrl": "https://auqaf.punjab.gov.pk/shrine-ghulam-farid-korejo",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q034",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://auqaf.punjab.gov.pk/shrine-ghulam-farid-korejo",
+        "label": "Shrine of Hazrat Khawaja Ghulam Farid",
+        "publisher": "Auqaf and Religious Affairs Department, Government of Punjab",
+        "authorityId": "punjab-auqaf",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Punjab Auqaf's shrine profile identifies Khawaja Ghulam Farid's Saraiki poetic and spiritual legacy."
+      },
+      {
+        "url": "https://rajanpur.punjab.gov.pk/important-places",
+        "label": "Important Places in Rajanpur",
+        "publisher": "District Administration Rajanpur, Government of Punjab",
+        "authorityId": "rajanpur-district-government",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rajanpur district's official profile independently associates him with the region's Saraiki culture and poetry."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q035-SRC",
+    "pairId": "ADV2E102-U0032-Q035",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Under Article 156 of Pakistan's Constitution, who is the chairman of the National Economic Council?",
+    "questionUrdu": "پاکستان کے آئین کے Article 156 کے تحت National Economic Council کا chairman کون ہوتا ہے؟",
+    "options": [
+      "Finance Minister",
+      "Prime Minister",
+      "President",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Prime Minister ہے۔ NEC وفاق اور صوبوں کی معاشی حالت کا جائزہ لے کر متوازن ترقی کے منصوبے بناتی ہے اور وزیر اعظم اس کی صدارت کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Constitution of the Islamic Republic of Pakistan, Article 156",
+      "referenceUrl": "https://pakistancode.gov.pk/pdffiles/administrator9d8e2ecc414c6d3371ac41114b61a2c4.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q035"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator9d8e2ecc414c6d3371ac41114b61a2c4.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan, Article 156",
+        "publisher": "Pakistan Code, Ministry of Law and Justice",
+        "authorityId": "pakistan-code",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Article 156 states that the National Economic Council shall consist of the Prime Minister, who shall be the chairman."
+      },
+      {
+        "url": "https://finance.gov.pk/Budget_Manual_1stEdition_2020.pdf",
+        "label": "Budget Manual, Federal Government of Pakistan",
+        "publisher": "Finance Division, Government of Pakistan",
+        "authorityId": "pakistan-finance-division",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The federal Budget Manual describes the National Economic Council as chaired by the Prime Minister."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The constitutional article was added to make the office and answer unambiguous."
+  },
+  {
+    "id": "ADV2E102-U0032-Q035-SIM",
+    "pairId": "ADV2E102-U0032-Q035",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "What is a principal constitutional function of Pakistan's National Economic Council?",
+    "questionUrdu": "پاکستان کی National Economic Council کا ایک بنیادی آئینی کام کیا ہے؟",
+    "options": [
+      "Conducting general elections",
+      "Reviewing economic conditions and formulating development plans",
+      "Appointing Supreme Court judges",
+      "Commanding the armed forces"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Reviewing economic conditions and formulating development plans ہے۔ NEC معاشی حالت کا جائزہ لے کر وفاق اور صوبوں کے لیے متوازن ترقی کے منصوبے بناتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Constitution of the Islamic Republic of Pakistan, Article 156",
+      "referenceUrl": "https://pakistancode.gov.pk/pdffiles/administrator9d8e2ecc414c6d3371ac41114b61a2c4.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q035",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator9d8e2ecc414c6d3371ac41114b61a2c4.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan, Article 156",
+        "publisher": "Pakistan Code, Ministry of Law and Justice",
+        "authorityId": "pakistan-code",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Article 156 assigns the NEC review of the overall economic condition and formulation of plans for balanced development."
+      },
+      {
+        "url": "https://finance.gov.pk/Budget_Manual_1stEdition_2020.pdf",
+        "label": "Budget Manual, Federal Government of Pakistan",
+        "publisher": "Finance Division, Government of Pakistan",
+        "authorityId": "pakistan-finance-division",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Finance Division Budget Manual independently describes the NEC's national economic planning and approval role."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q036-SRC",
+    "pairId": "ADV2E102-U0032-Q036",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Who was the first Muslim to serve as Governor of Pakistan's Punjab after independence?",
+    "questionUrdu": "آزادی کے بعد پاکستان کے Punjab کا پہلا مسلم Governor کون تھا؟",
+    "options": [
+      "Sardar Abdur Rab Nishtar",
+      "Mushtaq Gurmani",
+      "Feroz Khan Noon",
+      "Iftikhar Hussain Mamdot"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sardar Abdur Rab Nishtar ہے۔ آزادی کے فوراً بعد پہلے Governor Sir Francis Mudie تھے اور ان کے بعد Nishtar پہلے مسلم Governor بنے۔",
+    "source": {
+      "type": "book",
+      "label": "Former Governors of Punjab",
+      "referenceUrl": "https://punjab.gov.pk/index.php/our_governors_pg",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q036"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://punjab.gov.pk/index.php/our_governors_pg",
+        "label": "Former Governors of Punjab",
+        "publisher": "Government of Punjab",
+        "authorityId": "punjab-government",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Punjab's official sequence lists Sir Francis Mudie first after independence and Sardar Abdur Rab Nishtar as his Muslim successor."
+      },
+      {
+        "url": "https://pid.gov.pk/site/press_detail/2615",
+        "label": "Tribute to Sardar Abdur Rab Nishtar",
+        "publisher": "Press Information Department, Government of Pakistan",
+        "authorityId": "pakistan-pid",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official tribute identifies Sardar Abdur Rab Nishtar as a leading Muslim figure who served as Governor of Punjab."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Sir Francis Mudie was the first governor of West Punjab after independence; the source question specifically asks for the first Muslim holder, Sardar Abdur Rab Nishtar."
+  },
+  {
+    "id": "ADV2E102-U0032-Q036-SIM",
+    "pairId": "ADV2E102-U0032-Q036",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Who was the first Governor of West Punjab immediately after Pakistan's independence?",
+    "questionUrdu": "پاکستان کی آزادی کے فوراً بعد West Punjab کا پہلا Governor کون تھا؟",
+    "options": [
+      "Sardar Abdur Rab Nishtar",
+      "Sir Francis Mudie",
+      "Iftikhar Hussain Khan Mamdot",
+      "Mian Aminuddin"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Sir Francis Mudie ہے۔ وہ آزادی کے وقت پہلے Governor تھے، جبکہ Sardar Abdur Rab Nishtar ان کے بعد پہلے مسلم Governor بنے۔",
+    "source": {
+      "type": "practice",
+      "label": "Former Governors of Punjab",
+      "referenceUrl": "https://punjab.gov.pk/index.php/our_governors_pg",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q036",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://punjab.gov.pk/index.php/our_governors_pg",
+        "label": "Former Governors of Punjab",
+        "publisher": "Government of Punjab",
+        "authorityId": "punjab-government",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Punjab's official governors list places Sir Francis Mudie first after independence and Nishtar next."
+      },
+      {
+        "url": "https://pid.gov.pk/site/press_detail/2615",
+        "label": "Tribute to Sardar Abdur Rab Nishtar",
+        "publisher": "Press Information Department, Government of Pakistan",
+        "authorityId": "pakistan-pid",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's official tribute to Nishtar is consistent with his succeeding the initial British governor rather than being first overall."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q037-SRC",
+    "pairId": "ADV2E102-U0032-Q037",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "On which date in March 1949 was the Objectives Resolution presented in Pakistan's Constituent Assembly?",
+    "questionUrdu": "Objectives Resolution پاکستان کی Constituent Assembly میں March 1949 کی کس تاریخ کو پیش ہوئی؟",
+    "options": [
+      "2nd March 1949",
+      "7th March 1949",
+      "12th March 1949",
+      "17th March 1949"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 7 March 1949 ہے۔ قرارداد اس تاریخ کو پیش ہوئی اور پانچ روز بعد 12 March 1949 کو منظور کی گئی۔",
+    "source": {
+      "type": "book",
+      "label": "Constitutional history of Pakistan",
+      "referenceUrl": "https://www.na.gov.pk/en/content.php?id=75.",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q037"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.na.gov.pk/en/content.php?id=75.",
+        "label": "Constitutional history of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly history states that the Objectives Resolution was introduced on 7 March 1949 and adopted on 12 March 1949."
+      },
+      {
+        "url": "https://jps.pu.edu.pk/6/article/download/191/191/383",
+        "label": "The Objectives Resolution and constitutional development",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university publication independently records presentation on 7 March 1949 and passage on 12 March 1949."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1949-03-07",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Presentation on 7 March is distinct from adoption on 12 March 1949; the repaired wording keeps that distinction explicit."
+  },
+  {
+    "id": "ADV2E102-U0032-Q037-SIM",
+    "pairId": "ADV2E102-U0032-Q037",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "On which date was Pakistan's Objectives Resolution adopted by the Constituent Assembly?",
+    "questionUrdu": "پاکستان کی Constituent Assembly نے Objectives Resolution کس تاریخ کو منظور کیا؟",
+    "options": [
+      "7 March 1949",
+      "12 March 1949",
+      "23 March 1949",
+      "14 August 1949"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 12 March 1949 ہے۔ قرارداد 7 March کو پیش ہوئی اور بحث کے بعد 12 March کو منظور ہوئی۔",
+    "source": {
+      "type": "practice",
+      "label": "Constitutional history of Pakistan",
+      "referenceUrl": "https://www.na.gov.pk/en/content.php?id=75.",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q037",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.na.gov.pk/en/content.php?id=75.",
+        "label": "Constitutional history of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly history distinguishes introduction on 7 March from adoption on 12 March 1949."
+      },
+      {
+        "url": "https://jps.pu.edu.pk/6/article/download/191/191/383",
+        "label": "The Objectives Resolution and constitutional development",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of the Punjab study independently records passage on 12 March 1949."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q038-SRC",
+    "pairId": "ADV2E102-U0032-Q038",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Which listed politician served as Prime Minister of Pakistan from 7 December to 20 December 1971?",
+    "questionUrdu": "درج ذیل میں سے کون 7 December سے 20 December 1971 تک پاکستان کا Prime Minister رہا؟",
+    "options": [
+      "Noorul Amin",
+      "Fazal Haq",
+      "Fazal Elahi Chaudhary",
+      "Ch. Zahoor Elahi"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Noorul Amin ہے۔ ان کا مختصر دور وزارت عظمیٰ صرف دسمبر 1971 کے سیاسی و جنگی بحران میں رہا۔",
+    "source": {
+      "type": "book",
+      "label": "Prime Ministers of Pakistan",
+      "referenceUrl": "https://na.gov.pk/en/priminister_list.php",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q038"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://na.gov.pk/en/priminister_list.php",
+        "label": "Prime Ministers of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official list records Noor-ul-Amin as prime minister from 7 December to 20 December 1971."
+      },
+      {
+        "url": "https://epwing.gov.pk/SiteImage/Misc/files/Demp%2075%20Years%20New%20Size%20%28July-4-2023%29%20.pdf",
+        "label": "Story of Pakistan: 75 Years",
+        "publisher": "Economic Affairs Division, Government of Pakistan",
+        "authorityId": "pakistan-economic-affairs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government historical publication independently lists Noor-ul-Amin's premiership as 7-20 December 1971."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1971-12-07",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The book's 'only vice-president' label is commonly repeated but poorly documented in accessible primary records. A directly supported tenure fact was substituted while preserving Noor-ul-Amin as the answer."
+  },
+  {
+    "id": "ADV2E102-U0032-Q038-SIM",
+    "pairId": "ADV2E102-U0032-Q038",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "For approximately how long did Noorul Amin serve as Pakistan's prime minister in December 1971?",
+    "questionUrdu": "Noorul Amin نے December 1971 میں تقریباً کتنے دن پاکستان کے Prime Minister کی حیثیت سے کام کیا؟",
+    "options": [
+      "13 days",
+      "30 days",
+      "6 months",
+      "1 year"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 13 days ہے۔ سرکاری فہرست میں ان کا دور 7 سے 20 December 1971 درج ہے، اس لیے یہ تقریباً تیرہ دن بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Prime Ministers of Pakistan",
+      "referenceUrl": "https://na.gov.pk/en/priminister_list.php",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q038",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://na.gov.pk/en/priminister_list.php",
+        "label": "Prime Ministers of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly lists Noorul Amin's premiership from 7 to 20 December 1971."
+      },
+      {
+        "url": "https://epwing.gov.pk/SiteImage/Misc/files/Demp%2075%20Years%20New%20Size%20%28July-4-2023%29%20.pdf",
+        "label": "Story of Pakistan: 75 Years",
+        "publisher": "Economic Affairs Division, Government of Pakistan",
+        "authorityId": "pakistan-economic-affairs",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Economic Affairs Division independently records the same 7-20 December interval."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q040-SRC",
+    "pairId": "ADV2E102-U0032-Q040",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Under Article 215 of Pakistan's Constitution, what is the stated term of office of the Chief Election Commissioner?",
+    "questionUrdu": "پاکستان کے آئین کے Article 215 میں Chief Election Commissioner کی مدت کتنی بیان ہوئی ہے؟",
+    "options": [
+      "3 years",
+      "4 years",
+      "5 years",
+      "6 years"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 5 years ہے۔ آئین کے مطابق Commissioner عہدہ سنبھالنے کی تاریخ سے پانچ سال تک منصب پر رہتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Constitution of the Islamic Republic of Pakistan, Article 215",
+      "referenceUrl": "https://www.na.gov.pk/uploads/documents/1515056252_668.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q040"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.na.gov.pk/uploads/documents/1515056252_668.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan, Article 215",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Article 215 states that the Commissioner holds office for a term of five years from entering office."
+      },
+      {
+        "url": "https://ecp.gov.pk/storage/files/3/General%20Elections%20Report%202024%20Vol-I-compressed.pdf",
+        "label": "General Elections Report 2024, Volume I",
+        "publisher": "Election Commission of Pakistan",
+        "authorityId": "pakistan-election-commission",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ECP's official report states that the Chief Election Commissioner and members hold office for five years from assuming office."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The constitutional term is five years. Since the 26th Amendment, an incumbent may continue after expiry until a successor enters office; that continuation does not change the stated five-year term."
+  },
+  {
+    "id": "ADV2E102-U0032-Q040-SIM",
+    "pairId": "ADV2E102-U0032-Q040",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Which constitutional article states the term of Pakistan's Chief Election Commissioner?",
+    "questionUrdu": "پاکستان کے Chief Election Commissioner کی مدت کس constitutional Article میں بیان ہوئی ہے؟",
+    "options": [
+      "Article 58",
+      "Article 156",
+      "Article 215",
+      "Article 227"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Article 215 ہے۔ یہی Article Commissioner اور Election Commission کے اراکین کی مدت اور عہدے کے تسلسل سے متعلق ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Constitution of the Islamic Republic of Pakistan, Article 215",
+      "referenceUrl": "https://www.na.gov.pk/uploads/documents/1515056252_668.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q040",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.na.gov.pk/uploads/documents/1515056252_668.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan, Article 215",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Constitution places the Commissioner's five-year term in Article 215."
+      },
+      {
+        "url": "https://ecp.gov.pk/storage/files/3/General%20Elections%20Report%202024%20Vol-I-compressed.pdf",
+        "label": "General Elections Report 2024, Volume I",
+        "publisher": "Election Commission of Pakistan",
+        "authorityId": "pakistan-election-commission",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Election Commission's report independently cites Article 215 for the five-year term."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q041-SRC",
+    "pairId": "ADV2E102-U0032-Q041",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Under Article 58 of Pakistan's Constitution, after a Prime Minister advises dissolution, the National Assembly automatically stands dissolved after how many hours if it is not dissolved sooner?",
+    "questionUrdu": "Article 58 کے تحت Prime Minister کے مشورے کے بعد اگر National Assembly پہلے تحلیل نہ ہو تو کتنے گھنٹوں بعد خود بخود تحلیل ہو جاتی ہے؟",
+    "options": [
+      "24 hours",
+      "48 hours",
+      "72 hours",
+      "96 hours"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 48 hours ہے۔ وزیر اعظم کے آئینی مشورے کے بعد صدر پہلے تحلیل نہ کریں تو اڑتالیس گھنٹے مکمل ہونے پر اسمبلی تحلیل سمجھی جاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Constitution of the Islamic Republic of Pakistan, Article 58",
+      "referenceUrl": "https://na.gov.pk/uploads/documents/1308928052_477.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q041"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/documents/1308928052_477.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan, Article 58",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Article 58 states that the National Assembly stands dissolved after forty-eight hours if not dissolved sooner following the Prime Minister's advice."
+      },
+      {
+        "url": "https://www.wipo.int/wipolex/en/legislation/details/7246",
+        "label": "Constitution of the Islamic Republic of Pakistan",
+        "publisher": "WIPO Lex",
+        "authorityId": "wipo-lex",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WIPO Lex reproduces Article 58's forty-eight-hour rule after prime-ministerial advice."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The book combined federal and provincial rules in one loose sentence. The repaired question tests the National Assembly rule in Article 58; Article 112 contains the parallel provincial rule."
+  },
+  {
+    "id": "ADV2E102-U0032-Q041-SIM",
+    "pairId": "ADV2E102-U0032-Q041",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Who formally dissolves Pakistan's National Assembly on the Prime Minister's advice under Article 58?",
+    "questionUrdu": "Article 58 کے تحت Prime Minister کے مشورے پر National Assembly کو رسمی طور پر کون تحلیل کرتا ہے؟",
+    "options": [
+      "Chief Justice",
+      "President",
+      "Chairman Senate",
+      "Election Commission"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب President ہے۔ آئین صدر کو وزیر اعظم کے مشورے پر اسمبلی تحلیل کرنے کا حکم دیتا ہے اور عدم اقدام پر 48 hours کی خودکار حد لگاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Constitution of the Islamic Republic of Pakistan, Article 58",
+      "referenceUrl": "https://na.gov.pk/uploads/documents/1308928052_477.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q041",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/documents/1308928052_477.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan, Article 58",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Article 58 directs the President to dissolve the National Assembly on the Prime Minister's advice."
+      },
+      {
+        "url": "https://www.wipo.int/wipolex/en/legislation/details/7246",
+        "label": "Constitution of the Islamic Republic of Pakistan",
+        "publisher": "WIPO Lex",
+        "authorityId": "wipo-lex",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WIPO Lex independently reproduces the President's dissolution role and the forty-eight-hour fallback."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q042-SRC",
+    "pairId": "ADV2E102-U0032-Q042",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Which listed Muslim woman participated as a delegate in all three Indian Round Table Conferences held from 1930 to 1932?",
+    "questionUrdu": "درج ذیل میں سے کس مسلم خاتون نے 1930 سے 1932 تک تینوں Indian Round Table Conferences میں delegate کی حیثیت سے شرکت کی؟",
+    "options": [
+      "Begum Salma Tasaduq Hussain",
+      "Fatima Jinnah",
+      "Begum Shaista Ikram Ullah",
+      "Begum Jahanara Shahnawaz"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Begum Jahanara Shahnawaz ہے۔ انہوں نے مسلم خواتین اور برصغیر کے آئینی مستقبل کی نمائندگی کرتے ہوئے تینوں اجلاسوں میں حصہ لیا۔",
+    "source": {
+      "type": "book",
+      "label": "Jahan Ara Shahnawaz: Round Table Conference delegate",
+      "referenceUrl": "https://www.nottingham.ac.uk/research/groups/conferencing-the-international/delegates/people.aspx?id=6e6b1852-c5be-40ca-97b7-9ab00136af65",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q042"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nottingham.ac.uk/research/groups/conferencing-the-international/delegates/people.aspx?id=6e6b1852-c5be-40ca-97b7-9ab00136af65",
+        "label": "Jahan Ara Shahnawaz: Round Table Conference delegate",
+        "publisher": "University of Nottingham",
+        "authorityId": "university-nottingham",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university's conference archive profiles Begum Jahan Ara Shahnawaz as a Muslim woman delegate across the Round Table Conference sessions."
+      },
+      {
+        "url": "https://www.nihcr.edu.pk/Latest_English_Journal/Pjhc%2022-2%202001/10-Quaid%20%26%20women.pdf",
+        "label": "Quaid-i-Azam and Muslim women's political participation",
+        "publisher": "National Institute of Historical and Cultural Research",
+        "authorityId": "pakistan-nihcr",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The historical research article states that Jahan Ara Begum attended all three Round Table Conferences."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1930-01-01",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The book's unqualified word 'only' is misleading because different women attended different sessions. The repaired item asks the documented all-three-conferences fact."
+  },
+  {
+    "id": "ADV2E102-U0032-Q042-SIM",
+    "pairId": "ADV2E102-U0032-Q042",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "How many Indian Round Table Conferences did Begum Jahanara Shahnawaz attend as a delegate?",
+    "questionUrdu": "Begum Jahanara Shahnawaz نے delegate کے طور پر کتنی Indian Round Table Conferences میں شرکت کی؟",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Three ہے۔ انہوں نے London میں منعقد ہونے والی تینوں Round Table Conferences میں شرکت کی۔",
+    "source": {
+      "type": "practice",
+      "label": "Jahan Ara Shahnawaz: Round Table Conference delegate",
+      "referenceUrl": "https://www.nottingham.ac.uk/research/groups/conferencing-the-international/delegates/people.aspx?id=6e6b1852-c5be-40ca-97b7-9ab00136af65",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q042",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nottingham.ac.uk/research/groups/conferencing-the-international/delegates/people.aspx?id=6e6b1852-c5be-40ca-97b7-9ab00136af65",
+        "label": "Jahan Ara Shahnawaz: Round Table Conference delegate",
+        "publisher": "University of Nottingham",
+        "authorityId": "university-nottingham",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Nottingham archive profiles Jahanara Shahnawaz across all three conference sessions."
+      },
+      {
+        "url": "https://www.nihcr.edu.pk/Latest_English_Journal/Pjhc%2022-2%202001/10-Quaid%20%26%20women.pdf",
+        "label": "Quaid-i-Azam and Muslim women's political participation",
+        "publisher": "National Institute of Historical and Cultural Research",
+        "authorityId": "pakistan-nihcr",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIHCR independently states that she attended all three Round Table Conferences."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q043-SRC",
+    "pairId": "ADV2E102-U0032-Q043",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Which 1846 treaty transferred specified territories between the Indus and Ravi to Maharaja Gulab Singh in return for payment to the British Government?",
+    "questionUrdu": "1846 کے کس معاہدے نے Indus اور Ravi کے درمیان مخصوص علاقے ادائیگی کے عوض Maharaja Gulab Singh کو منتقل کیے؟",
+    "options": [
+      "Treaty of Amritsar",
+      "Treaty of Lahore",
+      "Instrument of Accession",
+      "Treaty of Kashmir"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Treaty of Amritsar ہے۔ اس معاہدے میں British Government نے مقررہ رقم کے بدلے Kashmir سمیت بیان کردہ علاقے Gulab Singh کو منتقل کیے۔",
+    "source": {
+      "type": "book",
+      "label": "Treaty of Amritsar, 16 March 1846",
+      "referenceUrl": "https://na.gov.pk/uploads/kc/Kashmir-Discourses.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q043"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/kc/Kashmir-Discourses.pdf",
+        "label": "Treaty of Amritsar, 16 March 1846",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The reproduced treaty records the territorial transfer to Gulab Singh and the stipulated payment under the Treaty of Amritsar."
+      },
+      {
+        "url": "https://nehruarchive.in/events/amritsar-treaty",
+        "label": "Amritsar Treaty",
+        "publisher": "Nehru Archive",
+        "authorityId": "nehru-archive",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archive identifies the 1846 Amritsar Treaty as granting Kashmir to Gulab Singh in return for payment."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1846-03-16",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The polemical verb 'sold Kashmir' was replaced by the treaty's documented transfer-and-payment terms."
+  },
+  {
+    "id": "ADV2E102-U0032-Q043-SIM",
+    "pairId": "ADV2E102-U0032-Q043",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "What payment did the 1846 Treaty of Amritsar require from Maharaja Gulab Singh?",
+    "questionUrdu": "1846 کے Treaty of Amritsar میں Maharaja Gulab Singh سے کتنی ادائیگی مقرر کی گئی؟",
+    "options": [
+      "25 lakh rupees",
+      "50 lakh rupees",
+      "75 lakh rupees",
+      "1 crore rupees"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 75 lakh rupees ہے۔ معاہدے میں پچھتر لاکھ Nanak Shahi روپے کی ادائیگی کے عوض مخصوص علاقے منتقل کیے گئے۔",
+    "source": {
+      "type": "practice",
+      "label": "Treaty of Amritsar, 16 March 1846",
+      "referenceUrl": "https://na.gov.pk/uploads/kc/Kashmir-Discourses.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q043",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/kc/Kashmir-Discourses.pdf",
+        "label": "Treaty of Amritsar, 16 March 1846",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The treaty text reproduced by Pakistan's National Assembly specifies seventy-five lakh Nanak Shahi rupees."
+      },
+      {
+        "url": "https://nehruarchive.in/events/amritsar-treaty",
+        "label": "Amritsar Treaty",
+        "publisher": "Nehru Archive",
+        "authorityId": "nehru-archive",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Nehru Archive independently summarizes the Kashmir transfer in return for seventy-five lakh rupees."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q044-SRC",
+    "pairId": "ADV2E102-U0032-Q044",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "From which university did Pakistani Nobel laureate Abdus Salam obtain his PhD in theoretical physics?",
+    "questionUrdu": "پاکستانی Nobel laureate Abdus Salam نے theoretical physics میں PhD کس university سے کی؟",
+    "options": [
+      "University of London",
+      "Howard University",
+      "Oxford University",
+      "University of Cambridge"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب University of Cambridge ہے۔ Abdus Salam نے Cambridge میں اعلیٰ تعلیم اور theoretical physics میں doctorate مکمل کی۔",
+    "source": {
+      "type": "book",
+      "label": "Abdus Salam: Biographical",
+      "referenceUrl": "https://www.nobelprize.org/prizes/physics/1979/salam/biographical/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q044"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/physics/1979/salam/biographical/",
+        "label": "Abdus Salam: Biographical",
+        "publisher": "Nobel Prize Outreach",
+        "authorityId": "nobel-prize",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Nobel biography states that Abdus Salam obtained a PhD in theoretical physics at Cambridge."
+      },
+      {
+        "url": "https://www.imperial.ac.uk/about/introducing-imperial/our-people/award-winners/nobel-winners/abdus-salam/",
+        "label": "Professor Abdus Salam",
+        "publisher": "Imperial College London",
+        "authorityId": "imperial-college-london",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Imperial College independently states that Salam took his first degree and PhD in physics at the University of Cambridge."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The wording now names the field and avoids implying that he was Pakistan's only Nobel recipient."
+  },
+  {
+    "id": "ADV2E102-U0032-Q044-SIM",
+    "pairId": "ADV2E102-U0032-Q044",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "In which year did Abdus Salam share the Nobel Prize in Physics?",
+    "questionUrdu": "Abdus Salam نے Nobel Prize in Physics کس سال مشترکہ طور پر حاصل کیا؟",
+    "options": [
+      "1965",
+      "1974",
+      "1979",
+      "1988"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 1979 ہے۔ Abdus Salam نے electroweak theory کے کام پر Sheldon Glashow اور Steven Weinberg کے ساتھ یہ انعام حاصل کیا۔",
+    "source": {
+      "type": "practice",
+      "label": "Abdus Salam: Biographical",
+      "referenceUrl": "https://www.nobelprize.org/prizes/physics/1979/salam/biographical/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q044",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/physics/1979/salam/biographical/",
+        "label": "Abdus Salam: Biographical",
+        "publisher": "Nobel Prize Outreach",
+        "authorityId": "nobel-prize",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Nobel Prize Outreach identifies Abdus Salam as a 1979 Physics laureate."
+      },
+      {
+        "url": "https://www.imperial.ac.uk/about/introducing-imperial/our-people/award-winners/nobel-winners/abdus-salam/",
+        "label": "Professor Abdus Salam",
+        "publisher": "Imperial College London",
+        "authorityId": "imperial-college-london",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Imperial College independently lists Salam's Nobel Prize in Physics in 1979."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q045-SRC",
+    "pairId": "ADV2E102-U0032-Q045",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Habba Khatoon is celebrated as a poet in which language?",
+    "questionUrdu": "Habba Khatoon کو کس زبان کی شاعرہ کے طور پر یاد کیا جاتا ہے؟",
+    "options": [
+      "Balochi",
+      "Pashto",
+      "Hindko",
+      "Kashmiri"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Kashmiri ہے۔ سولہویں صدی کی اس شاعرہ نے Kashmiri شاعری میں جذباتی گیت کی lol صنف کو نمایاں کیا۔",
+    "source": {
+      "type": "book",
+      "label": "District Census Handbook: Pulwama",
+      "referenceUrl": "https://censusindia.gov.in/nada/index.php/catalog/506/download/1672/DH_2011_0112_PART_A_DCHB_PULWAMA.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q045"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://censusindia.gov.in/nada/index.php/catalog/506/download/1672/DH_2011_0112_PART_A_DCHB_PULWAMA.pdf",
+        "label": "District Census Handbook: Pulwama",
+        "publisher": "Census of India",
+        "authorityId": "census-india",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government handbook states that Habba Khatoon sang in Kashmiri and introduced the lol form to Kashmiri poetry."
+      },
+      {
+        "url": "https://ocm.pu.edu.pk/website/journal/article/62662e6cc12ea/page",
+        "label": "Habba Khatun: A Trend Setter Poetess",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university journal identifies Habba Khatun as a major sixteenth-century Kashmiri poetess."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The question now asks the language of her poetry directly rather than using the vague phrase 'poetess of'."
+  },
+  {
+    "id": "ADV2E102-U0032-Q045-SIM",
+    "pairId": "ADV2E102-U0032-Q045",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which lyrical form is Habba Khatoon credited with popularizing in Kashmiri poetry?",
+    "questionUrdu": "Habba Khatoon کو Kashmiri poetry میں کس lyrical form کو مقبول بنانے کا credit دیا جاتا ہے؟",
+    "options": [
+      "Ghazal",
+      "Lol",
+      "Qasida",
+      "Rubai"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Lol ہے۔ Kashmiri lol محبت اور جذبات کے مختصر گیت کی صنف ہے جسے Habba Khatoon نے نمایاں مقام دیا۔",
+    "source": {
+      "type": "practice",
+      "label": "District Census Handbook: Pulwama",
+      "referenceUrl": "https://censusindia.gov.in/nada/index.php/catalog/506/download/1672/DH_2011_0112_PART_A_DCHB_PULWAMA.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q045",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://censusindia.gov.in/nada/index.php/catalog/506/download/1672/DH_2011_0112_PART_A_DCHB_PULWAMA.pdf",
+        "label": "District Census Handbook: Pulwama",
+        "publisher": "Census of India",
+        "authorityId": "census-india",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Census of India handbook credits Habba Khatoon with introducing or popularizing the lol form in Kashmiri poetry."
+      },
+      {
+        "url": "https://ocm.pu.edu.pk/website/journal/article/62662e6cc12ea/page",
+        "label": "Habba Khatun: A Trend Setter Poetess",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of the Punjab study independently discusses her lyrical Kashmiri poetic contribution."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q046-SRC",
+    "pairId": "ADV2E102-U0032-Q046",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What was Urdu humorist Mushtaq Ahmad Yusufi's principal profession outside literature?",
+    "questionUrdu": "ادب کے علاوہ Urdu مزاح نگار Mushtaq Ahmad Yusufi کا بنیادی پیشہ کیا تھا؟",
+    "options": [
+      "Civil servant",
+      "News caster",
+      "Banker",
+      "Publisher"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Banker ہے۔ انہوں نے پاکستان کے بڑے بینکوں میں طویل career گزارا اور اعلیٰ انتظامی عہدوں پر بھی کام کیا۔",
+    "source": {
+      "type": "book",
+      "label": "Pakistan Academy of Letters tribute to Mushtaq Ahmed Yusufi",
+      "referenceUrl": "https://www.app.com.pk/culture-heritage/pal-to-pay-tribute-to-renowned-writer-mushtaq-ahmed-yousufi-on-june-27/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q046"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.app.com.pk/culture-heritage/pal-to-pay-tribute-to-renowned-writer-mushtaq-ahmed-yousufi-on-june-27/",
+        "label": "Pakistan Academy of Letters tribute to Mushtaq Ahmed Yusufi",
+        "publisher": "Associated Press of Pakistan",
+        "authorityId": "associated-press-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's state news agency reports that Yusufi became a career banker."
+      },
+      {
+        "url": "https://www.rekhta.org/authors/mushtaq-ahmad-yusufi/profile?lang=ur",
+        "label": "Mushtaq Ahmad Yusufi: Profile",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's literary biography records Yusufi's long banking career and senior banking posts."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The duplicated option label in the scan was normalized; the four option texts remain distinct and banking is independently documented."
+  },
+  {
+    "id": "ADV2E102-U0032-Q046-SIM",
+    "pairId": "ADV2E102-U0032-Q046",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which well-known Urdu work was written by Mushtaq Ahmad Yusufi?",
+    "questionUrdu": "درج ذیل میں سے کون سی معروف Urdu کتاب Mushtaq Ahmad Yusufi نے لکھی؟",
+    "options": [
+      "Aab-e-Gum",
+      "Raja Gidh",
+      "Aag Ka Darya",
+      "Khuda Ki Basti"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Aab-e-Gum ہے۔ یہ Yusufi کی معروف مزاحیہ نثر کی کتابوں میں شامل ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Pakistan Academy of Letters tribute to Mushtaq Ahmed Yusufi",
+      "referenceUrl": "https://www.app.com.pk/culture-heritage/pal-to-pay-tribute-to-renowned-writer-mushtaq-ahmed-yousufi-on-june-27/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q046",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.app.com.pk/culture-heritage/pal-to-pay-tribute-to-renowned-writer-mushtaq-ahmed-yousufi-on-june-27/",
+        "label": "Pakistan Academy of Letters tribute to Mushtaq Ahmed Yusufi",
+        "publisher": "Associated Press of Pakistan",
+        "authorityId": "associated-press-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Associated Press of Pakistan identifies Aab-e-Gum among Mushtaq Ahmad Yusufi's notable works."
+      },
+      {
+        "url": "https://www.rekhta.org/authors/mushtaq-ahmad-yusufi/profile?lang=ur",
+        "label": "Mushtaq Ahmad Yusufi: Profile",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's author profile independently lists Aab-e-Gum in Yusufi's bibliography."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q047-SRC",
+    "pairId": "ADV2E102-U0032-Q047",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Dr Ruth Pfau devoted her major public-health work in Pakistan to controlling which disease?",
+    "questionUrdu": "Dr Ruth Pfau نے پاکستان میں کس بیماری کے کنٹرول کے لیے اپنی بڑی طبی خدمت انجام دی؟",
+    "options": [
+      "Cholera",
+      "Leprosy",
+      "Tuberculosis",
+      "Diarrhea"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Leprosy ہے۔ انہوں نے جذام کے علاج، ملک گیر مراکز اور قومی control programme کی تشکیل میں مرکزی کردار ادا کیا۔",
+    "source": {
+      "type": "book",
+      "label": "Country Report: Pakistan - Leprosy Control",
+      "referenceUrl": "https://applications.emro.who.int/docs/EM_SND_MTG_STR_LEP_CNT_4_PAK_EN.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q047"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://applications.emro.who.int/docs/EM_SND_MTG_STR_LEP_CNT_4_PAK_EN.pdf",
+        "label": "Country Report: Pakistan - Leprosy Control",
+        "publisher": "World Health Organization, Eastern Mediterranean Region",
+        "authorityId": "who-emro",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WHO identifies Dr Ruth Pfau as Pakistan's government adviser on leprosy and author of the national leprosy-control report."
+      },
+      {
+        "url": "https://leprosyhistory.org/person/person184/",
+        "label": "Dr Ruth Pfau",
+        "publisher": "International Leprosy Association History Project",
+        "authorityId": "international-leprosy-association",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The specialist historical record describes Pfau's nationwide work treating and controlling leprosy in Pakistan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The informal comparison to Mother Teresa was removed; the independently documented disease-control work is tested directly."
+  },
+  {
+    "id": "ADV2E102-U0032-Q047-SIM",
+    "pairId": "ADV2E102-U0032-Q047",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "In which country was Dr Ruth Pfau born?",
+    "questionUrdu": "Dr Ruth Pfau کس ملک میں پیدا ہوئیں؟",
+    "options": [
+      "Pakistan",
+      "Germany",
+      "Switzerland",
+      "Austria"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Germany ہے۔ جرمنی میں پیدا ہونے والی Ruth Pfau نے اپنی عملی زندگی کا بڑا حصہ پاکستان میں leprosy control کے لیے وقف کیا۔",
+    "source": {
+      "type": "practice",
+      "label": "Country Report: Pakistan - Leprosy Control",
+      "referenceUrl": "https://applications.emro.who.int/docs/EM_SND_MTG_STR_LEP_CNT_4_PAK_EN.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q047",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://applications.emro.who.int/docs/EM_SND_MTG_STR_LEP_CNT_4_PAK_EN.pdf",
+        "label": "Country Report: Pakistan - Leprosy Control",
+        "publisher": "World Health Organization, Eastern Mediterranean Region",
+        "authorityId": "who-emro",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WHO's biographical material identifies Ruth Pfau's German origin and her work in Pakistan."
+      },
+      {
+        "url": "https://leprosyhistory.org/person/person184/",
+        "label": "Dr Ruth Pfau",
+        "publisher": "International Leprosy Association History Project",
+        "authorityId": "international-leprosy-association",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The International Leprosy Association record independently states that she was born in Germany."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q048-SRC",
+    "pairId": "ADV2E102-U0032-Q048",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "According to the European Commission's 2024 GSP+ assessment data for Pakistan, which listed sector group benefited most from the preferences?",
+    "questionUrdu": "European Commission کے 2024 GSP+ assessment data کے مطابق پاکستان میں کس sector group نے سب سے زیادہ فائدہ اٹھایا؟",
+    "options": [
+      "Sports goods",
+      "Leather products",
+      "Textile and garments",
+      "Surgical instruments"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Textile and garments ہے۔ EU preferences میں clothing اور textile مصنوعات پاکستان کی سب سے نمایاں برآمدی beneficiary categories رہیں۔",
+    "source": {
+      "type": "book",
+      "label": "GSP+ assessment of Pakistan covering 2023-2025",
+      "referenceUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52026SC0184",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q048"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52026SC0184",
+        "label": "GSP+ assessment of Pakistan covering 2023-2025",
+        "publisher": "European Commission via EUR-Lex",
+        "authorityId": "european-commission",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Commission's 2024 data rank clothing first and textiles second among the sectors benefiting from Pakistan's GSP+ preferences."
+      },
+      {
+        "url": "https://www.finance.gov.pk/survey/chapters_17/Pakistan_ES_2016_17_pdf.pdf",
+        "label": "Pakistan Economic Survey 2016-17",
+        "publisher": "Finance Division, Government of Pakistan",
+        "authorityId": "pakistan-finance-division",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's official economic survey independently describes the textile sector as a major beneficiary of EU GSP+."
+      }
+    ],
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": null,
+      "asOf": "2024-12-31",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-01-01"
+    },
+    "sourceNotes": "The original superlative lacked a year. The repaired question is tied to the European Commission's 2024 sector data; the combined option 'Textile and garments' covers the top clothing and textile groups."
+  },
+  {
+    "id": "ADV2E102-U0032-Q048-SIM",
+    "pairId": "ADV2E102-U0032-Q048",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which individual product sector ranked first among Pakistan's beneficiaries in the cited 2024 EU GSP+ data?",
+    "questionUrdu": "حوالہ شدہ 2024 EU GSP+ data میں پاکستان کا کون سا individual product sector پہلے نمبر پر تھا؟",
+    "options": [
+      "Clothing",
+      "Chemicals",
+      "Machinery",
+      "Mineral products"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Clothing ہے۔ European Commission کے sector data میں clothing پہلے اور textiles دوسرے نمبر پر تھے۔",
+    "source": {
+      "type": "practice",
+      "label": "GSP+ assessment of Pakistan covering 2023-2025",
+      "referenceUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52026SC0184",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q048",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52026SC0184",
+        "label": "GSP+ assessment of Pakistan covering 2023-2025",
+        "publisher": "European Commission via EUR-Lex",
+        "authorityId": "european-commission",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The European Commission's 2024 GSP+ assessment ranks clothing as Pakistan's leading benefiting sector."
+      },
+      {
+        "url": "https://www.finance.gov.pk/survey/chapters_17/Pakistan_ES_2016_17_pdf.pdf",
+        "label": "Pakistan Economic Survey 2016-17",
+        "publisher": "Finance Division, Government of Pakistan",
+        "authorityId": "pakistan-finance-division",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's economic survey independently identifies garments and textiles as the dominant beneficiaries of EU GSP+ preferences."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q049-SRC",
+    "pairId": "ADV2E102-U0032-Q049",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Who described Muhammad Ali Jinnah as the 'Ambassador of Hindu-Muslim Unity'?",
+    "questionUrdu": "Muhammad Ali Jinnah کو Ambassador of Hindu-Muslim Unity کس نے کہا؟",
+    "options": [
+      "Gandhi",
+      "Vijay Lakshmi Pandit",
+      "Sarojini Naidu",
+      "Allama Iqbal"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Sarojini Naidu ہے۔ انہوں نے Jinnah کی ابتدائی آئینی اور فرقہ وارانہ ہم آہنگی کی کوششوں کے اعتراف میں یہ معروف وصف استعمال کیا۔",
+    "source": {
+      "type": "book",
+      "label": "Jinnah and Hindu-Muslim unity",
+      "referenceUrl": "https://fromjinnahtoquaid.gov.pk/Detail/MTM3Yjk3ZDctZWM5YS00ZjQ4LTk4ZTItYzQzMWU2OGE5YjI0",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q049"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://fromjinnahtoquaid.gov.pk/Detail/MTM3Yjk3ZDctZWM5YS00ZjQ4LTk4ZTItYzQzMWU2OGE5YjI0",
+        "label": "Jinnah and Hindu-Muslim unity",
+        "publisher": "Quaid-i-Azam Academy",
+        "authorityId": "quaid-azam-academy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Government of Pakistan academy states that Sarojini Naidu gave Jinnah the title in recognition of his unity efforts."
+      },
+      {
+        "url": "https://pu.edu.pk/images/journal/csas/PDF/Volume%2022%2C%20No.%201%2C%202007.pdf",
+        "label": "Jinnah and Hindu-Muslim unity",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university publication reproduces Sarojini Naidu's description of Jinnah as the best ambassador of Hindu-Muslim unity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The title is presented as an attributed historical description rather than an official office."
+  },
+  {
+    "id": "ADV2E102-U0032-Q049-SIM",
+    "pairId": "ADV2E102-U0032-Q049",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Sarojini Naidu's early biographical work on Jinnah used which phrase in its title?",
+    "questionUrdu": "Sarojini Naidu کی Jinnah پر ابتدائی biographical work کے title میں کون سی phrase استعمال ہوئی؟",
+    "options": [
+      "Ambassador of Unity",
+      "Lion of Punjab",
+      "Frontier Gandhi",
+      "Poet of the East"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ambassador of Unity ہے۔ اسی تحریر اور وصف سے Jinnah کا Ambassador of Hindu-Muslim Unity والا لقب مشہور ہوا۔",
+    "source": {
+      "type": "practice",
+      "label": "Jinnah and Hindu-Muslim unity",
+      "referenceUrl": "https://fromjinnahtoquaid.gov.pk/Detail/MTM3Yjk3ZDctZWM5YS00ZjQ4LTk4ZTItYzQzMWU2OGE5YjI0",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q049",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://fromjinnahtoquaid.gov.pk/Detail/MTM3Yjk3ZDctZWM5YS00ZjQ4LTk4ZTItYzQzMWU2OGE5YjI0",
+        "label": "Jinnah and Hindu-Muslim unity",
+        "publisher": "Quaid-i-Azam Academy",
+        "authorityId": "quaid-azam-academy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Quaid-i-Azam Academy links Sarojini Naidu with the Ambassador of Hindu-Muslim Unity description."
+      },
+      {
+        "url": "https://pu.edu.pk/images/journal/csas/PDF/Volume%2022%2C%20No.%201%2C%202007.pdf",
+        "label": "Jinnah and Hindu-Muslim unity",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of the Punjab publication independently reproduces her biographical description of Jinnah as an ambassador of unity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q050-SRC",
+    "pairId": "ADV2E102-U0032-Q050",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Muhammad Ali Jinnah resigned from the Imperial Legislative Council in protest against which 1919 law?",
+    "questionUrdu": "Muhammad Ali Jinnah نے 1919 کے کس قانون کے خلاف Imperial Legislative Council سے استعفا دیا؟",
+    "options": [
+      "Hindu-Muslim riots",
+      "Rowlatt Act",
+      "Internal differences of Muslim League",
+      "Demand for Independence"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Rowlatt Act ہے۔ انہوں نے بغیر مقدمے حراست جیسے غیر معمولی اختیارات دینے والی Rowlatt legislation کے خلاف احتجاجاً استعفا دیا۔",
+    "source": {
+      "type": "book",
+      "label": "Quaid-i-Azam and the Rowlatt Act",
+      "referenceUrl": "https://pu.edu.pk/images/journal/studies/PDF-FILES/1_V1_2_2000.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q050"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pu.edu.pk/images/journal/studies/PDF-FILES/1_V1_2_2000.pdf",
+        "label": "Quaid-i-Azam and the Rowlatt Act",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-punjab",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The historical study states that Jinnah resigned from the Imperial Legislative Council in protest against passage of the Rowlatt Act in 1919."
+      },
+      {
+        "url": "https://www.smiu.edu.pk/pdf/Quaid-e-Azam-Mohammad-Ali-Jinnah.pdf",
+        "label": "Quaid-e-Azam Mohammad Ali Jinnah",
+        "publisher": "Sindh Madressatul Islam University",
+        "authorityId": "sindh-madressatul-islam-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university biography states that Jinnah resigned from the Imperial Legislative Council in protest against the Rowlatt legislation."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1919-03-28",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem now identifies the year and asks for the specific law that prompted the resignation."
+  },
+  {
+    "id": "ADV2E102-U0032-Q050-SIM",
+    "pairId": "ADV2E102-U0032-Q050",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "By what popular name was the Rowlatt Act condemned in India?",
+    "questionUrdu": "India میں Rowlatt Act کو عام طور پر کس مذمتی نام سے پکارا گیا؟",
+    "options": [
+      "Black Act",
+      "White Paper",
+      "Pitt's India Act",
+      "Charter Act"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Black Act ہے۔ بغیر مقدمے حراست جیسے اختیارات کے باعث قوم پرست رہنماؤں نے Rowlatt legislation کو Black Act کہا۔",
+    "source": {
+      "type": "practice",
+      "label": "Quaid-i-Azam and the Rowlatt Act",
+      "referenceUrl": "https://pu.edu.pk/images/journal/studies/PDF-FILES/1_V1_2_2000.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q050",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pu.edu.pk/images/journal/studies/PDF-FILES/1_V1_2_2000.pdf",
+        "label": "Quaid-i-Azam and the Rowlatt Act",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-punjab",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of the Punjab historical study describes the Rowlatt legislation and the protest that led Jinnah to resign."
+      },
+      {
+        "url": "https://www.smiu.edu.pk/pdf/Quaid-e-Azam-Mohammad-Ali-Jinnah.pdf",
+        "label": "Quaid-e-Azam Mohammad Ali Jinnah",
+        "publisher": "Sindh Madressatul Islam University",
+        "authorityId": "sindh-madressatul-islam-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Sindh Madressatul Islam University's Jinnah biography independently records opposition to the measure commonly condemned as the Black Act."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

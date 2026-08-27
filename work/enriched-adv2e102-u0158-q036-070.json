@@ -1,0 +1,3277 @@
+[
+  {
+    "id": "ADV2E102-U0158-Q037-SRC",
+    "pairId": "ADV2E102-U0158-Q037",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "A dot-matrix device is a type of:",
+    "questionUrdu": "Dot-matrix device کس قسم کا آلہ ہے؟",
+    "options": [
+      "Scanner",
+      "Printer",
+      "Storage device",
+      "Display device"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Printer ہے۔ Dot-matrix ایک printer ہوتا ہے جس کا print head چھوٹی pins کے ذریعے کاغذ پر نقطوں کی شکل میں حروف اور تصاویر بناتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Impact dot matrix printers",
+      "referenceUrl": "https://epson.com/impact-dot-matrix-printers",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q037"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://epson.com/impact-dot-matrix-printers",
+        "label": "Impact dot matrix printers",
+        "publisher": "Epson",
+        "authorityId": "epson",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Epson categorizes its dot-matrix products as impact printers."
+      },
+      {
+        "url": "https://public.dhe.ibm.com/printers/specs/G544-3910-04.pdf",
+        "label": "IBM 6400 Line Matrix Printer specifications",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM's printer specifications classify line/dot-matrix technology as printing equipment."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed answer Printer is independently confirmed."
+  },
+  {
+    "id": "ADV2E102-U0158-Q037-SIM",
+    "pairId": "ADV2E102-U0158-Q037",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Impact dot-matrix printers are especially suitable for which task?",
+    "questionUrdu": "Impact dot-matrix printers خاص طور پر کس کام کے لیے موزوں ہوتے ہیں؟",
+    "options": [
+      "Printing multipart business forms",
+      "Producing photographic film",
+      "Scanning fingerprints",
+      "Projecting presentation slides"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Printing multipart business forms ہے۔ Impact mechanism ایک ہی وقت میں اصل اور متعدد carbonless copies پر نشان بنا سکتا ہے، اسی لیے invoices اور multipart forms میں یہ مفید ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "LQ-590 Impact Printer",
+      "referenceUrl": "https://epson.com/For-Work/Printers/Impact-Dot-Matrix/LQ-590-Impact-Printer/p/C11C558001",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q037",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://epson.com/For-Work/Printers/Impact-Dot-Matrix/LQ-590-Impact-Printer/p/C11C558001",
+        "label": "LQ-590 Impact Printer",
+        "publisher": "Epson",
+        "authorityId": "epson",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Epson supports that impact dot-matrix printers are especially suitable for printing multipart business forms."
+      },
+      {
+        "url": "https://public.dhe.ibm.com/printers/specs/fs4247.pdf",
+        "label": "IBM 4247 Multi-Form Printer",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM supports that impact dot-matrix printers are especially suitable for printing multipart business forms."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q043-SRC",
+    "pairId": "ADV2E102-U0158-Q043",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Before choosing Insert > PivotTable for an existing table or range in Excel, what should be selected?",
+    "questionUrdu": "Excel میں موجود table یا range کے لیے Insert > PivotTable منتخب کرنے سے پہلے کیا select کرنا چاہیے؟",
+    "options": [
+      "No source; insert immediately",
+      "A cell in or the range of source data",
+      "PivotTable fields before the source",
+      "A picture of the worksheet"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب A cell in or the range of source data ہے۔ موجودہ data سے PivotTable بنانے کے لیے source data کی range یا اس range کے اندر کوئی cell منتخب کیا جاتا ہے تاکہ Excel درست source پہچان سکے۔",
+    "source": {
+      "type": "book",
+      "label": "Create a PivotTable to analyze worksheet data",
+      "referenceUrl": "https://support.microsoft.com/en-US/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q043"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-US/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576",
+        "label": "Create a PivotTable to analyze worksheet data",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft instructs users to select the cells used to create a PivotTable before choosing Insert > PivotTable."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/scalc/guide/datapilot_createtable.html",
+        "label": "Creating Pivot Tables",
+        "publisher": "The Document Foundation",
+        "authorityId": "libreoffice",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice independently begins the PivotTable workflow by placing the cursor in or selecting the source range."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Modern Excel can infer a table from the active cell, so the version-dependent source wording was narrowed to the documented existing-table/range workflow. The source answer Select the data is preserved in substance."
+  },
+  {
+    "id": "ADV2E102-U0158-Q043-SIM",
+    "pairId": "ADV2E102-U0158-Q043",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "For a Microsoft Excel desktop PivotTable, which source-data layout is recommended?",
+    "questionUrdu": "Microsoft Excel desktop کے PivotTable کے لیے source data کی کون سی ترتیب تجویز کی جاتی ہے؟",
+    "options": [
+      "Tabular columns with one header row",
+      "Blank rows between every record",
+      "Merged cells throughout the range",
+      "A picture of the source table"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Tabular columns with one header row ہے۔ صاف column-based data اور ہر column کا ایک منفرد heading PivotTable fields کو درست طور پر شناخت کرنے میں مدد دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Create a PivotTable to analyze worksheet data",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q043",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576",
+        "label": "Create a PivotTable to analyze worksheet data",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft Support supports that Microsoft Excel desktop recommends tabular source data organized in columns with a single header row for PivotTables."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/scalc/guide/datapilot_createtable.html",
+        "label": "Creating Pivot Tables",
+        "publisher": "LibreOffice Help",
+        "authorityId": "libreoffice",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice Help supports that Microsoft Excel desktop recommends tabular source data organized in columns with a single header row for PivotTables."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Excel desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q044-SRC",
+    "pairId": "ADV2E102-U0158-Q044",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If 7/21 of a number is 6, what is 14/21 of that number?",
+    "questionUrdu": "اگر کسی عدد کا 7/21 حصہ 6 ہو تو اسی عدد کا 14/21 حصہ کیا ہوگا؟",
+    "options": [
+      "12",
+      "14",
+      "8",
+      "11"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 12 ہے۔ 14/21، 7/21 سے دو گنا ہے، اس لیے مطلوبہ مقدار بھی 6 کا دو گنا یعنی 12 ہوگی۔",
+    "source": {
+      "type": "book",
+      "label": "Solve equations with fractions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-7-solve-equations-with-fractions",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q044"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-7-solve-equations-with-fractions",
+        "label": "Solve equations with fractions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the fraction-equation method: (7/21)n = 6 gives n = 18, and (14/21)18 = 12."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-fifth-grade-math/imp-fractions-3/imp-multiplication-as-scaling/a/multiplication-as-scaling",
+        "label": "Multiplication as scaling",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy's fraction-scaling treatment independently supports doubling 7/21 to 14/21, so the corresponding value doubles from 6 to 12."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Direct calculation gives 12, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q044-SIM",
+    "pairId": "ADV2E102-U0158-Q044",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 3/10 of a number is 24, what is 2/5 of that number?",
+    "questionUrdu": "اگر کسی عدد کا 3/10 حصہ 24 ہو تو اسی عدد کا 2/5 حصہ کیا ہوگا؟",
+    "options": [
+      "30",
+      "32",
+      "36",
+      "40"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 32 ہے۔ پہلے عدد 24 × 10 ÷ 3 = 80 ملتا ہے؛ پھر 80 کا 2/5 حصہ 32 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve equations with fractions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-7-solve-equations-with-fractions",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q044",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-7-solve-equations-with-fractions",
+        "label": "Solve equations with fractions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that if three tenths of a number is 24, two fifths of it is 32."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-fifth-grade-math/imp-fractions-3/imp-multiplication-as-scaling/a/multiplication-as-scaling",
+        "label": "Multiplication as scaling with fractions",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that if three tenths of a number is 24, two fifths of it is 32."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q045-SRC",
+    "pairId": "ADV2E102-U0158-Q045",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If 80% of applicants were rejected, what is the ratio of accepted applicants to rejected applicants?",
+    "questionUrdu": "اگر 80% applicants مسترد ہوئے تو accepted applicants اور rejected applicants کا ratio کیا ہوگا؟",
+    "options": [
+      "1:4",
+      "1:5",
+      "2:5",
+      "4:5"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 1:4 ہے۔ 80% rejected ہونے سے 20% accepted رہتے ہیں، اس لیے accepted : rejected = 20 : 80 = 1 : 4 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Percents and ratios: key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q045"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percents and ratios: key concepts",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax's percent framework gives 20 accepted out of 100 when 80 percent are rejected; 20:80 simplifies to 1:4."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Applied_Mathematics_(Western_Oregon_University)/02%3A_Numbers_in_Context/2.03%3A_Percents",
+        "label": "Percents",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts independently explains percent as a ratio per hundred; 20 accepted to 80 rejected reduces to 1:4."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The complement of 80% is 20%; 20:80 simplifies to 1:4, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q045-SIM",
+    "pairId": "ADV2E102-U0158-Q045",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If the ratio of accepted to rejected applicants is 3:7, what percentage were rejected?",
+    "questionUrdu": "اگر accepted اور rejected applicants کا ratio 3:7 ہو تو کتنے فیصد applicants rejected ہوئے؟",
+    "options": [
+      "30%",
+      "40%",
+      "70%",
+      "75%"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 70% ہے۔ کل حصے 3 + 7 = 10 ہیں اور rejected حصے 7 ہیں، لہٰذا 7/10 × 100 = 70%۔",
+    "source": {
+      "type": "practice",
+      "label": "Percents, proportions and applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q045",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percents, proportions and applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that an accepted-to-rejected ratio of three to seven means seventy percent were rejected."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Applied_Mathematics_(Western_Oregon_University)/02%3A_Numbers_in_Context/2.03%3A_Percents",
+        "label": "Percents",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that an accepted-to-rejected ratio of three to seven means seventy percent were rejected."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q046-SRC",
+    "pairId": "ADV2E102-U0158-Q046",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'at the drop of a hat' mean?",
+    "questionUrdu": "Idiom 'at the drop of a hat' کا کیا مطلب ہے؟",
+    "options": [
+      "After a long wait",
+      "Immediately or without hesitation",
+      "When something falls",
+      "In a slow and careful manner"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Immediately or without hesitation ہے۔ At the drop of a hat کا مطلب فوراً، بغیر تاخیر یا بغیر زیادہ سوچ بچار کے کوئی کام کرنا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "At the drop of a hat",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/at-the-drop-of-a-hat",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q046"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/at-the-drop-of-a-hat",
+        "label": "At the drop of a hat",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines the idiom as doing something immediately, without planning or waiting."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/at%20the%20drop%20of%20a%20hat",
+        "label": "At the drop of a hat",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines the idiom as immediately and without hesitation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed answer Immediately or without hesitation is independently confirmed."
+  },
+  {
+    "id": "ADV2E102-U0158-Q046-SIM",
+    "pairId": "ADV2E102-U0158-Q046",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the idiom 'on the spur of the moment' mean?",
+    "questionUrdu": "Idiom 'on the spur of the moment' کا کیا مطلب ہے؟",
+    "options": [
+      "After detailed planning",
+      "Suddenly and without planning",
+      "At a fixed annual time",
+      "Under legal compulsion"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Suddenly and without planning ہے۔ یہ idiom ایسے اچانک فیصلے یا عمل کے لیے آتا ہے جو پہلے سے منصوبہ بند نہ ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "On the spur of the moment",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/on-the-spur-of-the-moment",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q046",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/on-the-spur-of-the-moment",
+        "label": "On the spur of the moment",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that on the spur of the moment means suddenly and without planning."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/spur-of-the-moment",
+        "label": "Spur-of-the-moment",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that on the spur of the moment means suddenly and without planning."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q047-SRC",
+    "pairId": "ADV2E102-U0158-Q047",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "The sun rises ____ the east.",
+    "questionUrdu": "جملہ مکمل کریں: The sun rises ____ the east.",
+    "options": [
+      "in",
+      "on",
+      "the",
+      "at"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب in ہے۔ سمت یا بڑے جغرافیائی علاقے کے ساتھ اس جملے میں preposition in آتا ہے: The sun rises in the east۔",
+    "source": {
+      "type": "book",
+      "label": "Sun",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/sun",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q047"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/sun",
+        "label": "Sun",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's usage examples include the standard phrase 'the sun rises in the east'."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/the-sun-rises-in-the-east",
+        "label": "The sun rises in the east",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently records the complete phrase with the preposition in."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The standard preposition is in, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q047-SIM",
+    "pairId": "ADV2E102-U0158-Q047",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Choose the correct preposition: 'The passengers arrived ____ the station just in time.'",
+    "questionUrdu": "درست preposition چنیں: 'The passengers arrived ____ the station just in time.'",
+    "options": [
+      "at",
+      "to",
+      "on",
+      "for"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب at ہے۔ کسی مخصوص مقام یا point کے ساتھ arrive at استعمال ہوتا ہے، جیسے arrive at the station۔",
+    "source": {
+      "type": "practice",
+      "label": "At, in and to (movement)",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/at-in-and-to-movement",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q047",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/at-in-and-to-movement",
+        "label": "At, in and to (movement)",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that arrive at is used with a specific place such as a station."
+      },
+      {
+        "url": "https://assets.cambridge.org/052194/7499/full_version/0521947499_pub.pdf",
+        "label": "Cambridge Learner's Dictionary sample",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press supports that arrive at is used with a specific place such as a station."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q048-SRC",
+    "pairId": "ADV2E102-U0158-Q048",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "In the movement sense, choose the antonym of 'withdraw':",
+    "questionUrdu": "Movement کے مفہوم میں 'withdraw' کا antonym چنیں۔",
+    "options": [
+      "Advance",
+      "Retreat",
+      "Depart",
+      "Remove"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Advance ہے۔ فوجی یا حرکتی مفہوم میں withdraw پیچھے ہٹنے کو کہتے ہیں، اس کا متضاد advance یعنی آگے بڑھنا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Synonyms and antonyms of withdraw",
+      "referenceUrl": "https://dictionary.cambridge.org/us/thesaurus/withdraw",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q048"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/withdraw",
+        "label": "Synonyms and antonyms of withdraw",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge lists advance as an antonym of withdraw in the movement sense."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english-thesaurus/advance",
+        "label": "Advance: synonyms and antonyms",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently contrasts advance with retreat or withdrawal."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key selected Permit, which is not a direct antonym of the unqualified verb. The item was repaired to the movement sense with four unique choices; Advance is now uniquely correct and differs from the printed key."
+  },
+  {
+    "id": "ADV2E102-U0158-Q048-SIM",
+    "pairId": "ADV2E102-U0158-Q048",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "When describing a person's behaviour, what does the adjective 'withdrawn' mean?",
+    "questionUrdu": "کسی شخص کے رویّے کے لیے adjective 'withdrawn' کا کیا مطلب ہے؟",
+    "options": [
+      "Sociable and talkative",
+      "Quiet and socially detached",
+      "Careless with money",
+      "Physically powerful"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Quiet and socially detached ہے۔ کسی شخص کو withdrawn کہنا عموماً اس کے خاموش، الگ تھلگ یا کم میل جول والے ہونے کو ظاہر کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Withdrawn synonyms and antonyms",
+      "referenceUrl": "https://dictionary.cambridge.org/us/thesaurus/withdrawn",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q048",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/withdrawn",
+        "label": "Withdrawn synonyms and antonyms",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the adjective withdrawn can mean quiet and socially detached."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/withdrawn",
+        "label": "Withdrawn",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that the adjective withdrawn can mean quiet and socially detached."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q049-SRC",
+    "pairId": "ADV2E102-U0158-Q049",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the proverb: There is no place like ____.",
+    "questionUrdu": "Proverb مکمل کریں: There is no place like ____.",
+    "options": [
+      "School",
+      "Office",
+      "Home",
+      "Park"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Home ہے۔ مشہور proverb There is no place like home اپنے گھر کی راحت اور اپنائیت کی اہمیت بیان کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Home",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/home",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q049"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/home",
+        "label": "Home",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster records the established sentence 'There's no place like home'."
+      },
+      {
+        "url": "https://doi.org/10.1093/OED/9487569112",
+        "label": "Home, noun and adjective",
+        "publisher": "Oxford English Dictionary",
+        "authorityId": "oxford-english-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The OED independently records '(there's) no place like home' under home."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The established proverb ends with Home, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q049-SIM",
+    "pairId": "ADV2E102-U0158-Q049",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What is meant by the expression 'a home away from home'?",
+    "questionUrdu": "Expression 'a home away from home' سے کیا مراد ہے؟",
+    "options": [
+      "A place as comfortable as one's own home",
+      "A house that has been abandoned",
+      "A workplace with no lodging",
+      "A journey with no destination"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A place as comfortable as one's own home ہے۔ یہ expression ایسے دوسرے مقام کے لیے آتا ہے جہاں انسان کو اپنے گھر جیسا سکون اور اپنائیت محسوس ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "Home away from home",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/home-away-from-home",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q049",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/home-away-from-home",
+        "label": "Home away from home",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that a home away from home is a place as comfortable as one's own home."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/home%20away%20from%20home",
+        "label": "Home away from home",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that a home away from home is a place as comfortable as one's own home."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q050-SRC",
+    "pairId": "ADV2E102-U0158-Q050",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What part of speech is the word 'reflection'?",
+    "questionUrdu": "لفظ 'reflection' کس part of speech سے تعلق رکھتا ہے؟",
+    "options": [
+      "Verb",
+      "Noun",
+      "Adjective",
+      "Adverb"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Noun ہے۔ Reflection کسی عمل، خیال یا عکس کا نام ہے، اس لیے یہ noun ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Reflection",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/reflection",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q050"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/reflection",
+        "label": "Reflection",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge labels reflection as a noun."
+      },
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/definition/english/reflection",
+        "label": "Reflection",
+        "publisher": "Oxford Learner's Dictionaries",
+        "authorityId": "oxford-learners-dictionaries",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford independently labels reflection as a noun."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Both dictionaries classify reflection as a noun, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q050-SIM",
+    "pairId": "ADV2E102-U0158-Q050",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What part of speech is the word 'reflective' in the phrase 'reflective surface'?",
+    "questionUrdu": "Phrase 'reflective surface' میں لفظ 'reflective' کون سا part of speech ہے؟",
+    "options": [
+      "Noun",
+      "Verb",
+      "Adjective",
+      "Adverb"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Adjective ہے۔ Reflective لفظ surface کی صفت بیان کرتا ہے، اس لیے یہ adjective کے طور پر استعمال ہوا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Reflective",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/reflective",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q050",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/reflective",
+        "label": "Reflective",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that reflective is an adjective in the phrase reflective surface."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/reflective",
+        "label": "Reflective",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that reflective is an adjective in the phrase reflective surface."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q051-SRC",
+    "pairId": "ADV2E102-U0158-Q051",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the idiom: To cast ____ before swine.",
+    "questionUrdu": "Idiom مکمل کریں: To cast ____ before swine.",
+    "options": [
+      "Shadow",
+      "Gold",
+      "Stones",
+      "Pearls"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Pearls ہے۔ درست مکمل صورت cast pearls before swine ہے، یعنی قیمتی چیز ایسے شخص کو دینا جو اس کی قدر نہ سمجھے۔",
+    "source": {
+      "type": "book",
+      "label": "Cast pearls before swine",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/cast-pearls-before-swine",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q051"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/cast-pearls-before-swine",
+        "label": "Cast pearls before swine",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records the idiom with the word pearls."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/cast%2Fthrow%20pearls%20before%20swine",
+        "label": "Cast/throw pearls before swine",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently records pearls as the missing word."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The established idiom uses Pearls, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q051-SIM",
+    "pairId": "ADV2E102-U0158-Q051",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the expression 'a pearl of wisdom' mean?",
+    "questionUrdu": "Expression 'a pearl of wisdom' کا کیا مطلب ہے؟",
+    "options": [
+      "A wise saying or piece of advice",
+      "An expensive ornament",
+      "A deliberate falsehood",
+      "A difficult riddle"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A wise saying or piece of advice ہے۔ Pearl of wisdom کسی دانائی بھری بات یا نصیحت کو کہتے ہیں، کبھی اسے مزاحیہ انداز میں بھی استعمال کیا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Pearl of wisdom",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/pearl-of-wisdom",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q051",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/pearl-of-wisdom",
+        "label": "Pearl of wisdom",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that a pearl of wisdom means a wise saying or piece of advice."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/pearl%20of%20wisdom",
+        "label": "Pearl of wisdom",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that a pearl of wisdom means a wise saying or piece of advice."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q052-SRC",
+    "pairId": "ADV2E102-U0158-Q052",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the sentence: We must submit ourselves ____ Allah.",
+    "questionUrdu": "جملہ مکمل کریں: We must submit ourselves ____ Allah.",
+    "options": [
+      "by",
+      "at",
+      "to",
+      "with"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب to ہے۔ Verb submit جب اطاعت یا سپردگی کے معنی دے تو اس کے بعد preposition to آتا ہے: submit ourselves to Allah۔",
+    "source": {
+      "type": "book",
+      "label": "Submit",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/submit",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q052"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/submit",
+        "label": "Submit",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records submit to as the standard construction meaning to yield or accept authority."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/submit",
+        "label": "Submit",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently gives submit with the preposition to in this sense."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source sentence 'stoop down ____ Allah' is nonstandard and does not yield a clear collocation. It was repaired to 'submit ourselves to Allah'; the intended printed option to remains correct."
+  },
+  {
+    "id": "ADV2E102-U0158-Q052-SIM",
+    "pairId": "ADV2E102-U0158-Q052",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which noun is correctly formed from the verb 'submit'?",
+    "questionUrdu": "Verb 'submit' سے بننے والا درست noun کون سا ہے؟",
+    "options": [
+      "Submittalness",
+      "Submission",
+      "Submitment",
+      "Submissive"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Submission ہے۔ Submit کا متعلقہ noun submission ہے؛ submissive adjective ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Submission",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/submission",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q052",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/submission",
+        "label": "Submission",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that submission is the noun formed from the verb submit."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/submission",
+        "label": "Submission",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that submission is the noun formed from the verb submit."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q053-SRC",
+    "pairId": "ADV2E102-U0158-Q053",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "In the sentence 'He is a very good swimmer', what part of speech is 'very'?",
+    "questionUrdu": "جملے 'He is a very good swimmer' میں 'very' کون سا part of speech ہے؟",
+    "options": [
+      "Verb",
+      "Adjective",
+      "Adverb",
+      "Noun"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Adverb ہے۔ Very لفظ adjective good کی شدت بڑھاتا ہے، اس لیے یہ adverb ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Very",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/very",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q053"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/very",
+        "label": "Very",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge labels very as an adverb when it intensifies an adjective such as good."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/very",
+        "label": "Very",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently classifies the intensifier very as an adverb."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Very modifies the adjective good and is an adverb, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q053-SIM",
+    "pairId": "ADV2E102-U0158-Q053",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which type of adverb is 'very' when it intensifies an adjective?",
+    "questionUrdu": "جب 'very' کسی adjective کی شدت بڑھائے تو یہ کس قسم کا adverb ہوتا ہے؟",
+    "options": [
+      "Adverb of place",
+      "Adverb of frequency",
+      "Adverb of degree",
+      "Conjunctive adverb"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Adverb of degree ہے۔ Very کسی quality کی مقدار یا شدت ظاہر کرتا ہے، اس لیے اسے degree adverb یا intensifier کہا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Very",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/very",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q053",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/very",
+        "label": "Very",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that very is an adverb of degree when it intensifies an adjective."
+      },
+      {
+        "url": "https://www.merriam-webster.com/grammar/the-adverb-the-most-fascinating-pos/adverbs-of-degree",
+        "label": "Adverbs of degree",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that very is an adverb of degree when it intensifies an adjective."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q054-SRC",
+    "pairId": "ADV2E102-U0158-Q054",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the sentence: He should bear my statement ____ mind.",
+    "questionUrdu": "جملہ مکمل کریں: He should bear my statement ____ mind.",
+    "options": [
+      "with",
+      "at",
+      "in",
+      "to"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب in ہے۔ Fixed expression bear in mind کا مطلب کسی بات کو یاد یا زیرِ غور رکھنا ہے، اس لیے درست preposition in ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Bear/keep something in mind",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/bear-keep-in-mind",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q054"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/bear-keep-in-mind",
+        "label": "Bear/keep something in mind",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records bear something in mind as the standard phrase."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/bear%20in%20mind",
+        "label": "Bear in mind",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently records bear in mind."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The scan omitted the word mind, leaving no complete standard phrase. Mind was restored after the blank; the intended printed option in is uniquely correct."
+  },
+  {
+    "id": "ADV2E102-U0158-Q054-SIM",
+    "pairId": "ADV2E102-U0158-Q054",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the idiom 'make up one's mind' mean?",
+    "questionUrdu": "Idiom 'make up one's mind' کا کیا مطلب ہے؟",
+    "options": [
+      "To forget something",
+      "To reach a decision",
+      "To become confused",
+      "To memorize a speech"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب To reach a decision ہے۔ Make up one's mind کا مطلب کسی معاملے میں فیصلہ کر لینا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Make up your mind",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/make-up-mind",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q054",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/make-up-mind",
+        "label": "Make up your mind",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that make up one's mind means to reach a decision."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/make%20up%20one%27s%20mind",
+        "label": "Make up one's mind",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that make up one's mind means to reach a decision."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q055-SRC",
+    "pairId": "ADV2E102-U0158-Q055",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "A mural is artwork painted or applied primarily to which surface?",
+    "questionUrdu": "Mural بنیادی طور پر کس سطح پر بنائی یا paint کی جانے والی artwork ہے؟",
+    "options": [
+      "A wall or ceiling",
+      "A freestanding pedestal",
+      "A portable sheet of paper",
+      "A musical instrument"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A wall or ceiling ہے۔ Mural بڑی تصویر یا artwork ہوتی ہے جو براہِ راست wall یا ceiling پر بنائی جاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Mural",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/mural",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q055"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/mural",
+        "label": "Mural",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a mural as a large picture painted on a wall."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/mural",
+        "label": "Mural",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines mural as a picture applied to a wall or ceiling surface."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source choice 'a piece of artwork' is true but too broad. The stem and options were reconstructed around the defining wall-or-ceiling surface; the verified index therefore differs from the printed key because the options changed."
+  },
+  {
+    "id": "ADV2E102-U0158-Q055-SIM",
+    "pairId": "ADV2E102-U0158-Q055",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What is an artist who specializes in painting murals called?",
+    "questionUrdu": "Murals بنانے میں مہارت رکھنے والے artist کو کیا کہا جاتا ہے؟",
+    "options": [
+      "Muralist",
+      "Numismatist",
+      "Cartographer",
+      "Calligrapher"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Muralist ہے۔ Muralist وہ artist یا painter ہوتا ہے جو walls اور دوسری بڑی surfaces پر murals بناتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Muralist",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/muralist",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q055",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/muralist",
+        "label": "Muralist",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that an artist who specializes in painting murals is called a muralist."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/muralist",
+        "label": "Muralist",
+        "publisher": "Collins English Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins English Dictionary supports that an artist who specializes in painting murals is called a muralist."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q058-SRC",
+    "pairId": "ADV2E102-U0158-Q058",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What does the Urdu idiom 'dil rakhna' mean?",
+    "questionUrdu": "اردو محاورے 'دل رکھنا' کا کیا مطلب ہے؟",
+    "options": [
+      "To upset someone",
+      "To hurt someone's feelings",
+      "To suffer from heart disease",
+      "To console someone"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب To console someone ہے۔ دل رکھنا کا مطلب کسی کی دل جوئی کرنا، اسے تسلی دینا یا اس کی خاطر کرنا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Meaning of dil rakhna",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-dil-rakhnaa?lang=ur",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q058"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-dil-rakhnaa?lang=ur",
+        "label": "Meaning of dil rakhna",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta gives tasalli dena, meaning to console, among the meanings of dil rakhna."
+      },
+      {
+        "url": "https://sindhi.s3.eu-central-1.amazonaws.com/books/attachments/000/000/012/original/FerozeSons_Urdu-English_Dictionary.pdf",
+        "label": "Ferozsons Urdu-English Dictionary",
+        "publisher": "Ferozsons",
+        "authorityId": "ferozsons",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The dictionary independently glosses dil rakhna as to comfort or console."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake Urdu stem and choices were translated into English for the verification ledger. Both dictionaries support To console someone, matching the printed key."
+  },
+  {
+    "id": "ADV2E102-U0158-Q058-SIM",
+    "pairId": "ADV2E102-U0158-Q058",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "What does the Urdu idiom 'dil chhota karna' mean?",
+    "questionUrdu": "اردو محاورے 'دل چھوٹا کرنا' کا کیا مطلب ہے؟",
+    "options": [
+      "To lose courage",
+      "To celebrate loudly",
+      "To become wealthy",
+      "To travel quickly"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب To lose courage ہے۔ دل چھوٹا کرنا ہمت ہارنے، دل گرفتہ ہونے یا آزردہ ہونے کے مفہوم میں آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Dil chhota karna",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-dil-chhotaa-karnaa",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q058",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-dil-chhotaa-karnaa",
+        "label": "Dil chhota karna",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary supports that the Urdu idiom dil chhota karna means to lose courage."
+      },
+      {
+        "url": "https://sindhi.s3.eu-central-1.amazonaws.com/books/attachments/000/000/012/original/FerozeSons_Urdu-English_Dictionary.pdf",
+        "label": "Ferozsons Urdu-English Dictionary",
+        "publisher": "Ferozsons",
+        "authorityId": "ferozsons",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Ferozsons supports that the Urdu idiom dil chhota karna means to lose courage."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q059-SRC",
+    "pairId": "ADV2E102-U0158-Q059",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which Persian masnavi by Mirza Ghalib celebrates the city of Banaras?",
+    "questionUrdu": "مرزا غالب کی کون سی فارسی مثنوی شہرِ بنارس کی تعریف میں لکھی گئی؟",
+    "options": [
+      "Qati-e-Burhan",
+      "Aab-e-Hayat",
+      "Chiragh-e-Dair",
+      "Badal aur Barq"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Chiragh-e-Dair ہے۔ چراغِ دیر غالب کی فارسی مثنوی ہے جس میں انہوں نے بنارس کے حسن، تہذیب اور روحانی فضا کو سراہا۔",
+    "source": {
+      "type": "book",
+      "label": "Ghalib's Chiragh-e-Dair and Banaras",
+      "referenceUrl": "https://hasp.ub.uni-heidelberg.de/journals/nidan/article/view/28630",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q059"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://hasp.ub.uni-heidelberg.de/journals/nidan/article/view/28630",
+        "label": "Ghalib's Chiragh-e-Dair and Banaras",
+        "publisher": "Heidelberg Asian Studies Publishing",
+        "authorityId": "heidelberg-university-publishing",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly article identifies Ghalib's Persian poem Chiragh-e-Dair as a celebration of Banaras."
+      },
+      {
+        "url": "https://alhamd.aiu.edu.pk/wp-content/uploads/2019/03/urdu-A7-2-Dr.-Ali-Kawasi.pdf",
+        "label": "Ghalib's Persian poetry and Banaras",
+        "publisher": "Al-Hamd Islamic University",
+        "authorityId": "al-hamd-islamic-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university article independently states that Ghalib rendered his impressions of Banaras in the masnavi Chiragh-e-Dair."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source asked for Ghalib's longest masnavi, a superlative not defensibly established by two direct specialist sources. It was repaired to the well-documented Banaras subject of Chiragh-e-Dair while preserving the intended title and option index."
+  },
+  {
+    "id": "ADV2E102-U0158-Q059-SIM",
+    "pairId": "ADV2E102-U0158-Q059",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which English rendering is commonly used for the title 'Chiragh-e-Dair'?",
+    "questionUrdu": "Title 'چراغِ دیر' کا عام English ترجمہ کیا ہے؟",
+    "options": [
+      "Lamp of the Temple",
+      "River of Life",
+      "Garden of Delhi",
+      "Mirror of Persia"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Lamp of the Temple ہے۔ Chiragh کا مطلب lamp اور dair کا مفہوم temple یا خانقاہی عبادت گاہ ہے؛ علمی مطالعات میں عنوان کا یہی English rendering ملتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Ghalib's Persian Masnavi on Banaras: Chiragh-e-Dair",
+      "referenceUrl": "https://hasp.ub.uni-heidelberg.de/journals/nidan/article/download/28630/28005/58285",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q059",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://hasp.ub.uni-heidelberg.de/journals/nidan/article/download/28630/28005/58285",
+        "label": "Ghalib's Persian Masnavi on Banaras: Chiragh-e-Dair",
+        "publisher": "Heidelberg Asian Studies Publishing",
+        "authorityId": "heidelberg-asian-studies",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Heidelberg Asian Studies Publishing supports that Chiragh-e-Dair is commonly rendered in English as Lamp of the Temple."
+      },
+      {
+        "url": "https://apnaorg.com/books/english/beloved-delhi/beloved-delhi.pdf",
+        "label": "Beloved Delhi: A Mughal City and Her Greatest Poets",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-university-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford University Press supports that Chiragh-e-Dair is commonly rendered in English as Lamp of the Temple."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q060-SRC",
+    "pairId": "ADV2E102-U0158-Q060",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which Urdu sentence uses the standard spelling of the polite phrase correctly?",
+    "questionUrdu": "کون سا اردو جملہ مؤدبانہ فقرے کے معیاری املا کو درست استعمال کرتا ہے؟",
+    "options": [
+      "براہِ مہربانی کل ضرور آئیں",
+      "براے مہربانی کل ضرور آئیں",
+      "براے مہربانی کرکے کل ضرور آئیں",
+      "ان میں سے کوئی نہیں"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب براہِ مہربانی کل ضرور آئیں ہے۔ معیاری صورت 'براہِ مہربانی کل ضرور آئیں' ہے؛ براہِ مہربانی مؤدبانہ درخواست کے لیے استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Meaning and spelling of ba-rah",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-ba-raah-e-karam?lang=ur",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q060"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-ba-raah-e-karam?lang=ur",
+        "label": "Meaning and spelling of ba-rah",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta records the standard form براہ and distinguishes it from the correctly hamza-bearing برائے, not the source distractor براے."
+      },
+      {
+        "url": "https://oup.com.pk/media/teaching-guides/We%20Learn%20English/We%20Learn%20English%20TG%203.pdf",
+        "label": "We Learn English teaching guide 3",
+        "publisher": "Oxford University Press Pakistan",
+        "authorityId": "oxford-university-press-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The OUP Pakistan guide independently uses the conventional polite expression براہِ مہربانی."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake stem and options were restored as proper UTF-8 Urdu, and the stem was made explicit. Option A uses the standard spelling; options B and C omit the hamza in برائے, while C is also stylistically redundant."
+  },
+  {
+    "id": "ADV2E102-U0158-Q060-SIM",
+    "pairId": "ADV2E102-U0158-Q060",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which fully marked Urdu form correctly shows the izafat in the courtesy phrase 'please'?",
+    "questionUrdu": "Courtesy phrase 'please' میں اضافت کو مکمل طور پر دکھانے والی درست اردو صورت کون سی ہے؟",
+    "options": [
+      "براہِ کرم",
+      "براہ کرمِ",
+      "برہِ کرم",
+      "برا کرم"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب براہِ کرم ہے۔ براہ کے نیچے زیر اضافت پہلے لفظ کو کرم سے جوڑتی ہے؛ عام غیر اعرابی تحریر میں زیر اکثر لکھی نہیں جاتی۔",
+    "source": {
+      "type": "practice",
+      "label": "براہ کرم",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-ba-raah-e-karam?lang=ur",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q060",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-ba-raah-e-karam?lang=ur",
+        "label": "براہ کرم",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary supports that the fully marked Urdu courtesy phrase correctly shows izafat as براہِ کرم."
+      },
+      {
+        "url": "https://oup.com.pk/downloadable/download/sample/sample_id/661/",
+        "label": "Urdu teaching material using براہِ کرم",
+        "publisher": "Oxford University Press Pakistan",
+        "authorityId": "oxford-university-press-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford University Press Pakistan supports that the fully marked Urdu courtesy phrase correctly shows izafat as براہِ کرم."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q061-SRC",
+    "pairId": "ADV2E102-U0158-Q061",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "In which Hijri year did Khalid ibn al-Walid embrace Islam?",
+    "questionUrdu": "Khalid ibn al-Walid نے کس Hijri سال میں اسلام قبول کیا؟",
+    "options": [
+      "5 AH",
+      "6 AH",
+      "8 AH",
+      "10 AH"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 8 AH ہے۔ معتبر سیرت نگاری کے مطابق خالد بن ولید نے فتحِ مکہ سے پہلے 8 AH میں اسلام قبول کیا۔",
+    "source": {
+      "type": "book",
+      "label": "Khalid ibn al-Walid",
+      "referenceUrl": "https://islamansiklopedisi.org.tr/halid-b-velid",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q061"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/halid-b-velid",
+        "label": "Khalid ibn al-Walid",
+        "publisher": "TDV Encyclopedia of Islam",
+        "authorityId": "tdv-islam-encyclopedia",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly encyclopedia dates Khalid's conversion to 1 Safar 8 AH."
+      },
+      {
+        "url": "https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/khalid",
+        "label": "Khalid",
+        "publisher": "The Columbia Encyclopedia via Encyclopedia.com",
+        "authorityId": "columbia-encyclopedia",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Columbia Encyclopedia independently dates Khalid's acceptance of Islam to 629 CE, corresponding to 8 AH in the documented chronology."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The conversion is dated to 8 AH, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q061-SIM",
+    "pairId": "ADV2E102-U0158-Q061",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which battle was Khalid ibn al-Walid's first major engagement after embracing Islam?",
+    "questionUrdu": "اسلام قبول کرنے کے بعد Khalid ibn al-Walid کی پہلی بڑی جنگ کون سی تھی؟",
+    "options": [
+      "Battle of Mu'tah",
+      "Battle of Badr",
+      "Battle of Uhud",
+      "Battle of the Trench"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Battle of Mu'tah ہے۔ اسلام قبول کرنے کے بعد خالد بن ولید نے 8 AH میں جنگِ مؤتہ میں حصہ لیا اور تین مقررہ commanders کی شہادت کے بعد لشکر سنبھالا۔",
+    "source": {
+      "type": "practice",
+      "label": "Halid b. Velid",
+      "referenceUrl": "https://islamansiklopedisi.org.tr/halid-b-velid",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q061",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/halid-b-velid",
+        "label": "Halid b. Velid",
+        "publisher": "TDV Islam Encyclopedia",
+        "authorityId": "tdv-islam-ansiklopedisi",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "TDV Islam Encyclopedia supports that the Battle of Mu'tah was Khalid ibn al-Walid's first major engagement after embracing Islam."
+      },
+      {
+        "url": "https://islamweb.net/en/fatwa/314386/biography-of-khaalid-ibn-al-waleed-may-allaah-be-pleased-with-him",
+        "label": "Biography of Khalid ibn al-Walid",
+        "publisher": "IslamWeb",
+        "authorityId": "islamweb",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IslamWeb supports that the Battle of Mu'tah was Khalid ibn al-Walid's first major engagement after embracing Islam."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q063-SRC",
+    "pairId": "ADV2E102-U0158-Q063",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "In which cave did Prophet Muhammad and Abu Bakr stay during the migration to Madinah?",
+    "questionUrdu": "ہجرتِ مدینہ کے دوران Prophet Muhammad ﷺ اور Abu Bakr کس غار میں ٹھہرے؟",
+    "options": [
+      "Cave of Hira",
+      "Cave of Badr",
+      "Cave of Thawr",
+      "Cave of Uhud"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Cave of Thawr ہے۔ ہجرت کے آغاز میں رسول اللہ ﷺ اور حضرت ابو بکرؓ نے مکہ کے جنوب میں غارِ ثور میں پناہ لی۔",
+    "source": {
+      "type": "book",
+      "label": "Mount and Cave Thawr",
+      "referenceUrl": "https://www.discovermakkah.sa/en/places-worth-visiting/stories-from-the-heart-of-mecca/mount-and-cave-thawr",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q063"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.discovermakkah.sa/en/places-worth-visiting/stories-from-the-heart-of-mecca/mount-and-cave-thawr",
+        "label": "Mount and Cave Thawr",
+        "publisher": "Discover Makkah",
+        "authorityId": "discover-makkah",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Makkah destination resource identifies Cave Thawr as the migration refuge of Prophet Muhammad and Abu Bakr."
+      },
+      {
+        "url": "https://eprints.soas.ac.uk/29357/1/10731452.pdf",
+        "label": "Early sources of the Prophet's biography",
+        "publisher": "SOAS University of London",
+        "authorityId": "soas-university-london",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The academic study independently records the migration of Prophet Muhammad and Abu Bakr and their refuge in the Cave of Thawr."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Cave of Thawr is independently confirmed, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q063-SIM",
+    "pairId": "ADV2E102-U0158-Q063",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "For how many nights did Prophet Muhammad and Abu Bakr stay in the Cave of Thawr during the Hijrah?",
+    "questionUrdu": "Hijrah کے دوران Prophet Muhammad ﷺ اور Abu Bakr غارِ ثور میں کتنی راتیں ٹھہرے؟",
+    "options": [
+      "One night",
+      "Two nights",
+      "Three nights",
+      "Seven nights"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Three nights ہے۔ مکہ سے روانگی کے بعد دونوں نے قریش کی تلاش سے بچنے کے لیے غارِ ثور میں تین راتیں قیام کیا۔",
+    "source": {
+      "type": "practice",
+      "label": "Cave and Mount of Thawr",
+      "referenceUrl": "https://www.discovermakkah.sa/en/places-worth-visiting/stories-from-the-heart-of-mecca/mount-and-cave-thawr",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q063",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.discovermakkah.sa/en/places-worth-visiting/stories-from-the-heart-of-mecca/mount-and-cave-thawr",
+        "label": "Cave and Mount of Thawr",
+        "publisher": "Royal Commission for Makkah City and Holy Sites",
+        "authorityId": "discover-makkah",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Royal Commission for Makkah City and Holy Sites supports that Prophet Muhammad and Abu Bakr stayed in the Cave of Thawr for three nights during the Hijrah."
+      },
+      {
+        "url": "https://eprints.soas.ac.uk/29357/1/10731452.pdf",
+        "label": "Study of the Hijrah narrative",
+        "publisher": "SOAS University of London",
+        "authorityId": "soas-university-london",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "SOAS University of London supports that Prophet Muhammad and Abu Bakr stayed in the Cave of Thawr for three nights during the Hijrah."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q064-SRC",
+    "pairId": "ADV2E102-U0158-Q064",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Who wrote Risala Roohi Sharif?",
+    "questionUrdu": "Risala Roohi Sharif کس نے لکھی؟",
+    "options": [
+      "Sultan Bahu",
+      "Lal Shahbaz Qalandar",
+      "Syed Ahmad Sultan",
+      "Baba Farid"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sultan Bahu ہے۔ رسالہ روحی شریف صوفی شاعر اور بزرگ سلطان باہو کی معروف مختصر تصنیف ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Pakistan National Bibliography 2016",
+      "referenceUrl": "https://www.nlp.gov.pk/downloads/Pakistan%20National%20Bibliography1947-2017/The%20Pakistan%20National%20Bibliography%202016/The%20Pakistan%20National%20Bibliography%202016%20%28English%29/PNB%202016%20%28English%29.pdf",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q064"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nlp.gov.pk/downloads/Pakistan%20National%20Bibliography1947-2017/The%20Pakistan%20National%20Bibliography%202016/The%20Pakistan%20National%20Bibliography%202016%20%28English%29/PNB%202016%20%28English%29.pdf",
+        "label": "Pakistan National Bibliography 2016",
+        "publisher": "National Library of Pakistan",
+        "authorityId": "pakistan-national-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The national bibliography catalogs Risala Roohi Sharif under Sultan Bahu."
+      },
+      {
+        "url": "https://pu.edu.pk/images/image/Departments/Punjabi/English-Books-Deptt-Punjabi.pdf",
+        "label": "English books, Department of Punjabi",
+        "publisher": "University of the Punjab",
+        "authorityId": "punjab-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university bibliography independently lists Risala Roohi Sharif with Sultan Bahu as author."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Two bibliographic authorities attribute Risala Roohi Sharif to Sultan Bahu, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q064-SIM",
+    "pairId": "ADV2E102-U0158-Q064",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "The original text presented with translations of 'Risala Roohi Sharif' is in which language?",
+    "questionUrdu": "'Risala Roohi Sharif' کے تراجم کے ساتھ دیا جانے والا اصل متن کس زبان میں ہے؟",
+    "options": [
+      "Persian",
+      "Arabic",
+      "Punjabi",
+      "Turkish"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Persian ہے۔ قومی کتابیاتی record اور شائع شدہ editions اسے English یا Urdu translation کے ساتھ Persian text کے طور پر درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Pakistan National Bibliography 2016",
+      "referenceUrl": "https://www.nlp.gov.pk/downloads/Pakistan%20National%20Bibliography1947-2017/The%20Pakistan%20National%20Bibliography%202016/The%20Pakistan%20National%20Bibliography%202016%20%28English%29/PNB%202016%20%28English%29.pdf",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q064",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nlp.gov.pk/downloads/Pakistan%20National%20Bibliography1947-2017/The%20Pakistan%20National%20Bibliography%202016/The%20Pakistan%20National%20Bibliography%202016%20%28English%29/PNB%202016%20%28English%29.pdf",
+        "label": "Pakistan National Bibliography 2016",
+        "publisher": "National Language Promotion Department, Pakistan",
+        "authorityId": "pakistan-national-language-promotion",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Language Promotion Department, Pakistan supports that the original text of Risala Roohi Sharif is Persian."
+      },
+      {
+        "url": "https://books.google.com/books/about/Risala_Roohi_Sharif_Urdu_Translation_wit.html?id=NVtlAQAAQBAJ",
+        "label": "Risala Roohi Sharif Urdu Translation with Persian Text",
+        "publisher": "Google Books",
+        "authorityId": "google-books",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Google Books supports that the original text of Risala Roohi Sharif is Persian."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q065-SRC",
+    "pairId": "ADV2E102-U0158-Q065",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Who authored al-Risalah fi usul al-fiqh?",
+    "questionUrdu": "کتاب al-Risalah fi usul al-fiqh کس عالم نے لکھی؟",
+    "options": [
+      "Imam Malik",
+      "Imam Abu Hanifa",
+      "Imam al-Shafi'i",
+      "Imam Ahmad ibn Hanbal"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Imam al-Shafi'i ہے۔ الرسالہ اصولِ فقہ کی بنیادی تصنیف ہے جسے امام محمد بن ادریس الشافعی نے لکھا۔",
+    "source": {
+      "type": "book",
+      "label": "Al-Risalah fi usul al-fiqh bibliographic record",
+      "referenceUrl": "https://catalogue.bnf.fr/ark:/12148/cb16173881c",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q065"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://catalogue.bnf.fr/ark:/12148/cb16173881c",
+        "label": "Al-Risalah fi usul al-fiqh bibliographic record",
+        "publisher": "Bibliothèque nationale de France",
+        "authorityId": "national-library-france",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The French national-library catalog identifies al-Risalah fi usul al-fiqh as a work by al-Shafi'i."
+      },
+      {
+        "url": "https://www.bibliotheque.nat.tn/BNT/doc/SYRACUSE/4334742/la-risala?_lg=ar-TN",
+        "label": "La Risala bibliographic record",
+        "publisher": "Bibliothèque nationale de Tunisie",
+        "authorityId": "national-library-tunisia",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Tunisian national-library catalog independently attributes al-Risalah on the foundations of Muslim law to al-Shafi'i."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source grouped 'al-Usul and al-Risalah' imprecisely. The item was repaired to the bibliographically identifiable title al-Risalah fi usul al-fiqh; Imam al-Shafi'i remains the intended printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q065-SIM",
+    "pairId": "ADV2E102-U0158-Q065",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which Sunni school of Islamic law is named after Imam al-Shafi'i?",
+    "questionUrdu": "کون سا Sunni school of Islamic law امام al-Shafi'i کے نام سے منسوب ہے؟",
+    "options": [
+      "Hanafi school",
+      "Maliki school",
+      "Shafi'i school",
+      "Hanbali school"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Shafi'i school ہے۔ یہ اہلِ سنت کے چار بڑے فقہی مذاہب میں سے ایک ہے اور امام محمد بن ادریس الشافعی کے نام سے منسوب ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Shafi'i",
+      "referenceUrl": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Sh%C4%81fi%CA%BD%C4%AB",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q065",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Sh%C4%81fi%CA%BD%C4%AB",
+        "label": "Shafi'i",
+        "publisher": "Encyclopaedia Britannica via Wikisource",
+        "authorityId": "encyclopaedia-britannica-wikisource",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Britannica via Wikisource supports that the Shafi'i school of Sunni Islamic law is named after Imam al-Shafi'i."
+      },
+      {
+        "url": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/shafii-school-law",
+        "label": "Shafi'i School of Law",
+        "publisher": "Encyclopedia.com",
+        "authorityId": "encyclopedia-com",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopedia.com supports that the Shafi'i school of Sunni Islamic law is named after Imam al-Shafi'i."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q066-SRC",
+    "pairId": "ADV2E102-U0158-Q066",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Who introduced the Chishtiyya order into India?",
+    "questionUrdu": "Chishtiyya سلسلہ ہندوستان میں کس بزرگ نے متعارف کرایا؟",
+    "options": [
+      "Khwaja Moinuddin Chishti",
+      "Nizamuddin Auliya",
+      "Abdul Qadir Jilani",
+      "Ali Hujwiri"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Khwaja Moinuddin Chishti ہے۔ خواجہ معین الدین چشتی نے برصغیر، خصوصاً اجمیر، میں چشتی سلسلے کو مضبوط بنیادوں پر قائم اور مقبول کیا۔",
+    "source": {
+      "type": "book",
+      "label": "Sufi traditions",
+      "referenceUrl": "https://ebooks.inflibnet.ac.in/icp03/chapter/sufi-traditions/",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q066"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ebooks.inflibnet.ac.in/icp03/chapter/sufi-traditions/",
+        "label": "Sufi traditions",
+        "publisher": "INFLIBNET Centre",
+        "authorityId": "inflibnet-india",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "India's academic e-book platform states that Moinuddin Chishti introduced the Chishti order into India."
+      },
+      {
+        "url": "https://www.metmuseum.org/art/collection/search/451272",
+        "label": "Folio concerning Mu'in al-Din Chishti",
+        "publisher": "The Metropolitan Museum of Art",
+        "authorityId": "metropolitan-museum-of-art",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The museum's scholarly catalog independently explains that the order expanded into India when Mu'in al-Din Chishti traveled there."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Calling him the order's founder without geographical scope is misleading because the Chishtiyya predates him. The stem was repaired to his documented role introducing or establishing it in India; the source answer remains correct."
+  },
+  {
+    "id": "ADV2E102-U0158-Q066-SIM",
+    "pairId": "ADV2E102-U0158-Q066",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "In which city is the shrine of Khwaja Moinuddin Chishti located?",
+    "questionUrdu": "Khwaja Moinuddin Chishti کا مزار کس شہر میں واقع ہے؟",
+    "options": [
+      "Ajmer",
+      "Delhi",
+      "Lahore",
+      "Multan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ajmer ہے۔ خواجہ معین الدین چشتی کا معروف مزار Ajmer Sharif، Rajasthan میں واقع ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Sufi Traditions",
+      "referenceUrl": "https://ebooks.inflibnet.ac.in/icp03/chapter/sufi-traditions/",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q066",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ebooks.inflibnet.ac.in/icp03/chapter/sufi-traditions/",
+        "label": "Sufi Traditions",
+        "publisher": "INFLIBNET Centre",
+        "authorityId": "inflibnet",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "INFLIBNET Centre supports that the shrine of Khwaja Moinuddin Chishti is located in Ajmer."
+      },
+      {
+        "url": "https://www.tourism.rajasthan.gov.in/the-ajmer-sharif-dargah.html",
+        "label": "Ajmer Sharif Dargah",
+        "publisher": "Rajasthan Tourism",
+        "authorityId": "rajasthan-tourism",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rajasthan Tourism supports that the shrine of Khwaja Moinuddin Chishti is located in Ajmer."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q068-SRC",
+    "pairId": "ADV2E102-U0158-Q068",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which companion of Prophet Muhammad was given the title 'Sword of Allah'?",
+    "questionUrdu": "Prophet Muhammad ﷺ کے کس companion کو 'Sword of Allah' کا لقب دیا گیا؟",
+    "options": [
+      "Abu Bakr",
+      "Ali ibn Abi Talib",
+      "Khalid ibn al-Walid",
+      "Abu Dharr al-Ghifari"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Khalid ibn al-Walid ہے۔ خالد بن ولید اپنی عسکری قیادت کے باعث سیف اللہ، یعنی Sword of Allah، کے لقب سے معروف ہوئے۔",
+    "source": {
+      "type": "book",
+      "label": "Khalid ibn al-Walid",
+      "referenceUrl": "https://islamansiklopedisi.org.tr/halid-b-velid",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/halid-b-velid",
+        "label": "Khalid ibn al-Walid",
+        "publisher": "TDV Encyclopedia of Islam",
+        "authorityId": "tdv-islam-encyclopedia",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly encyclopedia records that Prophet Muhammad gave Khalid the title Sayfullah, Sword of Allah."
+      },
+      {
+        "url": "https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/khalid",
+        "label": "Khalid",
+        "publisher": "The Columbia Encyclopedia via Encyclopedia.com",
+        "authorityId": "columbia-encyclopedia",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Columbia Encyclopedia independently records Khalid's title Sword of God."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Khalid ibn al-Walid is independently confirmed, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q068-SIM",
+    "pairId": "ADV2E102-U0158-Q068",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which caliph removed Khalid ibn al-Walid from supreme military command?",
+    "questionUrdu": "کس caliph نے Khalid ibn al-Walid کو اعلیٰ فوجی command سے ہٹایا؟",
+    "options": [
+      "Abu Bakr al-Siddiq",
+      "Umar ibn al-Khattab",
+      "Uthman ibn Affan",
+      "Ali ibn Abi Talib"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Umar ibn al-Khattab ہے۔ حضرت عمرؓ کے دورِ خلافت میں خالد بن ولید کو اعلیٰ فوجی command سے ہٹایا گیا، اگرچہ وہ بعد میں بھی لشکر کے ساتھ خدمات انجام دیتے رہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Halid b. Velid",
+      "referenceUrl": "https://islamansiklopedisi.org.tr/halid-b-velid",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/halid-b-velid",
+        "label": "Halid b. Velid",
+        "publisher": "TDV Islam Encyclopedia",
+        "authorityId": "tdv-islam-ansiklopedisi",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "TDV Islam Encyclopedia supports that Caliph Umar ibn al-Khattab removed Khalid ibn al-Walid from supreme military command."
+      },
+      {
+        "url": "https://dergipark.org.tr/tr/pub/dinbil/article/745999",
+        "label": "Khalid ibn al-Walid's command and dismissal",
+        "publisher": "Muş Alparslan University",
+        "authorityId": "mus-alparslan-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Muş Alparslan University supports that Caliph Umar ibn al-Khattab removed Khalid ibn al-Walid from supreme military command."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q069-SRC",
+    "pairId": "ADV2E102-U0158-Q069",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "What was the name of Bilal ibn Rabah's owner before he was freed?",
+    "questionUrdu": "آزادی سے پہلے Bilal ibn Rabah کے مالک کا نام کیا تھا؟",
+    "options": [
+      "Abu Sufyan",
+      "Umayyah ibn Khalaf",
+      "Abu Jahl",
+      "Walid ibn al-Mughira"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Umayyah ibn Khalaf ہے۔ روایتی سیرت کے مطابق حضرت بلالؓ کے مالک Umayyah ibn Khalaf تھے جو ان پر اسلام چھوڑنے کے لیے سخت ظلم کرتے تھے۔",
+    "source": {
+      "type": "book",
+      "label": "Sounds Powerful: the impact of the call to prayer",
+      "referenceUrl": "https://repository.essex.ac.uk/25432/1/SOUNDS%20POWERFUL.pdf",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://repository.essex.ac.uk/25432/1/SOUNDS%20POWERFUL.pdf",
+        "label": "Sounds Powerful: the impact of the call to prayer",
+        "publisher": "University of Essex",
+        "authorityId": "university-of-essex",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The academic thesis records that Bilal was enslaved by Umayyah ibn Khalaf before his emancipation."
+      },
+      {
+        "url": "https://era.ed.ac.uk/server/api/core/bitstreams/9e1c10eb-bd30-429b-a9eb-f7b588ee0a93/content",
+        "label": "Early Islamic history study",
+        "publisher": "University of Edinburgh",
+        "authorityId": "university-of-edinburgh",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university thesis independently states that Umayyah ibn Khalaf was Bilal's master during his bondage."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Two independent academic sources support the traditional historical account that Bilal's owner was Umayyah ibn Khalaf; the printed answer is retained."
+  },
+  {
+    "id": "ADV2E102-U0158-Q069-SIM",
+    "pairId": "ADV2E102-U0158-Q069",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "What does the epithet 'al-Habashi' associated with Bilal ibn Rabah indicate?",
+    "questionUrdu": "Bilal ibn Rabah کے ساتھ آنے والا لقب 'al-Habashi' کس نسبت کو ظاہر کرتا ہے؟",
+    "options": [
+      "Abyssinian or Ethiopian association",
+      "A Medinan farming clan",
+      "A Persian royal title",
+      "A Roman military rank"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Abyssinian or Ethiopian association ہے۔ عربی نسبت al-Habashi حبشہ، یعنی تاریخی Abyssinia/Ethiopia، سے تعلق کو ظاہر کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Bilal ibn Rabah, the Ethiopian",
+      "referenceUrl": "https://libres.uncg.edu/ir/uncg/f/O_Ali_Islam.pdf",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://libres.uncg.edu/ir/uncg/f/O_Ali_Islam.pdf",
+        "label": "Bilal ibn Rabah, the Ethiopian",
+        "publisher": "University of North Carolina at Greensboro",
+        "authorityId": "unc-greensboro",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "University of North Carolina at Greensboro supports that Bilal ibn Rabah's epithet al-Habashi indicates an Abyssinian or Ethiopian association."
+      },
+      {
+        "url": "https://arab-ency.com.sy/overview/4377",
+        "label": "Bilal al-Habashi",
+        "publisher": "Arab Encyclopedia",
+        "authorityId": "arab-encyclopedia",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Arab Encyclopedia supports that Bilal ibn Rabah's epithet al-Habashi indicates an Abyssinian or Ethiopian association."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0158-Q070-SRC",
+    "pairId": "ADV2E102-U0158-Q070",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "In which country is Najaf, a major pilgrimage city, located?",
+    "questionUrdu": "Najaf، جو ایک اہم زیارتی شہر ہے، کس ملک میں واقع ہے؟",
+    "options": [
+      "Saudi Arabia",
+      "Iraq",
+      "Iran",
+      "Pakistan"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Iraq ہے۔ نجف جنوبی عراق کا اہم مذہبی اور علمی شہر ہے اور شیعہ مسلمانوں کے بڑے زیارتی مراکز میں شمار ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Iraq",
+      "referenceUrl": "https://whc.unesco.org/en/statesparties/iq",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://whc.unesco.org/en/statesparties/iq",
+        "label": "Iraq",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco-world-heritage-centre",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO's Iraq country material locates Najaf within Iraq."
+      },
+      {
+        "url": "https://www.iranicaonline.org/articles/najaf/",
+        "label": "Najaf",
+        "publisher": "Encyclopaedia Iranica",
+        "authorityId": "encyclopaedia-iranica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Iranica independently identifies Najaf as a city in Iraq."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Najaf is in Iraq, matching the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0158-Q070-SIM",
+    "pairId": "ADV2E102-U0158-Q070",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Whose shrine is the principal pilgrimage focus in Najaf?",
+    "questionUrdu": "Najaf میں کس شخصیت کا مزار بنیادی زیارتی مرکز ہے؟",
+    "options": [
+      "Ali ibn Abi Talib",
+      "Husayn ibn Ali",
+      "Abu Hanifa",
+      "Abdul Qadir Jilani"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ali ibn Abi Talib ہے۔ نجف کی تاریخی اور مذہبی اہمیت حضرت علی بن ابی طالبؓ کے مزار سے وابستہ ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Najaf",
+      "referenceUrl": "https://www.iranicaonline.org/articles/najaf/",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0158",
+      "u0158-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.iranicaonline.org/articles/najaf/",
+        "label": "Najaf",
+        "publisher": "Encyclopaedia Iranica",
+        "authorityId": "encyclopaedia-iranica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Iranica supports that the shrine of Ali ibn Abi Talib is the principal pilgrimage focus in Najaf."
+      },
+      {
+        "url": "https://imamhussain.gov.iq/english/imamaliholyshrine",
+        "label": "Imam Ali Holy Shrine",
+        "publisher": "Imam Hussain Holy Shrine",
+        "authorityId": "imam-hussain-holy-shrine",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Imam Hussain Holy Shrine supports that the shrine of Ali ibn Abi Talib is the principal pilgrimage focus in Najaf."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

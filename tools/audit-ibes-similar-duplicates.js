@@ -43,22 +43,32 @@ function tokens(value) {
   return [...new Set(normalize(value).split(/\s+/).filter(Boolean).filter((token) => !stopWords.has(token)).map(stem))];
 }
 
-function overlap(left, right) {
-  const rightSet = new Set(right);
-  return left.reduce((count, item) => count + (rightSet.has(item) ? 1 : 0), 0);
+function prepare(item) {
+  const questionTokens = tokens(item.question);
+  const answerTokens = tokens(optionText(item.options[item.correctOptionIndex])).sort().join(" ");
+  return {
+    ...item,
+    _questionTokens: questionTokens,
+    _questionTokenSet: new Set(questionTokens),
+    _normalizedQuestion: normalize(item.question),
+    _answerTokens: answerTokens
+  };
 }
 
 function score(left, right) {
-  const leftTokens = tokens(left.question);
-  const rightTokens = tokens(right.question);
-  const shared = overlap(leftTokens, rightTokens);
+  const leftTokens = left._questionTokens;
+  const rightTokens = right._questionTokens;
+  const shared = leftTokens.reduce(
+    (count, item) => count + (right._questionTokenSet.has(item) ? 1 : 0),
+    0
+  );
   const dice = leftTokens.length && rightTokens.length ? (2 * shared) / (leftTokens.length + rightTokens.length) : 0;
   const containment = leftTokens.length && rightTokens.length ? shared / Math.min(leftTokens.length, rightTokens.length) : 0;
-  const leftAnswer = tokens(optionText(left.options[left.correctOptionIndex])).sort().join(" ");
-  const rightAnswer = tokens(optionText(right.options[right.correctOptionIndex])).sort().join(" ");
+  const leftAnswer = left._answerTokens;
+  const rightAnswer = right._answerTokens;
   const generic = new Set(["above all", "all these", "above none", "none these"]);
   const answerExact = Boolean(leftAnswer && rightAnswer && leftAnswer === rightAnswer && !generic.has(leftAnswer));
-  const exact = normalize(left.question) === normalize(right.question);
+  const exact = left._normalizedQuestion === right._normalizedQuestion;
   const likely = exact || (answerExact && dice >= 0.48 && containment >= 0.62) || (dice >= 0.8 && containment >= 0.85);
   return { exact, likely, answerExact, dice, containment };
 }
@@ -79,7 +89,7 @@ function loadVerification(decisions) {
     .sort()
     .flatMap((name) => JSON.parse(fs.readFileSync(path.join(workDirectory, name), "utf8")))
     .filter((item) => decisions.get(item.sourceQuestionNumber) !== "skip")
-    .map((item) => ({
+    .map((item) => prepare({
       id: `IBES-Q${String(item.sourceQuestionNumber).padStart(4, "0")}`,
       sourceQuestionNumber: item.sourceQuestionNumber,
       question: item.question,
@@ -95,7 +105,7 @@ function loadExisting() {
   vm.runInNewContext(code, sandbox, { filename: "data/questions.js" });
   return sandbox.window.PPSC_QUIZ_DATA.questions
     .filter((item) => !/^IBES-/i.test(String(item.id || "")))
-    .map((item) => ({
+    .map((item) => prepare({
       id: item.id,
       question: item.question,
       options: item.options,
@@ -109,7 +119,8 @@ function loadEnrichedSimilar() {
     .filter((name) => /^enriched-ibes-[a-z0-9-]+\.json$/i.test(name))
     .sort()
     .flatMap((name) => JSON.parse(fs.readFileSync(path.join(workDirectory, name), "utf8")))
-    .filter((item) => item.kind === "similar");
+    .filter((item) => item.kind === "similar")
+    .map(prepare);
 }
 
 const decisions = loadDecisions();

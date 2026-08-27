@@ -2,6 +2,15 @@
 
 const fs = require("fs");
 const path = require("path");
+const {
+  enrichedFilePattern: adv2e102EnrichedFilePattern,
+  extractionFilePattern: adv2e102ExtractionFilePattern,
+  isDirectHttpsUrl,
+  itemIdPattern: adv2e102ItemIdPattern,
+  pairIdPattern: adv2e102PairIdPattern,
+  validateReferences,
+  validateTemporalScope
+} = require("./adv2e102-common");
 
 const projectDirectory = path.resolve(__dirname, "..");
 const workDirectory = path.join(projectDirectory, "work");
@@ -23,7 +32,9 @@ const expectedPaperCounts = { 234: 20, 235: 100, 236: 78, 237: 76, 238: 89, 239:
 function loadExtractionIndex() {
   const index = new Map();
   const files = fs.readdirSync(workDirectory).filter((name) => (
-    /^extracted-pages-.*\.json$/i.test(name) || /^ibes-extracted-p\d{3}-\d{3}\.json$/i.test(name)
+    /^extracted-pages-.*\.json$/i.test(name) ||
+    /^ibes-extracted-p\d{3}-\d{3}\.json$/i.test(name) ||
+    adv2e102ExtractionFilePattern.test(name)
   ));
   for (const name of files) {
     const records = JSON.parse(fs.readFileSync(path.join(workDirectory, name), "utf8"));
@@ -32,6 +43,12 @@ function loadExtractionIndex() {
         const question = Number(record.sourceQuestionNumber);
         if (Number.isInteger(question)) {
           index.set(`IBES-Q${String(question).padStart(4, "0")}`, record);
+        }
+        continue;
+      }
+      if (adv2e102ExtractionFilePattern.test(name)) {
+        if (adv2e102PairIdPattern.test(String(record.sourceRecordId || ""))) {
+          index.set(record.sourceRecordId, record);
         }
         continue;
       }
@@ -72,10 +89,12 @@ function validateFile(filePath, extractionIndex) {
       continue;
     }
     if (/[ÃÂâØÙÛ]/u.test(JSON.stringify(item))) fail(errors, location, "contains likely UTF-8 mojibake");
-    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})-(SRC|SIM)$/.test(item.id || "")) fail(errors, location, "invalid id");
+    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})-(SRC|SIM)$/.test(item.id || "") &&
+        !adv2e102ItemIdPattern.test(item.id || "")) fail(errors, location, "invalid id");
     if (ids.has(item.id)) fail(errors, location, "duplicate id");
     ids.add(item.id);
-    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})$/.test(item.pairId || "")) fail(errors, location, "invalid pairId");
+    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})$/.test(item.pairId || "") &&
+        !adv2e102PairIdPattern.test(item.pairId || "")) fail(errors, location, "invalid pairId");
     if (item.id && item.pairId && !item.id.startsWith(`${item.pairId}-`)) fail(errors, location, "id and pairId disagree");
     if (!['source', 'similar'].includes(item.kind)) fail(errors, location, "kind must be source or similar");
     if (item.kind === "source" && !String(item.id).endsWith("-SRC")) fail(errors, location, "source id must end with -SRC");
@@ -102,7 +121,7 @@ function validateFile(filePath, extractionIndex) {
     if (explanation && !/[\u0600-\u06ff]/u.test(explanation)) fail(errors, location, "explanation does not contain Urdu script");
     const source = item.source || {};
     if (!['book', 'practice', 'user'].includes(source.type)) fail(errors, location, "invalid source.type");
-    if (item.kind === "source" && /^(?:P23|IBES-)/.test(String(item.id)) && source.type !== "book") fail(errors, location, "PDF source item must use source.type book");
+    if (item.kind === "source" && /^(?:P23|IBES-|ADV2E102-)/.test(String(item.id)) && source.type !== "book") fail(errors, location, "PDF source item must use source.type book");
     if (item.kind === "source" && String(item.id).startsWith("USR-") && source.type !== "user") fail(errors, location, "user-supplied source item must use source.type user");
     if (item.kind === "similar" && source.type !== "practice") fail(errors, location, "similar item must use source.type practice");
     if (!String(source.label || "").trim()) fail(errors, location, "missing source.label");
@@ -113,16 +132,32 @@ function validateFile(filePath, extractionIndex) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(source.accessedOn || "") || Number.isNaN(Date.parse(`${source.accessedOn}T00:00:00Z`))) {
       fail(errors, location, "accessedOn must be a valid YYYY-MM-DD date");
     }
+    if (adv2e102PairIdPattern.test(String(item.pairId || ""))) {
+      if (item.verificationStatus !== "verified") fail(errors, location, "ADV2E102 enrichment excludes unresolved, disputed, or held items");
+      const addAdvError = (message) => errors.push(message);
+      const references = validateReferences(item.references, location, addAdvError, 2);
+      validateTemporalScope(item.temporalScope, item.question, location, addAdvError);
+      if (!isDirectHttpsUrl(source.referenceUrl)) fail(errors, location, "ADV2E102 source.referenceUrl must be direct HTTPS");
+      if (!references.answerUrls.has(source.referenceUrl)) {
+        fail(errors, location, "ADV2E102 source.referenceUrl must appear among answer-supporting references");
+      }
+    }
     if (!Array.isArray(item.tags) || item.tags.length === 0) warnings.push(`${location}: no tags`);
     if (!String(item.verificationStatus || "").trim()) fail(errors, location, "missing verificationStatus");
     const extracted = extractionIndex.get(item.pairId);
-    if (/^(?:P23|IBES-)/.test(String(item.pairId)) && !extracted) {
+    if (/^(?:P23|IBES-|ADV2E102-)/.test(String(item.pairId)) && !extracted) {
       fail(errors, location, "pairId not found in extracted PDF inventory");
     } else if (
       extracted &&
       item.kind === "source" &&
-      Number.isInteger(extracted.printedOrInferredCorrectIndex ?? extracted.printedCorrectIndex) &&
-      (extracted.printedOrInferredCorrectIndex ?? extracted.printedCorrectIndex) !== item.correctOptionIndex &&
+      Number.isInteger(
+        extracted.printedOrInferredCorrectIndex ??
+        extracted.printedCorrectIndex ??
+        ((extracted.answerEvidence || []).find((evidence) => evidence && evidence.kind === "printed-answer-key") || {}).optionIndex
+      ) &&
+      (extracted.printedOrInferredCorrectIndex ??
+        extracted.printedCorrectIndex ??
+        ((extracted.answerEvidence || []).find((evidence) => evidence && evidence.kind === "printed-answer-key") || {}).optionIndex) !== item.correctOptionIndex &&
       !String(item.sourceNotes || "").trim()
     ) {
       fail(errors, location, "verified answer differs from the printed key but sourceNotes does not explain why");
@@ -163,6 +198,7 @@ const files = inputs.length
     .filter((name) => (
       /^enriched-paper-23[4-9](?:-q\d{3}-\d{3})?\.json$/i.test(name) ||
       /^enriched-ibes-[a-z0-9-]+\.json$/i.test(name) ||
+      adv2e102EnrichedFilePattern.test(name) ||
       name === "custom-questions.json"
     ))
     .sort()

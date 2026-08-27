@@ -3,6 +3,16 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const {
+  decisionFilePattern: adv2e102DecisionFilePattern,
+  enrichedFilePattern: adv2e102EnrichedFilePattern,
+  isDirectHttpsUrl,
+  itemIdPattern: adv2e102ItemIdPattern,
+  pairIdPattern: adv2e102PairIdPattern,
+  readArrayFiles,
+  validateReferences,
+  validateTemporalScope
+} = require("./adv2e102-common");
 
 const projectDirectory = path.resolve(__dirname, "..");
 const workspaceDirectory = path.resolve(projectDirectory, "..");
@@ -39,6 +49,7 @@ const markdownFiles = {
 
 const expectedPaperCounts = { 234: 20, 235: 100, 236: 78, 237: 76, 238: 89, 239: 86 };
 const expectedIbesSourceCount = 1088;
+const expectedAdv2e102SourceCount = 1982;
 const categoryIds = new Set(categories.map((category) => category.id));
 const optionLabels = ["A", "B", "C", "D"];
 
@@ -59,7 +70,10 @@ function loadBatches() {
   const ibesFiles = allNames
     .filter((name) => /^enriched-ibes-[a-z0-9-]+\.json$/i.test(name))
     .sort();
-  const batchFiles = files.concat(ibesFiles);
+  const adv2e102Files = allNames
+    .filter((name) => adv2e102EnrichedFilePattern.test(name))
+    .sort();
+  const batchFiles = files.concat(ibesFiles, adv2e102Files);
   const paperQuestions = batchFiles.flatMap((name) => {
     const value = JSON.parse(fs.readFileSync(path.join(workDirectory, name), "utf8"));
     if (!Array.isArray(value)) fail(`${name} must contain a JSON array.`);
@@ -127,6 +141,11 @@ function validate(questions) {
   const ids = new Set();
   const pairs = new Map();
   const sourcePaperCounts = {};
+  const adv2e102Decisions = new Map();
+  for (const decision of readArrayFiles(adv2e102DecisionFilePattern).records) {
+    if (adv2e102Decisions.has(decision.sourceRecordId)) fail(`${decision.sourceRecordId} has duplicate ADV2E102 decisions.`);
+    adv2e102Decisions.set(decision.sourceRecordId, decision);
+  }
 
   for (const [index, question] of questions.entries()) {
     const location = `question index ${index}`;
@@ -134,8 +153,10 @@ function validate(questions) {
     if (/[ÃÂâØÙÛ]/u.test(JSON.stringify(question))) fail(`${question.id || location} contains likely UTF-8 mojibake.`);
     if (!question.id || ids.has(question.id)) fail(`${location} has a missing/duplicate id: ${question.id}`);
     ids.add(question.id);
-    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})-(SRC|SIM)$/.test(question.id)) fail(`${question.id} has an invalid id format.`);
-    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})$/.test(question.pairId || "")) fail(`${question.id} has an invalid pairId.`);
+    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})-(SRC|SIM)$/.test(question.id) &&
+        !adv2e102ItemIdPattern.test(question.id)) fail(`${question.id} has an invalid id format.`);
+    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})$/.test(question.pairId || "") &&
+        !adv2e102PairIdPattern.test(question.pairId || "")) fail(`${question.id} has an invalid pairId.`);
     if (!categoryIds.has(question.categoryId)) fail(`${question.id} has unknown category ${question.categoryId}.`);
     if (!question.question || !String(question.question).trim()) fail(`${question.id} has no question text.`);
     if (question.question && !/[A-Za-z]/.test(question.question)) {
@@ -161,11 +182,24 @@ function validate(questions) {
     if (question.kind === "similar" && question.source.type !== "practice") {
       fail(`${question.id} similar item must use source.type practice.`);
     }
-    if (question.kind === "source" && /^(?:P23|IBES-)/.test(question.id) && question.source.type !== "book") {
+    if (question.kind === "source" && /^(?:P23|IBES-|ADV2E102-)/.test(question.id) && question.source.type !== "book") {
       fail(`${question.id} PDF source item must use source.type book.`);
     }
     if (question.kind === "source" && question.id.startsWith("USR-") && question.source.type !== "user") {
       fail(`${question.id} user-supplied source item must use source.type user.`);
+    }
+    if (adv2e102PairIdPattern.test(question.pairId || "")) {
+      if (question.verificationStatus !== "verified") fail(`${question.id} cannot build unresolved or disputed ADV2E102 content.`);
+      const referenceResult = validateReferences(question.references, question.id, fail, 2);
+      validateTemporalScope(question.temporalScope, question.question, question.id, fail);
+      if (!isDirectHttpsUrl(question.source.referenceUrl)) fail(`${question.id} ADV2E102 canonical source URL must be direct HTTPS.`);
+      if (!referenceResult.answerUrls.has(question.source.referenceUrl)) {
+        fail(`${question.id} ADV2E102 canonical source URL must be one of its answer-supporting references.`);
+      }
+      const decision = adv2e102Decisions.get(question.pairId);
+      if (!decision || decision.action !== "keep" || decision.reviewStatus !== "verified") {
+        fail(`${question.id} requires a verified keep decision before build.`);
+      }
     }
 
     const pair = pairs.get(question.pairId) || [];
@@ -199,6 +233,13 @@ function validate(questions) {
   const ibesSourceCount = questions.filter((question) => question.kind === "source" && question.id.startsWith("IBES-")).length;
   if (ibesSourceCount !== expectedIbesSourceCount) {
     fail(`IBES bank has ${ibesSourceCount} retained source items; expected ${expectedIbesSourceCount}.`);
+  }
+
+  const adv2e102SourceCount = questions.filter((question) => (
+    question.kind === "source" && question.id.startsWith("ADV2E102-")
+  )).length;
+  if (adv2e102SourceCount !== expectedAdv2e102SourceCount) {
+    fail(`ADV2E102 release has ${adv2e102SourceCount} retained source items; expected ${expectedAdv2e102SourceCount}.`);
   }
 }
 
@@ -266,7 +307,11 @@ function websiteQuestion(question, pairsById, translations) {
     source: question.source,
     tags: Array.isArray(question.tags) ? question.tags : [],
     verificationStatus: question.verificationStatus || "verified",
-    sourceNotes: question.sourceNotes || ""
+    sourceNotes: question.sourceNotes || "",
+    ...(adv2e102PairIdPattern.test(question.pairId) ? {
+      references: question.references,
+      temporalScope: question.temporalScope
+    } : {})
   };
 }
 

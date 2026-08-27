@@ -173,10 +173,41 @@ function validateIbesBank(questions) {
   }
 }
 
+function validateAdv2e102Bank(questions) {
+  const advQuestions = questions.filter((question) => String(question.id || "").startsWith("ADV2E102-"));
+  const sourceQuestions = advQuestions.filter((question) => question.kind === "source");
+  const similarQuestions = advQuestions.filter((question) => question.kind === "similar");
+  if (sourceQuestions.length !== 1982) error(`ADV2E102 source count is ${sourceQuestions.length}; expected 1982`);
+  if (similarQuestions.length !== 1982) error(`ADV2E102 similar count is ${similarQuestions.length}; expected 1982`);
+
+  const pairs = new Map();
+  for (const question of advQuestions) {
+    if (question.verificationStatus !== "verified") error(`${question.id}: ADV2E102 website item is not verified`);
+    if (!question.temporalScope || typeof question.temporalScope !== "object") {
+      error(`${question.id}: ADV2E102 website item is missing temporalScope`);
+    }
+    const answerAuthorities = new Set((Array.isArray(question.references) ? question.references : [])
+      .filter((reference) => Array.isArray(reference.supports) && reference.supports.includes("answer"))
+      .map((reference) => String(reference.authorityId || "").trim())
+      .filter(Boolean));
+    if (answerAuthorities.size < 2) error(`${question.id}: ADV2E102 website item needs two answer authorities`);
+    const pair = pairs.get(question.pairId) || [];
+    pair.push(question);
+    pairs.set(question.pairId, pair);
+  }
+  for (const [pairId, pair] of pairs) {
+    const kinds = pair.map((question) => question.kind).sort().join(",");
+    if (pair.length !== 2 || kinds !== "similar,source") {
+      error(`${pairId}: ADV2E102 website pair must contain one source and one similar item`);
+    }
+  }
+}
+
 function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
     "category-screen", "mode-screen", "quiz-screen", "results-screen", "category-grid",
+    "continue-session-card", "continue-session-button", "continue-session-title", "continue-session-meta",
     "mode-category", "standard-mode-options", "learn-mode-button", "quiz-mode-button",
     "difficult-mode-button", "difficult-mode-options", "difficult-back-button",
     "difficult-count", "difficult-empty", "difficult-learn-button", "difficult-quiz-button",
@@ -234,6 +265,7 @@ const data = loadData();
 const result = validateData(data);
 validateKnownCorrections(result.questions);
 validateIbesBank(result.questions);
+validateAdv2e102Bank(result.questions);
 validateHtml();
 validateFonts();
 

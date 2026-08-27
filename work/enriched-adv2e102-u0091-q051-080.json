@@ -1,0 +1,2840 @@
+[
+  {
+    "id": "ADV2E102-U0091-Q051-SRC",
+    "pairId": "ADV2E102-U0091-Q051",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Why can light not escape from inside a black hole's event horizon?",
+    "questionUrdu": "Black hole کے event horizon کے اندر سے روشنی کیوں نہیں نکل سکتی؟",
+    "options": [
+      "The object has a large visible diameter",
+      "It contains no mass",
+      "Its mass is concentrated within such a small radius that the required escape speed exceeds the speed of light",
+      "Its temperature is always zero"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب یہ ہے کہ mass بہت چھوٹے radius میں مرتکز ہونے سے درکار escape speed روشنی کی رفتار سے بڑھ جاتی ہے۔ Event horizon کے اندر سے کوئی causal signal باہر نہیں پہنچ سکتا۔",
+    "source": {
+      "type": "book",
+      "label": "Imagine the Universe: black holes",
+      "referenceUrl": "https://imagine.gsfc.nasa.gov/educators/blackholes/imagine/imagine_book.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q051"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://imagine.gsfc.nasa.gov/educators/blackholes/imagine/imagine_book.pdf",
+        "label": "Imagine the Universe: black holes",
+        "publisher": "NASA Goddard Space Flight Center",
+        "authorityId": "nasa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA's black-hole guide relates the event horizon to compact mass and an escape speed reaching the speed of light."
+      },
+      {
+        "url": "https://nightsky.jpl.nasa.gov/media/documents/resources/BHManual.pdf",
+        "label": "Black Hole Manual",
+        "publisher": "Jet Propulsion Laboratory",
+        "authorityId": "jpl",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "JPL's black-hole manual explains that sufficiently compact mass curves spacetime so strongly that light cannot escape."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's simple 'high density' option is incomplete. The answer was repaired to the mass-radius compactness relation that defines an event horizon."
+  },
+  {
+    "id": "ADV2E102-U0091-Q051-SIM",
+    "pairId": "ADV2E102-U0091-Q051",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What is the boundary beyond which nothing can escape from a black hole called?",
+    "questionUrdu": "Black hole کی وہ boundary جس کے پار سے کوئی چیز باہر نہیں نکل سکتی، کیا کہلاتی ہے؟",
+    "options": [
+      "Event horizon",
+      "Accretion disk",
+      "Photon sphere",
+      "Magnetic pole"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Event horizon ہے۔ یہ مادی سطح نہیں بلکہ space-time کی وہ حد ہے جس کے اندر سے روشنی بھی باہر کی سمت واپس نہیں آ سکتی۔",
+    "source": {
+      "type": "practice",
+      "label": "Imagine the Universe: black holes",
+      "referenceUrl": "https://imagine.gsfc.nasa.gov/educators/blackholes/imagine/imagine_book.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q051",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://imagine.gsfc.nasa.gov/educators/blackholes/imagine/imagine_book.pdf",
+        "label": "Imagine the Universe: black holes",
+        "publisher": "NASA Goddard Space Flight Center",
+        "authorityId": "nasa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA Goddard Space Flight Center supports that the boundary beyond which nothing can escape a black hole is called the event horizon."
+      },
+      {
+        "url": "https://nightsky.jpl.nasa.gov/media/documents/resources/BHManual.pdf",
+        "label": "Black Hole Manual",
+        "publisher": "Jet Propulsion Laboratory",
+        "authorityId": "jpl",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Jet Propulsion Laboratory supports that the boundary beyond which nothing can escape a black hole is called the event horizon."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q057-SRC",
+    "pairId": "ADV2E102-U0091-Q057",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If 125 workers can complete a fixed job in 120 days at the same rate, how many workers are needed to complete it in 100 days?",
+    "questionUrdu": "اگر 125 workers ایک کام 120 days میں مکمل کریں تو اسی رفتار سے اسے 100 days میں مکمل کرنے کے لیے کتنے workers درکار ہوں گے؟",
+    "options": [
+      "125",
+      "150",
+      "180",
+      "200"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 150 ہے۔ مقررہ کام میں workers اور days کا حاصل ضرب مستقل رہتا ہے: 125 × 120 = 150 × 100۔",
+    "source": {
+      "type": "book",
+      "label": "Modeling Using Variation",
+      "referenceUrl": "https://openstax.org/books/precalculus/pages/3-9-modeling-using-variation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q057"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/precalculus/pages/3-9-modeling-using-variation",
+        "label": "Modeling Using Variation",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains inverse variation for fixed-work rate problems; workers multiplied by days remains constant."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/06%3A_Ratios_and_Proportions/6.05%3A_Proportions",
+        "label": "Proportions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts' proportion method supports 125 x 120 = n x 100, giving n = 150."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The correct answer 150 is absent from the source choices, which therefore key None. The options were repaired to include the calculated result."
+  },
+  {
+    "id": "ADV2E102-U0091-Q057-SIM",
+    "pairId": "ADV2E102-U0091-Q057",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 80 workers can finish a job in 45 days, how many equally productive workers are needed to finish it in 30 days?",
+    "questionUrdu": "اگر 80 workers ایک کام 45 days میں کریں تو اسے 30 days میں مکمل کرنے کے لیے کتنے برابر کارکردگی والے workers چاہییں؟",
+    "options": [
+      "120",
+      "100",
+      "110",
+      "135"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 120 ہے۔ Work constant ہونے کی وجہ سے 80 × 45 کو 30 سے تقسیم کریں تو مطلوبہ workers 120 بنتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Modeling Using Variation",
+      "referenceUrl": "https://openstax.org/books/precalculus/pages/3-9-modeling-using-variation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q057",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/precalculus/pages/3-9-modeling-using-variation",
+        "label": "Modeling Using Variation",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that inverse proportion gives 120 workers when an 80-worker, 45-day job must be completed in 30 days."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/06%3A_Ratios_and_Proportions/6.05%3A_Proportions",
+        "label": "Proportions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that inverse proportion gives 120 workers when an 80-worker, 45-day job must be completed in 30 days."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q058-SRC",
+    "pairId": "ADV2E102-U0091-Q058",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If one tank is filled every 0.8 seconds at a constant rate, how many tanks can be filled in two hours?",
+    "questionUrdu": "اگر مسلسل رفتار سے ہر 0.8 seconds میں ایک tank بھرتا ہو تو two hours میں کتنے tanks بھریں گے؟",
+    "options": [
+      "9,000",
+      "8,000",
+      "7,000",
+      "6,000"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 9,000 ہے۔ two hours میں 7,200 seconds ہوتے ہیں اور 7,200 ÷ 0.8 = 9,000 tanks بنتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Solve Proportions and their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q058"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and their Applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax's rate and proportion method supports converting two hours to 7,200 seconds and dividing by 0.8 second per tank."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/06%3A_Ratios_and_Proportions/6.05%3A_Proportions",
+        "label": "Proportions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts' constant-rate proportion method supports 7,200 / 0.8 = 9,000 tanks."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and units were normalized; the mathematical data and answer are unchanged."
+  },
+  {
+    "id": "ADV2E102-U0091-Q058-SIM",
+    "pairId": "ADV2E102-U0091-Q058",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "At a rate of one tank every 0.8 seconds, how many tanks are filled per minute?",
+    "questionUrdu": "ہر 0.8 seconds میں one tank کی رفتار سے ایک minute میں کتنے tanks بھرتے ہیں؟",
+    "options": [
+      "75",
+      "60",
+      "80",
+      "96"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 75 ہے۔ ایک minute کے 60 seconds کو 0.8 سے تقسیم کرنے پر 75 tanks فی minute حاصل ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve Proportions and their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q058",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and their Applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that a rate of one tank every 0.8 seconds equals 75 tanks per minute."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/06%3A_Ratios_and_Proportions/6.05%3A_Proportions",
+        "label": "Proportions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that a rate of one tank every 0.8 seconds equals 75 tanks per minute."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q059-SRC",
+    "pairId": "ADV2E102-U0091-Q059",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If (3a + 5b)/(3a - 5b) = 5, what is the ratio a:b?",
+    "questionUrdu": "اگر (3a + 5b)/(3a - 5b) = 5 ہو تو a:b کیا ہوگا؟",
+    "options": [
+      "2:1",
+      "2:3",
+      "1:3",
+      "5:2"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 5:2 ہے۔ Cross multiplication سے 3a + 5b = 15a - 25b، پھر 30b = 12a، اس لیے a:b = 5:2۔",
+    "source": {
+      "type": "book",
+      "label": "Solve Proportions and their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q059"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and their Applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cross multiplication gives 3a + 5b = 15a - 25b, hence 12a = 30b and a:b = 5:2."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/04%3A_Fractions/4.02%3A_Multiplying_and_Dividing_Fractions",
+        "label": "Multiplying and dividing fractions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts' fraction-division and equivalent-ratio rules support the algebraic simplification to 5:2."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The answer embedded in the source's None option was promoted to a normal fourth option."
+  },
+  {
+    "id": "ADV2E102-U0091-Q059-SIM",
+    "pairId": "ADV2E102-U0091-Q059",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If a:b = 5:2, what is the ratio 3a:5b?",
+    "questionUrdu": "اگر a:b = 5:2 ہو تو 3a:5b کا ratio کیا ہوگا؟",
+    "options": [
+      "3:2",
+      "5:2",
+      "15:2",
+      "2:3"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 3:2 ہے۔ a = 5k اور b = 2k رکھنے پر 3a:5b = 15k:10k، جو سادہ ہو کر 3:2 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve Proportions and their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q059",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and their Applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that when a to b is 5 to 2, the ratio 3a to 5b simplifies to 3 to 2."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/04%3A_Fractions/4.02%3A_Multiplying_and_Dividing_Fractions",
+        "label": "Multiplying and dividing fractions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that when a to b is 5 to 2, the ratio 3a to 5b simplifies to 3 to 2."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q060-SRC",
+    "pairId": "ADV2E102-U0091-Q060",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Samar bought a shirt for Rs 250 and sold it for Rs 295. What was the profit percentage on cost?",
+    "questionUrdu": "Samar نے shirt Rs 250 میں خریدی اور Rs 295 میں بیچی؛ cost پر profit percentage کیا تھا؟",
+    "options": [
+      "16%",
+      "18%",
+      "20%",
+      "22%"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 18% ہے۔ Profit Rs 45 ہے، اور 45 ÷ 250 × 100 = 18 فیصد بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "General Applications of Percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q060"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "General Applications of Percent",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines percent increase as change divided by original amount; 45/250 x 100 = 18 percent."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Adult_Literacy_Fundamental_Mathematics_VI/04%3A_More_Working_with_Percent/4.01%3A_Topic_A-_Finding_What_Percent_One_Number_is_of_Another",
+        "label": "Finding the percent of an increase or decrease",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts gives the same percent-increase method using the original amount as base."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "'Profit' was clarified to profit percentage on cost, and the generic final option was replaced."
+  },
+  {
+    "id": "ADV2E102-U0091-Q060-SIM",
+    "pairId": "ADV2E102-U0091-Q060",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "At what selling price should an item costing Rs 250 be sold to earn a 20% profit on cost?",
+    "questionUrdu": "Rs 250 کی cost والی چیز کو cost پر 20% profit کے لیے کس selling price پر بیچنا چاہیے؟",
+    "options": [
+      "Rs 300",
+      "Rs 275",
+      "Rs 295",
+      "Rs 320"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Rs 300 ہے۔ Rs 250 کا 20 فیصد Rs 50 ہے، اس لیے selling price 250 + 50 = Rs 300 ہوگی۔",
+    "source": {
+      "type": "practice",
+      "label": "General Applications of Percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q060",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "General Applications of Percent",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that a 20 percent profit on a cost of Rs 250 gives a selling price of Rs 300."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Adult_Literacy_Fundamental_Mathematics_VI/04%3A_More_Working_with_Percent/4.01%3A_Topic_A-_Finding_What_Percent_One_Number_is_of_Another",
+        "label": "Finding the percent of an increase or decrease",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that a 20 percent profit on a cost of Rs 250 gives a selling price of Rs 300."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q061-SRC",
+    "pairId": "ADV2E102-U0091-Q061",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If the radius of a circle is increased by 2%, by what percentage does its area increase?",
+    "questionUrdu": "اگر circle کا radius 2% بڑھ جائے تو اس کا area کتنے فیصد بڑھے گا؟",
+    "options": [
+      "0.826%",
+      "3.88%",
+      "4.04%",
+      "8.04%"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 4.04% ہے۔ Area radius کے square کے متناسب ہے، اس لیے نیا factor 1.02² = 1.0404 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "General Applications of Percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q061"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "General Applications of Percent",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Using percent increase, the area factor is 1.02 squared = 1.0404, so the increase is 4.04 percent."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Adult_Literacy_Fundamental_Mathematics_VI/04%3A_More_Working_with_Percent/4.01%3A_Topic_A-_Finding_What_Percent_One_Number_is_of_Another",
+        "label": "Finding the percent of an increase or decrease",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts' percent-change formula confirms (1.0404 - 1) x 100 = 4.04 percent."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source expresses 4.04% as the unusual fraction 101/25; the choices were converted to explicit percentages."
+  },
+  {
+    "id": "ADV2E102-U0091-Q061-SIM",
+    "pairId": "ADV2E102-U0091-Q061",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If a circle's radius decreases by 10%, by what percentage does its area decrease?",
+    "questionUrdu": "اگر circle کا radius 10% کم ہو تو اس کا area کتنے فیصد کم ہوگا؟",
+    "options": [
+      "19%",
+      "10%",
+      "20%",
+      "21%"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 19% ہے۔ نیا radius 0.9 گنا ہو تو area 0.9² = 0.81 گنا رہتا ہے، یعنی 19 فیصد کمی۔",
+    "source": {
+      "type": "practice",
+      "label": "General Applications of Percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q061",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "General Applications of Percent",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that a 10 percent decrease in a circle's radius decreases its area by 19 percent."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Adult_Literacy_Fundamental_Mathematics_VI/04%3A_More_Working_with_Percent/4.01%3A_Topic_A-_Finding_What_Percent_One_Number_is_of_Another",
+        "label": "Finding the percent of an increase or decrease",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that a 10 percent decrease in a circle's radius decreases its area by 19 percent."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q062-SRC",
+    "pairId": "ADV2E102-U0091-Q062",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the reciprocal of the sum of the reciprocals of 2 and 3?",
+    "questionUrdu": "2 اور 3 کے reciprocals کے sum کا reciprocal کیا ہے؟",
+    "options": [
+      "0.47",
+      "0.20",
+      "0.77",
+      "1.20"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 1.20 ہے۔ 1/2 + 1/3 = 5/6، اور اس کا reciprocal 6/5 یعنی 1.20 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Multiplying and dividing fractions",
+      "referenceUrl": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/04%3A_Fractions/4.02%3A_Multiplying_and_Dividing_Fractions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q062"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/04%3A_Fractions/4.02%3A_Multiplying_and_Dividing_Fractions",
+        "label": "Multiplying and dividing fractions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "One half plus one third is five sixths, whose reciprocal is six fifths or 1.20."
+      },
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and their Applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax's fraction and ratio operations support the calculation 1/(1/2 + 1/3) = 6/5."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The answer embedded in the source's None option was promoted to an ordinary choice."
+  },
+  {
+    "id": "ADV2E102-U0091-Q062-SIM",
+    "pairId": "ADV2E102-U0091-Q062",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the reciprocal of the sum of the reciprocals of 4 and 6?",
+    "questionUrdu": "4 اور 6 کے reciprocals کے sum کا reciprocal کیا ہے؟",
+    "options": [
+      "2.4",
+      "1.2",
+      "5",
+      "10"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 2.4 ہے۔ 1/4 + 1/6 = 5/12، لہٰذا reciprocal 12/5 یعنی 2.4 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Multiplying and dividing fractions",
+      "referenceUrl": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/04%3A_Fractions/4.02%3A_Multiplying_and_Dividing_Fractions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q062",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/04%3A_Fractions/4.02%3A_Multiplying_and_Dividing_Fractions",
+        "label": "Multiplying and dividing fractions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that the reciprocal of one fourth plus one sixth is 2.4."
+      },
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and their Applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the reciprocal of one fourth plus one sixth is 2.4."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q063-SRC",
+    "pairId": "ADV2E102-U0091-Q063",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If A:B:C = 2:3:4, what is the ratio (A/B):(B/C):(C/A)?",
+    "questionUrdu": "اگر A:B:C = 2:3:4 ہو تو (A/B):(B/C):(C/A) کیا ہوگا؟",
+    "options": [
+      "4:9:16",
+      "8:9:12",
+      "8:9:24",
+      "6:8:9"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 8:9:24 ہے۔ fractions 2/3، 3/4 اور 2 کو مشترک denominator 12 پر لکھیں تو 8:9:24 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve Proportions and their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q063"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and their Applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Substitution gives 2/3:3/4:2; multiplying by 12 yields 8:9:24."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/04%3A_Fractions/4.02%3A_Multiplying_and_Dividing_Fractions",
+        "label": "Multiplying and dividing fractions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts' equivalent-fraction rules support clearing the denominators to obtain 8:9:24."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stacked ratios were made explicit with parentheses and a distinct fourth option."
+  },
+  {
+    "id": "ADV2E102-U0091-Q063-SIM",
+    "pairId": "ADV2E102-U0091-Q063",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If A:B:C = 3:4:6, what is (A/B):(B/C):(C/A)?",
+    "questionUrdu": "اگر A:B:C = 3:4:6 ہو تو (A/B):(B/C):(C/A) کیا ہوگا؟",
+    "options": [
+      "9:8:24",
+      "3:2:6",
+      "12:8:18",
+      "9:12:24"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 9:8:24 ہے۔ ratios 3/4، 2/3 اور 2 کو denominator 12 کے لحاظ سے 9/12، 8/12 اور 24/12 لکھا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve Proportions and their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q063",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and their Applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that for A to B to C equal to 3 to 4 to 6, the ratio A/B to B/C to C/A is 9 to 8 to 24."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/04%3A_Fractions/4.02%3A_Multiplying_and_Dividing_Fractions",
+        "label": "Multiplying and dividing fractions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that for A to B to C equal to 3 to 4 to 6, the ratio A/B to B/C to C/A is 9 to 8 to 24."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q064-SRC",
+    "pairId": "ADV2E102-U0091-Q064",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The ages of A and B are in the ratio 6:5 and total 44 years. How old will B be after 8 years?",
+    "questionUrdu": "A اور B کی ages کا ratio 6:5 اور total 44 years ہے؛ B کی age 8 years بعد کتنی ہوگی؟",
+    "options": [
+      "22 years",
+      "25 years",
+      "28 years",
+      "32 years"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 28 years ہے۔ 11 حصے 44 کے برابر ہیں، اس لیے ہر حصہ 4 اور B کی موجودہ عمر 20 ہے؛ آٹھ سال بعد 28 ہوگی۔",
+    "source": {
+      "type": "book",
+      "label": "Solve Proportions and their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q064"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and their Applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Eleven ratio parts equal 44, so each part is 4 and B is now 5 x 4 = 20; after eight years B is 28."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/06%3A_Ratios_and_Proportions/6.05%3A_Proportions",
+        "label": "Proportions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts' ratio-and-proportion method supports assigning the ages 6k and 5k and solving 11k = 44."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The sentence was normalized and units were added to the options."
+  },
+  {
+    "id": "ADV2E102-U0091-Q064-SIM",
+    "pairId": "ADV2E102-U0091-Q064",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If two ages are in the ratio 6:5 and total 44 years, what is their age difference?",
+    "questionUrdu": "اگر دو ages کا ratio 6:5 اور total 44 years ہو تو ان کی عمر کا فرق کتنا ہے؟",
+    "options": [
+      "4 years",
+      "5 years",
+      "6 years",
+      "8 years"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 4 years ہے۔ 6 + 5 = 11 حصے اور ہر حصہ 44 ÷ 11 = 4 سال ہے؛ ratio کا فرق ایک حصہ ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve Proportions and their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q064",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and their Applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that ages in the ratio 6 to 5 with a total of 44 years differ by 4 years."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(Arnold)/06%3A_Ratios_and_Proportions/6.05%3A_Proportions",
+        "label": "Proportions",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that ages in the ratio 6 to 5 with a total of 44 years differ by 4 years."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q065-SRC",
+    "pairId": "ADV2E102-U0091-Q065",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which punctuation mark correctly introduces the explanation in this sentence: 'She had one wish: to become a civil servant'?",
+    "questionUrdu": "اس sentence میں explanation شروع کرنے کے لیے کون سا punctuation mark درست ہے: 'She had one wish: to become a civil servant'؟",
+    "options": [
+      "Colon",
+      "Comma",
+      "Semicolon",
+      "Apostrophe"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Colon ہے۔ مکمل independent clause کے بعد colon آنے والی وضاحت، فہرست یا نتیجہ متعارف کر سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Punctuation guidance",
+      "referenceUrl": "https://owl.purdue.edu/owl/general_writing/punctuation/commas/extended_rules_for_commas.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q065"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://owl.purdue.edu/owl/general_writing/punctuation/commas/extended_rules_for_commas.html",
+        "label": "Punctuation guidance",
+        "publisher": "Purdue Online Writing Lab",
+        "authorityId": "purdue-owl",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Purdue OWL explains that a colon can introduce an explanation after a complete clause."
+      },
+      {
+        "url": "https://www.sussex.ac.uk/informatics/punctuation/colonandsemi/colon",
+        "label": "The colon",
+        "publisher": "University of Sussex",
+        "authorityId": "university-of-sussex",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Sussex punctuation guide describes a colon as introducing an explanation or elaboration."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source sentence 'His only wish: wants to be CSP' is incomplete before the colon. It was replaced with a grammatical complete clause followed by an explanation."
+  },
+  {
+    "id": "ADV2E102-U0091-Q065-SIM",
+    "pairId": "ADV2E102-U0091-Q065",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which sentence avoids placing a colon incorrectly between a verb and its object?",
+    "questionUrdu": "کون سا sentence verb اور اس کے object کے درمیان colon کے غلط استعمال سے بچتا ہے؟",
+    "options": [
+      "She bought paper, pens and folders.",
+      "She bought: paper, pens and folders.",
+      "She: bought paper, pens and folders.",
+      "She bought paper: pens and folders."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب پہلا sentence ہے۔ Colon کو verb 'bought' اور اس کے direct objects کے درمیان نہیں رکھنا چاہیے؛ فہرست بغیر colon کے مکمل ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Punctuation guidance",
+      "referenceUrl": "https://owl.purdue.edu/owl/general_writing/punctuation/commas/extended_rules_for_commas.html",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q065",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://owl.purdue.edu/owl/general_writing/punctuation/commas/extended_rules_for_commas.html",
+        "label": "Punctuation guidance",
+        "publisher": "Purdue Online Writing Lab",
+        "authorityId": "purdue-owl",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Purdue Online Writing Lab supports that a colon should not be placed between a verb and its direct objects."
+      },
+      {
+        "url": "https://www.sussex.ac.uk/informatics/punctuation/colonandsemi/colon",
+        "label": "The colon",
+        "publisher": "University of Sussex",
+        "authorityId": "university-of-sussex",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "University of Sussex supports that a colon should not be placed between a verb and its direct objects."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q066-SRC",
+    "pairId": "ADV2E102-U0091-Q066",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the sentence with the correct possessive pronoun: 'These books are yours and ____.'",
+    "questionUrdu": "صحیح possessive pronoun سے sentence مکمل کریں: 'These books are yours and ____.'",
+    "options": [
+      "hers",
+      "her",
+      "she",
+      "herself"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب hers ہے۔ Possessive pronoun کسی noun کو دوبارہ لکھے بغیر ownership ظاہر کرتا ہے، اس لیے her books کے بدلے hers آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Possessive pronouns",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/sites/podcasts/files/learnenglish-podcasts-elementary-03-08-transcript_0.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q066"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/sites/podcasts/files/learnenglish-podcasts-elementary-03-08-transcript_0.pdf",
+        "label": "Possessive pronouns",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council lists hers as a possessive pronoun that can replace a noun phrase."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/pronouns-possessive-my-mine-your-yours-etc",
+        "label": "Possessive pronouns",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge grammar distinguishes standalone possessive pronouns such as yours and hers from determiners such as her."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A distinct reflexive-pronoun distractor replaced the generic final option."
+  },
+  {
+    "id": "ADV2E102-U0091-Q066-SIM",
+    "pairId": "ADV2E102-U0091-Q066",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Choose the correct possessive pronoun: 'This pen belongs to me; it is ____.'",
+    "questionUrdu": "صحیح possessive pronoun چنیں: 'This pen belongs to me; it is ____.'",
+    "options": [
+      "mine",
+      "my",
+      "me",
+      "I"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب mine ہے۔ my کے بعد noun درکار ہوتا ہے، جبکہ mine اکیلا آ کر 'my pen' کا مکمل مفہوم دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Possessive pronouns",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/sites/podcasts/files/learnenglish-podcasts-elementary-03-08-transcript_0.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q066",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/sites/podcasts/files/learnenglish-podcasts-elementary-03-08-transcript_0.pdf",
+        "label": "Possessive pronouns",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that mine is the independent possessive pronoun corresponding to my."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/pronouns-possessive-my-mine-your-yours-etc",
+        "label": "Possessive pronouns",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that mine is the independent possessive pronoun corresponding to my."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q067-SRC",
+    "pairId": "ADV2E102-U0091-Q067",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the pair with the closest relationship to GRAIN:SALT, where the first word names a small piece of the second.",
+    "questionUrdu": "GRAIN:SALT سے سب سے قریب relation والا pair چنیں، جہاں پہلا لفظ دوسرے مادے کے چھوٹے ٹکڑے کو ظاہر کرتا ہے۔",
+    "options": [
+      "shard:pottery",
+      "plank:wood",
+      "blade:grass",
+      "drop:raincloud"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب shard:pottery ہے۔ Grain نمک کا چھوٹا ذرہ اور shard مٹی کے برتن کا ٹوٹا ہوا چھوٹا ٹکڑا ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Grain",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/grain",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q067"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/grain",
+        "label": "Grain",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines a grain as a small hard particle, as of salt."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/shard",
+        "label": "Shard",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a shard as a sharp broken piece of pottery or glass."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The intended part-material relationship was added to the stem because the raw analogy permits several looser associations; distractors were made structurally distinct."
+  },
+  {
+    "id": "ADV2E102-U0091-Q067-SIM",
+    "pairId": "ADV2E102-U0091-Q067",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which pair has the same piece-to-material relationship as DROP:WATER?",
+    "questionUrdu": "کون سا pair DROP:WATER جیسا piece-to-material relation رکھتا ہے؟",
+    "options": [
+      "flake:snow",
+      "river:bank",
+      "cup:tea",
+      "cloud:rain"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب flake:snow ہے۔ Drop پانی کی ایک چھوٹی مقدار ہے اور flake برف کا ایک چھوٹا ٹکڑا؛ دونوں میں پہلا لفظ دوسرے مادے کا جزو ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Grain",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/grain",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q067",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/grain",
+        "label": "Grain",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that a flake is a small piece of snow just as a drop is a small amount of water."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/shard",
+        "label": "Shard",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that a flake is a small piece of snow just as a drop is a small amount of water."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q069-SRC",
+    "pairId": "ADV2E102-U0091-Q069",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the sentence: 'She could not refrain ____ shedding tears.'",
+    "questionUrdu": "Sentence مکمل کریں: 'She could not refrain ____ shedding tears.'",
+    "options": [
+      "to",
+      "from",
+      "by",
+      "with"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب from ہے۔ Verb refrain کے بعد کسی عمل سے باز رہنے کے معنی میں from اور پھر gerund استعمال ہوتا ہے: refrain from doing۔",
+    "source": {
+      "type": "book",
+      "label": "Refrain",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/refrain",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/refrain",
+        "label": "Refrain",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge gives refrain from as the standard verb-preposition construction meaning to avoid doing something."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/refrain",
+        "label": "Refrain",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster examples and usage define refrain with the preposition from."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A distinct preposition replaced the generic final choice."
+  },
+  {
+    "id": "ADV2E102-U0091-Q069-SIM",
+    "pairId": "ADV2E102-U0091-Q069",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "As a noun in music, what does 'refrain' usually mean?",
+    "questionUrdu": "Music میں noun کے طور پر refrain کا عام مطلب کیا ہوتا ہے؟",
+    "options": [
+      "A repeated line or group of lines",
+      "An opening instrumental solo",
+      "A change of key only",
+      "The final silent pause"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A repeated line or group of lines ہے۔ گیت یا نظم میں refrain وہ حصہ ہے جو مختلف بندوں کے بعد بار بار دہرایا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Refrain",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/refrain",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/refrain",
+        "label": "Refrain",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that as a musical noun, a refrain is a repeated line or group of lines."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/refrain",
+        "label": "Refrain",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that as a musical noun, a refrain is a repeated line or group of lines."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q071-SRC",
+    "pairId": "ADV2E102-U0091-Q071",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "In the sentence 'He does everything with an eye to the main chance,' how does the phrase 'with an eye to the main chance' function?",
+    "questionUrdu": "Sentence 'He does everything with an eye to the main chance' میں phrase 'with an eye to the main chance' کس طرح کام کرتا ہے؟",
+    "options": [
+      "As a noun phrase",
+      "Adverbially, modifying 'does'",
+      "As the sentence subject",
+      "As a direct object"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Adverbially ہے۔ یہ phrase verb 'does' کو modify کر کے بتاتا ہے کہ وہ ذاتی فائدے کو سامنے رکھ کر کام کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "With an eye to",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/with%20an%20eye%20to",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/with%20an%20eye%20to",
+        "label": "With an eye to",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines 'with an eye to' as an idiom meaning with an objective or intention toward something."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/adverbs-and-adverb-phrases",
+        "label": "Adverbs and adverb phrases",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that adverb phrases modify verbs by expressing circumstances such as purpose or viewpoint."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source fragment and unstated role task were completed; the phrase is prepositional in form but functions adverbially in this sentence."
+  },
+  {
+    "id": "ADV2E102-U0091-Q071-SIM",
+    "pairId": "ADV2E102-U0091-Q071",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the idiom 'with an eye to' most nearly mean?",
+    "questionUrdu": "Idiom 'with an eye to' کا قریب ترین مطلب کیا ہے؟",
+    "options": [
+      "With the intention of",
+      "Without noticing",
+      "In spite of",
+      "By accident"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب With the intention of ہے۔ یہ idiom کسی مقصد، مستقبل کے فائدے یا نتیجے کو ذہن میں رکھ کر عمل کرنے کا مفہوم دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "With an eye to",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/with%20an%20eye%20to",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/with%20an%20eye%20to",
+        "label": "With an eye to",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that the idiom with an eye to means with the intention of or with a view to."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/adverbs-and-adverb-phrases",
+        "label": "Adverbs and adverb phrases",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the idiom with an eye to means with the intention of or with a view to."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q072-SRC",
+    "pairId": "ADV2E102-U0091-Q072",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which word is the closest synonym of 'repercussion' in the sense of a result of an action?",
+    "questionUrdu": "Action کے result کے معنی میں repercussion کا قریب ترین synonym کون سا ہے؟",
+    "options": [
+      "Recollection",
+      "Payment",
+      "Invention",
+      "Consequence"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Consequence ہے۔ Repercussion کسی عمل کے بعد پیدا ہونے والے اثر یا نتیجے کو کہتے ہیں، جو اکثر غیر مطلوب ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Repercussion",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/repercussion",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/repercussion",
+        "label": "Repercussion",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines repercussion as an effect of an act or event."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/repercussion",
+        "label": "Repercussion",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a repercussion as the effect that an action or event has on something."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source hides 'Reaction' inside None of these and includes weak distractors. A more exact synonym, consequence, was supplied as a normal option."
+  },
+  {
+    "id": "ADV2E102-U0091-Q072-SIM",
+    "pairId": "ADV2E102-U0091-Q072",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which adjective most naturally describes a repercussion in ordinary usage?",
+    "questionUrdu": "عام استعمال میں repercussion کو بیان کرنے کے لیے کون سا adjective سب سے موزوں ہے؟",
+    "options": [
+      "Unintended",
+      "Edible",
+      "Transparent",
+      "Musical"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Unintended ہے۔ Repercussion عموماً کسی فیصلے کے بالواسطہ، بعد میں ظاہر ہونے والے اور اکثر غیر مطلوب نتیجے کے لیے آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Repercussion",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/repercussion",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/repercussion",
+        "label": "Repercussion",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that a repercussion commonly denotes an unintended or unwelcome consequence."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/repercussion",
+        "label": "Repercussion",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that a repercussion commonly denotes an unintended or unwelcome consequence."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q073-SRC",
+    "pairId": "ADV2E102-U0091-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to 'scintillating' when it describes light?",
+    "questionUrdu": "روشنی بیان کرتے وقت scintillating کے قریب ترین معنی والا لفظ کون سا ہے؟",
+    "options": [
+      "Smouldering",
+      "Dull",
+      "Glittering",
+      "Opaque"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Glittering ہے۔ Scintillating کا لفظی مفہوم چمکنے، دمکنے یا تیزی سے روشن flashes دینے کا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Scintillating",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/scintillating",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/scintillating",
+        "label": "Scintillating",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster gives sparkling or shining brightly as a sense of scintillating."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/scintillating",
+        "label": "Scintillating",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines the literal sense as giving off bright flashes of light."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The literal light-related sense was stated to distinguish it from the figurative meaning 'brilliantly lively'."
+  },
+  {
+    "id": "ADV2E102-U0091-Q073-SIM",
+    "pairId": "ADV2E102-U0091-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "When used figuratively about a conversation, what does 'scintillating' mean?",
+    "questionUrdu": "Conversation کے لیے مجازی طور پر scintillating استعمال ہو تو اس کا کیا مطلب ہوتا ہے؟",
+    "options": [
+      "Brilliantly lively and witty",
+      "Quiet and hesitant",
+      "Needlessly repetitive",
+      "Strictly confidential"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Brilliantly lively and witty ہے۔ مجازی استعمال میں scintillating گفتگو ذہین، پرجوش اور بہت دل چسپ ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Scintillating",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/scintillating",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/scintillating",
+        "label": "Scintillating",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that figuratively, scintillating can mean brilliantly lively and witty."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/scintillating",
+        "label": "Scintillating",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that figuratively, scintillating can mean brilliantly lively and witty."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q075-SRC",
+    "pairId": "ADV2E102-U0091-Q075",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the correct question tag: 'Mr Ali teaches very well, ____?'",
+    "questionUrdu": "صحیح question tag چنیں: 'Mr Ali teaches very well, ____?'",
+    "options": [
+      "didn't he",
+      "doesn't he",
+      "hadn't he",
+      "isn't he"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب doesn't he ہے۔ مثبت simple-present statement کے بعد negative tag آتا ہے، اور teaches کے لیے auxiliary does استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Question tags",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/question-tags",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/question-tags",
+        "label": "Question tags",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council explains that a positive present-simple statement without an auxiliary takes a negative do/does tag."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/tags",
+        "label": "Question tags",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge grammar gives the same present-simple tag rule, making 'doesn't he' correct for a third-person singular subject."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Punctuation and capitalization were normalized and a distinct fourth tag replaced the generic option."
+  },
+  {
+    "id": "ADV2E102-U0091-Q075-SIM",
+    "pairId": "ADV2E102-U0091-Q075",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Choose the correct question tag: 'Mr Ali isn't late, ____?'",
+    "questionUrdu": "صحیح question tag چنیں: 'Mr Ali isn't late, ____?'",
+    "options": [
+      "is he",
+      "isn't he",
+      "does he",
+      "was he"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب is he ہے۔ Main statement منفی ہے، اس لیے tag مثبت ہوگا اور اسی auxiliary 'is' کو subject pronoun he کے ساتھ استعمال کیا جائے گا۔",
+    "source": {
+      "type": "practice",
+      "label": "Question tags",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/question-tags",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/question-tags",
+        "label": "Question tags",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that a negative statement with isn't takes the positive question tag is he."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/tags",
+        "label": "Question tags",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that a negative statement with isn't takes the positive question tag is he."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q076-SRC",
+    "pairId": "ADV2E102-U0091-Q076",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which sentence places the frequency adverb 'never' correctly after the modal verb?",
+    "questionUrdu": "کون سا sentence frequency adverb 'never' کو modal verb کے بعد درست جگہ رکھتا ہے؟",
+    "options": [
+      "He will never mend his ways.",
+      "He never will mend his ways.",
+      "He will mend never his ways.",
+      "Never he will mend his ways."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب He will never mend his ways ہے۔ Modal auxiliary will کے بعد اور main verb mend سے پہلے never رکھنا standard word order ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Word order: never",
+      "referenceUrl": "https://dictionary.cambridge.org/us/grammar/british-grammar/word-order-never",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/word-order-never",
+        "label": "Word order: never",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge states that with more than one verb, mid-position adverbs normally follow the first auxiliary or modal."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/adverbials",
+        "label": "Adverbials",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council grammar places frequency adverbs after modal verbs and before the main verb."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source does not state an editing task and offers fragmentary replacement options. It was reconstructed as a full-sentence word-order question."
+  },
+  {
+    "id": "ADV2E102-U0091-Q076-SIM",
+    "pairId": "ADV2E102-U0091-Q076",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which sentence places 'never' correctly between 'has' and a past participle?",
+    "questionUrdu": "کون سا sentence never کو has اور past participle کے درمیان درست جگہ رکھتا ہے؟",
+    "options": [
+      "She has never visited Quetta.",
+      "She never has visited Quetta.",
+      "She has visited never Quetta.",
+      "Never she has visited Quetta."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب She has never visited Quetta ہے۔ Present perfect میں frequency adverb عموماً auxiliary has/have اور past participle کے درمیان آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Word order: never",
+      "referenceUrl": "https://dictionary.cambridge.org/us/grammar/british-grammar/word-order-never",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/word-order-never",
+        "label": "Word order: never",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that in the present perfect, never normally appears between has or have and the past participle."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/adverbials",
+        "label": "Adverbials",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that in the present perfect, never normally appears between has or have and the past participle."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q077-SRC",
+    "pairId": "ADV2E102-U0091-Q077",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the sentence: 'I'm so weary ____ your complaints.'",
+    "questionUrdu": "Sentence مکمل کریں: 'I'm so weary ____ your complaints.'",
+    "options": [
+      "from",
+      "about",
+      "of",
+      "at"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب of ہے۔ Weary of کا مطلب کسی بار بار ہونے والی چیز سے تھک یا اکتا جانا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Weary",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/weary",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q077"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/weary",
+        "label": "Weary",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records 'weary of' as the construction meaning tired of something."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/weary",
+        "label": "Weary",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster usage supports weary of for being exhausted or bored by something."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A distinct preposition replaced the generic final option."
+  },
+  {
+    "id": "ADV2E102-U0091-Q077-SIM",
+    "pairId": "ADV2E102-U0091-Q077",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to 'weary'?",
+    "questionUrdu": "Weary کے معنی کے سب سے قریب کون سا لفظ ہے؟",
+    "options": [
+      "Tired",
+      "Eager",
+      "Silent",
+      "Wealthy"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Tired ہے۔ Weary جسمانی تھکن یا کسی مسلسل صورت حال سے ذہنی اکتاہٹ دونوں کے لیے استعمال ہو سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Weary",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/weary",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q077",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/weary",
+        "label": "Weary",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that weary means tired or exhausted."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/weary",
+        "label": "Weary",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that weary means tired or exhausted."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q078-SRC",
+    "pairId": "ADV2E102-U0091-Q078",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which device accelerates charged particles along a spiral path using a magnetic field and an alternating electric field?",
+    "questionUrdu": "کون سا device magnetic field اور alternating electric field سے charged particles کو spiral path میں accelerate کرتا ہے؟",
+    "options": [
+      "Transistor",
+      "Audio amplifier",
+      "Cyclotron",
+      "Transformer"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Cyclotron ہے۔ Magnetic field ذرے کا راستہ موڑتا اور alternating electric field ہر gap crossing پر اسے مزید توانائی دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "DOE Explains: Cyclotrons",
+      "referenceUrl": "https://www.energy.gov/science/doe-explainscyclotrons",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q078"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainscyclotrons",
+        "label": "DOE Explains: Cyclotrons",
+        "publisher": "United States Department of Energy",
+        "authorityId": "us-department-energy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The US Department of Energy explains that a cyclotron accelerates charged particles using electric and magnetic fields."
+      },
+      {
+        "url": "https://www.iaea.org/topics/cyclotrons",
+        "label": "Cyclotrons",
+        "publisher": "International Atomic Energy Agency",
+        "authorityId": "iaea",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The IAEA describes cyclotrons as particle accelerators that produce beams of charged particles."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was made technically precise and the generic final option was replaced."
+  },
+  {
+    "id": "ADV2E102-U0091-Q078-SIM",
+    "pairId": "ADV2E102-U0091-Q078",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Who invented the cyclotron?",
+    "questionUrdu": "Cyclotron کس نے ایجاد کیا؟",
+    "options": [
+      "Ernest O. Lawrence",
+      "Ernest Rutherford",
+      "Niels Bohr",
+      "J. J. Thomson"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ernest O. Lawrence ہے۔ انہوں نے 1930 کی دہائی کے آغاز میں cyclotron تیار کیا اور اس پیش رفت پر بعد میں Nobel Prize حاصل کیا۔",
+    "source": {
+      "type": "practice",
+      "label": "DOE Explains: Cyclotrons",
+      "referenceUrl": "https://www.energy.gov/science/doe-explainscyclotrons",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q078",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.energy.gov/science/doe-explainscyclotrons",
+        "label": "DOE Explains: Cyclotrons",
+        "publisher": "United States Department of Energy",
+        "authorityId": "us-department-energy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "United States Department of Energy supports that Ernest O. Lawrence invented the cyclotron."
+      },
+      {
+        "url": "https://www.iaea.org/topics/cyclotrons",
+        "label": "Cyclotrons",
+        "publisher": "International Atomic Energy Agency",
+        "authorityId": "iaea",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "International Atomic Energy Agency supports that Ernest O. Lawrence invented the cyclotron."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q079-SRC",
+    "pairId": "ADV2E102-U0091-Q079",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the sentence in the simple past: 'Yesterday, they ____ fruit.'",
+    "questionUrdu": "Simple past میں sentence مکمل کریں: 'Yesterday, they ____ fruit.'",
+    "options": [
+      "ate",
+      "eats",
+      "eaten",
+      "eat"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ate ہے۔ Eat ایک irregular verb ہے؛ اس کی simple-past form ate اور past participle eaten ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Past simple",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/past-simple-i-worked",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q079"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/past-simple-i-worked",
+        "label": "Past simple",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge grammar explains that the simple past describes completed past events and that ate is the past form of eat."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/past-simple",
+        "label": "Past simple",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council's past-simple guide supports using the simple-past verb after an explicit past-time marker."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source has no time marker, so more than one tense could be supplied. 'Yesterday' and 'simple past' were added to make ate uniquely correct."
+  },
+  {
+    "id": "ADV2E102-U0091-Q079-SIM",
+    "pairId": "ADV2E102-U0091-Q079",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which is the past participle of the verb 'eat'?",
+    "questionUrdu": "Verb 'eat' کی past participle form کون سی ہے؟",
+    "options": [
+      "eaten",
+      "ate",
+      "eating",
+      "eats"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب eaten ہے۔ Present perfect اور passive-like perfect constructions میں have/has/had کے بعد eaten استعمال ہوتا ہے، جبکہ ate simple past ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Past simple",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/past-simple-i-worked",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q079",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/past-simple-i-worked",
+        "label": "Past simple",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the past participle of eat is eaten."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/past-simple",
+        "label": "Past simple",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that the past participle of eat is eaten."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0091-Q080-SRC",
+    "pairId": "ADV2E102-U0091-Q080",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which adverb best completes the sentence to mean 'without stopping elsewhere': 'I went ____ to my family.'",
+    "questionUrdu": "'بغیر کہیں رکے' کے معنی دینے کے لیے sentence 'I went ____ to my family' میں کون سا adverb درست ہے؟",
+    "options": [
+      "strait",
+      "directly",
+      "rightly",
+      "widely"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب directly ہے۔ یہاں directly کا مطلب راستے میں کسی دوسری جگہ رکے بغیر سیدھا منزل پر جانا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Directly",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/directly",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q080"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/directly",
+        "label": "Directly",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines directly as without anyone or anything else being involved or without delay."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/directly",
+        "label": "Directly",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster gives straightaway and in a direct manner as meanings of directly."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The intended meaning was added to remove contextual ambiguity; the scan's misspelled distractor 'Strait' is disclosed and retained."
+  },
+  {
+    "id": "ADV2E102-U0091-Q080-SIM",
+    "pairId": "ADV2E102-U0091-Q080",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "In the sentence 'Come directly after lunch,' what does 'directly' mean?",
+    "questionUrdu": "Sentence 'Come directly after lunch' میں directly کا کیا مطلب ہے؟",
+    "options": [
+      "Immediately",
+      "In a straight line",
+      "Politely",
+      "Secretly"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Immediately ہے۔ اس context میں directly جگہ کی سمت نہیں بلکہ وقت کی فوری ترتیب، یعنی lunch کے فوراً بعد، ظاہر کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Directly",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/directly",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0091-q080",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/directly",
+        "label": "Directly",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that directly can mean immediately in a time expression."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/directly",
+        "label": "Directly",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that directly can mean immediately in a time expression."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

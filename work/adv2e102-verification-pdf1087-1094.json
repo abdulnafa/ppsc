@@ -1,0 +1,5381 @@
+[
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q001",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1088,
+    "sourceBookPage": 1087,
+    "sourceQuestionNumber": 1,
+    "question": "Who wrote the book \"The Sufis\"?",
+    "options": [
+      "Idries Shah",
+      "Nisar Shah",
+      "Jalal ud din Rumi",
+      "Sheikh Nasiruddin Mahmud"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://idriesshahfoundation.org/books/the-sufis/",
+        "label": "The Sufis",
+        "publisher": "Idries Shah Foundation",
+        "authorityId": "idries-shah-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The foundation's book page identifies Idries Shah as the author of The Sufis."
+      },
+      {
+        "url": "https://www.penguinrandomhouse.com/books/322207/the-way-of-the-sufi-by-idries-shah/",
+        "label": "The Way of the Sufi: author profile",
+        "publisher": "Penguin Random House",
+        "authorityId": "penguin-random-house",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The publisher identifies Idries Shah and lists The Sufis among the works for which he is known."
+      }
+    ],
+    "referenceUrl": "https://idriesshahfoundation.org/books/the-sufis/",
+    "referenceLabel": "The Sufis",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": ""
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q002",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1088,
+    "sourceBookPage": 1087,
+    "sourceQuestionNumber": 2,
+    "question": "Which is the world's most polluted city, as per the US Air Quality Index?",
+    "options": [
+      "Lahore",
+      "Karachi",
+      "Delhi",
+      "Tokyo"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Held unresolved: the question gives no date, averaging period, pollutant, monitoring network or AQI snapshot. A live US AQI city ranking changes hourly, so the printed Lahore answer is not a stable, uniquely verifiable fact."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q003",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1088,
+    "sourceBookPage": 1087,
+    "sourceQuestionNumber": 3,
+    "question": "Which country imposed Pressler Amendment sanctions on Pakistan in 1990?",
+    "options": [
+      "United Kingdom",
+      "United States",
+      "China",
+      "Australia"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://2001-2009.state.gov/r/pa/prs/ps/2001/5101.htm",
+        "label": "U.S. sanctions on India and Pakistan",
+        "publisher": "U.S. Department of State",
+        "authorityId": "us-state-department",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The State Department identifies the Pressler Amendment as United States legislation governing sanctions on Pakistan."
+      },
+      {
+        "url": "https://www.armscontrol.org/act/2000-01/confrontation-and-retreat-us-congress-and-south-asian-nuclear-tests-key-legislation",
+        "label": "U.S. Congress and South Asian nuclear sanctions",
+        "publisher": "Arms Control Association",
+        "authorityId": "arms-control-association",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent chronology records the U.S. Pressler Amendment sanctions imposed on Pakistan in 1990."
+      }
+    ],
+    "referenceUrl": "https://2001-2009.state.gov/r/pa/prs/ps/2001/5101.htm",
+    "referenceLabel": "U.S. sanctions on India and Pakistan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1990",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The sentence fragment and country abbreviations were normalized; the answer remains the United States."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q004",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1088,
+    "sourceBookPage": 1087,
+    "sourceQuestionNumber": 4,
+    "question": "Which language is commonly spoken in both Chitral and parts of Ghizer District?",
+    "options": [
+      "Khowar",
+      "Balti",
+      "Shina",
+      "Wakhi"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.khowarchitral.com/en",
+        "label": "Khowar language and Chitral",
+        "publisher": "Khowar Academy Chitral",
+        "authorityId": "khowar-academy",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Khowar Academy identifies Khowar as the principal language of Chitral."
+      },
+      {
+        "url": "https://uog.edu.pk/downloads/journal/PJLTS_Issue_07_No_02.pdf",
+        "label": "Khowar language communities",
+        "publisher": "University of Gujrat",
+        "authorityId": "university-of-gujrat",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The linguistic study independently documents Khowar in Chitral and Ghizer."
+      }
+    ],
+    "referenceUrl": "https://www.khowarchitral.com/en",
+    "referenceLabel": "Khowar language and Chitral",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The ungrammatical source wording was normalized and the claim was scoped to shared speech communities rather than implying a single universal language."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q005",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1088,
+    "sourceBookPage": 1087,
+    "sourceQuestionNumber": 5,
+    "question": "Which amendment relates with Shariah Bill?",
+    "options": [
+      "8th",
+      "9th",
+      "10th",
+      "11th"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Held unresolved: the source does not identify the country, bill title, date or legislative stage. More than one proposal has been called a Shariah Bill, so '9th Amendment' cannot be verified as a unique answer without inventing context."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q006",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1088,
+    "sourceBookPage": 1087,
+    "sourceQuestionNumber": 6,
+    "question": "In which year did Moinuddin Chishti migrate from Persia:",
+    "options": [
+      "1192",
+      "1195",
+      "1197",
+      "1199"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Held unresolved: reliable biographies establish Muin al-Din Chishti's broad migration and settlement chronology but do not independently support one of the four exact years offered for an undefined 'migration from Persia'."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q007",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1088,
+    "sourceBookPage": 1087,
+    "sourceQuestionNumber": 7,
+    "question": "Which article of the Constitution of Pakistan 1973 deals with the National Economic Council?",
+    "options": [
+      "Article 122",
+      "Article 137",
+      "Article 156",
+      "Article 174"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator9d8e2ecc414c6d3371ac41114b61a2c4.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan, Article 156",
+        "publisher": "Pakistan Code, Ministry of Law and Justice",
+        "authorityId": "pakistan-code",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Article 156 states that the National Economic Council shall consist of the Prime Minister, who shall be the chairman."
+      },
+      {
+        "url": "https://finance.gov.pk/Budget_Manual_1stEdition_2020.pdf",
+        "label": "Budget Manual, Federal Government of Pakistan",
+        "publisher": "Finance Division, Government of Pakistan",
+        "authorityId": "pakistan-finance-division",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The federal Budget Manual describes the National Economic Council as chaired by the Prime Minister."
+      }
+    ],
+    "referenceUrl": "https://pakistancode.gov.pk/pdffiles/administrator9d8e2ecc414c6d3371ac41114b61a2c4.pdf",
+    "referenceLabel": "Constitution of the Islamic Republic of Pakistan, Article 156",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The Constitution itself and the Finance Division identify Article 156 as the National Economic Council provision."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q008",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1088,
+    "sourceBookPage": 1087,
+    "sourceQuestionNumber": 8,
+    "question": "Which listed ruler is traditionally known by the epithet 'Breaker of Idols'?",
+    "options": [
+      "Mahmud Ghazni",
+      "Babar",
+      "Aurangzeb",
+      "Akbar"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.iranicaonline.org/articles/mahmud-b-sebuktegin/",
+        "label": "Mahmud ibn Sebuktegin",
+        "publisher": "Encyclopaedia Iranica",
+        "authorityId": "encyclopaedia-iranica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Iranica documents Mahmud of Ghazna and the iconoclastic image attached to his Indian campaigns."
+      },
+      {
+        "url": "https://www.ibiblio.org/britishraj/Jackson3/chapter02.html",
+        "label": "Mahmud of Ghazni",
+        "publisher": "Internet Medieval Sourcebook, Fordham University",
+        "authorityId": "fordham-sourcebooks",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The historical text independently records Mahmud's destruction of major idols and temples."
+      }
+    ],
+    "referenceUrl": "https://www.iranicaonline.org/articles/mahmud-b-sebuktegin/",
+    "referenceLabel": "Mahmud ibn Sebuktegin",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The question was qualified as a traditional epithet because the phrase is a later historical characterization rather than a formal title."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q009",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1088,
+    "sourceBookPage": 1087,
+    "sourceQuestionNumber": 9,
+    "question": "Which Constitution introduced a bicameral federal legislature in Pakistan?",
+    "options": [
+      "1956 Constitution",
+      "1962 Constitution",
+      "1973 Constitution",
+      "None of these"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.senate.gov.pk/en/essence.php?catid=4&cattitle=About+the+Senate&id=1098&subcatid=138",
+        "label": "About the Senate",
+        "publisher": "Senate of Pakistan",
+        "authorityId": "pakistan-senate",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Senate explains that the 1973 Constitution created a bicameral Parliament consisting of the National Assembly and Senate."
+      },
+      {
+        "url": "https://www.na.gov.pk/en/content.php?id=75.",
+        "label": "Constitutional history of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly's constitutional history independently records the bicameral legislature under the 1973 Constitution."
+      }
+    ],
+    "referenceUrl": "https://www.senate.gov.pk/en/essence.php?catid=4&cattitle=About+the+Senate&id=1098&subcatid=138",
+    "referenceLabel": "About the Senate",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The wording was normalized; the verified answer is the Constitution of 1973."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q010",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 10,
+    "question": "In which year was the Radcliffe Award announced?",
+    "options": [
+      "1944",
+      "1945",
+      "1946",
+      "1947"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://en.wikisource.org/wiki/Radcliffe_Award",
+        "label": "Radcliffe Award",
+        "publisher": "Wikisource transcription of the Gazette of India",
+        "authorityId": "wikisource-primary-documents",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The transcribed official award is dated and was published in August 1947."
+      },
+      {
+        "url": "https://searcharchives.bl.uk/catalog/040-000884211",
+        "label": "Radcliffe boundary papers",
+        "publisher": "British Library",
+        "authorityId": "british-library",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Library catalogue dates the Radcliffe boundary material to the 1947 partition."
+      }
+    ],
+    "referenceUrl": "https://en.wikisource.org/wiki/Radcliffe_Award",
+    "referenceLabel": "Radcliffe Award",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar was repaired; the answer is 1947."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q011",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 11,
+    "question": "In 1920, the All India Home Rule League changed its name to what?",
+    "options": [
+      "Swarajya Sabha",
+      "Hindu Mahasabha",
+      "Indian National Congress",
+      "None of these"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://nehruarchive.in/documents/the-swaraj-sabha-facts-about-changes-in-the-constitution-of-the-all-india-home-rule-league-18-october-1920-x87zk",
+        "label": "The Swaraj Sabha",
+        "publisher": "Nehru Archive",
+        "authorityId": "nehru-archive",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The contemporary 1920 document explains that the All India Home Rule League changed its name to Swarajya Sabha."
+      },
+      {
+        "url": "https://dspace.gipe.ac.in/xmlui/bitstream/handle/10973/17817/GIPE-018435.pdf?isAllowed=y&sequence=3",
+        "label": "Indian Annual Register 1920",
+        "publisher": "Gokhale Institute of Politics and Economics",
+        "authorityId": "gokhale-institute",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The contemporary annual register independently records the Home Rule League's change of name to Swarajya Sabha."
+      }
+    ],
+    "referenceUrl": "https://nehruarchive.in/documents/the-swaraj-sabha-facts-about-changes-in-the-constitution-of-the-all-india-home-rule-league-18-october-1920-x87zk",
+    "referenceLabel": "The Swaraj Sabha",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1920",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source reversed the direction of the name change. It was reconstructed so Swarajya Sabha is the uniquely correct answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q012",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 12,
+    "question": "Sir Sikandar Hayat Khan served as premier of which province in British India?",
+    "options": [
+      "Punjab",
+      "Sindh",
+      "North-West Frontier Province",
+      "Balochistan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.pap.gov.pk/uploads/previous_members/L-1937-1945.htm",
+        "label": "Punjab Legislative Assembly members, 1937-1945",
+        "publisher": "Provincial Assembly of the Punjab",
+        "authorityId": "punjab-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official assembly history places Sir Sikandar Hayat Khan's premiership in Punjab."
+      },
+      {
+        "url": "https://www.britannica.com/biography/Sikandar-Hayat-Khan",
+        "label": "Sikandar Hayat Khan",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently identifies Sikandar Hayat Khan as premier of Punjab."
+      }
+    ],
+    "referenceUrl": "https://www.pap.gov.pk/uploads/previous_members/L-1937-1945.htm",
+    "referenceLabel": "Punjab Legislative Assembly members, 1937-1945",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The anachronistic phrase 'Province of Pakistan' was repaired to British India and chief minister was normalized to premier."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q013",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 13,
+    "question": "In which year was the Indian National Congress session held on the bank of the Ravi at Lahore?",
+    "options": [
+      "1926",
+      "1929",
+      "1931",
+      "1933"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://nehruarchive.in/themes/the-lahore-congress-1929",
+        "label": "The Lahore Congress, 1929",
+        "publisher": "Nehru Archive",
+        "authorityId": "nehru-archive",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archive identifies the Indian National Congress Lahore session beside the Ravi in December 1929."
+      },
+      {
+        "url": "https://www.britannica.com/event/Indian-National-Congress",
+        "label": "Indian National Congress",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently dates the Lahore session that adopted complete independence to 1929."
+      }
+    ],
+    "referenceUrl": "https://nehruarchive.in/themes/the-lahore-congress-1929",
+    "referenceLabel": "The Lahore Congress, 1929",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar was normalized; the answer is 1929."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q014",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 14,
+    "question": "Pakistan purchased Gwadar from Muscat (Oman) in which year?",
+    "options": [
+      "1947",
+      "1958",
+      "1962",
+      "1977"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.gda.gov.pk/history-of-gwadar",
+        "label": "History of Gwadar",
+        "publisher": "Gwadar Development Authority",
+        "authorityId": "gwadar-development-authority",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The GDA states that Pakistan purchased Gwadar from Oman on 8 September 1958."
+      },
+      {
+        "url": "https://www.ndma.gov.pk/storage/publications/July2024/krTtLXzNPupl0aYQRoud.pdf",
+        "label": "Gwadar development master plan",
+        "publisher": "National Disaster Management Authority Pakistan",
+        "authorityId": "pakistan-ndma",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official publication records Pakistan's purchase of Gwadar from Oman in September 1958."
+      }
+    ],
+    "referenceUrl": "https://www.gda.gov.pk/history-of-gwadar",
+    "referenceLabel": "History of Gwadar",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "This source repeats the already verified fact that Pakistan acquired Gwadar from Oman in 1958."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q015",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 15,
+    "question": "Which listed Pakistani cricketer received the Sitara-i-Imtiaz posthumously in 2021?",
+    "options": [
+      "Khalid Wazir",
+      "Abdul Qadir",
+      "Akhtar Sarfaraz",
+      "Hafeez Kardar"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.pcb.com.pk/press-release-detail/abdul-qadir-inducted-into-the-pcb-hall-of-fame-posthumously.html",
+        "label": "Abdul Qadir inducted into PCB Hall of Fame",
+        "publisher": "Pakistan Cricket Board",
+        "authorityId": "pakistan-cricket-board",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PCB identifies the late Abdul Qadir and records his posthumous national recognition."
+      },
+      {
+        "url": "https://www.brecorder.com/news/40076901/pakistan-day-governor-confers-civil-awards-on-different-personalities",
+        "label": "Pakistan Day civil awards",
+        "publisher": "Business Recorder",
+        "authorityId": "business-recorder",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent report records the posthumous Sitara-i-Imtiaz conferred on Abdul Qadir."
+      }
+    ],
+    "referenceUrl": "https://www.pcb.com.pk/press-release-detail/abdul-qadir-inducted-into-the-pcb-hall-of-fame-posthumously.html",
+    "referenceLabel": "Abdul Qadir inducted into PCB Hall of Fame",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2021",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar was repaired and the award year added; Abdul Qadir is the unique answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q016",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 16,
+    "question": "Who announced the discovery of the Indus Valley Civilization to the world in 1924?",
+    "options": [
+      "John Marshall",
+      "Mortimer Wheeler",
+      "Alexander Cunningham",
+      "Rakhaldas Banerji"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.pib.gov.in/newsite/erelcontent.aspx?lang=2&reg=48&relid=78804",
+        "label": "Centenary of the Archaeological Survey of India",
+        "publisher": "Press Information Bureau, Government of India",
+        "authorityId": "india-press-information-bureau",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government history credits Sir John Marshall with announcing the Indus civilization's discovery to the world in 1924."
+      },
+      {
+        "url": "https://museumsanchiasi.mp.gov.in/about_sir_john_marshall.html",
+        "label": "About Sir John Marshall",
+        "publisher": "Archaeological Survey of India, Sanchi Museum",
+        "authorityId": "asi-sanchi-museum",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The museum biography independently records Marshall's role in bringing the Indus civilization's discovery to public attention."
+      }
+    ],
+    "referenceUrl": "https://www.pib.gov.in/newsite/erelcontent.aspx?lang=2&reg=48&relid=78804",
+    "referenceLabel": "Centenary of the Archaeological Survey of India",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1924",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague 'discovered' wording was repaired. Daya Ram Sahni and R. D. Banerji excavated key sites; John Marshall announced the civilization's discovery in 1924, which preserves the intended option uniquely."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q017",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 17,
+    "question": "A referendum on allowing Pervez Musharraf to continue as President for five years was held in Pakistan on:",
+    "options": [
+      "30 April 1998",
+      "30 April 2000",
+      "30 April 2001",
+      "30 April 2002"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.refworld.org/reference/annualreport/usdos/2003/en/31237",
+        "label": "Pakistan country report for 2002",
+        "publisher": "United States Department of State",
+        "authorityId": "us-state-department",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The U.S. State Department report records that Musharraf held the referendum on 30 April 2002."
+      },
+      {
+        "url": "https://www.refworld.org/reference/annualreport/hrw/2003/30209",
+        "label": "Pakistan events of 2002",
+        "publisher": "Human Rights Watch",
+        "authorityId": "human-rights-watch",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Human Rights Watch's 2002 chronology dates the presidential referendum to 30 April 2002."
+      }
+    ],
+    "referenceUrl": "https://www.refworld.org/reference/annualreport/usdos/2003/en/31237",
+    "referenceLabel": "Pakistan country report for 2002",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The exact 30 April 2002 referendum date was already independently verified."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q018",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 18,
+    "question": "On which date in 1947 was the Mountbatten Plan for the partition of British India officially announced?",
+    "options": [
+      "3rd June 1947",
+      "17th July 1947",
+      "14th August 1947",
+      "None of these"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.nationalarchives.gov.uk/education/resources/partition-of-british-india/",
+        "label": "Partition of British India",
+        "publisher": "The National Archives (UK)",
+        "authorityId": "uk-national-archives",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archive dates the 3 June 1947 plan for partitioning British India."
+      },
+      {
+        "url": "https://www.nationalarchives.gov.uk/education/resources/indian-independence/mountbatten-radio-broadcast/",
+        "label": "Mountbatten radio broadcast",
+        "publisher": "The National Archives education service",
+        "authorityId": "uk-national-archives-education",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The contemporary broadcast transcript independently identifies 3 June 1947 as the announcement date."
+      }
+    ],
+    "referenceUrl": "https://www.nationalarchives.gov.uk/education/resources/partition-of-british-india/",
+    "referenceLabel": "Partition of British India",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1947-06-03",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The complete event name and year were stated; the answer is 3 June 1947."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q019",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 19,
+    "question": "Muhammad Zia-ul-Haq was which numbered President of Pakistan?",
+    "options": [
+      "5th",
+      "6th",
+      "7th",
+      "8th"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://na.gov.pk/en/president_list.php/gallery.php",
+        "label": "Presidents of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official chronological list places Muhammad Zia-ul-Haq sixth among Pakistan's presidents."
+      },
+      {
+        "url": "https://cabinet.gov.pk/SiteImage/Downloads/president.pdf",
+        "label": "Presidents of Pakistan",
+        "publisher": "Cabinet Division, Government of Pakistan",
+        "authorityId": "pakistan-cabinet-division",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Cabinet Division's independent chronological record identifies Zia-ul-Haq as the sixth president."
+      }
+    ],
+    "referenceUrl": "https://na.gov.pk/en/president_list.php/gallery.php",
+    "referenceLabel": "Presidents of Pakistan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar and name punctuation were normalized; the answer is sixth."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q020",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 20,
+    "question": "In which year did K. B. Hedgewar found the Rashtriya Swayamsevak Sangh (RSS)?",
+    "options": [
+      "1922",
+      "1923",
+      "1924",
+      "1925"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.rss.org/Encyc/2017/6/3/basic-faq-on-rss-eng.amp.html",
+        "label": "Basic FAQ on RSS",
+        "publisher": "Rashtriya Swayamsevak Sangh",
+        "authorityId": "rss",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The organization's history states that K. B. Hedgewar founded RSS in 1925."
+      },
+      {
+        "url": "https://www.britannica.com/topic/Rashtriya-Swayamsevak-Sangh",
+        "label": "Rashtriya Swayamsevak Sangh",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently dates the founding of RSS by Hedgewar to 1925."
+      }
+    ],
+    "referenceUrl": "https://www.rss.org/Encyc/2017/6/3/basic-faq-on-rss-eng.amp.html",
+    "referenceLabel": "Basic FAQ on RSS",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar and the founder's initials were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q021",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 21,
+    "question": "In which year did Pakistan join SEATO?",
+    "options": [
+      "1949",
+      "1954",
+      "1973",
+      "1979"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://history.state.gov/milestones/1953-1960/seato",
+        "label": "Southeast Asia Treaty Organization",
+        "publisher": "Office of the Historian, U.S. Department of State",
+        "authorityId": "us-state-historian",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official history records Pakistan among the states that signed the Manila Pact creating SEATO in 1954."
+      },
+      {
+        "url": "https://treaties.un.org/Pages/showDetails.aspx?objid=080000028014b021",
+        "label": "Southeast Asia Collective Defense Treaty",
+        "publisher": "United Nations Treaty Collection",
+        "authorityId": "un-treaty-collection",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The treaty record independently dates Pakistan's participation in the Manila Pact to 1954."
+      }
+    ],
+    "referenceUrl": "https://history.state.gov/milestones/1953-1960/seato",
+    "referenceLabel": "Southeast Asia Treaty Organization",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The sentence was normalized; the answer is 1954."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q022",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 22,
+    "question": "During whose presidency was Sheikh Mujibur Rahman arrested in March 1971?",
+    "options": [
+      "Ayub Khan",
+      "Sikandar Mirza",
+      "Yahya Khan",
+      "Zulfiqar Ali Bhutto"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://2001-2009.state.gov/r/pa/ho/frus/nixon/xi/45604.htm",
+        "label": "Telegram on the arrest of Sheikh Mujibur Rahman",
+        "publisher": "U.S. Department of State, FRUS",
+        "authorityId": "us-state-frus",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The contemporary diplomatic record places Sheikh Mujib's March 1971 arrest under President Yahya Khan."
+      },
+      {
+        "url": "https://supremecourt.gov.bd/resources/documents/650628_CRIMINALAP62_of_2013.pdf",
+        "label": "Bangladesh Supreme Court judgment on 1971 events",
+        "publisher": "Supreme Court of Bangladesh",
+        "authorityId": "bangladesh-supreme-court",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The judgment independently records Sheikh Mujibur Rahman's arrest on 25 March 1971 during Yahya Khan's rule."
+      }
+    ],
+    "referenceUrl": "https://2001-2009.state.gov/r/pa/ho/frus/nixon/xi/45604.htm",
+    "referenceLabel": "Telegram on the arrest of Sheikh Mujibur Rahman",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1971-03",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The broad 'era' wording was repaired to the March 1971 arrest, making Yahya Khan uniquely correct."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q023",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 23,
+    "question": "In which year was the Vernacular Press Act enacted in British India?",
+    "options": [
+      "1870",
+      "1878",
+      "1882",
+      "1886"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.bl.uk/learning/timeline/item124195.html",
+        "label": "Vernacular Press Act",
+        "publisher": "British Library",
+        "authorityId": "british-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Library dates the Vernacular Press Act to 1878."
+      },
+      {
+        "url": "https://www.britannica.com/topic/Vernacular-Press-Act",
+        "label": "Vernacular Press Act",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently identifies the Vernacular Press Act of 1878."
+      }
+    ],
+    "referenceUrl": "https://www.bl.uk/learning/timeline/item124195.html",
+    "referenceLabel": "Vernacular Press Act",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The malformed verb 'given' was replaced with enacted."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q024",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 24,
+    "question": "Who was Pakistan's first civilian Chief Martial Law Administrator?",
+    "options": [
+      "Ayub Khan",
+      "Sikandar Mirza",
+      "Zulfiqar Ali Bhutto",
+      "Pervaiz Musharraf"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://na.gov.pk/en/content.php/content.php?id=75",
+        "label": "Parliamentary history of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly's official history states that Zulfikar Ali Bhutto became Pakistan's first civilian Chief Martial Law Administrator on 20 December 1971."
+      },
+      {
+        "url": "https://www.senate.gov.pk/uploads/documents/Gali-e-Dastoor%20Final.pdf",
+        "label": "Gali-e-Dastoor parliamentary history",
+        "publisher": "Senate of Pakistan",
+        "authorityId": "pakistan-senate",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Senate's parliamentary-history publication identifies Zulfikar Ali Bhutto as the first civilian Chief Martial Law Administrator."
+      }
+    ],
+    "referenceUrl": "https://na.gov.pk/en/content.php/content.php?id=75",
+    "referenceLabel": "Parliamentary history of Pakistan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Civil was corrected to civilian; Zulfikar Ali Bhutto is the verified answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q025",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 25,
+    "question": "Forests are only ______ of the total area of Pakistan.",
+    "options": [
+      "3.3%",
+      "4.8%",
+      "8.1%",
+      "6.8%"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Held unresolved: Pakistan forest percentages vary by reference year and by whether the measure is forest land, forest cover or tree cover. The source supplies neither a year nor a definition, so 4.8% is not uniquely verifiable."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q026",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 26,
+    "question": "Who chaired the opening sitting of the first Sindh Legislative Assembly in April 1937?",
+    "options": [
+      "G.M. Syed",
+      "Dewan Bahadur Hiranand Khemchand",
+      "Sir Shahnawaz Bhutto",
+      "Muhammad Ayub Khuhro"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.pas.gov.pk/uploads/downloads/mpas_1st_assembly.pdf",
+        "label": "Members and proceedings of the first Sindh Legislative Assembly",
+        "publisher": "Provincial Assembly of Sindh",
+        "authorityId": "sindh-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official record states that Dewan Bahadur Hiranand Khemchand was appointed to chair the opening sitting in April 1937."
+      },
+      {
+        "url": "https://www.pas.gov.pk/index.php/pages/detail/85",
+        "label": "History of the Sindh Assembly",
+        "publisher": "Provincial Assembly of Sindh Secretariat",
+        "authorityId": "sindh-assembly-secretariat",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Assembly history independently documents the formation and first sitting of the 1937 legislature."
+      }
+    ],
+    "referenceUrl": "https://www.pas.gov.pk/uploads/downloads/mpas_1st_assembly.pdf",
+    "referenceLabel": "Members and proceedings of the first Sindh Legislative Assembly",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1937-04",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source calls Hiranand Khemchand the first Speaker, but the official record distinguishes the member appointed to chair the opening sitting from the subsequently elected Speaker. The stem was repaired to the documented role."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q027",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 27,
+    "question": "On which date did the Government of India Act 1858 receive royal assent?",
+    "options": [
+      "2nd August 1858",
+      "2nd September 1858",
+      "2nd October 1858",
+      "2nd November 1858"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.legislative.gov.in/list-acts-1858",
+        "label": "Acts of 1858",
+        "publisher": "Legislative Department, Government of India",
+        "authorityId": "india-legislative-department",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official acts list dates the Government of India Act 1858 to 2 August 1858."
+      },
+      {
+        "url": "https://www.britannica.com/event/Government-of-India-Acts",
+        "label": "Government of India Acts",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently identifies the Government of India Act of 1858 and its transfer of rule to the Crown."
+      }
+    ],
+    "referenceUrl": "https://www.legislative.gov.in/list-acts-1858",
+    "referenceLabel": "Acts of 1858",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1858-08-02",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The legal event was specified as royal assent; the answer is 2 August 1858."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q028",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 28,
+    "question": "Which country becomes the largest exporter of Camel meat worldwide in 2020 according to the Global Export survey 2020?",
+    "options": [
+      "Pakistan",
+      "Saudi Arabia",
+      "India",
+      "Sudan"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Held unresolved: the source does not identify the purported 'Global Export Survey 2020', its publisher, product code or whether it measures meat value, volume, live camels or total camel products. Two independent authoritative sources could not establish Pakistan as the unique answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q029",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 29,
+    "question": "Which system of government was established by Pakistan's Constitution of 1973?",
+    "options": [
+      "Presidential",
+      "Parliamentary",
+      "Autonomous",
+      "Unilateral"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.na.gov.pk/en/content.php?id=75.",
+        "label": "Constitutional history",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly describes the 1973 Constitution as providing a parliamentary form of government."
+      },
+      {
+        "url": "https://www.senate.gov.pk/uploads/documents/Constitution%20of%20Pakistan.pdf",
+        "label": "Constitution of Pakistan",
+        "publisher": "Senate of Pakistan",
+        "authorityId": "pakistan-senate",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Constitution's provisions independently establish a parliamentary executive responsible to the National Assembly."
+      }
+    ],
+    "referenceUrl": "https://www.na.gov.pk/en/content.php?id=75.",
+    "referenceLabel": "Constitutional history",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar was repaired and the answer is parliamentary."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q030",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 30,
+    "question": "Who wrote the book The Emergence of Pakistan:",
+    "options": [
+      "Chaudhri Muhammad Ali",
+      "Allama Iqbal",
+      "Muhammad Ali Bogra",
+      "Aitzaz Ahsan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://openlibrary.org/works/OL5876637W/The_emergence_of_Pakistan",
+        "label": "The Emergence of Pakistan",
+        "publisher": "Open Library, Internet Archive",
+        "authorityId": "open-library",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Open Library attributes The Emergence of Pakistan to Chaudhri Muhammad Ali."
+      },
+      {
+        "url": "https://search.worldcat.org/title/243377",
+        "label": "The Emergence of Pakistan catalogue record",
+        "publisher": "WorldCat",
+        "authorityId": "worldcat",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WorldCat independently catalogues Chaudhri Muhammad Ali as the author."
+      }
+    ],
+    "referenceUrl": "https://openlibrary.org/works/OL5876637W/The_emergence_of_Pakistan",
+    "referenceLabel": "The Emergence of Pakistan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The author's name and title punctuation were standardized; this repeats an already verified source fact."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q031",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 31,
+    "question": "In which year were separate electorates for Muslims conceded under the Indian Councils Act?",
+    "options": [
+      "1909",
+      "1916",
+      "1919",
+      "1928"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/Edw7/9/4/enacted",
+        "label": "Indian Councils Act 1909",
+        "publisher": "UK Legislation",
+        "authorityId": "uk-legislation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The enacted Indian Councils Act 1909 implemented the reforms associated with separate Muslim electorates."
+      },
+      {
+        "url": "https://www.britannica.com/event/Indian-Councils-Act-of-1909",
+        "label": "Indian Councils Act of 1909",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently states that the 1909 act introduced separate electorates for Muslims."
+      }
+    ],
+    "referenceUrl": "https://www.legislation.gov.uk/ukpga/Edw7/9/4/enacted",
+    "referenceLabel": "Indian Councils Act 1909",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The reform context was added; the answer is 1909."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q032",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 32,
+    "question": "Sultan Bahu lived during the reigns of which listed Mughal emperors?",
+    "options": [
+      "Shah Jahan only",
+      "Aurangzeb only",
+      "Both Shah Jahan and Aurangzeb",
+      "Neither"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/sultan-bahu",
+        "label": "Sultan Bahu",
+        "publisher": "TDV Encyclopedia of Islam",
+        "authorityId": "tdv-islam-encyclopedia",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The encyclopedia dates Sultan Bahu's life to 1630-1691, overlapping the reigns of Shah Jahan and Aurangzeb."
+      },
+      {
+        "url": "https://pu.edu.pk/images/journal/HistoryPStudies/PDF_Files/6_v30_2_2017.pdf",
+        "label": "Sultan Bahu in Mughal Punjab",
+        "publisher": "University of the Punjab",
+        "authorityId": "punjab-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The historical study independently places Sultan Bahu's life under both Shah Jahan and Aurangzeb."
+      }
+    ],
+    "referenceUrl": "https://islamansiklopedisi.org.tr/sultan-bahu",
+    "referenceLabel": "Sultan Bahu",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The dates show that his life overlapped both reigns; options were clarified."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q033",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1089,
+    "sourceBookPage": 1088,
+    "sourceQuestionNumber": 33,
+    "question": "What was the ancient Sanskrit name of Taxila?",
+    "options": [
+      "Nandana",
+      "Takshasila",
+      "Gandhara",
+      "Pataliputra"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://whc.unesco.org/en/list/139/",
+        "label": "Taxila",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO identifies the ancient archaeological complex of Taxila and its historic name Takshasila."
+      },
+      {
+        "url": "https://www.britannica.com/place/Taxila",
+        "label": "Taxila",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently records the ancient Sanskrit form Takshashila or Takshasila."
+      }
+    ],
+    "referenceUrl": "https://whc.unesco.org/en/list/139/",
+    "referenceLabel": "Taxila",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The transliteration was standardized to Takshasila and None of these was replaced with a distinct place name."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q034",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 34,
+    "question": "Mian Sir Fazl-i-Hussain belonged to which caste:",
+    "options": [
+      "Jutt",
+      "Rajput",
+      "Mughal",
+      "None of these"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Held unresolved: caste identities are sensitive, inconsistently described in secondary biographies, and irrelevant to Fazl-i-Hussain's public office. Two independent authoritative biographical sources did not establish one of the choices as a stable fact."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q035",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 35,
+    "question": "What dual function did Pakistan's Constituent Assembly perform after independence in 1947?",
+    "options": [
+      "Judicial only",
+      "Advisory only",
+      "Legislative and constitution-making",
+      "Local government administration"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.na.gov.pk/en/content.php?id=74",
+        "label": "Muhammad Ali Jinnah's address to the Constituent Assembly",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Jinnah described the Assembly's two tasks as framing the constitution and functioning as the sovereign federal legislature."
+      },
+      {
+        "url": "https://na.gov.pk/en/content.php/content.php?id=75",
+        "label": "History of the Constituent Assembly",
+        "publisher": "National Assembly Secretariat",
+        "authorityId": "pakistan-national-assembly-secretariat",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official history independently states that the Assembly exercised central legislative powers as well as constitution-making powers."
+      }
+    ],
+    "referenceUrl": "https://www.na.gov.pk/en/content.php?id=74",
+    "referenceLabel": "Muhammad Ali Jinnah's address to the Constituent Assembly",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1947",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague purpose wording was repaired to the Assembly's documented dual role and a real distractor replaced None of these."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q036",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 36,
+    "question": "In which city was the Indus Waters Treaty signed by India's prime minister and Pakistan's president in 1960?",
+    "options": [
+      "Karachi",
+      "Lahore",
+      "Delhi",
+      "Kolkata"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=0800000280135336",
+        "label": "Indus Waters Treaty 1960",
+        "publisher": "United Nations Treaty Collection",
+        "authorityId": "un-treaty-collection",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The treaty record states that the Indus Waters Treaty was signed at Karachi on 19 September 1960."
+      },
+      {
+        "url": "https://www.worldbank.org/en/region/sar/brief/fact-sheet-the-indus-waters-treaty-1960-and-the-world-bank",
+        "label": "Indus Waters Treaty fact sheet",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The World Bank independently records the treaty signed by India and Pakistan in Karachi in 1960."
+      }
+    ],
+    "referenceUrl": "https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=0800000280135336",
+    "referenceLabel": "Indus Waters Treaty 1960",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1960",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar and treaty spelling were normalized; the city was Karachi."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q037",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 37,
+    "question": "In which year was Quetta devastated by a major earthquake?",
+    "options": [
+      "1931",
+      "1935",
+      "1948",
+      "1959"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/usp000jcj6/region-info",
+        "label": "Regional information: the 1935 Quetta earthquake",
+        "publisher": "U.S. Geological Survey",
+        "authorityId": "us-geological-survey",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USGS identifies the destructive 30 May 1935 event as the Quetta earthquake."
+      },
+      {
+        "url": "https://www.nature.com/articles/1351067b0",
+        "label": "The Quetta Earthquake",
+        "publisher": "Nature",
+        "authorityId": "nature",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Nature's contemporary 1935 report describes the great destruction caused in Quetta City."
+      }
+    ],
+    "referenceUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/usp000jcj6/region-info",
+    "referenceLabel": "Regional information: the 1935 Quetta earthquake",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The event wording was normalized; the answer is 1935."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q038",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 38,
+    "question": "Who was the fourth Prime Minister of Pakistan?",
+    "options": [
+      "Khawaja Nazimuddin",
+      "Muhammad Ali Bogra",
+      "Chaudhri Muhammad Ali",
+      "Feroz Khan Noon"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://na.gov.pk/en/primeministers.php",
+        "label": "Prime Ministers of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official chronological list places Chaudhri Muhammad Ali fourth among Pakistan's prime ministers."
+      },
+      {
+        "url": "https://agp.gov.pk/Detail/ODk0MDI5ZjMtM2FjOS00NjU3LWE0YzAtMTU1YzFjYmFmZjMw",
+        "label": "Chaudhry Muhammad Ali",
+        "publisher": "Auditor-General of Pakistan",
+        "authorityId": "auditor-general-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government biography independently records Chaudhry Muhammad Ali's premiership after Muhammad Ali Bogra and before Huseyn Shaheed Suhrawardy."
+      }
+    ],
+    "referenceUrl": "https://na.gov.pk/en/primeministers.php",
+    "referenceLabel": "Prime Ministers of Pakistan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar and spelling were standardized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q039",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 39,
+    "question": "In which year did the British Crown assume direct rule over India from the East India Company?",
+    "options": [
+      "1858",
+      "1860",
+      "1862",
+      "1864"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/Vict/21-22/106/enacted",
+        "label": "Government of India Act 1858",
+        "publisher": "UK Legislation",
+        "authorityId": "uk-legislation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The 1858 Act transferred the East India Company's governmental territories and powers to the Crown."
+      },
+      {
+        "url": "https://www.britannica.com/event/Government-of-India-Acts",
+        "label": "Government of India Acts",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently records that direct British Crown rule began through the Government of India Act 1858."
+      }
+    ],
+    "referenceUrl": "https://www.legislation.gov.uk/ukpga/Vict/21-22/106/enacted",
+    "referenceLabel": "Government of India Act 1858",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Direct control was clarified as the statutory transfer from the Company to the Crown."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q040",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 40,
+    "question": "Who interpreted neo-Sufi concept of Islam:",
+    "options": [
+      "Shah Wali Ullah",
+      "Sayed Ahmad Barelavi",
+      "Abdullah Shah",
+      "Ahmad Sirhindi"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Held unresolved: 'neo-Sufi concept of Islam' is undefined and the source gives no named theory, quotation or publication. The four figures belong to different periods and reform traditions; selecting Shah Wali Allah would require inventing a framework."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q041",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 41,
+    "question": "Under the current constitutional allocation, how many senators represent the Federal Capital of Islamabad?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.senate.gov.pk/en/essence.php?id=24",
+        "label": "Composition of the Senate",
+        "publisher": "Senate of Pakistan",
+        "authorityId": "pakistan-senate",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Senate's official composition page allocates four seats to the Federal Capital."
+      },
+      {
+        "url": "https://www.ecp.gov.pk/storage/files/1/Delimitation/Constitution%20of%20Pakistan.pdf",
+        "label": "Constitution of Pakistan",
+        "publisher": "Election Commission of Pakistan",
+        "authorityId": "pakistan-election-commission",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The constitutional schedule independently allocates four Senate seats to the Federal Capital."
+      }
+    ],
+    "referenceUrl": "https://www.senate.gov.pk/en/essence.php?id=24",
+    "referenceLabel": "Composition of the Senate",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "current constitutional allocation",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Islamabad was clarified as the Federal Capital allocation. The version scope is explicit because Senate composition can be amended."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q042",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 42,
+    "question": "Where is the shrine and burial place of Mian Muhammad Bakhsh?",
+    "options": [
+      "Khari Sharif",
+      "Dunyapur",
+      "Sham Sharif",
+      "Lahore"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://doam.gov.pk/public/sites/10151",
+        "label": "Shrine of Mian Muhammad Bakhsh",
+        "publisher": "Department of Archaeology and Museums Pakistan",
+        "authorityId": "pakistan-archaeology",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archaeology catalogue locates Mian Muhammad Bakhsh's shrine and burial at Khari Sharif."
+      },
+      {
+        "url": "https://ajktourism.gov.pk/khari-sharif/",
+        "label": "Khari Sharif",
+        "publisher": "AJK Tourism and Archaeology Department",
+        "authorityId": "ajk-tourism",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The tourism authority independently identifies Khari Sharif as the resting place of Mian Muhammad Bakhsh."
+      }
+    ],
+    "referenceUrl": "https://doam.gov.pk/public/sites/10151",
+    "referenceLabel": "Shrine of Mian Muhammad Bakhsh",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The name spelling was standardized and the shrine context was added."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q043",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 43,
+    "question": "In 1613, at which Indian port did the English East India Company establish a permanent trading factory?",
+    "options": [
+      "Madras",
+      "Bangalore",
+      "Masulipattam",
+      "Surat"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.bl.uk/learning/timeline/item124195.html",
+        "label": "East India Company chronology",
+        "publisher": "British Library",
+        "authorityId": "british-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Library chronology records the Company's early permanent factory at Surat."
+      },
+      {
+        "url": "https://www.britannica.com/place/Surat",
+        "label": "Surat",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently records that the English established a trading factory at Surat in 1612-13."
+      }
+    ],
+    "referenceUrl": "https://www.bl.uk/learning/timeline/item124195.html",
+    "referenceLabel": "East India Company chronology",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1613",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The location and permanent-factory context were clarified; the answer is Surat."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q044",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 44,
+    "question": "On which date in 2013 was the Pakistan-China Economic Corridor Secretariat inaugurated in Islamabad?",
+    "options": [
+      "April 20, 2013",
+      "April 24, 2014",
+      "August 27, 2013",
+      "August 29, 2016"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://cpec.gov.pk/news/7",
+        "label": "CPEC Secretariat inaugurated",
+        "publisher": "CPEC Authority, Government of Pakistan",
+        "authorityId": "pakistan-cpec-authority",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official CPEC archive dates the Islamabad Secretariat's inauguration to 27 August 2013."
+      },
+      {
+        "url": "https://www.pc.gov.pk/web/press/get_press/253",
+        "label": "Pakistan-China Economic Corridor Secretariat",
+        "publisher": "Planning Commission of Pakistan",
+        "authorityId": "pakistan-planning-commission",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Planning Commission independently records the CPEC Secretariat launch in Islamabad on 27 August 2013."
+      }
+    ],
+    "referenceUrl": "https://cpec.gov.pk/news/7",
+    "referenceLabel": "CPEC Secretariat inaugurated",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2013-08-27",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The project name and event year were added and punctuation normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q045",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 45,
+    "question": "Who was Viceroy of India when Bengal was partitioned in 1905?",
+    "options": [
+      "Lord Minto",
+      "Lord Curzon",
+      "Lord Linlithgow",
+      "Lord Irwin"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.nationalarchives.gov.uk/education/resources/partition-of-bengal/",
+        "label": "Partition of Bengal",
+        "publisher": "The National Archives (UK)",
+        "authorityId": "uk-national-archives",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archive identifies Lord Curzon as Viceroy when Bengal was partitioned in 1905."
+      },
+      {
+        "url": "https://www.britannica.com/event/Partition-of-Bengal",
+        "label": "Partition of Bengal",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently attributes the 1905 partition to Viceroy Lord Curzon."
+      }
+    ],
+    "referenceUrl": "https://www.nationalarchives.gov.uk/education/resources/partition-of-bengal/",
+    "referenceLabel": "Partition of Bengal",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1905",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The year was added to distinguish the 1905 partition from the 1947 partition."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q046",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 46,
+    "question": "Which of Pakistan's four provinces is smallest by area?",
+    "options": [
+      "Punjab",
+      "Sindh",
+      "Khyber Pakhtunkhwa",
+      "Balochistan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.pbs.gov.pk/sites/default/files//tables/rename-as-per-table-type/Administrative%20Units.pdf",
+        "label": "Administrative units and area",
+        "publisher": "Pakistan Bureau of Statistics",
+        "authorityId": "pakistan-statistics",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official area table shows Khyber Pakhtunkhwa has the smallest area among Pakistan's four provinces."
+      },
+      {
+        "url": "https://kp.gov.pk/page/about_khyber_pakhtunkhwa",
+        "label": "About Khyber Pakhtunkhwa",
+        "publisher": "Government of Khyber Pakhtunkhwa",
+        "authorityId": "khyber-pakhtunkhwa-government",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The provincial profile independently provides Khyber Pakhtunkhwa's area, smaller than the other three provinces."
+      }
+    ],
+    "referenceUrl": "https://www.pbs.gov.pk/sites/default/files//tables/rename-as-per-table-type/Administrative%20Units.pdf",
+    "referenceLabel": "Administrative units and area",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Province names were standardized and the scope was limited to the four provinces."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q047",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 47,
+    "question": "In which year was the Indian Councils Act associated with the Morley-Minto Reforms enacted?",
+    "options": [
+      "1909",
+      "1910",
+      "1911",
+      "1912"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/Edw7/9/4/enacted",
+        "label": "Indian Councils Act 1909",
+        "publisher": "UK Legislation",
+        "authorityId": "uk-legislation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official statute is the Indian Councils Act 1909, commonly associated with the Morley-Minto reforms."
+      },
+      {
+        "url": "https://www.britannica.com/event/Indian-Councils-Act-of-1909",
+        "label": "Indian Councils Act of 1909",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently dates the Morley-Minto reforms to 1909."
+      }
+    ],
+    "referenceUrl": "https://www.legislation.gov.uk/ukpga/Edw7/9/4/enacted",
+    "referenceLabel": "Indian Councils Act 1909",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The conventional order Morley-Minto and the Act's title were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q048",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 48,
+    "question": "In which year was the North-West Frontier Province established?",
+    "options": [
+      "1900",
+      "1901",
+      "1902",
+      "1903"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.kp.gov.pk/page/about_khyber_pakhtunkhwa",
+        "label": "History of Khyber Pakhtunkhwa",
+        "publisher": "Government of Khyber Pakhtunkhwa",
+        "authorityId": "khyber-pakhtunkhwa-government",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The provincial history records the creation of the North-West Frontier Province in 1901."
+      },
+      {
+        "url": "https://www.britannica.com/place/Khyber-Pakhtunkhwa",
+        "label": "Khyber Pakhtunkhwa",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently dates the constitution of the North-West Frontier Province to 1901."
+      }
+    ],
+    "referenceUrl": "https://www.kp.gov.pk/page/about_khyber_pakhtunkhwa",
+    "referenceLabel": "History of Khyber Pakhtunkhwa",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The abbreviation was expanded; the answer is 1901."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q049",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 49,
+    "question": "Which feature of the Government of India Act 1935 was implemented in the provinces in 1937?",
+    "options": [
+      "Proposed All India Federation",
+      "Bicameral Legislature",
+      "Provincial Autonomy",
+      "Communal representation"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/Geo5and1Edw8/26/2/enacted",
+        "label": "Government of India Act 1935",
+        "publisher": "UK Legislation",
+        "authorityId": "uk-legislation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Act established autonomous provincial governments under its provincial provisions."
+      },
+      {
+        "url": "https://www.britannica.com/event/Government-of-India-Act-1935",
+        "label": "Government of India Act 1935",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies provincial autonomy as a principal implemented feature of the 1935 Act."
+      }
+    ],
+    "referenceUrl": "https://www.legislation.gov.uk/ukpga/Geo5and1Edw8/26/2/enacted",
+    "referenceLabel": "Government of India Act 1935",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1937",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The subjective phrase 'most important' was replaced with an implementation question. The proposed federation never took effect, while provincial autonomy did."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q050",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 50,
+    "question": "Who was the first Viceroy of British India?",
+    "options": [
+      "Lord Rippon",
+      "Lord Canning",
+      "Lord Curzon",
+      "Lord Mayo"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.npg.org.uk/collections/search/person/mp00727/charles-john-canning-earl-canning?displayStyle=thumb",
+        "label": "Charles John Canning, Earl Canning",
+        "publisher": "National Portrait Gallery",
+        "authorityId": "uk-national-portrait-gallery",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Portrait Gallery identifies Charles John Canning as Governor-General and the first Viceroy of India."
+      },
+      {
+        "url": "https://artcollection.dcms.gov.uk/artwork/1421/",
+        "label": "Lord Canning's Hunter",
+        "publisher": "UK Government Art Collection",
+        "authorityId": "uk-government-art-collection",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UK Government Art Collection identifies Charles John Canning as Governor-General and first Viceroy of India."
+      }
+    ],
+    "referenceUrl": "https://www.npg.org.uk/collections/search/person/mp00727/charles-john-canning-earl-canning?displayStyle=thumb",
+    "referenceLabel": "Charles John Canning, Earl Canning",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Capitalization and punctuation were normalized; this repeats an already verified fact."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q051",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 51,
+    "question": "Which two listed Muslim members served on the committee that produced the 1928 Nehru Report?",
+    "options": [
+      "Shoaib Qureshi and Sir Ali Imam",
+      "Muhammad Ali Jinnah and Aga Khan",
+      "Maulana Abul Kalam Azad and Shaukat Ali",
+      "Muhammad Ali and Shibli Nomani"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://archive.org/details/in.ernet.dli.2015.276474/page/n7/mode/2up",
+        "label": "The Nehru Report",
+        "publisher": "Internet Archive scan of the 1928 report",
+        "authorityId": "internet-archive-primary-documents",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The report's committee list includes Sir Ali Imam and Shoaib Qureshi among its Muslim members."
+      },
+      {
+        "url": "https://nehruarchive.in/documents/the-nehru-report-1928",
+        "label": "The Nehru Report, 1928",
+        "publisher": "Nehru Archive",
+        "authorityId": "nehru-archive",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archive independently identifies the committee composition behind the 1928 Nehru Report."
+      }
+    ],
+    "referenceUrl": "https://archive.org/details/in.ernet.dli.2015.276474/page/n7/mode/2up",
+    "referenceLabel": "The Nehru Report",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1928",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The report year and precise committee role were added, and None of these was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q052",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1090,
+    "sourceBookPage": 1089,
+    "sourceQuestionNumber": 52,
+    "question": "Which principal demand of the 1906 Simla Deputation was incorporated into the Morley-Minto Reforms?",
+    "options": [
+      "Separate electorates",
+      "Funds for establishing a university for Muslims",
+      "Equal employment opportunities",
+      "None of these"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.nationalarchives.gov.uk/education/resources/indian-independence/simla-deputation/",
+        "label": "The Simla Deputation",
+        "publisher": "The National Archives (UK)",
+        "authorityId": "uk-national-archives",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archive records the Muslim deputation's demand for separate electoral representation."
+      },
+      {
+        "url": "https://www.britannica.com/event/Indian-Councils-Act-of-1909",
+        "label": "Indian Councils Act of 1909",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently states that the Morley-Minto reforms granted separate electorates to Muslims."
+      }
+    ],
+    "referenceUrl": "https://www.nationalarchives.gov.uk/education/resources/indian-independence/simla-deputation/",
+    "referenceLabel": "The Simla Deputation",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1906",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The event relationship was normalized; the answer is separate electorates."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q053",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 53,
+    "question": "Approximately how long is the Siachen Glacier?",
+    "options": [
+      "66 km",
+      "76 km",
+      "86 km",
+      "96 km"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://aimh.gov.pk/primer-2025/",
+        "label": "Military History Primer",
+        "publisher": "Army Institute of Military History Pakistan",
+        "authorityId": "pakistan-military-history-institute",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The institute's primer gives Siachen Glacier an approximate length of 76 kilometres."
+      },
+      {
+        "url": "https://www.britannica.com/place/Siachen-Glacier",
+        "label": "Siachen Glacier",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently describes Siachen as approximately 75 kilometres long, conventionally rounded to 76 kilometres in Pakistani references."
+      }
+    ],
+    "referenceUrl": "https://aimh.gov.pk/primer-2025/",
+    "referenceLabel": "Military History Primer",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "medium",
+    "sourceNotes": "Units and approximate wording were normalized; the intended rounded answer is 76 km."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q054",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 54,
+    "question": "Which two refugee girls' stories are both included in Malala Yousafzai's book 'We Are Displaced'?",
+    "options": [
+      "Zaynab and Muzoon",
+      "Zaynab and Malala",
+      "Zaynab and Masooma",
+      "None of these"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.littlebrownlibrary.com/titles/malala-yousafzai/we-are-displaced/9780316523653/",
+        "label": "We Are Displaced",
+        "publisher": "Little, Brown Books for Young Readers",
+        "authorityId": "little-brown",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The publisher's page identifies the refugee stories in Malala Yousafzai's book, including Zaynab."
+      },
+      {
+        "url": "https://www.unhcr.org/news/stories/malala-shares-stories-displaced-girls",
+        "label": "Malala shares stories of displaced girls",
+        "publisher": "UNHCR",
+        "authorityId": "unhcr",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNHCR independently discusses the book and the stories of Zaynab and Muzoon."
+      }
+    ],
+    "referenceUrl": "https://www.littlebrownlibrary.com/titles/malala-yousafzai/we-are-displaced/9780316523653/",
+    "referenceLabel": "We Are Displaced",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The wording was made precise; Zaynab and Muzoon are both featured, although the book contains several other girls' stories too."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q055",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 55,
+    "question": "India's national song 'Vande Mataram' appears in which novel by Bankim Chandra Chattopadhyay?",
+    "options": [
+      "Anandamath",
+      "Bankim Rachanabali",
+      "Rajasimha",
+      "None of these"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://knowindia.india.gov.in/national-identity-elements/national-song.php",
+        "label": "National Song",
+        "publisher": "National Portal of India",
+        "authorityId": "india-national-portal",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official portal states that Vande Mataram was composed in Sanskrit by Bankimchandra Chatterji and appears in Anandamath."
+      },
+      {
+        "url": "https://www.britannica.com/topic/Anandamath",
+        "label": "Anandamath",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently identifies Vande Mataram as a hymn in Bankim Chandra's novel Anandamath."
+      }
+    ],
+    "referenceUrl": "https://knowindia.india.gov.in/national-identity-elements/national-song.php",
+    "referenceLabel": "National Song",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar and title punctuation were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q056",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 56,
+    "question": "Who chaired the Punjab and Bengal Boundary Commissions that demarcated the 1947 India-Pakistan borders?",
+    "options": [
+      "Lord Mountbatten",
+      "Sir Cyril Radcliffe",
+      "Penderel Moon",
+      "A. V. Alexander"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://searcharchives.bl.uk/catalog/040-000884211",
+        "label": "Appointment of Sir Cyril Radcliffe",
+        "publisher": "British Library",
+        "authorityId": "british-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The India Office archival catalogue records Sir Cyril Radcliffe's appointment as chairman of the Punjab and Bengal Boundary Commissions."
+      },
+      {
+        "url": "https://www.mea.gov.in/Images/pdf/India-Pakistan-std.pdf",
+        "label": "India-Pakistan Relations documentary record",
+        "publisher": "Ministry of External Affairs, Government of India",
+        "authorityId": "india-ministry-external-affairs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official documentary compilation describes the Bengal Boundary Commission as headed by Sir C. Radcliffe."
+      }
+    ],
+    "referenceUrl": "https://searcharchives.bl.uk/catalog/040-000884211",
+    "referenceLabel": "Appointment of Sir Cyril Radcliffe",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1947",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Names and spelling were corrected; this is the same fact as an earlier verified ADV item."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q057",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 57,
+    "question": "Which Pashto folk-poetry genre is commonly described as the most popular after Tappa?",
+    "options": [
+      "Charbeta",
+      "Neemakai",
+      "Ghazal",
+      "Rubai"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.uob.edu.pk/journals/takatoo/data/2011/Jan-June/Pashto/Abstract/83-90.pdf",
+        "label": "The evolution of Pashto folk poetic genre Charbeta",
+        "publisher": "University of Balochistan",
+        "authorityId": "university-of-balochistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly abstract describes Charbeta as the popular Pashto folk-poetry genre after Tappa."
+      },
+      {
+        "url": "https://online.aiou.edu.pk/LIVE_SITE/SoftBooks/9366.pdf",
+        "label": "Pashto poetry genres",
+        "publisher": "Allama Iqbal Open University",
+        "authorityId": "allama-iqbal-open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The course material independently describes Charbeta immediately after Tappa among Pashto folk forms."
+      }
+    ],
+    "referenceUrl": "https://www.uob.edu.pk/journals/takatoo/data/2011/Jan-June/Pashto/Abstract/83-90.pdf",
+    "referenceLabel": "The evolution of Pashto folk poetic genre Charbeta",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The OCR-like word 'code' was repaired to genre. The printed key selected Ghazal, but two academic sources support Charbeta; the answer therefore changes to option A and None of these was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q058",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 58,
+    "question": "In which year were provincial elections held in British India under the Government of India Act 1935?",
+    "options": [
+      "1935",
+      "1936",
+      "1937",
+      "1938"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://api.parliament.uk/historic-hansard/lords/1937/apr/08/india-national-congress-and-provincial",
+        "label": "India: National Congress and provincial elections",
+        "publisher": "UK Parliament",
+        "authorityId": "uk-parliament",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UK parliamentary proceedings discuss the Indian provincial elections held in 1937."
+      },
+      {
+        "url": "https://sde.uoc.ac.in/sites/default/files/sde_videos/SLM-19311-His-Indian%20History%20-%20III.pdf",
+        "label": "Indian History III",
+        "publisher": "University of Calicut",
+        "authorityId": "university-of-calicut",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Calicut history text dates the provincial elections under the 1935 Act to 1937."
+      }
+    ],
+    "referenceUrl": "https://api.parliament.uk/historic-hansard/lords/1937/apr/08/india-national-congress-and-provincial",
+    "referenceLabel": "India: National Congress and provincial elections",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The wording was normalized; this repeats an already verified source fact."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q059",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 59,
+    "question": "In which year was the Pakistan Peoples Party founded?",
+    "options": [
+      "1965",
+      "1966",
+      "1967",
+      "1968"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://ppplahore.org/about/history/",
+        "label": "History of the Pakistan Peoples Party",
+        "publisher": "Pakistan Peoples Party Lahore",
+        "authorityId": "pakistan-peoples-party",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The party history states that the PPP was founded in Lahore on 30 November 1967."
+      },
+      {
+        "url": "https://www.cia.gov/readingroom/document/cia-rdp06t00412r000200490001-5",
+        "label": "The Pakistan People's Party: Origins and Development",
+        "publisher": "CIA Reading Room",
+        "authorityId": "cia-reading-room",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent historical assessment records that the PPP was founded in November 1967."
+      }
+    ],
+    "referenceUrl": "https://ppplahore.org/about/history/",
+    "referenceLabel": "History of the Pakistan Peoples Party",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The official party name was standardized; the answer is 1967."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q060",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 60,
+    "question": "Which country did Pakistan defeat in the final of the 1994 Men's Hockey World Cup?",
+    "options": [
+      "Australia",
+      "India",
+      "Netherlands",
+      "Italy"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.fih.hockey/events/others/men/1994-mens-world-cup-61/schedule-fixtures-results",
+        "label": "1994 Men's World Cup results",
+        "publisher": "International Hockey Federation",
+        "authorityId": "international-hockey-federation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "FIH's official results show Pakistan defeating the Netherlands in the 1994 final."
+      },
+      {
+        "url": "https://www.olympedia.org/results/45910",
+        "label": "1994 Men's Hockey World Cup final",
+        "publisher": "Olympedia",
+        "authorityId": "olympedia",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Olympedia independently records Pakistan's final against the Netherlands and the shootout result."
+      }
+    ],
+    "referenceUrl": "https://www.fih.hockey/events/others/men/1994-mens-world-cup-61/schedule-fixtures-results",
+    "referenceLabel": "1994 Men's World Cup results",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1994",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Netherland was corrected to Netherlands and the final was specified."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q061",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 61,
+    "question": "Which British police official became known for operations against revolutionary organizations in Bengal?",
+    "options": [
+      "General Reginald Dyer",
+      "Sir Charles Tegart",
+      "Sir John Simon",
+      "Lord Linlithgow"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://searcharchives.bl.uk/?f%5Bcollection_area_ssi%5D%5B%5D=India+Office+Records+and+Private+Papers&f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B32%5D+Fonds&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Brelated_names_ssim%5D%5B%5D=Indian+Police%2C+c+1865-&per_page=20&search_field=all_fields&sort=date",
+        "label": "Charles Tegart papers",
+        "publisher": "British Library",
+        "authorityId": "british-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archival catalogue identifies Charles Tegart's Indian Police career in Bengal and work concerning revolutionary activities."
+      },
+      {
+        "url": "https://www.dib.ie/biography/tegart-sir-charles-augustus-a8508",
+        "label": "Sir Charles Augustus Tegart",
+        "publisher": "Dictionary of Irish Biography",
+        "authorityId": "dictionary-of-irish-biography",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly biography independently documents Tegart's special role against revolutionary organizations in Bengal."
+      }
+    ],
+    "referenceUrl": "https://searcharchives.bl.uk/?f%5Bcollection_area_ssi%5D%5B%5D=India+Office+Records+and+Private+Papers&f%5Blanguage_ssim%5D%5B%5D=English&f%5Blevel_ssi%5D%5B%5D=%5B32%5D+Fonds&f%5Bmaterial_type_si%5D%5B%5D=Archives+and+Manuscripts&f%5Brelated_names_ssim%5D%5B%5D=Indian+Police%2C+c+1865-&per_page=20&search_field=all_fields&sort=date",
+    "referenceLabel": "Charles Tegart papers",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source key selected General Dyer while its associated explanation identified Charles Tegart. The broad 'Indian Freedom Movement' claim was rebuilt to Tegart's documented Bengal policing role, changing the answer to option B."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q062",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 62,
+    "question": "Who was the first United Nations High Commissioner for Human Rights?",
+    "options": [
+      "Jose Ayala Lasso",
+      "Winston Churchill",
+      "John Adams",
+      "Rene Cassin"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://digitallibrary.un.org/record/3794927?ln=en",
+        "label": "Assembly names first High Commissioner for Human Rights",
+        "publisher": "United Nations Digital Library",
+        "authorityId": "un-digital-library",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UN record identifies Jose Ayala Lasso as the first UN High Commissioner for Human Rights."
+      },
+      {
+        "url": "https://www.un.org/en/node/26804",
+        "label": "International human rights law: a short history",
+        "publisher": "United Nations",
+        "authorityId": "united-nations",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UN history independently states that Jose Ayala Lasso was the first High Commissioner in 1994."
+      }
+    ],
+    "referenceUrl": "https://digitallibrary.un.org/record/3794927?ln=en",
+    "referenceLabel": "Assembly names first High Commissioner for Human Rights",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The accent-free source spelling was retained and None of these was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q063",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 63,
+    "question": "Who edited the multi-volume work 'Documents on Punjab'?",
+    "options": [
+      "O. P. Ralhan",
+      "Stanley Wolpert",
+      "Muhammad Jahangir",
+      "Khushwant Singh"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://libraryopac.ignou.ac.in/cgi-bin/koha/opac-detail.pl?biblionumber=48743&shelfbrowse_itemnumber=48742",
+        "label": "Documents on Punjab",
+        "publisher": "Indira Gandhi National Open University Library",
+        "authorityId": "ignou-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university catalogue records Documents on Punjab as edited by O. P. Ralhan."
+      },
+      {
+        "url": "https://ci.nii.ac.jp/ncid/BA23720137",
+        "label": "Documents on Punjab catalogue record",
+        "publisher": "CiNii Books, National Institute of Informatics Japan",
+        "authorityId": "cinii-books",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent library catalogue also attributes Documents on Punjab to editor O. P. Ralhan."
+      }
+    ],
+    "referenceUrl": "https://libraryopac.ignou.ac.in/cgi-bin/koha/opac-detail.pl?biblionumber=48743&shelfbrowse_itemnumber=48742",
+    "referenceLabel": "Documents on Punjab",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Author was corrected to editor, which is how library catalogues credit O. P. Ralhan; initials were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q064",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 64,
+    "question": "For an election to the European Court of Human Rights, how many candidates does each state nominate for consideration by the Parliamentary Assembly?",
+    "options": [
+      "Three",
+      "Five",
+      "Seven",
+      "Nine"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://pace.coe.int/en/files/25213/html",
+        "label": "Procedure for election of judges to the European Court of Human Rights",
+        "publisher": "Parliamentary Assembly of the Council of Europe",
+        "authorityId": "council-of-europe-pace",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PACE states that each contracting state submits three candidates from whom the Assembly elects one judge."
+      },
+      {
+        "url": "https://www.gov.uk/government/news/election-of-the-uk-judge-to-the-european-court-of-human-rights",
+        "label": "Election of the UK judge to the European Court of Human Rights",
+        "publisher": "Government of the United Kingdom",
+        "authorityId": "uk-government",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UK government independently describes submission of a shortlist of three candidates to PACE."
+      }
+    ],
+    "referenceUrl": "https://pace.coe.int/en/files/25213/html",
+    "referenceLabel": "Procedure for election of judges to the European Court of Human Rights",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The sentence was normalized; the answer is three."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q065",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 65,
+    "question": "In which city is the working administrative headquarters of the Palestinian Authority located?",
+    "options": [
+      "Ramallah",
+      "Jerusalem",
+      "Gaza",
+      "None of these"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.palestinecabinet.gov.ps/portal/Depts/DetailsEn/1",
+        "label": "Palestinian government offices",
+        "publisher": "State of Palestine Council of Ministers",
+        "authorityId": "palestine-council-ministers",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Palestinian government portal locates the Council of Ministers and central authority offices in Ramallah."
+      },
+      {
+        "url": "https://www.britannica.com/place/Ramallah",
+        "label": "Ramallah",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently describes Ramallah as the working administrative centre of the Palestinian Authority."
+      }
+    ],
+    "referenceUrl": "https://www.palestinecabinet.gov.ps/portal/Depts/DetailsEn/1",
+    "referenceLabel": "Palestinian government offices",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The wording was qualified because Palestinians claim East Jerusalem as their capital, while the Authority's working administrative headquarters are in Ramallah."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q066",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 66,
+    "question": "Which visa arrangement is a feature of the Schengen area?",
+    "options": [
+      "Separate visa rules for every border crossing",
+      "A common short-stay visa policy",
+      "A United States travel red zone",
+      "A ban on all non-European visitors"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://home-affairs.ec.europa.eu/policies/schengen/visa-policy_en",
+        "label": "Schengen visa policy",
+        "publisher": "European Commission",
+        "authorityId": "european-commission",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Commission states that Schengen countries apply common visa rules."
+      },
+      {
+        "url": "https://www.consilium.europa.eu/en/policies/eu-visa-policy/",
+        "label": "EU visa policy",
+        "publisher": "Council of the European Union",
+        "authorityId": "council-european-union",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Council independently describes the common visa policy for short stays in the Schengen area."
+      }
+    ],
+    "referenceUrl": "https://home-affairs.ec.europa.eu/policies/schengen/visa-policy_en",
+    "referenceLabel": "Schengen visa policy",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The fragment was repaired and vague distractors were made complete; the answer is the common short-stay visa policy."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q067",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1091,
+    "sourceBookPage": 1090,
+    "sourceQuestionNumber": 67,
+    "question": "What term best describes Baba Farid's compositions included in the Guru Granth Sahib?",
+    "options": [
+      "Historical decrees",
+      "Bani (hymns)",
+      "Legal advice",
+      "Royal chronicles"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://new.sgpc.net/sri-guru-granth-sahib/",
+        "label": "Sri Guru Granth Sahib",
+        "publisher": "Shiromani Gurdwara Parbandhak Committee",
+        "authorityId": "sgpc",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The SGPC identifies Farid among the Bhagats whose compositions are included in the Guru Granth Sahib."
+      },
+      {
+        "url": "https://www.pib.gov.in/newsite/erelcontent.aspx?lang=2&reg=48&relid=44137",
+        "label": "Guru Granth Sahib compositions",
+        "publisher": "Press Information Bureau, Government of India",
+        "authorityId": "india-press-information-bureau",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government account independently records Baba Farid's contribution of hymns to the scripture."
+      }
+    ],
+    "referenceUrl": "https://new.sgpc.net/sri-guru-granth-sahib/",
+    "referenceLabel": "Sri Guru Granth Sahib",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar was repaired. Bani, meaning sacred compositions or hymns in this context, is the uniquely correct choice."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q068",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 68,
+    "question": "Which listed organization is a historically Sikh-centred political party in Punjab, India?",
+    "options": [
+      "Ghadar Party",
+      "Bharatiya Janata Party",
+      "Shiromani Akali Dal",
+      "Indian National Congress"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.eci.gov.in/statistical-report/statistical-reports",
+        "label": "Recognized political parties",
+        "publisher": "Election Commission of India",
+        "authorityId": "election-commission-india",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Election Commission records identify Shiromani Akali Dal as a recognized political party in Punjab."
+      },
+      {
+        "url": "https://irb-cisr.gc.ca/en/country-information/rir/Pages/index.aspx?doc=453968",
+        "label": "Akali Dal groups",
+        "publisher": "Immigration and Refugee Board of Canada",
+        "authorityId": "canada-immigration-refugee-board",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent government research response describes Shiromani Akali Dal as a Sikh political party."
+      }
+    ],
+    "referenceUrl": "https://www.eci.gov.in/statistical-report/statistical-reports",
+    "referenceLabel": "Recognized political parties",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The ungrammatical sentence was repaired and the Sikh-centred historical scope was stated."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q069",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 69,
+    "question": "Which ancient Greek author is traditionally known as the 'father of history'?",
+    "options": [
+      "Euclid",
+      "Aristotle",
+      "Herodotus",
+      "Caesar"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.britannica.com/biography/Herodotus-Greek-historian",
+        "label": "Herodotus",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies Herodotus as the Greek author traditionally called the father of history."
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/term/BIOG60564",
+        "label": "Herodotus",
+        "publisher": "British Museum",
+        "authorityId": "british-museum",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Museum independently identifies Herodotus as the ancient Greek historian and author of the Histories."
+      }
+    ],
+    "referenceUrl": "https://www.britannica.com/biography/Herodotus-Greek-historian",
+    "referenceLabel": "Herodotus",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The unsupported claim 'author of the first history book' was replaced with the conventional, documented epithet."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q070",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 70,
+    "question": "Panipat is located in which Indian state?",
+    "options": [
+      "Haryana",
+      "Uttar Pradesh",
+      "Rajasthan",
+      "Kerala"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://panipat.gov.in/",
+        "label": "District Panipat",
+        "publisher": "Government of Haryana",
+        "authorityId": "haryana-government",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official district website identifies Panipat as a district and city of Haryana."
+      },
+      {
+        "url": "https://www.britannica.com/place/Panipat",
+        "label": "Panipat",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently locates Panipat in Haryana state, India."
+      }
+    ],
+    "referenceUrl": "https://panipat.gov.in/",
+    "referenceLabel": "District Panipat",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar was normalized; the answer is Haryana."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q071",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 71,
+    "question": "According to the UN's 2018 World Urbanization Prospects urban-agglomeration estimates, which listed city was the world's most populous?",
+    "options": [
+      "Tokyo",
+      "Shanghai",
+      "Karachi",
+      "Delhi"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://population.un.org/wup/Publications/Files/WUP2018-Highlights.pdf",
+        "label": "World Urbanization Prospects 2018 Highlights",
+        "publisher": "United Nations Department of Economic and Social Affairs",
+        "authorityId": "un-desa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UN's 2018 urban-agglomeration estimates ranked Tokyo as the world's largest city at about 37 million people."
+      },
+      {
+        "url": "https://www.metro.tokyo.lg.jp/english/about/history/history03.html",
+        "label": "Tokyo's population and global scale",
+        "publisher": "Tokyo Metropolitan Government",
+        "authorityId": "tokyo-metropolitan-government",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Tokyo's official metropolitan history describes the metropolis's population scale and its long-standing position among the world's largest urban areas."
+      }
+    ],
+    "referenceUrl": "https://population.un.org/wup/Publications/Files/WUP2018-Highlights.pdf",
+    "referenceLabel": "World Urbanization Prospects 2018 Highlights",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2018",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The undated superlative was repaired to the UN's 2018 urban-agglomeration estimates; Tokyo is the scoped answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q072",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 72,
+    "question": "Which listed martial art was created in Japan?",
+    "options": [
+      "Judo",
+      "Cricket",
+      "Tennis",
+      "Basketball"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.ijf.org/history",
+        "label": "History of judo",
+        "publisher": "International Judo Federation",
+        "authorityId": "international-judo-federation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The IJF identifies judo as the Japanese martial art created by Jigoro Kano in Japan."
+      },
+      {
+        "url": "https://olympics.com/ioc/judo",
+        "label": "Judo",
+        "publisher": "International Olympic Committee",
+        "authorityId": "international-olympic-committee",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The IOC independently describes judo's origin in Japan."
+      }
+    ],
+    "referenceUrl": "https://www.ijf.org/history",
+    "referenceLabel": "History of judo",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Japan has no legally designated official national sport. The source was rebuilt as a stable origin question that preserves the intended answer Judo; 'Basket ball' was standardized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q073",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 73,
+    "question": "What was the theme of World Environment Day 2021?",
+    "options": [
+      "Our Land, Our Future",
+      "Ecosystem Restoration",
+      "Time for nature",
+      "Air pollution"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.unep.org/events/un-day/world-environment-day-2021",
+        "label": "World Environment Day 2021",
+        "publisher": "United Nations Environment Programme",
+        "authorityId": "unep",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNEP's event page identifies ecosystem restoration as the 2021 focus and launch of the UN Decade on Ecosystem Restoration."
+      },
+      {
+        "url": "https://environment.govmu.org/Documents/events/World%20Environment%20Day%202021.pdf",
+        "label": "World Environment Day 2021",
+        "publisher": "Government of Mauritius Ministry of Environment",
+        "authorityId": "mauritius-environment-ministry",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government briefing independently states that the 2021 theme was Ecosystem Restoration."
+      }
+    ],
+    "referenceUrl": "https://www.unep.org/events/un-day/world-environment-day-2021",
+    "referenceLabel": "World Environment Day 2021",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2021",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's event wording was retained; Ecosystem Restoration is the formal theme."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q074",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 74,
+    "question": "What was Pakistan's rank in the Global Innovation Index 2021?",
+    "options": [
+      "99",
+      "109",
+      "129",
+      "161"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.wipo.int/edocs/pubdocs/en/wipo_pub_gii_2021.pdf",
+        "label": "Global Innovation Index 2021",
+        "publisher": "World Intellectual Property Organization",
+        "authorityId": "wipo",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official 2021 index ranks Pakistan 99th."
+      },
+      {
+        "url": "https://idb.added.gov.ae/-/media/Project/DED/Documents/Competitiveness-reports/WIPO-Global-Innovation-Index-2021-compressed.pdf",
+        "label": "Global Innovation Index 2021 mirror",
+        "publisher": "Abu Dhabi Department of Economic Development",
+        "authorityId": "abu-dhabi-economic-development",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government-hosted independent copy reproduces Pakistan's 2021 rank of 99."
+      }
+    ],
+    "referenceUrl": "https://www.wipo.int/edocs/pubdocs/en/wipo_pub_gii_2021.pdf",
+    "referenceLabel": "Global Innovation Index 2021",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2021",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar was normalized; the answer is 99."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q075",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 75,
+    "question": "According to Pakistan's 2023 Digital Census, what was the national average annual population growth rate from 2017 to 2023?",
+    "options": [
+      "1.55%",
+      "2.55%",
+      "3.55%",
+      "4.55%"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/National-Census-Report-2023-2.pdf",
+        "label": "National Census Report 2023",
+        "publisher": "Pakistan Bureau of Statistics",
+        "authorityId": "pakistan-statistics",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The national census report gives Pakistan's 2017-2023 average annual population growth rate as 2.55 percent."
+      },
+      {
+        "url": "https://www.finance.gov.pk/survey/chapter_24/12_population.pdf",
+        "label": "Pakistan Economic Survey 2023-24: Population",
+        "publisher": "Finance Division, Government of Pakistan",
+        "authorityId": "pakistan-finance-division",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Economic Survey independently reports the national 2023 census growth rate as 2.55 percent."
+      }
+    ],
+    "referenceUrl": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/National-Census-Report-2023-2.pdf",
+    "referenceLabel": "National Census Report 2023",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2023",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The measured interval was added; the answer is 2.55%."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q076",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 76,
+    "question": "What amount was budgeted for markup (interest) payments in Pakistan's federal budget for FY2024-25?",
+    "options": [
+      "Rs. 9.775 trillion",
+      "Rs. 4.775 trillion",
+      "Rs. 3.775 trillion",
+      "Rs. 5.775 trillion"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.finance.gov.pk/fb_2024_25.html",
+        "label": "Federal Budget 2024-25",
+        "publisher": "Finance Division, Government of Pakistan",
+        "authorityId": "pakistan-finance-division",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Budget in Brief lists Rs 9.775 trillion for markup or interest payments in FY2024-25."
+      },
+      {
+        "url": "https://www.na.gov.pk/uploads/6669abd073b10_706.pdf",
+        "label": "Budget Speech 2024-25",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The budget speech independently presents the Rs 9.775 trillion debt-interest allocation."
+      }
+    ],
+    "referenceUrl": "https://www.finance.gov.pk/fb_2024_25.html",
+    "referenceLabel": "Federal Budget 2024-25",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "FY2024-25",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague phrase 'loan and interest payments' was narrowed to the official FY2024-25 budget line for markup payments."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q077",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 77,
+    "question": "Under the 7th NFC Award, what is Balochistan's horizontal share of the provincial divisible pool?",
+    "options": [
+      "51.74%",
+      "24.55%",
+      "14.62%",
+      "9.09%"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.finance.gov.pk/nfc/reportofthenfc_2009.pdf",
+        "label": "Report of the 7th National Finance Commission",
+        "publisher": "Finance Division, Government of Pakistan",
+        "authorityId": "pakistan-finance-division",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official NFC report assigns Balochistan 9.09 percent of the provincial divisible pool."
+      },
+      {
+        "url": "https://balochistan.gov.pk/wp-content/uploads/2024/06/White-Paper-2024-25.pdf",
+        "label": "Balochistan Budget White Paper 2024-25",
+        "publisher": "Government of Balochistan",
+        "authorityId": "balochistan-government",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The provincial white paper independently uses Balochistan's 9.09 percent horizontal share under the 7th NFC Award."
+      }
+    ],
+    "referenceUrl": "https://www.finance.gov.pk/nfc/reportofthenfc_2009.pdf",
+    "referenceLabel": "Report of the 7th National Finance Commission",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "7th NFC Award",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The NFC award and distribution level were specified; the answer is 9.09%."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q078",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 78,
+    "question": "Which Chinese autonomous region shares a border with Pakistan?",
+    "options": [
+      "Guangdong",
+      "Xinjiang",
+      "Yunnan",
+      "Hunan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://english.www.gov.cn/news/202412/02/content_WS674cfb1dc6d0868f4e8ed941.html",
+        "label": "China-Pakistan border port in Xinjiang",
+        "publisher": "State Council of the People's Republic of China",
+        "authorityId": "china-state-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official report locates the China-Pakistan Khunjerab border port in Xinjiang Uygur Autonomous Region."
+      },
+      {
+        "url": "https://en.ndrc.gov.cn/netcoo/goingout/202304/t20230421_1355426.html",
+        "label": "Xinjiang Khunjerab Pass",
+        "publisher": "National Development and Reform Commission of China",
+        "authorityId": "china-ndrc",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NDRC independently locates Khunjerab Pass on the Pakistan border in Xinjiang."
+      }
+    ],
+    "referenceUrl": "https://english.www.gov.cn/news/202412/02/content_WS674cfb1dc6d0868f4e8ed941.html",
+    "referenceLabel": "China-Pakistan border port in Xinjiang",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Province was corrected to autonomous region; the answer is Xinjiang."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q079",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 79,
+    "question": "Which mountain range contains K2 and most of Pakistan's peaks above 8,000 metres?",
+    "options": [
+      "Karakoram Range",
+      "Himalaya Range",
+      "Hindu Kush Range",
+      "Salt Range"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.britannica.com/place/K2",
+        "label": "K2",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica locates K2 in the Karakoram Range."
+      },
+      {
+        "url": "https://tourism.gov.pk/advertisements/Tourism%20in%20Pakistan%20English%20with%20PTDC%20%281%29.pdf",
+        "label": "Tourism in Pakistan",
+        "publisher": "Pakistan Tourism Development Corporation",
+        "authorityId": "pakistan-tourism-development-corporation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official tourism guide locates Pakistan's major high summits, including K2, in the Karakoram."
+      }
+    ],
+    "referenceUrl": "https://www.britannica.com/place/K2",
+    "referenceLabel": "K2",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague 'maximum summits' claim was repaired to the documented concentration of Pakistan's eight-thousanders; None of these was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q080",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 80,
+    "question": "Which is the highest peak of Pakistan's Salt Range?",
+    "options": [
+      "Sakesar",
+      "K2",
+      "Tirich Mir",
+      "Nanga Parbat"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/pcr_punjab.pdf",
+        "label": "Punjab regional profile",
+        "publisher": "Pakistan Bureau of Statistics",
+        "authorityId": "pakistan-statistics",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government profile identifies Sakesar among the highest peaks of the Salt Range."
+      },
+      {
+        "url": "https://www.britannica.com/place/Salt-Range",
+        "label": "Salt Range",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently identifies Sakesar as the Salt Range's highest summit."
+      }
+    ],
+    "referenceUrl": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/pcr_punjab.pdf",
+    "referenceLabel": "Punjab regional profile",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The spelling Sakasar was standardized to Sakesar."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q081",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 81,
+    "question": "What is the highest mountain in the Hindu Kush range?",
+    "options": [
+      "Tirich Mir",
+      "Nanga Parbat",
+      "Koh-e-Safaid",
+      "None of these"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://tourism.gov.pk/advertisements/Tourism%20in%20Pakistan%20English%20with%20PTDC%20%281%29.pdf",
+        "label": "Tourism in Pakistan",
+        "publisher": "Pakistan Tourism Development Corporation",
+        "authorityId": "ptdc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PTDC identifies Tirich Mir as the highest peak of the Hindu Kush."
+      },
+      {
+        "url": "https://www.iranicaonline.org/articles/hindu-kush/",
+        "label": "Hindu Kush",
+        "publisher": "Encyclopaedia Iranica",
+        "authorityId": "encyclopaedia-iranica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Iranica independently identifies Tirich Mir as the range's highest summit."
+      }
+    ],
+    "referenceUrl": "https://tourism.gov.pk/advertisements/Tourism%20in%20Pakistan%20English%20with%20PTDC%20%281%29.pdf",
+    "referenceLabel": "Tourism in Pakistan",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "This is an exact repetition of an already verified ADV fact; the answer is Tirich Mir."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q082",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 82,
+    "question": "Which route description correctly identifies the areas connected by Babusar Pass?",
+    "options": [
+      "Quetta to Chaman",
+      "Kaghan Valley to Chilas, with the route continuing toward Gilgit",
+      "Swat to Chitral",
+      "Bannu to Afghanistan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://tourism.gov.pk/publications/Kaghan%20Booklet.pdf",
+        "label": "Kaghan Valley travel guide",
+        "publisher": "Tourism Corporation Khyber Pakhtunkhwa",
+        "authorityId": "khyber-pakhtunkhwa-tourism",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The guide states that Babusar Pass forms the boundary between Kaghan Valley and Chilas and historically provided the route onward to Gilgit."
+      },
+      {
+        "url": "https://tourism.gov.pk/publications/Brochure.pdf",
+        "label": "Gilgit-Baltistan tourism brochure",
+        "publisher": "Pakistan Tourism Development Corporation",
+        "authorityId": "pakistan-tourism-development-corporation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official brochure independently says Babusar Pass connects Khyber Pakhtunkhwa with Gilgit-Baltistan through Chilas."
+      }
+    ],
+    "referenceUrl": "https://tourism.gov.pk/publications/Kaghan%20Booklet.pdf",
+    "referenceLabel": "Kaghan Valley travel guide",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "A pass connects regions rather than the distant cities printed. Option B was repaired from Abbottabad-Gilgit to the precise Kaghan-Chilas route while preserving the intended choice."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q083",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 83,
+    "question": "Which listed metal is the most malleable?",
+    "options": [
+      "Silver",
+      "Aluminum",
+      "Gold",
+      "Lithium"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://periodic-table.rsc.org/element/79/Gold",
+        "label": "Gold: element information",
+        "publisher": "Royal Society of Chemistry",
+        "authorityId": "royal-society-chemistry",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The RSC identifies gold as the most malleable of all metals."
+      },
+      {
+        "url": "https://ocw.mit.edu/courses/3-091-introduction-to-solid-state-chemistry-fall-2018/3ad190d2d139a07b92d720c96a022f46_Yap0AKRczf0.pdf",
+        "label": "Introduction to Solid-State Chemistry",
+        "publisher": "MIT OpenCourseWare",
+        "authorityId": "mit-opencourseware",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The MIT course material independently states that gold is the most malleable metal."
+      }
+    ],
+    "referenceUrl": "https://periodic-table.rsc.org/element/79/Gold",
+    "referenceLabel": "Gold: element information",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The blank was converted into a complete question; the answer is gold."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q084",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 84,
+    "question": "About how much blood does an average adult have?",
+    "options": [
+      "5 litres",
+      "6 litres",
+      "7 litres",
+      "8 litres"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://my.clevelandclinic.org/health/diagnostics/16793-blood-volume-testing",
+        "label": "Blood volume",
+        "publisher": "Cleveland Clinic",
+        "authorityId": "cleveland-clinic",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cleveland Clinic states that average adult blood volume is about 5 litres."
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK526077/",
+        "label": "Physiology, Blood Volume",
+        "publisher": "NCBI Bookshelf",
+        "authorityId": "ncbi-bookshelf",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The medical reference independently states that an average adult has nearly 5 litres of circulating blood."
+      }
+    ],
+    "referenceUrl": "https://my.clevelandclinic.org/health/diagnostics/16793-blood-volume-testing",
+    "referenceLabel": "Blood volume",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "British spelling and approximate wording were standardized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q085",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1092,
+    "sourceBookPage": 1091,
+    "sourceQuestionNumber": 85,
+    "question": "Which language was used to program first-generation electronic computers?",
+    "options": [
+      "Machine language",
+      "Python",
+      "C++",
+      "Java"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.ibm.com/history/1401",
+        "label": "IBM 1401 history",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM's history describes early computer operation through machine-oriented instructions and programming systems."
+      },
+      {
+        "url": "https://openstax.org/books/introduction-computer-science/pages/1-2-history-of-computers",
+        "label": "History of computers",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The computer-science text independently explains that first-generation computers were programmed in machine language."
+      }
+    ],
+    "referenceUrl": "https://www.ibm.com/history/1401",
+    "referenceLabel": "IBM 1401 history",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The ungrammatical source was repaired and 'binary language' was removed as a competing synonym of machine language."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q086",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1093,
+    "sourceBookPage": 1092,
+    "sourceQuestionNumber": 86,
+    "question": "Microsoft Access is primarily used for which task?",
+    "options": [
+      "Operating-system development",
+      "Video editing",
+      "Creating and managing databases",
+      "Drawing web pages only"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/database-design-basics",
+        "label": "Database design basics",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft's Access guidance describes creating relational databases with tables, queries, forms and reports."
+      },
+      {
+        "url": "https://www.britannica.com/technology/database/Relational-databases",
+        "label": "Relational databases",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently describes the database-management model implemented by applications such as Access."
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-us/office/database-design-basics",
+    "referenceLabel": "Database design basics",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The overly broad All of these choice was removed; Access is principally a database application."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q087",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1093,
+    "sourceBookPage": 1092,
+    "sourceQuestionNumber": 87,
+    "question": "In an Excel formula, what does a dollar sign do when placed before a row or column reference?",
+    "options": [
+      "Fixes that part of the reference",
+      "Updates the data automatically",
+      "Filters the worksheet",
+      "Deletes the reference"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-US/Excel/switch-between-relative-absolute-and-mixed-references",
+        "label": "Switch between relative, absolute and mixed references",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft states that a dollar sign fixes a row or column in an Excel cell reference."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/scalc/guide/relativ_absolut_ref.html",
+        "label": "Relative and absolute references",
+        "publisher": "The Document Foundation",
+        "authorityId": "document-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice Calc documentation independently explains the dollar sign used to make row or column references absolute."
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-US/Excel/switch-between-relative-absolute-and-mixed-references",
+    "referenceLabel": "Switch between relative, absolute and mixed references",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague phrase 'fix data' was repaired to the exact function of the dollar sign in a cell reference."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q088",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1093,
+    "sourceBookPage": 1092,
+    "sourceQuestionNumber": 88,
+    "question": "The line y = -2x - 2 is perpendicular to line l, and both have the same y-intercept. Which equation could represent line l?",
+    "options": [
+      "y = -2x - 2",
+      "y = 2x - 2",
+      "y = (1/2)x - 2",
+      "y = -(1/2)x - 2"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/2-1-the-rectangular-coordinate-systems-and-graphs",
+        "label": "Slopes of perpendicular lines",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that nonvertical perpendicular lines have slopes whose product is -1."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=line+perpendicular+to+y%3D-2x-2+through+%280%2C-2%29",
+        "label": "Perpendicular line calculation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent symbolic calculation returns y = x/2 - 2."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/2-1-the-rectangular-coordinate-systems-and-graphs",
+    "referenceLabel": "Slopes of perpendicular lines",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Mathematical spacing was normalized. The perpendicular slope is 1/2 and the shared intercept is -2."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q089",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1093,
+    "sourceBookPage": 1092,
+    "sourceQuestionNumber": 89,
+    "question": "A 15-metre ladder reaches the top of a vertical wall and makes a 60-degree angle with the wall. What is the wall's height?",
+    "options": [
+      "7 m",
+      "7.5 m",
+      "8 m",
+      "8.5 m"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+        "label": "Right-triangle trigonometry",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines cosine as adjacent side over hypotenuse, so the wall height is 15 cos 60 degrees = 7.5 metres."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=15*cos%2860+degrees%29",
+        "label": "15 cos 60 degrees",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation evaluates 15 cos 60 degrees as 7.5."
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+    "referenceLabel": "Right-triangle trigonometry",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Because the stated angle is with the wall, height is adjacent to the angle: 15 cos 60 degrees = 7.5 m. The source's associated work incorrectly treated the angle as being with the ground, but its keyed option remains 7.5 m."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q090",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1093,
+    "sourceBookPage": 1092,
+    "sourceQuestionNumber": 90,
+    "question": "Which listed word is the best antonym of 'ecstasy'?",
+    "options": [
+      "Happiness",
+      "Misery",
+      "Ailment",
+      "Amiable"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/ecstasy",
+        "label": "Synonyms and antonyms of ecstasy",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's thesaurus lists agony among antonyms and contrasting terms for ecstasy."
+      },
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/definition/english/ecstasy",
+        "label": "Ecstasy",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-university-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford defines ecstasy as a feeling of very great happiness, contrasting with agony as extreme suffering."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/us/thesaurus/ecstasy",
+    "referenceLabel": "Synonyms and antonyms of ecstasy",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The stem was normalized and the OCR-like 'Aliment' was corrected to Ailment. Dictionary evidence supports Misery."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q091",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1093,
+    "sourceBookPage": 1092,
+    "sourceQuestionNumber": 91,
+    "question": "Which verb form ends in '-ing' and functions like a noun?",
+    "options": [
+      "Gerund",
+      "Infinitive",
+      "Transitive",
+      "Indefinite"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/gerund",
+        "label": "Gerund",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a gerund as an -ing word made from a verb and used like a noun."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/verbs-followed-ing-forms",
+        "label": "Verbs followed by -ing forms",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently explains noun-like uses of verb -ing forms called gerunds."
+      }
+    ],
+    "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/gerund",
+    "referenceLabel": "Gerund",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Quotation marks and grammar were normalized; the answer is gerund."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q092",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1093,
+    "sourceBookPage": 1092,
+    "sourceQuestionNumber": 92,
+    "question": "What does the Urdu word 'ranjida' (رنجیدہ) mean?",
+    "options": [
+      "Sad or grieved",
+      "To devastate",
+      "To be happy",
+      "To describe"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-ranjiida?keyword=T&lang=ur",
+        "label": "Meaning of رنجیدہ",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines رنجیدہ as غمگین, اداس, دکھی and related senses."
+      },
+      {
+        "url": "https://www.urducouncil.nic.in/sites/default/files/2024-06/English_Urdu_Dictionary_Volume_Fifth_R-S.pdf",
+        "label": "English-Urdu Dictionary, R-S",
+        "publisher": "National Council for Promotion of Urdu Language",
+        "authorityId": "india-urdu-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government dictionary independently equates the relevant sense with غمگین and ملول."
+      }
+    ],
+    "referenceUrl": "https://rekhtadictionary.com/meaning-of-ranjiida?keyword=T&lang=ur",
+    "referenceLabel": "Meaning of رنجیدہ",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The Urdu stem was translated for the verified canonical. The printed key 'اجاڑ کرنا' is incorrect; dictionaries support sad or grieved."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q093",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1093,
+    "sourceBookPage": 1092,
+    "sourceQuestionNumber": 93,
+    "question": "Which word completes Ghalib's Urdu couplet 'Jaan tum par nisaar karta hun / Main nahin jaanta ____ kya hai'?",
+    "options": [
+      "Dua (prayer)",
+      "Wafa (fidelity)",
+      "Dagha (betrayal)",
+      "Sila (reward)"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.rekhta.org/couplets/jaan-tum-par-nisaar-kartaa-huun-mirza-ghalib-couplets",
+        "label": "جان تم پر نثار کرتا ہوں",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta gives Ghalib's complete couplet with the word دعا in the second line."
+      },
+      {
+        "url": "https://www.studiestoday.com/sites/default/files/books/telangana/Telangana-Board-SCERT-Class-10-Urdu-Book.pdf",
+        "label": "Telangana Class 10 Urdu textbook",
+        "publisher": "Telangana State Council of Educational Research and Training",
+        "authorityId": "telangana-scert",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government textbook independently prints the couplet as 'میں نہیں جانتا دعا کیا ہے'."
+      }
+    ],
+    "referenceUrl": "https://www.rekhta.org/couplets/jaan-tum-par-nisaar-kartaa-huun-mirza-ghalib-couplets",
+    "referenceLabel": "جان تم پر نثار کرتا ہوں",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The Urdu source was transliterated for the verified canonical. The correct word dua was absent from the first three source choices and the printed key selected wafa; options were rebuilt from the verified verse."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q094",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1093,
+    "sourceBookPage": 1092,
+    "sourceQuestionNumber": 94,
+    "question": "Who is known by the title 'Baba-e-Urdu'?",
+    "options": [
+      "Maulana Zafar Ali Khan",
+      "Maulvi Abdul Haq",
+      "Mirza Ghalib",
+      "Ghulam Abbas"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://sahitya-akademi.gov.in/publications/pdf/abdul-haq_english.pdf",
+        "label": "Abdul Haq",
+        "publisher": "Sahitya Akademi",
+        "authorityId": "sahitya-akademi",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The national literary academy biography states that Maulvi Abdul Haq was given the title Baba-e-Urdu."
+      },
+      {
+        "url": "https://imtezaaj.uok.edu.pk/website/journal/article/5d60213b6d780/page",
+        "label": "بابائے اردو کے خطوط",
+        "publisher": "University of Karachi",
+        "authorityId": "university-of-karachi",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university journal independently identifies Maulvi Abdul Haq as Baba-e-Urdu."
+      }
+    ],
+    "referenceUrl": "https://sahitya-akademi.gov.in/publications/pdf/abdul-haq_english.pdf",
+    "referenceLabel": "Abdul Haq",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The Urdu source question and names were translated or transliterated for the verified canonical; the answer is Maulvi Abdul Haq."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q095",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1093,
+    "sourceBookPage": 1092,
+    "sourceQuestionNumber": 95,
+    "question": "Who wrote the Urdu Kausar trilogy: 'Aab-e-Kausar', 'Rud-e-Kausar' and 'Mauj-e-Kausar'?",
+    "options": [
+      "Sheikh Muhammad Ikram",
+      "Aziz Ahmad",
+      "Naeem Siddiqui",
+      "Muhammad Husain Azad"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.rekhta.org/poets/shaikh-mohammad-ikram",
+        "label": "Shaikh Mohammad Ikram",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta identifies Shaikh Mohammad Ikram as author of the Kausar trilogy including Aab-e-Kausar and Mauj-e-Kausar."
+      },
+      {
+        "url": "https://online.aiou.edu.pk/LIVE_SITE/SoftBooks/5679.pdf",
+        "label": "Muslim historiography in South Asia",
+        "publisher": "Allama Iqbal Open University",
+        "authorityId": "allama-iqbal-open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university text independently lists Aab-i Kausar, Rud-i Kausar and Mauj-i Kausar among S. M. Ikram's works."
+      }
+    ],
+    "referenceUrl": "https://www.rekhta.org/poets/shaikh-mohammad-ikram",
+    "referenceLabel": "Shaikh Mohammad Ikram",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The Urdu source was translated for the canonical. It incorrectly printed 'Urdu Kausar'; the documented title Rud-e-Kausar was restored and author names were standardized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0151-Q096",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0151",
+    "sourcePdfPage": 1093,
+    "sourceBookPage": 1092,
+    "sourceQuestionNumber": 96,
+    "question": "Who was the sixth Umayyad caliph, reigning when Muhammad bin Qasim's forces captured Debal?",
+    "options": [
+      "Yazid ibn Muawiya",
+      "Umar ibn Abd al-Aziz",
+      "Al-Walid ibn Abd al-Malik",
+      "Sulayman ibn Abd al-Malik"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.britannica.com/biography/al-Walid-Umayyad-caliph",
+        "label": "Al-Walid",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies al-Walid I, son of Abd al-Malik, as the sixth Umayyad caliph whose reign covered the conquest of Sindh."
+      },
+      {
+        "url": "https://orca.cardiff.ac.uk/id/eprint/179949/1/2024rossidphd.pdf",
+        "label": "The Umayyad caliphate under al-Walid",
+        "publisher": "Cardiff University",
+        "authorityId": "cardiff-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The academic study independently identifies al-Walid ibn Abd al-Malik as the sixth Umayyad caliph, reigning 705-715."
+      }
+    ],
+    "referenceUrl": "https://www.britannica.com/biography/al-Walid-Umayyad-caliph",
+    "referenceLabel": "Al-Walid",
+    "accessedOn": "2026-08-27",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague phrase 'during the Debal incident' was repaired and names were standardized; the answer is al-Walid I."
+  }
+]

@@ -1,0 +1,3281 @@
+[
+  {
+    "id": "ADV2E102-U0011-Q026-SRC",
+    "pairId": "ADV2E102-U0011-Q026",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "According to Pakistan's Ministry of National Food Security in 2024, which country supplied about 85-90% of Pakistan's imported palm-oil market?",
+    "questionUrdu": "پاکستان کی وزارتِ غذائی تحفظ کے 2024 کے مطابق پاکستان کی درآمدی پام آئل منڈی کا تقریباً 85-90% کس ملک نے فراہم کیا؟",
+    "options": [
+      "Malaysia",
+      "Indonesia",
+      "China",
+      "Brazil"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Indonesia ہے۔ وزارت کے مطابق انڈونیشیا پاکستان کی پام آئل درآمدات کا غالب فراہم کنندہ تھا، جبکہ ملائیشیا دوسرا بڑا ذریعہ تھا۔",
+    "source": {
+      "type": "book",
+      "label": "Pakistan Edible Oil Conference: palm-oil import shares",
+      "referenceUrl": "https://mnfsr.gov.pk/Detail/OWVmNzI5ZWMtOWEzMS00OTI4LTk1NWUtYzQ0Y2ViMWU1MWEx",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q026"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://mnfsr.gov.pk/Detail/OWVmNzI5ZWMtOWEzMS00OTI4LTk1NWUtYzQ0Y2ViMWU1MWEx",
+        "label": "Pakistan Edible Oil Conference: palm-oil import shares",
+        "publisher": "Ministry of National Food Security and Research, Pakistan",
+        "authorityId": "pakistan-food-security-ministry",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The ministry states that Indonesia occupied about 85-90% of Pakistan's palm-oil market."
+      },
+      {
+        "url": "https://www.pbs.gov.pk/sites/default/files/external_trade/8_digit_level/export/D-10_Import-06-2023.pdf",
+        "label": "Imports by commodities and countries: palm oil",
+        "publisher": "Pakistan Bureau of Statistics",
+        "authorityId": "pakistan-bureau-statistics",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "PBS commodity-country tables show Indonesian refined palm-oil quantities far exceeding Malaysian quantities in the reported period."
+      }
+    ],
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": null,
+      "asOf": "2024-02-24",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-02-24"
+    },
+    "sourceNotes": "The source answer Malaysia is outdated. The stem was dated to the government's 2024 market-share statement, Indonesia was added, and the verified answer was changed accordingly."
+  },
+  {
+    "id": "ADV2E102-U0011-Q026-SIM",
+    "pairId": "ADV2E102-U0011-Q026",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Besides Indonesia, which Southeast Asian country is Pakistan's other major palm-oil supplier?",
+    "questionUrdu": "Indonesia کے علاوہ جنوب مشرقی ایشیا کا کون سا ملک پاکستان کو پام آئل فراہم کرنے والا دوسرا بڑا ملک ہے؟",
+    "options": [
+      "Malaysia",
+      "Vietnam",
+      "Thailand",
+      "Philippines"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Malaysia ہے۔ پاکستان کی پام آئل درآمدات میں انڈونیشیا غالب ہے اور ملائیشیا دوسرا اہم فراہم کنندہ ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Pakistan Edible Oil Conference: palm-oil import shares",
+      "referenceUrl": "https://mnfsr.gov.pk/Detail/OWVmNzI5ZWMtOWEzMS00OTI4LTk1NWUtYzQ0Y2ViMWU1MWEx",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q026",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://mnfsr.gov.pk/Detail/OWVmNzI5ZWMtOWEzMS00OTI4LTk1NWUtYzQ0Y2ViMWU1MWEx",
+        "label": "Pakistan Edible Oil Conference: palm-oil import shares",
+        "publisher": "Ministry of National Food Security and Research, Pakistan",
+        "authorityId": "pakistan-food-security-ministry",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Pakistan's food-security ministry identifies Malaysia alongside dominant supplier Indonesia in the palm-oil market."
+      },
+      {
+        "url": "https://www.pbs.gov.pk/sites/default/files/external_trade/8_digit_level/export/D-10_Import-06-2023.pdf",
+        "label": "Imports by commodities and countries: palm oil",
+        "publisher": "Pakistan Bureau of Statistics",
+        "authorityId": "pakistan-bureau-statistics",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "PBS country-commodity tables separately record substantial refined palm-oil imports from Malaysia."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q027-SRC",
+    "pairId": "ADV2E102-U0011-Q027",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Borstal Jails/Institutions are meant for:",
+    "questionUrdu": "Borstal Jails یا Institutions کن قیدیوں کے لیے بنائے جاتے ہیں؟",
+    "options": [
+      "Women Prisoners",
+      "Condemned Prisoners",
+      "Juvenile Prisoners",
+      "Hardened Prisoners"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Juvenile Prisoners ہے۔ بورسٹل اداروں کا مقصد کم عمر مجرموں کو بالغ قیدیوں سے الگ رکھ کر اصلاح اور بحالی کے مواقع دینا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Pakistan report on juvenile justice and Borstal institutions",
+      "referenceUrl": "https://docstore.ohchr.org/SelfServices/FilesHandler.ashx?enc=szGaNS6iDTD09sCZ7zxMXhYYKFyzaVrBv2Y0NNn6U0kaiC8kVlVlVfQNqD5oeLAKQsNCGu3YtTyIZPAkHOcxVw%3D%3D",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q027"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://docstore.ohchr.org/SelfServices/FilesHandler.ashx?enc=szGaNS6iDTD09sCZ7zxMXhYYKFyzaVrBv2Y0NNn6U0kaiC8kVlVlVfQNqD5oeLAKQsNCGu3YtTyIZPAkHOcxVw%3D%3D",
+        "label": "Pakistan report on juvenile justice and Borstal institutions",
+        "publisher": "United Nations Office of the High Commissioner for Human Rights",
+        "authorityId": "un-ohchr",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UN-hosted Pakistan report states that children under the juvenile-justice system are sent to Borstal institutions for rehabilitation."
+      },
+      {
+        "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/children-care/",
+        "label": "Correctional institutions for children and young offenders",
+        "publisher": "UK National Archives",
+        "authorityId": "uk-national-archives",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Archives explains that borstals were established to separate young offenders from older adult convicts."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0011-Q027-SIM",
+    "pairId": "ADV2E102-U0011-Q027",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "What is the principal rehabilitative purpose of a Borstal institution?",
+    "questionUrdu": "Borstal institution کا بنیادی اصلاحی مقصد کیا ہوتا ہے؟",
+    "options": [
+      "Reforming young offenders",
+      "Detaining prisoners of war",
+      "Holding civil debtors",
+      "Housing remand witnesses"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Reforming young offenders ہے۔ بورسٹل میں نوجوان مجرموں کو تعلیم، تربیت اور اصلاح کے ذریعے دوبارہ معاشرے کا مفید فرد بنانے کی کوشش کی جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Pakistan report on juvenile justice and Borstal institutions",
+      "referenceUrl": "https://docstore.ohchr.org/SelfServices/FilesHandler.ashx?enc=szGaNS6iDTD09sCZ7zxMXhYYKFyzaVrBv2Y0NNn6U0kaiC8kVlVlVfQNqD5oeLAKQsNCGu3YtTyIZPAkHOcxVw%3D%3D",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q027",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://docstore.ohchr.org/SelfServices/FilesHandler.ashx?enc=szGaNS6iDTD09sCZ7zxMXhYYKFyzaVrBv2Y0NNn6U0kaiC8kVlVlVfQNqD5oeLAKQsNCGu3YtTyIZPAkHOcxVw%3D%3D",
+        "label": "Pakistan report on juvenile justice and Borstal institutions",
+        "publisher": "United Nations Office of the High Commissioner for Human Rights",
+        "authorityId": "un-ohchr",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The UN-hosted Pakistan report describes Borstal institutions as facilities for the rehabilitation of children in the juvenile-justice system."
+      },
+      {
+        "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/children-care/",
+        "label": "Correctional institutions for children and young offenders",
+        "publisher": "UK National Archives",
+        "authorityId": "uk-national-archives",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The UK National Archives explains that borstals were created to train and reform young offenders apart from adult convicts."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q028-SRC",
+    "pairId": "ADV2E102-U0011-Q028",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "The official CPEC Long-Term Plan covers the period 2017 through which year?",
+    "questionUrdu": "CPEC کا سرکاری Long-Term Plan سال 2017 سے کس سال تک کے عرصے پر محیط ہے؟",
+    "options": [
+      "2020",
+      "2025",
+      "2028",
+      "2030"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 2030 ہے۔ پاکستان اور چین کا طویل مدتی سی پیک منصوبہ 2017-2030 کے ترقیاتی فریم ورک پر مبنی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Long-Term Plan for China-Pakistan Economic Corridor (2017-2030)",
+      "referenceUrl": "https://cpec.gov.pk/brain/public/uploads/documents/CPEC-LTP.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q028"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://cpec.gov.pk/brain/public/uploads/documents/CPEC-LTP.pdf",
+        "label": "Long-Term Plan for China-Pakistan Economic Corridor (2017-2030)",
+        "publisher": "CPEC Secretariat, Government of Pakistan",
+        "authorityId": "pakistan-cpec-secretariat",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official bilateral plan is titled Long-Term Plan for CPEC (2017-2030)."
+      },
+      {
+        "url": "https://pk.china-embassy.gov.cn/eng/zbgx/201812/t20181230_1134724.htm",
+        "label": "Latest Progress on CPEC: Long-Term Plan",
+        "publisher": "Embassy of the People's Republic of China in Pakistan",
+        "authorityId": "china-embassy-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "China's official account states that the CPEC Long-Term Plan is effective until 2030."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The prediction that CPEC would be 'fully operational' by a single year was not uniquely testable and may become obsolete. The item now asks the fixed end year of the official 2017-2030 plan."
+  },
+  {
+    "id": "ADV2E102-U0011-Q028-SIM",
+    "pairId": "ADV2E102-U0011-Q028",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which two countries jointly issued the CPEC Long-Term Plan for 2017-2030?",
+    "questionUrdu": "2017-2030 کے CPEC Long-Term Plan کو کن دو ممالک نے مشترکہ طور پر جاری کیا؟",
+    "options": [
+      "Pakistan and China",
+      "Pakistan and Turkey",
+      "China and Iran",
+      "Pakistan and Saudi Arabia"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Pakistan and China ہے۔ CPEC دونوں ممالک کا باہمی اقتصادی تعاون کا فریم ورک ہے اور طویل مدتی منصوبہ مشترکہ طور پر جاری کیا گیا۔",
+    "source": {
+      "type": "practice",
+      "label": "Long-Term Plan for China-Pakistan Economic Corridor (2017-2030)",
+      "referenceUrl": "https://cpec.gov.pk/brain/public/uploads/documents/CPEC-LTP.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q028",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://cpec.gov.pk/brain/public/uploads/documents/CPEC-LTP.pdf",
+        "label": "Long-Term Plan for China-Pakistan Economic Corridor (2017-2030)",
+        "publisher": "CPEC Secretariat, Government of Pakistan",
+        "authorityId": "pakistan-cpec-secretariat",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The official Long-Term Plan is a jointly issued Pakistan-China CPEC framework for 2017-2030."
+      },
+      {
+        "url": "https://pk.china-embassy.gov.cn/eng/zbgx/201812/t20181230_1134724.htm",
+        "label": "Latest Progress on CPEC: Long-Term Plan",
+        "publisher": "Embassy of the People's Republic of China in Pakistan",
+        "authorityId": "china-embassy-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "China's official account describes the plan as jointly formulated by China and Pakistan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q029-SRC",
+    "pairId": "ADV2E102-U0011-Q029",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "What is the official length of the Multan-Sukkur section of the M-5 motorway?",
+    "questionUrdu": "M-5 موٹروے کے Multan-Sukkur حصے کی سرکاری لمبائی کتنی ہے؟",
+    "options": [
+      "392 km",
+      "400 km",
+      "360 km",
+      "380 km"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 392 km ہے۔ ملتان سے سکھر تک یہ M-5 حصہ 392 کلومیٹر طویل اور چھ رویہ موٹروے ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Sukkur-Multan motorway section (392 km)",
+      "referenceUrl": "https://pc.gov.pk/web/projects/cdetail/6",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q029"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pc.gov.pk/web/projects/cdetail/6",
+        "label": "Sukkur-Multan motorway section (392 km)",
+        "publisher": "Planning Commission of Pakistan",
+        "authorityId": "pakistan-planning-commission",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official project page specifies a 392 km six-lane Sukkur-Multan motorway section."
+      },
+      {
+        "url": "https://cpec.gov.pk/project-details/29%26lang%3Den",
+        "label": "Peshawar-Karachi Motorway: Multan-Sukkur section",
+        "publisher": "CPEC Secretariat, Government of Pakistan",
+        "authorityId": "pakistan-cpec-secretariat",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The CPEC project record lists the Multan-Sukkur section length as 392 km."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed option 394 km conflicts with both official project records. It was corrected to 392 km while retaining the intended first option."
+  },
+  {
+    "id": "ADV2E102-U0011-Q029-SIM",
+    "pairId": "ADV2E102-U0011-Q029",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "How many traffic lanes does the 392 km Multan-Sukkur section of the M-5 motorway have?",
+    "questionUrdu": "M-5 موٹروے کے 392 km طویل Multan-Sukkur حصے میں ٹریفک کی کتنی لینیں ہیں؟",
+    "options": [
+      "Four",
+      "Six",
+      "Eight",
+      "Ten"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Six ہے۔ سرکاری منصوبہ ریکارڈ کے مطابق ملتان-سکھر موٹروے چھ لینوں پر مشتمل ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Sukkur-Multan motorway section (392 km)",
+      "referenceUrl": "https://pc.gov.pk/web/projects/cdetail/6",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q029",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pc.gov.pk/web/projects/cdetail/6",
+        "label": "Sukkur-Multan motorway section (392 km)",
+        "publisher": "Planning Commission of Pakistan",
+        "authorityId": "pakistan-planning-commission",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The official project page specifies that the 392 km Sukkur-Multan motorway is a six-lane facility."
+      },
+      {
+        "url": "https://cpec.gov.pk/project-details/29%26lang%3Den",
+        "label": "Peshawar-Karachi Motorway: Multan-Sukkur section",
+        "publisher": "CPEC Secretariat, Government of Pakistan",
+        "authorityId": "pakistan-cpec-secretariat",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The CPEC project record also describes the Multan-Sukkur motorway as six lanes."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q030-SRC",
+    "pairId": "ADV2E102-U0011-Q030",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "'Warsak Dam' has been built on the river:",
+    "questionUrdu": "Warsak Dam کس دریا پر تعمیر کیا گیا ہے؟",
+    "options": [
+      "Indus",
+      "Korang",
+      "Kabul",
+      "Sutlej"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Kabul ہے۔ ورسک ہائیڈرو الیکٹرک منصوبہ خیبر پختونخوا میں دریائے کابل پر واقع ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Warsak Dam",
+      "referenceUrl": "https://wapda.gov.pk/?p=2463",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q030"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://wapda.gov.pk/?p=2463",
+        "label": "Warsak Dam",
+        "publisher": "Water and Power Development Authority",
+        "authorityId": "pakistan-wapda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WAPDA states that Warsak Hydroelectric Project is located on the Kabul River."
+      },
+      {
+        "url": "https://documents1.worldbank.org/curated/fr/975791468775504944/pdf/multi-page.pdf",
+        "label": "World Bank report on NWFP fisheries and reservoirs",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The World Bank document identifies Warsak Dam on the Kabul River."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0011-Q030-SIM",
+    "pairId": "ADV2E102-U0011-Q030",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Warsak Dam is located northwest of which major Pakistani city?",
+    "questionUrdu": "Warsak Dam پاکستان کے کس بڑے شہر کے شمال مغرب میں واقع ہے؟",
+    "options": [
+      "Peshawar",
+      "Quetta",
+      "Lahore",
+      "Multan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Peshawar ہے۔ ورسک ڈیم دریائے کابل پر پشاور سے تقریباً 30 کلومیٹر شمال مغرب میں واقع ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Warsak Dam",
+      "referenceUrl": "https://wapda.gov.pk/?p=2463",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q030",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://wapda.gov.pk/?p=2463",
+        "label": "Warsak Dam",
+        "publisher": "Water and Power Development Authority",
+        "authorityId": "pakistan-wapda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "WAPDA locates Warsak Hydroelectric Project about 30 kilometres northwest of Peshawar."
+      },
+      {
+        "url": "https://documents1.worldbank.org/curated/fr/975791468775504944/pdf/multi-page.pdf",
+        "label": "World Bank report on NWFP fisheries and reservoirs",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The World Bank project material independently locates Warsak Dam near Peshawar on the Kabul River."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q031-SRC",
+    "pairId": "ADV2E102-U0011-Q031",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Under which article of the 1973 Constitution any law inconsistent with or in derogation of Fundamental Rights to be void?",
+    "questionUrdu": "1973 کے آئین کی کس دفعہ کے تحت Fundamental Rights سے متصادم یا ان میں کمی کرنے والا قانون کالعدم ہوتا ہے؟",
+    "options": [
+      "Article 8",
+      "Article 9",
+      "Article 7",
+      "Article 10"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Article 8 ہے۔ اس دفعہ کے مطابق بنیادی حقوق سے متصادم قانون عدم مطابقت کی حد تک بے اثر ہو جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Constitution of Pakistan: Article 8",
+      "referenceUrl": "https://www.na.gov.pk/uploads/documents/1496206393_518.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q031"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.na.gov.pk/uploads/documents/1496206393_518.pdf",
+        "label": "Constitution of Pakistan: Article 8",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official constitutional text labels Article 8 'Laws inconsistent with or in derogation of Fundamental Rights to be void'."
+      },
+      {
+        "url": "https://www.supremecourt.gov.pk/downloads_judgements/const.p._24_2023_f.pdf",
+        "label": "Supreme Court judgment explaining Article 8",
+        "publisher": "Supreme Court of Pakistan",
+        "authorityId": "pakistan-supreme-court",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Supreme Court explains that Article 8 declares laws inconsistent with fundamental rights void to the extent of inconsistency."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0011-Q031-SIM",
+    "pairId": "ADV2E102-U0011-Q031",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Which article of Pakistan's Constitution is titled 'Security of person'?",
+    "questionUrdu": "پاکستان کے آئین کی کون سی دفعہ کا عنوان 'Security of person' ہے؟",
+    "options": [
+      "Article 8",
+      "Article 9",
+      "Article 10",
+      "Article 14"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Article 9 ہے۔ یہ دفعہ قرار دیتی ہے کہ قانون کے مطابق عمل کے سوا کسی شخص کو زندگی یا آزادی سے محروم نہیں کیا جا سکتا۔",
+    "source": {
+      "type": "practice",
+      "label": "Constitution of the Islamic Republic of Pakistan",
+      "referenceUrl": "https://na.gov.pk/uploads/documents/1333523681_951.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q031",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/documents/1333523681_951.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The official Constitution titles Article 9 'Security of person'."
+      },
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator9d8e2ecc414c6d3371ac41114b61a2c4.pdf",
+        "label": "Constitution of Pakistan",
+        "publisher": "Pakistan Code, Ministry of Law and Justice",
+        "authorityId": "pakistan-code",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Pakistan Code reproduces Article 9 under the heading 'Security of person'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q032-SRC",
+    "pairId": "ADV2E102-U0011-Q032",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Shoaib Akhtar bowled the fastest recorded delivery during the Cricket World Cup in 2003. Against which team was Pakistan playing when this happened?",
+    "questionUrdu": "Shoaib Akhtar نے 2003 Cricket World Cup میں تیز ترین ریکارڈ شدہ گیند کس ٹیم کے خلاف کرائی؟",
+    "options": [
+      "England",
+      "West Indies",
+      "New Zealand",
+      "Sri Lanka"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب England ہے۔ شعیب اختر نے انگلینڈ کے خلاف 161.3 کلومیٹر فی گھنٹہ کی رفتار سے گیند کرائی۔",
+    "source": {
+      "type": "book",
+      "label": "Akhtar and Lee head pace race at CWC2003",
+      "referenceUrl": "https://www.icc-cricket.com/news/akhtar-and-lee-head-pace-race-at-cwc2003",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q032"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.icc-cricket.com/news/akhtar-and-lee-head-pace-race-at-cwc2003",
+        "label": "Akhtar and Lee head pace race at CWC2003",
+        "publisher": "International Cricket Council",
+        "authorityId": "icc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ICC records Shoaib Akhtar's 161.3 km/h delivery in Pakistan's match against England."
+      },
+      {
+        "url": "https://www.guinnessworldrecords.com/world-records/fastest-bowling-of-a-cricket-ball-male",
+        "label": "Fastest bowling of a cricket ball (male)",
+        "publisher": "Guinness World Records",
+        "authorityId": "guinness-world-records",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Guinness records Shoaib Akhtar's 161.3 km/h delivery against England at the 2003 World Cup."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2003-02-22",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key marks Sri Lanka, but the ICC and Guinness records identify England. The verified answer was therefore changed to England."
+  },
+  {
+    "id": "ADV2E102-U0011-Q032-SIM",
+    "pairId": "ADV2E102-U0011-Q032",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "What speed was recorded for Shoaib Akhtar's fastest delivery at the 2003 Cricket World Cup?",
+    "questionUrdu": "2003 Cricket World Cup میں Shoaib Akhtar کی تیز ترین گیند کی ریکارڈ شدہ رفتار کیا تھی؟",
+    "options": [
+      "156.4 km/h",
+      "158.8 km/h",
+      "160.0 km/h",
+      "161.3 km/h"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 161.3 km/h ہے۔ یہ گیند انگلینڈ کے خلاف کرائی گئی اور بین الاقوامی کرکٹ کی تیز ترین ریکارڈ شدہ گیند بنی۔",
+    "source": {
+      "type": "practice",
+      "label": "Akhtar and Lee head pace race at CWC2003",
+      "referenceUrl": "https://www.icc-cricket.com/news/akhtar-and-lee-head-pace-race-at-cwc2003",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q032",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.icc-cricket.com/news/akhtar-and-lee-head-pace-race-at-cwc2003",
+        "label": "Akhtar and Lee head pace race at CWC2003",
+        "publisher": "International Cricket Council",
+        "authorityId": "icc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The ICC records Shoaib Akhtar's delivery at 161.3 km/h during the 2003 World Cup."
+      },
+      {
+        "url": "https://www.guinnessworldrecords.com/world-records/fastest-bowling-of-a-cricket-ball-male",
+        "label": "Fastest bowling of a cricket ball (male)",
+        "publisher": "Guinness World Records",
+        "authorityId": "guinness-world-records",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Guinness World Records independently lists the speed as 161.3 km/h."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q033-SRC",
+    "pairId": "ADV2E102-U0011-Q033",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "When did Pakistan first time participate in Olympic Games?",
+    "questionUrdu": "پاکستان نے پہلی بار Olympic Games میں کب شرکت کی؟",
+    "options": [
+      "1944",
+      "1952",
+      "1948",
+      "1956"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 1948 ہے۔ آزادی کے بعد پاکستان کا پہلا اولمپک وفد 1948 کے لندن کھیلوں میں شریک ہوا۔",
+    "source": {
+      "type": "book",
+      "label": "Biographies of IOC members: Ahmed Ebrahim Haroon Jaffer",
+      "referenceUrl": "https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=2953596&parentDocumentId=2953593&skipCopyright=true&skipWatermark=true",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q033"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=2953596&parentDocumentId=2953593&skipCopyright=true&skipWatermark=true",
+        "label": "Biographies of IOC members: Ahmed Ebrahim Haroon Jaffer",
+        "publisher": "International Olympic Committee Olympic World Library",
+        "authorityId": "international-olympic-committee",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The IOC biography records that Jaffer led Pakistan's delegation to the Olympic Games of 1948."
+      },
+      {
+        "url": "https://www.sports.gov.pk/Detail/ZjI3OTZiZTYtN2M5Ny00YjlkLTlhOGUtYmJkZmRkOGJiMGE3",
+        "label": "Pakistan medal tally in Olympic Games",
+        "publisher": "Pakistan Sports Board",
+        "authorityId": "pakistan-sports-board",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Pakistan Sports Board's Olympic history begins Pakistan's participation list with the 1948 London Games."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0011-Q033-SIM",
+    "pairId": "ADV2E102-U0011-Q033",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Which city hosted the 1948 Olympic Games in which Pakistan first participated?",
+    "questionUrdu": "وہ 1948 Olympic Games کس شہر میں منعقد ہوئے جن میں پاکستان نے پہلی بار شرکت کی؟",
+    "options": [
+      "London",
+      "Helsinki",
+      "Melbourne",
+      "Rome"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب London ہے۔ 1948 کے لندن اولمپکس پاکستان کے پہلے اولمپک کھیل تھے۔",
+    "source": {
+      "type": "practice",
+      "label": "Biographies of IOC members: Ahmed Ebrahim Haroon Jaffer",
+      "referenceUrl": "https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=2953596&parentDocumentId=2953593&skipCopyright=true&skipWatermark=true",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q033",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=2953596&parentDocumentId=2953593&skipCopyright=true&skipWatermark=true",
+        "label": "Biographies of IOC members: Ahmed Ebrahim Haroon Jaffer",
+        "publisher": "International Olympic Committee Olympic World Library",
+        "authorityId": "international-olympic-committee",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The IOC record identifies Pakistan's first delegation with the London 1948 Olympic Games."
+      },
+      {
+        "url": "https://www.sports.gov.pk/Detail/ZjI3OTZiZTYtN2M5Ny00YjlkLTlhOGUtYmJkZmRkOGJiMGE3",
+        "label": "Pakistan medal tally in Olympic Games",
+        "publisher": "Pakistan Sports Board",
+        "authorityId": "pakistan-sports-board",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Pakistan Sports Board begins Pakistan's Olympic participation with the 1948 London Games."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q034-SRC",
+    "pairId": "ADV2E102-U0011-Q034",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "In which year did Muhammad Iqbal officially become 'Sir Muhammad Iqbal' through announcement of his knighthood?",
+    "questionUrdu": "Muhammad Iqbal کی knighthood کا اعلان کس سال ہوا جس کے بعد وہ سرکاری طور پر 'Sir Muhammad Iqbal' بنے؟",
+    "options": [
+      "1921",
+      "1922",
+      "1923",
+      "1924"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 1923 ہے۔ اقبال کی نائٹ ہڈ یکم جنوری 1923 کو سرکاری طور پر نافذ ہوئی۔",
+    "source": {
+      "type": "book",
+      "label": "Iqbal biography: official announcement of knighthood",
+      "referenceUrl": "https://www.allamaiqbal.com/biography/en/illustrated_biography05.php",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q034"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.allamaiqbal.com/biography/en/illustrated_biography05.php",
+        "label": "Iqbal biography: official announcement of knighthood",
+        "publisher": "Allama Iqbal educational portal",
+        "authorityId": "allama-iqbal-portal",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The biography records that Iqbal officially became Sir Muhammad Iqbal on 1 January 1923."
+      },
+      {
+        "url": "https://pu.edu.pk/images/journal/indianStudies/PDF/4_v5_2_19.pdf",
+        "label": "Allama Muhammad Iqbal in the politics of the subcontinent",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of the Punjab study states that Iqbal was knighted in 1923."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Sources distinguish the 1922 proposal from the official 1 January 1923 announcement. The ambiguous original was made date-specific, 1923 was added, and the answer changed from the printed 1922 choice."
+  },
+  {
+    "id": "ADV2E102-U0011-Q034-SIM",
+    "pairId": "ADV2E102-U0011-Q034",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "On which date did Muhammad Iqbal officially receive the title 'Sir' in 1923?",
+    "questionUrdu": "Muhammad Iqbal کو 1923 میں سرکاری طور پر 'Sir' کا خطاب کس تاریخ کو ملا؟",
+    "options": [
+      "1 January 1923",
+      "23 March 1923",
+      "14 August 1923",
+      "9 November 1923"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 1 January 1923 ہے۔ نئے سال کی اعزازی فہرست کے اعلان کے ساتھ اقبال سر محمد اقبال کہلائے۔",
+    "source": {
+      "type": "practice",
+      "label": "Iqbal biography: official announcement of knighthood",
+      "referenceUrl": "https://www.allamaiqbal.com/biography/en/illustrated_biography05.php",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q034",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.allamaiqbal.com/biography/en/illustrated_biography05.php",
+        "label": "Iqbal biography: official announcement of knighthood",
+        "publisher": "Allama Iqbal educational portal",
+        "authorityId": "allama-iqbal-portal",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The institutional biography dates Iqbal's official knighthood to 1 January 1923."
+      },
+      {
+        "url": "https://pu.edu.pk/images/journal/indianStudies/PDF/4_v5_2_19.pdf",
+        "label": "Allama Muhammad Iqbal in the politics of the subcontinent",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The University of the Punjab study confirms the 1923 knighthood and its official New Year announcement."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q035-SRC",
+    "pairId": "ADV2E102-U0011-Q035",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "OGRA stands for:",
+    "questionUrdu": "OGRA کی مکمل شکل کیا ہے؟",
+    "options": [
+      "Oil & Gas Regeneration Authority",
+      "Oil & Gas Regulatory Authority",
+      "Oil & Gas Reproduction Authority",
+      "Oil & Gas Restoration Authority"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Oil & Gas Regulatory Authority ہے۔ یہ پاکستان میں تیل اور گیس کے مخصوص شعبوں کی قانونی نگرانی کرنے والا ادارہ ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Oil and Gas Regulatory Authority: introduction",
+      "referenceUrl": "https://www.ogra.org.pk/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q035"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ogra.org.pk/",
+        "label": "Oil and Gas Regulatory Authority: introduction",
+        "publisher": "Oil and Gas Regulatory Authority",
+        "authorityId": "pakistan-ogra",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OGRA's official site expands its name as Oil and Gas Regulatory Authority."
+      },
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator34cd31814840fd2c6ae4ebe36e42c55b.pdf",
+        "label": "Oil and Gas Regulatory Authority Ordinance, 2002",
+        "publisher": "Pakistan Code, Ministry of Law and Justice",
+        "authorityId": "pakistan-code",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official ordinance establishes the Oil and Gas Regulatory Authority."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0011-Q035-SIM",
+    "pairId": "ADV2E102-U0011-Q035",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Which sector is principally regulated by Pakistan's OGRA?",
+    "questionUrdu": "پاکستان کا OGRA بنیادی طور پر کس شعبے کو منظم کرتا ہے؟",
+    "options": [
+      "Oil and gas",
+      "Telecommunications",
+      "Civil aviation",
+      "Securities trading"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Oil and gas ہے۔ OGRA قانون کے تحت پٹرولیم، قدرتی گیس اور متعلقہ سرگرمیوں کی ضابطہ کاری کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Oil and Gas Regulatory Authority: introduction",
+      "referenceUrl": "https://www.ogra.org.pk/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q035",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ogra.org.pk/",
+        "label": "Oil and Gas Regulatory Authority: introduction",
+        "publisher": "Oil and Gas Regulatory Authority",
+        "authorityId": "pakistan-ogra",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "OGRA's official mandate covers Pakistan's oil and gas sectors."
+      },
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator34cd31814840fd2c6ae4ebe36e42c55b.pdf",
+        "label": "Oil and Gas Regulatory Authority Ordinance, 2002",
+        "publisher": "Pakistan Code, Ministry of Law and Justice",
+        "authorityId": "pakistan-code",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The OGRA Ordinance legally establishes regulation of oil, gas and related activities."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q036-SRC",
+    "pairId": "ADV2E102-U0011-Q036",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Pakistan's National Anthem was approved by the Government in:",
+    "questionUrdu": "پاکستان کا قومی ترانہ حکومت نے کس سال منظور کیا؟",
+    "options": [
+      "1947",
+      "1951",
+      "1954",
+      "1957"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 1954 ہے۔ قومی ترانے کے الفاظ کو اگست 1954 میں سرکاری منظوری دی گئی۔",
+    "source": {
+      "type": "book",
+      "label": "National symbols of Pakistan: national anthem",
+      "referenceUrl": "https://mofa.gov.pk/ankara-national-symbols-of-pakistan",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q036"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://mofa.gov.pk/ankara-national-symbols-of-pakistan",
+        "label": "National symbols of Pakistan: national anthem",
+        "publisher": "Ministry of Foreign Affairs, Pakistan",
+        "authorityId": "pakistan-mofa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official national-symbols page gives the anthem's adoption date as 13 August 1954."
+      },
+      {
+        "url": "https://www.app.com.pk/national/pm-to-unveil-newly-recorded-national-anthem-on-august-14/",
+        "label": "History of Pakistan's national anthem",
+        "publisher": "Associated Press of Pakistan",
+        "authorityId": "associated-press-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's state news agency records that the anthem written by Hafeez Jalandhri was formally approved in August 1954."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0011-Q036-SIM",
+    "pairId": "ADV2E102-U0011-Q036",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Who wrote the lyrics of Pakistan's National Anthem approved in 1954?",
+    "questionUrdu": "1954 میں منظور ہونے والے پاکستان کے قومی ترانے کے الفاظ کس نے لکھے؟",
+    "options": [
+      "Hafeez Jalandhari",
+      "A. G. Chagla",
+      "Faiz Ahmad Faiz",
+      "Josh Malihabadi"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Hafeez Jalandhari ہے۔ اے جی چھاگلہ نے دھن بنائی جبکہ حفیظ جالندھری کے لکھے الفاظ 1954 میں منظور ہوئے۔",
+    "source": {
+      "type": "practice",
+      "label": "National symbols of Pakistan: national anthem",
+      "referenceUrl": "https://mofa.gov.pk/ankara-national-symbols-of-pakistan",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q036",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://mofa.gov.pk/ankara-national-symbols-of-pakistan",
+        "label": "National symbols of Pakistan: national anthem",
+        "publisher": "Ministry of Foreign Affairs, Pakistan",
+        "authorityId": "pakistan-mofa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Pakistan's official national-symbols page credits the approved anthem lyrics to Hafeez Jalandhari."
+      },
+      {
+        "url": "https://www.app.com.pk/national/pm-to-unveil-newly-recorded-national-anthem-on-august-14/",
+        "label": "History of Pakistan's national anthem",
+        "publisher": "Associated Press of Pakistan",
+        "authorityId": "associated-press-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Pakistan's state news agency independently identifies Hafeez Jalandhari as the anthem's lyricist."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q037-SRC",
+    "pairId": "ADV2E102-U0011-Q037",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "In 2005, Pakistan raised its technical objections to India's Baglihar hydropower project under which agreement?",
+    "questionUrdu": "2005 میں پاکستان نے بھارت کے Baglihar hydropower project پر کس معاہدے کے تحت فنی اعتراضات اٹھائے؟",
+    "options": [
+      "It was in violation of the UN Charter",
+      "It was violation of Simla Agreement",
+      "It was violation of LOC",
+      "It was violation of Indus Water Treaty"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Indus Water Treaty کی خلاف ورزی ہے۔ پاکستان نے منصوبے کے ڈیزائن کو سندھ طاس معاہدے کی شرائط سے متصادم قرار دیا۔",
+    "source": {
+      "type": "book",
+      "label": "International agreements for transboundary water resources: the Baglihar difference",
+      "referenceUrl": "https://documents1.worldbank.org/curated/en/244761521135162532/pdf/124326-WP-P160278-PUBLIC.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q037"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://documents1.worldbank.org/curated/en/244761521135162532/pdf/124326-WP-P160278-PUBLIC.pdf",
+        "label": "International agreements for transboundary water resources: the Baglihar difference",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The World Bank publication states that Pakistan claimed the Baglihar project contravened the Indus Waters Treaty."
+      },
+      {
+        "url": "https://www.mea.gov.in/bilateral-documents.htm?dtl%2F6439%2FIndus=&outputType=chromeless",
+        "label": "Indus Waters Treaty, 1960",
+        "publisher": "Ministry of External Affairs, India",
+        "authorityId": "india-ministry-external-affairs",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official treaty text governs India-Pakistan rights and hydroelectric uses on the Indus-system rivers."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2005",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The original asserted that the project itself violated the treaty, although the parties disputed compliance. The stem now tests the uncontested agreement under which Pakistan raised its objections."
+  },
+  {
+    "id": "ADV2E102-U0011-Q037-SIM",
+    "pairId": "ADV2E102-U0011-Q037",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "India's Baglihar Hydroelectric Project is built on which river?",
+    "questionUrdu": "بھارت کا Baglihar Hydroelectric Project کس دریا پر تعمیر کیا گیا ہے؟",
+    "options": [
+      "Chenab",
+      "Jhelum",
+      "Ravi",
+      "Sutlej"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Chenab ہے۔ بگلیہار منصوبہ دریائے چناب پر واقع ہے، جو سندھ طاس معاہدے میں مغربی دریاؤں میں شامل ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "International agreements for transboundary water resources: the Baglihar difference",
+      "referenceUrl": "https://documents1.worldbank.org/curated/en/244761521135162532/pdf/124326-WP-P160278-PUBLIC.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q037",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://documents1.worldbank.org/curated/en/244761521135162532/pdf/124326-WP-P160278-PUBLIC.pdf",
+        "label": "International agreements for transboundary water resources: the Baglihar difference",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The World Bank's Baglihar case material locates the project on the Chenab River."
+      },
+      {
+        "url": "https://www.mea.gov.in/bilateral-documents.htm?dtl%2F6439%2FIndus=&outputType=chromeless",
+        "label": "Indus Waters Treaty, 1960",
+        "publisher": "Ministry of External Affairs, India",
+        "authorityId": "india-ministry-external-affairs",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The official Indus Waters Treaty identifies the Chenab as one of the Western Rivers governed by its relevant provisions."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q038-SRC",
+    "pairId": "ADV2E102-U0011-Q038",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "TDAP is responsible for:",
+    "questionUrdu": "TDAP کس ذمہ داری کے لیے قائم کیا گیا ہے؟",
+    "options": [
+      "Export Promotion",
+      "Investment Promotion",
+      "Power Load Management",
+      "Water distribution"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Export Promotion ہے۔ ٹی ڈی اے پی پاکستان کی برآمدی ترقی، منڈیوں تک رسائی اور تجارتی فروغ پر کام کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "TDAP mandate",
+      "referenceUrl": "https://tdap.gov.pk/tdap-mandate/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q038"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://tdap.gov.pk/tdap-mandate/",
+        "label": "TDAP mandate",
+        "publisher": "Trade Development Authority of Pakistan",
+        "authorityId": "pakistan-tdap",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "TDAP's official mandate includes export development and promotion."
+      },
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administratorca109f140ec9f22c1b4ec98033ff45b2.pdf",
+        "label": "Trade Development Authority of Pakistan Ordinance",
+        "publisher": "Pakistan Code, Ministry of Law and Justice",
+        "authorityId": "pakistan-code",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The law assigns TDAP functions in export policy, export development and foreign trade promotion."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0011-Q038-SIM",
+    "pairId": "ADV2E102-U0011-Q038",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "What is the full form of TDAP?",
+    "questionUrdu": "TDAP کی مکمل شکل کیا ہے؟",
+    "options": [
+      "Trade Development Authority of Pakistan",
+      "Tariff and Duty Administration of Pakistan",
+      "Trade Data Association of Pakistan",
+      "Tourism Development Agency of Pakistan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Trade Development Authority of Pakistan ہے۔ یہ ادارہ برآمدات کے فروغ اور تجارتی ترقی کے لیے قائم ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "TDAP mandate",
+      "referenceUrl": "https://tdap.gov.pk/tdap-mandate/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q038",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://tdap.gov.pk/tdap-mandate/",
+        "label": "TDAP mandate",
+        "publisher": "Trade Development Authority of Pakistan",
+        "authorityId": "pakistan-tdap",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "TDAP's official site expands its name as Trade Development Authority of Pakistan."
+      },
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administratorca109f140ec9f22c1b4ec98033ff45b2.pdf",
+        "label": "Trade Development Authority of Pakistan Ordinance",
+        "publisher": "Pakistan Code, Ministry of Law and Justice",
+        "authorityId": "pakistan-code",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The establishing law uses the full title Trade Development Authority of Pakistan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q039-SRC",
+    "pairId": "ADV2E102-U0011-Q039",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Jawaharlal Nehru was the ____ of Motilal Nehru.",
+    "questionUrdu": "Jawaharlal Nehru کا Motilal Nehru سے کیا رشتہ تھا؟",
+    "options": [
+      "brother",
+      "son",
+      "father",
+      "cousin"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب son ہے۔ موتی لال نہرو، جواہر لال نہرو کے والد اور ہندوستان کے نمایاں وکیل و سیاسی رہنما تھے۔",
+    "source": {
+      "type": "book",
+      "label": "Jawaharlal Nehru: early life",
+      "referenceUrl": "https://nehruportal.nic.in/early-life",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q039"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://nehruportal.nic.in/early-life",
+        "label": "Jawaharlal Nehru: early life",
+        "publisher": "Nehru Portal, Ministry of Culture, India",
+        "authorityId": "india-nehru-portal",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Nehru Portal identifies Motilal Nehru as Jawaharlal Nehru's father."
+      },
+      {
+        "url": "https://www.britannica.com/biography/Jawaharlal-Nehru",
+        "label": "Jawaharlal Nehru",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies Jawaharlal as the son of Motilal Nehru."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0011-Q039-SIM",
+    "pairId": "ADV2E102-U0011-Q039",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "What was Motilal Nehru's profession before and alongside his political career?",
+    "questionUrdu": "Motilal Nehru کا سیاسی زندگی سے پہلے اور اس کے ساتھ بنیادی پیشہ کیا تھا؟",
+    "options": [
+      "Lawyer",
+      "Physician",
+      "Engineer",
+      "Soldier"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Lawyer ہے۔ موتی لال نہرو ایک ممتاز وکیل تھے اور بعد میں تحریکِ آزادی کی سیاست میں سرگرم ہوئے۔",
+    "source": {
+      "type": "practice",
+      "label": "Jawaharlal Nehru: early life",
+      "referenceUrl": "https://nehruportal.nic.in/early-life",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q039",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://nehruportal.nic.in/early-life",
+        "label": "Jawaharlal Nehru: early life",
+        "publisher": "Nehru Portal, Ministry of Culture, India",
+        "authorityId": "india-nehru-portal",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The official Nehru Portal biography identifies Motilal Nehru as a prominent lawyer."
+      },
+      {
+        "url": "https://www.britannica.com/biography/Jawaharlal-Nehru",
+        "label": "Jawaharlal Nehru",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Britannica independently describes Motilal Nehru as a lawyer and political leader."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q040-SRC",
+    "pairId": "ADV2E102-U0011-Q040",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "According to Pakistan's position recorded in the ICJ proceedings, in which province was Kulbhushan Jadhav arrested on 3 March 2016?",
+    "questionUrdu": "ICJ میں درج پاکستان کے مؤقف کے مطابق Kulbhushan Jadhav کو 3 مارچ 2016 کو کس صوبے سے گرفتار کیا گیا؟",
+    "options": [
+      "Sindh",
+      "Punjab",
+      "Khyber Pakhtunkhwa",
+      "Balochistan"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Balochistan ہے۔ پاکستان کے مطابق جادھو کو بلوچستان میں ایرانی سرحد کے قریب گرفتار کیا گیا۔",
+    "source": {
+      "type": "book",
+      "label": "Jadhav case judgment: factual background",
+      "referenceUrl": "https://www.icj-cij.org/index.php/node/105826",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q040"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.icj-cij.org/index.php/node/105826",
+        "label": "Jadhav case judgment: factual background",
+        "publisher": "International Court of Justice",
+        "authorityId": "international-court-justice",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ICJ judgment records Pakistan's position that Jadhav was arrested in Balochistan near the Iranian border."
+      },
+      {
+        "url": "https://mofa.gov.pk/pakistan-provides-second-consular-access-to-commander-jadhav",
+        "label": "Pakistan provides second consular access to Commander Jadhav",
+        "publisher": "Ministry of Foreign Affairs, Pakistan",
+        "authorityId": "pakistan-mofa",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's Foreign Ministry states that Jadhav was arrested in Balochistan on 3 March 2016."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2016-03-03",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The exact circumstances and locality are disputed by India and Pakistan. The item now expressly attributes Pakistan's position and asks only the province, which both cited records state as Balochistan."
+  },
+  {
+    "id": "ADV2E102-U0011-Q040-SIM",
+    "pairId": "ADV2E102-U0011-Q040",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "On which date did Pakistan state that Kulbhushan Jadhav was arrested?",
+    "questionUrdu": "پاکستان کے بیان کے مطابق Kulbhushan Jadhav کو کس تاریخ کو گرفتار کیا گیا؟",
+    "options": [
+      "3 March 2016",
+      "29 March 2016",
+      "10 April 2017",
+      "17 July 2019"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 3 March 2016 ہے۔ یہی تاریخ پاکستان کے سرکاری مؤقف اور عالمی عدالت انصاف کے فیصلے میں درج ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Jadhav case judgment: factual background",
+      "referenceUrl": "https://www.icj-cij.org/index.php/node/105826",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q040",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.icj-cij.org/index.php/node/105826",
+        "label": "Jadhav case judgment: factual background",
+        "publisher": "International Court of Justice",
+        "authorityId": "international-court-justice",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The ICJ judgment records Pakistan's stated arrest date as 3 March 2016."
+      },
+      {
+        "url": "https://mofa.gov.pk/pakistan-provides-second-consular-access-to-commander-jadhav",
+        "label": "Pakistan provides second consular access to Commander Jadhav",
+        "publisher": "Ministry of Foreign Affairs, Pakistan",
+        "authorityId": "pakistan-mofa",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Pakistan's Foreign Ministry independently gives 3 March 2016 as Jadhav's arrest date."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q041-SRC",
+    "pairId": "ADV2E102-U0011-Q041",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "In which city is Choudhary Rahmat Ali, who coined the name 'Pakistan', buried?",
+    "questionUrdu": "'Pakistan' نام تجویز کرنے والے Choudhary Rahmat Ali کس شہر میں دفن ہیں؟",
+    "options": [
+      "Karachi",
+      "London",
+      "Oxford",
+      "Cambridge"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Cambridge ہے۔ رحمت علی 1951 میں کیمبرج میں وفات پا گئے اور وہیں شہر کے قبرستان میں دفن ہوئے۔",
+    "source": {
+      "type": "book",
+      "label": "A tryst with destiny: Choudhary Rahmat Ali",
+      "referenceUrl": "https://www.cam.ac.uk/stories/tryst-with-destiny",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q041"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cam.ac.uk/stories/tryst-with-destiny",
+        "label": "A tryst with destiny: Choudhary Rahmat Ali",
+        "publisher": "University of Cambridge",
+        "authorityId": "university-cambridge",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Cambridge records that Rahmat Ali died in Cambridge in 1951 and is buried in Cambridge City Cemetery."
+      },
+      {
+        "url": "https://www.radio.gov.pk/03-02-2020/death-anniversary-of-chaudhary-rehmat-ali-being-observed-today",
+        "label": "Death anniversary of Chaudhary Rehmat Ali observed",
+        "publisher": "Radio Pakistan",
+        "authorityId": "radio-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's state broadcaster records that Rahmat Ali died in 1951 and was buried at Cambridge in the United Kingdom."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The grammar and spelling were standardized without changing the tested place or answer."
+  },
+  {
+    "id": "ADV2E102-U0011-Q041-SIM",
+    "pairId": "ADV2E102-U0011-Q041",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "In which year did Choudhary Rahmat Ali die in Cambridge?",
+    "questionUrdu": "Choudhary Rahmat Ali کا Cambridge میں کس سال انتقال ہوا؟",
+    "options": [
+      "1947",
+      "1948",
+      "1951",
+      "1956"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 1951 ہے۔ چوہدری رحمت علی کا انتقال کیمبرج میں ہوا اور انہیں Cambridge City Cemetery میں دفن کیا گیا۔",
+    "source": {
+      "type": "practice",
+      "label": "A tryst with destiny: Choudhary Rahmat Ali",
+      "referenceUrl": "https://www.cam.ac.uk/stories/tryst-with-destiny",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q041",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cam.ac.uk/stories/tryst-with-destiny",
+        "label": "A tryst with destiny: Choudhary Rahmat Ali",
+        "publisher": "University of Cambridge",
+        "authorityId": "university-cambridge",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The University of Cambridge records that Rahmat Ali died in Cambridge in 1951."
+      },
+      {
+        "url": "https://www.radio.gov.pk/03-02-2020/death-anniversary-of-chaudhary-rehmat-ali-being-observed-today",
+        "label": "Death anniversary of Chaudhary Rehmat Ali observed",
+        "publisher": "Radio Pakistan",
+        "authorityId": "radio-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Radio Pakistan also records his death and burial in Cambridge in 1951."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q042-SRC",
+    "pairId": "ADV2E102-U0011-Q042",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "As of 2026, who is the Governor of Sindh?",
+    "questionUrdu": "2026 تک سندھ کے گورنر کون ہیں؟",
+    "options": [
+      "Syed Muhammad Nehal Hashmi",
+      "Muhammad Kamran Khan Tessori",
+      "Muhammad Zubair",
+      "Imran Ismail"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Syed Muhammad Nehal Hashmi ہے۔ انہوں نے 13 مارچ 2026 کو سندھ کے 35ویں گورنر کی حیثیت سے حلف اٹھایا۔",
+    "source": {
+      "type": "book",
+      "label": "Office of the Governor Sindh: Syed Muhammad Nehal Hashmi",
+      "referenceUrl": "https://governor.sindh.gov.pk/home",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q042"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://governor.sindh.gov.pk/home",
+        "label": "Office of the Governor Sindh: Syed Muhammad Nehal Hashmi",
+        "publisher": "Governor House Sindh",
+        "authorityId": "sindh-governor-house",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The official Governor House site identifies Syed Muhammad Nehal Hashmi as Governor of Sindh in 2026."
+      },
+      {
+        "url": "https://www.pas.gov.pk/notifications-details/3295",
+        "label": "Governor of Sindh prorogation order, 28 June 2026",
+        "publisher": "Provincial Assembly of Sindh",
+        "authorityId": "sindh-provincial-assembly",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The official Assembly notification is signed by Syed Muhammad Nehal Hashmi in his capacity as Governor of Sindh."
+      }
+    ],
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": null,
+      "asOf": "2026-08-26",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-08-26"
+    },
+    "sourceNotes": "The undated current-affairs item had become obsolete and none of its four printed options was current. It was dated to 2026, its options were rebuilt, and the verified answer was updated to Syed Muhammad Nehal Hashmi."
+  },
+  {
+    "id": "ADV2E102-U0011-Q042-SIM",
+    "pairId": "ADV2E102-U0011-Q042",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "On which date in 2026 did Syed Muhammad Nehal Hashmi take oath as the 35th Governor of Sindh?",
+    "questionUrdu": "2026 میں Syed Muhammad Nehal Hashmi نے سندھ کے 35th Governor کی حیثیت سے کس تاریخ کو حلف اٹھایا؟",
+    "options": [
+      "12 March 2026",
+      "13 March 2026",
+      "15 June 2026",
+      "17 June 2026"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 13 March 2026 ہے۔ گورنر ہاؤس کراچی میں سندھ ہائی کورٹ کے چیف جسٹس نے ان سے عہدے کا حلف لیا۔",
+    "source": {
+      "type": "practice",
+      "label": "Nehal Hashmi takes oath as Governor of Sindh",
+      "referenceUrl": "https://governor.sindh.gov.pk/news/mhmd-nal-ashmi-n-gornr-snd-k-aad-ka-hlf-aalia",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q042",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://governor.sindh.gov.pk/news/mhmd-nal-ashmi-n-gornr-snd-k-aad-ka-hlf-aalia",
+        "label": "Nehal Hashmi takes oath as Governor of Sindh",
+        "publisher": "Governor House Sindh",
+        "authorityId": "sindh-governor-house",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Governor House Sindh records that Nehal Hashmi took oath on 13 March 2026 as the 35th Governor of Sindh."
+      },
+      {
+        "url": "https://na.gov.pk/en/pressrelease.php?__ncforminfo=&content=101",
+        "label": "NA Speaker felicitates Nehal Hashmi",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The National Assembly press release independently dates Nehal Hashmi's assumption of office to 13 March 2026."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-03-13",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q043-SRC",
+    "pairId": "ADV2E102-U0011-Q043",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "In 2018, Imran Khan was sworn in as Pakistan's which numbered Prime Minister?",
+    "questionUrdu": "2018 میں Imran Khan نے پاکستان کے کون سے نمبر کے وزیر اعظم کی حیثیت سے حلف اٹھایا؟",
+    "options": [
+      "19th",
+      "20th",
+      "21st",
+      "22nd"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 22nd ہے۔ عمران خان نے 18 اگست 2018 کو پاکستان کے بائیسویں وزیر اعظم کے طور پر حلف اٹھایا۔",
+    "source": {
+      "type": "book",
+      "label": "National Assembly profile of Imran Khan",
+      "referenceUrl": "https://na.gov.pk/uploads/documents/6694e218098ca_216.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q043"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/documents/6694e218098ca_216.pdf",
+        "label": "National Assembly profile of Imran Khan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly profile records that Imran Khan took oath as Pakistan's 22nd Prime Minister on 18 August 2018."
+      },
+      {
+        "url": "https://www.radio.gov.pk/currentaffairs/19-08-2018/imran-khan-becomes-22nd-prime-minister-of-pakistan",
+        "label": "Imran Khan becomes 22nd Prime Minister of Pakistan",
+        "publisher": "Radio Pakistan",
+        "authorityId": "radio-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's state broadcaster records Imran Khan's oath as the 22nd Prime Minister on 18 August 2018."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2018-08-18",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The relative word 'recently' was replaced by the fixed year 2018 and the grammar was repaired; the answer is unchanged."
+  },
+  {
+    "id": "ADV2E102-U0011-Q043-SIM",
+    "pairId": "ADV2E102-U0011-Q043",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "On which date in 2018 did Imran Khan take oath as Pakistan's Prime Minister?",
+    "questionUrdu": "2018 میں Imran Khan نے پاکستان کے وزیر اعظم کی حیثیت سے کس تاریخ کو حلف اٹھایا؟",
+    "options": [
+      "25 July 2018",
+      "13 August 2018",
+      "18 August 2018",
+      "6 September 2018"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 18 August 2018 ہے۔ قومی اسمبلی میں انتخاب کے بعد انہوں نے اس تاریخ کو وزارتِ عظمیٰ کا حلف لیا۔",
+    "source": {
+      "type": "practice",
+      "label": "National Assembly profile of Imran Khan",
+      "referenceUrl": "https://na.gov.pk/uploads/documents/6694e218098ca_216.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q043",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/documents/6694e218098ca_216.pdf",
+        "label": "National Assembly profile of Imran Khan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The National Assembly records Imran Khan's oath as Prime Minister on 18 August 2018."
+      },
+      {
+        "url": "https://www.radio.gov.pk/currentaffairs/19-08-2018/imran-khan-becomes-22nd-prime-minister-of-pakistan",
+        "label": "Imran Khan becomes 22nd Prime Minister of Pakistan",
+        "publisher": "Radio Pakistan",
+        "authorityId": "radio-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Radio Pakistan independently dates the oath ceremony to 18 August 2018."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q044-SRC",
+    "pairId": "ADV2E102-U0011-Q044",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which British politician of Pakistani heritage was elected Mayor of London in May 2016?",
+    "questionUrdu": "پاکستانی نژاد کون سا برطانوی سیاست دان مئی 2016 میں Mayor of London منتخب ہوا؟",
+    "options": [
+      "Sadiq Khan",
+      "Nazeer Ahmad",
+      "Muhammad Pervez",
+      "Sadiq Qureshi"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sadiq Khan ہے۔ صادق خان نے 2016 کے لندن میئر انتخابات میں کامیابی حاصل کی۔",
+    "source": {
+      "type": "book",
+      "label": "Your new Mayor of London",
+      "referenceUrl": "https://www.london.gov.uk/mayor-london/your-new-mayor-london",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q044"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.london.gov.uk/mayor-london/your-new-mayor-london",
+        "label": "Your new Mayor of London",
+        "publisher": "London City Hall",
+        "authorityId": "london-city-hall",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "London City Hall records that Sadiq Khan was elected Mayor of London on 5 May 2016."
+      },
+      {
+        "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-7598/",
+        "label": "London Elections 2016",
+        "publisher": "House of Commons Library",
+        "authorityId": "uk-parliament",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The House of Commons Library's election analysis identifies Sadiq Khan as the winner of the 2016 London mayoral election."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2016-05-05",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The wordy source stem was made precise while preserving the candidate, date and answer."
+  },
+  {
+    "id": "ADV2E102-U0011-Q044-SIM",
+    "pairId": "ADV2E102-U0011-Q044",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "On which date was Sadiq Khan elected Mayor of London in 2016?",
+    "questionUrdu": "Sadiq Khan سنہ 2016 میں کس تاریخ کو Mayor of London منتخب ہوئے؟",
+    "options": [
+      "5 May 2016",
+      "23 June 2016",
+      "13 July 2016",
+      "8 November 2016"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 5 May 2016 ہے۔ لندن کے میئر کا انتخاب اسی روز ہوا اور صادق خان فاتح قرار پائے۔",
+    "source": {
+      "type": "practice",
+      "label": "Your new Mayor of London",
+      "referenceUrl": "https://www.london.gov.uk/mayor-london/your-new-mayor-london",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q044",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.london.gov.uk/mayor-london/your-new-mayor-london",
+        "label": "Your new Mayor of London",
+        "publisher": "London City Hall",
+        "authorityId": "london-city-hall",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "London City Hall dates Sadiq Khan's election as Mayor to 5 May 2016."
+      },
+      {
+        "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-7598/",
+        "label": "London Elections 2016",
+        "publisher": "House of Commons Library",
+        "authorityId": "uk-parliament",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The House of Commons Library independently records the 5 May 2016 London mayoral election result."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q045-SRC",
+    "pairId": "ADV2E102-U0011-Q045",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "Baltoro Glacier is located in which mountain range of Pakistan?",
+    "questionUrdu": "Baltoro Glacier پاکستان کے کس پہاڑی سلسلے میں واقع ہے؟",
+    "options": [
+      "Himalayan",
+      "Kohistan",
+      "Karakoram",
+      "Hindukush"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Karakoram ہے۔ بلتورو گلیشیئر وسطی قراقرم کے عظیم برفانی نظام کا حصہ ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Central Karakoram National Park",
+      "referenceUrl": "https://whc.unesco.org/en/tentativelists/6112",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q045"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://whc.unesco.org/en/tentativelists/6112",
+        "label": "Central Karakoram National Park",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO identifies Baltoro among the major glacier systems of the Central Karakoram National Park."
+      },
+      {
+        "url": "https://pubs.usgs.gov/pp/p1386f/pdf/F6_Nepal.pdf",
+        "label": "Satellite Image Atlas of Glaciers of the World: Asia",
+        "publisher": "U.S. Geological Survey",
+        "authorityId": "usgs",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The USGS glacier inventory lists Baltoro Glacier in the Karakoram Range."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The grammar was repaired without changing the geographical fact or answer."
+  },
+  {
+    "id": "ADV2E102-U0011-Q045-SIM",
+    "pairId": "ADV2E102-U0011-Q045",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "Which famous 8,000-metre peak is approached through the Baltoro Glacier region?",
+    "questionUrdu": "Baltoro Glacier کے علاقے سے کس مشہور 8,000-metre چوٹی تک رسائی حاصل کی جاتی ہے؟",
+    "options": [
+      "K2",
+      "Nanga Parbat",
+      "Everest",
+      "Annapurna"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب K2 ہے۔ بلتورو اور گڈون آسٹن گلیشیئر کا علاقہ K2 کی عام مہماتی رسائی کا حصہ ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Central Karakoram National Park",
+      "referenceUrl": "https://whc.unesco.org/en/tentativelists/6112",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q045",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://whc.unesco.org/en/tentativelists/6112",
+        "label": "Central Karakoram National Park",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "UNESCO's Central Karakoram material associates the Baltoro glacier system with K2 and surrounding 8,000-metre peaks."
+      },
+      {
+        "url": "https://pubs.usgs.gov/pp/p1386f/pdf/F6_Nepal.pdf",
+        "label": "Satellite Image Atlas of Glaciers of the World: Asia",
+        "publisher": "U.S. Geological Survey",
+        "authorityId": "usgs",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The USGS Karakoram glacier material maps Baltoro in the K2 region."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q046-SRC",
+    "pairId": "ADV2E102-U0011-Q046",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "Bolan Pass is located in which province of Pakistan?",
+    "questionUrdu": "Bolan Pass پاکستان کے کس صوبے میں واقع ہے؟",
+    "options": [
+      "Balochistan",
+      "Khyber Pakhtunkhwa",
+      "Sindh",
+      "Punjab"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Balochistan ہے۔ بولان درہ بلوچستان میں سبی کے میدانوں کو کوئٹہ کے بلند علاقے سے ملانے والی تاریخی گزرگاہ ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Provincial Census Report: Balochistan",
+      "referenceUrl": "https://www.pbs.gov.pk/sites/default/files/population/census_reports/pcr_balochistan.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q046"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.pbs.gov.pk/sites/default/files/population/census_reports/pcr_balochistan.pdf",
+        "label": "Provincial Census Report: Balochistan",
+        "publisher": "Pakistan Bureau of Statistics",
+        "authorityId": "pakistan-bureau-statistics",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official provincial report describes Bolan Pass as a high mountain pass through the Toba Kakar Range of Balochistan province."
+      },
+      {
+        "url": "https://ndma.gov.pk/storage/publications/July2024/XtJGfrBKHJV25wIna6H9.pdf",
+        "label": "District Development Profile: Kachhi/Bolan",
+        "publisher": "National Disaster Management Authority",
+        "authorityId": "pakistan-ndma",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government-hosted district profile locates Bolan Pass near Dhadar in the former Bolan District, now Kachhi, Balochistan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The official spelling 'Balochistan' replaced the older variant 'Baluchistan', and 'of Pakistan' was added for clarity; the answer is unchanged."
+  },
+  {
+    "id": "ADV2E102-U0011-Q046-SIM",
+    "pairId": "ADV2E102-U0011-Q046",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "Bolan Pass lies near which town in Balochistan's Kachhi area?",
+    "questionUrdu": "Balochistan کے Kachhi علاقے میں Bolan Pass کس قصبے کے قریب واقع ہے؟",
+    "options": [
+      "Dhadar",
+      "Turbat",
+      "Chaman",
+      "Zhob"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Dhadar ہے۔ سرکاری ضلعی ریکارڈ بولان درے کو دھاڈر کے قریب واقع اہم پہاڑی گزرگاہ بتاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Provincial Census Report: Balochistan",
+      "referenceUrl": "https://www.pbs.gov.pk/sites/default/files/population/census_reports/pcr_balochistan.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q046",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.pbs.gov.pk/sites/default/files/population/census_reports/pcr_balochistan.pdf",
+        "label": "Provincial Census Report: Balochistan",
+        "publisher": "Pakistan Bureau of Statistics",
+        "authorityId": "pakistan-bureau-statistics",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The provincial report locates Bolan Pass in the corridor near Dhadar in Balochistan."
+      },
+      {
+        "url": "https://ndma.gov.pk/storage/publications/July2024/XtJGfrBKHJV25wIna6H9.pdf",
+        "label": "District Development Profile: Kachhi/Bolan",
+        "publisher": "National Disaster Management Authority",
+        "authorityId": "pakistan-ndma",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The government district profile explicitly places Bolan Pass near Dhadar in Kachhi."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q047-SRC",
+    "pairId": "ADV2E102-U0011-Q047",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "Gwadar is situated in which province of Pakistan?",
+    "questionUrdu": "Gwadar پاکستان کے کس صوبے میں واقع ہے؟",
+    "options": [
+      "Punjab",
+      "Sindh",
+      "Balochistan",
+      "Khyber Pakhtunkhwa"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Balochistan ہے۔ گوادر بلوچستان کے جنوب مغربی ساحل پر واقع اہم بندرگاہی شہر ہے۔",
+    "source": {
+      "type": "book",
+      "label": "About Gwadar",
+      "referenceUrl": "https://gda.gov.pk/about-gwadar/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q047"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://gda.gov.pk/about-gwadar/",
+        "label": "About Gwadar",
+        "publisher": "Gwadar Development Authority",
+        "authorityId": "gwadar-development-authority",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The provincial development authority identifies Gwadar as a port city on Balochistan's southwestern Arabian Sea coast."
+      },
+      {
+        "url": "https://balochistan.gov.pk/",
+        "label": "Official web gateway to Balochistan",
+        "publisher": "Government of Balochistan",
+        "authorityId": "balochistan-government",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official provincial portal identifies Gwadar as a strategic port on Balochistan's coastline."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Province names were standardized to their official spellings and the stem was made explicit; the answer is unchanged."
+  },
+  {
+    "id": "ADV2E102-U0011-Q047-SIM",
+    "pairId": "ADV2E102-U0011-Q047",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "In which year was Gwadar notified as a separate district?",
+    "questionUrdu": "Gwadar کو کس سال الگ district کا درجہ دیا گیا؟",
+    "options": [
+      "1958",
+      "1969",
+      "1977",
+      "1987"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 1977 ہے۔ گوادر پہلے مکران ضلع کا حصہ تھا اور جولائی 1977 میں اسے الگ ضلع قرار دیا گیا۔",
+    "source": {
+      "type": "practice",
+      "label": "About Gwadar",
+      "referenceUrl": "https://gda.gov.pk/about-gwadar/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q047",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://gda.gov.pk/about-gwadar/",
+        "label": "About Gwadar",
+        "publisher": "Gwadar Development Authority",
+        "authorityId": "gwadar-development-authority",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Gwadar Development Authority states that Gwadar was notified as a district in July 1977."
+      },
+      {
+        "url": "https://tdap.gov.pk/gwadar-district/",
+        "label": "Gwadar District",
+        "publisher": "Trade Development Authority of Pakistan",
+        "authorityId": "tdap",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "TDAP's official district profile independently lists Gwadar District as established in 1977."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q048-SRC",
+    "pairId": "ADV2E102-U0011-Q048",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "Which is the largest and deepest ocean basin on Earth?",
+    "questionUrdu": "زمین کا سب سے بڑا اور گہرا سمندری حوض کون سا ہے؟",
+    "options": [
+      "Pacific Ocean",
+      "Indian Ocean",
+      "Atlantic Ocean",
+      "Arctic Ocean"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Pacific Ocean ہے۔ بحرالکاہل رقبے میں سب سے بڑا ہے اور اس میں دنیا کا گہرا ترین سمندری مقام بھی واقع ہے۔",
+    "source": {
+      "type": "book",
+      "label": "How big is the Pacific Ocean?",
+      "referenceUrl": "https://origin.oceanexplorer.noaa.gov/ocean-fact/pacific-size/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q048"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://origin.oceanexplorer.noaa.gov/ocean-fact/pacific-size/",
+        "label": "How big is the Pacific Ocean?",
+        "publisher": "NOAA Ocean Exploration",
+        "authorityId": "noaa-ocean-exploration",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NOAA states that the Pacific is the largest and deepest ocean basin on Earth."
+      },
+      {
+        "url": "https://ocean.si.edu/planet-ocean/seafloor/mariana-trench",
+        "label": "Mariana Trench",
+        "publisher": "Smithsonian Ocean",
+        "authorityId": "smithsonian-ocean",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Smithsonian identifies the Mariana Trench in the Pacific as containing Challenger Deep, the deepest part of the planet's ocean."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The capitalization and grammar were repaired, and 'largest and deepest ocean basin' was used to state the standard comparison precisely; the answer is unchanged."
+  },
+  {
+    "id": "ADV2E102-U0011-Q048-SIM",
+    "pairId": "ADV2E102-U0011-Q048",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "What is the name of the deepest known point in Earth's ocean?",
+    "questionUrdu": "زمین کے سمندروں کے سب سے گہرے معلوم مقام کا نام کیا ہے؟",
+    "options": [
+      "Challenger Deep",
+      "Puerto Rico Trench",
+      "Java Deep",
+      "Tonga Deep"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Challenger Deep ہے۔ یہ Mariana Trench میں بحرالکاہل کے اندر واقع دنیا کا گہرا ترین معلوم سمندری مقام ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "How big is the Pacific Ocean?",
+      "referenceUrl": "https://origin.oceanexplorer.noaa.gov/ocean-fact/pacific-size/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q048",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://origin.oceanexplorer.noaa.gov/ocean-fact/pacific-size/",
+        "label": "How big is the Pacific Ocean?",
+        "publisher": "NOAA Ocean Exploration",
+        "authorityId": "noaa-ocean-exploration",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NOAA identifies Challenger Deep in the Mariana Trench as the deepest known point in the ocean."
+      },
+      {
+        "url": "https://ocean.si.edu/planet-ocean/seafloor/mariana-trench",
+        "label": "Mariana Trench",
+        "publisher": "Smithsonian Ocean",
+        "authorityId": "smithsonian-ocean",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Smithsonian independently describes Challenger Deep as the deepest part of Earth's ocean."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q049-SRC",
+    "pairId": "ADV2E102-U0011-Q049",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "Trunk Bay Beach is located in which listed destination?",
+    "questionUrdu": "Trunk Bay Beach درج ذیل میں سے کس مقام پر واقع ہے؟",
+    "options": [
+      "Bermuda",
+      "Bali",
+      "U.S. Virgin Islands",
+      "Bonaire"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب U.S. Virgin Islands ہے۔ ٹرنک بے ساحل جزیرہ سینٹ جان کے Virgin Islands National Park میں واقع ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Trunk Bay",
+      "referenceUrl": "https://home.nps.gov/places/trunk-bay.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q049"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://home.nps.gov/places/trunk-bay.htm",
+        "label": "Trunk Bay",
+        "publisher": "U.S. National Park Service",
+        "authorityId": "us-national-park-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Park Service locates Trunk Bay on St. John in Virgin Islands National Park."
+      },
+      {
+        "url": "https://www.visitusvi.com/experience/explore-trunk-bay-beach-st-john/",
+        "label": "Explore Trunk Bay Beach, St. John",
+        "publisher": "U.S. Virgin Islands Department of Tourism",
+        "authorityId": "us-virgin-islands-tourism",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The territory's official tourism site identifies Trunk Bay Beach on St. John in the U.S. Virgin Islands."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The misspelling 'Bonair' was corrected to 'Bonaire' and the stem was clarified; the answer is unchanged."
+  },
+  {
+    "id": "ADV2E102-U0011-Q049-SIM",
+    "pairId": "ADV2E102-U0011-Q049",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "On which island is Trunk Bay Beach located?",
+    "questionUrdu": "Trunk Bay Beach کس جزیرے پر واقع ہے؟",
+    "options": [
+      "St. John",
+      "St. Croix",
+      "St. Thomas",
+      "Water Island"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب St. John ہے۔ ٹرنک بے سینٹ جان کے شمالی ساحل پر Virgin Islands National Park کا مشہور ساحل ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Trunk Bay",
+      "referenceUrl": "https://home.nps.gov/places/trunk-bay.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q049",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://home.nps.gov/places/trunk-bay.htm",
+        "label": "Trunk Bay",
+        "publisher": "U.S. National Park Service",
+        "authorityId": "us-national-park-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The National Park Service locates Trunk Bay on the island of St. John."
+      },
+      {
+        "url": "https://www.visitusvi.com/experience/explore-trunk-bay-beach-st-john/",
+        "label": "Explore Trunk Bay Beach, St. John",
+        "publisher": "U.S. Virgin Islands Department of Tourism",
+        "authorityId": "us-virgin-islands-tourism",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The U.S. Virgin Islands tourism authority also identifies Trunk Bay as a St. John beach."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0011-Q050-SRC",
+    "pairId": "ADV2E102-U0011-Q050",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "At room temperature, which listed pure metal has the highest electrical conductivity?",
+    "questionUrdu": "کمرے کے درجہ حرارت پر درج شدہ خالص دھاتوں میں برقی رسانیت سب سے زیادہ کس کی ہے؟",
+    "options": [
+      "Copper",
+      "Silver",
+      "Aluminum",
+      "Steel"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Silver ہے۔ چاندی تمام خالص دھاتوں میں سب سے زیادہ برقی conductivity رکھتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "NIST Metallurgy Division Annual Report 2004",
+      "referenceUrl": "https://www.metallurgy.nist.gov/techactv2004/AnnualReport2004.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q050"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.metallurgy.nist.gov/techactv2004/AnnualReport2004.pdf",
+        "label": "NIST Metallurgy Division Annual Report 2004",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NIST report states that silver has the highest electrical conductivity of any metal."
+      },
+      {
+        "url": "https://edu.rsc.org/elements/silver/2020023.article",
+        "label": "Silver: the element",
+        "publisher": "Royal Society of Chemistry",
+        "authorityId": "royal-society-chemistry",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Royal Society of Chemistry identifies silver as having the highest electrical conductivity of all elements."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague phrase 'best conductor' was refined to pure metals at room temperature so the comparison is scientifically precise; the answer is unchanged."
+  },
+  {
+    "id": "ADV2E102-U0011-Q050-SIM",
+    "pairId": "ADV2E102-U0011-Q050",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What is the chemical symbol for silver?",
+    "questionUrdu": "Silver کا کیمیائی نشان کیا ہے؟",
+    "options": [
+      "Ag",
+      "Au",
+      "Si",
+      "Sr"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ag ہے۔ یہ نشان لاطینی نام argentum سے نکلا ہے، جبکہ Au سونے کا نشان ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Silver: element information",
+      "referenceUrl": "https://www.rsc.org/periodic-table/element/47/silver",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0011-q050",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rsc.org/periodic-table/element/47/silver",
+        "label": "Silver: element information",
+        "publisher": "Royal Society of Chemistry",
+        "authorityId": "royal-society-chemistry",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Royal Society of Chemistry lists Ag as the chemical symbol of silver."
+      },
+      {
+        "url": "https://pubchem.ncbi.nlm.nih.gov/element/Silver",
+        "label": "Silver",
+        "publisher": "PubChem, U.S. National Library of Medicine",
+        "authorityId": "nih-pubchem",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "PubChem independently identifies silver by the element symbol Ag."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

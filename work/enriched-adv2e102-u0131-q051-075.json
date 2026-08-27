@@ -1,0 +1,2324 @@
+[
+  {
+    "id": "ADV2E102-U0131-Q051-SRC",
+    "pairId": "ADV2E102-U0131-Q051",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which acid is used as the electrolyte in a conventional lead-acid storage battery?",
+    "questionUrdu": "روایتی lead-acid storage battery میں electrolyte کے طور پر کون سا acid استعمال ہوتا ہے؟",
+    "options": [
+      "Sulfuric Acid",
+      "Hydrochloric Acid",
+      "Hydrofluoric Acid",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sulfuric Acid ہے۔ اس battery میں پانی کے ساتھ dilute sulfuric acid electrolyte ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "DOE Fundamentals Handbook: Electrical Science, Volume 2",
+      "referenceUrl": "https://www.energy.gov/sites/default/files/2026-04/DOE-HDBK-1011-92_VOL2.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q051"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.energy.gov/sites/default/files/2026-04/DOE-HDBK-1011-92_VOL2.pdf",
+        "label": "DOE Fundamentals Handbook: Electrical Science, Volume 2",
+        "publisher": "United States Department of Energy",
+        "authorityId": "us-department-energy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The DOE handbook states that a lead-acid battery uses an electrolytic solution of diluted sulfuric acid."
+      },
+      {
+        "url": "https://www.gov.uk/guidance/waste-batteries-appropriate-measures-for-permitted-facilities/1-when-appropriate-measures-apply",
+        "label": "Waste batteries: when appropriate measures apply",
+        "publisher": "Environment Agency, UK",
+        "authorityId": "uk-environment-agency",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UK government guidance independently states that the electrolyte in lead-acid batteries is diluted sulphuric acid."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Different battery chemistries use different electrolytes, so the overbroad source stem was restricted to a conventional lead-acid storage battery."
+  },
+  {
+    "id": "ADV2E102-U0131-Q051-SIM",
+    "pairId": "ADV2E102-U0131-Q051",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which materials form the positive and negative active plates of a conventional lead-acid battery?",
+    "questionUrdu": "روایتی lead-acid battery کی مثبت اور منفی active plates کن مادوں سے بنتی ہیں؟",
+    "options": [
+      "Lead dioxide and lead",
+      "Copper and zinc",
+      "Nickel and cadmium",
+      "Carbon and lithium"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Lead dioxide and lead ہے۔ مثبت plate پر lead dioxide اور منفی plate پر sponge lead ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "DOE Fundamentals Handbook: Electrical Science, Volume 2",
+      "referenceUrl": "https://www.energy.gov/sites/default/files/2026-04/DOE-HDBK-1011-92_VOL2.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q051",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.energy.gov/sites/default/files/2026-04/DOE-HDBK-1011-92_VOL2.pdf",
+        "label": "DOE Fundamentals Handbook: Electrical Science, Volume 2",
+        "publisher": "United States Department of Energy",
+        "authorityId": "us-department-energy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "United States Department of Energy supports that a conventional lead-acid battery uses lead dioxide and lead as its positive and negative active materials."
+      },
+      {
+        "url": "https://www.gov.uk/guidance/waste-batteries-appropriate-measures-for-permitted-facilities/1-when-appropriate-measures-apply",
+        "label": "Waste batteries: when appropriate measures apply",
+        "publisher": "Environment Agency, UK",
+        "authorityId": "uk-environment-agency",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Environment Agency, UK supports that a conventional lead-acid battery uses lead dioxide and lead as its positive and negative active materials."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q058-SRC",
+    "pairId": "ADV2E102-U0131-Q058",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Twelve pens and five pencils cost Rs. 111. One pencil costs Rs. 5 less than one pen. What do eight pens and nine pencils cost?",
+    "questionUrdu": "12 pens اور 5 pencils کی قیمت Rs. 111 ہے، جبکہ pencil، pen سے Rs. 5 سستی ہے۔ 8 pens اور 9 pencils کی قیمت کیا ہوگی؟",
+    "options": [
+      "89",
+      "97",
+      "91",
+      "78"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 91 ہے۔ مساوات حل کرنے سے pen Rs. 8 اور pencil Rs. 3 ملتی ہے، اس لیے مجموعہ Rs. 91 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Use a general strategy to solve linear equations",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/2-4-use-a-general-strategy-to-solve-linear-equations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q058"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/2-4-use-a-general-strategy-to-solve-linear-equations",
+        "label": "Use a general strategy to solve linear equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the standard method for translating a word problem into and solving a linear equation."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve%2012p%2B5q%3D111%2C%20q%3Dp-5%3B%208p%2B9q",
+        "label": "WolframAlpha: solve 12p+5q=111, q=p-5; 8p+9q",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Solving gives pen price p=8 and pencil price q=3; therefore 8p+9q=91."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar was normalized. Solving the two stated price relations gives Rs. 91, option C."
+  },
+  {
+    "id": "ADV2E102-U0131-Q058-SIM",
+    "pairId": "ADV2E102-U0131-Q058",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Three notebooks and two pens cost Rs. 190. A notebook costs Rs. 30 more than a pen. What is the price of one pen?",
+    "questionUrdu": "3 notebooks اور 2 pens کی قیمت Rs. 190 ہے۔ ایک notebook، pen سے Rs. 30 مہنگی ہے۔ ایک pen کی قیمت کیا ہے؟",
+    "options": [
+      "Rs. 20",
+      "Rs. 25",
+      "Rs. 30",
+      "Rs. 35"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Rs. 20 ہے۔ اگر pen کی قیمت x ہو تو notebook x+30 ہوگی؛ 3(x+30)+2x=190 سے x=20 آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Use a General Strategy to Solve Linear Equations",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/2-4-use-a-general-strategy-to-solve-linear-equations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q058",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/2-4-use-a-general-strategy-to-solve-linear-equations",
+        "label": "Use a General Strategy to Solve Linear Equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that solving 3(n)+2p=190 with n=p+30 gives a pen price of Rs. 20."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+3%28p%2B30%29%2B2p%3D190",
+        "label": "Solve 3(p+30)+2p=190",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha supports that solving 3(n)+2p=190 with n=p+30 gives a pen price of Rs. 20."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q059-SRC",
+    "pairId": "ADV2E102-U0131-Q059",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Each side of a square is increased by 10%. By what percentage does its area increase?",
+    "questionUrdu": "مربع کی ہر side میں 10% اضافہ ہو تو area کتنے فیصد بڑھتا ہے؟",
+    "options": [
+      "21",
+      "23",
+      "25",
+      "27"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 21 ہے۔ نیا area 1.1 × 1.1 = 1.21 گنا، یعنی 21% زیادہ ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Understand percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q059"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+        "label": "Understand percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains percentage as a rate per hundred and the conversion used to apply a percentage increase."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=((1.1)%5E2-1)*100",
+        "label": "WolframAlpha: ((1.1)^2-1)*100",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Scaling both dimensions by 1.1 scales area by 1.21, so the increase is 21 percent."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The story wording was shortened without changing the mathematical proposition. The area, not merely one dimension, increases by 21%."
+  },
+  {
+    "id": "ADV2E102-U0131-Q059-SIM",
+    "pairId": "ADV2E102-U0131-Q059",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If each side of a square is increased by 20%, by what percentage does its area increase?",
+    "questionUrdu": "اگر مربع کی ہر side میں 20% اضافہ ہو تو اس کا area کتنے فیصد بڑھے گا؟",
+    "options": [
+      "44%",
+      "40%",
+      "20%",
+      "48%"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 44% ہے۔ نیا area 1.2² = 1.44 گنا ہوتا ہے، اس لیے اضافہ 44% ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Understand Percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q059",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+        "label": "Understand Percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that increasing both sides of a square by 20 percent increases its area by 44 percent."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%28%281.2%29%5E2-1%29*100",
+        "label": "Area increase after a 20 percent side increase",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha supports that increasing both sides of a square by 20 percent increases its area by 44 percent."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q060-SRC",
+    "pairId": "ADV2E102-U0131-Q060",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Ahmad is as much younger than Saeed as he is older than Tanveer. If Saeed's and Tanveer's ages total 48 years, how old is Ahmad?",
+    "questionUrdu": "Ahmad، Saeed سے جتنا چھوٹا ہے اتنا ہی Tanveer سے بڑا ہے۔ Saeed اور Tanveer کی عمروں کا مجموعہ 48 ہو تو Ahmad کی عمر کیا ہے؟",
+    "options": [
+      "21",
+      "22",
+      "23",
+      "24"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 24 ہے۔ Ahmad دونوں عمروں کے عین وسط میں ہے، اس لیے اس کی عمر 48 ÷ 2 = 24 سال ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Use a general strategy to solve linear equations",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/2-4-use-a-general-strategy-to-solve-linear-equations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q060"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/2-4-use-a-general-strategy-to-solve-linear-equations",
+        "label": "Use a general strategy to solve linear equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains how verbal relationships are translated into linear equations and solved."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve%20S-A%3DA-T%2C%20S%2BT%3D48%20for%20A",
+        "label": "WolframAlpha: solve S-A=A-T, S+T=48 for A",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The relations imply 2A=S+T=48, hence Ahmad is 24 years old."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and possessives were repaired; the midpoint-age relation gives 24 years."
+  },
+  {
+    "id": "ADV2E102-U0131-Q060-SIM",
+    "pairId": "ADV2E102-U0131-Q060",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Ayesha is as much younger than Sara as she is older than Hina. If Sara's and Hina's ages total 60 years, how old is Ayesha?",
+    "questionUrdu": "Ayesha، Sara سے جتنی چھوٹی ہے اتنی ہی Hina سے بڑی ہے۔ Sara اور Hina کی عمروں کا مجموعہ 60 ہو تو Ayesha کی عمر کیا ہے؟",
+    "options": [
+      "30 years",
+      "25 years",
+      "35 years",
+      "40 years"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 30 years ہے۔ Ayesha دونوں عمروں کا arithmetic mean ہے؛ 60 ÷ 2 = 30 سال۔",
+    "source": {
+      "type": "practice",
+      "label": "Use a General Strategy to Solve Linear Equations",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/2-4-use-a-general-strategy-to-solve-linear-equations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q060",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/2-4-use-a-general-strategy-to-solve-linear-equations",
+        "label": "Use a General Strategy to Solve Linear Equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that if Ayesha is midway between two ages totaling 60, her age is 30."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+S-A%3DA-H%2C+S%2BH%3D60+for+A",
+        "label": "Solve the midpoint age equations totaling 60",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha supports that if Ayesha is midway between two ages totaling 60, her age is 30."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q062-SRC",
+    "pairId": "ADV2E102-U0131-Q062",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What type of number is sqrt(3) / sqrt(12)?",
+    "questionUrdu": "sqrt(3) / sqrt(12) کس قسم کا number ہے؟",
+    "options": [
+      "Natural number",
+      "Integer",
+      "Rational number",
+      "Irrational number"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Rational number ہے۔ یہ کسر 1/2 کے برابر ہے، اس لیے rational number ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Rational and irrational numbers",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/7-1-rational-and-irrational-numbers",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q062"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/7-1-rational-and-irrational-numbers",
+        "label": "Rational and irrational numbers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines rational numbers as quotients of integers and explains simplification of square roots."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=sqrt(3)%2Fsqrt(12)",
+        "label": "WolframAlpha: sqrt(3)/sqrt(12)",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The expression simplifies exactly to 1/2, which is rational."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The radical notation was normalized for reliable text rendering. The expression simplifies to 1/2, a rational number."
+  },
+  {
+    "id": "ADV2E102-U0131-Q062-SIM",
+    "pairId": "ADV2E102-U0131-Q062",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the simplified value of sqrt(8) / sqrt(2)?",
+    "questionUrdu": "sqrt(8) / sqrt(2) کی سادہ قیمت کیا ہے؟",
+    "options": [
+      "2",
+      "4",
+      "sqrt(2)",
+      "1/2"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 2 ہے۔ Radicals کو تقسیم کرنے سے sqrt(8/2)=sqrt(4)=2 ملتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Rational and Irrational Numbers",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/7-1-rational-and-irrational-numbers",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q062",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/7-1-rational-and-irrational-numbers",
+        "label": "Rational and Irrational Numbers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that sqrt(8) divided by sqrt(2) simplifies to 2."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=sqrt%288%29%2Fsqrt%282%29",
+        "label": "Simplify sqrt(8)/sqrt(2)",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha supports that sqrt(8) divided by sqrt(2) simplifies to 2."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q063-SRC",
+    "pairId": "ADV2E102-U0131-Q063",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A boy read 3/8 of a book, then 4/5 of the remainder. If 40 pages were still unread, how many pages did the book contain?",
+    "questionUrdu": "ایک لڑکے نے کتاب کا 3/8، پھر باقی کا 4/5 پڑھا۔ اگر 40 pages باقی ہوں تو کل pages کتنے تھے؟",
+    "options": [
+      "320 pages",
+      "240 pages",
+      "120 pages",
+      "60 pages"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 320 pages ہے۔ دو مراحل کے بعد 1/8 حصہ باقی رہتا ہے؛ 40 × 8 = 320 pages۔",
+    "source": {
+      "type": "book",
+      "label": "Multiply and divide fractions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q063"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+        "label": "Multiply and divide fractions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the multiplication rule used to find a fraction of a remaining amount."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve%20(1-3%2F8)*(1-4%2F5)*x%3D40",
+        "label": "WolframAlpha: solve (1-3/8)*(1-4/5)*x=40",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The unread fraction is (5/8)(1/5)=1/8; solving x/8=40 gives 320 pages."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar was repaired. Forty unread pages are one-eighth of the book, so the verified total is 320 pages."
+  },
+  {
+    "id": "ADV2E102-U0131-Q063-SIM",
+    "pairId": "ADV2E102-U0131-Q063",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A student read half a book and then half of the remaining pages. If 30 pages were unread, how many pages did the book contain?",
+    "questionUrdu": "طالب علم نے کتاب کا نصف اور پھر باقی pages کا نصف پڑھا۔ اگر 30 pages نہ پڑھے گئے ہوں تو کتاب میں کل کتنے pages تھے؟",
+    "options": [
+      "120",
+      "90",
+      "60",
+      "150"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 120 ہے۔ آخر میں کتاب کا 1/4 باقی ہے؛ اگر یہ 30 ہے تو کل 30 × 4 = 120 pages ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Multiply and Divide Fractions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q063",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+        "label": "Multiply and Divide Fractions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that reading half and then half the remainder leaves one quarter, so 30 unread pages imply 120 total pages."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+%281-1%2F2%29%28%281-1%2F2%29x%29%3D30",
+        "label": "Solve the remaining-pages fraction problem",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha supports that reading half and then half the remainder leaves one quarter, so 30 unread pages imply 120 total pages."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q064-SRC",
+    "pairId": "ADV2E102-U0131-Q064",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is 10% of 391680?",
+    "questionUrdu": "391680 کا 10% کیا ہے؟",
+    "options": [
+      "23498",
+      "39168",
+      "8576",
+      "8643"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 39168 ہے۔ دس فیصد کے لیے عدد کو 10 سے تقسیم کرتے ہیں؛ جواب 39168 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Understand percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q064"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+        "label": "Understand percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that percent means per hundred and shows how to calculate a percentage of a number."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=10%2F100*391680",
+        "label": "WolframAlpha: 10/100*391680",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Ten percent of 391680 evaluates exactly to 39168."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's religious label was unnecessary to solve the explicitly stated 10% calculation and was removed; the answer is 39168."
+  },
+  {
+    "id": "ADV2E102-U0131-Q064-SIM",
+    "pairId": "ADV2E102-U0131-Q064",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 15% of 800?",
+    "questionUrdu": "800 کا 15% کیا ہے؟",
+    "options": [
+      "120",
+      "100",
+      "125",
+      "150"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 120 ہے۔ 0.15 × 800 = 120 ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Understand Percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q064",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+        "label": "Understand Percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 15 percent of 800 equals 120."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=15%25+of+800",
+        "label": "Calculate 15 percent of 800",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha supports that 15 percent of 800 equals 120."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q065-SRC",
+    "pairId": "ADV2E102-U0131-Q065",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A can complete a job in 6 days and B can complete it in 12 days. At constant rates, how many days will they take working together?",
+    "questionUrdu": "A کام 6 دن اور B بارہ (12) دن میں کرتا ہے۔ دونوں مل کر کتنے دن لیں گے؟",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 4 ہے۔ مشترک رفتار 1/6 + 1/12 = 1/4 کام روزانہ ہے، اس لیے 4 دن لگتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Solve uniform-motion and work applications",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q065"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+        "label": "Solve uniform-motion and work applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that individual work rates are added when people work together."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1%2F(1%2F6%2B1%2F12)",
+        "label": "WolframAlpha: 1/(1/6+1/12)",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The combined rate is one quarter of the job per day, so the time is 4 days."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The constant-rate assumption and units were made explicit; the answer remains 4 days."
+  },
+  {
+    "id": "ADV2E102-U0131-Q065-SIM",
+    "pairId": "ADV2E102-U0131-Q065",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A can finish a job in 8 days and B in 24 days. How long will they take working together at constant rates?",
+    "questionUrdu": "A ایک کام 8 دن اور B چوبیس (24) دن میں کرتا ہے۔ مستقل رفتار سے دونوں مل کر کتنے دن لیں گے؟",
+    "options": [
+      "6 days",
+      "8 days",
+      "12 days",
+      "16 days"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 6 days ہے۔ مشترک رفتار 1/8 + 1/24 = 1/6 ہے، لہٰذا کام 6 دن میں مکمل ہوگا۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve Work Applications",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q065",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+        "label": "Solve Work Applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that workers taking 8 and 24 days separately take 6 days together."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1%2F%281%2F8%2B1%2F24%29",
+        "label": "Combined work time for 8-day and 24-day rates",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha supports that workers taking 8 and 24 days separately take 6 days together."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q066-SRC",
+    "pairId": "ADV2E102-U0131-Q066",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which option correctly punctuates the direct negative question 'Dont you get this'?",
+    "questionUrdu": "براہ راست منفی سوال Dont you get this کی درست punctuation کون سی ہے؟",
+    "options": [
+      "Don't you get this?",
+      "Don't, you get this?",
+      "Don't you got this.",
+      "Don't, you got this."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Don't you get this? ہے۔ Don't میں apostrophe حذف شدہ حرف کو ظاہر کرتا ہے اور سوال کے آخر میں question mark آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Apostrophe",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/contraction",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q066"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/contraction",
+        "label": "Apostrophe",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge shows that an apostrophe marks omitted letters in contractions such as do not becoming don't."
+      },
+      {
+        "url": "https://style.mla.org/direct-question-in-a-sentence/",
+        "label": "How should I style a direct question contained in a sentence?",
+        "publisher": "Modern Language Association",
+        "authorityId": "modern-language-association",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The MLA Style Center demonstrates that a complete direct question begins with a capital letter and ends with a question mark."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The task wording was clarified. Option A alone has the correct contraction, verb form and final question mark."
+  },
+  {
+    "id": "ADV2E102-U0131-Q066-SIM",
+    "pairId": "ADV2E102-U0131-Q066",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which sentence correctly punctuates the direct negative question?",
+    "questionUrdu": "براہ راست منفی سوال کی درست punctuation کون سی ہے؟",
+    "options": [
+      "Isn't it ready?",
+      "Isnt it ready.",
+      "Is'nt it ready?",
+      "Isn't it ready."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Isn't it ready? ہے۔ Is not کا contraction Isn't ہے اور direct question سوالیہ نشان پر ختم ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Apostrophe",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/contraction",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q066",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/contraction",
+        "label": "Apostrophe",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that Isn't it ready? correctly uses an apostrophe in the contraction and a question mark."
+      },
+      {
+        "url": "https://style.mla.org/direct-question-in-a-sentence/",
+        "label": "How should I style a direct question contained in a sentence?",
+        "publisher": "Modern Language Association",
+        "authorityId": "modern-language-association",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Modern Language Association supports that Isn't it ready? correctly uses an apostrophe in the contraction and a question mark."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q067-SRC",
+    "pairId": "ADV2E102-U0131-Q067",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the preposition that completes the standard expression: 'A person should not stoop ___ dishonesty.'",
+    "questionUrdu": "معیاری اظہار مکمل کریں: A person should not stoop ___ dishonesty.",
+    "options": [
+      "before",
+      "to",
+      "for",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب to ہے۔ Stoop to کا مطلب برے یا کمتر عمل کی سطح تک گرنا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Stoop to something",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/stoop-to",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q067"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/stoop-to",
+        "label": "Stoop to something",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines the phrasal verb stoop to something and gives examples such as stoop to bribery."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/stoop",
+        "label": "Stoop",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently exemplifies the moral-lowering sense with 'stooped to lying'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The original religious sentence awkwardly mixed 'stoop down', 'before' and 'to anyone'. It was rebuilt as an idiomatic, neutral test of the phrasal verb stoop to."
+  },
+  {
+    "id": "ADV2E102-U0131-Q067-SIM",
+    "pairId": "ADV2E102-U0131-Q067",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does 'stoop to' most nearly mean?",
+    "questionUrdu": "Stoop to کا قریب ترین مطلب کیا ہے؟",
+    "options": [
+      "Lower oneself to an unworthy act",
+      "Bend for exercise",
+      "Rise above a problem",
+      "Refuse to act"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Lower oneself to an unworthy act ہے۔ Stoop to کسی ناپسندیدہ یا اخلاقاً کمتر کام پر اتر آنے کو کہتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Stoop to something",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/stoop-to",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q067",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/stoop-to",
+        "label": "Stoop to something",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that stoop to means to lower oneself to an unworthy action."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/stoop",
+        "label": "Stoop",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that stoop to means to lower oneself to an unworthy action."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q068-SRC",
+    "pairId": "ADV2E102-U0131-Q068",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Change to active voice: 'The tickets had been bought by us before 1 p.m.'",
+    "questionUrdu": "The tickets had been bought by us before 1 p.m. کو active voice میں بدلیں۔",
+    "options": [
+      "We had bought the tickets before 1 pm.",
+      "We buy the tickets before 1 pm.",
+      "We has been bought the tickets before 1 pm.",
+      "We should bought the tickets before 1 pm."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب We had bought the tickets before 1 pm. ہے۔ Past perfect passive کو active بناتے وقت subject We اور verb had bought رہتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Passive: forms",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+        "label": "Passive: forms",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's passive-form table gives had been plus the past participle for the past perfect passive."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+        "label": "Passives",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council gives the past perfect passive structure as had been plus past participle."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The instruction was corrected from the generic 'change voice' to active voice. Past perfect passive 'had been bought' becomes past perfect active 'had bought'."
+  },
+  {
+    "id": "ADV2E102-U0131-Q068-SIM",
+    "pairId": "ADV2E102-U0131-Q068",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which tense and voice is used in 'The tickets had been bought'?",
+    "questionUrdu": "The tickets had been bought میں کون سا tense اور voice استعمال ہوا ہے؟",
+    "options": [
+      "Past perfect passive",
+      "Past continuous active",
+      "Present perfect passive",
+      "Simple past active"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Past perfect passive ہے۔ Had been + past participle، past perfect passive کی ساخت ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Passive: forms",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+        "label": "Passive: forms",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that had been bought is a past-perfect passive verb form."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+        "label": "Passives",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council LearnEnglish supports that had been bought is a past-perfect passive verb form."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q069-SRC",
+    "pairId": "ADV2E102-U0131-Q069",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Change to passive voice: 'The company has fired some workers.'",
+    "questionUrdu": "The company has fired some workers کو passive voice میں بدلیں۔",
+    "options": [
+      "Some workers have been fired by the company.",
+      "Some workers had been fired by the company.",
+      "Some workers have fired by the company.",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Some workers have been fired by the company. ہے۔ Object کو subject بنا کر have been fired استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Passive: forms",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+        "label": "Passive: forms",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's passive-form table gives had been plus the past participle for the past perfect passive."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+        "label": "Passives",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council gives the past perfect passive structure as had been plus past participle."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The missing article and the target voice were supplied. Present-perfect active becomes 'Some workers have been fired by the company.'"
+  },
+  {
+    "id": "ADV2E102-U0131-Q069-SIM",
+    "pairId": "ADV2E102-U0131-Q069",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which auxiliary pattern is used in a perfect passive construction with has or have?",
+    "questionUrdu": "Has یا have والی perfect passive construction کس auxiliary pattern سے بنتی ہے؟",
+    "options": [
+      "has/have been + past participle",
+      "had been + present participle",
+      "is/are + base verb",
+      "will have + infinitive"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب has/have been + past participle ہے۔ Present perfect passive میں has یا have کے بعد been اور past participle آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Passive: forms",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+        "label": "Passive: forms",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the present-perfect passive uses has or have been plus a past participle."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+        "label": "Passives",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council LearnEnglish supports that the present-perfect passive uses has or have been plus a past participle."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q070-SRC",
+    "pairId": "ADV2E102-U0131-Q070",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the third conditional: 'If she had worked hard, she ___ the exam.'",
+    "questionUrdu": "Third conditional مکمل کریں: If she had worked hard, she ___ the exam.",
+    "options": [
+      "would have passed",
+      "have been passed",
+      "will have passed",
+      "has passed"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب would have passed ہے۔ Unreal past result کے لیے would have passed استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Conditionals: third and mixed",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/comment/128850",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/comment/128850",
+        "label": "Conditionals: third and mixed",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council gives the third-conditional form if plus past perfect followed by would have plus past participle."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/first-conditional",
+        "label": "Conditionals: if",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge independently gives the third-conditional pattern and examples such as if I had played better, I would have won."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Every printed option was ungrammatical. Option A was transparently repaired from 'would have pass' to 'would have passed' so the item has one valid answer."
+  },
+  {
+    "id": "ADV2E102-U0131-Q070-SIM",
+    "pairId": "ADV2E102-U0131-Q070",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "The third conditional normally describes which kind of situation?",
+    "questionUrdu": "Third conditional عموماً کس قسم کی صورت حال بیان کرتا ہے؟",
+    "options": [
+      "An unreal past situation",
+      "A universal scientific fact",
+      "A routine present habit",
+      "A definite future plan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب An unreal past situation ہے۔ Third conditional ایسے ماضی کی بات کرتا ہے جو حقیقت میں پیش نہیں آئی اور اس کا فرضی نتیجہ بیان کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Conditionals: third and mixed",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/comment/128850",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/comment/128850",
+        "label": "Conditionals: third and mixed",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that the third conditional describes an unreal past situation and its imagined result."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/first-conditional",
+        "label": "Conditionals: if",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the third conditional describes an unreal past situation and its imagined result."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q071-SRC",
+    "pairId": "ADV2E102-U0131-Q071",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which is the correct passive form of 'The people elected him Mayor'?",
+    "questionUrdu": "The people elected him Mayor کی درست passive form کون سی ہے؟",
+    "options": [
+      "Mayor is elected by the people.",
+      "He is elected by the people Mayor.",
+      "He was elected Mayor by the people.",
+      "Him was elected Mayor the people."
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب He was elected Mayor by the people. ہے۔ Object him کو subject He بنا کر was elected Mayor لکھا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Passive: forms",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+        "label": "Passive: forms",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's passive-form table gives had been plus the past participle for the past perfect passive."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+        "label": "Passives",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council gives the past perfect passive structure as had been plus past participle."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The instruction was normalized. The simple-past object 'him' becomes subject 'He', followed by 'was elected Mayor'."
+  },
+  {
+    "id": "ADV2E102-U0131-Q071-SIM",
+    "pairId": "ADV2E102-U0131-Q071",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which sentence is the correct passive form of 'They built the bridge in 2010'?",
+    "questionUrdu": "They built the bridge in 2010 کی درست passive form کون سی ہے؟",
+    "options": [
+      "The bridge was built in 2010.",
+      "The bridge is built in 2010.",
+      "The bridge had build in 2010.",
+      "The bridge was building in 2010."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The bridge was built in 2010. ہے۔ Simple past passive کی ساخت was/were + past participle ہے، اس لیے was built درست ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Passive: forms",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-forms",
+        "label": "Passive: forms",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that The bridge was built in 2010 is the correct simple-past passive form."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+        "label": "Passives",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council LearnEnglish supports that The bridge was built in 2010 is the correct simple-past passive form."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q072-SRC",
+    "pairId": "ADV2E102-U0131-Q072",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed part of speech can function as a grammatically independent exclamatory utterance?",
+    "questionUrdu": "درج parts of speech میں کون سا grammatically independent exclamation بن سکتا ہے؟",
+    "options": [
+      "Verb",
+      "Adverb",
+      "Conjunction",
+      "Interjection"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Interjection ہے۔ Interjection خوشی، حیرت یا درد جیسے فوری جذبات الگ لفظ سے ظاہر کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Interjections",
+      "referenceUrl": "https://dictionary.cambridge.org/us/grammar/british-grammar/interjections",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/interjections",
+        "label": "Interjections",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that interjections are short sounds or words used to express emotions, often as standalone exclamations."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/interjection",
+        "label": "Interjection",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines an interjection as a grammatically independent word or phrase used in exclamation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The overbroad claim that a part of speech always forms a complete sentence was repaired to the documented standalone-utterance property of interjections."
+  },
+  {
+    "id": "ADV2E102-U0131-Q072-SIM",
+    "pairId": "ADV2E102-U0131-Q072",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is an interjection in the sentence 'Wow! That was close'?",
+    "questionUrdu": "Wow! That was close میں interjection کون سا لفظ ہے؟",
+    "options": [
+      "Wow",
+      "That",
+      "Was",
+      "Close"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Wow ہے۔ Wow ایک آزاد exclamation ہے، اس لیے interjection ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Interjections",
+      "referenceUrl": "https://dictionary.cambridge.org/us/grammar/british-grammar/interjections",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/interjections",
+        "label": "Interjections",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that Wow functions as an interjection in Wow! That was close."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/interjection",
+        "label": "Interjection",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that Wow functions as an interjection in Wow! That was close."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q073-SRC",
+    "pairId": "ADV2E102-U0131-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'out of the blue' mean?",
+    "questionUrdu": "Out of the blue محاورے کا مطلب کیا ہے؟",
+    "options": [
+      "Clouds on the sky",
+      "Higher than the sky",
+      "Something expectedly",
+      "Something unexpectedly"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Something unexpectedly ہے۔ یہ کسی بالکل غیر متوقع واقعے کے لیے استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Out of the blue",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/out-of-the-blue",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/out-of-the-blue",
+        "label": "Out of the blue",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines out of the blue as completely unexpectedly."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/out%20of%20the%20blue",
+        "label": "Out of the blue",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines the phrase as without advance notice or unexpectedly."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Capitalization was normalized; option D, something unexpectedly, expresses the idiom's meaning."
+  },
+  {
+    "id": "ADV2E102-U0131-Q073-SIM",
+    "pairId": "ADV2E102-U0131-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the idiom 'a bolt from the blue' mean?",
+    "questionUrdu": "A bolt from the blue محاورے کا کیا مطلب ہے؟",
+    "options": [
+      "A sudden unexpected event",
+      "A planned celebration",
+      "A minor daily task",
+      "A visible storm warning"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A sudden unexpected event ہے۔ یہ محاورہ اچانک اور غیر متوقع خبر یا واقعے کو ظاہر کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "A bolt from the blue",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/bolt-from-the-blue",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/bolt-from-the-blue",
+        "label": "A bolt from the blue",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that a bolt from the blue means a sudden unexpected event."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/a%20bolt%20from%20the%20blue",
+        "label": "A bolt from the blue",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that a bolt from the blue means a sudden unexpected event."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q074-SRC",
+    "pairId": "ADV2E102-U0131-Q074",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Before signing the contract, I should ___ its contents to avoid a mistake.",
+    "questionUrdu": "Contract پر دستخط سے پہلے غلطی سے بچنے کے لیے اس کے contents کو ___ کرنا چاہیے۔",
+    "options": [
+      "Get over",
+      "Call out",
+      "Look through",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Look through ہے۔ Look through کا مطلب مواد کو پڑھ کر یا دیکھ کر جانچنا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Look through something",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/look-through",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/look-through",
+        "label": "Look through something",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines look through something as reading it quickly."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/look%20through",
+        "label": "Look through",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines look through as reading or briefly examining pages or a collection."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Articles and possessives were repaired. Of the listed phrasal verbs, look through uniquely means to read or examine the contents."
+  },
+  {
+    "id": "ADV2E102-U0131-Q074-SIM",
+    "pairId": "ADV2E102-U0131-Q074",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which phrasal verb means to examine something quickly but carefully?",
+    "questionUrdu": "کون سا phrasal verb کسی چیز کو جلد مگر توجہ سے جانچنے کے معنی دیتا ہے؟",
+    "options": [
+      "Look over",
+      "Look up to",
+      "Look out",
+      "Look after"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Look over ہے۔ Look over کا مطلب کسی چیز کا جائزہ یا معائنہ کرنا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Look over",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/look-over",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/look-over",
+        "label": "Look over",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that look over means to examine something."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/look%20over",
+        "label": "Look over",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that look over means to examine something."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0131-Q075-SRC",
+    "pairId": "ADV2E102-U0131-Q075",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed part of speech belongs to a closed class rather than an open class in English?",
+    "questionUrdu": "English میں درج parts of speech میں کون سا open class کے بجائے closed class ہے؟",
+    "options": [
+      "Noun",
+      "Verb",
+      "Pronoun",
+      "Adverb"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Pronoun ہے۔ Pronouns کی محدود grammatical فہرست ہوتی ہے، اس لیے یہ closed class ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "The Study of Meaning, Chapter 1",
+      "referenceUrl": "https://www.ucl.ac.uk/~ucjtudo/assets/teaching/the_study_of_meaning/Ch.1.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ucl.ac.uk/~ucjtudo/assets/teaching/the_study_of_meaning/Ch.1.pdf",
+        "label": "The Study of Meaning, Chapter 1",
+        "publisher": "University College London",
+        "authorityId": "university-college-london",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UCL teaching text identifies content words as an open class and function words as a closed class."
+      },
+      {
+        "url": "https://linguistics.ucla.edu/people/curtiss/2004%20-%20GCS%20Manual.pdf",
+        "label": "Grammatical Coding System manual",
+        "publisher": "University of California, Los Angeles",
+        "authorityId": "ucla",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UCLA linguistics manual explicitly excludes pronouns from its open-class lexical items and treats them as closed-class items."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar was normalized. Nouns, lexical verbs and adverbs are open-class choices here; pronouns are closed-class."
+  },
+  {
+    "id": "ADV2E102-U0131-Q075-SIM",
+    "pairId": "ADV2E102-U0131-Q075",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which listed part of speech is normally an open class in English?",
+    "questionUrdu": "English میں درج parts of speech میں کون سا عموماً open class ہے؟",
+    "options": [
+      "Noun",
+      "Pronoun",
+      "Preposition",
+      "Determiner"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Noun ہے۔ Nouns میں نئے الفاظ مسلسل شامل ہو سکتے ہیں، اس لیے یہ open class ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "The Study of Meaning, Chapter 1",
+      "referenceUrl": "https://www.ucl.ac.uk/~ucjtudo/assets/teaching/the_study_of_meaning/Ch.1.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0131-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ucl.ac.uk/~ucjtudo/assets/teaching/the_study_of_meaning/Ch.1.pdf",
+        "label": "The Study of Meaning, Chapter 1",
+        "publisher": "University College London",
+        "authorityId": "university-college-london",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "University College London supports that nouns normally form an open word class in English."
+      },
+      {
+        "url": "https://linguistics.ucla.edu/people/curtiss/2004%20-%20GCS%20Manual.pdf",
+        "label": "Grammatical Coding System manual",
+        "publisher": "University of California, Los Angeles",
+        "authorityId": "ucla",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "University of California, Los Angeles supports that nouns normally form an open word class in English."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

@@ -1,0 +1,2582 @@
+[
+  {
+    "id": "ADV2E102-U0081-Q051-SRC",
+    "pairId": "ADV2E102-U0081-Q051",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "What term means the amount of water vapour contained in the air?",
+    "questionUrdu": "ہوا میں موجود water vapour کی مقدار کو کیا کہتے ہیں؟",
+    "options": [
+      "Air pressure",
+      "Mildness",
+      "Humidity",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Humidity ہے۔ ہوا میں آبی بخارات کی مقدار humidity کہلاتی ہے اور موسم میں نمی کے احساس پر اس کا نمایاں اثر ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Dew point versus humidity",
+      "referenceUrl": "https://www.weather.gov/arx/why_dewpoint_vs_humidity",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q051"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.weather.gov/arx/why_dewpoint_vs_humidity",
+        "label": "Dew point versus humidity",
+        "publisher": "United States National Weather Service",
+        "authorityId": "us-national-weather-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Weather Service defines humidity in terms of water vapour in the air."
+      },
+      {
+        "url": "https://www.noaa.gov/jetstream/upper-air/humidity",
+        "label": "Humidity",
+        "publisher": "National Oceanic and Atmospheric Administration",
+        "authorityId": "noaa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NOAA explains that humidity is a measure of water vapour in the atmosphere."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The awkward source wording and the vague option 'pressure' were normalized."
+  },
+  {
+    "id": "ADV2E102-U0081-Q051-SIM",
+    "pairId": "ADV2E102-U0081-Q051",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What temperature marks the point at which air becomes saturated and dew can begin to form?",
+    "questionUrdu": "وہ کون سا temperature ہے جہاں ہوا سیر ہو جاتی ہے اور شبنم بننا شروع ہو سکتی ہے؟",
+    "options": [
+      "Dew point",
+      "Heat index",
+      "Wind chill",
+      "Freezing range"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Dew point ہے۔ جب ہوا اپنے dew point تک ٹھنڈی ہو تو وہ موجودہ آبی بخارات کے لحاظ سے سیر ہو جاتی ہے اور condensation شروع ہو سکتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Dew point versus humidity",
+      "referenceUrl": "https://www.weather.gov/arx/why_dewpoint_vs_humidity",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q051",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.weather.gov/arx/why_dewpoint_vs_humidity",
+        "label": "Dew point versus humidity",
+        "publisher": "United States National Weather Service",
+        "authorityId": "us-national-weather-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "United States National Weather Service supports that dew point is the temperature at which air becomes saturated and dew can begin to form."
+      },
+      {
+        "url": "https://www.noaa.gov/jetstream/upper-air/humidity",
+        "label": "Humidity",
+        "publisher": "National Oceanic and Atmospheric Administration",
+        "authorityId": "noaa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Oceanic and Atmospheric Administration supports that dew point is the temperature at which air becomes saturated and dew can begin to form."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q052-SRC",
+    "pairId": "ADV2E102-U0081-Q052",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which unit is commonly used to express distances between stars?",
+    "questionUrdu": "ستاروں کے درمیان فاصلے ظاہر کرنے کے لیے عام طور پر کون سی unit استعمال ہوتی ہے؟",
+    "options": [
+      "Parallax",
+      "Light-year",
+      "Astronomical unit",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Light-year ہے۔ نوری سال وقت نہیں بلکہ فاصلہ ہے اور روشنی ایک سال میں جتنا سفر کرتی ہے اس کے برابر ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "What is a light-year?",
+      "referenceUrl": "https://spaceplace.nasa.gov/light-year/en/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q052"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://spaceplace.nasa.gov/light-year/en/",
+        "label": "What is a light-year?",
+        "publisher": "NASA Space Place",
+        "authorityId": "nasa-space-place",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA explains that a light-year is a distance unit used for large distances in space, including distances between stars."
+      },
+      {
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/How_far_away_is_it",
+        "label": "How far away is it?",
+        "publisher": "European Space Agency",
+        "authorityId": "european-space-agency",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ESA explains the use of light-years and parsecs for stellar distances."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's 'between planet and star' wording is not uniquely keyed because Solar-System distances are normally expressed in astronomical units. It was repaired to the common interstellar-distance fact."
+  },
+  {
+    "id": "ADV2E102-U0081-Q052-SIM",
+    "pairId": "ADV2E102-U0081-Q052",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Approximately how far does light travel in one year?",
+    "questionUrdu": "روشنی ایک سال میں تقریباً کتنا فاصلہ طے کرتی ہے؟",
+    "options": [
+      "9.46 trillion kilometres",
+      "3.26 million kilometres",
+      "150 million kilometres",
+      "384,400 kilometres"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 9.46 trillion kilometres ہے۔ vacuum میں روشنی کی رفتار کو ایک سال کے وقت سے ضرب دینے پر ایک نوری سال تقریباً یہی فاصلہ بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "What is a light-year?",
+      "referenceUrl": "https://spaceplace.nasa.gov/light-year/en/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q052",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://spaceplace.nasa.gov/light-year/en/",
+        "label": "What is a light-year?",
+        "publisher": "NASA Space Place",
+        "authorityId": "nasa-space-place",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA Space Place supports that light travels approximately 9.46 trillion kilometres in one year."
+      },
+      {
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/How_far_away_is_it",
+        "label": "How far away is it?",
+        "publisher": "European Space Agency",
+        "authorityId": "european-space-agency",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "European Space Agency supports that light travels approximately 9.46 trillion kilometres in one year."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q053-SRC",
+    "pairId": "ADV2E102-U0081-Q053",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "What is the physiological process that stops bleeding at a damaged blood vessel?",
+    "questionUrdu": "زخمی blood vessel پر bleeding روکنے والے جسمانی عمل کو کیا کہتے ہیں؟",
+    "options": [
+      "Hemostasis",
+      "Homeostasis",
+      "Hematopoiesis",
+      "Hydrolysis"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Hemostasis ہے۔ اس عمل میں رگ کا سکڑاؤ، platelet plug اور coagulation مل کر خون کے بہاؤ کو روکتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Physiology, hemostasis",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK545263/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q053"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK545263/",
+        "label": "Physiology, hemostasis",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi-bookshelf",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The medical reference defines hemostasis as the process that stops bleeding at an injured blood vessel."
+      },
+      {
+        "url": "https://www.nhlbi.nih.gov/health/bleeding-disorders/how-blood-clots",
+        "label": "How blood clots",
+        "publisher": "National Heart, Lung, and Blood Institute",
+        "authorityId": "nhlbi",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NHLBI describes the vessel, platelet and fibrin responses that stop bleeding after injury."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source confuses homeostasis with hemostasis and supplies only digestive substances as options. The item was fully reconstructed around the correct term hemostasis."
+  },
+  {
+    "id": "ADV2E102-U0081-Q053-SIM",
+    "pairId": "ADV2E102-U0081-Q053",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What immediate vascular response helps reduce blood loss at the start of hemostasis?",
+    "questionUrdu": "Hemostasis کے آغاز میں خون کا نقصان کم کرنے والا فوری vascular response کیا ہے؟",
+    "options": [
+      "Vasoconstriction",
+      "Vasodilation",
+      "Hemolysis",
+      "Fibrinolysis"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Vasoconstriction ہے۔ زخمی رگ فوراً سکڑتی ہے، جس سے اس مقام پر خون کا بہاؤ کم ہوتا اور اگلے clotting مراحل کو وقت ملتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Physiology, hemostasis",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK545263/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q053",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK545263/",
+        "label": "Physiology, hemostasis",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi-bookshelf",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Center for Biotechnology Information supports that vasoconstriction is an immediate vascular response that reduces blood loss at the start of hemostasis."
+      },
+      {
+        "url": "https://www.nhlbi.nih.gov/health/bleeding-disorders/how-blood-clots",
+        "label": "How blood clots",
+        "publisher": "National Heart, Lung, and Blood Institute",
+        "authorityId": "nhlbi",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Heart, Lung, and Blood Institute supports that vasoconstriction is an immediate vascular response that reduces blood loss at the start of hemostasis."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q058-SRC",
+    "pairId": "ADV2E102-U0081-Q058",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If A:B = 2:3 and B:C = 4:5, what is A:B:C?",
+    "questionUrdu": "اگر A:B = 2:3 اور B:C = 4:5 ہو تو A:B:C کیا ہوگا؟",
+    "options": [
+      "5:4:6",
+      "2:3:5",
+      "8:12:15",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 8:12:15 ہے۔ دونوں ratios میں B کو 12 بنانے پر A:B برابر 8:12 اور B:C برابر 12:15 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q058"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax shows how equivalent ratios are formed by multiplying both terms by the same factor; scaling 2:3 and 4:5 to common B=12 gives 8:12:15."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_2e_%28OpenStax%29/06%3A_Percents/6.06%3A_Solve_Proportions_and_their_Applications",
+        "label": "Proportions and equivalent ratios",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts explains matching common ratio terms; A:B=8:12 and B:C=12:15 combine to 8:12:15."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Spacing and punctuation were normalized; scaling the common B term verifies 8:12:15."
+  },
+  {
+    "id": "ADV2E102-U0081-Q058-SIM",
+    "pairId": "ADV2E102-U0081-Q058",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If P:Q = 3:5 and Q:R = 10:7, what is P:Q:R?",
+    "questionUrdu": "اگر P:Q = 3:5 اور Q:R = 10:7 ہو تو P:Q:R کیا ہوگا؟",
+    "options": [
+      "6:10:7",
+      "3:10:7",
+      "6:5:7",
+      "3:5:14"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 6:10:7 ہے۔ پہلے ratio کو 2 سے ضرب دینے پر Q دونوں نسبتوں میں 10 ہو جاتا ہے، اس لیے مشترک نسبت 6:10:7 بنتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve proportions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q058",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that if P:Q is 3:5 and Q:R is 10:7, then P:Q:R is 6:10:7."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_2e_%28OpenStax%29/06%3A_Percents/6.06%3A_Solve_Proportions_and_their_Applications",
+        "label": "Proportions and equivalent ratios",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that if P:Q is 3:5 and Q:R is 10:7, then P:Q:R is 6:10:7."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q059-SRC",
+    "pairId": "ADV2E102-U0081-Q059",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "From the top of a tower, the angle of depression to a point 70 m from its base is 60°. What is the tower's height?",
+    "questionUrdu": "ایک tower کی چوٹی سے base سے 70 m دور نقطے کا angle of depression 60° ہے؛ tower کی height کیا ہے؟",
+    "options": [
+      "70√3 m",
+      "70 m",
+      "35√3 m",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 70√3 m ہے۔ قائمہ مثلث میں tan 60° = height/70 ہوتا ہے، اس لیے height برابر 70√3 میٹر ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Right-triangle trigonometry",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q059"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+        "label": "Right-triangle trigonometry",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives tangent as opposite over adjacent; h/70 = tan 60 degrees = square root of 3, so h = 70 square root of 3 metres."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_%28OpenStax%29/05%3A_Trigonometric_Functions/5.04%3A_Right_Triangle_Trigonometry",
+        "label": "Right-triangle trigonometry applications",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts relates angles of depression to equal alternate interior angles; applying tangent yields 70 square root of 3 metres."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The observation point was specified as the tower top; standard level-ground and vertical-tower assumptions yield 70√3 m."
+  },
+  {
+    "id": "ADV2E102-U0081-Q059-SIM",
+    "pairId": "ADV2E102-U0081-Q059",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A 30 m tower subtends an angle of elevation of 45° at a point on level ground. How far is the point from the tower's base?",
+    "questionUrdu": "30 m بلند tower کا angle of elevation ہموار زمین کے ایک نقطے پر 45° ہے؛ نقطہ base سے کتنی دور ہے؟",
+    "options": [
+      "30 m",
+      "15 m",
+      "30√2 m",
+      "60 m"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 30 m ہے۔ tan 45° = 1 ہوتا ہے، لہٰذا height اور horizontal distance برابر ہوں گے۔",
+    "source": {
+      "type": "practice",
+      "label": "Right-triangle trigonometry",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q059",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+        "label": "Right-triangle trigonometry",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a 30 m tower viewed at 45 degrees from level ground is 30 m horizontally from the observation point."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_%28OpenStax%29/05%3A_Trigonometric_Functions/5.04%3A_Right_Triangle_Trigonometry",
+        "label": "Right-triangle trigonometry applications",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that a 30 m tower viewed at 45 degrees from level ground is 30 m horizontally from the observation point."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q060-SRC",
+    "pairId": "ADV2E102-U0081-Q060",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If A:B = 2:3, B:C = 3:4 and A:D = 4:5, what is C:D?",
+    "questionUrdu": "اگر A:B = 2:3، B:C = 3:4 اور A:D = 4:5 ہو تو C:D کیا ہے؟",
+    "options": [
+      "5:1",
+      "3:5",
+      "8:5",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 8:5 ہے۔ A=4 رکھنے پر B=6، C=8 اور D=5 ملتے ہیں، اس لیے C:D برابر 8:5 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q060"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Equivalent-ratio scaling gives A:B:C = 2:3:4 and A:D = 4:5, hence after setting A=4, C:D = 8:5."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_2e_%28OpenStax%29/06%3A_Percents/6.06%3A_Solve_Proportions_and_their_Applications",
+        "label": "Equivalent ratios",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts' proportion rules support scaling A:C = 1:2 and A:D = 4:5 to obtain C:D = 8:5."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Punctuation was normalized; compatible scaling verifies the printed 8:5 option."
+  },
+  {
+    "id": "ADV2E102-U0081-Q060-SIM",
+    "pairId": "ADV2E102-U0081-Q060",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A recipe uses flour and sugar in the ratio 3:2. How much sugar is needed for 12 cups of flour?",
+    "questionUrdu": "ایک recipe میں flour اور sugar کا ratio 3:2 ہے؛ 12 cups flour کے لیے کتنی sugar درکار ہوگی؟",
+    "options": [
+      "8 cups",
+      "6 cups",
+      "10 cups",
+      "18 cups"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 8 cups ہے۔ 12 cups flour، ratio کے 3 حصوں کے برابر ہے، اس لیے ایک حصہ 4 اور sugar کے 2 حصے 8 cups ہوں گے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve proportions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q060",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a 3:2 flour-to-sugar ratio requires 8 cups of sugar for 12 cups of flour."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_2e_%28OpenStax%29/06%3A_Percents/6.06%3A_Solve_Proportions_and_their_Applications",
+        "label": "Equivalent ratios",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that a 3:2 flour-to-sugar ratio requires 8 cups of sugar for 12 cups of flour."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q061-SRC",
+    "pairId": "ADV2E102-U0081-Q061",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is 4.036 divided by 0.04?",
+    "questionUrdu": "4.036 کو 0.04 سے divide کرنے کا نتیجہ کیا ہے؟",
+    "options": [
+      "10.9",
+      "100.9",
+      "109",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 100.9 ہے۔ دونوں اعداد کو 100 سے ضرب دینے پر 403.6 ÷ 4 ملتا ہے، جس کا جواب 100.9 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-4-decimals",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q061"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-4-decimals",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains decimal division by shifting both decimal points equally; 4.036/0.04 becomes 403.6/4 = 100.9."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_%28Arnold%29/05%3A_Decimals/5.04%3A_Division_of_Decimals",
+        "label": "Division of decimals",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts gives the same decimal-divisor method; direct calculation produces 100.9."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The operation was written in a complete sentence; direct decimal division verifies 100.9."
+  },
+  {
+    "id": "ADV2E102-U0081-Q061-SIM",
+    "pairId": "ADV2E102-U0081-Q061",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 6.048 divided by 0.06?",
+    "questionUrdu": "6.048 کو 0.06 سے divide کرنے کا نتیجہ کیا ہے؟",
+    "options": [
+      "100.8",
+      "10.08",
+      "1008",
+      "0.1008"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 100.8 ہے۔ dividend اور divisor دونوں کو 100 سے ضرب دینے پر 604.8 ÷ 6 بنتا ہے، جو 100.8 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-4-decimals",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q061",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-4-decimals",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 6.048 divided by 0.06 equals 100.8."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_%28Arnold%29/05%3A_Decimals/5.04%3A_Division_of_Decimals",
+        "label": "Division of decimals",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that 6.048 divided by 0.06 equals 100.8."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q062-SRC",
+    "pairId": "ADV2E102-U0081-Q062",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A ladder makes a 60° angle with level ground, and its foot is 4.6 m from a vertical wall. How long is the ladder?",
+    "questionUrdu": "ایک ladder ہموار زمین سے 60° کا زاویہ بناتی ہے اور اس کا foot دیوار سے 4.6 m دور ہے؛ ladder کی length کیا ہے؟",
+    "options": [
+      "8.2 m",
+      "9.2 m",
+      "10.2 m",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 9.2 m ہے۔ cos 60° = adjacent/hypotenuse = 4.6/length، اس لیے length برابر 9.2 میٹر ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Right-triangle trigonometry",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q062"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+        "label": "Right-triangle trigonometry",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Using cosine = adjacent/hypotenuse gives cos 60 degrees = 4.6/L, so L = 9.2 metres."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_%28OpenStax%29/05%3A_Trigonometric_Functions/5.04%3A_Right_Triangle_Trigonometry",
+        "label": "Right-triangle trigonometry applications",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts' right-triangle definitions give ladder length 4.6 divided by cos 60 degrees, equal to 9.2 metres."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The angle was clarified as measured from level ground, metre units were added to every numeric option, and the 9.2 m answer was independently recomputed."
+  },
+  {
+    "id": "ADV2E102-U0081-Q062-SIM",
+    "pairId": "ADV2E102-U0081-Q062",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A ladder 10 m long makes a 60° angle with level ground. How far is its foot from the wall?",
+    "questionUrdu": "10 m لمبی ladder ہموار زمین سے 60° کا زاویہ بناتی ہے؛ اس کا foot دیوار سے کتنی دور ہے؟",
+    "options": [
+      "5 m",
+      "5√3 m",
+      "10√3 m",
+      "20 m"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 5 m ہے۔ horizontal distance برابر 10 cos 60° ہے، اور cos 60° نصف ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Right-triangle trigonometry",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q062",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+        "label": "Right-triangle trigonometry",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the foot of a 10 m ladder inclined at 60 degrees is 5 m from the wall."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_%28OpenStax%29/05%3A_Trigonometric_Functions/5.04%3A_Right_Triangle_Trigonometry",
+        "label": "Right-triangle trigonometry applications",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that the foot of a 10 m ladder inclined at 60 degrees is 5 m from the wall."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q063-SRC",
+    "pairId": "ADV2E102-U0081-Q063",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the Sun's angle of elevation when a vertical tree's shadow has the same length as the tree's height?",
+    "questionUrdu": "جب ایک vertical tree کی shadow اس کی height کے برابر ہو تو Sun کا angle of elevation کیا ہوگا؟",
+    "options": [
+      "90°",
+      "45°",
+      "75°",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 45° ہے۔ tan angle = height/shadow اور دونوں برابر ہونے سے tangent ایک بنتا ہے، جس کا زاویہ 45° ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Right-triangle trigonometry",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q063"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+        "label": "Right-triangle trigonometry",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Tangent equals height divided by shadow length; equal lengths give tan theta = 1 and theta = 45 degrees."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_%28OpenStax%29/05%3A_Trigonometric_Functions/5.04%3A_Right_Triangle_Trigonometry",
+        "label": "Right-triangle trigonometry applications",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The trigonometric definitions imply a 45-degree acute angle when opposite and adjacent sides are equal."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and the vertical-tree assumption were supplied; equal opposite and adjacent sides verify 45°."
+  },
+  {
+    "id": "ADV2E102-U0081-Q063-SIM",
+    "pairId": "ADV2E102-U0081-Q063",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If a vertical pole's shadow is half its height, the Sun's angle of elevation is closest to:",
+    "questionUrdu": "اگر vertical pole کی shadow اس کی height کا نصف ہو تو Sun کا angle of elevation کس کے قریب ہوگا؟",
+    "options": [
+      "63.4°",
+      "26.6°",
+      "45°",
+      "30°"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 63.4° ہے۔ tan angle = height/shadow = 2، اس لیے angle تقریباً arctan 2 یعنی 63.4° بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Right-triangle trigonometry",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q063",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry",
+        "label": "Right-triangle trigonometry",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a vertical pole whose shadow is half its height gives a solar elevation angle of about 63.4 degrees."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_%28OpenStax%29/05%3A_Trigonometric_Functions/5.04%3A_Right_Triangle_Trigonometry",
+        "label": "Right-triangle trigonometry applications",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that a vertical pole whose shadow is half its height gives a solar elevation angle of about 63.4 degrees."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q064-SRC",
+    "pairId": "ADV2E102-U0081-Q064",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Given 10^48 = x, 10^70 = y and x^z = y^2, which listed value is closest to z?",
+    "questionUrdu": "اگر 10^48 = x، 10^70 = y اور x^z = y^2 ہو تو z کے قریب ترین درج value کون سی ہے؟",
+    "options": [
+      "1.45",
+      "1.88",
+      "2.9",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 2.9 ہے۔ powers برابر کرنے سے 48z = 140، لہٰذا z = 140/48 تقریباً 2.92 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Exponential functions and exponent rules",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-1-exponential-functions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q064"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-1-exponential-functions",
+        "label": "Exponential functions and exponent rules",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Exponent rules give 10^(48z) = 10^140, hence z = 140/48 = 2.9167, closest to 2.9."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_%28Arnold%29/07%3A_Exponential_and_Logarithmic_Functions/7.01%3A_Exponential_Functions",
+        "label": "Laws of exponents",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Applying the power-of-a-power rule and equal-base rule yields z approximately 2.9167, whose closest listed value is 2.9."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Mathematical notation and wording were normalized; z = 140/48 confirms 2.9 as the closest option."
+  },
+  {
+    "id": "ADV2E102-U0081-Q064-SIM",
+    "pairId": "ADV2E102-U0081-Q064",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 2^12 = a, 2^18 = b and a^x = b^2, what is x?",
+    "questionUrdu": "اگر 2^12 = a، 2^18 = b اور a^x = b^2 ہو تو x کیا ہے؟",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "6"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 3 ہے۔ برابر bases کی powers سے 12x = 36 ملتا ہے، اس لیے x برابر 3 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Exponential functions and exponent rules",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-1-exponential-functions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q064",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-1-exponential-functions",
+        "label": "Exponential functions and exponent rules",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that if 2^12 is a, 2^18 is b and a^x equals b squared, then x is 3."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_%28Arnold%29/07%3A_Exponential_and_Logarithmic_Functions/7.01%3A_Exponential_Functions",
+        "label": "Laws of exponents",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that if 2^12 is a, 2^18 is b and a^x equals b squared, then x is 3."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q065-SRC",
+    "pairId": "ADV2E102-U0081-Q065",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If 3^(x+3) + 7 = 250, what is x?",
+    "questionUrdu": "اگر 3^(x+3) + 7 = 250 ہو تو x کیا ہے؟",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 2 ہے۔ سات منفی کرنے پر 3^(x+3)=243=3^5 آتا ہے، اس لیے x+3=5 اور x=2 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solving exponential equations",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-3-logarithmic-functions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q065"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-3-logarithmic-functions",
+        "label": "Solving exponential equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Subtracting 7 gives 3^(x+3)=243=3^5; equal bases imply x+3=5 and x=2."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_%28Arnold%29/07%3A_Exponential_and_Logarithmic_Functions/7.05%3A_Exponential_Equations",
+        "label": "Exponential equations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The equal-base method applied to 3^(x+3)=3^5 yields x=2."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Notation was normalized; solving the exponential equation verifies x = 2."
+  },
+  {
+    "id": "ADV2E102-U0081-Q065-SIM",
+    "pairId": "ADV2E102-U0081-Q065",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 2^(x+1) = 32, what is x?",
+    "questionUrdu": "اگر 2^(x+1) = 32 ہو تو x کیا ہے؟",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "6"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 4 ہے۔ 32 برابر 2^5 ہے، لہٰذا x+1=5 اور x برابر 4 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solving exponential equations",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-3-logarithmic-functions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q065",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-3-logarithmic-functions",
+        "label": "Solving exponential equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that if 2^(x+1) equals 32, then x equals 4."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_%28Arnold%29/07%3A_Exponential_and_Logarithmic_Functions/7.05%3A_Exponential_Equations",
+        "label": "Exponential equations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that if 2^(x+1) equals 32, then x equals 4."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q066-SRC",
+    "pairId": "ADV2E102-U0081-Q066",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If x:y = 5:2, what is (8x+9y):(8x+2y)?",
+    "questionUrdu": "اگر x:y = 5:2 ہو تو (8x+9y):(8x+2y) کیا ہوگا؟",
+    "options": [
+      "26:61",
+      "29:22",
+      "22:29",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 29:22 ہے۔ x=5k اور y=2k رکھنے سے دونوں expressions 58k اور 44k بنتے ہیں، جو 29:22 تک سادہ ہوتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q066"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Letting x=5k and y=2k gives 58k:44k, which simplifies to 29:22."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_2e_%28OpenStax%29/06%3A_Percents/6.06%3A_Solve_Proportions_and_their_Applications",
+        "label": "Equivalent ratios",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Ratio substitution and simplification produce (40+18):(40+4)=58:44=29:22."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Punctuation was normalized; substitution verifies 29:22."
+  },
+  {
+    "id": "ADV2E102-U0081-Q066-SIM",
+    "pairId": "ADV2E102-U0081-Q066",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If x:y = 3:2, what is (2x+y):(x+3y)?",
+    "questionUrdu": "اگر x:y = 3:2 ہو تو (2x+y):(x+3y) کیا ہوگا؟",
+    "options": [
+      "8:9",
+      "7:8",
+      "9:8",
+      "4:3"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 8:9 ہے۔ x=3k اور y=2k رکھنے پر numerator 8k اور denominator 9k بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve proportions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q066",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that if x:y is 3:2, then (2x+y):(x+3y) is 8:9."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_2e_%28OpenStax%29/06%3A_Percents/6.06%3A_Solve_Proportions_and_their_Applications",
+        "label": "Equivalent ratios",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that if x:y is 3:2, then (2x+y):(x+3y) is 8:9."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q067-SRC",
+    "pairId": "ADV2E102-U0081-Q067",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "In how many ways can three distinct offices—president, vice-president and water boy—be assigned to different people chosen from a group of 10?",
+    "questionUrdu": "10 افراد میں سے مختلف لوگوں کو president، vice-president اور water boy کے 3 مختلف عہدے کتنے طریقوں سے دیے جا سکتے ہیں؟",
+    "options": [
+      "10C3",
+      "10P3",
+      "240",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 10P3 ہے۔ عہدے مختلف ہیں، اس لیے ترتیب اہم ہے اور امکانات 10×9×8 یعنی 720 بنتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Permutations and combinations",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/7-4-permutations-and-combinations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q067"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/7-4-permutations-and-combinations",
+        "label": "Permutations and combinations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that ordered assignments use permutations; 10P3 = 10×9×8 = 720."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Combinatorics_and_Discrete_Mathematics/Applied_Discrete_Structures_%28Doerr_and_Levasseur%29/02%3A_Combinatorics/2.04%3A_Permutations",
+        "label": "Permutations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Distinct offices make order significant, so the count is the permutation 10P3."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and the requirement that offices go to different people were made explicit. The keyed expression 10P3 equals 720."
+  },
+  {
+    "id": "ADV2E102-U0081-Q067-SIM",
+    "pairId": "ADV2E102-U0081-Q067",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "In how many ways can a captain and vice-captain be chosen from 8 people?",
+    "questionUrdu": "8 افراد میں سے captain اور vice-captain کتنے طریقوں سے منتخب کیے جا سکتے ہیں؟",
+    "options": [
+      "56",
+      "28",
+      "16",
+      "64"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 56 ہے۔ دونوں عہدے مختلف ہیں، اس لیے 8P2 = 8×7 = 56 طریقے بنتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Permutations and combinations",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/7-4-permutations-and-combinations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q067",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/7-4-permutations-and-combinations",
+        "label": "Permutations and combinations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a captain and vice-captain can be chosen from 8 people in 56 ordered ways."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Combinatorics_and_Discrete_Mathematics/Applied_Discrete_Structures_%28Doerr_and_Levasseur%29/02%3A_Combinatorics/2.04%3A_Permutations",
+        "label": "Permutations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that a captain and vice-captain can be chosen from 8 people in 56 ordered ways."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q068-SRC",
+    "pairId": "ADV2E102-U0081-Q068",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the pair that correctly completes: 'He had ___ trouble parking the car ___ he asked for help.'",
+    "questionUrdu": "درست pair چنیں: He had ___ trouble parking the car ___ he asked for help.",
+    "options": [
+      "much / and",
+      "some / that",
+      "so much / that",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب so much / that ہے۔ uncountable noun trouble کے ساتھ so much آتا ہے اور نتیجہ بتانے کے لیے that clause استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "So",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/so",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/so",
+        "label": "So",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge grammar documents the result construction 'so + adjective/adverb or much/many + that-clause'."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/so-such",
+        "label": "So and such",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council grammar explains 'so much ... that' for an uncountable noun followed by a result clause."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source sentence was ungrammatical and semantically incoherent. It was repaired into a standard 'so much ... that' result construction while preserving the intended option pair."
+  },
+  {
+    "id": "ADV2E102-U0081-Q068-SIM",
+    "pairId": "ADV2E102-U0081-Q068",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Choose the correct pair: 'It was ___ difficult a question ___ nobody answered it.'",
+    "questionUrdu": "درست pair چنیں: It was ___ difficult a question ___ nobody answered it.",
+    "options": [
+      "so / that",
+      "such / that",
+      "too / that",
+      "very / so"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب so / that ہے۔ adjective کے بعد singular noun والی ساخت so difficult a question ہوتی ہے اور نتیجہ that clause میں آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "So",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/so",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/so",
+        "label": "So",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the standard construction is so difficult a question that nobody answered it."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/so-such",
+        "label": "So and such",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that the standard construction is so difficult a question that nobody answered it."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q069-SRC",
+    "pairId": "ADV2E102-U0081-Q069",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the sentence: 'He is overwhelmed ___ grief.'",
+    "questionUrdu": "جملہ مکمل کریں: He is overwhelmed ___ grief.",
+    "options": [
+      "at",
+      "with",
+      "of",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب with ہے۔ جذبات یا احساس کی بڑی مقدار بیان کرنے کے لیے overwhelmed with grief ایک معیاری collocation ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Overwhelmed",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/overwhelmed",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/overwhelmed",
+        "label": "Overwhelmed",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge examples use 'overwhelmed with' to express being strongly affected by an emotion."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/overwhelmed",
+        "label": "Overwhelmed",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins records the construction 'overwhelmed with grief'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "None of the printed prepositions was idiomatic. Option B and the answer were corrected from 'by' to 'with'."
+  },
+  {
+    "id": "ADV2E102-U0081-Q069-SIM",
+    "pairId": "ADV2E102-U0081-Q069",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Complete the passive construction: 'The coastal road was overwhelmed ___ floodwater.'",
+    "questionUrdu": "passive construction مکمل کریں: The coastal road was overwhelmed ___ floodwater.",
+    "options": [
+      "by",
+      "with",
+      "at",
+      "on"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب by ہے۔ جب بیرونی قوت یا شے کو agent کے طور پر دکھایا جائے تو passive ساخت overwhelmed by استعمال ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Overwhelmed",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/overwhelmed",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/overwhelmed",
+        "label": "Overwhelmed",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the passive construction is overwhelmed by floodwater."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/overwhelmed",
+        "label": "Overwhelmed",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins Dictionary supports that the passive construction is overwhelmed by floodwater."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q070-SRC",
+    "pairId": "ADV2E102-U0081-Q070",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the phrase that correctly completes: 'His behaviour was unprofessional enough ___.'",
+    "questionUrdu": "درست phrase چنیں: His behaviour was unprofessional enough ___.",
+    "options": [
+      "for him to be terminated immediately",
+      "that he terminated immediately",
+      "so terminating immediately",
+      "though he terminated immediately"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب for him to be terminated immediately ہے۔ adjective + enough کے بعد نتیجہ یا امکان بتانے کے لیے for + object + infinitive آ سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Enough",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/enough",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/enough",
+        "label": "Enough",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge grammar gives the pattern adjective + enough + to-infinitive and permits a for + noun/pronoun subject."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/adjectives-with-infinitive-or-ing-clauses",
+        "label": "Adjectives with infinitive clauses",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council grammar explains adjective complements formed with to-infinitive clauses."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "All printed options fail to complete the 'adjective + enough' pattern. The choices were replaced with one grammatical passive to-infinitive completion."
+  },
+  {
+    "id": "ADV2E102-U0081-Q070-SIM",
+    "pairId": "ADV2E102-U0081-Q070",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Choose the correct completion: 'The box is light enough ___.'",
+    "questionUrdu": "درست completion چنیں: The box is light enough ___.",
+    "options": [
+      "for one person to carry",
+      "that one person carrying",
+      "for carrying by one person",
+      "one person carried"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب for one person to carry ہے۔ adjective + enough کے بعد for + noun + to-infinitive صلاحیت یا امکان ظاہر کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Enough",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/enough",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/enough",
+        "label": "Enough",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the standard completion is light enough for one person to carry."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/adjectives-with-infinitive-or-ing-clauses",
+        "label": "Adjectives with infinitive clauses",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that the standard completion is light enough for one person to carry."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q071-SRC",
+    "pairId": "ADV2E102-U0081-Q071",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the verb that correctly completes: 'He has resigned from the job and ___ finished the task.'",
+    "questionUrdu": "درست verb چنیں: He has resigned from the job and ___ finished the task.",
+    "options": [
+      "has",
+      "have",
+      "had",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب has ہے۔ دونوں coordinated actions present perfect میں ہیں، اس لیے دوسرے فعل کے ساتھ auxiliary has درست رہتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Present perfect",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/present-perfect",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/present-perfect",
+        "label": "Present perfect",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council explains that third-person singular present perfect uses has plus the past participle."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/present-perfect-simple-i-have-worked",
+        "label": "Present perfect simple",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge grammar gives 'he has' as the third-person singular present-perfect form."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's first verb 'have resigned' was corrected to 'has resigned'; parallel coordination requires 'has finished'."
+  },
+  {
+    "id": "ADV2E102-U0081-Q071-SIM",
+    "pairId": "ADV2E102-U0081-Q071",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Choose the correct verb: 'She has completed the form and ___ it online.'",
+    "questionUrdu": "درست verb چنیں: She has completed the form and ___ it online.",
+    "options": [
+      "submitted",
+      "submits",
+      "submitting",
+      "submit"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب submitted ہے۔ مشترک auxiliary has دونوں past participles completed اور submitted پر لاگو ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Present perfect",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/present-perfect",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/present-perfect",
+        "label": "Present perfect",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that the coordinated present-perfect sentence uses the past participle submitted."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/present-perfect-simple-i-have-worked",
+        "label": "Present perfect simple",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the coordinated present-perfect sentence uses the past participle submitted."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q073-SRC",
+    "pairId": "ADV2E102-U0081-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which word is an antonym of 'docile'?",
+    "questionUrdu": "docile کا antonym کون سا لفظ ہے؟",
+    "options": [
+      "Constructive",
+      "Unyielding",
+      "Destructive",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Unyielding ہے۔ docile کا مطلب آسانی سے قابو یا ہدایت قبول کرنے والا ہے، جبکہ unyielding نہ جھکنے یا نہ ماننے کا مفہوم دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Docile",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/docile",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/docile",
+        "label": "Docile",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines docile as quiet and easy to influence or control."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/unyielding",
+        "label": "Unyielding",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines unyielding as not giving way or being inflexible, opposite to easily controlled docility."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was normalized and the unrelated infinitive distractors were converted to adjectives; unyielding remains the intended antonym."
+  },
+  {
+    "id": "ADV2E102-U0081-Q073-SIM",
+    "pairId": "ADV2E102-U0081-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to 'docile'?",
+    "questionUrdu": "docile کے معنی کے سب سے قریب کون سا لفظ ہے؟",
+    "options": [
+      "Obedient",
+      "Stubborn",
+      "Violent",
+      "Restless"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Obedient ہے۔ docile ایسے شخص یا جانور کو کہتے ہیں جو نرم مزاج اور آسانی سے قابو یا تربیت قبول کرے۔",
+    "source": {
+      "type": "practice",
+      "label": "Docile",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/docile",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/docile",
+        "label": "Docile",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that obedient is close in meaning to docile."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/unyielding",
+        "label": "Unyielding",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that obedient is close in meaning to docile."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q074-SRC",
+    "pairId": "ADV2E102-U0081-Q074",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'cry wolf' mean?",
+    "questionUrdu": "idiom cry wolf کا کیا مطلب ہے؟",
+    "options": [
+      "Give a false alarm",
+      "Listen eagerly",
+      "Turn pale",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Give a false alarm ہے۔ یہ محاورہ بار بار جھوٹی خطرے کی اطلاع دینے کے لیے بولا جاتا ہے، جس سے سچی تنبیہ بھی ناقابل یقین لگنے لگتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Cry wolf",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/cry-wolf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/cry-wolf",
+        "label": "Cry wolf",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines 'cry wolf' as asking for help when it is not needed, causing later disbelief."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/cry%20wolf",
+        "label": "Cry wolf",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines the idiom as giving a false alarm."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Capitalization was normalized; the answer phrase was retained."
+  },
+  {
+    "id": "ADV2E102-U0081-Q074-SIM",
+    "pairId": "ADV2E102-U0081-Q074",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "The expression 'cry wolf' is traditionally associated with a fable attributed to whom?",
+    "questionUrdu": "محاورہ cry wolf روایتی طور پر کس سے منسوب حکایت کے ساتھ وابستہ ہے؟",
+    "options": [
+      "Aesop",
+      "Homer",
+      "Shakespeare",
+      "Chaucer"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Aesop ہے۔ The Boy Who Cried Wolf ایسوپ سے منسوب معروف حکایت ہے جس سے یہ انگریزی محاورہ نکلا۔",
+    "source": {
+      "type": "practice",
+      "label": "Cry wolf",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/cry-wolf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/cry-wolf",
+        "label": "Cry wolf",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the expression cry wolf is associated with an Aesop fable."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/cry%20wolf",
+        "label": "Cry wolf",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that the expression cry wolf is associated with an Aesop fable."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0081-Q075-SRC",
+    "pairId": "ADV2E102-U0081-Q075",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'scratch someone's back' mean?",
+    "questionUrdu": "idiom scratch someone's back کا کیا مطلب ہے؟",
+    "options": [
+      "Slander someone",
+      "Do someone a favour, often expecting one in return",
+      "Find flaws in someone's work",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب کسی کے لیے احسان کرنا، عموماً بدلے کی توقع کے ساتھ، ہے۔ محاورہ باہمی مدد یا فائدے کے تبادلے کو ظاہر کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "You scratch my back",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/scratch-my-back",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/scratch-my-back",
+        "label": "You scratch my back",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains the idiom as helping someone in return for help."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/scratch-someones-back",
+        "label": "Scratch someone's back",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins defines it as doing someone a favour with an expectation of reciprocal help."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The answer was expanded to include the idiom's usual reciprocal implication; grammar and capitalization were corrected."
+  },
+  {
+    "id": "ADV2E102-U0081-Q075-SIM",
+    "pairId": "ADV2E102-U0081-Q075",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the idiom 'give someone a hand' mean?",
+    "questionUrdu": "idiom give someone a hand کا کیا مطلب ہے؟",
+    "options": [
+      "Help someone",
+      "Applaud someone only",
+      "Challenge someone",
+      "Ignore someone"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Help someone ہے۔ کسی کو a hand دینا عام محاوراتی استعمال میں اس کی مدد یا عملی معاونت کرنا ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Give/lend someone a helping hand",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/give-lend-someone-a-helping-hand",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0081-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/give-lend-someone-a-helping-hand",
+        "label": "Give/lend someone a helping hand",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the idiom give someone a hand means to help someone."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/give%20someone%20a%20hand",
+        "label": "Give someone a hand",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that the idiom give someone a hand means to help someone."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

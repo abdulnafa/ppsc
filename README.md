@@ -6,18 +6,20 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 
 - 449 source MCQs transcribed from the supplied `PPSC 110 Edition` scan.
 - 1,295 source-present MCQs extracted from `IBES CAPSULE Computer 2025`; 207 semantic repeats were excluded and 1,088 unique MCQs were retained. Printed Q254 is absent from the supplied scan and was not fabricated.
-- **1,537 retained source MCQs + 1,537 original researched PPSC-style related questions = 3,074 website questions.**
+- The current partial release of `Advanced PPSC MCQs Papers, Volume 2` contains 1,982 independently verified, retained source MCQs and 1,982 original researched related questions. Work on the remaining supplied scan continues in restart-safe batches; unresolved and unreviewed records are excluded from the website.
+- **3,519 retained source MCQs + 3,519 original researched PPSC-style related questions = 7,038 website questions.**
 - 10 advertised syllabus subjects, plus a separate **Finance, Taxation & Job-related** category for questions found in the supplied papers but outside that syllabus.
 - English question stems and four answer options, with a readable Urdu translation directly below every question.
 - A Learn mode that preselects and highlights the correct answer immediately.
 - A Quiz mode with instant Correct/Incorrect feedback after an answer is submitted.
-- A fresh question order for every Learn or Quiz session; Quiz options are also reshuffled without changing the correct answer.
+- Learn always follows the stable source/data order; Quiz creates a fresh question order and reshuffles its four options without changing the correct answer.
+- A compact Continue card restores the exact active Learn, Quiz, or Difficult session after a refresh or browser restart, including progress, Quiz option order, selection, submitted feedback, and score.
 - A persistent, always-visible **Mark as difficult** checkbox below every question, plus category-wise Difficult Learn and Difficult Quiz sessions containing only marked questions.
 - A focused question screen without Answer explained, View details, related-history or research-source panels.
 
-The flow is: choose a category → choose Learn, Quiz or Difficult. Difficult opens its own Learn/Quiz choice and uses only questions marked difficult in that category. Learn mode preselects the correct answer. After a learning session, **Start Quiz** opens the same full-category or difficult-only scope in scored Quiz mode. Quiz gives instant Correct/Incorrect feedback. Every start, restart and repeat creates a fresh question order; Quiz also creates a new four-option order and remaps the correct answer safely.
+The flow is: choose a category → choose Learn, Quiz or Difficult. Difficult opens its own Learn/Quiz choice and uses only questions marked difficult in that category. Learn mode preselects the correct answer and keeps the source/data order. After a learning session, **Start Quiz** opens the same full-category or difficult-only scope in scored Quiz mode. Quiz gives instant Correct/Incorrect feedback, creates a fresh question and option order, and remaps the correct answer safely.
 
-Difficult marks are stored in that browser and device using local storage. They survive normal reloads and visits; clearing the site's browser data removes them.
+Difficult marks and the compact active-session checkpoint are stored in that browser and device using local storage. They survive normal reloads and visits; clearing the site's browser data removes them. Completed sessions are removed from Continue automatically.
 
 ## Project structure
 
@@ -54,14 +56,18 @@ node tools/validate-enriched.js
 node tools/validate-ibes-verification.js --complete
 node tools/validate-ibes-final.js --complete
 node tools/audit-ibes-similar-duplicates.js
+node tools/validate-adv2e102-extraction.js
+node tools/validate-adv2e102-verification.js
+node tools/validate-adv2e102-dedup.js
+node tools/validate-adv2e102-enriched.js
 node tools/build-question-bank.js
-node tools/validate-site-data.js --expected=3074
+node tools/validate-site-data.js --expected=7038
 node tools/browser-smoke.js
 ```
 
-The browser smoke test requires local Chrome or Edge. It exercises Learn, Quiz and Difficult practice at mobile width, including the always-visible persistent mark/unmark control, difficult-only filtering and empty state, English and Urdu question rendering, changing question/option orders, answer remapping, the Learn-complete **Start Quiz** transition, wrong/correct quiz feedback, Restart/Practice Again, Next, and completion.
+The browser smoke test requires local Chrome or Edge. It exercises Learn, Quiz and Difficult practice at mobile width, including stable Learn order, shuffled Quiz questions/options, answer remapping, the Learn-complete **Start Quiz** transition, the always-visible persistent mark/unmark control, and exact Continue restoration for submitted answers, pending selections, score, Difficult scope, corrupt/stale storage recovery, and completed-session clearing.
 
-The build script validates all six `PPSC 110 Edition` papers and all 1,088 retained IBES source/similar pairs, balances only the generated similar-question answer positions, and creates:
+The build script validates all six `PPSC 110 Edition` papers, all 1,088 retained IBES pairs, and every currently retained ADV2E102 pair before including it. It balances only the generated similar-question answer positions and creates:
 
 - `data/questions.js` with the complete website bank.
 - `..\ppsc_mcqs.md` with all similar practice questions.
@@ -86,7 +92,7 @@ Each pair must:
 
 Explanations, source notes and evidence links remain in the verified data for research and validation, but the website does not display per-question explanation, history or source-detail panels.
 
-After adding a pair, run the validation and build commands again. For a bank larger than 3,074, update the `--expected` value or omit that argument.
+After adding a pair, run the validation and build commands again. For a bank larger than 7,038, update the `--expected` value or omit that argument.
 
 ## Push this update
 
@@ -95,7 +101,7 @@ The repository is already initialized on branch `main`, with `origin` set to `ht
 ```powershell
 cd "D:\My documents\PPSC\codex\ppsc-project"
 git add .
-git commit -m "Add verified IBES computer MCQ bank"
+git commit -m "Publish first verified Advanced PPSC batch"
 git push
 ```
 

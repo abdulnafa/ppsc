@@ -28,6 +28,9 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Validate committed release
+        run: node tools/validate-site-data.js --expected=7038
+
       - name: Prepare static site
         run: |
           mkdir -p _site/data _site/assets/fonts

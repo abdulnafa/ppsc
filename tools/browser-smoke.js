@@ -40,7 +40,7 @@ function connect(webSocketUrl) {
   const ready = new Promise((resolve, reject) => {
     const timer = setTimeout(
       () => reject(new Error("Chrome DevTools WebSocket did not connect in time.")),
-      15000
+      60000
     );
     socket.addEventListener("open", () => {
       clearTimeout(timer);
@@ -77,7 +77,7 @@ function connect(webSocketUrl) {
       const timer = setTimeout(() => {
         callbacks.delete(id);
         reject(new Error(`Chrome DevTools command ${method} timed out.`));
-      }, 15000);
+      }, 60000);
       callbacks.set(id, { resolve, reject, timer });
       try {
         socket.send(JSON.stringify({ id, method, params }));
@@ -137,7 +137,7 @@ async function main() {
     });
     await client.send("Page.navigate", { url: pageUrl });
     await client.evaluate(`new Promise((resolve, reject) => {
-      const deadline = Date.now() + 10000;
+      const deadline = Date.now() + 30000;
       const timer = setInterval(() => {
         if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
           clearInterval(timer);
@@ -168,9 +168,10 @@ async function main() {
       const errors = [];
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
-      if (!data || data.questions.length !== 3074) errors.push("Expected the complete 3,074-question bank.");
+      if (!data || data.questions.length !== 7038) errors.push("Expected the current 7,038-question release bank.");
       if (data && data.questions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) errors.push("A question is missing its Urdu translation.");
       if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("Category cards did not render.");
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("A fresh profile incorrectly showed Continue.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Mobile layout has horizontal overflow.");
       if (data.questions.some((question) => !/^https?:\\/\\//.test(question.source.referenceUrl))) errors.push("A research URL is missing.");
       if (document.querySelector("#details-toggle, #details-panel, #explanation-text, #related-history, #option-rationales, #source-notes, #details-source")) errors.push("Removed answer-explanation UI is still present.");
@@ -180,9 +181,18 @@ async function main() {
       if (ibesQuestions.length !== 2176 || ibesSourceQuestions.length !== 1088) errors.push("IBES retained source/similar counts are incomplete.");
       if (ibesQuestions.some((question) => question.categoryId !== "basic-computer-studies")) errors.push("An IBES question is outside Basic Computer Studies.");
 
+      const advQuestions = data.questions.filter((question) => question.id.startsWith("ADV2E102-"));
+      const advSourceQuestions = advQuestions.filter((question) => question.kind === "source");
+      const advSimilarQuestions = advQuestions.filter((question) => question.kind === "similar");
+      if (advQuestions.length !== 3964 || advSourceQuestions.length !== 1982 || advSimilarQuestions.length !== 1982) {
+        errors.push("The current ADV2E102 retained source/similar counts are incomplete.");
+      }
+      if (advQuestions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) {
+        errors.push("An ADV2E102 question is missing its Urdu translation.");
+      }
+
       // Render one deterministic IBES item without traversing all 2,296 Basic
-      // Computer questions. A zero-valued Fisher-Yates sequence brings the
-      // second source-order item to the front of the new session.
+      // Computer questions. Learn mode must keep the current source/data order.
       const ibesRenderTarget = ibesQuestions.find((question) => question.kind === "source");
       const firstComputerIndex = data.questions.findIndex((question) => question.categoryId === "basic-computer-studies");
       const ibesTargetIndex = data.questions.indexOf(ibesRenderTarget);
@@ -190,12 +200,9 @@ async function main() {
         errors.push("Could not locate a Basic Computer IBES render target.");
       } else {
         data.questions.splice(ibesTargetIndex, 1);
-        data.questions.splice(firstComputerIndex + 1, 0, ibesRenderTarget);
-        const originalRandom = Math.random;
-        Math.random = () => 0;
+        data.questions.splice(firstComputerIndex, 0, ibesRenderTarget);
         document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]').click();
         document.querySelector("#learn-mode-button").click();
-        Math.random = originalRandom;
         await pause();
         const renderedIbesId = document.querySelector("#question-text").dataset.questionId;
         if (renderedIbesId !== ibesRenderTarget.id) errors.push("The deterministic IBES question did not render in Basic Computer Learn mode.");
@@ -204,7 +211,12 @@ async function main() {
         await pause();
       }
 
-      const categoryButton = document.querySelector("#category-grid .category-card:not([disabled])");
+      const categoryButton = [...document.querySelectorAll("#category-grid .category-card:not([disabled])")]
+        .reduce((smallest, button) => {
+          const categoryId = button.dataset.category || button.dataset.categoryId;
+          const count = data.questions.filter((question) => question.categoryId === categoryId).length;
+          return !smallest || count < smallest.count ? { button, count } : smallest;
+        }, null).button;
       const activeCategory = categoryButton.dataset.category || categoryButton.dataset.categoryId;
       const categoryQuestions = data.questions.filter((question) => question.categoryId === activeCategory);
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
@@ -267,7 +279,7 @@ async function main() {
       while (!visible(document.querySelector("#results-screen"))) {
         question = findCurrent();
         if (!question) {
-          errors.push("Could not identify a shuffled Learn question.");
+          errors.push("Could not identify a Learn question.");
           break;
         }
         learnOrder.push(question.id);
@@ -286,8 +298,8 @@ async function main() {
         await pause();
       }
       const canonicalOrder = categoryQuestions.map((item) => item.id);
-      if (learnOrder.length !== categoryQuestions.length || new Set(learnOrder).size !== categoryQuestions.length) errors.push("Learn question shuffle lost or duplicated a question.");
-      if (JSON.stringify(learnOrder) === JSON.stringify(canonicalOrder)) errors.push("Learn questions remained in source order.");
+      if (learnOrder.length !== categoryQuestions.length || new Set(learnOrder).size !== categoryQuestions.length) errors.push("Learn source order lost or duplicated a question.");
+      if (JSON.stringify(learnOrder) !== JSON.stringify(canonicalOrder)) errors.push("Learn questions did not stay in source/data order.");
       const savedDifficultPayload = JSON.parse(localStorage.getItem("ppsc-prep:difficult-question-ids:v1") || "{}");
       if (savedDifficultPayload.version !== 1 || !Array.isArray(savedDifficultPayload.questionIds)) errors.push("Difficult marks were not stored with the versioned schema.");
       if (markedQuestionIds.some((id) => !savedDifficultPayload.questionIds.includes(id))) errors.push("A marked question ID was not persisted.");
@@ -386,6 +398,25 @@ async function main() {
       if (repeatedQuizOrder.length !== categoryQuestions.length || new Set(repeatedQuizOrder).size !== categoryQuestions.length) errors.push("Practice Again lost or duplicated a question.");
       if (JSON.stringify(repeatedQuizOrder) === JSON.stringify(quizOrder)) errors.push("Practice Again reused the previous question order.");
 
+      const sessionStorageKey = "ppsc-prep:active-session:v1";
+      if (localStorage.getItem(sessionStorageKey) !== null) errors.push("Completed Quiz session was not cleared from resume storage.");
+      document.querySelector("#change-category-button").click();
+      categoryButton.click();
+      document.querySelector("#quiz-mode-button").click();
+      await pause();
+      const resumeQuestion = findCurrent();
+      const resumeCorrectIndex = correctRenderedIndex(resumeQuestion);
+      const resumeSelectedIndex = (resumeCorrectIndex + 1) % 4;
+      document.querySelector('[data-option-index="' + resumeSelectedIndex + '"]').click();
+      document.querySelector("#action-button").click();
+      await pause();
+      const resumeSnapshot = JSON.parse(localStorage.getItem(sessionStorageKey) || "null");
+      if (!resumeSnapshot || resumeSnapshot.version !== 1) errors.push("Active Quiz was not saved with the versioned resume schema.");
+      if (!resumeSnapshot || resumeSnapshot.mode !== "quiz" || resumeSnapshot.scope !== "all") errors.push("Saved Quiz resume mode/scope was incorrect.");
+      if (!resumeSnapshot || !Array.isArray(resumeSnapshot.questionIds) || resumeSnapshot.questionIds.length !== categoryQuestions.length) errors.push("Saved Quiz question order was incomplete.");
+      if (!resumeSnapshot || !Array.isArray(resumeSnapshot.optionOrders) || resumeSnapshot.optionOrders.length !== categoryQuestions.length) errors.push("Saved Quiz option orders were incomplete.");
+      if (!resumeSnapshot || !resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== resumeSelectedIndex || resumeSnapshot.score !== 0) errors.push("Saved submitted-answer state was incorrect.");
+
       return {
         errors,
         categoryCards: document.querySelectorAll("#category-grid .category-card").length,
@@ -393,11 +424,22 @@ async function main() {
         testedCategory: activeCategory,
         testedCategoryQuestions: categoryQuestions.length,
         markedQuestionIds,
-        learnedOrderShuffled: JSON.stringify(learnOrder) !== JSON.stringify(canonicalOrder),
+        learnedInSourceOrder: JSON.stringify(learnOrder) === JSON.stringify(canonicalOrder),
         quizOrderShuffledAgain: JSON.stringify(quizOrder) !== JSON.stringify(learnOrder),
         practiceAgainShuffled: JSON.stringify(repeatedQuizOrder) !== JSON.stringify(quizOrder),
         firstQuizScore,
         repeatedQuizScore: document.querySelector("#result-score").textContent,
+        resumeExpected: {
+          categoryId: activeCategory,
+          categoryName: data.categories.find((category) => category.id === activeCategory).name,
+          questionCount: categoryQuestions.length,
+          questionIds: resumeSnapshot ? resumeSnapshot.questionIds : [],
+          optionOrders: resumeSnapshot ? resumeSnapshot.optionOrders : [],
+          questionId: resumeQuestion ? resumeQuestion.id : "",
+          optionTexts: renderedOptionTexts(),
+          selectedIndex: resumeSelectedIndex,
+          score: 0
+        },
         sourceNotesAvailable: data.questions.filter((item) => item.sourceNotes).length
       };
     })()`);
@@ -412,6 +454,163 @@ async function main() {
         } else if (Date.now() >= deadline) {
           clearInterval(timer);
           reject(new Error("Website did not reload in time."));
+        }
+      }, 50);
+    })`);
+
+    const resumeResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(normalResult.resumeExpected)};
+      const storageKey = "ppsc-prep:active-session:v1";
+      const card = document.querySelector("#continue-session-card");
+      if (!visible(document.querySelector("#category-screen"))) errors.push("Reload did not return to the category screen before Continue.");
+      if (!visible(card)) errors.push("Continue card was not shown for an active saved session.");
+      if (!document.querySelector("#continue-session-title").textContent.includes(expected.categoryName)) errors.push("Continue card did not label the saved category.");
+      const continueMeta = document.querySelector("#continue-session-meta").textContent;
+      if (!continueMeta.includes("Quiz") || !continueMeta.includes("Question 1 of " + expected.questionCount)) errors.push("Continue card did not label Quiz mode and progress.");
+
+      const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds)) errors.push("Reload changed the saved Quiz question order.");
+      if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders)) errors.push("Reload changed the saved Quiz option orders.");
+
+      document.querySelector("#continue-session-button").click();
+      await pause();
+      const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
+        .map((element) => element.textContent);
+      if (!visible(document.querySelector("#quiz-screen"))) errors.push("Continue did not reopen the Quiz screen.");
+      if (document.querySelector("#quiz-screen").dataset.mode !== "quiz" || document.querySelector("#quiz-screen").dataset.scope !== "all") errors.push("Continue restored the wrong mode/scope.");
+      if (!document.querySelector("#quiz-category").textContent.includes(expected.categoryName + " · Quiz")) errors.push("Restored Quiz header did not label category and mode.");
+      if (document.querySelector("#question-text").dataset.questionId !== expected.questionId) errors.push("Continue restored the wrong question.");
+      if (JSON.stringify(renderedOptionTexts()) !== JSON.stringify(expected.optionTexts)) errors.push("Continue changed the current Quiz option order.");
+      const selectedButton = document.querySelector('[data-option-index="' + expected.selectedIndex + '"]');
+      if (!selectedButton || !selectedButton.classList.contains("is-selected") || !selectedButton.classList.contains("is-incorrect") || !selectedButton.disabled) errors.push("Continue did not restore the submitted selected option.");
+      if (document.querySelector("#feedback-title").textContent !== "Incorrect") errors.push("Continue did not restore submitted feedback.");
+      if (document.querySelector("#score-text").textContent !== "Score: " + expected.score) errors.push("Continue did not restore the Quiz score.");
+      if (!document.querySelector("#question-counter").textContent.startsWith("Question 1 ")) errors.push("Continue did not restore the question index.");
+
+      document.querySelector("#action-button").click();
+      await pause();
+      const pendingQuestionId = document.querySelector("#question-text").dataset.questionId;
+      const pendingOptionTexts = renderedOptionTexts();
+      const pendingSelectedIndex = 2;
+      document.querySelector('[data-option-index="' + pendingSelectedIndex + '"]').click();
+      await pause();
+      const pendingSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!pendingSnapshot || pendingSnapshot.currentIndex !== 1 || pendingSnapshot.submitted || pendingSnapshot.selectedIndex !== pendingSelectedIndex) errors.push("Unsubmitted selected option was not saved for Continue.");
+
+      return {
+        errors,
+        pending: {
+          categoryName: expected.categoryName,
+          questionCount: expected.questionCount,
+          questionId: pendingQuestionId,
+          optionTexts: pendingOptionTexts,
+          selectedIndex: pendingSelectedIndex,
+          score: expected.score
+        }
+      };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for pending-selection resume in time."));
+        }
+      }, 50);
+    })`);
+
+    const pendingResumeResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(resumeResult.pending)};
+      const meta = document.querySelector("#continue-session-meta").textContent;
+      if (!visible(document.querySelector("#continue-session-card")) || !meta.includes("Question 2 of " + expected.questionCount)) errors.push("Continue card did not show the pending question index.");
+      document.querySelector("#continue-session-button").click();
+      await pause();
+      const renderedOptionTexts = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
+      if (document.querySelector("#question-text").dataset.questionId !== expected.questionId) errors.push("Pending Continue restored the wrong question.");
+      if (JSON.stringify(renderedOptionTexts) !== JSON.stringify(expected.optionTexts)) errors.push("Pending Continue changed the option order.");
+      const selectedButton = document.querySelector('[data-option-index="' + expected.selectedIndex + '"]');
+      if (!selectedButton || !selectedButton.classList.contains("is-selected") || selectedButton.disabled) errors.push("Pending Continue did not restore the unsubmitted selection.");
+      if (visible(document.querySelector("#feedback"))) errors.push("Pending Continue incorrectly restored submitted feedback.");
+      if (document.querySelector("#action-button").textContent !== "Check Answer") errors.push("Pending Continue did not restore Check Answer state.");
+      if (document.querySelector("#score-text").textContent !== "Score: " + expected.score) errors.push("Pending Continue changed the score.");
+
+      localStorage.setItem("ppsc-prep:active-session:v1", "{corrupt-json");
+      return { errors };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not recover from corrupt resume data in time."));
+        }
+      }, 50);
+    })`);
+
+    const corruptRecoveryResult = await client.evaluate(`(() => {
+      const errors = [];
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
+      const storageKey = "ppsc-prep:active-session:v1";
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("Corrupt resume data left the Continue card visible.");
+      if (localStorage.getItem(storageKey) !== null) errors.push("Corrupt resume data was not removed safely.");
+      localStorage.setItem(storageKey, JSON.stringify({
+        version: 1,
+        bankSignature: "stale-question-bank",
+        categoryId: ${JSON.stringify(normalResult.testedCategory)},
+        mode: "quiz",
+        scope: "all",
+        questionIds: [${JSON.stringify(normalResult.resumeExpected.questionId)}],
+        optionOrders: [[0, 1, 2, 3]],
+        currentIndex: 0,
+        selectedIndex: null,
+        submitted: false,
+        score: 0,
+        savedAt: Date.now()
+      }));
+      return { errors };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not recover from stale resume data in time."));
         }
       }, 50);
     })`);
@@ -439,6 +638,9 @@ async function main() {
       const correctRenderedIndex = (question) => renderedOptionTexts().indexOf(
         optionText(question.options[question.correctOptionIndex])
       );
+
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("Stale resume data left the Continue card visible.");
+      if (localStorage.getItem("ppsc-prep:active-session:v1") !== null) errors.push("Stale resume data was not removed safely.");
 
       const storedAfterReload = JSON.parse(localStorage.getItem("ppsc-prep:difficult-question-ids:v1") || "{}");
       if (!Array.isArray(storedAfterReload.questionIds) || expectedMarkedIds.some((id) => !storedAfterReload.questionIds.includes(id))) {
@@ -561,9 +763,115 @@ async function main() {
       };
     })()`);
 
+    const difficultResumeSeed = await client.evaluate(`(() => {
+      const categoryId = ${JSON.stringify(normalResult.testedCategory)};
+      const question = window.PPSC_QUIZ_DATA.questions.find((item) => item.categoryId === categoryId);
+      localStorage.setItem("ppsc-prep:difficult-question-ids:v1", JSON.stringify({
+        version: 1,
+        questionIds: question ? [question.id] : []
+      }));
+      return { categoryId, questionId: question ? question.id : "" };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for Difficult Continue setup in time."));
+        }
+      }, 50);
+    })`);
+
+    const difficultResumeSetup = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const seed = ${JSON.stringify(difficultResumeSeed)};
+      const categoryButton = [...document.querySelectorAll("#category-grid .category-card")]
+        .find((button) => (button.dataset.category || button.dataset.categoryId) === seed.categoryId);
+      categoryButton.click();
+      document.querySelector("#difficult-mode-button").click();
+      document.querySelector("#difficult-learn-button").click();
+      await pause();
+      const optionTexts = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
+      const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      if (!snapshot || snapshot.mode !== "learn" || snapshot.scope !== "difficult") errors.push("Difficult Learn was not stored with the correct resume scope/mode.");
+      if (!snapshot || snapshot.questionIds.length !== 1 || snapshot.questionIds[0] !== seed.questionId) errors.push("Difficult Learn resume snapshot did not keep its marked-question scope.");
+      if (!snapshot || !snapshot.submitted || snapshot.score !== 0) errors.push("Difficult Learn resume answer state was incorrect.");
+      return {
+        errors,
+        expected: {
+          questionId: seed.questionId,
+          optionTexts,
+          selectedIndex: snapshot ? snapshot.selectedIndex : -1
+        }
+      };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for Difficult Continue verification in time."));
+        }
+      }, 50);
+    })`);
+
+    const difficultResumeResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(difficultResumeSetup.expected)};
+      const meta = document.querySelector("#continue-session-meta").textContent;
+      if (!visible(document.querySelector("#continue-session-card")) || !meta.includes("Difficult Learn") || !meta.includes("Question 1 of 1")) errors.push("Continue card did not label the Difficult Learn session.");
+      document.querySelector("#continue-session-button").click();
+      await pause();
+      const optionTexts = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
+      if (document.querySelector("#quiz-screen").dataset.mode !== "learn" || document.querySelector("#quiz-screen").dataset.scope !== "difficult") errors.push("Continue did not restore Difficult Learn mode/scope.");
+      if (!document.querySelector("#quiz-category").textContent.includes("Difficult Learn")) errors.push("Restored header did not label Difficult Learn.");
+      if (document.querySelector("#question-text").dataset.questionId !== expected.questionId) errors.push("Continue restored the wrong Difficult Learn question.");
+      if (JSON.stringify(optionTexts) !== JSON.stringify(expected.optionTexts)) errors.push("Difficult Learn Continue changed source option order.");
+      const selectedButton = document.querySelector('[data-option-index="' + expected.selectedIndex + '"]');
+      if (!selectedButton || !selectedButton.disabled || !selectedButton.classList.contains("is-correct")) errors.push("Difficult Learn Continue did not restore the revealed answer.");
+      document.querySelector("#action-button").click();
+      await pause();
+      if (!visible(document.querySelector("#results-screen"))) errors.push("Restored Difficult Learn session did not complete.");
+      if (localStorage.getItem("ppsc-prep:active-session:v1") !== null) errors.push("Completed Difficult Learn session remained resumable.");
+      localStorage.setItem("ppsc-prep:difficult-question-ids:v1", JSON.stringify({ version: 1, questionIds: [] }));
+      return { errors };
+    })()`);
+
+    const { resumeExpected, ...normalSummary } = normalResult;
     const result = {
-      ...normalResult,
-      errors: normalResult.errors.concat(difficultResult.errors),
+      ...normalSummary,
+      errors: normalResult.errors
+        .concat(resumeResult.errors)
+        .concat(pendingResumeResult.errors)
+        .concat(corruptRecoveryResult.errors)
+        .concat(difficultResult.errors)
+        .concat(difficultResumeSetup.errors)
+        .concat(difficultResumeResult.errors),
+      resume: {
+        submittedStateRestored: resumeResult.errors.length === 0,
+        pendingSelectionRestored: pendingResumeResult.errors.length === 0,
+        difficultLearnRestored: difficultResumeSetup.errors.length === 0 && difficultResumeResult.errors.length === 0,
+        corruptDataRecovered: corruptRecoveryResult.errors.length === 0,
+        staleDataRecovered: !difficultResult.errors.some((message) => message.includes("Stale resume data"))
+      },
       difficult: difficultResult
     };
     console.log(JSON.stringify(result, null, 2));

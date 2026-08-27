@@ -1,0 +1,647 @@
+[
+  {
+    "id": "ADV2E102-U0111-Q052-SRC",
+    "pairId": "ADV2E102-U0111-Q052",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What kind of application was Microsoft Office InterConnect 2007?",
+    "questionUrdu": "Microsoft Office InterConnect 2007 کس قسم کی application تھی؟",
+    "options": [
+      "Optical-character-recognition editor",
+      "Personal relationship and contact-information manager",
+      "Antivirus scanner",
+      "Presentation designer"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Personal relationship and contact-information manager ہے۔ InterConnect لوگوں کے رابطوں، electronic business cards اور باہمی communication history کو منظم کرنے کے لیے بنایا گیا تھا۔",
+    "source": {
+      "type": "book",
+      "label": "Microsoft Office InterConnect 2007 lifecycle",
+      "referenceUrl": "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-office-interconnect-2007",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q052"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learn.microsoft.com/en-us/lifecycle/products/microsoft-office-interconnect-2007",
+        "label": "Microsoft Office InterConnect 2007 lifecycle",
+        "publisher": "Microsoft Learn",
+        "authorityId": "microsoft-learn",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft's lifecycle catalogue confirms Office InterConnect 2007 as a released Microsoft Office product."
+      },
+      {
+        "url": "https://pc.watch.impress.co.jp/docs/2004/0527/ms.htm",
+        "label": "Microsoft announces Office InterConnect",
+        "publisher": "PC Watch",
+        "authorityId": "pc-watch",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PC Watch's contemporaneous product report describes InterConnect as personal relationship-management software for electronic business cards and contact histories."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Office InterConnect 2007",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's loose 'business-relationship database' label was replaced by the product's documented personal relationship/contact-management role."
+  },
+  {
+    "id": "ADV2E102-U0111-Q052-SIM",
+    "pairId": "ADV2E102-U0111-Q052",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which kind of contact card could Microsoft Office InterConnect exchange with Outlook?",
+    "questionUrdu": "Microsoft Office InterConnect، Outlook کے ساتھ کس قسم کا contact card exchange کر سکتا تھا؟",
+    "options": [
+      "Electronic Business Card",
+      "Printed punch card",
+      "SIM card",
+      "Graphics card"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Electronic Business Card ہے۔ Microsoft کی documentation کے مطابق Outlook contact میں electronic business card کی قسم InterConnect format یا Outlook format ہو سکتی تھی۔",
+    "source": {
+      "type": "practice",
+      "label": "ContactItem.BusinessCardType property",
+      "referenceUrl": "https://learn.microsoft.com/en-us/office/vba/api/outlook.contactitem.businesscardtype",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q052",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learn.microsoft.com/en-us/office/vba/api/outlook.contactitem.businesscardtype",
+        "label": "ContactItem.BusinessCardType property",
+        "publisher": "Microsoft Learn",
+        "authorityId": "microsoft-learn",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft Learn supports that Microsoft Office InterConnect used an Electronic Business Card format that Outlook could recognize."
+      },
+      {
+        "url": "https://pc.watch.impress.co.jp/docs/2004/0527/ms.htm",
+        "label": "Microsoft announces Office InterConnect",
+        "publisher": "PC Watch",
+        "authorityId": "pc-watch",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PC Watch supports that Microsoft Office InterConnect used an Electronic Business Card format that Outlook could recognize."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Office InterConnect",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0111-Q056-SRC",
+    "pairId": "ADV2E102-U0111-Q056",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which action does not select all cells in an Excel worksheet?",
+    "questionUrdu": "Excel worksheet میں تمام cells کو select کرنے کے لیے کون سا action کام نہیں کرتا؟",
+    "options": [
+      "Clicking the Select All button at the row/column headings",
+      "Pressing Ctrl+A as needed",
+      "Right-clicking the worksheet three times",
+      "Using a supported Select All command"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Right-clicking the worksheet three times ہے۔ Excel میں Select All button یا Ctrl+A supported طریقے ہیں؛ تین مرتبہ right-click کرنا Select All command نہیں ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Select cell contents in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/select-cell-contents-in-excel-23f64223-2b6b-453a-8688-248355f10fa9",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q056"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/select-cell-contents-in-excel-23f64223-2b6b-453a-8688-248355f10fa9",
+        "label": "Select cell contents in Excel",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft documents the Select All button and Ctrl+A for selecting worksheet cells."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/scalc/guide/cellrange_addr.html",
+        "label": "Selecting cell ranges",
+        "publisher": "The Document Foundation",
+        "authorityId": "document-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice independently documents supported whole-sheet selection methods and does not assign that action to repeated right-clicks."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The malformed legacy Edit-menu option was generalized, 'None' was removed, and the unsupported triple-right-click action remains the unique answer."
+  },
+  {
+    "id": "ADV2E102-U0111-Q056-SIM",
+    "pairId": "ADV2E102-U0111-Q056",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Where is Excel's Select All button located on a worksheet?",
+    "questionUrdu": "Excel worksheet میں Select All button کہاں واقع ہوتا ہے؟",
+    "options": [
+      "At the intersection of the row and column headings",
+      "Inside the formula bar",
+      "At the bottom of the status bar",
+      "In every active cell"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب At the intersection of the row and column headings ہے۔ یہ چھوٹا button column letters کے بائیں اور row numbers کے اوپر ہوتا ہے اور پوری worksheet select کر دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Select cell contents in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/select-cell-contents-in-excel-23f64223-2b6b-453a-8688-248355f10fa9",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q056",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/select-cell-contents-in-excel-23f64223-2b6b-453a-8688-248355f10fa9",
+        "label": "Select cell contents in Excel",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft Support supports that Excel places the Select All button at the intersection of the row and column headings."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/scalc/guide/cellrange_addr.html",
+        "label": "Selecting cell ranges",
+        "publisher": "The Document Foundation",
+        "authorityId": "document-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Document Foundation supports that Excel places the Select All button at the intersection of the row and column headings."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0111-Q067-SRC",
+    "pairId": "ADV2E102-U0111-Q067",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In classic PowerPoint 2003, where were command categories such as File, Edit, View, and Insert displayed?",
+    "questionUrdu": "classic PowerPoint 2003 میں File، Edit، View اور Insert جیسے command categories کہاں دکھائی دیتے تھے؟",
+    "options": [
+      "Menu bar",
+      "Standard toolbar",
+      "Formatting toolbar",
+      "Drawing toolbar"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Menu bar ہے۔ PowerPoint 2003 کا classic interface commands کو menu bar کے File، Edit، View، Insert اور دوسرے menus میں ترتیب دیتا تھا۔",
+    "source": {
+      "type": "book",
+      "label": "Microsoft Office PowerPoint 2003 Help",
+      "referenceUrl": "https://documentation.help/MS-Office-PowerPoint-2003/documentation.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q067"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://documentation.help/MS-Office-PowerPoint-2003/documentation.pdf",
+        "label": "Microsoft Office PowerPoint 2003 Help",
+        "publisher": "Microsoft PowerPoint Help archive",
+        "authorityId": "microsoft-powerpoint-help",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archived PowerPoint 2003 help documents commands arranged under the classic menu bar."
+      },
+      {
+        "url": "https://web.uettaxila.edu.pk/CMS/AUT2012/ectEEPbs/tutorial/Microsoft%20Power%20Point%202003.pdf",
+        "label": "How to Do Everything with PowerPoint 2003",
+        "publisher": "University of Engineering and Technology Taxila",
+        "authorityId": "uet-taxila",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university-hosted PowerPoint 2003 guide shows File, Edit, View and Insert on the menu bar."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "PowerPoint 2003",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The overclaim 'any and every command' was replaced by a concrete description and explicitly scoped to the classic menu interface."
+  },
+  {
+    "id": "ADV2E102-U0111-Q067-SIM",
+    "pairId": "ADV2E102-U0111-Q067",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In PowerPoint 2003, which toolbar commonly contained the Save command?",
+    "questionUrdu": "PowerPoint 2003 میں Save command عموماً کس toolbar پر موجود تھا؟",
+    "options": [
+      "Standard toolbar",
+      "Drawing toolbar",
+      "Web toolbar",
+      "Picture toolbar"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Standard toolbar ہے۔ classic PowerPoint 2003 میں New، Open، Save اور Print جیسے عام file commands Standard toolbar پر رکھے جاتے تھے۔",
+    "source": {
+      "type": "practice",
+      "label": "Microsoft Office PowerPoint 2003 Help",
+      "referenceUrl": "https://documentation.help/MS-Office-PowerPoint-2003/documentation.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q067",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://documentation.help/MS-Office-PowerPoint-2003/documentation.pdf",
+        "label": "Microsoft Office PowerPoint 2003 Help",
+        "publisher": "Microsoft PowerPoint Help archive",
+        "authorityId": "microsoft-powerpoint-help",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft PowerPoint Help archive supports that PowerPoint 2003 placed common file commands such as Save on the Standard toolbar."
+      },
+      {
+        "url": "https://web.uettaxila.edu.pk/CMS/AUT2012/ectEEPbs/tutorial/Microsoft%20Power%20Point%202003.pdf",
+        "label": "How to Do Everything with PowerPoint 2003",
+        "publisher": "University of Engineering and Technology Taxila",
+        "authorityId": "uet-taxila",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "University of Engineering and Technology Taxila supports that PowerPoint 2003 placed common file commands such as Save on the Standard toolbar."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "PowerPoint 2003",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0111-Q068-SRC",
+    "pairId": "ADV2E102-U0111-Q068",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Where do you type speaker notes for the selected slide in PowerPoint Normal view?",
+    "questionUrdu": "PowerPoint Normal view میں selected slide کے speaker notes کہاں type کیے جاتے ہیں؟",
+    "options": [
+      "Notes pane",
+      "Slide Show pane",
+      "Zoom control",
+      "Slide Master"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Notes pane ہے۔ presenter اسی pane میں وہ اضافی نکات لکھتا ہے جو audience کو slide پر دکھائے بغیر presentation کے دوران مدد دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Create and print notes pages",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/create-and-print-notes-pages",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/powerpoint/create-and-print-notes-pages",
+        "label": "Create and print notes pages",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft instructs users to type speaker notes in the Notes pane below the slide."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/simpress/guide/speaker_notes.html",
+        "label": "Speaker notes",
+        "publisher": "The Document Foundation",
+        "authorityId": "document-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice independently documents entering notes for a slide in Notes view."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's key 'Insert' did not answer the workflow. The question was reconstructed around the actual Notes pane and the key was corrected."
+  },
+  {
+    "id": "ADV2E102-U0111-Q068-SIM",
+    "pairId": "ADV2E102-U0111-Q068",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which PowerPoint master controls formatting shared by all printed notes pages?",
+    "questionUrdu": "PowerPoint کا کون سا master تمام printed notes pages کی مشترک formatting کو control کرتا ہے؟",
+    "options": [
+      "Notes Master",
+      "Slide Master",
+      "Handout Master",
+      "Title Master"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Notes Master ہے۔ اس میں font styles، placeholders، headers، footers اور artwork جیسی تبدیلیاں تمام printed notes pages پر مشترک طور پر apply کی جا سکتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Create and print notes pages",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/create-and-print-notes-pages",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/powerpoint/create-and-print-notes-pages",
+        "label": "Create and print notes pages",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft Support supports that the Notes Master controls formatting and recurring elements across printed notes pages."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-ZA/text/simpress/guide/footer.html",
+        "label": "Adding a header or footer to all slides and notes",
+        "publisher": "The Document Foundation",
+        "authorityId": "document-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Document Foundation supports that the Notes Master controls formatting and recurring elements across printed notes pages."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0111-Q074-SRC",
+    "pairId": "ADV2E102-U0111-Q074",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In PowerPoint 2003, which three choices appeared under Insert > Picture?",
+    "questionUrdu": "PowerPoint 2003 میں Insert > Picture کے تحت کون سے تین choices موجود تھے؟",
+    "options": [
+      "Clip Art, From File, and AutoShapes",
+      "Table, Hyperlink, and Comment",
+      "Header, Footer, and Slide Number",
+      "Sound, Movie, and New Slide"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Clip Art, From File, and AutoShapes ہے۔ یہ classic menu مختلف ذرائع سے picture یا drawing object شامل کرنے کے commands مہیا کرتا تھا۔",
+    "source": {
+      "type": "book",
+      "label": "Microsoft Office PowerPoint 2003 Help",
+      "referenceUrl": "https://documentation.help/MS-Office-PowerPoint-2003/documentation.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://documentation.help/MS-Office-PowerPoint-2003/documentation.pdf",
+        "label": "Microsoft Office PowerPoint 2003 Help",
+        "publisher": "Microsoft PowerPoint Help archive",
+        "authorityId": "microsoft-powerpoint-help",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archived PowerPoint 2003 help documents Clip Art, From File and AutoShapes under Insert > Picture."
+      },
+      {
+        "url": "https://web.uettaxila.edu.pk/CMS/AUT2012/ectEEPbs/tutorial/Microsoft%20Power%20Point%202003.pdf",
+        "label": "PowerPoint 2003 guide",
+        "publisher": "University of Engineering and Technology Taxila",
+        "authorityId": "uet-taxila",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university-hosted guide independently shows the legacy Insert > Picture submenu."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "PowerPoint 2003",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The scan's near-duplicate choices used Pictures/From files inconsistently. The verified legacy menu labels are explicit and the printed key was corrected."
+  },
+  {
+    "id": "ADV2E102-U0111-Q074-SIM",
+    "pairId": "ADV2E102-U0111-Q074",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In PowerPoint 2003, which Insert > Picture command selected an image stored on a drive?",
+    "questionUrdu": "PowerPoint 2003 میں drive پر محفوظ image شامل کرنے کے لیے Insert > Picture کا کون سا command استعمال ہوتا تھا؟",
+    "options": [
+      "From File",
+      "AutoShapes",
+      "WordArt",
+      "New Photo Album"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب From File ہے۔ یہ command local یا network drive سے پہلے سے محفوظ picture منتخب کر کے slide میں insert کرتا تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "Microsoft Office PowerPoint 2003 Help",
+      "referenceUrl": "https://documentation.help/MS-Office-PowerPoint-2003/documentation.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0111-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://documentation.help/MS-Office-PowerPoint-2003/documentation.pdf",
+        "label": "Microsoft Office PowerPoint 2003 Help",
+        "publisher": "Microsoft PowerPoint Help archive",
+        "authorityId": "microsoft-powerpoint-help",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft PowerPoint Help archive supports that PowerPoint 2003 used Insert > Picture > From File to insert an image stored in a file."
+      },
+      {
+        "url": "https://web.uettaxila.edu.pk/CMS/AUT2012/ectEEPbs/tutorial/Microsoft%20Power%20Point%202003.pdf",
+        "label": "PowerPoint 2003 guide",
+        "publisher": "University of Engineering and Technology Taxila",
+        "authorityId": "uet-taxila",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "University of Engineering and Technology Taxila supports that PowerPoint 2003 used Insert > Picture > From File to insert an image stored in a file."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": "PowerPoint 2003",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

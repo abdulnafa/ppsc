@@ -1,0 +1,2453 @@
+[
+  {
+    "id": "ADV2E102-U0032-Q076-SRC",
+    "pairId": "ADV2E102-U0032-Q076",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "For long-distance signaling by a neuron, a stronger sustained stimulus is commonly encoded by which change?",
+    "questionUrdu": "Neuron کے long-distance signaling میں زیادہ مضبوط اور مسلسل stimulus عام طور پر کس تبدیلی سے encode ہوتا ہے؟",
+    "options": [
+      "The number of action potentials per second",
+      "The threshold potential",
+      "The amplitude of the action potential",
+      "The number of synapses crossed"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب action potentials per second کی تعداد ہے۔ Action potential کی amplitude all-or-none رہتی ہے، اس لیے مضبوط stimulus عموماً firing frequency بڑھاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ion Channels and the Electrical Properties of Membranes",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK26910/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK26910/",
+        "label": "Ion Channels and the Electrical Properties of Membranes",
+        "publisher": "NCBI Bookshelf",
+        "authorityId": "ncbi-bookshelf",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The reference explains that stronger stimulation produces a higher frequency of action potentials and that individual action potentials remain uniform in size."
+      },
+      {
+        "url": "https://openstax.org/books/anatomy-and-physiology/pages/12-4-the-action-potential",
+        "label": "The Action Potential",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax independently explains that stronger stimuli initiate action potentials more quickly rather than producing larger action potentials."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The answer is firing rate—the number of action potentials per second—not action-potential amplitude, because action potentials are all-or-none events."
+  },
+  {
+    "id": "ADV2E102-U0032-Q076-SIM",
+    "pairId": "ADV2E102-U0032-Q076",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which feature of an individual action potential remains essentially constant when stimulus strength increases above threshold?",
+    "questionUrdu": "Threshold سے اوپر stimulus strength بڑھنے پر ایک individual action potential کی کون سی feature بنیادی طور پر constant رہتی ہے؟",
+    "options": [
+      "Amplitude",
+      "Number per second",
+      "Probability of firing",
+      "Duration of the stimulus"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Amplitude ہے۔ Action potential all-or-none ہوتا ہے؛ intensity کی coding عموماً frequency سے ہوتی ہے، ہر spike کو بڑا کر کے نہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Ion Channels and the Electrical Properties of Membranes",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK26910/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK26910/",
+        "label": "Ion Channels and the Electrical Properties of Membranes",
+        "publisher": "NCBI Bookshelf",
+        "authorityId": "ncbi-bookshelf",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NCBI explains that action potentials remain uniform in size while stronger stimulation raises their frequency."
+      },
+      {
+        "url": "https://openstax.org/books/anatomy-and-physiology/pages/12-4-the-action-potential",
+        "label": "The Action Potential",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax independently describes the all-or-none amplitude and faster firing under stronger stimulation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q077-SRC",
+    "pairId": "ADV2E102-U0032-Q077",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Cirrhosis is a condition involving permanent scarring and damage of which organ?",
+    "questionUrdu": "Cirrhosis کس organ کی مستقل scarring اور damage کی حالت ہے؟",
+    "options": [
+      "Liver",
+      "Kidney",
+      "Pancreas",
+      "Small intestine"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Liver ہے۔ مسلسل injury کے باعث healthy liver tissue کی جگہ scar tissue آتا ہے اور جگر کے معمول کے functions متاثر ہوتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Cirrhosis",
+      "referenceUrl": "https://www.niddk.nih.gov/health-information/liver-disease/cirrhosis",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q077"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.niddk.nih.gov/health-information/liver-disease/cirrhosis",
+        "label": "Cirrhosis",
+        "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases",
+        "authorityId": "us-niddk",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIDDK defines cirrhosis as permanent scarring and damage of the liver."
+      },
+      {
+        "url": "https://www.cuh.nhs.uk/patient-information/cirrhosis/",
+        "label": "Cirrhosis",
+        "publisher": "Cambridge University Hospitals NHS Foundation Trust",
+        "authorityId": "cambridge-university-hospitals-nhs",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NHS hospital guidance independently defines liver cirrhosis as severe scarring of the liver."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The question tests the affected organ only and is not medical advice; cirrhosis is chronic scarring of the liver."
+  },
+  {
+    "id": "ADV2E102-U0032-Q077-SIM",
+    "pairId": "ADV2E102-U0032-Q077",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What replaces healthy liver tissue as cirrhosis progresses?",
+    "questionUrdu": "Cirrhosis بڑھنے کے ساتھ healthy liver tissue کی جگہ کیا آتا ہے؟",
+    "options": [
+      "Scar tissue",
+      "Bone tissue",
+      "Cartilage",
+      "Adipose tissue only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Scar tissue ہے۔ Progressive fibrosis جگر کی normal structure اور blood flow کو بگاڑ کر cirrhosis پیدا کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Cirrhosis",
+      "referenceUrl": "https://www.niddk.nih.gov/health-information/liver-disease/cirrhosis",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q077",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.niddk.nih.gov/health-information/liver-disease/cirrhosis",
+        "label": "Cirrhosis",
+        "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases",
+        "authorityId": "us-niddk",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIDDK explains that scar tissue replaces healthy liver tissue in cirrhosis."
+      },
+      {
+        "url": "https://www.cuh.nhs.uk/patient-information/cirrhosis/",
+        "label": "Cirrhosis",
+        "publisher": "Cambridge University Hospitals NHS Foundation Trust",
+        "authorityId": "cambridge-university-hospitals-nhs",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Hospitals independently describes cirrhosis as severe liver scarring that disrupts function."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q079-SRC",
+    "pairId": "ADV2E102-U0032-Q079",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which listed mineral nutrient, together with calcium, is a major constituent of hydroxyapatite in bone?",
+    "questionUrdu": "Calcium کے ساتھ کون سا mineral nutrient bone کے hydroxyapatite کا بڑا جزو ہے؟",
+    "options": [
+      "Iron",
+      "Sodium",
+      "Magnesium",
+      "Phosphorus"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Phosphorus ہے۔ Bone اور tooth enamel کی سخت mineral structure بنیادی طور پر calcium-phosphate hydroxyapatite crystals سے بنتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Phosphorus: Fact Sheet for Health Professionals",
+      "referenceUrl": "https://ods.od.nih.gov/factsheets/Phosphorus-HealthProfessional/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q079"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ods.od.nih.gov/factsheets/Phosphorus-HealthProfessional/",
+        "label": "Phosphorus: Fact Sheet for Health Professionals",
+        "publisher": "NIH Office of Dietary Supplements",
+        "authorityId": "nih-office-dietary-supplements",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIH states that phosphorus and calcium make up hydroxyapatite, the main structural component in bones and tooth enamel."
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK218748/",
+        "label": "Bone and Mineral Metabolism",
+        "publisher": "National Academies via NCBI Bookshelf",
+        "authorityId": "national-academies",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Academies reference independently states that bone is composed primarily of calcium and phosphorus in hydroxyapatite crystals."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The book's unexplained claim that one element makes up 14-17 percent of the skeleton depends on the material and mass convention. It was replaced by the stable compositional fact that uniquely identifies phosphorus."
+  },
+  {
+    "id": "ADV2E102-U0032-Q079-SIM",
+    "pairId": "ADV2E102-U0032-Q079",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Hydroxyapatite in bones and teeth is chiefly a crystalline form of which mineral compound?",
+    "questionUrdu": "Bones اور teeth کا hydroxyapatite بنیادی طور پر کس mineral compound کی crystalline form ہے؟",
+    "options": [
+      "Calcium phosphate",
+      "Sodium chloride",
+      "Potassium sulfate",
+      "Iron oxide"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Calcium phosphate ہے۔ Hydroxyapatite calcium اور phosphate ions کی مضبوط crystal structure بناتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Phosphorus: Fact Sheet for Health Professionals",
+      "referenceUrl": "https://ods.od.nih.gov/factsheets/Phosphorus-HealthProfessional/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q079",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ods.od.nih.gov/factsheets/Phosphorus-HealthProfessional/",
+        "label": "Phosphorus: Fact Sheet for Health Professionals",
+        "publisher": "NIH Office of Dietary Supplements",
+        "authorityId": "nih-office-dietary-supplements",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIH identifies hydroxyapatite as the calcium-phosphorus structural mineral in bone and enamel."
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK218748/",
+        "label": "Bone and Mineral Metabolism",
+        "publisher": "National Academies via NCBI Bookshelf",
+        "authorityId": "national-academies",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Academies reference independently describes bone mineral as calcium phosphate in hydroxyapatite crystals."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q080-SRC",
+    "pairId": "ADV2E102-U0032-Q080",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which listed vitamin is commonly used to inhibit enzymatic browning in cut fruit?",
+    "questionUrdu": "Cut fruit میں enzymatic browning روکنے کے لیے عموماً کون سا vitamin استعمال ہوتا ہے؟",
+    "options": [
+      "Vitamin K",
+      "Vitamin C",
+      "Vitamin B",
+      "Vitamin D"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Vitamin C ہے۔ Ascorbic acid antioxidant کے طور پر oxidation کم کرتا اور browning enzymes کے اثر کو عارضی طور پر روکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ascorbic Acid Technical Evaluation Report",
+      "referenceUrl": "https://www.ams.usda.gov/sites/default/files/media/AscorbicAcidTRFinal7172019.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q080"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ams.usda.gov/sites/default/files/media/AscorbicAcidTRFinal7172019.pdf",
+        "label": "Ascorbic Acid Technical Evaluation Report",
+        "publisher": "United States Department of Agriculture",
+        "authorityId": "usda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The USDA technical report identifies ascorbic acid as an antioxidant used to prevent discoloration and browning in fruit products."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34730855/",
+        "label": "Effect of ascorbic acid on tyrosinase and anti-browning activity in fresh-cut apple",
+        "publisher": "Journal of Food Biochemistry via PubMed",
+        "authorityId": "journal-food-biochemistry",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The experimental study found that ascorbic acid inhibited browning-related enzymes and delayed browning in fresh-cut Fuji apples."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source incorrectly said the vitamin 'controls browning by the help of enzymes.' Vitamin C (ascorbic acid) instead acts as an antioxidant and can inhibit or delay enzyme-driven browning."
+  },
+  {
+    "id": "ADV2E102-U0032-Q080-SIM",
+    "pairId": "ADV2E102-U0032-Q080",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What is the chemical name commonly used for vitamin C in anti-browning treatments?",
+    "questionUrdu": "Anti-browning treatments میں Vitamin C کا عام chemical name کیا ہے؟",
+    "options": [
+      "Ascorbic acid",
+      "Citric acid",
+      "Folic acid",
+      "Lactic acid"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ascorbic acid ہے۔ یہ reducing antioxidant cut fruit میں oxidized compounds کو واپس reduce کر کے browning کو delay کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Ascorbic Acid Technical Evaluation Report",
+      "referenceUrl": "https://www.ams.usda.gov/sites/default/files/media/AscorbicAcidTRFinal7172019.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q080",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ams.usda.gov/sites/default/files/media/AscorbicAcidTRFinal7172019.pdf",
+        "label": "Ascorbic Acid Technical Evaluation Report",
+        "publisher": "United States Department of Agriculture",
+        "authorityId": "usda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USDA identifies ascorbic acid, vitamin C, as an antioxidant anti-browning agent in fruit products."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34730855/",
+        "label": "Effect of ascorbic acid on tyrosinase and anti-browning activity in fresh-cut apple",
+        "publisher": "Journal of Food Biochemistry via PubMed",
+        "authorityId": "journal-food-biochemistry",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The experimental apple study independently tests ascorbic acid as the anti-browning treatment."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q081-SRC",
+    "pairId": "ADV2E102-U0032-Q081",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Using the standard Atwater factors, fat provides how many times as much energy per gram as carbohydrate?",
+    "questionUrdu": "Standard Atwater factors کے مطابق fat فی gram carbohydrate سے کتنی گنا energy دیتا ہے؟",
+    "options": [
+      "4.25",
+      "2.25",
+      "3.25",
+      "5.25"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 2.25 times ہے۔ Fat تقریباً 9 kcal/g اور carbohydrate 4 kcal/g دیتا ہے، اس لیے ratio 9/4 = 2.25 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Food and Nutrition Information Center",
+      "referenceUrl": "https://www.nal.usda.gov/programs/fnic",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q081"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nal.usda.gov/programs/fnic",
+        "label": "Food and Nutrition Information Center",
+        "publisher": "United States Department of Agriculture",
+        "authorityId": "usda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USDA states that fat provides 9 calories per gram while carbohydrate provides 4 calories per gram; 9 divided by 4 is 2.25."
+      },
+      {
+        "url": "https://www.fao.org/4/M2763E/M2763E00.htm",
+        "label": "Energy Absorption and Dietary Fibre",
+        "publisher": "Food and Agriculture Organization of the United Nations",
+        "authorityId": "un-fao",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "FAO independently gives the standard Atwater factors as 9 kcal per gram for fat and 4 kcal per gram for carbohydrate."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The phrase 'times more than' was replaced by 'times as much' to remove a mathematical-language ambiguity. Under the standard factors, 9/4 = 2.25."
+  },
+  {
+    "id": "ADV2E102-U0032-Q081-SIM",
+    "pairId": "ADV2E102-U0032-Q081",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Under standard Atwater factors, how much energy does one gram of fat provide?",
+    "questionUrdu": "Standard Atwater factors کے تحت 1 gram fat کتنی energy دیتا ہے؟",
+    "options": [
+      "4 kcal",
+      "7 kcal",
+      "9 kcal",
+      "12 kcal"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 9 kcal ہے۔ اسی کے مقابلے میں carbohydrate اور protein تقریباً 4 kcal/g دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Food and Nutrition Information Center",
+      "referenceUrl": "https://www.nal.usda.gov/programs/fnic",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q081",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nal.usda.gov/programs/fnic",
+        "label": "Food and Nutrition Information Center",
+        "publisher": "United States Department of Agriculture",
+        "authorityId": "usda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USDA gives fat's standard energy factor as 9 calories per gram."
+      },
+      {
+        "url": "https://www.fao.org/4/M2763E/M2763E00.htm",
+        "label": "Energy Absorption and Dietary Fibre",
+        "publisher": "Food and Agriculture Organization of the United Nations",
+        "authorityId": "un-fao",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "FAO independently gives the Atwater factor for fat as 9 kcal per gram."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q082-SRC",
+    "pairId": "ADV2E102-U0032-Q082",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Under the standard high-temperature, short-time method, milk held at 161°F (72°C) must remain at that temperature for at least how many seconds?",
+    "questionUrdu": "Standard HTST method میں 161°F (72°C) پر milk کو کم از کم کتنے seconds رکھنا ہوتا ہے؟",
+    "options": [
+      "25",
+      "15",
+      "20",
+      "30"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 15 seconds ہے۔ HTST pasteurization میں milk کو 72°C یا 161°F پر کم از کم پندرہ seconds رکھ کر تیزی سے ٹھنڈا کیا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Grade A Pasteurized Milk Ordinance",
+      "referenceUrl": "https://www.fda.gov/media/140394/download?attachment=",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q082"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.fda.gov/media/140394/download?attachment=",
+        "label": "Grade A Pasteurized Milk Ordinance",
+        "publisher": "United States Food and Drug Administration",
+        "authorityId": "us-fda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The FDA pasteurization table specifies 72°C (161°F) for 15 seconds for continuous-flow HTST pasteurization."
+      },
+      {
+        "url": "https://stacks.cdc.gov/view/cdc/71970/cdc_71970_DS1.pdf",
+        "label": "Come-up Time Method of Milk Pasteurization",
+        "publisher": "Centers for Disease Control and Prevention",
+        "authorityId": "us-cdc",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The CDC-hosted paper independently identifies the conventional HTST treatment as 161°F for 15 seconds."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The method was specified because other valid pasteurization time-temperature combinations exist. For ordinary HTST milk pasteurization, the verified answer is 15 seconds."
+  },
+  {
+    "id": "ADV2E102-U0032-Q082-SIM",
+    "pairId": "ADV2E102-U0032-Q082",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What temperature is used in the standard 15-second HTST pasteurization of milk?",
+    "questionUrdu": "Milk کی standard 15-second HTST pasteurization میں کون سا temperature استعمال ہوتا ہے؟",
+    "options": [
+      "63°C",
+      "72°C",
+      "100°C",
+      "121°C"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 72°C ہے۔ Standard HTST combination 72°C یا 161°F for 15 seconds ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Grade A Pasteurized Milk Ordinance",
+      "referenceUrl": "https://www.fda.gov/media/140394/download?attachment=",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q082",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.fda.gov/media/140394/download?attachment=",
+        "label": "Grade A Pasteurized Milk Ordinance",
+        "publisher": "United States Food and Drug Administration",
+        "authorityId": "us-fda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The FDA pasteurization table specifies 72°C for 15 seconds for continuous-flow HTST milk."
+      },
+      {
+        "url": "https://stacks.cdc.gov/view/cdc/71970/cdc_71970_DS1.pdf",
+        "label": "Come-up Time Method of Milk Pasteurization",
+        "publisher": "Centers for Disease Control and Prevention",
+        "authorityId": "us-cdc",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The CDC-hosted paper independently identifies the 161°F or 72°C, 15-second treatment."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q083-SRC",
+    "pairId": "ADV2E102-U0032-Q083",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which listed vitamin occurs naturally mainly in animal-source foods and is absent from unfortified plant foods?",
+    "questionUrdu": "کون سا vitamin قدرتی طور پر زیادہ تر animal-source foods میں ہوتا ہے اور unfortified plant foods میں موجود نہیں؟",
+    "options": [
+      "Vitamin B1",
+      "Vitamin B12",
+      "Vitamin B6",
+      "Vitamin A"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Vitamin B12 ہے۔ اسی لیے مکمل plant-based diet لینے والوں کو reliable fortified food یا supplement سے B12 حاصل کرنا ضروری ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Vitamin B12: Fact Sheet for Health Professionals",
+      "referenceUrl": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+        "label": "Vitamin B12: Fact Sheet for Health Professionals",
+        "publisher": "NIH Office of Dietary Supplements",
+        "authorityId": "nih-office-dietary-supplements",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIH states that vitamin B12 occurs in foods of animal origin and that plant foods do not naturally contain it."
+      },
+      {
+        "url": "https://www.nhs.uk/live-well/eat-well/how-to-eat-a-balanced-diet/the-vegan-diet/",
+        "label": "The vegan diet",
+        "publisher": "National Health Service",
+        "authorityId": "uk-nhs",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NHS independently explains that many people obtain vitamin B12 from animal foods and that vegan sources are fortified foods or supplements."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The book incorrectly claimed that the human body produces vitamin B12. Humans must obtain B12 from diet, fortified foods, or supplements, so the stem was rebuilt around its verified natural-food distribution."
+  },
+  {
+    "id": "ADV2E102-U0032-Q083-SIM",
+    "pairId": "ADV2E102-U0032-Q083",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What is the most reliable vitamin B12 strategy for a person eating only unfortified plant foods?",
+    "questionUrdu": "صرف unfortified plant foods کھانے والے شخص کے لیے Vitamin B12 کا reliable طریقہ کیا ہے؟",
+    "options": [
+      "Use fortified foods or a suitable supplement",
+      "Rely only on raw vegetables",
+      "Increase sunlight exposure",
+      "Drink more water"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب fortified foods یا مناسب supplement ہے۔ Unfortified plants قدرتی طور پر reliable B12 نہیں دیتے، اس لیے dependable external source ضروری ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Vitamin B12: Fact Sheet for Health Professionals",
+      "referenceUrl": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+        "label": "Vitamin B12: Fact Sheet for Health Professionals",
+        "publisher": "NIH Office of Dietary Supplements",
+        "authorityId": "nih-office-dietary-supplements",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIH states that plant foods do not naturally contain B12 and identifies fortified foods and supplements as sources."
+      },
+      {
+        "url": "https://www.nhs.uk/live-well/eat-well/how-to-eat-a-balanced-diet/the-vegan-diet/",
+        "label": "The vegan diet",
+        "publisher": "National Health Service",
+        "authorityId": "uk-nhs",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NHS independently advises vegans to obtain B12 from fortified foods or supplements."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q084-SRC",
+    "pairId": "ADV2E102-U0032-Q084",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Most fossils are found in which type of rock?",
+    "questionUrdu": "زیادہ تر fossils کس قسم کی rocks میں ملتے ہیں؟",
+    "options": [
+      "Celandine rocks",
+      "Monzonite rocks",
+      "Sedimentary rocks",
+      "Dolerite rocks"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Sedimentary rocks ہے۔ Sediment کی نرم تہیں جانداروں کی باقیات کو دفن اور محفوظ کر سکتی ہیں، جبکہ melting اور شدید heat انہیں عموماً تباہ کر دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "About Fossils",
+      "referenceUrl": "https://www.nps.gov/subjects/fossils/about-fossils.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q084"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nps.gov/subjects/fossils/about-fossils.htm",
+        "label": "About Fossils",
+        "publisher": "United States National Park Service",
+        "authorityId": "us-national-park-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Park Service states that most fossils are found in sedimentary rocks formed from accumulating sediment."
+      },
+      {
+        "url": "https://pubs.usgs.gov/gip/fossils/fossils-rocks.html",
+        "label": "Fossils, Rocks, and Time: Fossils and Rocks",
+        "publisher": "United States Geological Survey",
+        "authorityId": "usgs",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USGS independently explains that the great bulk of the fossil record is widespread in sedimentary rocks."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "'Most' was added because exceptional fossils can occur in volcanic deposits and metamorphosed material; sedimentary rock is the uniquely correct general answer."
+  },
+  {
+    "id": "ADV2E102-U0032-Q084-SIM",
+    "pairId": "ADV2E102-U0032-Q084",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Why are fossils generally uncommon in igneous rocks?",
+    "questionUrdu": "Igneous rocks میں fossils عموماً کم کیوں ہوتے ہیں؟",
+    "options": [
+      "Heat and molten material usually destroy remains",
+      "They form only under seawater",
+      "They contain no minerals",
+      "They are always younger than fossils"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب heat اور molten material کا remains کو تباہ کرنا ہے۔ Fossils زیادہ آسانی سے low-temperature sediment burial میں محفوظ ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "About Fossils",
+      "referenceUrl": "https://www.nps.gov/subjects/fossils/about-fossils.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q084",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nps.gov/subjects/fossils/about-fossils.htm",
+        "label": "About Fossils",
+        "publisher": "United States National Park Service",
+        "authorityId": "us-national-park-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Park Service explains why sedimentary deposition preserves fossils while high-temperature rock formation generally does not."
+      },
+      {
+        "url": "https://pubs.usgs.gov/gip/fossils/fossils-rocks.html",
+        "label": "Fossils, Rocks, and Time: Fossils and Rocks",
+        "publisher": "United States Geological Survey",
+        "authorityId": "usgs",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USGS independently contrasts fossil-rich sedimentary rocks with igneous processes that destroy organic remains."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q085-SRC",
+    "pairId": "ADV2E102-U0032-Q085",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which listed group of compounds is a well-established cause of stratospheric ozone depletion?",
+    "questionUrdu": "درج شدہ compounds میں stratospheric ozone depletion کی معروف وجہ کون سا group ہے؟",
+    "options": [
+      "Ferrocene",
+      "Fullerenes",
+      "Freons",
+      "Polyhalogens"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Freons یعنی chlorofluorocarbons ہے۔ Stratosphere میں ultraviolet light CFCs سے chlorine آزاد کرتی ہے جو ozone molecules کو catalytic طور پر توڑتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Basic Ozone Layer Science",
+      "referenceUrl": "https://www.epa.gov/ozone-layer-protection/basic-ozone-layer-science",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q085"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.epa.gov/ozone-layer-protection/basic-ozone-layer-science",
+        "label": "Basic Ozone Layer Science",
+        "publisher": "United States Environmental Protection Agency",
+        "authorityId": "us-epa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "EPA explains that chlorofluorocarbons release chlorine in the stratosphere, where it destroys ozone."
+      },
+      {
+        "url": "https://science.nasa.gov/earth/earth-observatory/ozone/",
+        "label": "Ozone",
+        "publisher": "NASA",
+        "authorityId": "nasa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA independently explains how ultraviolet radiation breaks CFCs apart and the released chlorine catalytically destroys ozone."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Freons is a trade-name family commonly used for several chlorofluorocarbons (CFCs). The repaired wording avoids implying that CFCs are the only ozone-depleting substances."
+  },
+  {
+    "id": "ADV2E102-U0032-Q085-SIM",
+    "pairId": "ADV2E102-U0032-Q085",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which element released from CFCs catalytically destroys stratospheric ozone?",
+    "questionUrdu": "CFCs سے آزاد ہونے والا کون سا element stratospheric ozone کو catalytically destroy کرتا ہے؟",
+    "options": [
+      "Chlorine",
+      "Nitrogen",
+      "Carbon",
+      "Helium"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Chlorine ہے۔ UV radiation CFC molecule توڑ کر chlorine atom آزاد کرتی ہے جو بار بار ozone molecules کو توڑ سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Basic Ozone Layer Science",
+      "referenceUrl": "https://www.epa.gov/ozone-layer-protection/basic-ozone-layer-science",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q085",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.epa.gov/ozone-layer-protection/basic-ozone-layer-science",
+        "label": "Basic Ozone Layer Science",
+        "publisher": "United States Environmental Protection Agency",
+        "authorityId": "us-epa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "EPA explains that chlorine released from CFCs destroys ozone catalytically."
+      },
+      {
+        "url": "https://science.nasa.gov/earth/earth-observatory/ozone/",
+        "label": "Ozone",
+        "publisher": "NASA",
+        "authorityId": "nasa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA independently describes ultraviolet breakup of CFCs and chlorine-driven ozone loss."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q086-SRC",
+    "pairId": "ADV2E102-U0032-Q086",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which listed material can be recycled repeatedly while retaining its fundamental material properties?",
+    "questionUrdu": "کون سا درج شدہ material اپنی بنیادی properties برقرار رکھتے ہوئے بار بار recycle ہو سکتا ہے؟",
+    "options": [
+      "Plastic",
+      "Wood",
+      "Organic materials",
+      "Aluminum"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Aluminum ہے۔ Aluminium کو پگھلا کر بار بار نئی مصنوعات میں بدلا جا سکتا ہے اور اس کی بنیادی material quality برقرار رہتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Aluminum Industry Vision",
+      "referenceUrl": "https://www1.eere.energy.gov/manufacturing/resources/aluminum/pdfs/alumvision.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www1.eere.energy.gov/manufacturing/resources/aluminum/pdfs/alumvision.pdf",
+        "label": "Aluminum Industry Vision",
+        "publisher": "United States Department of Energy",
+        "authorityId": "us-department-energy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Energy Department-hosted industry vision states that aluminum can be repeatedly recycled without loss of quality."
+      },
+      {
+        "url": "https://www.eesc.europa.eu/en/news-media/news/permanent-materials-missing-link-eus-circular-economy",
+        "label": "Permanent materials and the circular economy",
+        "publisher": "European Economic and Social Committee",
+        "authorityId": "eu-eesc",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The EESC independently states that aluminium can be melted and remade repeatedly without losing quality."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The broad phrase 'can be recycled many times' could also apply to some other materials under particular processes. Retaining fundamental properties makes aluminium the uniquely supported answer among these choices."
+  },
+  {
+    "id": "ADV2E102-U0032-Q086-SIM",
+    "pairId": "ADV2E102-U0032-Q086",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Recycling aluminium can save approximately how much energy compared with producing primary aluminium from ore?",
+    "questionUrdu": "Ore سے primary aluminium بنانے کے مقابلے میں recycling تقریباً کتنی energy بچا سکتی ہے؟",
+    "options": [
+      "About 15%",
+      "About 40%",
+      "About 70%",
+      "Up to about 95%"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Up to about 95% ہے۔ Aluminium remelting کو bauxite سے نئی metal بنانے کے مقابلے میں بہت کم energy درکار ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Aluminum Industry Vision",
+      "referenceUrl": "https://www1.eere.energy.gov/manufacturing/resources/aluminum/pdfs/alumvision.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www1.eere.energy.gov/manufacturing/resources/aluminum/pdfs/alumvision.pdf",
+        "label": "Aluminum Industry Vision",
+        "publisher": "United States Department of Energy",
+        "authorityId": "us-department-energy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The US Energy Department-hosted aluminium vision reports roughly 95 percent energy savings from recycling compared with primary production."
+      },
+      {
+        "url": "https://www.eesc.europa.eu/en/news-media/news/permanent-materials-missing-link-eus-circular-economy",
+        "label": "Permanent materials and the circular economy",
+        "publisher": "European Economic and Social Committee",
+        "authorityId": "eu-eesc",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The EESC independently highlights the major energy saving of repeatedly recycling aluminium."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q087-SRC",
+    "pairId": "ADV2E102-U0032-Q087",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which older term denotes the scientific study of life beyond Earth?",
+    "questionUrdu": "Earth سے باہر life کی scientific study کے لیے کون سی پرانی term استعمال ہوتی ہے؟",
+    "options": [
+      "Endobiology",
+      "Exobiology",
+      "Enterobiology",
+      "Neobiology"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Exobiology ہے۔ آج زیادہ جامع term Astrobiology استعمال ہوتی ہے، مگر exobiology تاریخی طور پر extraterrestrial life کی تلاش کے لیے معروف رہی۔",
+    "source": {
+      "type": "book",
+      "label": "NASA Thesaurus: Exobiology",
+      "referenceUrl": "https://ntrs.nasa.gov/api/citations/20000025197/downloads/20000025197.pdf?attachment=true",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q087"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ntrs.nasa.gov/api/citations/20000025197/downloads/20000025197.pdf?attachment=true",
+        "label": "NASA Thesaurus: Exobiology",
+        "publisher": "NASA",
+        "authorityId": "nasa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NASA thesaurus defines exobiology as the field dealing with the search for extraterrestrial life and conditions that may produce it."
+      },
+      {
+        "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/Extraterrestrial_life",
+        "label": "Extraterrestrial life",
+        "publisher": "European Space Agency",
+        "authorityId": "european-space-agency",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ESA defines exobiology as the study of extraterrestrial life and notes that it is also known as astrobiology."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Astrobiology is now the broader and more common modern term. Because it was not among the source options, the repaired stem explicitly asks for the older term exobiology."
+  },
+  {
+    "id": "ADV2E102-U0032-Q087-SIM",
+    "pairId": "ADV2E102-U0032-Q087",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What is the broader modern term commonly used instead of exobiology?",
+    "questionUrdu": "Exobiology کی جگہ آج عام طور پر کون سی وسیع modern term استعمال ہوتی ہے؟",
+    "options": [
+      "Astrobiology",
+      "Ecology",
+      "Paleontology",
+      "Embryology"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Astrobiology ہے۔ Astrobiology life کی origin, evolution اور Earth سے باہر امکان سمیت زیادہ وسیع questions کا مطالعہ کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "NASA Thesaurus: Exobiology",
+      "referenceUrl": "https://ntrs.nasa.gov/api/citations/20000025197/downloads/20000025197.pdf?attachment=true",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q087",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ntrs.nasa.gov/api/citations/20000025197/downloads/20000025197.pdf?attachment=true",
+        "label": "NASA Thesaurus: Exobiology",
+        "publisher": "NASA",
+        "authorityId": "nasa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA's terminology links exobiology to the search for extraterrestrial life within the broader field now called astrobiology."
+      },
+      {
+        "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/Extraterrestrial_life",
+        "label": "Extraterrestrial life",
+        "publisher": "European Space Agency",
+        "authorityId": "european-space-agency",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ESA explicitly states that exobiology is also known as astrobiology."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q088-SRC",
+    "pairId": "ADV2E102-U0032-Q088",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which field studies interactions among organisms and between organisms and their environment?",
+    "questionUrdu": "Organisms کے باہمی اور environment کے ساتھ interactions کا مطالعہ کس field میں ہوتا ہے؟",
+    "options": [
+      "Archaeology",
+      "Anthropology",
+      "Genetics",
+      "Ecology"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Ecology ہے۔ Ecology جانداروں، populations, communities اور ان کے biotic و abiotic ماحول کے تعلقات کا علم ہے۔",
+    "source": {
+      "type": "book",
+      "label": "USGS Thesaurus: Ecology",
+      "referenceUrl": "https://apps.usgs.gov/thesaurus/term-simple.php?code=311&thcode=2",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q088"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://apps.usgs.gov/thesaurus/term-simple.php?code=311&thcode=2",
+        "label": "USGS Thesaurus: Ecology",
+        "publisher": "United States Geological Survey",
+        "authorityId": "usgs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USGS defines ecology as the study of relations between living plants and animals and their environment."
+      },
+      {
+        "url": "https://www.nps.gov/articles/parkscience31-1_eckert-plumb.htm",
+        "label": "A Biodiversity Glossary",
+        "publisher": "United States National Park Service",
+        "authorityId": "us-national-park-service",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Park Service independently defines ecology as the study of interrelationships among living organisms and their environment."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The wording was expanded to include both organism-to-organism and organism-to-environment interactions, matching the standard definition of ecology."
+  },
+  {
+    "id": "ADV2E102-U0032-Q088-SIM",
+    "pairId": "ADV2E102-U0032-Q088",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "An ecosystem includes interactions between organisms and which other component?",
+    "questionUrdu": "Ecosystem میں organisms کے ساتھ کس دوسرے component کے interactions شامل ہوتے ہیں؟",
+    "options": [
+      "Their physical environment",
+      "Only their DNA",
+      "Only celestial objects",
+      "Only human institutions"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب their physical environment ہے۔ Ecology biotic organisms اور abiotic factors جیسے water, soil, light اور temperature کے تعلقات کو دیکھتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "USGS Thesaurus: Ecology",
+      "referenceUrl": "https://apps.usgs.gov/thesaurus/term-simple.php?code=311&thcode=2",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q088",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://apps.usgs.gov/thesaurus/term-simple.php?code=311&thcode=2",
+        "label": "USGS Thesaurus: Ecology",
+        "publisher": "United States Geological Survey",
+        "authorityId": "usgs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USGS defines ecology through relations between organisms and their environment."
+      },
+      {
+        "url": "https://www.nps.gov/articles/parkscience31-1_eckert-plumb.htm",
+        "label": "A Biodiversity Glossary",
+        "publisher": "United States National Park Service",
+        "authorityId": "us-national-park-service",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Park Service independently includes living organisms and the physical environment in ecological relationships."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q092-SRC",
+    "pairId": "ADV2E102-U0032-Q092",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Object Linking and Embedding (OLE), the two ways to place an object from one application into another are embedding and what?",
+    "questionUrdu": "Object Linking and Embedding یعنی OLE میں embedding کے علاوہ object رکھنے کا دوسرا طریقہ کیا ہے؟",
+    "options": [
+      "Importing",
+      "Integrating",
+      "Linking",
+      "Bookmarking"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Linking ہے۔ Linked object اصل source file کی طرف pointer رکھتا ہے جبکہ embedded object کی copy destination document میں محفوظ ہو جاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Linked objects and embedded objects",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/linked-objects-and-embedded-objects",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q092"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/word/linked-objects-and-embedded-objects",
+        "label": "Linked objects and embedded objects",
+        "publisher": "Microsoft",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft identifies the OLE alternatives as placing either a link to an object or an embedded copy in a document."
+      },
+      {
+        "url": "https://www.ibm.com/docs/en/notes/10.0.0?topic=information-what-is-object-linking-embedding",
+        "label": "What is object linking and embedding?",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM independently describes OLE as providing linked objects, which point to source data, and embedded objects, which copy the data."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The application context was made explicit. In OLE terminology, the counterpart to embedding is linking, not ordinary importing or bookmarking."
+  },
+  {
+    "id": "ADV2E102-U0032-Q092-SIM",
+    "pairId": "ADV2E102-U0032-Q092",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which OLE object can reflect changes made later in its source file?",
+    "questionUrdu": "OLE میں کون سا object بعد میں source file میں ہونے والی changes کو reflect کر سکتا ہے؟",
+    "options": [
+      "Linked object",
+      "Embedded copy",
+      "Plain screenshot",
+      "Printed object"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Linked object ہے۔ Link source data کی location رکھتا ہے، اس لیے update ہونے پر destination میں نئی information دکھا سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Linked objects and embedded objects",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/linked-objects-and-embedded-objects",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q092",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/word/linked-objects-and-embedded-objects",
+        "label": "Linked objects and embedded objects",
+        "publisher": "Microsoft",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft explains that a linked object can update when its source file changes."
+      },
+      {
+        "url": "https://www.ibm.com/docs/en/notes/10.0.0?topic=information-what-is-object-linking-embedding",
+        "label": "What is object linking and embedding?",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM independently contrasts linked pointers that reflect source changes with static embedded copies."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q095-SRC",
+    "pairId": "ADV2E102-U0032-Q095",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The average ages of A and B, B and C, and C and A are 30, 32, and 34 years respectively. What is C's age?",
+    "questionUrdu": "A اور B، B اور C، اور C اور A کی average ages بالترتیب 30، 32 اور 34 years ہیں؛ C کی age کیا ہے؟",
+    "options": [
+      "33 years",
+      "34 years",
+      "35 years",
+      "36 years"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 36 years ہے۔ مساوات A+B=60، B+C=64 اور C+A=68 کو حل کرنے سے 2C=72 اور C=36 ملتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve Systems of Equations by Elimination",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/5-3-solve-systems-of-equations-by-elimination",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q095"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/5-3-solve-systems-of-equations-by-elimination",
+        "label": "Solve Systems of Equations by Elimination",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains the elimination method used to combine linear equations and solve for an unknown."
+      },
+      {
+        "url": "https://math.libretexts.org/Courses/Cosumnes_River_College/Corequisite_Codex/12%3A_Linear_Systems/12.05%3A_Applications_Involving_Systems_of_Linear_Equations",
+        "label": "Applications Involving Systems of Linear Equations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts independently explains translating each condition in a word problem into an equation and solving the resulting system."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The averages give A+B=60, B+C=64, and C+A=68. Adding the last two equations and subtracting the first gives 2C=72, so C=36 years."
+  },
+  {
+    "id": "ADV2E102-U0032-Q095-SIM",
+    "pairId": "ADV2E102-U0032-Q095",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Using the same pairwise averages, what is B's age?",
+    "questionUrdu": "انہی pairwise averages کے مطابق B کی age کیا ہے؟",
+    "options": [
+      "26 years",
+      "28 years",
+      "30 years",
+      "32 years"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 28 years ہے۔ A+B=60، B+C=64 اور A+C=68 سے 2B=56 اور B=28 ملتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve Systems of Equations by Elimination",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/5-3-solve-systems-of-equations-by-elimination",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q095",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/5-3-solve-systems-of-equations-by-elimination",
+        "label": "Solve Systems of Equations by Elimination",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax's elimination method supports combining the three linear conditions to isolate B."
+      },
+      {
+        "url": "https://math.libretexts.org/Courses/Cosumnes_River_College/Corequisite_Codex/12%3A_Linear_Systems/12.05%3A_Applications_Involving_Systems_of_Linear_Equations",
+        "label": "Applications Involving Systems of Linear Equations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts independently explains modeling word-problem conditions as a simultaneous linear system and checking the solution."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q096-SRC",
+    "pairId": "ADV2E102-U0032-Q096",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If the successive increments are +5, +7, and +9, complete the sequence: 6, 11, ____, 27.",
+    "questionUrdu": "اگر successive increments +5، +7 اور +9 ہوں تو sequence 6، 11، ____، 27 مکمل کریں۔",
+    "options": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 18 ہے۔ 6+5=11، پھر 11+7=18 اور 18+9=27 ہوتا ہے؛ اصل مبہم sequence کو unique بنانے کے لیے rule واضح دیا گیا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Number patterns",
+      "referenceUrl": "https://downloads.bbc.co.uk/skillswise/maths/ma14fact/factsheet/ma14fact-l1-f-number-patterns.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q096"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://downloads.bbc.co.uk/skillswise/maths/ma14fact/factsheet/ma14fact-l1-f-number-patterns.pdf",
+        "label": "Number patterns",
+        "publisher": "BBC Skillswise",
+        "authorityId": "bbc-skillswise",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The BBC learning sheet explains determining a sequence by examining the difference from one term to the next."
+      },
+      {
+        "url": "https://nrich.maths.org/content/id/12662/Ontario%20Mapping%20Document.pdf",
+        "label": "Pattern rules and sequences",
+        "publisher": "NRICH, University of Cambridge",
+        "authorityId": "university-cambridge-nrich",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NRICH material emphasizes using a stated pattern rule to generate subsequent terms in a sequence."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The original four terms did not uniquely determine a sequence and the printed answer 17 was unsupported. The repaired stem states the rule: 6+5=11, 11+7=18, and 18+9=27."
+  },
+  {
+    "id": "ADV2E102-U0032-Q096-SIM",
+    "pairId": "ADV2E102-U0032-Q096",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If the next successive increment after +9 is +11, what term follows 27 in the sequence?",
+    "questionUrdu": "اگر +9 کے بعد اگلا successive increment +11 ہو تو sequence میں 27 کے بعد کون سا term آئے گا؟",
+    "options": [
+      "36",
+      "37",
+      "38",
+      "40"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 38 ہے۔ Odd increments +5, +7, +9 کے بعد +11 آتا ہے، اس لیے 27+11=38۔",
+    "source": {
+      "type": "practice",
+      "label": "Number patterns",
+      "referenceUrl": "https://downloads.bbc.co.uk/skillswise/maths/ma14fact/factsheet/ma14fact-l1-f-number-patterns.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q096",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://downloads.bbc.co.uk/skillswise/maths/ma14fact/factsheet/ma14fact-l1-f-number-patterns.pdf",
+        "label": "Number patterns",
+        "publisher": "BBC Skillswise",
+        "authorityId": "bbc-skillswise",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "BBC Skillswise explains extending a number pattern by examining successive differences."
+      },
+      {
+        "url": "https://nrich.maths.org/content/id/12662/Ontario%20Mapping%20Document.pdf",
+        "label": "Pattern rules and sequences",
+        "publisher": "NRICH, University of Cambridge",
+        "authorityId": "university-cambridge-nrich",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NRICH independently emphasizes applying the stated pattern rule to generate the next term."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q097-SRC",
+    "pairId": "ADV2E102-U0032-Q097",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "In an examination, 1,100 boys and 900 girls appeared. If 50% of the boys and 40% of the girls passed, what percentage of all candidates failed?",
+    "questionUrdu": "Exam میں 1,100 boys اور 900 girls آئے؛ 50% boys اور 40% girls pass ہوئے، تو تمام candidates کا fail percentage کیا ہے؟",
+    "options": [
+      "54.5%",
+      "45.5%",
+      "45%",
+      "60.5%"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 54.5% ہے۔ Pass ہونے والے 550+360=910 ہیں، اس لیے 2,000 میں سے 1,090 fail ہوئے اور 1090/2000 × 100 = 54.5% بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Use a Problem Solving Strategy",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra/pages/2-2-use-a-problem-solving-strategy",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q097"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra/pages/2-2-use-a-problem-solving-strategy",
+        "label": "Use a Problem Solving Strategy",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains translating percent statements into algebraic calculations and checking the result."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Prealgebra_1e_%28OpenStax%29/06%3A_Percents/6.03%3A_Solve_General_Applications_of_Percent",
+        "label": "Solve General Applications of Percent",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts independently explains calculating a part as a percentage of a whole and solving percent applications."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Passed candidates = 0.50(1100)+0.40(900)=550+360=910. Therefore 2000-910=1090 failed, and 1090/2000 x 100 = 54.5%."
+  },
+  {
+    "id": "ADV2E102-U0032-Q097-SIM",
+    "pairId": "ADV2E102-U0032-Q097",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "In the same examination, what percentage of all candidates passed?",
+    "questionUrdu": "اسی examination میں تمام candidates کا pass percentage کیا تھا؟",
+    "options": [
+      "40%",
+      "45%",
+      "45.5%",
+      "54.5%"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 45.5% ہے۔ 910 candidates pass ہوئے اور 910/2000 × 100 = 45.5% بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Use a Problem Solving Strategy",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra/pages/2-2-use-a-problem-solving-strategy",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q097",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra/pages/2-2-use-a-problem-solving-strategy",
+        "label": "Use a Problem Solving Strategy",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax's percent method supports dividing the passing part, 910, by the whole, 2,000."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Prealgebra_1e_%28OpenStax%29/06%3A_Percents/6.03%3A_Solve_General_Applications_of_Percent",
+        "label": "Solve General Applications of Percent",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts independently explains calculating a part as a percentage of the total."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q098-SRC",
+    "pairId": "ADV2E102-U0032-Q098",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The square of the standard deviation is called what?",
+    "questionUrdu": "Standard deviation کے square کو کیا کہتے ہیں؟",
+    "options": [
+      "Variance",
+      "Dispersion",
+      "Range",
+      "Mean"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Variance ہے۔ Variance = (standard deviation)² ہوتا ہے اور الٹا standard deviation، variance کا square root ہے۔",
+    "source": {
+      "type": "book",
+      "label": "s2",
+      "referenceUrl": "https://csrc.nist.gov/glossary/term/s2",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q098"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/s2",
+        "label": "s2",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "us-nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST states directly that variance equals standard deviation squared."
+      },
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm",
+        "label": "Measures of Scale",
+        "publisher": "NIST/SEMATECH",
+        "authorityId": "nist-sematech",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NIST/SEMATECH handbook independently states the inverse relationship: standard deviation is the square root of variance."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "For either a population or a sample, the corresponding variance is the square of its standard deviation."
+  },
+  {
+    "id": "ADV2E102-U0032-Q098-SIM",
+    "pairId": "ADV2E102-U0032-Q098",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If a data set has a variance of 49, what is its standard deviation?",
+    "questionUrdu": "اگر کسی data set کا variance 49 ہو تو اس کا standard deviation کیا ہوگا؟",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "49"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 7 ہے۔ Standard deviation، variance کا مثبت square root ہوتا ہے اور √49 = 7۔",
+    "source": {
+      "type": "practice",
+      "label": "s2",
+      "referenceUrl": "https://csrc.nist.gov/glossary/term/s2",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q098",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/s2",
+        "label": "s2",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "us-nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST states that variance equals standard deviation squared, so a variance of 49 corresponds to a standard deviation of 7."
+      },
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm",
+        "label": "Measures of Scale",
+        "publisher": "NIST/SEMATECH",
+        "authorityId": "nist-sematech",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NIST/SEMATECH handbook independently defines standard deviation as the square root of variance."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q099-SRC",
+    "pairId": "ADV2E102-U0032-Q099",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "In the social-separation sense, which word is the clearest opposite of 'segregation'?",
+    "questionUrdu": "سماجی separation کے معنی میں segregation کا واضح opposite کون سا لفظ ہے؟",
+    "options": [
+      "Appreciation",
+      "Collecting",
+      "Integration",
+      "Union"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Integration ہے۔ Segregation گروہوں کو الگ رکھنے جبکہ integration انہیں مساوی طور پر مشترک نظام یا معاشرے میں شامل کرنے کا تصور ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Segregation",
+      "referenceUrl": "https://www.oxfordlearnersdictionaries.com/us/definition/english/segregation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q099"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/segregation",
+        "label": "Segregation",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford's learner dictionary contrasts segregation with desegregation or integration."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/integration",
+        "label": "Integration",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines integration in this sense as incorporating people of different groups as equals into society or an organization."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The sense was specified because words can have different opposites in different contexts. Here segregation means enforced separation, so integration is the clearest listed antonym."
+  },
+  {
+    "id": "ADV2E102-U0032-Q099-SIM",
+    "pairId": "ADV2E102-U0032-Q099",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word specifically means the process of ending enforced segregation?",
+    "questionUrdu": "Enforced segregation ختم کرنے کے process کے لیے کون سا مخصوص لفظ استعمال ہوتا ہے؟",
+    "options": [
+      "Desegregation",
+      "Isolation",
+      "Separation",
+      "Exclusion"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Desegregation ہے۔ یہ قانونی یا عملی separation ختم کرنے کا عمل ہے جبکہ integration مشترک شرکت کا نتیجہ یا وسیع process ہو سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Segregation",
+      "referenceUrl": "https://www.oxfordlearnersdictionaries.com/us/definition/english/segregation",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q099",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/segregation",
+        "label": "Segregation",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford's segregation entry explicitly identifies desegregation and integration as contrasting processes."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/integration",
+        "label": "Integration",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster's integration definition independently describes equal incorporation after separation barriers are removed."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0032-Q100-SRC",
+    "pairId": "ADV2E102-U0032-Q100",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Through which constitutional amendment did Pakistan's Parliament approve the 1985 insertion of Article 2A, which made the Objectives Resolution a substantive part of the Constitution?",
+    "questionUrdu": "1985 میں Article 2A کی insertion، جس نے Objectives Resolution کو Constitution کا substantive part بنایا، Parliament نے کس amendment کے ذریعے approve کی؟",
+    "options": [
+      "9th",
+      "10th",
+      "11th",
+      "8th"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 8th Amendment ہے۔ Article 2A پہلے P.O. No. 14 of 1985 سے insert ہوا اور بعد میں Parliament نے Eighth Amendment کے ذریعے اس تبدیلی کو approval دی۔",
+    "source": {
+      "type": "book",
+      "label": "Constitution Petition No. 12 of 2010 judgment",
+      "referenceUrl": "https://www.supremecourt.gov.pk/downloads_judgements/Const.P.12of2010.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q100"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.supremecourt.gov.pk/downloads_judgements/Const.P.12of2010.pdf",
+        "label": "Constitution Petition No. 12 of 2010 judgment",
+        "publisher": "Supreme Court of Pakistan",
+        "authorityId": "pakistan-supreme-court",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Supreme Court states that Article 2A was inserted by the Revival of the Constitution of 1973 Order, 1985 and received parliamentary approval through the Eighth Amendment."
+      },
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator9d8e2ecc414c6d3371ac41114b61a2c4.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan",
+        "publisher": "Ministry of Law and Justice, Pakistan Code",
+        "authorityId": "pakistan-code",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official consolidated Constitution contains Article 2A and its Annex, and records the 1985 Presidential Order that inserted the provision."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1985-11-11",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The book's claim that the Quran and Sunnah were simply 'declared the supreme law under the Eighth Amendment' is legally imprecise. Article 227 was already part of the 1973 Constitution; Article 2A was inserted by P.O. No. 14 of 1985 and Parliament approved that change through the Eighth Amendment."
+  },
+  {
+    "id": "ADV2E102-U0032-Q100-SIM",
+    "pairId": "ADV2E102-U0032-Q100",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Which 1985 legal instrument originally inserted Article 2A into Pakistan's Constitution?",
+    "questionUrdu": "Pakistan کے Constitution میں Article 2A اصل میں کس 1985 legal instrument نے insert کیا؟",
+    "options": [
+      "P.O. No. 14 of 1985",
+      "Legal Framework Order 1970",
+      "Constitution Order 1981",
+      "Provisional Constitution Order 1999"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب P.O. No. 14 of 1985 ہے۔ Revival of the Constitution of 1973 Order نے Article 2A insert کیا اور بعد میں Eighth Amendment نے parliamentary approval دی۔",
+    "source": {
+      "type": "practice",
+      "label": "Constitution Petition No. 12 of 2010 judgment",
+      "referenceUrl": "https://www.supremecourt.gov.pk/downloads_judgements/Const.P.12of2010.pdf",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0032-q100",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.supremecourt.gov.pk/downloads_judgements/Const.P.12of2010.pdf",
+        "label": "Constitution Petition No. 12 of 2010 judgment",
+        "publisher": "Supreme Court of Pakistan",
+        "authorityId": "pakistan-supreme-court",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Supreme Court states that the Revival of the Constitution of 1973 Order, P.O. No. 14 of 1985, inserted Article 2A."
+      },
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator9d8e2ecc414c6d3371ac41114b61a2c4.pdf",
+        "label": "Constitution of the Islamic Republic of Pakistan",
+        "publisher": "Ministry of Law and Justice, Pakistan Code",
+        "authorityId": "pakistan-code",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan Code's official constitutional footnote independently records insertion by P.O. No. 14 of 1985."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

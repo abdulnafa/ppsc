@@ -1,0 +1,1533 @@
+[
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q001",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "When is United Nations Day observed each year? Correct answer: 24 October.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0041-Q012-SIM",
+        "ADV2E102-U0032-Q024",
+        "ADV2E102-U0031-Q012-SIM",
+        "ADV2E102-U0032-Q024-SRC",
+        "ADV2E102-U0001-Q015",
+        "ADV2E102-U0032-Q058",
+        "ADV2E102-U0041-Q003",
+        "ADV2E102-U0101-Q005",
+        "ADV2E102-U0001-Q015-SRC",
+        "ADV2E102-U0021-Q004-SIM",
+        "ADV2E102-U0032-Q019-SIM",
+        "ADV2E102-U0032-Q058-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q002",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "In which city is the headquarters of the International Energy Agency (IEA)? Correct answer: Paris.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0081-Q037-SIM",
+        "ADV2E102-U0081-Q037",
+        "ADV2E102-U0081-Q037-SRC",
+        "P237-Q001-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q003",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "MI5, formally called the Security Service, is an intelligence agency of which country? Correct answer: United Kingdom.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0061-Q016",
+        "ADV2E102-U0061-Q016-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q004",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "The source's count of 'European countries' in the United Nations has no stable official classification and the verification remains unresolved; it must not enter enrichment.",
+    "testedProposition": "How many European countries are members of the United Nations (UN)? Correct answer: unresolved.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q058",
+        "ADV2E102-U0032-Q058-SRC",
+        "ADV2E102-U0032-Q058-SIM",
+        "ADV2E102-U0032-Q023",
+        "ADV2E102-U0032-Q024",
+        "ADV2E102-U0032-Q024-SRC",
+        "ADV2E102-U0021-Q017",
+        "ADV2E102-U0071-Q004",
+        "ADV2E102-U0111-Q089",
+        "ADV2E102-U0071-Q004-SRC"
+      ],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q005",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Since which year have authorities on the two sides of the Taiwan Strait exercised separate governance? Correct answer: 1949.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0101-Q012",
+        "ADV2E102-U0101-Q012-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q006",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0160-Q027",
+    "reason": "The date–observance proposition that 5 June is World Environment Day is already tested by the earlier retained canonical; reversing the prompt adds no new fact.",
+    "testedProposition": "Which international observance is held annually on 5 June? Correct answer: World Environment Day.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q009",
+        "ADV2E102-U0021-Q009-SRC",
+        "ADV2E102-U0001-Q003",
+        "ADV2E102-U0061-Q002",
+        "ADV2E102-U0001-Q003-SRC",
+        "ADV2E102-U0061-Q002-SRC",
+        "ADV2E102-U0001-Q015",
+        "ADV2E102-U0001-Q015-SRC",
+        "ADV2E102-U0032-Q019-SIM",
+        "ADV2E102-U0160-Q027"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q007",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Which Dominion was named alongside Canada and Australia in the preamble to the Statute of Westminster 1931? Correct answer: New Zealand.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q008",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "In which city is the headquarters of the International Electrotechnical Commission (IEC)? Correct answer: Geneva.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P235-Q008-SRC",
+        "P237-Q001-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q009",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Tian'anmen Square is located in which country? Correct answer: China.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0041-Q067",
+        "ADV2E102-U0041-Q067-SRC",
+        "ADV2E102-U0041-Q067-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q010",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0131-Q034",
+    "reason": "Captain Mohan Singh's leadership of the first Indian National Army formed in Singapore in 1942 is already tested by the earlier retained canonical.",
+    "testedProposition": "Who organized and commanded the first Indian National Army in Singapore in 1942? Correct answer: Captain Mohan Singh.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0131-Q034"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q011",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Which proposed CPEC rail project would build a new track northward from Havelian to the China border at Khunjerab? Correct answer: Havelian–Khunjerab new rail link.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q012",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Who started the Urdu weekly Al-Hilal in 1912? Correct answer: Abul Kalam Azad.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q013",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Which expression appeared in the original 1940 Lahore Resolution for the Muslim-majority north-western and eastern zones? Correct answer: Independent States.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q010-SIM",
+        "P234-Q016-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q014",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Who founded the Punjab Nationalist Unionist Party in 1923 and became its first president? Correct answer: Sir Fazl-i-Hussain.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q015",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Which college did Quaid-e-Azam Muhammad Ali Jinnah visit in 1936, 1945 and 1948? Correct answer: Islamia College Peshawar.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P239-Q006-SIM",
+        "P239-Q006-SRC",
+        "ADV2E102-U0034-Q012-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q016",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "On which date did former Prime Minister Mir Zafarullah Khan Jamali die? Correct answer: 2 December 2020.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P237-Q008-SIM",
+        "ADV2E102-U0011-Q043",
+        "ADV2E102-U0011-Q043-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q017",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "In which year was the Gilgit-Baltistan (Empowerment and Self-Governance) Order introduced? Correct answer: 2009.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q018",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0021-Q031",
+    "reason": "Ghiyasuddin Tughlaq as founder and first ruler of the Tughlaq dynasty is the same tested proposition as the earlier retained canonical.",
+    "testedProposition": "Who founded the Tughlaq dynasty of the Delhi Sultanate? Correct answer: Ghiyasuddin Tughlaq.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q031",
+        "ADV2E102-U0021-Q031-SRC",
+        "ADV2E102-U0061-Q011",
+        "ADV2E102-U0061-Q011-SRC",
+        "IBES-Q0062-SRC",
+        "IBES-Q0622-SRC",
+        "IBES-Q0625-SRC",
+        "IBES-Q0630-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q019",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Who presided over the Muslim leaders' meeting that finalized the Delhi Muslim Proposals in March 1927? Correct answer: Muhammad Ali Jinnah.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q020",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Which pair represents the principal tribal communities of North Waziristan? Correct answer: Wazir and Dawar.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q021",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "In which Egyptian city is the mausoleum of Aga Khan III located? Correct answer: Aswan.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0034-Q022",
+        "ADV2E102-U0034-Q022-SRC",
+        "ADV2E102-U0071-Q018-SIM",
+        "ADV2E102-U0051-Q047"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q022",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Which operation did Pakistan launch in Swat and the wider Malakand region in May 2009 after the peace arrangement failed? Correct answer: Rah-e-Rast.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q023",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Who founded Dawn as a weekly newspaper in Delhi in 1941? Correct answer: Muhammad Ali Jinnah.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0061-Q011",
+        "ADV2E102-U0061-Q011-SRC",
+        "IBES-Q0062-SRC",
+        "IBES-Q0622-SRC",
+        "IBES-Q0625-SRC",
+        "IBES-Q0630-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q024",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "According to Pakistan's Labour Force Survey 2020-21, which sector had the largest share of employed persons? Correct answer: Agriculture.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q035-SIM",
+        "ADV2E102-U0021-Q034",
+        "ADV2E102-U0021-Q034-SRC",
+        "ADV2E102-U0033-Q017-SIM",
+        "ADV2E102-U0071-Q022-SIM",
+        "ADV2E102-U0041-Q028",
+        "ADV2E102-U0051-Q046",
+        "ADV2E102-U0081-Q025",
+        "ADV2E102-U0021-Q033-SIM",
+        "P236-Q017-SRC",
+        "ADV2E102-U0121-Q026"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q025",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "In which year did the Delhi Convention of Muslim League legislators replace 'states' with 'state' in the Lahore Resolution's formulation? Correct answer: 1946.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P234-Q016-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q026",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "At the 14th Islamic Summit in Makkah on 31 May 2019, which organization appointed a Special Envoy for Jammu and Kashmir? Correct answer: Organisation of Islamic Cooperation.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q027",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Which province of British India was divided in 1947 into West Punjab in Pakistan and East Punjab in India? Correct answer: Punjab.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0061-Q058",
+        "ADV2E102-U0101-Q041",
+        "ADV2E102-U0101-Q041-SRC",
+        "ADV2E102-U0091-Q030",
+        "ADV2E102-U0031-Q028-SIM",
+        "ADV2E102-U0091-Q030-SRC",
+        "P239-Q007-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q028",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "In which year did the princely state of Chitral merge into Pakistan's settled administrative structure? Correct answer: 1969.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0041-Q038",
+        "ADV2E102-U0041-Q038-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q029",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Which period did Pakistan's First Five-Year Plan cover? Correct answer: 1955-60.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0041-Q020-SIM",
+        "P236-Q008-SRC",
+        "P238-Q002-SRC",
+        "ADV2E102-U0041-Q028",
+        "ADV2E102-U0051-Q046",
+        "ADV2E102-U0081-Q025",
+        "ADV2E102-U0081-Q016-SIM",
+        "ADV2E102-U0081-Q033-SIM",
+        "ADV2E102-U0032-Q055",
+        "ADV2E102-U0032-Q055-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q030",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Which government formally referred the Jammu and Kashmir situation to the United Nations Security Council by a letter dated 1 January 1948? Correct answer: India.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q024",
+        "ADV2E102-U0121-Q023",
+        "ADV2E102-U0031-Q012-SIM",
+        "ADV2E102-U0032-Q024-SRC",
+        "ADV2E102-U0032-Q058",
+        "ADV2E102-U0041-Q003",
+        "ADV2E102-U0101-Q005",
+        "ADV2E102-U0021-Q004-SIM",
+        "ADV2E102-U0032-Q058-SRC",
+        "ADV2E102-U0041-Q003-SRC",
+        "ADV2E102-U0101-Q005-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q031",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "In which city is the CPEC Allama Iqbal Industrial City special economic zone located? Correct answer: Faisalabad.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q032",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Which country enacted a law in December 2020 granting former presidents lifetime immunity from prosecution for acts committed during and after their terms? Correct answer: Russia.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q033",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "In the survey designation 'K2', what did the letter K stand for? Correct answer: Karakoram.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0151-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q034",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Greenwich, home of the Royal Observatory and the Prime Meridian, is a district of which city? Correct answer: London.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0081-Q004",
+        "ADV2E102-U0091-Q007",
+        "ADV2E102-U0101-Q001",
+        "ADV2E102-U0021-Q002-SIM",
+        "ADV2E102-U0071-Q008-SIM",
+        "ADV2E102-U0081-Q004-SRC",
+        "ADV2E102-U0091-Q007-SRC",
+        "ADV2E102-U0101-Q001-SRC",
+        "P235-Q008-SRC",
+        "ADV2E102-U0051-Q047"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q035",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0021-Q022",
+    "reason": "The Diamer-Bhasha Dam Project being located on the Indus River is already tested verbatim in substance by the earlier retained canonical.",
+    "testedProposition": "On which river is the Diamer-Bhasha Dam being constructed? Correct answer: Indus.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0033-Q026",
+        "ADV2E102-U0033-Q010",
+        "ADV2E102-U0033-Q010-SRC",
+        "P236-Q022-SIM",
+        "ADV2E102-U0021-Q022",
+        "ADV2E102-U0021-Q022-SRC",
+        "ADV2E102-U0041-Q019",
+        "ADV2E102-U0041-Q019-SRC",
+        "P236-Q021-SRC",
+        "P237-Q016-SRC",
+        "P237-Q018-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q036",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "According to IARC's global projection, which disease was expected to reach about 29 million new cases per year by 2040? Correct answer: Cancer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q037",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Which influenza subtype is primarily an avian influenza virus but can occasionally infect humans? Correct answer: H5N1 avian influenza.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0121-Q048",
+        "ADV2E102-U0061-Q066",
+        "ADV2E102-U0061-Q066-SRC",
+        "IBES-Q0200-SIM",
+        "IBES-Q0364-SRC",
+        "IBES-Q0618-SIM",
+        "IBES-Q1204-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q038",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "In 2023, which listed country was the largest emitter in both the IEA energy-related CO2 dataset and EDGAR's total greenhouse-gas dataset? Correct answer: China.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0131-Q049",
+        "ADV2E102-U0021-Q046",
+        "ADV2E102-U0121-Q041",
+        "ADV2E102-U0021-Q046-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q039",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0004-SRC",
+    "reason": "Charles Babbage as designer of the Difference Engine is already tested by the retained IBES canonical, which also covers the Analytical Engine.",
+    "testedProposition": "Who designed the Difference Engine, an early automatic mechanical calculator and ancestor of modern computers? Correct answer: Charles Babbage.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P239-Q031-SRC",
+        "IBES-Q0024-SRC",
+        "IBES-Q0009-SRC",
+        "IBES-Q0004-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q040",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "What is the name of the curved punctuation mark represented by either '(' or ')'? Correct answer: Parenthesis.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0033-Q048",
+        "ADV2E102-U0011-Q050-SIM",
+        "ADV2E102-U0033-Q042-SIM",
+        "ADV2E102-U0033-Q048-SRC",
+        "IBES-Q0272-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q041",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Which pair co-founded Mosaic Communications in 1994, the company later renamed Netscape Communications? Correct answer: Jim Clark and Marc Andreessen.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0061-Q011",
+        "ADV2E102-U0061-Q011-SRC",
+        "IBES-Q0062-SRC",
+        "IBES-Q0622-SRC",
+        "IBES-Q0625-SRC",
+        "IBES-Q0630-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q042",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Which non-impact printer type ejects microscopic ink droplets through an array of tiny nozzles onto the printing surface? Correct answer: Inkjet printer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q043",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0052-SRC",
+    "reason": "Artificial intelligence as the field associated with the conventional fifth-generation computer concept is already tested by the retained IBES canonical.",
+    "testedProposition": "In the traditional five-generation textbook classification of computers, artificial intelligence is associated with which generation? Correct answer: Fifth generation.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0034-Q055",
+        "IBES-Q0133-SRC",
+        "ADV2E102-U0111-Q022",
+        "ADV2E102-U0111-Q022-SRC",
+        "IBES-Q0052-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q044",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0985-SRC",
+    "reason": "Indentation as moving paragraph text inward from the page margin is already tested by the retained IBES canonical.",
+    "testedProposition": "In word processing, what is moving the first line or an entire paragraph inward from the page margin called? Correct answer: Indentation.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0985-SRC",
+        "IBES-Q0921-SRC",
+        "IBES-Q0922-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q045",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0988-SRC",
+    "reason": "The extra binding-side margin space called a gutter is already tested by the retained IBES canonical.",
+    "testedProposition": "What is the extra inside-margin space added so that text is not obscured by a document's binding called? Correct answer: Gutter margin.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0988-SRC",
+        "IBES-Q0985-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q046",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0011-SRC",
+    "reason": "J. Presper Eckert and John Mauchly as ENIAC's principal inventors/designers are already tested by the retained IBES canonical.",
+    "testedProposition": "Who were the principal designers and co-inventors of ENIAC? Correct answer: J. Presper Eckert and John Mauchly.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0010-SRC",
+        "IBES-Q0010-SIM",
+        "IBES-Q0011-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q047",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0765-SRC",
+    "reason": "Ctrl+5 applying 1.5-line spacing to a Word paragraph is already tested by the retained IBES canonical.",
+    "testedProposition": "In Microsoft Word desktop, what line spacing does Ctrl+5 apply to the selected paragraph? Correct answer: 1.5-line spacing.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0765-SRC",
+        "ADV2E102-U0121-Q055",
+        "ADV2E102-U0034-Q062",
+        "IBES-Q0745-SRC",
+        "IBES-Q0748-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q048",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "What is the value of sin(90 degrees) multiplied by cos(90 degrees)? Correct answer: 0.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q049",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "If A(2,3), B(-2,2), C(-1,-2) and D are consecutive vertices of square ABCD, what are the coordinates of D? Correct answer: (3,-1).",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0081-Q060",
+        "ADV2E102-U0081-Q060-SRC",
+        "ADV2E102-U0081-Q058",
+        "ADV2E102-U0091-Q063",
+        "ADV2E102-U0081-Q058-SRC",
+        "ADV2E102-U0091-Q063-SRC",
+        "P239-Q064-SIM",
+        "ADV2E102-U0091-Q063-SIM",
+        "P237-Q038-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q050",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "If 78 students represent 30 percent of a class, what is the class's total number of students? Correct answer: 260.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q051",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "What is the sum of 0.3 + 0.03 + 0.003 + 0.0003? Correct answer: 0.3333.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0091-Q062",
+        "ADV2E102-U0091-Q062-SRC",
+        "P236-Q050-SIM",
+        "P239-Q071-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q052",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "What is the additive inverse of -5? Correct answer: 5.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q053",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "If an arrangement has an equal number of rows and columns and the number of rows is represented by K, what represents the number of columns? Correct answer: K.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q054",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "P238-Q073-SIM",
+    "reason": "An exclamation mark as the punctuation for a direct exclamation or strong stand-alone interjection is already tested by the retained baseline item.",
+    "testedProposition": "Which punctuation mark conventionally follows a stand-alone strong interjection such as 'Alas'? Correct answer: Exclamation mark.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P236-Q074-SRC",
+        "P238-Q073-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q055",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "What is the grammatical arrangement of words in a sentence called? Correct answer: Syntax.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q056",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Which option is an antonym of 'germane'? Correct answer: Irrelevant.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P234-Q008-SIM",
+        "P238-Q063-SIM",
+        "P234-Q008-SRC",
+        "P235-Q037-SIM",
+        "P235-Q040-SRC",
+        "P238-Q062-SRC",
+        "P239-Q046-SRC",
+        "P239-Q049-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q057",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "Who wrote the line 'The Child is father of the Man' in the poem 'My Heart Leaps Up'? Correct answer: William Wordsworth.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P236-Q062-SIM",
+        "ADV2E102-U0051-Q018",
+        "ADV2E102-U0051-Q018-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q058",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0011-Q078",
+    "reason": "The exact idiom proposition 'call it a day' meaning to stop working for the present is already tested by the earlier retained pair's SIM.",
+    "testedProposition": "What does the idiom 'call it a day' mean? Correct answer: To stop working for the day or for the present.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q078-SIM",
+        "ADV2E102-U0011-Q072",
+        "ADV2E102-U0011-Q078",
+        "ADV2E102-U0041-Q090",
+        "ADV2E102-U0081-Q074",
+        "ADV2E102-U0011-Q072-SRC",
+        "ADV2E102-U0011-Q072-SIM",
+        "ADV2E102-U0011-Q078-SRC",
+        "ADV2E102-U0041-Q090-SRC",
+        "ADV2E102-U0081-Q074-SRC",
+        "ADV2E102-U0011-Q092",
+        "ADV2E102-U0021-Q077"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q059",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Yesterday, Aslam ____ police protection. Correct answer: asked for.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q060",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "You should not feel jealous ____ your brother's success. Correct answer: of.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q061",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Which option is a synonym of 'nexus'? Correct answer: Connection.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q062",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "testedProposition": "What does the idiom 'work against the clock' mean? Correct answer: Work very quickly to finish before a deadline.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q072",
+        "ADV2E102-U0011-Q078",
+        "ADV2E102-U0041-Q090",
+        "ADV2E102-U0081-Q074",
+        "ADV2E102-U0011-Q072-SRC",
+        "ADV2E102-U0011-Q072-SIM",
+        "ADV2E102-U0011-Q078-SRC",
+        "ADV2E102-U0011-Q078-SIM",
+        "ADV2E102-U0041-Q090-SRC",
+        "ADV2E102-U0081-Q074-SRC",
+        "ADV2E102-U0011-Q092",
+        "ADV2E102-U0021-Q077"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0169-Q063",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item baseline or earlier retained ADV2E102 source/SIM material, so this independently verified proposition is retained.",
+    "testedProposition": "Which word completes 'He is ____ weak' when the intended meaning is 'weak to a great degree' without implying excess or a following result clause? Correct answer: very.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  }
+]

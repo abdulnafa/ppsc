@@ -1,0 +1,2582 @@
+[
+  {
+    "id": "ADV2E102-U0101-Q051-SRC",
+    "pairId": "ADV2E102-U0101-Q051",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "Which of these mass-wasting processes is characteristically slow enough that a person could readily outrun it?",
+    "questionUrdu": "ان mass-wasting processes میں کون سا اتنا آہستہ ہوتا ہے کہ آدمی آسانی سے اس سے آگے نکل سکتا ہے؟",
+    "options": [
+      "Debris flow",
+      "Soil creep",
+      "Rock avalanche",
+      "Landslide"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Soil creep ہے۔ یہ مٹی اور سطحی مواد کی ڈھلوان پر انتہائی سست اور مسلسل حرکت ہے جو اکثر فوری طور پر محسوس نہیں ہوتی۔",
+    "source": {
+      "type": "book",
+      "label": "Landslide types and processes",
+      "referenceUrl": "https://www.usgs.gov/programs/landslide-hazards/science/landslide-types-and-processes",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q051"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.usgs.gov/programs/landslide-hazards/science/landslide-types-and-processes",
+        "label": "Landslide types and processes",
+        "publisher": "US Geological Survey",
+        "authorityId": "usgs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "USGS describes creep as imperceptibly slow, steady downward movement."
+      },
+      {
+        "url": "https://www.bgs.ac.uk/discovering-geology/earth-hazards/landslides/",
+        "label": "Landslides",
+        "publisher": "British Geological Survey",
+        "authorityId": "british-geological-survey",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "BGS independently distinguishes very slow soil creep from rapid mass movements."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The comparative stem and choices were repaired so one process is uniquely slow; vague 'debris' and 'slump' choices were replaced."
+  },
+  {
+    "id": "ADV2E102-U0101-Q051-SIM",
+    "pairId": "ADV2E102-U0101-Q051",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "In what general direction does soil creep move loose material?",
+    "questionUrdu": "Soil creep ڈھیلے زمینی material کو عمومی طور پر کس سمت حرکت دیتا ہے؟",
+    "options": [
+      "Downslope",
+      "Vertically upward",
+      "Toward the equator",
+      "Across level ground only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Downslope ہے۔ gravity کے زیر اثر مٹی کے ذرات بہت آہستگی سے ڈھلوان کے نیچے سرکتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Landslide types and processes",
+      "referenceUrl": "https://www.usgs.gov/programs/landslide-hazards/science/landslide-types-and-processes",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q051",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.usgs.gov/programs/landslide-hazards/science/landslide-types-and-processes",
+        "label": "Landslide types and processes",
+        "publisher": "US Geological Survey",
+        "authorityId": "usgs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "US Geological Survey supports that soil creep moves loose surface material slowly downslope."
+      },
+      {
+        "url": "https://www.bgs.ac.uk/discovering-geology/earth-hazards/landslides/",
+        "label": "Landslides",
+        "publisher": "British Geological Survey",
+        "authorityId": "british-geological-survey",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Geological Survey supports that soil creep moves loose surface material slowly downslope."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q052-SRC",
+    "pairId": "ADV2E102-U0101-Q052",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Ignoring air resistance, what is the acceleration of a ball while it is moving vertically upward near Earth's surface?",
+    "questionUrdu": "air resistance نظر انداز کرتے ہوئے، اوپر جاتی ہوئی ball کی acceleration زمین کی سطح کے قریب کیا ہوگی؟",
+    "options": [
+      "9.8 m/s² downward",
+      "9.8 m/s² upward",
+      "Zero",
+      "It changes direction at the top"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 9.8 m/s² downward ہے۔ ball اوپر جا رہی ہو یا نیچے، gravity کی acceleration مسلسل زمین کی طرف رہتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Acceleration due to gravity",
+      "referenceUrl": "https://pwg.gsfc.nasa.gov/stargaze/Saccelg.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q052"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pwg.gsfc.nasa.gov/stargaze/Saccelg.htm",
+        "label": "Acceleration due to gravity",
+        "publisher": "NASA Goddard Space Flight Center",
+        "authorityId": "nasa-goddard",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA gives gravitational acceleration near Earth's surface as about 9.8 m/s² directed downward."
+      },
+      {
+        "url": "https://openstax.org/books/physics/pages/5-3-projectile-motion",
+        "label": "Projectile Motion",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The physics text independently treats gravitational acceleration as downward throughout upward and downward motion."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source mixed a negative sign with the word downward, which depends on coordinate convention. The repaired choices use magnitude plus direction once."
+  },
+  {
+    "id": "ADV2E102-U0101-Q052-SIM",
+    "pairId": "ADV2E102-U0101-Q052",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "At the highest point of a vertically thrown ball's flight, which statement is correct?",
+    "questionUrdu": "عمودی طور پر پھینکی گئی ball کے بلند ترین مقام پر کون سا بیان درست ہے؟",
+    "options": [
+      "Velocity is zero but acceleration is downward",
+      "Velocity and acceleration are both zero",
+      "Acceleration is upward",
+      "Velocity is maximum upward"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Velocity is zero but acceleration is downward ہے۔ بلند ترین نقطے پر رفتار لمحاتی طور پر صفر ہوتی ہے مگر gravity برقرار رہتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Acceleration due to gravity",
+      "referenceUrl": "https://pwg.gsfc.nasa.gov/stargaze/Saccelg.htm",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q052",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pwg.gsfc.nasa.gov/stargaze/Saccelg.htm",
+        "label": "Acceleration due to gravity",
+        "publisher": "NASA Goddard Space Flight Center",
+        "authorityId": "nasa-goddard",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA Goddard Space Flight Center supports that at the highest point of vertical flight the ball's velocity is momentarily zero while acceleration remains downward."
+      },
+      {
+        "url": "https://openstax.org/books/physics/pages/5-3-projectile-motion",
+        "label": "Projectile Motion",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that at the highest point of vertical flight the ball's velocity is momentarily zero while acceleration remains downward."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q054-SRC",
+    "pairId": "ADV2E102-U0101-Q054",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which atmospheric objects refract, internally reflect and disperse sunlight to form a rainbow?",
+    "questionUrdu": "کون سے atmospheric objects sunlight کو refract، internally reflect اور disperse کر کے rainbow بناتے ہیں؟",
+    "options": [
+      "Ice-free clouds alone",
+      "Dust particles",
+      "Water droplets",
+      "All airborne particles"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Water droplets ہے۔ بارش کے قطرے روشنی کو موڑتے، اندر منعکس کرتے اور رنگوں میں تقسیم کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Rainbows",
+      "referenceUrl": "https://www.noaa.gov/jetstream/rainbows",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q054"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.noaa.gov/jetstream/rainbows",
+        "label": "Rainbows",
+        "publisher": "National Oceanic and Atmospheric Administration",
+        "authorityId": "noaa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NOAA explains rainbow formation through refraction, reflection and dispersion in water droplets."
+      },
+      {
+        "url": "https://weather.metoffice.gov.uk/learn-about/weather/optical-effects/rainbows",
+        "label": "Rainbows",
+        "publisher": "UK Met Office",
+        "authorityId": "uk-met-office",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Met Office independently explains that raindrops form rainbows from sunlight."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The physical processes were added, 'rain drops' was standardized and the false compound option was replaced."
+  },
+  {
+    "id": "ADV2E102-U0101-Q054-SIM",
+    "pairId": "ADV2E102-U0101-Q054",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "In a primary rainbow, which colour appears on the outer edge?",
+    "questionUrdu": "primary rainbow میں کون سا رنگ بیرونی کنارے پر نظر آتا ہے؟",
+    "options": [
+      "Red",
+      "Violet",
+      "Blue",
+      "Green"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Red ہے۔ primary rainbow میں سرخ روشنی کم منحرف ہو کر بیرونی طرف اور violet اندرونی طرف دکھائی دیتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Rainbows",
+      "referenceUrl": "https://www.noaa.gov/jetstream/rainbows",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q054",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.noaa.gov/jetstream/rainbows",
+        "label": "Rainbows",
+        "publisher": "National Oceanic and Atmospheric Administration",
+        "authorityId": "noaa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Oceanic and Atmospheric Administration supports that red appears on the outer edge of a primary rainbow."
+      },
+      {
+        "url": "https://weather.metoffice.gov.uk/learn-about/weather/optical-effects/rainbows",
+        "label": "Rainbows",
+        "publisher": "UK Met Office",
+        "authorityId": "uk-met-office",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UK Met Office supports that red appears on the outer edge of a primary rainbow."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q055-SRC",
+    "pairId": "ADV2E102-U0101-Q055",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "In a vacuum, how does the speed of electromagnetic waves compare with the speed of visible light?",
+    "questionUrdu": "vacuum میں electromagnetic waves کی رفتار visible light کی رفتار کے مقابلے میں کیسی ہوتی ہے؟",
+    "options": [
+      "Greater",
+      "Less",
+      "The same",
+      "Unrelated"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب The same ہے۔ visible light خود electromagnetic spectrum کا حصہ ہے اور vacuum میں تمام electromagnetic waves رفتارِ نور سے چلتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Anatomy of an Electromagnetic Wave",
+      "referenceUrl": "https://science.nasa.gov/ems/02_anatomy/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q055"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://science.nasa.gov/ems/02_anatomy/",
+        "label": "Anatomy of an Electromagnetic Wave",
+        "publisher": "NASA Science",
+        "authorityId": "nasa-science",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA explains that all electromagnetic waves travel at the speed of light in a vacuum."
+      },
+      {
+        "url": "https://www.nist.gov/pml/owm/si-units-length",
+        "label": "SI unit of length and speed of light",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST gives the defined vacuum speed of light for electromagnetic radiation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The necessary vacuum condition and visible-light comparison were added."
+  },
+  {
+    "id": "ADV2E102-U0101-Q055-SIM",
+    "pairId": "ADV2E102-U0101-Q055",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What is the exact defined speed of light in vacuum in metres per second?",
+    "questionUrdu": "vacuum میں light کی exact defined speed metres per second میں کیا ہے؟",
+    "options": [
+      "299,792,458",
+      "300,792,458",
+      "299,792,000",
+      "3,000,000"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 299,792,458 ہے۔ SI نظام میں vacuum کی speed of light یہی exact defined constant ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Anatomy of an Electromagnetic Wave",
+      "referenceUrl": "https://science.nasa.gov/ems/02_anatomy/",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q055",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://science.nasa.gov/ems/02_anatomy/",
+        "label": "Anatomy of an Electromagnetic Wave",
+        "publisher": "NASA Science",
+        "authorityId": "nasa-science",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA Science supports that the exact defined speed of light in vacuum is 299,792,458 metres per second."
+      },
+      {
+        "url": "https://www.nist.gov/pml/owm/si-units-length",
+        "label": "SI unit of length and speed of light",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Institute of Standards and Technology supports that the exact defined speed of light in vacuum is 299,792,458 metres per second."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q060-SRC",
+    "pairId": "ADV2E102-U0101-Q060",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which operating-system service manages queued print jobs before sending them to a printer?",
+    "questionUrdu": "کون سی operating-system service print jobs کو printer بھیجنے سے پہلے queue میں manage کرتی ہے؟",
+    "options": [
+      "Print spooler",
+      "Boot loader",
+      "File compressor",
+      "Display driver"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Print spooler ہے۔ یہ jobs وصول کرتا، ترتیب دیتا اور printer دستیاب ہونے پر انہیں باری باری بھیجتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Introduction to spooler components",
+      "referenceUrl": "https://learn.microsoft.com/en-us/windows-hardware/drivers/print/introduction-to-spooler-components",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q060"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/print/introduction-to-spooler-components",
+        "label": "Introduction to spooler components",
+        "publisher": "Microsoft Learn",
+        "authorityId": "microsoft-learn",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft explains that the print spooler receives, schedules and sends print jobs."
+      },
+      {
+        "url": "https://www.cups.org/doc/overview.html",
+        "label": "CUPS overview",
+        "publisher": "OpenPrinting",
+        "authorityId": "openprinting-cups",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The CUPS documentation independently describes the print scheduler and queued jobs."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source sentence ('used to print the document and store software') and its choices did not form a coherent question. It was replaced by a uniquely answerable print-service fact; the printed 'None of these' key was not retained."
+  },
+  {
+    "id": "ADV2E102-U0101-Q060-SIM",
+    "pairId": "ADV2E102-U0101-Q060",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What normally happens to a print job when the printer is temporarily busy?",
+    "questionUrdu": "جب printer عارضی طور پر busy ہو تو print job کے ساتھ عموماً کیا ہوتا ہے؟",
+    "options": [
+      "It remains in the spooler's queue",
+      "It is converted into an email",
+      "It is deleted immediately",
+      "It restarts the computer"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب It remains in the spooler's queue ہے۔ spooler job کو محفوظ ترتیب میں رکھتا ہے اور printer دستیاب ہونے پر process کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Introduction to spooler components",
+      "referenceUrl": "https://learn.microsoft.com/en-us/windows-hardware/drivers/print/introduction-to-spooler-components",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q060",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/print/introduction-to-spooler-components",
+        "label": "Introduction to spooler components",
+        "publisher": "Microsoft Learn",
+        "authorityId": "microsoft-learn",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft Learn supports that a print job remains queued by the print spooler while the printer is temporarily busy."
+      },
+      {
+        "url": "https://www.cups.org/doc/overview.html",
+        "label": "CUPS overview",
+        "publisher": "OpenPrinting",
+        "authorityId": "openprinting-cups",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenPrinting supports that a print job remains queued by the print spooler while the printer is temporarily busy."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q061-SRC",
+    "pairId": "ADV2E102-U0101-Q061",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A cricket player's average after 10 innings is 33 runs. How many runs in the 11th innings would raise the average to 36?",
+    "questionUrdu": "ایک cricket player کی 10 innings کے بعد average 33 runs ہے۔ 11th innings میں کتنے runs سے average 36 ہو جائے گا؟",
+    "options": [
+      "56",
+      "66",
+      "76",
+      "86"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 66 ہے۔ پہلے total 10×33=330 ہے، نیا مطلوب total 11×36=396 ہے، اس لیے 396−330=66 runs درکار ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Applications of averages and proportions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q061"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Applications of averages and proportions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The textbook supplies the mean-as-total-divided-by-count method; 10×33=330 and 11×36=396, so 66 runs are needed."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/mean-and-median/a/calculating-the-mean",
+        "label": "Calculating the mean",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent lesson defines mean as the sum divided by the number of values, supporting the same calculation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The target average was stated directly and 'None of these' was replaced."
+  },
+  {
+    "id": "ADV2E102-U0101-Q061-SIM",
+    "pairId": "ADV2E102-U0101-Q061",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Five scores have a mean of 20. If a sixth score is 26, what is the new mean?",
+    "questionUrdu": "پانچ scores کا mean 20 ہے۔ اگر sixth score 26 ہو تو نیا mean کیا ہوگا؟",
+    "options": [
+      "20",
+      "21",
+      "22",
+      "23"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 21 ہے۔ پہلے total 5×20=100، پھر 26 شامل کر کے 126 بنتا ہے اور 126÷6=21۔",
+    "source": {
+      "type": "practice",
+      "label": "Applications of averages and proportions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q061",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Applications of averages and proportions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that five scores averaging 20 plus a sixth score of 26 have a new mean of 21."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/mean-and-median/a/calculating-the-mean",
+        "label": "Calculating the mean",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that five scores averaging 20 plus a sixth score of 26 have a new mean of 21."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q062-SRC",
+    "pairId": "ADV2E102-U0101-Q062",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The average incomes of A and B, B and C, and A and C are respectively 50,000, 60,000 and 55,000. What is B's income?",
+    "questionUrdu": "A اور B، B اور C، اور A اور C کی average incomes بالترتیب 50,000، 60,000 اور 55,000 ہیں۔ B کی income کیا ہے؟",
+    "options": [
+      "45,000",
+      "55,000",
+      "65,000",
+      "75,000"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 55,000 ہے۔ equations A+B=100,000، B+C=120,000 اور A+C=110,000 حل کرنے سے B=55,000 ملتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Systems of linear equations",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/4-1-solve-systems-of-linear-equations-with-two-variables",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q062"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra-2e/pages/4-1-solve-systems-of-linear-equations-with-two-variables",
+        "label": "Systems of linear equations",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The system gives A+B=100000, B+C=120000 and A+C=110000; solving yields B=55000."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_(OpenStax)/04%3A_Systems_of_Linear_Equations/4.01%3A_Solve_Systems_of_Linear_Equations_with_Two_Variables",
+        "label": "Solving systems of linear equations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent algebra reference supports elimination used to obtain B=55,000."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Punctuation and number formatting were repaired; the erroneous 750000 distractor became 75,000."
+  },
+  {
+    "id": "ADV2E102-U0101-Q062-SIM",
+    "pairId": "ADV2E102-U0101-Q062",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Using the same pairwise averages 50,000, 60,000 and 55,000, what is C's income?",
+    "questionUrdu": "انہی pairwise averages 50,000، 60,000 اور 55,000 کی بنیاد پر C کی income کیا ہے؟",
+    "options": [
+      "45,000",
+      "50,000",
+      "55,000",
+      "65,000"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 65,000 ہے۔ B=55,000 اور B+C=120,000 ہونے سے C=65,000 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Systems of linear equations",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/4-1-solve-systems-of-linear-equations-with-two-variables",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q062",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra-2e/pages/4-1-solve-systems-of-linear-equations-with-two-variables",
+        "label": "Systems of linear equations",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the pairwise averages 50,000, 60,000 and 55,000 imply that C's income is 65,000."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_(OpenStax)/04%3A_Systems_of_Linear_Equations/4.01%3A_Solve_Systems_of_Linear_Equations_with_Two_Variables",
+        "label": "Solving systems of linear equations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that the pairwise averages 50,000, 60,000 and 55,000 imply that C's income is 65,000."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q063-SRC",
+    "pairId": "ADV2E102-U0101-Q063",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "In how many unordered ways can 2 students be chosen from a class of 20?",
+    "questionUrdu": "20 طلبہ کی class سے 2 طلبہ منتخب کرنے کے کتنے unordered طریقے ہیں؟",
+    "options": [
+      "190",
+      "180",
+      "240",
+      "390"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 190 ہے۔ چونکہ ترتیب اہم نہیں، اس لیے combination C(20,2)=20×19÷2=190 استعمال ہوگی۔",
+    "source": {
+      "type": "book",
+      "label": "Combinations",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/7-5-combinations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q063"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/7-5-combinations",
+        "label": "Combinations",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Using C(20,2)=20×19/2 gives 190 unordered pairs."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Combinatorics_and_Discrete_Mathematics/Combinatorics_(Morris)/01%3A_Counting/07%3A_Combinations",
+        "label": "Combinations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent reference defines combinations and supports C(20,2)=190."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "'Unordered' was added to distinguish combinations from arrangements."
+  },
+  {
+    "id": "ADV2E102-U0101-Q063-SIM",
+    "pairId": "ADV2E102-U0101-Q063",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "In how many unordered ways can 3 students be selected from a group of 10?",
+    "questionUrdu": "10 طلبہ کے group سے 3 طلبہ منتخب کرنے کے کتنے unordered طریقے ہیں؟",
+    "options": [
+      "30",
+      "90",
+      "120",
+      "720"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 120 ہے۔ C(10,3)=10×9×8÷(3×2×1)=120۔",
+    "source": {
+      "type": "practice",
+      "label": "Combinations",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/7-5-combinations",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q063",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/7-5-combinations",
+        "label": "Combinations",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that three students can be selected from a group of ten in 120 unordered ways."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Combinatorics_and_Discrete_Mathematics/Combinatorics_(Morris)/01%3A_Counting/07%3A_Combinations",
+        "label": "Combinations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that three students can be selected from a group of ten in 120 unordered ways."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q064-SRC",
+    "pairId": "ADV2E102-U0101-Q064",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A rat population is initially 20 and grows to 25 after one year. If the same annual exponential factor continues, which model gives population P after t years?",
+    "questionUrdu": "rat population ابتدا میں 20 ہے اور ایک سال بعد 25 ہو جاتی ہے۔ یہی annual exponential factor رہے تو t years بعد P کا model کیا ہوگا؟",
+    "options": [
+      "P = 5t² + 20",
+      "P = 5t + 20",
+      "P = 20(1.25)^t",
+      "P = 20(5)^t"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب P = 20(1.25)^t ہے۔ growth factor 25÷20=1.25 ہے، جسے ہر سال initial population پر ضرب دی جاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Exponential Functions",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q064"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+        "label": "Exponential Functions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "An exponential model has initial value times growth factor to t; 25/20=1.25."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:exp/x2ec2f6f830c9fb89:exp-models/a/exponential-models-word-problems",
+        "label": "Exponential models",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent lesson supports P=initial×factor^time, yielding 20(1.25)^t."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source said the increase to 25 occurred after the second year, which would require exponent t/2 and made every option wrong. It was repaired to one year to match the intended model."
+  },
+  {
+    "id": "ADV2E102-U0101-Q064-SIM",
+    "pairId": "ADV2E102-U0101-Q064",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Under the model P = 20(1.25)^t, what is the population after 2 years?",
+    "questionUrdu": "model P = 20(1.25)^t کے تحت 2 years بعد population کتنی ہوگی؟",
+    "options": [
+      "25",
+      "30",
+      "31.25",
+      "40"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 31.25 ہے۔ t=2 رکھنے پر 20×1.25²=31.25 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Exponential Functions",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q064",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+        "label": "Exponential Functions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the model P = 20(1.25)^t gives a population of 31.25 after 2 years."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:exp/x2ec2f6f830c9fb89:exp-models/a/exponential-models-word-problems",
+        "label": "Exponential models",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that the model P = 20(1.25)^t gives a population of 31.25 after 2 years."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q065-SRC",
+    "pairId": "ADV2E102-U0101-Q065",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A total of Rs. 60,000 is awarded to eight teams in an arithmetic sequence by rank. If the last team receives Rs. 4,000, how much does the first team receive?",
+    "questionUrdu": "Rs. 60,000 آٹھ teams کو rank کے لحاظ سے arithmetic sequence میں ملتے ہیں۔ آخری team کو Rs. 4,000 ملیں تو پہلی کو کتنے ملیں گے؟",
+    "options": [
+      "Rs. 8,000",
+      "Rs. 11,000",
+      "Rs. 16,000",
+      "Rs. 20,000"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Rs. 11,000 ہے۔ S=8(a+4,000)/2=60,000 سے a+4,000=15,000 اور a=11,000 نکلتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Arithmetic Sequences",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/9-2-arithmetic-sequences",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q065"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/9-2-arithmetic-sequences",
+        "label": "Arithmetic Sequences",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "For eight terms, S=8(first+last)/2; 60000=4(first+4000), so first=11000."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/College_Algebra_and_Trigonometry_(Beveridge)/10%3A_Sequences_and_Series/1002%3A_Arithmetic_Sequences_and_Series",
+        "label": "Arithmetic sequences and series",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent sum formula yields the first award of Rs. 11,000."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The sequence direction and equal-difference condition were stated clearly."
+  },
+  {
+    "id": "ADV2E102-U0101-Q065-SIM",
+    "pairId": "ADV2E102-U0101-Q065",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If eight prizes fall arithmetically from Rs. 11,000 to Rs. 4,000, what is the common difference per rank?",
+    "questionUrdu": "اگر آٹھ prizes Rs. 11,000 سے Rs. 4,000 تک arithmetic ترتیب میں کم ہوں تو ہر rank کا common difference کیا ہے؟",
+    "options": [
+      "Rs. -500",
+      "Rs. -1,000",
+      "Rs. -1,500",
+      "Rs. -2,000"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Rs. -1,000 ہے۔ سات intervals میں total کمی Rs. 7,000 ہے، اس لیے ہر اگلا prize Rs. 1,000 کم ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Arithmetic Sequences",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/9-2-arithmetic-sequences",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q065",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/9-2-arithmetic-sequences",
+        "label": "Arithmetic Sequences",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that eight arithmetic prizes from Rs. 11,000 to Rs. 4,000 have a common difference of Rs. -1,000 per rank."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/College_Algebra_and_Trigonometry_(Beveridge)/10%3A_Sequences_and_Series/1002%3A_Arithmetic_Sequences_and_Series",
+        "label": "Arithmetic sequences and series",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that eight arithmetic prizes from Rs. 11,000 to Rs. 4,000 have a common difference of Rs. -1,000 per rank."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q066-SRC",
+    "pairId": "ADV2E102-U0101-Q066",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A printer costs Rs. 150,000 and depreciates by 4% each year. What is its value after 3 years, rounded to the nearest rupee?",
+    "questionUrdu": "ایک printer کی قیمت Rs. 150,000 ہے اور ہر سال 4% depreciate ہوتی ہے۔ 3 years بعد nearest rupee قیمت کیا ہوگی؟",
+    "options": [
+      "Rs. 131,699",
+      "Rs. 132,710",
+      "Rs. 133,766",
+      "Rs. 135,076"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Rs. 132,710 ہے۔ compound depreciation سے 150,000×0.96³=132,710.4 آتا ہے، جو nearest rupee پر 132,710 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Exponential Functions",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q066"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+        "label": "Exponential Functions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Exponential decay gives 150000×0.96^3=132710.4, which rounds to Rs. 132,710."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/College_Algebra_2e_(OpenStax)/06%3A_Exponential_and_Logarithmic_Functions/601%3A_Exponential_Functions",
+        "label": "Exponential decay",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent decay model supports the same calculation and rounding."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Currency separators and the rounding rule were added."
+  },
+  {
+    "id": "ADV2E102-U0101-Q066-SIM",
+    "pairId": "ADV2E102-U0101-Q066",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the value after 1 year of an asset costing Rs. 150,000 that depreciates by 4% annually?",
+    "questionUrdu": "Rs. 150,000 کی asset جو سالانہ 4% depreciate ہو، 1 year بعد کتنی قیمت رکھے گی؟",
+    "options": [
+      "Rs. 144,000",
+      "Rs. 146,000",
+      "Rs. 150,400",
+      "Rs. 156,000"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Rs. 144,000 ہے۔ ایک سال کی کمی 150,000×0.04=6,000 ہے، اس لیے باقی قیمت 144,000 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Exponential Functions",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q066",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+        "label": "Exponential Functions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that an asset costing Rs. 150,000 and depreciating by 4% is worth Rs. 144,000 after 1 year."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/College_Algebra_2e_(OpenStax)/06%3A_Exponential_and_Logarithmic_Functions/601%3A_Exponential_Functions",
+        "label": "Exponential decay",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that an asset costing Rs. 150,000 and depreciating by 4% is worth Rs. 144,000 after 1 year."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q067-SRC",
+    "pairId": "ADV2E102-U0101-Q067",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A carpenter lays x bricks per hour for y hours, then x/2 bricks per hour for 2y hours. How many bricks are laid in total?",
+    "questionUrdu": "carpenter پہلے x bricks per hour سے y hours اور پھر x/2 bricks per hour سے 2y hours کام کرتا ہے۔ total bricks کتنی ہیں؟",
+    "options": [
+      "xy",
+      "2xy",
+      "3xy",
+      "4xy"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 2xy ہے۔ پہلے حصے میں xy اور دوسرے میں (x/2)(2y)=xy bricks بنتی ہیں، مجموعہ 2xy ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Simplifying algebraic expressions",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/2-2-evaluate-simplify-and-translate-expressions-part-1",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q067"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/2-2-evaluate-simplify-and-translate-expressions-part-1",
+        "label": "Simplifying algebraic expressions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The two quantities are xy and (x/2)(2y)=xy, so the total is 2xy."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-distributive-property/a/distributive-property-review",
+        "label": "Distributive property review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent algebra rules support simplifying xy+(x/2)(2y) to 2xy."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The rate phrase was repeated in the second part to remove ambiguity."
+  },
+  {
+    "id": "ADV2E102-U0101-Q067-SIM",
+    "pairId": "ADV2E102-U0101-Q067",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If a worker makes 3x items per hour for 2y hours, which expression gives the output?",
+    "questionUrdu": "اگر worker 3x items per hour کی رفتار سے 2y hours کام کرے تو output کی expression کیا ہوگی؟",
+    "options": [
+      "5xy",
+      "6xy",
+      "6x + y",
+      "x/6y"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 6xy ہے۔ rate کو time سے ضرب دینے پر (3x)(2y)=6xy بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Simplifying algebraic expressions",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/2-2-evaluate-simplify-and-translate-expressions-part-1",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q067",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/2-2-evaluate-simplify-and-translate-expressions-part-1",
+        "label": "Simplifying algebraic expressions",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that a rate of 3x items per hour for 2y hours produces 6xy items."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-distributive-property/a/distributive-property-review",
+        "label": "Distributive property review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that a rate of 3x items per hour for 2y hours produces 6xy items."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q068-SRC",
+    "pairId": "ADV2E102-U0101-Q068",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the place value contributed by the digit 9 in 0.06945?",
+    "questionUrdu": "0.06945 میں digit 9 کی place value contribution کیا ہے؟",
+    "options": [
+      "90",
+      "1/100",
+      "9/1000",
+      "9/90"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 9/1000 ہے۔ decimal کے بعد تیسری جگہ thousandths ہوتی ہے، اس لیے 9 کی قدر 0.009 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Decimals",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-2-decimals",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-2-decimals",
+        "label": "Decimals",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "In 0.06945 the 9 is in the thousandths position and contributes 9/1000."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-fifth-grade-math/imp-place-value-and-decimals/imp-decimal-place-value/a/decimal-place-value-review",
+        "label": "Decimal place value",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent place-value lesson supports identifying the third decimal position as thousandths."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was clarified to ask the value contributed, not merely the place name."
+  },
+  {
+    "id": "ADV2E102-U0101-Q068-SIM",
+    "pairId": "ADV2E102-U0101-Q068",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What place value is contributed by the digit 6 in 0.06945?",
+    "questionUrdu": "0.06945 میں digit 6 کی place value contribution کیا ہے؟",
+    "options": [
+      "6/10",
+      "6/100",
+      "6/1000",
+      "6/10000"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 6/100 ہے۔ digit 6 decimal کے بعد دوسری یعنی hundredths جگہ پر ہے، اس کی قدر 0.06 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimals",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-2-decimals",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-2-decimals",
+        "label": "Decimals",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the digit 6 in 0.06945 contributes a place value of 6/100."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-fifth-grade-math/imp-place-value-and-decimals/imp-decimal-place-value/a/decimal-place-value-review",
+        "label": "Decimal place value",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that the digit 6 in 0.06945 contributes a place value of 6/100."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q069-SRC",
+    "pairId": "ADV2E102-U0101-Q069",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which word is a synonym of 'anomaly'?",
+    "questionUrdu": "لفظ anomaly کا synonym کون سا ہے؟",
+    "options": [
+      "Straightness",
+      "Normality",
+      "Integrity",
+      "Irregularity"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Irregularity ہے۔ anomaly کسی معمول، pattern یا توقع سے انحراف اور غیر معمولی چیز کو کہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Anomaly",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/anomaly",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/anomaly",
+        "label": "Anomaly",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines anomaly as a deviation or irregularity."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/anomaly",
+        "label": "Anomaly",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge independently defines anomaly as something different from what is usual."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Distractor word forms were normalized."
+  },
+  {
+    "id": "ADV2E102-U0101-Q069-SIM",
+    "pairId": "ADV2E102-U0101-Q069",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to the opposite of 'anomaly'?",
+    "questionUrdu": "anomaly کے opposite meaning کے سب سے قریب کون سا لفظ ہے؟",
+    "options": [
+      "Regularity",
+      "Deviation",
+      "Exception",
+      "Oddity"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Regularity ہے۔ anomaly بے قاعدگی ہے جبکہ regularity معمول اور قائم pattern کو ظاہر کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Anomaly",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/anomaly",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/anomaly",
+        "label": "Anomaly",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that regularity expresses the opposite idea to anomaly or irregularity."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/anomaly",
+        "label": "Anomaly",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that regularity expresses the opposite idea to anomaly or irregularity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q070-SRC",
+    "pairId": "ADV2E102-U0101-Q070",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which word is a synonym of 'animosity'?",
+    "questionUrdu": "لفظ animosity کا synonym کون سا ہے؟",
+    "options": [
+      "Hostility",
+      "Consideration",
+      "Kindness",
+      "Generosity"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Hostility ہے۔ animosity شدید ناپسندیدگی، دشمنی یا مخالفانہ جذبے کو ظاہر کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Animosity",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/animosity",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/animosity",
+        "label": "Animosity",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines animosity as strong hostility."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/animosity",
+        "label": "Animosity",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge independently defines animosity as strong dislike or unfriendly feeling."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Capitalization was normalized."
+  },
+  {
+    "id": "ADV2E102-U0101-Q070-SIM",
+    "pairId": "ADV2E102-U0101-Q070",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word expresses the closest opposite of 'animosity'?",
+    "questionUrdu": "animosity کے قریب ترین opposite کو کون سا لفظ ظاہر کرتا ہے؟",
+    "options": [
+      "Goodwill",
+      "Hostility",
+      "Resentment",
+      "Hatred"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Goodwill ہے۔ animosity دشمنی ہے جبکہ goodwill دوستانہ اور خیر خواہ جذبہ ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Animosity",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/animosity",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/animosity",
+        "label": "Animosity",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that goodwill expresses an opposite idea to animosity or hostility."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/animosity",
+        "label": "Animosity",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that goodwill expresses an opposite idea to animosity or hostility."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q071-SRC",
+    "pairId": "ADV2E102-U0101-Q071",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the standard reported form of: He said to me, 'May you be happy.'",
+    "questionUrdu": "اس direct speech کی standard reported form منتخب کریں: He said to me, 'May you be happy.'",
+    "options": [
+      "He wished that I might be happy.",
+      "He said that I might be happy.",
+      "He told me that I might be happy.",
+      "He reported that I might be happy."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب He wished that I might be happy ہے۔ دعائیہ جملے کو indirect speech میں wished اور مناسب modal backshift کے ساتھ بیان کیا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Reported speech",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/reported-speech-statements",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/reported-speech-statements",
+        "label": "Reported speech",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The grammar guide explains reported-speech backshift and reporting-verb choice."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+        "label": "Reported speech",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary-grammar",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge independently explains indirect speech and modal backshift; a wish is reported with wished."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The instruction was separated from the quotation and punctuation was repaired."
+  },
+  {
+    "id": "ADV2E102-U0101-Q071-SIM",
+    "pairId": "ADV2E102-U0101-Q071",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which reporting verb most naturally introduces an indirect statement of a blessing or good wish?",
+    "questionUrdu": "blessing یا good wish کو indirect statement میں لانے کے لیے کون سا reporting verb زیادہ مناسب ہے؟",
+    "options": [
+      "Wished",
+      "Ordered",
+      "Denied",
+      "Warned"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Wished ہے۔ May سے شروع ہونے والی دعا یا نیک خواہش کو reported speech میں عموماً wished سے منتقل کیا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Reported speech",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/reported-speech-statements",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/reported-speech-statements",
+        "label": "Reported speech",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that wished is the natural reporting verb for an indirect statement of a blessing or good wish."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+        "label": "Reported speech",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary-grammar",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary Grammar supports that wished is the natural reporting verb for an indirect statement of a blessing or good wish."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q072-SRC",
+    "pairId": "ADV2E102-U0101-Q072",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "In the sentence 'I will pencil you in for Tuesday,' what does 'pencil you in' mean?",
+    "questionUrdu": "جملے I will pencil you in for Tuesday میں pencil you in کا کیا مطلب ہے؟",
+    "options": [
+      "Schedule a provisional appointment",
+      "Move you physically",
+      "Change your work shift",
+      "Cancel an appointment"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Schedule a provisional appointment ہے۔ اس expression میں وقت عارضی طور پر reserve ہوتا ہے اور بعد میں بدلا جا سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Pencil in",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/pencil-in",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/pencil-in",
+        "label": "Pencil in",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines pencil someone in as provisionally arranging an appointment."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/pencil-in",
+        "label": "Pencil in",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently defines it as arranging tentatively."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The missing particle 'in' was restored, the underlining dependency was removed and all choices were made explicit."
+  },
+  {
+    "id": "ADV2E102-U0101-Q072-SIM",
+    "pairId": "ADV2E102-U0101-Q072",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Grammatically, what type of multiword verb is 'pencil in'?",
+    "questionUrdu": "grammar کے لحاظ سے pencil in کس قسم کا multiword verb ہے؟",
+    "options": [
+      "Phrasal verb",
+      "Modal verb",
+      "Linking verb",
+      "Defective verb"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Phrasal verb ہے۔ pencil اور particle in مل کر ایک ایسا معنی بناتے ہیں جو provisional scheduling کو ظاہر کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Pencil in",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/pencil-in",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/pencil-in",
+        "label": "Pencil in",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that pencil in is classified as a phrasal verb."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/pencil-in",
+        "label": "Pencil in",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins Dictionary supports that pencil in is classified as a phrasal verb."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q073-SRC",
+    "pairId": "ADV2E102-U0101-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the sentence: 'The department store is open ____ eight to seven.'",
+    "questionUrdu": "جملہ مکمل کریں: The department store is open ____ eight to seven.",
+    "options": [
+      "From",
+      "By",
+      "Between",
+      "During"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب From ہے۔ وقت کی ابتدا اور انتہا بتانے کے لیے standard pair from ... to ... استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "From",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/from",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/from",
+        "label": "From",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary-grammar",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains the paired range construction from ... to ...."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/prepositions-time-at-in-on",
+        "label": "Prepositions of time",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently covers time-range preposition usage."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Departmental was standardized to department store."
+  },
+  {
+    "id": "ADV2E102-U0101-Q073-SIM",
+    "pairId": "ADV2E102-U0101-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which preposition normally completes the pair that begins with 'from' in a time range?",
+    "questionUrdu": "time range میں from سے شروع ہونے والے pair کو عموماً کون سا preposition مکمل کرتا ہے؟",
+    "options": [
+      "At",
+      "For",
+      "To",
+      "By"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب To ہے۔ from آغاز اور to اختتامی وقت بتاتا ہے، مثلاً from eight to seven۔",
+    "source": {
+      "type": "practice",
+      "label": "From",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/from",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/from",
+        "label": "From",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary-grammar",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary Grammar supports that to normally completes the from ... to construction for a time range."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/prepositions-time-at-in-on",
+        "label": "Prepositions of time",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that to normally completes the from ... to construction for a time range."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q074-SRC",
+    "pairId": "ADV2E102-U0101-Q074",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'keep a straight face' mean?",
+    "questionUrdu": "idiom keep a straight face کا کیا مطلب ہے؟",
+    "options": [
+      "Remain silent",
+      "Avoid smiling or laughing",
+      "Remain worried",
+      "Refuse to speak"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Avoid smiling or laughing ہے۔ مزاحیہ یا عجیب حالت میں بھی چہرے پر سنجیدہ تاثر قائم رکھنے کو یہ idiom کہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Keep a straight face",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/keep-a-straight-face",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/keep-a-straight-face",
+        "label": "Keep a straight face",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines the idiom as managing not to smile or laugh."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/keep%20a%20straight%20face",
+        "label": "Keep a straight face",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines it as avoiding a smile or laugh."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The keyed choice was made more exact than the broad phrase 'remain serious'."
+  },
+  {
+    "id": "ADV2E102-U0101-Q074-SIM",
+    "pairId": "ADV2E102-U0101-Q074",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What type of fixed expression is 'keep a straight face'?",
+    "questionUrdu": "keep a straight face کس قسم کا fixed expression ہے؟",
+    "options": [
+      "Idiom",
+      "Scientific formula",
+      "Legal title",
+      "Proper noun"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Idiom ہے۔ اس phrase کا مجموعی مطلب صرف لفظی face سے نہیں بلکہ ہنسی ظاہر نہ کرنے کے مجازی مفہوم سے سمجھا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Keep a straight face",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/keep-a-straight-face",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/keep-a-straight-face",
+        "label": "Keep a straight face",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that keep a straight face is an idiomatic fixed expression."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/keep%20a%20straight%20face",
+        "label": "Keep a straight face",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that keep a straight face is an idiomatic fixed expression."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0101-Q075-SRC",
+    "pairId": "ADV2E102-U0101-Q075",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'get into hot water' mean?",
+    "questionUrdu": "idiom get into hot water کا کیا مطلب ہے؟",
+    "options": [
+      "Become impatient",
+      "Get into difficulties or trouble",
+      "Lose a large sum of money",
+      "Become mentally confused"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Get into difficulties or trouble ہے۔ یہاں hot water حقیقی گرم پانی نہیں بلکہ مشکل یا گرفتاری جیسی حالت کا استعارہ ہے۔",
+    "source": {
+      "type": "book",
+      "label": "In hot water",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/in-hot-water",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/in-hot-water",
+        "label": "In hot water",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines being in hot water as being in a difficult situation or trouble."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/hot%20water",
+        "label": "Hot water",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently gives trouble or difficulty as the idiomatic meaning."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The nonstandard plural 'hot waters' was corrected."
+  },
+  {
+    "id": "ADV2E102-U0101-Q075-SIM",
+    "pairId": "ADV2E102-U0101-Q075",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "In the expression 'in hot water', the words 'hot water' function as what?",
+    "questionUrdu": "expression in hot water میں hot water کس حیثیت سے استعمال ہوا ہے؟",
+    "options": [
+      "An idiom for trouble",
+      "A literal weather term",
+      "A cooking instruction",
+      "A unit of temperature"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب An idiom for trouble ہے۔ یہ figurative expression ہے جو مشکل صورت حال یا سرزنش میں ہونے کو بیان کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "In hot water",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/in-hot-water",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0101-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/in-hot-water",
+        "label": "In hot water",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that hot water functions idiomatically as a metaphor for trouble or difficulty."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/hot%20water",
+        "label": "Hot water",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that hot water functions idiomatically as a metaphor for trouble or difficulty."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]
