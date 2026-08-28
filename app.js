@@ -5,7 +5,7 @@
   var PART_SIZE = 50;
   var DIFFICULT_STORAGE_KEY = "ppsc-prep:difficult-question-ids:v1";
   var SESSION_STORAGE_KEY = "ppsc-prep:active-session:v1";
-  var SESSION_STORAGE_VERSION = 2;
+  var SESSION_STORAGE_VERSION = 3;
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
@@ -28,6 +28,7 @@
     scope: "all",
     partIndex: 0,
     importantOnly: false,
+    responses: [],
     currentIndex: 0,
     selectedIndex: null,
     submitted: false,
@@ -77,6 +78,7 @@
     elements.questionUrduBlock = firstElement(["#question-urdu-block", "[data-question-urdu-block]"]);
     elements.questionTextUrdu = firstElement(["#question-text-urdu", "[data-question-text-urdu]"]);
     elements.optionsList = firstElement(["#options-list", "#options-container", "[data-options-list]"]);
+    elements.previousButton = firstElement(["#previous-button", "[data-previous-question]"]);
     elements.actionButton = firstElement(["#action-button", "#next-button", "[data-quiz-action]"]);
     elements.feedback = firstElement(["#feedback", "[data-feedback]"]);
     elements.feedbackTitle = firstElement(["#feedback-title", "[data-feedback-title]"]);
@@ -147,6 +149,13 @@
     return importantOnly ? partLabel + " · Important" : partLabel;
   }
 
+  function scoreForResponses(responses, questions) {
+    return responses.reduce(function (score, response, index) {
+      return score + (response && response.submitted
+        && response.selectedIndex === questions[index].correctOptionIndex ? 1 : 0);
+    }, 0);
+  }
+
   function updateContinueSessionUI() {
     var snapshot = activeSessionSnapshot;
     var category = snapshot ? findCategory(snapshot.categoryId) : null;
@@ -187,7 +196,7 @@
 
   function normalizeStoredSession(savedValue) {
     if (!savedValue || typeof savedValue !== "object" || Array.isArray(savedValue)) return null;
-    if (savedValue.version !== 1 && savedValue.version !== SESSION_STORAGE_VERSION) return null;
+    if (![1, 2, SESSION_STORAGE_VERSION].includes(savedValue.version)) return null;
     if (savedValue.bankSignature !== questionBankSignature) return null;
     if (savedValue.mode !== "learn" && savedValue.mode !== "quiz") return null;
     if (savedValue.scope !== "all" && savedValue.scope !== "difficult") return null;
@@ -254,13 +263,29 @@
     if (typeof submitted !== "boolean") return null;
     if (!Number.isInteger(score) || score < 0) return null;
 
+    var responses = new Array(sessionQuestions.length).fill(null);
     if (savedValue.mode === "learn") {
       if (!submitted || score !== 0 || selectedIndex !== sessionQuestions[currentIndex].correctOptionIndex) return null;
     } else {
-      if (submitted && selectedIndex === null) return null;
-      var currentPoint = submitted && selectedIndex === sessionQuestions[currentIndex].correctOptionIndex ? 1 : 0;
-      var previousScore = score - currentPoint;
-      if (previousScore < 0 || previousScore > currentIndex) return null;
+      // Older snapshots did not retain prior answers, so they cannot safely
+      // support backward navigation without risking an incorrect score.
+      if (savedValue.version !== SESSION_STORAGE_VERSION) return null;
+      if (!Array.isArray(savedValue.answerHistory) || savedValue.answerHistory.length !== sessionQuestions.length) return null;
+      responses = savedValue.answerHistory.map(function (entry) {
+        if (entry === null) return null;
+        if (!Array.isArray(entry) || entry.length !== 2) return false;
+        if (!Number.isInteger(entry[0]) || entry[0] < 0 || entry[0] >= OPTION_LABELS.length) return false;
+        if (typeof entry[1] !== "boolean") return false;
+        return { selectedIndex: entry[0], submitted: entry[1] };
+      });
+      if (responses.some(function (response) { return response === false; })) return null;
+      var currentResponse = responses[currentIndex];
+      if (currentResponse) {
+        if (selectedIndex !== currentResponse.selectedIndex || submitted !== currentResponse.submitted) return null;
+      } else if (selectedIndex !== null || submitted) {
+        return null;
+      }
+      if (score !== scoreForResponses(responses, sessionQuestions)) return null;
     }
 
     var snapshot = {
@@ -273,6 +298,9 @@
       importantOnly: importantOnly,
       questionIds: questionIds,
       optionOrders: optionOrders,
+      answerHistory: savedValue.mode === "quiz" ? responses.map(function (response) {
+        return response ? [response.selectedIndex, response.submitted] : null;
+      }) : null,
       currentIndex: currentIndex,
       selectedIndex: selectedIndex,
       submitted: submitted,
@@ -280,7 +308,7 @@
       savedAt: Number.isFinite(savedValue.savedAt) ? savedValue.savedAt : 0
     };
 
-    return { snapshot: snapshot, category: category, questions: sessionQuestions };
+    return { snapshot: snapshot, category: category, questions: sessionQuestions, responses: responses };
   }
 
   function loadActiveSession() {
@@ -303,8 +331,32 @@
     }
   }
 
+  function storeCurrentResponse() {
+    if (state.mode !== "quiz" || !state.questions.length) return;
+    if (!Array.isArray(state.responses) || state.responses.length !== state.questions.length) {
+      state.responses = new Array(state.questions.length).fill(null);
+    }
+    state.responses[state.currentIndex] = state.selectedIndex === null
+      ? null
+      : { selectedIndex: state.selectedIndex, submitted: state.submitted };
+    state.score = scoreForResponses(state.responses, state.questions);
+  }
+
+  function loadCurrentResponse() {
+    if (state.mode !== "quiz") {
+      state.selectedIndex = null;
+      state.submitted = false;
+      return;
+    }
+    var response = Array.isArray(state.responses) ? state.responses[state.currentIndex] : null;
+    state.selectedIndex = response ? response.selectedIndex : null;
+    state.submitted = response ? response.submitted : false;
+  }
+
   function saveActiveSession() {
     if (!state.category || !state.mode || state.questions.length === 0) return false;
+
+    storeCurrentResponse();
 
     var optionOrders = null;
     if (state.mode === "quiz") {
@@ -329,6 +381,9 @@
       importantOnly: state.importantOnly,
       questionIds: state.questions.map(function (question) { return String(question.id); }),
       optionOrders: optionOrders,
+      answerHistory: state.mode === "quiz" ? state.responses.map(function (response) {
+        return response ? [response.selectedIndex, response.submitted] : null;
+      }) : null,
       currentIndex: state.currentIndex,
       selectedIndex: state.selectedIndex,
       submitted: state.submitted,
@@ -362,6 +417,7 @@
     state.scope = normalized.snapshot.scope;
     state.partIndex = normalized.snapshot.partIndex;
     state.importantOnly = normalized.snapshot.importantOnly;
+    state.responses = normalized.responses;
     state.currentIndex = normalized.snapshot.currentIndex;
     state.selectedIndex = normalized.snapshot.selectedIndex;
     state.submitted = normalized.snapshot.submitted;
@@ -369,7 +425,7 @@
 
     setQuizSessionLabel();
     showScreen("quiz");
-    renderQuestion(true);
+    renderQuestion();
     return true;
   }
 
@@ -848,6 +904,7 @@
     state.scope = "all";
     state.partIndex = 0;
     state.importantOnly = false;
+    state.responses = [];
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -983,6 +1040,7 @@
         state.questions = [];
         state.mode = null;
         state.scope = "difficult";
+        state.responses = [];
         state.currentIndex = 0;
         state.selectedIndex = null;
         state.submitted = false;
@@ -1024,6 +1082,7 @@
     state.questions = sessionQuestions;
     state.mode = selectedMode;
     state.scope = selectedScope;
+    state.responses = new Array(sessionQuestions.length).fill(null);
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -1050,14 +1109,16 @@
     };
   }
 
-  function renderQuestion(restoringCurrentState) {
+  function renderQuestion() {
     var question = currentQuestion();
     if (!question) {
       showResults();
       return;
     }
 
-    if (!restoringCurrentState) {
+    if (state.mode === "quiz") {
+      loadCurrentResponse();
+    } else {
       state.selectedIndex = null;
       state.submitted = false;
     }
@@ -1085,6 +1146,13 @@
     }
     renderOptions(question);
     updateProgress();
+    if (elements.previousButton) {
+      elements.previousButton.disabled = state.currentIndex === 0;
+      elements.previousButton.setAttribute(
+        "aria-label",
+        state.currentIndex === 0 ? "Previous question unavailable" : "Go to previous question"
+      );
+    }
     resetFeedback();
     syncDifficultCheckbox(question);
     setHidden(elements.difficultControl, false);
@@ -1211,9 +1279,17 @@
     if (state.currentIndex >= state.questions.length - 1) {
       showResults();
     } else {
+      storeCurrentResponse();
       state.currentIndex += 1;
       renderQuestion();
     }
+  }
+
+  function handlePrevious() {
+    if (!currentQuestion() || state.currentIndex === 0) return;
+    storeCurrentResponse();
+    state.currentIndex -= 1;
+    renderQuestion();
   }
 
   function submitAnswer() {
@@ -1227,7 +1303,7 @@
 
     state.submitted = true;
     var isCorrect = state.selectedIndex === question.correctOptionIndex;
-    if (isCorrect) state.score += 1;
+    storeCurrentResponse();
 
     markSubmittedOptions(question);
     showFeedback(question, isCorrect);
@@ -1430,6 +1506,7 @@
     state.scope = "all";
     state.partIndex = 0;
     state.importantOnly = false;
+    state.responses = [];
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -1503,6 +1580,7 @@
     }
     if (elements.modeBackButton) elements.modeBackButton.addEventListener("click", returnToCategories);
     if (elements.optionsList) elements.optionsList.addEventListener("click", onOptionClick);
+    if (elements.previousButton) elements.previousButton.addEventListener("click", handlePrevious);
     if (elements.actionButton) elements.actionButton.addEventListener("click", handleAction);
     if (elements.backButton) elements.backButton.addEventListener("click", returnToCategories);
     if (elements.restartButton) elements.restartButton.addEventListener("click", restartQuiz);

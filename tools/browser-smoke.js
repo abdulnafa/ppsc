@@ -311,6 +311,17 @@ async function main() {
       if (!visible(document.querySelector("#question-urdu-block")) || document.querySelector("#question-text-urdu").textContent !== question.questionUrdu) errors.push("Urdu question translation did not render in Learn mode.");
       if (document.querySelector("#score-text").textContent !== "Learn Mode") errors.push("Learn mode displayed a score.");
       if (document.querySelector("#action-button").textContent !== "Next Question" && categoryQuestions.length > 1) errors.push("Learn mode did not offer the next question immediately.");
+      if (!document.querySelector("#previous-button").disabled) errors.push("Previous was enabled on the first Learn question.");
+      if (categoryQuestions.length > 1) {
+        const firstLearnId = question.id;
+        document.querySelector("#action-button").click();
+        await pause();
+        if (document.querySelector("#previous-button").disabled) errors.push("Previous stayed disabled after advancing in Learn mode.");
+        document.querySelector("#previous-button").click();
+        await pause();
+        if (document.querySelector("#question-text").dataset.questionId !== firstLearnId) errors.push("Previous did not restore the first Learn question.");
+        if (!document.querySelector("#previous-button").disabled) errors.push("Previous was not disabled after returning to the first Learn question.");
+      }
       document.querySelector("#restart-button").click();
       await pause();
       if (!document.querySelector("#question-counter").textContent.startsWith("Question 1 ")) errors.push("Learn restart failed.");
@@ -379,6 +390,21 @@ async function main() {
       document.querySelector("#action-button").click();
       await pause();
       question = findCurrent();
+      const secondQuizId = question.id;
+      const secondQuizOptions = JSON.stringify(renderedOptionTexts());
+      if (document.querySelector("#previous-button").disabled) errors.push("Previous stayed disabled after advancing in Quiz mode.");
+      document.querySelector("#previous-button").click();
+      await pause();
+      if (document.querySelector("#question-text").dataset.questionId !== quizOrder[0]) errors.push("Previous restored the wrong Quiz question.");
+      if (JSON.stringify(renderedOptionTexts()) !== firstQuizOptionOrders[quizOrder[0]]) errors.push("Previous changed the restored Quiz option order.");
+      const restoredWrongButton = document.querySelector('[data-option-index="' + wrongIndex + '"]');
+      if (!restoredWrongButton || !restoredWrongButton.disabled || !restoredWrongButton.classList.contains("is-incorrect")) errors.push("Previous did not restore the submitted Quiz answer.");
+      if (document.querySelector("#feedback-title").textContent !== "Incorrect" || document.querySelector("#score-text").textContent !== "Score: 0") errors.push("Previous changed Quiz feedback or score.");
+      if (!document.querySelector("#previous-button").disabled) errors.push("Previous was not disabled on the restored first Quiz question.");
+      document.querySelector("#action-button").click();
+      await pause();
+      question = findCurrent();
+      if (question.id !== secondQuizId || JSON.stringify(renderedOptionTexts()) !== secondQuizOptions) errors.push("Next did not return to the same pending Quiz question after Previous.");
       quizOrder.push(question.id);
       renderedCorrectIndex = verifyQuizOptionShuffle(question);
       firstQuizOptionOrders[question.id] = JSON.stringify(renderedOptionTexts());
@@ -451,11 +477,12 @@ async function main() {
       document.querySelector("#action-button").click();
       await pause();
       const resumeSnapshot = JSON.parse(localStorage.getItem(sessionStorageKey) || "null");
-      if (!resumeSnapshot || resumeSnapshot.version !== 2) errors.push("Active Quiz was not saved with the versioned resume schema.");
+      if (!resumeSnapshot || resumeSnapshot.version !== 3) errors.push("Active Quiz was not saved with the versioned resume schema.");
       if (!resumeSnapshot || resumeSnapshot.mode !== "quiz" || resumeSnapshot.scope !== "all") errors.push("Saved Quiz resume mode/scope was incorrect.");
       if (!resumeSnapshot || resumeSnapshot.partIndex !== 0 || resumeSnapshot.importantOnly !== false) errors.push("Saved Quiz Part/Important scope was incorrect.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.questionIds) || resumeSnapshot.questionIds.length !== categoryQuestions.length) errors.push("Saved Quiz question order was incomplete.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.optionOrders) || resumeSnapshot.optionOrders.length !== categoryQuestions.length) errors.push("Saved Quiz option orders were incomplete.");
+      if (!resumeSnapshot || !Array.isArray(resumeSnapshot.answerHistory) || resumeSnapshot.answerHistory.length !== categoryQuestions.length) errors.push("Saved Quiz answer history was incomplete.");
       if (!resumeSnapshot || !resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== resumeSelectedIndex || resumeSnapshot.score !== 0) errors.push("Saved submitted-answer state was incorrect.");
 
       return {

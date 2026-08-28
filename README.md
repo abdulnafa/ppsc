@@ -15,7 +15,8 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 - Every category is divided into fixed 50-question Parts (with a shorter final Part), while **All Questions** remains available.
 - An evidence-based **Important repeated MCQs** filter uses verified deduplication records and displays how many times each marked fact occurred.
 - Learn always follows the stable source/data order; Quiz creates a fresh question order and reshuffles its four options without changing the correct answer.
-- A compact Continue card restores the exact active Learn, Quiz, or Difficult session after a refresh or browser restart, including selected Part/Important scope, progress, Quiz option order, selection, submitted feedback, and score.
+- Previous and Next navigation lets you revisit earlier questions; Quiz restores each pending or submitted answer, its feedback, shuffled options, and score without counting an answer twice.
+- A compact Continue card restores the exact active Learn, Quiz, or Difficult session after a refresh or browser restart, including selected Part/Important scope, progress, Quiz option order, answer history, submitted feedback, and score.
 - A persistent, always-visible **Mark as difficult** checkbox below every question, plus category-wise Difficult Learn and Difficult Quiz sessions containing only marked questions.
 - A focused question screen without Answer explained, View details, related-history or research-source panels.
 
@@ -67,7 +68,7 @@ node tools/validate-site-data.js --expected=9340
 node tools/browser-smoke.js
 ```
 
-The browser smoke test requires local Chrome or Edge. It exercises Learn, Quiz and Difficult practice at mobile width, including stable Learn order, shuffled Quiz questions/options, answer remapping, the Learn-complete **Start Quiz** transition, the always-visible persistent mark/unmark control, and exact Continue restoration for submitted answers, pending selections, score, Difficult scope, corrupt/stale storage recovery, and completed-session clearing.
+The browser smoke test requires local Chrome or Edge. It exercises Learn, Quiz and Difficult practice at mobile width, including Previous/Next answer restoration, stable Learn order, shuffled Quiz questions/options, answer remapping, the Learn-complete **Start Quiz** transition, the always-visible persistent mark/unmark control, and exact Continue restoration for answer history, pending selections, submitted feedback, score, Difficult scope, corrupt/stale storage recovery, and completed-session clearing.
 
 The build script validates all six `PPSC 110 Edition` papers, all 1,088 retained IBES pairs, and every currently retained ADV2E102 pair before including it. It balances only the generated similar-question answer positions and creates:
 
