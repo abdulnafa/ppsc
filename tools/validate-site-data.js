@@ -5,6 +5,7 @@ const path = require("path");
 const vm = require("vm");
 
 const projectDirectory = path.resolve(__dirname, "..");
+const workDirectory = path.join(projectDirectory, "work");
 const dataPath = path.join(projectDirectory, "data", "questions.js");
 const htmlPath = path.join(projectDirectory, "index.html");
 const stylesPath = path.join(projectDirectory, "styles.css");
@@ -14,6 +15,12 @@ const fontPaths = [
 ];
 const errors = [];
 const warnings = [];
+const repeatDecisionFilePatterns = [
+  { corpus: "IBES", pattern: /^ibes-dedup-decisions-p\d{3}-\d{3,4}\.json$/i },
+  { corpus: "ADV2E102", pattern: /^adv2e102-dedup-decisions-pdf\d{4}-\d{4}\.json$/i }
+];
+const productionItemIdPattern = /^(?:(?:P23[4-9]-Q\d{3}|IBES-Q\d{4})-(?:SRC|SIM)|ADV2E102-U\d{4}-Q\d{3}-(?:SRC|SIM))$/;
+const canonicalPairIdPattern = /^(?:IBES-Q\d{4}|ADV2E102-U\d{4}-Q\d{3})$/;
 
 function error(message) {
   errors.push(message);
@@ -29,6 +36,62 @@ function loadData() {
     return { categories: [], questions: [] };
   }
   return sandbox.window.PPSC_QUIZ_DATA || { categories: [], questions: [] };
+}
+
+function canonicalRepeatTargetId(duplicateOf) {
+  const target = String(duplicateOf || "").trim();
+  if (productionItemIdPattern.test(target)) return target;
+  if (canonicalPairIdPattern.test(target)) return `${target}-SRC`;
+  return "";
+}
+
+function loadVerifiedSkipCounts() {
+  const skipCountsByTargetId = new Map();
+  const seenDecisions = new Set();
+  let verifiedSkipCount = 0;
+
+  for (const { corpus, pattern } of repeatDecisionFilePatterns) {
+    const files = fs.readdirSync(workDirectory).filter((name) => pattern.test(name)).sort();
+    for (const name of files) {
+      let decisions;
+      try {
+        decisions = JSON.parse(fs.readFileSync(path.join(workDirectory, name), "utf8"));
+      } catch (reason) {
+        error(`${name}: cannot read repeat evidence (${reason.message})`);
+        continue;
+      }
+      if (!Array.isArray(decisions)) {
+        error(`${name}: repeat-evidence decision file must contain an array`);
+        continue;
+      }
+      for (const decision of decisions) {
+        const sourceIdentity = String(decision.sourceRecordId || (
+          Number.isInteger(Number(decision.sourceQuestionNumber))
+            ? `Q${String(Number(decision.sourceQuestionNumber)).padStart(4, "0")}`
+            : ""
+        ));
+        const evidenceId = `${corpus}:${sourceIdentity}`;
+        if (!sourceIdentity) {
+          error(`${name}: decision has no stable source identity`);
+          continue;
+        }
+        if (seenDecisions.has(evidenceId)) {
+          error(`${evidenceId}: duplicate decision evidence`);
+          continue;
+        }
+        seenDecisions.add(evidenceId);
+        if (decision.action !== "skip" || decision.reviewStatus !== "verified") continue;
+        const targetId = canonicalRepeatTargetId(decision.duplicateOf);
+        if (!targetId) {
+          error(`${evidenceId}: verified skip does not resolve to a production question ID`);
+          continue;
+        }
+        verifiedSkipCount += 1;
+        skipCountsByTargetId.set(targetId, (skipCountsByTargetId.get(targetId) || 0) + 1);
+      }
+    }
+  }
+  return { skipCountsByTargetId, verifiedSkipCount };
 }
 
 function validateData(data) {
@@ -106,6 +169,49 @@ function validateData(data) {
   }
 
   return { categories, questions };
+}
+
+function validateRepeatMetadata(data, questions) {
+  // Version 5 introduces evidence-derived repeat metadata. Version 4 remains
+  // valid until the next deliberate question-bank rebuild.
+  if (Number(data.version || 0) < 5) return;
+
+  const evidence = loadVerifiedSkipCounts();
+  const questionsById = new Map(questions.map((question) => [question.id, question]));
+  let markedCount = 0;
+  let representedSkipCount = 0;
+
+  for (const [targetId, skipCount] of evidence.skipCountsByTargetId) {
+    if (!questionsById.has(targetId)) error(`${targetId}: verified repeat target is absent from production questions`);
+    if (!Number.isInteger(skipCount) || skipCount < 1) error(`${targetId}: invalid verified skip count ${skipCount}`);
+  }
+
+  for (const question of questions) {
+    const skipCount = evidence.skipCountsByTargetId.get(question.id) || 0;
+    const hasRepeatCount = Object.prototype.hasOwnProperty.call(question, "repeatCount");
+    const hasImportant = Object.prototype.hasOwnProperty.call(question, "isImportant");
+    if (!skipCount) {
+      if (hasRepeatCount || hasImportant) error(`${question.id}: repeat metadata has no verified skip evidence`);
+      continue;
+    }
+    const expectedRepeatCount = skipCount + 1;
+    if (question.repeatCount !== expectedRepeatCount) {
+      error(`${question.id}: repeatCount is ${question.repeatCount}; expected ${expectedRepeatCount}`);
+    }
+    if (question.isImportant !== true) error(`${question.id}: repeated canonical question must use isImportant=true`);
+    if (!Number.isInteger(question.repeatCount) || question.repeatCount < 2) {
+      error(`${question.id}: repeatCount must be an integer of at least 2`);
+    }
+    markedCount += 1;
+    representedSkipCount += skipCount;
+  }
+
+  if (markedCount !== evidence.skipCountsByTargetId.size) {
+    error(`repeat metadata marks ${markedCount} questions; expected ${evidence.skipCountsByTargetId.size}`);
+  }
+  if (representedSkipCount !== evidence.verifiedSkipCount) {
+    error(`repeat metadata represents ${representedSkipCount} verified skips; expected ${evidence.verifiedSkipCount}`);
+  }
 }
 
 function validateKnownCorrections(questions) {
@@ -263,6 +369,7 @@ function validateFonts() {
 
 const data = loadData();
 const result = validateData(data);
+validateRepeatMetadata(data, result.questions);
 validateKnownCorrections(result.questions);
 validateIbesBank(result.questions);
 validateAdv2e102Bank(result.questions);

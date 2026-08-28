@@ -52,6 +52,9 @@ const expectedIbesSourceCount = 1088;
 const expectedAdv2e102SourceCount = 3133;
 const categoryIds = new Set(categories.map((category) => category.id));
 const optionLabels = ["A", "B", "C", "D"];
+const ibesDecisionFilePattern = /^ibes-dedup-decisions-p\d{3}-\d{3,4}\.json$/i;
+const productionItemIdPattern = /^(?:(?:P23[4-9]-Q\d{3}|IBES-Q\d{4})-(?:SRC|SIM)|ADV2E102-U\d{4}-Q\d{3}-(?:SRC|SIM))$/;
+const canonicalPairIdPattern = /^(?:IBES-Q\d{4}|ADV2E102-U\d{4}-Q\d{3})$/;
 
 function fail(message) {
   throw new Error(message);
@@ -85,6 +88,55 @@ function loadBatches() {
   const customQuestions = JSON.parse(fs.readFileSync(customPath, "utf8"));
   if (!Array.isArray(customQuestions)) fail("custom-questions.json must contain a JSON array.");
   return paperQuestions.concat(customQuestions);
+}
+
+function canonicalRepeatTargetId(duplicateOf) {
+  const target = String(duplicateOf || "").trim();
+  if (productionItemIdPattern.test(target)) return target;
+  if (canonicalPairIdPattern.test(target)) return `${target}-SRC`;
+  return "";
+}
+
+function loadRepeatEvidence() {
+  const decisionSets = [
+    { corpus: "IBES", records: readArrayFiles(ibesDecisionFilePattern).records },
+    { corpus: "ADV2E102", records: readArrayFiles(adv2e102DecisionFilePattern).records }
+  ];
+  const seenDecisions = new Set();
+  const skipCountsByTargetId = new Map();
+  let verifiedSkipCount = 0;
+
+  for (const { corpus, records } of decisionSets) {
+    for (const decision of records) {
+      const sourceIdentity = String(decision.sourceRecordId || (
+        Number.isInteger(Number(decision.sourceQuestionNumber))
+          ? `Q${String(Number(decision.sourceQuestionNumber)).padStart(4, "0")}`
+          : ""
+      ));
+      const evidenceId = `${corpus}:${sourceIdentity}`;
+      if (!sourceIdentity) fail(`${decision._file || corpus}: decision has no stable source identity.`);
+      if (seenDecisions.has(evidenceId)) fail(`${evidenceId} appears in more than one decision file.`);
+      seenDecisions.add(evidenceId);
+
+      if (decision.action !== "skip" || decision.reviewStatus !== "verified") continue;
+      const targetId = canonicalRepeatTargetId(decision.duplicateOf);
+      if (!targetId) {
+        fail(`${evidenceId} is a verified skip but duplicateOf does not resolve to a production question ID.`);
+      }
+      verifiedSkipCount += 1;
+      skipCountsByTargetId.set(targetId, (skipCountsByTargetId.get(targetId) || 0) + 1);
+    }
+  }
+
+  return { skipCountsByTargetId, verifiedSkipCount };
+}
+
+function validateRepeatEvidence(questions, repeatEvidence) {
+  const questionIds = new Set(questions.map((question) => question.id));
+  for (const [targetId, skipCount] of repeatEvidence.skipCountsByTargetId) {
+    if (!questionIds.has(targetId)) fail(`Verified skip target ${targetId} does not resolve to a retained production question.`);
+    if (!Number.isInteger(skipCount) || skipCount < 1) fail(`${targetId} has invalid verified skip evidence count ${skipCount}.`);
+  }
 }
 
 function loadQuestionTranslations(questions) {
@@ -286,10 +338,11 @@ function rebalanceSimilarOptions(questions) {
   });
 }
 
-function websiteQuestion(question, pairsById, translations) {
+function websiteQuestion(question, pairsById, translations, repeatEvidence) {
   const pair = pairsById.get(question.pairId) || [];
   const relatedQuestion = pair.find((item) => item.id !== question.id);
   if (!relatedQuestion) fail(`${question.id} has no related pair for background history.`);
+  const verifiedSkipCount = repeatEvidence.skipCountsByTargetId.get(question.id) || 0;
 
   return {
     id: question.id,
@@ -308,6 +361,10 @@ function websiteQuestion(question, pairsById, translations) {
     tags: Array.isArray(question.tags) ? question.tags : [],
     verificationStatus: question.verificationStatus || "verified",
     sourceNotes: question.sourceNotes || "",
+    ...(verifiedSkipCount ? {
+      repeatCount: verifiedSkipCount + 1,
+      isImportant: true
+    } : {}),
     ...(adv2e102PairIdPattern.test(question.pairId) ? {
       references: question.references,
       temporalScope: question.temporalScope
@@ -331,7 +388,34 @@ function buildRelatedHistory(question, relatedQuestion) {
   return `${background} موجودہ سوال کے جواب ”${correctAnswer}“ کو اس متعلقہ مستند حقیقت ”${relatedAnswer}“ کے ساتھ جوڑ کر یاد رکھیں۔`;
 }
 
-function buildJavaScript(questions, translations) {
+function validateGeneratedRepeatMetadata(questions, repeatEvidence) {
+  let importantCount = 0;
+  let representedSkipCount = 0;
+  for (const question of questions) {
+    const verifiedSkipCount = repeatEvidence.skipCountsByTargetId.get(question.id) || 0;
+    const hasRepeatCount = Object.prototype.hasOwnProperty.call(question, "repeatCount");
+    const hasImportant = Object.prototype.hasOwnProperty.call(question, "isImportant");
+    if (!verifiedSkipCount) {
+      if (hasRepeatCount || hasImportant) fail(`${question.id} has repeat metadata without verified skip evidence.`);
+      continue;
+    }
+    const expectedRepeatCount = verifiedSkipCount + 1;
+    if (question.repeatCount !== expectedRepeatCount) {
+      fail(`${question.id} repeatCount is ${question.repeatCount}; expected ${expectedRepeatCount} from verified skip evidence.`);
+    }
+    if (question.isImportant !== true) fail(`${question.id} must use isImportant=true when repeatCount is at least 2.`);
+    importantCount += 1;
+    representedSkipCount += verifiedSkipCount;
+  }
+  if (importantCount !== repeatEvidence.skipCountsByTargetId.size) {
+    fail(`Generated repeat metadata marks ${importantCount} questions; expected ${repeatEvidence.skipCountsByTargetId.size}.`);
+  }
+  if (representedSkipCount !== repeatEvidence.verifiedSkipCount) {
+    fail(`Generated repeat metadata represents ${representedSkipCount} verified skips; expected ${repeatEvidence.verifiedSkipCount}.`);
+  }
+}
+
+function buildJavaScript(questions, translations, repeatEvidence) {
   const generatedOn = questions
     .map((question) => question.source.accessedOn)
     .sort()
@@ -342,8 +426,9 @@ function buildJavaScript(questions, translations) {
     pair.push(question);
     pairsById.set(question.pairId, pair);
   });
-  const websiteQuestions = questions.map((question) => websiteQuestion(question, pairsById, translations));
-  return `(function () {\n  "use strict";\n\n  var categories = ${JSON.stringify(categories, null, 2)};\n\n  var questions = ${JSON.stringify(websiteQuestions, null, 2)};\n\n  window.PPSC_QUIZ_DATA = {\n    version: 4,\n    generatedOn: ${JSON.stringify(generatedOn)},\n    categories: categories,\n    questions: questions\n  };\n  window.PPSC_CATEGORIES = categories;\n  window.PPSC_QUESTIONS = questions;\n})();\n`;
+  const websiteQuestions = questions.map((question) => websiteQuestion(question, pairsById, translations, repeatEvidence));
+  validateGeneratedRepeatMetadata(websiteQuestions, repeatEvidence);
+  return `(function () {\n  "use strict";\n\n  var categories = ${JSON.stringify(categories, null, 2)};\n\n  var questions = ${JSON.stringify(websiteQuestions, null, 2)};\n\n  window.PPSC_QUIZ_DATA = {\n    version: 5,\n    generatedOn: ${JSON.stringify(generatedOn)},\n    categories: categories,\n    questions: questions\n  };\n  window.PPSC_CATEGORIES = categories;\n  window.PPSC_QUESTIONS = questions;\n})();\n`;
 }
 
 function optionText(option) {
@@ -384,13 +469,25 @@ function writeMarkdown(questions) {
 
 const questions = rebalanceSimilarOptions(loadBatches());
 validate(questions);
+const repeatEvidence = loadRepeatEvidence();
+validateRepeatEvidence(questions, repeatEvidence);
 const translations = loadQuestionTranslations(questions);
-fs.writeFileSync(outputFile, buildJavaScript(questions, translations), "utf8");
-writeMarkdown(questions);
+const generatedJavaScript = buildJavaScript(questions, translations, repeatEvidence);
+const validateOnly = process.argv.includes("--validate-only");
+if (!validateOnly) {
+  fs.writeFileSync(outputFile, generatedJavaScript, "utf8");
+  writeMarkdown(questions);
+}
 
 const counts = Object.fromEntries(categories.map((category) => [
   category.name,
   questions.filter((question) => question.categoryId === category.id).length
 ]));
-console.log(`Built ${questions.length} website MCQs (${questions.length / 2} source + ${questions.length / 2} similar).`);
+const repeatDistribution = {};
+for (const skipCount of repeatEvidence.skipCountsByTargetId.values()) {
+  const repeatCount = skipCount + 1;
+  repeatDistribution[repeatCount] = (repeatDistribution[repeatCount] || 0) + 1;
+}
+console.log(`${validateOnly ? "Validated" : "Built"} ${questions.length} website MCQs (${questions.length / 2} source + ${questions.length / 2} similar).`);
+console.log(`Repeat metadata: ${repeatEvidence.skipCountsByTargetId.size} important questions from ${repeatEvidence.verifiedSkipCount} verified skip decisions; repeatCount distribution ${JSON.stringify(repeatDistribution)}.`);
 console.log(counts);

@@ -169,6 +169,10 @@ async function main() {
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
       if (!data || data.questions.length !== 9340) errors.push("Expected the current 9,340-question release bank.");
+      if (!data || data.version !== 5) errors.push("Expected question-data schema version 5.");
+      const importantQuestions = data ? data.questions.filter((question) => question.isImportant === true) : [];
+      if (importantQuestions.length !== 704) errors.push("Expected 704 evidence-based important questions.");
+      if (importantQuestions.some((question) => !Number.isInteger(question.repeatCount) || question.repeatCount < 2)) errors.push("Important repeat metadata is invalid.");
       if (data && data.questions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) errors.push("A question is missing its Urdu translation.");
       if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("Category cards did not render.");
       if (visible(document.querySelector("#continue-session-card"))) errors.push("A fresh profile incorrectly showed Continue.");
@@ -218,7 +222,8 @@ async function main() {
           return !smallest || count < smallest.count ? { button, count } : smallest;
         }, null).button;
       const activeCategory = categoryButton.dataset.category || categoryButton.dataset.categoryId;
-      const categoryQuestions = data.questions.filter((question) => question.categoryId === activeCategory);
+      const allCategoryQuestions = data.questions.filter((question) => question.categoryId === activeCategory);
+      const categoryQuestions = allCategoryQuestions.slice(0, 50);
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
       const findCurrent = () => {
         const questionId = document.querySelector("#question-text").dataset.questionId;
@@ -244,6 +249,41 @@ async function main() {
       await pause();
       if (!visible(document.querySelector("#mode-screen"))) errors.push("Mode chooser did not open after selecting a category.");
       if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 3) errors.push("Mode chooser did not show Learn, Quiz and Difficult.");
+      const partSelect = document.querySelector("#part-select");
+      if (!partSelect || partSelect.value !== "0") errors.push("The first 50-question Part was not selected by default.");
+      if (!partSelect || partSelect.options.length !== Math.ceil(allCategoryQuestions.length / 50) + 1) errors.push("Part selector count is incorrect.");
+      if (!document.querySelector("#study-scope-summary").textContent.includes("questions 1–50")) errors.push("Part summary did not show the first 50-question range.");
+      const firstPartImportantCount = categoryQuestions.filter((question) => question.isImportant === true).length;
+      if (!document.querySelector("#important-count").textContent.startsWith(String(firstPartImportantCount))) errors.push("Important count did not match the selected Part.");
+
+      const importantPartIndex = Array.from(
+        { length: Math.ceil(allCategoryQuestions.length / 50) },
+        (_, index) => index
+      ).find((index) => allCategoryQuestions.slice(index * 50, (index + 1) * 50).some((question) => question.isImportant === true));
+      if (!Number.isInteger(importantPartIndex)) {
+        errors.push("Could not find an Important Part in the tested category.");
+      } else {
+        partSelect.value = String(importantPartIndex);
+        partSelect.dispatchEvent(new Event("change", { bubbles: true }));
+        const expectedImportant = allCategoryQuestions
+          .slice(importantPartIndex * 50, (importantPartIndex + 1) * 50)
+          .filter((question) => question.isImportant === true);
+        const importantCheckbox = document.querySelector("#important-only-checkbox");
+        importantCheckbox.click();
+        await pause();
+        if (document.querySelector("#learn-mode-button").disabled || document.querySelector("#quiz-mode-button").disabled) errors.push("Important Learn/Quiz was disabled despite matching questions.");
+        document.querySelector("#learn-mode-button").click();
+        await pause();
+        const importantRenderedId = document.querySelector("#question-text").dataset.questionId;
+        if (!expectedImportant.some((question) => question.id === importantRenderedId)) errors.push("Important Learn rendered a non-important question.");
+        if (!document.querySelector("#question-counter").textContent.endsWith("of " + expectedImportant.length)) errors.push("Important Learn total was incorrect.");
+        if (!document.querySelector("#question-kind").textContent.includes("IMPORTANT")) errors.push("Important question badge was not rendered.");
+        document.querySelector("#back-button").click();
+        await pause();
+        categoryButton.click();
+        await pause();
+        if (document.querySelector("#part-select").value !== "0" || document.querySelector("#important-only-checkbox").checked) errors.push("A fresh category choice did not reset to standard Part 1.");
+      }
 
       document.querySelector("#difficult-mode-button").click();
       await pause();
@@ -411,8 +451,9 @@ async function main() {
       document.querySelector("#action-button").click();
       await pause();
       const resumeSnapshot = JSON.parse(localStorage.getItem(sessionStorageKey) || "null");
-      if (!resumeSnapshot || resumeSnapshot.version !== 1) errors.push("Active Quiz was not saved with the versioned resume schema.");
+      if (!resumeSnapshot || resumeSnapshot.version !== 2) errors.push("Active Quiz was not saved with the versioned resume schema.");
       if (!resumeSnapshot || resumeSnapshot.mode !== "quiz" || resumeSnapshot.scope !== "all") errors.push("Saved Quiz resume mode/scope was incorrect.");
+      if (!resumeSnapshot || resumeSnapshot.partIndex !== 0 || resumeSnapshot.importantOnly !== false) errors.push("Saved Quiz Part/Important scope was incorrect.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.questionIds) || resumeSnapshot.questionIds.length !== categoryQuestions.length) errors.push("Saved Quiz question order was incomplete.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.optionOrders) || resumeSnapshot.optionOrders.length !== categoryQuestions.length) errors.push("Saved Quiz option orders were incomplete.");
       if (!resumeSnapshot || !resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== resumeSelectedIndex || resumeSnapshot.score !== 0) errors.push("Saved submitted-answer state was incorrect.");
@@ -474,7 +515,7 @@ async function main() {
       if (!visible(card)) errors.push("Continue card was not shown for an active saved session.");
       if (!document.querySelector("#continue-session-title").textContent.includes(expected.categoryName)) errors.push("Continue card did not label the saved category.");
       const continueMeta = document.querySelector("#continue-session-meta").textContent;
-      if (!continueMeta.includes("Quiz") || !continueMeta.includes("Question 1 of " + expected.questionCount)) errors.push("Continue card did not label Quiz mode and progress.");
+      if (!continueMeta.includes("Quiz") || !continueMeta.includes("Part 1") || !continueMeta.includes("Question 1 of " + expected.questionCount)) errors.push("Continue card did not label Quiz mode, Part and progress.");
 
       const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds)) errors.push("Reload changed the saved Quiz question order.");

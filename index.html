@@ -6,9 +6,9 @@
   <meta name="description" content="Free category-wise MCQ practice for the PPSC General Ability test.">
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
-  <link rel="stylesheet" href="styles.css?v=20260828-1">
-  <script src="data/questions.js?v=20260828-1" defer></script>
-  <script src="app.js?v=20260828-1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260828-2">
+  <script src="data/questions.js?v=20260828-2" defer></script>
+  <script src="app.js?v=20260828-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -128,6 +128,32 @@
         <span id="mode-category" class="mode-category">Selected category</span>
         <h1 id="mode-title">How would you like to prepare?</h1>
         <p class="mode-intro">Learn each answer, test yourself in quiz mode, or practise only the questions you marked as difficult.</p>
+
+        <section class="study-scope-panel" aria-labelledby="study-scope-title">
+          <div class="study-scope-heading">
+            <div>
+              <span class="eyebrow">MANAGEABLE STUDY SETS</span>
+              <h2 id="study-scope-title">Choose a 50-question Part</h2>
+            </div>
+            <p id="study-scope-summary" data-study-scope-summary>Part 1 covers questions 1–50.</p>
+          </div>
+
+          <div class="study-scope-controls">
+            <label class="part-select-label" for="part-select">
+              <span>Study Part</span>
+              <select id="part-select" data-part-select></select>
+            </label>
+
+            <label class="important-filter" for="important-only-checkbox">
+              <input id="important-only-checkbox" data-important-only type="checkbox">
+              <span class="important-filter-icon" aria-hidden="true">I</span>
+              <span class="important-filter-copy">
+                <strong>Important repeated MCQs only</strong>
+                <small id="important-count" data-important-count>0 repeated MCQs in this selection</small>
+              </span>
+            </label>
+          </div>
+        </section>
 
         <div id="standard-mode-options" class="mode-options" aria-label="Preparation mode">
           <button id="learn-mode-button" class="mode-option mode-option-learn" type="button">

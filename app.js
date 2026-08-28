@@ -2,9 +2,10 @@
   "use strict";
 
   var OPTION_LABELS = ["A", "B", "C", "D"];
+  var PART_SIZE = 50;
   var DIFFICULT_STORAGE_KEY = "ppsc-prep:difficult-question-ids:v1";
   var SESSION_STORAGE_KEY = "ppsc-prep:active-session:v1";
-  var SESSION_STORAGE_VERSION = 1;
+  var SESSION_STORAGE_VERSION = 2;
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
@@ -25,6 +26,8 @@
     questions: [],
     mode: null,
     scope: "all",
+    partIndex: 0,
+    importantOnly: false,
     currentIndex: 0,
     selectedIndex: null,
     submitted: false,
@@ -53,6 +56,10 @@
     elements.continueSessionTitle = firstElement(["#continue-session-title", "[data-continue-session-title]"]);
     elements.continueSessionMeta = firstElement(["#continue-session-meta", "[data-continue-session-meta]"]);
     elements.modeCategory = firstElement(["#mode-category", "[data-mode-category]"]);
+    elements.partSelect = firstElement(["#part-select", "[data-part-select]"]);
+    elements.importantOnlyCheckbox = firstElement(["#important-only-checkbox", "[data-important-only]"]);
+    elements.importantCount = firstElement(["#important-count", "[data-important-count]"]);
+    elements.studyScopeSummary = firstElement(["#study-scope-summary", "[data-study-scope-summary]"]);
     elements.learnModeButton = firstElement(["#learn-mode-button", "[data-start-learn]"]);
     elements.quizModeButton = firstElement(["#quiz-mode-button", "[data-start-quiz]"]);
     elements.standardModeOptions = firstElement(["#standard-mode-options", "[data-standard-mode-options]", ".mode-options"]);
@@ -135,6 +142,11 @@
     return scope === "difficult" ? "Difficult " + modeName : modeName;
   }
 
+  function sessionSelectionLabel(partIndex, importantOnly) {
+    var partLabel = partIndex === null ? "All Questions" : "Part " + (partIndex + 1);
+    return importantOnly ? partLabel + " · Important" : partLabel;
+  }
+
   function updateContinueSessionUI() {
     var snapshot = activeSessionSnapshot;
     var category = snapshot ? findCategory(snapshot.categoryId) : null;
@@ -145,17 +157,18 @@
 
     var currentNumber = Math.min(snapshot.currentIndex + 1, snapshot.questionIds.length);
     var modeLabel = sessionModeLabel(snapshot.mode, snapshot.scope);
+    var selectionLabel = sessionSelectionLabel(snapshot.partIndex, snapshot.importantOnly);
     if (elements.continueSessionTitle) {
       elements.continueSessionTitle.textContent = "Continue " + category.name;
     }
     if (elements.continueSessionMeta) {
-      elements.continueSessionMeta.textContent = modeLabel + " \u00b7 Question "
+      elements.continueSessionMeta.textContent = modeLabel + " \u00b7 " + selectionLabel + " \u00b7 Question "
         + currentNumber + " of " + snapshot.questionIds.length;
     }
     if (elements.continueSessionButton) {
       elements.continueSessionButton.setAttribute(
         "aria-label",
-        "Continue " + category.name + " " + modeLabel + ", question "
+        "Continue " + category.name + " " + modeLabel + ", " + selectionLabel + ", question "
           + currentNumber + " of " + snapshot.questionIds.length
       );
     }
@@ -174,13 +187,18 @@
 
   function normalizeStoredSession(savedValue) {
     if (!savedValue || typeof savedValue !== "object" || Array.isArray(savedValue)) return null;
-    if (savedValue.version !== SESSION_STORAGE_VERSION) return null;
+    if (savedValue.version !== 1 && savedValue.version !== SESSION_STORAGE_VERSION) return null;
     if (savedValue.bankSignature !== questionBankSignature) return null;
     if (savedValue.mode !== "learn" && savedValue.mode !== "quiz") return null;
     if (savedValue.scope !== "all" && savedValue.scope !== "difficult") return null;
 
     var category = findCategory(String(savedValue.categoryId || ""));
     if (!category) return null;
+    var isLegacyFullCategorySession = savedValue.version === 1;
+    var partIndex = isLegacyFullCategorySession ? null : savedValue.partIndex;
+    if (partIndex !== null && (!Number.isInteger(partIndex) || partIndex < 0 || partIndex >= partCount(category.id))) return null;
+    if (!isLegacyFullCategorySession && typeof savedValue.importantOnly !== "boolean") return null;
+    var importantOnly = isLegacyFullCategorySession ? false : savedValue.importantOnly;
     if (!Array.isArray(savedValue.questionIds) || savedValue.questionIds.length === 0) return null;
 
     var questionIds = savedValue.questionIds.map(String);
@@ -192,22 +210,22 @@
       return !question || question.categoryId !== category.id;
     })) return null;
 
-    var allCategoryIds = allQuestions.filter(function (question) {
-      return question.categoryId === category.id;
-    }).map(function (question) {
+    var selectedCategoryIds = questionsForSelection(category.id, partIndex, importantOnly).map(function (question) {
       return String(question.id);
     });
     if (savedValue.scope === "all") {
       var savedIdSet = new Set(questionIds);
       if (
-        questionIds.length !== allCategoryIds.length
-        || allCategoryIds.some(function (questionId) { return !savedIdSet.has(questionId); })
+        questionIds.length !== selectedCategoryIds.length
+        || selectedCategoryIds.some(function (questionId) { return !savedIdSet.has(questionId); })
       ) return null;
+    } else if (questionIds.some(function (questionId) { return !selectedCategoryIds.includes(questionId); })) {
+      return null;
     }
 
     if (savedValue.mode === "learn") {
       var includedIds = new Set(questionIds);
-      var expectedLearnOrder = allCategoryIds.filter(function (questionId) {
+      var expectedLearnOrder = selectedCategoryIds.filter(function (questionId) {
         return includedIds.has(questionId);
       });
       if (orderKey(questionIds, function (questionId) { return questionId; })
@@ -251,6 +269,8 @@
       categoryId: category.id,
       mode: savedValue.mode,
       scope: savedValue.scope,
+      partIndex: partIndex,
+      importantOnly: importantOnly,
       questionIds: questionIds,
       optionOrders: optionOrders,
       currentIndex: currentIndex,
@@ -305,6 +325,8 @@
       categoryId: state.category.id,
       mode: state.mode,
       scope: state.scope,
+      partIndex: state.partIndex,
+      importantOnly: state.importantOnly,
       questionIds: state.questions.map(function (question) { return String(question.id); }),
       optionOrders: optionOrders,
       currentIndex: state.currentIndex,
@@ -338,6 +360,8 @@
     state.questions = normalized.questions;
     state.mode = normalized.snapshot.mode;
     state.scope = normalized.snapshot.scope;
+    state.partIndex = normalized.snapshot.partIndex;
+    state.importantOnly = normalized.snapshot.importantOnly;
     state.currentIndex = normalized.snapshot.currentIndex;
     state.selectedIndex = normalized.snapshot.selectedIndex;
     state.submitted = normalized.snapshot.submitted;
@@ -385,9 +409,38 @@
     }
   }
 
-  function difficultQuestionCount(categoryId) {
+  function isImportantQuestion(question) {
+    return Boolean(question && (question.isImportant === true || Number(question.repeatCount) >= 2));
+  }
+
+  function categoryQuestions(categoryId) {
     return allQuestions.filter(function (question) {
-      return question.categoryId === categoryId && difficultQuestionIds.has(String(question.id));
+      return question.categoryId === categoryId;
+    });
+  }
+
+  function partCount(categoryId) {
+    return Math.ceil(categoryQuestions(categoryId).length / PART_SIZE);
+  }
+
+  function baseQuestionsForSelection(categoryId, partIndex) {
+    var questions = categoryQuestions(categoryId);
+    if (partIndex === null) return questions;
+    var start = partIndex * PART_SIZE;
+    return questions.slice(start, start + PART_SIZE);
+  }
+
+  function questionsForSelection(categoryId, partIndex, importantOnly) {
+    return baseQuestionsForSelection(categoryId, partIndex).filter(function (question) {
+      return !importantOnly || isImportantQuestion(question);
+    });
+  }
+
+  function difficultQuestionCount(categoryId, partIndex, importantOnly) {
+    var selectedPart = arguments.length >= 2 ? partIndex : state.partIndex;
+    var selectedImportantOnly = arguments.length >= 3 ? importantOnly : state.importantOnly;
+    return questionsForSelection(categoryId, selectedPart, selectedImportantOnly).filter(function (question) {
+      return difficultQuestionIds.has(String(question.id));
     }).length;
   }
 
@@ -572,14 +625,83 @@
   }
 
   function questionCount(categoryId) {
-    return allQuestions.filter(function (question) {
-      return question.categoryId === categoryId;
-    }).length;
+    return categoryQuestions(categoryId).length;
+  }
+
+  function importantQuestionCount(categoryId) {
+    return categoryQuestions(categoryId).filter(isImportantQuestion).length;
+  }
+
+  function populateStudyScopeUI(categoryId) {
+    var total = questionCount(categoryId);
+    var totalParts = partCount(categoryId);
+
+    if (elements.partSelect) {
+      elements.partSelect.textContent = "";
+      for (var index = 0; index < totalParts; index += 1) {
+        var start = (index * PART_SIZE) + 1;
+        var end = Math.min((index + 1) * PART_SIZE, total);
+        var option = document.createElement("option");
+        option.value = String(index);
+        option.textContent = "Part " + (index + 1) + " · Questions " + start + "–" + end;
+        elements.partSelect.appendChild(option);
+      }
+
+      var allOption = document.createElement("option");
+      allOption.value = "all";
+      allOption.textContent = "All Questions · " + total;
+      elements.partSelect.appendChild(allOption);
+      elements.partSelect.value = state.partIndex === null ? "all" : String(state.partIndex);
+    }
+
+    if (elements.importantOnlyCheckbox) {
+      elements.importantOnlyCheckbox.checked = state.importantOnly;
+      elements.importantOnlyCheckbox.disabled = importantQuestionCount(categoryId) === 0;
+    }
+    updateStudyScopeUI();
+  }
+
+  function updateStudyScopeUI() {
+    if (!state.category) return;
+
+    var categoryId = state.category.id;
+    var allInCategory = categoryQuestions(categoryId);
+    var baseQuestions = baseQuestionsForSelection(categoryId, state.partIndex);
+    var importantInSelection = baseQuestions.filter(isImportantQuestion).length;
+    var selectedQuestions = questionsForSelection(categoryId, state.partIndex, state.importantOnly);
+    var selectionLabel = sessionSelectionLabel(state.partIndex, state.importantOnly);
+
+    if (elements.modeCategory) {
+      elements.modeCategory.textContent = state.category.name + " · " + selectionLabel;
+    }
+    if (elements.importantCount) {
+      elements.importantCount.textContent = importantInSelection + (importantInSelection === 1
+        ? " repeated MCQ in this selection"
+        : " repeated MCQs in this selection");
+    }
+    if (elements.studyScopeSummary) {
+      if (state.partIndex === null) {
+        elements.studyScopeSummary.textContent = "All " + allInCategory.length + " questions selected";
+      } else {
+        var start = (state.partIndex * PART_SIZE) + 1;
+        var end = Math.min((state.partIndex + 1) * PART_SIZE, allInCategory.length);
+        elements.studyScopeSummary.textContent = "Part " + (state.partIndex + 1) + " covers questions "
+          + start + "–" + end + " of " + allInCategory.length;
+      }
+      if (state.importantOnly) {
+        elements.studyScopeSummary.textContent += " · " + selectedQuestions.length + " important selected";
+      }
+    }
+
+    var hasSelectedQuestions = selectedQuestions.length > 0;
+    if (elements.learnModeButton) elements.learnModeButton.disabled = !hasSelectedQuestions;
+    if (elements.quizModeButton) elements.quizModeButton.disabled = !hasSelectedQuestions;
+    updateDifficultModeUI();
   }
 
   function updateDifficultModeUI() {
     var categoryId = state.category ? state.category.id : "";
-    var count = categoryId ? difficultQuestionCount(categoryId) : 0;
+    var count = categoryId ? difficultQuestionCount(categoryId, state.partIndex, state.importantOnly) : 0;
     var hasQuestions = count > 0;
 
     if (elements.difficultCount) {
@@ -594,6 +716,7 @@
       elements.difficultModeButton.setAttribute(
         "aria-label",
         "Difficult questions, " + count + " marked in " + (state.category ? state.category.name : "this category")
+          + ", " + sessionSelectionLabel(state.partIndex, state.importantOnly)
       );
     }
   }
@@ -611,7 +734,7 @@
     if (!state.category) return;
     setDifficultModeChoiceOpen(true);
 
-    var count = difficultQuestionCount(state.category.id);
+    var count = difficultQuestionCount(state.category.id, state.partIndex, state.importantOnly);
     var focusTarget = count > 0 ? elements.difficultLearnButton : elements.difficultEmpty;
     if (focusTarget && typeof focusTarget.focus === "function") {
       if (focusTarget === elements.difficultEmpty) focusTarget.setAttribute("tabindex", "-1");
@@ -663,13 +786,18 @@
 
     categories.forEach(function (category) {
       var count = questionCount(category.id);
+      var importantCount = importantQuestionCount(category.id);
       var card = document.createElement("button");
       card.type = "button";
       card.className = "category-card" + (count === 0 ? " is-empty" : "");
       card.dataset.category = category.id;
       card.dataset.categoryId = category.id;
       card.disabled = count === 0;
-      card.setAttribute("aria-label", category.name + ", " + count + (count === 1 ? " question" : " questions"));
+      card.setAttribute(
+        "aria-label",
+        category.name + ", " + count + (count === 1 ? " question" : " questions")
+          + (importantCount ? ", " + importantCount + " important repeated" : "")
+      );
 
       var badge = document.createElement("span");
       badge.className = "category-card__icon category-icon";
@@ -691,6 +819,7 @@
       meta.className = "category-card__count question-count";
       meta.textContent = count > 0
         ? count + (count === 1 ? " question" : " questions")
+          + (importantCount ? " · " + importantCount + " important" : "")
         : "Coming soon";
 
       content.appendChild(title);
@@ -717,12 +846,14 @@
     state.questions = [];
     state.mode = null;
     state.scope = "all";
+    state.partIndex = 0;
+    state.importantOnly = false;
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
     state.score = 0;
 
-    if (elements.modeCategory) elements.modeCategory.textContent = category.name;
+    populateStudyScopeUI(category.id);
     setDifficultModeChoiceOpen(false);
     updateDifficultModeUI();
 
@@ -829,7 +960,8 @@
   function setQuizSessionLabel() {
     if (elements.quizCategory && state.category) {
       elements.quizCategory.textContent = state.category.name + " \u00b7 "
-        + sessionModeLabel(state.mode, state.scope);
+        + sessionModeLabel(state.mode, state.scope) + " \u00b7 "
+        + sessionSelectionLabel(state.partIndex, state.importantOnly);
     }
     if (elements.quizScreen) {
       elements.quizScreen.dataset.mode = state.mode || "";
@@ -840,10 +972,8 @@
   function startQuiz(categoryId, mode, scope) {
     var category = findCategory(categoryId);
     var selectedScope = scope === "difficult" ? "difficult" : "all";
-    var filteredQuestions = allQuestions.filter(function (question) {
-      return question.categoryId === categoryId && (
-        selectedScope !== "difficult" || difficultQuestionIds.has(String(question.id))
-      );
+    var filteredQuestions = questionsForSelection(categoryId, state.partIndex, state.importantOnly).filter(function (question) {
+      return selectedScope !== "difficult" || difficultQuestionIds.has(String(question.id));
     });
 
     if (!category) return false;
@@ -876,7 +1006,9 @@
     var selectedMode = mode === "learn" ? "learn" : "quiz";
     var sessionQuestions = filteredQuestions.slice();
     if (selectedMode === "quiz") {
-      var sessionOrderKey = categoryId + "::" + selectedScope;
+      var sessionOrderKey = categoryId + "::" + selectedScope + "::"
+        + (state.partIndex === null ? "all" : state.partIndex) + "::"
+        + (state.importantOnly ? "important" : "standard");
       sessionQuestions = shuffledOrder(
         filteredQuestions,
         function (question) { return question.id; },
@@ -931,7 +1063,12 @@
     }
 
     if (elements.questionKind) {
-      elements.questionKind.textContent = question.kind === "similar" ? "SIMILAR PRACTICE" : "SOURCE PAPER";
+      var kindLabel = question.kind === "similar" ? "SIMILAR PRACTICE" : "SOURCE PAPER";
+      if (isImportantQuestion(question)) {
+        kindLabel += " · IMPORTANT · REPEATED " + question.repeatCount + "x";
+      }
+      elements.questionKind.textContent = kindLabel;
+      elements.questionKind.classList.toggle("is-important", isImportantQuestion(question));
     }
     if (elements.questionText) {
       elements.questionText.textContent = question.question;
@@ -1211,7 +1348,7 @@
     var total = state.questions.length;
     var percent = total > 0 ? Math.round((state.score / total) * 100) : 0;
     var remainingInScope = state.category && state.scope === "difficult"
-      ? difficultQuestionCount(state.category.id)
+      ? difficultQuestionCount(state.category.id, state.partIndex, state.importantOnly)
       : total;
     var canRepeatScope = state.scope !== "difficult" || remainingInScope > 0;
     removeStoredActiveSession();
@@ -1252,7 +1389,8 @@
       elements.resultSummary.textContent = "You studied " + total + " questions from this difficult session. The quiz will use "
         + remainingInScope + (remainingInScope === 1 ? " question" : " questions") + " still marked difficult.";
     } else if (elements.resultSummary && state.mode === "learn") {
-      elements.resultSummary.textContent = "You studied all " + total + " questions in this category. Now test yourself with the quiz.";
+      elements.resultSummary.textContent = "You studied all " + total + " questions in "
+        + sessionSelectionLabel(state.partIndex, state.importantOnly) + ". Now test yourself with the quiz.";
     } else if (elements.resultSummary) {
       elements.resultSummary.textContent = resultMessage(percent);
     }
@@ -1290,6 +1428,8 @@
     state.questions = [];
     state.mode = null;
     state.scope = "all";
+    state.partIndex = 0;
+    state.importantOnly = false;
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -1320,6 +1460,18 @@
 
   function bindEvents() {
     if (elements.categoryGrid) elements.categoryGrid.addEventListener("click", onCategoryClick);
+    if (elements.partSelect) {
+      elements.partSelect.addEventListener("change", function () {
+        state.partIndex = elements.partSelect.value === "all" ? null : Number(elements.partSelect.value);
+        updateStudyScopeUI();
+      });
+    }
+    if (elements.importantOnlyCheckbox) {
+      elements.importantOnlyCheckbox.addEventListener("change", function () {
+        state.importantOnly = elements.importantOnlyCheckbox.checked;
+        updateStudyScopeUI();
+      });
+    }
     if (elements.continueSessionButton) {
       elements.continueSessionButton.addEventListener("click", restoreActiveSession);
     }
