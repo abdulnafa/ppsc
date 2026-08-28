@@ -1,0 +1,2453 @@
+[
+  {
+    "id": "ADV2E102-U0006-Q053-SRC",
+    "pairId": "ADV2E102-U0006-Q053",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "WWW stands for ______?",
+    "questionUrdu": "WWW کا مکمل نام کیا ہے؟",
+    "options": [
+      "World Whole Web",
+      "Wide World Web",
+      "Web World Wide",
+      "World Wide Web"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”World Wide Web“ ہے۔ WWW سے مراد World Wide Web ہے، جو باہم منسلک hypertext resources کا نظام ہے۔",
+    "source": {
+      "type": "book",
+      "label": "About the World Wide Web",
+      "referenceUrl": "https://www.w3.org/WWW/Overview.html",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q053"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.w3.org/WWW/Overview.html",
+        "label": "About the World Wide Web",
+        "publisher": "World Wide Web Consortium",
+        "authorityId": "w3c",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "W3C identifies the World Wide Web as being known by the abbreviation WWW."
+      },
+      {
+        "url": "https://datatracker.ietf.org/doc/html/rfc1392",
+        "label": "RFC 1392: Internet Users' Glossary",
+        "publisher": "Internet Engineering Task Force",
+        "authorityId": "ietf",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "RFC 1392 independently gives the entry 'World Wide Web (WWW or W3)' and directs WWW to World Wide Web."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0006-Q053-SIM",
+    "pairId": "ADV2E102-U0006-Q053",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What was the address of the world's first website?",
+    "questionUrdu": "دنیا کی پہلی website کا address کیا تھا؟",
+    "options": [
+      "info.cern.ch",
+      "www.w3.org",
+      "web.mit.edu",
+      "home.nasa.gov"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”info.cern.ch“ ہے۔ Tim Berners-Lee کی پہلی website CERN کے info.cern.ch address پر چلائی گئی تھی۔",
+    "source": {
+      "type": "practice",
+      "label": "A short history of the Web",
+      "referenceUrl": "https://home.cern/science/computing/birth-web/short-history-web",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q053",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://home.cern/science/computing/birth-web/short-history-web",
+        "label": "A short history of the Web",
+        "publisher": "CERN",
+        "authorityId": "cern",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CERN supports that the world's first website was hosted at info.cern.ch."
+      },
+      {
+        "url": "https://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html",
+        "label": "The World Wide Web project",
+        "publisher": "World Wide Web Consortium",
+        "authorityId": "w3c",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "World Wide Web Consortium supports that the world's first website was hosted at info.cern.ch."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q057-SRC",
+    "pairId": "ADV2E102-U0006-Q057",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Solve: 2⁵ × 2³ = ?",
+    "questionUrdu": "درج ذیل حساب حل کریں: 2⁵ × 2³ = ؟",
+    "options": [
+      "256",
+      "128",
+      "54",
+      "60"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”256“ ہے۔ ایک ہی base کی powers کو multiply کرتے وقت exponents جمع ہوتے ہیں؛ 2⁸ = 256 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Properties of exponents and scientific notation",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/5-2-properties-of-exponents-and-scientific-notation",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q057"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra-2e/pages/5-2-properties-of-exponents-and-scientific-notation",
+        "label": "Properties of exponents and scientific notation",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the product rule for equal bases: add the exponents, so 2⁵ × 2³ = 2⁸ = 256."
+      },
+      {
+        "url": "https://math.libretexts.org/Courses/Cosumnes_River_College/Corequisite_Codex/05%3A_Simplifying_Expressions/5.03%3A_Laws_of_Exponents_-_Power_Rules",
+        "label": "Laws of exponents",
+        "publisher": "Cosumnes River College via Mathematics LibreTexts",
+        "authorityId": "cosumnes-river-college",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The college text independently states the product rule for exponents with the same base, confirming 2⁸ = 256."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "OCR mojibake in the superscripts and multiplication sign was repaired. The printed answer 128 conflicts with the exponent product rule and was corrected to 256."
+  },
+  {
+    "id": "ADV2E102-U0006-Q057-SIM",
+    "pairId": "ADV2E102-U0006-Q057",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "When powers with the same non-zero base are divided, what operation is performed on their exponents?",
+    "questionUrdu": "ایک ہی non-zero base کی powers کو divide کرتے وقت ان کے exponents پر کون سا عمل کیا جاتا ہے؟",
+    "options": [
+      "They are subtracted",
+      "They are added",
+      "They are multiplied",
+      "They are squared"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”They are subtracted“ ہے۔ Quotient rule کے مطابق aᵐ ÷ aⁿ = aᵐ⁻ⁿ ہوتا ہے، اس لیے exponents subtract کیے جاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Properties of exponents",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/5-2-properties-of-exponents-and-scientific-notation",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q057",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra-2e/pages/5-2-properties-of-exponents-and-scientific-notation",
+        "label": "Properties of exponents",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that dividing powers with the same non-zero base requires subtracting their exponents."
+      },
+      {
+        "url": "https://math.libretexts.org/Courses/Cosumnes_River_College/Corequisite_Codex/05%3A_Simplifying_Expressions/5.03%3A_Laws_of_Exponents_-_Power_Rules",
+        "label": "Laws of exponents",
+        "publisher": "Cosumnes River College via Mathematics LibreTexts",
+        "authorityId": "cosumnes-river-college",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cosumnes River College via Mathematics LibreTexts supports that dividing powers with the same non-zero base requires subtracting their exponents."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q059-SRC",
+    "pairId": "ADV2E102-U0006-Q059",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Evaluate: √6084",
+    "questionUrdu": "√6084 کی value کیا ہے؟",
+    "options": [
+      "78",
+      "72",
+      "66",
+      "65"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”78“ ہے۔ 78 × 78 = 6084، اس لیے √6084 = 78 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Simplify and use square roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-1-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q059"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-1-simplify-and-use-square-roots",
+        "label": "Simplify and use square roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the principal square root as the nonnegative number whose square equals the radicand; 78² equals 6084."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-roots/a/square-roots-review",
+        "label": "Square roots review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently explains principal square roots; multiplying 78 by 78 confirms √6084 = 78."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "OCR mojibake in the radical sign was repaired; the numerical proposition is unchanged."
+  },
+  {
+    "id": "ADV2E102-U0006-Q059-SIM",
+    "pairId": "ADV2E102-U0006-Q059",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Evaluate √7056.",
+    "questionUrdu": "√7056 کی value معلوم کریں۔",
+    "options": [
+      "74",
+      "78",
+      "82",
+      "84"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”84“ ہے۔ 84 × 84 = 7056، اس لیے 7056 کا principal square root 84 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Simplify and use square roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-1-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q059",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-1-simplify-and-use-square-roots",
+        "label": "Simplify and use square roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the principal square root of 7056 is 84."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-roots/a/square-roots-review",
+        "label": "Square roots review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that the principal square root of 7056 is 84."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q060-SRC",
+    "pairId": "ADV2E102-U0006-Q060",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "The plural of sheep is:",
+    "questionUrdu": "لفظ sheep کی plural form کیا ہے؟",
+    "options": [
+      "sheeps",
+      "sheepers",
+      "sheeves",
+      "sheep"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”sheep“ ہے۔ Sheep کی singular اور plural دونوں forms ایک ہی ہیں: sheep۔",
+    "source": {
+      "type": "book",
+      "label": "Nouns: form",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/nouns-form",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q060"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/nouns-form",
+        "label": "Nouns: form",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge grammar lists sheep among nouns whose plural has the same form as the singular."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/sheep",
+        "label": "Sheep definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently records sheep as both the singular and plural form."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0006-Q060-SIM",
+    "pairId": "ADV2E102-U0006-Q060",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What is the standard plural of 'deer'?",
+    "questionUrdu": "لفظ deer کی standard plural form کیا ہے؟",
+    "options": [
+      "deer",
+      "deers",
+      "deeres",
+      "deeren"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”deer“ ہے۔ عام English usage میں deer کی singular اور plural دونوں forms deer ہی ہوتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "deer",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/deer",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q060",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/deer",
+        "label": "deer",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that the standard plural of deer is deer."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/deer",
+        "label": "deer",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that the standard plural of deer is deer."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q061-SRC",
+    "pairId": "ADV2E102-U0006-Q061",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'by fits and starts' mean?",
+    "questionUrdu": "Idiom ‘by fits and starts’ کا کیا مطلب ہے؟",
+    "options": [
+      "Suddenly",
+      "Irregularly",
+      "Successfully",
+      "Incompletely"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Irregularly“ ہے۔ یہ idiom ایسے کام کے لیے آتا ہے جو مسلسل نہیں بلکہ بےقاعدہ وقفوں سے ہو۔",
+    "source": {
+      "type": "book",
+      "label": "Fits and starts",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/fits-and-starts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q061"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/fits-and-starts",
+        "label": "Fits and starts",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines fits and starts as periods of activity mixed with periods when nothing happens."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english/in-fits-and-starts",
+        "label": "In or by fits and starts",
+        "publisher": "HarperCollins",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently defines by fits and starts as happening irregularly, with repeated stopping and starting."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The expression was correctly classified as an idiom rather than a proverb, and punctuation was normalized."
+  },
+  {
+    "id": "ADV2E102-U0006-Q061-SIM",
+    "pairId": "ADV2E102-U0006-Q061",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word best matches the phrase 'on and off'?",
+    "questionUrdu": "Phrase ‘on and off’ کے مفہوم کے سب سے قریب کون سا لفظ ہے؟",
+    "options": [
+      "Intermittently",
+      "Permanently",
+      "Immediately",
+      "Successfully"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Intermittently“ ہے۔ On and off کا مطلب وقفے وقفے سے یا intermittently ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "on and off",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/on-and-off",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q061",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/on-and-off",
+        "label": "on and off",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that on and off means intermittently."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/on%20and%20off",
+        "label": "on and off",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that on and off means intermittently."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q062-SRC",
+    "pairId": "ADV2E102-U0006-Q062",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Fill in the blank: You must pay attention _____ the lecture.",
+    "questionUrdu": "خالی جگہ پُر کریں: You must pay attention _____ the lecture.",
+    "options": [
+      "on",
+      "to",
+      "with",
+      "in"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”to“ ہے۔ Pay attention کے بعد preposition ‘to’ آتا ہے: pay attention to the lecture۔",
+    "source": {
+      "type": "book",
+      "label": "Pay attention to something or someone",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/pay-attention-to",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q062"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/pay-attention-to",
+        "label": "Pay attention to something or someone",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge gives the construction pay attention to something or someone."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english/pay-attention",
+        "label": "Pay attention",
+        "publisher": "HarperCollins",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently uses pay attention to for watching, listening to, or taking notice of a person or thing."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source sentence 'attend _____ the lecture' is defective for the intended meaning because standard English uses the transitive form 'attend the lecture' without a preposition, which is absent from the choices. It was reconstructed as 'pay attention _____ the lecture' so that 'to' is uniquely correct."
+  },
+  {
+    "id": "ADV2E102-U0006-Q062-SIM",
+    "pairId": "ADV2E102-U0006-Q062",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the phrase 'take notice of' mean?",
+    "questionUrdu": "Phrase ‘take notice of’ کا کیا مطلب ہے؟",
+    "options": [
+      "Pay attention to",
+      "Argue against",
+      "Move away from",
+      "Forget completely"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Pay attention to“ ہے۔ Take notice of کا مطلب کسی چیز پر توجہ دینا یا اسے اہم سمجھنا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "take notice",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/take-notice",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q062",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/take-notice",
+        "label": "take notice",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that take notice of means to pay attention to something."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/take-notice",
+        "label": "take notice",
+        "publisher": "HarperCollins",
+        "authorityId": "collins-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "HarperCollins supports that take notice of means to pay attention to something."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q063-SRC",
+    "pairId": "ADV2E102-U0006-Q063",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Lenient means:",
+    "questionUrdu": "Lenient کا کیا مطلب ہے؟",
+    "options": [
+      "Rude",
+      "Harsh",
+      "Obstinate",
+      "Merciful or not strict"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”Merciful or not strict“ ہے۔ Lenient ایسے شخص یا رویے کو کہتے ہیں جو سخت نہ ہو بلکہ نرمی برتے۔",
+    "source": {
+      "type": "book",
+      "label": "Lenient definition",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/lenient",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q063"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/lenient",
+        "label": "Lenient definition",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines lenient as less severe or strong in punishment or judgment than expected."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/lenient",
+        "label": "Lenient definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines lenient as mild and tolerant, rather than harsh, severe, or strict."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The malformed source answer 'Easy way' was replaced by the documented meaning 'Merciful or not strict'; the three source distractors were retained."
+  },
+  {
+    "id": "ADV2E102-U0006-Q063-SIM",
+    "pairId": "ADV2E102-U0006-Q063",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "When describing a punishment, what does 'clement' mean?",
+    "questionUrdu": "Punishment کے بارے میں لفظ ‘clement’ کیا معنی دیتا ہے؟",
+    "options": [
+      "Merciful or mild",
+      "Unusually severe",
+      "Legally invalid",
+      "Secretly imposed"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Merciful or mild“ ہے۔ Clement punishment نرم، رحم دلانہ یا معمول سے کم سخت سزا ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "clement",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/clement",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q063",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/clement",
+        "label": "clement",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that clement means merciful or mild when describing punishment."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/clement",
+        "label": "clement",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that clement means merciful or mild when describing punishment."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q064-SRC",
+    "pairId": "ADV2E102-U0006-Q064",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which meaning best matches 'utopia'?",
+    "questionUrdu": "Utopia کا درست مفہوم کیا ہے؟",
+    "options": [
+      "A real island nation",
+      "A carved idol",
+      "An imagined ideal society",
+      "A legal sanctuary"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”An imagined ideal society“ ہے۔ Utopia ایک خیالی مثالی معاشرے یا ایسی کامل جگہ کو کہتے ہیں جو حقیقت میں موجود نہ ہو۔",
+    "source": {
+      "type": "book",
+      "label": "Utopia definition",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/utopia",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q064"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/utopia",
+        "label": "Utopia definition",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a utopia as a perfect society in which people cooperate and are happy."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/utopia",
+        "label": "Utopia definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines utopia as a place of ideal perfection, especially in social conditions."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source choices 'an ideal land' and 'paradise' overlap. The choices were reconstructed around the dictionary meaning so that an imagined ideal society is uniquely correct."
+  },
+  {
+    "id": "ADV2E102-U0006-Q064-SIM",
+    "pairId": "ADV2E102-U0006-Q064",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Who coined the word 'utopia' as the title of a book first published in 1516?",
+    "questionUrdu": "1516 میں پہلی بار شائع ہونے والی کتاب کے title کے طور پر لفظ ‘utopia’ کس نے وضع کیا؟",
+    "options": [
+      "Thomas More",
+      "Francis Bacon",
+      "John Locke",
+      "Jonathan Swift"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Thomas More“ ہے۔ Thomas More نے اپنی 1516 کی Latin کتاب Utopia کے عنوان کے لیے یہ لفظ بنایا۔",
+    "source": {
+      "type": "practice",
+      "label": "Utopia by Thomas More",
+      "referenceUrl": "https://www.bl.uk/collection-items/utopia-by-thomas-more",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q064",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.bl.uk/collection-items/utopia-by-thomas-more",
+        "label": "Utopia by Thomas More",
+        "publisher": "British Library",
+        "authorityId": "british-library",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Library supports that Thomas More coined the word utopia for his book first published in 1516."
+      },
+      {
+        "url": "https://www.britannica.com/topic/Utopia-by-More",
+        "label": "Utopia by Thomas More",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Britannica supports that Thomas More coined the word utopia for his book first published in 1516."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q065-SRC",
+    "pairId": "ADV2E102-U0006-Q065",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Asylum means:",
+    "questionUrdu": "Asylum کا کیا مطلب ہے؟",
+    "options": [
+      "Refuge",
+      "Diplomat",
+      "Embryo",
+      "Soreness"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Refuge“ ہے۔ Asylum ظلم یا خطرے سے بچنے والے شخص کو دی جانے والی پناہ یا تحفظ ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Asylum definition",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/asylum",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q065"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/asylum",
+        "label": "Asylum definition",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines asylum as protection or safety and, in its American entry, as a protected and safe place."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/asylum",
+        "label": "Asylum definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently gives refuge, shelter, and sanctuary as senses or synonyms of asylum."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0006-Q065-SIM",
+    "pairId": "ADV2E102-U0006-Q065",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which refugee-law principle prohibits returning a person to a place where they face persecution?",
+    "questionUrdu": "Refugee law کا کون سا اصول کسی شخص کو ایسی جگہ واپس بھیجنے سے روکتا ہے جہاں اسے persecution کا خطرہ ہو؟",
+    "options": [
+      "Non-refoulement",
+      "Extradition",
+      "Naturalization",
+      "Diplomatic immunity"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Non-refoulement“ ہے۔ Non-refoulement پناہ گزین کو persecution یا سنگین خطرے والی جگہ زبردستی واپس بھیجنے سے منع کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Refugees and protection",
+      "referenceUrl": "https://www.unhcr.org/about-unhcr/who-we-protect/refugees",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q065",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.unhcr.org/about-unhcr/who-we-protect/refugees",
+        "label": "Refugees and protection",
+        "publisher": "UN Refugee Agency",
+        "authorityId": "unhcr",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UN Refugee Agency supports that the principle of non-refoulement prohibits returning a person to a place where they face persecution."
+      },
+      {
+        "url": "https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-relating-status-refugees",
+        "label": "Convention relating to the Status of Refugees",
+        "publisher": "Office of the UN High Commissioner for Human Rights",
+        "authorityId": "ohchr",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Office of the UN High Commissioner for Human Rights supports that the principle of non-refoulement prohibits returning a person to a place where they face persecution."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q066-SRC",
+    "pairId": "ADV2E102-U0006-Q066",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Vigorous means:",
+    "questionUrdu": "Vigorous کا کیا مطلب ہے؟",
+    "options": [
+      "Coward",
+      "Energetic",
+      "Lethargic",
+      "Sluggish"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Energetic“ ہے۔ Vigorous کا مطلب طاقتور، فعال اور energetic ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Vigorous definition",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/vigorous",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q066"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/vigorous",
+        "label": "Vigorous definition",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines vigorous as very forceful or energetic."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/vigorous",
+        "label": "Vigorous definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines vigorous acts as forceful and energetic."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0006-Q066-SIM",
+    "pairId": "ADV2E102-U0006-Q066",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word means lacking energy and enthusiasm?",
+    "questionUrdu": "کون سا لفظ energy اور enthusiasm کی کمی کا مفہوم دیتا ہے؟",
+    "options": [
+      "Lethargic",
+      "Vigorous",
+      "Animated",
+      "Robust"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Lethargic“ ہے۔ Lethargic ایسے شخص یا حالت کو کہتے ہیں جس میں توانائی اور سرگرمی بہت کم ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "lethargic",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/lethargic",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q066",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/lethargic",
+        "label": "lethargic",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that lethargic means lacking energy and enthusiasm."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/lethargic",
+        "label": "lethargic",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that lethargic means lacking energy and enthusiasm."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q067-SRC",
+    "pairId": "ADV2E102-U0006-Q067",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Fill in the blank: The manager likes to be _____ control.",
+    "questionUrdu": "خالی جگہ پُر کریں: The manager likes to be _____ control.",
+    "options": [
+      "about",
+      "of",
+      "in",
+      "on"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”in“ ہے۔ درست phrase ‘in control’ ہے، یعنی اختیار یا انتظام اپنے ہاتھ میں ہونا۔",
+    "source": {
+      "type": "book",
+      "label": "Control definition and usage",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/control",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q067"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/control",
+        "label": "Control definition and usage",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge illustrates 'in control' for the condition of possessing the power to direct events."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/control%20of",
+        "label": "In control of",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines 'in control of' as having the power to direct or control something."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Capitalization and terminal punctuation were normalized; the tested preposition remains unchanged."
+  },
+  {
+    "id": "ADV2E102-U0006-Q067-SIM",
+    "pairId": "ADV2E102-U0006-Q067",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which verb means 'to bring under control'?",
+    "questionUrdu": "کون سا verb ‘قابو میں لانے’ کا مفہوم دیتا ہے؟",
+    "options": [
+      "Subdue",
+      "Provoke",
+      "Release",
+      "Magnify"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Subdue“ ہے۔ Subdue کا مطلب کسی شخص، مزاحمت یا قوت کو قابو میں لانا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "subdue",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/subdue",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q067",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/subdue",
+        "label": "subdue",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that subdue means to bring someone or something under control."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/subdue",
+        "label": "subdue",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that subdue means to bring someone or something under control."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q068-SRC",
+    "pairId": "ADV2E102-U0006-Q068",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Fill in the blank: I am envious _____ them.",
+    "questionUrdu": "خالی جگہ پُر کریں: I am envious _____ them.",
+    "options": [
+      "of",
+      "in",
+      "on",
+      "about"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”of“ ہے۔ Adjective envious کے ساتھ preposition ‘of’ استعمال ہوتا ہے: envious of them۔",
+    "source": {
+      "type": "book",
+      "label": "Envious definition and usage",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/envious",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/envious",
+        "label": "Envious definition and usage",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge gives 'envious of' as the standard construction for wishing one had what another person has."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/envious",
+        "label": "Envious definition and usage",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently illustrates envious with the preposition 'of'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The fragment was converted into a conventional fill-in-the-blank stem and punctuation was normalized."
+  },
+  {
+    "id": "ADV2E102-U0006-Q068-SIM",
+    "pairId": "ADV2E102-U0006-Q068",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which sentence correctly uses 'envy' as a transitive verb?",
+    "questionUrdu": "کون سا sentence لفظ ‘envy’ کو transitive verb کے طور پر درست استعمال کرتا ہے؟",
+    "options": [
+      "I envy their success.",
+      "I envy of their success.",
+      "I envy at their success.",
+      "I envy with their success."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”I envy their success.“ ہے۔ Verb envy براہِ راست object لیتا ہے، اس لیے ‘I envy their success’ درست ہے اور preposition نہیں لگتی۔",
+    "source": {
+      "type": "practice",
+      "label": "Envy",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/envy",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/envy",
+        "label": "Envy",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that envy can be used as a transitive verb taking a direct object without a preposition."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/envy",
+        "label": "envy",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that envy can be used as a transitive verb taking a direct object without a preposition."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q069-SRC",
+    "pairId": "ADV2E102-U0006-Q069",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Notion means:",
+    "questionUrdu": "Notion کا کیا مطلب ہے؟",
+    "options": [
+      "Idea",
+      "Factual statement",
+      "Worthlessness",
+      "Forward direction"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Idea“ ہے۔ Notion سے مراد کوئی خیال، تصور یا belief ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Notion definition",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/notion",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/notion",
+        "label": "Notion definition",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines notion as a belief or idea."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/notion",
+        "label": "Notion definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently treats notion as an idea, concept, conception, or thought."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The distractor fragments were normalized into parallel noun phrases; the tested synonym remains Idea."
+  },
+  {
+    "id": "ADV2E102-U0006-Q069-SIM",
+    "pairId": "ADV2E102-U0006-Q069",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which adjective means existing as an idea rather than as a real thing?",
+    "questionUrdu": "کون سا adjective کسی چیز کے حقیقت کے بجائے صرف خیال کی صورت میں موجود ہونے کا مفہوم دیتا ہے؟",
+    "options": [
+      "Notional",
+      "Notorious",
+      "Noteworthy",
+      "Notified"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Notional“ ہے۔ Notional کا مطلب خیالی یا تصوراتی ہے، یعنی عملی یا حقیقی وجود کے بجائے idea کی صورت میں۔",
+    "source": {
+      "type": "practice",
+      "label": "notional",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/notional",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/notional",
+        "label": "notional",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that notional means existing as an idea rather than as a real thing."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/notional",
+        "label": "notional",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that notional means existing as an idea rather than as a real thing."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q070-SRC",
+    "pairId": "ADV2E102-U0006-Q070",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Static means:",
+    "questionUrdu": "Static کا کیا مطلب ہے؟",
+    "options": [
+      "Mathematician",
+      "Dynamic",
+      "Straight",
+      "Motionless"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”Motionless“ ہے۔ Static کا مطلب ساکن یا حرکت نہ کرنے والا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Static definition",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/static",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/static",
+        "label": "Static definition",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines static as staying in one place without moving and lists motionless as a synonym."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/static",
+        "label": "Static definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines static as characterized by lack of movement or fixed in one place."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0006-Q070-SIM",
+    "pairId": "ADV2E102-U0006-Q070",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which type of IP address is configured to remain unchanged until it is manually altered?",
+    "questionUrdu": "کس قسم کا IP address manually تبدیل کیے جانے تک ایک ہی رہنے کے لیے configure کیا جاتا ہے؟",
+    "options": [
+      "Static IP address",
+      "Dynamic IP address",
+      "Multicast packet",
+      "Temporary DNS query"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Static IP address“ ہے۔ Static IP address مستقل طور پر configure کیا جاتا ہے، جبکہ dynamic address خودکار طور پر بدل سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "IP addressing and static routes",
+      "referenceUrl": "https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13788-3.html",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13788-3.html",
+        "label": "IP addressing and static routes",
+        "publisher": "Cisco",
+        "authorityId": "cisco",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cisco supports that a static IP address is configured to remain unchanged until manually altered."
+      },
+      {
+        "url": "https://www.cloudflare.com/learning/network-layer/what-is-an-ip-address/",
+        "label": "What is an IP address?",
+        "publisher": "Cloudflare",
+        "authorityId": "cloudflare",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cloudflare supports that a static IP address is configured to remain unchanged until manually altered."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q071-SRC",
+    "pairId": "ADV2E102-U0006-Q071",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'tie the knot' mean?",
+    "questionUrdu": "Idiom ‘tie the knot’ کا کیا مطلب ہے؟",
+    "options": [
+      "Friendship",
+      "Getting married",
+      "Enmity",
+      "Criticism"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Getting married“ ہے۔ Tie the knot کا مطلب شادی کرنا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Tie the knot",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/tie%20the%20knot",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/tie%20the%20knot",
+        "label": "Tie the knot",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines tie the knot as performing a marriage ceremony or getting married."
+      },
+      {
+        "url": "https://downloads.bbc.co.uk/worldservice/learningenglish/quiznet/pdfs/qnet_136_love_and_relationships_070607.pdf",
+        "label": "Love and relationships: tie the knot",
+        "publisher": "BBC Learning English",
+        "authorityId": "bbc-learning-english",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "BBC Learning English independently states that tie the knot means to get married."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and punctuation were normalized without changing the idiom or choices."
+  },
+  {
+    "id": "ADV2E102-U0006-Q071-SIM",
+    "pairId": "ADV2E102-U0006-Q071",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the idiom 'walk down the aisle' commonly mean?",
+    "questionUrdu": "Idiom ‘walk down the aisle’ عام طور پر کیا معنی دیتا ہے؟",
+    "options": [
+      "To get married",
+      "To leave a job",
+      "To win an election",
+      "To begin a journey"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”To get married“ ہے۔ Wedding context میں walk down the aisle کا مطلب شادی کی تقریب میں شریک ہو کر شادی کرنا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "walk down the aisle",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/walk-down-the-aisle",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/walk-down-the-aisle",
+        "label": "walk down the aisle",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that walk down the aisle commonly means to get married."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/walk-down-the-aisle",
+        "label": "walk down the aisle",
+        "publisher": "HarperCollins",
+        "authorityId": "collins-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "HarperCollins supports that walk down the aisle commonly means to get married."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q072-SRC",
+    "pairId": "ADV2E102-U0006-Q072",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "His office is always in apple-pie order. What does 'apple-pie order' mean?",
+    "questionUrdu": "Sentence میں ‘apple-pie order’ کا کیا مطلب ہے؟",
+    "options": [
+      "Neat & tidy",
+      "Disordered",
+      "Mismanaged",
+      "Ornamental"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Neat & tidy“ ہے۔ Apple-pie order کا مطلب مکمل طور پر صاف، منظم اور tidy حالت ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Be in apple-pie order",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/be-in-apple-pie-order",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/be-in-apple-pie-order",
+        "label": "Be in apple-pie order",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines being in apple-pie order as being perfectly arranged and tidy."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/apple-pie",
+        "label": "Apple-pie definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines apple-pie order as excellent or perfect order."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's ungrammatical final verb was corrected while preserving its contextual example and choices."
+  },
+  {
+    "id": "ADV2E102-U0006-Q072-SIM",
+    "pairId": "ADV2E102-U0006-Q072",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word means 'neat, orderly and ready for use'?",
+    "questionUrdu": "کون سا لفظ ‘صاف، منظم اور استعمال کے لیے تیار’ ہونے کا مفہوم دیتا ہے؟",
+    "options": [
+      "Shipshape",
+      "Haphazard",
+      "Dilapidated",
+      "Chaotic"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Shipshape“ ہے۔ Shipshape ایسی چیز یا جگہ کو کہتے ہیں جو بہت صاف ستھری، ترتیب میں اور تیار ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "shipshape",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/shipshape",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/shipshape",
+        "label": "shipshape",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that shipshape means neat, orderly and ready for use."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/shipshape",
+        "label": "shipshape",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that shipshape means neat, orderly and ready for use."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q073-SRC",
+    "pairId": "ADV2E102-U0006-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does 'feel blue' mean?",
+    "questionUrdu": "Phrase ‘feel blue’ کا کیا مطلب ہے؟",
+    "options": [
+      "Feel Sad",
+      "Feel happy",
+      "Feel energetic",
+      "Feel angry"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Feel Sad“ ہے۔ Feel blue کا مطلب اداس یا افسردہ محسوس کرنا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Feel blue",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/feel-blue",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/feel-blue",
+        "label": "Feel blue",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines feel blue as feel sad."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/blue",
+        "label": "Blue definition",
+        "publisher": "HarperCollins",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently states that feeling blue means feeling sad or depressed."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The blank-style source wording was converted into a direct idiom question; the choices are unchanged."
+  },
+  {
+    "id": "ADV2E102-U0006-Q073-SIM",
+    "pairId": "ADV2E102-U0006-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the phrase 'in high spirits' mean?",
+    "questionUrdu": "Phrase ‘in high spirits’ کا کیا مطلب ہے؟",
+    "options": [
+      "Cheerful and excited",
+      "Deeply worried",
+      "Physically exhausted",
+      "Quietly resentful"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Cheerful and excited“ ہے۔ In high spirits کا مطلب بہت خوش، پُرجوش اور cheerful ہونا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "high spirits",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/high-spirits",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/high-spirits",
+        "label": "high spirits",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that in high spirits means cheerful and excited."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/high%20spirits",
+        "label": "high spirits",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that in high spirits means cheerful and excited."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q074-SRC",
+    "pairId": "ADV2E102-U0006-Q074",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'to cut a long story short' mean?",
+    "questionUrdu": "Idiom ‘to cut a long story short’ کا کیا مطلب ہے؟",
+    "options": [
+      "To summarize briefly",
+      "To begin a new topic",
+      "To omit every main point",
+      "To tell a longer version"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”To summarize briefly“ ہے۔ اس idiom کا مطلب تفصیل چھوڑ کر بات کو مختصر انداز میں بیان کرنا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "To cut a long story short",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/to-cut-a-long-story-short",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/to-cut-a-long-story-short",
+        "label": "To cut a long story short",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines the idiom as explaining what happened in a few words without all the details."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english/to-cut-a-long-story-short",
+        "label": "To cut a long story short",
+        "publisher": "HarperCollins",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently says the phrase introduces the final result without giving further details."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The article 'a' was restored. The source answers 'tell the story briefly' and 'come to the point' overlap, so the distractors were reconstructed to make 'To summarize briefly' uniquely correct."
+  },
+  {
+    "id": "ADV2E102-U0006-Q074-SIM",
+    "pairId": "ADV2E102-U0006-Q074",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the phrase 'in a nutshell' mean?",
+    "questionUrdu": "Phrase ‘in a nutshell’ کا کیا مطلب ہے؟",
+    "options": [
+      "In a few words",
+      "Without evidence",
+      "At the beginning",
+      "In complete secrecy"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”In a few words“ ہے۔ In a nutshell کا مطلب بہت مختصر اور جامع انداز میں بات بیان کرنا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "in a nutshell",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/in-a-nutshell",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/in-a-nutshell",
+        "label": "in a nutshell",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that in a nutshell means in a few words."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/in%20a%20nutshell",
+        "label": "in a nutshell",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that in a nutshell means in a few words."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0006-Q075-SRC",
+    "pairId": "ADV2E102-U0006-Q075",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does 'get your goat' mean?",
+    "questionUrdu": "Phrase ‘get your goat’ کا کیا مطلب ہے؟",
+    "options": [
+      "To pacify someone",
+      "To irritate someone",
+      "To soothe someone",
+      "To Hug someone"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”To irritate someone“ ہے۔ Get your goat کا مطلب کسی کو irritate یا annoy کرنا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Get one's goat",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/get%20your%20goat",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/get%20your%20goat",
+        "label": "Get one's goat",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines getting someone's goat as upsetting or irritating that person."
+      },
+      {
+        "url": "https://downloads.bbc.co.uk/learningenglish/features/tews/160920_tews_get_somebodys_goat.pdf",
+        "label": "Get somebody's goat",
+        "publisher": "BBC Learning English",
+        "authorityId": "bbc-learning-english",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "BBC Learning English independently explains that the expression means something annoys a person."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The fill-in-the-blank punctuation was converted into a direct idiom question; capitalization was normalized."
+  },
+  {
+    "id": "ADV2E102-U0006-Q075-SIM",
+    "pairId": "ADV2E102-U0006-Q075",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does it mean to 'rub someone the wrong way'?",
+    "questionUrdu": "‘Rub someone the wrong way’ کا کیا مطلب ہے؟",
+    "options": [
+      "To irritate them",
+      "To praise them",
+      "To protect them",
+      "To imitate them"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”To irritate them“ ہے۔ یہ idiom کسی شخص کو ناراض، irritate یا uncomfortable کرنے کے لیے استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "rub someone the wrong way",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/rub-the-wrong-way",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0006-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/rub-the-wrong-way",
+        "label": "rub someone the wrong way",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that to rub someone the wrong way means to irritate them."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/rub%20the%20wrong%20way",
+        "label": "rub the wrong way",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that to rub someone the wrong way means to irritate them."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

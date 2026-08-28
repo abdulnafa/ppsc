@@ -1,0 +1,2453 @@
+[
+  {
+    "id": "ADV2E102-U0004-Q054-SRC",
+    "pairId": "ADV2E102-U0004-Q054",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Microsoft Word 2007 for Windows, which shortcut selects a table column from the bottom cell upward?",
+    "questionUrdu": "Microsoft Word 2007 for Windows میں table column کو bottom cell سے اوپر کی طرف select کرنے کا shortcut کیا ہے؟",
+    "options": [
+      "SHIFT + ALT + PAGE UP",
+      "ALT + PAGE UP",
+      "CTRL + PAGE UP",
+      "CTRL + ALT + PAGE UP"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”SHIFT + ALT + PAGE UP“ ہے۔ Word 2007 میں bottom cell سے پورا column اوپر کی طرف select کرنے کے لیے Shift + Alt + Page Up استعمال ہوتا تھا۔ Version اور platform واضح رکھنا ضروری ہے کیونکہ بعد کی shortcut documentation مختلف ہوسکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q054"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-gb/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+        "label": "Keyboard shortcuts in Word",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft's Word shortcut reference documents selecting table-column content upward from the bottom cell with Shift+Alt+Page Up."
+      },
+      {
+        "url": "https://www.ucdc.edu/sites/default/files/uploads/documents/IS/User%20Docs/Word%202016%20for%20Windows%20keyboard%20shortcuts.pdf",
+        "label": "Word for Windows keyboard shortcuts",
+        "publisher": "University of California Washington Center",
+        "authorityId": "uc-washington-center",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university's independent Word for Windows shortcut guide explicitly lists Shift+Alt+Page Up for selecting a column from bottom to top."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word 2007 for Windows",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Capitalization and shortcut separators were normalized; the source version and Windows platform were retained explicitly."
+  },
+  {
+    "id": "ADV2E102-U0004-Q054-SIM",
+    "pairId": "ADV2E102-U0004-Q054",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In Microsoft Word 2007 for Windows, which shortcut selects a table column from the top cell downward?",
+    "questionUrdu": "Microsoft Word 2007 for Windows میں table column کو top cell سے نیچے کی طرف select کرنے کا shortcut کیا ہے؟",
+    "options": [
+      "Shift + Alt + Page Down",
+      "Alt + Page Down",
+      "Ctrl + Page Down",
+      "Ctrl + Alt + Page Down"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Shift + Alt + Page Down“ ہے۔ Top cell سے column کو نیچے کی طرف select کرنے کے لیے Shift + Alt + Page Down استعمال ہوتا ہے۔ Page Up والا متقابل shortcut bottom سے top کی طرف selection کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Keyboard shortcuts in Word",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q054",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-gb/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+        "label": "Keyboard shortcuts in Word",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft Support supports that in Microsoft Word 2007 for Windows, Shift+Alt+Page Down selects a table column from the top cell downward."
+      },
+      {
+        "url": "https://www.ucdc.edu/sites/default/files/uploads/documents/IS/User%20Docs/Word%202016%20for%20Windows%20keyboard%20shortcuts.pdf",
+        "label": "Word for Windows keyboard shortcuts",
+        "publisher": "University of California Washington Center",
+        "authorityId": "uc-washington-center",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "University of California Washington Center supports that in Microsoft Word 2007 for Windows, Shift+Alt+Page Down selects a table column from the top cell downward."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word 2007 for Windows",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q058-SRC",
+    "pairId": "ADV2E102-U0004-Q058",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "As of 2026, in which US state is Google's global headquarters located?",
+    "questionUrdu": "2026 تک Google کا global headquarters کس امریکی state میں واقع ہے؟",
+    "options": [
+      "New York",
+      "California",
+      "Washington",
+      "San Francisco"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”California“ ہے۔ Google کا global headquarters California میں واقع ہے۔ اس کا مشہور Googleplex campus Mountain View شہر میں ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Google locations",
+      "referenceUrl": "https://www.google.com/about/careers/applications/locations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q058"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.google.com/about/careers/applications/locations",
+        "label": "Google locations",
+        "publisher": "Google Careers",
+        "authorityId": "google",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Google identifies Mountain View as its global headquarters; Mountain View is in California."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "label": "Alphabet 2025 Form 10-K",
+        "publisher": "United States Securities and Exchange Commission",
+        "authorityId": "us-sec",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Alphabet's filed 2025 annual report gives its principal executive offices as Mountain View, California."
+      }
+    ],
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": "2019",
+      "asOf": "2026-08-28",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-08-28"
+    },
+    "sourceNotes": "The mutable headquarters claim was scoped to 2026, and the stem now asks for a state because the source choices mixed states with a city."
+  },
+  {
+    "id": "ADV2E102-U0004-Q058-SIM",
+    "pairId": "ADV2E102-U0004-Q058",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "As of 2026, in which California city is Google's global headquarters?",
+    "questionUrdu": "2026 تک Google کا global headquarters California کے کس شہر میں ہے؟",
+    "options": [
+      "Mountain View",
+      "Sacramento",
+      "San Diego",
+      "Fresno"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Mountain View“ ہے۔ Google کا principal global headquarters Mountain View، California میں ہے۔ اس campus کو عام طور پر Googleplex کہا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Google locations",
+      "referenceUrl": "https://www.google.com/about/careers/applications/locations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q058",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.google.com/about/careers/applications/locations",
+        "label": "Google locations",
+        "publisher": "Google Careers",
+        "authorityId": "google",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Google Careers supports that as of 2026, Google's global headquarters is in Mountain View, California."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "label": "Alphabet 2025 Form 10-K",
+        "publisher": "United States Securities and Exchange Commission",
+        "authorityId": "us-sec",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "United States Securities and Exchange Commission supports that as of 2026, Google's global headquarters is in Mountain View, California."
+      }
+    ],
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": "2019",
+      "asOf": "2026-08-28",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-08-28"
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q059-SRC",
+    "pairId": "ADV2E102-U0004-Q059",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Which decimal is equal to six tenths?",
+    "questionUrdu": "Six tenths کے برابر کون سا decimal ہے؟",
+    "options": [
+      "60",
+      "0.6",
+      "6.0",
+      "0.06"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”0.6“ ہے۔ Six tenths کا مطلب 6/10 ہے۔ Decimal notation میں 6/10 کو 0.6 لکھا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q059"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the place-value rules and worked procedures for multiplying and dividing decimals."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university-authored numeracy refresher covers decimals, fractions, averages and percentages with worked arithmetic."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Six tenths is 6/10, which equals 0.6; the stem was normalized as a direct equivalence question."
+  },
+  {
+    "id": "ADV2E102-U0004-Q059-SIM",
+    "pairId": "ADV2E102-U0004-Q059",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Which decimal is equal to thirty-seven hundredths?",
+    "questionUrdu": "Thirty-seven hundredths کے برابر کون سا decimal ہے؟",
+    "options": [
+      "0.37",
+      "3.7",
+      "0.037",
+      "37.0"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”0.37“ ہے۔ Thirty-seven hundredths یعنی 37/100 ہوتا ہے۔ Decimal point کے بعد tenths اور hundredths places رکھنے سے جواب 0.37 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q059",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that thirty-seven hundredths is written as the decimal 0.37."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that thirty-seven hundredths is written as the decimal 0.37."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q060-SRC",
+    "pairId": "ADV2E102-U0004-Q060",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If 2:7 = x:49, what is x?",
+    "questionUrdu": "اگر 2:7 = x:49 ہو تو x کی قدر کیا ہوگی؟",
+    "options": [
+      "9",
+      "14",
+      "52",
+      "28"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”14“ ہے۔ Equivalent ratios میں دونوں terms کو ایک ہی factor سے ضرب دی جاتی ہے۔ 7 سے 49 حاصل کرنے کے لیے 7 سے ضرب دینے پر 2 بھی 14 بن جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and proportions key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q060"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Ratios and proportions key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines a proportion as equality of two ratios and states the cross-products rule."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/uploaded/15-ratios.pdf",
+        "label": "Ratios",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent mathcentre guide explains equivalent ratios and proportional division."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Using equal ratios, 2/7 = x/49 gives 7x = 98 and x = 14. The printed key selected 28 (option D); it was corrected to 14 (option B)."
+  },
+  {
+    "id": "ADV2E102-U0004-Q060-SIM",
+    "pairId": "ADV2E102-U0004-Q060",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 3:5 = x:40, what is x?",
+    "questionUrdu": "اگر 3:5 = x:40 ہو تو x کیا ہوگا؟",
+    "options": [
+      "24",
+      "15",
+      "30",
+      "32"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”24“ ہے۔ 5 سے 40 تک factor 8 ہے۔ اسی factor سے 3 کو ضرب دینے پر x = 24 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and proportions key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q060",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Ratios and proportions key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the proportion 3:5 = x:40 has the solution x = 24."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/uploaded/15-ratios.pdf",
+        "label": "Ratios",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that the proportion 3:5 = x:40 has the solution x = 24."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q061-SRC",
+    "pairId": "ADV2E102-U0004-Q061",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is 5.3% written as a decimal?",
+    "questionUrdu": "5.3% کو decimal میں کیسے لکھا جاتا ہے؟",
+    "options": [
+      "53",
+      "0.53",
+      "0.0053",
+      "0.053"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”0.053“ ہے۔ Percent کو decimal بنانے کے لیے 100 سے تقسیم کرتے ہیں۔ 5.3 ÷ 100 = 0.053 ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Percent key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q061"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines percent as a ratio to 100 and gives the rules for percent-decimal conversion and percentage change."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/workbooks/mathcentre/percentages.pdf",
+        "label": "Percentages",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent mathcentre workbook defines percent as 'out of 100' and demonstrates decimal equivalents and percentage calculations."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Dividing 5.3 by 100 gives 0.053; the grammar was normalized."
+  },
+  {
+    "id": "ADV2E102-U0004-Q061-SIM",
+    "pairId": "ADV2E102-U0004-Q061",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 0.375 written as a percentage?",
+    "questionUrdu": "0.375 کو percentage میں کیسے لکھیں گے؟",
+    "options": [
+      "37.5%",
+      "3.75%",
+      "375%",
+      "0.375%"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”37.5%“ ہے۔ Decimal کو percent بنانے کے لیے 100 سے ضرب دیتے ہیں۔ 0.375 × 100 = 37.5% ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q061",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the decimal 0.375 equals 37.5 percent."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/workbooks/mathcentre/percentages.pdf",
+        "label": "Percentages",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that the decimal 0.375 equals 37.5 percent."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q062-SRC",
+    "pairId": "ADV2E102-U0004-Q062",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "An article bought for Rs. 27.50 is sold for Rs. 28.60. What is the gain percentage based on cost price?",
+    "questionUrdu": "Rs. 27.50 کی خریدی چیز Rs. 28.60 میں بیچی جائے تو cost price کے لحاظ سے gain percentage کیا ہے؟",
+    "options": [
+      "1%",
+      "2%",
+      "3%",
+      "4%"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”4%“ ہے۔ Gain Rs. 1.10 ہے۔ اسے cost price 27.50 سے تقسیم کرکے 100 سے ضرب دینے پر 4% حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Percent increase",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q062"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent increase",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax states that percent increase is the increase divided by the original amount, expressed as a percent."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=158684&section=9.3",
+        "label": "Percentage change",
+        "publisher": "Open University OpenLearn",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenLearn independently gives percentage change as the difference divided by the original value, multiplied by 100."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Gain is Rs. 1.10, and 1.10/27.50 x 100 = 4%. The printed key selected 2% (option B); it was corrected to 4% (option D), and the percentage base was stated explicitly."
+  },
+  {
+    "id": "ADV2E102-U0004-Q062-SIM",
+    "pairId": "ADV2E102-U0004-Q062",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "An article costs Rs. 500. At a 20% profit on cost, what is its selling price?",
+    "questionUrdu": "کسی چیز کی cost Rs. 500 ہے۔ Cost پر 20% profit ہو تو selling price کیا ہوگی؟",
+    "options": [
+      "Rs. 600",
+      "Rs. 520",
+      "Rs. 580",
+      "Rs. 625"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Rs. 600“ ہے۔ Rs. 500 کا 20% Rs. 100 ہے۔ Cost میں profit شامل کرنے سے selling price Rs. 600 بنتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent increase",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q062",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent increase",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a 20 percent profit on a cost of Rs. 500 gives a selling price of Rs. 600."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=158684&section=9.3",
+        "label": "Percentage change",
+        "publisher": "Open University OpenLearn",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Open University OpenLearn supports that a 20 percent profit on a cost of Rs. 500 gives a selling price of Rs. 600."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q063-SRC",
+    "pairId": "ADV2E102-U0004-Q063",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the largest perfect square strictly between 4 and 50?",
+    "questionUrdu": "4 اور 50 کے درمیان سب سے بڑا perfect square کون سا ہے؟",
+    "options": [
+      "25",
+      "36",
+      "49",
+      "45"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”49“ ہے۔ 7² = 49 ہے اور 49، 50 سے کم ہے۔ اگلا perfect square 8² = 64 ہے، اس لیے جواب 49 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Simplify and use square roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q063"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+        "label": "Simplify and use square roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines a perfect square and lists 25, 36 and 49 among the squares below 50."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/squares-roots-and-powers/content-section-3.3",
+        "label": "Square roots",
+        "publisher": "Open University OpenLearn",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenLearn independently identifies 49 as 7 squared and therefore a perfect square."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The interval was clarified as strictly between 4 and 50; 49 = 7 x 7 is the largest qualifying perfect square."
+  },
+  {
+    "id": "ADV2E102-U0004-Q063-SIM",
+    "pairId": "ADV2E102-U0004-Q063",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the smallest perfect square greater than 50?",
+    "questionUrdu": "50 سے بڑا سب سے چھوٹا perfect square کون سا ہے؟",
+    "options": [
+      "64",
+      "54",
+      "81",
+      "100"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”64“ ہے۔ 7² = 49 پچاس سے کم ہے جبکہ 8² = 64 پچاس سے بڑا پہلا square ہے۔ اس لیے smallest qualifying value 64 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Simplify and use square roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q063",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+        "label": "Simplify and use square roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 64 is the smallest perfect square greater than 50."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/squares-roots-and-powers/content-section-3.3",
+        "label": "Square roots",
+        "publisher": "Open University OpenLearn",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Open University OpenLearn supports that 64 is the smallest perfect square greater than 50."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q064-SRC",
+    "pairId": "ADV2E102-U0004-Q064",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is 8 divided by 0.2?",
+    "questionUrdu": "8 کو 0.2 سے divide کرنے پر کیا جواب آتا ہے؟",
+    "options": [
+      "4",
+      "40",
+      "1.6",
+      "16"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”40“ ہے۔ 0.2 دراصل 1/5 ہے۔ 8 کو 1/5 سے divide کرنا 8 کو 5 سے multiply کرنے کے برابر ہے، اس لیے جواب 40 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q064"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the place-value rules and worked procedures for multiplying and dividing decimals."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university-authored numeracy refresher covers decimals, fractions, averages and percentages with worked arithmetic."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Since 0.2 = 1/5, dividing 8 by 0.2 is equivalent to multiplying 8 by 5, giving 40."
+  },
+  {
+    "id": "ADV2E102-U0004-Q064-SIM",
+    "pairId": "ADV2E102-U0004-Q064",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 0.8 divided by 0.04?",
+    "questionUrdu": "0.8 کو 0.04 سے divide کرنے پر کیا جواب آتا ہے؟",
+    "options": [
+      "20",
+      "2",
+      "200",
+      "0.2"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”20“ ہے۔ دونوں numbers کو 100 سے ضرب دے کر decimal ختم کریں تو 80 ÷ 4 ملتا ہے۔ اس کا جواب 20 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q064",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 0.8 divided by 0.04 equals 20."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that 0.8 divided by 0.04 equals 20."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q065-SRC",
+    "pairId": "ADV2E102-U0004-Q065",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Three boxes have a certain average weight. Replacing an 89 kg box raises the three-box average by 5 kg. How much does the replacement box weigh?",
+    "questionUrdu": "تین boxes میں 89 kg والا box بدلنے سے average weight 5 kg بڑھ جائے تو نئے box کا weight کیا ہوگا؟",
+    "options": [
+      "109 kg",
+      "94 kg",
+      "104 kg",
+      "84 kg"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”104 kg“ ہے۔ تین items کا average 5 kg بڑھے تو total 15 kg بڑھتا ہے۔ نیا box 89 + 15 = 104 kg ہوگا۔",
+    "source": {
+      "type": "book",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q065"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the arithmetic mean as the sum of values divided by the number of values."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher: averages",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent mathcentre booklet gives the total-divided-by-count procedure for calculating averages."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A 5 kg rise across three boxes raises the total by 15 kg, so the replacement weighs 89 + 15 = 104 kg. The source grammar was repaired."
+  },
+  {
+    "id": "ADV2E102-U0004-Q065-SIM",
+    "pairId": "ADV2E102-U0004-Q065",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Four items have a certain average. Replacing a 20 kg item raises the average by 3 kg. What is the replacement item's weight?",
+    "questionUrdu": "چار items کا ایک average ہے۔ 20 kg item بدلنے سے average 3 kg بڑھتا ہے۔ Replacement item کا weight کیا ہے؟",
+    "options": [
+      "32 kg",
+      "23 kg",
+      "26 kg",
+      "35 kg"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”32 kg“ ہے۔ چار items میں average 3 kg بڑھنے سے total 12 kg بڑھتا ہے۔ اس لیے replacement item 20 + 12 = 32 kg ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q065",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that replacing a 20 kg item among four items and raising the average by 3 kg requires a 32 kg replacement."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher: averages",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that replacing a 20 kg item among four items and raising the average by 3 kg requires a 32 kg replacement."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q066-SRC",
+    "pairId": "ADV2E102-U0004-Q066",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The average ages of A and B, B and C, and C and A are 30, 32, and 34 years respectively. What is C's age?",
+    "questionUrdu": "A اور B، B اور C، اور C اور A کی average ages بالترتیب 30، 32 اور 34 ہوں تو C کی age کیا ہے؟",
+    "options": [
+      "33 years",
+      "34 years",
+      "35 years",
+      "36 years"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”36 years“ ہے۔ A+B=60، B+C=64 اور C+A=68 ہیں۔ آخری دو sums جمع کرکے پہلے کو منفی کرنے سے 2C=72 اور C=36 ملتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve Systems of Equations by Elimination",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/5-3-solve-systems-of-equations-by-elimination",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q066"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/5-3-solve-systems-of-equations-by-elimination",
+        "label": "Solve Systems of Equations by Elimination",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains the elimination method used to combine linear equations and solve for an unknown."
+      },
+      {
+        "url": "https://math.libretexts.org/Courses/Cosumnes_River_College/Corequisite_Codex/12%3A_Linear_Systems/12.05%3A_Applications_Involving_Systems_of_Linear_Equations",
+        "label": "Applications Involving Systems of Linear Equations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts independently explains translating each condition in a word problem into an equation and solving the resulting system."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A+B=60, B+C=64 and C+A=68; therefore 2C=64+68-60=72 and C=36. The printed key selected 33 years (option A); it was corrected to 36 years (option D)."
+  },
+  {
+    "id": "ADV2E102-U0004-Q066-SIM",
+    "pairId": "ADV2E102-U0004-Q066",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "The average ages of A and B, B and C, and C and A are 20, 22, and 24 years respectively. What is C's age?",
+    "questionUrdu": "A اور B، B اور C، اور C اور A کی average ages بالترتیب 20، 22 اور 24 سال ہوں تو C کی عمر کیا ہے؟",
+    "options": [
+      "26 years",
+      "22 years",
+      "24 years",
+      "28 years"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”26 years“ ہے۔ Pair sums 40، 44 اور 48 ہیں۔ (44 + 48 - 40) ÷ 2 سے C = 26 years حاصل ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve Systems of Equations by Elimination",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/5-3-solve-systems-of-equations-by-elimination",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q066",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/5-3-solve-systems-of-equations-by-elimination",
+        "label": "Solve Systems of Equations by Elimination",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the stated pairwise averages 20, 22, and 24 imply that C is 26 years old."
+      },
+      {
+        "url": "https://math.libretexts.org/Courses/Cosumnes_River_College/Corequisite_Codex/12%3A_Linear_Systems/12.05%3A_Applications_Involving_Systems_of_Linear_Equations",
+        "label": "Applications Involving Systems of Linear Equations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts supports that the stated pairwise averages 20, 22, and 24 imply that C is 26 years old."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q067-SRC",
+    "pairId": "ADV2E102-U0004-Q067",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is 142.5% written as a decimal?",
+    "questionUrdu": "142.5% کو decimal میں لکھنے پر کیا حاصل ہوتا ہے؟",
+    "options": [
+      "1.425",
+      "0.1425",
+      "142.5",
+      "14.25"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”1.425“ ہے۔ 142.5 کو 100 سے divide کرنے پر 1.425 ملتا ہے۔ 100% سے زیادہ percent کا decimal 1 سے زیادہ ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Percent key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q067"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines percent as a ratio to 100 and gives the rules for percent-decimal conversion and percentage change."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/workbooks/mathcentre/percentages.pdf",
+        "label": "Percentages",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent mathcentre workbook defines percent as 'out of 100' and demonstrates decimal equivalents and percentage calculations."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Dividing 142.5 by 100 gives 1.425; the stem was normalized."
+  },
+  {
+    "id": "ADV2E102-U0004-Q067-SIM",
+    "pairId": "ADV2E102-U0004-Q067",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What percentage is represented by the decimal 1.25?",
+    "questionUrdu": "Decimal 1.25 کس percentage کے برابر ہے؟",
+    "options": [
+      "125%",
+      "12.5%",
+      "1.25%",
+      "0.125%"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”125%“ ہے۔ 1.25 کو percent بنانے کے لیے 100 سے ضرب دیتے ہیں۔ نتیجہ 125% ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q067",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the decimal 1.25 represents 125 percent."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/workbooks/mathcentre/percentages.pdf",
+        "label": "Percentages",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that the decimal 1.25 represents 125 percent."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q068-SRC",
+    "pairId": "ADV2E102-U0004-Q068",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A class has three times as many boys as girls. Which listed number cannot be the total number of students?",
+    "questionUrdu": "کسی class میں boys کی تعداد girls سے تین گنا ہو تو کون سا total students کا ممکنہ عدد نہیں؟",
+    "options": [
+      "48",
+      "44",
+      "42",
+      "40"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”42“ ہے۔ اگر girls g ہوں تو boys 3g اور total 4g ہوگا۔ Total لازماً 4 سے divisible ہونا چاہیے، جبکہ 42 نہیں ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and proportions key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Ratios and proportions key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines a proportion as equality of two ratios and states the cross-products rule."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/uploaded/15-ratios.pdf",
+        "label": "Ratios",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent mathcentre guide explains equivalent ratios and proportional division."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "If there are g girls and 3g boys, the total is 4g and must be divisible by 4. Among the choices only 42 is not divisible by 4. The printed key selected 44 (option B); it was corrected to 42 (option C)."
+  },
+  {
+    "id": "ADV2E102-U0004-Q068-SIM",
+    "pairId": "ADV2E102-U0004-Q068",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A class has three times as many boys as girls. If there are 12 girls, how many students are in the class?",
+    "questionUrdu": "کسی class میں boys، girls سے تین گنا ہیں۔ اگر 12 girls ہوں تو class میں کل کتنے students ہیں؟",
+    "options": [
+      "48",
+      "36",
+      "24",
+      "60"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”48“ ہے۔ 12 girls کے مقابل boys 3 × 12 = 36 ہیں۔ دونوں کو جمع کرنے پر total 48 students بنتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and proportions key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Ratios and proportions key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a class with 12 girls and three times as many boys has 48 students."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/uploaded/15-ratios.pdf",
+        "label": "Ratios",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that a class with 12 girls and three times as many boys has 48 students."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q069-SRC",
+    "pairId": "ADV2E102-U0004-Q069",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Which ratio is equivalent to 3:7?",
+    "questionUrdu": "3:7 کے equivalent کون سا ratio ہے؟",
+    "options": [
+      "3 : 9",
+      "6 : 10",
+      "9 : 21",
+      "18 : 49"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”9 : 21“ ہے۔ دونوں terms کو 3 سے ضرب دینے پر 9:21 بنتا ہے۔ Equivalent ratios میں دونوں terms پر ایک ہی non-zero factor لگتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and proportions key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Ratios and proportions key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines a proportion as equality of two ratios and states the cross-products rule."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/uploaded/15-ratios.pdf",
+        "label": "Ratios",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent mathcentre guide explains equivalent ratios and proportional division."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Multiplying both terms of 3:7 by 3 gives 9:21. The printed key selected 3:9 (option A); it was corrected to 9:21 (option C)."
+  },
+  {
+    "id": "ADV2E102-U0004-Q069-SIM",
+    "pairId": "ADV2E102-U0004-Q069",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A sum of 50 is divided in the ratio 2:3. What is the larger share?",
+    "questionUrdu": "50 کو 2:3 کے ratio میں تقسیم کیا جائے تو بڑا حصہ کتنا ہوگا؟",
+    "options": [
+      "30",
+      "20",
+      "25",
+      "35"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”30“ ہے۔ Ratio کے total parts 5 ہیں، اس لیے ہر part 50 ÷ 5 = 10 ہے۔ بڑا حصہ 3 × 10 = 30 ہوگا۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and proportions key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Ratios and proportions key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that dividing 50 in the ratio 2:3 gives a larger share of 30."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/uploaded/15-ratios.pdf",
+        "label": "Ratios",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that dividing 50 in the ratio 2:3 gives a larger share of 30."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q070-SRC",
+    "pairId": "ADV2E102-U0004-Q070",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The average of five quantities is 6, while the average of three of them is 4. What is the average of the remaining two quantities?",
+    "questionUrdu": "پانچ quantities کا average 6 اور ان میں سے تین کا average 4 ہو تو باقی دو کا average کیا ہے؟",
+    "options": [
+      "9",
+      "10",
+      "8",
+      "9.5"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”9“ ہے۔ پانچوں کا total 30 اور تین کا total 12 ہے۔ باقی دو کا total 18 اور average 9 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the arithmetic mean as the sum of values divided by the number of values."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher: averages",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent mathcentre booklet gives the total-divided-by-count procedure for calculating averages."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The total of all five is 5 x 6 = 30 and the selected three total 3 x 4 = 12; the remaining total is 18, so their average is 9."
+  },
+  {
+    "id": "ADV2E102-U0004-Q070-SIM",
+    "pairId": "ADV2E102-U0004-Q070",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "The average of six numbers is 12. The average of four of them is 10. What is the average of the remaining two?",
+    "questionUrdu": "چھ numbers کا average 12 ہے۔ ان میں سے چار کا average 10 ہو تو باقی دو کا average کیا ہوگا؟",
+    "options": [
+      "16",
+      "14",
+      "18",
+      "20"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”16“ ہے۔ چھ numbers کا total 72 اور چار کا total 40 ہے۔ باقی دو کا total 32، اس لیے ان کا average 16 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that if six numbers average 12 and four average 10, the remaining two average 16."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher: averages",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that if six numbers average 12 and four average 10, the remaining two average 16."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q071-SRC",
+    "pairId": "ADV2E102-U0004-Q071",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If the ratio of cost price to selling price is 4:5, what is the profit percentage based on cost price?",
+    "questionUrdu": "اگر cost price اور selling price کا ratio 4:5 ہو تو cost کے لحاظ سے profit percentage کیا ہے؟",
+    "options": [
+      "10%",
+      "20%",
+      "25%",
+      "30%"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”25%“ ہے۔ Cost 4 parts اور selling 5 parts ہو تو profit 1 part ہے۔ 1/4 × 100 = 25% profit بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Percent increase",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent increase",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines percent increase as increase divided by the original amount."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=158684&section=9.3",
+        "label": "Percentage change",
+        "publisher": "Open University OpenLearn",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenLearn independently explains that percentage profit is the positive percentage change from the original price."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Taking cost price as 4 units and selling price as 5 units gives a 1-unit profit; 1/4 x 100 = 25%. The percentage base was stated explicitly."
+  },
+  {
+    "id": "ADV2E102-U0004-Q071-SIM",
+    "pairId": "ADV2E102-U0004-Q071",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If cost price and selling price are in the ratio 5:6, what is the profit percentage on cost?",
+    "questionUrdu": "اگر cost price اور selling price کا ratio 5:6 ہو تو cost پر profit percentage کیا ہوگا؟",
+    "options": [
+      "20%",
+      "16.67%",
+      "25%",
+      "10%"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”20%“ ہے۔ Profit 1 part اور cost 5 parts ہے۔ 1/5 × 100 = 20% ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent increase",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent increase",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a cost-price to selling-price ratio of 5:6 gives a 20 percent profit on cost."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=158684&section=9.3",
+        "label": "Percentage change",
+        "publisher": "Open University OpenLearn",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Open University OpenLearn supports that a cost-price to selling-price ratio of 5:6 gives a 20 percent profit on cost."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q072-SRC",
+    "pairId": "ADV2E102-U0004-Q072",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A television bought for Rs. 5,000 is sold for Rs. 4,000. What is the loss percentage based on cost price?",
+    "questionUrdu": "Rs. 5,000 کی television Rs. 4,000 میں فروخت ہو تو cost price پر loss percentage کیا ہے؟",
+    "options": [
+      "100%",
+      "20%",
+      "25%",
+      "28%"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”20%“ ہے۔ Loss Rs. 1,000 ہے۔ 1,000 کو 5,000 سے divide کرکے 100 سے ضرب دینے پر 20% ملتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Percent decrease",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent decrease",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines percent decrease as the decrease divided by the original amount."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/uploaded/5-percentage-increase-and-decrease.pdf",
+        "label": "Percentage increase and decrease",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent mathcentre guide demonstrates calculating a decrease as a percentage of the initial amount."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The loss is Rs. 1,000; 1,000/5,000 x 100 = 20%. The source typo 'lost percent' was corrected and the base was made explicit."
+  },
+  {
+    "id": "ADV2E102-U0004-Q072-SIM",
+    "pairId": "ADV2E102-U0004-Q072",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "An item bought for Rs. 800 is sold for Rs. 680. What is the loss percentage on cost?",
+    "questionUrdu": "Rs. 800 میں خریدی چیز Rs. 680 میں بیچی جائے تو cost پر loss percentage کیا ہے؟",
+    "options": [
+      "15%",
+      "12%",
+      "18%",
+      "20%"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”15%“ ہے۔ Loss Rs. 120 ہے۔ 120 ÷ 800 × 100 = 15% بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent decrease",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent decrease",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that selling an Rs. 800 item for Rs. 680 produces a 15 percent loss on cost."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/uploaded/5-percentage-increase-and-decrease.pdf",
+        "label": "Percentage increase and decrease",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that selling an Rs. 800 item for Rs. 680 produces a 15 percent loss on cost."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q073-SRC",
+    "pairId": "ADV2E102-U0004-Q073",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A man completes a job alone in 5 days, but he and his son together complete it in 3 days. Assuming constant independent work rates, how long would the son take alone?",
+    "questionUrdu": "ایک شخص اکیلا کام 5 دن میں اور اپنے بیٹے کے ساتھ 3 دن میں کرے تو بیٹا اکیلا کتنے دن لے گا؟",
+    "options": [
+      "7.5 days",
+      "6.5 days",
+      "5.5 days",
+      "4.5 days"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”7.5 days“ ہے۔ Combined rate 1/3 اور والد کی rate 1/5 job per day ہے۔ فرق 2/15 ہے، اس لیے بیٹا اکیلا 15/2 یعنی 7.5 دن لے گا۔",
+    "source": {
+      "type": "book",
+      "label": "Solve work applications with rational equations",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/7-5-solve-applications-with-rational-equations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra-2e/pages/7-5-solve-applications-with-rational-equations",
+        "label": "Solve work applications with rational equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax models the same five-days-alone and three-days-together form by subtracting work rates; the unknown rate is 1/3 - 1/5."
+      },
+      {
+        "url": "https://www.math.purdue.edu/academic/files/courses/2016spring/MA15910/MA15910lesson7notes%2Crev.fa15.pdf",
+        "label": "Job or work problems",
+        "publisher": "Purdue University Department of Mathematics",
+        "authorityId": "purdue-math",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Purdue independently defines a worker's rate as one job divided by the time and adds individual rates for joint work."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The son's rate is 1/3 - 1/5 = 2/15 job per day, so his time is 15/2 = 7.5 days. Constant independent rates were stated explicitly."
+  },
+  {
+    "id": "ADV2E102-U0004-Q073-SIM",
+    "pairId": "ADV2E102-U0004-Q073",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A can complete a job in 6 days and B in 12 days. At constant rates, how long do they take together?",
+    "questionUrdu": "A کام 6 دن اور B کام 12 دن میں کرتا ہے۔ Constant rates پر دونوں مل کر کتنے دن لیں گے؟",
+    "options": [
+      "4 days",
+      "3 days",
+      "6 days",
+      "9 days"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”4 days“ ہے۔ Combined rate 1/6 + 1/12 = 1/4 job per day ہے۔ اس لیے پورا کام 4 دن میں مکمل ہوگا۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve work applications with rational equations",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/7-5-solve-applications-with-rational-equations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra-2e/pages/7-5-solve-applications-with-rational-equations",
+        "label": "Solve work applications with rational equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that workers taking 6 and 12 days alone complete the job together in 4 days."
+      },
+      {
+        "url": "https://www.math.purdue.edu/academic/files/courses/2016spring/MA15910/MA15910lesson7notes%2Crev.fa15.pdf",
+        "label": "Job or work problems",
+        "publisher": "Purdue University Department of Mathematics",
+        "authorityId": "purdue-math",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Purdue University Department of Mathematics supports that workers taking 6 and 12 days alone complete the job together in 4 days."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q074-SRC",
+    "pairId": "ADV2E102-U0004-Q074",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is 5 1/5 + 4 1/2 + 4 1/3?",
+    "questionUrdu": "5 1/5 + 4 1/2 + 4 1/3 کا مجموعہ کیا ہے؟",
+    "options": [
+      "14 1/10",
+      "13 1/5",
+      "13/30",
+      "14 1/30"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”14 1/30“ ہے۔ Whole parts 13 ہیں اور fractions کا مجموعہ 31/30 یعنی 1 1/30 ہے۔ کل جواب 14 1/30 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Add and subtract mixed numbers",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-6-add-and-subtract-mixed-numbers",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-6-add-and-subtract-mixed-numbers",
+        "label": "Add and subtract mixed numbers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the procedure for adding mixed numbers with different denominators."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/workbooks/mathcentre/fractionadd.pdf",
+        "label": "Fractions: adding and subtracting",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent mathcentre workbook covers adding mixed fractions using a common denominator."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The whole parts total 13 and 1/5+1/2+1/3 = 31/30 = 1 1/30, so the sum is 14 1/30. The printed key selected 13/30 (option C); it was corrected to option D."
+  },
+  {
+    "id": "ADV2E102-U0004-Q074-SIM",
+    "pairId": "ADV2E102-U0004-Q074",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 2 1/4 + 3 2/3?",
+    "questionUrdu": "2 1/4 + 3 2/3 کا جواب کیا ہے؟",
+    "options": [
+      "5 11/12",
+      "5 5/7",
+      "6 1/12",
+      "4 11/12"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”5 11/12“ ہے۔ Whole parts 5 ہیں اور 1/4 + 2/3 = 3/12 + 8/12 = 11/12 ہے۔ مجموعہ 5 11/12 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Add and subtract mixed numbers",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-6-add-and-subtract-mixed-numbers",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-6-add-and-subtract-mixed-numbers",
+        "label": "Add and subtract mixed numbers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 2 1/4 plus 3 2/3 equals 5 11/12."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/workbooks/mathcentre/fractionadd.pdf",
+        "label": "Fractions: adding and subtracting",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that 2 1/4 plus 3 2/3 equals 5 11/12."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q075-SRC",
+    "pairId": "ADV2E102-U0004-Q075",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is 0.7 divided by 10?",
+    "questionUrdu": "0.7 کو 10 سے divide کرنے پر کیا جواب آتا ہے؟",
+    "options": [
+      "7",
+      "0.07",
+      "70",
+      "0.007"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”0.07“ ہے۔ 10 سے divide کرنے پر decimal point ایک جگہ بائیں جاتا ہے۔ اس لیے 0.7 ÷ 10 = 0.07 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the place-value rules and worked procedures for multiplying and dividing decimals."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university-authored numeracy refresher covers decimals, fractions, averages and percentages with worked arithmetic."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Dividing by 10 moves the decimal point one place left, so 0.7/10 = 0.07."
+  },
+  {
+    "id": "ADV2E102-U0004-Q075-SIM",
+    "pairId": "ADV2E102-U0004-Q075",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 3.6 divided by 100?",
+    "questionUrdu": "3.6 کو 100 سے divide کرنے پر کیا جواب آتا ہے؟",
+    "options": [
+      "0.036",
+      "0.36",
+      "0.0036",
+      "36"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”0.036“ ہے۔ 100 سے divide کرنے پر decimal point دو places بائیں جاتا ہے۔ 3.6 کا نتیجہ 0.036 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 3.6 divided by 100 equals 0.036."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that 3.6 divided by 100 equals 0.036."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

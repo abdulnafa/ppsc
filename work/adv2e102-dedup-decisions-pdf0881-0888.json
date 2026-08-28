@@ -24,7 +24,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "reason": "Manual proposition review found that surfaced candidates test a different organization, title, date, mathematical expression, grammar application, lexical item, or otherwise materially distinct fact; this independently verified proposition is retained.",
     "testedProposition": "Which country has the longest coastline in the world? Correct answer: Canada.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -35,16 +35,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q041-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0121-Q003",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0042-Q054",
+    "reason": "The earlier source-order U0042 canonical asks the identical Waterloo-country proposition and answers Belgium.",
     "testedProposition": "Waterloo is a municipality in which country? Correct answer: Belgium.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -55,7 +57,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0042-Q054"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -101,10 +105,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0121-Q006",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found that surfaced candidates test a different organization, title, date, mathematical expression, grammar application, lexical item, or otherwise materially distinct fact; this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0008-Q016",
+    "reason": "The earlier U0008 source asks the identical OIC headquarters-city proposition and answers Jeddah.",
     "testedProposition": "In which city is the headquarters of the Organisation of Islamic Cooperation located? Correct answer: Jeddah.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -116,7 +120,10 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P235-Q008-SRC"
+        "P235-Q008-SRC",
+        "ADV2E102-U0013-Q008-SRC",
+        "ADV2E102-U0007-Q012-SIM",
+        "ADV2E102-U0008-Q016"
       ],
       "answerConflictReviewed": true
     }
@@ -612,7 +619,8 @@
       "semanticCandidateIds": [
         "P238-Q013-SIM",
         "P238-Q013-SRC",
-        "ADV2E102-U0001-Q037-SRC"
+        "ADV2E102-U0001-Q037-SRC",
+        "ADV2E102-U0005-Q014-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -655,7 +663,8 @@
       "exactFingerprintMatch": true,
       "semanticCandidateIds": [
         "P235-Q003-SIM",
-        "ADV2E102-U0021-Q036-SRC"
+        "ADV2E102-U0021-Q036-SRC",
+        "ADV2E102-U0004-Q015-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -745,7 +754,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "reason": "Manual proposition review found that surfaced candidates test a different organization, title, date, mathematical expression, grammar application, lexical item, or otherwise materially distinct fact; this independently verified proposition is retained.",
     "testedProposition": "The Inter-Services Intelligence and Federal Investigation Agency are institutions of which country? Correct answer: Pakistan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -756,7 +765,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0023-Q021-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -825,7 +836,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "reason": "Manual proposition review found that surfaced candidates test a different organization, title, date, mathematical expression, grammar application, lexical item, or otherwise materially distinct fact; this independently verified proposition is retained.",
     "testedProposition": "Which listed country bordering Pakistan is landlocked? Correct answer: Afghanistan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -836,7 +847,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q022-SRC",
+        "ADV2E102-U0008-Q046-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -965,7 +979,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "reason": "Manual proposition review found that surfaced candidates test a different organization, title, date, mathematical expression, grammar application, lexical item, or otherwise materially distinct fact; this independently verified proposition is retained.",
     "testedProposition": "Myopia primarily affects which organ? Correct answer: Eye.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -976,7 +990,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0004-Q032-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1000,6 +1016,8 @@
         "IBES-Q1285-SRC",
         "IBES-Q0871-SRC",
         "P236-Q042-SRC",
+        "ADV2E102-U0012-Q052-SRC",
+        "ADV2E102-U0004-Q046-SRC",
         "ADV2E102-U0061-Q092-SRC",
         "IBES-Q1044-SRC"
       ],
@@ -1050,17 +1068,18 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "IBES-Q0311-SRC"
+        "IBES-Q0311-SRC",
+        "ADV2E102-U0006-Q056-SRC"
       ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0121-Q052",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0006-Q053",
+    "reason": "The earlier source-order U0006 canonical asks the same expansion of WWW and answers World Wide Web.",
     "testedProposition": "What does WWW stand for? Correct answer: World Wide Web.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1071,7 +1090,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q053-SRC",
+        "ADV2E102-U0006-Q053"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1238,7 +1260,8 @@
         "ADV2E102-U0011-Q062-SRC",
         "ADV2E102-U0011-Q062-SIM",
         "ADV2E102-U0011-Q061-SIM",
-        "ADV2E102-U0081-Q066-SIM"
+        "ADV2E102-U0081-Q066-SIM",
+        "ADV2E102-U0004-Q060-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1398,7 +1421,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "reason": "Manual proposition review found that surfaced candidates test a different organization, title, date, mathematical expression, grammar application, lexical item, or otherwise materially distinct fact; this independently verified proposition is retained.",
     "testedProposition": "Which word is the best synonym of 'entice'? Correct answer: Lure.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1409,7 +1432,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0002-Q078-SIM",
+        "ADV2E102-U0009-Q074-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1451,6 +1477,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0034-Q076-SRC",
+        "ADV2E102-U0121-Q068-SIM",
         "ADV2E102-U0081-Q076-SIM",
         "ADV2E102-U0034-Q073-SIM",
         "ADV2E102-U0121-Q067-SRC",
@@ -1855,10 +1882,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0121-Q090",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found that surfaced candidates test a different organization, title, date, mathematical expression, grammar application, lexical item, or otherwise materially distinct fact; this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0003-Q098",
+    "reason": "The earlier source-order U0003 canonical already asks who wrote Khuda Ki Basti and answers Shaukat Siddiqui; adding Jangloos does not change the tested author relation.",
     "testedProposition": "Who wrote the Urdu novels 'Khuda Ki Basti' and 'Jangloos'? Correct answer: Shaukat Siddiqui.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1870,8 +1897,13 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0003-Q098-SRC",
+        "ADV2E102-U0043-Q086-SRC",
+        "ADV2E102-U0022-Q083-SIM",
+        "ADV2E102-U0043-Q088-SRC",
         "ADV2E102-U0021-Q092-SIM",
-        "ADV2E102-U0091-Q084-SRC"
+        "ADV2E102-U0091-Q084-SRC",
+        "ADV2E102-U0003-Q098"
       ],
       "answerConflictReviewed": true
     }
@@ -1881,7 +1913,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "reason": "Manual proposition review found that surfaced candidates test a different organization, title, date, mathematical expression, grammar application, lexical item, or otherwise materially distinct fact; this independently verified proposition is retained.",
     "testedProposition": "Which early collection by Premchand, published under the name Nawab Rai, was confiscated by the colonial government? Correct answer: Soz-e-Watan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1892,7 +1924,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q084-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -2000,8 +2034,8 @@
     "sourceRecordId": "ADV2E102-U0121-Q097",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0051-Q097",
-    "reason": "The retained U0051 pair's similar item asks the identical Banu Sa'd branch-of-Hawazin proposition for Halima al-Sa'diyya.",
+    "duplicateOf": "ADV2E102-U0043-Q100",
+    "reason": "The earlier retained U0043 pair's similar item asks the identical Banu Sa'd branch-of-Hawazin proposition for Halima al-Sa'diyya.",
     "testedProposition": "Halima al-Sa'diyya, the Prophet Muhammad's foster mother, belonged to Banu Sa'd, a branch of which larger tribal grouping? Correct answer: Hawazin.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -2013,8 +2047,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0051-Q097-SIM",
-        "ADV2E102-U0051-Q097"
+        "ADV2E102-U0043-Q100-SIM",
+        "ADV2E102-U0043-Q100"
       ],
       "answerConflictReviewed": true
     }

@@ -16,6 +16,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0013-Q090-SRC",
         "ADV2E102-U0011-Q088-SIM",
         "ADV2E102-U0051-Q090-SIM"
       ],
@@ -487,7 +488,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "To which major language branch does Urdu belong? Correct answer: Indo-Aryan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -498,7 +499,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q074-SRC",
+        "ADV2E102-U0022-Q074-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -890,8 +894,8 @@
     "sourceRecordId": "ADV2E102-U0141-Q045",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0034-Q091",
-    "reason": "The earlier U0034 source asks the same conventionally first sahib-e-diwan Urdu poet proposition and gives Muhammad Quli Qutb Shah.",
+    "duplicateOf": "ADV2E102-U0007-Q052",
+    "reason": "The earlier U0007 source asks the same conventionally first sahib-e-diwan Urdu poet proposition and gives Muhammad Quli Qutb Shah.",
     "testedProposition": "Who is conventionally identified as the first sahib-e-diwan Urdu poet in the surviving Deccani literary tradition? Correct answer: Muhammad Quli Qutb Shah.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -904,7 +908,8 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0034-Q091-SRC",
-        "ADV2E102-U0034-Q091"
+        "ADV2E102-U0007-Q052-SRC",
+        "ADV2E102-U0007-Q052"
       ],
       "answerConflictReviewed": true
     }
@@ -1844,6 +1849,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0023-Q023-SRC",
         "ADV2E102-U0033-Q036-SRC"
       ],
       "answerConflictReviewed": true
@@ -1970,6 +1976,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P236-Q055-SRC",
+        "ADV2E102-U0012-Q069-SRC",
         "ADV2E102-U0121-Q073-SIM"
       ],
       "answerConflictReviewed": true

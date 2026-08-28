@@ -1,0 +1,647 @@
+[
+  {
+    "id": "ADV2E102-U0003-Q030-SRC",
+    "pairId": "ADV2E102-U0003-Q030",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which listed web-search service began first?",
+    "questionUrdu": "درج ذیل Internet search services میں سب سے پہلے کون سی شروع ہوئی؟",
+    "options": [
+      "Google",
+      "MSN Search",
+      "Yahoo",
+      "AltaVista"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”Yahoo“ ہے۔ Yahoo کی ابتدا 1994 میں ہوئی، جبکہ AltaVista 1995 اور Google و MSN Search بعد میں شروع ہوئے۔",
+    "source": {
+      "type": "book",
+      "label": "Our story",
+      "referenceUrl": "https://www.yahooinc.com/our-story",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q030"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.yahooinc.com/our-story",
+        "label": "Our story",
+        "publisher": "Yahoo Inc.",
+        "authorityId": "yahoo",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Yahoo's corporate history dates its founding and original web guide to 1994."
+      },
+      {
+        "url": "https://ciir.cs.umass.edu/node/397",
+        "label": "AltaVista launched Internet search engine",
+        "publisher": "Center for Intelligent Information Retrieval, University of Massachusetts Amherst",
+        "authorityId": "umass-ciir",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university chronology independently dates AltaVista's launch to December 1995, later than Yahoo's 1994 beginning."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's word 'oldest' was normalized to 'began first.' Yahoo began in 1994; AltaVista launched in 1995, MSN Search in 1998 and Google in 1998. The printed key naming AltaVista was corrected to Yahoo."
+  },
+  {
+    "id": "ADV2E102-U0003-Q030-SIM",
+    "pairId": "ADV2E102-U0003-Q030",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which company originally developed the AltaVista search engine?",
+    "questionUrdu": "AltaVista search engine اصل میں کس کمپنی نے تیار کیا؟",
+    "options": [
+      "Digital Equipment Corporation",
+      "Apple",
+      "IBM",
+      "Netscape"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Digital Equipment Corporation“ ہے۔ AltaVista کو Digital Equipment Corporation کے researchers نے تیار کیا اور 1995 میں جاری کیا۔",
+    "source": {
+      "type": "practice",
+      "label": "AltaVista launched Internet search engine",
+      "referenceUrl": "https://ciir.cs.umass.edu/node/397",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q030",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ciir.cs.umass.edu/node/397",
+        "label": "AltaVista launched Internet search engine",
+        "publisher": "Center for Intelligent Information Retrieval, University of Massachusetts Amherst",
+        "authorityId": "umass-ciir",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Center for Intelligent Information Retrieval, University of Massachusetts Amherst supports that AltaVista was originally developed at Digital Equipment Corporation."
+      },
+      {
+        "url": "https://seltzerbooks.com/alta.html",
+        "label": "AltaVista Search: a history",
+        "publisher": "Richard Seltzer / Digital historical archive",
+        "authorityId": "seltzer-digital-archive",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Richard Seltzer / Digital historical archive supports that AltaVista was originally developed at Digital Equipment Corporation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q031-SRC",
+    "pairId": "ADV2E102-U0003-Q031",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "A hybrid computer:",
+    "questionUrdu": "Hybrid computer کس سے مشابہ ہوتا ہے؟",
+    "options": [
+      "Resembles digital computer",
+      "Resembles analogue computer",
+      "Resembles both a digital and analogue computer",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”Resembles both a digital and analogue computer“ ہے۔ Hybrid computer میں analog اور digital دونوں قسم کی processing کی خصوصیات یکجا ہوتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Hybrid computer",
+      "referenceUrl": "https://www.britannica.com/technology/hybrid-computer",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q031"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britannica.com/technology/hybrid-computer",
+        "label": "Hybrid computer",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica defines a hybrid computer as combining analog and digital computer features."
+      },
+      {
+        "url": "https://www.sciencedirect.com/topics/computer-science/hybrid-computer",
+        "label": "Hybrid computer",
+        "publisher": "ScienceDirect Topics",
+        "authorityId": "sciencedirect",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The technical reference independently describes hybrid computers as combining analog and digital processing."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0003-Q031-SIM",
+    "pairId": "ADV2E102-U0003-Q031",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In a hybrid computer, the analog subsystem is chiefly suited to handling which kind of data?",
+    "questionUrdu": "Hybrid computer میں analog subsystem بنیادی طور پر کس قسم کے data کو process کرتا ہے؟",
+    "options": [
+      "Continuously varying data",
+      "Only discrete binary digits",
+      "Only printed text",
+      "Encrypted passwords only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Continuously varying data“ ہے۔ Analog subsystem مسلسل بدلنے والی physical quantities یا continuous signals کو process کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Hybrid computer",
+      "referenceUrl": "https://www.britannica.com/technology/hybrid-computer",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q031",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britannica.com/technology/hybrid-computer",
+        "label": "Hybrid computer",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Britannica supports that the analog part of a hybrid computer handles continuously varying data."
+      },
+      {
+        "url": "https://www.sciencedirect.com/topics/computer-science/hybrid-computer",
+        "label": "Hybrid computer",
+        "publisher": "ScienceDirect Topics",
+        "authorityId": "sciencedirect",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ScienceDirect Topics supports that the analog part of a hybrid computer handles continuously varying data."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q044-SRC",
+    "pairId": "ADV2E102-U0003-Q044",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which type of computer program would be used to design an invitation card?",
+    "questionUrdu": "Invitation card ڈیزائن کرنے کے لیے کس قسم کا computer program استعمال کیا جاتا ہے؟",
+    "options": [
+      "Word processing",
+      "Simulation",
+      "Desktop publishing",
+      "Virtual realty"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”Desktop publishing“ ہے۔ Desktop publishing software متن، تصاویر اور page layout کو ملا کر cards اور publications تیار کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Desktop publishing",
+      "referenceUrl": "https://www.britannica.com/technology/desktop-publishing",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q044"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britannica.com/technology/desktop-publishing",
+        "label": "Desktop publishing",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica describes desktop publishing as producing publication-quality documents combining text and graphics."
+      },
+      {
+        "url": "https://www.adobe.com/creativecloud/design/discover/desktop-publishing.html",
+        "label": "Desktop publishing",
+        "publisher": "Adobe",
+        "authorityId": "adobe",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Adobe independently lists cards and invitations among desktop-publishing design outputs."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0003-Q044-SIM",
+    "pairId": "ADV2E102-U0003-Q044",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Adobe application is primarily designed for professional page layout and desktop publishing?",
+    "questionUrdu": "Adobe کی کون سی application professional page layout اور desktop publishing کے لیے بنیادی طور پر بنائی گئی ہے؟",
+    "options": [
+      "Adobe InDesign",
+      "Adobe Audition",
+      "Adobe Animate",
+      "Adobe Lightroom"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Adobe InDesign“ ہے۔ Adobe InDesign books، brochures، magazines اور دوسرے page-layout documents کے لیے desktop-publishing application ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Adobe InDesign",
+      "referenceUrl": "https://www.adobe.com/products/indesign.html",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q044",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.adobe.com/products/indesign.html",
+        "label": "Adobe InDesign",
+        "publisher": "Adobe",
+        "authorityId": "adobe",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Adobe supports that Adobe InDesign is a professional page-layout and desktop-publishing application."
+      },
+      {
+        "url": "https://www.britannica.com/technology/desktop-publishing",
+        "label": "Desktop publishing",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Britannica supports that Adobe InDesign is a professional page-layout and desktop-publishing application."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q052-SRC",
+    "pairId": "ADV2E102-U0003-Q052",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which listed Windows utility reorganizes fragmented files on a hard disk?",
+    "questionUrdu": "Windows کی کون سی utility hard disk پر fragmented files کو دوبارہ منظم کرتی ہے؟",
+    "options": [
+      "Disk cleanup",
+      "Disk defragmenter",
+      "Disk cleanout",
+      "Disk cleaning"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Disk defragmenter“ ہے۔ Disk Defragmenter فائل کے بکھرے حصوں کو قریب لا کر hard disk access بہتر کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Defragment and optimize data drives",
+      "referenceUrl": "https://support.microsoft.com/en-us/windows/defragment-optimize-your-data-drives-in-windows-54d4fed1-c96e-46db-b843-8c6b34bd27a4",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q052"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/windows/defragment-optimize-your-data-drives-in-windows-54d4fed1-c96e-46db-b843-8c6b34bd27a4",
+        "label": "Defragment and optimize data drives",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft identifies Disk Defragmenter/Optimize Drives as reorganizing fragmented files on hard disks."
+      },
+      {
+        "url": "https://www.britannica.com/technology/defragmentation",
+        "label": "Defragmentation",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently describes disk defragmentation as rearranging file fragments into contiguous storage."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The inaccurate phrase 'used as a disk scanner' was repaired to the documented purpose of Disk Defragmenter; the tested option is unchanged."
+  },
+  {
+    "id": "ADV2E102-U0003-Q052-SIM",
+    "pairId": "ADV2E102-U0003-Q052",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which operation does Windows normally use to optimize a solid-state drive (SSD) instead of traditional file defragmentation?",
+    "questionUrdu": "Windows عام طور پر solid-state drive (SSD) کو traditional defragmentation کے بجائے کس operation سے optimize کرتا ہے؟",
+    "options": [
+      "TRIM",
+      "Disk compression",
+      "Low-level formatting",
+      "File encryption"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”TRIM“ ہے۔ SSD کے لیے Windows عام طور پر TRIM/retrim operation استعمال کرتا ہے، جبکہ HDD پر traditional defragmentation ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Defragment and optimize data drives",
+      "referenceUrl": "https://support.microsoft.com/en-us/windows/defragment-optimize-your-data-drives-in-windows-54d4fed1-c96e-46db-b843-8c6b34bd27a4",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q052",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/windows/defragment-optimize-your-data-drives-in-windows-54d4fed1-c96e-46db-b843-8c6b34bd27a4",
+        "label": "Defragment and optimize data drives",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft Support supports that Windows normally uses TRIM or retrim to optimize an SSD rather than traditional defragmentation."
+      },
+      {
+        "url": "https://www.crucial.com/articles/about-ssd/what-is-trim",
+        "label": "What is TRIM?",
+        "publisher": "Crucial",
+        "authorityId": "crucial",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Crucial supports that Windows normally uses TRIM or retrim to optimize an SSD rather than traditional defragmentation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q054-SRC",
+    "pairId": "ADV2E102-U0003-Q054",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In computing, NOS stands for:",
+    "questionUrdu": "Computing میں NOS کا مکمل نام کیا ہے؟",
+    "options": [
+      "Non-operating Software",
+      "Network Operating System",
+      "Node Open Software",
+      "Neutral Operating System"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Network Operating System“ ہے۔ NOS کا مطلب Network Operating System ہے، جو network resources اور users کا انتظام کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Network operating systems",
+      "referenceUrl": "https://www.ibm.com/docs/en/aix/7.2.0?topic=networks-network-operating-systems",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q054"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ibm.com/docs/en/aix/7.2.0?topic=networks-network-operating-systems",
+        "label": "Network operating systems",
+        "publisher": "IBM Documentation",
+        "authorityId": "ibm",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM uses NOS for network operating system."
+      },
+      {
+        "url": "https://www.techtarget.com/searchnetworking/definition/network-operating-system",
+        "label": "Network operating system (NOS)",
+        "publisher": "TechTarget",
+        "authorityId": "techtarget",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "TechTarget independently expands NOS as network operating system."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0003-Q054-SIM",
+    "pairId": "ADV2E102-U0003-Q054",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is a principal function of a network operating system?",
+    "questionUrdu": "Network operating system کا ایک بنیادی کام کیا ہے؟",
+    "options": [
+      "Managing shared network resources and users",
+      "Editing photographs only",
+      "Replacing all network hardware",
+      "Compiling every application"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Managing shared network resources and users“ ہے۔ Network operating system users، permissions، shared files، printers اور دیگر network resources کا انتظام کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Network operating systems",
+      "referenceUrl": "https://www.ibm.com/docs/en/aix/7.2.0?topic=networks-network-operating-systems",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q054",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ibm.com/docs/en/aix/7.2.0?topic=networks-network-operating-systems",
+        "label": "Network operating systems",
+        "publisher": "IBM Documentation",
+        "authorityId": "ibm",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM Documentation supports that a network operating system manages shared network resources and users."
+      },
+      {
+        "url": "https://www.techtarget.com/searchnetworking/definition/network-operating-system",
+        "label": "Network operating system",
+        "publisher": "TechTarget",
+        "authorityId": "techtarget",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "TechTarget supports that a network operating system manages shared network resources and users."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

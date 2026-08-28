@@ -114,9 +114,10 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
-        "IBES-Q0615-SRC"
+        "IBES-Q0615-SRC",
+        "ADV2E102-U0005-Q033-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -188,7 +189,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition and answer review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, broader, narrower, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which team won the ICC Men's T20 World Cup in 2016? Correct answer: West Indies.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -199,7 +200,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q019-SIM",
+        "ADV2E102-U0005-Q019-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -425,10 +429,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0012-Q022",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced items test related, inverse, broader, narrower, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
+    "duplicateOf": "ADV2E102-U0008-Q027",
+    "reason": "The earlier U0008 pair already tests the identical 14 August 1973 Constitution commencement-date proposition in its retained practice item.",
     "testedProposition": "On what date did Pakistan's Constitution of 1973 come into force? Correct answer: 14 August 1973.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -440,7 +444,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P236-Q006-SIM"
+        "P236-Q006-SIM",
+        "ADV2E102-U0008-Q027"
       ],
       "answerConflictReviewed": true
     }
@@ -533,7 +538,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition and answer review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, broader, narrower, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "What total area did Pakistan's official statistical publications conventionally report for the country? Correct answer: 796,096 sq km.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -544,7 +549,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0002-Q031-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -570,10 +577,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0012-Q029",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition and answer review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0008-Q041",
+    "reason": "The earlier U0008 source asks the identical Lucknow location of the joint 1916 Congress and Muslim League sessions that produced the Lucknow Pact.",
     "testedProposition": "In which city did the Indian National Congress and All-India Muslim League hold their landmark 1916 sessions that produced the Lucknow Pact? Correct answer: Lucknow.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -583,8 +590,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q041-SRC",
+        "ADV2E102-U0008-Q041"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -669,7 +679,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P239-Q006-SIM"
+        "P239-Q006-SIM",
+        "ADV2E102-U0008-Q042-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -714,6 +725,7 @@
       "exactFingerprintMatch": true,
       "semanticCandidateIds": [
         "ADV2E102-U0012-Q023-SRC",
+        "ADV2E102-U0012-Q023-SIM",
         "ADV2E102-U0012-Q023"
       ],
       "answerConflictReviewed": true
@@ -744,7 +756,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition and answer review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, broader, narrower, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "As of 27 August 2026, UN Secretary-General António Guterres is a national of which country? Correct answer: Portugal.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -755,7 +767,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q003-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -903,10 +917,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0012-Q045",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition and answer review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0008-Q059",
+    "reason": "The earlier U0008 pair already tests the identical gallbladder storage-and-concentration of liver-produced bile proposition.",
     "testedProposition": "Which organ stores and concentrates bile between meals? Correct answer: Gallbladder.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -917,7 +931,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q059"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1019,7 +1035,8 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "IBES-Q0811-SRC",
-        "IBES-Q0818-SRC"
+        "IBES-Q0818-SRC",
+        "ADV2E102-U0003-Q042-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1112,7 +1129,8 @@
       "semanticCandidateIds": [
         "IBES-Q0811-SRC",
         "IBES-Q0818-SRC",
-        "ADV2E102-U0012-Q050-SRC"
+        "ADV2E102-U0012-Q050-SRC",
+        "ADV2E102-U0003-Q042-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1168,7 +1186,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition and answer review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, broader, narrower, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "A father is twice as old as his son. Twenty years earlier, the father was twelve times the son's age. What is the father's age under these conditions? Correct answer: 44 years.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1179,7 +1197,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q058-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1415,7 +1435,10 @@
         "P237-Q048-SRC",
         "P239-Q049-SIM",
         "P237-Q054-SRC",
-        "P237-Q060-SIM"
+        "P237-Q060-SIM",
+        "ADV2E102-U0004-Q093-SIM",
+        "ADV2E102-U0003-Q025-SRC",
+        "ADV2E102-U0004-Q011-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1716,7 +1739,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition and answer review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, broader, narrower, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Under Pakistan's Zakat and Ushr Ordinance, Ushr is levied on which category? Correct answer: Agricultural produce.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1727,7 +1750,11 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q060-SRC",
+        "ADV2E102-U0007-Q061-SRC",
+        "ADV2E102-U0007-Q060-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },

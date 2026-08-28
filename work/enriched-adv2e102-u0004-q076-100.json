@@ -1,0 +1,2969 @@
+[
+  {
+    "id": "ADV2E102-U0004-Q076-SRC",
+    "pairId": "ADV2E102-U0004-Q076",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A Batsman makes a score of 87 runs in the 17th inning and thus increases his average by 3. Find his average after 17th inning.",
+    "questionUrdu": "ایک batsman 17th innings میں 87 runs بناکر اپنا average 3 بڑھاتا ہے۔ 17 innings کے بعد اس کا average کیا ہے؟",
+    "options": [
+      "33",
+      "35",
+      "37",
+      "39"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”39“ ہے۔ پہلے 16 innings کا average a مانیں تو 16a + 87 = 17(a + 3) ہوگا۔ حل کرنے سے پرانا average 36 اور نیا average 39 ملتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the arithmetic mean as the sum of the observations divided by their number."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university-authored numeracy guide gives the total-divided-by-count method for means."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Let the old average after 16 innings be a. Then 16a + 87 = 17(a + 3), so a = 36 and the new average is 39. The source capitalization and grammar were normalized."
+  },
+  {
+    "id": "ADV2E102-U0004-Q076-SIM",
+    "pairId": "ADV2E102-U0004-Q076",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A batter scores 80 runs in the 11th innings and raises the batting average by 4. What is the new average?",
+    "questionUrdu": "ایک batter 11th innings میں 80 runs بناکر batting average 4 بڑھاتا ہے۔ نیا average کیا ہوگا؟",
+    "options": [
+      "40",
+      "36",
+      "44",
+      "48"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”40“ ہے۔ پہلے دس innings کا average a ہو تو 10a + 80 = 11(a + 4) ہے۔ اس سے a = 36 اور نیا average 40 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that scoring 80 in an eleventh innings and raising a ten-innings average by 4 gives a new average of 40."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that scoring 80 in an eleventh innings and raising a ten-innings average by 4 gives a new average of 40."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q077-SRC",
+    "pairId": "ADV2E102-U0004-Q077",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Which number is as much greater than 36 as it is less than 86?",
+    "questionUrdu": "کون سا number، 36 سے جتنا بڑا ہے اتنا ہی 86 سے چھوٹا ہے؟",
+    "options": [
+      "61",
+      "59",
+      "67",
+      "57"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”61“ ہے۔ یہ number 36 اور 86 کا midpoint ہے۔ دونوں کو جمع کرکے 2 سے divide کریں تو 61 ملتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve equations using equality properties",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/8-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q077"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/8-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality",
+        "label": "Solve equations using equality properties",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that equal operations on both sides preserve a linear equation and shows how to isolate its variable."
+      },
+      {
+        "url": "https://tutorial.math.lamar.edu/classes/alg/solveequations.aspx",
+        "label": "Solving equations and inequalities",
+        "publisher": "Lamar University",
+        "authorityId": "lamar-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Lamar University's algebra notes independently demonstrate solving linear equations by simplifying and isolating the unknown."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The wording was repaired. Solving x - 36 = 86 - x gives 2x = 122 and x = 61."
+  },
+  {
+    "id": "ADV2E102-U0004-Q077-SIM",
+    "pairId": "ADV2E102-U0004-Q077",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Which number is as much greater than 24 as it is less than 70?",
+    "questionUrdu": "کون سا number، 24 سے جتنا بڑا ہے اتنا ہی 70 سے چھوٹا ہے؟",
+    "options": [
+      "47",
+      "46",
+      "48",
+      "52"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”47“ ہے۔ مطلوبہ number دونوں endpoints کا midpoint ہے۔ (24 + 70) ÷ 2 = 47 ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve equations using equality properties",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/8-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q077",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/8-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality",
+        "label": "Solve equations using equality properties",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 47 is equally distant from 24 and 70."
+      },
+      {
+        "url": "https://tutorial.math.lamar.edu/classes/alg/solveequations.aspx",
+        "label": "Solving equations and inequalities",
+        "publisher": "Lamar University",
+        "authorityId": "lamar-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Lamar University supports that 47 is equally distant from 24 and 70."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q078-SRC",
+    "pairId": "ADV2E102-U0004-Q078",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A speed of 14 meters per second is the same as:",
+    "questionUrdu": "14 metres per second کی speed کتنے kilometres per hour کے برابر ہے؟",
+    "options": [
+      "45.5 km/h",
+      "50.4 km/h",
+      "52.2 km/h",
+      "55.5 km/h"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”50.4 km/h“ ہے۔ m/s کو km/h میں بدلنے کے لیے 3.6 سے ضرب دیتے ہیں۔ 14 × 3.6 = 50.4 km/h ہے۔",
+    "source": {
+      "type": "book",
+      "label": "SI unit conversion factors",
+      "referenceUrl": "https://nvlpubs.nist.gov/nistpubs/jres/123/jres.123.008.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q078"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://nvlpubs.nist.gov/nistpubs/jres/123/jres.123.008.pdf",
+        "label": "SI unit conversion factors",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST gives the exact relation 1 metre per second equals 3.6 kilometres per hour."
+      },
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and velocity",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines speed and demonstrates consistent conversion of distance and time units."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key selects 52.2 km/h, but the independently verified conversion is 14 x 3.6 = 50.4 km/h; the answer was corrected from printed option C to option B."
+  },
+  {
+    "id": "ADV2E102-U0004-Q078-SIM",
+    "pairId": "ADV2E102-U0004-Q078",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A speed of 20 metres per second equals how many kilometres per hour?",
+    "questionUrdu": "20 metres per second کی speed کتنے kilometres per hour کے برابر ہے؟",
+    "options": [
+      "72 km/h",
+      "60 km/h",
+      "75 km/h",
+      "80 km/h"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”72 km/h“ ہے۔ 20 m/s کو 3.6 سے ضرب دینے پر 72 km/h ملتا ہے۔ Unit conversion میں distance اور time دونوں units تبدیل ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "SI unit conversion factors",
+      "referenceUrl": "https://nvlpubs.nist.gov/nistpubs/jres/123/jres.123.008.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q078",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://nvlpubs.nist.gov/nistpubs/jres/123/jres.123.008.pdf",
+        "label": "SI unit conversion factors",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Institute of Standards and Technology supports that 20 metres per second equals 72 kilometres per hour."
+      },
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and velocity",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 20 metres per second equals 72 kilometres per hour."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q079-SRC",
+    "pairId": "ADV2E102-U0004-Q079",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the square root of 0.16?",
+    "questionUrdu": "0.16 کا principal square root کیا ہے؟",
+    "options": [
+      "0.4",
+      "0.5",
+      "0.6",
+      "0.7"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”0.4“ ہے۔ 0.4 × 0.4 = 0.16 ہوتا ہے۔ اس لیے 0.16 کا principal square root 0.4 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Simplify and use square roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q079"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+        "label": "Simplify and use square roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines a square root as a number whose square is the given number and explains principal roots."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/squares-roots-and-powers/content-section-3.3",
+        "label": "Squares, roots and powers",
+        "publisher": "The Open University",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Open University independently explains roots as inverse power operations."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The principal square root is 0.4 because 0.4 x 0.4 = 0.16."
+  },
+  {
+    "id": "ADV2E102-U0004-Q079-SIM",
+    "pairId": "ADV2E102-U0004-Q079",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the principal square root of 0.81?",
+    "questionUrdu": "0.81 کا principal square root کیا ہے؟",
+    "options": [
+      "0.9",
+      "0.09",
+      "9",
+      "0.8"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”0.9“ ہے۔ 0.9 کو خود سے multiply کرنے پر 0.81 ملتا ہے۔ Principal square root غیر منفی value ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Simplify and use square roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q079",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+        "label": "Simplify and use square roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the principal square root of 0.81 is 0.9."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/squares-roots-and-powers/content-section-3.3",
+        "label": "Squares, roots and powers",
+        "publisher": "The Open University",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Open University supports that the principal square root of 0.81 is 0.9."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q080-SRC",
+    "pairId": "ADV2E102-U0004-Q080",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The cube root of 0.000216 is:",
+    "questionUrdu": "0.000216 کا cube root کیا ہے؟",
+    "options": [
+      "0.6",
+      "0.06",
+      "0.006",
+      "0.00006"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”0.06“ ہے۔ 0.06 × 0.06 × 0.06 = 0.000216 ہے۔ اس لیے cube root 0.06 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Rational exponents and roots",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/8-1-simplify-rational-exponents",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q080"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra-2e/pages/8-1-simplify-rational-exponents",
+        "label": "Rational exponents and roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains nth roots and their equivalent rational-exponent notation."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/squares-roots-and-powers/content-section-3.3",
+        "label": "Squares, roots and powers",
+        "publisher": "The Open University",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Open University independently explains roots as inverse power operations."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The cube root is 0.06 because 0.06 x 0.06 x 0.06 = 0.000216."
+  },
+  {
+    "id": "ADV2E102-U0004-Q080-SIM",
+    "pairId": "ADV2E102-U0004-Q080",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the cube root of 0.000125?",
+    "questionUrdu": "0.000125 کا cube root کیا ہے؟",
+    "options": [
+      "0.05",
+      "0.5",
+      "0.005",
+      "0.025"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”0.05“ ہے۔ 0.05 کی cube یعنی 0.05 × 0.05 × 0.05 برابر 0.000125 ہے۔ لہٰذا مطلوبہ cube root 0.05 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Rational exponents and roots",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/8-1-simplify-rational-exponents",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q080",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra-2e/pages/8-1-simplify-rational-exponents",
+        "label": "Rational exponents and roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the cube root of 0.000125 is 0.05."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/squares-roots-and-powers/content-section-3.3",
+        "label": "Squares, roots and powers",
+        "publisher": "The Open University",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Open University supports that the cube root of 0.000125 is 0.05."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q081-SRC",
+    "pairId": "ADV2E102-U0004-Q081",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Complete the opposite-direction analogy: Left : Right :: East : ____.",
+    "questionUrdu": "Opposite-direction analogy مکمل کریں: Left : Right :: East : ____۔",
+    "options": [
+      "South",
+      "North",
+      "West",
+      "Coast"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”West“ ہے۔ Left کا opposite Right اور East کا opposite West ہے۔ اس لیے analogy کا درست جواب West ہے۔",
+    "source": {
+      "type": "book",
+      "label": "West definition",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/west",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q081"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/west",
+        "label": "West definition",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines west as the direction opposite east."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/west",
+        "label": "West definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines west as the direction opposite east."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The relationship was made explicit as opposition; West is opposite East just as Right is opposite Left."
+  },
+  {
+    "id": "ADV2E102-U0004-Q081-SIM",
+    "pairId": "ADV2E102-U0004-Q081",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Complete the opposite-direction analogy: Up : Down :: North : ____.",
+    "questionUrdu": "Opposite-direction analogy مکمل کریں: Up : Down :: North : ____۔",
+    "options": [
+      "South",
+      "East",
+      "West",
+      "Up"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”South“ ہے۔ Up کا opposite Down ہے۔ اسی relation کے مطابق North کا opposite South ہوگا۔",
+    "source": {
+      "type": "practice",
+      "label": "West definition",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/west",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q081",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/west",
+        "label": "West definition",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press supports that South is the compass direction opposite North."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/west",
+        "label": "West definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that South is the compass direction opposite North."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q082-SRC",
+    "pairId": "ADV2E102-U0004-Q082",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "In a 100 m race, A covers the distance in 36 seconds and B in 45 seconds. In this race A beats B by:",
+    "questionUrdu": "100 m race میں A کو 36 seconds اور B کو 45 seconds لگیں تو A، B کو کتنے metres سے شکست دیتا ہے؟",
+    "options": [
+      "20 m",
+      "24 m",
+      "28 m",
+      "30 m"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”20 m“ ہے۔ A کے 36 seconds میں B صرف 100 × 36/45 = 80 m طے کرتا ہے۔ اس وقت A finish پر ہوتا ہے، اس لیے margin 20 m ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Speed and velocity",
+      "referenceUrl": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q082"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and velocity",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines average speed as distance divided by elapsed time."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=85547&section=3.3",
+        "label": "Speed, distance and time",
+        "publisher": "The Open University",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Open University independently states the relationship speed equals distance divided by time."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "In A's 36 seconds, B covers 100 x 36/45 = 80 metres, so A wins by 20 metres."
+  },
+  {
+    "id": "ADV2E102-U0004-Q082-SIM",
+    "pairId": "ADV2E102-U0004-Q082",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "In a 200 m race, A finishes in 40 seconds and B in 50 seconds. By how many metres does A beat B?",
+    "questionUrdu": "200 m race میں A 40 seconds اور B 50 seconds میں finish کرے تو A کتنے metres سے جیتتا ہے؟",
+    "options": [
+      "40 m",
+      "20 m",
+      "50 m",
+      "80 m"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”40 m“ ہے۔ A کے 40 seconds میں B، 200 × 40/50 = 160 m طے کرتا ہے۔ Finish line سے اس کا فاصلہ 40 m رہتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Speed and velocity",
+      "referenceUrl": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q082",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and velocity",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that in the stated 200-metre race, A beats B by 40 metres."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=85547&section=3.3",
+        "label": "Speed, distance and time",
+        "publisher": "The Open University",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Open University supports that in the stated 200-metre race, A beats B by 40 metres."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q083-SRC",
+    "pairId": "ADV2E102-U0004-Q083",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A person rows 48 km downstream and 48 km upstream in a total of 14 hours. Four kilometres downstream take the same time as three kilometres upstream. What is the stream's speed?",
+    "questionUrdu": "48 km downstream اور 48 km upstream کا total وقت 14 hours ہو، اور 4 km downstream کا وقت 3 km upstream کے برابر ہو، تو stream speed کیا ہے؟",
+    "options": [
+      "5 km/h",
+      "4 km/h",
+      "3 km/h",
+      "1 km/h"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”1 km/h“ ہے۔ Downstream اور upstream speeds کا ratio 4:3 نکلتا ہے۔ Total-time equation حل کرنے سے speeds 8 اور 6 km/h، اس لیے stream speed 1 km/h ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Speed and velocity",
+      "referenceUrl": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and velocity",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines average speed as distance divided by elapsed time."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=85547&section=3.3",
+        "label": "Speed, distance and time",
+        "publisher": "The Open University",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Open University independently states the relationship speed equals distance divided by time."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and direction labels were clarified. Equal times give downstream:upstream speed = 4:3. Writing the speeds as 4k and 3k, 48/(4k) + 48/(3k) = 14 gives k = 2; the stream speed is (4k - 3k)/2 = 1 km/h."
+  },
+  {
+    "id": "ADV2E102-U0004-Q083-SIM",
+    "pairId": "ADV2E102-U0004-Q083",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A boat travels at 12 km/h downstream and 8 km/h upstream. What is its speed in still water?",
+    "questionUrdu": "ایک boat کی downstream speed 12 km/h اور upstream speed 8 km/h ہے۔ Still water میں اس کی speed کیا ہے؟",
+    "options": [
+      "10 km/h",
+      "2 km/h",
+      "20 km/h",
+      "4 km/h"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”10 km/h“ ہے۔ Still-water speed downstream اور upstream speeds کا average ہوتی ہے۔ (12 + 8) ÷ 2 = 10 km/h ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Speed and velocity",
+      "referenceUrl": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and velocity",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a boat moving at 12 km/h downstream and 8 km/h upstream has a still-water speed of 10 km/h."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=85547&section=3.3",
+        "label": "Speed, distance and time",
+        "publisher": "The Open University",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Open University supports that a boat moving at 12 km/h downstream and 8 km/h upstream has a still-water speed of 10 km/h."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q084-SRC",
+    "pairId": "ADV2E102-U0004-Q084",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Solve: 840 ÷ 14 + 40 = ?",
+    "questionUrdu": "840 ÷ 14 + 40 کی قیمت حل کریں۔",
+    "options": [
+      "50",
+      "60",
+      "100",
+      "120"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”100“ ہے۔ Order of operations کے مطابق division پہلے ہوگی۔ 840 ÷ 14 = 60 اور 60 + 40 = 100 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q084"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra",
+        "label": "Order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax specifies that multiplication and division are performed before addition and subtraction."
+      },
+      {
+        "url": "https://mathcentre.ac.uk/resources/uploaded/mc-ty-subsandformulae-2009-1.pdf",
+        "label": "Substitution and formulae",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent mathcentre guide explains the standard order of arithmetic operations."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Division is evaluated before addition: 840 / 14 = 60, then 60 + 40 = 100."
+  },
+  {
+    "id": "ADV2E102-U0004-Q084-SIM",
+    "pairId": "ADV2E102-U0004-Q084",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Solve: 720 ÷ 12 + 15 = ?",
+    "questionUrdu": "720 ÷ 12 + 15 کی قیمت حل کریں۔",
+    "options": [
+      "75",
+      "60",
+      "65",
+      "90"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”75“ ہے۔ پہلے 720 ÷ 12 = 60 کریں۔ پھر 15 جمع کرنے سے 75 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q084",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra",
+        "label": "Order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 720 divided by 12 plus 15 equals 75."
+      },
+      {
+        "url": "https://mathcentre.ac.uk/resources/uploaded/mc-ty-subsandformulae-2009-1.pdf",
+        "label": "Substitution and formulae",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that 720 divided by 12 plus 15 equals 75."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q085-SRC",
+    "pairId": "ADV2E102-U0004-Q085",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A square region has an area of 2304 square metres. What is its perimeter?",
+    "questionUrdu": "2304 square metres area والے square کا perimeter کیا ہے؟",
+    "options": [
+      "24 m",
+      "96 m",
+      "144 m",
+      "192 m"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”192 m“ ہے۔ Square کی side √2304 = 48 m ہے۔ Perimeter چار sides کا مجموعہ یعنی 4 × 48 = 192 m ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Geometric formulas",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/c-geometric-formulas",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q085"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/c-geometric-formulas",
+        "label": "Geometric formulas",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax lists a square's area as side squared and its perimeter as four times its side."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/language-notation-and-formulas/content-section-1.2/?printable=1",
+        "label": "Using mathematical formulas",
+        "publisher": "The Open University",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Open University independently demonstrates substituting known values into area and perimeter formulas."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's area unit 'm' was corrected to square metres. The side is sqrt(2304) = 48 metres, so the perimeter is 4 x 48 = 192 metres."
+  },
+  {
+    "id": "ADV2E102-U0004-Q085-SIM",
+    "pairId": "ADV2E102-U0004-Q085",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A square has a perimeter of 80 metres. What is its area?",
+    "questionUrdu": "ایک square کا perimeter 80 metres ہے۔ اس کا area کیا ہوگا؟",
+    "options": [
+      "400 square metres",
+      "320 square metres",
+      "640 square metres",
+      "1600 square metres"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”400 square metres“ ہے۔ ہر side 80 ÷ 4 = 20 m ہے۔ Area 20 × 20 = 400 square metres ہوگا۔",
+    "source": {
+      "type": "practice",
+      "label": "Geometric formulas",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/c-geometric-formulas",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q085",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/c-geometric-formulas",
+        "label": "Geometric formulas",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a square with an 80-metre perimeter has an area of 400 square metres."
+      },
+      {
+        "url": "https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/language-notation-and-formulas/content-section-1.2/?printable=1",
+        "label": "Using mathematical formulas",
+        "publisher": "The Open University",
+        "authorityId": "open-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Open University supports that a square with an 80-metre perimeter has an area of 400 square metres."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q086-SRC",
+    "pairId": "ADV2E102-U0004-Q086",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The arithmetic mean between 4 and 6 is:",
+    "questionUrdu": "4 اور 6 کا arithmetic mean کیا ہے؟",
+    "options": [
+      "5",
+      "6",
+      "8",
+      "10"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”5“ ہے۔ Arithmetic mean کے لیے values کو جمع کرکے count سے divide کرتے ہیں۔ (4 + 6) ÷ 2 = 5 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the arithmetic mean as the sum of the observations divided by their number."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university-authored numeracy guide gives the total-divided-by-count method for means."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mean is (4 + 6) / 2 = 5."
+  },
+  {
+    "id": "ADV2E102-U0004-Q086-SIM",
+    "pairId": "ADV2E102-U0004-Q086",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the arithmetic mean of 12 and 18?",
+    "questionUrdu": "12 اور 18 کا arithmetic mean کیا ہے؟",
+    "options": [
+      "15",
+      "14",
+      "16",
+      "30"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”15“ ہے۔ 12 اور 18 کا sum 30 ہے۔ دو values ہونے کی وجہ سے 30 ÷ 2 = 15 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the arithmetic mean of 12 and 18 is 15."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that the arithmetic mean of 12 and 18 is 15."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q087-SRC",
+    "pairId": "ADV2E102-U0004-Q087",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If x% of 60 equals 48, what is x?",
+    "questionUrdu": "اگر x% of 60 = 48 ہو تو x کیا ہے؟",
+    "options": [
+      "40",
+      "60",
+      "70",
+      "80"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”80“ ہے۔ Equation (x/100) × 60 = 48 ہے۔ Solve کرنے پر x = 80 ملتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Percent key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q087"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines a percent as a ratio with denominator 100 and gives percent-equation rules."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/workbooks/mathcentre/percentages.pdf",
+        "label": "Percentages",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent mathcentre workbook defines percent as out of 100 and demonstrates percentage calculations."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Solving (x/100) x 60 = 48 gives x = 80. Spacing and punctuation were normalized."
+  },
+  {
+    "id": "ADV2E102-U0004-Q087-SIM",
+    "pairId": "ADV2E102-U0004-Q087",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "20 is what percent of 80?",
+    "questionUrdu": "20، 80 کا کتنے percent ہے؟",
+    "options": [
+      "25%",
+      "20%",
+      "40%",
+      "80%"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”25%“ ہے۔ Part کو whole سے divide کرکے 100 سے multiply کریں۔ 20 ÷ 80 × 100 = 25% ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent key concepts",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q087",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-key-concepts",
+        "label": "Percent key concepts",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 20 is 25 percent of 80."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/workbooks/mathcentre/percentages.pdf",
+        "label": "Percentages",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that 20 is 25 percent of 80."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q089-SRC",
+    "pairId": "ADV2E102-U0004-Q089",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If the average of 5, 6, 7 and x is 10, what is x?",
+    "questionUrdu": "5، 6، 7 اور x کا average 10 ہو تو x کی قدر کیا ہے؟",
+    "options": [
+      "12",
+      "22",
+      "32",
+      "42"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”22“ ہے۔ چار values کا required total 4 × 10 = 40 ہے۔ معلوم values کا sum 18 ہے، اس لیے x = 22 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q089"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the arithmetic mean as the sum of the observations divided by their number."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university-authored numeracy guide gives the total-divided-by-count method for means."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A mean of 10 for four values requires a total of 40; therefore x = 40 - (5 + 6 + 7) = 22."
+  },
+  {
+    "id": "ADV2E102-U0004-Q089-SIM",
+    "pairId": "ADV2E102-U0004-Q089",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If the average of 8, 12, and x is 10, what is x?",
+    "questionUrdu": "اگر 8، 12 اور x کا average 10 ہو تو x کیا ہے؟",
+    "options": [
+      "10",
+      "8",
+      "12",
+      "20"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”10“ ہے۔ تین values کا total 30 ہونا چاہیے۔ 8 + 12 = 20 ہے، لہٰذا x = 10 ہوگا۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q089",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that if 8, 12, and x average 10, then x equals 10."
+      },
+      {
+        "url": "https://www.mathcentre.ac.uk/resources/Refresher%20Booklets/numeracy%20refresher/mathcentreNumeracy1.pdf",
+        "label": "Numeracy refresher",
+        "publisher": "mathcentre",
+        "authorityId": "mathcentre",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "mathcentre supports that if 8, 12, and x average 10, then x equals 10."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q090-SRC",
+    "pairId": "ADV2E102-U0004-Q090",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A train running with a speed of 60 km/h crosses a pole in 9 seconds. What is the length of the train?",
+    "questionUrdu": "60 km/h کی speed سے چلتی train pole کو 9 seconds میں cross کرے تو train کی length کیا ہے؟",
+    "options": [
+      "120 m",
+      "140 m",
+      "150 m",
+      "160 m"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”150 m“ ہے۔ 60 km/h برابر 16.666... m/s ہے۔ Pole cross کرتے وقت distance train کی اپنی length ہوتی ہے، یعنی 16.666... × 9 = 150 m۔",
+    "source": {
+      "type": "book",
+      "label": "Speed and velocity",
+      "referenceUrl": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q090"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and velocity",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines average speed as distance divided by elapsed time."
+      },
+      {
+        "url": "https://nvlpubs.nist.gov/nistpubs/jres/123/jres.123.008.pdf",
+        "label": "SI unit conversion factors",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST gives the exact kilometre-per-hour to metre-per-second conversion relationship."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "60 km/h equals 16.666... m/s; in 9 seconds the train covers its own 150-metre length while passing a pole."
+  },
+  {
+    "id": "ADV2E102-U0004-Q090-SIM",
+    "pairId": "ADV2E102-U0004-Q090",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A train travelling at 72 km/h crosses a pole in 15 seconds. What is the train's length?",
+    "questionUrdu": "72 km/h سے چلتی train pole کو 15 seconds میں cross کرے تو train کی length کیا ہے؟",
+    "options": [
+      "300 m",
+      "240 m",
+      "360 m",
+      "180 m"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”300 m“ ہے۔ 72 km/h = 20 m/s ہے۔ 15 seconds میں distance 20 × 15 = 300 m بنتا ہے، یہی train کی length ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Speed and velocity",
+      "referenceUrl": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q090",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and velocity",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a train moving at 72 km/h and crossing a pole in 15 seconds is 300 metres long."
+      },
+      {
+        "url": "https://nvlpubs.nist.gov/nistpubs/jres/123/jres.123.008.pdf",
+        "label": "SI unit conversion factors",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Institute of Standards and Technology supports that a train moving at 72 km/h and crossing a pole in 15 seconds is 300 metres long."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q091-SRC",
+    "pairId": "ADV2E102-U0004-Q091",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which word is misspelled?",
+    "questionUrdu": "درج شدہ الفاظ میں misspelled word کون سا ہے؟",
+    "options": [
+      "Veriety",
+      "Ability",
+      "Energy",
+      "Capacity"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Veriety“ ہے۔ Veriety غلط spelling ہے۔ Standard English spelling Variety ہے، جبکہ باقی تین words درست لکھے گئے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Variety definition and spelling",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/variety",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q091"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/variety",
+        "label": "Variety definition and spelling",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster records the standard spelling as 'variety'."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/variety",
+        "label": "Variety definition and spelling",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge independently records the standard spelling as 'variety'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key selects option D, but 'Capacity' is correctly spelled while source option A 'Veriety' misspells 'variety'. The verified answer was corrected to option A."
+  },
+  {
+    "id": "ADV2E102-U0004-Q091-SIM",
+    "pairId": "ADV2E102-U0004-Q091",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What is the correct plural form of 'variety'?",
+    "questionUrdu": "Variety کی درست plural form کیا ہے؟",
+    "options": [
+      "Varieties",
+      "Varietys",
+      "Varietes",
+      "Variety's"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Varieties“ ہے۔ Consonant کے بعد y پر ختم ہونے والے noun میں y کو ies سے بدلتے ہیں۔ اس لیے variety کی plural varieties ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Variety definition and spelling",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/variety",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q091",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/variety",
+        "label": "Variety definition and spelling",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that the correct plural of variety is varieties."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/variety",
+        "label": "Variety definition and spelling",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press supports that the correct plural of variety is varieties."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q092-SRC",
+    "pairId": "ADV2E102-U0004-Q092",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "In the sentence 'The tenants had to abandon the unsafe building,' which option is closest in meaning to 'abandon'?",
+    "questionUrdu": "Sentence میں tenants کو unsafe building abandon کرنا پڑا؛ یہاں abandon کے قریب ترین معنی کیا ہیں؟",
+    "options": [
+      "Gain",
+      "Vacate",
+      "Occupy",
+      "Foil"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Vacate“ ہے۔ Building کے context میں abandon کا مطلب اسے چھوڑ دینا ہے۔ دیے گئے options میں Vacate سب سے قریب معنی رکھتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Abandon synonyms",
+      "referenceUrl": "https://www.merriam-webster.com/thesaurus/abandon",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q092"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/abandon",
+        "label": "Abandon synonyms",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster's thesaurus includes vacate among synonyms for abandon in the sense of leaving."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/vacate",
+        "label": "Vacate definition",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines vacate as leaving a room or building so it is available for others."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The context-free source stem allowed several senses of 'abandon'. A building context was added so 'Vacate' is the unique closest listed answer."
+  },
+  {
+    "id": "ADV2E102-U0004-Q092-SIM",
+    "pairId": "ADV2E102-U0004-Q092",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is the closest opposite of 'vacate' when referring to a building?",
+    "questionUrdu": "Building کے حوالے سے vacate کا قریب ترین opposite کون سا word ہے؟",
+    "options": [
+      "Occupy",
+      "Leave",
+      "Abandon",
+      "Exit"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Occupy“ ہے۔ Vacate کا مطلب جگہ خالی کرنا ہے۔ Occupy کا مطلب جگہ پر موجود ہونا یا اسے استعمال میں لینا ہے، اس لیے یہ opposite ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Vacate synonyms and antonyms",
+      "referenceUrl": "https://www.merriam-webster.com/thesaurus/vacate",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q092",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/vacate",
+        "label": "Vacate synonyms and antonyms",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that occupy is an opposite of vacate in the sense of leaving a building."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/vacate",
+        "label": "Vacate thesaurus",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press supports that occupy is an opposite of vacate in the sense of leaving a building."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q093-SRC",
+    "pairId": "ADV2E102-U0004-Q093",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What is the antonym of 'Vindictive'?",
+    "questionUrdu": "Vindictive کا antonym کیا ہے؟",
+    "options": [
+      "Careless",
+      "Forgiving",
+      "Revengeful",
+      "Refined"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Forgiving“ ہے۔ Vindictive شخص بدلہ لینے کی خواہش رکھتا اور معاف کرنے پر آمادہ نہیں ہوتا۔ Forgiving اس کے opposite معنی دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Vindictive definition",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/vindictive",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q093"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/vindictive",
+        "label": "Vindictive definition",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines vindictive as wishing revenge and being unwilling to forgive."
+      },
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/revengeful",
+        "label": "Revengeful synonyms and antonyms",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster groups vindictive with revengeful and lists forgiving among its antonyms."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Forgiving is the unique listed opposite of vindictive, which denotes vengeful unwillingness to forgive."
+  },
+  {
+    "id": "ADV2E102-U0004-Q093-SIM",
+    "pairId": "ADV2E102-U0004-Q093",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to 'vindictive'?",
+    "questionUrdu": "Vindictive کے قریب ترین معنی کون سا word رکھتا ہے؟",
+    "options": [
+      "Vengeful",
+      "Forgiving",
+      "Neutral",
+      "Careless"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Vengeful“ ہے۔ Vindictive اور vengeful دونوں بدلہ لینے کی خواہش ظاہر کرتے ہیں۔ Forgiving ان دونوں کا مخالف تصور ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Vindictive definition",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/vindictive",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q093",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/vindictive",
+        "label": "Vindictive definition",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press supports that vengeful is close in meaning to vindictive."
+      },
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/revengeful",
+        "label": "Revengeful synonyms and antonyms",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that vengeful is close in meaning to vindictive."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q094-SRC",
+    "pairId": "ADV2E102-U0004-Q094",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the correct article for a general statement: 'I don't like ____ dogs.'",
+    "questionUrdu": "General statement میں درست article چنیں: I don't like ____ dogs۔",
+    "options": [
+      "An",
+      "A",
+      "The",
+      "Article not required"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”Article not required“ ہے۔ General plural noun کے ساتھ عموماً article استعمال نہیں ہوتا۔ اس لیے dogs سے پہلے blank خالی رہے گا۔",
+    "source": {
+      "type": "book",
+      "label": "Articles: a, an and the",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/articles-a-an-the",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q094"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/articles-a-an-the",
+        "label": "Articles: a, an and the",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council explains that plural countable nouns take no article when referring to things in general."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/a-an-the",
+        "label": "A/an and the",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-grammar",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge independently states that general plural nouns normally take no article."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The phrase 'for a general statement' was added to remove the context-dependent possibility of referring to a particular group of dogs."
+  },
+  {
+    "id": "ADV2E102-U0004-Q094-SIM",
+    "pairId": "ADV2E102-U0004-Q094",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Choose the correct article: 'I fed ____ dogs that were waiting outside my house.'",
+    "questionUrdu": "درست article چنیں: I fed ____ dogs that were waiting outside my house۔",
+    "options": [
+      "the",
+      "a",
+      "an",
+      "no article"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”the“ ہے۔ Relative clause ایک خاص group of dogs کی نشاندہی کرتی ہے۔ Specific plural noun کے ساتھ the استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Articles: a, an and the",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/articles-a-an-the",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q094",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2-grammar/articles-a-an-the",
+        "label": "Articles: a, an and the",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that the definite article is used for the specific dogs identified by the following relative clause."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/a-an-the",
+        "label": "A/an and the",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-grammar",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press supports that the definite article is used for the specific dogs identified by the following relative clause."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q095-SRC",
+    "pairId": "ADV2E102-U0004-Q095",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Fill in the blank: There has been a fall _____ prices.",
+    "questionUrdu": "Blank پُر کریں: There has been a fall _____ prices۔",
+    "options": [
+      "on",
+      "to",
+      "with",
+      "in"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”in“ ہے۔ Standard collocation a fall in prices ہے۔ یہاں preposition in استعمال ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Fall definition and usage",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/essential-british-english/fall",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q095"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/essential-british-english/fall",
+        "label": "Fall definition and usage",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge gives the model phrase 'a sharp fall in prices'."
+      },
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/definition/english/fall_2",
+        "label": "Fall noun: decrease",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-learners-dictionaries",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford independently gives 'fall in something' and specifically 'a sharp fall in prices'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Both independent usage references attest the collocation 'a fall in prices'."
+  },
+  {
+    "id": "ADV2E102-U0004-Q095-SIM",
+    "pairId": "ADV2E102-U0004-Q095",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Fill in the blank: 'There was a sharp rise ____ food prices.'",
+    "questionUrdu": "Blank پُر کریں: There was a sharp rise ____ food prices۔",
+    "options": [
+      "in",
+      "on",
+      "at",
+      "with"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”in“ ہے۔ Increase یا rise کے بعد جس quantity میں تبدیلی ہو اس کے لیے in استعمال ہوتا ہے۔ درست phrase a rise in food prices ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Rise definition and usage",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/rise",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q095",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/rise",
+        "label": "Rise definition and usage",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press supports that the standard collocation is a rise in prices."
+      },
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/definition/english/rise_1",
+        "label": "Rise noun and usage",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-learners-dictionaries",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford University Press supports that the standard collocation is a rise in prices."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q096-SRC",
+    "pairId": "ADV2E102-U0004-Q096",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does 'devoid of' mean?",
+    "questionUrdu": "Devoid of کا کیا مطلب ہے؟",
+    "options": [
+      "Including",
+      "Fraud",
+      "Correlating",
+      "Lacking"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”Lacking“ ہے۔ Devoid of کا مطلب کسی چیز سے مکمل طور پر خالی یا lacking ہونا ہے۔ یہ phrase عموماً ضروری complement کے ساتھ استعمال ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Devoid of definition",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/devoid%20of",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q096"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/devoid%20of",
+        "label": "Devoid of definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines 'devoid of' as not having or being completely without something."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/devoid",
+        "label": "Devoid definition",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge independently defines 'devoid of' as lacking or being without something."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The required complement 'of' was added because 'devoid of' is the conventional phrase tested by the listed answer 'Lacking'."
+  },
+  {
+    "id": "ADV2E102-U0004-Q096-SIM",
+    "pairId": "ADV2E102-U0004-Q096",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which preposition normally follows 'devoid'?",
+    "questionUrdu": "Devoid کے بعد عام طور پر کون سی preposition آتی ہے؟",
+    "options": [
+      "of",
+      "from",
+      "with",
+      "at"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”of“ ہے۔ Standard construction devoid of ہے، مثلاً devoid of evidence۔ اس میں of کے بعد وہ چیز آتی ہے جو موجود نہ ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "Devoid of definition",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/devoid%20of",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q096",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/devoid%20of",
+        "label": "Devoid of definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that the adjective devoid is normally followed by the preposition of."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/devoid",
+        "label": "Devoid definition",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press supports that the adjective devoid is normally followed by the preposition of."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q097-SRC",
+    "pairId": "ADV2E102-U0004-Q097",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Under which Rashidun caliph was Basra founded as a garrison city?",
+    "questionUrdu": "Basra کو garrison city کے طور پر کس Rashidun caliph کے عہد میں قائم کیا گیا؟",
+    "options": [
+      "Hazrat Abu Bakar (R.A)",
+      "Hazrat Umar Farooq (R.A)",
+      "Hazrat Usman Ghani (R.A)",
+      "Hazrat Ali Al Murtaza (R.A)"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Hazrat Umar Farooq (R.A)“ ہے۔ Basra کو Caliph Umar ibn al-Khattab کے عہد میں فوجی camp city کے طور پر قائم کیا گیا۔ یہ بعد میں عراق کا اہم شہری اور تجارتی مرکز بنا۔",
+    "source": {
+      "type": "book",
+      "label": "Iraq: A Country Study",
+      "referenceUrl": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ir/iraqcountrystudy00metz_0/iraqcountrystudy00metz_0.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q097"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/ir/iraqcountrystudy00metz_0/iraqcountrystudy00metz_0.pdf",
+        "label": "Iraq: A Country Study",
+        "publisher": "Library of Congress",
+        "authorityId": "library-of-congress",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Library of Congress country study states that Caliph Umar ordered the founding of Basra as a garrison city and port."
+      },
+      {
+        "url": "https://www.cambridge.org/core/books/abs/byzantine-and-early-islamic-near-east/archaeology-and-new-urban-settlement-in-early-islamic-syria-and-iraq/921E78D9D1ED2B0AEBE80FEF7DD77E04",
+        "label": "Archaeology and New Urban Settlement in Early Islamic Syria and Iraq",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's scholarly chapter attributes the foundation of the amsar, including Basra, to Umar ibn al-Khattab."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The malformed phrase 'inhabited in the reign' was reconstructed as the stable historical proposition about Basra's founding as a garrison city under Caliph Umar."
+  },
+  {
+    "id": "ADV2E102-U0004-Q097-SIM",
+    "pairId": "ADV2E102-U0004-Q097",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which commander is credited with founding the early Muslim garrison settlement of Basra under Caliph Umar's authority?",
+    "questionUrdu": "Caliph Umar کی authority کے تحت ابتدائی Muslim garrison settlement Basra قائم کرنے کا کریڈٹ کس commander کو دیا جاتا ہے؟",
+    "options": [
+      "Utba ibn Ghazwan",
+      "Sa'd ibn Abi Waqqas",
+      "Amr ibn al-As",
+      "Khalid ibn al-Walid"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Utba ibn Ghazwan“ ہے۔ Utba ibn Ghazwan نے Caliph Umar کے حکم کے تحت Basra کا ابتدائی camp قائم کیا۔ یہ settlement آگے چل کر ایک بڑے شہر میں تبدیل ہوئی۔",
+    "source": {
+      "type": "practice",
+      "label": "The Persian Gulf",
+      "referenceUrl": "https://tile.loc.gov/storage-services/service/gdc/gdclccn/28/01/88/94/28018894/28018894.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q097",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://tile.loc.gov/storage-services/service/gdc/gdclccn/28/01/88/94/28018894/28018894.pdf",
+        "label": "The Persian Gulf",
+        "publisher": "Library of Congress",
+        "authorityId": "library-of-congress",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Library of Congress supports that Utba ibn Ghazwan founded the early Muslim garrison settlement of Basra under Caliph Umar's authority."
+      },
+      {
+        "url": "https://www.iranicaonline.org/articles/basra/",
+        "label": "Basra",
+        "publisher": "Encyclopaedia Iranica",
+        "authorityId": "encyclopaedia-iranica",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Iranica supports that Utba ibn Ghazwan founded the early Muslim garrison settlement of Basra under Caliph Umar's authority."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q098-SRC",
+    "pairId": "ADV2E102-U0004-Q098",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Masjid al-Khayf is located at which Hajj site?",
+    "questionUrdu": "Masjid al-Khayf کس Hajj site میں واقع ہے؟",
+    "options": [
+      "Mina",
+      "Makkah city centre",
+      "Madinah",
+      "Muzdalifah"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Mina“ ہے۔ Masjid al-Khayf، Mina میں واقع ایک تاریخی mosque ہے۔ Hajj کے مخصوص دنوں میں یہاں بڑی تعداد میں حجاج نماز ادا کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Al-Khayf Mosque",
+      "referenceUrl": "https://media1.haj.gov.sa/storage/uploads/EN-111.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q098"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://media1.haj.gov.sa/storage/uploads/EN-111.pdf",
+        "label": "Al-Khayf Mosque",
+        "publisher": "Saudi Ministry of Hajj and Umrah",
+        "authorityId": "saudi-hajj-ministry",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Saudi Ministry of Hajj and Umrah identifies Al-Khayf as the principal mosque in Mina."
+      },
+      {
+        "url": "https://saudipedia.com/en/al-khayf-mosque",
+        "label": "Al-Khayf Mosque",
+        "publisher": "Saudipedia",
+        "authorityId": "saudipedia",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Saudipedia independently locates Al-Khayf Mosque at the base of Mina's southern hill."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The scan visibly prints 'Masjid-e-Hanif', a name not supported by two authoritative sources. It was transparently reconstructed as the likely intended, well-attested Masjid al-Khayf; the answer Mina and the distractor spellings were normalized."
+  },
+  {
+    "id": "ADV2E102-U0004-Q098-SIM",
+    "pairId": "ADV2E102-U0004-Q098",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Why is Masjid al-Khayf also known as the 'Mosque of the Prophets'?",
+    "questionUrdu": "Masjid al-Khayf کو Mosque of the Prophets کیوں کہا جاتا ہے؟",
+    "options": [
+      "Many prophets are reported to have prayed there",
+      "It is inside the Prophet's Mosque in Madinah",
+      "It contains the Kaaba",
+      "It was the first mosque in Jerusalem"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Many prophets are reported to have prayed there“ ہے۔ روایات کے مطابق متعدد prophets نے Masjid al-Khayf میں نماز ادا کی۔ اسی تاریخی نسبت کی وجہ سے اسے Mosque of the Prophets بھی کہا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Al-Khayf Mosque",
+      "referenceUrl": "https://media1.haj.gov.sa/storage/uploads/EN-111.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q098",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://media1.haj.gov.sa/storage/uploads/EN-111.pdf",
+        "label": "Al-Khayf Mosque",
+        "publisher": "Saudi Ministry of Hajj and Umrah",
+        "authorityId": "saudi-hajj-ministry",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Saudi Ministry of Hajj and Umrah supports that Masjid al-Khayf is called the Mosque of the Prophets because many prophets are reported to have prayed there."
+      },
+      {
+        "url": "https://saudipedia.com/en/al-khayf-mosque",
+        "label": "Al-Khayf Mosque",
+        "publisher": "Saudipedia",
+        "authorityId": "saudipedia",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Saudipedia supports that Masjid al-Khayf is called the Mosque of the Prophets because many prophets are reported to have prayed there."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0004-Q099-SRC",
+    "pairId": "ADV2E102-U0004-Q099",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "According to Qur'an 7:54, in how many days did Allah create the heavens and the earth?",
+    "questionUrdu": "Qur'an 7:54 کے مطابق Allah نے heavens اور earth کتنے دنوں میں پیدا کیے؟",
+    "options": [
+      "Five days",
+      "Six days",
+      "Seven days",
+      "Eight days"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Six days“ ہے۔ Surah Al-A'raf کی آیت 54 میں تخلیق کے لیے six days بیان ہوئے ہیں۔ آیت کے حوالہ کو ساتھ رکھنے سے جواب واضح primary text سے جڑ جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Surah Al-A'raf 7:54",
+      "referenceUrl": "https://quranenc.com/en/browse/english_saheeh/7/54",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q099"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://quranenc.com/en/browse/english_saheeh/7/54",
+        "label": "Surah Al-A'raf 7:54",
+        "publisher": "Encyclopedia of the Noble Quran",
+        "authorityId": "quranenc",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The verse's Arabic text and English translation state that Allah created the heavens and earth in six days."
+      },
+      {
+        "url": "https://quran.com/7/54",
+        "label": "Surah Al-A'raf 7:54",
+        "publisher": "Quran.com",
+        "authorityId": "quran-com",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "An independent Qur'an text and translation portal presents 7:54 with the same six-day statement."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The verse reference was added so the religious-text claim has an explicit primary-source scope."
+  },
+  {
+    "id": "ADV2E102-U0004-Q099-SIM",
+    "pairId": "ADV2E102-U0004-Q099",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Qur'an 7:54 belongs to which surah?",
+    "questionUrdu": "Qur'an کی آیت 7:54 کس surah میں ہے؟",
+    "options": [
+      "Al-A'raf",
+      "Al-Baqarah",
+      "Yunus",
+      "Al-Furqan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Al-A'raf“ ہے۔ Qur'anic reference میں پہلا number surah number ہوتا ہے۔ Surah 7 کا نام Al-A'raf ہے، اس لیے 7:54 اسی surah کی آیت ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Surah Al-A'raf 7:54",
+      "referenceUrl": "https://quranenc.com/en/browse/english_saheeh/7/54",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0004-q099",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://quranenc.com/en/browse/english_saheeh/7/54",
+        "label": "Surah Al-A'raf 7:54",
+        "publisher": "Encyclopedia of the Noble Quran",
+        "authorityId": "quranenc",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopedia of the Noble Quran supports that Qur'an 7:54 is a verse of Surah Al-A'raf."
+      },
+      {
+        "url": "https://quran.com/7/54",
+        "label": "Surah Al-A'raf 7:54",
+        "publisher": "Quran.com",
+        "authorityId": "quran-com",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Quran.com supports that Qur'an 7:54 is a verse of Surah Al-A'raf."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

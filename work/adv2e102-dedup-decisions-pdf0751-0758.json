@@ -66,7 +66,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found that the surfaced items test a reciprocal relation, a different attribute, date, word, calculation, grammar transformation, or otherwise materially distinct fact; this independently verified proposition is retained as a useful confusable distinction.",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
     "testedProposition": "From which country did Israel capture the Golan Heights in the June 1967 war? Correct answer: Syria.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -77,9 +77,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "ADV2E102-U0101-Q004-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -654,7 +652,11 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P236-Q006-SIM",
-        "ADV2E102-U0051-Q040-SIM",
+        "ADV2E102-U0043-Q026-SIM",
+        "ADV2E102-U0012-Q024-SRC",
+        "ADV2E102-U0012-Q022-SRC",
+        "ADV2E102-U0012-Q022-SIM",
+        "ADV2E102-U0043-Q026-SRC",
         "ADV2E102-U0051-Q040-SRC"
       ],
       "answerConflictReviewed": true
@@ -682,10 +684,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0101-Q034",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0007-Q017",
+    "reason": "Earlier U0007 Q17 already identifies squash as the sport in which Jahangir Khan became world champion.",
     "testedProposition": "Jahangir Khan became a world champion in which sport? Correct answer: Squash.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -696,7 +698,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q017"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -718,6 +722,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0021-Q025-SIM",
+        "ADV2E102-U0002-Q024-SIM",
         "ADV2E102-U0021-Q025"
       ],
       "answerConflictReviewed": true
@@ -781,6 +786,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0051-Q093-SIM",
+        "ADV2E102-U0022-Q033-SIM",
         "ADV2E102-U0051-Q093"
       ],
       "answerConflictReviewed": true
@@ -827,6 +833,7 @@
         "P239-Q019-SRC",
         "P234-Q015-SIM",
         "P237-Q016-SRC",
+        "ADV2E102-U0013-Q040-SRC",
         "ADV2E102-U0071-Q034-SRC",
         "ADV2E102-U0033-Q010-SIM"
       ],
@@ -857,10 +864,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0101-Q042",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0005-Q015",
+    "reason": "The earlier-source-order U0005 pair already tests that Jinnah's Fourteen Points were formulated in response to the Nehru Report; this later source repeats the same proposition.",
     "testedProposition": "In 1929, Muhammad Ali Jinnah's Fourteen Points were formulated chiefly in response to which document? Correct answer: Nehru Report.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -871,7 +878,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q015"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1034,6 +1043,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0043-Q064-SRC",
         "ADV2E102-U0051-Q065-SRC"
       ],
       "answerConflictReviewed": true
@@ -1165,6 +1175,7 @@
         "IBES-Q0790-SIM",
         "IBES-Q0890-SRC",
         "IBES-Q0819-SIM",
+        "ADV2E102-U0034-Q061-SRC",
         "ADV2E102-U0011-Q060-SRC",
         "ADV2E102-U0011-Q058-SRC"
       ],
@@ -1294,8 +1305,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0101-Q062-SRC",
-        "ADV2E102-U0032-Q095-SIM"
+        "ADV2E102-U0101-Q062-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1450,13 +1460,13 @@
         "P237-Q054-SRC",
         "P237-Q060-SIM",
         "ADV2E102-U0041-Q073-SIM",
+        "ADV2E102-U0091-Q077-SIM",
+        "ADV2E102-U0012-Q068-SIM",
         "ADV2E102-U0033-Q078-SIM",
         "ADV2E102-U0081-Q073-SIM",
+        "ADV2E102-U0003-Q025-SRC",
         "ADV2E102-U0021-Q072-SIM",
-        "ADV2E102-U0021-Q075-SIM",
-        "ADV2E102-U0041-Q075-SIM",
-        "ADV2E102-U0081-Q076-SRC",
-        "ADV2E102-U0071-Q070-SRC"
+        "ADV2E102-U0021-Q075-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -1479,6 +1489,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0041-Q073-SIM",
+        "ADV2E102-U0012-Q068-SIM",
         "ADV2E102-U0101-Q069-SIM"
       ],
       "answerConflictReviewed": true
@@ -1566,10 +1577,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0101-Q075",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0007-Q039",
+    "reason": "Earlier U0007 Q39 already tests that the idiom get into hot water means to get into trouble.",
     "testedProposition": "What does the idiom 'get into hot water' mean? Correct answer: Get into difficulties or trouble.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1580,7 +1591,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q039"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1840,7 +1853,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found that the surfaced items test a reciprocal relation, a different attribute, date, word, calculation, grammar transformation, or otherwise materially distinct fact; this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Who wrote the Urdu short-story collection 'Aakhri Aadmi'? Correct answer: Intizar Husain.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1851,7 +1864,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q083-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },

@@ -177,8 +177,8 @@ function validateAdv2e102Bank(questions) {
   const advQuestions = questions.filter((question) => String(question.id || "").startsWith("ADV2E102-"));
   const sourceQuestions = advQuestions.filter((question) => question.kind === "source");
   const similarQuestions = advQuestions.filter((question) => question.kind === "similar");
-  if (sourceQuestions.length !== 1982) error(`ADV2E102 source count is ${sourceQuestions.length}; expected 1982`);
-  if (similarQuestions.length !== 1982) error(`ADV2E102 similar count is ${similarQuestions.length}; expected 1982`);
+  if (sourceQuestions.length !== 3133) error(`ADV2E102 source count is ${sourceQuestions.length}; expected 3133`);
+  if (similarQuestions.length !== 3133) error(`ADV2E102 similar count is ${similarQuestions.length}; expected 3133`);
 
   const pairs = new Map();
   for (const question of advQuestions) {

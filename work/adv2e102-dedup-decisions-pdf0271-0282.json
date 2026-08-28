@@ -267,10 +267,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0031-Q014",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0009-Q001",
+    "reason": "Earlier-source-order U0009 asks the identical Formosa old-name proposition and answers Taiwan.",
     "testedProposition": "Formosa is the old name of: Correct answer: Taiwan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -281,7 +281,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0009-Q001"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -404,8 +406,6 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0011-Q036-SIM",
-        "ADV2E102-U0011-Q036-SRC",
         "ADV2E102-U0011-Q036"
       ],
       "answerConflictReviewed": true
@@ -475,10 +475,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0031-Q024",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0007-Q025",
+    "reason": "The earlier-source-order U0007 canonical already tests that Ghulam Ishaq Khan became Acting President after General Zia-ul-Haq's death; this later item asks the same succession proposition.",
     "testedProposition": "Who became Acting President of Pakistan after President Zia-ul-Haq died on 17 August 1988? Correct answer: Ghulam Ishaq Khan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -489,7 +489,12 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q025-SRC",
+        "ADV2E102-U0013-Q019-SRC",
+        "ADV2E102-U0007-Q025-SIM",
+        "ADV2E102-U0007-Q025"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -557,10 +562,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0031-Q028",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0003-Q015",
+    "reason": "The earlier source-order U0003 canonical already tests that Sir Cyril Radcliffe chaired both the Punjab and Bengal Boundary Commissions; the source option set expresses that answer as None of these.",
     "testedProposition": "Who chaired the Punjab and Bengal Boundary Commissions that demarcated the 1947 India-Pakistan borders? Correct answer: Sir Cyril Radcliffe.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -571,7 +576,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0003-Q015-SRC",
+        "ADV2E102-U0003-Q015"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -632,7 +640,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0031-Q031-SRC"
+        "ADV2E102-U0031-Q031-SRC",
+        "ADV2E102-U0012-Q023-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -825,10 +834,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0031-Q041",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0007-Q030",
+    "reason": "Earlier U0007 Q30 already tests that Mount Godwin Austen is another name for K2.",
     "testedProposition": "What is the other name for Mount Godwin Austen? Correct answer: K2.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -839,7 +848,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q030-SRC",
+        "ADV2E102-U0007-Q030"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1179,7 +1191,9 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "IBES-Q0583-SRC"
+        "IBES-Q0583-SRC",
+        "ADV2E102-U0004-Q041-SRC",
+        "ADV2E102-U0009-Q053-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1220,7 +1234,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0003-Q081-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1427,6 +1443,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0004-Q094-SIM",
         "ADV2E102-U0031-Q069-SRC",
         "ADV2E102-U0031-Q066-SRC"
       ],
@@ -1550,6 +1567,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0004-Q094-SIM",
         "ADV2E102-U0031-Q069-SIM"
       ],
       "answerConflictReviewed": true
@@ -1831,10 +1849,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "ADV2E102-U0011-Q088-SIM",
-        "ADV2E102-U0011-Q088-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -1876,7 +1891,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q083-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -2006,10 +2023,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0031-Q098",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0007-Q097",
+    "reason": "Earlier U0007 Q97 already asks which Prophet is known as Zun-Nun and answers Yunus.",
     "testedProposition": "Which Prophet is known as Zun-Nun? Correct answer: Hazrat Younas (A.S.).",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -2020,7 +2037,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q097-SRC",
+        "ADV2E102-U0007-Q097"
+      ],
       "answerConflictReviewed": true
     }
   },

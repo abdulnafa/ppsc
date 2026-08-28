@@ -43,8 +43,8 @@
     "sourceRecordId": "ADV2E102-U0061-Q003",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0051-Q055",
-    "reason": "The earlier-source-order U0051 canonical asks the identical 2022 Winter Olympics host-country question and has the same verified answer, China.",
+    "duplicateOf": "ADV2E102-U0009-Q040",
+    "reason": "The earlier-source-order U0009 canonical asks the identical 2022 Winter Olympics host-country question and has the same verified answer, China.",
     "testedProposition": "Which country hosted the 2022 Winter Olympics? Correct answer: China.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -56,9 +56,12 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0009-Q040-SRC",
         "ADV2E102-U0051-Q055-SRC",
-        "ADV2E102-U0051-Q055-SIM",
-        "ADV2E102-U0051-Q055"
+        "ADV2E102-U0043-Q052-SRC",
+        "ADV2E102-U0043-Q052-SIM",
+        "ADV2E102-U0009-Q040-SIM",
+        "ADV2E102-U0009-Q040"
       ],
       "answerConflictReviewed": true
     }
@@ -108,7 +111,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which river runs through London? Correct answer: Thames.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -119,7 +122,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0023-Q020-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -148,7 +153,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "When did the Soviet Union invade Afghanistan? Correct answer: 24 December 1979.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -159,7 +164,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0023-Q022-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -365,10 +372,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0061-Q019",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0002-Q006",
+    "reason": "The earlier source-order U0002 canonical asks the identical Mona Lisa painter proposition and answers Leonardo da Vinci.",
     "testedProposition": "Who painted the Mona Lisa? Correct answer: Leonardo da Vinci.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -379,7 +386,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0002-Q006-SRC",
+        "ADV2E102-U0002-Q006"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -410,7 +420,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "The World Bank was created in: Correct answer: 1944.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -421,7 +431,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0009-Q017-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -430,7 +442,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "How many presidents of the United States were assassinated? Correct answer: 4.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -441,7 +453,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q006-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -462,17 +476,17 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0051-Q010-SIM"
+        "ADV2E102-U0043-Q001-SIM"
       ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0061-Q024",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0012-Q008",
+    "reason": "The earlier-source-order U0012 canonical asks the same Genoa-country proposition and has the same verified answer, Italy; the Columbus wording adds no separate fact.",
     "testedProposition": "In which country is Genoa, the birthplace of Christopher Columbus? Correct answer: Italy.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -483,7 +497,11 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q008-SRC",
+        "ADV2E102-U0013-Q007-SRC",
+        "ADV2E102-U0012-Q008"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -505,7 +523,9 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0021-Q010-SIM",
+        "ADV2E102-U0010-Q023-SRC",
         "ADV2E102-U0032-Q023-SRC",
+        "ADV2E102-U0008-Q013-SRC",
         "ADV2E102-U0021-Q010"
       ],
       "answerConflictReviewed": true
@@ -1139,10 +1159,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0061-Q056",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0013-Q030",
+    "reason": "The earlier-source-order U0013 canonical already identifies Shah Waliullah as the author of Hujjat Allah al-Baligha; this later source tests the same authorship proposition.",
     "testedProposition": "According to Pakistan's official account, how many days did the September 1965 India-Pakistan war last? Correct answer: 17 days.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1153,7 +1173,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q030-SRC",
+        "ADV2E102-U0013-Q030"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1195,6 +1218,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0032-Q036-SIM",
+        "ADV2E102-U0013-Q033-SRC",
         "ADV2E102-U0032-Q036-SRC",
         "ADV2E102-U0032-Q036"
       ],
@@ -1527,6 +1551,8 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0001-Q082-SRC",
+        "ADV2E102-U0002-Q073-SRC",
+        "ADV2E102-U0002-Q073-SIM",
         "ADV2E102-U0001-Q082"
       ],
       "answerConflictReviewed": true
@@ -1549,6 +1575,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0002-Q073-SRC",
         "ADV2E102-U0001-Q082-SRC",
         "ADV2E102-U0061-Q074-SRC"
       ],
@@ -1780,7 +1807,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "In adults, prolonged severe deficiency of which vitamin classically causes osteomalacia? Correct answer: Vitamin D.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1791,7 +1818,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0004-Q031-SIM",
+        "ADV2E102-U0002-Q073-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1812,6 +1842,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0002-Q064-SRC",
         "ADV2E102-U0041-Q053-SRC",
         "ADV2E102-U0041-Q053"
       ],
@@ -1860,7 +1891,8 @@
       "semanticCandidateIds": [
         "IBES-Q0817-SRC",
         "IBES-Q0746-SRC",
-        "IBES-Q0717-SRC"
+        "IBES-Q0717-SRC",
+        "ADV2E102-U0009-Q056-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1905,6 +1937,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "IBES-Q0358-SIM",
+        "ADV2E102-U0012-Q052-SRC",
         "IBES-Q1044-SRC"
       ],
       "answerConflictReviewed": true
@@ -1927,7 +1960,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "IBES-Q0501-SIM"
+        "IBES-Q0501-SIM",
+        "ADV2E102-U0004-Q045-SRC"
       ],
       "answerConflictReviewed": true
     }

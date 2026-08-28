@@ -1,0 +1,2103 @@
+[
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q001",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: visual review confirms the printed transliteration 'Ghermeen', but no authoritative lexical source identifies that form. Guessing that the scan intended a different Urdu or Persian expression would fabricate the source proposition.",
+    "testedProposition": "What does the source term 'Ghermeen' mean? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q002",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "The activity of a jockey is most directly associated with which sport? Correct answer: Horse racing.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q003",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "In which country was the modern parliamentary ombudsman institution first established in 1809? Correct answer: Sweden.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q004",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "What is the capital city of Thailand? Correct answer: Bangkok.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P238-Q017-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q005",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Whitehaven Beach is located in which country? Correct answer: Australia.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0003-Q006-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q006",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Who was elected President of Brazil in the 2018 election? Correct answer: Jair Bolsonaro.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q007",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "The terms cue-ball, baulk and break are used in the official rules of which game? Correct answer: Billiards.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q008",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "At the Asian Cricket Council meeting in 2018, which country was awarded hosting rights for the 2020 Asia Cup? Correct answer: Pakistan.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q009",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Under the Olympic Charter, the Summer Olympic Games are normally held at what interval? Correct answer: Every 4 years.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q010",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "What name is commonly used for the former World Trade Center site after the attacks of 11 September 2001? Correct answer: Ground Zero.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q011",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Braunau am Inn, Adolf Hitler's birthplace, lies in which country? Correct answer: Austria.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q012",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which listed country has never been a member of OPEC? Correct answer: Malaysia.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q013",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "In which year was Nelson Mandela released from prison? Correct answer: 1990.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q014",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: the source does not identify a province or statute. Several Boards of Revenue exist; choosing Punjab from nearby context would be an unsupported assumption even though the Punjab Board of Revenue Act is dated 1957.",
+    "testedProposition": "Which Board of Revenue does the source mean, and in which year was it established? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q015",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Under Pakistan's 1973 Constitution, which electoral college elects the President? Correct answer: By two Houses of the Parliament and the four provincial Assemblies.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q016",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "A terracotta figurine excavated at Harappa and catalogued by the British Museum represents which animal? Correct answer: Bull.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q017",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Jahangir Khan became a world champion in which sport? Correct answer: Squash.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q018",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: the printed stem names 'Sir Abdullah Hassain', the key selects Punjab, while the adjacent explanation discusses the different person Sir Abdullah Haroon of Sindh. The intended person and proposition cannot be recovered without fabrication.",
+    "testedProposition": "Which person did the source intend by the name 'Sir Abdullah Hassain'? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q019",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "As of 2026, how many districts does Punjab, Pakistan, have? Correct answer: 41.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q020",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Arif Alvi served as which numbered President of Pakistan? Correct answer: 13th.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q021",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0002-Q019",
+    "reason": "The earlier retained U0002 source asks the identical first international trip by Prime Minister Imran Khan in 2018.",
+    "testedProposition": "Which country did Prime Minister Imran Khan visit on his first international trip after taking office in 2018? Correct answer: Saudi Arab.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0002-Q019-SRC",
+        "ADV2E102-U0002-Q019-SIM",
+        "ADV2E102-U0003-Q019-SIM",
+        "ADV2E102-U0002-Q019"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q022",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "In which year did Pakistan establish the Development Board that preceded the Planning Commission? Correct answer: 1948.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q023",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which body adopted Pakistan's Objectives Resolution on 12 March 1949? Correct answer: Constituent Assembly of Pakistan.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q024",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Pakistan's Parliament (Majlis-e-Shoora) is bicameral and therefore consists of how many Houses? Correct answer: Two.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q025",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Who became Acting President of Pakistan after President Zia-ul-Haq died on 17 August 1988? Correct answer: Ghulam Ishaq Khan.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q026",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which listed Indian prime minister received Pakistan's Nishan-e-Pakistan award? Correct answer: Morarji Desai.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q027",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which channel is the internationally recognized long-distance swimming route between England and France? Correct answer: English Channel.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q028",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "The Rann of Kutch lies along which side of Pakistan's Tharparkar District? Correct answer: South.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q029",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which strait connects the Persian Gulf with the Gulf of Oman? Correct answer: Hormuz.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q030",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "What is the other name for Mount Godwin Austen? Correct answer: K2.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q031",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which mountain range forms much of the high border region between Pakistan and China? Correct answer: Karakoram.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q032",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Why does a person commonly lean forward while walking uphill? Correct answer: To keep the centre of mass over the base of support.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q033",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Traditional soft solder is primarily an alloy of which two metals? Correct answer: Tin and lead.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q034",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Which statement correctly distinguishes angiography from angioplasty? Correct answer: Angiography images blood vessels, while angioplasty opens a narrowed vessel.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0544-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q035",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which mosquito-borne viral disease is commonly called 'break-bone fever'? Correct answer: Dengue.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q036",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which branch of linguistics studies the sound systems of languages? Correct answer: Phonology.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q037",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Who is chiefly credited with formulating the periodic table in 1869? Correct answer: Dmitri Mendeleev.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q038",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0987-SRC",
+    "reason": "The pinned IBES source already asks the identical Microsoft Word Portrait/Landscape page-orientation proposition.",
+    "testedProposition": "In Microsoft Word, Portrait and Landscape are types of: Correct answer: Page orientation.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0987-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q039",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "What does the idiom 'get into hot water' mean? Correct answer: Get into difficulties or trouble.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q040",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which preposition completes the fixed expression: 'learn something ___ heart'? Correct answer: by.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q041",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Choose the simple past form of 'speed' in the sentence: 'Atif ___ around the track in his new car.' Correct answer: sped.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q042",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which sentence has standard adjective order and punctuation? Correct answer: I met a beautiful English woman..",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q043",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Complete the conventional simile: 'as clear as ___'. Correct answer: crystal.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q044",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "According to the proverb attributed to Benjamin Franklin, after how many days do fish and guests begin to smell? Correct answer: Three days.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q045",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "What was the title of Faiz Ahmad Faiz's first published poetry collection? Correct answer: Naqsh-e-Faryadi.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q046",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which Urdu poet is widely described as a 'people's poet' for verses about ordinary life? Correct answer: Nazeer Akbarabadi.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q047",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Who wrote the Urdu work 'Sair-e-Kohsar'? Correct answer: Ratan Nath Sarshar.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q048",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: the source key selects None, but searches of authoritative Urdu catalogues did not identify the intended work uniquely; several similarly titled works exist. An author cannot be inserted without fabricating the source proposition.",
+    "testedProposition": "Who wrote the book titled 'Banda Parwar'? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q049",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Who wrote the Urdu prose tale 'Bagh-o-Bahar'? Correct answer: Mir Amman Dehlvi.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q050",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Who is commonly credited as the first Urdu novelist, particularly for 'Mirat-ul-Uroos' (1869)? Correct answer: Deputy Nazir Ahmad.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q051",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Who wrote the Urdu historical novel 'Firdaus-e-Bareen'? Correct answer: Abdul Halim Sharar.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q052",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Who is conventionally identified in Urdu literary history as the first sahib-e-diwan Urdu poet? Correct answer: Muhammad Quli Qutb Shah.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q053",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: the printed key selects 'to disregard everyone', while accessible dictionaries give overlapping senses involving haste, excitement or arrogance. No two authoritative lexical sources support one unique option as worded.",
+    "testedProposition": "What does the Urdu idiom 'hawa ke ghore par sawar hona' mean? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q054",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "What is the standard Urdu plural of 'gharaz' (غرض)? Correct answer: aghraz (اغراض).",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q055",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which English verb best expresses the purification sense of the Arabic root associated with zakat? Correct answer: To purify.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q056",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0002-Q096",
+    "reason": "The earlier retained U0002 pair already includes the same Quran 9:60 Surah At-Tawbah identification as its reviewed similar item.",
+    "testedProposition": "In which surah are the eight eligible categories for zakat listed in verse 9:60? Correct answer: At-Tawbah.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0002-Q096-SIM",
+        "ADV2E102-U0002-Q096"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q057",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which Quranic verse commands believers to give the due of crops on the day of harvest? Correct answer: Quran 6:141.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q058",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "According to the hadith on crop irrigation, what share is due on produce watered by rain or natural channels? Correct answer: One-tenth.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q059",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "What is the literal meaning of the Quranic phrase 'fi sabilillah'? Correct answer: In the way of Allah.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q060",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "In which year was Pakistan's Zakat and Ushr Ordinance promulgated? Correct answer: 1980.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q061",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under whose presidency was Pakistan's Zakat and Ushr Ordinance promulgated in 1980? Correct answer: Muhammad Zia-ul-Haq.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q060-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q062",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which caliph led the Ridda campaigns against tribes that withheld zakat after the Prophet's death? Correct answer: Abu Bakr.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q063",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which Rashidun caliph is especially associated with organizing the Bayt al-Mal as a state treasury? Correct answer: Umar ibn al-Khattab.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q064",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "During whose caliphate was systematic administration of conquered agricultural land and its revenue greatly developed? Correct answer: Umar ibn al-Khattab.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q065",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, who serves as co-chairman of the Punjab Zakat and Ushr Council? Correct answer: Minister for Zakat and Ushr.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q066",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, what is the ordinary term of a Local Zakat and Ushr Committee? Correct answer: 3 years.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q065-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q067",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which institutions deduct compulsory zakat at source from liable bank and financial assets in Punjab? Correct answer: Banks and financial institutions.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q068",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Under the legacy Zakat and Ushr Ordinance 1980, what religious qualification applied to a Local Zakat Committee chairman? Correct answer: The chairman had to be Muslim.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q069",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "In Pakistan's zakat law, what is a Muslim whose wealth equals or exceeds nisab called? Correct answer: Sahib-e-nisab.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q070",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, what maximum small portion of a plot used for another crop is exempted from separate Ushr charging? Correct answer: 1/4 acre.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q071",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which condition means a person is not liable to pay zakat because the wealth threshold is not met? Correct answer: Wealth is below nisab.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q072",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, what term means voluntary donations to a Zakat Fund other than Zakat or Ushr? Correct answer: Atiyyat.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q066-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q073",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, what happens to Ushr liability when the entire crop is destroyed before harvest by a natural disaster? Correct answer: No Ushr is due on destroyed produce.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q074",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which group of personal-use assets is generally excluded from compulsory zakat under Pakistan's Zakat and Ushr law? Correct answer: All three listed groups.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q075",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, an assessed amount of zakat that remains unpaid is treated as:  Correct answer: Arrears.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q065-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q076",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, which body prepares and maintains the accounts of a Local Zakat Fund? Correct answer: Local Zakat and Ushr Committee.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q066-SRC",
+        "ADV2E102-U0007-Q065-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q077",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, who heads a constituted Local Zakat and Ushr Committee? Correct answer: Its selected Chairman.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q066-SRC",
+        "ADV2E102-U0007-Q065-SRC",
+        "ADV2E102-U0007-Q076-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q078",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, how is Ushr ordinarily collected? Correct answer: In cash, except wheat or paddy may be collected in kind at the Council's option.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q065-SRC",
+        "ADV2E102-U0007-Q066-SRC",
+        "ADV2E102-U0007-Q077-SRC",
+        "ADV2E102-U0007-Q075-SRC",
+        "ADV2E102-U0007-Q076-SRC",
+        "ADV2E102-U0007-Q072-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q079",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, what compulsory Ushr rate is charged on a liable person's share of produce? Correct answer: 5%.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q080",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "In which Hijri year is zakat generally understood to have become obligatory in Madinah? Correct answer: 2 AH.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q081",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which act of worship is repeatedly paired with zakat in the Quran? Correct answer: Salat (prayer).",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q082",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, when does the Zakat year begin and end? Correct answer: First of Ramadan to the last day of the following Sha'ban.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q078-SRC",
+        "ADV2E102-U0007-Q065-SRC",
+        "ADV2E102-U0007-Q066-SRC",
+        "ADV2E102-U0007-Q077-SRC",
+        "ADV2E102-U0007-Q075-SRC",
+        "ADV2E102-U0007-Q076-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q083",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0002-Q096",
+    "reason": "The earlier retained U0002 source asks the identical count of eight eligible Zakat-recipient categories in Quran 9:60.",
+    "testedProposition": "How many categories of eligible Zakat recipients are specified in Quran 9:60? Correct answer: 8.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0002-Q096-SRC",
+        "ADV2E102-U0002-Q096"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q084",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which two primary textual sources form the basis of Islamic rulings on zakat? Correct answer: Quran and Sunnah.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q085",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, who is the Chief Administrator? Correct answer: Secretary, Zakat and Ushr Department.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q078-SRC",
+        "ADV2E102-U0007-Q065-SRC",
+        "ADV2E102-U0007-Q082-SRC",
+        "ADV2E102-U0007-Q077-SRC",
+        "ADV2E102-U0007-Q066-SRC",
+        "ADV2E102-U0007-Q075-SRC",
+        "ADV2E102-U0007-Q076-SRC",
+        "ADV2E102-U0007-Q072-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q086",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under which section of the Punjab Zakat and Ushr Act 2018 is a District Zakat and Ushr Committee constituted? Correct answer: Section 14.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q077-SRC",
+        "ADV2E102-U0007-Q066-SRC",
+        "ADV2E102-U0007-Q078-SRC",
+        "ADV2E102-U0007-Q085-SRC",
+        "ADV2E102-U0007-Q065-SRC",
+        "ADV2E102-U0007-Q082-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q087",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, which circumstance prevents zakat being charged on a person's assets for that deduction date? Correct answer: The person died before the deduction date.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q079-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q088",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under section 6 of the Punjab Zakat and Ushr Act 2018, Ushr assessment may apply to which listed holders of agricultural land? Correct answer: All three listed categories.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q086-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q089",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: the printed key selects only crossed cheque, while the source gives no statute, rule, period or fund level. Current Punjab disbursement arrangements include several banking and service-provider methods, so an exclusive answer cannot be verified.",
+    "testedProposition": "Which payment method did the source intend as the exclusive method for zakat disbursement? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q090",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, if the preferred retired civil servant or former judge is unavailable, what minimum age applies to an alternative Punjab Council chairman? Correct answer: 40 years.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q091",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0007-Q066",
+    "reason": "Earlier within this source unit, Q66 asks the identical three-year Local Zakat and Ushr Committee term proposition.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, what is the ordinary term of office for a Local Zakat and Ushr Committee? Correct answer: 3 years.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q066-SRC",
+        "ADV2E102-U0007-Q077-SRC",
+        "ADV2E102-U0007-Q078-SRC",
+        "ADV2E102-U0007-Q086-SRC",
+        "ADV2E102-U0007-Q085-SRC",
+        "ADV2E102-U0007-Q082-SRC",
+        "ADV2E102-U0007-Q065-SRC",
+        "ADV2E102-U0007-Q076-SRC",
+        "ADV2E102-U0007-Q066"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q092",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "According to the zakat schedule transmitted by Abu Bakr, what is due on every five camels when a herd contains 5 to 24 camels? Correct answer: One sheep.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q093",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "According to the zakat schedule transmitted by Abu Bakr, what is due on a flock of 40 to 120 sheep? Correct answer: One sheep.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q092-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q094",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: the stem omits the committee and governing version. The current Punjab Act uses different age requirements for different council and committee roles, so the legacy printed key cannot be safely generalized.",
+    "testedProposition": "Under which law and committee did the source intend a minimum age of 25 years for a non-official member? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q095",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found that the surfaced matches test a different place, person, date, statute section, threshold, definition, inverse unknown, or related but independently useful fact. This verified item is retained as confusable but distinct.",
+    "testedProposition": "Under which section of the Punjab Zakat and Ushr Act 2018 are the statutory Zakat Funds established? Correct answer: Section 7.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q086-SRC",
+        "ADV2E102-U0007-Q078-SRC",
+        "ADV2E102-U0007-Q085-SRC",
+        "ADV2E102-U0007-Q082-SRC",
+        "ADV2E102-U0007-Q076-SRC",
+        "ADV2E102-U0007-Q065-SRC",
+        "ADV2E102-U0007-Q072-SRC",
+        "ADV2E102-U0007-Q088-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q096",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0007-Q082",
+    "reason": "Earlier within this source unit, Q82 already tests both boundaries of the Zakat year, including the same first-day-of-Ramadan start proposition.",
+    "testedProposition": "Under the Punjab Zakat and Ushr Act 2018, on which day does the Zakat year begin? Correct answer: First day of Ramadan.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q082-SRC",
+        "ADV2E102-U0007-Q078-SRC",
+        "ADV2E102-U0007-Q085-SRC",
+        "ADV2E102-U0007-Q065-SRC",
+        "ADV2E102-U0007-Q066-SRC",
+        "ADV2E102-U0007-Q077-SRC",
+        "ADV2E102-U0007-Q095-SRC",
+        "ADV2E102-U0007-Q086-SRC",
+        "ADV2E102-U0007-Q082"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q097",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which Prophet is known as Zun-Nun? Correct answer: Hazrat Younas (A.S.).",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q098",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual proposition review found no exact or same-proposition repeat in the pinned 3,074-item bank or source-order-earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "testedProposition": "Which Companion is traditionally known by the title 'Tarjuman al-Quran' (Interpreter of the Quran)? Correct answer: Abdullah ibn Abbas.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q099",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "P237-Q064-SIM",
+    "reason": "The pinned baseline already asks the identical Umayyad-Caliphate capital proposition with Damascus as the answer.",
+    "testedProposition": "Which city served as the capital of the Umayyad Caliphate? Correct answer: Damascus.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P237-Q064-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0007-Q100",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: the age-at-first-Syria-journey narrative is a traditional sira report with variant chronology, and the source gives no attribution. The printed age 12 cannot be presented as an unqualified historical fact without two independent authoritative sources.",
+    "testedProposition": "According to which specific early sira source did the Prophet Muhammad first travel to Syria at age 12? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  }
+]

@@ -283,7 +283,6 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0034-Q003-SIM",
         "ADV2E102-U0034-Q003"
       ],
       "answerConflictReviewed": true
@@ -314,7 +313,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found that the surfaced items test related, inverse, date-different, or otherwise materially distinct facts; this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "What did the United Nations General Assembly elect on 17 June 2020? Correct answer: Five non-permanent members of the Security Council.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -325,7 +324,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q011-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -356,7 +357,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found that the surfaced items test related, inverse, date-different, or otherwise materially distinct facts; this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "On what date in 1898 did Sir Syed Ahmad Khan die? Correct answer: 27 March 1898.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -367,7 +368,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0042-Q062-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -442,7 +445,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found that the surfaced items test related, inverse, date-different, or otherwise materially distinct facts; this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "What was the religion of Nawab Mahabat Khan III, the ruler of Junagadh at partition in 1947? Correct answer: Muslim.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -453,7 +456,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q027-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -504,7 +509,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found that the surfaced items test related, inverse, date-different, or otherwise materially distinct facts; this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which leader is widely known as the principal architect of the 1916 Lucknow Pact? Correct answer: Muhammad Ali Jinnah.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -515,7 +520,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q029-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -565,8 +572,8 @@
     "sourceRecordId": "ADV2E102-U0071-Q028",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0051-Q035",
-    "reason": "The exact date proposition for the Jallianwala Bagh massacre, 13 April 1919, is already tested by the earlier retained U0051 canonical source item.",
+    "duplicateOf": "ADV2E102-U0043-Q039",
+    "reason": "The exact date proposition for the Jallianwala Bagh massacre, 13 April 1919, is already tested by the earlier retained U0043 canonical source item.",
     "testedProposition": "On which date in 1919 did the Jallianwala Bagh massacre take place? Correct answer: 13 April.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -579,7 +586,8 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0051-Q035-SRC",
-        "ADV2E102-U0051-Q035"
+        "ADV2E102-U0043-Q039-SRC",
+        "ADV2E102-U0043-Q039"
       ],
       "answerConflictReviewed": true
     }
@@ -624,11 +632,13 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0021-Q044-SIM",
-        "ADV2E102-U0051-Q015-SIM",
+        "ADV2E102-U0013-Q018-SIM",
+        "ADV2E102-U0043-Q047-SIM",
         "ADV2E102-U0011-Q046-SRC",
+        "ADV2E102-U0013-Q032-SIM",
         "ADV2E102-U0041-Q005-SIM",
-        "ADV2E102-U0001-Q031-SRC"
+        "ADV2E102-U0001-Q031-SRC",
+        "ADV2E102-U0023-Q049-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -677,8 +687,8 @@
     "sourceRecordId": "ADV2E102-U0071-Q033",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0051-Q015",
-    "reason": "The proposition that Mohenjo-daro is in Sindh province is already tested by the earlier retained U0051 pair.",
+    "duplicateOf": "ADV2E102-U0043-Q047",
+    "reason": "The proposition that Mohenjo-daro is in Sindh province is already tested by the earlier retained U0043 pair.",
     "testedProposition": "Mohenjo-daro, a major urban site of the Indus civilization, is located in which Pakistani province? Correct answer: Sindh.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -690,8 +700,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0051-Q015-SIM",
-        "ADV2E102-U0051-Q015"
+        "ADV2E102-U0043-Q047-SIM",
+        "ADV2E102-U0043-Q047"
       ],
       "answerConflictReviewed": true
     }
@@ -738,10 +748,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0071-Q036",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0006-Q027",
+    "reason": "The earlier source-order U0006 canonical already tests that Muslims formed the majority in Jammu and Kashmir at partition using the 1941 census.",
     "testedProposition": "Which religious community formed the majority of Jammu and Kashmir's population in the 1941 census before partition? Correct answer: Muslims.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -751,8 +761,12 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q027-SRC",
+        "ADV2E102-U0071-Q022-SIM",
+        "ADV2E102-U0006-Q027"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -773,7 +787,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P239-Q003-SIM"
+        "P239-Q003-SIM",
+        "ADV2E102-U0013-Q024-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -901,6 +916,8 @@
         "IBES-Q0205-SIM",
         "IBES-Q0020-SRC",
         "ADV2E102-U0021-Q050-SIM",
+        "ADV2E102-U0023-Q068-SRC",
+        "ADV2E102-U0042-Q075-SRC",
         "ADV2E102-U0061-Q016-SIM",
         "ADV2E102-U0051-Q025-SIM"
       ],

@@ -584,16 +584,16 @@
     "pairId": "ADV2E102-U0031-Q060",
     "kind": "similar",
     "categoryId": "basic-mathematics",
-    "question": "Complete the geometric sequence: 2, 6, 18, 54, ____. ",
-    "questionUrdu": "Geometric sequence مکمل کریں: 2, 6, 18, 54, ____۔",
+    "question": "Which formula gives the nth term of the geometric sequence 2, 6, 18, 54, ...?",
+    "questionUrdu": "Geometric sequence 2, 6, 18, 54, ... کی nth term کون سا formula دیتا ہے؟",
     "options": [
-      "108",
-      "126",
-      "144",
-      "162"
+      "a_n = 2 × 3^(n−1)",
+      "a_n = 3 × 2^(n−1)",
+      "a_n = 2 + 3(n−1)",
+      "a_n = 6 × 3^n"
     ],
-    "correctOptionIndex": 3,
-    "explanationUrdu": "درست جواب 162 ہے۔ Common ratio 3 ہے، اس لیے 54 × 3 = 162۔",
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب a_n = 2 × 3^(n−1) ہے۔ پہلی term 2 اور common ratio 3 ہے، اس لیے geometric formula a_n = a_1 r^(n−1) استعمال ہوتا ہے۔",
     "source": {
       "type": "practice",
       "label": "Geometric Sequences",
@@ -618,7 +618,7 @@
         "supports": [
           "answer"
         ],
-        "claimSummary": "OpenStax defines a geometric sequence by a constant ratio between consecutive terms."
+        "claimSummary": "OpenStax gives the nth-term formula for a geometric sequence in terms of its first term and common ratio."
       },
       {
         "url": "https://math.libretexts.org/Bookshelves/Precalculus/Precalculus_%28Tradler_and_Carley%29/24%3A_The_Geometric_Series/24.01%3A_Finite_Geometric_Series",
@@ -631,7 +631,7 @@
         "supports": [
           "answer"
         ],
-        "claimSummary": "LibreTexts explains that multiplying by the common ratio produces the next geometric term."
+        "claimSummary": "LibreTexts explains the explicit nth-term rule for geometric sequences."
       }
     ],
     "temporalScope": {

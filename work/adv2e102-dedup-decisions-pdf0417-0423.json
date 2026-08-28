@@ -1,10 +1,10 @@
 [
   {
     "sourceRecordId": "ADV2E102-U0051-Q001",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "The surfaced item tests the men's ODI fastest-century record, while this source tests the men's Test record; the formats and record holders differ.",
+    "duplicateOf": "ADV2E102-U0043-Q003",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Who scored the fastest century in men's Test cricket as of 2026? Correct answer: Brendon McCullum.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -16,6 +16,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0043-Q003",
+        "ADV2E102-U0043-Q003-SRC",
         "ADV2E102-U0011-Q001-SRC"
       ],
       "answerConflictReviewed": true
@@ -23,10 +25,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q002",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q002",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Berbers, also known as Amazigh, are indigenous mainly to which region? Correct answer: North Africa.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -36,8 +38,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q002",
+        "ADV2E102-U0043-Q002-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -57,16 +62,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q011-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q004",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q005",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "What was the former official name of Chennai? Correct answer: Madras.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -76,17 +83,21 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q005",
+        "ADV2E102-U0043-Q005-SRC",
+        "ADV2E102-U0005-Q010-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q005",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q006",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Capital of Bhutan is: Correct answer: Thimphu.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -97,16 +108,19 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q006",
+        "ADV2E102-U0043-Q006-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q006",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q007",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "On which date was the United Kingdom's 2016 referendum on European Union membership held? Correct answer: 23 June 2016.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -116,8 +130,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q007",
+        "ADV2E102-U0043-Q007-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -143,10 +160,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q008",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "The surfaced city-country item concerns Kyoto and Japan, while this source independently tests Montreal and Canada.",
+    "duplicateOf": "ADV2E102-U0043-Q008",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Montreal is a city in which country? Correct answer: Canada.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -156,9 +173,16 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
+        "ADV2E102-U0043-Q008",
         "P239-Q001-SRC",
+        "ADV2E102-U0043-Q008-SRC",
+        "ADV2E102-U0012-Q008-SRC",
+        "ADV2E102-U0013-Q007-SRC",
+        "ADV2E102-U0014-Q026-SRC",
+        "ADV2E102-U0022-Q008-SRC",
+        "ADV2E102-U0008-Q007-SIM",
         "ADV2E102-U0033-Q008-SIM"
       ],
       "answerConflictReviewed": true
@@ -166,10 +190,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q009",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q019",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Which listed word is a native Japanese name for Japan? Correct answer: Nippon.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -179,17 +203,20 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q019",
+        "ADV2E102-U0043-Q019-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q010",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q001",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "A budget deficit requiring financing occurs when: Correct answer: Spending exceeds revenue.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -200,16 +227,19 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q001",
+        "ADV2E102-U0043-Q001-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q011",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0004-Q002",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Ping-pong is another common name for which sport? Correct answer: Table tennis.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -219,17 +249,20 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0004-Q002",
+        "ADV2E102-U0043-Q013-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q012",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0012-Q004",
+    "reason": "The earlier-source-order U0012 canonical asks the identical cited badminton singles-court length proposition and has the same verified answer, 13.40 m.",
     "testedProposition": "Under the cited Laws of Badminton, what is the full length of a singles court? Correct answer: 13.40 m.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -239,17 +272,22 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q004",
+        "ADV2E102-U0012-Q004-SRC",
+        "ADV2E102-U0043-Q012-SRC",
+        "ADV2E102-U0012-Q004-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q013",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q014",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "The headquarters of the Food and Agriculture Organization (FAO) is in: Correct answer: Rome.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -260,16 +298,19 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q014",
+        "ADV2E102-U0043-Q014-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q014",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q054",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "As of 2026, who is the Crown Prince of Saudi Arabia? Correct answer: Muhammad bin Salman.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -279,17 +320,21 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q054",
+        "ADV2E102-U0043-Q054-SRC",
+        "ADV2E102-U0043-Q054-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q015",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q047",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "What does the name Mohenjo-daro literally mean? Correct answer: Mound of the Dead.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -299,8 +344,10 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
+        "ADV2E102-U0043-Q047",
+        "ADV2E102-U0043-Q047-SRC",
         "ADV2E102-U0034-Q053-SIM"
       ],
       "answerConflictReviewed": true
@@ -308,10 +355,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q016",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q023",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "The Arch of Janus is located in which country? Correct answer: Italy.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -322,16 +369,20 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q023",
+        "ADV2E102-U0043-Q023-SRC",
+        "ADV2E102-U0043-Q023-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q017",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0012-Q005",
+    "reason": "The earlier-source-order U0012 canonical asks the identical last-king-of-Afghanistan proposition and has the same verified answer, Muhammad Zahir Shah.",
     "testedProposition": "Who was the last king of Afghanistan? Correct answer: Muhammad Zahir Shah.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -341,17 +392,21 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q005",
+        "ADV2E102-U0012-Q005-SRC",
+        "ADV2E102-U0043-Q011-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q018",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q024",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Who wrote the play 'Arms and the Man'? Correct answer: GB Shaw.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -362,16 +417,19 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q024",
+        "ADV2E102-U0043-Q024-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q019",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q025",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Who wrote both 'Hard Times' and 'A Tale of Two Cities'? Correct answer: Charles Dickens.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -382,7 +440,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q025",
+        "ADV2E102-U0043-Q025-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -468,10 +529,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q024",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0006-Q008",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "What is the capital of Cuba? Correct answer: Havana.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -482,7 +543,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q008",
+        "ADV2E102-U0006-Q008-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -508,10 +572,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q026",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q029",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "In which year did the sustained military confrontation on the Siachen Glacier begin? Correct answer: 1984.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -521,8 +585,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q029",
+        "ADV2E102-U0043-Q029-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -543,6 +610,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0043-Q031-SRC",
         "ADV2E102-U0033-Q021-SRC"
       ],
       "answerConflictReviewed": true
@@ -550,10 +618,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q028",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q032",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Which period correctly states Mamnoon Hussain's tenure as President of Pakistan? Correct answer: 2013-2018.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -563,17 +631,20 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q032",
+        "ADV2E102-U0043-Q032-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q029",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0008-Q027",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Under its original enactment, how many numbered articles did the Constitution of Pakistan, 1973, contain? Correct answer: 280 Articles.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -583,17 +654,21 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q027",
+        "ADV2E102-U0008-Q027-SRC",
+        "ADV2E102-U0043-Q037-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q030",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q038",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Bantva, the birthplace of Abdul Sattar Edhi, is in which country? Correct answer: Bantva, India.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -603,17 +678,20 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q038",
+        "ADV2E102-U0043-Q038-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q031",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q050",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "In which city was the Urdu poet Mirza Ghalib born? Correct answer: Agra.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -623,8 +701,12 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q050",
+        "ADV2E102-U0043-Q050-SRC",
+        "ADV2E102-U0043-Q050-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -644,16 +726,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q034-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q033",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q035",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "As of 2026, how many seats in the Senate of Pakistan are allocated to each province? Correct answer: 23.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -663,17 +747,20 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q035",
+        "ADV2E102-U0043-Q035-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q034",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q036",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "In which year was Faiz Ahmed Faiz awarded the Lenin Peace Prize? Correct answer: 1962.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -683,17 +770,21 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q036",
+        "ADV2E102-U0043-Q036-SRC",
+        "ADV2E102-U0043-Q036-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q035",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q039",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "On which date did the Jallianwala Bagh massacre take place? Correct answer: 13 April, 1919.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -703,8 +794,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q039",
+        "ADV2E102-U0043-Q039-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -730,10 +824,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q037",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q040",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Shah Abdul Latif Bhittai is celebrated primarily as a poet of which language? Correct answer: Sindhi.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -743,8 +837,12 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q040",
+        "ADV2E102-U0043-Q040-SRC",
+        "ADV2E102-U0043-Q040-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -770,10 +868,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q039",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q042",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Which foreign leader became the first to address a joint sitting of Pakistan's Parliament for a third time on 17 November 2016? Correct answer: Recep Tayyip Erdoğan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -783,17 +881,20 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q042",
+        "ADV2E102-U0043-Q042-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q040",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "The related canonicals test the 1956 Constitution's commencement date, the Objectives Resolution, or the Prime Minister; this source uniquely tests the Constitution's adoption date.",
+    "duplicateOf": "ADV2E102-U0043-Q026",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "On which date did Pakistan's Constituent Assembly adopt the Constitution of 1956? Correct answer: 29 February, 1956.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -803,10 +904,14 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
+        "ADV2E102-U0043-Q026",
         "P236-Q006-SIM",
+        "ADV2E102-U0043-Q026-SRC",
         "ADV2E102-U0032-Q037-SIM",
+        "ADV2E102-U0005-Q020-SIM",
+        "ADV2E102-U0043-Q026-SIM",
         "ADV2E102-U0021-Q025-SRC",
         "ADV2E102-U0032-Q037-SRC"
       ],
@@ -815,10 +920,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q041",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q044",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Which Pakistan Navy submarine was lost during the 1971 war? Correct answer: PNS Ghazi.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -828,17 +933,20 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q044",
+        "ADV2E102-U0043-Q044-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q042",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q028",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Under Jinnah's Fourteen Points, constitutional reforms were to be introduced in which two regions? Correct answer: NWFP and Balochistan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -849,16 +957,19 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q028",
+        "ADV2E102-U0043-Q028-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q043",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q027",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "In which city did Benazir Bhutto and Nawaz Sharif sign the Charter of Democracy in 2006? Correct answer: London.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -869,7 +980,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q027",
+        "ADV2E102-U0043-Q027-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -932,6 +1046,7 @@
       "semanticCandidateIds": [
         "P235-Q013-SRC",
         "ADV2E102-U0041-Q028-SRC",
+        "ADV2E102-U0009-Q032-SRC",
         "ADV2E102-U0033-Q017-SIM"
       ],
       "answerConflictReviewed": true
@@ -955,7 +1070,9 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P238-Q001-SRC",
-        "P238-Q001-SIM"
+        "P238-Q001-SIM",
+        "ADV2E102-U0005-Q011-SRC",
+        "ADV2E102-U0042-Q064-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -996,7 +1113,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q030-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1015,9 +1134,10 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
-        "P238-Q010-SRC"
+        "P238-Q010-SRC",
+        "ADV2E102-U0043-Q048-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1084,10 +1204,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q054",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q043",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Nili-Ravi is a breed of which animal? Correct answer: Buffalo.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1097,17 +1217,20 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q043",
+        "ADV2E102-U0043-Q043-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q055",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no earlier canonical testing the host country of the 2022 Winter Olympics. Later-source U0061 correctly points back to this U0051 item.",
+    "duplicateOf": "ADV2E102-U0009-Q040",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Which country hosted the 2022 Winter Olympics? Correct answer: China.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1118,16 +1241,22 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0009-Q040",
+        "ADV2E102-U0009-Q040-SRC",
+        "ADV2E102-U0043-Q052-SRC",
+        "ADV2E102-U0043-Q052-SIM",
+        "ADV2E102-U0009-Q040-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q056",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "The surfaced ADV2E102 item tests Balochistan's Chief Minister in 2020, while this item tests its Governor; the offices and answers differ.",
+    "duplicateOf": "ADV2E102-U0043-Q053",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Who served as Governor of Balochistan during 2020? Correct answer: Justice (retd) Amanullah Khan Yasinzai.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1137,9 +1266,12 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
-        "ADV2E102-U0041-Q029-SRC"
+        "ADV2E102-U0043-Q053",
+        "ADV2E102-U0043-Q053-SRC",
+        "ADV2E102-U0041-Q029-SRC",
+        "ADV2E102-U0006-Q030-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1182,10 +1314,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
         "P237-Q014-SRC",
-        "ADV2E102-U0001-Q046-SIM"
+        "ADV2E102-U0001-Q046-SIM",
+        "ADV2E102-U0043-Q057-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1206,7 +1339,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q058-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1225,20 +1360,22 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
         "ADV2E102-U0032-Q065",
-        "ADV2E102-U0032-Q065-SIM"
+        "ADV2E102-U0032-Q065-SIM",
+        "ADV2E102-U0022-Q054-SIM",
+        "ADV2E102-U0043-Q060-SRC"
       ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q061",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q049",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Garam Chashma, a documented tourmaline locality in Pakistan, lies in which district? Correct answer: Chitral.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1248,17 +1385,20 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q049",
+        "ADV2E102-U0043-Q049-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q062",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q059",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Tirich Mir is located in which mountain range? Correct answer: Hindu Kush.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1268,8 +1408,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q059",
+        "ADV2E102-U0043-Q059-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1297,10 +1440,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q064",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q063",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Which listed material is commonly classified as a synthetic polymer? Correct answer: Plastic.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1311,16 +1454,19 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q063",
+        "ADV2E102-U0043-Q063-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q065",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q064",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "At standard atmospheric pressure, approximately what is the boiling point of pure water? Correct answer: 100°C.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1330,17 +1476,21 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q064",
+        "ADV2E102-U0043-Q064-SRC",
+        "ADV2E102-U0043-Q064-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q066",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q065",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "White blood cells, also called leukocytes, primarily help the body fight: Correct answer: Disease.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1351,7 +1501,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q065"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1430,10 +1582,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
         "IBES-Q0192-SRC",
-        "IBES-Q0215-SIM"
+        "IBES-Q0215-SIM",
+        "ADV2E102-U0043-Q066-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1453,9 +1606,10 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
-        "IBES-Q1163-SRC"
+        "IBES-Q1163-SRC",
+        "ADV2E102-U0043-Q070-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1475,9 +1629,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
-        "IBES-Q0987-SRC"
+        "IBES-Q0987-SRC",
+        "ADV2E102-U0007-Q038-SRC",
+        "ADV2E102-U0043-Q071-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1542,16 +1698,19 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0004-Q061-SRC",
+        "ADV2E102-U0004-Q067-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q076",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q073",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "A is B's father, and B is not A's son. If B is one of A's children and the choices use the conventional son/daughter distinction, what is B to A? Correct answer: Daughter.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1561,8 +1720,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q073",
+        "ADV2E102-U0043-Q073-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1588,10 +1750,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q078",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q082",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Everyone is ignorant ______ something. Correct answer: of.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1602,7 +1764,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q082"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1622,7 +1786,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q078-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1644,11 +1810,14 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P237-Q060-SRC",
+        "ADV2E102-U0005-Q093-SRC",
+        "ADV2E102-U0043-Q074-SIM",
         "ADV2E102-U0011-Q071-SIM",
         "ADV2E102-U0021-Q072-SRC",
         "ADV2E102-U0021-Q075-SRC",
-        "ADV2E102-U0011-Q073-SRC",
-        "ADV2E102-U0011-Q081-SRC"
+        "ADV2E102-U0043-Q074-SRC",
+        "ADV2E102-U0005-Q092-SRC",
+        "ADV2E102-U0003-Q096-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -1669,7 +1838,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q079-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1692,17 +1863,24 @@
       "semanticCandidateIds": [
         "ADV2E102-U0034-Q087",
         "ADV2E102-U0034-Q087-SRC",
-        "ADV2E102-U0034-Q087-SIM"
+        "ADV2E102-U0034-Q087-SIM",
+        "ADV2E102-U0043-Q092-SRC",
+        "ADV2E102-U0022-Q083-SIM",
+        "ADV2E102-U0043-Q088-SRC",
+        "ADV2E102-U0043-Q091-SRC",
+        "ADV2E102-U0007-Q051-SRC",
+        "ADV2E102-U0022-Q081-SRC",
+        "ADV2E102-U0003-Q098-SRC"
       ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q083",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "The surfaced earlier item asks who wrote Dasht-e-Soos, whereas this item asks the author of Raja Gidh; only the question form is similar.",
+    "duplicateOf": "ADV2E102-U0043-Q091",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Who wrote the Urdu novel Raja Gidh? Correct answer: Bano Qudsia.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1712,20 +1890,25 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
+        "ADV2E102-U0043-Q091",
+        "ADV2E102-U0043-Q091-SRC",
         "ADV2E102-U0051-Q082-SRC",
-        "ADV2E102-U0034-Q087-SRC"
+        "ADV2E102-U0034-Q087-SRC",
+        "ADV2E102-U0043-Q092-SRC",
+        "ADV2E102-U0043-Q088-SRC",
+        "ADV2E102-U0022-Q083-SIM"
       ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q084",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q088",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "The novel Aangan was written by: Correct answer: Khadija Mastoor.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1736,7 +1919,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q088",
+        "ADV2E102-U0043-Q088-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1756,7 +1942,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q084-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1941,18 +2129,21 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0043-Q088-SRC",
+        "ADV2E102-U0022-Q083-SIM",
         "ADV2E102-U0051-Q082-SRC",
-        "ADV2E102-U0034-Q087-SRC"
+        "ADV2E102-U0034-Q087-SRC",
+        "ADV2E102-U0043-Q092-SRC"
       ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q095",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q094",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Which listed institution is commonly credited as having been established as a designated facility during Caliph Umar's administration? Correct answer: Imprisonment.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1962,17 +2153,20 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q094",
+        "ADV2E102-U0043-Q094-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q096",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q099",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "According to the Qur'an, the people associated with which prophet were struck by a rain of baked-clay stones? Correct answer: Hazrat Lut (A.S).",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1982,17 +2176,20 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q099",
+        "ADV2E102-U0043-Q099-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q097",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q100",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Halimah al-Sa'diyyah, the foster mother of Prophet Muhammad (PBUH), belonged to which tribe? Correct answer: Banu Sa'd.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -2004,6 +2201,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0043-Q100",
+        "ADV2E102-U0043-Q100-SRC",
         "ADV2E102-U0034-Q095-SRC"
       ],
       "answerConflictReviewed": true
@@ -2054,10 +2253,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q100",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0008-Q091",
+    "reason": "The earlier U0008 source asks the identical battle in which Abu Jahl was killed and answers Badr.",
     "testedProposition": "Abu Jahl was killed in the Battle of: Correct answer: Badr.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -2068,7 +2267,11 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q091",
+        "ADV2E102-U0022-Q090-SRC",
+        "ADV2E102-U0008-Q091-SRC"
+      ],
       "answerConflictReviewed": true
     }
   }

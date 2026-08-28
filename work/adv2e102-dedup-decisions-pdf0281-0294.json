@@ -95,9 +95,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "ADV2E102-U0021-Q017-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -163,10 +161,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0032-Q009",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0023-Q030",
+    "reason": "The earlier-source-order U0023 canonical already defines a shadow cabinet as senior opposition spokespeople who mirror government ministers; this later formulation tests the identical proposition.",
     "testedProposition": "In a parliamentary system, what is a shadow cabinet? Correct answer: Senior opposition spokespeople who mirror government ministers.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -177,7 +175,11 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0023-Q030-SRC",
+        "ADV2E102-U0023-Q030-SIM",
+        "ADV2E102-U0023-Q030"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -237,9 +239,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "ADV2E102-U0021-Q088-SIM"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -299,7 +299,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q015-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -319,9 +321,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "P236-Q015-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -361,7 +361,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q018-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -381,7 +383,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q019-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -421,7 +425,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "IBES-Q0130-SRC",
+        "ADV2E102-U0023-Q028-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -484,16 +491,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q024-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0032-Q025",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "The candidate asks for the largest peninsula, whereas this item asks for the largest hot desert; the superlative template is shared but the geographic facts differ.",
+    "duplicateOf": "ADV2E102-U0002-Q039",
+    "reason": "The earlier source-order U0002 canonical asks the identical world's-largest-hot-desert proposition and answers Sahara.",
     "testedProposition": "Which is the world's largest hot desert? Correct answer: Sahara Desert.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -505,7 +514,9 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0021-Q041-SRC"
+        "ADV2E102-U0002-Q039-SRC",
+        "ADV2E102-U0021-Q041-SRC",
+        "ADV2E102-U0002-Q039"
       ],
       "answerConflictReviewed": true
     }
@@ -526,7 +537,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q026-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -567,7 +580,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P236-Q021-SRC"
+        "ADV2E102-U0009-Q025-SRC",
+        "ADV2E102-U0023-Q051-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -629,7 +643,9 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P237-Q018-SRC"
+        "P237-Q016-SRC",
+        "ADV2E102-U0023-Q024-SIM",
+        "ADV2E102-U0011-Q030-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -670,7 +686,12 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q033-SRC",
+        "ADV2E102-U0001-Q043-SIM",
+        "ADV2E102-U0013-Q047-SRC",
+        "ADV2E102-U0005-Q022-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -710,7 +731,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q035-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -730,7 +753,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q036-SRC",
+        "ADV2E102-U0013-Q033-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -750,7 +776,11 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q037-SRC",
+        "ADV2E102-U0005-Q020-SIM",
+        "ADV2E102-U0007-Q023-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -791,7 +821,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P238-Q011-SRC"
+        "P238-Q011-SRC",
+        "ADV2E102-U0007-Q015-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -812,7 +843,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q040-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -832,7 +865,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q041-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -952,7 +987,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q007-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1032,7 +1069,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q051-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1095,7 +1134,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q017-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1155,16 +1196,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q057-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0032-Q058",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "The earlier item counts the 15 judges of the ICJ; this item counts the 15 members of the UN Security Council. Equal numbers make the two institutions easy to confuse but do not make the facts duplicates.",
+    "duplicateOf": "ADV2E102-U0008-Q014",
+    "reason": "The earlier U0008 pair already asks the total UN Security Council membership and establishes the same answer, 15.",
     "testedProposition": "How many members does the United Nations Security Council have? Correct answer: 15.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1176,7 +1219,10 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0001-Q002-SRC"
+        "ADV2E102-U0032-Q058-SRC",
+        "ADV2E102-U0008-Q014-SRC",
+        "ADV2E102-U0006-Q011-SRC",
+        "ADV2E102-U0008-Q014"
       ],
       "answerConflictReviewed": true
     }
@@ -1197,7 +1243,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "P239-Q021-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1217,7 +1265,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q060-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1317,16 +1367,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q054-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0032-Q066",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0003-Q011",
+    "reason": "The earlier source-order U0003 canonical asks the same Kabul River joining the Indus near Attock proposition and has the same answer.",
     "testedProposition": "Near which place does the Kabul River join the Indus River? Correct answer: Attock.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1337,7 +1389,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0003-Q011-SRC",
+        "ADV2E102-U0003-Q011"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1397,10 +1452,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "ADV2E102-U0001-Q045-SRC",
-        "ADV2E102-U0001-Q045-SIM"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -1460,7 +1512,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "P237-Q015-SRC",
+        "ADV2E102-U0012-Q042-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1622,7 +1677,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q063-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1642,7 +1699,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q081-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1889,7 +1948,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "IBES-Q0150-SRC"
+        "IBES-Q0150-SRC",
+        "ADV2E102-U0009-Q059-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1918,10 +1978,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0032-Q095",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0004-Q066",
+    "reason": "The earlier-source-order U0004 canonical asks the identical pairwise-average age problem with the same values and answer, 36 years.",
     "testedProposition": "The average ages of A and B, B and C, and C and A are 30, 32, and 34 years respectively. What is C's age? Correct answer: 36 years.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1932,7 +1992,11 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0004-Q066-SRC",
+        "ADV2E102-U0004-Q066-SIM",
+        "ADV2E102-U0004-Q066"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1972,7 +2036,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q097-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },

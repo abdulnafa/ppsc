@@ -1,0 +1,1937 @@
+[
+  {
+    "id": "ADV2E102-U0042-Q083-SRC",
+    "pairId": "ADV2E102-U0042-Q083",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Village X has population 68,000 and loses 1,200 people per year; village Y has population 42,000 and gains 800 people per year. After how many years will their populations be equal?",
+    "questionUrdu": "گاؤں X کی آبادی 68,000 ہے اور ہر سال 1,200 کم ہوتی ہے، جبکہ گاؤں Y کی آبادی 42,000 ہے اور ہر سال 800 بڑھتی ہے۔ کتنے سال بعد دونوں آبادیاں برابر ہوں گی؟",
+    "options": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 13 ہے۔ دونوں آبادیوں کا ابتدائی فرق 26,000 ہے اور یہ فرق ہر سال مجموعی طور پر 2,000 کم ہوتا ہے۔ 26,000 کو 2,000 پر تقسیم کرنے سے 13 سال حاصل ہوتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Modeling with Linear Functions",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions",
+        "label": "Modeling with Linear Functions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains how initial values and constant rates are represented and compared with linear functions."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+68000-1200t%3D42000%2B800t",
+        "label": "Population equation computation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Solving 68000 - 1200t = 42000 + 800t independently gives t = 13."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Equating the two linear models gives 26,000 = 2,000t, so t = 13 years; option B is correct."
+  },
+  {
+    "id": "ADV2E102-U0042-Q083-SIM",
+    "pairId": "ADV2E102-U0042-Q083",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A town has 50,000 residents and gains 1,500 residents per year. What will its population be after 4 years?",
+    "questionUrdu": "ایک قصبے کی آبادی 50,000 ہے اور ہر سال 1,500 افراد بڑھتے ہیں۔ 4 سال بعد آبادی کتنی ہوگی؟",
+    "options": [
+      "54,500",
+      "55,000",
+      "56,000",
+      "57,500"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "چار سال میں مجموعی اضافہ 1,500 × 4 = 6,000 ہوگا۔ اسے 50,000 میں جمع کرنے سے درست آبادی 56,000 بنتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Modeling with Linear Functions",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions",
+        "label": "Modeling with Linear Functions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a population of 50,000 growing by 1,500 per year reaches 56,000 after 4 years."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=50000%2B1500*4",
+        "label": "Population computation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that a population of 50,000 growing by 1,500 per year reaches 56,000 after 4 years."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q084-SRC",
+    "pairId": "ADV2E102-U0042-Q084",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What positive number x satisfies 2/x = x/50?",
+    "questionUrdu": "وہ مثبت عدد x معلوم کریں جو مساوات 2/x = x/50 کو درست بناتا ہے۔",
+    "options": [
+      "5",
+      "10",
+      "25",
+      "100"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 10 ہے۔ طرفین کو ضرب دینے سے x² = 100 حاصل ہوتا ہے۔ چونکہ سوال میں مثبت عدد مطلوب ہے، اس لیے x = 10 درست جواب ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve Proportions and Their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q084"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and Their Applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains solving proportions by cross multiplication."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+2%2Fx%3Dx%2F50%2C+x%3E0",
+        "label": "Positive rational-equation solution",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The constrained equation is independently solved as x = 10."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Cross multiplication gives x^2 = 100. The source omitted the sign condition, which would allow both +10 and -10; specifying a positive number makes option B uniquely correct."
+  },
+  {
+    "id": "ADV2E102-U0042-Q084-SIM",
+    "pairId": "ADV2E102-U0042-Q084",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What positive number x satisfies 3/x = x/12?",
+    "questionUrdu": "وہ مثبت عدد x معلوم کریں جو مساوات 3/x = x/12 کو درست بناتا ہے۔",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "9"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "کراس ضرب سے x² = 36 بنتا ہے۔ مثبت جذر لینے پر x = 6 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve Proportions and Their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q084",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and Their Applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the positive solution of 3/x = x/12 is 6."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+3%2Fx%3Dx%2F12%2C+x%3E0",
+        "label": "Positive rational-equation solution",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the positive solution of 3/x = x/12 is 6."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q085-SRC",
+    "pairId": "ADV2E102-U0042-Q085",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "4% of a number is 120. What is the number?",
+    "questionUrdu": "کسی عدد کا 4%، 120 ہے۔ وہ عدد کیا ہے؟",
+    "options": [
+      "2000",
+      "3000",
+      "5000",
+      "4000"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 3000 ہے۔ فی صد کو اعشاریہ میں لکھنے سے مساوات 0.04x = 120 بنتی ہے۔ 120 کو 0.04 سے تقسیم کرنے پر 3,000 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Writing Equations to Represent Relationships with Percentages",
+      "referenceUrl": "https://openstax.org/books/algebra-1/pages/1-2-4-writing-equations-to-represent-relationships-with-percentages",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q085"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-1/pages/1-2-4-writing-equations-to-represent-relationships-with-percentages",
+        "label": "Writing Equations to Represent Relationships with Percentages",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax models percentage relationships with equations such as part = percent times whole."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+0.04x%3D120",
+        "label": "Percent equation computation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation solves 0.04x = 120 as x = 3000."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Since 0.04x = 120, x = 120/0.04 = 3,000; option B is correct."
+  },
+  {
+    "id": "ADV2E102-U0042-Q085-SIM",
+    "pairId": "ADV2E102-U0042-Q085",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "15% of a number is 75. What is the number?",
+    "questionUrdu": "کسی عدد کا 15%، 75 ہے۔ وہ عدد کیا ہے؟",
+    "options": [
+      "450",
+      "500",
+      "525",
+      "600"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "مساوات 0.15x = 75 بنے گی۔ 75 کو 0.15 سے تقسیم کرنے پر درست عدد 500 آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Writing Equations to Represent Relationships with Percentages",
+      "referenceUrl": "https://openstax.org/books/algebra-1/pages/1-2-4-writing-equations-to-represent-relationships-with-percentages",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q085",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-1/pages/1-2-4-writing-equations-to-represent-relationships-with-percentages",
+        "label": "Writing Equations to Represent Relationships with Percentages",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the solution of 0.15x = 75 is 500."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+0.15x%3D75",
+        "label": "Percent equation computation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the solution of 0.15x = 75 is 500."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q086-SRC",
+    "pairId": "ADV2E102-U0042-Q086",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the antonym of 'pristine'.",
+    "questionUrdu": "لفظ 'pristine' کا متضاد منتخب کریں۔",
+    "options": [
+      "Pure",
+      "Contaminated",
+      "Fresh",
+      "Flawless"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Contaminated ہے۔ Pristine ایسی چیز کو کہتے ہیں جو اصل، صاف اور آلودگی سے محفوظ ہو۔ اس کے برعکس contaminated کا مطلب آلودہ ہے، اس لیے یہی درست متضاد ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Pristine: Synonyms and Antonyms",
+      "referenceUrl": "https://www.merriam-webster.com/thesaurus/pristine",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/pristine",
+        "label": "Pristine: Synonyms and Antonyms",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster lists contaminated among the antonyms of pristine."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/pristine",
+        "label": "Pristine",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines pristine as original, pure, and not spoiled or worn, supporting contaminated as its opposite."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague source option 'Impure' was replaced with the directly attested antonym 'Contaminated'; option B remains correct."
+  },
+  {
+    "id": "ADV2E102-U0042-Q086-SIM",
+    "pairId": "ADV2E102-U0042-Q086",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to 'pristine'?",
+    "questionUrdu": "لفظ 'pristine' کے معنی کے سب سے قریب کون سا لفظ ہے؟",
+    "options": [
+      "Contaminated",
+      "Unspoiled",
+      "Damaged",
+      "Polluted"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "Pristine کا مفہوم اصل حالت میں محفوظ اور خراب نہ ہونے والا ہے۔ اسی لیے unspoiled اس کا قریب ترین مترادف ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Pristine: Synonyms and Antonyms",
+      "referenceUrl": "https://www.merriam-webster.com/thesaurus/pristine",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/pristine",
+        "label": "Pristine: Synonyms and Antonyms",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that unspoiled is a close synonym of pristine."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/pristine",
+        "label": "Pristine",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that unspoiled is a close synonym of pristine."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q088-SRC",
+    "pairId": "ADV2E102-U0042-Q088",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "She inquired ____ my ailing uncle.",
+    "questionUrdu": "خالی جگہ مکمل کریں: She inquired ____ my ailing uncle.",
+    "options": [
+      "after",
+      "for",
+      "about",
+      "in"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب after ہے۔ Inquire after کسی شخص کی صحت یا حالت دریافت کرنے کے لیے مستعمل ہے۔ اس لیے بیمار چچا کے بارے میں خیریت پوچھنے والے جملے میں after درست حرفِ جار ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Inquire after",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/inquire%20after",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q088"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/inquire%20after",
+        "label": "Inquire after",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines inquire after as asking about the health or condition of someone."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english/inquire-after",
+        "label": "Inquire after",
+        "publisher": "Collins English Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently defines inquire after as asking for information about a person's health."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source sentence 'inquired after/about my health' admitted more than one defensible preposition. Referring to an ailing person tests the established phrasal verb inquire after; option A is now unique."
+  },
+  {
+    "id": "ADV2E102-U0042-Q088-SIM",
+    "pairId": "ADV2E102-U0042-Q088",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Complete the sentence: 'The committee will inquire ____ the cause of the accident.'",
+    "questionUrdu": "جملہ مکمل کریں: The committee will inquire ____ the cause of the accident.",
+    "options": [
+      "after",
+      "into",
+      "for",
+      "at"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "Inquire into کا مطلب کسی معاملے کے حقائق کی تحقیق کرنا ہے۔ حادثے کی وجہ کی چھان بین کے لیے into درست حرفِ جار ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Inquire into something",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/inquire-into",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q088",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/inquire-into",
+        "label": "Inquire into something",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that inquire into means to investigate or discover the facts about something."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/inquire",
+        "label": "Inquire",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that inquire into means to investigate or discover the facts about something."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q089-SRC",
+    "pairId": "ADV2E102-U0042-Q089",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does 'It is high time to do something' imply?",
+    "questionUrdu": "فقرہ 'It is high time to do something' کیا مفہوم دیتا ہے؟",
+    "options": [
+      "It should already have been done",
+      "It is merely a convenient time",
+      "It is an optional future wish",
+      "The opportunity can never return"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب It should already have been done ہے۔ High time سے مراد ایسا کام ہے جو اب تک ہو جانا چاہیے تھا۔ یہ محض موزوں وقت نہیں بلکہ تاخیر اور فوری ضرورت کا مفہوم دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "About time / high time",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/about-time",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q089"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/about-time",
+        "label": "About time / high time",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that high time means something should have happened sooner or a long time ago."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/it-is-high-time",
+        "label": "It is high time",
+        "publisher": "Collins English Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently says the expression means something should have been done already."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key B ('appropriate time') misses the idiom's overdue implication. The options were repaired and verified answer is A."
+  },
+  {
+    "id": "ADV2E102-U0042-Q089-SIM",
+    "pairId": "ADV2E102-U0042-Q089",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which phrase is closest in meaning to 'It is high time'?",
+    "questionUrdu": "کون سا فقرہ 'It is high time' کے معنی کے سب سے قریب ہے؟",
+    "options": [
+      "It is about time",
+      "It is too early",
+      "It may never happen",
+      "It happened once"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "It is about time بھی بتاتا ہے کہ کوئی کام پہلے ہو جانا چاہیے تھا۔ دونوں فقروں میں تاخیر کے بعد فوری اقدام کا تصور موجود ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "About time / high time",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/about-time",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q089",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/about-time",
+        "label": "About time / high time",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that it is about time has essentially the same overdue implication as it is high time."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/it-is-high-time",
+        "label": "It is high time",
+        "publisher": "Collins English Dictionary",
+        "authorityId": "collins-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins English Dictionary supports that it is about time has essentially the same overdue implication as it is high time."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q090-SRC",
+    "pairId": "ADV2E102-U0042-Q090",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "In the Urdu couplet 'ستاروں سے آگے جہاں اور بھی ہیں / ابھی عشق کے امتحاں اور بھی ہیں', which words are the qafiya (rhyme)?",
+    "questionUrdu": "شعر 'ستاروں سے آگے جہاں اور بھی ہیں / ابھی عشق کے امتحاں اور بھی ہیں' میں قافیہ کون سے الفاظ ہیں؟",
+    "options": [
+      "جہاں، امتحاں",
+      "اور بھی ہیں",
+      "ستاروں، عشق",
+      "اس شعر میں قافیہ نہیں ہے"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب جہاں، امتحاں ہے۔ دونوں مصرعوں میں 'اور بھی ہیں' ایک ہی صورت میں دہرایا گیا ہے، اس لیے یہ ردیف ہے۔ ردیف سے پہلے ہم آواز الفاظ 'جہاں' اور 'امتحاں' قافیہ ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "بال جبریل: ستاروں سے آگے جہاں اور بھی ہیں",
+      "referenceUrl": "https://www.allamaiqbal.com/poetry.php?bookbup=24&conType=ur&lang=4&lang_code=ur&orderno=271",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q090"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.allamaiqbal.com/poetry.php?bookbup=24&conType=ur&lang=4&lang_code=ur&orderno=271",
+        "label": "بال جبریل: ستاروں سے آگے جہاں اور بھی ہیں",
+        "publisher": "Iqbal Academy Pakistan",
+        "authorityId": "iqbal-academy-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Iqbal Academy supplies the authoritative text of the two lines, ending in جہاں اور بھی ہیں and امتحاں اور بھی ہیں."
+      },
+      {
+        "url": "https://urdunotes.in/ncert-class-12-urdu-grammar-chapter-16/",
+        "label": "قافیہ اور ردیف",
+        "publisher": "Urdu Notes",
+        "authorityId": "urdu-notes",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Urdu grammar explanation identifies جہاں and امتحاں as the qafiya and اور بھی ہیں as the radif."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The obscured blank option C was replaced with a distinct distractor. The rhyming words before the repeated radif are جہاں and امتحاں; option A is correct."
+  },
+  {
+    "id": "ADV2E102-U0042-Q090-SIM",
+    "pairId": "ADV2E102-U0042-Q090",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "In the same Iqbal couplet, which repeated phrase is the radif?",
+    "questionUrdu": "اسی اقبالی شعر میں بار بار آنے والا کون سا فقرہ ردیف ہے؟",
+    "options": [
+      "اور بھی ہیں",
+      "جہاں",
+      "امتحاں",
+      "ستاروں سے آگے"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "ہر مصرعے کے آخر میں 'اور بھی ہیں' بعینہٖ دہرایا گیا ہے۔ اسی مسلسل تکرار کی وجہ سے یہ فقرہ ردیف قرار پاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "بال جبریل: ستاروں سے آگے جہاں اور بھی ہیں",
+      "referenceUrl": "https://www.allamaiqbal.com/poetry.php?bookbup=24&conType=ur&lang=4&lang_code=ur&orderno=271",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q090",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.allamaiqbal.com/poetry.php?bookbup=24&conType=ur&lang=4&lang_code=ur&orderno=271",
+        "label": "بال جبریل: ستاروں سے آگے جہاں اور بھی ہیں",
+        "publisher": "Iqbal Academy Pakistan",
+        "authorityId": "iqbal-academy-pakistan",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Iqbal Academy Pakistan supports that the repeated phrase 'اور بھی ہیں' is the radif of the cited Iqbal couplet."
+      },
+      {
+        "url": "https://urdunotes.in/ncert-class-12-urdu-grammar-chapter-16/",
+        "label": "قافیہ اور ردیف",
+        "publisher": "Urdu Notes",
+        "authorityId": "urdu-notes",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Urdu Notes supports that the repeated phrase 'اور بھی ہیں' is the radif of the cited Iqbal couplet."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q091-SRC",
+    "pairId": "ADV2E102-U0042-Q091",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What is the meaning of the Urdu idiom 'چراغ پا ہونا' (chiragh-pa hona)?",
+    "questionUrdu": "اردو محاورہ 'چراغ پا ہونا' کا مفہوم کیا ہے؟",
+    "options": [
+      "شدید غصے میں ہونا",
+      "روشنی بکھیرنا",
+      "خوشیاں بانٹنا",
+      "مہذب ہونا"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب شدید غصے میں ہونا ہے۔ چراغ پا ہونا شدید غصے میں آنے اور بے قابو ناراضی ظاہر کرنے کا محاورہ ہے۔ اس کا لفظی تعلق روشنی پھیلانے سے نہیں بلکہ غضب ناک کیفیت سے ہے۔",
+    "source": {
+      "type": "book",
+      "label": "چراغ پا کے معنی",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-charaag-paa?lang=ur",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q091"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-charaag-paa?lang=ur",
+        "label": "چراغ پا کے معنی",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines چراغ پا as angry, displeased, or out of control with anger."
+      },
+      {
+        "url": "https://dic.sindhila.edu.pk/index.php?txtsrch=%DA%86%D8%B1%D8%A7%D8%BA+%D9%BE%D8%A7",
+        "label": "چراغ پا",
+        "publisher": "Sindhi Language Authority",
+        "authorityId": "sindhi-language-authority",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official dictionary independently gives the expression the sense of becoming angry or displeased."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The answer was made idiomatically precise as شدید غصے میں ہونا; option A remains correct."
+  },
+  {
+    "id": "ADV2E102-U0042-Q091-SIM",
+    "pairId": "ADV2E102-U0042-Q091",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu idiom best describes someone who suddenly becomes furious?",
+    "questionUrdu": "کسی شخص کے اچانک شدید غصے میں آنے کے لیے کون سا اردو محاورہ موزوں ہے؟",
+    "options": [
+      "چراغ پا ہونا",
+      "باغ باغ ہونا",
+      "پانی پانی ہونا",
+      "ہاتھ پاؤں پھولنا"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "اچانک سخت ناراضی اور غصے کی کیفیت کے لیے 'چراغ پا ہونا' کہا جاتا ہے۔ باقی محاورے بالترتیب خوشی، شرمندگی اور گھبراہٹ کے مفہوم رکھتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "چراغ پا کے معنی",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-charaag-paa?lang=ur",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q091",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-charaag-paa?lang=ur",
+        "label": "چراغ پا کے معنی",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary supports that چراغ پا ہونا describes becoming extremely angry."
+      },
+      {
+        "url": "https://dic.sindhila.edu.pk/index.php?txtsrch=%DA%86%D8%B1%D8%A7%D8%BA+%D9%BE%D8%A7",
+        "label": "چراغ پا",
+        "publisher": "Sindhi Language Authority",
+        "authorityId": "sindhi-language-authority",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Sindhi Language Authority supports that چراغ پا ہونا describes becoming extremely angry."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q092-SRC",
+    "pairId": "ADV2E102-U0042-Q092",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "How many misras (lines) make up the Hindi poetic form 'دوہا' (doha)?",
+    "questionUrdu": "ہندی صنفِ نظم 'دوہا' کتنے مصرعوں پر مشتمل ہوتا ہے؟",
+    "options": [
+      "دو مصرعوں پر",
+      "چار مصرعوں پر",
+      "چھ مصرعوں پر",
+      "مصرعوں کی تعداد مقرر نہیں"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب دو مصرعوں پر ہے۔ دوہا بنیادی طور پر دو مصرعوں پر مشتمل شعری ہیئت ہے۔ ہر مصرع مزید دو حصوں یا چرنوں میں تقسیم ہوتا ہے، اس لیے مجموعی طور پر چار چرن ہوتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "دوہا کے معنی",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-dohaa?lang=ur",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q092"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-dohaa?lang=ur",
+        "label": "دوہا کے معنی",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta describes a doha as a two-line verse divided into four metrical parts."
+      },
+      {
+        "url": "https://www.chdpublication.education.gov.in/ebook/pdf/Bhasha_May-June_2020.pdf",
+        "label": "Bhasha, May-June 2020",
+        "publisher": "Central Hindi Directorate, Ministry of Education, Government of India",
+        "authorityId": "central-hindi-directorate",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Government of India language journal independently describes the doha as comprising two lines."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's 'one sher' convention was converted to the structurally precise count of two misras; option A remains correct."
+  },
+  {
+    "id": "ADV2E102-U0042-Q092-SIM",
+    "pairId": "ADV2E102-U0042-Q092",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Into how many metrical parts is a traditional doha divided?",
+    "questionUrdu": "روایتی دوہا مجموعی طور پر کتنے عروضی حصوں یا چرنوں میں تقسیم ہوتا ہے؟",
+    "options": [
+      "Two",
+      "Three",
+      "Four",
+      "Six"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "دوہے کے دو مصرعے ہوتے ہیں اور ہر مصرع دو چرن رکھتا ہے۔ یوں پوری ہیئت میں کل چار عروضی حصے بنتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "دوہا کے معنی",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-dohaa?lang=ur",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q092",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-dohaa?lang=ur",
+        "label": "دوہا کے معنی",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary supports that a traditional doha is divided into four metrical parts."
+      },
+      {
+        "url": "https://www.chdpublication.education.gov.in/ebook/pdf/Bhasha_May-June_2020.pdf",
+        "label": "Bhasha, May-June 2020",
+        "publisher": "Central Hindi Directorate, Ministry of Education, Government of India",
+        "authorityId": "central-hindi-directorate",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Central Hindi Directorate, Ministry of Education, Government of India supports that a traditional doha is divided into four metrical parts."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q093-SRC",
+    "pairId": "ADV2E102-U0042-Q093",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "In which year did the Urdu periodical 'مخزن' (Makhzan) begin publication?",
+    "questionUrdu": "اردو رسالہ 'مخزن' کا اجرا کس سال ہوا؟",
+    "options": [
+      "1900",
+      "1901",
+      "1902",
+      "1903"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 1901 ہے۔ برٹش لائبریری اور اقبال سائبر لائبریری دونوں کے ریکارڈ کے مطابق مخزن کا آغاز لاہور سے 1901 میں ہوا۔ اس لیے درست جواب 1901 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Makhzan archive catalogue",
+      "referenceUrl": "https://searcharchives.bl.uk/catalog/036-002896705",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q093"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://searcharchives.bl.uk/catalog/036-002896705",
+        "label": "Makhzan archive catalogue",
+        "publisher": "British Library",
+        "authorityId": "british-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Library catalogue states that the Urdu periodical Makhzan began publication in Lahore in April 1901."
+      },
+      {
+        "url": "https://iqbalcyberlibrary.net/en/Makhzan-Apr-1901.html",
+        "label": "Makhzan, April 1901",
+        "publisher": "Iqbal Cyber Library, Iqbal Academy Pakistan",
+        "authorityId": "iqbal-cyber-library",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Iqbal Cyber Library independently catalogues the inaugural April 1901 issue of Makhzan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Both catalogues support 1901; option B is correct."
+  },
+  {
+    "id": "ADV2E102-U0042-Q093-SIM",
+    "pairId": "ADV2E102-U0042-Q093",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "In which month of 1901 did the first issue of the Urdu periodical Makhzan appear?",
+    "questionUrdu": "اردو رسالہ مخزن کا پہلا شمارہ 1901 کے کس مہینے میں شائع ہوا؟",
+    "options": [
+      "January",
+      "April",
+      "July",
+      "October"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "مخزن کے ابتدائی شمارے کا کتابیاتی ریکارڈ April 1901 درج کرتا ہے۔ اس لیے درست مہینہ April ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Makhzan archive catalogue",
+      "referenceUrl": "https://searcharchives.bl.uk/catalog/036-002896705",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q093",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://searcharchives.bl.uk/catalog/036-002896705",
+        "label": "Makhzan archive catalogue",
+        "publisher": "British Library",
+        "authorityId": "british-library",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Library supports that the inaugural issue of Makhzan appeared in April 1901."
+      },
+      {
+        "url": "https://iqbalcyberlibrary.net/en/Makhzan-Apr-1901.html",
+        "label": "Makhzan, April 1901",
+        "publisher": "Iqbal Cyber Library, Iqbal Academy Pakistan",
+        "authorityId": "iqbal-cyber-library",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Iqbal Cyber Library, Iqbal Academy Pakistan supports that the inaugural issue of Makhzan appeared in April 1901."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q095-SRC",
+    "pairId": "ADV2E102-U0042-Q095",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which listed English word is conventionally used for the vessel built by Noah?",
+    "questionUrdu": "نوحؑ کی بنائی ہوئی سواری کے لیے انگریزی میں روایتی طور پر کون سا لفظ استعمال ہوتا ہے؟",
+    "options": [
+      "Juz",
+      "Asm",
+      "Ark",
+      "Scroll"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Ark ہے۔ قرآن 11:37 میں عربی لفظ الفُلک کشتی یا جہاز کے معنی دیتا ہے۔ انگریزی روایت میں نوحؑ کی اسی سواری کو Ark کہا جاتا ہے، نہ کہ کوئی ذاتی نام۔",
+    "source": {
+      "type": "book",
+      "label": "Quran 11:37 word-by-word",
+      "referenceUrl": "https://corpus.quran.com/wordbyword.jsp?chapter=11&verse=37",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q095"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://corpus.quran.com/wordbyword.jsp?chapter=11&verse=37",
+        "label": "Quran 11:37 word-by-word",
+        "publisher": "Quranic Arabic Corpus, University of Leeds",
+        "authorityId": "quranic-arabic-corpus",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The corpus renders al-fulk in the command to Noah as the ship and identifies the passage as Noah's Ark."
+      },
+      {
+        "url": "https://www.clearquran.com/downloads/quran-arabic-english-clearquran.pdf",
+        "label": "The Clear Quran",
+        "publisher": "ClearQuran",
+        "authorityId": "clear-quran",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The translation of Quran 11:37 uses the English expression 'build the Ark.'"
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source incorrectly treated 'Ark' as a proper personal name. The repaired stem asks for the conventional English term; option C is correct."
+  },
+  {
+    "id": "ADV2E102-U0042-Q095-SIM",
+    "pairId": "ADV2E102-U0042-Q095",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "In Quran 11:37, what does the Arabic word 'al-fulk' refer to in the command given to Noah?",
+    "questionUrdu": "قرآن 11:37 میں نوحؑ کو دیے گئے حکم میں عربی لفظ 'الفُلک' کس چیز کے لیے آیا ہے؟",
+    "options": [
+      "A ship or vessel",
+      "A mountain",
+      "A written scroll",
+      "A fortified city"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "الفُلک کا لغوی اور سیاقی مفہوم کشتی یا جہاز ہے۔ آیت میں نوحؑ کو اسی سواری کی تعمیر کا حکم دیا گیا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Quran 11:37 word-by-word",
+      "referenceUrl": "https://corpus.quran.com/wordbyword.jsp?chapter=11&verse=37",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q095",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://corpus.quran.com/wordbyword.jsp?chapter=11&verse=37",
+        "label": "Quran 11:37 word-by-word",
+        "publisher": "Quranic Arabic Corpus, University of Leeds",
+        "authorityId": "quranic-arabic-corpus",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Quranic Arabic Corpus, University of Leeds supports that al-fulk in Quran 11:37 refers to the ship or vessel Noah was commanded to build."
+      },
+      {
+        "url": "https://www.clearquran.com/downloads/quran-arabic-english-clearquran.pdf",
+        "label": "The Clear Quran",
+        "publisher": "ClearQuran",
+        "authorityId": "clear-quran",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ClearQuran supports that al-fulk in Quran 11:37 refers to the ship or vessel Noah was commanded to build."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q096-SRC",
+    "pairId": "ADV2E102-U0042-Q096",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "What was the name of Caliph Uthman ibn Affan's mother?",
+    "questionUrdu": "خلیفہ عثمان بن عفانؓ کی والدہ کا نام کیا تھا؟",
+    "options": [
+      "Arwa bint Kurayz",
+      "Fatima bint Asad",
+      "Salma bint Sakhar",
+      "Hantamah bint Hisham"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Arwa bint Kurayz ہے۔ قدیم سوانحی روایت میں ان کی والدہ کا نام اَرویٰ بنت کُریز درج ہے۔ مکمل نام دینے سے دوسری خواتین کے مشترک ناموں کا ابہام ختم ہو جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Arwa bint Kurayz",
+      "referenceUrl": "https://sunnah.com/narrator/50208",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q096"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://sunnah.com/narrator/50208",
+        "label": "Arwa bint Kurayz",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The biographical narrator record identifies Arwa bint Kurayz as the mother of Uthman ibn Affan."
+      },
+      {
+        "url": "https://gupea.ub.gu.se/server/api/core/bitstreams/7411e9fd-2dd2-444f-b78b-3ec6aa9e69a0/content",
+        "label": "Early Islamic kinship study",
+        "publisher": "University of Gothenburg",
+        "authorityId": "university-of-gothenburg",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The academic study independently identifies Arwa bint Kurayz as Uthman's mother."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Full names replace ambiguous single given names; Arwa bint Kurayz is uniquely option A."
+  },
+  {
+    "id": "ADV2E102-U0042-Q096-SIM",
+    "pairId": "ADV2E102-U0042-Q096",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Who was Caliph Uthman ibn Affan's maternal grandmother?",
+    "questionUrdu": "خلیفہ عثمان بن عفانؓ کی نانی کون تھیں؟",
+    "options": [
+      "Umm Hakim al-Bayda bint Abd al-Muttalib",
+      "Fatima bint Asad",
+      "Salma bint Sakhar",
+      "Hantamah bint Hisham"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "اَرویٰ بنت کُریز کی والدہ اُمِّ حکیم البیضاء بنت عبدالمطلب تھیں۔ اسی نسبت سے وہ خلیفہ عثمانؓ کی نانی بنتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Narrative, Gender and Authority",
+      "referenceUrl": "https://gupea.ub.gu.se/server/api/core/bitstreams/7411e9fd-2dd2-444f-b78b-3ec6aa9e69a0/content",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q096",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://gupea.ub.gu.se/server/api/core/bitstreams/7411e9fd-2dd2-444f-b78b-3ec6aa9e69a0/content",
+        "label": "Narrative, Gender and Authority",
+        "publisher": "University of Gothenburg",
+        "authorityId": "university-of-gothenburg",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "University of Gothenburg supports that Umm Hakim al-Bayda bint Abd al-Muttalib was Uthman ibn Affan's maternal grandmother."
+      },
+      {
+        "url": "https://mahajjah.com/chapter-one-ties-of-kinship-and-marriage/",
+        "label": "Ties of Kinship and Marriage",
+        "publisher": "Mahajjah Institute",
+        "authorityId": "mahajjah-institute",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mahajjah Institute supports that Umm Hakim al-Bayda bint Abd al-Muttalib was Uthman ibn Affan's maternal grandmother."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q097-SRC",
+    "pairId": "ADV2E102-U0042-Q097",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "According to the traditional epithet, which prophet is called Khatib al-Anbiya (the orator of the prophets)?",
+    "questionUrdu": "روایتی لقب 'خطیب الانبیاء' کس نبی کے لیے استعمال ہوتا ہے؟",
+    "options": [
+      "Prophet Ibrahim",
+      "Prophet Yaqub",
+      "Prophet Shuayb",
+      "Prophet Idris"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Prophet Shuayb ہے۔ کلاسیکی روایات میں یہ لقب حضرت شعیبؑ سے منسوب کیا جاتا ہے۔ سوال میں اسے روایتی لقب کہا گیا ہے کیونکہ یہ قرآنی لقب کے طور پر مذکور نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Classical account of Prophet Shuayb",
+      "referenceUrl": "https://www.islamweb.net/ar/library/index.php?ID=885&bk_no=203&idfrom=878&idto=878&page=bookcontents_ver3",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q097"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.islamweb.net/ar/library/index.php?ID=885&bk_no=203&idfrom=878&idto=878&page=bookcontents_ver3",
+        "label": "Classical account of Prophet Shuayb",
+        "publisher": "Islamweb Library",
+        "authorityId": "islamweb-library",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The classical-source compilation records the traditional description of Shuayb as Khatib al-Anbiya."
+      },
+      {
+        "url": "https://norr.numl.edu.pk/attachments/5_1543906239_54ac2e94a6.pdf",
+        "label": "Study of Prophet Shuayb",
+        "publisher": "National University of Modern Languages",
+        "authorityId": "numl",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The academic study independently states that Shuayb is known by the title Khatib al-Anbiya."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem explicitly labels this as a traditional epithet rather than a Quranic title; Prophet Shuayb is option C."
+  },
+  {
+    "id": "ADV2E102-U0042-Q097-SIM",
+    "pairId": "ADV2E102-U0042-Q097",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "What does the Arabic word 'khatib' most nearly mean in the epithet Khatib al-Anbiya?",
+    "questionUrdu": "لقب 'خطیب الانبیاء' میں عربی لفظ 'خطیب' کا قریب ترین مطلب کیا ہے؟",
+    "options": [
+      "Orator or preacher",
+      "Scribe",
+      "Traveller",
+      "Judge"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "عربی میں خطیب عوام کے سامنے خطاب یا وعظ کرنے والے کو کہتے ہیں۔ اسی لیے اس کا قریب ترین انگریزی مفہوم orator یا preacher ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Khatib in Lane's Lexicon",
+      "referenceUrl": "https://www.laneslexicon.com/word/%D8%AE%D8%B7%D9%8A%D8%A8/n10983",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q097",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.laneslexicon.com/word/%D8%AE%D8%B7%D9%8A%D8%A8/n10983",
+        "label": "Khatib in Lane's Lexicon",
+        "publisher": "Lane's Arabic-English Lexicon",
+        "authorityId": "lanes-lexicon",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Lane's Arabic-English Lexicon supports that the Arabic word khatib means a public speaker, orator, or preacher."
+      },
+      {
+        "url": "https://nou.edu.ng/coursewarecontent/ARA%20228%20PDF.pdf",
+        "label": "Arabic Literature: Khitaba and the Khatib",
+        "publisher": "National Open University of Nigeria",
+        "authorityId": "national-open-university-nigeria",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Open University of Nigeria supports that the Arabic word khatib means a public speaker, orator, or preacher."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q098-SRC",
+    "pairId": "ADV2E102-U0042-Q098",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which ruler tore up Prophet Muhammad's letter inviting him to Islam?",
+    "questionUrdu": "نبی محمد ﷺ کا اسلام کی دعوت والا خط کس حکمران نے پھاڑا تھا؟",
+    "options": [
+      "Khosrow II of Persia",
+      "Al-Muqawqis of Egypt",
+      "The Negus of Aksum",
+      "Heraclius of Byzantium"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Khosrow II of Persia ہے۔ صحیح بخاری کی روایت میں فارس کے کسریٰ کے خط پھاڑنے کا ذکر ہے۔ تاریخی شناخت کے لحاظ سے یہ حکمران Khosrow II تھا، اس لیے پہلا جواب درست ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Sahih al-Bukhari 4424",
+      "referenceUrl": "https://sunnah.com/bukhari/64/446",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q098"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://sunnah.com/bukhari/64/446",
+        "label": "Sahih al-Bukhari 4424",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The hadith states that Khosrow tore the Prophet's letter to pieces."
+      },
+      {
+        "url": "https://open.bu.edu/server/api/core/bitstreams/f0ee25ab-b396-445e-808d-7f413d8539a3/content",
+        "label": "Study of the Prophet's letters to rulers",
+        "publisher": "Boston University",
+        "authorityId": "boston-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The academic work independently discusses the letter sent to Khosrow II and the report that he tore it up."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The ruler is identified precisely as Khosrow II rather than the generic Persian title Khusro Parvez; option A is correct."
+  },
+  {
+    "id": "ADV2E102-U0042-Q098-SIM",
+    "pairId": "ADV2E102-U0042-Q098",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Khosrow II, who received the Prophet's letter, ruled which empire?",
+    "questionUrdu": "نبی ﷺ کا خط وصول کرنے والا Khosrow II کس سلطنت کا حکمران تھا؟",
+    "options": [
+      "Sasanian Persian Empire",
+      "Byzantine Empire",
+      "Aksumite Empire",
+      "Umayyad Empire"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "Khosrow II ساسانی فارس کا شہنشاہ تھا۔ اسے بازنطینی، حبشی یا اموی حکمران سمجھنا تاریخی طور پر درست نہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Sahih al-Bukhari 4424",
+      "referenceUrl": "https://sunnah.com/bukhari/64/446",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q098",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://sunnah.com/bukhari/64/446",
+        "label": "Sahih al-Bukhari 4424",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Sunnah.com supports that Khosrow II ruled the Sasanian Persian Empire."
+      },
+      {
+        "url": "https://open.bu.edu/server/api/core/bitstreams/f0ee25ab-b396-445e-808d-7f413d8539a3/content",
+        "label": "Study of the Prophet's letters to rulers",
+        "publisher": "Boston University",
+        "authorityId": "boston-university",
+        "sourceClass": "authoritative-secondary",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Boston University supports that Khosrow II ruled the Sasanian Persian Empire."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  },
+  {
+    "id": "ADV2E102-U0042-Q099-SRC",
+    "pairId": "ADV2E102-U0042-Q099",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "The 630 CE expedition to Tabuk was directed toward the frontier of which empire, although no pitched battle occurred?",
+    "questionUrdu": "630 عیسوی کی مہمِ تبوک کس سلطنت کی سرحد کی طرف تھی، اگرچہ وہاں باقاعدہ جنگ نہیں ہوئی؟",
+    "options": [
+      "Sasanian Empire",
+      "Byzantine (Roman) Empire",
+      "Aksumite Empire",
+      "Tang Empire"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Byzantine (Roman) Empire ہے۔ تبوک کا رخ بازنطینی یا رومی سرحد کی جانب تھا۔ معتبر تاریخی تحقیق یہ بھی واضح کرتی ہے کہ وہاں دونوں افواج کے درمیان باقاعدہ میدانِ جنگ قائم نہیں ہوا۔",
+    "source": {
+      "type": "book",
+      "label": "The Tabuk Expedition in its Byzantine context",
+      "referenceUrl": "https://www.mdpi.com/2077-1444/15/5/545",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q099"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.mdpi.com/2077-1444/15/5/545",
+        "label": "The Tabuk Expedition in its Byzantine context",
+        "publisher": "Religions, MDPI",
+        "authorityId": "mdpi-religions",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly article situates Tabuk against the Byzantine frontier and notes that it did not result in direct confrontation."
+      },
+      {
+        "url": "https://academic.oup.com/book/57350/chapter-abstract/464649519",
+        "label": "Expeditions to the Byzantine Frontiers",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-university-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford independently places the Tabuk expedition among campaigns toward the Byzantine frontiers."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The book incorrectly calls Tabuk a pitched battle between Muslims and Romans. The repaired historically precise question identifies the Byzantine frontier while stating that no pitched battle occurred; option B is correct."
+  },
+  {
+    "id": "ADV2E102-U0042-Q099-SIM",
+    "pairId": "ADV2E102-U0042-Q099",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Tabuk is located in which modern country?",
+    "questionUrdu": "تبوک آج کے کس ملک میں واقع ہے؟",
+    "options": [
+      "Saudi Arabia",
+      "Jordan",
+      "Syria",
+      "Iraq"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "تبوک سعودی عرب کے شمال مغربی حصے میں واقع شہر اور علاقہ ہے۔ اسے اردن یا شام کا حصہ سمجھنا درست نہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "University of Tabuk",
+      "referenceUrl": "https://www.ut.edu.sa/en",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0042-q099",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ut.edu.sa/en",
+        "label": "University of Tabuk",
+        "publisher": "University of Tabuk",
+        "authorityId": "university-of-tabuk",
+        "sourceClass": "official",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "University of Tabuk supports that Tabuk is located in northwestern Saudi Arabia."
+      },
+      {
+        "url": "https://sites.moe.gov.sa/Tabuk/about/",
+        "label": "About Tabuk",
+        "publisher": "Saudi Ministry of Education",
+        "authorityId": "saudi-ministry-of-education",
+        "sourceClass": "official",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Saudi Ministry of Education supports that Tabuk is located in northwestern Saudi Arabia."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+  }
+]

@@ -179,9 +179,10 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
-        "P239-Q010-SIM"
+        "P239-Q010-SIM",
+        "ADV2E102-U0012-Q034-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -253,7 +254,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or semantic repeat in the pinned bank or earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "reason": "Manual proposition review found the surfaced candidates test a different date, office, document feature, measurement, location, language rule, or otherwise materially distinct fact; this independently verified proposition is retained.",
     "testedProposition": "In which year was the Indian National Congress session held on the bank of the Ravi at Lahore? Correct answer: 1929.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -264,7 +265,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q028-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -285,6 +288,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0023-Q044-SRC",
         "ADV2E102-U0021-Q029-SRC",
         "ADV2E102-U0021-Q029"
       ],
@@ -313,10 +317,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0151-Q016",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or semantic repeat in the pinned bank or earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0022-Q028",
+    "reason": "The earlier source-order U0022 canonical asks the identical 1924 Indus Valley Civilization discovery-announcement proposition and answers John Marshall.",
     "testedProposition": "Who announced the discovery of the Indus Valley Civilization to the world in 1924? Correct answer: John Marshall.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -326,8 +330,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q028-SRC",
+        "ADV2E102-U0022-Q028"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -349,6 +356,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0081-Q019-SRC",
+        "ADV2E102-U0002-Q012-SRC",
         "ADV2E102-U0081-Q019"
       ],
       "answerConflictReviewed": true
@@ -843,10 +851,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0151-Q041",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or semantic repeat in the pinned bank or earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0008-Q044",
+    "reason": "The earlier U0008 source asks the identical four-seat Senate allocation for the Federal Capital.",
     "testedProposition": "Under the current constitutional allocation, how many senators represent the Federal Capital of Islamabad? Correct answer: 4.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -857,7 +865,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q044"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1055,10 +1065,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0151-Q051",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or semantic repeat in the pinned bank or earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0022-Q029",
+    "reason": "The earlier source-order U0022 canonical asks the identical two Muslim members of the Nehru Report committee proposition and answers Shoaib Qureshi and Sir Ali Imam.",
     "testedProposition": "Which two listed Muslim members served on the committee that produced the 1928 Nehru Report? Correct answer: Shoaib Qureshi and Sir Ali Imam.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1068,8 +1078,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q029-SRC",
+        "ADV2E102-U0022-Q029"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1090,6 +1103,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0009-Q026-SRC",
         "ADV2E102-U0151-Q031"
       ],
       "answerConflictReviewed": true
@@ -1137,10 +1151,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0151-Q055",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or semantic repeat in the pinned bank or earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0008-Q043",
+    "reason": "The earlier U0008 similar-practice item asks the identical Vande Mataram-in-Anandamath proposition.",
     "testedProposition": "India's national song 'Vande Mataram' appears in which novel by Bankim Chandra Chattopadhyay? Correct answer: Anandamath.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1151,7 +1165,11 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q043-SRC",
+        "ADV2E102-U0008-Q043-SIM",
+        "ADV2E102-U0008-Q043"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1159,8 +1177,8 @@
     "sourceRecordId": "ADV2E102-U0151-Q056",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0031-Q028",
-    "reason": "The earlier retained ADV source has identical wording and answer for the chairman of the Punjab and Bengal Boundary Commissions.",
+    "duplicateOf": "ADV2E102-U0003-Q015",
+    "reason": "The earlier source-order U0003 canonical already tests that Sir Cyril Radcliffe chaired both the Punjab and Bengal Boundary Commissions; the source option set expresses that answer as None of these.",
     "testedProposition": "Who chaired the Punjab and Bengal Boundary Commissions that demarcated the 1947 India-Pakistan borders? Correct answer: Sir Cyril Radcliffe.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1173,7 +1191,8 @@
       "exactFingerprintMatch": true,
       "semanticCandidateIds": [
         "ADV2E102-U0031-Q028-SRC",
-        "ADV2E102-U0031-Q028"
+        "ADV2E102-U0003-Q015-SRC",
+        "ADV2E102-U0003-Q015"
       ],
       "answerConflictReviewed": true
     }
@@ -1260,7 +1279,9 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0091-Q028-SRC",
-        "ADV2E102-U0091-Q028-SIM"
+        "ADV2E102-U0091-Q028-SIM",
+        "ADV2E102-U0005-Q019-SIM",
+        "ADV2E102-U0002-Q027-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1453,7 +1474,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or semantic repeat in the pinned bank or earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "reason": "Manual proposition review found the surfaced candidates test a different date, office, document feature, measurement, location, language rule, or otherwise materially distinct fact; this independently verified proposition is retained.",
     "testedProposition": "Panipat is located in which Indian state? Correct answer: Haryana.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1464,7 +1485,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q017-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1486,6 +1509,7 @@
       "exactFingerprintMatch": true,
       "semanticCandidateIds": [
         "ADV2E102-U0081-Q009-SRC",
+        "ADV2E102-U0002-Q054-SRC",
         "ADV2E102-U0081-Q009"
       ],
       "answerConflictReviewed": true
@@ -1615,10 +1639,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0151-Q078",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or semantic repeat in the pinned bank or earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0022-Q055",
+    "reason": "The earlier source-order U0022 canonical asks the identical Chinese autonomous region bordering Pakistan proposition and answers Xinjiang.",
     "testedProposition": "Which Chinese autonomous region shares a border with Pakistan? Correct answer: Xinjiang.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1628,8 +1652,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q055-SRC",
+        "ADV2E102-U0022-Q055"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1670,6 +1697,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0022-Q054-SRC",
         "ADV2E102-U0091-Q042-SRC"
       ],
       "answerConflictReviewed": true
@@ -1740,10 +1768,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0151-Q084",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or semantic repeat in the pinned bank or earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0002-Q067",
+    "reason": "The earlier source-order U0002 canonical asks the identical approximate average-adult blood-volume proposition and answers about 5 litres.",
     "testedProposition": "About how much blood does an average adult have? Correct answer: 5 litres.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1753,8 +1781,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0002-Q067-SRC",
+        "ADV2E102-U0002-Q067"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1775,7 +1806,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": true,
       "semanticCandidateIds": [
-        "IBES-Q0034-SRC"
+        "IBES-Q0034-SRC",
+        "ADV2E102-U0013-Q061-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1889,7 +1921,7 @@
         "ADV2E102-U0034-Q076-SRC",
         "ADV2E102-U0121-Q077-SIM",
         "ADV2E102-U0081-Q076-SIM",
-        "ADV2E102-U0034-Q073-SIM",
+        "ADV2E102-U0005-Q093-SRC",
         "ADV2E102-U0051-Q080"
       ],
       "answerConflictReviewed": true
@@ -1932,6 +1964,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0141-Q058-SIM",
         "ADV2E102-U0041-Q092-SIM"
       ],
       "answerConflictReviewed": true

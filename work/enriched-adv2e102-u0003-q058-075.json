@@ -1,0 +1,2324 @@
+[
+  {
+    "id": "ADV2E102-U0003-Q058-SRC",
+    "pairId": "ADV2E102-U0003-Q058",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A hockey team won 6 games and lost 8. What is the ratio of wins to number of games?",
+    "questionUrdu": "ایک hockey team نے 6 games جیتے اور 8 ہارے۔ جیتے ہوئے games اور کل games کا ratio کیا ہے؟",
+    "options": [
+      "6:8",
+      "8:6",
+      "3:7",
+      "8:14"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”3:7“ ہے۔ کل games 6 + 8 = 14 ہیں؛ wins:total = 6:14، جو 3:7 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and Rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-26"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q058"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and Rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines a ratio and instructs simplifying its fraction form; wins to games is 6:(6+8) = 6:14 = 3:7."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Applied_Mathematics/Developmental_Math_%28NROC%29/04%3A_Ratios_Rates_and_Proportions/4.01%3A_Ratio_and_Rates/4.1.01%3A_Simplifying_Ratios_and_Rates",
+        "label": "Simplifying Ratios and Rates",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "math-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-26",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts independently explains comparing quantities with ratios and reducing them to simplest form."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Six wins out of fourteen total games gives 6:14, which simplifies to 3:7; the printed mark beside 6:8 was corrected."
+  },
+  {
+    "id": "ADV2E102-U0003-Q058-SIM",
+    "pairId": "ADV2E102-U0003-Q058",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A team wins 9 matches and loses 6, with no draws. What is the simplified ratio of wins to total matches?",
+    "questionUrdu": "ایک team 9 matches جیتتی اور 6 ہارتی ہے، کوئی draw نہیں۔ Wins اور total matches کا simplified ratio کیا ہے؟",
+    "options": [
+      "3:5",
+      "2:3",
+      "3:2",
+      "5:3"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”3:5“ ہے۔ کل matches 15 ہیں؛ 9:15 کو 3 سے تقسیم کرنے پر 3:5 آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q058",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 9 wins out of 15 total matches simplify to the ratio 3:5."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that 9 wins out of 15 total matches simplify to the ratio 3:5."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q059-SRC",
+    "pairId": "ADV2E102-U0003-Q059",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Evaluate (25 × 10) ÷ [5 × (6 − 4) × 2].",
+    "questionUrdu": "(25 × 10) ÷ [5 × (6 − 4) × 2] کی قیمت معلوم کریں۔",
+    "options": [
+      "200",
+      "50",
+      "25/2",
+      "25"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”25/2“ ہے۔ Bracket کے بعد denominator 5 × 2 × 2 = 20 اور numerator 250 ہے؛ 250 ÷ 20 = 25/2۔",
+    "source": {
+      "type": "book",
+      "label": "The order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q059"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+        "label": "The order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The bracket is 2, so the denominator is 5 × 2 × 2 = 20 and 250 ÷ 20 = 12.5 = 25/2."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-order-of-operations/a/order-of-operations-review",
+        "label": "Order of operations review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "An independent application of the standard order-of-operations rules confirms: The bracket is 2, so the denominator is 5 × 2 × 2 = 20 and 250 ÷ 20 = 12.5 = 25/2."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Multiplication signs and brackets were added to make the scan's implicit multiplication unambiguous; its worked solution uses the same calculation."
+  },
+  {
+    "id": "ADV2E102-U0003-Q059-SIM",
+    "pairId": "ADV2E102-U0003-Q059",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Evaluate (18 × 6) ÷ [3 × (5 − 2)].",
+    "questionUrdu": "(18 × 6) ÷ [3 × (5 − 2)] کی قیمت معلوم کریں۔",
+    "options": [
+      "12",
+      "9",
+      "18",
+      "36"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”12“ ہے۔ Bracket 3 ہے؛ denominator 3 × 3 = 9 اور numerator 108 ہے، لہٰذا جواب 12 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "The order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q059",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+        "label": "The order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that (18 × 6) divided by [3 × (5 − 2)] equals 12."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-order-of-operations/a/order-of-operations-review",
+        "label": "Order of operations review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that (18 × 6) divided by [3 × (5 − 2)] equals 12."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q060-SRC",
+    "pairId": "ADV2E102-U0003-Q060",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The terms alternate n³ and n² for n = 1, 2, 3, ...: 1, 1, 8, 4, 27, 9, ____. What is next?",
+    "questionUrdu": "Terms، n = 1, 2, 3, ... کے لیے باری باری n³ اور n² ہیں: 1, 1, 8, 4, 27, 9, ____۔ اگلا term کیا ہے؟",
+    "options": [
+      "64",
+      "20",
+      "60",
+      "16"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”64“ ہے۔ Pattern 1³, 1², 2³, 2², 3³, 3² ہے؛ اگلا term 4³ = 64 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "The order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q060"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+        "label": "The order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "After 3², the next term is 4³ = 64."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-order-of-operations/a/order-of-operations-review",
+        "label": "Order of operations review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "An independent application of the standard order-of-operations rules confirms: After 3², the next term is 4³ = 64."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A finite sequence can fit many rules, so the alternating cube/square rule shown in the source solution was stated explicitly."
+  },
+  {
+    "id": "ADV2E102-U0003-Q060-SIM",
+    "pairId": "ADV2E102-U0003-Q060",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the value of 5³?",
+    "questionUrdu": "5³ کی قیمت کیا ہے؟",
+    "options": [
+      "125",
+      "25",
+      "15",
+      "625"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”125“ ہے۔ 5³ کا مطلب 5 × 5 × 5 ہے، جو 125 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "The order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q060",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+        "label": "The order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 5 cubed equals 125."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-order-of-operations/a/order-of-operations-review",
+        "label": "Order of operations review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that 5 cubed equals 125."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q061-SRC",
+    "pairId": "ADV2E102-U0003-Q061",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If Jack needs 2.5 pints of cream to make a dessert. How many pints will he need to make 3 desserts?",
+    "questionUrdu": "اگر Jack ایک dessert کے لیے 2.5 pints cream استعمال کرتا ہے تو 3 desserts کے لیے کتنی cream چاہیے؟",
+    "options": [
+      "7.5",
+      "3",
+      "4",
+      "5.5"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”7.5“ ہے۔ 2.5 کو 3 سے ضرب دینے پر 7.5 pints حاصل ہوتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "The order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q061"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+        "label": "The order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "At 2.5 pints per dessert, three desserts require 2.5 × 3 = 7.5 pints."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-order-of-operations/a/order-of-operations-review",
+        "label": "Order of operations review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "An independent application of the standard order-of-operations rules confirms: At 2.5 pints per dessert, three desserts require 2.5 × 3 = 7.5 pints."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed mark beside option B was corrected; the source's own worked solution gives 7.5."
+  },
+  {
+    "id": "ADV2E102-U0003-Q061-SIM",
+    "pairId": "ADV2E102-U0003-Q061",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A recipe uses 1.75 litres of milk per batch. How much milk is needed for 4 batches?",
+    "questionUrdu": "ایک recipe کے ہر batch میں 1.75 litres دودھ لگتا ہے۔ 4 batches کے لیے کتنا دودھ چاہیے؟",
+    "options": [
+      "7 litres",
+      "5.25 litres",
+      "6 litres",
+      "7.75 litres"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”7 litres“ ہے۔ 1.75 × 4 = 7، اس لیے 7 litres دودھ درکار ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q061",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 1.75 litres per batch for 4 batches requires 7 litres."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that 1.75 litres per batch for 4 batches requires 7 litres."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q062-SRC",
+    "pairId": "ADV2E102-U0003-Q062",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Ali can type at a speed of 25 words per minute. How many words he can type in one hour?",
+    "questionUrdu": "Ali کی typing speed 25 words per minute ہے۔ وہ ایک گھنٹے میں کتنے words type کرے گا؟",
+    "options": [
+      "1300",
+      "1200",
+      "1500",
+      "1475"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”1500“ ہے۔ ایک گھنٹے میں 60 minutes ہوتے ہیں؛ 25 × 60 = 1500 words۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q062"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "At 25 words per minute for 60 minutes, the total is 25 × 60 = 1,500 words."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Independent ratio rules support the calculation: At 25 words per minute for 60 minutes, the total is 25 × 60 = 1,500 words."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed mark beside 1,475 was corrected; the source's worked solution gives 1,500."
+  },
+  {
+    "id": "ADV2E102-U0003-Q062-SIM",
+    "pairId": "ADV2E102-U0003-Q062",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "At 32 words per minute, how many words can be typed in 15 minutes?",
+    "questionUrdu": "32 words per minute کی رفتار سے 15 minutes میں کتنے words type ہوں گے؟",
+    "options": [
+      "480",
+      "320",
+      "470",
+      "512"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”480“ ہے۔ 32 × 15 = 480 words۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q062",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 32 words per minute for 15 minutes gives 480 words."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that 32 words per minute for 15 minutes gives 480 words."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q063-SRC",
+    "pairId": "ADV2E102-U0003-Q063",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If the average arithmetic means of 8, 12, 15, 21, x and 11 is 17 then what is x?",
+    "questionUrdu": "اگر 8, 12, 15, 21, x اور 11 کا arithmetic mean 17 ہے تو x کیا ہوگا؟",
+    "options": [
+      "3",
+      "15",
+      "17",
+      "35"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”35“ ہے۔ 6 values کا مطلوبہ total 17 × 6 = 102 ہے؛ معلوم values کا total 67، اس لیے x = 35۔",
+    "source": {
+      "type": "book",
+      "label": "Measures of location: mean",
+      "referenceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q063"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "label": "Measures of location: mean",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "A mean of 17 across six values requires total 102; the five known values total 67, so x = 35."
+      },
+      {
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/2-5-measures-of-the-center-of-the-data",
+        "label": "Measures of the center of data",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax independently defines the arithmetic mean; applying it gives: A mean of 17 across six values requires total 102; the five known values total 67, so x = 35."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed mark beside 3 was corrected; the source's worked solution gives 35."
+  },
+  {
+    "id": "ADV2E102-U0003-Q063-SIM",
+    "pairId": "ADV2E102-U0003-Q063",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "The mean of 10, 12, x, and 16 is 14. What is x?",
+    "questionUrdu": "10, 12, x اور 16 کا mean 14 ہے۔ x کیا ہے؟",
+    "options": [
+      "18",
+      "14",
+      "20",
+      "16"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”18“ ہے۔ 4 values کا total 14 × 4 = 56؛ معلوم total 38 ہے، اس لیے x = 18۔",
+    "source": {
+      "type": "practice",
+      "label": "Measures of location: mean",
+      "referenceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q063",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "label": "Measures of location: mean",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Institute of Standards and Technology supports that if the mean of 10, 12, x and 16 is 14, x equals 18."
+      },
+      {
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/2-5-measures-of-the-center-of-the-data",
+        "label": "Measures of the center of data",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that if the mean of 10, 12, x and 16 is 14, x equals 18."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q064-SRC",
+    "pairId": "ADV2E102-U0003-Q064",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Starting at 8, apply +5 and −3 alternately: 8, 13, 10, 15, 12, 17, 14, ____. What is next?",
+    "questionUrdu": "8 سے شروع کر کے باری باری +5 اور −3 لگائیں: 8, 13, 10, 15, 12, 17, 14, ____۔ اگلا number کیا ہے؟",
+    "options": [
+      "19",
+      "22",
+      "16",
+      "20"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”19“ ہے۔ 14 کے بعد rule کے مطابق +5 آتا ہے، اس لیے جواب 19 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "The order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q064"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+        "label": "The order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The next operation after 17 − 3 = 14 is +5, giving 19."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-order-of-operations/a/order-of-operations-review",
+        "label": "Order of operations review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "An independent application of the standard order-of-operations rules confirms: The next operation after 17 − 3 = 14 is +5, giving 19."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The alternating +5/−3 rule from the source solution was made explicit because a finite sequence alone is underdetermined; the printed mark beside 22 was corrected to 19."
+  },
+  {
+    "id": "ADV2E102-U0003-Q064-SIM",
+    "pairId": "ADV2E102-U0003-Q064",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Starting at 4, add 6 and subtract 2 alternately: 4, 10, 8, 14, 12, ____. What is next?",
+    "questionUrdu": "4 سے شروع کر کے باری باری 6 جمع اور 2 منفی کریں: 4, 10, 8, 14, 12, ____۔ اگلا number کیا ہے؟",
+    "options": [
+      "18",
+      "16",
+      "14",
+      "20"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”18“ ہے۔ 12 کے بعد +6 کا مرحلہ ہے، لہٰذا اگلا number 18 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "The order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q064",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+        "label": "The order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that alternating +6 and −2 after 12 gives 18."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-order-of-operations/a/order-of-operations-review",
+        "label": "Order of operations review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that alternating +6 and −2 after 12 gives 18."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q065-SRC",
+    "pairId": "ADV2E102-U0003-Q065",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If Mary traveled 116 miles on day 1, 130 miles on day 2, 114 miles on day 3. How many miles per day did she average?",
+    "questionUrdu": "Mary نے day 1 پر 116 miles، day 2 پر 130 miles اور day 3 پر 114 miles سفر کیا۔ روزانہ average کتنی miles ہے؟",
+    "options": [
+      "120",
+      "115",
+      "116",
+      "114"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”120“ ہے۔ Total 360 miles ہے؛ 360 ÷ 3 = 120 miles per day۔",
+    "source": {
+      "type": "book",
+      "label": "Measures of location: mean",
+      "referenceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q065"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "label": "Measures of location: mean",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The total distance is 116 + 130 + 114 = 360 miles; dividing by three days gives 120 miles per day."
+      },
+      {
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/2-5-measures-of-the-center-of-the-data",
+        "label": "Measures of the center of data",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax independently defines the arithmetic mean; applying it gives: The total distance is 116 + 130 + 114 = 360 miles; dividing by three days gives 120 miles per day."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed mark beside 114 was corrected; the source's figures give an average of 120."
+  },
+  {
+    "id": "ADV2E102-U0003-Q065-SIM",
+    "pairId": "ADV2E102-U0003-Q065",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A driver covers 90 km, 120 km, and 150 km on three days. What is the mean distance per day?",
+    "questionUrdu": "ایک driver تین دن میں 90 km، 120 km اور 150 km طے کرتا ہے۔ روزانہ mean distance کیا ہے؟",
+    "options": [
+      "120 km",
+      "110 km",
+      "130 km",
+      "360 km"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”120 km“ ہے۔ Total 360 km کو 3 سے تقسیم کرنے پر 120 km per day آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Measures of location: mean",
+      "referenceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q065",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "label": "Measures of location: mean",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Institute of Standards and Technology supports that the mean of 90 km, 120 km and 150 km is 120 km."
+      },
+      {
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/2-5-measures-of-the-center-of-the-data",
+        "label": "Measures of the center of data",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the mean of 90 km, 120 km and 150 km is 120 km."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q066-SRC",
+    "pairId": "ADV2E102-U0003-Q066",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Find the average of 8, 13, 25, 43 and 11.",
+    "questionUrdu": "8, 13, 25, 43 اور 11 کا average معلوم کریں۔",
+    "options": [
+      "20",
+      "32",
+      "27",
+      "19"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”20“ ہے۔ Numbers کا total 100 اور تعداد 5 ہے؛ average 100 ÷ 5 = 20۔",
+    "source": {
+      "type": "book",
+      "label": "Measures of location: mean",
+      "referenceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q066"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "label": "Measures of location: mean",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The five values total 100; 100 ÷ 5 gives an arithmetic mean of 20."
+      },
+      {
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/2-5-measures-of-the-center-of-the-data",
+        "label": "Measures of the center of data",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax independently defines the arithmetic mean; applying it gives: The five values total 100; 100 ÷ 5 gives an arithmetic mean of 20."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed mark beside 27 was corrected; the source's own worked calculation gives 100 ÷ 5 = 20."
+  },
+  {
+    "id": "ADV2E102-U0003-Q066-SIM",
+    "pairId": "ADV2E102-U0003-Q066",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the median of 3, 7, 9, 12, and 20?",
+    "questionUrdu": "3, 7, 9, 12 اور 20 کا median کیا ہے؟",
+    "options": [
+      "9",
+      "10.2",
+      "7",
+      "12"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”9“ ہے۔ ترتیب شدہ 5 values میں درمیان کی تیسری value 9 ہے، اس لیے median 9 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Measures of location: mean",
+      "referenceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q066",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "label": "Measures of location: mean",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Institute of Standards and Technology supports that the median of 3, 7, 9, 12 and 20 is 9."
+      },
+      {
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/2-5-measures-of-the-center-of-the-data",
+        "label": "Measures of the center of data",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the median of 3, 7, 9, 12 and 20 is 9."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q067-SRC",
+    "pairId": "ADV2E102-U0003-Q067",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Ahmad reads 24 pages of a book in 15 minutes. The rate of pages read per minute by him will be:",
+    "questionUrdu": "Ahmad، 15 minutes میں 24 pages پڑھتا ہے۔ اس کی pages per minute rate کیا ہے؟",
+    "options": [
+      "1.6",
+      "2",
+      "2.5",
+      "3"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”1.6“ ہے۔ 24 ÷ 15 = 1.6 pages per minute۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q067"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The unit rate is 24 pages ÷ 15 minutes = 1.6 pages per minute."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Independent ratio rules support the calculation: The unit rate is 24 pages ÷ 15 minutes = 1.6 pages per minute."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed mark beside 2 was corrected. The source solution also miscopies 24 as 25, but the stated 24 ÷ 15 equals 1.6."
+  },
+  {
+    "id": "ADV2E102-U0003-Q067-SIM",
+    "pairId": "ADV2E102-U0003-Q067",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A student reads 45 pages in 30 minutes. What is the reading rate per minute?",
+    "questionUrdu": "ایک student 30 minutes میں 45 pages پڑھتا ہے۔ فی minute reading rate کیا ہے؟",
+    "options": [
+      "1.5 pages",
+      "2 pages",
+      "0.67 page",
+      "15 pages"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”1.5 pages“ ہے۔ 45 ÷ 30 = 1.5 pages per minute۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q067",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 45 pages in 30 minutes is a rate of 1.5 pages per minute."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that 45 pages in 30 minutes is a rate of 1.5 pages per minute."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q068-SRC",
+    "pairId": "ADV2E102-U0003-Q068",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The length and breadth of a rectangle are in the ratio 3 : 1. If the breadth is 7 cm, then the length of the rectangle is:",
+    "questionUrdu": "Rectangle کی length اور breadth کا ratio 3 : 1 ہے۔ اگر breadth 7 cm ہو تو length کتنی ہے؟",
+    "options": [
+      "14",
+      "16",
+      "18",
+      "21"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”21“ ہے۔ ایک ratio part 7 cm ہے؛ length کے 3 parts = 3 × 7 = 21 cm۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "With length:breadth = 3:1 and breadth 7 cm, length is 3 × 7 = 21 cm."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Independent ratio rules support the calculation: With length:breadth = 3:1 and breadth 7 cm, length is 3 × 7 = 21 cm."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed mark beside 16 was corrected; the source's own ratio work gives length 21 cm."
+  },
+  {
+    "id": "ADV2E102-U0003-Q068-SIM",
+    "pairId": "ADV2E102-U0003-Q068",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A rectangle has length:breadth = 4:3 and breadth 9 cm. What is its perimeter?",
+    "questionUrdu": "ایک rectangle میں length:breadth = 4:3 اور breadth 9 cm ہے۔ اس کا perimeter کیا ہے؟",
+    "options": [
+      "42 cm",
+      "36 cm",
+      "108 cm",
+      "24 cm"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”42 cm“ ہے۔ 3 parts = 9، اس لیے length 12 cm؛ perimeter = 2 × (12 + 9) = 42 cm۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a 4:3 rectangle with breadth 9 cm has perimeter 42 cm."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that a 4:3 rectangle with breadth 9 cm has perimeter 42 cm."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q069-SRC",
+    "pairId": "ADV2E102-U0003-Q069",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Write 6.334 × 10⁴ in ordinary decimal notation.",
+    "questionUrdu": "6.334 × 10⁴ کو ordinary decimal notation میں لکھیں۔",
+    "options": [
+      "0.0006334",
+      "0.06334",
+      "6334",
+      "63340"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”63340“ ہے۔ Decimal کو 4 places دائیں منتقل کرنے سے 63340 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Use scientific notation",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/10-8-use-scientific-notation",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/10-8-use-scientific-notation",
+        "label": "Use scientific notation",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Multiplying 6.334 by 10^4 moves the decimal four places right, giving 63,340."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-scientific-notation/a/scientific-notation-review",
+        "label": "Scientific notation review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently explains conversion from scientific to ordinary notation; the result is 63,340."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed mark beside 6,334 was corrected; multiplying by 10⁴ gives 63,340 as the source's own solution shows."
+  },
+  {
+    "id": "ADV2E102-U0003-Q069-SIM",
+    "pairId": "ADV2E102-U0003-Q069",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Write 0.00072 in scientific notation.",
+    "questionUrdu": "0.00072 کو scientific notation میں لکھیں۔",
+    "options": [
+      "7.2 × 10⁻⁴",
+      "7.2 × 10⁴",
+      "72 × 10⁻⁴",
+      "0.72 × 10⁻⁴"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”7.2 × 10⁻⁴“ ہے۔ Decimal کو 4 places دائیں لے جا کر 7.2 بنتا ہے، اس لیے exponent −4 ہوگا۔",
+    "source": {
+      "type": "practice",
+      "label": "Use scientific notation",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/10-8-use-scientific-notation",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/10-8-use-scientific-notation",
+        "label": "Use scientific notation",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 0.00072 in normalized scientific notation is 7.2 × 10^-4."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-scientific-notation/a/scientific-notation-review",
+        "label": "Scientific notation review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that 0.00072 in normalized scientific notation is 7.2 × 10^-4."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q070-SRC",
+    "pairId": "ADV2E102-U0003-Q070",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A patient requires a 30% decrease from a starting dosage of 340 mg. What dosage remains after the decrease?",
+    "questionUrdu": "340 mg کی starting dosage میں 30% کمی درکار ہے۔ کمی کے بعد کتنی dosage باقی رہے گی؟",
+    "options": [
+      "70",
+      "238",
+      "270",
+      "340"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”238“ ہے۔ 30% کمی کے بعد 70% باقی ہے؛ 0.70 × 340 = 238 mg۔",
+    "source": {
+      "type": "book",
+      "label": "Understand percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+        "label": "Understand percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "A 30% reduction leaves 70% of 340 mg: 0.70 × 340 = 238 mg."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-percentages/a/percentages-review",
+        "label": "Percentages review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy's independent percentage method confirms: A 30% reduction leaves 70% of 340 mg: 0.70 × 340 = 238 mg."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The word 'current' was replaced with 'starting' to keep the arithmetic question temporally static; its values and proposition are unchanged."
+  },
+  {
+    "id": "ADV2E102-U0003-Q070-SIM",
+    "pairId": "ADV2E102-U0003-Q070",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "After a 15% decrease from 200 mg, what dosage remains?",
+    "questionUrdu": "200 mg میں 15% کمی کے بعد کتنی dosage باقی رہتی ہے؟",
+    "options": [
+      "170 mg",
+      "185 mg",
+      "30 mg",
+      "215 mg"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”170 mg“ ہے۔ 15% of 200 = 30 mg؛ 200 − 30 = 170 mg۔",
+    "source": {
+      "type": "practice",
+      "label": "Understand percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+        "label": "Understand percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a 15 percent decrease from 200 mg leaves 170 mg."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-percentages/a/percentages-review",
+        "label": "Percentages review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that a 15 percent decrease from 200 mg leaves 170 mg."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q071-SRC",
+    "pairId": "ADV2E102-U0003-Q071",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Solve: 7500 + (1250 / 50)",
+    "questionUrdu": "درج ذیل حسابی عبارت 7500 + (1250 / 50) کی قیمت معلوم کریں۔",
+    "options": [
+      "7500",
+      "7525",
+      "7550",
+      "8000"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”7525“ ہے۔ پہلے 1250 ÷ 50 = 25، پھر 7500 + 25 = 7525۔",
+    "source": {
+      "type": "book",
+      "label": "The order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+        "label": "The order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Division precedes addition: 1250 ÷ 50 = 25, then 7500 + 25 = 7525."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-order-of-operations/a/order-of-operations-review",
+        "label": "Order of operations review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "An independent application of the standard order-of-operations rules confirms: Division precedes addition: 1250 ÷ 50 = 25, then 7500 + 25 = 7525."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0003-Q071-SIM",
+    "pairId": "ADV2E102-U0003-Q071",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Evaluate 4800 + (900 ÷ 30).",
+    "questionUrdu": "درج ذیل حسابی عبارت 4800 + (900 ÷ 30) کی قیمت معلوم کریں۔",
+    "options": [
+      "4830",
+      "190",
+      "5700",
+      "4803"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”4830“ ہے۔ پہلے 900 ÷ 30 = 30، پھر 4800 + 30 = 4830۔",
+    "source": {
+      "type": "practice",
+      "label": "The order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+        "label": "The order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 4800 plus 900 divided by 30 equals 4830."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-order-of-operations/a/order-of-operations-review",
+        "label": "Order of operations review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that 4800 plus 900 divided by 30 equals 4830."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q072-SRC",
+    "pairId": "ADV2E102-U0003-Q072",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If x = 3, then x³ = ?",
+    "questionUrdu": "اگر x = 3 ہو تو x³ کیا ہوگا؟",
+    "options": [
+      "6",
+      "9",
+      "27",
+      "81"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”27“ ہے۔ Cube میں 3 کو خود سے تین مرتبہ multiply کیا جاتا ہے: 3³ = 3 × 3 × 3 = 27۔",
+    "source": {
+      "type": "book",
+      "label": "The order of operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-8-the-order-of-operations",
+        "label": "The order of operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "With x = 3, x³ means 3 × 3 × 3 = 27."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-order-of-operations/a/order-of-operations-review",
+        "label": "Order of operations review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "An independent application of the standard order-of-operations rules confirms: With x = 3, x³ means 3 × 3 × 3 = 27."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0003-Q072-SIM",
+    "pairId": "ADV2E102-U0003-Q072",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the cube root of 125?",
+    "questionUrdu": "125 کا cube root کیا ہے؟",
+    "options": [
+      "5",
+      "25",
+      "15",
+      "3"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”5“ ہے۔ 5 × 5 × 5 = 125، اس لیے cube root 5 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Simplify and use square roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-1-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-1-simplify-and-use-square-roots",
+        "label": "Simplify and use square roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the cube root of 125 is 5."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-roots/a/square-roots-review",
+        "label": "Square roots review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that the cube root of 125 is 5."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q073-SRC",
+    "pairId": "ADV2E102-U0003-Q073",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The ratio 35 : 84 in simplest form is:",
+    "questionUrdu": "35 : 84 کو simplest form میں لکھیں۔",
+    "options": [
+      "5:7",
+      "7:12",
+      "5:12",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”5:12“ ہے۔ 35 اور 84 دونوں کو 7 سے تقسیم کرنے پر 5:12 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The greatest common factor of 35 and 84 is 7; dividing both terms by 7 gives 5:12."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Independent ratio rules support the calculation: The greatest common factor of 35 and 84 is 7; dividing both terms by 7 gives 5:12."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed mark beside 5:7 was corrected; the source's own simplification gives 5:12."
+  },
+  {
+    "id": "ADV2E102-U0003-Q073-SIM",
+    "pairId": "ADV2E102-U0003-Q073",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Simplify the ratio 42:63.",
+    "questionUrdu": "درج ذیل نسبت 42:63 کو سادہ ترین صورت میں لکھیں۔",
+    "options": [
+      "2:3",
+      "3:2",
+      "4:6",
+      "7:9"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”2:3“ ہے۔ 42 اور 63 کا greatest common factor 21 ہے؛ دونوں کو 21 سے تقسیم کرنے پر 2:3 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 42:63 simplifies to 2:3."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that 42:63 simplifies to 2:3."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q074-SRC",
+    "pairId": "ADV2E102-U0003-Q074",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Solve √(1.44)",
+    "questionUrdu": "درج ذیل مربع جذر √(1.44) کی قیمت معلوم کریں۔",
+    "options": [
+      "0.8",
+      "1.2",
+      "8",
+      "12"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”1.2“ ہے۔ 1.2 × 1.2 = 1.44، اس لیے principal square root 1.2 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Simplify and use square roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-1-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-1-simplify-and-use-square-roots",
+        "label": "Simplify and use square roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The principal square root is the nonnegative value whose square is the radicand; 1.2² = 1.44."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-roots/a/square-roots-review",
+        "label": "Square roots review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently defines principal square roots, confirming √1.44 = 1.2."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed mark beside 0.8 was corrected; the source's own worked solution gives the principal square root as 1.2."
+  },
+  {
+    "id": "ADV2E102-U0003-Q074-SIM",
+    "pairId": "ADV2E102-U0003-Q074",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the principal square root of 2.25?",
+    "questionUrdu": "2.25 کا principal square root کیا ہے؟",
+    "options": [
+      "1.5",
+      "1.25",
+      "2.5",
+      "0.15"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”1.5“ ہے۔ 1.5 × 1.5 = 2.25، اس لیے principal square root 1.5 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Simplify and use square roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-1-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-1-simplify-and-use-square-roots",
+        "label": "Simplify and use square roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the principal square root of 2.25 is 1.5."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-numbers-operations/cc-8th-roots/a/square-roots-review",
+        "label": "Square roots review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that the principal square root of 2.25 is 1.5."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0003-Q075-SRC",
+    "pairId": "ADV2E102-U0003-Q075",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "At equal constant work rates, 15 men can plough a field in 10 days. How many additional men are needed to finish it in 3 days?",
+    "questionUrdu": "برابر اور مستقل work rates پر 15 men ایک field کو 10 days میں plough کرتے ہیں۔ 3 days میں کام ختم کرنے کے لیے کتنے additional men چاہییں؟",
+    "options": [
+      "35",
+      "40",
+      "50",
+      "30"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”35“ ہے۔ Total work 150 man-days؛ 3 days کے لیے 50 men، یعنی موجودہ 15 سے 35 additional men۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The job requires 15 × 10 = 150 man-days; 150 ÷ 3 = 50 men, so 50 − 15 = 35 additional men."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Independent ratio rules support the calculation: The job requires 15 × 10 = 150 man-days; 150 ÷ 3 = 50 men, so 50 − 15 = 35 additional men."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The standard assumption of equal constant work rates was made explicit."
+  },
+  {
+    "id": "ADV2E102-U0003-Q075-SIM",
+    "pairId": "ADV2E102-U0003-Q075",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "At equal constant rates, 12 workers finish a job in 15 days. How many additional workers are needed to finish it in 9 days?",
+    "questionUrdu": "برابر اور مستقل rates پر 12 workers کام 15 days میں کرتے ہیں۔ 9 days میں ختم کرنے کے لیے کتنے additional workers چاہییں؟",
+    "options": [
+      "8",
+      "20",
+      "5",
+      "3"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”8“ ہے۔ Total work 12 × 15 = 180 worker-days؛ 9 days میں 20 workers چاہییں، یعنی 20 − 12 = 8 اضافی۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and rate",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0003-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rate",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 12 workers for 15 days require 20 workers for 9 days, which is 8 additional workers."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-ratios-rates/a/intro-to-ratios",
+        "label": "Introduction to ratios",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that 12 workers for 15 days require 20 workers for 9 days, which is 8 additional workers."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

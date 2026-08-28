@@ -41,10 +41,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0011-Q003",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0005-Q002",
+    "reason": "Manual proposition review found that this item repeats the same tested fact already retained as ADV2E102-U0005-Q002; the earlier canonical item is used to prevent a semantic duplicate.",
     "testedProposition": "Union Jack is the name of the flag of which country? Correct answer: United Kingdom.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -55,7 +55,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q002-SRC",
+        "ADV2E102-U0005-Q002"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -84,7 +87,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Which listed person shared the 1978 Nobel Peace Prize with Menachem Begin? Correct answer: Anwar Sadat of Egypt.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -95,7 +98,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q005-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -186,7 +191,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Samsung Electronics has its head office in which country? Correct answer: South Korea.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -197,7 +202,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q010-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -226,7 +233,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Which organization designated 18 July as Nelson Mandela International Day in 2009? Correct answer: United Nations.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -237,7 +244,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q012-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -257,10 +266,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "P238-Q017-SIM",
-        "ADV2E102-U0011-Q002-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -426,10 +432,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0011-Q022",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0004-Q017",
+    "reason": "Manual proposition review found that this item repeats the same tested fact already retained as ADV2E102-U0004-Q017; the earlier canonical item is used to prevent a semantic duplicate.",
     "testedProposition": "During the Muslim League's 1927 split over the Simon Commission, who led the faction that supported cooperation? Correct answer: Mian Muhammad Shafi.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -440,7 +446,11 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0004-Q017-SIM",
+        "ADV2E102-U0004-Q017-SRC",
+        "ADV2E102-U0004-Q017"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -469,7 +479,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Which Nawab of Bengal was defeated by forces led by Robert Clive at the 1757 Battle of Plassey? Correct answer: Nawab Siraj-ud-Daula.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -480,7 +490,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q024-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -501,6 +513,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0009-Q004-SRC",
         "P236-Q006-SRC"
       ],
       "answerConflictReviewed": true
@@ -571,7 +584,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "What is the official length of the Multan-Sukkur section of the M-5 motorway? Correct answer: 392 km.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -582,7 +595,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q029-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -602,9 +617,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "P237-Q016-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -613,7 +626,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Under which article of the 1973 Constitution any law inconsistent with or in derogation of Fundamental Rights to be void? Correct answer: Article 8.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -624,7 +637,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q012-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -633,7 +648,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Shoaib Akhtar bowled the fastest recorded delivery during the Cricket World Cup in 2003. Against which team was Pakistan playing when this happened? Correct answer: England.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -644,7 +659,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q032-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -653,7 +670,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "When did Pakistan first time participate in Olympic Games? Correct answer: 1948.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -664,7 +681,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q033-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -713,7 +732,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Pakistan's National Anthem was approved by the Government in: Correct answer: 1954.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -724,7 +743,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q036-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -810,10 +831,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0011-Q041",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0003-Q010",
+    "reason": "Manual proposition review found that this item repeats the same tested fact already retained as ADV2E102-U0003-Q010; the earlier canonical item is used to prevent a semantic duplicate.",
     "testedProposition": "In which city is Choudhary Rahmat Ali, who coined the name 'Pakistan', buried? Correct answer: Cambridge.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -824,7 +845,11 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0003-Q010-SRC",
+        "ADV2E102-U0003-Q010-SIM",
+        "ADV2E102-U0003-Q010"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -850,10 +875,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0011-Q043",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0003-Q019",
+    "reason": "Manual proposition review found that this item repeats the same tested fact already retained as ADV2E102-U0003-Q019; the earlier canonical item is used to prevent a semantic duplicate.",
     "testedProposition": "In 2018, Imran Khan was sworn in as Pakistan's which numbered Prime Minister? Correct answer: 22nd.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -864,7 +889,12 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0003-Q019-SRC",
+        "ADV2E102-U0004-Q025-SRC",
+        "ADV2E102-U0003-Q019-SIM",
+        "ADV2E102-U0003-Q019"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -924,10 +954,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "P236-Q024-SIM",
-        "ADV2E102-U0001-Q031-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -947,10 +974,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "ADV2E102-U0011-Q046-SRC",
-        "ADV2E102-U0001-Q031-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -979,7 +1003,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Trunk Bay Beach is located in which listed destination? Correct answer: U.S. Virgin Islands.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -990,7 +1014,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q049-SRC",
+        "ADV2E102-U0007-Q005-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1099,7 +1126,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "The newton (N) is the SI unit of which physical quantity? Correct answer: Force.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1110,7 +1137,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q038-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1246,7 +1275,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P239-Q066-SIM"
+        "P239-Q066-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1267,10 +1296,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "P239-Q066-SRC",
-        "ADV2E102-U0011-Q061-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -1359,7 +1385,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Which of the following ratios has the greatest numerical value? Correct answer: 21:29.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1370,7 +1396,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0003-Q073-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1439,7 +1467,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Which listed word is a synonym of 'disparate'? Correct answer: different.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1450,7 +1478,14 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "P237-Q060-SRC",
+        "P236-Q060-SIM",
+        "ADV2E102-U0011-Q071-SRC",
+        "ADV2E102-U0005-Q093-SRC",
+        "ADV2E102-U0005-Q092-SRC",
+        "ADV2E102-U0003-Q096-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1539,7 +1574,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Choose the correctly spelled word: 'The horseman pulled the ____ of the horse.' Correct answer: reins.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1550,7 +1585,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q076-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1611,7 +1648,10 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0011-Q071-SRC"
+        "ADV2E102-U0011-Q071-SRC",
+        "ADV2E102-U0011-Q079-SRC",
+        "ADV2E102-U0003-Q096-SRC",
+        "ADV2E102-U0009-Q074-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1653,7 +1693,11 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0011-Q073-SRC"
+        "ADV2E102-U0011-Q071-SRC",
+        "ADV2E102-U0011-Q079-SRC",
+        "ADV2E102-U0011-Q079-SIM",
+        "ADV2E102-U0003-Q096-SRC",
+        "ADV2E102-U0011-Q081-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1663,7 +1707,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Choose the noun that completes the idiom: 'His voice gets on my ____.' Correct answer: nerves.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1674,16 +1718,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0009-Q080-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0011-Q083",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0009-Q088",
+    "reason": "Manual proposition review found that this item repeats the same tested fact already retained as ADV2E102-U0009-Q088; the earlier canonical item is used to prevent a semantic duplicate.",
     "testedProposition": "Which author wrote the travelogues 'Andalus Mein Ajnabi' and 'Khanabadosh'? Correct answer: Mustansar Hussain Tarar.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1694,7 +1740,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0009-Q088-SIM",
+        "ADV2E102-U0009-Q088"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1703,7 +1752,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Who wrote the poem that begins, 'Nisar main teri galiyon ke, ae watan, ke jahan...'? Correct answer: Faiz Ahmad Faiz.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1714,7 +1763,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q084-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1740,10 +1791,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0011-Q086",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0007-Q049",
+    "reason": "Manual proposition review found that this item repeats the same tested fact already retained as ADV2E102-U0007-Q049; the earlier canonical item is used to prevent a semantic duplicate.",
     "testedProposition": "Who wrote the Urdu prose tale 'Bagh-o-Bahar'? Correct answer: Mir Amman Dehlvi.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1754,7 +1805,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q049-SRC",
+        "ADV2E102-U0007-Q049"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1763,7 +1817,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Who wrote the couplet beginning, 'Tum aaye ho na shab-e-intizar guzri hai...'? Correct answer: Faiz Ahmad Faiz.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1774,7 +1828,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q087-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1803,7 +1859,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "In an NCPUL research article, the qita containing 'Hum rehne wale hain isi ujre dayar ke' is identified as whose qita? Correct answer: Mir Taqi Mir.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1814,7 +1870,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q089-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1894,9 +1952,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "P237-Q066-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -1925,7 +1981,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "In the terminology used by the Saudi Alharamain guide, Salat al-Khusuf is associated with which event? Correct answer: lunar eclipse.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1936,7 +1992,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q095-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -2025,7 +2083,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual review of every tool candidate found only related wording or a different tested proposition, date, entity, direction, or answer; this independently verified fact is retained.",
     "testedProposition": "Under the standard biographical count used by Egypt's Dar Al-Ifta and Qatar's Bin Zaid Center, how many sons and daughters did Prophet Muhammad have? Correct answer: three sons and four daughters.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -2036,7 +2094,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q095-SIM"
+      ],
       "answerConflictReviewed": true
     }
   }

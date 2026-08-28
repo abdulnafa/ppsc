@@ -1696,10 +1696,10 @@
       "pdfPageEnd": 153,
       "bookPageStart": null,
       "bookPageEnd": null,
-      "bodyPdfPageStart": 144,
+      "bodyPdfPageStart": 145,
       "bodyPdfPageEnd": 152,
       "answerKeyPdfPageStart": 152,
-      "answerKeyPdfPageEnd": 153,
+      "answerKeyPdfPageEnd": 152,
       "expectedQuestionNumbers": [
         1,
         2,
@@ -1803,8 +1803,8 @@
         100
       ],
       "visibleQuestionCount": 100,
-      "inventoryConfidence": "medium",
-      "notes": "Question 1 start was not machine-detected; PDF start is a conservative scan envelope. Question 100 was not machine-detected; PDF end includes the printed key page as a conservative envelope."
+      "inventoryConfidence": "high",
+      "notes": "High-resolution visual audit confirmed that U0015 starts below the U0014 key on PDF page 145, Q100 crosses from page 151 to 152, and the complete U0015 printed key is on page 152. The outer PDF 144-153 range remains a conservative non-overlapping inventory envelope."
     },
     {
       "sourceUnitId": "U0016",

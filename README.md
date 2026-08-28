@@ -6,8 +6,8 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 
 - 449 source MCQs transcribed from the supplied `PPSC 110 Edition` scan.
 - 1,295 source-present MCQs extracted from `IBES CAPSULE Computer 2025`; 207 semantic repeats were excluded and 1,088 unique MCQs were retained. Printed Q254 is absent from the supplied scan and was not fabricated.
-- The current partial release of `Advanced PPSC MCQs Papers, Volume 2` contains 1,982 independently verified, retained source MCQs and 1,982 original researched related questions. Work on the remaining supplied scan continues in restart-safe batches; unresolved and unreviewed records are excluded from the website.
-- **3,519 retained source MCQs + 3,519 original researched PPSC-style related questions = 7,038 website questions.**
+- The current partial release of `Advanced PPSC MCQs Papers, Volume 2` contains 3,133 independently verified, retained source MCQs and 3,133 original researched related questions. Work on the remaining supplied scan continues in restart-safe batches; unresolved and unreviewed records are excluded from the website.
+- **4,670 retained source MCQs + 4,670 original researched PPSC-style related questions = 9,340 website questions.**
 - 10 advertised syllabus subjects, plus a separate **Finance, Taxation & Job-related** category for questions found in the supplied papers but outside that syllabus.
 - English question stems and four answer options, with a readable Urdu translation directly below every question.
 - A Learn mode that preselects and highlights the correct answer immediately.
@@ -61,7 +61,7 @@ node tools/validate-adv2e102-verification.js
 node tools/validate-adv2e102-dedup.js
 node tools/validate-adv2e102-enriched.js
 node tools/build-question-bank.js
-node tools/validate-site-data.js --expected=7038
+node tools/validate-site-data.js --expected=9340
 node tools/browser-smoke.js
 ```
 
@@ -92,7 +92,7 @@ Each pair must:
 
 Explanations, source notes and evidence links remain in the verified data for research and validation, but the website does not display per-question explanation, history or source-detail panels.
 
-After adding a pair, run the validation and build commands again. For a bank larger than 7,038, update the `--expected` value or omit that argument.
+After adding a pair, run the validation and build commands again. For a bank larger than 9,340, update the `--expected` value or omit that argument.
 
 ## Push this update
 

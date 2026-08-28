@@ -97,6 +97,10 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P239-Q001-SRC",
+        "ADV2E102-U0022-Q008-SRC",
+        "ADV2E102-U0012-Q008-SRC",
+        "ADV2E102-U0013-Q007-SRC",
+        "ADV2E102-U0043-Q008-SRC",
         "ADV2E102-U0051-Q008-SRC",
         "ADV2E102-U0033-Q008-SIM"
       ],
@@ -148,7 +152,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which river flows through Paris? Correct answer: Seine.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -159,7 +163,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q048-SRC",
+        "ADV2E102-U0022-Q019-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -168,7 +175,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "According to the UN's 2018 World Urbanization Prospects urban-agglomeration estimates, which listed city was the world's most populous? Correct answer: Tokyo.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -179,7 +186,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0002-Q054-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -351,7 +360,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "In which year was the annulment of the 1905 Partition of Bengal announced? Correct answer: 1911.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -362,7 +371,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q038-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -383,7 +394,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P237-Q007-SRC"
+        "P237-Q007-SRC",
+        "ADV2E102-U0002-Q012-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -518,7 +530,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Who chaired the Mirwaiz faction of the All Parties Hurriyat Conference in 2006? Correct answer: Mirwaiz Umar Farooq.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -529,16 +541,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0023-Q040-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0081-Q027",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0013-Q047",
+    "reason": "The earlier-source-order U0013 canonical already tests that Khunjerab Pass connects Pakistan with China; this later source is the same geographic proposition.",
     "testedProposition": "The Khunjerab Pass border crossing connects Pakistan with which country? Correct answer: Pakistan-China.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -549,7 +563,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q047-SRC",
+        "ADV2E102-U0013-Q047"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -704,7 +721,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "As of 2026, who is the Secretary-General of the Organisation of Islamic Cooperation? Correct answer: Hissein Brahim Taha.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -715,7 +732,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q008-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -817,6 +836,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0032-Q065-SRC",
+        "ADV2E102-U0043-Q057-SRC",
         "ADV2E102-U0001-Q046-SIM",
         "ADV2E102-U0011-Q045-SRC"
       ],
@@ -861,8 +881,8 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P237-Q015-SRC",
+        "ADV2E102-U0012-Q042-SRC",
         "ADV2E102-U0021-Q041-SIM",
-        "ADV2E102-U0032-Q025-SIM",
         "ADV2E102-U0032-Q072-SIM"
       ],
       "answerConflictReviewed": true
@@ -873,7 +893,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which listed city is the capital of Bangladesh? Correct answer: Dhaka.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -884,7 +904,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q016-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1585,12 +1607,14 @@
         "P237-Q054-SRC",
         "P237-Q048-SRC",
         "P237-Q060-SIM",
+        "ADV2E102-U0003-Q025-SRC",
         "ADV2E102-U0033-Q078-SIM",
         "ADV2E102-U0081-Q073-SIM",
         "ADV2E102-U0021-Q072-SIM",
         "ADV2E102-U0021-Q075-SIM",
         "ADV2E102-U0041-Q075-SIM",
-        "ADV2E102-U0071-Q070-SRC"
+        "ADV2E102-U0042-Q086-SIM",
+        "ADV2E102-U0013-Q073-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1758,8 +1782,12 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0022-Q083-SIM",
         "ADV2E102-U0051-Q082-SRC",
+        "ADV2E102-U0043-Q088-SRC",
         "ADV2E102-U0034-Q087-SRC",
+        "ADV2E102-U0043-Q092-SRC",
+        "ADV2E102-U0043-Q091-SRC",
         "ADV2E102-U0051-Q083-SRC"
       ],
       "answerConflictReviewed": true
@@ -1802,7 +1830,10 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0043-Q088-SRC",
+        "ADV2E102-U0022-Q083-SIM",
         "ADV2E102-U0034-Q087-SRC",
+        "ADV2E102-U0043-Q092-SRC",
         "ADV2E102-U0051-Q082-SRC"
       ],
       "answerConflictReviewed": true
@@ -1886,7 +1917,10 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0051-Q094-SRC",
+        "ADV2E102-U0022-Q083-SIM",
+        "ADV2E102-U0043-Q088-SRC",
         "ADV2E102-U0034-Q087-SRC",
+        "ADV2E102-U0043-Q092-SRC",
         "ADV2E102-U0051-Q082-SRC",
         "ADV2E102-U0051-Q094"
       ],

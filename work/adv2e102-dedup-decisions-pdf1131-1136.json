@@ -107,8 +107,8 @@
     "sourceRecordId": "ADV2E102-U0158-Q006",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0101-Q042",
-    "reason": "The earlier retained ADV source asks the identical 1929 Fourteen Points response-to-the-Nehru-Report proposition.",
+    "duplicateOf": "ADV2E102-U0005-Q015",
+    "reason": "The earlier retained U0005 pair already contains the identical 1929 Fourteen Points response-to-the-Nehru-Report proposition in its adjacent researched item.",
     "testedProposition": "In 1929, Muhammad Ali Jinnah formulated his Fourteen Points chiefly in response to which document? Correct answer: Nehru Report.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -122,7 +122,7 @@
       "semanticCandidateIds": [
         "ADV2E102-U0101-Q042-SRC",
         "ADV2E102-U0051-Q042-SIM",
-        "ADV2E102-U0101-Q042"
+        "ADV2E102-U0005-Q015"
       ],
       "answerConflictReviewed": true
     }
@@ -409,10 +409,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0158-Q020",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or same-proposition repeat in the pinned bank or earlier retained ADV2E102 canonicals, so the independently verified item is retained.",
+    "duplicateOf": "ADV2E102-U0006-Q032",
+    "reason": "The earlier source-order U0006 canonical already tests that the Gibson Desert is in Australia, and its pair asks the same Western Australia location fact.",
     "testedProposition": "The Gibson Desert is located in which country? Correct answer: Australia.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -423,7 +423,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q032"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -471,10 +473,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0158-Q023",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or same-proposition repeat in the pinned bank or earlier retained ADV2E102 canonicals, so the independently verified item is retained.",
+    "duplicateOf": "ADV2E102-U0006-Q007",
+    "reason": "The earlier source-order U0006 canonical already tests the Suez Canal's 1869 completion and opening year.",
     "testedProposition": "In which year was the Suez Canal completed and formally opened for navigation? Correct answer: 1869.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -485,7 +487,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q007"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1318,7 +1322,7 @@
     "sourceRecordId": "ADV2E102-U0158-Q062",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0034-Q092",
+    "duplicateOf": "ADV2E102-U0009-Q095",
     "reason": "The earlier retained ADV source already tests Sumayyah bint Khayyat as the first martyr of the Muslim community; the female-martyr wording is the same historical proposition.",
     "testedProposition": "Who is traditionally identified as the first female martyr in Islam? Correct answer: Sumayyah.",
     "reviewedAgainst": {
@@ -1331,7 +1335,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0034-Q092"
+        "ADV2E102-U0009-Q095"
       ],
       "answerConflictReviewed": true
     }
@@ -1441,10 +1445,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0158-Q068",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or same-proposition repeat in the pinned bank or earlier retained ADV2E102 canonicals, so the independently verified item is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q096",
+    "reason": "The earlier source-order U0043 pair contains the identical source and practice propositions, so this later pair is omitted.",
     "testedProposition": "Which companion of Prophet Muhammad was given the title 'Sword of Allah'? Correct answer: Khalid ibn al-Walid.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1455,16 +1459,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q096"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0158-Q069",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or same-proposition repeat in the pinned bank or earlier retained ADV2E102 canonicals, so the independently verified item is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q095",
+    "reason": "The earlier source-order U0043 canonical asks the same Bilal ibn Rabah owner-before-manumission proposition, so this later pair is omitted.",
     "testedProposition": "What was the name of Bilal ibn Rabah's owner before he was freed? Correct answer: Umayyah ibn Khalaf.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1475,7 +1481,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q095"
+      ],
       "answerConflictReviewed": true
     }
   },

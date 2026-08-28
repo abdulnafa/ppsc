@@ -1,0 +1,3277 @@
+[
+  {
+    "id": "ADV2E102-U0014-Q026-SRC",
+    "pairId": "ADV2E102-U0014-Q026",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "Zurich is a city in which country?",
+    "questionUrdu": "Zurich کس ملک کا شہر ہے؟",
+    "options": [
+      "Sweden",
+      "Switzerland",
+      "Norway",
+      "Austria"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Switzerland ہے۔ Zurich سوئٹزرلینڈ کا سب سے بڑا شہر اور اہم مالیاتی مرکز ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Zurich pocket statistics",
+      "referenceUrl": "https://www.stadt-zuerich.ch/content/dam/web/de/politik-verwaltung/statistik-und-daten/publikationen-dienstleistungen/publikationen/taschenstatistik/TAS_2011-en_WEB.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q026"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.stadt-zuerich.ch/content/dam/web/de/politik-verwaltung/statistik-und-daten/publikationen-dienstleistungen/publikationen/taschenstatistik/TAS_2011-en_WEB.pdf",
+        "label": "Zurich pocket statistics",
+        "publisher": "City of Zurich",
+        "authorityId": "city-zurich",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The City of Zurich's official statistics publication identifies Zurich as Switzerland's largest city."
+      },
+      {
+        "url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/wirtschaft-arbeit/wirtschaftsstandort/dokumente/englisch/facts_figures_eng.pdf",
+        "label": "Facts and figures",
+        "publisher": "Canton of Zurich",
+        "authorityId": "canton-zurich",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The canton government's facts publication independently locates Zurich in Switzerland."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The grammar was normalized and the catch-all option was replaced."
+  },
+  {
+    "id": "ADV2E102-U0014-Q026-SIM",
+    "pairId": "ADV2E102-U0014-Q026",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "Which is Switzerland's largest city by population?",
+    "questionUrdu": "آبادی کے لحاظ سے Switzerland کا سب سے بڑا شہر کون سا ہے؟",
+    "options": [
+      "Zurich",
+      "Bern",
+      "Geneva",
+      "Basel"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Zurich ہے۔ Bern وفاقی شہر ہے مگر سب سے بڑی شہری آبادی Zurich کی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Zurich pocket statistics",
+      "referenceUrl": "https://www.stadt-zuerich.ch/content/dam/web/de/politik-verwaltung/statistik-und-daten/publikationen-dienstleistungen/publikationen/taschenstatistik/TAS_2011-en_WEB.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q026",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.stadt-zuerich.ch/content/dam/web/de/politik-verwaltung/statistik-und-daten/publikationen-dienstleistungen/publikationen/taschenstatistik/TAS_2011-en_WEB.pdf",
+        "label": "Zurich pocket statistics",
+        "publisher": "City of Zurich",
+        "authorityId": "city-zurich",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The City of Zurich's official statistics identify Zurich as Switzerland's largest city."
+      },
+      {
+        "url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/wirtschaft-arbeit/wirtschaftsstandort/dokumente/englisch/facts_figures_eng.pdf",
+        "label": "Facts and figures",
+        "publisher": "Canton of Zurich",
+        "authorityId": "canton-zurich",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Canton of Zurich facts publication independently describes Zurich as the country's largest city."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q027-SRC",
+    "pairId": "ADV2E102-U0014-Q027",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Who ordered the construction of Rohtas Fort near Dina?",
+    "questionUrdu": "Dina کے قریب Rohtas Fort کی تعمیر کس کے حکم سے ہوئی؟",
+    "options": [
+      "Sher Shah Suri",
+      "Akbar",
+      "Qutb al-Din Aibak",
+      "Shah Jahan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sher Shah Suri ہے۔ انہوں نے strategic control کے لیے یہ مضبوط قلعہ تعمیر کرایا تھا۔",
+    "source": {
+      "type": "book",
+      "label": "Rohtas Fort",
+      "referenceUrl": "https://doam.gov.pk/public/world-heritage-sites/18",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q027"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://doam.gov.pk/public/world-heritage-sites/18",
+        "label": "Rohtas Fort",
+        "publisher": "Department of Archaeology and Museums, Pakistan",
+        "authorityId": "pakistan-doam",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's archaeology department states that Rohtas Fort was built on Sher Shah Suri's orders."
+      },
+      {
+        "url": "https://whc.unesco.org/en/list/586/",
+        "label": "Rohtas Fort",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO records that Sher Shah Suri built the fortified complex at Rohtas."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The distance claim was removed because it is unnecessary; names were normalized and the catch-all replaced."
+  },
+  {
+    "id": "ADV2E102-U0014-Q027-SIM",
+    "pairId": "ADV2E102-U0014-Q027",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Rohtas Fort was principally built to control which strategic route and region?",
+    "questionUrdu": "Rohtas Fort بنیادی طور پر کس strategic route اور region پر قابو رکھنے کے لیے بنایا گیا؟",
+    "options": [
+      "The route between the Punjab plains and Peshawar",
+      "The sea route to Gwadar",
+      "The Thar desert caravan route",
+      "The Indus delta ports"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Punjab plains اور Peshawar کے درمیان route ہے۔ قلعہ شمال مغربی راستوں اور مقامی مزاحمت پر نگرانی کے لیے strategic مقام پر بنایا گیا۔",
+    "source": {
+      "type": "practice",
+      "label": "Rohtas Fort",
+      "referenceUrl": "https://doam.gov.pk/public/world-heritage-sites/18",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q027",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://doam.gov.pk/public/world-heritage-sites/18",
+        "label": "Rohtas Fort",
+        "publisher": "Department of Archaeology and Museums, Pakistan",
+        "authorityId": "pakistan-doam",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Pakistan's archaeology department explains Rohtas Fort's strategic control of the northern route."
+      },
+      {
+        "url": "https://whc.unesco.org/en/list/586/",
+        "label": "Rohtas Fort",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "UNESCO independently describes the fort's strategic position between the mountainous north and Punjab plains."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q028-SRC",
+    "pairId": "ADV2E102-U0014-Q028",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Ranikot Fort is located in which district of Sindh?",
+    "questionUrdu": "Ranikot Fort سندھ کے کس district میں واقع ہے؟",
+    "options": [
+      "Larkana",
+      "Jamshoro",
+      "Hyderabad",
+      "Thatta"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Jamshoro ہے۔ یہ وسیع تاریخی fort صوبہ سندھ کے Jamshoro District میں واقع ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Rani Kot Fort, Jamshoro",
+      "referenceUrl": "https://antiquities.sindhculture.gov.pk/tour/rani-kot-fort-jamshoro/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q028"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://antiquities.sindhculture.gov.pk/tour/rani-kot-fort-jamshoro/",
+        "label": "Rani Kot Fort, Jamshoro",
+        "publisher": "Directorate General of Antiquities, Government of Sindh",
+        "authorityId": "sindh-antiquities",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The provincial antiquities directorate identifies Rani Kot Fort in Jamshoro."
+      },
+      {
+        "url": "https://doam.gov.pk/public/sites/6638",
+        "label": "Ranikot Fort",
+        "publisher": "Department of Archaeology and Museums, Pakistan",
+        "authorityId": "pakistan-doam",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's federal archaeology inventory locates Ranikot Fort in Jamshoro District."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The disputed 'largest fort in Asia' superlative was removed and the verifiable district proposition retained."
+  },
+  {
+    "id": "ADV2E102-U0014-Q028-SIM",
+    "pairId": "ADV2E102-U0014-Q028",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Ranikot Fort is situated near which mountain range?",
+    "questionUrdu": "Ranikot Fort کس mountain range کے قریب واقع ہے؟",
+    "options": [
+      "Kirthar Range",
+      "Salt Range",
+      "Karakoram Range",
+      "Sulaiman Range"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Kirthar Range ہے۔ Ranikot کی فصیلیں Kirthar کے خشک پہاڑی landscape میں پھیلی ہوئی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Rani Kot Fort, Jamshoro",
+      "referenceUrl": "https://antiquities.sindhculture.gov.pk/tour/rani-kot-fort-jamshoro/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q028",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://antiquities.sindhculture.gov.pk/tour/rani-kot-fort-jamshoro/",
+        "label": "Rani Kot Fort, Jamshoro",
+        "publisher": "Directorate General of Antiquities, Government of Sindh",
+        "authorityId": "sindh-antiquities",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Sindh's antiquities directorate locates Ranikot beside the Kirthar hills."
+      },
+      {
+        "url": "https://doam.gov.pk/public/sites/6638",
+        "label": "Ranikot Fort",
+        "publisher": "Department of Archaeology and Museums, Pakistan",
+        "authorityId": "pakistan-doam",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Pakistan's federal archaeology inventory independently describes its Kirthar-region setting."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q029-SRC",
+    "pairId": "ADV2E102-U0014-Q029",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Mervyn Leslie Middlecoat was a decorated officer of which service?",
+    "questionUrdu": "Mervyn Leslie Middlecoat کس service کے decorated officer تھے؟",
+    "options": [
+      "Pakistan Air Force",
+      "Pakistan Army",
+      "Pakistan Navy",
+      "Pakistan Coast Guards"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Pakistan Air Force ہے۔ وہ جنگی pilot تھے اور اپنی بہادری کے باعث PAF heroes میں شمار ہوتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Mervyn Leslie Middlecoat",
+      "referenceUrl": "https://www.pafmuseum.com.pk/heroes/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q029"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.pafmuseum.com.pk/heroes/",
+        "label": "Mervyn Leslie Middlecoat",
+        "publisher": "Pakistan Air Force Museum",
+        "authorityId": "paf-museum",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The PAF Museum lists Middlecoat among its heroes and records his Sitara-i-Juraat citation."
+      },
+      {
+        "url": "https://hilal.gov.pk/uploads/ebook/pdf/6f4922f45568161a8cdf4ad2299f6d23.pdf",
+        "label": "Pakistan Air Force war heroes",
+        "publisher": "Hilal Publications",
+        "authorityId": "hilal-publications",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's armed-forces publication identifies Mervyn Middlecoat as a PAF officer."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's '1956 war' is erroneous and its printed rank conflicts with the PAF citation, which calls him Squadron Leader at the award. The row was reconstructed around his unambiguous service affiliation."
+  },
+  {
+    "id": "ADV2E102-U0014-Q029-SIM",
+    "pairId": "ADV2E102-U0014-Q029",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Which gallantry award did Mervyn Middlecoat receive twice?",
+    "questionUrdu": "Mervyn Middlecoat نے کون سا gallantry award دو مرتبہ حاصل کیا؟",
+    "options": [
+      "Sitara-i-Jurat",
+      "Nishan-e-Haider",
+      "Hilal-e-Imtiaz",
+      "Tamgha-e-Basalat"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sitara-i-Jurat ہے۔ ان کی جنگی خدمات کے اعتراف میں یہ اعزاز انہیں دو بار دیا گیا۔",
+    "source": {
+      "type": "practice",
+      "label": "Mervyn Leslie Middlecoat",
+      "referenceUrl": "https://www.pafmuseum.com.pk/heroes/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q029",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.pafmuseum.com.pk/heroes/",
+        "label": "Mervyn Leslie Middlecoat",
+        "publisher": "Pakistan Air Force Museum",
+        "authorityId": "paf-museum",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Pakistan Air Force Museum records Middlecoat's two Sitara-i-Jurat awards."
+      },
+      {
+        "url": "https://hilal.gov.pk/uploads/ebook/pdf/6f4922f45568161a8cdf4ad2299f6d23.pdf",
+        "label": "Pakistan Air Force war heroes",
+        "publisher": "Hilal Publications",
+        "authorityId": "hilal-publications",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Hilal's armed-forces profile independently identifies him as a twice-decorated Sitara-i-Jurat recipient."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q030-SRC",
+    "pairId": "ADV2E102-U0014-Q030",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Among Misbah-ul-Haq, Inzamam-ul-Haq and Umar Akmal, who finished his ODI career with the most runs?",
+    "questionUrdu": "Misbah-ul-Haq، Inzamam-ul-Haq اور Umar Akmal میں کس نے ODI career میں سب سے زیادہ runs بنائے؟",
+    "options": [
+      "Misbah-ul-Haq",
+      "Inzamam-ul-Haq",
+      "Umar Akmal",
+      "All scored the same"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Inzamam-ul-Haq ہے۔ ان کے 11,739 ODI runs باقی دونوں کھلاڑیوں سے کہیں زیادہ ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Inzamam-ul-Haq",
+      "referenceUrl": "https://www.pcb.com.pk/inzamam-ul-haq.html",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q030"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.pcb.com.pk/inzamam-ul-haq.html",
+        "label": "Inzamam-ul-Haq",
+        "publisher": "Pakistan Cricket Board",
+        "authorityId": "pcb",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PCB records Inzamam's completed ODI career total as more than 11,000 runs."
+      },
+      {
+        "url": "https://www.icc-cricket.com/news/inzamam-ul-haq-mark-boucher-named-mcc-honorary-life-members",
+        "label": "Inzamam-ul-Haq named MCC honorary life member",
+        "publisher": "International Cricket Council",
+        "authorityId": "icc",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ICC records Inzamam's 11,739 ODI runs over his completed career."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The unscoped record claim was limited to the three listed players and their completed ODI careers; the catch-all option was replaced."
+  },
+  {
+    "id": "ADV2E102-U0014-Q030-SIM",
+    "pairId": "ADV2E102-U0014-Q030",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "How many ODI runs did Inzamam-ul-Haq score in his completed career?",
+    "questionUrdu": "Inzamam-ul-Haq نے اپنے مکمل ODI career میں کتنے runs بنائے؟",
+    "options": [
+      "7,381",
+      "9,625",
+      "11,739",
+      "13,289"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 11,739 ہے۔ اس مجموعے نے انہیں پاکستان کے نمایاں ODI run-scorers میں شامل کیا۔",
+    "source": {
+      "type": "practice",
+      "label": "Inzamam-ul-Haq",
+      "referenceUrl": "https://www.pcb.com.pk/inzamam-ul-haq.html",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q030",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.pcb.com.pk/inzamam-ul-haq.html",
+        "label": "Inzamam-ul-Haq",
+        "publisher": "Pakistan Cricket Board",
+        "authorityId": "pcb",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "PCB records Inzamam-ul-Haq's completed ODI aggregate above 11,000 runs."
+      },
+      {
+        "url": "https://www.icc-cricket.com/news/inzamam-ul-haq-mark-boucher-named-mcc-honorary-life-members",
+        "label": "Inzamam-ul-Haq named MCC honorary life member",
+        "publisher": "International Cricket Council",
+        "authorityId": "icc",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "ICC gives his exact ODI career total as 11,739 runs."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q031-SRC",
+    "pairId": "ADV2E102-U0014-Q031",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Pakistani sprinter Abdul Khaliq was popularly known by which nickname?",
+    "questionUrdu": "Pakistani sprinter Abdul Khaliq کس nickname سے مشہور تھے؟",
+    "options": [
+      "Flying Bird of Pakistan",
+      "Flying Bird of Asia",
+      "Flying Boy of Asia",
+      "Asian Express"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Flying Bird of Asia ہے۔ ان کی غیر معمولی sprint speed نے انہیں ایشیا بھر میں یہ لقب دلایا۔",
+    "source": {
+      "type": "book",
+      "label": "Crafts and Craftsmen of Chakwal",
+      "referenceUrl": "https://www.psic.gop.pk/Download%28psic%29/Crafts-of-Chakwal-1.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q031"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.psic.gop.pk/Download%28psic%29/Crafts-of-Chakwal-1.pdf",
+        "label": "Crafts and Craftsmen of Chakwal",
+        "publisher": "Punjab Small Industries Corporation",
+        "authorityId": "punjab-small-industries",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Punjab government publication identifies Abdul Khaliq as the Flying Bird of Asia."
+      },
+      {
+        "url": "https://uoc.edu.pk/Downloads/Results/DhanScribes%20Magazine.pdf",
+        "label": "The Flying Bird of Asia: Subedar Abdul Khaliq",
+        "publisher": "University of Chakwal",
+        "authorityId": "university-chakwal",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university publication documents Abdul Khaliq's Flying Bird of Asia nickname."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The nickname was normalized and the unnecessary disputed medal-total clause removed."
+  },
+  {
+    "id": "ADV2E102-U0014-Q031-SIM",
+    "pairId": "ADV2E102-U0014-Q031",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "In which athletics events did Abdul Khaliq chiefly compete?",
+    "questionUrdu": "Abdul Khaliq بنیادی طور پر کن athletics events میں مقابلہ کرتے تھے؟",
+    "options": [
+      "100 m and 200 m sprints",
+      "Marathon and race walking",
+      "Shot put and discus",
+      "High jump and pole vault"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 100 m اور 200 m sprints ہے۔ ان کی شہرت مختصر فاصلے کی تیز دوڑ میں کامیابیوں سے بنی۔",
+    "source": {
+      "type": "practice",
+      "label": "Crafts and Craftsmen of Chakwal",
+      "referenceUrl": "https://www.psic.gop.pk/Download%28psic%29/Crafts-of-Chakwal-1.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q031",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.psic.gop.pk/Download%28psic%29/Crafts-of-Chakwal-1.pdf",
+        "label": "Crafts and Craftsmen of Chakwal",
+        "publisher": "Punjab Small Industries Corporation",
+        "authorityId": "punjab-small-industries",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Punjab government publication profiles Abdul Khaliq as a 100 m and 200 m sprinter."
+      },
+      {
+        "url": "https://uoc.edu.pk/Downloads/Results/DhanScribes%20Magazine.pdf",
+        "label": "The Flying Bird of Asia: Subedar Abdul Khaliq",
+        "publisher": "University of Chakwal",
+        "authorityId": "university-chakwal",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The University of Chakwal publication independently documents his sprint achievements."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q032-SRC",
+    "pairId": "ADV2E102-U0014-Q032",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Who succeeded John F. Kennedy as president of the United States in 1963?",
+    "questionUrdu": "1963 میں John F. Kennedy کے بعد U.S. president کون بنے؟",
+    "options": [
+      "Jimmy Carter",
+      "Lyndon B. Johnson",
+      "George H. W. Bush",
+      "Richard Nixon"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Lyndon B. Johnson ہے۔ Kennedy کی وفات کے بعد Johnson نے اسی دن صدارت کا حلف اٹھایا۔",
+    "source": {
+      "type": "book",
+      "label": "Lyndon B. Johnson",
+      "referenceUrl": "https://obamawhitehouse.archives.gov/about/presidents/lyndonbjohnson",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q032"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://obamawhitehouse.archives.gov/about/presidents/lyndonbjohnson",
+        "label": "Lyndon B. Johnson",
+        "publisher": "White House Archives",
+        "authorityId": "white-house-archives",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archived White House biography records Johnson's swearing-in after Kennedy's assassination in 1963."
+      },
+      {
+        "url": "https://jfk.artifacts.archives.gov/people/585/president-lyndon-b-johnson",
+        "label": "President Lyndon B. Johnson",
+        "publisher": "John F. Kennedy Presidential Library and Museum",
+        "authorityId": "jfk-library",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The JFK Library states that Johnson was sworn in as president on Kennedy's death in 1963."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1963",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The country, event year and full names were supplied; the catch-all option was replaced."
+  },
+  {
+    "id": "ADV2E102-U0014-Q032-SIM",
+    "pairId": "ADV2E102-U0014-Q032",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "Where did Lyndon B. Johnson take the presidential oath after Kennedy's assassination?",
+    "questionUrdu": "Kennedy کے قتل کے بعد Lyndon B. Johnson نے presidential oath کہاں لیا؟",
+    "options": [
+      "Aboard Air Force One",
+      "Inside the White House",
+      "At the U.S. Capitol",
+      "At Camp David"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Air Force One ہے۔ انہوں نے Dallas کے Love Field پر کھڑے presidential aircraft کے اندر حلف لیا تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "Lyndon B. Johnson",
+      "referenceUrl": "https://obamawhitehouse.archives.gov/about/presidents/lyndonbjohnson",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q032",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://obamawhitehouse.archives.gov/about/presidents/lyndonbjohnson",
+        "label": "Lyndon B. Johnson",
+        "publisher": "White House Archives",
+        "authorityId": "white-house-archives",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The archived White House biography records Johnson's oath aboard Air Force One."
+      },
+      {
+        "url": "https://jfk.artifacts.archives.gov/people/585/president-lyndon-b-johnson",
+        "label": "President Lyndon B. Johnson",
+        "publisher": "John F. Kennedy Presidential Library and Museum",
+        "authorityId": "jfk-library",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The JFK Presidential Library independently documents the Air Force One swearing-in."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q033-SRC",
+    "pairId": "ADV2E102-U0014-Q033",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "The Cornwallis Code of 1793, which reorganized judicial and civil administration in British India, is associated with which official?",
+    "questionUrdu": "1793 کا Cornwallis Code کس British official سے منسوب ہے؟",
+    "options": [
+      "Warren Hastings",
+      "Thomas Macaulay",
+      "Charles Cornwallis",
+      "William Bentinck"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Charles Cornwallis ہے۔ ان اصلاحات نے British India کے عدالتی اور civil administration کو نئے انداز میں منظم کیا۔",
+    "source": {
+      "type": "book",
+      "label": "Cornwallis Code",
+      "referenceUrl": "https://www.britannica.com/topic/Cornwallis-Code",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q033"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britannica.com/topic/Cornwallis-Code",
+        "label": "Cornwallis Code",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica attributes the 1793 Cornwallis Code and administrative reforms to Lord Cornwallis."
+      },
+      {
+        "url": "https://egyankosh.ac.in/bitstream/123456789/66571/1/Block-7.pdf",
+        "label": "Colonial administration in India",
+        "publisher": "Indira Gandhi National Open University",
+        "authorityId": "ignou",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IGNOU's history material documents Cornwallis's reorganization of the civil bureaucracy."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1793",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The conventional and subjective 'father of civil services' title was replaced with Cornwallis's documented 1793 administrative code."
+  },
+  {
+    "id": "ADV2E102-U0014-Q033-SIM",
+    "pairId": "ADV2E102-U0014-Q033",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "The Cornwallis Code permanently separated which two administrative functions?",
+    "questionUrdu": "Cornwallis Code نے کن دو administrative functions کو مستقل طور پر الگ کیا؟",
+    "options": [
+      "Revenue collection and judicial work",
+      "Defence and foreign affairs",
+      "Education and public health",
+      "Railways and postal services"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب revenue collection اور judicial work ہے۔ اس separation کا مقصد district administration میں مفادات کے ٹکراؤ کو کم کرنا تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "Cornwallis Code",
+      "referenceUrl": "https://www.britannica.com/topic/Cornwallis-Code",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q033",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britannica.com/topic/Cornwallis-Code",
+        "label": "Cornwallis Code",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Britannica explains the Cornwallis Code's separation of revenue and judicial administration."
+      },
+      {
+        "url": "https://egyankosh.ac.in/bitstream/123456789/66571/1/Block-7.pdf",
+        "label": "Colonial administration in India",
+        "publisher": "Indira Gandhi National Open University",
+        "authorityId": "ignou",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "IGNOU's history material independently describes Cornwallis's administrative separation of functions."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q034-SRC",
+    "pairId": "ADV2E102-U0014-Q034",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "In which year did the Urdu-Hindi controversy become prominent in Benares?",
+    "questionUrdu": "Benares میں Urdu-Hindi controversy کس سال نمایاں ہوئی؟",
+    "options": [
+      "1857",
+      "1867",
+      "1877",
+      "1887"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 1867 ہے۔ اسی سال Hindi کو Urdu کی جگہ سرکاری استعمال میں لانے کی تحریک نے تنازع کو نمایاں کیا۔",
+    "source": {
+      "type": "book",
+      "label": "The Urdu-Hindi Controversy",
+      "referenceUrl": "https://pjhc.nihcr.edu.pk/wp-content/uploads/2020/08/2-The-Urdu-Hindi-Controversy.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q034"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pjhc.nihcr.edu.pk/wp-content/uploads/2020/08/2-The-Urdu-Hindi-Controversy.pdf",
+        "label": "The Urdu-Hindi Controversy",
+        "publisher": "National Institute of Historical and Cultural Research",
+        "authorityId": "nihcr",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly history article traces the Benares language movement to 1867."
+      },
+      {
+        "url": "https://vulms.vu.edu.pk/Courses/PAK301/Lessons/Lesson_4/Lec04-04.html",
+        "label": "Hindi-Urdu Controversy",
+        "publisher": "Virtual University of Pakistan",
+        "authorityId": "virtual-university-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university lesson records the 1867 Benares campaign to replace Urdu with Hindi."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source stem and option A were incomplete. The row was reconstructed as the directly documented event-year question rather than asserting a single ideological outcome."
+  },
+  {
+    "id": "ADV2E102-U0014-Q034-SIM",
+    "pairId": "ADV2E102-U0014-Q034",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "In which city did the 1867 Urdu-Hindi controversy become prominent?",
+    "questionUrdu": "1867 کی Urdu-Hindi controversy کس شہر میں نمایاں ہوئی؟",
+    "options": [
+      "Benares",
+      "Lahore",
+      "Delhi",
+      "Aligarh"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Benares ہے۔ وہاں کی language campaign نے شمالی ہند کی سیاسی لسانی تقسیم کو گہرا کیا۔",
+    "source": {
+      "type": "practice",
+      "label": "The Urdu-Hindi Controversy",
+      "referenceUrl": "https://pjhc.nihcr.edu.pk/wp-content/uploads/2020/08/2-The-Urdu-Hindi-Controversy.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q034",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pjhc.nihcr.edu.pk/wp-content/uploads/2020/08/2-The-Urdu-Hindi-Controversy.pdf",
+        "label": "The Urdu-Hindi Controversy",
+        "publisher": "National Institute of Historical and Cultural Research",
+        "authorityId": "nihcr",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NIHCR's scholarly article locates the 1867 controversy in Benares."
+      },
+      {
+        "url": "https://vulms.vu.edu.pk/Courses/PAK301/Lessons/Lesson_4/Lec04-04.html",
+        "label": "Hindi-Urdu Controversy",
+        "publisher": "Virtual University of Pakistan",
+        "authorityId": "virtual-university-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Virtual University of Pakistan independently records the Benares language campaign."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q035-SRC",
+    "pairId": "ADV2E102-U0014-Q035",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Which 1909 reforms introduced separate electorates for Muslims in British India?",
+    "questionUrdu": "1909 کی کن reforms نے British India میں مسلمانوں کے لیے separate electorates متعارف کرائے؟",
+    "options": [
+      "Morley-Minto Reforms",
+      "Montagu-Chelmsford Reforms",
+      "Government of India Act 1935",
+      "Cripps Proposals"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Morley-Minto Reforms ہے۔ ان اصلاحات کو قانونی شکل Indian Councils Act 1909 نے دی۔",
+    "source": {
+      "type": "book",
+      "label": "Indian Councils Act 1909",
+      "referenceUrl": "https://www.legislation.gov.uk/ukpga/Edw7/9/4/contents/enacted",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q035"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/Edw7/9/4/contents/enacted",
+        "label": "Indian Councils Act 1909",
+        "publisher": "UK Legislation",
+        "authorityId": "uk-legislation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The enacted Indian Councils Act 1909 provides the statutory framework known as the Morley-Minto Reforms."
+      },
+      {
+        "url": "https://api.parliament.uk/historic-hansard/lords/1909/may/04/the-mahomedan-electorate",
+        "label": "The Mahomedan Electorate",
+        "publisher": "UK Parliament",
+        "authorityId": "uk-parliament",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The 1909 parliamentary debate documents the separate Muslim electorate arrangements."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1909",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The grammar and reform names were normalized, and the catch-all option was replaced."
+  },
+  {
+    "id": "ADV2E102-U0014-Q035-SIM",
+    "pairId": "ADV2E102-U0014-Q035",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "What was the formal statutory name of the Morley-Minto Reforms?",
+    "questionUrdu": "Morley-Minto Reforms کا رسمی قانونی نام کیا تھا؟",
+    "options": [
+      "Indian Councils Act 1909",
+      "Government of India Act 1919",
+      "Indian Independence Act 1947",
+      "Charter Act 1833"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Indian Councils Act 1909 ہے۔ یہی statute legislative councils اور separate Muslim electorate کے انتظامات کا قانونی ذریعہ تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "Indian Councils Act 1909",
+      "referenceUrl": "https://www.legislation.gov.uk/ukpga/Edw7/9/4/contents/enacted",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q035",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/Edw7/9/4/contents/enacted",
+        "label": "Indian Councils Act 1909",
+        "publisher": "UK Legislation",
+        "authorityId": "uk-legislation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "UK Legislation publishes the enacted Indian Councils Act 1909."
+      },
+      {
+        "url": "https://api.parliament.uk/historic-hansard/lords/1909/may/04/the-mahomedan-electorate",
+        "label": "The Mahomedan Electorate",
+        "publisher": "UK Parliament",
+        "authorityId": "uk-parliament",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "UK Parliament's 1909 debate independently connects the Act with the Morley-Minto electoral arrangements."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q036-SRC",
+    "pairId": "ADV2E102-U0014-Q036",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Which legal framework, adopted as Pakistan's interim constitution in 1947, provided for federal and provincial public service commissions?",
+    "questionUrdu": "1947 میں Pakistan کے interim constitution کے طور پر اختیار کیے گئے کس قانونی framework نے federal اور provincial public service commissions فراہم کیے؟",
+    "options": [
+      "Government of India Act 1935",
+      "Constitution of 1956",
+      "Constitution of 1962",
+      "Interim Constitution of 1972"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Government of India Act 1935 ہے۔ آزادی کے بعد ضروری adaptations کے ساتھ اسی Act نے عبوری آئینی ڈھانچہ فراہم کیا۔",
+    "source": {
+      "type": "book",
+      "label": "History of the Commission and its functions",
+      "referenceUrl": "https://www.fpsc.gov.pk/assets/media/2024-09-16-05-36-39-FPSC-Annual-Report-2016.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q036"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.fpsc.gov.pk/assets/media/2024-09-16-05-36-39-FPSC-Annual-Report-2016.pdf",
+        "label": "History of the Commission and its functions",
+        "publisher": "Federal Public Service Commission of Pakistan",
+        "authorityId": "fpsc",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "FPSC records Pakistan's adoption of the Government of India Act 1935 and its provisions for public service commissions."
+      },
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/Geo5and1Edw8/26/2/contents/enacted",
+        "label": "Government of India Act 1935",
+        "publisher": "UK Legislation",
+        "authorityId": "uk-legislation",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The enacted 1935 statute contains the federal and provincial public service commission provisions."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1947",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The malformed 'was termed according to which set' wording was replaced with the precise constitutional-history proposition."
+  },
+  {
+    "id": "ADV2E102-U0014-Q036-SIM",
+    "pairId": "ADV2E102-U0014-Q036",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Which body did the Government of India Act 1935 provide at the federal level for civil-service recruitment?",
+    "questionUrdu": "Government of India Act 1935 نے federal سطح پر civil-service recruitment کے لیے کون سا body فراہم کیا؟",
+    "options": [
+      "Federal Public Service Commission",
+      "Election Commission",
+      "Finance Commission",
+      "Planning Commission"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Federal Public Service Commission ہے۔ Act میں وفاقی اور صوبائی سطح پر merit-based recruitment کے لیے commissions کا انتظام تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "History of the Commission and its functions",
+      "referenceUrl": "https://www.fpsc.gov.pk/assets/media/2024-09-16-05-36-39-FPSC-Annual-Report-2016.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q036",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.fpsc.gov.pk/assets/media/2024-09-16-05-36-39-FPSC-Annual-Report-2016.pdf",
+        "label": "History of the Commission and its functions",
+        "publisher": "Federal Public Service Commission of Pakistan",
+        "authorityId": "fpsc",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "FPSC's official history explains the 1935 Act's federal public-service commission framework."
+      },
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/Geo5and1Edw8/26/2/contents/enacted",
+        "label": "Government of India Act 1935",
+        "publisher": "UK Legislation",
+        "authorityId": "uk-legislation",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The enacted UK statute independently contains provisions for a federal public service commission."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q037-SRC",
+    "pairId": "ADV2E102-U0014-Q037",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Which humanitarian society was founded in Pakistan on 20 December 1947?",
+    "questionUrdu": "Pakistan میں 20 December 1947 کو کون سی humanitarian society قائم ہوئی؟",
+    "options": [
+      "Pakistan Red Crescent Society",
+      "Edhi Foundation",
+      "Pakistan Boys Scouts Association",
+      "Ansar Burney Trust"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Pakistan Red Crescent Society ہے۔ یہ آفات، صحت اور emergency relief میں انسانی خدمت انجام دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "History of PRCS",
+      "referenceUrl": "https://prcspunjab.com/history/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q037"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://prcspunjab.com/history/",
+        "label": "History of PRCS",
+        "publisher": "Pakistan Red Crescent Society Punjab",
+        "authorityId": "prcs",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PRCS records its foundation on 20 December 1947 by the Pakistan Red Cross Order."
+      },
+      {
+        "url": "https://data-api.ifrc.org/documents/PK/audited%20Financial%20Statement_Pakistan_2018-2018.pdf",
+        "label": "Pakistan Red Crescent Society financial statements",
+        "publisher": "International Federation of Red Cross and Red Crescent Societies",
+        "authorityId": "ifrc",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The IFRC-hosted audited statement records the Society's foundation on 20 December 1947."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1947-12-20",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The date-answer question was inverted so the full event date is explicit, with four organization options."
+  },
+  {
+    "id": "ADV2E102-U0014-Q037-SIM",
+    "pairId": "ADV2E102-U0014-Q037",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Who served as the founding president of the Pakistan Red Crescent Society?",
+    "questionUrdu": "Pakistan Red Crescent Society کے founding president کون تھے؟",
+    "options": [
+      "Fatima Jinnah",
+      "Begum Ra'ana Liaquat Ali Khan",
+      "Muhammad Ali Jinnah",
+      "Abdul Sattar Edhi"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Muhammad Ali Jinnah ہے۔ قائداعظم نے نئی قومی humanitarian society کی سرپرستی اور ابتدائی قیادت کی۔",
+    "source": {
+      "type": "practice",
+      "label": "History of PRCS",
+      "referenceUrl": "https://prcspunjab.com/history/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q037",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://prcspunjab.com/history/",
+        "label": "History of PRCS",
+        "publisher": "Pakistan Red Crescent Society Punjab",
+        "authorityId": "prcs",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "PRCS's official history identifies Muhammad Ali Jinnah as its founding president."
+      },
+      {
+        "url": "https://data-api.ifrc.org/documents/PK/audited%20Financial%20Statement_Pakistan_2018-2018.pdf",
+        "label": "Pakistan Red Crescent Society financial statements",
+        "publisher": "International Federation of Red Cross and Red Crescent Societies",
+        "authorityId": "ifrc",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The IFRC-hosted institutional statement independently records Jinnah's founding role."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q038-SRC",
+    "pairId": "ADV2E102-U0014-Q038",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Under the provincial dyarchy created by the Government of India Act 1919, law and order belonged to which class of subjects?",
+    "questionUrdu": "Government of India Act 1919 کی provincial dyarchy میں law and order کس class کے subjects میں تھا؟",
+    "options": [
+      "Transferred subjects",
+      "Reserved subjects",
+      "Concurrent subjects",
+      "Federal subjects"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Reserved subjects ہے۔ ایسے شعبے governor اور اس کے executive councillors کے control میں رہتے تھے۔",
+    "source": {
+      "type": "book",
+      "label": "Constitutional development under the Government of India Act 1919",
+      "referenceUrl": "https://www.presidentofindia.gov.in/sites/default/files/sp150517_1.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q038"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.presidentofindia.gov.in/sites/default/files/sp150517_1.pdf",
+        "label": "Constitutional development under the Government of India Act 1919",
+        "publisher": "President of India",
+        "authorityId": "president-india",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official constitutional account explains the reserved and transferred lists under 1919 dyarchy."
+      },
+      {
+        "url": "https://www.drishtiias.com/pdf/1629166334-government-of-india-act-1919.pdf",
+        "label": "Government of India Act 1919",
+        "publisher": "Drishti IAS",
+        "authorityId": "drishti-ias",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The constitutional study material lists law and order among reserved provincial subjects."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1919",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The reform name and plural agreement were corrected, and the catch-all option replaced."
+  },
+  {
+    "id": "ADV2E102-U0014-Q038-SIM",
+    "pairId": "ADV2E102-U0014-Q038",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Under the 1919 dyarchy, which listed field was a transferred provincial subject?",
+    "questionUrdu": "1919 کی dyarchy میں درج ذیل میں سے کون سا transferred provincial subject تھا؟",
+    "options": [
+      "Education",
+      "Police",
+      "Justice",
+      "Land revenue"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Education ہے۔ transferred subjects وزرا کے سپرد تھے، جبکہ police، justice اور land revenue reserved رہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Constitutional development under the Government of India Act 1919",
+      "referenceUrl": "https://www.presidentofindia.gov.in/sites/default/files/sp150517_1.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q038",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.presidentofindia.gov.in/sites/default/files/sp150517_1.pdf",
+        "label": "Constitutional development under the Government of India Act 1919",
+        "publisher": "President of India",
+        "authorityId": "president-india",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The President of India's constitutional account lists education among transferred subjects."
+      },
+      {
+        "url": "https://www.drishtiias.com/pdf/1629166334-government-of-india-act-1919.pdf",
+        "label": "Government of India Act 1919",
+        "publisher": "Drishti IAS",
+        "authorityId": "drishti-ias",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The constitutional study material independently contrasts education with reserved law-and-order fields."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q039-SRC",
+    "pairId": "ADV2E102-U0014-Q039",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Which renowned Pakistani qawwali singer died in 1997?",
+    "questionUrdu": "کون سے معروف Pakistani qawwali singer کا انتقال 1997 میں ہوا؟",
+    "options": [
+      "Nusrat Fateh Ali Khan",
+      "Mehdi Hassan",
+      "Ghulam Ali",
+      "Aziz Mian"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Nusrat Fateh Ali Khan ہے۔ ان کی آواز نے qawwali کو عالمی سطح پر غیر معمولی شہرت دی۔",
+    "source": {
+      "type": "book",
+      "label": "Nusrat Fateh Ali Khan",
+      "referenceUrl": "https://www.britannica.com/biography/Nusrat-Fateh-Ali-Khan",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q039"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britannica.com/biography/Nusrat-Fateh-Ali-Khan",
+        "label": "Nusrat Fateh Ali Khan",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica records Nusrat Fateh Ali Khan's death in 1997."
+      },
+      {
+        "url": "https://www.washingtonpost.com/archive/local/1997/08/19/deaths/ac306307-d023-44af-9545-7e5cfabfa5be/",
+        "label": "Nusrat Fateh Ali Khan obituary",
+        "publisher": "The Washington Post",
+        "authorityId": "washington-post",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The contemporary obituary records Khan's death in August 1997."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1997",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The year-answer question was inverted so the event year is explicit and all options are artists."
+  },
+  {
+    "id": "ADV2E102-U0014-Q039-SIM",
+    "pairId": "ADV2E102-U0014-Q039",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "In which city did Nusrat Fateh Ali Khan die in 1997?",
+    "questionUrdu": "Nusrat Fateh Ali Khan کا 1997 میں کس شہر میں انتقال ہوا؟",
+    "options": [
+      "London",
+      "Lahore",
+      "Karachi",
+      "New York"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب London ہے۔ علاج کے دوران وہاں ان کا انتقال ہوا اور بعد میں تدفین پاکستان میں ہوئی۔",
+    "source": {
+      "type": "practice",
+      "label": "Nusrat Fateh Ali Khan",
+      "referenceUrl": "https://www.britannica.com/biography/Nusrat-Fateh-Ali-Khan",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q039",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britannica.com/biography/Nusrat-Fateh-Ali-Khan",
+        "label": "Nusrat Fateh Ali Khan",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Britannica records Nusrat Fateh Ali Khan's death in London."
+      },
+      {
+        "url": "https://www.washingtonpost.com/archive/local/1997/08/19/deaths/ac306307-d023-44af-9545-7e5cfabfa5be/",
+        "label": "Nusrat Fateh Ali Khan obituary",
+        "publisher": "The Washington Post",
+        "authorityId": "washington-post",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The contemporary Washington Post obituary independently reports his death at a London hospital."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q040-SRC",
+    "pairId": "ADV2E102-U0014-Q040",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "The Liaquat-Nehru Pact signed on 8 April 1950 primarily protected the rights and security of which group in India and Pakistan?",
+    "questionUrdu": "8 April 1950 کے Liaquat-Nehru Pact نے India اور Pakistan میں بنیادی طور پر کس گروہ کے حقوق اور سلامتی محفوظ کی؟",
+    "options": [
+      "River-water users",
+      "Religious minorities",
+      "Border customs officials",
+      "Military prisoners"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Religious minorities ہے۔ معاہدے نے دونوں ملکوں میں minorities کی شہریت، مذہبی آزادی اور تحفظ کی ضمانت دی۔",
+    "source": {
+      "type": "book",
+      "label": "India-Pakistan Agreement on minorities",
+      "referenceUrl": "https://treaties.un.org/doc/Publication/UNTS/Volume%20131/v131.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q040"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://treaties.un.org/doc/Publication/UNTS/Volume%20131/v131.pdf",
+        "label": "India-Pakistan Agreement on minorities",
+        "publisher": "United Nations Treaty Series",
+        "authorityId": "un-treaty-series",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The registered agreement guarantees citizenship, security and freedoms to minorities in both countries."
+      },
+      {
+        "url": "https://www.pib.gov.in/newsite/erelcontent.aspx?lang=2&reg=48&relid=59464",
+        "label": "Nehru-Liaquat Agreement",
+        "publisher": "Press Information Bureau, Government of India",
+        "authorityId": "india-pib",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official release summarizes the pact's guarantees for minorities."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1950-04-08",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The date and purpose were made grammatical and the options replaced with parallel policy subjects."
+  },
+  {
+    "id": "ADV2E102-U0014-Q040-SIM",
+    "pairId": "ADV2E102-U0014-Q040",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Which two prime ministers signed the Liaquat-Nehru Pact?",
+    "questionUrdu": "Liaquat-Nehru Pact پر کن دو prime ministers نے دستخط کیے؟",
+    "options": [
+      "Liaquat Ali Khan and Jawaharlal Nehru",
+      "Muhammad Ali Jinnah and Mahatma Gandhi",
+      "Khwaja Nazimuddin and Vallabhbhai Patel",
+      "Ayub Khan and Lal Bahadur Shastri"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Liaquat Ali Khan اور Jawaharlal Nehru ہے۔ pact کا نام بھی دونوں ملکوں کے انہی وزرائے اعظم کے ناموں سے بنا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "India-Pakistan Agreement on minorities",
+      "referenceUrl": "https://treaties.un.org/doc/Publication/UNTS/Volume%20131/v131.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q040",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://treaties.un.org/doc/Publication/UNTS/Volume%20131/v131.pdf",
+        "label": "India-Pakistan Agreement on minorities",
+        "publisher": "United Nations Treaty Series",
+        "authorityId": "un-treaty-series",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The UN Treaty Series records the agreement between Liaquat Ali Khan and Jawaharlal Nehru."
+      },
+      {
+        "url": "https://www.pib.gov.in/newsite/erelcontent.aspx?lang=2&reg=48&relid=59464",
+        "label": "Nehru-Liaquat Agreement",
+        "publisher": "Press Information Bureau, Government of India",
+        "authorityId": "india-pib",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "India's Press Information Bureau independently identifies both prime-minister signatories."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q041-SRC",
+    "pairId": "ADV2E102-U0014-Q041",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Which Delhi Sultan's general Malik Kafur led campaigns into the Deccan and South India?",
+    "questionUrdu": "Malik Kafur نے کس Delhi Sultan کی طرف سے Deccan اور South India میں campaigns چلائیں؟",
+    "options": [
+      "Mahmud of Ghazni",
+      "Muhammad of Ghor",
+      "Alauddin Khalji",
+      "Jalaluddin Khalji"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Alauddin Khalji ہے۔ Malik Kafur ان کے اہم general تھے اور انہوں نے جنوبی ریاستوں تک فوجی مہمات کیں۔",
+    "source": {
+      "type": "book",
+      "label": "The Khalji dynasty",
+      "referenceUrl": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-khilji-khalji-dynasty-1290-1320/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q041"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-khilji-khalji-dynasty-1290-1320/",
+        "label": "The Khalji dynasty",
+        "publisher": "INFLIBNET Centre",
+        "authorityId": "inflibnet",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "India's university-library network records Malik Kafur's southern campaigns under Alauddin Khalji."
+      },
+      {
+        "url": "https://mis.alagappauniversity.ac.in/siteAdmin/dde-admin/uploads/5/__UG_B.A._History%20%28English%29_108%2051_History%20of%20Tamil%20Nadu%20%28Beginning%20to%201947%20AD%29_BA%20%28History%29_9683.pdf",
+        "label": "History of Tamil Nadu",
+        "publisher": "Alagappa University",
+        "authorityId": "alagappa-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university text states that Malik Kafur led the Deccan army under Sultan Alauddin Khalji."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The sweeping and imprecise 'captured India up to its extreme South' claim was replaced with the documented relationship between the Sultan and his general."
+  },
+  {
+    "id": "ADV2E102-U0014-Q041-SIM",
+    "pairId": "ADV2E102-U0014-Q041",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "Alauddin Khalji belonged to which Delhi Sultanate dynasty?",
+    "questionUrdu": "Alauddin Khalji Delhi Sultanate کی کس dynasty سے تعلق رکھتے تھے؟",
+    "options": [
+      "Khalji dynasty",
+      "Mamluk dynasty",
+      "Tughluq dynasty",
+      "Lodi dynasty"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Khalji dynasty ہے۔ Alauddin اسی خاندان کے سب سے طاقتور حکمرانوں میں شمار ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "The Khalji dynasty",
+      "referenceUrl": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-khilji-khalji-dynasty-1290-1320/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q041",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ebooks.inflibnet.ac.in/icp01/chapter/the-khilji-khalji-dynasty-1290-1320/",
+        "label": "The Khalji dynasty",
+        "publisher": "INFLIBNET Centre",
+        "authorityId": "inflibnet",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "INFLIBNET's history chapter places Alauddin in the Khalji dynasty."
+      },
+      {
+        "url": "https://mis.alagappauniversity.ac.in/siteAdmin/dde-admin/uploads/5/__UG_B.A._History%20%28English%29_108%2051_History%20of%20Tamil%20Nadu%20%28Beginning%20to%201947%20AD%29_BA%20%28History%29_9683.pdf",
+        "label": "History of Tamil Nadu",
+        "publisher": "Alagappa University",
+        "authorityId": "alagappa-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Alagappa University's history text independently identifies his Khalji dynastic affiliation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q042-SRC",
+    "pairId": "ADV2E102-U0014-Q042",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Who wrote India Wins Freedom?",
+    "questionUrdu": "India Wins Freedom کس نے لکھی؟",
+    "options": [
+      "Jawaharlal Nehru",
+      "Louis Mountbatten",
+      "Maulana Abul Kalam Azad",
+      "Rajendra Prasad"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Maulana Abul Kalam Azad ہے۔ یہ کتاب آزادی کی تحریک اور تقسیم کے واقعات پر ان کی سیاسی یادداشت ہے۔",
+    "source": {
+      "type": "book",
+      "label": "India Wins Freedom catalog records",
+      "referenceUrl": "https://gsl.lbsnaa.gov.in/cgi-bin/koha/opac-search.pl?q=au%3A%22Azad%2C+Maulana+Abul+Kalam%22",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q042"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://gsl.lbsnaa.gov.in/cgi-bin/koha/opac-search.pl?q=au%3A%22Azad%2C+Maulana+Abul+Kalam%22",
+        "label": "India Wins Freedom catalog records",
+        "publisher": "Lal Bahadur Shastri National Academy of Administration",
+        "authorityId": "lbsnaa",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The academy library catalogs India Wins Freedom under Maulana Abul Kalam Azad."
+      },
+      {
+        "url": "https://openlibrary.org/works/OL290674W/India_wins_freedom",
+        "label": "India Wins Freedom",
+        "publisher": "Open Library",
+        "authorityId": "open-library",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Open Library's bibliographic record attributes the work to Abul Kalam Azad."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Names and the book title were normalized, and the catch-all option replaced."
+  },
+  {
+    "id": "ADV2E102-U0014-Q042-SIM",
+    "pairId": "ADV2E102-U0014-Q042",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "What literary form best describes 'India Wins Freedom'?",
+    "questionUrdu": "'India Wins Freedom' کو کس literary form میں رکھا جاتا ہے؟",
+    "options": [
+      "Political autobiography",
+      "Historical novel",
+      "Epic poem",
+      "Travelogue"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Political autobiography ہے۔ کتاب Azad کے ذاتی مشاہدات کے ذریعے آزادی کی سیاست کو بیان کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "India Wins Freedom catalog records",
+      "referenceUrl": "https://gsl.lbsnaa.gov.in/cgi-bin/koha/opac-search.pl?q=au%3A%22Azad%2C+Maulana+Abul+Kalam%22",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q042",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://gsl.lbsnaa.gov.in/cgi-bin/koha/opac-search.pl?q=au%3A%22Azad%2C+Maulana+Abul+Kalam%22",
+        "label": "India Wins Freedom catalog records",
+        "publisher": "Lal Bahadur Shastri National Academy of Administration",
+        "authorityId": "lbsnaa",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The LBSNAA catalog classifies India Wins Freedom as Azad's autobiographical political account."
+      },
+      {
+        "url": "https://openlibrary.org/works/OL290674W/India_wins_freedom",
+        "label": "India Wins Freedom",
+        "publisher": "Open Library",
+        "authorityId": "open-library",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Open Library independently catalogs the work as Azad's autobiographical history of independence."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q043-SRC",
+    "pairId": "ADV2E102-U0014-Q043",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Which airport was identified in a 2018 official record as Pakistan's first greenfield airport?",
+    "questionUrdu": "2018 کے official record میں Pakistan کا پہلا greenfield airport کون سا بتایا گیا؟",
+    "options": [
+      "Allama Iqbal International Airport",
+      "Islamabad International Airport",
+      "Quetta International Airport",
+      "Jinnah International Airport"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Islamabad International Airport ہے۔ اسے موجودہ airport کی توسیع کے بجائے نئی site پر مکمل منصوبے کے طور پر تعمیر کیا گیا۔",
+    "source": {
+      "type": "book",
+      "label": "National Assembly question on New Islamabad Airport",
+      "referenceUrl": "https://na.gov.pk/uploads/documents/questions/1516095522_923.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q043"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/documents/questions/1516095522_923.pdf",
+        "label": "National Assembly question on New Islamabad Airport",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official parliamentary reply calls New Islamabad International Airport Pakistan's first greenfield airport."
+      },
+      {
+        "url": "https://www.invest.gov.pk/sites/default/files/boi/Tourism_Hospitality.pdf",
+        "label": "Pakistan tourism and hospitality profile",
+        "publisher": "Board of Investment, Pakistan",
+        "authorityId": "pakistan-boi",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official investment profile identifies Islamabad International Airport as Pakistan's first greenfield airport."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "2018",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The country and official-record year were supplied, the airport name expanded, and the ambiguous global superlative removed."
+  },
+  {
+    "id": "ADV2E102-U0014-Q043-SIM",
+    "pairId": "ADV2E102-U0014-Q043",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "What does 'greenfield airport' mean in this context?",
+    "questionUrdu": "اس context میں 'greenfield airport' سے کیا مراد ہے؟",
+    "options": [
+      "An airport built on a new undeveloped site",
+      "An airport painted green",
+      "An airport used only for cargo",
+      "An airport without a runway"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب نئی undeveloped site پر بنایا گیا airport ہے۔ greenfield project پہلے سے موجود facility کی محض توسیع نہیں ہوتا۔",
+    "source": {
+      "type": "practice",
+      "label": "National Assembly question on New Islamabad Airport",
+      "referenceUrl": "https://na.gov.pk/uploads/documents/questions/1516095522_923.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q043",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://na.gov.pk/uploads/documents/questions/1516095522_923.pdf",
+        "label": "National Assembly question on New Islamabad Airport",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Pakistan's National Assembly record uses greenfield for the newly built Islamabad airport project."
+      },
+      {
+        "url": "https://www.invest.gov.pk/sites/default/files/boi/Tourism_Hospitality.pdf",
+        "label": "Pakistan tourism and hospitality profile",
+        "publisher": "Board of Investment, Pakistan",
+        "authorityId": "pakistan-boi",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Board of Investment profile independently distinguishes the new-site Islamabad airport as greenfield infrastructure."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q044-SRC",
+    "pairId": "ADV2E102-U0014-Q044",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Which authority regulates private electronic media in Pakistan?",
+    "questionUrdu": "Pakistan میں private electronic media کو کون سا authority regulate کرتا ہے؟",
+    "options": [
+      "NEPRA",
+      "PEMRA",
+      "PTA",
+      "PRA"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب PEMRA ہے۔ یہ licenses، standards اور private electronic media regulation کا statutory ادارہ ہے۔",
+    "source": {
+      "type": "book",
+      "label": "About PEMRA",
+      "referenceUrl": "https://www.pemra.gov.pk/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q044"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.pemra.gov.pk/",
+        "label": "About PEMRA",
+        "publisher": "Pakistan Electronic Media Regulatory Authority",
+        "authorityId": "pemra",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PEMRA states that its mandate is to facilitate and regulate private electronic media."
+      },
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator0d8373dfae195c4de13b0bd012416abb.pdf",
+        "label": "PEMRA Ordinance 2002",
+        "publisher": "Pakistan Code",
+        "authorityId": "pakistan-code",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official ordinance establishes PEMRA and defines its electronic-media regulatory functions."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The media type and country were supplied, abbreviations normalized, and the catch-all option replaced."
+  },
+  {
+    "id": "ADV2E102-U0014-Q044-SIM",
+    "pairId": "ADV2E102-U0014-Q044",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "What does the abbreviation PEMRA stand for?",
+    "questionUrdu": "PEMRA کا مکمل نام کیا ہے؟",
+    "options": [
+      "Pakistan Electronic Media Regulatory Authority",
+      "Pakistan Entertainment and Music Rights Agency",
+      "Public Electronic Media Review Association",
+      "Pakistan Emergency Media Response Authority"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Pakistan Electronic Media Regulatory Authority ہے۔ نام ہی اس کے electronic media regulation کے قانونی mandate کو ظاہر کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "About PEMRA",
+      "referenceUrl": "https://www.pemra.gov.pk/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q044",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.pemra.gov.pk/",
+        "label": "About PEMRA",
+        "publisher": "Pakistan Electronic Media Regulatory Authority",
+        "authorityId": "pemra",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "PEMRA's official website gives the authority's full statutory name."
+      },
+      {
+        "url": "https://pakistancode.gov.pk/pdffiles/administrator0d8373dfae195c4de13b0bd012416abb.pdf",
+        "label": "PEMRA Ordinance 2002",
+        "publisher": "Pakistan Code",
+        "authorityId": "pakistan-code",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Pakistan Code independently gives the same full name in the establishing ordinance."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q045-SRC",
+    "pairId": "ADV2E102-U0014-Q045",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Which film is identified as the first Pakistani feature film released after independence in 1948?",
+    "questionUrdu": "1948 میں independence کے بعد release ہونے والی پہلی Pakistani feature film کون سی تھی؟",
+    "options": [
+      "Aina",
+      "Teri Yaad",
+      "Shaheed",
+      "Heer Ranjha"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Teri Yaad ہے۔ اسے پاکستان کی ابتدائی film industry کا پہلا post-independence feature سمجھا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "History of Pakistani cinema",
+      "referenceUrl": "https://epwing.gov.pk/SiteImage/Misc/files/Cinema%20House%20P1_compress.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q045"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://epwing.gov.pk/SiteImage/Misc/files/Cinema%20House%20P1_compress.pdf",
+        "label": "History of Pakistani cinema",
+        "publisher": "Ministry of Information and Broadcasting, Pakistan",
+        "authorityId": "pakistan-moib",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official cinema history identifies Teri Yaad as Pakistan's first post-independence film."
+      },
+      {
+        "url": "https://lib.zu.edu.pk/ebookdata/Media%20Sciences/Film/Pakistan%20Cinema%201947-1997%20by%20Mushtaq%20Gazdar.pdf",
+        "label": "Pakistan Cinema 1947-1997",
+        "publisher": "Ziauddin University Library",
+        "authorityId": "ziauddin-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mushtaq Gazdar's film history identifies Teri Yaad as Pakistan's first film, released in 1948."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1948",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The release context and year were supplied; 'Aaeana' was normalized to Aina and the catch-all replaced."
+  },
+  {
+    "id": "ADV2E102-U0014-Q045-SIM",
+    "pairId": "ADV2E102-U0014-Q045",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "In which city was Pakistan's early film industry centred when 'Teri Yaad' was produced?",
+    "questionUrdu": "'Teri Yaad' بننے کے وقت Pakistan کی ابتدائی film industry کس شہر میں مرکوز تھی؟",
+    "options": [
+      "Lahore",
+      "Karachi",
+      "Dhaka",
+      "Peshawar"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Lahore ہے۔ تقسیم کے بعد دستیاب studios کی وجہ سے ابتدائی پاکستانی cinema کا مرکز لاہور بنا۔",
+    "source": {
+      "type": "practice",
+      "label": "History of Pakistani cinema",
+      "referenceUrl": "https://epwing.gov.pk/SiteImage/Misc/files/Cinema%20House%20P1_compress.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q045",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://epwing.gov.pk/SiteImage/Misc/files/Cinema%20House%20P1_compress.pdf",
+        "label": "History of Pakistani cinema",
+        "publisher": "Ministry of Information and Broadcasting, Pakistan",
+        "authorityId": "pakistan-moib",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Pakistan's official cinema history places the production of Teri Yaad in Lahore's early film industry."
+      },
+      {
+        "url": "https://lib.zu.edu.pk/ebookdata/Media%20Sciences/Film/Pakistan%20Cinema%201947-1997%20by%20Mushtaq%20Gazdar.pdf",
+        "label": "Pakistan Cinema 1947-1997",
+        "publisher": "Ziauddin University Library",
+        "authorityId": "ziauddin-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Gazdar's Pakistan cinema history independently documents Lahore as the film's production centre."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q046-SRC",
+    "pairId": "ADV2E102-U0014-Q046",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Who founded and edited the English weekly The Comrade, first published in 1911?",
+    "questionUrdu": "1911 میں پہلی بار شائع ہونے والے English weekly The Comrade کے founder اور editor کون تھے؟",
+    "options": [
+      "Maulana Muhammad Ali Jauhar",
+      "Maulana Abul Kalam Azad",
+      "Zafar Ali Khan",
+      "Hasrat Mohani"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Maulana Muhammad Ali Jauhar ہے۔ انہوں نے اس اخبار کو مسلم سیاسی رائے اور قومی مباحث کے لیے استعمال کیا۔",
+    "source": {
+      "type": "book",
+      "label": "Muhammad Ali: his life, services and trial",
+      "referenceUrl": "https://archive.org/details/muhammadali00mohauoft",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q046"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://archive.org/details/muhammadali00mohauoft",
+        "label": "Muhammad Ali: his life, services and trial",
+        "publisher": "Internet Archive scan of contemporary biography",
+        "authorityId": "internet-archive",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The historical biography records Muhammad Ali's founding and editorship of The Comrade in Calcutta."
+      },
+      {
+        "url": "https://www.jmi.ac.in/upload/menuupload/ma_jauhar.pdf",
+        "label": "Maulana Mohammad Ali Jauhar",
+        "publisher": "Jamia Millia Islamia",
+        "authorityId": "jamia-millia-islamia",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university biography independently credits Muhammad Ali Jauhar with launching The Comrade from Calcutta."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1911",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source date is internally contradictory and misprints 13 July. The row was reconstructed around the independently verified founder-editor and uncontested publication year."
+  },
+  {
+    "id": "ADV2E102-U0014-Q046-SIM",
+    "pairId": "ADV2E102-U0014-Q046",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "From which city was 'The Comrade' first published?",
+    "questionUrdu": "'The Comrade' پہلی بار کس شہر سے شائع ہوا؟",
+    "options": [
+      "Calcutta",
+      "Delhi",
+      "Lahore",
+      "Lucknow"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Calcutta ہے۔ Muhammad Ali Jauhar نے 1911 میں وہیں سے اس English weekly کا آغاز کیا تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "Muhammad Ali: his life, services and trial",
+      "referenceUrl": "https://archive.org/details/muhammadali00mohauoft",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q046",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://archive.org/details/muhammadali00mohauoft",
+        "label": "Muhammad Ali: his life, services and trial",
+        "publisher": "Internet Archive scan of contemporary biography",
+        "authorityId": "internet-archive",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The contemporary biography records The Comrade's launch from Calcutta."
+      },
+      {
+        "url": "https://www.jmi.ac.in/upload/menuupload/ma_jauhar.pdf",
+        "label": "Maulana Mohammad Ali Jauhar",
+        "publisher": "Jamia Millia Islamia",
+        "authorityId": "jamia-millia-islamia",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Jamia Millia Islamia independently credits Jauhar with launching it from Calcutta."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q047-SRC",
+    "pairId": "ADV2E102-U0014-Q047",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "Who wrote the Urdu historical novel Muhammad Bin Qasim?",
+    "questionUrdu": "Urdu historical novel Muhammad Bin Qasim کس نے لکھی؟",
+    "options": [
+      "M. Islam",
+      "Aslam Rahi",
+      "Naseem Hijazi",
+      "Qudrat Ullah Shahab"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Naseem Hijazi ہے۔ یہ ان کے معروف تاریخی ناولوں میں شامل ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Muhammad bin Qasim",
+      "referenceUrl": "https://books.google.com/books/about/Muhammad_bin_Qasim.html?id=6CkC0QEACAAJ",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q047"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://books.google.com/books/about/Muhammad_bin_Qasim.html?id=6CkC0QEACAAJ",
+        "label": "Muhammad bin Qasim",
+        "publisher": "Google Books",
+        "authorityId": "google-books",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The bibliographic record attributes the historical novel to Naseem Hijazi."
+      },
+      {
+        "url": "https://openlibrary.org/works/OL11740004W/Muhammad_bin_qasim",
+        "label": "Muhammad bin Qasim",
+        "publisher": "Open Library",
+        "authorityId": "open-library",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Open Library catalogs Muhammad bin Qasim as a historical novel by Naseem Hijazi."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The work was identified as an Urdu historical novel and the catch-all option replaced."
+  },
+  {
+    "id": "ADV2E102-U0014-Q047-SIM",
+    "pairId": "ADV2E102-U0014-Q047",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "What is the literary genre of Naseem Hijazi's 'Muhammad Bin Qasim'?",
+    "questionUrdu": "Naseem Hijazi کی 'Muhammad Bin Qasim' کس literary genre سے تعلق رکھتی ہے؟",
+    "options": [
+      "Historical novel",
+      "Lyric poetry",
+      "Scientific biography",
+      "Stage comedy"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Historical novel ہے۔ ناول تاریخی واقعات کو fictional narrative کے انداز میں پیش کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Muhammad bin Qasim",
+      "referenceUrl": "https://books.google.com/books/about/Muhammad_bin_Qasim.html?id=6CkC0QEACAAJ",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q047",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://books.google.com/books/about/Muhammad_bin_Qasim.html?id=6CkC0QEACAAJ",
+        "label": "Muhammad bin Qasim",
+        "publisher": "Google Books",
+        "authorityId": "google-books",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Google Books catalogs Muhammad bin Qasim as Naseem Hijazi's historical novel."
+      },
+      {
+        "url": "https://openlibrary.org/works/OL11740004W/Muhammad_bin_qasim",
+        "label": "Muhammad bin Qasim",
+        "publisher": "Open Library",
+        "authorityId": "open-library",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Open Library independently classifies the work as historical fiction."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q048-SRC",
+    "pairId": "ADV2E102-U0014-Q048",
+    "kind": "source",
+    "categoryId": "general-knowledge",
+    "question": "In which country did Dadabhai Naoroji enter Parliament and advocate Indian interests?",
+    "questionUrdu": "Dadabhai Naoroji نے کس ملک کی Parliament میں داخل ہو کر Indian interests کی وکالت کی؟",
+    "options": [
+      "India",
+      "United Kingdom",
+      "Russia",
+      "United States"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب United Kingdom ہے۔ وہ British House of Commons میں منتخب ہوئے اور ہندوستانی معاشی و سیاسی مسائل اٹھائے۔",
+    "source": {
+      "type": "book",
+      "label": "Pioneers: the first Asian and Black parliamentarians",
+      "referenceUrl": "https://heritagecollections.parliament.uk/exhibits/pioneers/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q048"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://heritagecollections.parliament.uk/exhibits/pioneers/",
+        "label": "Pioneers: the first Asian and Black parliamentarians",
+        "publisher": "UK Parliament",
+        "authorityId": "uk-parliament",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UK Parliament records Naoroji's election as an MP and his advocacy of Indian affairs in the Commons."
+      },
+      {
+        "url": "https://www.pib.gov.in/newsite/printrelease.aspx?lang=2&reg=48&relid=166908",
+        "label": "Dadabhai Naoroji: the man who brought statistics into politics",
+        "publisher": "Press Information Bureau, Government of India",
+        "authorityId": "india-pib",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official biography records Naoroji's advocacy of India's cause in the British Parliament."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague location of 'work for India' was narrowed to his documented parliamentary advocacy; country names were expanded."
+  },
+  {
+    "id": "ADV2E102-U0014-Q048-SIM",
+    "pairId": "ADV2E102-U0014-Q048",
+    "kind": "similar",
+    "categoryId": "general-knowledge",
+    "question": "Dadabhai Naoroji was elected to which chamber of the UK Parliament?",
+    "questionUrdu": "Dadabhai Naoroji UK Parliament کے کس chamber کے رکن منتخب ہوئے؟",
+    "options": [
+      "House of Commons",
+      "House of Lords",
+      "Privy Council",
+      "Scottish Parliament"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب House of Commons ہے۔ وہ Finsbury Central سے MP منتخب ہو کر اس elected chamber میں پہنچے۔",
+    "source": {
+      "type": "practice",
+      "label": "Pioneers: the first Asian and Black parliamentarians",
+      "referenceUrl": "https://heritagecollections.parliament.uk/exhibits/pioneers/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q048",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://heritagecollections.parliament.uk/exhibits/pioneers/",
+        "label": "Pioneers: the first Asian and Black parliamentarians",
+        "publisher": "UK Parliament",
+        "authorityId": "uk-parliament",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "UK Parliament records Naoroji's election to the House of Commons."
+      },
+      {
+        "url": "https://www.pib.gov.in/newsite/printrelease.aspx?lang=2&reg=48&relid=166908",
+        "label": "Dadabhai Naoroji: the man who brought statistics into politics",
+        "publisher": "Press Information Bureau, Government of India",
+        "authorityId": "india-pib",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "India's Press Information Bureau independently notes his service in the British House of Commons."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q049-SRC",
+    "pairId": "ADV2E102-U0014-Q049",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Which leader's insistence that the Muslim League nominate all Muslim members contributed to the failure of the 1945 Simla Conference?",
+    "questionUrdu": "کس leader کے اس اصرار نے 1945 Simla Conference کی ناکامی میں کردار ادا کیا کہ تمام Muslim members کو Muslim League nominate کرے؟",
+    "options": [
+      "Iskander Mirza",
+      "Maulana Abul Kalam Azad",
+      "Muhammad Ali Jinnah",
+      "Jawaharlal Nehru"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Muhammad Ali Jinnah ہے۔ League کی exclusive representation کی شرط اور Congress کا اختلاف deadlock کا سبب بنے۔",
+    "source": {
+      "type": "book",
+      "label": "Towards Independence: Simla Conference",
+      "referenceUrl": "https://www.publicationsdivision.nic.in/catalog/view/theme/default/images/new_ngm_final/timeline/pages/page20.html",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q049"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.publicationsdivision.nic.in/catalog/view/theme/default/images/new_ngm_final/timeline/pages/page20.html",
+        "label": "Towards Independence: Simla Conference",
+        "publisher": "Publications Division, Government of India",
+        "authorityId": "india-publications-division",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official history attributes the conference deadlock to Jinnah's insistence on the League's exclusive nomination of Muslim members."
+      },
+      {
+        "url": "https://academic.oup.com/book/3615/chapter-abstract/144932344",
+        "label": "At the Simla Conference and in the General Elections",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-university-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly account identifies Jinnah's nomination demand as the cause of the conference failure."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1945",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague claim that someone 'suggested new elections' was replaced with a directly documented 1945 Simla Conference issue; names were normalized."
+  },
+  {
+    "id": "ADV2E102-U0014-Q049-SIM",
+    "pairId": "ADV2E102-U0014-Q049",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "Which viceroy convened the 1945 Simla Conference?",
+    "questionUrdu": "1945 کی Simla Conference کس viceroy نے بلائی؟",
+    "options": [
+      "Lord Wavell",
+      "Lord Mountbatten",
+      "Lord Linlithgow",
+      "Lord Curzon"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Lord Wavell ہے۔ انہوں نے اپنی executive council کی تشکیل نو کے Wavell Plan پر اتفاق کے لیے conference بلائی۔",
+    "source": {
+      "type": "practice",
+      "label": "Towards Independence: Simla Conference",
+      "referenceUrl": "https://www.publicationsdivision.nic.in/catalog/view/theme/default/images/new_ngm_final/timeline/pages/page20.html",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q049",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.publicationsdivision.nic.in/catalog/view/theme/default/images/new_ngm_final/timeline/pages/page20.html",
+        "label": "Towards Independence: Simla Conference",
+        "publisher": "Publications Division, Government of India",
+        "authorityId": "india-publications-division",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Government of India history identifies Viceroy Wavell as convener of the Simla Conference."
+      },
+      {
+        "url": "https://academic.oup.com/book/3615/chapter-abstract/144932344",
+        "label": "At the Simla Conference and in the General Elections",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-university-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Oxford's scholarly account independently places the conference under Wavell's plan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0014-Q050-SRC",
+    "pairId": "ADV2E102-U0014-Q050",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which federal portfolio did Dr Fehmida Mirza hold in Pakistan in 2019?",
+    "questionUrdu": "2019 میں Dr Fehmida Mirza کے پاس Pakistan کا کون سا federal portfolio تھا؟",
+    "options": [
+      "National Food Security",
+      "Interior",
+      "Inter-Provincial Coordination",
+      "Information and Broadcasting"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Inter-Provincial Coordination ہے۔ وہ وفاق اور صوبوں کے درمیان policy coordination کی minister تھیں۔",
+    "source": {
+      "type": "book",
+      "label": "Federal Cabinet under Prime Minister Imran Khan",
+      "referenceUrl": "https://www.cabinet.gov.pk/SiteImage/Misc/files/Federal%20Cabinet%201947/32%20Federal%20Cabinet%20of%20Imran%20Khan.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q050"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cabinet.gov.pk/SiteImage/Misc/files/Federal%20Cabinet%201947/32%20Federal%20Cabinet%20of%20Imran%20Khan.pdf",
+        "label": "Federal Cabinet under Prime Minister Imran Khan",
+        "publisher": "Cabinet Division, Pakistan",
+        "authorityId": "pakistan-cabinet-division",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official cabinet record lists Fehmida Mirza's Inter-Provincial Coordination portfolio from 2018 to 2022."
+      },
+      {
+        "url": "https://www.ipc.gov.pk/SiteImage/Misc/files/Year%20Books/Year%20Book%202019-20.pdf",
+        "label": "Year Book 2019-20",
+        "publisher": "Ministry of Inter-Provincial Coordination, Pakistan",
+        "authorityId": "pakistan-ipc",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ministry yearbook identifies Dr Fehmida Mirza as federal minister for Inter-Provincial Coordination."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "2019",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The time-sensitive office-holder claim was anchored to 2019 and the full portfolio name supplied."
+  },
+  {
+    "id": "ADV2E102-U0014-Q050-SIM",
+    "pairId": "ADV2E102-U0014-Q050",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "What is the standard abbreviation of the Ministry of Inter-Provincial Coordination?",
+    "questionUrdu": "Ministry of Inter-Provincial Coordination کا عام abbreviation کیا ہے؟",
+    "options": [
+      "IPC",
+      "MOFA",
+      "MORA",
+      "NHSRC"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب IPC ہے۔ سرکاری cabinet record اور ministry yearbook دونوں اسی مختصر نام کو استعمال کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Federal Cabinet under Prime Minister Imran Khan",
+      "referenceUrl": "https://www.cabinet.gov.pk/SiteImage/Misc/files/Federal%20Cabinet%201947/32%20Federal%20Cabinet%20of%20Imran%20Khan.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0014-q050",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cabinet.gov.pk/SiteImage/Misc/files/Federal%20Cabinet%201947/32%20Federal%20Cabinet%20of%20Imran%20Khan.pdf",
+        "label": "Federal Cabinet under Prime Minister Imran Khan",
+        "publisher": "Cabinet Division, Pakistan",
+        "authorityId": "pakistan-cabinet-division",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Pakistan's Cabinet Division uses IPC for the Inter-Provincial Coordination portfolio."
+      },
+      {
+        "url": "https://www.ipc.gov.pk/SiteImage/Misc/files/Year%20Books/Year%20Book%202019-20.pdf",
+        "label": "Year Book 2019-20",
+        "publisher": "Ministry of Inter-Provincial Coordination, Pakistan",
+        "authorityId": "pakistan-ipc",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The ministry's official yearbook independently uses IPC as its standard abbreviation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

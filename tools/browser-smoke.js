@@ -168,7 +168,7 @@ async function main() {
       const errors = [];
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
-      if (!data || data.questions.length !== 7038) errors.push("Expected the current 7,038-question release bank.");
+      if (!data || data.questions.length !== 9340) errors.push("Expected the current 9,340-question release bank.");
       if (data && data.questions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) errors.push("A question is missing its Urdu translation.");
       if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("Category cards did not render.");
       if (visible(document.querySelector("#continue-session-card"))) errors.push("A fresh profile incorrectly showed Continue.");
@@ -184,7 +184,7 @@ async function main() {
       const advQuestions = data.questions.filter((question) => question.id.startsWith("ADV2E102-"));
       const advSourceQuestions = advQuestions.filter((question) => question.kind === "source");
       const advSimilarQuestions = advQuestions.filter((question) => question.kind === "similar");
-      if (advQuestions.length !== 3964 || advSourceQuestions.length !== 1982 || advSimilarQuestions.length !== 1982) {
+      if (advQuestions.length !== 6266 || advSourceQuestions.length !== 3133 || advSimilarQuestions.length !== 3133) {
         errors.push("The current ADV2E102 retained source/similar counts are incomplete.");
       }
       if (advQuestions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) {

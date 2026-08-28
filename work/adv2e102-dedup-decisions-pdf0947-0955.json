@@ -342,7 +342,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0051-Q016-SRC"
+        "ADV2E102-U0051-Q016-SRC",
+        "ADV2E102-U0043-Q023-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -424,7 +425,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P238-Q003-SRC"
+        "P238-Q003-SRC",
+        "ADV2E102-U0023-Q046-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -519,6 +521,8 @@
         "P236-Q022-SIM",
         "ADV2E102-U0071-Q034-SRC",
         "ADV2E102-U0033-Q010-SIM",
+        "ADV2E102-U0022-Q041-SIM",
+        "ADV2E102-U0023-Q024-SIM",
         "ADV2E102-U0011-Q030-SRC",
         "ADV2E102-U0041-Q019-SRC",
         "ADV2E102-U0032-Q031-SIM",
@@ -750,9 +754,11 @@
         "P236-Q024-SIM",
         "ADV2E102-U0011-Q046-SRC",
         "ADV2E102-U0071-Q030-SIM",
+        "ADV2E102-U0013-Q018-SIM",
+        "ADV2E102-U0013-Q032-SIM",
         "ADV2E102-U0001-Q031-SRC",
-        "ADV2E102-U0051-Q015-SIM",
-        "ADV2E102-U0021-Q044-SIM"
+        "ADV2E102-U0043-Q047-SIM",
+        "ADV2E102-U0023-Q049-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -817,7 +823,9 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P238-Q012-SIM",
-        "ADV2E102-U0034-Q051-SRC"
+        "ADV2E102-U0034-Q051-SRC",
+        "ADV2E102-U0004-Q028-SRC",
+        "ADV2E102-U0002-Q049-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -864,10 +872,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0131-Q042",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0008-Q048",
+    "reason": "The earlier U0008 source asks the identical longest-river-of-Pakistan proposition and answers the Indus.",
     "testedProposition": "Which is the longest river of Pakistan? Correct answer: Indus.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -878,7 +886,12 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q048-SRC",
+        "ADV2E102-U0023-Q042-SRC",
+        "ADV2E102-U0023-Q047-SRC",
+        "ADV2E102-U0008-Q048"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -986,8 +999,8 @@
     "sourceRecordId": "ADV2E102-U0131-Q048",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0091-Q050",
-    "reason": "The earlier retained source asks the identical discovery-of-penicillin proposition and gives Alexander Fleming.",
+    "duplicateOf": "ADV2E102-U0008-Q054",
+    "reason": "The earlier U0008 source asks the identical discovery-of-penicillin proposition and gives Alexander Fleming.",
     "testedProposition": "Which listed substance was discovered by Alexander Fleming? Correct answer: Penicillin.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -999,7 +1012,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0091-Q050"
+        "ADV2E102-U0008-Q054-SRC",
+        "ADV2E102-U0008-Q054"
       ],
       "answerConflictReviewed": true
     }
@@ -1042,6 +1056,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0001-Q070-SRC",
+        "ADV2E102-U0006-Q042-SRC",
         "ADV2E102-U0001-Q070"
       ],
       "answerConflictReviewed": true
@@ -1084,6 +1099,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0002-Q064-SRC",
         "ADV2E102-U0041-Q053-SRC",
         "ADV2E102-U0061-Q088-SRC",
         "ADV2E102-U0041-Q053"
@@ -1349,7 +1365,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "A can complete a job in 6 days and B can complete it in 12 days. At constant rates, how many days will they take working together? Correct answer: 4.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1360,7 +1376,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0004-Q073-SIM",
+        "ADV2E102-U0008-Q069-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1509,7 +1528,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "What does the idiom 'out of the blue' mean? Correct answer: Something unexpectedly.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1520,7 +1539,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q073-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1663,7 +1684,9 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P236-Q054-SRC"
+        "P236-Q054-SRC",
+        "ADV2E102-U0008-Q073-SRC",
+        "ADV2E102-U0008-Q070-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1790,10 +1813,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0131-Q087",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0006-Q079",
+    "reason": "The earlier source-order U0006 canonical already tests Indar Sabha as the first complete Urdu stage play, and its pair asks the same authorship fact.",
     "testedProposition": "Which listed work is conventionally regarded as the first complete Urdu stage play? Correct answer: اندر سبھا.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1804,7 +1827,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q079-SRC",
+        "ADV2E102-U0006-Q079"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1865,7 +1891,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0041-Q093-SIM"
+        "ADV2E102-U0041-Q093-SIM",
+        "ADV2E102-U0008-Q083-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1952,10 +1979,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0131-Q095",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0023-Q099",
+    "reason": "The earlier-source-order U0023 canonical asks the identical authorship of the Persian Sufi treatise Kashf al-Mahjub and gives Ali al-Hujwiri; its paired practice item also already tests the work's original Persian language.",
     "testedProposition": "Who wrote the Persian Sufi treatise 'Kashf al-Mahjub'? Correct answer: Hazrat Data Ganj Bukush RA.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1966,7 +1993,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0023-Q099-SRC",
+        "ADV2E102-U0023-Q099"
+      ],
       "answerConflictReviewed": true
     }
   },

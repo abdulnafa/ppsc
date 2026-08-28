@@ -1,0 +1,3098 @@
+[
+  {
+    "id": "ADV2E102-U0005-Q026-SRC",
+    "pairId": "ADV2E102-U0005-Q026",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Microsoft Word, you want to insert a paragraph from one document into another while keeping it in the first document. Which operation should you use?",
+    "questionUrdu": "Microsoft Word میں ایک document کا paragraph دوسرے document میں شامل کرتے ہوئے پہلے document میں بھی برقرار رکھنا ہو تو کون سا عمل استعمال کیا جائے؟",
+    "options": [
+      "Cut and paste",
+      "Copy and paste",
+      "Delete and paste",
+      "Insert and paste"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Copy and paste“ ہے۔ Copy منتخب متن کی نقل clipboard پر رکھتا ہے مگر اصل متن کو حذف نہیں کرتا۔ Paste اس نقل کو دوسرے document میں شامل کرتا ہے۔ اس لیے Copy and paste درست عمل ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Control the formatting when you paste text",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/control-the-formatting-when-you-paste-text",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q026"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/word/control-the-formatting-when-you-paste-text",
+        "label": "Control the formatting when you paste text",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft documents copying content from one Word document and pasting it into another document."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/shared/main_edit.html",
+        "label": "Edit commands",
+        "publisher": "The Document Foundation",
+        "authorityId": "document-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice independently documents that Copy places selected content on the clipboard and Paste inserts it at another location."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Copy, rather than Cut, leaves the source paragraph in the first document while Paste inserts a copy in the second. The original options and verified answer B were retained."
+  },
+  {
+    "id": "ADV2E102-U0005-Q026-SIM",
+    "pairId": "ADV2E102-U0005-Q026",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which editing command places selected text on the clipboard while leaving the original text unchanged?",
+    "questionUrdu": "کون سی editing command منتخب متن کو اصل جگہ برقرار رکھتے ہوئے اس کی نقل clipboard پر رکھتی ہے؟",
+    "options": [
+      "Cut",
+      "Copy",
+      "Delete",
+      "Undo"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Copy“ ہے۔ Copy command منتخب مواد کی نقل clipboard پر رکھتی ہے۔ اصل مواد اپنی جگہ موجود رہتا ہے۔ Cut کے برعکس Copy متن کو اصل document سے نہیں ہٹاتی۔",
+    "source": {
+      "type": "practice",
+      "label": "Control the formatting when you paste text",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/control-the-formatting-when-you-paste-text",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q026",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/word/control-the-formatting-when-you-paste-text",
+        "label": "Control the formatting when you paste text",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft Support supports that the Copy command copies selected material to the clipboard without removing the original."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/shared/main_edit.html",
+        "label": "Edit commands",
+        "publisher": "The Document Foundation",
+        "authorityId": "document-foundation",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Document Foundation supports that the Copy command copies selected material to the clipboard without removing the original."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q053-SRC",
+    "pairId": "ADV2E102-U0005-Q053",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which listed company introduced the Macintosh computer and later the iPhone?",
+    "questionUrdu": "Macintosh computer اور بعد میں iPhone متعارف کرانے والی درج ذیل کمپنی کون سی ہے؟",
+    "options": [
+      "Acer",
+      "IBM",
+      "Microsoft",
+      "Apple"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”Apple“ ہے۔ درست کمپنی Apple ہے۔ Apple نے Macintosh computer تیار کیا اور 2007 میں iPhone متعارف کرایا۔ باقی درج کمپنیوں نے یہ دونوں مصنوعات متعارف نہیں کرائیں۔",
+    "source": {
+      "type": "book",
+      "label": "iPhone premieres at Apple Retail Stores",
+      "referenceUrl": "https://www.apple.com/newsroom/2007/06/28iPhone-Premieres-This-Friday-Night-at-Apple-Retail-Stores/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q053"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.apple.com/newsroom/2007/06/28iPhone-Premieres-This-Friday-Night-at-Apple-Retail-Stores/",
+        "label": "iPhone premieres at Apple Retail Stores",
+        "publisher": "Apple Newsroom",
+        "authorityId": "apple-newsroom",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Apple's 2007 release states that Apple reinvented personal computing with Macintosh and was entering mobile phones with iPhone."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "label": "Apple Form 10-K",
+        "publisher": "U.S. Securities and Exchange Commission",
+        "authorityId": "us-sec",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Apple's filed annual report independently identifies iPhone as its smartphone line and Mac as its personal-computer line."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source superlative 'largest by sales' is undefined without a year, market and metric. It was replaced by a stable, directly documented product-history fact; the misspelling 'Aser' was corrected to Acer and Apple remains answer D."
+  },
+  {
+    "id": "ADV2E102-U0005-Q053-SIM",
+    "pairId": "ADV2E102-U0005-Q053",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Apple product launched in 2007 combined a mobile phone, music player and web browser?",
+    "questionUrdu": "Apple کی کون سی 2007 کی product نے mobile phone، music player اور web browser کو یکجا کیا؟",
+    "options": [
+      "Apple II",
+      "Macintosh",
+      "iPad",
+      "iPhone"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”iPhone“ ہے۔ یہ product iPhone تھی۔ Apple نے اسے 2007 میں mobile phone، music player اور internet device کے امتزاج کے طور پر پیش کیا۔ Computer History Museum بھی 2007 کی اس launch کو درج کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "iPhone premieres at Apple Retail Stores",
+      "referenceUrl": "https://www.apple.com/newsroom/2007/06/28iPhone-Premieres-This-Friday-Night-at-Apple-Retail-Stores/",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q053",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.apple.com/newsroom/2007/06/28iPhone-Premieres-This-Friday-Night-at-Apple-Retail-Stores/",
+        "label": "iPhone premieres at Apple Retail Stores",
+        "publisher": "Apple Newsroom",
+        "authorityId": "apple-newsroom",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Apple Newsroom supports that Apple launched the iPhone in 2007 as a phone, music player and web-browsing device."
+      },
+      {
+        "url": "https://www.computerhistory.org/timeline/computers/",
+        "label": "Timeline of Computer History",
+        "publisher": "Computer History Museum",
+        "authorityId": "computer-history-museum",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Computer History Museum supports that Apple launched the iPhone in 2007 as a phone, music player and web-browsing device."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q054-SRC",
+    "pairId": "ADV2E102-U0005-Q054",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "At a college function, 1/3 of the boys and 1/2 of the girls attended. If the total numbers of boys and girls were not given, how many students attended?",
+    "questionUrdu": "کسی college function میں boys کا 1/3 اور girls کا 1/2 حصہ شریک ہوا۔ اگر boys اور girls کی کل تعداد معلوم نہ ہو تو شریک طلبہ کی تعداد کیا ہوگی؟",
+    "options": [
+      "90",
+      "110",
+      "125",
+      "Data inadequate"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”Data inadequate“ ہے۔ صرف fractions معلوم ہیں مگر دونوں گروہوں کی اصل تعداد نہیں دی گئی۔ مختلف کل تعداد رکھنے سے حاضر طلبہ کی تعداد بھی بدل جائے گی۔ اس لیے دی گئی معلومات ناکافی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q054"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and percent applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax shows that a percent or fractional amount requires a known base; here the present count is B/3 + G/2 and neither B nor G is supplied."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=b%2F3%2Bg%2F2",
+        "label": "Evaluate the symbolic attendance expression",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The expression remains b/3 + g/2 when the two totals are unspecified, so it cannot yield one numerical attendance value."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The missing-data condition was stated explicitly. For example, B=30 and G=20 gives 20 present, while B=60 and G=40 gives 40; therefore Data inadequate is the only valid choice D."
+  },
+  {
+    "id": "ADV2E102-U0005-Q054-SIM",
+    "pairId": "ADV2E102-U0005-Q054",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A class has 30 boys and 20 girls. If 1/3 of the boys and 1/2 of the girls attend a function, how many students attend?",
+    "questionUrdu": "ایک class میں 30 boys اور 20 girls ہیں۔ اگر boys کا 1/3 اور girls کا 1/2 function میں شریک ہوں تو کل کتنے students شریک ہوں گے؟",
+    "options": [
+      "10",
+      "15",
+      "20",
+      "25"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”20“ ہے۔ 30 کا 1/3 برابر 10 boys ہے۔ 20 کا 1/2 برابر 10 girls ہے۔ دونوں کو جمع کرنے سے 20 students حاصل ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q054",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Percent applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that one third of 30 plus one half of 20 equals 20."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=30%2F3%2B20%2F2",
+        "label": "Attendance calculation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that one third of 30 plus one half of 20 equals 20."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q055-SRC",
+    "pairId": "ADV2E102-U0005-Q055",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Microsoft Excel, what value does the formula =20*10/5*8 return?",
+    "questionUrdu": "Microsoft Excel میں formula =20*10/5*8 کیا value دیتا ہے؟",
+    "options": [
+      "5",
+      "6.25",
+      "320",
+      "232"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”320“ ہے۔ Multiplication اور division ایک ہی ترجیح رکھتے ہیں اور بائیں سے دائیں حل ہوتے ہیں۔ 20×10=200، پھر 200÷5=40 اور 40×8=320 بنتا ہے۔ اس لیے جواب 320 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "The order in which Excel performs operations in formulas",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/the-order-in-which-excel-performs-operations-in-formulas",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q055"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/excel/the-order-in-which-excel-performs-operations-in-formulas",
+        "label": "The order in which Excel performs operations in formulas",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft states that multiplication and division have equal precedence and Excel evaluates operators of equal precedence from left to right."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/scalc/01/04060199.html",
+        "label": "Operators in LibreOffice Calc",
+        "publisher": "The Document Foundation",
+        "authorityId": "document-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice independently documents multiplication and division as left-associative operators of the same precedence."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Excel",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Evaluating left to right gives 20*10=200, 200/5=40, and 40*8=320; answer C is correct."
+  },
+  {
+    "id": "ADV2E102-U0005-Q055-SIM",
+    "pairId": "ADV2E102-U0005-Q055",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In a spreadsheet, what value does the formula =18/3*4 return?",
+    "questionUrdu": "Spreadsheet میں formula =18/3*4 کیا value دیتا ہے؟",
+    "options": [
+      "1.5",
+      "6",
+      "24",
+      "72"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”24“ ہے۔ Division اور multiplication کو بائیں سے دائیں حل کیا جاتا ہے۔ پہلے 18÷3=6 بنتا ہے۔ پھر 6×4=24، لہٰذا درست جواب 24 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Excel order of operations",
+      "referenceUrl": "https://support.microsoft.com/en-us/excel/the-order-in-which-excel-performs-operations-in-formulas",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q055",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/excel/the-order-in-which-excel-performs-operations-in-formulas",
+        "label": "Excel order of operations",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft Support supports that spreadsheet multiplication and division are evaluated left to right, so 18 divided by 3 times 4 equals 24."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/scalc/01/04060199.html",
+        "label": "Operators in LibreOffice Calc",
+        "publisher": "The Document Foundation",
+        "authorityId": "document-foundation",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Document Foundation supports that spreadsheet multiplication and division are evaluated left to right, so 18 divided by 3 times 4 equals 24."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q056-SRC",
+    "pairId": "ADV2E102-U0005-Q056",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What number increased by 20% of itself is equal to 102?",
+    "questionUrdu": "کون سا عدد اپنے 20% اضافے کے بعد 102 کے برابر ہو جاتا ہے؟",
+    "options": [
+      "85",
+      "90",
+      "75",
+      "185"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”85“ ہے۔ اگر عدد x ہو تو x+0.20x=102 بنتا ہے۔ یعنی 1.2x=102 ہے۔ تقسیم کرنے پر x=85 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q056"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and percent applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax models percent increases algebraically. Writing x + 0.20x = 102 gives 1.20x = 102."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+x%2B0.2x%3D102",
+        "label": "Solve the 20 percent increase equation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact solution of x + 0.2x = 102 is x = 85."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key B (90) was rejected. Solving 1.2x=102 gives x=85, so the verified answer is A, matching the book's own worked calculation."
+  },
+  {
+    "id": "ADV2E102-U0005-Q056-SIM",
+    "pairId": "ADV2E102-U0005-Q056",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What number increased by 25% of itself becomes 150?",
+    "questionUrdu": "کون سا عدد اپنے 25% اضافے کے بعد 150 بن جاتا ہے؟",
+    "options": [
+      "100",
+      "110",
+      "120",
+      "125"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”120“ ہے۔ اگر عدد x ہو تو 1.25x=150 ہوگا۔ 150 کو 1.25 سے تقسیم کرنے پر 120 ملتا ہے۔ اس لیے اصل عدد 120 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q056",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Percent applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that a number that becomes 150 after a 25 percent increase is 120."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve%20x%2B0.25x%3D150",
+        "label": "Twenty-five percent increase equation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that a number that becomes 150 after a 25 percent increase is 120."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q057-SRC",
+    "pairId": "ADV2E102-U0005-Q057",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "To convert a non-negative decimal integer to binary by the standard remainder algorithm, which operation is repeated?",
+    "questionUrdu": "Standard remainder algorithm سے non-negative decimal integer کو binary میں تبدیل کرتے وقت کون سا عمل بار بار کیا جاتا ہے؟",
+    "options": [
+      "Multiplication",
+      "Division",
+      "Addition",
+      "Subtraction"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Division“ ہے۔ Decimal عدد کو مسلسل 2 سے divide کیا جاتا ہے۔ ہر division کا remainder محفوظ کیا جاتا ہے۔ Remainders کو الٹی ترتیب میں پڑھنے سے binary representation ملتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Converting decimal representation to binary",
+      "referenceUrl": "https://chortle.ccsu.edu/AssemblyTutorial/zAppendixH/appH_01.html",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q057"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://chortle.ccsu.edu/AssemblyTutorial/zAppendixH/appH_01.html",
+        "label": "Converting decimal representation to binary",
+        "publisher": "Central Connecticut State University",
+        "authorityId": "central-connecticut-state-university",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university tutorial names the repeated-division method and specifies repeated division by two."
+      },
+      {
+        "url": "https://www.cs.uaf.edu/~cs301/notes/Chapter3/node7.html",
+        "label": "Decimal to binary conversion",
+        "publisher": "University of Alaska Fairbanks",
+        "authorityId": "university-of-alaska-fairbanks",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university notes independently state that division by two is repeated on each quotient until the quotient is zero."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The scope was limited to the standard remainder algorithm for non-negative integers; Division is the uniquely supported answer B."
+  },
+  {
+    "id": "ADV2E102-U0005-Q057-SIM",
+    "pairId": "ADV2E102-U0005-Q057",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Using repeated division by 2, what is decimal 13 in binary?",
+    "questionUrdu": "2 سے مسلسل division کے طریقے سے decimal 13 کا binary روپ کیا ہے؟",
+    "options": [
+      "1010",
+      "1011",
+      "1101",
+      "1110"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”1101“ ہے۔ 13 کو 2 سے مسلسل divide کرنے پر remainders 1، 0، 1، 1 ملتے ہیں۔ انہیں نیچے سے اوپر پڑھنے پر 1101 بنتا ہے۔ اس لیے decimal 13 کا binary روپ 1101 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Converting decimal representation to binary",
+      "referenceUrl": "https://chortle.ccsu.edu/AssemblyTutorial/zAppendixH/appH_01.html",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q057",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://chortle.ccsu.edu/AssemblyTutorial/zAppendixH/appH_01.html",
+        "label": "Converting decimal representation to binary",
+        "publisher": "Central Connecticut State University",
+        "authorityId": "central-connecticut-state-university",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Central Connecticut State University supports that repeated division by two converts decimal 13 to binary 1101."
+      },
+      {
+        "url": "https://www.cs.uaf.edu/~cs301/notes/Chapter3/node7.html",
+        "label": "Decimal to binary conversion",
+        "publisher": "University of Alaska Fairbanks",
+        "authorityId": "university-of-alaska-fairbanks",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "University of Alaska Fairbanks supports that repeated division by two converts decimal 13 to binary 1101."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q058-SRC",
+    "pairId": "ADV2E102-U0005-Q058",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A father's age is three times his son's age. Five years earlier, the father was four times as old as his son. How old is the son?",
+    "questionUrdu": "ایک باپ کی عمر بیٹے کی عمر سے تین گنا ہے۔ پانچ سال پہلے باپ کی عمر بیٹے سے چار گنا تھی۔ بیٹے کی موجودہ عمر کیا ہے؟",
+    "options": [
+      "10",
+      "12",
+      "15",
+      "18"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”15“ ہے۔ بیٹے کی عمر S اور باپ کی 3S فرض کریں۔ پانچ سال پہلے کے لیے 3S−5=4(S−5) بنتا ہے۔ حل کرنے پر S=15 سال آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve a formula for a specific variable",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/2-6-solve-a-formula-for-a-specific-variable",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q058"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/2-6-solve-a-formula-for-a-specific-variable",
+        "label": "Solve a formula for a specific variable",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax documents translating relationships into linear equations and isolating a variable; here F=3S and F-5=4(S-5)."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+f%3D3s%2C+f-5%3D4%28s-5%29",
+        "label": "Solve the father-and-son age equations",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The simultaneous equations give the son's current age s = 15 years."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key B (12) was rejected. Substituting F=3S into 3S-5=4S-20 gives S=15, so the verified answer is C."
+  },
+  {
+    "id": "ADV2E102-U0005-Q058-SIM",
+    "pairId": "ADV2E102-U0005-Q058",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A mother is four times as old as her daughter. In 6 years, she will be twice as old. How old is the daughter?",
+    "questionUrdu": "ایک ماں کی عمر اپنی بیٹی سے چار گنا ہے۔ 6 سال بعد ماں کی عمر بیٹی سے دو گنا ہوگی۔ بیٹی کی عمر کیا ہے؟",
+    "options": [
+      "2 years",
+      "3 years",
+      "4 years",
+      "6 years"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”3 years“ ہے۔ بیٹی کی عمر d ہو تو ماں کی عمر 4d ہوگی۔ چھ سال بعد 4d+6=2(d+6) بنتا ہے۔ حل کرنے پر d=3 سال حاصل ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve a formula for a variable",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/2-6-solve-a-formula-for-a-specific-variable",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q058",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/2-6-solve-a-formula-for-a-specific-variable",
+        "label": "Solve a formula for a variable",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the daughter is 3 years old when the mother is four times her age and twice her age six years later."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve%204d%2B6%3D2(d%2B6)",
+        "label": "Mother and daughter age equation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the daughter is 3 years old when the mother is four times her age and twice her age six years later."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q059-SRC",
+    "pairId": "ADV2E102-U0005-Q059",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Find the average of all numbers between 6 and 34 which are divisible by 5:",
+    "questionUrdu": "6 اور 34 کے درمیان 5 سے تقسیم ہونے والے تمام اعداد کا average معلوم کریں۔",
+    "options": [
+      "15",
+      "20",
+      "25",
+      "30"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”20“ ہے۔ متعلقہ اعداد 10، 15، 20، 25 اور 30 ہیں۔ ان کا مجموعہ 100 اور تعداد 5 ہے۔ 100÷5=20، اس لیے average 20 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Calculate the mean of a set of numbers",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q059"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Calculate the mean of a set of numbers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the arithmetic mean as the sum of the values divided by their number; the relevant values are 10, 15, 20, 25 and 30."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=mean%2810%2C15%2C20%2C25%2C30%29",
+        "label": "Mean of the multiples of five",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact mean of 10, 15, 20, 25 and 30 is 20."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The multiples of 5 strictly between 6 and 34 are 10, 15, 20, 25 and 30; their mean is 20, answer B."
+  },
+  {
+    "id": "ADV2E102-U0005-Q059-SIM",
+    "pairId": "ADV2E102-U0005-Q059",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the average of the multiples of 4 from 8 through 24 inclusive?",
+    "questionUrdu": "8 سے 24 تک 4 کے multiples کا average کیا ہے؟",
+    "options": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”16“ ہے۔ اعداد 8، 12، 16، 20 اور 24 ہیں۔ ان کا مجموعہ 80 ہے اور تعداد 5 ہے۔ 80÷5=16، لہٰذا average 16 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q059",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the mean of 8, 12, 16, 20 and 24 is 16."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=mean(8%2C12%2C16%2C20%2C24)",
+        "label": "Mean of multiples of four",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the mean of 8, 12, 16, 20 and 24 is 16."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q060-SRC",
+    "pairId": "ADV2E102-U0005-Q060",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Solve: 30% of 3300 =",
+    "questionUrdu": "3300 کا 30% معلوم کریں۔",
+    "options": [
+      "330",
+      "990",
+      "700",
+      "1100"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”990“ ہے۔ 30% کو 0.30 لکھا جا سکتا ہے۔ 3300×0.30=990 بنتا ہے۔ اس لیے درست جواب 990 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q060"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and percent applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the percent equation amount = percent times base; 30% of 3300 is 0.30 times 3300."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=30%25+of+3300",
+        "label": "Calculate 30 percent of 3300",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact calculation gives 990."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0005-Q060-SIM",
+    "pairId": "ADV2E102-U0005-Q060",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 35% of 2400?",
+    "questionUrdu": "2400 کا 35% کیا ہے؟",
+    "options": [
+      "720",
+      "800",
+      "840",
+      "960"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”840“ ہے۔ 35% برابر 0.35 ہے۔ 2400×0.35=840 بنتا ہے۔ اس لیے درست جواب 840 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q060",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Percent applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that 35 percent of 2400 is 840."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=35%25%20of%202400",
+        "label": "Thirty-five percent of 2400",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that 35 percent of 2400 is 840."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q061-SRC",
+    "pairId": "ADV2E102-U0005-Q061",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Evaluate: √(248 + √64)",
+    "questionUrdu": "√(248 + √64) کی value معلوم کریں۔",
+    "options": [
+      "14",
+      "26",
+      "16",
+      "36"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”16“ ہے۔ پہلے اندرونی root سے √64=8 ملتا ہے۔ پھر 248+8=256 بنتا ہے۔ √256=16، اس لیے جواب 16 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Simplify and use square roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q061"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+        "label": "Simplify and use square roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax documents evaluating principal square roots and simplifying nested numerical expressions; √64=8, so the outer radicand is 256."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=sqrt%28248%2Bsqrt%2864%29%29",
+        "label": "Evaluate the nested square root",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact value of √(248 + √64) is 16."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The scan's corrupted radical glyph was restored. Since √64=8 and √256=16, the verified answer is C."
+  },
+  {
+    "id": "ADV2E102-U0005-Q061-SIM",
+    "pairId": "ADV2E102-U0005-Q061",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Evaluate: √(89 + √121)",
+    "questionUrdu": "√(89 + √121) کی value معلوم کریں۔",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "14"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”10“ ہے۔ پہلے √121=11 ہے۔ پھر 89+11=100 بنتا ہے۔ √100=10، اس لیے درست جواب 10 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Square roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q061",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+        "label": "Square roots",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the corrected nested expression square root of 89 plus square root of 121 equals 10."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=sqrt(89%2Bsqrt(121))",
+        "label": "Nested square-root calculation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the corrected nested expression square root of 89 plus square root of 121 equals 10."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q062-SRC",
+    "pairId": "ADV2E102-U0005-Q062",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Given that 543 × 21 = 11,403, what is 1,140.3 ÷ 5.43?",
+    "questionUrdu": "اگر 543×21=11,403 ہو تو 1,140.3÷5.43 کیا ہوگا؟",
+    "options": [
+      "210",
+      "150",
+      "120",
+      "200"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”210“ ہے۔ Decimal places ہٹا کر نسبت کو 114030÷543 کی شکل میں دیکھا جا سکتا ہے۔ 543×210=114030 ہے۔ اس لیے حاصل تقسیم 210 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q062"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax documents decimal multiplication and division and the use of place value when moving decimal points."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1140.3%2F5.43",
+        "label": "Evaluate 1140.3 divided by 5.43",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact quotient is 210."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Corrupted multiplication and division symbols were restored and grouping commas added. The verified answer is A, 210."
+  },
+  {
+    "id": "ADV2E102-U0005-Q062-SIM",
+    "pairId": "ADV2E102-U0005-Q062",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Evaluate: 72.8 ÷ 0.28",
+    "questionUrdu": "72.8÷0.28 کی value معلوم کریں۔",
+    "options": [
+      "26",
+      "260",
+      "2,600",
+      "0.26"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”260“ ہے۔ دونوں اعداد کو 100 سے ضرب دینے پر 7280÷28 بنتا ہے۔ یہ حاصل تقسیم 260 ہے۔ اس لیے درست جواب 260 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q062",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that 72.8 divided by 0.28 equals 260."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=72.8%2F0.28",
+        "label": "Decimal division calculation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that 72.8 divided by 0.28 equals 260."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q063-SRC",
+    "pairId": "ADV2E102-U0005-Q063",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The average of ten positive numbers is x. If each number is increased by 10%, then x:",
+    "questionUrdu": "دس مثبت اعداد کا average x ہے۔ اگر ہر عدد میں اسی عدد کا 10% اضافہ کیا جائے تو x میں کیا تبدیلی ہوگی؟",
+    "options": [
+      "Remains unchanged",
+      "May decrease",
+      "May increase",
+      "Is increased by 10%"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”Is increased by 10%“ ہے۔ ہر عدد 1.1 گنا ہو جاتا ہے۔ تمام اعداد کا مجموعہ بھی 1.1 گنا ہوگا۔ لہٰذا average بھی 10% بڑھ کر 1.1x ہو جائے گا۔",
+    "source": {
+      "type": "book",
+      "label": "Calculate the mean of a set of numbers",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q063"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Calculate the mean of a set of numbers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines a mean as the sum of the values divided by their count. Multiplying every value by 1.10 also multiplies their sum and hence their mean by 1.10."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%281.1*10*x%29%2F10",
+        "label": "Mean after increasing every value by 10 percent",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The symbolic mean simplifies to 1.1x, which is a 10% increase from x."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "If the original sum is 10x, the new sum is 1.1(10x), and the new average is 1.1x. Thus x is increased by 10%, answer D."
+  },
+  {
+    "id": "ADV2E102-U0005-Q063-SIM",
+    "pairId": "ADV2E102-U0005-Q063",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "The average of eight numbers is 24. If 5 is added to every number, what is the new average?",
+    "questionUrdu": "آٹھ اعداد کا average 24 ہے۔ اگر ہر عدد میں 5 جمع کیا جائے تو نیا average کیا ہوگا؟",
+    "options": [
+      "24",
+      "25",
+      "29",
+      "40"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”29“ ہے۔ ہر observation میں ایک ہی عدد 5 جمع کرنے سے average میں بھی 5 کا اضافہ ہوتا ہے۔ 24+5=29 بنتا ہے۔ اس لیے نیا average 29 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q063",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that adding 5 to every value raises an average of 24 to 29."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=mean%20increase%20each%20value%20by%205%20from%2024",
+        "label": "Mean after adding five",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that adding 5 to every value raises an average of 24 to 29."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q064-SRC",
+    "pairId": "ADV2E102-U0005-Q064",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Three hundredths is the same as:",
+    "questionUrdu": "Three hundredths کس decimal کے برابر ہے؟",
+    "options": [
+      "0.3",
+      "300.0",
+      "300",
+      "0.03"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”0.03“ ہے۔ Hundredths place decimal point کے دائیں دوسری جگہ ہوتی ہے۔ Three hundredths برابر 3/100 ہے۔ 3/100 کو decimal میں 0.03 لکھتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Decimal place value",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-1-decimals",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q064"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-1-decimals",
+        "label": "Decimal place value",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax documents that the second digit to the right of the decimal point is the hundredths place, so three hundredths is written 0.03."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=3%2F100",
+        "label": "Convert three hundredths to decimal",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact value of 3/100 is 0.03."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0005-Q064-SIM",
+    "pairId": "ADV2E102-U0005-Q064",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Five thousandths is equal to which decimal?",
+    "questionUrdu": "Five thousandths کس decimal کے برابر ہے؟",
+    "options": [
+      "0.5",
+      "0.05",
+      "0.005",
+      "0.0005"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”0.005“ ہے۔ Thousandths place decimal point کے دائیں تیسری جگہ ہے۔ Five thousandths برابر 5/1000 ہے۔ اسے decimal میں 0.005 لکھا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimal place value",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-1-decimals",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q064",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-1-decimals",
+        "label": "Decimal place value",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that five thousandths equals 0.005."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=5%2F1000",
+        "label": "Five thousandths as a decimal",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that five thousandths equals 0.005."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q065-SRC",
+    "pairId": "ADV2E102-U0005-Q065",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "There are two sections A and B of a class, consisting of 36 and 44 students respectively. If the average weight of section A is 40 kg and that of section B is 35 kg, find the average weight of the whole class.",
+    "questionUrdu": "Class کے sections A اور B میں بالترتیب 36 اور 44 students ہیں۔ ان کے average weights 40 kg اور 35 kg ہوں تو پوری class کا average weight کیا ہوگا؟",
+    "options": [
+      "30 kg",
+      "35 kg",
+      "37.25 kg",
+      "42.50 kg"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”37.25 kg“ ہے۔ پہلے دونوں sections کا total weight نکالا جاتا ہے: 36×40 اور 44×35۔ مجموعہ 2,980 kg اور students 80 ہیں۔ 2,980÷80=37.25 kg بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Calculate the mean of a set of numbers",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q065"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Calculate the mean of a set of numbers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the mean as total value divided by the number of values. Combining the sections gives total weight 36×40 + 44×35 over 80 students."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%2836*40%2B44*35%29%2F%2836%2B44%29",
+        "label": "Combined class average weight",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The weighted calculation evaluates exactly to 37.25 kilograms."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The combined mean is (1,440 + 1,540)/80 = 37.25 kg, so answer C is correct."
+  },
+  {
+    "id": "ADV2E102-U0005-Q065-SIM",
+    "pairId": "ADV2E102-U0005-Q065",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A group of 20 students has an average score of 70, and another 30 students average 80. What is the combined average?",
+    "questionUrdu": "20 students کے group کا average score 70 اور 30 students کے group کا 80 ہے۔ دونوں groups کا combined average کیا ہے؟",
+    "options": [
+      "74",
+      "75",
+      "76",
+      "78"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”76“ ہے۔ پہلے weighted total 20×70+30×80=3,800 بنتا ہے۔ کل students 50 ہیں۔ 3,800÷50=76، لہٰذا combined average 76 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q065",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the combined average of 20 scores averaging 70 and 30 scores averaging 80 is 76."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=(20*70%2B30*80)%2F(20%2B30)",
+        "label": "Combined weighted average",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the combined average of 20 scores averaging 70 and 30 scores averaging 80 is 76."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q066-SRC",
+    "pairId": "ADV2E102-U0005-Q066",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Reeya obtained 65, 67, 78, 82 and 85 out of 100 in different subjects. What will be the average?",
+    "questionUrdu": "Reeya نے مختلف subjects میں 100 میں سے 65، 67، 78، 82 اور 85 marks لیے۔ ان marks کا average کیا ہے؟",
+    "options": [
+      "70",
+      "75.4",
+      "80",
+      "85"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”75.4“ ہے۔ Marks کا مجموعہ 377 ہے۔ Subjects کی تعداد 5 ہے۔ 377÷5=75.4، اس لیے exact average 75.4 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Calculate the mean of a set of numbers",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q066"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Calculate the mean of a set of numbers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the arithmetic mean as the sum of all scores divided by their count."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=mean%2865%2C67%2C78%2C82%2C85%29",
+        "label": "Mean of Reeya's five scores",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact mean of 65, 67, 78, 82 and 85 is 75.4."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's option B rounded the result to 75 without asking for rounding. The exact total is 377 and 377/5=75.4, so option B was repaired to 75.4."
+  },
+  {
+    "id": "ADV2E102-U0005-Q066-SIM",
+    "pairId": "ADV2E102-U0005-Q066",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the average of 72, 76, 81, 84 and 87?",
+    "questionUrdu": "72، 76، 81، 84 اور 87 کا average کیا ہے؟",
+    "options": [
+      "78",
+      "79",
+      "80",
+      "81"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”80“ ہے۔ پانچ اعداد کا مجموعہ 400 ہے۔ 400 کو 5 سے تقسیم کرنے پر 80 ملتا ہے۔ اس لیے average 80 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q066",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the mean of 72, 76, 81, 84 and 87 is 80."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=mean(72%2C76%2C81%2C84%2C87)",
+        "label": "Mean of five scores",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the mean of 72, 76, 81, 84 and 87 is 80."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q067-SRC",
+    "pairId": "ADV2E102-U0005-Q067",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is 75% in simplest fractional form?",
+    "questionUrdu": "75% کو سادہ ترین fraction میں لکھیں۔",
+    "options": [
+      "3/4",
+      "2/3",
+      "1/3",
+      "1/4"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”3/4“ ہے۔ 75% برابر 75/100 ہے۔ numerator اور denominator دونوں کو 25 سے تقسیم کیا جا سکتا ہے۔ نتیجہ 3/4 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q067"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and percent applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines percent as a ratio out of 100; 75% is 75/100, which simplifies to 3/4."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=75%2F100",
+        "label": "Convert 75 percent to a fraction",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact value 75/100 simplifies to 3/4."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The wording was normalized; the verified answer remains A, 3/4."
+  },
+  {
+    "id": "ADV2E102-U0005-Q067-SIM",
+    "pairId": "ADV2E102-U0005-Q067",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 62.5% in simplest fractional form?",
+    "questionUrdu": "62.5% کا سادہ ترین fractional روپ کیا ہے؟",
+    "options": [
+      "3/5",
+      "5/8",
+      "2/3",
+      "7/8"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”5/8“ ہے۔ 62.5% برابر 62.5/100 یا 625/1000 ہے۔ دونوں کو 125 سے تقسیم کرنے پر 5/8 ملتا ہے۔ اس لیے درست fraction 5/8 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q067",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Percent applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that 62.5 percent equals five eighths."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=62.5%2F100",
+        "label": "Convert 62.5 percent to a fraction",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that 62.5 percent equals five eighths."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q068-SRC",
+    "pairId": "ADV2E102-U0005-Q068",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Alia can complete an assignment in 5 days and Babar can complete the same assignment in 20 days. The time taken by both Alia and Babar to complete the assignment working together is:",
+    "questionUrdu": "Alia ایک assignment 5 دن میں اور Babar وہی assignment 20 دن میں مکمل کرتا ہے۔ دونوں مل کر اسے کتنے دن میں مکمل کریں گے؟",
+    "options": [
+      "3 days",
+      "5 days",
+      "4 days",
+      "2 days"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”4 days“ ہے۔ ان کی روزانہ rates بالترتیب 1/5 اور 1/20 ہیں۔ مجموعی rate 1/4 assignment روزانہ بنتی ہے۔ اس لیے دونوں مل کر 4 دن میں کام مکمل کریں گے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve work applications",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+        "label": "Solve work applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax models a worker's rate as one task divided by completion time and adds rates when people work together."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1%2F%281%2F5%2B1%2F20%29",
+        "label": "Combined completion time",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The reciprocal of the combined daily rate 1/5 + 1/20 is exactly 4 days."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Their combined rate is 1/5 + 1/20 = 1/4 assignment per day, so they finish in 4 days, answer C."
+  },
+  {
+    "id": "ADV2E102-U0005-Q068-SIM",
+    "pairId": "ADV2E102-U0005-Q068",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "One worker finishes a job in 6 days and another in 12 days. How long will they take together?",
+    "questionUrdu": "ایک worker کام 6 دن اور دوسرا 12 دن میں مکمل کرتا ہے۔ دونوں مل کر کتنے دن لیں گے؟",
+    "options": [
+      "3 days",
+      "4 days",
+      "6 days",
+      "9 days"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”4 days“ ہے۔ مجموعی روزانہ rate 1/6+1/12=1/4 ہے۔ ایک پورا کام 1÷1/4=4 دن میں ہوگا۔ اس لیے جواب 4 days ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Work applications",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+        "label": "Work applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that workers taking 6 and 12 days separately finish together in 4 days."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1%2F(1%2F6%2B1%2F12)",
+        "label": "Combined work time",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that workers taking 6 and 12 days separately finish together in 4 days."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q069-SRC",
+    "pairId": "ADV2E102-U0005-Q069",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If Kayla left a $10.47 tip on a breakfast that cost $87.25, what percentage was the tip?",
+    "questionUrdu": "$87.25 کے breakfast پر $10.47 tip دی گئی۔ Tip کی percentage کیا ہے؟",
+    "options": [
+      "8.3%",
+      "12%",
+      "13%",
+      "14%"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”12%“ ہے۔ Tip percentage کے لیے 10.47 کو 87.25 سے تقسیم کیا جاتا ہے۔ حاصل کو 100 سے ضرب دینے پر 12 آتا ہے۔ اس لیے tip 12% ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and percent applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives percent = amount/base × 100. Here the tip percentage is 10.47/87.25 × 100."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=10.47%2F87.25*100",
+        "label": "Tip percentage",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact calculation gives 12 percent."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key A (8.3%) was rejected. The correct tip rate is (10.47/87.25)×100=12%, so the verified answer is B."
+  },
+  {
+    "id": "ADV2E102-U0005-Q069-SIM",
+    "pairId": "ADV2E102-U0005-Q069",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A bill is $64 and the tip is $9.60. What percentage of the bill is the tip?",
+    "questionUrdu": "Bill $64 اور tip $9.60 ہو تو tip bill کا کتنے percent ہے؟",
+    "options": [
+      "12%",
+      "15%",
+      "18%",
+      "20%"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”15%“ ہے۔ 9.60 کو 64 سے تقسیم کرکے 100 سے ضرب دی جاتی ہے۔ نتیجہ 15% آتا ہے۔ اس لیے tip percentage 15% ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Percent applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that a 9.60 dollar tip on a 64 dollar bill is 15 percent."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=9.60%2F64*100",
+        "label": "Tip percentage calculation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that a 9.60 dollar tip on a 64 dollar bill is 15 percent."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q070-SRC",
+    "pairId": "ADV2E102-U0005-Q070",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Asghar can do a job in 60 days, and both Asghar and Babar can do the same job in 20 days working together. Babar alone can do the same job in:",
+    "questionUrdu": "Asghar اکیلا کام 60 دن اور Asghar و Babar مل کر 20 دن میں کرتے ہیں۔ Babar اکیلا کتنے دن میں کام کرے گا؟",
+    "options": [
+      "30 days",
+      "60 days",
+      "28 days",
+      "45 days"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”30 days“ ہے۔ دونوں کی rate 1/20 اور Asghar کی 1/60 ہے۔ Babar کی rate 1/20−1/60=1/30 بنتی ہے۔ لہٰذا Babar اکیلا 30 دن لے گا۔",
+    "source": {
+      "type": "book",
+      "label": "Solve work applications",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+        "label": "Solve work applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax documents that individual work rates add to the combined rate; Babar's rate is therefore 1/20 - 1/60."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1%2F%281%2F20-1%2F60%29",
+        "label": "Babar's individual completion time",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The reciprocal of 1/20 - 1/60 is exactly 30 days."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key D (45 days) was rejected. Babar's rate is 1/20−1/60=1/30 job per day, so the verified answer is A, 30 days."
+  },
+  {
+    "id": "ADV2E102-U0005-Q070-SIM",
+    "pairId": "ADV2E102-U0005-Q070",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A worker can finish a job in 24 days. Together with a second worker, the job takes 8 days. How long would the second worker take alone?",
+    "questionUrdu": "ایک worker کام 24 دن میں کرتا ہے، جبکہ دوسرے worker کے ساتھ مل کر 8 دن میں۔ دوسرا worker اکیلا کتنے دن لے گا؟",
+    "options": [
+      "10 days",
+      "12 days",
+      "16 days",
+      "20 days"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”12 days“ ہے۔ دوسرے worker کی rate 1/8−1/24=2/24=1/12 ہے۔ Rate کا reciprocal 12 days ہے۔ اس لیے دوسرا worker اکیلا 12 دن لے گا۔",
+    "source": {
+      "type": "practice",
+      "label": "Work applications",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+        "label": "Work applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that a second worker takes 12 days alone when the first takes 24 days and together they take 8."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1%2F(1%2F8-1%2F24)",
+        "label": "Second worker's completion time",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that a second worker takes 12 days alone when the first takes 24 days and together they take 8."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q071-SRC",
+    "pairId": "ADV2E102-U0005-Q071",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If a:b = 2:3 and b:c = 4:3, what is a:b:c?",
+    "questionUrdu": "اگر a:b=2:3 اور b:c=4:3 ہو تو a:b:c کیا ہوگا؟",
+    "options": [
+      "8 : 12 : 9",
+      "2 : 3 : 8",
+      "2 : 3 : 9",
+      "2 : 3 : 12"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”8 : 12 : 9“ ہے۔ دونوں ratios میں b کو برابر کرنا ضروری ہے۔ پہلے ratio کو 4 اور دوسرے کو 3 سے مناسب طور پر بڑھانے سے a:b:c=8:12:9 بنتا ہے۔ اس لیے درست جواب 8:12:9 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and rates",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rates",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines and simplifies ratios. Scaling 2:3 by 4 and 4:3 by 3 makes the shared b term 12."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=a%2Fb%3D2%2F3%2C+b%2Fc%3D4%2F3",
+        "label": "Combine the two ratios",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The proportional relationship is a:b:c = 8:12:9."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Matching the common b term gives a:b=8:12 and b:c=12:9, hence 8:12:9, answer A."
+  },
+  {
+    "id": "ADV2E102-U0005-Q071-SIM",
+    "pairId": "ADV2E102-U0005-Q071",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If p:q = 4:7 and q:r = 14:9, what is p:q:r?",
+    "questionUrdu": "اگر p:q=4:7 اور q:r=14:9 ہو تو p:q:r کیا ہوگا؟",
+    "options": [
+      "4:14:9",
+      "8:14:9",
+      "8:7:9",
+      "56:98:63"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”8:14:9“ ہے۔ پہلے ratio میں q=7 اور دوسرے میں q=14 ہے۔ پہلے ratio کو 2 سے ضرب دینے پر 8:14 ملتا ہے۔ لہٰذا p:q:r=8:14:9 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and rates",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rates",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the combined ratio for p:q=4:7 and q:r=14:9 is 8:14:9."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=p%2Fq%3D4%2F7%2C%20q%2Fr%3D14%2F9",
+        "label": "Combine two ratios",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the combined ratio for p:q=4:7 and q:r=14:9 is 8:14:9."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q072-SRC",
+    "pairId": "ADV2E102-U0005-Q072",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A fruit seller purchases oranges at the rate of 3 for Rs. 5 and sells them at 2 for Rs. 4. His profit in the transaction is:",
+    "questionUrdu": "Fruit seller oranges 3 کے Rs. 5 میں خریدتا اور 2 کے Rs. 4 میں بیچتا ہے۔ Profit percentage کیا ہے؟",
+    "options": [
+      "25%",
+      "15%",
+      "20%",
+      "10%"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”20%“ ہے۔ فی orange cost Rs. 5/3 اور sale price Rs. 2 ہے۔ Profit Rs. 1/3 ہے۔ Cost پر profit rate (1/3)÷(5/3)×100=20% بنتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve general applications of percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "Solve general applications of percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax models percent change relative to the original base; the unit cost is 5/3 and selling price is 2."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%282-5%2F3%29%2F%285%2F3%29*100",
+        "label": "Profit percentage on the oranges",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact profit as a percentage of cost is 20 percent."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key A (25%) was rejected. Profit per orange is 2−5/3=1/3, and (1/3)/(5/3)×100=20%, so the verified answer is C."
+  },
+  {
+    "id": "ADV2E102-U0005-Q072-SIM",
+    "pairId": "ADV2E102-U0005-Q072",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A seller buys pencils at 5 for Rs. 20 and sells them at 4 for Rs. 20. What is the profit percentage?",
+    "questionUrdu": "ایک seller pencils 5 کے Rs. 20 میں خریدتا اور 4 کے Rs. 20 میں بیچتا ہے۔ Profit percentage کیا ہے؟",
+    "options": [
+      "20%",
+      "25%",
+      "30%",
+      "40%"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”25%“ ہے۔ فی pencil cost Rs. 4 اور sale price Rs. 5 ہے۔ Profit Rs. 1 فی pencil ہے۔ 1÷4×100=25%، اس لیے جواب 25% ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "General applications of percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "General applications of percent",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that buying at 5 for 20 rupees and selling at 4 for 20 rupees gives a 25 percent profit."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=(5-4)%2F4*100",
+        "label": "Pencil profit percentage",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that buying at 5 for 20 rupees and selling at 4 for 20 rupees gives a 25 percent profit."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q073-SRC",
+    "pairId": "ADV2E102-U0005-Q073",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A doll is sold for Rs. 220. What was the cost of the doll if the rate of profit was 10% of the cost?",
+    "questionUrdu": "ایک doll Rs. 220 میں 10% profit on cost پر فروخت ہوئی۔ Doll کی cost کیا تھی؟",
+    "options": [
+      "Rs. 198",
+      "Rs. 200",
+      "Rs. 210",
+      "Rs. 240"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Rs. 200“ ہے۔ 10% profit کے بعد sale price اصل cost کا 110% ہے۔ Cost=220÷1.10 بنتی ہے۔ نتیجہ Rs. 200 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve general applications of percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "Solve general applications of percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax models a percent increase as new amount = original amount + rate times original amount; here 220=1.10C."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+1.1c%3D220",
+        "label": "Find the doll's cost price",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact solution is c = 200."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A 10% profit on cost makes the selling price 110% of cost. Thus cost=220/1.10=Rs. 200, answer B."
+  },
+  {
+    "id": "ADV2E102-U0005-Q073-SIM",
+    "pairId": "ADV2E102-U0005-Q073",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "An item is sold for Rs. 575 at a profit of 15% on cost. What was its cost price?",
+    "questionUrdu": "ایک item Rs. 575 میں cost پر 15% profit کے ساتھ فروخت ہوئی۔ اس کی cost price کیا تھی؟",
+    "options": [
+      "Rs. 475",
+      "Rs. 500",
+      "Rs. 525",
+      "Rs. 550"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Rs. 500“ ہے۔ 15% profit کے بعد selling price cost کا 115% ہے۔ 575÷1.15=500 بنتا ہے۔ اس لیے cost price Rs. 500 تھی۔",
+    "source": {
+      "type": "practice",
+      "label": "General applications of percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "General applications of percent",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that an item sold for 575 rupees at 15 percent profit cost 500 rupees."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=575%2F1.15",
+        "label": "Cost price before fifteen percent profit",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that an item sold for 575 rupees at 15 percent profit cost 500 rupees."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q074-SRC",
+    "pairId": "ADV2E102-U0005-Q074",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Find the average of A and B if 16A + 16B = 48.",
+    "questionUrdu": "اگر 16A+16B=48 ہو تو A اور B کا average کیا ہے؟",
+    "options": [
+      "1.5",
+      "2",
+      "5.3",
+      "7.4"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”1.5“ ہے۔ Equation سے 16(A+B)=48 ملتا ہے۔ اس لیے A+B=3 ہے۔ دو اعداد کا average (A+B)/2=3/2=1.5 ہوگا۔",
+    "source": {
+      "type": "book",
+      "label": "Calculate the mean of a set of numbers",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Calculate the mean of a set of numbers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the mean of two values as their sum divided by two. Dividing 16A+16B=48 by 16 gives A+B=3."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%2848%2F16%29%2F2",
+        "label": "Average of A and B",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact calculation (A+B)/2 = (48/16)/2 gives 1.5."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Since A+B=3, their average is 3/2=1.5, answer A."
+  },
+  {
+    "id": "ADV2E102-U0005-Q074-SIM",
+    "pairId": "ADV2E102-U0005-Q074",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 12x + 12y = 96, what is the average of x and y?",
+    "questionUrdu": "اگر 12x+12y=96 ہو تو x اور y کا average کیا ہے؟",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "8"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”4“ ہے۔ Equation کو 12 سے تقسیم کرنے پر x+y=8 ملتا ہے۔ Average کے لیے مجموعہ 2 سے تقسیم ہوتا ہے۔ 8÷2=4، اس لیے جواب 4 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that if 12x plus 12y equals 96, the average of x and y is 4."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=(96%2F12)%2F2",
+        "label": "Average from a linear equation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that if 12x plus 12y equals 96, the average of x and y is 4."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q075-SRC",
+    "pairId": "ADV2E102-U0005-Q075",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "In the series 4, 6, 9, 13, ... the successive increases are +2, +3, +4, and then +5. What is the next term?",
+    "questionUrdu": "Series 4، 6، 9، 13، ... میں اضافہ +2، +3، +4 اور پھر +5 ہے۔ اگلی term کیا ہے؟",
+    "options": [
+      "15",
+      "12",
+      "18",
+      "17"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”18“ ہے۔ Successive differences 2، 3 اور 4 ہیں۔ دیے گئے rule کے مطابق اگلا difference 5 ہوگا۔ 13+5=18، اس لیے اگلی term 18 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "What is a recursive definition?",
+      "referenceUrl": "https://openstax.org/books/algebra-1/pages/4-17-2-what-is-a-recursive-definition",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-1/pages/4-17-2-what-is-a-recursive-definition",
+        "label": "What is a recursive definition?",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that a recursive rule calculates the next sequence term from the preceding term; the stated next increment is 5."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=13%2B5",
+        "label": "Apply the next stated increment",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Adding the stated next increase 5 to 13 gives 18."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A finite list alone does not determine a unique continuation, so the intended increasing-difference rule was stated explicitly. Under that rule the next term is 13+5=18, answer C."
+  },
+  {
+    "id": "ADV2E102-U0005-Q075-SIM",
+    "pairId": "ADV2E102-U0005-Q075",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "The sequence 10, 13, 17, 22 follows successive increases of +3, +4, +5 and then +6. What is the next term?",
+    "questionUrdu": "Sequence 10، 13، 17، 22 میں successive increases +3، +4، +5 اور پھر +6 ہیں۔ اگلی term کیا ہے؟",
+    "options": [
+      "26",
+      "27",
+      "28",
+      "29"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”28“ ہے۔ Differences 3، 4 اور 5 کے بعد اگلا stated difference 6 ہے۔ 22+6=28 بنتا ہے۔ اس لیے اگلی term 28 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Recursive sequences",
+      "referenceUrl": "https://openstax.org/books/algebra-1/pages/4-17-2-what-is-a-recursive-definition",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-1/pages/4-17-2-what-is-a-recursive-definition",
+        "label": "Recursive sequences",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the next term after 22 under the stated plus-six step is 28."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=22%2B6",
+        "label": "Next sequence term",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the next term after 22 under the stated plus-six step is 28."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

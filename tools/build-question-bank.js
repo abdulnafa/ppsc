@@ -49,7 +49,7 @@ const markdownFiles = {
 
 const expectedPaperCounts = { 234: 20, 235: 100, 236: 78, 237: 76, 238: 89, 239: 86 };
 const expectedIbesSourceCount = 1088;
-const expectedAdv2e102SourceCount = 1982;
+const expectedAdv2e102SourceCount = 3133;
 const categoryIds = new Set(categories.map((category) => category.id));
 const optionLabels = ["A", "B", "C", "D"];
 

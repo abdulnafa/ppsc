@@ -527,10 +527,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0170-Q027",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition-level review found that the surfaced candidates share a topic, answer term, office, date, language pattern, or mathematical domain but test a genuinely different fact; this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0013-Q033",
+    "reason": "The earlier-source-order U0013 canonical already tests that Lal Suhanra National Park is located in Bahawalpur; this later source is the same location proposition.",
     "testedProposition": "Who became the first Chief Minister of West Punjab after Pakistan's independence in 1947? Correct answer: Iftikhar Hussain Khan Mamdot.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -544,7 +544,8 @@
       "semanticCandidateIds": [
         "ADV2E102-U0061-Q058",
         "ADV2E102-U0032-Q036",
-        "ADV2E102-U0091-Q030"
+        "ADV2E102-U0091-Q030",
+        "ADV2E102-U0013-Q033"
       ],
       "answerConflictReviewed": true
     }
@@ -653,10 +654,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0170-Q033",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition-level review found that the surfaced candidates share a topic, answer term, office, date, language pattern, or mathematical domain but test a genuinely different fact; this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0043-Q034",
+    "reason": "Aurangzeb commissioning Lahore's Badshahi Mosque, completed in 1673, is already tested by the earlier retained U0043 source.",
     "testedProposition": "Which Mughal emperor commissioned Lahore's Badshahi Mosque, completed in 1673? Correct answer: Aurangzeb.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -668,7 +669,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0051-Q032"
+        "ADV2E102-U0051-Q032",
+        "ADV2E102-U0043-Q034"
       ],
       "answerConflictReviewed": true
     }
@@ -962,8 +964,8 @@
     "sourceRecordId": "ADV2E102-U0170-Q048",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0081-Q027",
-    "reason": "Khunjerab Pass connecting Pakistan with China is an exact same-proposition repeat of the earlier retained source.",
+    "duplicateOf": "ADV2E102-U0013-Q047",
+    "reason": "Khunjerab Pass connecting Pakistan with China is an exact same-proposition repeat of the earliest retained U0013 source; the intervening U0081 repeat is also skipped.",
     "testedProposition": "The Khunjerab Pass border crossing connects Pakistan with which country? Correct answer: China.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -973,10 +975,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": true,
+      "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0081-Q027",
-        "ADV2E102-U0032-Q033"
+        "ADV2E102-U0032-Q033",
+        "ADV2E102-U0013-Q047"
       ],
       "answerConflictReviewed": true
     }

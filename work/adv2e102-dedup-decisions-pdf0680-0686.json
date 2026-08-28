@@ -109,7 +109,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Hagia Sophia is located in which city and country? Correct answer: Istanbul, Turkey.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -120,7 +120,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q023-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -129,7 +131,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Buckingham Palace is located in which city? Correct answer: London.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -140,7 +142,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0023-Q019-SRC",
+        "ADV2E102-U0034-Q002-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -169,7 +174,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Who wrote 'A Brief History of Time'? Correct answer: Stephen Hawking.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -180,7 +185,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q009-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -209,7 +216,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "On what date did the World Trade Organization come into being? Correct answer: 1 January 1995.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -220,7 +227,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q008-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -271,7 +280,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "According to the CIA World Factbook's archived 2022 active-duty personnel estimates, which listed country had the largest military force? Correct answer: China.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -282,7 +291,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0002-Q038-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -308,10 +319,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0091-Q016",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0022-Q051",
+    "reason": "The earlier U0022 source already asks the year Muhammad Ali Jinnah joined the All-India Muslim League and gives 1913.",
     "testedProposition": "In which year did Muhammad Ali Jinnah join the All-India Muslim League? Correct answer: 1913.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -321,8 +332,12 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q051-SRC",
+        "ADV2E102-U0008-Q035-SRC",
+        "ADV2E102-U0022-Q051"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -353,7 +368,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Who became Pakistan's first Hindu woman civil judge in 2019? Correct answer: Suman Kumari Bodani.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -364,7 +379,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0034-Q037-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -569,7 +586,11 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0051-Q049-SIM"
+        "ADV2E102-U0005-Q019-SIM",
+        "ADV2E102-U0002-Q027-SRC",
+        "ADV2E102-U0002-Q027-SIM",
+        "ADV2E102-U0023-Q016-SIM",
+        "ADV2E102-U0012-Q010-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -614,6 +635,8 @@
         "P234-Q002-SIM",
         "P238-Q006-SRC",
         "P234-Q002-SRC",
+        "ADV2E102-U0013-Q033-SRC",
+        "ADV2E102-U0002-Q028-SRC",
         "ADV2E102-U0032-Q036-SRC",
         "ADV2E102-U0061-Q058-SRC",
         "ADV2E102-U0041-Q028-SRC",
@@ -689,7 +712,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "The Line of Actual Control is the de facto boundary between which two countries? Correct answer: China and India.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -700,7 +723,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0023-Q034-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -854,10 +879,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0091-Q042",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0022-Q054",
+    "reason": "The earlier U0022 source already asks for Pakistan's highest Himalayan peak and gives Nanga Parbat; this later wording tests the same proposition.",
     "testedProposition": "Which is the highest peak of the Himalayan range within Pakistan? Correct answer: Nanga Parbat.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -867,8 +892,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q054-SRC",
+        "ADV2E102-U0022-Q054"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1014,10 +1042,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0091-Q050",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0008-Q054",
+    "reason": "The earlier U0008 pair already tests Alexander Fleming as the discoverer of penicillin in 1928.",
     "testedProposition": "Who discovered penicillin in 1928? Correct answer: Alexander Fleming.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1028,7 +1056,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q054"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1137,7 +1167,9 @@
       "semanticCandidateIds": [
         "IBES-Q0395-SIM",
         "IBES-Q0601-SRC",
-        "IBES-Q1204-SRC"
+        "IBES-Q1204-SRC",
+        "ADV2E102-U0004-Q052-SRC",
+        "ADV2E102-U0006-Q047-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1159,6 +1191,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0006-Q045-SRC",
         "IBES-Q0293-SRC"
       ],
       "answerConflictReviewed": true
@@ -1301,6 +1334,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0005-Q071-SRC",
         "ADV2E102-U0081-Q058-SRC",
         "ADV2E102-U0081-Q060-SRC"
       ],
@@ -1511,12 +1545,14 @@
         "P237-Q054-SRC",
         "P237-Q048-SRC",
         "P239-Q049-SIM",
+        "ADV2E102-U0013-Q075-SRC",
+        "ADV2E102-U0013-Q074-SIM",
+        "ADV2E102-U0013-Q075-SIM",
         "ADV2E102-U0033-Q078-SIM",
         "ADV2E102-U0081-Q076-SRC",
         "ADV2E102-U0081-Q073-SIM",
-        "ADV2E102-U0021-Q072-SIM",
-        "ADV2E102-U0021-Q075-SIM",
-        "ADV2E102-U0041-Q075-SIM"
+        "ADV2E102-U0003-Q025-SRC",
+        "ADV2E102-U0021-Q072-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -1721,7 +1757,9 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0032-Q053-SRC",
-        "ADV2E102-U0021-Q083-SRC"
+        "ADV2E102-U0021-Q083-SRC",
+        "ADV2E102-U0022-Q083-SRC",
+        "ADV2E102-U0043-Q084-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -1730,8 +1768,8 @@
     "sourceRecordId": "ADV2E102-U0091-Q084",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0051-Q084",
-    "reason": "The earlier retained U0051 source asks the identical authorship proposition for the Urdu novel Aangan and gives Khadija Mastoor.",
+    "duplicateOf": "ADV2E102-U0043-Q088",
+    "reason": "The earlier retained U0043 source asks the identical authorship proposition for the Urdu novel Aangan and gives Khadija Mastoor.",
     "testedProposition": "Who wrote the Urdu novel 'Aangan'? Correct answer: Khadija Mastoor.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1741,17 +1779,17 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
+        "ADV2E102-U0043-Q088-SRC",
+        "ADV2E102-U0022-Q083-SIM",
+        "ADV2E102-U0043-Q092-SRC",
+        "ADV2E102-U0034-Q087-SRC",
         "ADV2E102-U0051-Q082-SRC",
         "ADV2E102-U0051-Q084-SRC",
+        "ADV2E102-U0043-Q091-SRC",
         "ADV2E102-U0081-Q085-SRC",
-        "ADV2E102-U0051-Q083-SRC",
-        "ADV2E102-U0081-Q091-SRC",
-        "ADV2E102-U0051-Q094-SRC",
-        "ADV2E102-U0071-Q082-SRC",
-        "ADV2E102-U0081-Q087-SRC",
-        "ADV2E102-U0051-Q084"
+        "ADV2E102-U0043-Q088"
       ],
       "answerConflictReviewed": true
     }
@@ -1801,7 +1839,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Who wrote the Urdu letter collection 'Urdu-e-Mualla'? Correct answer: Mirza Ghalib.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1812,7 +1850,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0043-Q084-SIM",
+        "ADV2E102-U0034-Q084-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -2020,10 +2061,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0091-Q098",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0008-Q098",
+    "reason": "The earlier U0008 source asks the identical al-Tabari hadith-work proposition and answers Tahdhib al-Athar.",
     "testedProposition": "Which hadith work was authored by Abu Jafar Muhammad ibn Jarir al-Tabari? Correct answer: Tahdhib al-Athar.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -2033,8 +2074,11 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q098-SRC",
+        "ADV2E102-U0008-Q098"
+      ],
       "answerConflictReviewed": true
     }
   },

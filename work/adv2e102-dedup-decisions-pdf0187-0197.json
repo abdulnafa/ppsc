@@ -24,7 +24,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Vatican City is an enclave within which country? Correct answer: Italy.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -35,7 +35,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q002-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -64,7 +66,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "On what date did the United Nations Charter enter into force in 1945? Correct answer: 24 October.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -75,7 +77,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q004-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -164,7 +168,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "On which date is International Literacy Day observed each year? Correct answer: 8 September.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -175,7 +179,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0001-Q003-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -184,7 +190,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which listed country is an observer rather than a member of SAARC? Correct answer: Myanmar.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -195,7 +201,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0010-Q023-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -224,7 +232,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "As of 2026, which nickname is used for Zimbabwe's national men's cricket team? Correct answer: The Chevrons.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -235,16 +243,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q012-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0021-Q013",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0014-Q001",
+    "reason": "Earlier source-order U0014 Q1 already tests the identical Nigeria-currency proposition and answers naira.",
     "testedProposition": "What is the currency of Nigeria? Correct answer: Naira.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -255,7 +265,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0014-Q001"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -264,7 +276,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "The Taj Mahal stands on the bank of which river? Correct answer: Jamuna.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -275,7 +287,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q014-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -386,7 +400,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
     "testedProposition": "In which year was the Lahore Declaration signed by the prime ministers of Pakistan and India? Correct answer: 1999.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -397,9 +411,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "P238-Q003-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -440,9 +452,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P236-Q021-SRC",
-        "P234-Q015-SIM",
-        "P237-Q016-SRC"
+        "ADV2E102-U0021-Q022-SRC",
+        "ADV2E102-U0009-Q025-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -474,7 +485,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which Pakistani player won the 1994 IBSF World Amateur Snooker Championship? Correct answer: Muhammad Yousaf.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -485,7 +496,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q024-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -506,9 +519,9 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P235-Q011-SRC",
-        "P235-Q011-SIM",
-        "P236-Q006-SRC"
+        "ADV2E102-U0002-Q024-SIM",
+        "ADV2E102-U0007-Q015-SIM",
+        "ADV2E102-U0007-Q015-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -518,7 +531,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "In which year was the foundation stone of Pakistan Steel Mills laid? Correct answer: 1973.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -529,7 +542,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q026-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -598,7 +613,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which three tehsils of the former Gurdaspur district were allocated to India by the 1947 Radcliffe Award? Correct answer: Gurdaspur, Pathankot, Batala.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -609,7 +624,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q030-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -690,8 +707,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P236-Q017-SRC",
-        "P235-Q013-SRC"
+        "P235-Q013-SRC",
+        "ADV2E102-U0021-Q034-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -761,7 +778,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which article of Pakistan's Constitution governs the Armed Forces acting in aid of civil power? Correct answer: Article 245.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -772,7 +789,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q038-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -801,7 +820,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "On what date did Pakistani cooking expert Zubaida Tariq die? Correct answer: 4th January, 2018.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -812,7 +831,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q040-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -821,7 +842,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which is the world's largest peninsula by area? Correct answer: Arabian.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -832,7 +853,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q042-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -878,10 +901,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0021-Q044",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0007-Q028",
+    "reason": "Earlier U0007 Q28 already tests that the Rann of Kutch lies south of Tharparkar District.",
     "testedProposition": "The Rann of Kutch lies along which side of Pakistan's Tharparkar District? Correct answer: South.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -892,7 +915,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q028-SRC",
+        "ADV2E102-U0007-Q028"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1003,7 +1029,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "In living organisms, genes are segments of which molecule? Correct answer: DNA.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1014,7 +1040,11 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "IBES-Q0078-SIM",
+        "IBES-Q0205-SIM",
+        "IBES-Q0020-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1285,7 +1315,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "A job takes one person 20 hours. If four equally efficient people join that person, how long will all five take working together? Correct answer: 4 hours.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1296,7 +1326,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q063-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1305,7 +1337,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which one of the following is not a prime number? Correct answer: 91.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1316,7 +1348,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q064-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1325,7 +1359,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "For x not equal to 0, solve (30x + 70) / x = 100. Correct answer: 1.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1336,7 +1370,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q065-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1365,7 +1401,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "What is the mode of the data set 3, 5, 2, 0, 0, 1, 6, 6, 3, 1, 0, 7, 9? Correct answer: 0.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1376,7 +1412,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q067-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1405,7 +1443,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Laila is 8 years old and her brother Mansoor is 2. After how many years will Mansoor be half Laila's age? Correct answer: 4 years.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1416,7 +1454,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q069-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1425,7 +1465,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "In the recursively defined sequence 2, 3, 6, 18, 108, ... where each term after the second is the product of the previous two terms, what is the next term? Correct answer: 1944.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1436,7 +1476,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q071-SRC",
+        "ADV2E102-U0021-Q070-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1477,7 +1520,22 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P239-Q046-SRC"
+        "P239-Q049-SIM",
+        "P238-Q062-SIM",
+        "P239-Q046-SIM",
+        "P239-Q062-SIM",
+        "P237-Q048-SIM",
+        "P237-Q048-SRC",
+        "P237-Q054-SRC",
+        "P237-Q060-SIM",
+        "ADV2E102-U0008-Q073-SIM",
+        "ADV2E102-U0003-Q025-SRC",
+        "ADV2E102-U0004-Q093-SIM",
+        "ADV2E102-U0013-Q073-SRC",
+        "ADV2E102-U0012-Q068-SRC",
+        "ADV2E102-U0008-Q070-SIM",
+        "ADV2E102-U0004-Q011-SRC",
+        "ADV2E102-U0013-Q075-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1539,7 +1597,22 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0021-Q072-SRC"
+        "P238-Q062-SIM",
+        "P239-Q046-SIM",
+        "P239-Q062-SIM",
+        "P237-Q048-SIM",
+        "P237-Q048-SRC",
+        "P239-Q049-SIM",
+        "P237-Q054-SRC",
+        "P237-Q060-SIM",
+        "ADV2E102-U0008-Q073-SIM",
+        "ADV2E102-U0003-Q025-SRC",
+        "ADV2E102-U0021-Q072-SIM",
+        "ADV2E102-U0004-Q093-SIM",
+        "ADV2E102-U0013-Q073-SRC",
+        "ADV2E102-U0012-Q068-SRC",
+        "ADV2E102-U0008-Q070-SIM",
+        "ADV2E102-U0004-Q011-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1566,10 +1639,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0021-Q077",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0013-Q083",
+    "reason": "The earlier-source-order U0013 canonical tests the same idiom proposition: to fish in troubled waters means to exploit a confused or difficult situation for personal advantage.",
     "testedProposition": "What does the idiom 'fish in troubled waters' mean? Correct answer: To benefit from other people's troubles.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1580,7 +1653,11 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q083-SRC",
+        "ADV2E102-U0013-Q083-SIM",
+        "ADV2E102-U0013-Q083"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1609,7 +1686,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
     "testedProposition": "Which listed word is a synonym of 'exorbitant' when describing a price? Correct answer: Extortionate.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1620,10 +1697,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "ADV2E102-U0011-Q079-SRC",
-        "ADV2E102-U0011-Q071-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -1789,10 +1863,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0021-Q088",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0014-Q084",
+    "reason": "Earlier source-order U0014 Q84 already tests the identical formal Arabic-derived plural of fauj and answers afwaj.",
     "testedProposition": "Which Arabic-derived broken plural of the Urdu noun 'fauj' is used in formal Urdu? Correct answer: Afwaj.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1803,7 +1877,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0014-Q084"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1812,7 +1888,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which Urdu grammatical term denotes the feminine gender, contrasted with 'muzakkar' (masculine)? Correct answer: Muannas.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1823,7 +1899,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0014-Q091-SRC",
+        "ADV2E102-U0021-Q089-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1852,7 +1931,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "What does the Urdu-Persian phrase 'itmam-e-hujjat' most nearly mean? Correct answer: To present a final, decisive argument.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1863,7 +1942,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q091-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1884,7 +1965,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0021-Q087-SRC"
+        "ADV2E102-U0003-Q098-SRC",
+        "ADV2E102-U0021-Q092-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1894,7 +1976,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which surah is numbered 1 and opens the Quran? Correct answer: Surah Al-Fatihah.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1905,7 +1987,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q100-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1934,7 +2018,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "After receiving the first revelation at Hira, to whom did Prophet Muhammad return and recount what had happened? Correct answer: Khadija.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1945,7 +2029,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q095-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1954,7 +2040,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "According to Zayd ibn Arqam's report in Sahih al-Bukhari, how many Ghazwas did the Prophet undertake? Correct answer: 19.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1965,7 +2051,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q096-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1994,7 +2082,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "According to historical reference works, how did Caliph Uthman ibn Affan die in Medina in 656 CE? Correct answer: He was killed during a rebellion.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -2005,7 +2093,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q098-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -2014,7 +2104,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank or earlier ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "In which year CE was Caliph Ali ibn Abi Talib assassinated at Kufa? Correct answer: 661 CE.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -2025,7 +2115,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q099-SRC",
+        "ADV2E102-U0002-Q089-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },

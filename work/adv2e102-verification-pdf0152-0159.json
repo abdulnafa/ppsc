@@ -1,0 +1,1425 @@
+[
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q001",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 152,
+    "sourceBookPage": 157,
+    "sourceQuestionNumber": 1,
+    "question": "The Folketing is the parliament of which country?",
+    "options": [
+      "France",
+      "Italy",
+      "China",
+      "Denmark"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.thedanishparliament.dk/-/media/sites/ft/pdf/publikationer/folketinget-the-danish-parliament.pdf",
+        "label": "The Danish Parliament (The Folketing)",
+        "publisher": "The Danish Parliament",
+        "authorityId": "danish-parliament",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Danish Parliament's official publication identifies the Folketing as Denmark's parliament."
+      },
+      {
+        "url": "https://denmark.dk/society-and-business/government-and-politics",
+        "label": "Government and politics",
+        "publisher": "Official Website of Denmark",
+        "authorityId": "denmark-official",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Denmark's official country portal identifies the Folketing as the national parliament."
+      }
+    ],
+    "referenceUrl": "https://www.thedanishparliament.dk/-/media/sites/ft/pdf/publikationer/folketinget-the-danish-parliament.pdf",
+    "referenceLabel": "The Danish Parliament (The Folketing)",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Quotation marks and grammar were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q002",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 152,
+    "sourceBookPage": 157,
+    "sourceQuestionNumber": 2,
+    "question": "Pope Francis, born Jorge Mario Bergoglio in 1936, was from which country?",
+    "options": [
+      "United States",
+      "United Kingdom",
+      "Brazil",
+      "Argentina"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.vatican.va/content/francesco/en/biography/documents/papa-francesco-biografia-bergoglio.html",
+        "label": "Biography of Pope Francis",
+        "publisher": "The Holy See",
+        "authorityId": "holy-see",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Vatican biography calls Jorge Mario Bergoglio an Argentine Jesuit born in Buenos Aires."
+      },
+      {
+        "url": "https://apnews.com/article/0d33f7c8adca4c22a8e9bebeb5d3cdcc",
+        "label": "Key dates in the life of Pope Francis",
+        "publisher": "Associated Press",
+        "authorityId": "associated-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "AP records that Jorge Mario Bergoglio was born in Buenos Aires, Argentina."
+      }
+    ],
+    "referenceUrl": "https://www.vatican.va/content/francesco/en/biography/documents/papa-francesco-biografia-bergoglio.html",
+    "referenceLabel": "Biography of Pope Francis",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1936-12-17",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The awkward Vatican-nationality wording was replaced with a precise biographical question, and country names were expanded."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q003",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 152,
+    "sourceBookPage": 157,
+    "sourceQuestionNumber": 3,
+    "question": "Rearranging the letters RAPIS forms PARIS, the name of a well-known what?",
+    "options": [
+      "Country",
+      "Animal",
+      "City",
+      "Ocean"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.paris.fr/en",
+        "label": "City of Paris",
+        "publisher": "City of Paris",
+        "authorityId": "city-of-paris",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official municipal portal identifies Paris as a city."
+      },
+      {
+        "url": "https://www.britannica.com/place/Paris",
+        "label": "Paris",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies Paris as the city and capital of France."
+      }
+    ],
+    "referenceUrl": "https://www.paris.fr/en",
+    "referenceLabel": "City of Paris",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The anagram was made explicit; RAPIS rearranges to PARIS, which both sources classify as a city."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q004",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 152,
+    "sourceBookPage": 157,
+    "sourceQuestionNumber": 4,
+    "question": "From 1992 until his death in 2024, Hassan Nasrallah served as secretary-general of which organization?",
+    "options": [
+      "Hamas",
+      "Hezbollah",
+      "Jundullah",
+      "Palestine Liberation Organization"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://apnews.com/article/2da3789a02fd4e2e88511a7f59174d19",
+        "label": "Hezbollah leader Hassan Nasrallah",
+        "publisher": "Associated Press",
+        "authorityId": "associated-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "AP records that Hezbollah chose Nasrallah as secretary-general in 1992 and that he led it until his death in 2024."
+      },
+      {
+        "url": "https://www.britannica.com/biography/Hassan-Nasrallah",
+        "label": "Hassan Nasrallah",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies Nasrallah as Hezbollah's secretary-general from 1992 until 2024."
+      }
+    ],
+    "referenceUrl": "https://apnews.com/article/2da3789a02fd4e2e88511a7f59174d19",
+    "referenceLabel": "Hezbollah leader Hassan Nasrallah",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The present-tense source was repaired after Nasrallah's 2024 death and the office period was explicitly bounded; PLO was expanded."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q005",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 153,
+    "sourceBookPage": 158,
+    "sourceQuestionNumber": 5,
+    "question": "Ferdinand Marcos ruled which country?",
+    "options": [
+      "Hawaii",
+      "Colombia",
+      "Liberia",
+      "Philippines"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://philhistoricsites.nhcp.gov.ph/registry_database/ferdinand-e-marcos-1917-1989/",
+        "label": "Ferdinand E. Marcos (1917–1989)",
+        "publisher": "National Historical Commission of the Philippines",
+        "authorityId": "philippines-nhcp",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Philippine historical registry identifies Ferdinand Marcos as President of the Philippines from 1965 to 1986."
+      },
+      {
+        "url": "https://officialgazette.gov.ph/1973/09/09/proclamation-no-1182-s-1973/",
+        "label": "Proclamation No. 1182, s. 1973",
+        "publisher": "Official Gazette of the Republic of the Philippines",
+        "authorityId": "philippines-official-gazette",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official proclamation is issued by Ferdinand E. Marcos in his capacity as President of the Philippines."
+      }
+    ],
+    "referenceUrl": "https://philhistoricsites.nhcp.gov.ph/registry_database/ferdinand-e-marcos-1917-1989/",
+    "referenceLabel": "Ferdinand E. Marcos (1917–1989)",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The grammar was normalized; two previously verified independent authorities were reused."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q006",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 153,
+    "sourceBookPage": 158,
+    "sourceQuestionNumber": 6,
+    "question": "Who wrote the novel Anna Karenina?",
+    "options": [
+      "George Orwell",
+      "Enid Blyton",
+      "Leo Tolstoy",
+      "Mark Twain"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.gutenberg.org/ebooks/1399",
+        "label": "Anna Karenina",
+        "publisher": "Project Gutenberg",
+        "authorityId": "project-gutenberg",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Project Gutenberg catalogs Anna Karenina under author Leo Tolstoy."
+      },
+      {
+        "url": "https://www.britannica.com/topic/Anna-Karenina-novel-by-Tolstoy",
+        "label": "Anna Karenina",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies Anna Karenina as a novel by Leo Tolstoy."
+      }
+    ],
+    "referenceUrl": "https://www.gutenberg.org/ebooks/1399",
+    "referenceLabel": "Anna Karenina",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The question was normalized and the OCR-corrupt name 'George Orville' was corrected to George Orwell."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q007",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 153,
+    "sourceBookPage": 158,
+    "sourceQuestionNumber": 7,
+    "question": "What is a buffer state?",
+    "options": [
+      "A financially weak state",
+      "A state under United Nations sanctions",
+      "A small state between two larger rival states",
+      "A state completely surrounded by hostile states"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/buffer-state",
+        "label": "Buffer state definition",
+        "publisher": "Collins English Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins defines a buffer state as a small neutral state between rival or hostile powers."
+      },
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/definition/english/buffer_1",
+        "label": "Buffer definition",
+        "publisher": "Oxford Advanced Learner's Dictionary",
+        "authorityId": "oxford-learners-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford defines a buffer state as a small country between two powerful states that helps keep peace."
+      }
+    ],
+    "referenceUrl": "https://www.collinsdictionary.com/dictionary/english/buffer-state",
+    "referenceLabel": "Buffer state definition",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The definition and capitalization were normalized; the intended geopolitical meaning remains unique."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q008",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 153,
+    "sourceBookPage": 158,
+    "sourceQuestionNumber": 8,
+    "question": "Which conflict did the 1919 Treaty of Versailles officially end?",
+    "options": [
+      "World War I",
+      "World War II",
+      "French Revolution",
+      "Crimean War"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.nationalarchives.gov.uk/explore-the-collection/stories/the-treaty-of-versailles/",
+        "label": "The Treaty of Versailles",
+        "publisher": "The National Archives, United Kingdom",
+        "authorityId": "uk-national-archives",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UK National Archives states that the Treaty of Versailles officially ended the First World War."
+      },
+      {
+        "url": "https://history.state.gov/milestones/1914-1920/paris-peace",
+        "label": "Paris Peace Conference and Treaty of Versailles",
+        "publisher": "Office of the Historian, U.S. Department of State",
+        "authorityId": "us-state-historian",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The U.S. State Department history identifies the Treaty of Versailles as the treaty that ended World War I."
+      }
+    ],
+    "referenceUrl": "https://www.nationalarchives.gov.uk/explore-the-collection/stories/the-treaty-of-versailles/",
+    "referenceLabel": "The Treaty of Versailles",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1919-06-28",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The catch-all option was replaced and the official end-of-war proposition retained."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q009",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 153,
+    "sourceBookPage": 158,
+    "sourceQuestionNumber": 9,
+    "question": "As of 28 August 2026, which country had won the most men's FIFA World Cup titles?",
+    "options": [
+      "Brazil",
+      "Germany",
+      "Italy",
+      "Argentina"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/pele-three-world-cup-titles-only-player",
+        "label": "Pelé's three titles and Brazil's record",
+        "publisher": "FIFA",
+        "authorityId": "fifa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "FIFA records that Brazil remains top of the ranking for the most men's World Cup titles."
+      },
+      {
+        "url": "https://www.guinnessworldrecords.com/world-records/81375-most-football-soccer-fifa-world-cup-finals-appearances-by-a-team",
+        "label": "Most FIFA World Cup finals appearances by a team",
+        "publisher": "Guinness World Records",
+        "authorityId": "guinness-world-records",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Guinness independently states that Brazil has lifted the trophy a record five times."
+      }
+    ],
+    "referenceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/pele-three-world-cup-titles-only-player",
+    "referenceLabel": "Pelé's three titles and Brazil's record",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": "2019",
+      "asOf": "2026-08-28",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2026-12-31"
+    },
+    "confidence": "high",
+    "sourceNotes": "The question was scoped to the men's tournament and dated; the catch-all option was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q010",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 153,
+    "sourceBookPage": 158,
+    "sourceQuestionNumber": 10,
+    "question": "In which city did the United States Constitutional Convention assemble in 1787?",
+    "options": [
+      "Philadelphia",
+      "Washington, D.C.",
+      "Chicago",
+      "New York City"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.archives.gov/milestone-documents/constitution",
+        "label": "Constitution of the United States (1787)",
+        "publisher": "U.S. National Archives",
+        "authorityId": "us-national-archives",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Archives states that the Federal Convention convened at the State House in Philadelphia in 1787."
+      },
+      {
+        "url": "https://founders.archives.gov/documents/Hamilton/01-04-02-0099",
+        "label": "Constitutional Convention: Plan of Government",
+        "publisher": "U.S. National Archives Founders Online",
+        "authorityId": "founders-online",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The primary convention document is dated Philadelphia, June 18, 1787."
+      }
+    ],
+    "referenceUrl": "https://www.archives.gov/milestone-documents/constitution",
+    "referenceLabel": "Constitution of the United States (1787)",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1787",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The prior independently verified formulation and references were reused; city names were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q011",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 153,
+    "sourceBookPage": 158,
+    "sourceQuestionNumber": 11,
+    "question": "The Madame Tussauds attraction on Marylebone Road is in which city?",
+    "options": [
+      "Paris",
+      "London",
+      "Rome",
+      "New York City"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.madametussauds.com/london/plan-your-visit/before-you-visit/directions-parking/",
+        "label": "Directions to Madame Tussauds London",
+        "publisher": "Madame Tussauds",
+        "authorityId": "madame-tussauds",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The attraction's official directions give its Marylebone Road address in London."
+      },
+      {
+        "url": "https://www.visitlondon.com/things-to-do/place/284875-madame-tussauds-london",
+        "label": "Madame Tussauds London",
+        "publisher": "London & Partners",
+        "authorityId": "visit-london",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "London's official visitor guide locates Madame Tussauds on Marylebone Road in London."
+      }
+    ],
+    "referenceUrl": "https://www.madametussauds.com/london/plan-your-visit/before-you-visit/directions-parking/",
+    "referenceLabel": "Directions to Madame Tussauds London",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The broad claim was scoped to the named Marylebone Road attraction because Madame Tussauds has branches in several cities."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q012",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 153,
+    "sourceBookPage": 158,
+    "sourceQuestionNumber": 12,
+    "question": "In which year was Regional Cooperation for Development, the predecessor of the Economic Cooperation Organization, founded?",
+    "options": [
+      "1963",
+      "1964",
+      "1965",
+      "1966"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://eco.int/about-eco/",
+        "label": "About ECO",
+        "publisher": "Economic Cooperation Organization",
+        "authorityId": "eco",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ECO's official history records that Regional Cooperation for Development was founded in 1964."
+      },
+      {
+        "url": "https://www.mfa.gov.tr/turkiye-and-the-economic-cooperation-organization-_eco_.en.mfa",
+        "label": "Economic Cooperation Organization",
+        "publisher": "Ministry of Foreign Affairs of Türkiye",
+        "authorityId": "turkiye-mfa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Türkiye's Foreign Ministry records that Regional Cooperation for Development was established in 1964."
+      }
+    ],
+    "referenceUrl": "https://eco.int/about-eco/",
+    "referenceLabel": "About ECO",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Organization names were expanded and the historical predecessor relationship retained."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q013",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 153,
+    "sourceBookPage": 158,
+    "sourceQuestionNumber": 13,
+    "question": "The International Court of Justice has its seat in which city?",
+    "options": [
+      "Paris",
+      "Luxembourg",
+      "Brussels",
+      "The Hague"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.icj-cij.org/court",
+        "label": "The Court",
+        "publisher": "International Court of Justice",
+        "authorityId": "icj",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ICJ states that its seat is at the Peace Palace in The Hague."
+      },
+      {
+        "url": "https://www.un.org/en/about-us/un-charter/statute-of-the-international-court-of-justice",
+        "label": "Statute of the International Court of Justice",
+        "publisher": "United Nations",
+        "authorityId": "united-nations",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Article 22 of the ICJ Statute establishes the Court's seat at The Hague."
+      }
+    ],
+    "referenceUrl": "https://www.icj-cij.org/court",
+    "referenceLabel": "The Court",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The blank-style wording was converted to a direct question."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q014",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 153,
+    "sourceBookPage": 158,
+    "sourceQuestionNumber": 14,
+    "question": "The Lighthouse of Alexandria, one of the Seven Wonders of the ancient world, stood in which country?",
+    "options": [
+      "Türkiye",
+      "Egypt",
+      "Greece",
+      "Italy"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://egymonuments.gov.eg/collections/alexandria/",
+        "label": "Alexandria",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "authorityId": "egypt-antiquities",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Egypt's Ministry of Tourism and Antiquities identifies Alexandria as the site of the famous Lighthouse."
+      },
+      {
+        "url": "https://alexu.edu.eg/index.php/en/2015-11-24-10-38-8",
+        "label": "Alexandria University slogan",
+        "publisher": "Alexandria University",
+        "authorityId": "alexandria-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Alexandria University describes the Lighthouse on Pharos at Alexandria's eastern port."
+      }
+    ],
+    "referenceUrl": "https://egymonuments.gov.eg/collections/alexandria/",
+    "referenceLabel": "Alexandria",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The historical monument was scoped to its present-day country and the wording was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q015",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 15,
+    "question": "Ankara is the capital of which country?",
+    "options": [
+      "Greece",
+      "Egypt",
+      "Cyprus",
+      "Türkiye"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.mfa.gov.tr/data/Terminoloji/the-list-of-countries-and-their-capitals.pdf",
+        "label": "List of countries and their capitals",
+        "publisher": "Ministry of Foreign Affairs of Türkiye",
+        "authorityId": "turkiye-mfa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Türkiye's official country-and-capital list pairs Türkiye with Ankara."
+      },
+      {
+        "url": "https://www.britannica.com/place/Ankara",
+        "label": "Ankara",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies Ankara as the capital of Türkiye."
+      }
+    ],
+    "referenceUrl": "https://www.mfa.gov.tr/data/Terminoloji/the-list-of-countries-and-their-capitals.pdf",
+    "referenceLabel": "List of countries and their capitals",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Capitalization and country spelling were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q016",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 16,
+    "question": "In which city is the Eiffel Tower located?",
+    "options": [
+      "Paris",
+      "Vienna",
+      "Lyon",
+      "Pisa"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.toureiffel.paris/en/access-map",
+        "label": "Getting to the Eiffel Tower",
+        "publisher": "Société d'Exploitation de la Tour Eiffel",
+        "authorityId": "eiffel-tower-official",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Eiffel Tower's official site gives its address in Paris."
+      },
+      {
+        "url": "https://parisjetaime.com/eng/culture/eiffel-tower-p3544",
+        "label": "Eiffel Tower",
+        "publisher": "Paris je t'aime Tourist Office",
+        "authorityId": "paris-tourism",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Paris's official tourism organization identifies the Eiffel Tower as a Paris monument."
+      }
+    ],
+    "referenceUrl": "https://www.toureiffel.paris/en/access-map",
+    "referenceLabel": "Getting to the Eiffel Tower",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source question was already uniquely answerable; punctuation was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q017",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 17,
+    "question": "What is the capital city of China?",
+    "options": [
+      "Shanghai",
+      "Shenzhen",
+      "Tianjin",
+      "Beijing"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://english.beijing.gov.cn/beijinginfo/abstract/202005/t20200512_1895468.html",
+        "label": "Facts about Beijing",
+        "publisher": "Beijing Municipal Government",
+        "authorityId": "beijing-government",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Beijing's official portal states that Beijing is the capital of the People's Republic of China."
+      },
+      {
+        "url": "https://www.britannica.com/place/Beijing",
+        "label": "Beijing",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies Beijing as the capital of China."
+      }
+    ],
+    "referenceUrl": "https://english.beijing.gov.cn/beijinginfo/abstract/202005/t20200512_1895468.html",
+    "referenceLabel": "Facts about Beijing",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The wording was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q018",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 18,
+    "question": "After America the largest numbers of Nobel Laureates are from:",
+    "options": [
+      "United Kingdom",
+      "Germany",
+      "France",
+      "Switzerland"
+    ],
+    "verificationStatus": "unresolved",
+    "verifiedCorrectIndex": null,
+    "references": [],
+    "referenceUrl": null,
+    "referenceLabel": null,
+    "accessedOn": null,
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "low",
+    "sourceNotes": "Held: 'number of Nobel laureates by country' has no stated year or reproducible counting rule (nationality, birthplace, institutional affiliation, and shared prizes yield different rankings). A unique answer cannot be verified without inventing a methodology."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q019",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 19,
+    "question": "Which country hosted the 10th BRICS Summit in July 2018?",
+    "options": [
+      "Russia",
+      "China",
+      "Brazil",
+      "South Africa"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.gov.za/news/media-statements/10th-brics-summit-johannesburg-declaration-27-jul-2018",
+        "label": "10th BRICS Summit Johannesburg Declaration",
+        "publisher": "South African Government",
+        "authorityId": "south-africa-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The declaration records the 10th BRICS Summit in Johannesburg, South Africa, from 25 to 27 July 2018."
+      },
+      {
+        "url": "https://www.mea.gov.in/flipbook/Re-energising-India-Engagement-With-Africa/",
+        "label": "Re-energising India's Engagement with Africa",
+        "publisher": "Ministry of External Affairs, India",
+        "authorityId": "india-mea",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "India's Foreign Ministry records that South Africa organized the 10th BRICS Leaders' Summit in July 2018."
+      }
+    ],
+    "referenceUrl": "https://www.gov.za/news/media-statements/10th-brics-summit-johannesburg-declaration-27-jul-2018",
+    "referenceLabel": "10th BRICS Summit Johannesburg Declaration",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "2018-07-25",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The incorrect distractor 'South America' was replaced with Brazil and the host-country wording made explicit."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q020",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 20,
+    "question": "The Iranian Revolution overthrew Shah Mohammad Reza Pahlavi in which year?",
+    "options": [
+      "1976",
+      "1977",
+      "1978",
+      "1979"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.govinfo.gov/content/pkg/GOVPUB-D201-PURL-gpo85530/pdf/GOVPUB-D201-PURL-gpo85530.pdf",
+        "label": "The Islamic Revolution of 1979",
+        "publisher": "U.S. Government Publishing Office",
+        "authorityId": "us-gpo",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government publication records that Mohammad Reza Shah Pahlavi fled Iran in January 1979 during the Islamic Revolution."
+      },
+      {
+        "url": "https://apnews.com/article/98a6448a051e4496524d3f90b82f4f8b",
+        "label": "Iran marks anniversary of Islamic Revolution",
+        "publisher": "Associated Press",
+        "authorityId": "associated-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "AP records that Shah Mohammad Reza Pahlavi fled in January 1979 and the government fell in February 1979."
+      }
+    ],
+    "referenceUrl": "https://www.govinfo.gov/content/pkg/GOVPUB-D201-PURL-gpo85530/pdf/GOVPUB-D201-PURL-gpo85530.pdf",
+    "referenceLabel": "The Islamic Revolution of 1979",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source confused Reza Shah with his son Mohammad Reza Shah Pahlavi; the ruler's name and overthrow event were corrected."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q021",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 21,
+    "question": "The House of Lords is the upper chamber of which country's Parliament?",
+    "options": [
+      "United Kingdom",
+      "United States",
+      "Sweden",
+      "France"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.parliament.uk/lords/",
+        "label": "House of Lords",
+        "publisher": "UK Parliament",
+        "authorityId": "uk-parliament",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UK Parliament identifies the House of Lords as its second chamber."
+      },
+      {
+        "url": "https://apnews.com/article/e5dce9545524a0b25bf43ef8e60d1741",
+        "label": "Britain's State Opening of Parliament",
+        "publisher": "Associated Press",
+        "authorityId": "associated-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "AP independently describes the House of Lords as Britain's unelected upper chamber."
+      }
+    ],
+    "referenceUrl": "https://www.parliament.uk/lords/",
+    "referenceLabel": "House of Lords",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Country abbreviations were expanded; two previously verified independent authorities were reused."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q022",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 22,
+    "question": "In a plutocracy, political power is held primarily by which group?",
+    "options": [
+      "Scholars",
+      "People without formal education",
+      "The wealthy",
+      "The poor"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/plutocracy",
+        "label": "Plutocracy definition",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines plutocracy as government by the wealthy."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/plutocracy",
+        "label": "Plutocracy",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines plutocracy as a system in which the richest people rule or have power."
+      }
+    ],
+    "referenceUrl": "https://www.merriam-webster.com/dictionary/plutocracy",
+    "referenceLabel": "Plutocracy definition",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The definition was made direct and the labels were neutralized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q023",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 23,
+    "question": "Which regional initiative for peace and stability in Afghanistan was adopted in Istanbul on 2 November 2011?",
+    "options": [
+      "Pivot to Asia",
+      "Shanghai Cooperation Organisation",
+      "Asia Cooperation Dialogue",
+      "Heart of Asia–Istanbul Process"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://peacemaker.un.org/sites/default/files/document/files/2024/05/af111102istanbulprocessonafghanistan.pdf",
+        "label": "Istanbul Process on Afghanistan",
+        "publisher": "United Nations Peacemaker",
+        "authorityId": "un-peacemaker",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The declaration states that the Istanbul Process was adopted on 2 November 2011 by the Heart of Asia countries."
+      },
+      {
+        "url": "https://www.mfa.gov.tr/istanbul-process-on-regional-security-and-cooperation-for-a-secure-and-stable-afghanistan.en.mfa",
+        "label": "Istanbul Process on Afghanistan",
+        "publisher": "Ministry of Foreign Affairs of Türkiye",
+        "authorityId": "turkiye-mfa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Türkiye's Foreign Ministry identifies the Heart of Asia–Istanbul Process as the regional cooperation initiative launched in 2011."
+      }
+    ],
+    "referenceUrl": "https://peacemaker.un.org/sites/default/files/document/files/2024/05/af111102istanbulprocessonafghanistan.pdf",
+    "referenceLabel": "Istanbul Process on Afghanistan",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "2011-11-02",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source called an initiative an organization; the official name, purpose, date, and plausible distractors were restored."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q024",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 24,
+    "question": "Which listed countries claim all or part of the Spratly Islands in the South China Sea?",
+    "options": [
+      "Vietnam",
+      "Malaysia",
+      "Philippines",
+      "All three"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.eia.gov/international/content/analysis/regions_of_interest/South_China_Sea/",
+        "label": "South China Sea regional analysis",
+        "publisher": "U.S. Energy Information Administration",
+        "authorityId": "us-eia",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "EIA records that Vietnam claims all Spratly Islands while Malaysia and the Philippines claim some features."
+      },
+      {
+        "url": "https://crsreports.congress.gov/product/pdf/IF/IF10607",
+        "label": "South China Sea disputes",
+        "publisher": "Congressional Research Service",
+        "authorityId": "us-crs",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The CRS overview identifies Vietnam, Malaysia, and the Philippines among the Spratly claimants."
+      }
+    ],
+    "referenceUrl": "https://www.eia.gov/international/content/analysis/regions_of_interest/South_China_Sea/",
+    "referenceLabel": "South China Sea regional analysis",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The relationship to China was removed because the options test whether all three listed states are claimants; 'All of these' was made explicit."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q025",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 25,
+    "question": "PCRWR's 2016 warning projected that Pakistan would cross the absolute water-scarcity threshold by which year?",
+    "options": [
+      "2020",
+      "2022",
+      "2025",
+      "2028"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.pcrwr.gov.pk/wp-content/uploads/2023/02/National-Water-Conservation-Strategy-for-Pakistan-2023-27.pdf",
+        "label": "National Water Conservation Strategy for Pakistan 2023–27",
+        "publisher": "Pakistan Council of Research in Water Resources",
+        "authorityId": "pcrwr",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PCRWR's national strategy records its 2016 warning that Pakistan would breach the absolute water-scarcity threshold by 2025."
+      },
+      {
+        "url": "https://www.undp.org/pakistan/blog/water-lifeblood-tomorrow",
+        "label": "Water – the lifeblood of tomorrow",
+        "publisher": "United Nations Development Programme Pakistan",
+        "authorityId": "undp-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNDP Pakistan records the historical projection that absolute water scarcity could be reached by 2025."
+      }
+    ],
+    "referenceUrl": "https://www.pcrwr.gov.pk/wp-content/uploads/2023/02/National-Water-Conservation-Strategy-for-Pakistan-2023-27.pdf",
+    "referenceLabel": "National Water Conservation Strategy for Pakistan 2023–27",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "2016",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The expired prediction was converted into a historically attributed PCRWR warning; it does not claim that the forecast was subsequently realized."
+  }
+]

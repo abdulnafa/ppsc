@@ -1,0 +1,1937 @@
+[
+  {
+    "id": "ADV2E102-U0012-Q057-SRC",
+    "pairId": "ADV2E102-U0012-Q057",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A father is twice as old as his son. Twenty years earlier, the father was twelve times the son's age. What is the father's age under these conditions?",
+    "questionUrdu": "ایک باپ اپنے بیٹے سے دوگنا عمر کا ہے۔ Twenty years پہلے باپ کی عمر بیٹے سے twelve گنا تھی۔ ان شرائط میں باپ کی موجودہ عمر کیا ہے؟",
+    "options": [
+      "44 years",
+      "32 years",
+      "22 years",
+      "50 years"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”44 years“ ہے۔ اگر بیٹے کی عمر x ہو تو باپ کی عمر 2x ہے۔ Twenty years پہلے 2x−20 = 12(x−20) بنتا ہے، جس سے x=22 اور باپ کی عمر 44 years نکلتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve formulas for a variable",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/2-6-solve-a-formula-for-a-specific-variable",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q057"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/2-6-solve-a-formula-for-a-specific-variable",
+        "label": "Solve formulas for a variable",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax provides the linear-equation method: with father F=2S and F-20=12(S-20), S=22 and F=44."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/algebra-basics/alg-basics-linear-equations-and-inequalities",
+        "label": "Linear equations",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy's linear-equation method independently supports solving the simultaneous age conditions to obtain 44."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and capitalization were normalized; equations give F=44 and S=22."
+  },
+  {
+    "id": "ADV2E102-U0012-Q057-SIM",
+    "pairId": "ADV2E102-U0012-Q057",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A mother is three times as old as her daughter. After 12 years, she will be twice as old. What is the daughter's age at the stated starting point?",
+    "questionUrdu": "ایک ماں اپنی بیٹی سے تین گنا عمر کی ہے۔ 12 years بعد ماں کی عمر بیٹی سے دوگنا ہو گی۔ بیان کردہ ابتدائی وقت پر بیٹی کی عمر کیا ہے؟",
+    "options": [
+      "12 years",
+      "10 years",
+      "14 years",
+      "16 years"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”12 years“ ہے۔ اگر بیٹی کی عمر x ہو تو ماں 3x ہے۔ مساوات 3x+12 = 2(x+12) سے x=12 آتا ہے، اس لیے ابتدائی وقت پر بیٹی 12 years کی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve formulas for a variable",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/2-6-solve-a-formula-for-a-specific-variable",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q057",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/2-6-solve-a-formula-for-a-specific-variable",
+        "label": "Solve formulas for a variable",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a daughter is 12 years old at the starting point when her mother is three times her age and twice her age after 12 years."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/algebra-basics/alg-basics-linear-equations-and-inequalities",
+        "label": "Linear equations",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that a daughter is 12 years old at the starting point when her mother is three times her age and twice her age after 12 years."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q058-SRC",
+    "pairId": "ADV2E102-U0012-Q058",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Thirty percent of 100 equals three percent of which number?",
+    "questionUrdu": "100 کا Thirty percent، کس عدد کے three percent کے برابر ہے؟",
+    "options": [
+      "100",
+      "10",
+      "1,000",
+      "10,000"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”1,000“ ہے۔ 100 کا 30 percent برابر 30 ہے۔ اگر مطلوبہ عدد x ہو تو 3 percent of x = 30، لہٰذا x = 1,000۔",
+    "source": {
+      "type": "book",
+      "label": "General applications of percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q058"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "General applications of percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Using the OpenStax percent equation, 0.30×100=0.03x gives x=1,000."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-percentages/a/percent-word-problems",
+        "label": "Percent word problems",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy's percent-as-a-decimal method independently gives 30/0.03=1,000."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "'Digit' was corrected to number and thousands separators added."
+  },
+  {
+    "id": "ADV2E102-U0012-Q058-SIM",
+    "pairId": "ADV2E102-U0012-Q058",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 25 percent of a number is 45, what is the number?",
+    "questionUrdu": "اگر کسی عدد کا 25 percent برابر 45 ہو تو وہ عدد کیا ہے؟",
+    "options": [
+      "180",
+      "160",
+      "200",
+      "225"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”180“ ہے۔ مساوات 0.25x = 45 ہے؛ دونوں طرف 0.25 سے تقسیم کرنے پر x = 180 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "General applications of percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q058",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "General applications of percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that a number is 180 when 25 percent of it equals 45."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-percentages/a/percent-word-problems",
+        "label": "Percent word problems",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that a number is 180 when 25 percent of it equals 45."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q059-SRC",
+    "pairId": "ADV2E102-U0012-Q059",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "One kilometre equals how many metres?",
+    "questionUrdu": "One kilometre میں کتنے metres ہوتے ہیں؟",
+    "options": [
+      "100 metres",
+      "500 metres",
+      "1,000 metres",
+      "2,000 metres"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”1,000 metres“ ہے۔ SI prefix kilo ایک ہزار کو ظاہر کرتا ہے، اس لیے one kilometre برابر 1,000 metres ہے۔",
+    "source": {
+      "type": "book",
+      "label": "SI units",
+      "referenceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q059"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.bipm.org/en/measurement-units/si-base-units",
+        "label": "SI units",
+        "publisher": "International Bureau of Weights and Measures",
+        "authorityId": "bipm",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The SI prefix kilo denotes a factor of 1,000, so one kilometre is 1,000 metres."
+      },
+      {
+        "url": "https://www.nist.gov/pml/owm/si-units-length",
+        "label": "SI units of length",
+        "publisher": "NIST",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST's SI length guidance identifies kilometre as 1,000 metres."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source typo 'equation to' was corrected to equals and metre spelling standardized."
+  },
+  {
+    "id": "ADV2E102-U0012-Q059-SIM",
+    "pairId": "ADV2E102-U0012-Q059",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "One metre equals how many millimetres?",
+    "questionUrdu": "One metre میں کتنے millimetres ہوتے ہیں؟",
+    "options": [
+      "1,000",
+      "100",
+      "10",
+      "10,000"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”1,000“ ہے۔ SI prefix milli ایک metre کے one-thousandth کو ظاہر کرتا ہے، اس لیے one metre میں 1,000 millimetres ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "SI units",
+      "referenceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q059",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.bipm.org/en/measurement-units/si-base-units",
+        "label": "SI units",
+        "publisher": "International Bureau of Weights and Measures",
+        "authorityId": "bipm",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "International Bureau of Weights and Measures supports that one metre equals 1,000 millimetres."
+      },
+      {
+        "url": "https://www.nist.gov/pml/owm/si-units-length",
+        "label": "SI units of length",
+        "publisher": "NIST",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST supports that one metre equals 1,000 millimetres."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q061-SRC",
+    "pairId": "ADV2E102-U0012-Q061",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the result of dividing 30 by 1/2 and then adding 10?",
+    "questionUrdu": "30 کو 1/2 سے divide کر کے پھر 10 جمع کیا جائے تو نتیجہ کیا ہو گا؟",
+    "options": [
+      "25",
+      "160",
+      "70",
+      "40"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”70“ ہے۔ کسی عدد کو 1/2 سے divide کرنا اسے 2 سے multiply کرنے کے برابر ہے؛ 30 ÷ 1/2 = 60 اور 60 + 10 = 70۔",
+    "source": {
+      "type": "book",
+      "label": "Multiply and divide fractions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-2-multiply-and-divide-fractions",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q061"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-2-multiply-and-divide-fractions",
+        "label": "Multiply and divide fractions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that dividing by a fraction is performed by multiplying by its reciprocal; therefore 30 divided by 1/2 is 60, and adding 10 gives 70."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-fifth-grade-math/divide-fractions/imp-dividing-fractions-by-fractions/a/dividing-fractions-review",
+        "label": "Dividing fractions review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy independently states the reciprocal rule for fraction division, which gives 30 x 2 + 10 = 70."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The ambiguous word 'to' was corrected to 'by'; standard order of operations gives 70."
+  },
+  {
+    "id": "ADV2E102-U0012-Q061-SIM",
+    "pairId": "ADV2E102-U0012-Q061",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 24 divided by 3/8?",
+    "questionUrdu": "24 کو 3/8 سے divide کیا جائے تو جواب کیا ہو گا؟",
+    "options": [
+      "64",
+      "48",
+      "72",
+      "9"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”64“ ہے۔ Fraction سے division میں اس کے reciprocal سے multiplication کی جاتی ہے: 24 × 8/3 = 64۔",
+    "source": {
+      "type": "practice",
+      "label": "Multiply and divide fractions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-2-multiply-and-divide-fractions",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q061",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-2-multiply-and-divide-fractions",
+        "label": "Multiply and divide fractions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 24 divided by three-eighths equals 64."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-fifth-grade-math/divide-fractions/imp-dividing-fractions-by-fractions/a/dividing-fractions-review",
+        "label": "Dividing fractions review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that 24 divided by three-eighths equals 64."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q062-SRC",
+    "pairId": "ADV2E102-U0012-Q062",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Which number is the odd one out because it is not a perfect cube?",
+    "questionUrdu": "کون سا عدد اس لیے مختلف ہے کہ وہ perfect cube نہیں؟",
+    "options": [
+      "27",
+      "100",
+      "125",
+      "343"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”100“ ہے۔ 100 perfect cube نہیں، جبکہ 8 = 2³، 27 = 3³ اور 125 = 5³ ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Find square roots and cube roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/10-1-find-square-roots-and-cube-roots",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q062"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/10-1-find-square-roots-and-cube-roots",
+        "label": "Find square roots and cube roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines a perfect cube as a number expressible as an integer raised to the third power; 27, 125 and 343 are 3^3, 5^3 and 7^3, whereas 100 is not."
+      },
+      {
+        "url": "https://mathworld.wolfram.com/CubeNumber.html",
+        "label": "Cube number",
+        "publisher": "Wolfram Research",
+        "authorityId": "wolfram-research",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "MathWorld defines cube numbers and lists the integer-cube sequence, independently excluding 100 while including 27, 125 and 343."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The criterion 'not a perfect cube' was added so the odd-one-out question has one reproducible basis."
+  },
+  {
+    "id": "ADV2E102-U0012-Q062-SIM",
+    "pairId": "ADV2E102-U0012-Q062",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the cube root of 343?",
+    "questionUrdu": "343 کا cube root کیا ہے؟",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "9"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”7“ ہے۔ چونکہ 7 × 7 × 7 = 343، اس لیے 343 کا cube root برابر 7 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Find square roots and cube roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/10-1-find-square-roots-and-cube-roots",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q062",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/10-1-find-square-roots-and-cube-roots",
+        "label": "Find square roots and cube roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that the cube root of 343 is 7."
+      },
+      {
+        "url": "https://mathworld.wolfram.com/CubeNumber.html",
+        "label": "Cube number",
+        "publisher": "Wolfram Research",
+        "authorityId": "wolfram-research",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Research supports that the cube root of 343 is 7."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q063-SRC",
+    "pairId": "ADV2E102-U0012-Q063",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A person covers a fixed distance in 50 minutes at 6 km/h. How long will the same distance take at 10 km/h?",
+    "questionUrdu": "ایک شخص 6 km/h کی رفتار سے مقررہ فاصلہ 50 minutes میں طے کرتا ہے۔ 10 km/h پر یہی فاصلہ کتنے وقت میں طے ہو گا؟",
+    "options": [
+      "1 hour",
+      "30 minutes",
+      "20 minutes",
+      "10 minutes"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”30 minutes“ ہے۔ فاصلہ 6 × 50/60 = 5 km ہے۔ 10 km/h سے 5 km طے کرنے کا وقت 5/10 hour یعنی 30 minutes بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Distance, rate and time applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-2-distance-rate-and-time-applications",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q063"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-2-distance-rate-and-time-applications",
+        "label": "Distance, rate and time applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The distance-rate-time relation gives a distance of 5 km at 6 km/h for 50 minutes and hence 0.5 hour, or 30 minutes, at 10 km/h."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-rates/a/rates-review",
+        "label": "Rates review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy's rate method independently supports scaling the time inversely with speed: 50 x 6/10 = 30 minutes."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar was normalized; the fixed-distance condition was made explicit."
+  },
+  {
+    "id": "ADV2E102-U0012-Q063-SIM",
+    "pairId": "ADV2E102-U0012-Q063",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A car covers 72 km at 48 km/h. How long does the journey take?",
+    "questionUrdu": "ایک car 48 km/h کی رفتار سے 72 km طے کرتی ہے۔ سفر میں کتنا وقت لگے گا؟",
+    "options": [
+      "1.5 hours",
+      "1 hour",
+      "2 hours",
+      "2.5 hours"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”1.5 hours“ ہے۔ وقت = فاصلہ ÷ رفتار، اس لیے 72 ÷ 48 = 1.5 hours۔",
+    "source": {
+      "type": "practice",
+      "label": "Distance, rate and time applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-2-distance-rate-and-time-applications",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q063",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-2-distance-rate-and-time-applications",
+        "label": "Distance, rate and time applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax, Rice University supports that 72 kilometres at 48 kilometres per hour takes 1.5 hours."
+      },
+      {
+        "url": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-rates/a/rates-review",
+        "label": "Rates review",
+        "publisher": "Khan Academy",
+        "authorityId": "khan-academy",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Khan Academy supports that 72 kilometres at 48 kilometres per hour takes 1.5 hours."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q065-SRC",
+    "pairId": "ADV2E102-U0012-Q065",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which sentence correctly reports the command 'Go upstairs'?",
+    "questionUrdu": "Command 'Go upstairs' کو indirect speech میں درست طور پر کیسے report کیا جائے گا؟",
+    "options": [
+      "She told me to go upstairs.",
+      "She said me to upstairs.",
+      "She told me that go upstairs.",
+      "She told me to went upstairs."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”She told me to go upstairs.“ ہے۔ Command کو report کرتے وقت told کے بعد object اور to-infinitive آتا ہے، اس لیے درست جملہ 'She told me to go upstairs' ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Reported speech: orders, requests, advice and warnings",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-orders-requests-advice-and-warnings",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q065"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-orders-requests-advice-and-warnings",
+        "label": "Reported speech: orders, requests, advice and warnings",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that reported orders use tell plus object plus a to-infinitive, matching 'She told me to go upstairs.'"
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/reported-speech-reporting-verbs",
+        "label": "Reported speech: reporting verbs",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council independently gives the tell-someone-to-do-something pattern for reported commands."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The missing reporting subject/object context was supplied and punctuation normalized; the intended grammar proposition is unchanged."
+  },
+  {
+    "id": "ADV2E102-U0012-Q065-SIM",
+    "pairId": "ADV2E102-U0012-Q065",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which sentence correctly reports the command 'Do not talk'?",
+    "questionUrdu": "Command 'Do not talk' کو indirect speech میں کون سا جملہ درست report کرتا ہے؟",
+    "options": [
+      "The teacher told us not to talk.",
+      "The teacher told us do not talk.",
+      "The teacher said us not talk.",
+      "The teacher asked that we not talked."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”The teacher told us not to talk.“ ہے۔ منفی command میں told + object + not to + verb استعمال ہوتا ہے، اس لیے 'The teacher told us not to talk' درست ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Reported speech: orders, requests, advice and warnings",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-orders-requests-advice-and-warnings",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q065",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-orders-requests-advice-and-warnings",
+        "label": "Reported speech: orders, requests, advice and warnings",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that the command Do not talk is reported as The teacher told us not to talk."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/reported-speech-reporting-verbs",
+        "label": "Reported speech: reporting verbs",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that the command Do not talk is reported as The teacher told us not to talk."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q067-SRC",
+    "pairId": "ADV2E102-U0012-Q067",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the sentence: This merchant deals ______ silk goods.",
+    "questionUrdu": "Sentence 'This merchant deals ______ silk goods' میں درست preposition کون سی ہے؟",
+    "options": [
+      "with",
+      "about",
+      "for",
+      "in"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”in“ ہے۔ Deal in کا مطلب کسی جنس کی خرید و فروخت یا کاروبار کرنا ہے، اس لیے 'deals in silk goods' درست ترکیب ہے۔",
+    "source": {
+      "type": "book",
+      "label": "deal in something",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/deal-in-sth",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q067"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/deal-in-sth",
+        "label": "deal in something",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines 'deal in something' as buying and selling a particular product, so the merchant deals in silk goods."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/deal%20in",
+        "label": "deal in",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines 'deal in' as to do business in a particular commodity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Punctuation was added; the tested prepositional phrase remains 'deal in'."
+  },
+  {
+    "id": "ADV2E102-U0012-Q067-SIM",
+    "pairId": "ADV2E102-U0012-Q067",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Choose the correct preposition: This chapter deals ______ climate change.",
+    "questionUrdu": "درست preposition منتخب کریں: This chapter deals ______ climate change.",
+    "options": [
+      "with",
+      "in",
+      "at",
+      "for"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”with“ ہے۔ کسی موضوع سے متعلق ہونے یا اسے discuss کرنے کے معنی میں deal with آتا ہے؛ تجارت کے معنی میں deal in استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "deal in something",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/deal-in-sth",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q067",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/deal-in-sth",
+        "label": "deal in something",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that a chapter that concerns climate change deals with climate change."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/deal%20in",
+        "label": "deal in",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that a chapter that concerns climate change deals with climate change."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q068-SRC",
+    "pairId": "ADV2E102-U0012-Q068",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to 'benediction'?",
+    "questionUrdu": "'Benediction' کے قریب ترین معنی والا لفظ کون سا ہے؟",
+    "options": [
+      "Rise",
+      "Blessing",
+      "Curse",
+      "Praise"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Blessing“ ہے۔ Benediction کسی blessing، بالخصوص اختتامی مذہبی دعا یا دعائے خیر، کو کہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "benediction",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/benediction",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/benediction",
+        "label": "benediction",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines benediction as a prayer asking God for help and protection, that is, a blessing."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/benediction",
+        "label": "benediction",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently gives 'blessing' among the meanings of benediction."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Capitalization and wording were normalized without changing the vocabulary test."
+  },
+  {
+    "id": "ADV2E102-U0012-Q068-SIM",
+    "pairId": "ADV2E102-U0012-Q068",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is the closest opposite of 'benediction'?",
+    "questionUrdu": "'Benediction' کا قریب ترین متضاد لفظ کون سا ہے؟",
+    "options": [
+      "Curse",
+      "Blessing",
+      "Prayer",
+      "Approval"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Curse“ ہے۔ Benediction کا مفہوم blessing یا دعائے خیر ہے، اس لیے اس کا قریب ترین opposite curse یعنی بددعا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "benediction",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/benediction",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/benediction",
+        "label": "benediction",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that curse is the closest opposite of benediction, which means a blessing."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/benediction",
+        "label": "benediction",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that curse is the closest opposite of benediction, which means a blessing."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q069-SRC",
+    "pairId": "ADV2E102-U0012-Q069",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which option is closest in meaning to the verb 'trespass'?",
+    "questionUrdu": "Verb 'trespass' کے قریب ترین معنی کون سے ہیں؟",
+    "options": [
+      "Contemplate",
+      "Persuade",
+      "Explain",
+      "Intrude"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”Intrude“ ہے۔ Trespass کا مطلب کسی کی زمین، حق یا حدود میں اجازت کے بغیر داخل ہونا یا مداخلت کرنا ہے، اس لیے intrude قریب ترین معنی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "trespass",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/trespass",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/trespass",
+        "label": "trespass",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines trespass as entering land or a building without permission, closely matching intrude among the choices."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/trespass",
+        "label": "trespass",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines the verb as entering unlawfully or encroaching, making intrude the unique closest option."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The first three source options were adjectives while the answer was a verb; they were normalized to parallel verbs."
+  },
+  {
+    "id": "ADV2E102-U0012-Q069-SIM",
+    "pairId": "ADV2E102-U0012-Q069",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which act is an example of trespassing?",
+    "questionUrdu": "کون سا عمل trespassing کی مثال ہے؟",
+    "options": [
+      "Entering private land without permission",
+      "Paying a lawful toll",
+      "Using a public footpath",
+      "Receiving an invited guest"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Entering private land without permission“ ہے۔ مالک کی اجازت کے بغیر private land میں داخل ہونا trespass ہے؛ قانونی public route استعمال کرنا یا دعوت پر جانا trespass نہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "trespass",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/trespass",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/trespass",
+        "label": "trespass",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that entering private land without permission is trespassing."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/trespass",
+        "label": "trespass",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that entering private land without permission is trespassing."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q070-SRC",
+    "pairId": "ADV2E102-U0012-Q070",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the proverb: You can lead a horse to water, but you cannot make it ______.",
+    "questionUrdu": "Proverb مکمل کریں: You can lead a horse to water, but you cannot make it ______.",
+    "options": [
+      "drown",
+      "drink",
+      "dance",
+      "ride"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”drink“ ہے۔ درست لفظ drink ہے۔ محاورے کا مطلب ہے کہ کسی کو موقع یا رہنمائی دی جا سکتی ہے، مگر اسے فائدہ اٹھانے پر مجبور نہیں کیا جا سکتا۔",
+    "source": {
+      "type": "book",
+      "label": "you can lead a horse to water, but you cannot make him drink",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/you-can-lead-a-horse-to-water-but-you-can-t-make-him-drink",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/you-can-lead-a-horse-to-water-but-you-can-t-make-him-drink",
+        "label": "you can lead a horse to water, but you cannot make him drink",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records the proverb with the final word 'drink'."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/you%20can%20lead%20a%20horse%20to%20water%2C%20but%20you%20can%27t%20make%20him%20drink",
+        "label": "you can lead a horse to water, but you cannot make him drink",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently records the same conventional wording."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Capitalization and punctuation were standardized."
+  },
+  {
+    "id": "ADV2E102-U0012-Q070-SIM",
+    "pairId": "ADV2E102-U0012-Q070",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the proverb 'You can lead a horse to water, but you cannot make it drink' mean?",
+    "questionUrdu": "Proverb 'You can lead a horse to water, but you cannot make it drink' کا مفہوم کیا ہے؟",
+    "options": [
+      "You cannot force someone to accept help or advice.",
+      "Every journey must end near water.",
+      "Animals learn faster than people.",
+      "Good advice always guarantees action."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”You cannot force someone to accept help or advice.“ ہے۔ محاورہ اختیار اور آمادگی کی حد واضح کرتا ہے: آپ موقع یا مشورہ دے سکتے ہیں، مگر دوسرے شخص سے لازماً عمل نہیں کروا سکتے۔",
+    "source": {
+      "type": "practice",
+      "label": "you can lead a horse to water, but you cannot make him drink",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/you-can-lead-a-horse-to-water-but-you-can-t-make-him-drink",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/you-can-lead-a-horse-to-water-but-you-can-t-make-him-drink",
+        "label": "you can lead a horse to water, but you cannot make him drink",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that the horse-to-water proverb means that someone cannot be forced to accept help or act on advice."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/you%20can%20lead%20a%20horse%20to%20water%2C%20but%20you%20can%27t%20make%20him%20drink",
+        "label": "you can lead a horse to water, but you cannot make him drink",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that the horse-to-water proverb means that someone cannot be forced to accept help or act on advice."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q071-SRC",
+    "pairId": "ADV2E102-U0012-Q071",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the sentence: He is interested ______ coin collection.",
+    "questionUrdu": "Sentence 'He is interested ______ coin collection' میں درست preposition کون سی ہے؟",
+    "options": [
+      "at",
+      "of",
+      "with",
+      "in"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”in“ ہے۔ Adjective interested کے بعد موضوع بتانے کے لیے preposition in آتی ہے، اس لیے 'interested in coin collection' درست ہے۔",
+    "source": {
+      "type": "book",
+      "label": "interested",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/interested",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/interested",
+        "label": "interested",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge examples use the construction 'interested in' followed by a topic or activity."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/adjectives-prepositions",
+        "label": "Adjectives and prepositions",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council lists 'interested in' as the standard adjective-plus-preposition combination."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The duplicated preposition in the source sentence was removed, leaving one grammatical blank."
+  },
+  {
+    "id": "ADV2E102-U0012-Q071-SIM",
+    "pairId": "ADV2E102-U0012-Q071",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which sentence uses the correct preposition after 'interested'?",
+    "questionUrdu": "'Interested' کے بعد درست preposition کس sentence میں استعمال ہوئی ہے؟",
+    "options": [
+      "She is interested in astronomy.",
+      "She is interested on astronomy.",
+      "She is interested at astronomy.",
+      "She is interested for astronomy."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”She is interested in astronomy.“ ہے۔ Interested کے بعد عام طور پر in آتا ہے، اس لیے 'interested in astronomy' درست collocation ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "interested",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/interested",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/interested",
+        "label": "interested",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press & Assessment supports that the correct collocation is interested in astronomy."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/adjectives-prepositions",
+        "label": "Adjectives and prepositions",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council supports that the correct collocation is interested in astronomy."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q073-SRC",
+    "pairId": "ADV2E102-U0012-Q073",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who wrote the Urdu stories 'Anandi' and 'Overcoat'?",
+    "questionUrdu": "Urdu stories 'Anandi' اور 'Overcoat' کس نے لکھی تھیں؟",
+    "options": [
+      "Saadat Hasan Manto",
+      "Ghulam Abbas",
+      "Syed Imtiaz Ali Taj",
+      "Ahmad Nadeem Qasmi"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Ghulam Abbas“ ہے۔ 'Anandi' اور 'Overcoat' معروف Urdu افسانہ نگار Ghulam Abbas کی کہانیاں ہیں، جن میں معاشرتی مشاہدہ اور طنز نمایاں ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Anandi by Ghulam Abbas",
+      "referenceUrl": "https://www.rekhta.org/ebooks/anandi-ghulam-abbas-ebooks",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/anandi-ghulam-abbas-ebooks",
+        "label": "Anandi by Ghulam Abbas",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's catalogue identifies Ghulam Abbas as the author of Anandi and its Ghulam Abbas collection includes Overcoat."
+      },
+      {
+        "url": "https://ojs.plhr.org.pk/journal/article/view/887",
+        "label": "The Exploration of Speech Acts and Politeness in Anandi and Overcoat",
+        "publisher": "Pakistan Languages and Humanities Review",
+        "authorityId": "plhr",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The peer-reviewed article explicitly identifies both Anandi and Overcoat as stories by Ghulam Abbas."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The Urdu source was translated to English; romanized titles and author names were standardized."
+  },
+  {
+    "id": "ADV2E102-U0012-Q073-SIM",
+    "pairId": "ADV2E102-U0012-Q073",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "To which literary genre does Ghulam Abbas's 'Anandi' belong?",
+    "questionUrdu": "Ghulam Abbas کی 'Anandi' کس literary genre سے تعلق رکھتی ہے؟",
+    "options": [
+      "Short story",
+      "Ghazal",
+      "Epic poem",
+      "Stage play"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Short story“ ہے۔ 'Anandi' ایک Urdu short story یعنی افسانہ ہے، نہ کہ ghazal، رزمیہ نظم یا stage play۔",
+    "source": {
+      "type": "practice",
+      "label": "Anandi by Ghulam Abbas",
+      "referenceUrl": "https://www.rekhta.org/ebooks/anandi-ghulam-abbas-ebooks",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/anandi-ghulam-abbas-ebooks",
+        "label": "Anandi by Ghulam Abbas",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Foundation supports that Ghulam Abbas's Anandi belongs to the short-story genre."
+      },
+      {
+        "url": "https://ojs.plhr.org.pk/journal/article/view/887",
+        "label": "The Exploration of Speech Acts and Politeness in Anandi and Overcoat",
+        "publisher": "Pakistan Languages and Humanities Review",
+        "authorityId": "plhr",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan Languages and Humanities Review supports that Ghulam Abbas's Anandi belongs to the short-story genre."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q074-SRC",
+    "pairId": "ADV2E102-U0012-Q074",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who wrote the poem 'Iblis ki Majlis-e-Shura'?",
+    "questionUrdu": "Poem 'Iblis ki Majlis-e-Shura' کس شاعر نے لکھی؟",
+    "options": [
+      "Muhammad Husain Azad",
+      "Allama Muhammad Iqbal",
+      "Faiz Ahmed Faiz",
+      "Akbar Allahabadi"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Allama Muhammad Iqbal“ ہے۔ 'Iblis ki Majlis-e-Shura' Allama Muhammad Iqbal کی فکری نظم ہے جس میں ابلیس اور اس کے مشیروں کی گفتگو کے ذریعے جدید سیاسی و سماجی نظام پر تنقید کی گئی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "The Principle of Movement in the Structure of Islam",
+      "referenceUrl": "https://www.allamaiqbal.com/works/prose/english/reconstruction/06.htm",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.allamaiqbal.com/works/prose/english/reconstruction/06.htm",
+        "label": "The Principle of Movement in the Structure of Islam",
+        "publisher": "Iqbal Academy Pakistan",
+        "authorityId": "iqbal-academy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Iqbal Academy's text refers to Iblis ki Majlis-i-Shura as Iqbal's poem in Armaghan-i-Hijaz."
+      },
+      {
+        "url": "https://affiliation.iub.edu.pk/portal/uploads/institute_notification/1649136896-Course%20Contents%20of%20ADP%204th%20Semester%282020-2022%29.pdf",
+        "label": "ADP Persian course contents: Fikr-e-Iqbal",
+        "publisher": "The Islamia University of Bahawalpur",
+        "authorityId": "islamia-university-bahawalpur",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university's Fikr-e-Iqbal syllabus lists Iblees ki Majlis-e-Shura among the selected poems of Iqbal."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The Urdu source was translated to English; names and title transliteration were normalized."
+  },
+  {
+    "id": "ADV2E102-U0012-Q074-SIM",
+    "pairId": "ADV2E102-U0012-Q074",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "In which posthumously published collection does Iqbal's 'Iblis ki Majlis-e-Shura' appear?",
+    "questionUrdu": "Iqbal کی 'Iblis ki Majlis-e-Shura' ان کے کس بعد از وفات شائع ہونے والے مجموعے میں شامل ہے؟",
+    "options": [
+      "Armaghan-e-Hijaz",
+      "Bang-e-Dara",
+      "Bal-e-Jibril",
+      "Zarb-e-Kalim"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Armaghan-e-Hijaz“ ہے۔ 'Iblis ki Majlis-e-Shura' Urdu حصے کے ساتھ Armaghan-e-Hijaz میں شامل ہے، جو Iqbal کی وفات کے بعد شائع ہوا۔",
+    "source": {
+      "type": "practice",
+      "label": "The Principle of Movement in the Structure of Islam",
+      "referenceUrl": "https://www.allamaiqbal.com/works/prose/english/reconstruction/06.htm",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.allamaiqbal.com/works/prose/english/reconstruction/06.htm",
+        "label": "The Principle of Movement in the Structure of Islam",
+        "publisher": "Iqbal Academy Pakistan",
+        "authorityId": "iqbal-academy",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Iqbal Academy Pakistan supports that Iblis ki Majlis-e-Shura appears in Iqbal's posthumous collection Armaghan-e-Hijaz."
+      },
+      {
+        "url": "https://affiliation.iub.edu.pk/portal/uploads/institute_notification/1649136896-Course%20Contents%20of%20ADP%204th%20Semester%282020-2022%29.pdf",
+        "label": "ADP Persian course contents: Fikr-e-Iqbal",
+        "publisher": "The Islamia University of Bahawalpur",
+        "authorityId": "islamia-university-bahawalpur",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Islamia University of Bahawalpur supports that Iblis ki Majlis-e-Shura appears in Iqbal's posthumous collection Armaghan-e-Hijaz."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0012-Q075-SRC",
+    "pairId": "ADV2E102-U0012-Q075",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which option gives the primary lexical sense of the Urdu word 'talif' in the context of books?",
+    "questionUrdu": "کتابوں کے سیاق میں Urdu لفظ 'talif' کا بنیادی لغوی مفہوم کیا ہے؟",
+    "options": [
+      "Making a picture",
+      "Compiling and arranging",
+      "Deer skin",
+      "Expressing an opinion"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Compiling and arranging“ ہے۔ Talif کا بنیادی مفہوم مواد کو جمع، مرتب اور کتابی صورت دینا ہے؛ اسی مادے سے mu'allif یعنی مصنف یا مرتب بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Meaning of talif",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-taaliif?lang=ur",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-taaliif?lang=ur",
+        "label": "Meaning of talif",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary defines talif as compilation and the act of selecting and arranging material."
+      },
+      {
+        "url": "https://udb.gov.pk/result.php?search=%D8%AA%D8%A7%D9%84%DB%8C%D9%81",
+        "label": "Urdu Lughat search: talif",
+        "publisher": "Urdu Dictionary Board, Government of Pakistan",
+        "authorityId": "urdu-dictionary-board",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The national Urdu lexicon records talif in the senses of bringing together, compiling and arranging."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The Urdu source was translated and the book-related lexical context was stated to distinguish other historical senses of talif."
+  },
+  {
+    "id": "ADV2E102-U0012-Q075-SIM",
+    "pairId": "ADV2E102-U0012-Q075",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "What does the Urdu word 'mu'allif' most commonly mean?",
+    "questionUrdu": "Urdu لفظ 'mu'allif' کا عام مطلب کیا ہے؟",
+    "options": [
+      "Author or compiler",
+      "Reader",
+      "Publisher's printer",
+      "Book buyer"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Author or compiler“ ہے۔ Mu'allif اس شخص کو کہتے ہیں جو کتاب تصنیف یا مرتب کرے، اس لیے author or compiler درست مفہوم ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Meaning of talif",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-taaliif?lang=ur",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0012-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-taaliif?lang=ur",
+        "label": "Meaning of talif",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary supports that the Urdu word mu'allif means an author or compiler."
+      },
+      {
+        "url": "https://udb.gov.pk/result.php?search=%D8%AA%D8%A7%D9%84%DB%8C%D9%81",
+        "label": "Urdu Lughat search: talif",
+        "publisher": "Urdu Dictionary Board, Government of Pakistan",
+        "authorityId": "urdu-dictionary-board",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Urdu Dictionary Board, Government of Pakistan supports that the Urdu word mu'allif means an author or compiler."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

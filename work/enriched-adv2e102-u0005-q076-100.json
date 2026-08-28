@@ -1,0 +1,2840 @@
+[
+  {
+    "id": "ADV2E102-U0005-Q076-SRC",
+    "pairId": "ADV2E102-U0005-Q076",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A buyer pays Rs. 4,700 for an old scooter and Rs. 500 for repairs, then sells it for Rs. 5,800. What is the gain percentage?",
+    "questionUrdu": "ایک خریدار پرانے scooter کے لیے Rs. 4,700 اور مرمت پر Rs. 500 خرچ کرتا ہے، پھر اسے Rs. 5,800 میں بیچ دیتا ہے۔ gain percentage کتنی ہے؟",
+    "options": [
+      "4.57%",
+      "5.45%",
+      "10%",
+      "11.54%"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”11.54%“ ہے۔ کل لاگت Rs. 5,200 اور منافع Rs. 600 ہے۔ منافع کو لاگت سے تقسیم کر کے 100 سے ضرب دینے پر تقریباً 11.54% حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and percent applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines gain percentage as gain divided by the original cost base times 100; total cost is Rs. 5,200 and gain is Rs. 600."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=600%2F5200*100",
+        "label": "Calculate the scooter gain percentage",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact gain percentage is approximately 11.538%, which rounds to 11.54%."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's name typo was removed and option D was made exact. Total cost is 4,700+500=5,200; gain is 5,800-5,200=600; 600/5,200×100=11.54%, so D is verified."
+  },
+  {
+    "id": "ADV2E102-U0005-Q076-SIM",
+    "pairId": "ADV2E102-U0005-Q076",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A trader buys an item for Rs. 2,500, spends Rs. 500 on repairs and sells it for Rs. 3,600. What is the gain percentage?",
+    "questionUrdu": "ایک تاجر چیز Rs. 2,500 میں خریدتا، مرمت پر Rs. 500 لگاتا اور اسے Rs. 3,600 میں بیچتا ہے۔ gain percentage کتنی ہے؟",
+    "options": [
+      "10%",
+      "15%",
+      "20%",
+      "25%"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”20%“ ہے۔ کل لاگت Rs. 3,000 اور منافع Rs. 600 ہے۔ Rs. 600 کو Rs. 3,000 سے تقسیم کر کے 100 سے ضرب دیں تو 20% بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Percent applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the gain percentage on a total cost of Rs. 3,000 and sale price of Rs. 3,600 is 20%."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=(3600-(2500%2B500))%2F(2500%2B500)*100",
+        "label": "Gain percentage calculation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the gain percentage on a total cost of Rs. 3,000 and sale price of Rs. 3,600 is 20%."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q077-SRC",
+    "pairId": "ADV2E102-U0005-Q077",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If a worker completes 1/20 of a job per day, how many days are required to finish the whole job at the same rate?",
+    "questionUrdu": "اگر ایک worker روزانہ کسی کام کا 1/20 حصہ مکمل کرے تو اسی رفتار سے پورا کام کتنے دن میں ہوگا؟",
+    "options": [
+      "20",
+      "10",
+      "25",
+      "30"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”20“ ہے۔ روزانہ کی شرح 1/20 کام ہے، اس لیے پورے ایک کام کے لیے 1 کو 1/20 سے تقسیم کرنے پر 20 دن آتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Solve work applications",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q077"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+        "label": "Solve work applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax models a work rate as the fraction of one job completed per unit time; time is the reciprocal of a constant daily rate."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1%2F%281%2F20%29",
+        "label": "Reciprocal of the daily work rate",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The reciprocal of 1/20 job per day is 20 days per job."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The wording was normalized. At 1/20 job per day, one job takes 20 days, answer A."
+  },
+  {
+    "id": "ADV2E102-U0005-Q077-SIM",
+    "pairId": "ADV2E102-U0005-Q077",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A worker completes 3/20 of a job per day. What fraction of the job remains after 4 days at the same rate?",
+    "questionUrdu": "ایک worker روزانہ کام کا 3/20 حصہ مکمل کرتا ہے۔ اسی رفتار سے 4 دن بعد کام کا کتنا حصہ باقی رہے گا؟",
+    "options": [
+      "1/5",
+      "2/5",
+      "3/5",
+      "4/5"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”2/5“ ہے۔ چار دن میں 4 × 3/20 یعنی 3/5 کام مکمل ہوگا۔ ایک پورے کام میں سے 3/5 نکالنے پر 2/5 باقی رہتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Work applications",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q077",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/8-8-solve-uniform-motion-and-work-applications",
+        "label": "Work applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that 2/5 of the job remains after completing 3/20 per day for four days."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1-4*(3%2F20)",
+        "label": "Remaining work after four days",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that 2/5 of the job remains after completing 3/20 per day for four days."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q078-SRC",
+    "pairId": "ADV2E102-U0005-Q078",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A hat's original price was $9.20 and its sale price was $5.06. What was the percentage discount?",
+    "questionUrdu": "ایک hat کی اصل قیمت $9.20 اور sale price $5.06 تھی۔ percentage discount کتنی تھی؟",
+    "options": [
+      "4.5%",
+      "41.4%",
+      "45%",
+      "55%"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”45%“ ہے۔ کمی $4.14 ہے۔ اسے اصل قیمت $9.20 سے تقسیم کر کے 100 سے ضرب دینے پر 45% discount حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q078"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and percent applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax calculates a discount rate as the discount amount divided by the original price; here the discount is $9.20-$5.06=$4.14."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%289.20-5.06%29%2F9.20*100",
+        "label": "Calculate the hat's percentage discount",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact percentage discount is 45%."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key B (41.4%) was rejected. The discount is $4.14 and $4.14/$9.20×100=45%, so C is verified."
+  },
+  {
+    "id": "ADV2E102-U0005-Q078-SIM",
+    "pairId": "ADV2E102-U0005-Q078",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "After a 20% discount, an item costs $72. What was its original price?",
+    "questionUrdu": "20% discount کے بعد کسی چیز کی قیمت $72 ہے۔ اس کی اصل قیمت کیا تھی؟",
+    "options": [
+      "$80",
+      "$86.40",
+      "$90",
+      "$92"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”$90“ ہے۔ Discount کے بعد قیمت اصل کا 80% رہتی ہے۔ $72 کو 0.80 سے تقسیم کرنے پر اصل قیمت $90 بنتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q078",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Percent applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that an item costing $72 after a 20% discount originally cost $90."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=72%2F(1-20%2F100)",
+        "label": "Original price before a 20 percent discount",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that an item costing $72 after a 20% discount originally cost $90."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q080-SRC",
+    "pairId": "ADV2E102-U0005-Q080",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The sequence 36, 34, 30, 28, 24 alternately subtracts 2 and 4. What is the next term?",
+    "questionUrdu": "Sequence 36, 34, 30, 28, 24 میں باری باری 2 اور 4 منفی کیے جاتے ہیں۔ اگلی term کیا ہے؟",
+    "options": [
+      "20",
+      "22",
+      "23",
+      "26"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”22“ ہے۔ 24 کے بعد باری 2 منفی کرنے کی ہے، لہٰذا اگلی term 22 بنتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Recursive definitions of sequences",
+      "referenceUrl": "https://openstax.org/books/algebra-1/pages/4-17-2-what-is-a-recursive-definition",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q080"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-1/pages/4-17-2-what-is-a-recursive-definition",
+        "label": "Recursive definitions of sequences",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that later terms can be generated from earlier terms by an explicitly stated recursive rule."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=36%2C34%2C30%2C28%2C24+next+alternating+-2+-4",
+        "label": "Continue the alternating-difference sequence",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "After subtracting 2, 4, 2 and 4, the next operation subtracts 2 from 24, giving 22."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The alternating rule was stated explicitly to remove pattern ambiguity. The next term is 24-2=22, answer B."
+  },
+  {
+    "id": "ADV2E102-U0005-Q080-SIM",
+    "pairId": "ADV2E102-U0005-Q080",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "The sequence 5, 8, 13, 16, 21 alternately adds 3 and 5. What is the next term?",
+    "questionUrdu": "Sequence 5, 8, 13, 16, 21 میں باری باری 3 اور 5 جمع کیے جاتے ہیں۔ اگلی term کیا ہے؟",
+    "options": [
+      "23",
+      "24",
+      "26",
+      "29"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”24“ ہے۔ 21 کے بعد pattern کے مطابق 3 جمع ہوگا، اس لیے اگلی term 24 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Recursive sequences",
+      "referenceUrl": "https://openstax.org/books/algebra-1/pages/4-17-2-what-is-a-recursive-definition",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q080",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-1/pages/4-17-2-what-is-a-recursive-definition",
+        "label": "Recursive sequences",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that 24 is the next term after 21 in the alternating plus 3, plus 5 sequence."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=5%2C8%2C13%2C16%2C21%20next%20alternating%20%2B3%20%2B5",
+        "label": "Alternating sequence calculation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that 24 is the next term after 21 in the alternating plus 3, plus 5 sequence."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q082-SRC",
+    "pairId": "ADV2E102-U0005-Q082",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Two numbers are in the ratio 7 : 9. If the sum of the numbers is 112, the larger number is:",
+    "questionUrdu": "دو اعداد کا ratio 7 : 9 اور مجموعہ 112 ہے۔ بڑا عدد کیا ہے؟",
+    "options": [
+      "49",
+      "72",
+      "63",
+      "42"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”63“ ہے۔ کل 16 حصے ہیں، اس لیے ایک حصہ 7 ہے۔ بڑا عدد 9 × 7 یعنی 63 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and rates",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q082"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rates",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax solves ratio applications by representing quantities as proportional parts. Seven plus nine gives 16 total parts."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=112*9%2F%287%2B9%29",
+        "label": "Larger share of a 7 to 9 ratio",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The larger number is 112×9/16=63."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The unit value is 112/16=7, so the larger number is 9×7=63, answer C."
+  },
+  {
+    "id": "ADV2E102-U0005-Q082-SIM",
+    "pairId": "ADV2E102-U0005-Q082",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Two numbers are in the ratio 5 : 8 and their difference is 21. What is the smaller number?",
+    "questionUrdu": "دو اعداد کا ratio 5 : 8 ہے اور ان کا فرق 21 ہے۔ چھوٹا عدد کیا ہے؟",
+    "options": [
+      "28",
+      "35",
+      "40",
+      "56"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”35“ ہے۔ Ratio کا فرق 3 حصے ہے، جو 21 کے برابر ہے؛ ایک حصہ 7 اور چھوٹا عدد 5 × 7 یعنی 35 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and rates",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q082",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rates",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the smaller number is 35 when two numbers are in the ratio 5 to 8 and differ by 21."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=21*5%2F(8-5)",
+        "label": "Smaller number from ratio and difference",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the smaller number is 35 when two numbers are in the ratio 5 to 8 and differ by 21."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q083-SRC",
+    "pairId": "ADV2E102-U0005-Q083",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the decimal equivalent of 1/10?",
+    "questionUrdu": "1/10 کا decimal equivalent کیا ہے؟",
+    "options": [
+      "0.01",
+      "0.1",
+      "1.0",
+      "10"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”0.1“ ہے۔ ایک کو دس سے تقسیم کرنے پر decimal point ایک جگہ بائیں آتا ہے، لہٰذا جواب 0.1 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains decimal place value and division by powers of ten; one tenth is written 0.1."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1%2F10",
+        "label": "Convert one tenth to decimal",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact decimal value of 1/10 is 0.1."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The fragment was normalized into a complete question; 1/10 equals 0.1, answer B."
+  },
+  {
+    "id": "ADV2E102-U0005-Q083-SIM",
+    "pairId": "ADV2E102-U0005-Q083",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the decimal equivalent of 3/8?",
+    "questionUrdu": "3/8 کا decimal equivalent کیا ہے؟",
+    "options": [
+      "0.0375",
+      "0.35",
+      "0.375",
+      "0.625"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”0.375“ ہے۔ 3 کو 8 سے تقسیم کرنے پر 0.375 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that 3/8 equals 0.375."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=3%2F8",
+        "label": "Decimal value of three eighths",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that 3/8 equals 0.375."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q084-SRC",
+    "pairId": "ADV2E102-U0005-Q084",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Solve: 12 ÷ 20 =",
+    "questionUrdu": "درج ذیل تقسیم کا نتیجہ معلوم کریں: 12 ÷ 20 =",
+    "options": [
+      "6",
+      "2.4",
+      "0.6",
+      "24"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”0.6“ ہے۔ 12/20 کو 4 سے سادہ کرنے پر 3/5 بنتا ہے، جس کی decimal شکل 0.6 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q084"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax documents decimal division; 12 divided by 20 can be simplified to 3/5 and written as a decimal."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=12%2F20",
+        "label": "Evaluate 12 divided by 20",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact quotient is 0.6."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The division glyph was normalized. 12/20=3/5=0.6, answer C."
+  },
+  {
+    "id": "ADV2E102-U0005-Q084-SIM",
+    "pairId": "ADV2E102-U0005-Q084",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Solve: 1.2 × 0.4 =",
+    "questionUrdu": "درج ذیل اعشاری اعداد کو ضرب دے کر نتیجہ معلوم کریں: 1.2 × 0.4 =",
+    "options": [
+      "0.048",
+      "0.48",
+      "4.8",
+      "48"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”0.48“ ہے۔ 12 × 4 = 48 ہوتا ہے اور دونوں factors میں مجموعی طور پر دو decimal places ہیں، اس لیے جواب 0.48 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q084",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that 1.2 multiplied by 0.4 equals 0.48."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1.2*0.4",
+        "label": "Decimal multiplication calculation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that 1.2 multiplied by 0.4 equals 0.48."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q085-SRC",
+    "pairId": "ADV2E102-U0005-Q085",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the fractional equivalent of 12.5%?",
+    "questionUrdu": "12.5% کا fractional equivalent کیا ہے؟",
+    "options": [
+      "1/4",
+      "2/9",
+      "1/5",
+      "1/8"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”1/8“ ہے۔ 12.5/100 کو سادہ کرنے پر 125/1000 اور پھر 1/8 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q085"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and percent applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines percent as a ratio per hundred; 12.5% equals 12.5/100."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=12.5%2F100",
+        "label": "Convert 12.5 percent to a fraction",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact value of 12.5/100 simplifies to 1/8."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": ""
+  },
+  {
+    "id": "ADV2E102-U0005-Q085-SIM",
+    "pairId": "ADV2E102-U0005-Q085",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the fractional equivalent of 37.5%?",
+    "questionUrdu": "37.5% کا fractional equivalent کیا ہے؟",
+    "options": [
+      "1/4",
+      "3/8",
+      "2/5",
+      "5/8"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”3/8“ ہے۔ 37.5% کو 100 سے تقسیم کرنے پر 0.375 بنتا ہے، جو سادہ کسر 3/8 کے برابر ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q085",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Percent applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that 37.5% equals the fraction 3/8."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=37.5%2F100",
+        "label": "Fractional value of 37.5 percent",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that 37.5% equals the fraction 3/8."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q086-SRC",
+    "pairId": "ADV2E102-U0005-Q086",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Solve: 5 ÷ 0.5 =",
+    "questionUrdu": "درج ذیل اعشاری تقسیم کا نتیجہ معلوم کریں: 5 ÷ 0.5 =",
+    "options": [
+      "2.5",
+      "25",
+      "10",
+      "5"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”10“ ہے۔ 0.5 نصف ہے، اور 5 میں دس نصف شامل ہوتے ہیں؛ اس لیے جواب 10 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains division with decimals, including moving the decimal point equally in divisor and dividend."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=5%2F0.5",
+        "label": "Evaluate 5 divided by 0.5",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact quotient is 10."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key B (25) was rejected. Dividing both numbers by 0.5 gives 10, so C is verified."
+  },
+  {
+    "id": "ADV2E102-U0005-Q086-SIM",
+    "pairId": "ADV2E102-U0005-Q086",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 0.5 of a number is 6, what is the number?",
+    "questionUrdu": "اگر کسی عدد کا 0.5 حصہ 6 ہو تو وہ عدد کیا ہے؟",
+    "options": [
+      "3",
+      "6",
+      "12",
+      "30"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”12“ ہے۔ 0.5 نصف کے برابر ہے۔ اگر نصف 6 ہے تو پورا عدد 6 ÷ 0.5 یعنی 12 ہوگا۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the number is 12 when 0.5 of it equals 6."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=6%2F0.5",
+        "label": "Number whose half equals six",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the number is 12 when 0.5 of it equals 6."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q087-SRC",
+    "pairId": "ADV2E102-U0005-Q087",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Three numbers are in the ratio 4 : 5 : 6 and their average is 30. The largest number is:",
+    "questionUrdu": "تین اعداد کا ratio 4 : 5 : 6 اور average 30 ہے۔ سب سے بڑا عدد کیا ہے؟",
+    "options": [
+      "28",
+      "32",
+      "36",
+      "42"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”36“ ہے۔ تین اعداد کا مجموعہ 90 ہے۔ Ratio کے 15 حصوں سے ایک حصہ 6 اور بڑا عدد 36 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ratios and rates",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q087"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rates",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax relates an average to the total and uses proportional parts for ratios; three numbers averaging 30 total 90."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=90*6%2F%284%2B5%2B6%29",
+        "label": "Largest number in the ratio 4 to 5 to 6",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The largest share is 90×6/15=36."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The total is 3×30=90. Fifteen ratio parts make each part 6, so the largest number is 6×6=36, answer C."
+  },
+  {
+    "id": "ADV2E102-U0005-Q087-SIM",
+    "pairId": "ADV2E102-U0005-Q087",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Three numbers are in the ratio 2 : 3 : 5. If the middle number is 24, what is the largest number?",
+    "questionUrdu": "تین اعداد کا ratio 2 : 3 : 5 ہے۔ اگر درمیانی عدد 24 ہو تو سب سے بڑا عدد کیا ہے؟",
+    "options": [
+      "32",
+      "36",
+      "40",
+      "48"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”40“ ہے۔ Ratio کے 3 حصے 24 ہیں، لہٰذا ایک حصہ 8 ہے۔ بڑا عدد 5 × 8 یعنی 40 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Ratios and rates",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q087",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+        "label": "Ratios and rates",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the largest number is 40 when the 3-part middle number equals 24 in a 2 to 3 to 5 ratio."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=24*5%2F3",
+        "label": "Largest number from a ratio",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the largest number is 40 when the 3-part middle number equals 24 in a 2 to 3 to 5 ratio."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q088-SRC",
+    "pairId": "ADV2E102-U0005-Q088",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The average of four consecutive odd numbers is 24. Find the largest number:",
+    "questionUrdu": "چار consecutive odd numbers کا average 24 ہے۔ سب سے بڑا عدد معلوم کریں۔",
+    "options": [
+      "25",
+      "27",
+      "29",
+      "31"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”27“ ہے۔ یہ اعداد 21، 23، 25 اور 27 ہیں، اس لیے سب سے بڑا عدد 27 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Calculate the mean of a set of numbers",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q088"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Calculate the mean of a set of numbers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines the mean as total divided by count; four consecutive odd numbers can be represented symmetrically around their mean."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+mean%28x%2Cx%2B2%2Cx%2B4%2Cx%2B6%29%3D24",
+        "label": "Four consecutive odd numbers with mean 24",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The solution gives the four numbers 21, 23, 25 and 27, whose largest is 27."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The four odd numbers are 21, 23, 25 and 27; their largest is 27, answer B."
+  },
+  {
+    "id": "ADV2E102-U0005-Q088-SIM",
+    "pairId": "ADV2E102-U0005-Q088",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "The average of five consecutive odd numbers is 31. What is the smallest number?",
+    "questionUrdu": "پانچ consecutive odd numbers کا average 31 ہے۔ سب سے چھوٹا عدد کیا ہے؟",
+    "options": [
+      "25",
+      "27",
+      "29",
+      "31"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”27“ ہے۔ پانچ consecutive odd numbers میں درمیانی عدد average یعنی 31 ہے؛ ترتیب 27، 29، 31، 33، 35 بنتی ہے، اس لیے چھوٹا عدد 27 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q088",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that 27 is the smallest of five consecutive odd numbers whose average is 31."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve%20mean(x%2Cx%2B2%2Cx%2B4%2Cx%2B6%2Cx%2B8)%3D31",
+        "label": "Five consecutive odd numbers with mean 31",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that 27 is the smallest of five consecutive odd numbers whose average is 31."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q089-SRC",
+    "pairId": "ADV2E102-U0005-Q089",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "For a qualification, 2/5 of the marks were given for coursework. The rest were given for a written paper, of which 3/8 were given for a mental test. Total marks were out of 120. How many marks were given for the mental test?",
+    "questionUrdu": "Qualification میں 2/5 marks coursework کے تھے، باقی written paper کے؛ written paper کے 3/8 marks mental test کے تھے۔ Total 120 میں mental test کے کتنے marks تھے؟",
+    "options": [
+      "30",
+      "55",
+      "27",
+      "45"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”27“ ہے۔ Written paper کے 72 marks بنتے ہیں اور ان کا 3/8 حصہ 27 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q089"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and percent applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax documents multiplying a whole by successive fractional parts. The written paper receives 3/5 of 120 marks and the mental test receives 3/8 of that remainder."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=120*%283%2F5%29*%283%2F8%29",
+        "label": "Marks allocated to the mental test",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact calculation is 27 marks."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The written paper receives 120×3/5=72 marks, and the mental test receives 72×3/8=27 marks, answer C."
+  },
+  {
+    "id": "ADV2E102-U0005-Q089-SIM",
+    "pairId": "ADV2E102-U0005-Q089",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Coursework receives 3/8 of the total marks. An oral test receives 2/5 of the remaining marks. What fraction of the total is for the oral test?",
+    "questionUrdu": "Coursework کو کل marks کا 3/8 ملتا ہے۔ باقی marks کا 2/5 oral test کے لیے ہے۔ Oral test کل marks کا کتنا حصہ ہے؟",
+    "options": [
+      "1/5",
+      "1/4",
+      "3/8",
+      "1/2"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”1/4“ ہے۔ Coursework کے بعد 5/8 باقی ہے۔ اس کا 2/5 حصہ 2/5 × 5/8 یعنی 1/4 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Percent applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q089",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Percent applications",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax supports that the oral test receives 1/4 of the total marks."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=(1-3%2F8)*(2%2F5)",
+        "label": "Fraction assigned to the oral test",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolframalpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha supports that the oral test receives 1/4 of the total marks."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q090-SRC",
+    "pairId": "ADV2E102-U0005-Q090",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is the opposite of 'euphonious'?",
+    "questionUrdu": "درج الفاظ میں 'euphonious' کا opposite کون سا ہے؟",
+    "options": [
+      "Concordant",
+      "Lethargic",
+      "Harmonious",
+      "Cacophonous"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ”Cacophonous“ ہے۔ Euphonious خوش آہنگ آواز کو کہتے ہیں، جبکہ cacophonous سخت، بے آہنگ اور ناگوار آواز کے لیے آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Meaning of cacophonous",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/cacophonous",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q090"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/cacophonous",
+        "label": "Meaning of cacophonous",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explicitly lists euphonious as an opposite of cacophonous."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/euphonious",
+        "label": "Definition of euphonious",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines euphonious as pleasing or sweet in sound, contrasting with unpleasant-sounding cacophonous."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The nonstandard distractor 'Cacophonic' was repaired to the standard adjective Cacophonous. D is uniquely correct."
+  },
+  {
+    "id": "ADV2E102-U0005-Q090-SIM",
+    "pairId": "ADV2E102-U0005-Q090",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which noun means a pleasing or harmonious quality of sound?",
+    "questionUrdu": "کون سا noun آواز کی خوش گوار یا ہم آہنگ کیفیت کو ظاہر کرتا ہے؟",
+    "options": [
+      "Euphony",
+      "Cacophony",
+      "Lethargy",
+      "Discord"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Euphony“ ہے۔ Euphony کسی آواز یا لفظوں کی خوش آہنگ اور کانوں کو اچھی لگنے والی کیفیت کا نام ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Euphony",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/euphony",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q090",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/euphony",
+        "label": "Euphony",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that euphony means a pleasing or harmonious quality of sound."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/euphony",
+        "label": "Euphony",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that euphony means a pleasing or harmonious quality of sound."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q091-SRC",
+    "pairId": "ADV2E102-U0005-Q091",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the correct preposition: Look! There is a big spider _____ the ceiling.",
+    "questionUrdu": "درست preposition منتخب کریں: Look! There is a big spider _____ the ceiling.",
+    "options": [
+      "At",
+      "In",
+      "On",
+      "Of"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”On“ ہے۔ Ceiling کی سطح سے چپکی ہوئی چیز کے لیے on استعمال ہوتا ہے، اس لیے درست ترکیب on the ceiling ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Meaning of on",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/learner-english/on",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q091"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/learner-english/on",
+        "label": "Meaning of on",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines on as positioned on a surface, matching a spider attached to the surface of a ceiling."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/on",
+        "label": "Definition of on",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines on as in contact with and supported by or attached to a surface."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A spider attached to the ceiling's surface is 'on the ceiling', answer C."
+  },
+  {
+    "id": "ADV2E102-U0005-Q091-SIM",
+    "pairId": "ADV2E102-U0005-Q091",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Choose the correct preposition: The lamp hangs _____ the table without touching it.",
+    "questionUrdu": "درست preposition منتخب کریں: The lamp hangs _____ the table without touching it.",
+    "options": [
+      "In",
+      "On",
+      "Above",
+      "Inside"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”Above“ ہے۔ Above اس چیز کے لیے استعمال ہوتا ہے جو کسی دوسری چیز سے بلند مقام پر ہو مگر اسے چھو نہ رہی ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "Above",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/above",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q091",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/above",
+        "label": "Above",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that above describes the lamp's position higher than the table without touching it."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/above",
+        "label": "Above",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that above describes the lamp's position higher than the table without touching it."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q092-SRC",
+    "pairId": "ADV2E102-U0005-Q092",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is the closest antonym of 'infallible'?",
+    "questionUrdu": "درج الفاظ میں 'infallible' کا قریب ترین antonym کون سا ہے؟",
+    "options": [
+      "Imperfect",
+      "Impeccable",
+      "Flawless",
+      "Reliable"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Imperfect“ ہے۔ Infallible ایسی چیز یا شخص کو کہتے ہیں جو غلطی نہ کرے، جبکہ imperfect میں نقص یا غلطی کا امکان موجود ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Meaning of infallible",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/infallible",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q092"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/infallible",
+        "label": "Meaning of infallible",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines infallible as never wrong, failing or making a mistake."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/imperfect",
+        "label": "Definition of imperfect",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines imperfect as having faults or weaknesses and not perfect."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was narrowed to the listed choices. Imperfect is the only option expressing fallibility or fault; the other choices reinforce reliability or flawlessness, so A is correct."
+  },
+  {
+    "id": "ADV2E102-U0005-Q092-SIM",
+    "pairId": "ADV2E102-U0005-Q092",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which noun means the condition of being capable of making mistakes?",
+    "questionUrdu": "کون سا noun غلطی کرنے کی صلاحیت یا امکان کی حالت کو ظاہر کرتا ہے؟",
+    "options": [
+      "Fallibility",
+      "Infallibility",
+      "Impeccability",
+      "Reliability"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Fallibility“ ہے۔ Fallibility کا مطلب غلطی کر سکنے یا غلط ثابت ہو سکنے کی کیفیت ہے؛ infallibility اس کا الٹ ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Fallibility",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/fallibility",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q092",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/fallibility",
+        "label": "Fallibility",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that fallibility means the condition of being capable of making mistakes."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/fallibility",
+        "label": "Fallibility",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that fallibility means the condition of being capable of making mistakes."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q093-SRC",
+    "pairId": "ADV2E102-U0005-Q093",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is the antonym of 'guilty'?",
+    "questionUrdu": "درج الفاظ میں 'guilty' کا antonym کون سا ہے؟",
+    "options": [
+      "Innocent",
+      "Humble",
+      "Clever",
+      "Proud"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Innocent“ ہے۔ Guilty جرم یا قصور ثابت ہونے کو اور innocent بے قصور ہونے کو ظاہر کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Definition of guilty",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/guilty",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q093"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/guilty",
+        "label": "Definition of guilty",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines guilty as justly chargeable with or responsible for an offense."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/innocent",
+        "label": "Meaning of innocent",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines innocent as not guilty of a crime."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was normalized into a complete question; Innocent is the direct antonym, answer A."
+  },
+  {
+    "id": "ADV2E102-U0005-Q093-SIM",
+    "pairId": "ADV2E102-U0005-Q093",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What is a court judgment that a criminal defendant has not been proved guilty called?",
+    "questionUrdu": "عدالت کا وہ judgment کیا کہلاتا ہے جس میں criminal defendant کے خلاف جرم ثابت نہ ہو؟",
+    "options": [
+      "Acquittal",
+      "Conviction",
+      "Indictment",
+      "Probation"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Acquittal“ ہے۔ Acquittal وہ عدالتی فیصلہ ہے جس میں ملزم کو مطلوبہ معیار کے مطابق guilty ثابت نہیں کیا جاتا۔",
+    "source": {
+      "type": "practice",
+      "label": "Acquittal",
+      "referenceUrl": "https://www.law.cornell.edu/wex/acquittal",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q093",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.law.cornell.edu/wex/acquittal",
+        "label": "Acquittal",
+        "publisher": "Cornell Legal Information Institute",
+        "authorityId": "cornell-legal-information-institute",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cornell Legal Information Institute supports that a judgment that a criminal defendant has not been proved guilty is an acquittal."
+      },
+      {
+        "url": "https://www.justice.gov/usao/justice-101/glossary",
+        "label": "Legal terms glossary",
+        "publisher": "United States Department of Justice",
+        "authorityId": "us-department-of-justice",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "United States Department of Justice supports that a judgment that a criminal defendant has not been proved guilty is an acquittal."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q094-SRC",
+    "pairId": "ADV2E102-U0005-Q094",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which of the following Urdu sentences is grammatically correct?",
+    "questionUrdu": "درج ذیل میں قواعد کے لحاظ سے درست اردو جملہ کون سا ہے؟",
+    "options": [
+      "آپ بمع اہل و عیال تشریف لائیں",
+      "آپ مع اہل و عیال تشریف لائیں",
+      "آپ بمع اہل عیال تشریف لائیں",
+      "آپ مع اہل عیال تشریف لائیں"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”آپ مع اہل و عیال تشریف لائیں“ ہے۔ درست ترکیب 'مع اہل و عیال' ہے؛ مع کے معنی ساتھ اور اہل و عیال سے گھر والے مراد ہوتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "اہل و عیال کے معنی",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-ahl-o-ayaal?lang=ur",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q094"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-ahl-o-ayaal?lang=ur",
+        "label": "اہل و عیال کے معنی",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta records the compound 'اہل و عیال' and specifically gives 'مع اہل و عیال' for being accompanied by one's family."
+      },
+      {
+        "url": "https://jang.com.pk/news/667337",
+        "label": "صحتِ زباں: مع، معہ یا بمعہ؟",
+        "publisher": "Jang Group",
+        "authorityId": "jang",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The language column explains that 'بمع' and 'بمعہ' are incorrect here and that 'مع اہل و عیال' is sufficient and correct."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Both independent language sources support 'مع اہل و عیال'; therefore option B is verified."
+  },
+  {
+    "id": "ADV2E102-U0005-Q094-SIM",
+    "pairId": "ADV2E102-U0005-Q094",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which connector appears between the two nouns in the standard Urdu compound 'اہل و عیال'?",
+    "questionUrdu": "معیاری اردو مرکب 'اہل و عیال' میں دونوں nouns کے درمیان کون سا connector آتا ہے؟",
+    "options": [
+      "و (o)",
+      "ِ (e)",
+      "کا (ka)",
+      "سے (se)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”و (o)“ ہے۔ معیاری مرکب اہل و عیال میں حرفِ عطف و آتا ہے، جسے یہاں 'o' پڑھا جاتا ہے اور یہ دونوں nouns کو ملاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "اہل و عیال",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-ahl-o-ayaal?lang=ur",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q094",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-ahl-o-ayaal?lang=ur",
+        "label": "اہل و عیال",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary supports that the connector و (o) appears between اہل and عیال in the standard Urdu compound."
+      },
+      {
+        "url": "https://jang.com.pk/news/667337",
+        "label": "اہل و عیال کی ترکیب",
+        "publisher": "Daily Jang",
+        "authorityId": "daily-jang",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Daily Jang supports that the connector و (o) appears between اہل and عیال in the standard Urdu compound."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q095-SRC",
+    "pairId": "ADV2E102-U0005-Q095",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What does the Urdu idiom 'فاختہ اڑانا' mean?",
+    "questionUrdu": "اردو محاورے 'فاختہ اڑانا' کا مطلب کیا ہے؟",
+    "options": [
+      "ہانک لگانا",
+      "مزے اڑانا",
+      "شور مچانا",
+      "تمسخر کرنا"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”مزے اڑانا“ ہے۔ یہ محاورہ بے فکری، خوش حالی یا مزے اڑانے کے معنی میں استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "فاختہ اڑانا کے معنی",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-faakhta-udaanaa?lang=hi",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q095"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-faakhta-udaanaa?lang=hi",
+        "label": "فاختہ اڑانا کے معنی",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta lists عیش کرنا and مزے کرنا among the Urdu meanings of the idiom."
+      },
+      {
+        "url": "https://xn--mgbqf7g.com/%D9%81%D8%B1%DB%81%D9%86%DA%AF/40554",
+        "label": "فاختہ اڑانا — فرہنگِ آصفیہ",
+        "publisher": "Urdu Gah",
+        "authorityId": "urdu-gah",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The electronic Farhang-e-Asifi entry independently defines the idiom as گلچھڑے اڑانا، مزے اڑانا and عیش منانا."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The wording was normalized. Both dictionaries support مزے اڑانا, answer B."
+  },
+  {
+    "id": "ADV2E102-U0005-Q095-SIM",
+    "pairId": "ADV2E102-U0005-Q095",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which English bird name is the direct meaning of the Urdu word 'فاختہ'?",
+    "questionUrdu": "اردو لفظ 'فاختہ' کا براہِ راست انگریزی bird name کیا ہے؟",
+    "options": [
+      "Sparrow",
+      "Dove",
+      "Falcon",
+      "Peacock"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Dove“ ہے۔ فاختہ ایک dove، بالخصوص ring-dove یا turtle-dove قسم کے پرندے کے لیے اردو نام ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "فاختہ",
+      "referenceUrl": "https://www.rekhta.org/urdudictionary?keyword=%D9%81%D8%A7%D8%AE%D8%AA%DB%81",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q095",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/urdudictionary?keyword=%D9%81%D8%A7%D8%AE%D8%AA%DB%81",
+        "label": "فاختہ",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary supports that the Urdu word فاختہ directly means dove."
+      },
+      {
+        "url": "https://www.urducouncil.nic.in/sites/default/files/2024-06/English_Urdu_Dictionary_Volume_Two_D-G.pdf",
+        "label": "English-Urdu Dictionary: Dove",
+        "publisher": "National Council for Promotion of Urdu Language",
+        "authorityId": "ncpul",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Council for Promotion of Urdu Language supports that the Urdu word فاختہ directly means dove."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q096-SRC",
+    "pairId": "ADV2E102-U0005-Q096",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "'Out of the frying pan into the fire' کے درست اردو متبادل کا انتخاب کیجیے۔",
+    "questionUrdu": "'Out of the frying pan into the fire' کا درست اردو محاوراتی متبادل کون سا ہے؟",
+    "options": [
+      "جل بن مچھلی",
+      "پوری چھوڑ آدھی سے بھی جائے",
+      "آسمان سے گرا کھجور میں اٹکا",
+      "آئے تھے نماز بخشوانے، روزے گلے پڑ گئے"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ”آسمان سے گرا کھجور میں اٹکا“ ہے۔ 'آسمان سے گرا کھجور میں اٹکا' ایک مشکل سے نکل کر دوسری مشکل میں پھنسنے کا وہی مفہوم دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "English–Urdu Dictionary, Volume Two",
+      "referenceUrl": "https://www.urducouncil.nic.in/sites/default/files/2024-06/English_Urdu_Dictionary_Volume_Two_D-G.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q096"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.urducouncil.nic.in/sites/default/files/2024-06/English_Urdu_Dictionary_Volume_Two_D-G.pdf",
+        "label": "English–Urdu Dictionary, Volume Two",
+        "publisher": "National Council for Promotion of Urdu Language",
+        "authorityId": "ncpul",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Government of India Urdu council's bilingual dictionary gives the Urdu proverbial equivalent 'آسمان سے گرا کھجور میں اٹکا'."
+      },
+      {
+        "url": "https://dunya.com.pk/index.php/author/naseem-ahmed-bajwa/2020-04-14/30566/67099711",
+        "label": "Out of the frying pan",
+        "publisher": "Roznama Dunya",
+        "authorityId": "roznama-dunya",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Urdu column independently identifies 'آسمان سے گرا کھجور میں اٹکا' as the corresponding Urdu proverb."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was clarified from literal translation to the standard Urdu proverbial equivalent. Option C is verified."
+  },
+  {
+    "id": "ADV2E102-U0005-Q096-SIM",
+    "pairId": "ADV2E102-U0005-Q096",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "What does the proverb 'Don't count your chickens before they hatch' warn against?",
+    "questionUrdu": "Proverb 'Don't count your chickens before they hatch' کس بات سے خبردار کرتا ہے؟",
+    "options": [
+      "Assuming success before it is certain",
+      "Keeping poultry in a safe place",
+      "Counting only after sunset",
+      "Sharing every plan publicly"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Assuming success before it is certain“ ہے۔ یہ proverb متنبہ کرتا ہے کہ کسی امید یا منصوبے کو نتیجہ آنے سے پہلے یقینی کامیابی نہ سمجھا جائے۔",
+    "source": {
+      "type": "practice",
+      "label": "Don't count your chickens before they hatch",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/don-t-count-your-chickens-before-they-re-hatched",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q096",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/don-t-count-your-chickens-before-they-re-hatched",
+        "label": "Don't count your chickens before they hatch",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary supports that the proverb warns against assuming success before it is certain."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/count%20one%27s%20chickens%20%28before%20they%20hatch%29",
+        "label": "Count one's chickens before they hatch",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster supports that the proverb warns against assuming success before it is certain."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q098-SRC",
+    "pairId": "ADV2E102-U0005-Q098",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Abu Bakr served as the first Rashidun caliph from 632 to 634 CE. Approximately how long was his caliphate?",
+    "questionUrdu": "Abu Bakr نے پہلے Rashidun caliph کے طور پر 632 سے 634 CE تک تقریباً کتنے عرصے خلافت کی؟",
+    "options": [
+      "Two years",
+      "Three years",
+      "Four years",
+      "Five years"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Two years“ ہے۔ 632 سے 634 CE تک کا دور تقریباً دو سال بنتا ہے، نہ کہ چار سال۔",
+    "source": {
+      "type": "book",
+      "label": "The Caliphate to 750",
+      "referenceUrl": "https://www.cambridge.org/core/books/abs/islamic-societies-to-the-nineteenth-century/caliphate-to-750/F992FE2C051E17ADBC4D11AF015E0423",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q098"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cambridge.org/core/books/abs/islamic-societies-to-the-nineteenth-century/caliphate-to-750/F992FE2C051E17ADBC4D11AF015E0423",
+        "label": "The Caliphate to 750",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Cambridge history chapter identifies Abu Bakr as the first Rashidun caliph and dates his caliphate 632–634."
+      },
+      {
+        "url": "https://www.encyclopedia.com/history/asia-and-africa/middle-eastern-history/caliphate",
+        "label": "Caliphate",
+        "publisher": "Encyclopedia.com",
+        "authorityId": "encyclopedia-com",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The encyclopedia independently dates Abu Bakr's caliphate 632–634 and describes his death two years after Muhammad's."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key C (four years) was rejected. The verified 632–634 date range is approximately two years, so A is correct."
+  },
+  {
+    "id": "ADV2E102-U0005-Q098-SIM",
+    "pairId": "ADV2E102-U0005-Q098",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Who succeeded Abu Bakr as the second Rashidun caliph in 634 CE?",
+    "questionUrdu": "634 CE میں Abu Bakr کے بعد دوسرے Rashidun caliph کون بنے؟",
+    "options": [
+      "Umar ibn al-Khattab",
+      "Uthman ibn Affan",
+      "Ali ibn Abi Talib",
+      "Muawiya ibn Abi Sufyan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Umar ibn al-Khattab“ ہے۔ Abu Bakr کی وفات کے بعد 634 CE میں Umar ibn al-Khattab نے خلافت سنبھالی اور وہ دوسرے Rashidun caliph بنے۔",
+    "source": {
+      "type": "practice",
+      "label": "Hijri calendar historical notes",
+      "referenceUrl": "https://www.islam.gov.bh/wp-content/uploads/2020/06/Hijjri-Booklet-1441.pdf",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q098",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.islam.gov.bh/wp-content/uploads/2020/06/Hijjri-Booklet-1441.pdf",
+        "label": "Hijri calendar historical notes",
+        "publisher": "Ministry of Justice and Islamic Affairs, Bahrain",
+        "authorityId": "bahrain-islamic-affairs",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Ministry of Justice and Islamic Affairs, Bahrain supports that Umar ibn al-Khattab succeeded Abu Bakr as caliph in 634 CE."
+      },
+      {
+        "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/omar-ibn-al-khattab",
+        "label": "Omar ibn al-Khattab",
+        "publisher": "Encyclopedia.com",
+        "authorityId": "encyclopedia-com",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopedia.com supports that Umar ibn al-Khattab succeeded Abu Bakr as caliph in 634 CE."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q099-SRC",
+    "pairId": "ADV2E102-U0005-Q099",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "According to Sahih al-Bukhari 1894, which act of worship is described as a shield?",
+    "questionUrdu": "Sahih al-Bukhari 1894 کے مطابق کون سی عبادت shield قرار دی گئی ہے؟",
+    "options": [
+      "Salat (prayer)",
+      "Sawm (fasting)",
+      "Zakat",
+      "Hajj"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ”Sawm (fasting)“ ہے۔ حدیث میں Sawm یعنی روزے کو ڈھال کہا گیا ہے، کیونکہ وہ انسان کو گناہ اور بری خواہشات سے بچاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Sahih al-Bukhari 1894",
+      "referenceUrl": "https://sunnah.com/bukhari%3A1894",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q099"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://sunnah.com/bukhari%3A1894",
+        "label": "Sahih al-Bukhari 1894",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The hadith text explicitly states that fasting is a shield."
+      },
+      {
+        "url": "https://hadeeth.islamcontent.com/en/hadeeth/9618",
+        "label": "Fasting is a shield",
+        "publisher": "Encyclopedia of Translated Prophetic Hadiths",
+        "authorityId": "hadeeth-encyclopedia",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent hadith encyclopedia likewise records the saying 'Fasting is a shield'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague 'pillar declared as armour' wording and spelling 'Soam' were repaired to the directly attested hadith claim and standard transliteration Sawm. Answer B is verified."
+  },
+  {
+    "id": "ADV2E102-U0005-Q099-SIM",
+    "pairId": "ADV2E102-U0005-Q099",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "According to Sahih al-Bukhari 1894, what should a fasting person say if someone insults or fights him?",
+    "questionUrdu": "Sahih al-Bukhari 1894 کے مطابق اگر کوئی روزہ دار کو گالی دے یا لڑے تو اسے کیا کہنا چاہیے؟",
+    "options": [
+      "I am fasting",
+      "I will end my fast",
+      "Meet me after sunset",
+      "I owe you food"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”I am fasting“ ہے۔ حدیث میں روزہ دار کو جھگڑے یا بدزبانی کے جواب میں 'I am fasting' کہنے کی ہدایت دی گئی ہے تاکہ وہ ضبط قائم رکھے۔",
+    "source": {
+      "type": "practice",
+      "label": "Sahih al-Bukhari 1894",
+      "referenceUrl": "https://sunnah.com/bukhari%3A1894",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q099",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://sunnah.com/bukhari%3A1894",
+        "label": "Sahih al-Bukhari 1894",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Sunnah.com supports that Sahih al-Bukhari 1894 instructs a fasting person who is insulted or challenged to say I am fasting."
+      },
+      {
+        "url": "https://hadeeth.islamcontent.com/en/hadeeth/9618",
+        "label": "Fasting is a shield",
+        "publisher": "IslamContent Hadeeth Encyclopedia",
+        "authorityId": "islamcontent-hadeeth",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IslamContent Hadeeth Encyclopedia supports that Sahih al-Bukhari 1894 instructs a fasting person who is insulted or challenged to say I am fasting."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0005-Q100-SRC",
+    "pairId": "ADV2E102-U0005-Q100",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "How many numbered verses are in Surah 108, Al-Kawthar?",
+    "questionUrdu": "Surah 108 یعنی Al-Kawthar میں کتنی numbered verses ہیں؟",
+    "options": [
+      "Three",
+      "Four",
+      "Five",
+      "Less than three"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Three“ ہے۔ Al-Kawthar تین آیات پر مشتمل ہے؛ کئی مختصر سورتوں کی طرح اس میں بھی تین numbered verses ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Surah Al-Kawthar, 108:1–3",
+      "referenceUrl": "https://quran.com/al-kawthar?font=v1&locale=en&reading=false&translations=33%2C20",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q100"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://quran.com/al-kawthar?font=v1&locale=en&reading=false&translations=33%2C20",
+        "label": "Surah Al-Kawthar, 108:1–3",
+        "publisher": "Quran Foundation",
+        "authorityId": "quran-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The complete Surah Al-Kawthar page displays exactly verses 108:1, 108:2 and 108:3."
+      },
+      {
+        "url": "https://alquran.cloud/surah/108",
+        "label": "Surah 108 — Al-Kawthar",
+        "publisher": "Al Quran Cloud",
+        "authorityId": "al-quran-cloud",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent complete-surah page likewise displays exactly three numbered verses."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The superlative clause was removed because several short surahs tie at three verses; the directly counted question has the unique answer Three (A)."
+  },
+  {
+    "id": "ADV2E102-U0005-Q100-SIM",
+    "pairId": "ADV2E102-U0005-Q100",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "According to verse 2 of Surah 108, Al-Kawthar, which two acts are commanded?",
+    "questionUrdu": "Surah 108 یعنی Al-Kawthar کی verse 2 میں کن دو اعمال کا حکم دیا گیا ہے؟",
+    "options": [
+      "Pray to your Lord and sacrifice",
+      "Fast and give zakat",
+      "Travel and trade",
+      "Read and write"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ”Pray to your Lord and sacrifice“ ہے۔ Al-Kawthar کی دوسری آیت اپنے رب کے لیے نماز ادا کرنے اور قربانی کرنے کا حکم دیتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Surah Al-Kawthar 108:2",
+      "referenceUrl": "https://quran.com/108/2",
+      "accessedOn": "2026-08-28"
+    },
+    "tags": [
+      "adv2e102",
+      "u0005-q100",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://quran.com/108/2",
+        "label": "Surah Al-Kawthar 108:2",
+        "publisher": "Quran.com",
+        "authorityId": "quran-com",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Quran.com supports that verse 2 of Surah 108 commands prayer to the Lord and sacrifice."
+      },
+      {
+        "url": "https://alquran.cloud/ayah/108:2/en.asad",
+        "label": "Al-Kawthar 108:2",
+        "publisher": "Al Quran Cloud",
+        "authorityId": "alquran-cloud",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Al Quran Cloud supports that verse 2 of Surah 108 commands prayer to the Lord and sacrifice."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

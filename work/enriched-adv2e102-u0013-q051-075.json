@@ -1,0 +1,2360 @@
+[
+  {
+    "id": "ADV2E102-U0013-Q052-SRC",
+    "pairId": "ADV2E102-U0013-Q052",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which acid is a major component of gastric juice in the stomach?",
+    "questionUrdu": "Stomach کے gastric juice میں کون سا acid بڑی مقدار میں شامل ہوتا ہے؟",
+    "options": [
+      "Nitric acid",
+      "Hydrochloric acid",
+      "Sulfuric acid",
+      "Acetic acid"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Hydrochloric acid ہے۔ یہ معدے میں کم pH پیدا کرتا ہے، جراثیم کے خلاف مدد دیتا ہے اور protein digestion کے enzymes کو فعال ماحول فراہم کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Physiology, Gastric Acid Secretion",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK279304/",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q052"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK279304/",
+        "label": "Physiology, Gastric Acid Secretion",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The medical reference identifies hydrochloric acid as the acid secreted into the stomach lumen."
+      },
+      {
+        "url": "https://my.clevelandclinic.org/health/body/21758-stomach",
+        "label": "Stomach",
+        "publisher": "Cleveland Clinic",
+        "authorityId": "cleveland-clinic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cleveland Clinic explains that gastric juice in the stomach includes hydrochloric acid."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The anatomically false gall-bladder phrase was removed: gastric juice is produced in the stomach, whereas the gallbladder stores bile. 'None' was replaced and acid spelling was standardized."
+  },
+  {
+    "id": "ADV2E102-U0013-Q052-SIM",
+    "pairId": "ADV2E102-U0013-Q052",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which stomach cells secrete hydrochloric acid?",
+    "questionUrdu": "Stomach کے کون سے cells hydrochloric acid خارج کرتے ہیں؟",
+    "options": [
+      "Parietal cells",
+      "Chief cells",
+      "Goblet cells",
+      "Beta cells"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Parietal cells ہے۔ gastric glands کے یہ cells hydrochloric acid کے ساتھ intrinsic factor بھی خارج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Physiology, Gastric Acid Secretion",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK279304/",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q052",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK279304/",
+        "label": "Physiology, Gastric Acid Secretion",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NCBI identifies gastric parietal cells as the cells that secrete hydrochloric acid."
+      },
+      {
+        "url": "https://my.clevelandclinic.org/health/body/21758-stomach",
+        "label": "Stomach",
+        "publisher": "Cleveland Clinic",
+        "authorityId": "cleveland-clinic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cleveland Clinic independently explains that parietal cells produce stomach acid."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q053-SRC",
+    "pairId": "ADV2E102-U0013-Q053",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "During a normal pregnancy, embryonic cardiac activity begins at which stage?",
+    "questionUrdu": "Normal pregnancy میں embryonic cardiac activity کس مرحلے پر شروع ہوتی ہے؟",
+    "options": [
+      "Before birth, during early pregnancy",
+      "Only after birth",
+      "One minute after birth",
+      "Only during labour"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Before birth, during early pregnancy ہے۔ primitive heart embryonic development کے شروع میں دھڑکنا شروع کرتا ہے، اس لیے source کا 'after birth' تصور درست نہیں تھا۔",
+    "source": {
+      "type": "book",
+      "label": "Embryology, Heart",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK537123/",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q053"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537123/",
+        "label": "Embryology, Heart",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The embryology reference describes the primitive heart beginning to beat early in embryonic development."
+      },
+      {
+        "url": "https://www.acog.org/womens-health/faqs/ultrasound-exams",
+        "label": "Ultrasound Exams",
+        "publisher": "American College of Obstetricians and Gynecologists",
+        "authorityId": "acog",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ACOG explains that early pregnancy ultrasound can assess embryonic or fetal cardiac activity before birth."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague 'heartbeat of a baby starts' stem was rebuilt around embryonic cardiac activity during early pregnancy. The distractors were made temporal and unique."
+  },
+  {
+    "id": "ADV2E102-U0013-Q053-SIM",
+    "pairId": "ADV2E102-U0013-Q053",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which imaging method is routinely used to assess embryonic cardiac activity in early pregnancy?",
+    "questionUrdu": "Early pregnancy میں embryonic cardiac activity جانچنے کے لیے عموماً کون سا imaging method استعمال ہوتا ہے؟",
+    "options": [
+      "Ultrasound",
+      "Plain X-ray",
+      "Mammography",
+      "Bone scan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ultrasound ہے۔ ابتدائی حمل میں transvaginal یا abdominal ultrasound سے embryo اور اس کی cardiac activity دیکھی جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Embryology, Heart",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK537123/",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q053",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537123/",
+        "label": "Embryology, Heart",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NCBI's embryology review describes ultrasound assessment of early embryonic cardiac activity."
+      },
+      {
+        "url": "https://www.acog.org/womens-health/faqs/ultrasound-exams",
+        "label": "Ultrasound Exams",
+        "publisher": "American College of Obstetricians and Gynecologists",
+        "authorityId": "acog",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "ACOG independently recommends ultrasound for evaluating cardiac activity in early pregnancy."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q054-SRC",
+    "pairId": "ADV2E102-U0013-Q054",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "The trachea is part of which body system?",
+    "questionUrdu": "Trachea جسم کے کس system کا حصہ ہے؟",
+    "options": [
+      "Respiratory system",
+      "Nervous system",
+      "Digestive system",
+      "Urinary system"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Respiratory system ہے۔ trachea larynx سے ہوا کو lungs کی طرف لے جانے والی بڑی conducting airway ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Definition of trachea",
+      "referenceUrl": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/trachea",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q054"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/trachea",
+        "label": "Definition of trachea",
+        "publisher": "National Cancer Institute",
+        "authorityId": "national-cancer-institute",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NCI defines the trachea as the airway leading from the larynx to the bronchi and lungs."
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448070/",
+        "label": "Anatomy, Thorax, Tracheobronchial Tree",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The anatomy reference places the trachea in the conducting portion of the respiratory tract."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source incorrectly asked which local organ a 'trachea disease' concerns. It was reconstructed as an anatomy question with four body systems; the intended respiratory/throat association is made precise."
+  },
+  {
+    "id": "ADV2E102-U0013-Q054-SIM",
+    "pairId": "ADV2E102-U0013-Q054",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "The trachea divides at its lower end into which paired airways?",
+    "questionUrdu": "Trachea اپنے نچلے سرے پر کن دو airways میں تقسیم ہوتی ہے؟",
+    "options": [
+      "Main bronchi",
+      "Ureters",
+      "Pulmonary veins",
+      "Eustachian tubes"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Main bronchi ہے۔ trachea carina کے مقام پر right اور left main bronchus میں تقسیم ہو کر دونوں lungs تک ہوا پہنچاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Definition of trachea",
+      "referenceUrl": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/trachea",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q054",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/trachea",
+        "label": "Definition of trachea",
+        "publisher": "National Cancer Institute",
+        "authorityId": "national-cancer-institute",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The National Cancer Institute defines the trachea as dividing toward the bronchi and lungs."
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK448070/",
+        "label": "Anatomy, Thorax, Tracheobronchial Tree",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NCBI anatomy independently describes the tracheal bifurcation into the right and left main bronchi."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q055-SRC",
+    "pairId": "ADV2E102-U0013-Q055",
+    "kind": "source",
+    "categoryId": "geography",
+    "question": "In which angular unit is geographic latitude conventionally expressed?",
+    "questionUrdu": "Geographic latitude کو روایتی طور پر کس angular unit میں ظاہر کیا جاتا ہے؟",
+    "options": [
+      "Radians",
+      "Degrees",
+      "Metres",
+      "Kilometres"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Degrees ہے۔ latitude کو equator سے north یا south زاویائی فاصلے کے طور پر degrees، minutes اور seconds میں لکھا جا سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Latitude and longitude",
+      "referenceUrl": "https://oceanservice.noaa.gov/education/tutorial_geodesy/geo02_hist.html",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q055"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://oceanservice.noaa.gov/education/tutorial_geodesy/geo02_hist.html",
+        "label": "Latitude and longitude",
+        "publisher": "National Oceanic and Atmospheric Administration",
+        "authorityId": "noaa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NOAA explains that latitude and longitude are measured in degrees, minutes and seconds."
+      },
+      {
+        "url": "https://earthobservatory.nasa.gov/features/OrbitsCatalog/page2.php",
+        "label": "Latitude and longitude",
+        "publisher": "NASA Earth Observatory",
+        "authorityId": "nasa-earth-observatory",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA describes geographic latitude in degrees north or south of the equator."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was made grammatical; vague 'angular unit' and 'None' choices were replaced with distinct linear units."
+  },
+  {
+    "id": "ADV2E102-U0013-Q055-SIM",
+    "pairId": "ADV2E102-U0013-Q055",
+    "kind": "similar",
+    "categoryId": "geography",
+    "question": "What is the latitude of the Equator?",
+    "questionUrdu": "Equator کی latitude کتنی ہے؟",
+    "options": [
+      "0 degrees",
+      "23.5 degrees north",
+      "66.5 degrees south",
+      "90 degrees"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 0 degrees ہے۔ latitude کی پیمائش equator سے شروع ہوتی ہے اور poles پر 90 degrees north یا south تک پہنچتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Latitude and longitude",
+      "referenceUrl": "https://oceanservice.noaa.gov/education/tutorial_geodesy/geo02_hist.html",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q055",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://oceanservice.noaa.gov/education/tutorial_geodesy/geo02_hist.html",
+        "label": "Latitude and longitude",
+        "publisher": "National Oceanic and Atmospheric Administration",
+        "authorityId": "noaa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NOAA defines the Equator as the zero-degree latitude reference."
+      },
+      {
+        "url": "https://earthobservatory.nasa.gov/features/OrbitsCatalog/page2.php",
+        "label": "Latitude and longitude",
+        "publisher": "NASA Earth Observatory",
+        "authorityId": "nasa-earth-observatory",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NASA independently describes latitude as degrees north or south from zero at the Equator."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q056-SRC",
+    "pairId": "ADV2E102-U0013-Q056",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "The diaphragm is a major skeletal muscle used primarily in which process?",
+    "questionUrdu": "Diaphragm بنیادی طور پر کس عمل میں استعمال ہونے والا بڑا skeletal muscle ہے؟",
+    "options": [
+      "Digestion",
+      "Breathing",
+      "Nerve conduction",
+      "Blood clotting"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Breathing ہے۔ diaphragm inspiration کا مرکزی muscle ہے اور اس کی حرکت thoracic cavity کے volume کو بدلتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Anatomy, Thorax, Diaphragm",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK519558/",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q056"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK519558/",
+        "label": "Anatomy, Thorax, Diaphragm",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The anatomy reference identifies the diaphragm as the principal muscle of inspiration."
+      },
+      {
+        "url": "https://my.clevelandclinic.org/health/body/21578-diaphragm",
+        "label": "Diaphragm",
+        "publisher": "Cleveland Clinic",
+        "authorityId": "cleveland-clinic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cleveland Clinic describes the diaphragm as the main muscle used for breathing."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague 'related to a system' wording was replaced with the diaphragm's primary function; choices are processes rather than mixed system labels."
+  },
+  {
+    "id": "ADV2E102-U0013-Q056-SIM",
+    "pairId": "ADV2E102-U0013-Q056",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "What happens to the diaphragm during normal inhalation?",
+    "questionUrdu": "Normal inhalation کے دوران diaphragm کے ساتھ کیا ہوتا ہے؟",
+    "options": [
+      "It contracts and moves downward",
+      "It relaxes and moves downward",
+      "It contracts and moves upward",
+      "It stops moving completely"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب It contracts and moves downward ہے۔ اس حرکت سے chest cavity کا volume بڑھتا اور ہوا lungs میں داخل ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Anatomy, Thorax, Diaphragm",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK519558/",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q056",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK519558/",
+        "label": "Anatomy, Thorax, Diaphragm",
+        "publisher": "National Center for Biotechnology Information",
+        "authorityId": "ncbi",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NCBI anatomy states that the diaphragm contracts and descends during inspiration."
+      },
+      {
+        "url": "https://my.clevelandclinic.org/health/body/21578-diaphragm",
+        "label": "Diaphragm",
+        "publisher": "Cleveland Clinic",
+        "authorityId": "cleveland-clinic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cleveland Clinic independently explains the diaphragm's downward movement during inhalation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q057-SRC",
+    "pairId": "ADV2E102-U0013-Q057",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Respiratory diphtheria most commonly affects which area?",
+    "questionUrdu": "Respiratory diphtheria عام طور پر کس حصے کو متاثر کرتی ہے؟",
+    "options": [
+      "Throat and upper airways",
+      "Brain",
+      "Kidneys",
+      "Middle ear only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Throat and upper airways ہے۔ بیماری حلق میں موٹی membrane، درد اور سانس کی دشواری پیدا کر سکتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "About Diphtheria",
+      "referenceUrl": "https://www.cdc.gov/diphtheria/about/index.html",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q057"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cdc.gov/diphtheria/about/index.html",
+        "label": "About Diphtheria",
+        "publisher": "U.S. Centers for Disease Control and Prevention",
+        "authorityId": "cdc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CDC states that respiratory diphtheria affects the respiratory system and commonly causes sore throat and a throat membrane."
+      },
+      {
+        "url": "https://www.who.int/news-room/fact-sheets/detail/diphtheria",
+        "label": "Diphtheria",
+        "publisher": "World Health Organization",
+        "authorityId": "who",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WHO describes diphtheria as affecting the upper respiratory tract, including the throat."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was scoped to respiratory diphtheria and the answer expanded from 'throat' to throat and upper airways."
+  },
+  {
+    "id": "ADV2E102-U0013-Q057-SIM",
+    "pairId": "ADV2E102-U0013-Q057",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which characteristic coating may form in the throat in respiratory diphtheria?",
+    "questionUrdu": "Respiratory diphtheria میں throat کے اندر کون سی خاص تہہ بن سکتی ہے؟",
+    "options": [
+      "A thick gray pseudomembrane",
+      "A clear fatty layer",
+      "A bony plate",
+      "A blue cartilage ring"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A thick gray pseudomembrane ہے۔ یہ مضبوط تہہ airway کو روک سکتی ہے، اس لیے diphtheria فوری medical treatment مانگتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "About Diphtheria",
+      "referenceUrl": "https://www.cdc.gov/diphtheria/about/index.html",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q057",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cdc.gov/diphtheria/about/index.html",
+        "label": "About Diphtheria",
+        "publisher": "U.S. Centers for Disease Control and Prevention",
+        "authorityId": "cdc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "CDC identifies the thick gray throat pseudomembrane as a hallmark of respiratory diphtheria."
+      },
+      {
+        "url": "https://www.who.int/news-room/fact-sheets/detail/diphtheria",
+        "label": "Diphtheria",
+        "publisher": "World Health Organization",
+        "authorityId": "who",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "WHO independently describes the adherent membrane in upper-airway diphtheria."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q058-SRC",
+    "pairId": "ADV2E102-U0013-Q058",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which instrument measures humidity in the air?",
+    "questionUrdu": "Air میں humidity ناپنے والا instrument کون سا ہے؟",
+    "options": [
+      "Hydrometer",
+      "Hygrometer",
+      "Odometer",
+      "Anemometer"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Hygrometer ہے۔ یہ آلہ فضا میں water vapour یا relative humidity کی مقدار معلوم کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Full Weather Glossary",
+      "referenceUrl": "https://www.weather.gov/otx/Full_Weather_Glossary",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q058"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.weather.gov/otx/Full_Weather_Glossary",
+        "label": "Full Weather Glossary",
+        "publisher": "National Weather Service",
+        "authorityId": "us-national-weather-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The US National Weather Service defines a hygrometer as an instrument used to measure humidity."
+      },
+      {
+        "url": "https://www.metoffice.gov.uk/weather/guides/observations/how-we-measure-humidity",
+        "label": "How humidity is measured",
+        "publisher": "UK Met Office",
+        "authorityId": "uk-met-office",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UK Met Office explains the instruments used for measuring atmospheric humidity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The nonstandard 'humidometer' distractor was replaced with anemometer. Already verified weather-service references are reused."
+  },
+  {
+    "id": "ADV2E102-U0013-Q058-SIM",
+    "pairId": "ADV2E102-U0013-Q058",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Relative humidity is normally expressed in which form?",
+    "questionUrdu": "Relative humidity کو عموماً کس صورت میں ظاہر کیا جاتا ہے؟",
+    "options": [
+      "Percentage",
+      "Degrees Celsius",
+      "Metres per second",
+      "Hectopascals"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Percentage ہے۔ relative humidity موجودہ water vapour کو اسی temperature پر ممکنہ زیادہ سے زیادہ مقدار کے تناسب کے طور پر دکھاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Full Weather Glossary",
+      "referenceUrl": "https://www.weather.gov/otx/Full_Weather_Glossary",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q058",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.weather.gov/otx/Full_Weather_Glossary",
+        "label": "Full Weather Glossary",
+        "publisher": "National Weather Service",
+        "authorityId": "us-national-weather-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The National Weather Service expresses relative humidity as a percentage."
+      },
+      {
+        "url": "https://www.metoffice.gov.uk/weather/guides/observations/how-we-measure-humidity",
+        "label": "How humidity is measured",
+        "publisher": "UK Met Office",
+        "authorityId": "uk-met-office",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The UK Met Office independently explains relative humidity in percentage terms."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q064-SRC",
+    "pairId": "ADV2E102-U0013-Q064",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Using a cell value from another worksheet in an Excel formula is called what?",
+    "questionUrdu": "Excel formula میں کسی دوسرے worksheet کی cell value استعمال کرنے کو کیا کہا جاتا ہے؟",
+    "options": [
+      "Accessing",
+      "Referencing",
+      "Updating",
+      "Formatting"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Referencing ہے۔ cross-sheet reference formula کو دوسرے sheet کی cell یا range سے value لینے دیتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Create or change a cell reference",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-or-change-a-cell-reference-c7b8b95d-c594-4488-947e-c835903cebaa",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q064"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/create-or-change-a-cell-reference-c7b8b95d-c594-4488-947e-c835903cebaa",
+        "label": "Create or change a cell reference",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft calls links to cells, including cells on other worksheets, cell references."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/scalc/guide/cellreferences.html",
+        "label": "Addressing a Cell in Another Sheet",
+        "publisher": "The Document Foundation",
+        "authorityId": "libreoffice",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice documents cross-sheet cell references and their syntax."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The task was placed explicitly in an Excel formula and 'Functioning' was replaced with formatting."
+  },
+  {
+    "id": "ADV2E102-U0013-Q064-SIM",
+    "pairId": "ADV2E102-U0013-Q064",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "When a spreadsheet worksheet name contains spaces, which punctuation is used around that sheet name in a cell reference?",
+    "questionUrdu": "Spreadsheet میں worksheet name کے اندر spaces ہوں تو cell reference میں اس نام کے گرد کون سی punctuation لگائی جاتی ہے؟",
+    "options": [
+      "Single quotation marks",
+      "Square brackets only",
+      "Curly braces",
+      "Double slashes"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Single quotation marks ہے۔ مثال کے طور پر Excel میں 'Annual Sales'!A1 لکھ کر spaced sheet name کو واضح کیا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Create or change a cell reference",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/create-or-change-a-cell-reference-c7b8b95d-c594-4488-947e-c835903cebaa",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q064",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/create-or-change-a-cell-reference-c7b8b95d-c594-4488-947e-c835903cebaa",
+        "label": "Create or change a cell reference",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Microsoft Support shows worksheet names containing spaces enclosed in single quotation marks in references."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/scalc/guide/cellreferences.html",
+        "label": "Addressing a Cell in Another Sheet",
+        "publisher": "The Document Foundation",
+        "authorityId": "libreoffice",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "LibreOffice documentation independently uses single quotation marks around spaced sheet names in cross-sheet references."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q065-SRC",
+    "pairId": "ADV2E102-U0013-Q065",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the sum of the three interior angles of a Euclidean triangle?",
+    "questionUrdu": "Euclidean triangle کے تین interior angles کا مجموعہ کتنا ہوتا ہے؟",
+    "options": [
+      "270 degrees",
+      "180 degrees",
+      "90 degrees",
+      "360 degrees"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 180 degrees ہے۔ Triangle Sum Theorem کے مطابق ہر Euclidean triangle کے اندرونی زاویوں کا مجموعہ یہی رہتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Angles of Triangles",
+      "referenceUrl": "https://openstax.org/books/geometry/pages/5-1-angles-of-triangles",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q065"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/geometry/pages/5-1-angles-of-triangles",
+        "label": "Angles of Triangles",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax states the Triangle Sum Theorem: the measures of a triangle's interior angles total 180 degrees."
+      },
+      {
+        "url": "https://flexbooks.ck12.org/cbook/ck-12-interactive-geometry-for-ccss/section/4.1/primary/lesson/triangle-sum-theorem-geo-ccss/",
+        "label": "Triangle Sum Theorem",
+        "publisher": "CK-12 Foundation",
+        "authorityId": "ck12",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CK-12 independently states that a triangle's interior angles add to 180 degrees in Euclidean geometry."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Euclidean and interior-angle scope was supplied, and 'none' was replaced with 360 degrees."
+  },
+  {
+    "id": "ADV2E102-U0013-Q065-SIM",
+    "pairId": "ADV2E102-U0013-Q065",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Two angles of a Euclidean triangle are 50 degrees and 60 degrees. What is the third angle?",
+    "questionUrdu": "ایک Euclidean triangle کے دو angles 50 degrees اور 60 degrees ہیں؛ تیسرا angle کتنا ہوگا؟",
+    "options": [
+      "70 degrees",
+      "80 degrees",
+      "90 degrees",
+      "110 degrees"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 70 degrees ہے۔ 180 میں سے 50 اور 60 منفی کرنے پر باقی angle 70 degrees رہ جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Angles of Triangles",
+      "referenceUrl": "https://openstax.org/books/geometry/pages/5-1-angles-of-triangles",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q065",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/geometry/pages/5-1-angles-of-triangles",
+        "label": "Angles of Triangles",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "OpenStax's Triangle Sum Theorem supports calculating the missing angle from a 180-degree total."
+      },
+      {
+        "url": "https://flexbooks.ck12.org/cbook/ck-12-interactive-geometry-for-ccss/section/4.1/primary/lesson/triangle-sum-theorem-geo-ccss/",
+        "label": "Triangle Sum Theorem",
+        "publisher": "CK-12 Foundation",
+        "authorityId": "ck12",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "CK-12 independently supports the same 180-degree subtraction method."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q066-SRC",
+    "pairId": "ADV2E102-U0013-Q066",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A zoo has 200 rabbits and pigeons in total and 580 legs. How many pigeons are there?",
+    "questionUrdu": "ایک zoo میں مجموعی طور پر 200 rabbits اور pigeons ہیں اور legs کی کل تعداد 580 ہے؛ pigeons کتنے ہیں؟",
+    "options": [
+      "90",
+      "100",
+      "120",
+      "110"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 110 ہے۔ rabbits کے 4 اور pigeons کے 2 legs لے کر دو linear equations حل کرنے سے rabbits 90 اور pigeons 110 آتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Solve systems of linear equations with two variables",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/4-1-solve-systems-of-linear-equations-with-two-variables",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q066"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra-2e/pages/4-1-solve-systems-of-linear-equations-with-two-variables",
+        "label": "Solve systems of linear equations with two variables",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the substitution/elimination methods used to solve the two-count system."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/04%3A_Systems_of_Linear_Equations/4.01%3A_Solve_Systems_of_Linear_Equations_with_Two_Variables",
+        "label": "Systems of Linear Equations",
+        "publisher": "LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts independently documents solving two-variable linear systems; solving r+p=200 and 4r+2p=580 gives p=110."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and capitalization were repaired. Solving r + p = 200 and 4r + 2p = 580 gives 90 rabbits and 110 pigeons."
+  },
+  {
+    "id": "ADV2E102-U0013-Q066-SIM",
+    "pairId": "ADV2E102-U0013-Q066",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A farm has 35 chickens and cows in total and 94 legs. How many cows are there?",
+    "questionUrdu": "ایک farm میں 35 chickens اور cows ملا کر 94 legs ہیں؛ cows کتنی ہیں؟",
+    "options": [
+      "12",
+      "17",
+      "23",
+      "29"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 12 ہے۔ اگر cows کو c مانیں تو c+h=35 اور 4c+2h=94 سے 2c=24، یعنی c=12 ملتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve systems of linear equations with two variables",
+      "referenceUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/4-1-solve-systems-of-linear-equations-with-two-variables",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q066",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/intermediate-algebra-2e/pages/4-1-solve-systems-of-linear-equations-with-two-variables",
+        "label": "Solve systems of linear equations with two variables",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "OpenStax supports solving animal-count problems as two-variable linear systems."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/04%3A_Systems_of_Linear_Equations/4.01%3A_Solve_Systems_of_Linear_Equations_with_Two_Variables",
+        "label": "Systems of Linear Equations",
+        "publisher": "LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "LibreTexts independently documents the elimination method used to obtain 12 cows."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q067-SRC",
+    "pairId": "ADV2E102-U0013-Q067",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A school has 286 students with a boys-to-girls ratio of 8:5. If 22 more girls enroll, what is the new boys-to-girls ratio?",
+    "questionUrdu": "ایک school میں 286 students ہیں اور boys-to-girls ratio 8:5 ہے؛ 22 مزید girls آنے پر نیا ratio کیا ہوگا؟",
+    "options": [
+      "4:5",
+      "4:6",
+      "4:3",
+      "3:4"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 4:3 ہے۔ ابتدا میں 176 boys اور 110 girls ہیں؛ 22 girls بڑھنے پر 176:132 بنتا ہے جو 4:3 میں simplify ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and their applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q067"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and their applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains proportional parts and ratio calculations used in the problem."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(OpenStax)/06%3A_Percents/6.05%3A_Solve_Proportions_and_their_Applications",
+        "label": "Solve Proportions",
+        "publisher": "LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts independently documents proportion methods; 286 divided into 8:5 gives 176 boys and 110 girls, then 176:132 simplifies to 4:3."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The wording was modernized. The original counts give 176 boys and 110 girls; after 22 girls enroll, 176:132 reduces to 4:3."
+  },
+  {
+    "id": "ADV2E102-U0013-Q067-SIM",
+    "pairId": "ADV2E102-U0013-Q067",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A class has boys and girls in the ratio 5:4 and 45 students in total. If 5 more girls join, what is the new ratio of boys to girls?",
+    "questionUrdu": "ایک class میں boys-to-girls ratio 5:4 اور کل students 45 ہیں؛ 5 مزید girls آنے پر نیا ratio کیا ہوگا؟",
+    "options": [
+      "1:1",
+      "5:4",
+      "4:5",
+      "5:6"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 1:1 ہے۔ ابتدا میں boys 25 اور girls 20 ہیں؛ پانچ girls کے اضافے سے دونوں کی تعداد 25 ہو جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve proportions and their applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q067",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and their applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "OpenStax's proportional-parts method supports dividing 45 in the ratio 5:4."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/PreAlgebra/Prealgebra_(OpenStax)/06%3A_Percents/6.05%3A_Solve_Proportions_and_their_Applications",
+        "label": "Solve Proportions",
+        "publisher": "LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "LibreTexts independently supports updating and simplifying the resulting 25:25 ratio."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q068-SRC",
+    "pairId": "ADV2E102-U0013-Q068",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If x = 3 is a root of 3x^2 + (k - 1)x + 9 = 0, what is k?",
+    "questionUrdu": "اگر x = 3، equation 3x^2 + (k - 1)x + 9 = 0 کا root ہے تو k کیا ہوگا؟",
+    "options": [
+      "-9",
+      "-11",
+      "-13",
+      "-16"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب -11 ہے۔ x=3 رکھنے سے 27+3k-3+9=0 بنتا ہے، یعنی 3k+33=0 اور k=-11۔",
+    "source": {
+      "type": "book",
+      "label": "The Factor Theorem",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/5-4-dividing-polynomials",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/5-4-dividing-polynomials",
+        "label": "The Factor Theorem",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax states the root/factor substitution principle used to set the polynomial equal to zero at x=3."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/College_Algebra_1e_(OpenStax)/05%3A_Polynomial_and_Rational_Functions/5.04%3A_Dividing_Polynomials",
+        "label": "Factor Theorem",
+        "publisher": "LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts independently explains evaluating a polynomial at a claimed root; substitution yields 3k+33=0 and k=-11."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Mathematical notation was normalized. Substituting x=3 yields 27 + 3(k-1) + 9 = 0, hence k=-11."
+  },
+  {
+    "id": "ADV2E102-U0013-Q068-SIM",
+    "pairId": "ADV2E102-U0013-Q068",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If x = 2 is a root of x^2 + kx - 6 = 0, what is k?",
+    "questionUrdu": "اگر x = 2، equation x^2 + kx - 6 = 0 کا root ہے تو k کیا ہے؟",
+    "options": [
+      "1",
+      "-1",
+      "2",
+      "-2"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 1 ہے۔ x=2 رکھنے سے 4+2k-6=0، پھر 2k=2 اور k=1 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "The Factor Theorem",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/5-4-dividing-polynomials",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/5-4-dividing-polynomials",
+        "label": "The Factor Theorem",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "OpenStax supports substituting a stated root into a polynomial and setting its value to zero."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/College_Algebra_1e_(OpenStax)/05%3A_Polynomial_and_Rational_Functions/5.04%3A_Dividing_Polynomials",
+        "label": "Factor Theorem",
+        "publisher": "LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "LibreTexts independently supports evaluation at x=2, which gives k=1."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q069-SRC",
+    "pairId": "ADV2E102-U0013-Q069",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "For real numbers x and y, what follows from x^2 > y^2?",
+    "questionUrdu": "Real numbers x اور y کے لیے x^2 > y^2 سے کیا نتیجہ نکلتا ہے؟",
+    "options": [
+      "|x| > |y|",
+      "y > x in every case",
+      "x = y",
+      "No conclusion is possible"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب |x| > |y| ہے۔ real numbers کے squares ان کی absolute magnitudes کا موازنہ کرتے ہیں، signs کا نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Absolute value equations",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/2-6-other-types-of-equations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/2-6-other-types-of-equations",
+        "label": "Absolute value equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax relates squares and absolute magnitudes for real numbers."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/02%3A_Solving_Linear_Equations_and_Inequalities/2.07%3A_Solve_Absolute_Value_Inequalities",
+        "label": "Absolute Value Inequalities",
+        "publisher": "LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts explains comparison by absolute value; x squared greater than y squared is equivalent to |x|>|y| for real x and y."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed answer 'x is greater than y' is false when both numbers are negative. The stem was restricted to real numbers and option A corrected to the uniquely valid conclusion |x|>|y|; the verified key remains at index A but its content changes."
+  },
+  {
+    "id": "ADV2E102-U0013-Q069-SIM",
+    "pairId": "ADV2E102-U0013-Q069",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "For real numbers x and y, what follows from x^2 = y^2?",
+    "questionUrdu": "Real numbers x اور y کے لیے x^2 = y^2 ہو تو کیا نتیجہ نکلتا ہے؟",
+    "options": [
+      "x = y or x = -y",
+      "x must equal y only",
+      "x and y must both be positive",
+      "x + y must equal 1"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب x = y or x = -y ہے۔ برابر squares کا مطلب برابر absolute values ہے، اس لیے signs یکساں یا مخالف ہو سکتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Absolute value equations",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/2-6-other-types-of-equations",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/2-6-other-types-of-equations",
+        "label": "Absolute value equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "OpenStax relates equality of real-number squares to equality of absolute values."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/Intermediate_Algebra_1e_(OpenStax)/02%3A_Solving_Linear_Equations_and_Inequalities/2.07%3A_Solve_Absolute_Value_Inequalities",
+        "label": "Absolute Value Inequalities",
+        "publisher": "LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "LibreTexts independently derives x equals plus or minus y from x squared equals y squared."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q071-SRC",
+    "pairId": "ADV2E102-U0013-Q071",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the next term in the geometric sequence 2, 4, 8, 16, ...?",
+    "questionUrdu": "Geometric sequence 2, 4, 8, 16, ... کا اگلا term کیا ہے؟",
+    "options": [
+      "64",
+      "32",
+      "42",
+      "81"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 32 ہے۔ ہر term کو 2 سے multiply کرنے پر اگلا term بنتا ہے، اس لیے 16 کے بعد 32 آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Geometric Sequences",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/9-3-geometric-sequences",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/9-3-geometric-sequences",
+        "label": "Geometric Sequences",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines a geometric sequence by a constant common ratio; here each term is multiplied by 2."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/College_Algebra_1e_(OpenStax)/09%3A_Sequences_Probability_and_Counting_Theory/9.03%3A_Geometric_Sequences",
+        "label": "Geometric Sequences",
+        "publisher": "LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts independently gives the common-ratio method; 16 multiplied by 2 is 32."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The sequence type was identified as geometric; multiplying each term by 2 gives 32."
+  },
+  {
+    "id": "ADV2E102-U0013-Q071-SIM",
+    "pairId": "ADV2E102-U0013-Q071",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the common ratio of the geometric sequence 3, 9, 27, 81, ...?",
+    "questionUrdu": "Geometric sequence 3, 9, 27, 81, ... کا common ratio کیا ہے؟",
+    "options": [
+      "3",
+      "2",
+      "6",
+      "9"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 3 ہے۔ ہر term پچھلے term کو 3 سے multiply کرنے پر بنتا ہے، لہٰذا common ratio 3 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Geometric Sequences",
+      "referenceUrl": "https://openstax.org/books/college-algebra-2e/pages/9-3-geometric-sequences",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/9-3-geometric-sequences",
+        "label": "Geometric Sequences",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "OpenStax defines the common ratio as the quotient of consecutive geometric-sequence terms."
+      },
+      {
+        "url": "https://math.libretexts.org/Bookshelves/Algebra/College_Algebra_1e_(OpenStax)/09%3A_Sequences_Probability_and_Counting_Theory/9.03%3A_Geometric_Sequences",
+        "label": "Geometric Sequences",
+        "publisher": "LibreTexts",
+        "authorityId": "libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "LibreTexts independently shows that 9 divided by 3 and 27 divided by 9 both equal 3."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q072-SRC",
+    "pairId": "ADV2E102-U0013-Q072",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the correct passive form of: 'They would not agree to my proposal.'",
+    "questionUrdu": "درست passive form منتخب کریں: 'They would not agree to my proposal.'",
+    "options": [
+      "My proposal would not be agreed by them.",
+      "My proposal would not be agreed to by them.",
+      "My proposal will not be agreed by them.",
+      "My proposal will not be agreed to by them."
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب My proposal would not be agreed to by them ہے۔ passive بناتے وقت modal would برقرار رہتا اور phrasal construction agree to کا preposition بھی نہیں ہٹتا۔",
+    "source": {
+      "type": "book",
+      "label": "Passive voice",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/passive-voice",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-voice",
+        "label": "Passive voice",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-grammar",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains passive formation with the appropriate form of be plus past participle and retention of required prepositions."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/active-passive-voice",
+        "label": "Active and passive voice",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently documents preserving tense and forming passive clauses; 'agree to' retains to."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Punctuation was standardized. The modal would is retained and the phrasal/prepositional verb agree to keeps its preposition in the passive."
+  },
+  {
+    "id": "ADV2E102-U0013-Q072-SIM",
+    "pairId": "ADV2E102-U0013-Q072",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Choose the correct passive form of: 'The committee will look into the matter.'",
+    "questionUrdu": "درست passive form منتخب کریں: 'The committee will look into the matter.'",
+    "options": [
+      "The matter will be looked into by the committee.",
+      "The matter will look into by the committee.",
+      "The committee will be looked into the matter.",
+      "The matter is looked by the committee."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The matter will be looked into by the committee ہے۔ passive میں will کے بعد be اور past participle looked آتا ہے، جبکہ look into کا into برقرار رہتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Passive voice",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/passive-voice",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-voice",
+        "label": "Passive voice",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-grammar",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge grammar supports retaining required prepositions when a prepositional verb is made passive."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/active-passive-voice",
+        "label": "Active and passive voice",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The British Council independently supports will + be + past participle in future passive clauses."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q073-SRC",
+    "pairId": "ADV2E102-U0013-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to 'homogeneous'?",
+    "questionUrdu": "'Homogeneous' کے قریب ترین معنی والا لفظ کون سا ہے؟",
+    "options": [
+      "Different",
+      "Dissimilar",
+      "Similar",
+      "Indifferent"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Similar ہے۔ homogeneous ایسی چیز کو کہتے ہیں جس کے حصے یکساں یا ایک ہی نوعیت کے ہوں۔",
+    "source": {
+      "type": "book",
+      "label": "homogeneous",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/homogeneous",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/homogeneous",
+        "label": "homogeneous",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines homogeneous as consisting of parts that are the same or similar."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/homogeneous",
+        "label": "homogeneous",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines homogeneous in terms of sameness or uniformity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source misspelling 'Homogenous' was corrected to homogeneous and the stem made grammatical."
+  },
+  {
+    "id": "ADV2E102-U0013-Q073-SIM",
+    "pairId": "ADV2E102-U0013-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is the closest antonym of 'homogeneous'?",
+    "questionUrdu": "'Homogeneous' کا قریب ترین antonym کون سا ہے؟",
+    "options": [
+      "Heterogeneous",
+      "Uniform",
+      "Similar",
+      "Consistent"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Heterogeneous ہے۔ یہ ایسے مجموعے کو ظاہر کرتا ہے جس کے اجزا مختلف اقسام یا خصوصیات رکھتے ہوں۔",
+    "source": {
+      "type": "practice",
+      "label": "homogeneous",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/homogeneous",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/homogeneous",
+        "label": "homogeneous",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge contrasts homogeneous composition with heterogeneous composition."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/homogeneous",
+        "label": "homogeneous",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Merriam-Webster independently identifies heterogeneous as the standard contrast to homogeneous."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q074-SRC",
+    "pairId": "ADV2E102-U0013-Q074",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which word is an antonym of 'coarse' when it means rough in texture?",
+    "questionUrdu": "Texture کے معنی میں 'coarse' کا antonym کون سا لفظ ہے؟",
+    "options": [
+      "Rough",
+      "Boorish",
+      "Churlish",
+      "Delicate"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Delicate ہے۔ coarse کسی rough یا سخت texture کو ظاہر کرتا ہے، جبکہ delicate باریک اور نرم کیفیت بتاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "coarse",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/coarse",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/coarse",
+        "label": "coarse",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines coarse texture as rough rather than smooth or delicate."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/coarse",
+        "label": "coarse",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines coarse as rough or harsh in texture, supporting delicate as the listed contrast."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The intended texture sense was stated because coarse also has a manners sense; delicate is the unique listed antonym in that scope."
+  },
+  {
+    "id": "ADV2E102-U0013-Q074-SIM",
+    "pairId": "ADV2E102-U0013-Q074",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to 'coarse' when describing a surface?",
+    "questionUrdu": "Surface کی کیفیت کے لیے 'coarse' کے قریب ترین معنی والا لفظ کون سا ہے؟",
+    "options": [
+      "Rough",
+      "Polished",
+      "Silky",
+      "Fragile"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Rough ہے۔ surface کے لیے coarse کا مطلب کھردرا یا غیر ہموار ہوتا ہے، نہ کہ polished یا silky۔",
+    "source": {
+      "type": "practice",
+      "label": "coarse",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/coarse",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/coarse",
+        "label": "coarse",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge defines a coarse surface as rough rather than smooth."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/coarse",
+        "label": "coarse",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Merriam-Webster independently defines coarse texture as rough or harsh."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0013-Q075-SRC",
+    "pairId": "ADV2E102-U0013-Q075",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to 'viable' when describing a plan?",
+    "questionUrdu": "Plan کے لیے 'viable' کے قریب ترین معنی والا لفظ کون سا ہے؟",
+    "options": [
+      "Feasible",
+      "Impracticable",
+      "Impossible",
+      "Unworkable"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Feasible ہے۔ viable plan وہ ہوتا ہے جو عملی طور پر کام کر سکے اور کامیابی کا مناسب امکان رکھتا ہو۔",
+    "source": {
+      "type": "book",
+      "label": "viable",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/viable",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/viable",
+        "label": "viable",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a viable plan as capable of working successfully."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/viable",
+        "label": "viable",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines viable as capable of working, functioning or succeeding; feasible is the closest choice."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed 'reasonable' answer is only approximate and the source distractors overlap. The sense was scoped to a plan and option A corrected to the precise synonym feasible."
+  },
+  {
+    "id": "ADV2E102-U0013-Q075-SIM",
+    "pairId": "ADV2E102-U0013-Q075",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to 'nonviable' when describing a plan?",
+    "questionUrdu": "Plan کے لیے 'nonviable' کے قریب ترین معنی والا لفظ کون سا ہے؟",
+    "options": [
+      "Unworkable",
+      "Practical",
+      "Feasible",
+      "Promising"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Unworkable ہے۔ nonviable plan ایسا منصوبہ ہے جو قابلِ عمل یا کامیاب ہونے کے قابل نہ ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "viable",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/viable",
+      "accessedOn": "2026-08-27"
+    },
+    "tags": [
+      "adv2e102",
+      "u0013-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/viable",
+        "label": "viable",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge's definition of viable supports nonviable as not capable of working successfully."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/viable",
+        "label": "viable",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-27",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Merriam-Webster independently supports unworkable as the relevant opposite of viable."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

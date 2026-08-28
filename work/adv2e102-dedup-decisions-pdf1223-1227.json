@@ -704,10 +704,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0169-Q030",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0009-Q027",
+    "reason": "Earlier-source-order U0009 asks the identical government that referred Kashmir to the UN Security Council in January 1948 and answers India.",
     "testedProposition": "Which government formally referred the Jammu and Kashmir situation to the United Nations Security Council by a letter dated 1 January 1948? Correct answer: India.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -729,7 +729,8 @@
         "ADV2E102-U0021-Q004-SIM",
         "ADV2E102-U0032-Q058-SRC",
         "ADV2E102-U0041-Q003-SRC",
-        "ADV2E102-U0101-Q005-SRC"
+        "ADV2E102-U0101-Q005-SRC",
+        "ADV2E102-U0009-Q027"
       ],
       "answerConflictReviewed": true
     }
@@ -881,10 +882,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0169-Q037",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found that surfaced candidates share a topic, entity, date, answer word, grammar family, or mathematical form but test a genuinely different fact; this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0006-Q035",
+    "reason": "The earlier source-order U0006 canonical already identifies H5N1 as an influenza virus, and its paired practice item explains the H and N surface-protein names.",
     "testedProposition": "Which influenza subtype is primarily an avian influenza virus but can occasionally infect humans? Correct answer: H5N1 avian influenza.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -902,7 +903,8 @@
         "IBES-Q0200-SIM",
         "IBES-Q0364-SRC",
         "IBES-Q0618-SIM",
-        "IBES-Q1204-SRC"
+        "IBES-Q1204-SRC",
+        "ADV2E102-U0006-Q035"
       ],
       "answerConflictReviewed": true
     }

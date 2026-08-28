@@ -141,10 +141,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0034-Q008",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review against the pinned baseline and completed ADV canonicals found no exact or semantic repeat, so this verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0013-Q043",
+    "reason": "The earlier-source-order U0013 canonical already tests the same Cripps Mission arrival-year proposition and gives 1942.",
     "testedProposition": "Which country became the first to make all nationwide public transport free from 2020? Correct answer: Luxembourg.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -155,7 +155,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q043"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -224,10 +226,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0034-Q012",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review against the pinned baseline and completed ADV canonicals found no exact or semantic repeat, so this verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0023-Q053",
+    "reason": "The earlier-source-order U0023 canonical already asks which is Pakistan's highest civil award and gives Nishan-e-Pakistan; this later wording tests the identical proposition.",
     "testedProposition": "Which of the following is Pakistan's highest civil award? Correct answer: Nishan-e-Pakistan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -238,7 +240,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0023-Q053"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -349,10 +353,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0034-Q018",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review against the pinned baseline and completed ADV canonicals found no exact or semantic repeat, so this verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0022-Q088",
+    "reason": "The earlier U0022 source already identifies Hujjat Allah al-Baligha as Shah Waliullah's work translated as The Conclusive Argument from God; this later row tests the same proposition.",
     "testedProposition": "Which work by Shah Waliullah is commonly translated as 'The Conclusive Argument from God'? Correct answer: Hujjat Allah al-Baligha.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -363,7 +367,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q088"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -589,10 +595,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0034-Q030",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "A later practice item repeats Sir Syed's founding of the Muhammadan Anglo-Oriental College, but this earlier source is canonical and the later SIM will be revised.",
+    "duplicateOf": "ADV2E102-U0022-Q043",
+    "reason": "The earlier U0022 source already asks who founded the Muhammadan Anglo-Oriental College and gives Sir Syed Ahmad Khan; this later row tests the same proposition.",
     "testedProposition": "Who founded the Muhammadan Anglo-Oriental College at Aligarh in 1877? Correct answer: Sir Syed Ahmad Khan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -603,7 +609,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q043"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1154,10 +1162,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0034-Q057",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review against the pinned baseline and completed ADV canonicals found no exact or semantic repeat, so this verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0014-Q063",
+    "reason": "Earlier source-order U0014 Q63 already tests the identical study-and-tracing-of-family-ancestry proposition and answers genealogy.",
     "testedProposition": "What is the study and tracing of family ancestry called? Correct answer: Genealogy.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1168,7 +1176,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0014-Q063"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1515,10 +1525,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0034-Q074",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review against the pinned baseline and completed ADV canonicals found no exact or semantic repeat, so this verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0014-Q078",
+    "reason": "Earlier source-order U0014 Q78 already tests the identical completion of the proverb 'Do not judge a book by its cover'.",
     "testedProposition": "Complete the proverb: 'Do not judge a book by its ___.'' Correct answer: cover.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1529,7 +1539,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0014-Q078"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1862,10 +1874,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0034-Q091",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review against the pinned baseline and completed ADV canonicals found no exact or semantic repeat, so this verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0007-Q052",
+    "reason": "Earlier U0007 Q52 already tests the documented identification of Muhammad Quli Qutb Shah as the first sahib-e-diwan Urdu poet.",
     "testedProposition": "Who is conventionally identified in Urdu literary history as the first sahib-e-diwan Urdu poet? Correct answer: Muhammad Quli Qutb Shah.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1876,16 +1888,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q052"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0034-Q092",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review against the pinned baseline and completed ADV canonicals found no exact or semantic repeat, so this verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0009-Q095",
+    "reason": "Earlier-source-order U0009 asks the identical first-martyr-of-Islam proposition and answers Sumayyah bint Khayyat.",
     "testedProposition": "Who is traditionally recognized as the first martyr of the Muslim community? Correct answer: Sumayyah bint Khayyat.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1896,7 +1910,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0009-Q095"
+      ],
       "answerConflictReviewed": true
     }
   },
