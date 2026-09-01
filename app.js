@@ -2,10 +2,9 @@
   "use strict";
 
   var OPTION_LABELS = ["A", "B", "C", "D"];
-  var PART_SIZE = 50;
   var DIFFICULT_STORAGE_KEY = "ppsc-prep:difficult-question-ids:v1";
   var SESSION_STORAGE_KEY = "ppsc-prep:active-session:v1";
-  var SESSION_STORAGE_VERSION = 3;
+  var SESSION_STORAGE_VERSION = 4;
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
@@ -26,9 +25,10 @@
     questions: [],
     mode: null,
     scope: "all",
-    partIndex: 0,
+    partIndex: null,
     importantOnly: false,
     responses: [],
+    learnVisitedQuestionIds: new Set(),
     currentIndex: 0,
     selectedIndex: null,
     submitted: false,
@@ -57,7 +57,6 @@
     elements.continueSessionTitle = firstElement(["#continue-session-title", "[data-continue-session-title]"]);
     elements.continueSessionMeta = firstElement(["#continue-session-meta", "[data-continue-session-meta]"]);
     elements.modeCategory = firstElement(["#mode-category", "[data-mode-category]"]);
-    elements.partSelect = firstElement(["#part-select", "[data-part-select]"]);
     elements.importantOnlyCheckbox = firstElement(["#important-only-checkbox", "[data-important-only]"]);
     elements.importantCount = firstElement(["#important-count", "[data-important-count]"]);
     elements.studyScopeSummary = firstElement(["#study-scope-summary", "[data-study-scope-summary]"]);
@@ -87,6 +86,8 @@
     elements.difficultCheckbox = firstElement(["#difficult-checkbox", "[data-difficult-checkbox]"]);
     elements.difficultStatus = firstElement(["#difficult-mark-status", "#difficult-status", "[data-difficult-status]"]);
     elements.questionCounter = firstElement(["#question-counter", "[data-question-counter]"]);
+    elements.questionNumberInput = firstElement(["#question-number-input", "[data-question-number-input]"]);
+    elements.questionTotal = firstElement(["#question-total", "[data-question-total]"]);
     elements.progressText = firstElement(["#progress-text", "[data-progress-text]"]);
     elements.progressBar = firstElement(["#progress-bar", "#progress-fill", "[data-progress-bar]"]);
     elements.scoreText = firstElement(["#score-text", "[data-score-text]"]);
@@ -145,8 +146,7 @@
   }
 
   function sessionSelectionLabel(partIndex, importantOnly) {
-    var partLabel = partIndex === null ? "All Questions" : "Part " + (partIndex + 1);
-    return importantOnly ? partLabel + " · Important" : partLabel;
+    return importantOnly ? "All Important Questions" : "All Questions";
   }
 
   function scoreForResponses(responses, questions) {
@@ -196,18 +196,17 @@
 
   function normalizeStoredSession(savedValue) {
     if (!savedValue || typeof savedValue !== "object" || Array.isArray(savedValue)) return null;
-    if (![1, 2, SESSION_STORAGE_VERSION].includes(savedValue.version)) return null;
+    if (savedValue.version !== SESSION_STORAGE_VERSION) return null;
     if (savedValue.bankSignature !== questionBankSignature) return null;
     if (savedValue.mode !== "learn" && savedValue.mode !== "quiz") return null;
     if (savedValue.scope !== "all" && savedValue.scope !== "difficult") return null;
 
     var category = findCategory(String(savedValue.categoryId || ""));
     if (!category) return null;
-    var isLegacyFullCategorySession = savedValue.version === 1;
-    var partIndex = isLegacyFullCategorySession ? null : savedValue.partIndex;
-    if (partIndex !== null && (!Number.isInteger(partIndex) || partIndex < 0 || partIndex >= partCount(category.id))) return null;
-    if (!isLegacyFullCategorySession && typeof savedValue.importantOnly !== "boolean") return null;
-    var importantOnly = isLegacyFullCategorySession ? false : savedValue.importantOnly;
+    if (savedValue.partIndex !== null) return null;
+    var partIndex = null;
+    if (typeof savedValue.importantOnly !== "boolean") return null;
+    var importantOnly = savedValue.importantOnly;
     if (!Array.isArray(savedValue.questionIds) || savedValue.questionIds.length === 0) return null;
 
     var questionIds = savedValue.questionIds.map(String);
@@ -264,12 +263,17 @@
     if (!Number.isInteger(score) || score < 0) return null;
 
     var responses = new Array(sessionQuestions.length).fill(null);
+    var learnVisitedQuestionIds = new Set();
     if (savedValue.mode === "learn") {
+      if (!Array.isArray(savedValue.learnVisitedQuestionIds)) return null;
+      var visitedQuestionIds = savedValue.learnVisitedQuestionIds.map(String);
+      if (new Set(visitedQuestionIds).size !== visitedQuestionIds.length) return null;
+      if (visitedQuestionIds.some(function (questionId) { return !questionIds.includes(questionId); })) return null;
+      if (!visitedQuestionIds.includes(questionIds[currentIndex])) return null;
+      learnVisitedQuestionIds = new Set(visitedQuestionIds);
       if (!submitted || score !== 0 || selectedIndex !== sessionQuestions[currentIndex].correctOptionIndex) return null;
     } else {
-      // Older snapshots did not retain prior answers, so they cannot safely
-      // support backward navigation without risking an incorrect score.
-      if (savedValue.version !== SESSION_STORAGE_VERSION) return null;
+      if (savedValue.learnVisitedQuestionIds !== null) return null;
       if (!Array.isArray(savedValue.answerHistory) || savedValue.answerHistory.length !== sessionQuestions.length) return null;
       responses = savedValue.answerHistory.map(function (entry) {
         if (entry === null) return null;
@@ -301,6 +305,7 @@
       answerHistory: savedValue.mode === "quiz" ? responses.map(function (response) {
         return response ? [response.selectedIndex, response.submitted] : null;
       }) : null,
+      learnVisitedQuestionIds: savedValue.mode === "learn" ? Array.from(learnVisitedQuestionIds) : null,
       currentIndex: currentIndex,
       selectedIndex: selectedIndex,
       submitted: submitted,
@@ -308,7 +313,13 @@
       savedAt: Number.isFinite(savedValue.savedAt) ? savedValue.savedAt : 0
     };
 
-    return { snapshot: snapshot, category: category, questions: sessionQuestions, responses: responses };
+    return {
+      snapshot: snapshot,
+      category: category,
+      questions: sessionQuestions,
+      responses: responses,
+      learnVisitedQuestionIds: learnVisitedQuestionIds
+    };
   }
 
   function loadActiveSession() {
@@ -377,12 +388,17 @@
       categoryId: state.category.id,
       mode: state.mode,
       scope: state.scope,
-      partIndex: state.partIndex,
+      partIndex: null,
       importantOnly: state.importantOnly,
       questionIds: state.questions.map(function (question) { return String(question.id); }),
       optionOrders: optionOrders,
       answerHistory: state.mode === "quiz" ? state.responses.map(function (response) {
         return response ? [response.selectedIndex, response.submitted] : null;
+      }) : null,
+      learnVisitedQuestionIds: state.mode === "learn" ? state.questions.filter(function (question) {
+        return state.learnVisitedQuestionIds.has(String(question.id));
+      }).map(function (question) {
+        return String(question.id);
       }) : null,
       currentIndex: state.currentIndex,
       selectedIndex: state.selectedIndex,
@@ -418,6 +434,7 @@
     state.partIndex = normalized.snapshot.partIndex;
     state.importantOnly = normalized.snapshot.importantOnly;
     state.responses = normalized.responses;
+    state.learnVisitedQuestionIds = normalized.learnVisitedQuestionIds;
     state.currentIndex = normalized.snapshot.currentIndex;
     state.selectedIndex = normalized.snapshot.selectedIndex;
     state.submitted = normalized.snapshot.submitted;
@@ -475,15 +492,8 @@
     });
   }
 
-  function partCount(categoryId) {
-    return Math.ceil(categoryQuestions(categoryId).length / PART_SIZE);
-  }
-
   function baseQuestionsForSelection(categoryId, partIndex) {
-    var questions = categoryQuestions(categoryId);
-    if (partIndex === null) return questions;
-    var start = partIndex * PART_SIZE;
-    return questions.slice(start, start + PART_SIZE);
+    return categoryQuestions(categoryId);
   }
 
   function questionsForSelection(categoryId, partIndex, importantOnly) {
@@ -689,27 +699,6 @@
   }
 
   function populateStudyScopeUI(categoryId) {
-    var total = questionCount(categoryId);
-    var totalParts = partCount(categoryId);
-
-    if (elements.partSelect) {
-      elements.partSelect.textContent = "";
-      for (var index = 0; index < totalParts; index += 1) {
-        var start = (index * PART_SIZE) + 1;
-        var end = Math.min((index + 1) * PART_SIZE, total);
-        var option = document.createElement("option");
-        option.value = String(index);
-        option.textContent = "Part " + (index + 1) + " · Questions " + start + "–" + end;
-        elements.partSelect.appendChild(option);
-      }
-
-      var allOption = document.createElement("option");
-      allOption.value = "all";
-      allOption.textContent = "All Questions · " + total;
-      elements.partSelect.appendChild(allOption);
-      elements.partSelect.value = state.partIndex === null ? "all" : String(state.partIndex);
-    }
-
     if (elements.importantOnlyCheckbox) {
       elements.importantOnlyCheckbox.checked = state.importantOnly;
       elements.importantOnlyCheckbox.disabled = importantQuestionCount(categoryId) === 0;
@@ -722,9 +711,8 @@
 
     var categoryId = state.category.id;
     var allInCategory = categoryQuestions(categoryId);
-    var baseQuestions = baseQuestionsForSelection(categoryId, state.partIndex);
-    var importantInSelection = baseQuestions.filter(isImportantQuestion).length;
-    var selectedQuestions = questionsForSelection(categoryId, state.partIndex, state.importantOnly);
+    var importantInSelection = allInCategory.filter(isImportantQuestion).length;
+    var selectedQuestions = questionsForSelection(categoryId, null, state.importantOnly);
     var selectionLabel = sessionSelectionLabel(state.partIndex, state.importantOnly);
 
     if (elements.modeCategory) {
@@ -732,21 +720,13 @@
     }
     if (elements.importantCount) {
       elements.importantCount.textContent = importantInSelection + (importantInSelection === 1
-        ? " repeated MCQ in this selection"
-        : " repeated MCQs in this selection");
+        ? " repeated MCQ in this category"
+        : " repeated MCQs in this category");
     }
     if (elements.studyScopeSummary) {
-      if (state.partIndex === null) {
-        elements.studyScopeSummary.textContent = "All " + allInCategory.length + " questions selected";
-      } else {
-        var start = (state.partIndex * PART_SIZE) + 1;
-        var end = Math.min((state.partIndex + 1) * PART_SIZE, allInCategory.length);
-        elements.studyScopeSummary.textContent = "Part " + (state.partIndex + 1) + " covers questions "
-          + start + "–" + end + " of " + allInCategory.length;
-      }
-      if (state.importantOnly) {
-        elements.studyScopeSummary.textContent += " · " + selectedQuestions.length + " important selected";
-      }
+      elements.studyScopeSummary.textContent = state.importantOnly
+        ? "All " + selectedQuestions.length + " important questions selected"
+        : "All " + allInCategory.length + " questions selected";
     }
 
     var hasSelectedQuestions = selectedQuestions.length > 0;
@@ -902,9 +882,10 @@
     state.questions = [];
     state.mode = null;
     state.scope = "all";
-    state.partIndex = 0;
+    state.partIndex = null;
     state.importantOnly = false;
     state.responses = [];
+    state.learnVisitedQuestionIds = new Set();
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -1029,7 +1010,8 @@
   function startQuiz(categoryId, mode, scope) {
     var category = findCategory(categoryId);
     var selectedScope = scope === "difficult" ? "difficult" : "all";
-    var filteredQuestions = questionsForSelection(categoryId, state.partIndex, state.importantOnly).filter(function (question) {
+    state.partIndex = null;
+    var filteredQuestions = questionsForSelection(categoryId, null, state.importantOnly).filter(function (question) {
       return selectedScope !== "difficult" || difficultQuestionIds.has(String(question.id));
     });
 
@@ -1041,6 +1023,7 @@
         state.mode = null;
         state.scope = "difficult";
         state.responses = [];
+        state.learnVisitedQuestionIds = new Set();
         state.currentIndex = 0;
         state.selectedIndex = null;
         state.submitted = false;
@@ -1083,6 +1066,7 @@
     state.mode = selectedMode;
     state.scope = selectedScope;
     state.responses = new Array(sessionQuestions.length).fill(null);
+    state.learnVisitedQuestionIds = new Set();
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -1096,6 +1080,21 @@
 
   function currentQuestion() {
     return state.questions[state.currentIndex] || null;
+  }
+
+  function firstUnvisitedLearnQuestionIndex() {
+    for (var index = 0; index < state.questions.length; index += 1) {
+      if (!state.learnVisitedQuestionIds.has(String(state.questions[index].id))) return index;
+    }
+    return -1;
+  }
+
+  function firstUnansweredQuizQuestionIndex() {
+    for (var index = 0; index < state.questions.length; index += 1) {
+      var response = Array.isArray(state.responses) ? state.responses[index] : null;
+      if (!response || !response.submitted) return index;
+    }
+    return -1;
   }
 
   function normalizeOption(option, index) {
@@ -1167,13 +1166,20 @@
       }
       if (elements.actionButton) {
         var isLast = state.currentIndex === state.questions.length - 1;
+        var nextUnansweredIndex = isLast && state.submitted
+          ? firstUnansweredQuizQuestionIndex()
+          : -1;
         setHidden(elements.actionButton, false);
         elements.actionButton.textContent = state.submitted
-          ? (isLast ? "View Results" : "Next Question")
+          ? (isLast
+            ? (nextUnansweredIndex >= 0 ? "Next Unanswered" : "View Results")
+            : "Next Question")
           : "Check Answer";
         elements.actionButton.disabled = false;
         elements.actionButton.dataset.action = state.submitted
-          ? (isLast ? "results" : "next")
+          ? (isLast
+            ? (nextUnansweredIndex >= 0 ? "next-unanswered" : "results")
+            : "next")
           : "check";
       }
     }
@@ -1227,6 +1233,10 @@
   }
 
   function prepareLearnQuestion(question) {
+    if (!(state.learnVisitedQuestionIds instanceof Set)) {
+      state.learnVisitedQuestionIds = new Set();
+    }
+    state.learnVisitedQuestionIds.add(String(question.id));
     state.selectedIndex = question.correctOptionIndex;
 
     if (elements.optionsList) {
@@ -1245,10 +1255,15 @@
 
     if (elements.actionButton) {
       var isLast = state.currentIndex === state.questions.length - 1;
+      var nextUnvisitedIndex = isLast ? firstUnvisitedLearnQuestionIndex() : -1;
       setHidden(elements.actionButton, false);
-      elements.actionButton.textContent = isLast ? "Finish Learning" : "Next Question";
+      elements.actionButton.textContent = isLast
+        ? (nextUnvisitedIndex >= 0 ? "Next Unvisited" : "Finish Learning")
+        : "Next Question";
       elements.actionButton.disabled = false;
-      elements.actionButton.dataset.action = isLast ? "results" : "next";
+      elements.actionButton.dataset.action = isLast
+        ? (nextUnvisitedIndex >= 0 ? "next-unvisited" : "results")
+        : "next";
     }
   }
 
@@ -1276,13 +1291,22 @@
       return;
     }
 
+    storeCurrentResponse();
     if (state.currentIndex >= state.questions.length - 1) {
+      var pendingIndex = state.mode === "learn"
+        ? firstUnvisitedLearnQuestionIndex()
+        : firstUnansweredQuizQuestionIndex();
+      if (pendingIndex >= 0) {
+        state.currentIndex = pendingIndex;
+        renderQuestion();
+        return;
+      }
       showResults();
-    } else {
-      storeCurrentResponse();
-      state.currentIndex += 1;
-      renderQuestion();
+      return;
     }
+
+    state.currentIndex += 1;
+    renderQuestion();
   }
 
   function handlePrevious() {
@@ -1290,6 +1314,38 @@
     storeCurrentResponse();
     state.currentIndex -= 1;
     renderQuestion();
+  }
+
+  function handleQuestionNumberJump() {
+    if (!elements.questionNumberInput || state.questions.length === 0) return false;
+
+    var rawValue = String(elements.questionNumberInput.value || "").trim();
+    var requestedNumber = Number(rawValue);
+    var isValid = /^\d+$/.test(rawValue)
+      && Number.isInteger(requestedNumber)
+      && requestedNumber >= 1
+      && requestedNumber <= state.questions.length;
+
+    if (!isValid) {
+      elements.questionNumberInput.value = String(state.currentIndex + 1);
+      if (typeof elements.questionNumberInput.setCustomValidity === "function") {
+        elements.questionNumberInput.setCustomValidity(
+          "Enter a whole number from 1 to " + state.questions.length + "."
+        );
+      }
+      if (typeof elements.questionNumberInput.reportValidity === "function") {
+        elements.questionNumberInput.reportValidity();
+      }
+      return false;
+    }
+
+    if (typeof elements.questionNumberInput.setCustomValidity === "function") {
+      elements.questionNumberInput.setCustomValidity("");
+    }
+    storeCurrentResponse();
+    state.currentIndex = requestedNumber - 1;
+    renderQuestion();
+    return true;
   }
 
   function submitAnswer() {
@@ -1311,8 +1367,13 @@
 
     if (elements.actionButton) {
       var isLast = state.currentIndex === state.questions.length - 1;
-      elements.actionButton.textContent = isLast ? "View Results" : "Next Question";
-      elements.actionButton.dataset.action = isLast ? "results" : "next";
+      var nextUnansweredIndex = isLast ? firstUnansweredQuizQuestionIndex() : -1;
+      elements.actionButton.textContent = isLast
+        ? (nextUnansweredIndex >= 0 ? "Next Unanswered" : "View Results")
+        : "Next Question";
+      elements.actionButton.dataset.action = isLast
+        ? (nextUnansweredIndex >= 0 ? "next-unanswered" : "results")
+        : "next";
       elements.actionButton.focus({ preventScroll: true });
     }
     saveActiveSession();
@@ -1403,8 +1464,25 @@
     var number = Math.min(state.currentIndex + 1, total);
     var percent = total > 0 ? Math.round((number / total) * 100) : 0;
 
-    if (elements.questionCounter) {
+    if (elements.questionCounter && !elements.questionNumberInput) {
       elements.questionCounter.textContent = "Question " + number + " of " + total;
+    }
+    if (elements.questionNumberInput) {
+      if (typeof elements.questionNumberInput.setCustomValidity === "function") {
+        elements.questionNumberInput.setCustomValidity("");
+      }
+      elements.questionNumberInput.value = String(number);
+      elements.questionNumberInput.min = "1";
+      elements.questionNumberInput.max = String(total);
+      elements.questionNumberInput.step = "1";
+      elements.questionNumberInput.disabled = total === 0;
+      elements.questionNumberInput.setAttribute(
+        "aria-label",
+        "Go to question " + number + " of " + total
+      );
+    }
+    if (elements.questionTotal) {
+      elements.questionTotal.textContent = String(total);
     }
     if (elements.progressText) {
       elements.progressText.textContent = number + " / " + total;
@@ -1440,11 +1518,11 @@
     var scoreCaption = elements.resultScore && elements.resultScore.parentElement
       ? elements.resultScore.parentElement.querySelector("span")
       : null;
-    if (scoreCaption) scoreCaption.textContent = state.mode === "learn" ? "Learned" : "Correct";
+    if (scoreCaption) scoreCaption.textContent = state.mode === "learn" ? "Questions" : "Correct";
     if (elements.resultScore && elements.resultScore.parentElement) {
       elements.resultScore.parentElement.setAttribute(
         "aria-label",
-        state.mode === "learn" ? "Questions learned" : "Final score"
+        state.mode === "learn" ? "Questions in learning set" : "Final score"
       );
     }
     if (elements.playAgainButton) {
@@ -1462,10 +1540,10 @@
     if (elements.resultSummary && !canRepeatScope) {
       elements.resultSummary.textContent = "You removed all difficult marks in this category. Mark a question again before starting another difficult session.";
     } else if (elements.resultSummary && state.mode === "learn" && state.scope === "difficult") {
-      elements.resultSummary.textContent = "You studied " + total + " questions from this difficult session. The quiz will use "
+      elements.resultSummary.textContent = "This difficult learning set contains " + total + " questions. The quiz will use "
         + remainingInScope + (remainingInScope === 1 ? " question" : " questions") + " still marked difficult.";
     } else if (elements.resultSummary && state.mode === "learn") {
-      elements.resultSummary.textContent = "You studied all " + total + " questions in "
+      elements.resultSummary.textContent = "This learning set contains " + total + " questions in "
         + sessionSelectionLabel(state.partIndex, state.importantOnly) + ". Now test yourself with the quiz.";
     } else if (elements.resultSummary) {
       elements.resultSummary.textContent = resultMessage(percent);
@@ -1504,9 +1582,10 @@
     state.questions = [];
     state.mode = null;
     state.scope = "all";
-    state.partIndex = 0;
+    state.partIndex = null;
     state.importantOnly = false;
     state.responses = [];
+    state.learnVisitedQuestionIds = new Set();
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -1537,12 +1616,6 @@
 
   function bindEvents() {
     if (elements.categoryGrid) elements.categoryGrid.addEventListener("click", onCategoryClick);
-    if (elements.partSelect) {
-      elements.partSelect.addEventListener("change", function () {
-        state.partIndex = elements.partSelect.value === "all" ? null : Number(elements.partSelect.value);
-        updateStudyScopeUI();
-      });
-    }
     if (elements.importantOnlyCheckbox) {
       elements.importantOnlyCheckbox.addEventListener("change", function () {
         state.importantOnly = elements.importantOnlyCheckbox.checked;
@@ -1581,6 +1654,19 @@
     if (elements.modeBackButton) elements.modeBackButton.addEventListener("click", returnToCategories);
     if (elements.optionsList) elements.optionsList.addEventListener("click", onOptionClick);
     if (elements.previousButton) elements.previousButton.addEventListener("click", handlePrevious);
+    if (elements.questionNumberInput) {
+      elements.questionNumberInput.addEventListener("input", function () {
+        if (typeof elements.questionNumberInput.setCustomValidity === "function") {
+          elements.questionNumberInput.setCustomValidity("");
+        }
+      });
+      elements.questionNumberInput.addEventListener("change", handleQuestionNumberJump);
+      elements.questionNumberInput.addEventListener("keydown", function (event) {
+        if (event.key !== "Enter") return;
+        event.preventDefault();
+        handleQuestionNumberJump();
+      });
+    }
     if (elements.actionButton) elements.actionButton.addEventListener("click", handleAction);
     if (elements.backButton) elements.backButton.addEventListener("click", returnToCategories);
     if (elements.restartButton) elements.restartButton.addEventListener("click", restartQuiz);

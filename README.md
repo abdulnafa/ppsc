@@ -12,15 +12,15 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 - English question stems and four answer options, with a readable Urdu translation directly below every question.
 - A Learn mode that preselects and highlights the correct answer immediately.
 - A Quiz mode with instant Correct/Incorrect feedback after an answer is submitted.
-- Every category is divided into fixed 50-question Parts (with a shorter final Part), while **All Questions** remains available.
+- Learn and Quiz include the full selected category by default; the question-number input above the progress bar lets you jump directly to any question in the active session.
 - An evidence-based **Important repeated MCQs** filter uses verified deduplication records and displays how many times each marked fact occurred.
 - Learn always follows the stable source/data order; Quiz creates a fresh question order and reshuffles its four options without changing the correct answer.
 - Previous and Next navigation lets you revisit earlier questions; Quiz restores each pending or submitted answer, its feedback, shuffled options, and score without counting an answer twice.
-- A compact Continue card restores the exact active Learn, Quiz, or Difficult session after a refresh or browser restart, including selected Part/Important scope, progress, Quiz option order, answer history, submitted feedback, and score.
+- A compact Continue card restores the exact active Learn, Quiz, or Difficult session after a refresh or browser restart, including the category/Important scope, progress, Quiz option order, answer history, submitted feedback, and score.
 - A persistent, always-visible **Mark as difficult** checkbox below every question, plus category-wise Difficult Learn and Difficult Quiz sessions containing only marked questions.
 - A focused question screen without Answer explained, View details, related-history or research-source panels.
 
-The flow is: choose a category → choose a 50-question Part (or All Questions) → optionally limit it to Important repeated MCQs → choose Learn, Quiz or Difficult. Difficult opens its own Learn/Quiz choice and uses only marked questions inside the selected Part/filter. Learn mode preselects the correct answer and keeps the source/data order. After a learning session, **Start Quiz** opens the same Part/filter and full or difficult-only scope in scored Quiz mode. Quiz gives instant Correct/Incorrect feedback, creates a fresh question and option order, and remaps the correct answer safely.
+The flow is: choose a category → optionally limit it to all **Important repeated MCQs** in that category → choose Learn, Quiz or Difficult. Learn and Quiz start with the full active scope, and the editable question number above the progress bar can jump directly to a specific question. Difficult opens its own Learn/Quiz choice and uses only marked questions inside the active category/filter. Learn mode preselects the correct answer and keeps the source/data order. After a learning session, **Start Quiz** opens the same category/filter and full or difficult-only scope in scored Quiz mode. Quiz gives instant Correct/Incorrect feedback, creates a fresh question and option order, and remaps the correct answer safely.
 
 Difficult marks and the compact active-session checkpoint are stored in that browser and device using local storage. They survive normal reloads and visits; clearing the site's browser data removes them. Completed sessions are removed from Continue automatically.
 

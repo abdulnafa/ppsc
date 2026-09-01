@@ -223,7 +223,7 @@ async function main() {
         }, null).button;
       const activeCategory = categoryButton.dataset.category || categoryButton.dataset.categoryId;
       const allCategoryQuestions = data.questions.filter((question) => question.categoryId === activeCategory);
-      const categoryQuestions = allCategoryQuestions.slice(0, 50);
+      const categoryQuestions = allCategoryQuestions;
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
       const findCurrent = () => {
         const questionId = document.querySelector("#question-text").dataset.questionId;
@@ -244,30 +244,43 @@ async function main() {
         if (correctIndex < 0) errors.push("Shuffled correct answer could not be mapped for " + question.id + ".");
         return correctIndex < 0 ? 0 : correctIndex;
       };
+      const assertProgress = (expectedNumber, expectedTotal, context) => {
+        const input = document.querySelector("#question-number-input");
+        const total = document.querySelector("#question-total");
+        if (!input || !total) {
+          errors.push(context + " did not render the question jump controls.");
+          return;
+        }
+        if (input.value !== String(expectedNumber)) errors.push(context + " question-number input was incorrect.");
+        if (input.min !== "1" || input.max !== String(expectedTotal) || input.step !== "1") errors.push(context + " question-number bounds were incorrect.");
+        if (total.textContent.trim() !== String(expectedTotal)) errors.push(context + " question total was incorrect.");
+      };
+      const jumpByChange = async (number) => {
+        const input = document.querySelector("#question-number-input");
+        input.value = String(number);
+        input.dispatchEvent(new Event("change", { bubbles: true }));
+        await pause();
+      };
+      const jumpByEnter = async (number) => {
+        const input = document.querySelector("#question-number-input");
+        input.value = String(number);
+        input.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", bubbles: true, cancelable: true }));
+        await pause();
+      };
 
       categoryButton.click();
       await pause();
       if (!visible(document.querySelector("#mode-screen"))) errors.push("Mode chooser did not open after selecting a category.");
+      if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Mode chooser has horizontal overflow on mobile.");
       if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 3) errors.push("Mode chooser did not show Learn, Quiz and Difficult.");
-      const partSelect = document.querySelector("#part-select");
-      if (!partSelect || partSelect.value !== "0") errors.push("The first 50-question Part was not selected by default.");
-      if (!partSelect || partSelect.options.length !== Math.ceil(allCategoryQuestions.length / 50) + 1) errors.push("Part selector count is incorrect.");
-      if (!document.querySelector("#study-scope-summary").textContent.includes("questions 1–50")) errors.push("Part summary did not show the first 50-question range.");
-      const firstPartImportantCount = categoryQuestions.filter((question) => question.isImportant === true).length;
-      if (!document.querySelector("#important-count").textContent.startsWith(String(firstPartImportantCount))) errors.push("Important count did not match the selected Part.");
+      if (document.querySelector("#part-select, [data-part-select]")) errors.push("Removed Part dropdown is still present.");
+      if (!document.querySelector("#study-scope-summary").textContent.includes(String(allCategoryQuestions.length))) errors.push("Study summary did not show the full-category total.");
+      const expectedImportant = allCategoryQuestions.filter((question) => question.isImportant === true);
+      if (!document.querySelector("#important-count").textContent.startsWith(String(expectedImportant.length))) errors.push("Important count did not match the full category.");
 
-      const importantPartIndex = Array.from(
-        { length: Math.ceil(allCategoryQuestions.length / 50) },
-        (_, index) => index
-      ).find((index) => allCategoryQuestions.slice(index * 50, (index + 1) * 50).some((question) => question.isImportant === true));
-      if (!Number.isInteger(importantPartIndex)) {
-        errors.push("Could not find an Important Part in the tested category.");
+      if (!expectedImportant.length) {
+        errors.push("Could not find an Important question in the tested category.");
       } else {
-        partSelect.value = String(importantPartIndex);
-        partSelect.dispatchEvent(new Event("change", { bubbles: true }));
-        const expectedImportant = allCategoryQuestions
-          .slice(importantPartIndex * 50, (importantPartIndex + 1) * 50)
-          .filter((question) => question.isImportant === true);
         const importantCheckbox = document.querySelector("#important-only-checkbox");
         importantCheckbox.click();
         await pause();
@@ -276,13 +289,17 @@ async function main() {
         await pause();
         const importantRenderedId = document.querySelector("#question-text").dataset.questionId;
         if (!expectedImportant.some((question) => question.id === importantRenderedId)) errors.push("Important Learn rendered a non-important question.");
-        if (!document.querySelector("#question-counter").textContent.endsWith("of " + expectedImportant.length)) errors.push("Important Learn total was incorrect.");
+        assertProgress(1, expectedImportant.length, "Important Learn");
         if (!document.querySelector("#question-kind").textContent.includes("IMPORTANT")) errors.push("Important question badge was not rendered.");
+        const importantJumpNumber = Math.min(2, expectedImportant.length);
+        await jumpByChange(importantJumpNumber);
+        if (document.querySelector("#question-text").dataset.questionId !== expectedImportant[importantJumpNumber - 1].id) errors.push("Important Learn jump did not map the filtered number to the expected important question.");
+        assertProgress(importantJumpNumber, expectedImportant.length, "Important Learn jump");
         document.querySelector("#back-button").click();
         await pause();
         categoryButton.click();
         await pause();
-        if (document.querySelector("#part-select").value !== "0" || document.querySelector("#important-only-checkbox").checked) errors.push("A fresh category choice did not reset to standard Part 1.");
+        if (document.querySelector("#part-select, [data-part-select]") || document.querySelector("#important-only-checkbox").checked) errors.push("A fresh category choice did not reset to full-category standard scope.");
       }
 
       document.querySelector("#difficult-mode-button").click();
@@ -303,6 +320,9 @@ async function main() {
       document.querySelector("#learn-mode-button").click();
       await pause();
       if (!visible(document.querySelector("#quiz-screen"))) errors.push("Learn mode did not open.");
+      if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Question screen has horizontal overflow on mobile.");
+      const questionNumberInput = document.querySelector("#question-number-input");
+      if (!questionNumberInput || (!questionNumberInput.labels.length && !questionNumberInput.getAttribute("aria-label"))) errors.push("Question-number input has no accessible name.");
 
       let question = findCurrent();
       let correctButton = document.querySelector('[data-option-index="' + correctRenderedIndex(question) + '"]');
@@ -312,19 +332,54 @@ async function main() {
       if (document.querySelector("#score-text").textContent !== "Learn Mode") errors.push("Learn mode displayed a score.");
       if (document.querySelector("#action-button").textContent !== "Next Question" && categoryQuestions.length > 1) errors.push("Learn mode did not offer the next question immediately.");
       if (!document.querySelector("#previous-button").disabled) errors.push("Previous was enabled on the first Learn question.");
+      assertProgress(1, categoryQuestions.length, "Initial Learn");
       if (categoryQuestions.length > 1) {
         const firstLearnId = question.id;
         document.querySelector("#action-button").click();
         await pause();
+        assertProgress(2, categoryQuestions.length, "Learn Next");
         if (document.querySelector("#previous-button").disabled) errors.push("Previous stayed disabled after advancing in Learn mode.");
         document.querySelector("#previous-button").click();
         await pause();
+        assertProgress(1, categoryQuestions.length, "Learn Previous");
         if (document.querySelector("#question-text").dataset.questionId !== firstLearnId) errors.push("Previous did not restore the first Learn question.");
         if (!document.querySelector("#previous-button").disabled) errors.push("Previous was not disabled after returning to the first Learn question.");
+
+        const manualLearnNumber = Math.min(3, categoryQuestions.length);
+        await jumpByChange(manualLearnNumber);
+        if (document.querySelector("#question-text").dataset.questionId !== categoryQuestions[manualLearnNumber - 1].id) errors.push("Learn change jump opened the wrong question.");
+        assertProgress(manualLearnNumber, categoryQuestions.length, "Learn change jump");
+        await jumpByEnter(2);
+        if (document.querySelector("#question-text").dataset.questionId !== categoryQuestions[1].id) errors.push("Learn Enter jump opened the wrong question.");
+        assertProgress(2, categoryQuestions.length, "Learn Enter jump");
+        const beforeInvalidLearnId = document.querySelector("#question-text").dataset.questionId;
+        await jumpByChange(0);
+        if (document.querySelector("#question-text").dataset.questionId !== beforeInvalidLearnId) errors.push("Invalid Learn jump changed the current question.");
+        assertProgress(2, categoryQuestions.length, "Invalid Learn jump recovery");
+
+        await jumpByChange(categoryQuestions.length);
+        const learnGuardSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+        const visitedLearnIds = new Set(
+          learnGuardSnapshot && Array.isArray(learnGuardSnapshot.learnVisitedQuestionIds)
+            ? learnGuardSnapshot.learnVisitedQuestionIds
+            : []
+        );
+        const firstUnvisitedLearnIndex = categoryQuestions.findIndex((item) => !visitedLearnIds.has(item.id));
+        if (!learnGuardSnapshot || learnGuardSnapshot.version !== 4 || learnGuardSnapshot.mode !== "learn" || learnGuardSnapshot.partIndex !== null) errors.push("Learn completion guard was not stored with the v4 full-category schema.");
+        if (!learnGuardSnapshot || learnGuardSnapshot.currentIndex !== categoryQuestions.length - 1 || !visitedLearnIds.has(categoryQuestions[categoryQuestions.length - 1].id)) errors.push("Learn visited IDs did not persist the directly visited last question.");
+        if (firstUnvisitedLearnIndex < 0) errors.push("Learn completion guard could not identify an unvisited question.");
+        if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Last Learn question did not offer Next Unvisited while questions remained unseen.");
+        document.querySelector("#action-button").click();
+        await pause();
+        if (visible(document.querySelector("#results-screen"))) errors.push("Learn opened results while questions remained unvisited.");
+        if (firstUnvisitedLearnIndex >= 0) {
+          if (document.querySelector("#question-text").dataset.questionId !== categoryQuestions[firstUnvisitedLearnIndex].id) errors.push("Next Unvisited did not wrap to the first unvisited Learn question.");
+          assertProgress(firstUnvisitedLearnIndex + 1, categoryQuestions.length, "Learn Next Unvisited");
+        }
       }
       document.querySelector("#restart-button").click();
       await pause();
-      if (!document.querySelector("#question-counter").textContent.startsWith("Question 1 ")) errors.push("Learn restart failed.");
+      assertProgress(1, categoryQuestions.length, "Learn restart");
       const learnOrder = [];
       const markedQuestionIds = [];
       while (!visible(document.querySelector("#results-screen"))) {
@@ -387,22 +442,84 @@ async function main() {
       if (!getComputedStyle(document.querySelector("#question-text-urdu")).fontFamily.includes("Noto Nastaliq Urdu")) errors.push("Readable Urdu font was not applied.");
       if (document.fonts && !loadedFontFamilies.includes("Noto Nastaliq Urdu")) errors.push("Noto Nastaliq Urdu did not load.");
 
+      if (categoryQuestions.length > 2) {
+        const submittedQuestionId = question.id;
+        const submittedOptionOrder = JSON.stringify(renderedOptionTexts());
+        const pendingJumpNumber = 3;
+        await jumpByChange(pendingJumpNumber);
+        const pendingJumpId = document.querySelector("#question-text").dataset.questionId;
+        const pendingJumpOptionOrder = JSON.stringify(renderedOptionTexts());
+        const pendingJumpSelectedIndex = 2;
+        document.querySelector('[data-option-index="' + pendingJumpSelectedIndex + '"]').click();
+        await pause();
+
+        await jumpByEnter(1);
+        if (document.querySelector("#question-text").dataset.questionId !== submittedQuestionId) errors.push("Quiz jump back restored the wrong submitted question.");
+        if (JSON.stringify(renderedOptionTexts()) !== submittedOptionOrder) errors.push("Quiz jump back changed the submitted question option order.");
+        const restoredSubmittedButton = document.querySelector('[data-option-index="' + wrongIndex + '"]');
+        if (!restoredSubmittedButton || !restoredSubmittedButton.disabled || !restoredSubmittedButton.classList.contains("is-incorrect")) errors.push("Quiz jump back did not preserve the submitted response.");
+        if (document.querySelector("#feedback-title").textContent !== "Incorrect" || document.querySelector("#score-text").textContent !== "Score: 0") errors.push("Quiz jump back changed submitted feedback or score.");
+        assertProgress(1, categoryQuestions.length, "Quiz submitted jump back");
+
+        await jumpByChange(pendingJumpNumber);
+        if (document.querySelector("#question-text").dataset.questionId !== pendingJumpId) errors.push("Quiz jump did not return to the same pending question.");
+        if (JSON.stringify(renderedOptionTexts()) !== pendingJumpOptionOrder) errors.push("Quiz jump changed the pending question option order.");
+        const restoredPendingButton = document.querySelector('[data-option-index="' + pendingJumpSelectedIndex + '"]');
+        if (!restoredPendingButton || !restoredPendingButton.classList.contains("is-selected") || restoredPendingButton.disabled) errors.push("Quiz jump did not preserve the pending response.");
+        if (visible(document.querySelector("#feedback")) || document.querySelector("#score-text").textContent !== "Score: 0") errors.push("Quiz pending jump incorrectly changed feedback or score.");
+        assertProgress(pendingJumpNumber, categoryQuestions.length, "Quiz pending jump");
+        await jumpByEnter(1);
+      }
+
+      let completionGuardScore = 0;
+      if (categoryQuestions.length > 2) {
+        const lastQuizNumber = categoryQuestions.length;
+        await jumpByChange(lastQuizNumber);
+        const lastQuizQuestion = findCurrent();
+        const lastQuizId = lastQuizQuestion ? lastQuizQuestion.id : "";
+        const lastQuizCorrectIndex = lastQuizQuestion ? verifyQuizOptionShuffle(lastQuizQuestion) : 0;
+        const lastQuizOptionOrder = JSON.stringify(renderedOptionTexts());
+        firstQuizOptionOrders[lastQuizId] = lastQuizOptionOrder;
+        document.querySelector('[data-option-index="' + lastQuizCorrectIndex + '"]').click();
+        document.querySelector("#action-button").click();
+        await pause();
+        completionGuardScore = 1;
+        if (document.querySelector("#feedback-title").textContent !== "Correct!" || document.querySelector("#score-text").textContent !== "Score: " + completionGuardScore) errors.push("Last-question Quiz guard did not preserve the submitted answer and score.");
+        if (document.querySelector("#action-button").textContent !== "Next Unanswered" || document.querySelector("#action-button").dataset.action !== "next-unanswered") errors.push("Last Quiz question did not offer Next Unanswered while questions remained unanswered.");
+        document.querySelector("#action-button").click();
+        await pause();
+        if (visible(document.querySelector("#results-screen"))) errors.push("Quiz opened results while questions remained unanswered.");
+        assertProgress(2, categoryQuestions.length, "Quiz Next Unanswered");
+        if (document.querySelector("#score-text").textContent !== "Score: " + completionGuardScore) errors.push("Next Unanswered changed the Quiz score.");
+
+        await jumpByEnter(lastQuizNumber);
+        if (document.querySelector("#question-text").dataset.questionId !== lastQuizId) errors.push("Quiz guard jump did not restore the submitted last question.");
+        if (JSON.stringify(renderedOptionTexts()) !== lastQuizOptionOrder) errors.push("Quiz guard jump changed the submitted last-question option order.");
+        const restoredLastCorrectButton = document.querySelector('[data-option-index="' + lastQuizCorrectIndex + '"]');
+        if (!restoredLastCorrectButton || !restoredLastCorrectButton.disabled || !restoredLastCorrectButton.classList.contains("is-correct")) errors.push("Quiz guard jump did not restore the submitted last answer.");
+        if (document.querySelector("#feedback-title").textContent !== "Correct!" || document.querySelector("#score-text").textContent !== "Score: " + completionGuardScore) errors.push("Quiz guard jump changed the submitted feedback or score.");
+        await jumpByChange(1);
+      }
+
       document.querySelector("#action-button").click();
       await pause();
+      assertProgress(2, categoryQuestions.length, "Quiz Next");
       question = findCurrent();
       const secondQuizId = question.id;
       const secondQuizOptions = JSON.stringify(renderedOptionTexts());
       if (document.querySelector("#previous-button").disabled) errors.push("Previous stayed disabled after advancing in Quiz mode.");
       document.querySelector("#previous-button").click();
       await pause();
+      assertProgress(1, categoryQuestions.length, "Quiz Previous");
       if (document.querySelector("#question-text").dataset.questionId !== quizOrder[0]) errors.push("Previous restored the wrong Quiz question.");
       if (JSON.stringify(renderedOptionTexts()) !== firstQuizOptionOrders[quizOrder[0]]) errors.push("Previous changed the restored Quiz option order.");
       const restoredWrongButton = document.querySelector('[data-option-index="' + wrongIndex + '"]');
       if (!restoredWrongButton || !restoredWrongButton.disabled || !restoredWrongButton.classList.contains("is-incorrect")) errors.push("Previous did not restore the submitted Quiz answer.");
-      if (document.querySelector("#feedback-title").textContent !== "Incorrect" || document.querySelector("#score-text").textContent !== "Score: 0") errors.push("Previous changed Quiz feedback or score.");
+      if (document.querySelector("#feedback-title").textContent !== "Incorrect" || document.querySelector("#score-text").textContent !== "Score: " + completionGuardScore) errors.push("Previous changed Quiz feedback or score.");
       if (!document.querySelector("#previous-button").disabled) errors.push("Previous was not disabled on the restored first Quiz question.");
       document.querySelector("#action-button").click();
       await pause();
+      assertProgress(2, categoryQuestions.length, "Quiz return Next");
       question = findCurrent();
       if (question.id !== secondQuizId || JSON.stringify(renderedOptionTexts()) !== secondQuizOptions) errors.push("Next did not return to the same pending Quiz question after Previous.");
       quizOrder.push(question.id);
@@ -477,9 +594,9 @@ async function main() {
       document.querySelector("#action-button").click();
       await pause();
       const resumeSnapshot = JSON.parse(localStorage.getItem(sessionStorageKey) || "null");
-      if (!resumeSnapshot || resumeSnapshot.version !== 3) errors.push("Active Quiz was not saved with the versioned resume schema.");
+      if (!resumeSnapshot || resumeSnapshot.version !== 4) errors.push("Active Quiz was not saved with the versioned resume schema.");
       if (!resumeSnapshot || resumeSnapshot.mode !== "quiz" || resumeSnapshot.scope !== "all") errors.push("Saved Quiz resume mode/scope was incorrect.");
-      if (!resumeSnapshot || resumeSnapshot.partIndex !== 0 || resumeSnapshot.importantOnly !== false) errors.push("Saved Quiz Part/Important scope was incorrect.");
+      if (!resumeSnapshot || resumeSnapshot.partIndex !== null || resumeSnapshot.importantOnly !== false) errors.push("Saved Quiz full-category/Important scope was incorrect.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.questionIds) || resumeSnapshot.questionIds.length !== categoryQuestions.length) errors.push("Saved Quiz question order was incomplete.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.optionOrders) || resumeSnapshot.optionOrders.length !== categoryQuestions.length) errors.push("Saved Quiz option orders were incomplete.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.answerHistory) || resumeSnapshot.answerHistory.length !== categoryQuestions.length) errors.push("Saved Quiz answer history was incomplete.");
@@ -501,6 +618,7 @@ async function main() {
           categoryId: activeCategory,
           categoryName: data.categories.find((category) => category.id === activeCategory).name,
           questionCount: categoryQuestions.length,
+          bankSignature: resumeSnapshot ? resumeSnapshot.bankSignature : "",
           questionIds: resumeSnapshot ? resumeSnapshot.questionIds : [],
           optionOrders: resumeSnapshot ? resumeSnapshot.optionOrders : [],
           questionId: resumeQuestion ? resumeQuestion.id : "",
@@ -542,7 +660,7 @@ async function main() {
       if (!visible(card)) errors.push("Continue card was not shown for an active saved session.");
       if (!document.querySelector("#continue-session-title").textContent.includes(expected.categoryName)) errors.push("Continue card did not label the saved category.");
       const continueMeta = document.querySelector("#continue-session-meta").textContent;
-      if (!continueMeta.includes("Quiz") || !continueMeta.includes("Part 1") || !continueMeta.includes("Question 1 of " + expected.questionCount)) errors.push("Continue card did not label Quiz mode, Part and progress.");
+      if (!continueMeta.includes("Quiz") || !continueMeta.includes("All Questions") || !continueMeta.includes("Question 1 of " + expected.questionCount)) errors.push("Continue card did not label Quiz mode, All Questions and progress.");
 
       const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds)) errors.push("Reload changed the saved Quiz question order.");
@@ -561,7 +679,9 @@ async function main() {
       if (!selectedButton || !selectedButton.classList.contains("is-selected") || !selectedButton.classList.contains("is-incorrect") || !selectedButton.disabled) errors.push("Continue did not restore the submitted selected option.");
       if (document.querySelector("#feedback-title").textContent !== "Incorrect") errors.push("Continue did not restore submitted feedback.");
       if (document.querySelector("#score-text").textContent !== "Score: " + expected.score) errors.push("Continue did not restore the Quiz score.");
-      if (!document.querySelector("#question-counter").textContent.startsWith("Question 1 ")) errors.push("Continue did not restore the question index.");
+      const restoredNumberInput = document.querySelector("#question-number-input");
+      const restoredTotal = document.querySelector("#question-total");
+      if (!restoredNumberInput || restoredNumberInput.value !== "1" || restoredNumberInput.max !== String(expected.questionCount) || !restoredTotal || restoredTotal.textContent.trim() !== String(expected.questionCount)) errors.push("Continue did not restore the question progress controls.");
 
       document.querySelector("#action-button").click();
       await pause();
@@ -622,6 +742,9 @@ async function main() {
       if (visible(document.querySelector("#feedback"))) errors.push("Pending Continue incorrectly restored submitted feedback.");
       if (document.querySelector("#action-button").textContent !== "Check Answer") errors.push("Pending Continue did not restore Check Answer state.");
       if (document.querySelector("#score-text").textContent !== "Score: " + expected.score) errors.push("Pending Continue changed the score.");
+      const pendingNumberInput = document.querySelector("#question-number-input");
+      const pendingTotal = document.querySelector("#question-total");
+      if (!pendingNumberInput || pendingNumberInput.value !== "2" || pendingNumberInput.max !== String(expected.questionCount) || !pendingTotal || pendingTotal.textContent.trim() !== String(expected.questionCount)) errors.push("Pending Continue did not restore the question progress controls.");
 
       localStorage.setItem("ppsc-prep:active-session:v1", "{corrupt-json");
       return { errors };
@@ -653,13 +776,16 @@ async function main() {
       if (visible(document.querySelector("#continue-session-card"))) errors.push("Corrupt resume data left the Continue card visible.");
       if (localStorage.getItem(storageKey) !== null) errors.push("Corrupt resume data was not removed safely.");
       localStorage.setItem(storageKey, JSON.stringify({
-        version: 1,
-        bankSignature: "stale-question-bank",
+        version: 3,
+        bankSignature: ${JSON.stringify(normalResult.resumeExpected.bankSignature)},
         categoryId: ${JSON.stringify(normalResult.testedCategory)},
         mode: "quiz",
         scope: "all",
+        partIndex: 0,
+        importantOnly: false,
         questionIds: [${JSON.stringify(normalResult.resumeExpected.questionId)}],
         optionOrders: [[0, 1, 2, 3]],
+        answerHistory: [null],
         currentIndex: 0,
         selectedIndex: null,
         submitted: false,
@@ -706,9 +832,19 @@ async function main() {
       const correctRenderedIndex = (question) => renderedOptionTexts().indexOf(
         optionText(question.options[question.correctOptionIndex])
       );
+      const progressMatches = (number, total) => {
+        const input = document.querySelector("#question-number-input");
+        const totalElement = document.querySelector("#question-total");
+        return Boolean(
+          input && totalElement &&
+          input.value === String(number) && input.min === "1" &&
+          input.max === String(total) && input.step === "1" &&
+          totalElement.textContent.trim() === String(total)
+        );
+      };
 
-      if (visible(document.querySelector("#continue-session-card"))) errors.push("Stale resume data left the Continue card visible.");
-      if (localStorage.getItem("ppsc-prep:active-session:v1") !== null) errors.push("Stale resume data was not removed safely.");
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("Legacy Part resume data left the Continue card visible.");
+      if (localStorage.getItem("ppsc-prep:active-session:v1") !== null) errors.push("Legacy Part resume data was not removed safely.");
 
       const storedAfterReload = JSON.parse(localStorage.getItem("ppsc-prep:difficult-question-ids:v1") || "{}");
       if (!Array.isArray(storedAfterReload.questionIds) || expectedMarkedIds.some((id) => !storedAfterReload.questionIds.includes(id))) {
@@ -729,7 +865,7 @@ async function main() {
       await pause();
       if (document.querySelector("#quiz-screen").dataset.scope !== "difficult") errors.push("Difficult Learn did not retain difficult scope.");
       if (document.querySelector("#quiz-screen").dataset.mode !== "learn") errors.push("Difficult Learn did not enter Learn mode.");
-      if (!document.querySelector("#question-counter").textContent.endsWith("of " + expectedMarkedIds.length)) errors.push("Difficult Learn total did not match marked questions.");
+      if (!progressMatches(1, expectedMarkedIds.length)) errors.push("Difficult Learn progress did not match marked questions.");
 
       const difficultLearnIds = [];
       while (!visible(document.querySelector("#results-screen"))) {
@@ -754,7 +890,7 @@ async function main() {
       document.querySelector("#play-again-button").click();
       await pause();
       if (document.querySelector("#quiz-screen").dataset.scope !== "difficult" || document.querySelector("#quiz-screen").dataset.mode !== "quiz") errors.push("Start Quiz left Difficult scope.");
-      if (!document.querySelector("#question-counter").textContent.endsWith("of " + expectedMarkedIds.length)) errors.push("Difficult Quiz total did not match both marked questions.");
+      if (!progressMatches(1, expectedMarkedIds.length)) errors.push("Difficult Quiz progress did not match both marked questions.");
 
       const difficultQuizIds = [];
       const difficultQuizOptionOrders = Object.create(null);
@@ -793,7 +929,7 @@ async function main() {
       const remainingId = expectedMarkedIds.find((id) => id !== removedId);
       document.querySelector("#play-again-button").click();
       await pause();
-      if (!document.querySelector("#question-counter").textContent.endsWith("of 1")) errors.push("Practice Again did not filter Difficult Quiz to the remaining mark.");
+      if (!progressMatches(1, 1)) errors.push("Practice Again did not filter Difficult Quiz to the remaining mark.");
       const finalQuizQuestion = findCurrent();
       if (!finalQuizQuestion || finalQuizQuestion.id !== remainingId) errors.push("Repeated Difficult Quiz rendered the wrong question.");
       if (difficultQuizOptionOrders[remainingId] === JSON.stringify(renderedOptionTexts())) errors.push("Repeated Difficult Quiz reused the previous option order.");
@@ -838,6 +974,23 @@ async function main() {
         version: 1,
         questionIds: question ? [question.id] : []
       }));
+      localStorage.setItem("ppsc-prep:active-session:v1", JSON.stringify({
+        version: 4,
+        bankSignature: "stale-question-bank",
+        categoryId,
+        mode: "learn",
+        scope: "difficult",
+        partIndex: null,
+        importantOnly: false,
+        questionIds: question ? [question.id] : [],
+        optionOrders: [[0, 1, 2, 3]],
+        answerHistory: [null],
+        currentIndex: 0,
+        selectedIndex: null,
+        submitted: false,
+        score: 0,
+        savedAt: Date.now()
+      }));
       return { categoryId, questionId: question ? question.id : "" };
     })()`);
 
@@ -857,8 +1010,16 @@ async function main() {
 
     const difficultResumeSetup = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
       const errors = [];
       const seed = ${JSON.stringify(difficultResumeSeed)};
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("Stale-bank resume data left the Continue card visible.");
+      if (localStorage.getItem("ppsc-prep:active-session:v1") !== null) errors.push("Stale-bank resume data was not removed safely.");
       const categoryButton = [...document.querySelectorAll("#category-grid .category-card")]
         .find((button) => (button.dataset.category || button.dataset.categoryId) === seed.categoryId);
       categoryButton.click();
@@ -867,6 +1028,7 @@ async function main() {
       await pause();
       const optionTexts = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
       const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      if (!snapshot || snapshot.version !== 4 || snapshot.partIndex !== null || snapshot.importantOnly !== false) errors.push("Difficult Learn was not stored with the v4 full-category resume schema.");
       if (!snapshot || snapshot.mode !== "learn" || snapshot.scope !== "difficult") errors.push("Difficult Learn was not stored with the correct resume scope/mode.");
       if (!snapshot || snapshot.questionIds.length !== 1 || snapshot.questionIds[0] !== seed.questionId) errors.push("Difficult Learn resume snapshot did not keep its marked-question scope.");
       if (!snapshot || !snapshot.submitted || snapshot.score !== 0) errors.push("Difficult Learn resume answer state was incorrect.");
@@ -913,6 +1075,9 @@ async function main() {
       if (!document.querySelector("#quiz-category").textContent.includes("Difficult Learn")) errors.push("Restored header did not label Difficult Learn.");
       if (document.querySelector("#question-text").dataset.questionId !== expected.questionId) errors.push("Continue restored the wrong Difficult Learn question.");
       if (JSON.stringify(optionTexts) !== JSON.stringify(expected.optionTexts)) errors.push("Difficult Learn Continue changed source option order.");
+      const numberInput = document.querySelector("#question-number-input");
+      const questionTotal = document.querySelector("#question-total");
+      if (!numberInput || numberInput.value !== "1" || numberInput.max !== "1" || !questionTotal || questionTotal.textContent.trim() !== "1") errors.push("Difficult Learn Continue did not restore its question progress controls.");
       const selectedButton = document.querySelector('[data-option-index="' + expected.selectedIndex + '"]');
       if (!selectedButton || !selectedButton.disabled || !selectedButton.classList.contains("is-correct")) errors.push("Difficult Learn Continue did not restore the revealed answer.");
       document.querySelector("#action-button").click();
@@ -920,6 +1085,88 @@ async function main() {
       if (!visible(document.querySelector("#results-screen"))) errors.push("Restored Difficult Learn session did not complete.");
       if (localStorage.getItem("ppsc-prep:active-session:v1") !== null) errors.push("Completed Difficult Learn session remained resumable.");
       localStorage.setItem("ppsc-prep:difficult-question-ids:v1", JSON.stringify({ version: 1, questionIds: [] }));
+      return { errors };
+    })()`);
+
+    const learnResumeSetup = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const categoryId = ${JSON.stringify(normalResult.testedCategory)};
+      document.querySelector("#change-category-button").click();
+      await pause();
+      const categoryButton = [...document.querySelectorAll("#category-grid .category-card")]
+        .find((button) => (button.dataset.category || button.dataset.categoryId) === categoryId);
+      categoryButton.click();
+      document.querySelector("#learn-mode-button").click();
+      await pause();
+      const total = Number(document.querySelector("#question-total").textContent);
+      const numberInput = document.querySelector("#question-number-input");
+      numberInput.value = String(total);
+      numberInput.dispatchEvent(new Event("change", { bubbles: true }));
+      await pause();
+      const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      const visitedIds = snapshot && Array.isArray(snapshot.learnVisitedQuestionIds)
+        ? snapshot.learnVisitedQuestionIds
+        : [];
+      const firstUnvisitedIndex = snapshot
+        ? snapshot.questionIds.findIndex((questionId) => !visitedIds.includes(questionId))
+        : -1;
+      if (!snapshot || snapshot.version !== 4 || snapshot.mode !== "learn" || snapshot.scope !== "all" || snapshot.partIndex !== null) errors.push("Learn guard resume setup did not use the v4 full-category schema.");
+      if (!snapshot || snapshot.currentIndex !== total - 1 || visitedIds.length !== 2 || !visitedIds.includes(snapshot.questionIds[0]) || !visitedIds.includes(snapshot.questionIds[total - 1])) errors.push("Learn guard resume setup did not persist the first and directly visited last IDs.");
+      if (firstUnvisitedIndex < 0) errors.push("Learn guard resume setup did not retain an unvisited question.");
+      return {
+        errors,
+        expected: {
+          categoryId,
+          total,
+          lastQuestionId: snapshot ? snapshot.questionIds[total - 1] : "",
+          visitedIds,
+          firstUnvisitedIndex,
+          firstUnvisitedId: snapshot && firstUnvisitedIndex >= 0 ? snapshot.questionIds[firstUnvisitedIndex] : ""
+        }
+      };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for Learn completion-guard Continue verification in time."));
+        }
+      }, 50);
+    })`);
+
+    const learnResumeResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(learnResumeSetup.expected)};
+      const meta = document.querySelector("#continue-session-meta").textContent;
+      if (!visible(document.querySelector("#continue-session-card")) || !meta.includes("Learn") || !meta.includes("All Questions") || !meta.includes("Question " + expected.total + " of " + expected.total)) errors.push("Continue card did not label the saved last-question Learn guard session.");
+      document.querySelector("#continue-session-button").click();
+      await pause();
+      if (document.querySelector("#question-text").dataset.questionId !== expected.lastQuestionId) errors.push("Learn Continue restored the wrong completion-guard question.");
+      const restoredSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      if (!restoredSnapshot || restoredSnapshot.version !== 4 || JSON.stringify(restoredSnapshot.learnVisitedQuestionIds) !== JSON.stringify(expected.visitedIds)) errors.push("Learn Continue changed the persisted visited-ID snapshot.");
+      if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Restored Learn guard did not offer Next Unvisited.");
+      document.querySelector("#action-button").click();
+      await pause();
+      if (visible(document.querySelector("#results-screen"))) errors.push("Restored Learn guard opened results with an unvisited question remaining.");
+      if (document.querySelector("#question-text").dataset.questionId !== expected.firstUnvisitedId) errors.push("Restored Learn guard did not wrap to the first unvisited question.");
+      const numberInput = document.querySelector("#question-number-input");
+      const questionTotal = document.querySelector("#question-total");
+      if (!numberInput || numberInput.value !== String(expected.firstUnvisitedIndex + 1) || numberInput.max !== String(expected.total) || !questionTotal || questionTotal.textContent.trim() !== String(expected.total)) errors.push("Restored Learn guard progress did not match the first unvisited question.");
+      localStorage.removeItem("ppsc-prep:active-session:v1");
       return { errors };
     })()`);
 
@@ -932,13 +1179,17 @@ async function main() {
         .concat(corruptRecoveryResult.errors)
         .concat(difficultResult.errors)
         .concat(difficultResumeSetup.errors)
-        .concat(difficultResumeResult.errors),
+        .concat(difficultResumeResult.errors)
+        .concat(learnResumeSetup.errors)
+        .concat(learnResumeResult.errors),
       resume: {
         submittedStateRestored: resumeResult.errors.length === 0,
         pendingSelectionRestored: pendingResumeResult.errors.length === 0,
         difficultLearnRestored: difficultResumeSetup.errors.length === 0 && difficultResumeResult.errors.length === 0,
+        learnVisitedIdsRestored: learnResumeSetup.errors.length === 0 && learnResumeResult.errors.length === 0,
         corruptDataRecovered: corruptRecoveryResult.errors.length === 0,
-        staleDataRecovered: !difficultResult.errors.some((message) => message.includes("Stale resume data"))
+        staleDataRecovered: !difficultResult.errors.some((message) => message.includes("Legacy Part resume data"))
+          && !difficultResumeSetup.errors.some((message) => message.includes("Stale-bank resume data"))
       },
       difficult: difficultResult
     };

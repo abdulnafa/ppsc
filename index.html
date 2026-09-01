@@ -6,9 +6,9 @@
   <meta name="description" content="Free category-wise MCQ practice for the PPSC General Ability test.">
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
-  <link rel="stylesheet" href="styles.css?v=20260901-1">
+  <link rel="stylesheet" href="styles.css?v=20260901-2">
   <script src="data/questions.js?v=20260901-1" defer></script>
-  <script src="app.js?v=20260901-1" defer></script>
+  <script src="app.js?v=20260901-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -132,24 +132,19 @@
         <section class="study-scope-panel" aria-labelledby="study-scope-title">
           <div class="study-scope-heading">
             <div>
-              <span class="eyebrow">MANAGEABLE STUDY SETS</span>
-              <h2 id="study-scope-title">Choose a 50-question Part</h2>
+              <span class="eyebrow">STUDY SCOPE</span>
+              <h2 id="study-scope-title">Study the full category</h2>
             </div>
-            <p id="study-scope-summary" data-study-scope-summary>Part 1 covers questions 1–50.</p>
+            <p id="study-scope-summary" data-study-scope-summary>All questions in this category will be included.</p>
           </div>
 
           <div class="study-scope-controls">
-            <label class="part-select-label" for="part-select">
-              <span>Study Part</span>
-              <select id="part-select" data-part-select></select>
-            </label>
-
             <label class="important-filter" for="important-only-checkbox">
               <input id="important-only-checkbox" data-important-only type="checkbox">
               <span class="important-filter-icon" aria-hidden="true">I</span>
               <span class="important-filter-copy">
                 <strong>Important repeated MCQs only</strong>
-                <small id="important-count" data-important-count>0 repeated MCQs in this selection</small>
+                <small id="important-count" data-important-count>0 repeated MCQs in this category</small>
               </span>
             </label>
           </div>
@@ -234,11 +229,16 @@
       </div>
 
       <div class="progress-header">
-        <span id="question-counter">Question 1 of 1</span>
+        <span id="question-counter" class="question-jump-control">
+          <label for="question-number-input">Question</label>
+          <input id="question-number-input" type="number" value="1" min="1" step="1" inputmode="numeric">
+          <span aria-hidden="true">of</span>
+          <span id="question-total">1</span>
+        </span>
         <span id="score-text" aria-live="polite">Score: 0</span>
       </div>
       <div class="progress-track">
-        <span id="progress-fill" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></span>
+        <span id="progress-fill" role="progressbar" aria-label="Session progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></span>
       </div>
 
       <article class="question-card">

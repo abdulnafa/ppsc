@@ -470,7 +470,7 @@ function validateHtml() {
     "options-container", "action-button", "feedback",
     "difficult-control", "difficult-checkbox",
     "difficult-mark-help", "difficult-mark-status",
-    "question-counter", "progress-fill",
+    "question-counter", "question-number-input", "question-total", "progress-fill",
     "score-text", "result-score", "back-button", "restart-button",
     "play-again-button", "change-category-button"
   ];
@@ -486,6 +486,15 @@ function validateHtml() {
   for (const id of removedDetailIds) {
     if (new RegExp(`\\bid=["']${id}["']`).test(html)) {
       error(`index.html: removed answer-detail control #${id} must not be present`);
+    }
+  }
+  if (/\bid=["']part-select["']|\bdata-part-select\b/i.test(html)) {
+    error("index.html: the removed Study Part selector must not be present");
+  }
+  const questionNumberInput = html.match(/<input\b[^>]*\bid=["']question-number-input["'][^>]*>/i)?.[0] || "";
+  for (const [attribute, expectedValue] of [["type", "number"], ["min", "1"], ["step", "1"], ["inputmode", "numeric"]]) {
+    if (!new RegExp(`\\b${attribute}=["']${expectedValue}["']`, "i").test(questionNumberInput)) {
+      error(`index.html: #question-number-input must use ${attribute}="${expectedValue}"`);
     }
   }
   const dataScript = html.search(/src=["']data\/questions\.js(?:\?[^"']*)?["']/);
