@@ -365,7 +365,7 @@ async function main() {
             : []
         );
         const firstUnvisitedLearnIndex = categoryQuestions.findIndex((item) => !visitedLearnIds.has(item.id));
-        if (!learnGuardSnapshot || learnGuardSnapshot.version !== 4 || learnGuardSnapshot.mode !== "learn" || learnGuardSnapshot.partIndex !== null) errors.push("Learn completion guard was not stored with the v4 full-category schema.");
+        if (!learnGuardSnapshot || learnGuardSnapshot.version !== 5 || learnGuardSnapshot.sessionKind !== "category" || learnGuardSnapshot.paperCategoryIds !== null || learnGuardSnapshot.mode !== "learn" || learnGuardSnapshot.partIndex !== null) errors.push("Learn completion guard was not stored with the v5 category-session schema.");
         if (!learnGuardSnapshot || learnGuardSnapshot.currentIndex !== categoryQuestions.length - 1 || !visitedLearnIds.has(categoryQuestions[categoryQuestions.length - 1].id)) errors.push("Learn visited IDs did not persist the directly visited last question.");
         if (firstUnvisitedLearnIndex < 0) errors.push("Learn completion guard could not identify an unvisited question.");
         if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Last Learn question did not offer Next Unvisited while questions remained unseen.");
@@ -594,7 +594,8 @@ async function main() {
       document.querySelector("#action-button").click();
       await pause();
       const resumeSnapshot = JSON.parse(localStorage.getItem(sessionStorageKey) || "null");
-      if (!resumeSnapshot || resumeSnapshot.version !== 4) errors.push("Active Quiz was not saved with the versioned resume schema.");
+      if (!resumeSnapshot || resumeSnapshot.version !== 5) errors.push("Active Quiz was not saved with the versioned resume schema.");
+      if (!resumeSnapshot || resumeSnapshot.sessionKind !== "category" || resumeSnapshot.paperCategoryIds !== null) errors.push("Saved Quiz did not use the v5 category-session fields.");
       if (!resumeSnapshot || resumeSnapshot.mode !== "quiz" || resumeSnapshot.scope !== "all") errors.push("Saved Quiz resume mode/scope was incorrect.");
       if (!resumeSnapshot || resumeSnapshot.partIndex !== null || resumeSnapshot.importantOnly !== false) errors.push("Saved Quiz full-category/Important scope was incorrect.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.questionIds) || resumeSnapshot.questionIds.length !== categoryQuestions.length) errors.push("Saved Quiz question order was incomplete.");
@@ -975,9 +976,11 @@ async function main() {
         questionIds: question ? [question.id] : []
       }));
       localStorage.setItem("ppsc-prep:active-session:v1", JSON.stringify({
-        version: 4,
+        version: 5,
         bankSignature: "stale-question-bank",
+        sessionKind: "category",
         categoryId,
+        paperCategoryIds: null,
         mode: "learn",
         scope: "difficult",
         partIndex: null,
@@ -1028,7 +1031,7 @@ async function main() {
       await pause();
       const optionTexts = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
       const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
-      if (!snapshot || snapshot.version !== 4 || snapshot.partIndex !== null || snapshot.importantOnly !== false) errors.push("Difficult Learn was not stored with the v4 full-category resume schema.");
+      if (!snapshot || snapshot.version !== 5 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.partIndex !== null || snapshot.importantOnly !== false) errors.push("Difficult Learn was not stored with the v5 category-session resume schema.");
       if (!snapshot || snapshot.mode !== "learn" || snapshot.scope !== "difficult") errors.push("Difficult Learn was not stored with the correct resume scope/mode.");
       if (!snapshot || snapshot.questionIds.length !== 1 || snapshot.questionIds[0] !== seed.questionId) errors.push("Difficult Learn resume snapshot did not keep its marked-question scope.");
       if (!snapshot || !snapshot.submitted || snapshot.score !== 0) errors.push("Difficult Learn resume answer state was incorrect.");
@@ -1111,7 +1114,7 @@ async function main() {
       const firstUnvisitedIndex = snapshot
         ? snapshot.questionIds.findIndex((questionId) => !visitedIds.includes(questionId))
         : -1;
-      if (!snapshot || snapshot.version !== 4 || snapshot.mode !== "learn" || snapshot.scope !== "all" || snapshot.partIndex !== null) errors.push("Learn guard resume setup did not use the v4 full-category schema.");
+      if (!snapshot || snapshot.version !== 5 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.mode !== "learn" || snapshot.scope !== "all" || snapshot.partIndex !== null) errors.push("Learn guard resume setup did not use the v5 category-session schema.");
       if (!snapshot || snapshot.currentIndex !== total - 1 || visitedIds.length !== 2 || !visitedIds.includes(snapshot.questionIds[0]) || !visitedIds.includes(snapshot.questionIds[total - 1])) errors.push("Learn guard resume setup did not persist the first and directly visited last IDs.");
       if (firstUnvisitedIndex < 0) errors.push("Learn guard resume setup did not retain an unvisited question.");
       return {
@@ -1157,7 +1160,7 @@ async function main() {
       await pause();
       if (document.querySelector("#question-text").dataset.questionId !== expected.lastQuestionId) errors.push("Learn Continue restored the wrong completion-guard question.");
       const restoredSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
-      if (!restoredSnapshot || restoredSnapshot.version !== 4 || JSON.stringify(restoredSnapshot.learnVisitedQuestionIds) !== JSON.stringify(expected.visitedIds)) errors.push("Learn Continue changed the persisted visited-ID snapshot.");
+      if (!restoredSnapshot || restoredSnapshot.version !== 5 || restoredSnapshot.sessionKind !== "category" || restoredSnapshot.paperCategoryIds !== null || JSON.stringify(restoredSnapshot.learnVisitedQuestionIds) !== JSON.stringify(expected.visitedIds)) errors.push("Learn Continue changed the persisted visited-ID snapshot.");
       if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Restored Learn guard did not offer Next Unvisited.");
       document.querySelector("#action-button").click();
       await pause();
@@ -1168,6 +1171,345 @@ async function main() {
       if (!numberInput || numberInput.value !== String(expected.firstUnvisitedIndex + 1) || numberInput.max !== String(expected.total) || !questionTotal || questionTotal.textContent.trim() !== String(expected.total)) errors.push("Restored Learn guard progress did not match the first unvisited question.");
       localStorage.removeItem("ppsc-prep:active-session:v1");
       return { errors };
+    })()`);
+
+    const paperSetupResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
+      const errors = [];
+      const data = window.PPSC_QUIZ_DATA;
+      const storageKey = "ppsc-prep:active-session:v1";
+      const selectedCategoryIds = ["general-knowledge", "pakistan-studies"];
+      const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
+        .map((element) => element.textContent);
+      const currentCanonicalQuestion = () => questionById.get(
+        String(document.querySelector("#question-text").dataset.questionId)
+      );
+      const currentCorrectRenderedIndex = () => {
+        const question = currentCanonicalQuestion();
+        return question
+          ? renderedOptionTexts().indexOf(optionText(question.options[question.correctOptionIndex]))
+          : -1;
+      };
+      const answerCurrent = async (correct) => {
+        const correctIndex = currentCorrectRenderedIndex();
+        if (correctIndex < 0) {
+          errors.push("Custom Paper could not map the current correct answer.");
+          return;
+        }
+        const selectedIndex = correct ? correctIndex : (correctIndex + 1) % 4;
+        const button = document.querySelector('[data-option-index="' + selectedIndex + '"]');
+        if (!button) {
+          errors.push("Custom Paper answer option was missing.");
+          return;
+        }
+        button.click();
+        document.querySelector("#action-button").click();
+        await pause();
+      };
+
+      const backButton = document.querySelector("#back-button");
+      if (backButton && visible(document.querySelector("#quiz-screen"))) {
+        backButton.click();
+        await pause();
+      }
+      localStorage.removeItem(storageKey);
+
+      const paperCard = document.querySelector("#paper-builder-card");
+      if (!paperCard || !visible(paperCard)) errors.push("Start Paper Here card was not visible on the category screen.");
+      if (paperCard && paperCard.closest("#category-grid")) errors.push("Start Paper Here card was incorrectly rendered inside the subject category grid.");
+      if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("The paper card changed the 11 subject-category cards.");
+      if (paperCard) paperCard.click();
+      await pause();
+
+      const setupScreen = document.querySelector("#paper-setup-screen");
+      if (!visible(setupScreen)) errors.push("Start Paper Here did not open the paper setup screen.");
+      if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Paper setup has horizontal overflow on mobile.");
+      const categoryCheckboxes = [...document.querySelectorAll("#paper-category-options input[name='paper-category']")];
+      if (categoryCheckboxes.length !== 11) errors.push("Paper setup did not render all 11 category checkboxes.");
+      if (categoryCheckboxes.some((checkbox) => checkbox.disabled)) errors.push("A populated paper category was incorrectly disabled.");
+      if (categoryCheckboxes.some((checkbox) => checkbox.checked)) errors.push("Paper setup did not begin with an empty category selection.");
+      if (!document.querySelector("#paper-start-button").disabled) errors.push("Paper start was enabled without a selected category.");
+
+      document.querySelector("#paper-select-all-button").click();
+      await pause();
+      if (categoryCheckboxes.some((checkbox) => !checkbox.checked)) errors.push("Select all did not select every available paper category.");
+      if (document.querySelector("#paper-start-button").disabled) errors.push("Paper start stayed disabled after Select all.");
+      document.querySelector("#paper-clear-all-button").click();
+      await pause();
+      if (categoryCheckboxes.some((checkbox) => checkbox.checked)) errors.push("Clear did not remove every paper category selection.");
+      if (!document.querySelector("#paper-start-button").disabled) errors.push("Paper start stayed enabled after clearing the categories.");
+
+      selectedCategoryIds.forEach((categoryId) => {
+        const checkbox = document.querySelector('input[data-paper-category="' + categoryId + '"]');
+        if (!checkbox) {
+          errors.push("Known paper category checkbox was missing: " + categoryId + ".");
+          return;
+        }
+        checkbox.checked = true;
+        checkbox.dispatchEvent(new Event("change", { bubbles: true }));
+      });
+      await pause();
+      if (document.querySelector("#paper-start-button").disabled) errors.push("Paper start was disabled for two sufficiently large categories.");
+      if (!document.querySelector("#paper-selection-summary").textContent.includes("2 categories selected")) errors.push("Paper setup summary did not announce the two selected categories.");
+      document.querySelector("#paper-start-button").click();
+      await pause();
+
+      if (!visible(document.querySelector("#quiz-screen"))) errors.push("Starting a Custom Paper did not open the question screen.");
+      if (document.querySelector("#quiz-screen").dataset.sessionKind !== "paper") errors.push("Custom Paper question screen did not expose paper session kind.");
+      if (document.querySelector("#quiz-screen").dataset.mode !== "quiz" || document.querySelector("#quiz-screen").dataset.scope !== "all") errors.push("Custom Paper did not reuse scored Quiz/all scope.");
+      if (!document.querySelector("#quiz-category").textContent.includes("Custom Paper") || !document.querySelector("#quiz-category").textContent.includes("100 MCQs")) errors.push("Custom Paper header did not describe the paper.");
+      if (!document.querySelector("#question-kind").textContent.includes("CUSTOM PAPER")) errors.push("Custom Paper question did not show its paper/category label.");
+      if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Custom Paper question screen has horizontal overflow on mobile.");
+
+      const initialSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!initialSnapshot || initialSnapshot.version !== 5 || initialSnapshot.sessionKind !== "paper") errors.push("Custom Paper was not stored with the v5 paper-session schema.");
+      if (!initialSnapshot || initialSnapshot.categoryId !== null || initialSnapshot.mode !== "quiz" || initialSnapshot.scope !== "all" || initialSnapshot.partIndex !== null || initialSnapshot.importantOnly !== false) errors.push("Custom Paper stored invalid category/mode/scope fields.");
+      if (!initialSnapshot || JSON.stringify(initialSnapshot.paperCategoryIds) !== JSON.stringify(selectedCategoryIds)) errors.push("Custom Paper did not store the selected category IDs in data order.");
+      if (!initialSnapshot || !Array.isArray(initialSnapshot.questionIds) || initialSnapshot.questionIds.length !== 100 || new Set(initialSnapshot.questionIds).size !== 100) errors.push("Custom Paper did not contain exactly 100 unique question IDs.");
+      if (!initialSnapshot || !Array.isArray(initialSnapshot.optionOrders) || initialSnapshot.optionOrders.length !== 100) errors.push("Custom Paper did not store 100 option orders.");
+      if (!initialSnapshot || !Array.isArray(initialSnapshot.answerHistory) || initialSnapshot.answerHistory.length !== 100 || initialSnapshot.learnVisitedQuestionIds !== null) errors.push("Custom Paper did not store a 100-entry Quiz answer history.");
+      const sampledQuestions = initialSnapshot
+        ? initialSnapshot.questionIds.map((questionId) => questionById.get(String(questionId))).filter(Boolean)
+        : [];
+      if (sampledQuestions.length !== 100) errors.push("A Custom Paper question ID was absent from the bank.");
+      if (sampledQuestions.some((question) => !selectedCategoryIds.includes(question.categoryId))) errors.push("Custom Paper included a question outside the selected categories.");
+      const sampledCategoryCounts = Object.fromEntries(selectedCategoryIds.map((categoryId) => [
+        categoryId,
+        sampledQuestions.filter((question) => question.categoryId === categoryId).length
+      ]));
+      if (selectedCategoryIds.some((categoryId) => sampledCategoryCounts[categoryId] < 1)) errors.push("A selected category was omitted from the Custom Paper.");
+      if (Math.max(...Object.values(sampledCategoryCounts)) - Math.min(...Object.values(sampledCategoryCounts)) > 1) errors.push("Custom Paper category allocation was not balanced within one question.");
+      if (document.querySelector("#question-total").textContent.trim() !== "100" || document.querySelector("#question-number-input").max !== "100") errors.push("Custom Paper progress did not use exactly 100 questions.");
+      if (document.querySelector("#score-text").textContent !== "C:0 W:0 Marks:0") errors.push("Custom Paper live score did not start at zero.");
+
+      for (let index = 0; index < 4; index += 1) {
+        await answerCurrent(false);
+        const expectedMark = String(-0.25 * (index + 1));
+        if (document.querySelector("#feedback-title").textContent !== "Incorrect") errors.push("Custom Paper did not show instant Incorrect feedback.");
+        if (!document.querySelector("#feedback-text").textContent.includes("The correct answer is")) errors.push("Custom Paper did not reveal the correct answer after a wrong response.");
+        if (document.querySelector("#score-text").textContent !== "C:0 W:" + (index + 1) + " Marks:" + expectedMark) errors.push("Custom Paper live wrong count/negative mark was incorrect after answer " + (index + 1) + ".");
+        if (index < 3) {
+          document.querySelector("#action-button").click();
+          await pause();
+        }
+      }
+      if (document.querySelector("#score-text").textContent !== "C:0 W:4 Marks:-1") errors.push("Four Custom Paper wrong answers did not deduct exactly one mark.");
+
+      document.querySelector("#action-button").click();
+      await pause();
+      await answerCurrent(true);
+      if (document.querySelector("#feedback-title").textContent !== "Correct!") errors.push("Custom Paper did not show instant Correct feedback.");
+      if (document.querySelector("#score-text").textContent !== "C:1 W:4 Marks:0") errors.push("Custom Paper live correct/wrong/net score was incorrect after the first correct answer.");
+      document.querySelector("#action-button").click();
+      await pause();
+
+      const pendingCorrectIndex = currentCorrectRenderedIndex();
+      const pendingButton = document.querySelector('[data-option-index="' + pendingCorrectIndex + '"]');
+      if (pendingCorrectIndex < 0 || !pendingButton) {
+        errors.push("Custom Paper could not prepare a pending correct selection for Continue.");
+      } else {
+        pendingButton.click();
+        await pause();
+      }
+      const resumeSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!resumeSnapshot || resumeSnapshot.currentIndex !== 5 || resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== pendingCorrectIndex || resumeSnapshot.score !== 1) errors.push("Custom Paper pending Continue checkpoint was incorrect.");
+      if (!resumeSnapshot || resumeSnapshot.answerHistory.filter((entry) => entry && entry[1]).length !== 5) errors.push("Custom Paper checkpoint did not preserve four wrong and one correct submitted response.");
+
+      return {
+        errors,
+        expected: {
+          selectedCategoryIds,
+          sampledCategoryCounts,
+          questionIds: resumeSnapshot ? resumeSnapshot.questionIds : [],
+          optionOrders: resumeSnapshot ? resumeSnapshot.optionOrders : [],
+          answerHistory: resumeSnapshot ? resumeSnapshot.answerHistory : [],
+          currentIndex: resumeSnapshot ? resumeSnapshot.currentIndex : -1,
+          currentQuestionId: document.querySelector("#question-text").dataset.questionId,
+          currentOptionTexts: renderedOptionTexts(),
+          selectedIndex: pendingCorrectIndex,
+          score: 1
+        }
+      };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for Custom Paper Continue verification in time."));
+        }
+      }, 50);
+    })`);
+
+    const paperResumeResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(paperSetupResult.expected)};
+      const data = window.PPSC_QUIZ_DATA;
+      const storageKey = "ppsc-prep:active-session:v1";
+      const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
+        .map((element) => element.textContent);
+      const currentCanonicalQuestion = () => questionById.get(
+        String(document.querySelector("#question-text").dataset.questionId)
+      );
+      const currentCorrectRenderedIndex = () => {
+        const question = currentCanonicalQuestion();
+        return question
+          ? renderedOptionTexts().indexOf(optionText(question.options[question.correctOptionIndex]))
+          : -1;
+      };
+      const selectAndCheckCorrect = async () => {
+        const correctIndex = currentCorrectRenderedIndex();
+        const button = document.querySelector('[data-option-index="' + correctIndex + '"]');
+        if (correctIndex < 0 || !button) {
+          errors.push("Custom Paper Continue could not map a correct answer.");
+          return false;
+        }
+        button.click();
+        document.querySelector("#action-button").click();
+        await pause();
+        if (document.querySelector("#feedback-title").textContent !== "Correct!") errors.push("Custom Paper completion lost instant Correct feedback.");
+        return true;
+      };
+
+      if (!visible(document.querySelector("#category-screen"))) errors.push("Custom Paper reload did not return to categories before Continue.");
+      if (!visible(document.querySelector("#continue-session-card"))) errors.push("Custom Paper reload did not show Continue.");
+      if (document.querySelector("#continue-session-title").textContent !== "Continue Custom Paper") errors.push("Custom Paper Continue title was incorrect.");
+      const continueMeta = document.querySelector("#continue-session-meta").textContent;
+      if (!continueMeta.includes("Custom Paper") || !continueMeta.includes("2 categories") || !continueMeta.includes("Question 6 of 100")) errors.push("Custom Paper Continue metadata was incomplete.");
+      const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!storedBeforeContinue || storedBeforeContinue.version !== 5 || storedBeforeContinue.sessionKind !== "paper" || storedBeforeContinue.categoryId !== null) errors.push("Reload changed the Custom Paper session schema.");
+      if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.paperCategoryIds) !== JSON.stringify(expected.selectedCategoryIds)) errors.push("Reload changed the selected Custom Paper categories.");
+      if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds)) errors.push("Reload changed the Custom Paper question IDs/order.");
+      if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders)) errors.push("Reload changed the Custom Paper option orders.");
+      if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.answerHistory) !== JSON.stringify(expected.answerHistory)) errors.push("Reload changed the Custom Paper response history.");
+      if (!storedBeforeContinue || storedBeforeContinue.currentIndex !== expected.currentIndex || storedBeforeContinue.score !== expected.score) errors.push("Reload changed the Custom Paper current position or score.");
+
+      document.querySelector("#continue-session-button").click();
+      await pause();
+      if (!visible(document.querySelector("#quiz-screen")) || document.querySelector("#quiz-screen").dataset.sessionKind !== "paper") errors.push("Continue did not reopen the Custom Paper question screen.");
+      if (!document.querySelector("#quiz-category").textContent.includes("Custom Paper") || document.querySelector("#question-total").textContent.trim() !== "100") errors.push("Restored Custom Paper header/progress was incorrect.");
+      if (document.querySelector("#question-text").dataset.questionId !== expected.currentQuestionId) errors.push("Continue restored the wrong Custom Paper question.");
+      if (JSON.stringify(renderedOptionTexts()) !== JSON.stringify(expected.currentOptionTexts)) errors.push("Continue changed the current Custom Paper option order.");
+      const restoredPendingButton = document.querySelector('[data-option-index="' + expected.selectedIndex + '"]');
+      if (!restoredPendingButton || !restoredPendingButton.classList.contains("is-selected") || restoredPendingButton.disabled) errors.push("Continue did not restore the pending Custom Paper selection.");
+      if (visible(document.querySelector("#feedback")) || document.querySelector("#action-button").textContent !== "Check Answer") errors.push("Continue incorrectly submitted the pending Custom Paper answer.");
+      if (document.querySelector("#score-text").textContent !== "C:1 W:4 Marks:0") errors.push("Continue did not restore the Custom Paper live correct/wrong/marks score.");
+      const storedAfterContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!storedAfterContinue || JSON.stringify(storedAfterContinue.questionIds) !== JSON.stringify(expected.questionIds) || JSON.stringify(storedAfterContinue.optionOrders) !== JSON.stringify(expected.optionOrders) || JSON.stringify(storedAfterContinue.answerHistory) !== JSON.stringify(expected.answerHistory)) errors.push("Continue changed Custom Paper IDs, options, or responses.");
+
+      const numberInput = document.querySelector("#question-number-input");
+      numberInput.value = "100";
+      numberInput.dispatchEvent(new Event("change", { bubbles: true }));
+      await pause();
+      if (visible(document.querySelector("#results-screen"))) errors.push("Custom Paper opened results after jumping to an unanswered last question.");
+      await selectAndCheckCorrect();
+      if (document.querySelector("#score-text").textContent !== "C:2 W:4 Marks:1") errors.push("Custom Paper score was incorrect after answering the last question.");
+      if (document.querySelector("#action-button").textContent !== "Next Unanswered" || document.querySelector("#action-button").dataset.action !== "next-unanswered") errors.push("Custom Paper last question did not offer Next Unanswered.");
+      document.querySelector("#action-button").click();
+      await pause();
+      if (visible(document.querySelector("#results-screen"))) errors.push("Custom Paper opened results while an earlier answer remained pending.");
+      if (document.querySelector("#question-text").dataset.questionId !== expected.currentQuestionId) errors.push("Next Unanswered did not restore the first pending Custom Paper question.");
+      const pendingAfterGuard = document.querySelector('[data-option-index="' + expected.selectedIndex + '"]');
+      if (!pendingAfterGuard || !pendingAfterGuard.classList.contains("is-selected") || pendingAfterGuard.disabled) errors.push("Next Unanswered lost the pending Custom Paper selection.");
+      document.querySelector("#action-button").click();
+      await pause();
+      if (document.querySelector("#feedback-title").textContent !== "Correct!" || document.querySelector("#score-text").textContent !== "C:3 W:4 Marks:2") errors.push("Submitting the restored pending answer produced the wrong Custom Paper score.");
+      document.querySelector("#action-button").click();
+      await pause();
+
+      let safety = 0;
+      while (!visible(document.querySelector("#results-screen")) && safety < 110) {
+        safety += 1;
+        const optionButtons = [...document.querySelectorAll("#options-container .option-button")];
+        const submitted = optionButtons.length === 4 && optionButtons.every((button) => button.disabled);
+        if (!submitted) await selectAndCheckCorrect();
+        document.querySelector("#action-button").click();
+        await pause();
+      }
+      if (safety >= 110 || !visible(document.querySelector("#results-screen"))) errors.push("Custom Paper did not complete after all 100 questions were answered.");
+      if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Custom Paper results have horizontal overflow on mobile.");
+      if (localStorage.getItem(storageKey) !== null) errors.push("Completed Custom Paper remained resumable.");
+      if (document.querySelector("#results-title").textContent !== "Paper complete!") errors.push("Custom Paper completion title was incorrect.");
+      if (document.querySelector("#result-score").textContent.replace(/\\s/g, "") !== "95/100") errors.push("Custom Paper final net score was not 95/100.");
+      if (document.querySelector("#result-correct-count").textContent.trim() !== "96") errors.push("Custom Paper final correct count was not 96.");
+      if (document.querySelector("#result-wrong-count").textContent.trim() !== "4") errors.push("Custom Paper final wrong count was not 4.");
+      if (document.querySelector("#result-paper-score").textContent.replace(/\\s/g, "") !== "95/100") errors.push("Custom Paper breakdown net score was not 95/100.");
+      if (!document.querySelector("#result-penalty").textContent.includes("-1")) errors.push("Custom Paper did not show the one-mark penalty for four wrong answers.");
+      if (!document.querySelector("#result-summary").textContent.includes("96 correct") || !document.querySelector("#result-summary").textContent.includes("4 wrong") || !document.querySelector("#result-summary").textContent.includes("95 out of 100")) errors.push("Custom Paper summary omitted correct, wrong, or net marks.");
+      if (document.querySelector("#play-again-button").textContent !== "Attempt New Paper") errors.push("Custom Paper result did not offer Attempt New Paper.");
+
+      const correctControl = document.querySelector("#result-correct-button");
+      correctControl.click();
+      await pause();
+      const correctItems = [...document.querySelectorAll("#result-review-list .result-review-item.is-correct")];
+      if (!visible(document.querySelector("#result-review-panel")) || correctControl.getAttribute("aria-expanded") !== "true") errors.push("Correct result control did not open its review list.");
+      if (correctItems.length !== 96 || document.querySelectorAll("#result-review-list > li").length !== 96) errors.push("Correct review list did not contain exactly 96 answers.");
+      if (correctItems.some((item) => !item.textContent.includes("Question ") || !item.textContent.includes("Category:") || !item.textContent.includes("Your answer:") || !item.textContent.includes("Correct answer:"))) errors.push("A correct review row was missing question/category/answer content.");
+      if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Correct-answer review has horizontal overflow on mobile.");
+      document.querySelector("#result-review-close-button").click();
+      await pause();
+      if (visible(document.querySelector("#result-review-panel")) || document.activeElement !== correctControl || correctControl.getAttribute("aria-expanded") !== "false") errors.push("Closing the correct review did not hide it and restore focus.");
+
+      const wrongControl = document.querySelector("#result-wrong-button");
+      wrongControl.click();
+      await pause();
+      const wrongItems = [...document.querySelectorAll("#result-review-list .result-review-item.is-wrong")];
+      if (!visible(document.querySelector("#result-review-panel")) || wrongControl.getAttribute("aria-expanded") !== "true") errors.push("Wrong result control did not open its review list.");
+      if (wrongItems.length !== 4 || document.querySelectorAll("#result-review-list > li").length !== 4) errors.push("Wrong review list did not contain exactly four answers.");
+      if (wrongItems.some((item) => !item.textContent.includes("Question ") || !item.textContent.includes("Category:") || !item.textContent.includes("Your answer:") || !item.textContent.includes("Correct answer:"))) errors.push("A wrong review row was missing question/category/answer content.");
+      if (wrongItems.some((item) => {
+        const answers = item.querySelectorAll(".result-review-answer");
+        return answers.length !== 2 || answers[0].textContent.replace(/^Your answer:\s*/, "") === answers[1].textContent.replace(/^Correct answer:\s*/, "");
+      })) errors.push("A wrong review row did not distinguish the selected and correct answers.");
+      if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Wrong-answer review has horizontal overflow on mobile.");
+      document.querySelector("#result-review-close-button").click();
+      await pause();
+      if (visible(document.querySelector("#result-review-panel")) || document.activeElement !== wrongControl || wrongControl.getAttribute("aria-expanded") !== "false") errors.push("Closing the wrong review did not hide it and restore focus.");
+
+      const completedQuestionIds = expected.questionIds.slice();
+      document.querySelector("#play-again-button").click();
+      await pause();
+      const newPaperSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!visible(document.querySelector("#quiz-screen")) || !newPaperSnapshot || newPaperSnapshot.sessionKind !== "paper") errors.push("Attempt New Paper did not start another paper session.");
+      if (!newPaperSnapshot || newPaperSnapshot.questionIds.length !== 100 || new Set(newPaperSnapshot.questionIds).size !== 100) errors.push("Attempt New Paper did not create 100 unique questions.");
+      if (!newPaperSnapshot || JSON.stringify(newPaperSnapshot.paperCategoryIds) !== JSON.stringify(expected.selectedCategoryIds)) errors.push("Attempt New Paper changed the selected categories.");
+      if (!newPaperSnapshot || JSON.stringify(newPaperSnapshot.questionIds) === JSON.stringify(completedQuestionIds)) errors.push("Attempt New Paper reused the previous paper question order.");
+      localStorage.removeItem(storageKey);
+
+      return {
+        errors,
+        exactQuestionCount: 100,
+        selectedCategoryIds: expected.selectedCategoryIds,
+        balancedCategoryCounts: expected.sampledCategoryCounts,
+        correct: 96,
+        wrong: 4,
+        penalty: 1,
+        netMarks: 95,
+        continueRestored: true,
+        reshuffled: Boolean(newPaperSnapshot && JSON.stringify(newPaperSnapshot.questionIds) !== JSON.stringify(completedQuestionIds))
+      };
     })()`);
 
     const { resumeExpected, ...normalSummary } = normalResult;
@@ -1181,7 +1523,9 @@ async function main() {
         .concat(difficultResumeSetup.errors)
         .concat(difficultResumeResult.errors)
         .concat(learnResumeSetup.errors)
-        .concat(learnResumeResult.errors),
+        .concat(learnResumeResult.errors)
+        .concat(paperSetupResult.errors)
+        .concat(paperResumeResult.errors),
       resume: {
         submittedStateRestored: resumeResult.errors.length === 0,
         pendingSelectionRestored: pendingResumeResult.errors.length === 0,
@@ -1191,7 +1535,8 @@ async function main() {
         staleDataRecovered: !difficultResult.errors.some((message) => message.includes("Legacy Part resume data"))
           && !difficultResumeSetup.errors.some((message) => message.includes("Stale-bank resume data"))
       },
-      difficult: difficultResult
+      difficult: difficultResult,
+      paper: paperResumeResult
     };
     console.log(JSON.stringify(result, null, 2));
     if (result.errors.length) process.exitCode = 1;

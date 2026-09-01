@@ -460,7 +460,10 @@ function validateAdv2e102Bank(questions) {
 function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
-    "category-screen", "mode-screen", "quiz-screen", "results-screen", "category-grid",
+    "category-screen", "paper-builder-card", "paper-setup-screen", "paper-setup-back-button",
+    "paper-category-options", "paper-select-all-button", "paper-clear-all-button",
+    "paper-selection-summary", "paper-setup-status", "paper-start-button",
+    "mode-screen", "quiz-screen", "results-screen", "category-grid",
     "continue-session-card", "continue-session-button", "continue-session-title", "continue-session-meta",
     "mode-category", "standard-mode-options", "learn-mode-button", "quiz-mode-button",
     "difficult-mode-button", "difficult-mode-options", "difficult-back-button",
@@ -471,7 +474,11 @@ function validateHtml() {
     "difficult-control", "difficult-checkbox",
     "difficult-mark-help", "difficult-mark-status",
     "question-counter", "question-number-input", "question-total", "progress-fill",
-    "score-text", "result-score", "back-button", "restart-button",
+    "score-text", "result-score", "result-breakdown", "result-correct-button",
+    "result-correct-count", "result-wrong-button", "result-wrong-count",
+    "result-paper-score", "result-penalty", "result-review-panel",
+    "result-review-title", "result-review-summary", "result-review-list",
+    "result-review-close-button", "back-button", "restart-button",
     "play-again-button", "change-category-button"
   ];
   for (const id of requiredIds) {

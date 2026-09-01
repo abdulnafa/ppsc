@@ -2,9 +2,11 @@
   "use strict";
 
   var OPTION_LABELS = ["A", "B", "C", "D"];
+  var PAPER_QUESTION_COUNT = 100;
+  var PAPER_WRONG_PENALTY = 0.25;
   var DIFFICULT_STORAGE_KEY = "ppsc-prep:difficult-question-ids:v1";
   var SESSION_STORAGE_KEY = "ppsc-prep:active-session:v1";
-  var SESSION_STORAGE_VERSION = 4;
+  var SESSION_STORAGE_VERSION = 5;
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
@@ -22,6 +24,8 @@
 
   var state = {
     category: null,
+    sessionKind: "category",
+    paperCategoryIds: [],
     questions: [],
     mode: null,
     scope: "all",
@@ -48,10 +52,19 @@
 
   function collectElements() {
     elements.categoryScreen = firstElement(["#category-screen", "[data-screen='categories']"]);
+    elements.paperSetupScreen = firstElement(["#paper-setup-screen", "[data-screen='paper-setup']"]);
     elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
     elements.quizScreen = firstElement(["#quiz-screen", "[data-screen='quiz']"]);
     elements.resultScreen = firstElement(["#result-screen", "#results-screen", "[data-screen='results']"]);
     elements.categoryGrid = firstElement(["#category-grid", "[data-category-grid]"]);
+    elements.paperBuilderCard = firstElement(["#paper-builder-card", "[data-paper-builder]"]);
+    elements.paperSetupBackButton = firstElement(["#paper-setup-back-button", "[data-paper-setup-back]"]);
+    elements.paperCategoryOptions = firstElement(["#paper-category-options", "[data-paper-category-options]"]);
+    elements.paperSelectAllButton = firstElement(["#paper-select-all-button", "[data-paper-select-all]"]);
+    elements.paperClearAllButton = firstElement(["#paper-clear-all-button", "[data-paper-clear-all]"]);
+    elements.paperSelectionSummary = firstElement(["#paper-selection-summary", "[data-paper-selection-summary]"]);
+    elements.paperStartButton = firstElement(["#paper-start-button", "[data-paper-start]"]);
+    elements.paperSetupStatus = firstElement(["#paper-setup-status", "[data-paper-setup-status]"]);
     elements.continueSessionCard = firstElement(["#continue-session-card", "[data-continue-session-card]"]);
     elements.continueSessionButton = firstElement(["#continue-session-button", "[data-continue-session]"]);
     elements.continueSessionTitle = firstElement(["#continue-session-title", "[data-continue-session-title]"]);
@@ -94,6 +107,18 @@
     elements.resultScore = firstElement(["#result-score", "[data-result-score]"]);
     elements.resultSummary = firstElement(["#result-summary", "#result-message", "[data-result-summary]"]);
     elements.resultTitle = firstElement(["#results-title", "[data-result-title]"]);
+    elements.resultBreakdown = firstElement(["#result-breakdown", "[data-result-breakdown]"]);
+    elements.resultCorrectButton = firstElement(["#result-correct-button", "[data-result-correct]"]);
+    elements.resultWrongButton = firstElement(["#result-wrong-button", "[data-result-wrong]"]);
+    elements.resultCorrectCount = firstElement(["#result-correct-count", "[data-result-correct-count]"]);
+    elements.resultWrongCount = firstElement(["#result-wrong-count", "[data-result-wrong-count]"]);
+    elements.resultPaperScore = firstElement(["#result-paper-score", "[data-result-paper-score]"]);
+    elements.resultPenalty = firstElement(["#result-penalty", "[data-result-penalty]"]);
+    elements.resultReviewPanel = firstElement(["#result-review-panel", "[data-result-review-panel]"]);
+    elements.resultReviewTitle = firstElement(["#result-review-title", "[data-result-review-title]"]);
+    elements.resultReviewSummary = firstElement(["#result-review-summary", "[data-result-review-summary]"]);
+    elements.resultReviewList = firstElement(["#result-review-list", "[data-result-review-list]"]);
+    elements.resultReviewCloseButton = firstElement(["#result-review-close-button", "[data-result-review-close]"]);
     elements.backButton = firstElement(["#back-button", "[data-back-to-categories]"]);
     elements.restartButton = firstElement(["#restart-button", "[data-restart-quiz]"]);
     elements.playAgainButton = firstElement(["#play-again-button", "[data-play-again]"]);
@@ -156,19 +181,47 @@
     }, 0);
   }
 
+  function isPaperSession(value) {
+    var session = value || state;
+    return session.sessionKind === "paper";
+  }
+
+  function paperStats(responses, questions) {
+    var correct = 0;
+    var wrong = 0;
+    (Array.isArray(responses) ? responses : []).forEach(function (response, index) {
+      if (!response || !response.submitted || !questions[index]) return;
+      if (response.selectedIndex === questions[index].correctOptionIndex) correct += 1;
+      else wrong += 1;
+    });
+    return {
+      correct: correct,
+      wrong: wrong,
+      answered: correct + wrong,
+      net: correct - (wrong * PAPER_WRONG_PENALTY)
+    };
+  }
+
+  function formatPaperMark(mark) {
+    return Number(mark.toFixed(2)).toString();
+  }
+
   function updateContinueSessionUI() {
     var snapshot = activeSessionSnapshot;
-    var category = snapshot ? findCategory(snapshot.categoryId) : null;
-    if (!snapshot || !category) {
+    var paperSession = snapshot && isPaperSession(snapshot);
+    var category = snapshot && !paperSession ? findCategory(snapshot.categoryId) : null;
+    if (!snapshot || (!paperSession && !category)) {
       setHidden(elements.continueSessionCard, true);
       return;
     }
 
     var currentNumber = Math.min(snapshot.currentIndex + 1, snapshot.questionIds.length);
-    var modeLabel = sessionModeLabel(snapshot.mode, snapshot.scope);
-    var selectionLabel = sessionSelectionLabel(snapshot.partIndex, snapshot.importantOnly);
+    var modeLabel = paperSession ? "Custom Paper" : sessionModeLabel(snapshot.mode, snapshot.scope);
+    var selectionLabel = paperSession
+      ? snapshot.paperCategoryIds.length + (snapshot.paperCategoryIds.length === 1 ? " category" : " categories")
+      : sessionSelectionLabel(snapshot.partIndex, snapshot.importantOnly);
     if (elements.continueSessionTitle) {
-      elements.continueSessionTitle.textContent = "Continue " + category.name;
+      elements.continueSessionTitle.textContent = paperSession ? "Continue Custom Paper" : "Continue " + category.name;
     }
     if (elements.continueSessionMeta) {
       elements.continueSessionMeta.textContent = modeLabel + " \u00b7 " + selectionLabel + " \u00b7 Question "
@@ -177,7 +230,7 @@
     if (elements.continueSessionButton) {
       elements.continueSessionButton.setAttribute(
         "aria-label",
-        "Continue " + category.name + " " + modeLabel + ", " + selectionLabel + ", question "
+        "Continue " + (paperSession ? "Custom Paper" : category.name) + " " + modeLabel + ", " + selectionLabel + ", question "
           + currentNumber + " of " + snapshot.questionIds.length
       );
     }
@@ -198,46 +251,80 @@
     if (!savedValue || typeof savedValue !== "object" || Array.isArray(savedValue)) return null;
     if (savedValue.version !== SESSION_STORAGE_VERSION) return null;
     if (savedValue.bankSignature !== questionBankSignature) return null;
+    if (savedValue.sessionKind !== "category" && savedValue.sessionKind !== "paper") return null;
     if (savedValue.mode !== "learn" && savedValue.mode !== "quiz") return null;
-    if (savedValue.scope !== "all" && savedValue.scope !== "difficult") return null;
+    var paperSession = savedValue.sessionKind === "paper";
+    if (paperSession && (savedValue.mode !== "quiz" || savedValue.scope !== "all")) return null;
+    if (!paperSession && savedValue.scope !== "all" && savedValue.scope !== "difficult") return null;
 
-    var category = findCategory(String(savedValue.categoryId || ""));
-    if (!category) return null;
+    var category = paperSession ? null : findCategory(String(savedValue.categoryId || ""));
+    if (paperSession && savedValue.categoryId !== null) return null;
+    if (!paperSession && !category) return null;
     if (savedValue.partIndex !== null) return null;
     var partIndex = null;
     if (typeof savedValue.importantOnly !== "boolean") return null;
     var importantOnly = savedValue.importantOnly;
+    if (paperSession && importantOnly) return null;
+
+    var paperCategoryIds = null;
+    if (paperSession) {
+      if (!Array.isArray(savedValue.paperCategoryIds) || savedValue.paperCategoryIds.length === 0) return null;
+      paperCategoryIds = savedValue.paperCategoryIds.map(String);
+      if (new Set(paperCategoryIds).size !== paperCategoryIds.length) return null;
+      if (paperCategoryIds.some(function (categoryId) {
+        return !findCategory(categoryId) || questionCount(categoryId) === 0;
+      })) return null;
+      var availablePaperQuestionCount = paperCategoryIds.reduce(function (count, categoryId) {
+        return count + questionCount(categoryId);
+      }, 0);
+      if (availablePaperQuestionCount < PAPER_QUESTION_COUNT) return null;
+    } else if (savedValue.paperCategoryIds !== null) {
+      return null;
+    }
+
     if (!Array.isArray(savedValue.questionIds) || savedValue.questionIds.length === 0) return null;
 
     var questionIds = savedValue.questionIds.map(String);
     if (new Set(questionIds).size !== questionIds.length) return null;
+    if (paperSession && questionIds.length !== PAPER_QUESTION_COUNT) return null;
     var canonicalQuestions = questionIds.map(function (questionId) {
       return questionsById.get(questionId) || null;
     });
-    if (canonicalQuestions.some(function (question) {
-      return !question || question.categoryId !== category.id;
-    })) return null;
+    if (canonicalQuestions.some(function (question) { return !question; })) return null;
 
-    var selectedCategoryIds = questionsForSelection(category.id, partIndex, importantOnly).map(function (question) {
-      return String(question.id);
-    });
-    if (savedValue.scope === "all") {
-      var savedIdSet = new Set(questionIds);
-      if (
-        questionIds.length !== selectedCategoryIds.length
-        || selectedCategoryIds.some(function (questionId) { return !savedIdSet.has(questionId); })
-      ) return null;
-    } else if (questionIds.some(function (questionId) { return !selectedCategoryIds.includes(questionId); })) {
-      return null;
-    }
-
-    if (savedValue.mode === "learn") {
-      var includedIds = new Set(questionIds);
-      var expectedLearnOrder = selectedCategoryIds.filter(function (questionId) {
-        return includedIds.has(questionId);
+    var selectedQuestionIds = [];
+    if (paperSession) {
+      if (canonicalQuestions.some(function (question) {
+        return !paperCategoryIds.includes(String(question.categoryId));
+      })) return null;
+      if (paperCategoryIds.some(function (categoryId) {
+        return !canonicalQuestions.some(function (question) { return question.categoryId === categoryId; });
+      })) return null;
+    } else {
+      if (canonicalQuestions.some(function (question) {
+        return question.categoryId !== category.id;
+      })) return null;
+      selectedQuestionIds = questionsForSelection(category.id, partIndex, importantOnly).map(function (question) {
+        return String(question.id);
       });
-      if (orderKey(questionIds, function (questionId) { return questionId; })
-        !== orderKey(expectedLearnOrder, function (questionId) { return questionId; })) return null;
+      if (savedValue.scope === "all") {
+        var savedIdSet = new Set(questionIds);
+        if (
+          questionIds.length !== selectedQuestionIds.length
+          || selectedQuestionIds.some(function (questionId) { return !savedIdSet.has(questionId); })
+        ) return null;
+      } else if (questionIds.some(function (questionId) { return !selectedQuestionIds.includes(questionId); })) {
+        return null;
+      }
+
+      if (savedValue.mode === "learn") {
+        var includedIds = new Set(questionIds);
+        var expectedLearnOrder = selectedQuestionIds.filter(function (questionId) {
+          return includedIds.has(questionId);
+        });
+        if (orderKey(questionIds, function (questionId) { return questionId; })
+          !== orderKey(expectedLearnOrder, function (questionId) { return questionId; })) return null;
+      }
     }
 
     var sessionQuestions = canonicalQuestions;
@@ -295,7 +382,9 @@
     var snapshot = {
       version: SESSION_STORAGE_VERSION,
       bankSignature: questionBankSignature,
-      categoryId: category.id,
+      sessionKind: savedValue.sessionKind,
+      categoryId: paperSession ? null : category.id,
+      paperCategoryIds: paperSession ? paperCategoryIds.slice() : null,
       mode: savedValue.mode,
       scope: savedValue.scope,
       partIndex: partIndex,
@@ -365,7 +454,14 @@
   }
 
   function saveActiveSession() {
-    if (!state.category || !state.mode || state.questions.length === 0) return false;
+    if (!state.mode || state.questions.length === 0) return false;
+    if (!isPaperSession() && !state.category) return false;
+    if (isPaperSession() && (
+      state.mode !== "quiz"
+      || state.questions.length !== PAPER_QUESTION_COUNT
+      || !Array.isArray(state.paperCategoryIds)
+      || state.paperCategoryIds.length === 0
+    )) return false;
 
     storeCurrentResponse();
 
@@ -385,7 +481,9 @@
     var snapshot = {
       version: SESSION_STORAGE_VERSION,
       bankSignature: questionBankSignature,
-      categoryId: state.category.id,
+      sessionKind: state.sessionKind,
+      categoryId: isPaperSession() ? null : state.category.id,
+      paperCategoryIds: isPaperSession() ? state.paperCategoryIds.slice() : null,
       mode: state.mode,
       scope: state.scope,
       partIndex: null,
@@ -428,6 +526,10 @@
     }
 
     state.category = normalized.category;
+    state.sessionKind = normalized.snapshot.sessionKind;
+    state.paperCategoryIds = normalized.snapshot.paperCategoryIds
+      ? normalized.snapshot.paperCategoryIds.slice()
+      : [];
     state.questions = normalized.questions;
     state.mode = normalized.snapshot.mode;
     state.scope = normalized.snapshot.scope;
@@ -669,11 +771,14 @@
 
   function showScreen(screenName) {
     setHidden(elements.categoryScreen, screenName !== "categories");
+    setHidden(elements.paperSetupScreen, screenName !== "paper-setup");
     setHidden(elements.modeScreen, screenName !== "mode");
     setHidden(elements.quizScreen, screenName !== "quiz");
     setHidden(elements.resultScreen, screenName !== "results");
 
-    var activeScreen = screenName === "quiz"
+    var activeScreen = screenName === "paper-setup"
+      ? elements.paperSetupScreen
+      : screenName === "quiz"
       ? elements.quizScreen
       : screenName === "mode"
         ? elements.modeScreen
@@ -867,6 +972,185 @@
     });
   }
 
+  function renderPaperCategoryOptions() {
+    if (!elements.paperCategoryOptions) return;
+    elements.paperCategoryOptions.textContent = "";
+
+    categories.forEach(function (category) {
+      var count = questionCount(category.id);
+      var label = document.createElement("label");
+      label.className = "paper-category-option";
+
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.name = "paper-category";
+      checkbox.value = category.id;
+      checkbox.dataset.paperCategory = category.id;
+      checkbox.disabled = count === 0;
+
+      var copy = document.createElement("span");
+      copy.className = "paper-category-option-copy";
+      var name = document.createElement("strong");
+      name.textContent = category.name;
+      var description = document.createElement("small");
+      description.textContent = category.description || "PPSC practice questions";
+      copy.appendChild(name);
+      copy.appendChild(description);
+
+      var countLabel = document.createElement("span");
+      countLabel.className = "paper-category-option-count";
+      countLabel.textContent = count > 0 ? count + " MCQs" : "Unavailable";
+
+      label.appendChild(checkbox);
+      label.appendChild(copy);
+      label.appendChild(countLabel);
+      elements.paperCategoryOptions.appendChild(label);
+    });
+  }
+
+  function selectedPaperCategoryIds() {
+    if (!elements.paperCategoryOptions) return [];
+    var selectedIds = Array.from(
+      elements.paperCategoryOptions.querySelectorAll("input[name='paper-category']:checked:not(:disabled)")
+    ).map(function (checkbox) {
+      return String(checkbox.value);
+    });
+    return categories.map(function (category) { return category.id; }).filter(function (categoryId) {
+      return selectedIds.includes(categoryId);
+    });
+  }
+
+  function paperPoolSize(categoryIds) {
+    return categoryIds.reduce(function (total, categoryId) {
+      return total + questionCount(categoryId);
+    }, 0);
+  }
+
+  function updatePaperSelectionUI() {
+    var selectedIds = selectedPaperCategoryIds();
+    var available = paperPoolSize(selectedIds);
+    var canStart = selectedIds.length > 0 && available >= PAPER_QUESTION_COUNT;
+
+    if (elements.paperSelectionSummary) {
+      if (selectedIds.length === 0) {
+        elements.paperSelectionSummary.textContent = "No categories selected";
+      } else {
+        elements.paperSelectionSummary.textContent = selectedIds.length
+          + (selectedIds.length === 1 ? " category selected" : " categories selected")
+          + " · " + available + " MCQs available";
+      }
+    }
+    if (elements.paperStartButton) elements.paperStartButton.disabled = !canStart;
+    if (elements.paperSetupStatus) {
+      elements.paperSetupStatus.textContent = selectedIds.length > 0 && !canStart
+        ? "Select categories containing at least " + PAPER_QUESTION_COUNT + " questions in total."
+        : "";
+    }
+    return canStart;
+  }
+
+  function openPaperSetup() {
+    if (!elements.paperSetupScreen) return;
+    if (elements.paperCategoryOptions) {
+      elements.paperCategoryOptions.querySelectorAll("input[name='paper-category']").forEach(function (checkbox) {
+        checkbox.checked = false;
+      });
+    }
+    updatePaperSelectionUI();
+    showScreen("paper-setup");
+  }
+
+  function setAllPaperCategories(selected) {
+    if (!elements.paperCategoryOptions) return;
+    elements.paperCategoryOptions.querySelectorAll("input[name='paper-category']").forEach(function (checkbox) {
+      checkbox.checked = Boolean(selected) && !checkbox.disabled;
+    });
+    updatePaperSelectionUI();
+  }
+
+  function paperPairKey(question) {
+    var pairId = String(question && question.pairId || "").trim();
+    return pairId || "question:" + String(question.id);
+  }
+
+  function balancedPaperSample(categoryIds) {
+    var pools = fisherYates(categoryIds).map(function (categoryId) {
+      return {
+        categoryId: categoryId,
+        questions: fisherYates(categoryQuestions(categoryId))
+      };
+    });
+    var selected = [];
+    var usedPairIds = new Set();
+
+    while (selected.length < PAPER_QUESTION_COUNT) {
+      var availablePools = pools.filter(function (pool) { return pool.questions.length > 0; });
+      if (availablePools.length === 0) break;
+      var madeProgress = false;
+
+      fisherYates(availablePools).forEach(function (pool) {
+        if (selected.length >= PAPER_QUESTION_COUNT || pool.questions.length === 0) return;
+        var preferredIndex = pool.questions.findIndex(function (question) {
+          return !usedPairIds.has(paperPairKey(question));
+        });
+        var questionIndex = preferredIndex >= 0 ? preferredIndex : 0;
+        var question = pool.questions.splice(questionIndex, 1)[0];
+        selected.push(question);
+        usedPairIds.add(paperPairKey(question));
+        madeProgress = true;
+      });
+
+      if (!madeProgress) break;
+    }
+
+    return selected.length === PAPER_QUESTION_COUNT ? fisherYates(selected) : [];
+  }
+
+  function startPaper(categoryIds) {
+    var selectedIds = Array.isArray(categoryIds) ? categoryIds.map(String) : [];
+    selectedIds = categories.map(function (category) { return category.id; }).filter(function (categoryId) {
+      return selectedIds.includes(categoryId) && questionCount(categoryId) > 0;
+    });
+
+    if (selectedIds.length === 0 || paperPoolSize(selectedIds) < PAPER_QUESTION_COUNT) {
+      if (elements.paperSetupStatus) {
+        elements.paperSetupStatus.textContent = "Choose categories with at least "
+          + PAPER_QUESTION_COUNT + " available questions.";
+      }
+      return false;
+    }
+
+    var sampledQuestions = balancedPaperSample(selectedIds);
+    if (sampledQuestions.length !== PAPER_QUESTION_COUNT) {
+      if (elements.paperSetupStatus) {
+        elements.paperSetupStatus.textContent = "A 100-question paper could not be prepared from this selection.";
+      }
+      return false;
+    }
+
+    var sessionQuestions = sampledQuestions.map(shuffledQuizQuestion);
+    state.category = null;
+    state.sessionKind = "paper";
+    state.paperCategoryIds = selectedIds.slice();
+    state.questions = sessionQuestions;
+    state.mode = "quiz";
+    state.scope = "all";
+    state.partIndex = null;
+    state.importantOnly = false;
+    state.responses = new Array(PAPER_QUESTION_COUNT).fill(null);
+    state.learnVisitedQuestionIds = new Set();
+    state.currentIndex = 0;
+    state.selectedIndex = null;
+    state.submitted = false;
+    state.score = 0;
+
+    closePaperReview();
+    setQuizSessionLabel();
+    showScreen("quiz");
+    renderQuestion();
+    return true;
+  }
+
   function findCategory(categoryId) {
     return categories.find(function (category) {
       return category.id === categoryId;
@@ -879,6 +1163,8 @@
     if (!category || count === 0) return;
 
     state.category = category;
+    state.sessionKind = "category";
+    state.paperCategoryIds = [];
     state.questions = [];
     state.mode = null;
     state.scope = "all";
@@ -996,14 +1282,19 @@
   }
 
   function setQuizSessionLabel() {
-    if (elements.quizCategory && state.category) {
-      elements.quizCategory.textContent = state.category.name + " \u00b7 "
-        + sessionModeLabel(state.mode, state.scope) + " \u00b7 "
-        + sessionSelectionLabel(state.partIndex, state.importantOnly);
+    if (elements.quizCategory) {
+      if (isPaperSession()) {
+        elements.quizCategory.textContent = "Custom Paper · 100 MCQs";
+      } else if (state.category) {
+        elements.quizCategory.textContent = state.category.name + " \u00b7 "
+          + sessionModeLabel(state.mode, state.scope) + " \u00b7 "
+          + sessionSelectionLabel(state.partIndex, state.importantOnly);
+      }
     }
     if (elements.quizScreen) {
       elements.quizScreen.dataset.mode = state.mode || "";
       elements.quizScreen.dataset.scope = state.scope || "all";
+      elements.quizScreen.dataset.sessionKind = state.sessionKind || "category";
     }
   }
 
@@ -1019,6 +1310,8 @@
     if (filteredQuestions.length === 0) {
       if (selectedScope === "difficult") {
         state.category = category;
+        state.sessionKind = "category";
+        state.paperCategoryIds = [];
         state.questions = [];
         state.mode = null;
         state.scope = "difficult";
@@ -1062,6 +1355,8 @@
     }
 
     state.category = category;
+    state.sessionKind = "category";
+    state.paperCategoryIds = [];
     state.questions = sessionQuestions;
     state.mode = selectedMode;
     state.scope = selectedScope;
@@ -1123,7 +1418,10 @@
     }
 
     if (elements.questionKind) {
-      var kindLabel = question.kind === "similar" ? "SIMILAR PRACTICE" : "SOURCE PAPER";
+      var paperQuestionCategory = isPaperSession() ? findCategory(question.categoryId) : null;
+      var kindLabel = paperQuestionCategory
+        ? "CUSTOM PAPER · " + paperQuestionCategory.name.toUpperCase()
+        : (question.kind === "similar" ? "SIMILAR PRACTICE" : "SOURCE PAPER");
       if (isImportantQuestion(question)) {
         kindLabel += " · IMPORTANT · REPEATED " + question.repeatCount + "x";
       }
@@ -1153,8 +1451,12 @@
       );
     }
     resetFeedback();
-    syncDifficultCheckbox(question);
-    setHidden(elements.difficultControl, false);
+    if (isPaperSession()) {
+      setHidden(elements.difficultControl, true);
+    } else {
+      syncDifficultCheckbox(question);
+      setHidden(elements.difficultControl, false);
+    }
 
     if (state.mode === "learn") {
       prepareLearnQuestion(question);
@@ -1494,11 +1796,137 @@
       elements.progressBar.setAttribute("aria-valuenow", String(percent));
     }
     if (elements.scoreText) {
-      elements.scoreText.textContent = state.mode === "learn" ? "Learn Mode" : "Score: " + state.score;
+      if (isPaperSession()) {
+        var livePaperStats = paperStats(state.responses, state.questions);
+        elements.scoreText.textContent = "C:" + livePaperStats.correct + " W:" + livePaperStats.wrong
+          + " Marks:" + formatPaperMark(livePaperStats.net);
+        elements.scoreText.setAttribute(
+          "aria-label",
+          livePaperStats.correct + " correct, " + livePaperStats.wrong + " wrong, "
+            + formatPaperMark(livePaperStats.net) + " marks"
+        );
+      } else {
+        elements.scoreText.textContent = state.mode === "learn" ? "Learn Mode" : "Score: " + state.score;
+        elements.scoreText.removeAttribute("aria-label");
+      }
+    }
+  }
+
+  function closePaperReview() {
+    setHidden(elements.resultReviewPanel, true);
+    if (elements.resultCorrectButton) elements.resultCorrectButton.setAttribute("aria-expanded", "false");
+    if (elements.resultWrongButton) elements.resultWrongButton.setAttribute("aria-expanded", "false");
+  }
+
+  function appendPaperReviewText(item, className, text, language) {
+    if (!text) return;
+    var paragraph = document.createElement("p");
+    paragraph.className = className;
+    paragraph.textContent = text;
+    if (language === "ur") {
+      paragraph.lang = "ur";
+      paragraph.dir = "rtl";
+    }
+    item.appendChild(paragraph);
+  }
+
+  function showPaperReview(reviewKind) {
+    if (!isPaperSession() || !elements.resultReviewPanel || !elements.resultReviewList) return;
+    var showCorrect = reviewKind === "correct";
+    var matchingIndexes = [];
+    state.responses.forEach(function (response, index) {
+      if (!response || !response.submitted || !state.questions[index]) return;
+      var correct = response.selectedIndex === state.questions[index].correctOptionIndex;
+      if (correct === showCorrect) matchingIndexes.push(index);
+    });
+
+    elements.resultReviewList.textContent = "";
+    matchingIndexes.forEach(function (questionIndex) {
+      var question = state.questions[questionIndex];
+      var response = state.responses[questionIndex];
+      var category = findCategory(question.categoryId);
+      var selectedOption = normalizeOption(question.options[response.selectedIndex], response.selectedIndex);
+      var correctOption = normalizeOption(
+        question.options[question.correctOptionIndex],
+        question.correctOptionIndex
+      );
+
+      var item = document.createElement("li");
+      item.className = "result-review-item " + (showCorrect ? "is-correct" : "is-wrong");
+      var heading = document.createElement("strong");
+      heading.textContent = "Question " + (questionIndex + 1) + ". " + question.question;
+      item.appendChild(heading);
+      appendPaperReviewText(
+        item,
+        "result-review-meta",
+        category ? "Category: " + category.name : "",
+        ""
+      );
+      appendPaperReviewText(item, "result-review-question-urdu", String(question.questionUrdu || "").trim(), "ur");
+      appendPaperReviewText(
+        item,
+        "result-review-answer",
+        "Your answer: " + selectedOption.label + ". " + selectedOption.text,
+        ""
+      );
+      appendPaperReviewText(
+        item,
+        "result-review-answer",
+        "Correct answer: " + correctOption.label + ". " + correctOption.text,
+        ""
+      );
+      appendPaperReviewText(
+        item,
+        "result-review-explanation-urdu",
+        String(question.explanationUrdu || "").trim(),
+        "ur"
+      );
+      elements.resultReviewList.appendChild(item);
+    });
+
+    if (matchingIndexes.length === 0) {
+      var emptyItem = document.createElement("li");
+      emptyItem.className = "result-review-empty";
+      emptyItem.textContent = showCorrect
+        ? "There are no correct answers in this paper."
+        : "There are no wrong answers in this paper.";
+      elements.resultReviewList.appendChild(emptyItem);
+    }
+
+    var label = showCorrect ? "Correct answers" : "Wrong answers";
+    if (elements.resultReviewTitle) elements.resultReviewTitle.textContent = label;
+    if (elements.resultReviewSummary) {
+      elements.resultReviewSummary.textContent = matchingIndexes.length + " "
+        + (matchingIndexes.length === 1 ? "answer" : "answers") + " in this list.";
+    }
+    if (elements.resultCorrectButton) {
+      elements.resultCorrectButton.setAttribute("aria-expanded", showCorrect ? "true" : "false");
+    }
+    if (elements.resultWrongButton) {
+      elements.resultWrongButton.setAttribute("aria-expanded", showCorrect ? "false" : "true");
+    }
+    setHidden(elements.resultReviewPanel, false);
+    if (elements.resultReviewTitle && typeof elements.resultReviewTitle.focus === "function") {
+      elements.resultReviewTitle.setAttribute("tabindex", "-1");
+      elements.resultReviewTitle.focus({ preventScroll: true });
+    }
+    if (typeof elements.resultReviewPanel.scrollIntoView === "function") {
+      elements.resultReviewPanel.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
 
   function showResults() {
+    storeCurrentResponse();
+    var pendingIndex = state.mode === "learn"
+      ? firstUnvisitedLearnQuestionIndex()
+      : firstUnansweredQuizQuestionIndex();
+    if (state.questions.length > 0 && pendingIndex >= 0) {
+      state.currentIndex = pendingIndex;
+      showScreen("quiz");
+      renderQuestion();
+      return;
+    }
+
     var total = state.questions.length;
     var percent = total > 0 ? Math.round((state.score / total) * 100) : 0;
     var remainingInScope = state.category && state.scope === "difficult"
@@ -1507,6 +1935,48 @@
     var canRepeatScope = state.scope !== "difficult" || remainingInScope > 0;
     removeStoredActiveSession();
     showScreen("results");
+
+    if (isPaperSession()) {
+      var completedPaperStats = paperStats(state.responses, state.questions);
+      var penalty = completedPaperStats.wrong * PAPER_WRONG_PENALTY;
+      if (elements.resultScore) elements.resultScore.textContent = formatPaperMark(completedPaperStats.net) + "/100";
+      var paperScoreCaption = elements.resultScore && elements.resultScore.parentElement
+        ? elements.resultScore.parentElement.querySelector("span")
+        : null;
+      if (paperScoreCaption) paperScoreCaption.textContent = "Marks";
+      if (elements.resultScore && elements.resultScore.parentElement) {
+        elements.resultScore.parentElement.setAttribute(
+          "aria-label",
+          "Final paper score " + formatPaperMark(completedPaperStats.net) + " out of 100"
+        );
+      }
+      if (elements.resultCorrectCount) elements.resultCorrectCount.textContent = String(completedPaperStats.correct);
+      if (elements.resultWrongCount) elements.resultWrongCount.textContent = String(completedPaperStats.wrong);
+      if (elements.resultPaperScore) {
+        elements.resultPaperScore.textContent = formatPaperMark(completedPaperStats.net) + " / 100";
+      }
+      if (elements.resultPenalty) {
+        elements.resultPenalty.textContent = penalty > 0
+          ? "Negative marking: -" + formatPaperMark(penalty)
+          : "Negative marking: 0";
+      }
+      setHidden(elements.resultBreakdown, false);
+      closePaperReview();
+      if (elements.playAgainButton) {
+        elements.playAgainButton.textContent = "Attempt New Paper";
+        elements.playAgainButton.disabled = false;
+      }
+      if (elements.resultTitle) elements.resultTitle.textContent = "Paper complete!";
+      if (elements.resultSummary) {
+        elements.resultSummary.textContent = completedPaperStats.correct + " correct, "
+          + completedPaperStats.wrong + " wrong. Final score after negative marking: "
+          + formatPaperMark(completedPaperStats.net) + " out of 100.";
+      }
+      return;
+    }
+
+    setHidden(elements.resultBreakdown, true);
+    closePaperReview();
 
     var scoreOutput = elements.resultScore || elements.scoreText;
     if (scoreOutput && state.mode === "learn") {
@@ -1558,6 +2028,10 @@
   }
 
   function restartQuiz() {
+    if (isPaperSession()) {
+      startPaper(state.paperCategoryIds);
+      return;
+    }
     if (!state.category) {
       returnToCategories();
       return;
@@ -1566,6 +2040,10 @@
   }
 
   function handlePlayAgain() {
+    if (isPaperSession()) {
+      startPaper(state.paperCategoryIds);
+      return;
+    }
     if (!state.category) {
       returnToCategories();
       return;
@@ -1579,6 +2057,8 @@
 
   function returnToCategories() {
     state.category = null;
+    state.sessionKind = "category";
+    state.paperCategoryIds = [];
     state.questions = [];
     state.mode = null;
     state.scope = "all";
@@ -1590,6 +2070,8 @@
     state.selectedIndex = null;
     state.submitted = false;
     state.score = 0;
+    setHidden(elements.resultBreakdown, true);
+    closePaperReview();
     showScreen("categories");
     updateContinueSessionUI();
   }
@@ -1616,6 +2098,24 @@
 
   function bindEvents() {
     if (elements.categoryGrid) elements.categoryGrid.addEventListener("click", onCategoryClick);
+    if (elements.paperBuilderCard) elements.paperBuilderCard.addEventListener("click", openPaperSetup);
+    if (elements.paperSetupBackButton) elements.paperSetupBackButton.addEventListener("click", returnToCategories);
+    if (elements.paperCategoryOptions) {
+      elements.paperCategoryOptions.addEventListener("change", function (event) {
+        if (event.target.matches("input[name='paper-category']")) updatePaperSelectionUI();
+      });
+    }
+    if (elements.paperSelectAllButton) {
+      elements.paperSelectAllButton.addEventListener("click", function () { setAllPaperCategories(true); });
+    }
+    if (elements.paperClearAllButton) {
+      elements.paperClearAllButton.addEventListener("click", function () { setAllPaperCategories(false); });
+    }
+    if (elements.paperStartButton) {
+      elements.paperStartButton.addEventListener("click", function () {
+        startPaper(selectedPaperCategoryIds());
+      });
+    }
     if (elements.importantOnlyCheckbox) {
       elements.importantOnlyCheckbox.addEventListener("change", function () {
         state.importantOnly = elements.importantOnlyCheckbox.checked;
@@ -1672,6 +2172,22 @@
     if (elements.restartButton) elements.restartButton.addEventListener("click", restartQuiz);
     if (elements.playAgainButton) elements.playAgainButton.addEventListener("click", handlePlayAgain);
     if (elements.changeCategoryButton) elements.changeCategoryButton.addEventListener("click", returnToCategories);
+    if (elements.resultCorrectButton) {
+      elements.resultCorrectButton.addEventListener("click", function () { showPaperReview("correct"); });
+    }
+    if (elements.resultWrongButton) {
+      elements.resultWrongButton.addEventListener("click", function () { showPaperReview("wrong"); });
+    }
+    if (elements.resultReviewCloseButton) {
+      elements.resultReviewCloseButton.addEventListener("click", function () {
+        var returnTarget = elements.resultCorrectButton
+          && elements.resultCorrectButton.getAttribute("aria-expanded") === "true"
+          ? elements.resultCorrectButton
+          : elements.resultWrongButton;
+        closePaperReview();
+        if (returnTarget && typeof returnTarget.focus === "function") returnTarget.focus({ preventScroll: true });
+      });
+    }
     if (elements.difficultCheckbox) {
       elements.difficultCheckbox.addEventListener("change", handleDifficultCheckboxChange);
     }
@@ -1684,9 +2200,13 @@
     difficultQuestionIds = loadDifficultQuestionIds();
     loadActiveSession();
     renderCategories();
+    renderPaperCategoryOptions();
     bindEvents();
     resetFeedback();
     updateDifficultModeUI();
+    updatePaperSelectionUI();
+    setHidden(elements.resultBreakdown, true);
+    closePaperReview();
     showScreen("categories");
     updateContinueSessionUI();
 

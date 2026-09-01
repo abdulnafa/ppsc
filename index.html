@@ -6,9 +6,9 @@
   <meta name="description" content="Free category-wise MCQ practice for the PPSC General Ability test.">
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
-  <link rel="stylesheet" href="styles.css?v=20260901-2">
+  <link rel="stylesheet" href="styles.css?v=20260901-3">
   <script src="data/questions.js?v=20260901-1" defer></script>
-  <script src="app.js?v=20260901-2" defer></script>
+  <script src="app.js?v=20260901-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -64,6 +64,18 @@
         <p>Pick a subject to begin your practice session.</p>
       </div>
 
+      <div class="category-grid paper-entry-grid">
+        <button id="paper-builder-card" class="category-card paper-builder-card" type="button" aria-controls="paper-setup-screen">
+          <span class="category-icon paper-builder-icon" aria-hidden="true">100</span>
+          <span class="category-copy">
+            <strong>Start Paper Here</strong>
+            <small>Choose subjects and attempt a complete 100-MCQ practice paper.</small>
+          </span>
+          <span class="paper-card-badge" aria-hidden="true">FULL PAPER</span>
+          <span class="card-arrow" aria-hidden="true">&rarr;</span>
+        </button>
+      </div>
+
       <div id="category-grid" class="category-grid">
         <button class="category-card" type="button" data-category="general-knowledge">
           <span class="category-icon icon-blue" aria-hidden="true">GK</span>
@@ -116,6 +128,53 @@
           <span class="card-arrow" aria-hidden="true">→</span>
         </button>
       </div>
+    </section>
+
+    <section id="paper-setup-screen" class="screen paper-setup-screen" aria-labelledby="paper-setup-title" hidden>
+      <button id="paper-setup-back-button" class="text-button paper-setup-back-button" type="button">
+        <span aria-hidden="true">&larr;</span> Categories
+      </button>
+
+      <article class="paper-setup-card">
+        <header class="paper-setup-header">
+          <span class="eyebrow">CUSTOM PRACTICE PAPER</span>
+          <h1 id="paper-setup-title">Build your 100-MCQ paper</h1>
+          <p>Select the subjects you want included. Questions will be chosen randomly from your selected categories.</p>
+        </header>
+
+        <div class="paper-pattern" aria-label="Paper pattern">
+          <span><strong>100</strong> MCQs</span>
+          <span><strong>1</strong> mark each</span>
+          <span><strong>-0.25</strong> each wrong (4 wrong = -1)</span>
+        </div>
+
+        <fieldset class="paper-category-fieldset">
+          <legend>Choose paper categories</legend>
+          <div class="paper-category-toolbar">
+            <p id="paper-category-help">Select one or more categories. Your paper will use only these subjects.</p>
+            <div class="paper-selection-actions">
+              <button id="paper-select-all-button" class="text-button" type="button">Select all</button>
+              <span aria-hidden="true">&middot;</span>
+              <button id="paper-clear-all-button" class="text-button" type="button">Clear</button>
+            </div>
+          </div>
+
+          <div id="paper-category-options" class="paper-category-options" aria-describedby="paper-category-help">
+            <!-- Category checkboxes are populated from the active question bank. -->
+          </div>
+        </fieldset>
+
+        <div class="paper-setup-footer">
+          <div class="paper-selection-copy">
+            <strong id="paper-selection-summary" aria-live="polite">No categories selected</strong>
+            <small>100 random questions will be prepared from your selection.</small>
+          </div>
+          <button id="paper-start-button" class="primary-button paper-start-button" type="button" disabled>
+            Start 100-MCQ Paper
+          </button>
+        </div>
+        <p id="paper-setup-status" class="paper-setup-status" role="status" aria-live="polite"></p>
+      </article>
     </section>
 
     <section id="mode-screen" class="screen mode-screen" aria-labelledby="mode-title" hidden>
@@ -286,6 +345,37 @@
           <strong id="result-score">0/0</strong>
           <span>Correct</span>
         </div>
+        <div id="result-breakdown" class="result-breakdown" aria-label="Paper answer breakdown" hidden>
+          <button id="result-correct-button" class="result-breakdown-button result-breakdown-correct" type="button" aria-controls="result-review-panel" aria-expanded="false">
+            <span>Correct</span>
+            <strong id="result-correct-count">0</strong>
+            <small>View correct answers</small>
+          </button>
+          <button id="result-wrong-button" class="result-breakdown-button result-breakdown-wrong" type="button" aria-controls="result-review-panel" aria-expanded="false">
+            <span>Wrong</span>
+            <strong id="result-wrong-count">0</strong>
+            <small>View wrong answers</small>
+          </button>
+          <div class="result-paper-score" aria-label="Paper score after negative marking">
+            <span>Final score</span>
+            <strong id="result-paper-score">0 / 100</strong>
+            <small id="result-penalty">Negative marking: 0</small>
+          </div>
+        </div>
+
+        <section id="result-review-panel" class="result-review-panel" aria-labelledby="result-review-title" hidden>
+          <div class="result-review-header">
+            <div>
+              <span class="eyebrow">ANSWER REVIEW</span>
+              <h2 id="result-review-title">Correct answers</h2>
+              <p id="result-review-summary">Review the answers from this paper.</p>
+            </div>
+            <button id="result-review-close-button" class="secondary-button result-review-close-button" type="button">
+              <span aria-hidden="true">&larr;</span> Back to results
+            </button>
+          </div>
+          <ol id="result-review-list" class="result-review-list"></ol>
+        </section>
         <div class="result-actions">
           <button id="play-again-button" class="primary-button" type="button">Practice Again</button>
           <button id="change-category-button" class="secondary-button" type="button">Choose Another Category</button>
