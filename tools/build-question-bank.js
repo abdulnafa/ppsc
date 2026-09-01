@@ -18,6 +18,7 @@ const projectDirectory = path.resolve(__dirname, "..");
 const workspaceDirectory = path.resolve(projectDirectory, "..");
 const workDirectory = path.join(projectDirectory, "work");
 const outputFile = path.join(projectDirectory, "data", "questions.js");
+const releaseRepeatEvidencePath = path.join(projectDirectory, "data", "release-repeat-evidence.json");
 
 const categories = [
   { id: "general-knowledge", name: "General Knowledge", shortLabel: "GK", description: "World facts, organizations, personalities and important events." },
@@ -97,16 +98,33 @@ function canonicalRepeatTargetId(duplicateOf) {
   return "";
 }
 
+function sha256Json(value) {
+  return crypto.createHash("sha256").update(JSON.stringify(value)).digest("hex");
+}
+
 function loadRepeatEvidence() {
+  const ibesDecisionData = readArrayFiles(ibesDecisionFilePattern);
+  const adv2e102DecisionData = readArrayFiles(adv2e102DecisionFilePattern);
   const decisionSets = [
-    { corpus: "IBES", records: readArrayFiles(ibesDecisionFilePattern).records },
-    { corpus: "ADV2E102", records: readArrayFiles(adv2e102DecisionFilePattern).records }
+    { corpus: "IBES", ...ibesDecisionData },
+    { corpus: "ADV2E102", ...adv2e102DecisionData }
   ];
+  const decisionSources = [];
+  const verifiedSkips = [];
   const seenDecisions = new Set();
   const skipCountsByTargetId = new Map();
   let verifiedSkipCount = 0;
 
-  for (const { corpus, records } of decisionSets) {
+  for (const { corpus, files, records } of decisionSets) {
+    for (const file of files) {
+      const parsed = JSON.parse(fs.readFileSync(path.join(workDirectory, file), "utf8"));
+      decisionSources.push({
+        corpus,
+        file,
+        recordCount: parsed.length,
+        recordsSha256: sha256Json(parsed)
+      });
+    }
     for (const decision of records) {
       const sourceIdentity = String(decision.sourceRecordId || (
         Number.isInteger(Number(decision.sourceQuestionNumber))
@@ -123,12 +141,22 @@ function loadRepeatEvidence() {
       if (!targetId) {
         fail(`${evidenceId} is a verified skip but duplicateOf does not resolve to a production question ID.`);
       }
+      verifiedSkips.push({
+        corpus,
+        sourceIdentity,
+        targetId,
+        sourceFile: decision._file
+      });
       verifiedSkipCount += 1;
       skipCountsByTargetId.set(targetId, (skipCountsByTargetId.get(targetId) || 0) + 1);
     }
   }
 
-  return { skipCountsByTargetId, verifiedSkipCount };
+  decisionSources.sort((left, right) => `${left.corpus}:${left.file}`.localeCompare(`${right.corpus}:${right.file}`));
+  verifiedSkips.sort((left, right) => (
+    `${left.corpus}:${left.sourceIdentity}`.localeCompare(`${right.corpus}:${right.sourceIdentity}`)
+  ));
+  return { decisionSources, verifiedSkips, skipCountsByTargetId, verifiedSkipCount };
 }
 
 function validateRepeatEvidence(questions, repeatEvidence) {
@@ -428,7 +456,32 @@ function buildJavaScript(questions, translations, repeatEvidence) {
   });
   const websiteQuestions = questions.map((question) => websiteQuestion(question, pairsById, translations, repeatEvidence));
   validateGeneratedRepeatMetadata(websiteQuestions, repeatEvidence);
-  return `(function () {\n  "use strict";\n\n  var categories = ${JSON.stringify(categories, null, 2)};\n\n  var questions = ${JSON.stringify(websiteQuestions, null, 2)};\n\n  window.PPSC_QUIZ_DATA = {\n    version: 5,\n    generatedOn: ${JSON.stringify(generatedOn)},\n    categories: categories,\n    questions: questions\n  };\n  window.PPSC_CATEGORIES = categories;\n  window.PPSC_QUESTIONS = questions;\n})();\n`;
+  const releaseData = {
+    version: 5,
+    generatedOn,
+    categories,
+    questions: websiteQuestions
+  };
+  const javascript = `(function () {\n  "use strict";\n\n  var categories = ${JSON.stringify(categories, null, 2)};\n\n  var questions = ${JSON.stringify(websiteQuestions, null, 2)};\n\n  window.PPSC_QUIZ_DATA = {\n    version: 5,\n    generatedOn: ${JSON.stringify(generatedOn)},\n    categories: categories,\n    questions: questions\n  };\n  window.PPSC_CATEGORIES = categories;\n  window.PPSC_QUESTIONS = questions;\n})();\n`;
+  return { javascript, releaseData };
+}
+
+function buildReleaseRepeatEvidence(releaseData, repeatEvidence) {
+  return {
+    schemaVersion: 1,
+    questionBank: {
+      dataVersion: releaseData.version,
+      questionCount: releaseData.questions.length,
+      payloadSha256: sha256Json(releaseData)
+    },
+    summary: {
+      decisionSourceCount: repeatEvidence.decisionSources.length,
+      verifiedSkipCount: repeatEvidence.verifiedSkips.length,
+      targetCount: repeatEvidence.skipCountsByTargetId.size
+    },
+    decisionSources: repeatEvidence.decisionSources,
+    verifiedSkips: repeatEvidence.verifiedSkips
+  };
 }
 
 function optionText(option) {
@@ -472,10 +525,12 @@ validate(questions);
 const repeatEvidence = loadRepeatEvidence();
 validateRepeatEvidence(questions, repeatEvidence);
 const translations = loadQuestionTranslations(questions);
-const generatedJavaScript = buildJavaScript(questions, translations, repeatEvidence);
+const { javascript: generatedJavaScript, releaseData } = buildJavaScript(questions, translations, repeatEvidence);
+const releaseRepeatEvidence = buildReleaseRepeatEvidence(releaseData, repeatEvidence);
 const validateOnly = process.argv.includes("--validate-only");
 if (!validateOnly) {
   fs.writeFileSync(outputFile, generatedJavaScript, "utf8");
+  fs.writeFileSync(releaseRepeatEvidencePath, `${JSON.stringify(releaseRepeatEvidence, null, 2)}\n`, "utf8");
   writeMarkdown(questions);
 }
 

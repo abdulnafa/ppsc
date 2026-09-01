@@ -30,6 +30,7 @@ Difficult marks and the compact active-session checkpoint are stored in that bro
 ppsc-project/
 ├── .github/workflows/pages.yml  # GitHub Pages deployment
 ├── data/questions.js            # Generated browser question bank
+├── data/release-repeat-evidence.json # Pinned repeat evidence for that release
 ├── tools/                       # Build and validation scripts
 ├── work/                        # Verified source/enrichment JSON
 ├── index.html                   # Website markup
@@ -38,7 +39,7 @@ ppsc-project/
 └── README.md
 ```
 
-`data/questions.js` and the Markdown banks in the parent folder are generated outputs. The verified enrichment JSON and `question-translations-ur*.json` files under `work/` are the source of truth.
+`data/questions.js`, `data/release-repeat-evidence.json`, and the Markdown banks in the parent folder are generated outputs. The verified enrichment JSON and `question-translations-ur*.json` files under `work/` are the source of truth.
 
 ## Preview locally
 
@@ -64,15 +65,18 @@ node tools/validate-adv2e102-verification.js
 node tools/validate-adv2e102-dedup.js
 node tools/validate-adv2e102-enriched.js
 node tools/build-question-bank.js
-node tools/validate-site-data.js --expected=9340
+node tools/validate-site-data.js --expected=9340 --verify-work-repeat-evidence
 node tools/browser-smoke.js
 ```
+
+The strict repeat-evidence flag belongs to a deliberate question-bank rebuild, after the source validators and builder are clean. GitHub Pages deployment validates the committed question bank against its pinned, hashed release-evidence snapshot without coupling it to newer restart-safe work-in-progress decision files.
 
 The browser smoke test requires local Chrome or Edge. It exercises Learn, Quiz and Difficult practice at mobile width, including Previous/Next answer restoration, stable Learn order, shuffled Quiz questions/options, answer remapping, the Learn-complete **Start Quiz** transition, the always-visible persistent mark/unmark control, and exact Continue restoration for answer history, pending selections, submitted feedback, score, Difficult scope, corrupt/stale storage recovery, and completed-session clearing.
 
 The build script validates all six `PPSC 110 Edition` papers, all 1,088 retained IBES pairs, and every currently retained ADV2E102 pair before including it. It balances only the generated similar-question answer positions and creates:
 
 - `data/questions.js` with the complete website bank.
+- `data/release-repeat-evidence.json` with the exact hashed decision evidence used by that release.
 - `..\ppsc_mcqs.md` with all similar practice questions.
 - Eleven category Markdown files in the parent folder.
 
