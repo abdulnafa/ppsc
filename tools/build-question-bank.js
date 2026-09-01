@@ -50,7 +50,7 @@ const markdownFiles = {
 
 const expectedPaperCounts = { 234: 20, 235: 100, 236: 78, 237: 76, 238: 89, 239: 86 };
 const expectedIbesSourceCount = 1088;
-const expectedAdv2e102SourceCount = 3133;
+const expectedAdv2e102SourceCount = 4169;
 const categoryIds = new Set(categories.map((category) => category.id));
 const optionLabels = ["A", "B", "C", "D"];
 const ibesDecisionFilePattern = /^ibes-dedup-decisions-p\d{3}-\d{3,4}\.json$/i;
@@ -230,7 +230,13 @@ function validate(questions) {
   for (const [index, question] of questions.entries()) {
     const location = `question index ${index}`;
     if (!question || typeof question !== "object") fail(`${location} is not an object.`);
-    if (/[ÃÂâØÙÛ]/u.test(JSON.stringify(question))) fail(`${question.id || location} contains likely UTF-8 mojibake.`);
+    // Standalone accented letters such as â are valid in names (for example,
+    // Mâlik). Treat â as mojibake only when it begins a malformed UTF-8
+    // punctuation sequence; the other lead characters are never expected in
+    // canonical question data.
+    if (/(?:[ÃÂØÙÛ]|â(?![\p{L}\p{M}]))/u.test(JSON.stringify(question))) {
+      fail(`${question.id || location} contains likely UTF-8 mojibake.`);
+    }
     if (!question.id || ids.has(question.id)) fail(`${location} has a missing/duplicate id: ${question.id}`);
     ids.add(question.id);
     if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})-(SRC|SIM)$/.test(question.id) &&

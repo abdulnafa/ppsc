@@ -1,0 +1,264 @@
+[
+  {
+    "id": "ADV2E102-U0039-Q053-SRC",
+    "pairId": "ADV2E102-U0039-Q053",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "How many bones does a normal adult human skeleton contain?",
+    "questionUrdu": "ایک عام بالغ انسانی ڈھانچے میں کتنی ہڈیاں ہوتی ہیں؟",
+    "options": [
+      "200",
+      "201",
+      "206",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 206 ہے۔ معتبر طبی مراجع کے مطابق ایک عام بالغ انسانی ڈھانچے میں عموماً 206 ہڈیاں ہوتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "The skeletal system",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK20361/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0039-q053"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK20361/",
+        "label": "The skeletal system",
+        "publisher": "U.S. National Library of Medicine",
+        "authorityId": "us-national-library-medicine",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The medical text states that the adult human skeleton normally contains 206 bones."
+      },
+      {
+        "url": "https://www.hopkinsmedicine.org/health/wellness-and-prevention/anatomy-of-the-bone",
+        "label": "Anatomy of the bone",
+        "publisher": "Johns Hopkins Medicine",
+        "authorityId": "johns-hopkins-medicine",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Johns Hopkins independently states that the adult human body has 206 bones."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source stem was made grammatical and scoped to the normal adult skeleton. Both medical authorities support 206; printed answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0039-Q053-SIM",
+    "pairId": "ADV2E102-U0039-Q053",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "A teaching model omits 6 bones from the standard 206-bone adult skeleton. How many bones does the model display?",
+    "questionUrdu": "ایک تدریسی نمونے میں بالغ انسانی ڈھانچے کی معیاری 206 ہڈیوں میں سے 6 ہڈیاں شامل نہیں ہیں۔ نمونے میں کتنی ہڈیاں دکھائی گئی ہیں؟",
+    "options": [
+      "200",
+      "206",
+      "212",
+      "196"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 200 ہے۔ بالغ انسانی ڈھانچے کی معیاری 206 ہڈیوں میں سے 6 کم کرنے پر تدریسی نمونے میں 200 ہڈیاں رہ جاتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "The skeletal system",
+      "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK20361/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0039-q053",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK20361/",
+        "label": "The skeletal system",
+        "publisher": "U.S. National Library of Medicine",
+        "authorityId": "us-national-library-medicine",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The medical text states that the adult human skeleton normally contains 206 bones."
+      },
+      {
+        "url": "https://www.hopkinsmedicine.org/health/wellness-and-prevention/anatomy-of-the-bone",
+        "label": "Anatomy of the bone",
+        "publisher": "Johns Hopkins Medicine",
+        "authorityId": "johns-hopkins-medicine",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Johns Hopkins independently states that the adult human body has 206 bones."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0039-Q086-SRC",
+    "pairId": "ADV2E102-U0039-Q086",
+    "kind": "source",
+    "categoryId": "pakistan-studies",
+    "question": "Where was Bahadur Shah Zafar exiled in 1858 after his trial following the 1857 rebellion?",
+    "questionUrdu": "1857 کی بغاوت کے بعد مقدمے کے نتیجے میں بہادر شاہ ظفر کو 1858 میں کہاں جلاوطن کیا گیا؟",
+    "options": [
+      "بمبئی",
+      "دہلی",
+      "رنگون",
+      "ان میں سے کوئی نہیں"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب رنگون ہے۔ 1857 کی بغاوت کے بعد مقدمے میں سزا پانے والے بہادر شاہ ظفر کو 1858 میں رنگون جلاوطن کیا گیا۔",
+    "source": {
+      "type": "book",
+      "label": "The Mughal Empire and its decline",
+      "referenceUrl": "https://southasia.ucla.edu/history-politics/mughals-and-medieval/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0039-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://southasia.ucla.edu/history-politics/mughals-and-medieval/",
+        "label": "The Mughal Empire and its decline",
+        "publisher": "UCLA South Asia Institute",
+        "authorityId": "ucla-south-asia",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UCLA records that Bahadur Shah Zafar was convicted after the 1857 rebellion and transported to Rangoon."
+      },
+      {
+        "url": "https://library.brown.edu/exhibits/fashioning-insurrection/india/press-and-popular-sentiment/7-3.html",
+        "label": "Bahadur Shah Zafar and the aftermath of 1857",
+        "publisher": "Brown University Library",
+        "authorityId": "brown-university-library",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Brown University Library independently records that the deposed emperor was exiled to Rangoon."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1858",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's broad 'imprisoned' wording was repaired to the documented post-trial exile. UCLA and Brown University identify Rangoon; printed answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0039-Q086-SIM",
+    "pairId": "ADV2E102-U0039-Q086",
+    "kind": "similar",
+    "categoryId": "pakistan-studies",
+    "question": "How many years after the 1857 rebellion was Bahadur Shah Zafar exiled to Rangoon in 1858?",
+    "questionUrdu": "1857 کی بغاوت کے کتنے سال بعد بہادر شاہ ظفر کو 1858 میں رنگون جلاوطن کیا گیا؟",
+    "options": [
+      "1 year",
+      "2 years",
+      "3 years",
+      "5 years"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 1 year ہے۔ 1858 میں ہونے والی جلاوطنی، 1857 کی بغاوت کے ایک سال بعد ہوئی۔",
+    "source": {
+      "type": "practice",
+      "label": "The Mughal Empire and its decline",
+      "referenceUrl": "https://southasia.ucla.edu/history-politics/mughals-and-medieval/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0039-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://southasia.ucla.edu/history-politics/mughals-and-medieval/",
+        "label": "The Mughal Empire and its decline",
+        "publisher": "UCLA South Asia Institute",
+        "authorityId": "ucla-south-asia",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "UCLA records that Bahadur Shah Zafar was convicted after the 1857 rebellion and transported to Rangoon."
+      },
+      {
+        "url": "https://library.brown.edu/exhibits/fashioning-insurrection/india/press-and-popular-sentiment/7-3.html",
+        "label": "Bahadur Shah Zafar and the aftermath of 1857",
+        "publisher": "Brown University Library",
+        "authorityId": "brown-university-library",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Brown University Library independently records that the deposed emperor was exiled to Rangoon."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "1858",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

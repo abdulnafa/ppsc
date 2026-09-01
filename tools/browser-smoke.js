@@ -168,10 +168,10 @@ async function main() {
       const errors = [];
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
-      if (!data || data.questions.length !== 9340) errors.push("Expected the current 9,340-question release bank.");
+      if (!data || data.questions.length !== 11412) errors.push("Expected the current 11,412-question release bank.");
       if (!data || data.version !== 5) errors.push("Expected question-data schema version 5.");
       const importantQuestions = data ? data.questions.filter((question) => question.isImportant === true) : [];
-      if (importantQuestions.length !== 704) errors.push("Expected 704 evidence-based important questions.");
+      if (importantQuestions.length !== 1071) errors.push("Expected 1,071 evidence-based important questions.");
       if (importantQuestions.some((question) => !Number.isInteger(question.repeatCount) || question.repeatCount < 2)) errors.push("Important repeat metadata is invalid.");
       if (data && data.questions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) errors.push("A question is missing its Urdu translation.");
       if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("Category cards did not render.");
@@ -188,7 +188,7 @@ async function main() {
       const advQuestions = data.questions.filter((question) => question.id.startsWith("ADV2E102-"));
       const advSourceQuestions = advQuestions.filter((question) => question.kind === "source");
       const advSimilarQuestions = advQuestions.filter((question) => question.kind === "similar");
-      if (advQuestions.length !== 6266 || advSourceQuestions.length !== 3133 || advSimilarQuestions.length !== 3133) {
+      if (advQuestions.length !== 8338 || advSourceQuestions.length !== 4169 || advSimilarQuestions.length !== 4169) {
         errors.push("The current ADV2E102 retained source/similar counts are incomplete.");
       }
       if (advQuestions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) {

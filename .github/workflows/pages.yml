@@ -30,7 +30,7 @@ jobs:
         uses: actions/configure-pages@v6
 
       - name: Validate committed release
-        run: node tools/validate-site-data.js --expected=9340
+        run: node tools/validate-site-data.js --expected=11412
 
       - name: Prepare static site
         run: |

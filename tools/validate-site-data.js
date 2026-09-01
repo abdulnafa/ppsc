@@ -148,7 +148,11 @@ function validateData(data) {
       error(`${location}: must be an object`);
       continue;
     }
-    if (/[ÃÂâØÙÛ]/u.test(JSON.stringify(question))) error(`${location}: contains likely UTF-8 mojibake`);
+    // Permit valid in-word diacritics such as Mâlik, while rejecting common
+    // UTF-8-to-Windows-1252 lead characters and punctuation sequences.
+    if (/(?:[ÃÂØÙÛ]|â(?![\p{L}\p{M}]))/u.test(JSON.stringify(question))) {
+      error(`${location}: contains likely UTF-8 mojibake`);
+    }
     if (!String(question.id || "").trim()) error(`${location}: missing id`);
     if (questionIds.has(question.id)) error(`${location}: duplicate id`);
     questionIds.add(question.id);
@@ -427,8 +431,8 @@ function validateAdv2e102Bank(questions) {
   const advQuestions = questions.filter((question) => String(question.id || "").startsWith("ADV2E102-"));
   const sourceQuestions = advQuestions.filter((question) => question.kind === "source");
   const similarQuestions = advQuestions.filter((question) => question.kind === "similar");
-  if (sourceQuestions.length !== 3133) error(`ADV2E102 source count is ${sourceQuestions.length}; expected 3133`);
-  if (similarQuestions.length !== 3133) error(`ADV2E102 similar count is ${similarQuestions.length}; expected 3133`);
+  if (sourceQuestions.length !== 4169) error(`ADV2E102 source count is ${sourceQuestions.length}; expected 4169`);
+  if (similarQuestions.length !== 4169) error(`ADV2E102 similar count is ${similarQuestions.length}; expected 4169`);
 
   const pairs = new Map();
   for (const question of advQuestions) {
