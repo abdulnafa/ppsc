@@ -2,11 +2,13 @@
   "use strict";
 
   var OPTION_LABELS = ["A", "B", "C", "D"];
+  var CANONICAL_OPTION_ORDER = [0, 1, 2, 3];
+  var POSITION_DEPENDENT_OPTION_PATTERN = /(?:\b(?:both|either|neither)\s+\(?\s*(?:(?:options?|choices?|answers?)\s*)?[A-D]\s*(?:and|or|&|\+)\s*(?:(?:options?|choices?|answers?)\s*)?[A-D]\s*\)?(?=\s|[.,;:)\]-]|$)|\bboth\s+of\s+(?:the\s+)?(?:above|below|these|them)\b|\b(?:all|none)\s+of\s+(?:the\s+)?(?:above|below)\b|\b(?:options?|choices?|answers?)\s*\(?[A-D]\)?(?=\s|[.,;:)\]-]|$))/i;
   var PAPER_QUESTION_COUNT = 100;
   var PAPER_WRONG_PENALTY = 0.25;
   var DIFFICULT_STORAGE_KEY = "ppsc-prep:difficult-question-ids:v1";
   var SESSION_STORAGE_KEY = "ppsc-prep:active-session:v1";
-  var SESSION_STORAGE_VERSION = 5;
+  var SESSION_STORAGE_VERSION = 6;
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
@@ -163,6 +165,19 @@
         return Number.isInteger(index) && index >= 0 && index < OPTION_LABELS.length;
       })
       && new Set(value).size === OPTION_LABELS.length;
+  }
+
+  function isCanonicalOptionOrder(value) {
+    return isIndexPermutation(value) && value.every(function (originalIndex, index) {
+      return originalIndex === CANONICAL_OPTION_ORDER[index];
+    });
+  }
+
+  function hasPositionDependentOptionWording(question) {
+    return Boolean(question) && Array.isArray(question.options) && question.options.some(function (option) {
+      var text = option && typeof option === "object" ? option.text : option;
+      return POSITION_DEPENDENT_OPTION_PATTERN.test(String(text || ""));
+    });
   }
 
   function sessionModeLabel(mode, scope) {
@@ -335,6 +350,10 @@
         return Array.isArray(optionOrder) ? optionOrder.slice() : optionOrder;
       });
       if (optionOrders.some(function (optionOrder) { return !isIndexPermutation(optionOrder); })) return null;
+      if (optionOrders.some(function (optionOrder, index) {
+        return hasPositionDependentOptionWording(canonicalQuestions[index])
+          && !isCanonicalOptionOrder(optionOrder);
+      })) return null;
       sessionQuestions = canonicalQuestions.map(function (question, index) {
         return quizQuestionWithOrder(question, optionOrders[index]);
       });
@@ -1263,6 +1282,13 @@
   }
 
   function shuffledQuizQuestion(question) {
+    if (hasPositionDependentOptionWording(question)) {
+      previousOptionOrders[question.id] = orderKey(CANONICAL_OPTION_ORDER, function (originalIndex) {
+        return originalIndex;
+      });
+      return quizQuestionWithOrder(question, CANONICAL_OPTION_ORDER);
+    }
+
     var optionEntries = question.options.map(function (option, originalIndex) {
       return { option: option, originalIndex: originalIndex };
     });

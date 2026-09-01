@@ -11,6 +11,33 @@ const chromeCandidates = [
   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
 ];
+const positionSensitiveQuestionIds = [
+  "IBES-Q0017-SRC",
+  "IBES-Q0034-SRC",
+  "IBES-Q0152-SRC",
+  "IBES-Q0347-SRC",
+  "IBES-Q0409-SRC",
+  "IBES-Q0481-SRC",
+  "IBES-Q0488-SRC",
+  "IBES-Q0501-SRC",
+  "IBES-Q0550-SRC",
+  "IBES-Q0562-SRC",
+  "IBES-Q0597-SRC",
+  "ADV2E102-U0001-Q033-SRC",
+  "ADV2E102-U0002-Q026-SRC",
+  "ADV2E102-U0002-Q035-SRC",
+  "ADV2E102-U0002-Q047-SRC",
+  "ADV2E102-U0002-Q055-SRC",
+  "ADV2E102-U0002-Q056-SRC",
+  "ADV2E102-U0002-Q069-SRC",
+  "ADV2E102-U0002-Q072-SRC",
+  "ADV2E102-U0002-Q098-SRC",
+  "ADV2E102-U0009-Q052-SRC",
+  "ADV2E102-U0040-Q013-SRC",
+  "ADV2E102-U0042-Q017-SRC",
+  "ADV2E102-U0045-Q020-SRC",
+  "ADV2E102-U0045-Q079-SRC"
+];
 
 function delay(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
@@ -365,7 +392,7 @@ async function main() {
             : []
         );
         const firstUnvisitedLearnIndex = categoryQuestions.findIndex((item) => !visitedLearnIds.has(item.id));
-        if (!learnGuardSnapshot || learnGuardSnapshot.version !== 5 || learnGuardSnapshot.sessionKind !== "category" || learnGuardSnapshot.paperCategoryIds !== null || learnGuardSnapshot.mode !== "learn" || learnGuardSnapshot.partIndex !== null) errors.push("Learn completion guard was not stored with the v5 category-session schema.");
+        if (!learnGuardSnapshot || learnGuardSnapshot.version !== 6 || learnGuardSnapshot.sessionKind !== "category" || learnGuardSnapshot.paperCategoryIds !== null || learnGuardSnapshot.mode !== "learn" || learnGuardSnapshot.partIndex !== null) errors.push("Learn completion guard was not stored with the v6 category-session schema.");
         if (!learnGuardSnapshot || learnGuardSnapshot.currentIndex !== categoryQuestions.length - 1 || !visitedLearnIds.has(categoryQuestions[categoryQuestions.length - 1].id)) errors.push("Learn visited IDs did not persist the directly visited last question.");
         if (firstUnvisitedLearnIndex < 0) errors.push("Learn completion guard could not identify an unvisited question.");
         if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Last Learn question did not offer Next Unvisited while questions remained unseen.");
@@ -594,8 +621,8 @@ async function main() {
       document.querySelector("#action-button").click();
       await pause();
       const resumeSnapshot = JSON.parse(localStorage.getItem(sessionStorageKey) || "null");
-      if (!resumeSnapshot || resumeSnapshot.version !== 5) errors.push("Active Quiz was not saved with the versioned resume schema.");
-      if (!resumeSnapshot || resumeSnapshot.sessionKind !== "category" || resumeSnapshot.paperCategoryIds !== null) errors.push("Saved Quiz did not use the v5 category-session fields.");
+      if (!resumeSnapshot || resumeSnapshot.version !== 6) errors.push("Active Quiz was not saved with the v6 resume schema.");
+      if (!resumeSnapshot || resumeSnapshot.sessionKind !== "category" || resumeSnapshot.paperCategoryIds !== null) errors.push("Saved Quiz did not use the v6 category-session fields.");
       if (!resumeSnapshot || resumeSnapshot.mode !== "quiz" || resumeSnapshot.scope !== "all") errors.push("Saved Quiz resume mode/scope was incorrect.");
       if (!resumeSnapshot || resumeSnapshot.partIndex !== null || resumeSnapshot.importantOnly !== false) errors.push("Saved Quiz full-category/Important scope was incorrect.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.questionIds) || resumeSnapshot.questionIds.length !== categoryQuestions.length) errors.push("Saved Quiz question order was incomplete.");
@@ -765,7 +792,8 @@ async function main() {
       }, 50);
     })`);
 
-    const corruptRecoveryResult = await client.evaluate(`(() => {
+    const positionGuardSetupResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
       const errors = [];
       const visible = (element) => Boolean(
         element &&
@@ -776,6 +804,116 @@ async function main() {
       const storageKey = "ppsc-prep:active-session:v1";
       if (visible(document.querySelector("#continue-session-card"))) errors.push("Corrupt resume data left the Continue card visible.");
       if (localStorage.getItem(storageKey) !== null) errors.push("Corrupt resume data was not removed safely.");
+      const data = window.PPSC_QUIZ_DATA;
+      const sensitiveIds = ${JSON.stringify(positionSensitiveQuestionIds)};
+      const sensitiveIdSet = new Set(sensitiveIds);
+      const canonicalOrder = JSON.stringify([0, 1, 2, 3]);
+      const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
+      const missingSensitiveIds = sensitiveIds.filter((questionId) => !questionById.has(questionId));
+      if (sensitiveIds.length !== 25 || new Set(sensitiveIds).size !== 25) errors.push("The positional-option regression list must contain exactly 25 unique IDs.");
+      if (missingSensitiveIds.length) errors.push("Known positional-option questions are missing: " + missingSensitiveIds.join(", ") + ".");
+
+      const sensitiveCategoryIds = [...new Set(sensitiveIds.map((questionId) => {
+        const question = questionById.get(questionId);
+        return question ? question.categoryId : null;
+      }).filter(Boolean))];
+      const verifiedSensitiveIds = new Set();
+      let normalOptionOrderShuffled = false;
+      let malformedSnapshot = null;
+      let malformedQuestionId = "";
+
+      for (const categoryId of sensitiveCategoryIds) {
+        const categoryButton = document.querySelector('#category-grid .category-card[data-category="' + categoryId + '"]');
+        if (!categoryButton) {
+          errors.push("Could not open the positional-option category " + categoryId + ".");
+          continue;
+        }
+        categoryButton.click();
+        document.querySelector("#quiz-mode-button").click();
+        await pause();
+
+        const snapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
+        if (!snapshot || snapshot.version !== 6 || snapshot.sessionKind !== "category" || snapshot.categoryId !== categoryId || snapshot.mode !== "quiz") {
+          errors.push("Positional-option audit did not create a valid v6 Quiz snapshot for " + categoryId + ".");
+        } else {
+          const idsInCategory = sensitiveIds.filter((questionId) => {
+            const question = questionById.get(questionId);
+            return question && question.categoryId === categoryId;
+          });
+          idsInCategory.forEach((questionId) => {
+            const questionIndex = snapshot.questionIds.indexOf(questionId);
+            if (questionIndex < 0) {
+              errors.push("Quiz snapshot omitted known positional-option question " + questionId + ".");
+              return;
+            }
+            if (JSON.stringify(snapshot.optionOrders[questionIndex]) !== canonicalOrder) {
+              errors.push("Quiz shuffled the positional-option answers for " + questionId + ".");
+              return;
+            }
+            verifiedSensitiveIds.add(questionId);
+          });
+
+          if (snapshot.questionIds.some((questionId, index) => (
+            !sensitiveIdSet.has(questionId)
+            && JSON.stringify(snapshot.optionOrders[index]) !== canonicalOrder
+          ))) normalOptionOrderShuffled = true;
+
+          if (!malformedSnapshot && idsInCategory.length) {
+            malformedSnapshot = JSON.parse(JSON.stringify(snapshot));
+            malformedQuestionId = idsInCategory[0];
+            const malformedIndex = malformedSnapshot.questionIds.indexOf(malformedQuestionId);
+            malformedSnapshot.optionOrders[malformedIndex] = [1, 0, 2, 3];
+          }
+        }
+
+        document.querySelector("#back-button").click();
+        await pause();
+      }
+
+      if (verifiedSensitiveIds.size !== sensitiveIds.length) {
+        errors.push("Only " + verifiedSensitiveIds.size + " of 25 positional-option questions kept canonical answer order.");
+      }
+      if (!normalOptionOrderShuffled) errors.push("Ordinary Quiz options did not remain shuffled during the positional-option audit.");
+      if (!malformedSnapshot || !malformedQuestionId) {
+        errors.push("Could not construct a malformed v6 positional-option snapshot.");
+        localStorage.removeItem(storageKey);
+      } else {
+        localStorage.setItem(storageKey, JSON.stringify(malformedSnapshot));
+      }
+
+      return {
+        errors,
+        verifiedSensitiveCount: verifiedSensitiveIds.size,
+        normalOptionOrderShuffled,
+        malformedQuestionId
+      };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reject a malformed positional-option resume snapshot in time."));
+        }
+      }, 50);
+    })`);
+
+    const positionGuardRecoveryResult = await client.evaluate(`(() => {
+      const errors = [];
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
+      const storageKey = "ppsc-prep:active-session:v1";
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("Malformed v6 positional-option data left the Continue card visible.");
+      if (localStorage.getItem(storageKey) !== null) errors.push("Malformed v6 positional-option data was not rejected and removed.");
       localStorage.setItem(storageKey, JSON.stringify({
         version: 3,
         bankSignature: ${JSON.stringify(normalResult.resumeExpected.bankSignature)},
@@ -976,7 +1114,7 @@ async function main() {
         questionIds: question ? [question.id] : []
       }));
       localStorage.setItem("ppsc-prep:active-session:v1", JSON.stringify({
-        version: 5,
+        version: 6,
         bankSignature: "stale-question-bank",
         sessionKind: "category",
         categoryId,
@@ -1031,7 +1169,7 @@ async function main() {
       await pause();
       const optionTexts = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
       const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
-      if (!snapshot || snapshot.version !== 5 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.partIndex !== null || snapshot.importantOnly !== false) errors.push("Difficult Learn was not stored with the v5 category-session resume schema.");
+      if (!snapshot || snapshot.version !== 6 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.partIndex !== null || snapshot.importantOnly !== false) errors.push("Difficult Learn was not stored with the v6 category-session resume schema.");
       if (!snapshot || snapshot.mode !== "learn" || snapshot.scope !== "difficult") errors.push("Difficult Learn was not stored with the correct resume scope/mode.");
       if (!snapshot || snapshot.questionIds.length !== 1 || snapshot.questionIds[0] !== seed.questionId) errors.push("Difficult Learn resume snapshot did not keep its marked-question scope.");
       if (!snapshot || !snapshot.submitted || snapshot.score !== 0) errors.push("Difficult Learn resume answer state was incorrect.");
@@ -1114,7 +1252,7 @@ async function main() {
       const firstUnvisitedIndex = snapshot
         ? snapshot.questionIds.findIndex((questionId) => !visitedIds.includes(questionId))
         : -1;
-      if (!snapshot || snapshot.version !== 5 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.mode !== "learn" || snapshot.scope !== "all" || snapshot.partIndex !== null) errors.push("Learn guard resume setup did not use the v5 category-session schema.");
+      if (!snapshot || snapshot.version !== 6 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.mode !== "learn" || snapshot.scope !== "all" || snapshot.partIndex !== null) errors.push("Learn guard resume setup did not use the v6 category-session schema.");
       if (!snapshot || snapshot.currentIndex !== total - 1 || visitedIds.length !== 2 || !visitedIds.includes(snapshot.questionIds[0]) || !visitedIds.includes(snapshot.questionIds[total - 1])) errors.push("Learn guard resume setup did not persist the first and directly visited last IDs.");
       if (firstUnvisitedIndex < 0) errors.push("Learn guard resume setup did not retain an unvisited question.");
       return {
@@ -1160,7 +1298,7 @@ async function main() {
       await pause();
       if (document.querySelector("#question-text").dataset.questionId !== expected.lastQuestionId) errors.push("Learn Continue restored the wrong completion-guard question.");
       const restoredSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
-      if (!restoredSnapshot || restoredSnapshot.version !== 5 || restoredSnapshot.sessionKind !== "category" || restoredSnapshot.paperCategoryIds !== null || JSON.stringify(restoredSnapshot.learnVisitedQuestionIds) !== JSON.stringify(expected.visitedIds)) errors.push("Learn Continue changed the persisted visited-ID snapshot.");
+      if (!restoredSnapshot || restoredSnapshot.version !== 6 || restoredSnapshot.sessionKind !== "category" || restoredSnapshot.paperCategoryIds !== null || JSON.stringify(restoredSnapshot.learnVisitedQuestionIds) !== JSON.stringify(expected.visitedIds)) errors.push("Learn Continue changed the persisted visited-ID snapshot.");
       if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Restored Learn guard did not offer Next Unvisited.");
       document.querySelector("#action-button").click();
       await pause();
@@ -1270,7 +1408,7 @@ async function main() {
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Custom Paper question screen has horizontal overflow on mobile.");
 
       const initialSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!initialSnapshot || initialSnapshot.version !== 5 || initialSnapshot.sessionKind !== "paper") errors.push("Custom Paper was not stored with the v5 paper-session schema.");
+      if (!initialSnapshot || initialSnapshot.version !== 6 || initialSnapshot.sessionKind !== "paper") errors.push("Custom Paper was not stored with the v6 paper-session schema.");
       if (!initialSnapshot || initialSnapshot.categoryId !== null || initialSnapshot.mode !== "quiz" || initialSnapshot.scope !== "all" || initialSnapshot.partIndex !== null || initialSnapshot.importantOnly !== false) errors.push("Custom Paper stored invalid category/mode/scope fields.");
       if (!initialSnapshot || JSON.stringify(initialSnapshot.paperCategoryIds) !== JSON.stringify(selectedCategoryIds)) errors.push("Custom Paper did not store the selected category IDs in data order.");
       if (!initialSnapshot || !Array.isArray(initialSnapshot.questionIds) || initialSnapshot.questionIds.length !== 100 || new Set(initialSnapshot.questionIds).size !== 100) errors.push("Custom Paper did not contain exactly 100 unique question IDs.");
@@ -1399,7 +1537,7 @@ async function main() {
       const continueMeta = document.querySelector("#continue-session-meta").textContent;
       if (!continueMeta.includes("Custom Paper") || !continueMeta.includes("2 categories") || !continueMeta.includes("Question 6 of 100")) errors.push("Custom Paper Continue metadata was incomplete.");
       const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!storedBeforeContinue || storedBeforeContinue.version !== 5 || storedBeforeContinue.sessionKind !== "paper" || storedBeforeContinue.categoryId !== null) errors.push("Reload changed the Custom Paper session schema.");
+      if (!storedBeforeContinue || storedBeforeContinue.version !== 6 || storedBeforeContinue.sessionKind !== "paper" || storedBeforeContinue.categoryId !== null) errors.push("Reload changed the Custom Paper session schema.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.paperCategoryIds) !== JSON.stringify(expected.selectedCategoryIds)) errors.push("Reload changed the selected Custom Paper categories.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds)) errors.push("Reload changed the Custom Paper question IDs/order.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders)) errors.push("Reload changed the Custom Paper option orders.");
@@ -1518,7 +1656,8 @@ async function main() {
       errors: normalResult.errors
         .concat(resumeResult.errors)
         .concat(pendingResumeResult.errors)
-        .concat(corruptRecoveryResult.errors)
+        .concat(positionGuardSetupResult.errors)
+        .concat(positionGuardRecoveryResult.errors)
         .concat(difficultResult.errors)
         .concat(difficultResumeSetup.errors)
         .concat(difficultResumeResult.errors)
@@ -1531,9 +1670,16 @@ async function main() {
         pendingSelectionRestored: pendingResumeResult.errors.length === 0,
         difficultLearnRestored: difficultResumeSetup.errors.length === 0 && difficultResumeResult.errors.length === 0,
         learnVisitedIdsRestored: learnResumeSetup.errors.length === 0 && learnResumeResult.errors.length === 0,
-        corruptDataRecovered: corruptRecoveryResult.errors.length === 0,
+        corruptDataRecovered: !positionGuardSetupResult.errors.some((message) => message.includes("Corrupt resume data")),
+        malformedPositionOrderRejected: positionGuardRecoveryResult.errors.length === 0,
         staleDataRecovered: !difficultResult.errors.some((message) => message.includes("Legacy Part resume data"))
           && !difficultResumeSetup.errors.some((message) => message.includes("Stale-bank resume data"))
+      },
+      positionOptionGuard: {
+        verifiedSensitiveCount: positionGuardSetupResult.verifiedSensitiveCount,
+        normalOptionsStillShuffle: positionGuardSetupResult.normalOptionOrderShuffled,
+        malformedQuestionId: positionGuardSetupResult.malformedQuestionId,
+        malformedSnapshotRejected: positionGuardRecoveryResult.errors.length === 0
       },
       difficult: difficultResult,
       paper: paperResumeResult

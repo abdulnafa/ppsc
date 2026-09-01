@@ -16,7 +16,7 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 - Custom papers award 1 mark per correct answer and deduct 0.25 per wrong answer; the final Correct and Wrong totals open filtered answer-review lists.
 - Learn and Quiz include the full selected category by default; the question-number input above the progress bar lets you jump directly to any question in the active session.
 - An evidence-based **Important repeated MCQs** filter uses verified deduplication records and displays how many times each marked fact occurred.
-- Learn always follows the stable source/data order; Quiz creates a fresh question order and reshuffles its four options without changing the correct answer.
+- Learn always follows the stable source/data order; Quiz creates a fresh question order and safely reshuffles ordinary options without changing the correct answer. Questions whose choices refer to fixed labels such as “Both A and B” or “All of the above” retain their canonical A–D order so their meaning stays correct.
 - Previous and Next navigation lets you revisit earlier questions; Quiz restores each pending or submitted answer, its feedback, shuffled options, and score without counting an answer twice.
 - A compact Continue card restores the exact active Learn, Quiz, Difficult, or Custom Paper session after a refresh or browser restart, including its selected categories, progress, option order, answer history, submitted feedback, and score.
 - A persistent, always-visible **Mark as difficult** checkbox below every question, plus category-wise Difficult Learn and Difficult Quiz sessions containing only marked questions.
