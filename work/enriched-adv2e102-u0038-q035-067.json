@@ -1,0 +1,2363 @@
+[
+  {
+    "id": "ADV2E102-U0038-Q036-SRC",
+    "pairId": "ADV2E102-U0038-Q036",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which unit measures the frequency of a periodic analog signal?",
+    "questionUrdu": "دورانی نوعیت کے اینالاگ اشارے کی تعدد کس اکائی میں ناپی جاتی ہے؟",
+    "options": [
+      "Volts",
+      "Pulses",
+      "Hertz",
+      "Watts"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Hertz ہے۔ تعدد کی معیاری اکائی ہرٹز ہے، جو فی سیکنڈ واقع ہونے والے دورانی واقعات یا مکمل چکروں کی تعداد ظاہر کرتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Frequency",
+      "referenceUrl": "https://csrc.nist.gov/glossary/term/frequency",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q036"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/frequency",
+        "label": "Frequency",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST defines frequency as the number of periodic events per unit time and identifies hertz as its unit."
+      },
+      {
+        "url": "https://www.cs.cmu.edu/~15322/book/ch03/00.html",
+        "label": "Signals and frequency",
+        "publisher": "Carnegie Mellon University",
+        "authorityId": "carnegie-mellon-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university text independently explains that the frequency of a periodic signal is measured in hertz."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source stem 'Analog signal is measured in?' was ambiguous because signal amplitude may be measured in volts. It was repaired to ask specifically for frequency; Hertz remains printed answer C."
+  },
+  {
+    "id": "ADV2E102-U0038-Q036-SIM",
+    "pairId": "ADV2E102-U0038-Q036",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What rate does one hertz represent?",
+    "questionUrdu": "ایک ہرٹز کس شرح کے برابر ہوتا ہے؟",
+    "options": [
+      "One cycle or event per second",
+      "One cycle per minute",
+      "One volt per second",
+      "One watt per hour"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب فی سیکنڈ ایک چکر یا واقعہ ہے۔ دونوں مراجع ہرٹز کو دورانی واقعات کی فی سیکنڈ تعداد کے طور پر بیان کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Frequency",
+      "referenceUrl": "https://csrc.nist.gov/glossary/term/frequency",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q036",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/frequency",
+        "label": "Frequency",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST defines hertz through the number of periodic events occurring per second."
+      },
+      {
+        "url": "https://www.cs.cmu.edu/~15322/book/ch03/00.html",
+        "label": "Signals and frequency",
+        "publisher": "Carnegie Mellon University",
+        "authorityId": "carnegie-mellon-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Carnegie Mellon independently describes one hertz as one cycle per second."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q037-SRC",
+    "pairId": "ADV2E102-U0038-Q037",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Desktop Microsoft PowerPoint, which of the listed media file formats can be inserted or used?",
+    "questionUrdu": "Desktop Microsoft PowerPoint میں درج فائل فارمیٹس میں سے کون سے داخل یا استعمال کیے جا سکتے ہیں؟",
+    "options": [
+      "JPG",
+      "WAV",
+      "GIF",
+      "All of these"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب All of these ہے۔ پاورپوائنٹ میں جے پی جی اور گف تصویری فائلیں اور ویو صوتی فائل استعمال ہو سکتی ہے، اس لیے تمام درج اختیارات درست ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Video and audio file formats supported in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-us/PowerPoint/video-and-audio-file-formats-supported-in-powerpoint",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q037"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/PowerPoint/video-and-audio-file-formats-supported-in-powerpoint",
+        "label": "Video and audio file formats supported in PowerPoint",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft lists WAV among audio formats PowerPoint can use."
+      },
+      {
+        "url": "https://support.microsoft.com/en-gb/office/insert-a-picture-in-powerpoint-5f7368d2-ee94-4b94-a6f2-a663646a07e1",
+        "label": "Insert a picture in PowerPoint",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft documents inserting JPG and GIF picture files in PowerPoint."
+      },
+      {
+        "url": "https://venues.indstate.edu/wp-content/uploads/2021/06/AV-Guidelines-Preparing-PowerPoint.pdf",
+        "label": "AV guidelines for preparing PowerPoint",
+        "publisher": "Indiana State University",
+        "authorityId": "indiana-state-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently identifies WAV audio as usable in PowerPoint."
+      },
+      {
+        "url": "https://www.bu.edu/celop/dev/pdf/PowerPoint.pdf",
+        "label": "Microsoft PowerPoint guide",
+        "publisher": "Boston University",
+        "authorityId": "boston-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently documents JPG and GIF picture formats in PowerPoint."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Desktop Microsoft PowerPoint",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague singular stem was repaired to include PowerPoint picture and audio media. Microsoft and two independent university guides support JPG, WAV, and GIF, so printed answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q037-SIM",
+    "pairId": "ADV2E102-U0038-Q037",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Within Desktop Microsoft PowerPoint, which pair consists of picture-file formats that can be inserted?",
+    "questionUrdu": "Desktop Microsoft PowerPoint میں درج جوڑوں میں سے کون سا داخل کیے جانے والے تصویری فائل فارمیٹس پر مشتمل ہے؟",
+    "options": [
+      "JPG and GIF",
+      "WAV and MP3",
+      "DOCX and XLSX",
+      "EXE and DLL"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب جے پی جی اور گف ہے۔ مائیکروسافٹ اور بوسٹن یونیورسٹی کے مراجع دونوں ان تصویری فارمیٹس کے پاورپوائنٹ میں استعمال کی تائید کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Insert a picture in PowerPoint",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/insert-a-picture-in-powerpoint-5f7368d2-ee94-4b94-a6f2-a663646a07e1",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q037",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-gb/office/insert-a-picture-in-powerpoint-5f7368d2-ee94-4b94-a6f2-a663646a07e1",
+        "label": "Insert a picture in PowerPoint",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft lists JPG and GIF among picture-file formats that can be inserted in PowerPoint."
+      },
+      {
+        "url": "https://www.bu.edu/celop/dev/pdf/PowerPoint.pdf",
+        "label": "Microsoft PowerPoint guide",
+        "publisher": "Boston University",
+        "authorityId": "boston-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Boston University's PowerPoint guide independently identifies JPG and GIF as usable picture formats."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Desktop Microsoft PowerPoint",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q039-SRC",
+    "pairId": "ADV2E102-U0038-Q039",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Microsoft Word desktop, on which Ribbon tab is the Illustrations group found?",
+    "questionUrdu": "Microsoft Word desktop میں السٹریشنز گروپ ربن کے کس ٹیب پر موجود ہوتا ہے؟",
+    "options": [
+      "Insert",
+      "Layout",
+      "Home",
+      "All of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Insert ہے۔ ورڈ میں تصویروں، اشکال اور متعلقہ بصری مواد کے لیے السٹریشنز گروپ اِنسرٹ ٹیب پر واقع ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Add a drawing to a document",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/add-a-drawing-to-a-document",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q039"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-US/Word/add-a-drawing-to-a-document",
+        "label": "Add a drawing to a document",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft places Word's drawing tools under the Illustrations group on the Insert tab."
+      },
+      {
+        "url": "https://td.usd.edu/TDClient/33/Portal/KB/ArticleDet?ID=8301",
+        "label": "Insert pictures in Word",
+        "publisher": "University of South Dakota",
+        "authorityId": "university-south-dakota",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently directs users to the Insert tab and Illustrations group in Word."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The application and Ribbon context were added, and 'Page layout' was normalized to the current tab label. The Illustrations group is on Insert; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q039-SIM",
+    "pairId": "ADV2E102-U0038-Q039",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In Microsoft Word desktop, which command inserts an image saved on the computer?",
+    "questionUrdu": "Microsoft Word desktop میں کمپیوٹر پر محفوظ تصویر داخل کرنے کے لیے کون سی کمانڈ استعمال ہوتی ہے؟",
+    "options": [
+      "Pictures",
+      "Track Changes",
+      "Word Count",
+      "Margins"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب پکچرز ہے۔ مائیکروسافٹ اور یونیورسٹی آف ساؤتھ ڈکوٹا دونوں محفوظ تصویری فائل داخل کرنے کے لیے پکچرز کمانڈ کی ہدایت دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Insert pictures",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/training/insert-pictures",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q039",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/word/training/insert-pictures",
+        "label": "Insert pictures",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft directs Word users to the Pictures command to insert an image saved on their device."
+      },
+      {
+        "url": "https://td.usd.edu/TDClient/33/Portal/KB/ArticleDet?ID=8301",
+        "label": "Insert pictures in Word",
+        "publisher": "University of South Dakota",
+        "authorityId": "university-south-dakota",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of South Dakota independently directs Word users to the Picture command for a saved image."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q040-SRC",
+    "pairId": "ADV2E102-U0038-Q040",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Microsoft Excel desktop, which can be assigned a new name: a worksheet tab or a saved workbook file?",
+    "questionUrdu": "Microsoft Excel desktop میں ورک شیٹ ٹیب اور محفوظ ورک بک فائل میں سے کس کو نیا نام دیا جا سکتا ہے؟",
+    "options": [
+      "Worksheet only",
+      "A cell only",
+      "Workbook only",
+      "Both worksheet and workbook"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Both worksheet and workbook ہے۔ ایکسل میں ورک شیٹ ٹیب کا نام تبدیل کیا جا سکتا ہے اور ورک بک کو بھی نئے فائل نام کے ساتھ محفوظ کیا جا سکتا ہے، اس لیے دونوں درست ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Accessibility best practices with Excel spreadsheets",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/excel/accessibility-best-practices-with-excel-spreadsheets",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q040"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-US/accessibility/excel/accessibility-best-practices-with-excel-spreadsheets",
+        "label": "Accessibility best practices with Excel spreadsheets",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft explicitly recommends giving each worksheet a unique, meaningful name."
+      },
+      {
+        "url": "https://support.microsoft.com/en-us/excel/save-a-workbook-in-another-file-format",
+        "label": "Save a workbook in another file format",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft documents saving an Excel workbook under a new file name."
+      },
+      {
+        "url": "https://education.auburn.edu/about/learning-resources-center/digital-accessibility/excel-accessibility-cklst.php",
+        "label": "Excel accessibility checklist",
+        "publisher": "Auburn University",
+        "authorityId": "auburn-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university checklist independently covers both renaming worksheet tabs and assigning a workbook file name."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Excel desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's word 'renamed' made a named cell a plausible distractor. The proposition was repaired to worksheet-tab naming and workbook-file naming; both are supported, so answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q040-SIM",
+    "pairId": "ADV2E102-U0038-Q040",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "In Microsoft Excel desktop, what kind of worksheet-tab names support accessibility?",
+    "questionUrdu": "Microsoft Excel desktop میں رسائی آسان بنانے کے لیے ورک شیٹ ٹیبوں کے نام کس نوعیت کے ہونے چاہییں؟",
+    "options": [
+      "Descriptive and meaningful",
+      "Blank",
+      "Identical on every sheet",
+      "Random characters"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب بامعنی اور وضاحتی نام ہیں۔ مائیکروسافٹ اور اوبرن یونیورسٹی دونوں ورک شیٹ ٹیبوں کے واضح نام رکھنے کی سفارش کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Accessibility best practices with Excel spreadsheets",
+      "referenceUrl": "https://support.microsoft.com/en-US/accessibility/excel/accessibility-best-practices-with-excel-spreadsheets",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q040",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-US/accessibility/excel/accessibility-best-practices-with-excel-spreadsheets",
+        "label": "Accessibility best practices with Excel spreadsheets",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft recommends unique, meaningful worksheet names so users can identify sheet contents."
+      },
+      {
+        "url": "https://education.auburn.edu/about/learning-resources-center/digital-accessibility/excel-accessibility-cklst.php",
+        "label": "Excel accessibility checklist",
+        "publisher": "Auburn University",
+        "authorityId": "auburn-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Auburn University independently recommends descriptive names for worksheet tabs."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Excel desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q042-SRC",
+    "pairId": "ADV2E102-U0038-Q042",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which action selects a contiguous range of slides in Microsoft PowerPoint desktop?",
+    "questionUrdu": "Microsoft PowerPoint desktop میں مسلسل ترتیب والی سلائیڈوں کا مجموعہ کس عمل سے منتخب ہوتا ہے؟",
+    "options": [
+      "Press Ctrl+Enter",
+      "Hold Shift and click the last slide in the range",
+      "Press Alt+F4",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Hold Shift and click the last slide in the range ہے۔ پہلی سلائیڈ منتخب کرنے کے بعد شفٹ دبا کر آخری سلائیڈ پر کلک کرنے سے درمیان کی تمام مسلسل سلائیڈیں منتخب ہو جاتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Copy and paste your slides",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/copy-and-paste-your-slides",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q042"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/powerpoint/copy-and-paste-your-slides",
+        "label": "Copy and paste your slides",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft documents holding Shift while selecting the last slide to select a sequential range of slides."
+      },
+      {
+        "url": "https://www.csun.edu/~csunitr/guides/powerpoint/2003/pp_basics.pdf",
+        "label": "PowerPoint basics",
+        "publisher": "California State University, Northridge",
+        "authorityId": "cal-state-northridge",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently uses Shift-click to select consecutive slides."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft PowerPoint desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source asked broadly about selecting all or multiple slides, for which more than one method exists. It was repaired to a contiguous range; Shift-click is uniquely correct and printed answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q042-SIM",
+    "pairId": "ADV2E102-U0038-Q042",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "How are nonconsecutive slides selected in Microsoft PowerPoint desktop?",
+    "questionUrdu": "Microsoft PowerPoint desktop میں غیر مسلسل سلائیڈیں کس طریقے سے منتخب کی جاتی ہیں؟",
+    "options": [
+      "Hold Ctrl and click each required slide",
+      "Hold Shift and click only the last slide",
+      "Press Alt+F4",
+      "Press Ctrl+Enter"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب کنٹرول دبا کر مطلوبہ سلائیڈوں پر الگ الگ کلک کرنا ہے۔ دونوں مراجع مسلسل نہ ہونے والی سلائیڈوں کے لیے یہی طریقہ بیان کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Copy and paste your slides",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/copy-and-paste-your-slides",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q042",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/powerpoint/copy-and-paste-your-slides",
+        "label": "Copy and paste your slides",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft instructs users to hold Ctrl while selecting individual nonconsecutive slides."
+      },
+      {
+        "url": "https://www.csun.edu/~csunitr/guides/powerpoint/2003/pp_basics.pdf",
+        "label": "PowerPoint basics",
+        "publisher": "California State University, Northridge",
+        "authorityId": "cal-state-northridge",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently documents Ctrl-click for selecting nonconsecutive slides."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft PowerPoint desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q043-SRC",
+    "pairId": "ADV2E102-U0038-Q043",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Microsoft PowerPoint desktop, unless Apply to All is chosen, a transition is applied to which slide?",
+    "questionUrdu": "Microsoft PowerPoint desktop میں، اپلائی ٹو آل منتخب نہ کیا جائے تو ٹرانزیشن کس سلائیڈ پر لگتی ہے؟",
+    "options": [
+      "The currently selected slide",
+      "The previous slide",
+      "A newly created slide",
+      "All slides"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The currently selected slide ہے۔ عام طریقے میں ٹرانزیشن موجودہ منتخب سلائیڈ پر لگتی ہے، جبکہ اپلائی ٹو آل اسے تمام سلائیڈوں تک پھیلا دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Add, change, or remove transitions between slides",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/add-change-or-remove-transitions-between-slides-3f8244bf-f893-4efd-a7eb-3a4845c9c971",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q043"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/add-change-or-remove-transitions-between-slides-3f8244bf-f893-4efd-a7eb-3a4845c9c971",
+        "label": "Add, change, or remove transitions between slides",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft instructs users to select a slide and choose its transition, with a separate Apply to All command."
+      },
+      {
+        "url": "https://apps.lib.umich.edu/files/services/exploratory/pdfs/powerpoint2010.pdf",
+        "label": "Microsoft PowerPoint 2010 guide",
+        "publisher": "University of Michigan Library",
+        "authorityId": "university-michigan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently distinguishes applying a transition to the selected slide from applying it to all slides."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft PowerPoint desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source wording 'Slide Transition Done on?' was incomplete. The normal selected-slide scope and Apply to All exception were made explicit; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q043-SIM",
+    "pairId": "ADV2E102-U0038-Q043",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does the Apply to All transition command do in Microsoft PowerPoint desktop?",
+    "questionUrdu": "Microsoft PowerPoint desktop میں ٹرانزیشن کی اپلائی ٹو آل کمانڈ کیا کرتی ہے؟",
+    "options": [
+      "Applies the transition to every slide",
+      "Deletes every transition",
+      "Applies it only to the previous slide",
+      "Creates a new presentation"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ٹرانزیشن کو ہر سلائیڈ پر لگانا ہے۔ مائیکروسافٹ اور مشی گن یونیورسٹی دونوں اس کمانڈ کا یہی دائرۂ عمل بتاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Add, change, or remove transitions between slides",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/add-change-or-remove-transitions-between-slides-3f8244bf-f893-4efd-a7eb-3a4845c9c971",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q043",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/add-change-or-remove-transitions-between-slides-3f8244bf-f893-4efd-a7eb-3a4845c9c971",
+        "label": "Add, change, or remove transitions between slides",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft states that Apply to All applies the selected transition throughout the presentation."
+      },
+      {
+        "url": "https://apps.lib.umich.edu/files/services/exploratory/pdfs/powerpoint2010.pdf",
+        "label": "Microsoft PowerPoint 2010 guide",
+        "publisher": "University of Michigan Library",
+        "authorityId": "university-michigan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Michigan guide independently says Apply to All puts the transition on all slides."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft PowerPoint desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q044-SRC",
+    "pairId": "ADV2E102-U0038-Q044",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Microsoft Word desktop interface element displays the open document's name?",
+    "questionUrdu": "Microsoft Word desktop کا کون سا حصہ کھلی دستاویز کا نام دکھاتا ہے؟",
+    "options": [
+      "Format menu",
+      "Insert tab",
+      "Home tab",
+      "Title bar"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Title bar ہے۔ ٹائٹل بار کھلی دستاویز کا نام دکھاتی ہے اور اسی جگہ استعمال ہونے والے پروگرام کی شناخت بھی ظاہر ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/word-for-new-users-cace0fd8-eed9-4aa2-b3c6-07d39895886c",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q044"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/word-for-new-users-cace0fd8-eed9-4aa2-b3c6-07d39895886c",
+        "label": "Word for new users",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft identifies the title bar as displaying the document's file name."
+      },
+      {
+        "url": "https://srdc.msstate.edu/sites/default/files/2024-01/Word.pdf",
+        "label": "Introduction to Microsoft Word",
+        "publisher": "Mississippi State University",
+        "authorityId": "mississippi-state-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university training manual independently states that the title bar displays the document name."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's broad word 'information' was removed. Both guides identify the title bar as displaying the document name; printed answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q044-SIM",
+    "pairId": "ADV2E102-U0038-Q044",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Besides the document name, what else does the Microsoft Word desktop title bar display?",
+    "questionUrdu": "Microsoft Word desktop کی ٹائٹل بار دستاویز کے نام کے علاوہ اور کیا دکھاتی ہے؟",
+    "options": [
+      "The software or program name",
+      "The printer's serial number",
+      "The user's password",
+      "The computer's temperature"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب سافٹ ویئر یا پروگرام کا نام ہے۔ مائیکروسافٹ اور مسیسیپی اسٹیٹ یونیورسٹی دونوں ٹائٹل بار میں دستاویز اور پروگرام کے نام درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Word for new users",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/word-for-new-users-cace0fd8-eed9-4aa2-b3c6-07d39895886c",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q044",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/word-for-new-users-cace0fd8-eed9-4aa2-b3c6-07d39895886c",
+        "label": "Word for new users",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft explains that the title bar displays both the document name and the software name."
+      },
+      {
+        "url": "https://srdc.msstate.edu/sites/default/files/2024-01/Word.pdf",
+        "label": "Introduction to Microsoft Word",
+        "publisher": "Mississippi State University",
+        "authorityId": "mississippi-state-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mississippi State University independently states that the title bar shows the document and program names."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q045-SRC",
+    "pairId": "ADV2E102-U0038-Q045",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Microsoft Word 2016 for Windows, on which Ribbon tab is the Screenshot command found?",
+    "questionUrdu": "Microsoft Word 2016 for Windows میں اسکرین شاٹ کمانڈ ربن کے کس ٹیب پر ہوتی ہے؟",
+    "options": [
+      "Insert",
+      "Review",
+      "Options",
+      "Backstage view"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Insert ہے۔ ورڈ میں اسکرین شاٹ کمانڈ اِنسرٹ ٹیب پر ہوتی ہے، جہاں سے مکمل دستیاب ونڈو یا اس کا منتخب حصہ شامل کیا جا سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Insert a screenshot or screen clipping",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/insert-a-screenshot-or-screen-clipping-56ade2ac-7285-4e7b-a0b1-40646b275703",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q045"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-gb/office/insert-a-screenshot-or-screen-clipping-56ade2ac-7285-4e7b-a0b1-40646b275703",
+        "label": "Insert a screenshot or screen clipping",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft directs Word users to Insert and then Screenshot."
+      },
+      {
+        "url": "https://stc.wwu.edu/files/2020-08/word2016_0.pdf",
+        "label": "Word 2016 guide",
+        "publisher": "Western Washington University",
+        "authorityId": "western-washington-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent Word 2016 guide places Screenshot in the Illustrations group of the Insert tab."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word 2016 for Windows",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The command and Ribbon context were standardized. Screenshot is on the Insert tab; printed answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q045-SIM",
+    "pairId": "ADV2E102-U0038-Q045",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What does the Screen Clipping option in Microsoft Word 2016 for Windows let a user capture?",
+    "questionUrdu": "Microsoft Word 2016 for Windows کا اسکرین کلپنگ اختیار صارف کو کیا محفوظ کرنے دیتا ہے؟",
+    "options": [
+      "A selected part of the screen",
+      "Only an entire document",
+      "Only typed text",
+      "Only a printer page"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب اسکرین کا منتخب حصہ ہے۔ مائیکروسافٹ اور ویسٹرن واشنگٹن یونیورسٹی دونوں مطلوبہ حصے کو کھینچ کر منتخب کرنے کی وضاحت کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Insert a screenshot or screen clipping",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/insert-a-screenshot-or-screen-clipping-56ade2ac-7285-4e7b-a0b1-40646b275703",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q045",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-gb/office/insert-a-screenshot-or-screen-clipping-56ade2ac-7285-4e7b-a0b1-40646b275703",
+        "label": "Insert a screenshot or screen clipping",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft says Screen Clipping lets the user select and insert only part of a window."
+      },
+      {
+        "url": "https://stc.wwu.edu/files/2020-08/word2016_0.pdf",
+        "label": "Word 2016 guide",
+        "publisher": "Western Washington University",
+        "authorityId": "western-washington-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Western Washington University's guide independently explains dragging over the desired screen area to capture it."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word 2016 for Windows",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q049-SRC",
+    "pairId": "ADV2E102-U0038-Q049",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In Microsoft Word desktop, what default name is initially given to the first new, unsaved blank document in a session?",
+    "questionUrdu": "Microsoft Word desktop میں کسی نشست کی پہلی نئی اور ابھی غیر محفوظ خالی دستاویز کو ابتدا میں کیا نام دیا جاتا ہے؟",
+    "options": [
+      "Document1",
+      "Document2",
+      "Document",
+      "All of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Document1 ہے۔ ورڈ پہلی نئی غیر محفوظ خالی دستاویز کو عارضی طور پر ڈاکیومنٹ ون نام دیتا ہے، جو محفوظ کرتے وقت بدلا جا سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Word practice activity",
+      "referenceUrl": "https://open.maricopa.edu/computerusageandapplications/chapter/os-practice-activity-1/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q049"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://open.maricopa.edu/computerusageandapplications/chapter/os-practice-activity-1/",
+        "label": "Word practice activity",
+        "publisher": "Maricopa Community Colleges",
+        "authorityId": "maricopa-community-colleges",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The college learning material identifies Document1 as the default name of a new blank Word document."
+      },
+      {
+        "url": "https://sites.pitt.edu/~poole/Office2007Tutorials/Lesson12007.pdf",
+        "label": "Microsoft Word lesson 1",
+        "publisher": "University of Pittsburgh",
+        "authorityId": "university-pittsburgh",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university tutorial independently explains that Word initially names new documents Document1, Document2, and so on."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source incorrectly asked about a saved document, whose name is chosen during saving. It was repaired to the initial unsaved blank document; Document1 is answer A."
+  },
+  {
+    "id": "ADV2E102-U0038-Q049-SIM",
+    "pairId": "ADV2E102-U0038-Q049",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What must a user choose when first saving a new document in Microsoft Word desktop?",
+    "questionUrdu": "Microsoft Word desktop میں نئی دستاویز پہلی بار محفوظ کرتے وقت صارف کو کیا منتخب کرنا ہوتا ہے؟",
+    "options": [
+      "A file name and storage location",
+      "Only a font color",
+      "Only a page border",
+      "A printer model"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب فائل کا نام اور محفوظ کرنے کی جگہ ہے۔ دونوں تعلیمی مراجع پہلی بار محفوظ کرتے وقت یہ دونوں چیزیں مقرر کرنے کی وضاحت کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Word practice activity",
+      "referenceUrl": "https://open.maricopa.edu/computerusageandapplications/chapter/os-practice-activity-1/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q049",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://open.maricopa.edu/computerusageandapplications/chapter/os-practice-activity-1/",
+        "label": "Word practice activity",
+        "publisher": "Maricopa Community Colleges",
+        "authorityId": "maricopa-community-colleges",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Maricopa's guide explains that the first save requires choosing both a file name and a location."
+      },
+      {
+        "url": "https://sites.pitt.edu/~poole/Office2007Tutorials/Lesson12007.pdf",
+        "label": "Microsoft Word lesson 1",
+        "publisher": "University of Pittsburgh",
+        "authorityId": "university-pittsburgh",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Pittsburgh guide independently describes selecting a location and file name in Save As."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q051-SRC",
+    "pairId": "ADV2E102-U0038-Q051",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "How many standard page-orientation choices does Microsoft Word desktop provide?",
+    "questionUrdu": "Microsoft Word desktop میں صفحے کی سمت کے کتنے معیاری اختیارات دستیاب ہیں؟",
+    "options": [
+      "3",
+      "5",
+      "2",
+      "1"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 2 ہے۔ ورڈ میں صفحے کی سمت کے دو معیاری اختیارات، پورٹریٹ اور لینڈ اسکیپ، دستیاب ہوتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Change page orientation to landscape or portrait",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/change-page-orientation-to-landscape-or-portrait-9b5ac1af-9998-4a37-962b-a82b689572a9",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q051"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/change-page-orientation-to-landscape-or-portrait-9b5ac1af-9998-4a37-962b-a82b689572a9",
+        "label": "Change page orientation to landscape or portrait",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft documents the two Word page-orientation choices, Portrait and Landscape."
+      },
+      {
+        "url": "https://www.abdn.ac.uk/toolkit/documents/uploads/msword_landscapepages.pdf",
+        "label": "Portrait and landscape pages in Word",
+        "publisher": "University of Aberdeen",
+        "authorityId": "university-aberdeen",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently identifies Portrait and Landscape as Word's two orientation choices."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The application was made explicit. Portrait and Landscape are the two standard choices; printed answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q051-SIM",
+    "pairId": "ADV2E102-U0038-Q051",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What are the two standard page-orientation choices in Microsoft Word desktop called?",
+    "questionUrdu": "Microsoft Word desktop میں صفحے کی سمت کے دو معیاری اختیارات کن ناموں سے موسوم ہیں؟",
+    "options": [
+      "Portrait and Landscape",
+      "Top and Bottom",
+      "Left and Right",
+      "Header and Footer"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب پورٹریٹ اور لینڈ اسکیپ ہے۔ مائیکروسافٹ اور یونیورسٹی آف ایبرڈین دونوں انہی دو سمتوں کو درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Change page orientation to landscape or portrait",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/change-page-orientation-to-landscape-or-portrait-9b5ac1af-9998-4a37-962b-a82b689572a9",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q051",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/change-page-orientation-to-landscape-or-portrait-9b5ac1af-9998-4a37-962b-a82b689572a9",
+        "label": "Change page orientation to landscape or portrait",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft identifies Portrait and Landscape as Word's page-orientation choices."
+      },
+      {
+        "url": "https://www.abdn.ac.uk/toolkit/documents/uploads/msword_landscapepages.pdf",
+        "label": "Portrait and landscape pages in Word",
+        "publisher": "University of Aberdeen",
+        "authorityId": "university-aberdeen",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Aberdeen independently lists Portrait and Landscape as the two page orientations."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q053-SRC",
+    "pairId": "ADV2E102-U0038-Q053",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "On which Microsoft Word desktop Ribbon tab are the Mail Merge commands found?",
+    "questionUrdu": "Microsoft Word desktop میں میل مرج کی کمانڈیں ربن کے کس ٹیب پر موجود ہوتی ہیں؟",
+    "options": [
+      "Combining",
+      "Mailings",
+      "Registers",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Mailings ہے۔ میل مرج کے آغاز، وصول کنندگان کے انتخاب، پیش منظر اور تکمیل کی کمانڈیں میلنگز ٹیب پر ہوتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Preview mail merge results",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/mail-merge-preview-results",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q053"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/word/mail-merge-preview-results",
+        "label": "Preview mail merge results",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft locates Mail Merge controls on Word's Mailings tab."
+      },
+      {
+        "url": "https://s3.wp.wsu.edu/uploads/sites/2676/2021/05/MailMerge.pdf",
+        "label": "Mail Merge guide",
+        "publisher": "Washington State University",
+        "authorityId": "washington-state-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently directs users to Mailings and Start Mail Merge."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source option 'Mailing' was normalized to the actual Ribbon label 'Mailings'. Printed answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q053-SIM",
+    "pairId": "ADV2E102-U0038-Q053",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the purpose of Preview Results during a Microsoft Word desktop mail merge?",
+    "questionUrdu": "Microsoft Word desktop میں میل مرج کے دوران پری ویو رزلٹس کمانڈ کا مقصد کیا ہے؟",
+    "options": [
+      "Inspect merged output before completion",
+      "Delete the recipient list",
+      "Change the printer driver",
+      "Close Word immediately"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب تکمیل سے پہلے ملا ہوا نتیجہ دیکھنا ہے۔ مائیکروسافٹ اور واشنگٹن اسٹیٹ یونیورسٹی دونوں حتمی مرحلے سے پہلے پیش منظر کی ہدایت دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Preview mail merge results",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/mail-merge-preview-results",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q053",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/word/mail-merge-preview-results",
+        "label": "Preview mail merge results",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft explains that Preview Results lets users review the merged records before finishing the merge."
+      },
+      {
+        "url": "https://s3.wp.wsu.edu/uploads/sites/2676/2021/05/MailMerge.pdf",
+        "label": "Mail Merge guide",
+        "publisher": "Washington State University",
+        "authorityId": "washington-state-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Washington State University independently places previewing merged output before the Finish and Merge step."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q054-SRC",
+    "pairId": "ADV2E102-U0038-Q054",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which keyboard shortcut opens Find in Microsoft Word for Windows?",
+    "questionUrdu": "Microsoft Word for Windows میں تلاش کھولنے کا کی بورڈ مختصر راستہ کون سا ہے؟",
+    "options": [
+      "Ctrl+Shift+F",
+      "Ctrl+F",
+      "Shift+F",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Ctrl+F ہے۔ کنٹرول اور ایف کی کنجیاں اکٹھی دبانے سے ورڈ میں تلاش کا خانہ یا نیوی گیشن پین کھل جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Find text in a document",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/find-text-in-a-document",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q054"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-US/Word/find-text-in-a-document",
+        "label": "Find text in a document",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft identifies Ctrl+F as the shortcut that opens the Navigation pane to find text."
+      },
+      {
+        "url": "https://publichealth.hsc.wvu.edu/media/7230/using-microsoft-word.pdf",
+        "label": "Using Microsoft Word",
+        "publisher": "West Virginia University",
+        "authorityId": "west-virginia-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently lists Ctrl+F for Find."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word for Windows",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The application was added for precision. Ctrl+F opens Find; printed answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q054-SIM",
+    "pairId": "ADV2E102-U0038-Q054",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which pane opens when Ctrl+F is pressed in Microsoft Word for Windows?",
+    "questionUrdu": "Microsoft Word for Windows میں کنٹرول ایف دبانے سے کون سا پین کھلتا ہے؟",
+    "options": [
+      "Navigation pane",
+      "Clipboard pane",
+      "Selection pane",
+      "Format Painter pane"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب نیوی گیشن پین ہے۔ مائیکروسافٹ اور ویسٹ ورجینیا یونیورسٹی دونوں کنٹرول ایف کو اسی پین کے کھلنے سے جوڑتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Find text in a document",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/find-text-in-a-document",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q054",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-US/Word/find-text-in-a-document",
+        "label": "Find text in a document",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft states that Ctrl+F opens the Navigation pane for finding text."
+      },
+      {
+        "url": "https://publichealth.hsc.wvu.edu/media/7230/using-microsoft-word.pdf",
+        "label": "Using Microsoft Word",
+        "publisher": "West Virginia University",
+        "authorityId": "west-virginia-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "West Virginia University's guide independently says Ctrl+F opens the Navigation pane."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word for Windows",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q055-SRC",
+    "pairId": "ADV2E102-U0038-Q055",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the smallest nonempty table, by rows and columns, that can be created in Microsoft Word desktop?",
+    "questionUrdu": "Microsoft Word desktop میں قطاروں اور کالموں کے لحاظ سے سب سے چھوٹی غیر خالی جدول کیا بن سکتی ہے؟",
+    "options": [
+      "1 row by 1 column",
+      "2 rows by 1 column",
+      "2 rows by 2 columns",
+      "1 row by 2 columns"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 1 row by 1 column ہے۔ غیر خالی جدول کے لیے کم از کم ایک قطار اور ایک کالم درکار ہوتے ہیں، اس لیے سب سے چھوٹی جدول ایک ضرب ایک ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Insert tables and pictures",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/graphics-visuals/officeweb/insert-tables-and-pictures",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q055"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/graphics-visuals/officeweb/insert-tables-and-pictures",
+        "label": "Insert tables and pictures",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft documents creating a Word table by choosing its row and column count."
+      },
+      {
+        "url": "https://aildi.arizona.edu/sites/default/files/technology_manual_2006_0.pdf",
+        "label": "Technology manual: Microsoft Word tables",
+        "publisher": "University of Arizona",
+        "authorityId": "university-arizona",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university manual independently gives a valid Word-table construction with one row and one column, establishing the smallest nonempty table."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The grammar and nonempty-table condition were added. A one-cell table has one row and one column and is the smallest possible nonempty table; printed answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q055-SIM",
+    "pairId": "ADV2E102-U0038-Q055",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "How is a table's size specified when it is inserted in Microsoft Word desktop?",
+    "questionUrdu": "Microsoft Word desktop میں جدول داخل کرتے وقت اس کا حجم کس طرح متعین کیا جاتا ہے؟",
+    "options": [
+      "By its numbers of rows and columns",
+      "By page color only",
+      "By the document password",
+      "By printer speed"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب قطاروں اور کالموں کی تعداد ہے۔ مائیکروسافٹ اور یونیورسٹی آف ایریزونا دونوں جدول بناتے وقت یہی دو تعدادیں منتخب کرنے کی وضاحت کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Insert tables and pictures",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/graphics-visuals/officeweb/insert-tables-and-pictures",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q055",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/graphics-visuals/officeweb/insert-tables-and-pictures",
+        "label": "Insert tables and pictures",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft explains that users choose the numbers of columns and rows when inserting a table."
+      },
+      {
+        "url": "https://aildi.arizona.edu/sites/default/files/technology_manual_2006_0.pdf",
+        "label": "Technology manual: Microsoft Word tables",
+        "publisher": "University of Arizona",
+        "authorityId": "university-arizona",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Arizona independently describes specifying a table by its rows and columns."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q057-SRC",
+    "pairId": "ADV2E102-U0038-Q057",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Under the Microsoft Word desktop AutoRecover default, how often is recovery information saved?",
+    "questionUrdu": "Microsoft Word desktop AutoRecover default کے تحت بازیابی کی معلومات کتنی دیر بعد محفوظ ہوتی ہیں؟",
+    "options": [
+      "Every 20 minutes",
+      "Every 10 minutes",
+      "Every 30 minutes",
+      "No specific interval"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Every 10 minutes ہے۔ طے شدہ وقفہ ہر دس منٹ ہے، البتہ صارف ورڈ کی محفوظ کرنے والی ترتیبات میں اس وقفے کو تبدیل کر سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Recover files in Office for Mac",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/collab-files/recover-files-in-office-for-mac",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q057"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/collab-files/recover-files-in-office-for-mac",
+        "label": "Recover files in Office for Mac",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft states that AutoRecover saves a recovery file every 10 minutes by default."
+      },
+      {
+        "url": "https://itg.wfu.edu/2018/09/microsoft-word-tips/",
+        "label": "Microsoft Word tips",
+        "publisher": "Wake Forest University",
+        "authorityId": "wake-forest-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university's Word guidance independently states that the default AutoRecover interval is 10 minutes."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop AutoRecover default",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source incorrectly called periodic recovery-file creation AutoSave. It was repaired to AutoRecover; Microsoft's default is 10 minutes, retaining answer B."
+  },
+  {
+    "id": "ADV2E102-U0038-Q057-SIM",
+    "pairId": "ADV2E102-U0038-Q057",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Under the Microsoft Word desktop AutoRecover default, can the saving interval be changed by the user?",
+    "questionUrdu": "Microsoft Word desktop AutoRecover default میں کیا محفوظ کرنے والا وقفہ صارف تبدیل کر سکتا ہے؟",
+    "options": [
+      "Yes, the interval can be changed",
+      "No, it is permanently fixed",
+      "Only by replacing the keyboard",
+      "Only after printing"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ہاں ہے۔ مائیکروسافٹ اور ویک فاریسٹ یونیورسٹی دونوں خودکار بازیابی کے منٹوں کا وقفہ بدلنے کا طریقہ بیان کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Recover files in Office for Mac",
+      "referenceUrl": "https://support.microsoft.com/en-us/office/collab-files/recover-files-in-office-for-mac",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q057",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/collab-files/recover-files-in-office-for-mac",
+        "label": "Recover files in Office for Mac",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft documents changing how frequently Word saves AutoRecover information."
+      },
+      {
+        "url": "https://itg.wfu.edu/2018/09/microsoft-word-tips/",
+        "label": "Microsoft Word tips",
+        "publisher": "Wake Forest University",
+        "authorityId": "wake-forest-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wake Forest University independently explains changing Word's AutoRecover interval from its default."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop AutoRecover default",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q059-SRC",
+    "pairId": "ADV2E102-U0038-Q059",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which symbol must an ordinary Microsoft Excel desktop formula begin with?",
+    "questionUrdu": "Microsoft Excel desktop میں عام فارمولا لازماً کس علامت سے شروع ہوتا ہے؟",
+    "options": [
+      "=",
+      "*",
+      "#",
+      "All of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب = ہے۔ ایکسل عام فارمولے کو مساوی کی علامت سے شروع کرتا ہے، جس کے بعد اعداد، خانے کے حوالے اور عامل لکھے جاتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q059"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-gb/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173",
+        "label": "Overview of formulas in Excel",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft states that an Excel formula always begins with an equal sign."
+      },
+      {
+        "url": "https://www.american.edu/training/upload/excel-basic-formatting-2.pdf",
+        "label": "Excel basic formatting",
+        "publisher": "American University",
+        "authorityId": "american-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently states that formulas start with an equals sign."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Excel desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The application and ordinary-formula context were added. Excel formulas begin with an equals sign; printed answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q059-SIM",
+    "pairId": "ADV2E102-U0038-Q059",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which operator represents multiplication in a Microsoft Excel desktop formula?",
+    "questionUrdu": "Microsoft Excel desktop کے فارمولے میں ضرب کے لیے کون سی علامت استعمال ہوتی ہے؟",
+    "options": [
+      "*",
+      "/",
+      "+",
+      "^"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ستارے کی علامت ہے۔ مائیکروسافٹ اور امریکن یونیورسٹی دونوں ایکسل فارمولوں میں ضرب کے لیے یہی عامل درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Overview of formulas in Excel",
+      "referenceUrl": "https://support.microsoft.com/en-gb/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q059",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-gb/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173",
+        "label": "Overview of formulas in Excel",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft's formula guide identifies the asterisk as Excel's multiplication operator."
+      },
+      {
+        "url": "https://www.american.edu/training/upload/excel-basic-formatting-2.pdf",
+        "label": "Excel basic formatting",
+        "publisher": "American University",
+        "authorityId": "american-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "American University's Excel guide independently uses the asterisk for multiplication in formulas."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Excel desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q061-SRC",
+    "pairId": "ADV2E102-U0038-Q061",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which horizontal-alignment choice spaces cell contents evenly across the cell width in Microsoft Excel desktop?",
+    "questionUrdu": "Microsoft Excel desktop میں افقی سیدھ کا کون سا اختیار خانے کے متن کو پوری چوڑائی میں یکساں طور پر پھیلاتا ہے؟",
+    "options": [
+      "Center",
+      "Distributed",
+      "Justify",
+      "Indent"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Distributed ہے۔ ڈسٹری بیوٹڈ سیدھ متن کے اجزا کے درمیان فاصلہ بڑھا کر انہیں خانے کی دستیاب چوڑائی میں برابر طور پر پھیلاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Formatting cells in Excel",
+      "referenceUrl": "https://learn.microsoft.com/en-us/answers/questions/5129861/formatting-cells-in-excel",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q061"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learn.microsoft.com/en-us/answers/questions/5129861/formatting-cells-in-excel",
+        "label": "Formatting cells in Excel",
+        "publisher": "Microsoft Q&A",
+        "authorityId": "microsoft-qa",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Microsoft-hosted explanation describes Distributed alignment as spacing cell contents evenly between the borders."
+      },
+      {
+        "url": "https://ptgmedia.pearsoncmg.com/images/9780735626881/samplepages/9780735626881.pdf",
+        "label": "Microsoft Excel reference: cell alignment",
+        "publisher": "Pearson Education",
+        "authorityId": "pearson-education",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent reference explains that Distributed alignment positions text fragments with equal spacing across a cell."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Excel desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The application and horizontal-alignment context were added. Distributed alignment spaces the content across the cell; printed answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q061-SIM",
+    "pairId": "ADV2E102-U0038-Q061",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Under Microsoft Excel desktop Distributed (Indent) alignment, where is equal spacing added?",
+    "questionUrdu": "Microsoft Excel desktop کی ڈسٹری بیوٹڈ اِنڈینٹ سیدھ میں برابر فاصلہ کہاں شامل کیا جاتا ہے؟",
+    "options": [
+      "Between the text and both cell borders",
+      "Only above the cell",
+      "Only below the worksheet",
+      "Between separate workbooks"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب متن اور خانے کی دونوں جانب کی سرحدوں کے درمیان ہے۔ دونوں مراجع اس سیدھ میں دائیں اور بائیں برابر خلا کی وضاحت کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Formatting cells in Excel",
+      "referenceUrl": "https://learn.microsoft.com/en-us/answers/questions/5129861/formatting-cells-in-excel",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q061",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learn.microsoft.com/en-us/answers/questions/5129861/formatting-cells-in-excel",
+        "label": "Formatting cells in Excel",
+        "publisher": "Microsoft Q&A",
+        "authorityId": "microsoft-qa",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft Q&A explains that Distributed (Indent) adds equal space between text and both cell borders."
+      },
+      {
+        "url": "https://ptgmedia.pearsoncmg.com/images/9780735626881/samplepages/9780735626881.pdf",
+        "label": "Microsoft Excel reference: cell alignment",
+        "publisher": "Pearson Education",
+        "authorityId": "pearson-education",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pearson's Excel reference independently describes distributed alignment and its equal spacing across the cell."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Excel desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q062-SRC",
+    "pairId": "ADV2E102-U0038-Q062",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which Microsoft Word desktop tool is used to find synonyms for a selected word?",
+    "questionUrdu": "Microsoft Word desktop میں منتخب لفظ کے ہم معنی الفاظ تلاش کرنے کے لیے کون سا آلہ استعمال ہوتا ہے؟",
+    "options": [
+      "Thesaurus",
+      "Macros",
+      "Functions",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Thesaurus ہے۔ تھیسارس منتخب لفظ کے متبادل اور ہم معنی الفاظ دکھاتا ہے، اس لیے لفظی انتخاب بہتر بنانے کے لیے یہی آلہ استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Word features comparison",
+      "referenceUrl": "https://support.microsoft.com/en-US/Word/word-features-comparison-word-for-the-web-vs-desktop",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q062"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-US/Word/word-features-comparison-word-for-the-web-vs-desktop",
+        "label": "Word features comparison",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft describes Word's built-in Thesaurus as a tool for exploring synonyms."
+      },
+      {
+        "url": "https://staging.wcupa.edu/infoServices/training/documents/courses/MicrosoftOffice/Word_Essentials_2013.pdf",
+        "label": "Word essentials",
+        "publisher": "West Chester University",
+        "authorityId": "west-chester-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university manual independently describes using the Thesaurus to find synonyms."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source incorrectly called the feature a dictionary. The proposition was repaired to synonym lookup; Thesaurus remains printed answer A."
+  },
+  {
+    "id": "ADV2E102-U0038-Q062-SIM",
+    "pairId": "ADV2E102-U0038-Q062",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "On which Microsoft Word desktop Ribbon tab is the Thesaurus command found?",
+    "questionUrdu": "Microsoft Word desktop ربن کے کس ٹیب پر تھیسارس کمانڈ موجود ہوتی ہے؟",
+    "options": [
+      "Review",
+      "Insert",
+      "Layout",
+      "Mailings"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ریویو ٹیب ہے۔ مائیکروسافٹ اور ویسٹ چیسٹر یونیورسٹی دونوں تھیسارس تک پہنچنے کے لیے اسی ٹیب کی ہدایت دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Look up words in the thesaurus",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/look-up-words-in-the-thesaurus",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q062",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/word/look-up-words-in-the-thesaurus",
+        "label": "Look up words in the thesaurus",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft directs Word users to the Review tab to open the Thesaurus command."
+      },
+      {
+        "url": "https://staging.wcupa.edu/infoServices/training/documents/courses/MicrosoftOffice/Word_Essentials_2013.pdf",
+        "label": "Word essentials",
+        "publisher": "West Chester University",
+        "authorityId": "west-chester-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "West Chester University's Word guide independently locates Thesaurus on the Review tab."
+      }
+    ],
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2020",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word desktop",
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q064-SRC",
+    "pairId": "ADV2E102-U0038-Q064",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "What is a drop cap in word-processing typography?",
+    "questionUrdu": "ورڈ پروسیسنگ کی طباعت میں ڈراپ کیپ سے کیا مراد ہے؟",
+    "options": [
+      "Text formatted in small capitals",
+      "Every word in title case",
+      "A whole passage in capital letters",
+      "A large initial capital extending down through several lines"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب A large initial capital extending down through several lines ہے۔ ڈراپ کیپ پیراگراف کا بڑا ابتدائی حرف ہوتا ہے جو متن کی کئی سطروں کی گہرائی تک پھیلا ہوا دکھائی دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Word 2013 advanced",
+      "referenceUrl": "https://www.wcupa.edu/infoservices/training/documents/courses/MicrosoftOffice/Word2013_Advanced.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q064"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.wcupa.edu/infoservices/training/documents/courses/MicrosoftOffice/Word2013_Advanced.pdf",
+        "label": "Word 2013 advanced",
+        "publisher": "West Chester University",
+        "authorityId": "west-chester-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide defines a drop cap as a large initial capital extending down through multiple lines."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-ZA/text/swriter/01/05030400.html",
+        "label": "Drop Caps",
+        "publisher": "The Document Foundation",
+        "authorityId": "libreoffice-help",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice independently describes a drop cap as an enlarged first letter spanning several lines."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "None of the source's first three choices defined a drop cap, so printed answer D ('None') was only a placeholder. Option D was transparently replaced with the documented definition, retaining answer index D."
+  },
+  {
+    "id": "ADV2E102-U0038-Q064-SIM",
+    "pairId": "ADV2E102-U0038-Q064",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What are Word's two positioning choices for a drop cap?",
+    "questionUrdu": "ورڈ میں ڈراپ کیپ کی جگہ مقرر کرنے کے دو اختیارات کون سے ہیں؟",
+    "options": [
+      "Dropped and In Margin",
+      "Portrait and Landscape",
+      "Left and Justified",
+      "Header and Footer"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ڈراپڈ اور اِن مارجن ہے۔ مائیکروسافٹ اور ویسٹ چیسٹر یونیورسٹی دونوں ڈراپ کیپ کے یہی دو مقامی اختیارات درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Insert a drop cap",
+      "referenceUrl": "https://support.microsoft.com/en-us/word/insert-a-drop-cap",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q064",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/word/insert-a-drop-cap",
+        "label": "Insert a drop cap",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft lists Dropped and In Margin as Word's two drop-cap placement choices."
+      },
+      {
+        "url": "https://www.wcupa.edu/infoservices/training/documents/courses/MicrosoftOffice/Word2013_Advanced.pdf",
+        "label": "Word 2013 advanced",
+        "publisher": "West Chester University",
+        "authorityId": "west-chester-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "West Chester University's Word guide independently lists Dropped and In Margin for drop-cap positioning."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

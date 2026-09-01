@@ -76,7 +76,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0071-Q004-SRC"
+        "ADV2E102-U0071-Q004-SRC",
+        "ADV2E102-U0010-Q003-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -313,7 +314,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found that the surfaced items test related, inverse, date-different, or otherwise materially distinct facts; this independently verified proposition is retained as a useful confusable distinction.",
+    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
     "testedProposition": "What did the United Nations General Assembly elect on 17 June 2020? Correct answer: Five non-permanent members of the Security Council.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -324,9 +325,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "ADV2E102-U0006-Q011-SIM"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -521,7 +520,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0012-Q029-SIM"
+        "ADV2E102-U0008-Q041-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -1092,10 +1091,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0071-Q052",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0045-Q055",
+    "reason": "The earlier source-order U0045 canonical already tests the Wright brothers' first successful powered, controlled flight in 1903, so this later source repeats the same proposition.",
     "testedProposition": "Who built and flew the first successful powered, controlled, heavier-than-air airplane in 1903? Correct answer: Orville and Wilbur Wright.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1106,7 +1105,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0045-Q055"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1543,7 +1544,8 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P238-Q074-SRC",
-        "P237-Q071-SRC"
+        "P237-Q071-SRC",
+        "ADV2E102-U0008-Q089-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -1615,7 +1617,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found that the surfaced items test related, inverse, date-different, or otherwise materially distinct facts; this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "What does the expression 'as plentiful as blackberries' mean? Correct answer: Very abundant.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1626,7 +1628,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0014-Q076-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1856,10 +1860,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0071-Q089",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found that the surfaced items test related, inverse, date-different, or otherwise materially distinct facts; this independently verified proposition is retained as a useful confusable distinction.",
+    "duplicateOf": "ADV2E102-U0026-Q085",
+    "reason": "The earlier-source-order U0026 canonical asks the identical Mirza Ghalib birthplace proposition and answers Agra.",
     "testedProposition": "In which year did Mirza Ghalib die? Correct answer: 1869.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1871,7 +1875,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0071-Q089-SRC"
+        "ADV2E102-U0071-Q089-SRC",
+        "ADV2E102-U0026-Q085"
       ],
       "answerConflictReviewed": true
     }

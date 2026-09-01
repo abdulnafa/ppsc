@@ -1,0 +1,2969 @@
+[
+  {
+    "id": "ADV2E102-U0036-Q068-SRC",
+    "pairId": "ADV2E102-U0036-Q068",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Starting at 6, alternately divide by 2 and multiply by 4: 6, 3, 12, 6, 24, ____. What is the next term?",
+    "questionUrdu": "6 سے شروع ہونے والی ترتیب میں باری باری 2 سے تقسیم اور 4 سے ضرب دیں: 6، 3، 12، 6، 24، __۔ اگلی حد کیا ہے؟",
+    "options": [
+      "12",
+      "18",
+      "30",
+      "40"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 12 ہے۔ 24 کے بعد باری 2 سے تقسیم کرنے کی ہے، اس لیے 24 ÷ 2 = 12۔",
+    "source": {
+      "type": "book",
+      "label": "Sequences and Their Notations",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry/pages/13-1-sequences-and-their-notations",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry/pages/13-1-sequences-and-their-notations",
+        "label": "Sequences and Their Notations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that a sequence rule may alternate and that successive terms must be generated in their stated order."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=24%2F2",
+        "label": "Compute 24 / 2",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation gives 24 divided by 2 as 12."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The bare finite sequence admits many possible continuations. The intended alternating rule was made explicit; it reproduces every printed term and gives 24 / 2 = 12. Answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q068-SIM",
+    "pairId": "ADV2E102-U0036-Q068",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Which operation changes 24 into the next term 12 in the alternating sequence?",
+    "questionUrdu": "اس باری باری چلنے والی ترتیب میں 24 کو اگلی حد 12 میں کون سا عمل بدلتا ہے؟",
+    "options": [
+      "Divide by 2",
+      "Multiply by 2",
+      "Add 12",
+      "Subtract 2"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Divide by 2 ہے۔ ترتیب کے قاعدے کے مطابق 24 کو 2 سے تقسیم کرنے پر اگلی حد 12 آتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Sequences and Their Notations",
+      "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry/pages/13-1-sequences-and-their-notations",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/algebra-and-trigonometry/pages/13-1-sequences-and-their-notations",
+        "label": "Sequences and Their Notations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains that the stated alternating sequence operations must be applied in order."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=24%2F2",
+        "label": "Compute 24 / 2",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently evaluates 24 divided by 2 as 12."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q069-SRC",
+    "pairId": "ADV2E102-U0036-Q069",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "For the ordered pair (2, 4), which statement is correct?",
+    "questionUrdu": "مرتب جوڑے (2، 4) کے بارے میں کون سا بیان درست ہے؟",
+    "options": [
+      "2 is the abscissa and 4 is the ordinate",
+      "2 is the ordinate and 4 is the abscissa",
+      "2 and 4 are both abscissas",
+      "2 and 4 are both ordinates"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 2 is the abscissa and 4 is the ordinate ہے۔ مرتب جوڑے میں پہلا عدد abscissa یعنی x-coordinate اور دوسرا ordinate یعنی y-coordinate ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "The Cartesian Coordinate Plane",
+      "referenceUrl": "https://math.libretexts.org/Courses/Cosumnes_River_College/Math_372%3A_College_Algebra_for_Calculus/11%3A_Appendix_-_Prerequisite_Function_Material/11.01%3A_Sets_of_Real_Numbers_and_the_Cartesian_Coordinate_Plane",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://math.libretexts.org/Courses/Cosumnes_River_College/Math_372%3A_College_Algebra_for_Calculus/11%3A_Appendix_-_Prerequisite_Function_Material/11.01%3A_Sets_of_Real_Numbers_and_the_Cartesian_Coordinate_Plane",
+        "label": "The Cartesian Coordinate Plane",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "mathematics-libretexts",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The text defines the first entry of an ordered pair as the abscissa and the second as the ordinate."
+      },
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/2-key-terms",
+        "label": "College Algebra 2e: Key Terms",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax independently defines an ordered pair as horizontal then vertical displacement, i.e. x-coordinate then y-coordinate."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The fragmentary stem was completed and plural agreement normalized. Answer A is directly supported."
+  },
+  {
+    "id": "ADV2E102-U0036-Q069-SIM",
+    "pairId": "ADV2E102-U0036-Q069",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is the ordinate of the ordered pair (2, 4)?",
+    "questionUrdu": "مرتب جوڑے (2، 4) کا ordinate کیا ہے؟",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 4 ہے۔ مرتب جوڑے کا دوسرا عدد ordinate یا y-coordinate ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "The Cartesian Coordinate Plane",
+      "referenceUrl": "https://math.libretexts.org/Courses/Cosumnes_River_College/Math_372%3A_College_Algebra_for_Calculus/11%3A_Appendix_-_Prerequisite_Function_Material/11.01%3A_Sets_of_Real_Numbers_and_the_Cartesian_Coordinate_Plane",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://math.libretexts.org/Courses/Cosumnes_River_College/Math_372%3A_College_Algebra_for_Calculus/11%3A_Appendix_-_Prerequisite_Function_Material/11.01%3A_Sets_of_Real_Numbers_and_the_Cartesian_Coordinate_Plane",
+        "label": "The Cartesian Coordinate Plane",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "mathematics-libretexts",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Mathematics LibreTexts defines the second entry of an ordered pair as the ordinate."
+      },
+      {
+        "url": "https://openstax.org/books/college-algebra-2e/pages/2-key-terms",
+        "label": "College Algebra 2e: Key Terms",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax independently defines the second entry as the vertical or y-coordinate, so it is 4 in (2, 4)."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q071-SRC",
+    "pairId": "ADV2E102-U0036-Q071",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A cyclist covers 750 metres in 2 minutes 30 seconds. What is the average speed?",
+    "questionUrdu": "ایک سائیکل سوار 2 منٹ 30 سیکنڈ میں 750 میٹر طے کرتا ہے؛ اس کی اوسط رفتار کیا ہے؟",
+    "options": [
+      "16 km/h",
+      "17 km/h",
+      "18 km/h",
+      "19 km/h"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 18 km/h ہے۔ 150 سیکنڈ میں 750 میٹر کا مطلب 5 میٹر فی سیکنڈ ہے، جو 18 کلومیٹر فی گھنٹہ بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Speed and Velocity",
+      "referenceUrl": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and Velocity",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines average speed as distance divided by elapsed time."
+      },
+      {
+        "url": "https://nvlpubs.nist.gov/nistpubs/jres/123/jres.123.008.pdf",
+        "label": "SI Unit Conversion Factors",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST gives the exact conversion relationship between metres per second and kilometres per hour."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was standardized to average speed. Since 2 min 30 s = 150 s, 750 / 150 = 5 m/s = 18 km/h; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q071-SIM",
+    "pairId": "ADV2E102-U0036-Q071",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 750 metres divided by 150 seconds, expressed in metres per second?",
+    "questionUrdu": "750 میٹر کو 150 سیکنڈ سے تقسیم کرنے پر رفتار میٹر فی سیکنڈ میں کتنی بنتی ہے؟",
+    "options": [
+      "3 m/s",
+      "5 m/s",
+      "12 m/s",
+      "18 m/s"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 5 m/s ہے۔ اوسط رفتار فاصلہ تقسیم وقت ہے، اس لیے 750 ÷ 150 = 5 میٹر فی سیکنڈ۔",
+    "source": {
+      "type": "practice",
+      "label": "Speed and Velocity",
+      "referenceUrl": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/physics/pages/2-2-speed-and-velocity",
+        "label": "Speed and Velocity",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines average speed as distance divided by elapsed time, yielding 5 metres per second here."
+      },
+      {
+        "url": "https://nvlpubs.nist.gov/nistpubs/jres/123/jres.123.008.pdf",
+        "label": "SI Unit Conversion Factors",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST's exact speed-unit relationship independently confirms that 5 metres per second equals 18 kilometres per hour."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q073-SRC",
+    "pairId": "ADV2E102-U0036-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is a synonym of 'odour'?",
+    "questionUrdu": "درج الفاظ میں odour کا مترادف کون سا ہے؟",
+    "options": [
+      "Taste",
+      "Smell",
+      "Colour",
+      "Texture"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Smell ہے۔ Odour کے معنی بو یا smell ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Odour",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/odour",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/odour",
+        "label": "Odour",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines odour as a smell, especially a strong or unpleasant one."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/odor",
+        "label": "Odor",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines odor as a quality that stimulates the olfactory organ, i.e. a smell."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was made grammatical; answer B is directly supported by both dictionaries."
+  },
+  {
+    "id": "ADV2E102-U0036-Q073-SIM",
+    "pairId": "ADV2E102-U0036-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is closest in meaning to 'smell'?",
+    "questionUrdu": "کون سا لفظ smell کے معنی کے سب سے قریب ہے؟",
+    "options": [
+      "Odour",
+      "Silence",
+      "Colour",
+      "Motion"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Odour ہے۔ انگریزی میں odour کسی بو یا smell کو کہتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Odour",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/odour",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/odour",
+        "label": "Odour",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary directly defines odour as a smell."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/odor",
+        "label": "Odor",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines odor as a smell perceived by the olfactory organ."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q074-SRC",
+    "pairId": "ADV2E102-U0036-Q074",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which option explicitly reports the officer's words as a threat? The officer said to the peon, 'If you do not do your duty well, I will dismiss you.'",
+    "questionUrdu": "کون سا اختیار افسر کے ان الفاظ کو دھمکی کے طور پر درست نقل کرتا ہے: اگر تم نے اپنا فرض اچھی طرح ادا نہ کیا تو میں تمہیں برطرف کر دوں گا؟",
+    "options": [
+      "The officer told the peon that if he did not do his duty well, he would dismiss him.",
+      "The officer threatened to dismiss the peon if he did not do his duty well.",
+      "The officer suggested to the peon that if he did not do his duty well, he would be dismissed.",
+      "The officer told the peon that he would be dismissed if he failed to do his duty well."
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب The officer threatened to dismiss the peon if he did not do his duty well. ہے۔ شرط پوری نہ ہونے پر برطرفی کا اعلان دھمکی ہے، اس لیے درست reported speech میں threatened to dismiss آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Threaten",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/threaten",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/threaten",
+        "label": "Threaten",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines threaten as telling someone that one will cause trouble or harm if a condition is not met."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/threaten",
+        "label": "Threaten",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines threaten as announcing an intention to inflict harm or punishment."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Several choices can convey similar propositional content, so the task was narrowed to the reporting verb that explicitly classifies the conditional dismissal as a threat. Answer B is then unique."
+  },
+  {
+    "id": "ADV2E102-U0036-Q074-SIM",
+    "pairId": "ADV2E102-U0036-Q074",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which verb means to announce an intention to punish someone if a condition is not met?",
+    "questionUrdu": "کسی شرط کے پورا نہ ہونے پر سزا دینے کے ارادے کا اعلان کرنے کے لیے کون سا فعل آتا ہے؟",
+    "options": [
+      "Threaten",
+      "Invite",
+      "Praise",
+      "Request"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Threaten ہے۔ کسی کو نقصان یا سزا کی مشروط تنبیہ دینا threaten کہلاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Threaten",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/threaten",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/threaten",
+        "label": "Threaten",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary defines threaten as saying that harm or trouble will follow if a condition is not met."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/threaten",
+        "label": "Threaten",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines threaten as announcing an intention to inflict harm or punishment."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q075-SRC",
+    "pairId": "ADV2E102-U0036-Q075",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Using conventional tense backshift, report: They said, 'We take exercise every day.'",
+    "questionUrdu": "روایتی tense backshift کے مطابق اس جملے کو بالواسطہ انداز میں بیان کریں: They said, 'We take exercise every day.'",
+    "options": [
+      "They said that we take exercise every day.",
+      "They said that they take exercise every day.",
+      "They had said that they take exercise every day.",
+      "They said that they took exercise every day."
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب They said that they took exercise every day. ہے۔ Reported speech میں present simple take عموماً past simple took بن جاتا ہے اور we کی جگہ they آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Reported Speech: Indirect Speech",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+        "label": "Reported Speech: Indirect Speech",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge gives conventional backshift from present simple to past simple in indirect speech."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-statements",
+        "label": "Reported Speech: Statements",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently explains that present simple commonly backshifts to past simple and pronouns change in reported speech."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The task was explicitly scoped to conventional backshift because present tense may remain when still true. Under that scope, we changes to they and take changes to took; answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q075-SIM",
+    "pairId": "ADV2E102-U0036-Q075",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Under the conventional reported-speech backshift rule, the simple non-past form changes to which tense?",
+    "questionUrdu": "روایتی reported speech کے backshift میں سادہ غیر ماضی فعل کس tense میں بدلتا ہے؟",
+    "options": [
+      "Past simple",
+      "Future perfect",
+      "Present continuous",
+      "Past perfect continuous"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Past simple ہے۔ ماضی کے reporting verb کے بعد present simple کو عموماً past simple میں backshift کیا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Reported Speech: Indirect Speech",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+        "label": "Reported Speech: Indirect Speech",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Grammar states that present simple commonly backshifts to past simple in reported speech."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-statements",
+        "label": "Reported Speech: Statements",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently explains the same present-simple to past-simple backshift."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q076-SRC",
+    "pairId": "ADV2E102-U0036-Q076",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "He gave his wife a large ____ of flowers on her birthday.",
+    "questionUrdu": "اس نے اپنی بیوی کو سالگرہ پر پھولوں کا ایک بڑا ____ دیا۔",
+    "options": [
+      "Bundle",
+      "Pack",
+      "Bouquet",
+      "Group"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Bouquet ہے۔ Bouquet خوب صورتی سے ترتیب دیے گئے یا اکٹھے باندھے گئے پھولوں کے گچھے کو کہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Bouquet",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/bouquet",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/bouquet",
+        "label": "Bouquet",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a bouquet as a collection of flowers arranged attractively."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/bouquet",
+        "label": "Bouquet",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines bouquet as flowers picked and fastened together in a bunch."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Introductory clutter was removed and punctuation standardized. Bouquet is the conventional noun for an arranged bunch of flowers; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q076-SIM",
+    "pairId": "ADV2E102-U0036-Q076",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the noun 'bouquet' mean?",
+    "questionUrdu": "انگریزی اسم bouquet کا کیا مطلب ہے؟",
+    "options": [
+      "An arranged bunch of flowers",
+      "A musical instrument",
+      "A birthday cake",
+      "A written invitation"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب An arranged bunch of flowers ہے۔ Bouquet سے مراد ترتیب دیا ہوا پھولوں کا گلدستہ ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Bouquet",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/bouquet",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/bouquet",
+        "label": "Bouquet",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary defines a bouquet as an attractively arranged collection of flowers."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/bouquet",
+        "label": "Bouquet",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines bouquet as flowers fastened together in a bunch."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q077-SRC",
+    "pairId": "ADV2E102-U0036-Q077",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "____ to London on the train yesterday?",
+    "questionUrdu": "____ to London on the train yesterday? میں درست الفاظ کون سے ہیں؟",
+    "options": [
+      "Did Mary went",
+      "Did Mary go",
+      "Mary go",
+      "Mary goes"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Did Mary go ہے۔ Past simple سوال میں did کے بعد subject اور main verb کی base form آتی ہے، اس لیے Did Mary go درست ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Do as an Auxiliary Verb",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/do",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q077"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/do",
+        "label": "Do as an Auxiliary Verb",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge states that past-simple questions use did followed by the subject and the main verb's base form."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/past-simple",
+        "label": "Past Simple",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently gives past questions such as 'Where did you go?', confirming did plus base form."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source wording is preserved apart from punctuation. Past-simple questions use did plus the base form go, so answer B is unique."
+  },
+  {
+    "id": "ADV2E102-U0036-Q077-SIM",
+    "pairId": "ADV2E102-U0036-Q077",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which auxiliary verb is normally used to form a past-simple question?",
+    "questionUrdu": "Past simple کا سوال بنانے کے لیے عموماً کون سا معاون فعل استعمال ہوتا ہے؟",
+    "options": [
+      "Did",
+      "Does",
+      "Has",
+      "Will"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Did ہے۔ Past simple سوال میں did کے بعد subject اور فعل کی بنیادی شکل آتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Do as an Auxiliary Verb",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/do",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q077",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/do",
+        "label": "Do as an Auxiliary Verb",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Grammar states that past-simple questions use did followed by the subject and base verb."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/past-simple",
+        "label": "Past Simple",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently demonstrates past-simple questions with did plus the base form."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q078-SRC",
+    "pairId": "ADV2E102-U0036-Q078",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is closest in meaning to 'conspicuous'?",
+    "questionUrdu": "درج الفاظ میں conspicuous کے معنی کے سب سے قریب کون سا لفظ ہے؟",
+    "options": [
+      "Discernible",
+      "Concealed",
+      "Unclear",
+      "Obscure"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Discernible ہے۔ Conspicuous کا مطلب بہت نمایاں یا آسانی سے نظر آنے والا ہے، اس لیے discernible قریب ترین اختیار ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Conspicuous",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/conspicuous",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q078"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/conspicuous",
+        "label": "Conspicuous",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines conspicuous as very noticeable or attracting attention."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/discernible",
+        "label": "Discernible",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines discernible as capable of being perceived or recognized, making it the only listed near-synonym."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The task was framed as closest meaning: discernible means perceptible/noticeable, while the other three choices imply hiddenness or lack of clarity. Answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q078-SIM",
+    "pairId": "ADV2E102-U0036-Q078",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which listed word is closest in meaning to 'discernible'?",
+    "questionUrdu": "درج الفاظ میں discernible کے معنی کے سب سے قریب کون سا ہے؟",
+    "options": [
+      "Conspicuous",
+      "Invisible",
+      "Hidden",
+      "Obscure"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Conspicuous ہے۔ Discernible کسی قابلِ ادراک چیز کو اور conspicuous کسی واضح و نمایاں چیز کو کہتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Conspicuous",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/conspicuous",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q078",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/conspicuous",
+        "label": "Conspicuous",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines conspicuous as very noticeable, supporting its near-equivalence here."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/discernible",
+        "label": "Discernible",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines discernible as capable of being perceived or recognized, independently supporting the match."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q079-SRC",
+    "pairId": "ADV2E102-U0036-Q079",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "You would have seen my garden at its best if you ____ here last week.",
+    "questionUrdu": "You would have seen my garden at its best if you ____ here last week. میں خالی جگہ کیا ہوگی؟",
+    "options": [
+      "Be",
+      "Were",
+      "Had been",
+      "Should be"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Had been ہے۔ یہ unreal past کی third conditional ساخت ہے، اس لیے if-clause میں past perfect یعنی had been آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Third Conditional",
+      "referenceUrl": "https://learnenglishteens.britishcouncil.org/sites/teens/files/gs_third_conditional.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q079"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglishteens.britishcouncil.org/sites/teens/files/gs_third_conditional.pdf",
+        "label": "Third Conditional",
+        "publisher": "British Council LearnEnglish Teens",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council gives third-conditional form as if plus past perfect, followed by would have plus past participle."
+      },
+      {
+        "url": "https://downloads.bbc.co.uk/learningenglish/intermediate/unit9/b2_u9_6min_gram_3rd_conditional.pdf",
+        "label": "Third Conditional",
+        "publisher": "BBC Learning English",
+        "authorityId": "bbc-learning-english",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "BBC Learning English independently uses 'if I had known ... I would have taken' for an unreal past condition."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The visible source typo 'soon' was transparently corrected to 'seen'. A third conditional requires past perfect in the if-clause, so answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q079-SIM",
+    "pairId": "ADV2E102-U0036-Q079",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which tense normally follows 'if' in a third conditional sentence?",
+    "questionUrdu": "Third conditional جملے میں if کے بعد عموماً کون سا tense آتا ہے؟",
+    "options": [
+      "Past perfect",
+      "Present simple",
+      "Future simple",
+      "Present perfect"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Past perfect ہے۔ Third conditional کی if-clause میں had کے ساتھ past participle استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Third Conditional",
+      "referenceUrl": "https://learnenglishteens.britishcouncil.org/sites/teens/files/gs_third_conditional.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q079",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglishteens.britishcouncil.org/sites/teens/files/gs_third_conditional.pdf",
+        "label": "Third Conditional",
+        "publisher": "British Council LearnEnglish Teens",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council gives the third conditional as if plus the past perfect."
+      },
+      {
+        "url": "https://downloads.bbc.co.uk/learningenglish/intermediate/unit9/b2_u9_6min_gram_3rd_conditional.pdf",
+        "label": "Third Conditional",
+        "publisher": "BBC Learning English",
+        "authorityId": "bbc-learning-english",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "BBC Learning English independently demonstrates third-conditional if-clauses with the past perfect."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q080-SRC",
+    "pairId": "ADV2E102-U0036-Q080",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is the most suitable synonym of 'cataclysm'?",
+    "questionUrdu": "درج الفاظ میں cataclysm کا سب سے موزوں مترادف کون سا ہے؟",
+    "options": [
+      "Tranquility",
+      "Catastrophe",
+      "Pungent",
+      "Trash"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Catastrophe ہے۔ Cataclysm کسی بہت بڑی تباہی یا زبردست catastrophe کو کہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Cataclysm",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/cataclysm",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q080"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/cataclysm",
+        "label": "Cataclysm",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a cataclysm as an event causing great change or destruction."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/cataclysm",
+        "label": "Cataclysm",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines cataclysm as an overwhelming catastrophe."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar was normalized; both dictionaries directly support catastrophe, answer B."
+  },
+  {
+    "id": "ADV2E102-U0036-Q080-SIM",
+    "pairId": "ADV2E102-U0036-Q080",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word means an overwhelming catastrophe?",
+    "questionUrdu": "کون سا لفظ ایک انتہائی بڑی تباہی یا catastrophe کے معنی دیتا ہے؟",
+    "options": [
+      "Cataclysm",
+      "Routine",
+      "Benefit",
+      "Truce"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Cataclysm ہے۔ یہ کسی بڑے تباہ کن واقعے کے لیے استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Cataclysm",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/cataclysm",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q080",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/cataclysm",
+        "label": "Cataclysm",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary defines cataclysm as an event causing great destruction."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/cataclysm",
+        "label": "Cataclysm",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines cataclysm as an overwhelming catastrophe."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q082-SRC",
+    "pairId": "ADV2E102-U0036-Q082",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is closest in meaning to 'haggard'?",
+    "questionUrdu": "درج الفاظ میں haggard کے معنی کے سب سے قریب کون سا لفظ ہے؟",
+    "options": [
+      "Healthy",
+      "Flabby",
+      "Unworn",
+      "Exhausted"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Exhausted ہے۔ Haggard ایسے شخص کو کہتے ہیں جو تھکا ہوا، بیمار یا نڈھال نظر آئے۔",
+    "source": {
+      "type": "book",
+      "label": "Haggard",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/haggard",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q082"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/haggard",
+        "label": "Haggard",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines haggard as looking ill or tired."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/haggard",
+        "label": "Haggard",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines haggard as appearing worn and exhausted."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The task was framed as closest meaning. Haggard describes a worn or exhausted appearance, making answer D unique among the choices."
+  },
+  {
+    "id": "ADV2E102-U0036-Q082-SIM",
+    "pairId": "ADV2E102-U0036-Q082",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "A person described as 'haggard' typically looks how?",
+    "questionUrdu": "Haggard کہلانے والا شخص عموماً کیسا نظر آتا ہے؟",
+    "options": [
+      "Worn and exhausted",
+      "Fresh and rested",
+      "Cheerful and energetic",
+      "Neat and formal"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Worn and exhausted ہے۔ Haggard کسی تھکے، نڈھال اور کمزور نظر آنے والے شخص کی صفت ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Haggard",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/haggard",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q082",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/haggard",
+        "label": "Haggard",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge Dictionary defines haggard as looking ill or tired."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/haggard",
+        "label": "Haggard",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines haggard as appearing worn and exhausted."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q083-SRC",
+    "pairId": "ADV2E102-U0036-Q083",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which woman wrote the Urdu novel 'Neeli Bar'?",
+    "questionUrdu": "اردو ناول ’نیلی بار‘ کس خاتون نے لکھا؟",
+    "options": [
+      "نیلوفر اقبال",
+      "نیلوفر سکندر",
+      "طاہرہ اقبال",
+      "طاہرہ سکندر"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب طاہرہ اقبال ہے۔ ’نیلی بار‘ طاہرہ اقبال کا ناول ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Diverse Culture in Tahira Iqbal's Neeli Bar",
+      "referenceUrl": "https://matan.iub.edu.pk/website/journal/article/649efcb88b08c/page",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://matan.iub.edu.pk/website/journal/article/649efcb88b08c/page",
+        "label": "Diverse Culture in Tahira Iqbal's Neeli Bar",
+        "publisher": "The Islamia University of Bahawalpur",
+        "authorityId": "islamia-university-bahawalpur",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university journal identifies Neeli Bar as a novel by Tahira Iqbal."
+      },
+      {
+        "url": "https://zabanoadab.gcuf.edu.pk/index.php/1/article/view/178",
+        "label": "Historical Sensibility in Tahira Iqbal's Novels Neeli Bar and Graan",
+        "publisher": "Government College University Faisalabad",
+        "authorityId": "gc-university-faisalabad",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university journal likewise attributes Neeli Bar to Tahira Iqbal."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored to genuine Urdu. The vague claim about changing a region's language and idiom was replaced by the directly documented authorship proposition; Tahira Iqbal remains answer C."
+  },
+  {
+    "id": "ADV2E102-U0036-Q083-SIM",
+    "pairId": "ADV2E102-U0036-Q083",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu novel is attributed to Tahira Iqbal?",
+    "questionUrdu": "طاہرہ اقبال سے کون سا اردو ناول منسوب ہے؟",
+    "options": [
+      "Neeli Bar",
+      "Aangan",
+      "Raja Gidh",
+      "Udas Naslain"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Neeli Bar ہے۔ جامعاتی تحقیقی ماخذ ’نیلی بار‘ کو طاہرہ اقبال کا ناول قرار دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Diverse Culture in Tahira Iqbal's Neeli Bar",
+      "referenceUrl": "https://matan.iub.edu.pk/website/journal/article/649efcb88b08c/page",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://matan.iub.edu.pk/website/journal/article/649efcb88b08c/page",
+        "label": "Diverse Culture in Tahira Iqbal's Neeli Bar",
+        "publisher": "The Islamia University of Bahawalpur",
+        "authorityId": "islamia-university-bahawalpur",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Islamia University of Bahawalpur journal attributes the Urdu novel Neeli Bar to Tahira Iqbal."
+      },
+      {
+        "url": "https://zabanoadab.gcuf.edu.pk/index.php/1/article/view/178",
+        "label": "Historical Sensibility in Tahira Iqbal's Novels Neeli Bar and Graan",
+        "publisher": "Government College University Faisalabad",
+        "authorityId": "gc-university-faisalabad",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Government College University Faisalabad's journal independently attributes Neeli Bar to Tahira Iqbal."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q084-SRC",
+    "pairId": "ADV2E102-U0036-Q084",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which tradition best describes Amir Khusrau's literary and spiritual affiliation?",
+    "questionUrdu": "امیر خسرو کی ادبی اور روحانی وابستگی کو کون سی روایت بہتر طور پر بیان کرتی ہے؟",
+    "options": [
+      "ابہام گوئی کی تحریک",
+      "رومانی تحریک",
+      "ترقی پسند تحریک",
+      "صوفیانہ روایت"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب صوفیانہ روایت ہے۔ امیر خسرو ہند فارسی صوفی شاعر اور حضرت نظام الدین اولیا کے چشتی مرید تھے۔",
+    "source": {
+      "type": "book",
+      "label": "Folio from Amir Khusrau's Khamsa",
+      "referenceUrl": "https://www.britishmuseum.org/collection/object/W_1937-0710-0-324",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q084"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britishmuseum.org/collection/object/W_1937-0710-0-324",
+        "label": "Folio from Amir Khusrau's Khamsa",
+        "publisher": "British Museum",
+        "authorityId": "british-museum",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Museum identifies Amir Khusrau Dihlavi as an Indo-Persian Sufi poet."
+      },
+      {
+        "url": "https://www.digitalcollections.manchester.ac.uk/view/MS-PERSIAN-00109",
+        "label": "Divan-i Amir Khusraw Dihlavi",
+        "publisher": "University of Manchester Library",
+        "authorityId": "university-manchester",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university catalogue independently records Amir Khusrau as a disciple of Nizamuddin Auliya of the Chishti Sufi order."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored. The anachronistic wording about later literary movements was repaired to Amir Khusrau's documented Sufi affiliation; answer D remains the intended choice."
+  },
+  {
+    "id": "ADV2E102-U0036-Q084-SIM",
+    "pairId": "ADV2E102-U0036-Q084",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Amir Khusrau was an Indo-Persian poet associated with which spiritual tradition?",
+    "questionUrdu": "امیر خسرو ہند فارسی شاعر تھے اور کس روحانی روایت سے وابستہ تھے؟",
+    "options": [
+      "Sufism",
+      "Stoicism",
+      "Shinto",
+      "Confucianism"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sufism ہے۔ امیر خسرو صوفی شاعر اور چشتی بزرگ نظام الدین اولیا کے مرید تھے۔",
+    "source": {
+      "type": "practice",
+      "label": "Folio from Amir Khusrau's Khamsa",
+      "referenceUrl": "https://www.britishmuseum.org/collection/object/W_1937-0710-0-324",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q084",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britishmuseum.org/collection/object/W_1937-0710-0-324",
+        "label": "Folio from Amir Khusrau's Khamsa",
+        "publisher": "British Museum",
+        "authorityId": "british-museum",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Museum identifies Amir Khusrau as an Indo-Persian Sufi poet."
+      },
+      {
+        "url": "https://www.digitalcollections.manchester.ac.uk/view/MS-PERSIAN-00109",
+        "label": "Divan-i Amir Khusraw Dihlavi",
+        "publisher": "University of Manchester Library",
+        "authorityId": "university-manchester",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Manchester catalogue independently records Khusrau as a disciple in the Chishti Sufi order."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q086-SRC",
+    "pairId": "ADV2E102-U0036-Q086",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What are words such as 'wao' and 'aur' that join words or clauses called in Urdu grammar?",
+    "questionUrdu": "اردو قواعد میں واو اور اور جیسے الفاظ، جو لفظوں یا فقروں کو ملاتے ہیں، کیا کہلاتے ہیں؟",
+    "options": [
+      "حروفِ رابط",
+      "حروفِ تمام",
+      "حروفِ عطف",
+      "حروفِ جار"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب حروفِ عطف ہے۔ ایسے جوڑنے والے الفاظ کو حروفِ عطف کہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Urdu Class 5",
+      "referenceUrl": "https://vatt.gob.pk/pluginfile.php/96/mod_folder/content/0/Public%20Repository/08.%20Books/6.%20Class%20Five/urdu%20class%205th.pdf?forcedownload=1",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://vatt.gob.pk/pluginfile.php/96/mod_folder/content/0/Public%20Repository/08.%20Books/6.%20Class%20Five/urdu%20class%205th.pdf?forcedownload=1",
+        "label": "Urdu Class 5",
+        "publisher": "Government of Pakistan Vocational and Technical Training",
+        "authorityId": "pakistan-vtt",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Urdu text defines words such as 'اور' that join words or clauses as حروفِ عطف."
+      },
+      {
+        "url": "https://kpese.gov.pk/vtwkaf/uploads/2021/09/SNC-based-LPs-Grade-4-English-Urdu-Mathematics-General-Science-and-Social-Studies_2021.pdf",
+        "label": "SNC-based Urdu Lesson Plans",
+        "publisher": "Khyber Pakhtunkhwa Elementary and Secondary Education Department",
+        "authorityId": "kp-ese",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The provincial lesson plan independently teaches conjunctions such as 'اور' under حروفِ عطف."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored and the definition aligned with the official teaching sources. Answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q086-SIM",
+    "pairId": "ADV2E102-U0036-Q086",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "What function do Urdu huroof-e-atf perform?",
+    "questionUrdu": "اردو کے حروفِ عطف کیا کام انجام دیتے ہیں؟",
+    "options": [
+      "They join words or clauses",
+      "They mark only questions",
+      "They indicate numbers",
+      "They replace every verb"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب They join words or clauses ہے۔ حروفِ عطف الفاظ، تراکیب یا جملوں کو باہم ملاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Urdu Class 5",
+      "referenceUrl": "https://vatt.gob.pk/pluginfile.php/96/mod_folder/content/0/Public%20Repository/08.%20Books/6.%20Class%20Five/urdu%20class%205th.pdf?forcedownload=1",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://vatt.gob.pk/pluginfile.php/96/mod_folder/content/0/Public%20Repository/08.%20Books/6.%20Class%20Five/urdu%20class%205th.pdf?forcedownload=1",
+        "label": "Urdu Class 5",
+        "publisher": "Government of Pakistan Vocational and Technical Training",
+        "authorityId": "pakistan-vtt",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's official Urdu textbook defines huroof-e-atf as words such as aur that join words or clauses."
+      },
+      {
+        "url": "https://kpese.gov.pk/vtwkaf/uploads/2021/09/SNC-based-LPs-Grade-4-English-Urdu-Mathematics-General-Science-and-Social-Studies_2021.pdf",
+        "label": "SNC-based Urdu Lesson Plans",
+        "publisher": "Khyber Pakhtunkhwa Elementary and Secondary Education Department",
+        "authorityId": "kp-ese",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Khyber Pakhtunkhwa lesson plan independently teaches aur and similar conjunctions as huroof-e-atf."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q087-SRC",
+    "pairId": "ADV2E102-U0036-Q087",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which listed word is the closest antonym of 'intishar' in the sense of anxiety and restlessness?",
+    "questionUrdu": "بے چینی اور اضطراب کے مفہوم میں انتشار کا قریب ترین متضاد کون سا لفظ ہے؟",
+    "options": [
+      "افتخار",
+      "انتخاب",
+      "اضطراب",
+      "قرار"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب قرار ہے۔ اس مفہوم میں انتشار بے چینی ہے، جبکہ قرار سکون اور اطمینان کو ظاہر کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Intishaar",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-intishaar?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q087"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-intishaar?lang=ur",
+        "label": "Intishaar",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta gives انتشار senses including disorder, anxiety and restlessness."
+      },
+      {
+        "url": "https://www.urdupoint.com/dictionary/urdu-to-english/qarar-meaning-in-english/13813.html",
+        "label": "Qarar",
+        "publisher": "UrduPoint Dictionary",
+        "authorityId": "urdupoint-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent dictionary gives قرار as calmness, composure, peace and tranquility, contrasting with the intended anxiety/restlessness sense."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The visually soft headword was restored from mojibake. Because the broad lexical antonyms of انتشار vary by sense, the stem was scoped to anxiety/restlessness; قرار (calmness) is then the closest listed contrast, answer D."
+  },
+  {
+    "id": "ADV2E102-U0036-Q087-SIM",
+    "pairId": "ADV2E102-U0036-Q087",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu word denotes calmness and therefore contrasts with 'intishar' meaning restlessness?",
+    "questionUrdu": "کون سا اردو لفظ سکون کے معنی دیتا ہے اور بے چینی کے مفہوم والے ’انتشار‘ کا متضاد بنتا ہے؟",
+    "options": [
+      "Qarar",
+      "Izterab",
+      "Bechaini",
+      "Halchal"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Qarar ہے۔ قرار کے معنی سکون و اطمینان ہیں، اس لیے یہ اضطراب والے انتشار کی ضد ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Intishaar",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-intishaar?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q087",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-intishaar?lang=ur",
+        "label": "Intishaar",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary gives intishar the relevant senses of anxiety and restlessness."
+      },
+      {
+        "url": "https://www.urdupoint.com/dictionary/urdu-to-english/qarar-meaning-in-english/13813.html",
+        "label": "Qarar",
+        "publisher": "UrduPoint Dictionary",
+        "authorityId": "urdupoint-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UrduPoint independently defines qarar as calmness, composure, peace and tranquility."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q088-SRC",
+    "pairId": "ADV2E102-U0036-Q088",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which listed Urdu word is a synonym of 'falak'?",
+    "questionUrdu": "درج اردو الفاظ میں فلک کا مترادف کون سا ہے؟",
+    "options": [
+      "سنگِ مرمر",
+      "ایمن",
+      "چرخ",
+      "پہاڑ"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب چرخ ہے۔ فلک کے مترادفات میں چرخ شامل ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Falak",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-falak?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q088"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-falak?lang=ur",
+        "label": "Falak",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta directly lists چرخ among the Urdu meanings and synonyms of فلک."
+      },
+      {
+        "url": "https://vajehyab.com/?q=%D9%81%D9%84%DA%A9&s=suffix",
+        "label": "Falak",
+        "publisher": "Vajehyab Dictionary",
+        "authorityId": "vajehyab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent Persian dictionary also lists چرخ among the synonyms of فلک."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored. Both independent dictionaries list چرخ as a synonym of فلک; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q088-SIM",
+    "pairId": "ADV2E102-U0036-Q088",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu word can mean 'charkh' in the sense of the heavens?",
+    "questionUrdu": "آسمان کے مفہوم میں ’چرخ‘ کے لیے کون سا اردو لفظ آ سکتا ہے؟",
+    "options": [
+      "Falak",
+      "Zameen",
+      "Darya",
+      "Sahil"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Falak ہے۔ لغات فلک اور چرخ کو آسمان کے مفہوم میں مترادف بتاتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Falak",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-falak?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q088",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-falak?lang=ur",
+        "label": "Falak",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary directly lists charkh among the meanings and synonyms of falak."
+      },
+      {
+        "url": "https://vajehyab.com/?q=%D9%81%D9%84%DA%A9&s=suffix",
+        "label": "Falak",
+        "publisher": "Vajehyab Dictionary",
+        "authorityId": "vajehyab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Vajehyab independently lists charkh among the synonyms of falak."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q089-SRC",
+    "pairId": "ADV2E102-U0036-Q089",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "ادبی اصطلاح 'ناول' جس 'novella' روایت سے نکلی، وہ کس زبان کی ہے؟",
+    "questionUrdu": "ادبی اصطلاح ناول، جو novella کی روایت سے نکلی، کس زبان کی ہے؟",
+    "options": [
+      "یونانی",
+      "انگریزی",
+      "اطالوی",
+      "ہندوستانی"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب اطالوی ہے۔ ناول کی اصطلاح اطالوی لفظ novella سے اخذ ہوئی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "The Art and Elements of the Novel",
+      "referenceUrl": "https://manuu.edu.in/sites/default/files/E-Content/Urdu/E-Text/Novel%20Ka%20Fun%20aur%20uske%20Ajza-e-Tarkeebi.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q089"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://manuu.edu.in/sites/default/files/E-Content/Urdu/E-Text/Novel%20Ka%20Fun%20aur%20uske%20Ajza-e-Tarkeebi.pdf",
+        "label": "The Art and Elements of the Novel",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university text states that the term novel first developed from Italian novella."
+      },
+      {
+        "url": "https://uou.ac.in/sites/default/files/slm/BAUL%28N%29-102.pdf",
+        "label": "Urdu Novel",
+        "publisher": "Uttarakhand Open University",
+        "authorityId": "uttarakhand-open-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university text derives novel from the Italian word novella."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored. The vague borrowing claim was repaired to the documented derivation from Italian novella; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q089-SIM",
+    "pairId": "ADV2E102-U0036-Q089",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "From which Italian word is the literary term 'novel' derived?",
+    "questionUrdu": "ادبی اصطلاح novel کس اطالوی لفظ سے اخذ ہوئی ہے؟",
+    "options": [
+      "Novella",
+      "Romanzo",
+      "Poema",
+      "Favola"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Novella ہے۔ جامعاتی ماخذ novel کی اصل اطالوی لفظ novella بتاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "The Art and Elements of the Novel",
+      "referenceUrl": "https://manuu.edu.in/sites/default/files/E-Content/Urdu/E-Text/Novel%20Ka%20Fun%20aur%20uske%20Ajza-e-Tarkeebi.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q089",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://manuu.edu.in/sites/default/files/E-Content/Urdu/E-Text/Novel%20Ka%20Fun%20aur%20uske%20Ajza-e-Tarkeebi.pdf",
+        "label": "The Art and Elements of the Novel",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Maulana Azad National Urdu University's text derives novel from the Italian word novella."
+      },
+      {
+        "url": "https://uou.ac.in/sites/default/files/slm/BAUL%28N%29-102.pdf",
+        "label": "Urdu Novel",
+        "publisher": "Uttarakhand Open University",
+        "authorityId": "uttarakhand-open-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Uttarakhand Open University's text independently derives novel from Italian novella."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q090-SRC",
+    "pairId": "ADV2E102-U0036-Q090",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who founded the Urdu monthly magazine 'Makhzan'?",
+    "questionUrdu": "اردو ماہنامہ ’مخزن‘ کس نے قائم کیا؟",
+    "options": [
+      "حسرت موہانی",
+      "سر سید احمد خان",
+      "احمد ندیم قاسمی",
+      "شیخ عبدالقادر"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب شیخ عبدالقادر ہے۔ شیخ عبدالقادر نے ’مخزن‘ جاری کیا اور اس کے بانی مدیر تھے۔",
+    "source": {
+      "type": "book",
+      "label": "Makhzan Lahore, Issue 1",
+      "referenceUrl": "https://www.rekhta.org/ebooks/detail/makhzan-lahore-shumara-number-001-shaikh-abdul-qadir-magazines-5",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q090"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/makhzan-lahore-shumara-number-001-shaikh-abdul-qadir-magazines-5",
+        "label": "Makhzan Lahore, Issue 1",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's first-issue bibliographic record identifies Shaikh Abdul Qadir with Makhzan."
+      },
+      {
+        "url": "https://jorurdu.bzu.edu.pk/website/journal/article/5e83491f47954/file/5e8350220d460/download",
+        "label": "Research on Makhzan",
+        "publisher": "Bahauddin Zakariya University",
+        "authorityId": "bahauddin-zakariya-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university research identifies Sheikh Abdul Qadir as the founder/editor who launched Makhzan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored. Independent bibliographic and university sources identify Sheikh Abdul Qadir; answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q090-SIM",
+    "pairId": "ADV2E102-U0036-Q090",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu magazine was launched by Sheikh Abdul Qadir?",
+    "questionUrdu": "شیخ عبدالقادر نے کون سا اردو رسالہ جاری کیا؟",
+    "options": [
+      "Makhzan",
+      "Al-Hilal",
+      "Zamindar",
+      "Nigar"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Makhzan ہے۔ شیخ عبدالقادر نے لاہور سے ماہنامہ ’مخزن‘ جاری کیا تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "Makhzan Lahore, Issue 1",
+      "referenceUrl": "https://www.rekhta.org/ebooks/detail/makhzan-lahore-shumara-number-001-shaikh-abdul-qadir-magazines-5",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q090",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/makhzan-lahore-shumara-number-001-shaikh-abdul-qadir-magazines-5",
+        "label": "Makhzan Lahore, Issue 1",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's first-issue record identifies Sheikh Abdul Qadir with the magazine Makhzan."
+      },
+      {
+        "url": "https://jorurdu.bzu.edu.pk/website/journal/article/5e83491f47954/file/5e8350220d460/download",
+        "label": "Research on Makhzan",
+        "publisher": "Bahauddin Zakariya University",
+        "authorityId": "bahauddin-zakariya-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Bahauddin Zakariya University research independently identifies Sheikh Abdul Qadir as the founder-editor who launched Makhzan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q092-SRC",
+    "pairId": "ADV2E102-U0036-Q092",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which poet wrote the famous hamd 'Wohi Khuda Hai'?",
+    "questionUrdu": "مشہور حمد ’وہی خدا ہے‘ کس شاعر نے لکھی؟",
+    "options": [
+      "افتخار رحمانی",
+      "مظفر وارثی",
+      "ریاض مجید",
+      "پروین شاکر"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب مظفر وارثی ہے۔ ’وہی خدا ہے‘ مظفر وارثی کی معروف حمد ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Muzaffar Warsi: Devotional Poetry",
+      "referenceUrl": "https://sufinama.org/poets/muzaffar-warsi/manqabat?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q092"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://sufinama.org/poets/muzaffar-warsi/manqabat?lang=ur",
+        "label": "Muzaffar Warsi: Devotional Poetry",
+        "publisher": "Sufinama",
+        "authorityId": "sufinama",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Sufinama places 'Koi to hai jo nizam-e-hasti chala raha hai, wohi Khuda hai' in Muzaffar Warsi's devotional corpus."
+      },
+      {
+        "url": "https://www.sbs.com.au/language/urdu/ur/podcast-episode/wohi-khuda-hey-ka-safer/dgoouhn4s",
+        "label": "Wohi Khuda Hai: Journey of a Hamd",
+        "publisher": "SBS Urdu",
+        "authorityId": "sbs-urdu",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "SBS independently identifies Wohi Khuda Hai as Muzaffar Warsi's hamd and recounts his own 1995 recitation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored. Two independent cultural-literary sources attribute the hamd to Muzaffar Warsi; answer B is retained. The visually soft first distractor does not affect the answer."
+  },
+  {
+    "id": "ADV2E102-U0036-Q092-SIM",
+    "pairId": "ADV2E102-U0036-Q092",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which devotional poem is attributed to Muzaffar Warsi?",
+    "questionUrdu": "مظفر وارثی سے کون سی معروف حمد منسوب ہے؟",
+    "options": [
+      "Wohi Khuda Hai",
+      "Lab Pe Aati Hai Dua",
+      "Hamd-e-Bari Taala",
+      "Shikwa"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Wohi Khuda Hai ہے۔ ’کوئی تو ہے جو نظامِ ہستی چلا رہا ہے، وہی خدا ہے‘ مظفر وارثی کی حمد ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Muzaffar Warsi: Devotional Poetry",
+      "referenceUrl": "https://sufinama.org/poets/muzaffar-warsi/manqabat?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q092",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://sufinama.org/poets/muzaffar-warsi/manqabat?lang=ur",
+        "label": "Muzaffar Warsi: Devotional Poetry",
+        "publisher": "Sufinama",
+        "authorityId": "sufinama",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Sufinama places Wohi Khuda Hai in Muzaffar Warsi's devotional corpus."
+      },
+      {
+        "url": "https://www.sbs.com.au/language/urdu/ur/podcast-episode/wohi-khuda-hey-ka-safer/dgoouhn4s",
+        "label": "Wohi Khuda Hai: Journey of a Hamd",
+        "publisher": "SBS Urdu",
+        "authorityId": "sbs-urdu",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "SBS Urdu independently identifies Wohi Khuda Hai as Muzaffar Warsi's hamd."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q094-SRC",
+    "pairId": "ADV2E102-U0036-Q094",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which surah is popularly called 'Aroos al-Quran' (the Bride of the Quran), although the report behind the epithet is weak?",
+    "questionUrdu": "کس سورت کو مقبول طور پر عروس القرآن کہا جاتا ہے، اگرچہ اس لقب کی روایت ضعیف ہے؟",
+    "options": [
+      "Al-Rahman",
+      "Al-Alaq",
+      "Al-Baqarah",
+      "Al-Asr"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Al-Rahman ہے۔ سورۃ الرحمٰن کو عروس القرآن کہا جاتا ہے، لیکن اس بارے میں منقول حدیث کی سند ضعیف ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Report: 'The bride of the Quran is al-Rahman'",
+      "referenceUrl": "https://dorar.net/h/VtZq7q0z?osoul=1",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q094"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dorar.net/h/VtZq7q0z?osoul=1",
+        "label": "Report: 'The bride of the Quran is al-Rahman'",
+        "publisher": "Al-Dorar Al-Saniyyah Hadith Encyclopedia",
+        "authorityId": "dorar",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The hadith encyclopedia records the report associating the phrase 'bride of the Quran' with al-Rahman while also documenting weakness in its chain."
+      },
+      {
+        "url": "https://www.islamweb.net/ar/fatwa/print.php?id=53323",
+        "label": "Why Surah al-Rahman is called the Bride of the Quran",
+        "publisher": "IslamWeb",
+        "authorityId": "islamweb",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IslamWeb independently explains that Surah al-Rahman is popularly called Aroos al-Quran, while clarifying that the report is weak."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's unqualified 'known as' was repaired to a popular epithet and the weakness of the underlying report was disclosed. Both authorities associate the phrase with Surah al-Rahman; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q094-SIM",
+    "pairId": "ADV2E102-U0036-Q094",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "How is the report behind the popular epithet 'Aroos al-Quran' for Surah al-Rahman graded?",
+    "questionUrdu": "سورۃ الرحمٰن کے مقبول لقب ’عروس القرآن‘ کے پیچھے موجود روایت کو کیسا قرار دیا گیا ہے؟",
+    "options": [
+      "Weak",
+      "Mutawatir",
+      "Sahih by consensus",
+      "Quranic text"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Weak ہے۔ حدیثی تحقیق کے مطابق عروس القرآن والا منقول قول مشہور ہے مگر اس کی سند ضعیف ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Report: 'The bride of the Quran is al-Rahman'",
+      "referenceUrl": "https://dorar.net/h/VtZq7q0z?osoul=1",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q094",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dorar.net/h/VtZq7q0z?osoul=1",
+        "label": "Report: 'The bride of the Quran is al-Rahman'",
+        "publisher": "Al-Dorar Al-Saniyyah Hadith Encyclopedia",
+        "authorityId": "dorar",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Al-Dorar records the report linking the epithet to al-Rahman and grades its chain as weak."
+      },
+      {
+        "url": "https://www.islamweb.net/ar/fatwa/print.php?id=53323",
+        "label": "Why Surah al-Rahman is called the Bride of the Quran",
+        "publisher": "IslamWeb",
+        "authorityId": "islamweb",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IslamWeb independently explains that the report behind Surah al-Rahman's popular epithet is weak."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q097-SRC",
+    "pairId": "ADV2E102-U0036-Q097",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which listed name is used for Makkah in Qur'anic and Islamic tradition?",
+    "questionUrdu": "قرآنی اور اسلامی روایت میں مکہ کے لیے درج ناموں میں سے کون سا استعمال ہوا ہے؟",
+    "options": [
+      "Wadi",
+      "Yathrib",
+      "Bakkah",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Bakkah ہے۔ بکہ مکہ مکرمہ کے تاریخی اور قرآنی ناموں میں سے ایک ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Makkah al-Mukarramah",
+      "referenceUrl": "https://haj.gov.sa/ar/Makkah-Al-Mukarramah",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q097"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://haj.gov.sa/ar/Makkah-Al-Mukarramah",
+        "label": "Makkah al-Mukarramah",
+        "publisher": "Saudi Ministry of Hajj and Umrah",
+        "authorityId": "saudi-ministry-hajj",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Saudi page lists Bakkah among the names of Makkah."
+      },
+      {
+        "url": "https://corpus.quran.com/concept.jsp?id=bakkah",
+        "label": "Bakkah",
+        "publisher": "Quranic Arabic Corpus, University of Leeds",
+        "authorityId": "quranic-arabic-corpus",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university corpus independently identifies Bakkah as a historic name for Makkah."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The absolute phrase 'old name' was narrowed to the directly sourced traditional name, and spellings were standardized. Bakkah remains answer C."
+  },
+  {
+    "id": "ADV2E102-U0036-Q097-SIM",
+    "pairId": "ADV2E102-U0036-Q097",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Bakkah is a historic and Quranic name for which city?",
+    "questionUrdu": "بکہ کس شہر کا تاریخی اور قرآنی نام ہے؟",
+    "options": [
+      "Makkah",
+      "Madinah",
+      "Jerusalem",
+      "Taif"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Makkah ہے۔ سعودی سرکاری ماخذ اور قرآنی لغوی ماخذ بکہ کو مکہ کا نام بتاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Makkah al-Mukarramah",
+      "referenceUrl": "https://haj.gov.sa/ar/Makkah-Al-Mukarramah",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q097",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://haj.gov.sa/ar/Makkah-Al-Mukarramah",
+        "label": "Makkah al-Mukarramah",
+        "publisher": "Saudi Ministry of Hajj and Umrah",
+        "authorityId": "saudi-ministry-hajj",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Saudi Arabia's Ministry of Hajj and Umrah lists Bakkah among the names of Makkah."
+      },
+      {
+        "url": "https://corpus.quran.com/concept.jsp?id=bakkah",
+        "label": "Bakkah",
+        "publisher": "Quranic Arabic Corpus, University of Leeds",
+        "authorityId": "quranic-arabic-corpus",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Leeds Quranic Arabic Corpus independently identifies Bakkah as a historic name for Makkah."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0036-Q099-SRC",
+    "pairId": "ADV2E102-U0036-Q099",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "What shared historical role best describes Ukaz, Dhu al-Majaz and Dumat al-Jandal?",
+    "questionUrdu": "عکاظ، ذوالمجاز اور دومت الجندل کا مشترک تاریخی کردار کیا تھا؟",
+    "options": [
+      "Trade centres",
+      "Battlefields",
+      "Playgrounds",
+      "Horse-riding courses"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Trade centres ہے۔ یہ مقامات قدیم عرب کے بڑے موسمی بازار اور تجارتی مراکز تھے۔",
+    "source": {
+      "type": "book",
+      "label": "Pre-Islamic Arabic Literature",
+      "referenceUrl": "https://drive.uqu.edu.sa/_/aazaid/files/adab%20jahli.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q099"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://drive.uqu.edu.sa/_/aazaid/files/adab%20jahli.pdf",
+        "label": "Pre-Islamic Arabic Literature",
+        "publisher": "Umm Al-Qura University",
+        "authorityId": "umm-al-qura-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university text lists Dumat al-Jandal, Ukaz and Dhu al-Majaz among the major seasonal markets of Arabia."
+      },
+      {
+        "url": "https://gulf.edu.sa/assets/lib/law/law1.pdf",
+        "label": "History of the Arabs in Arabia",
+        "publisher": "Gulf Colleges",
+        "authorityId": "gulf-colleges",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent academic text likewise identifies Dumat al-Jandal, Ukaz and Dhu al-Majaz as major historical markets."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Transliterations and parallel plural forms were standardized. Two independent academic sources identify all three as historic Arabian markets; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0036-Q099-SIM",
+    "pairId": "ADV2E102-U0036-Q099",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which listed place was one of Arabia's major historical seasonal markets?",
+    "questionUrdu": "درج مقامات میں کون قدیم عرب کے بڑے موسمی بازاروں میں شامل تھا؟",
+    "options": [
+      "Ukaz",
+      "Byzantium",
+      "Alexandria",
+      "Taxila"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ukaz ہے۔ عکاظ قدیم عرب کے معروف موسمی بازاروں اور تجارتی مراکز میں شمار ہوتا تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "Pre-Islamic Arabic Literature",
+      "referenceUrl": "https://drive.uqu.edu.sa/_/aazaid/files/adab%20jahli.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0036-q099",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://drive.uqu.edu.sa/_/aazaid/files/adab%20jahli.pdf",
+        "label": "Pre-Islamic Arabic Literature",
+        "publisher": "Umm Al-Qura University",
+        "authorityId": "umm-al-qura-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Umm Al-Qura University's text lists Ukaz among Arabia's major seasonal markets."
+      },
+      {
+        "url": "https://gulf.edu.sa/assets/lib/law/law1.pdf",
+        "label": "History of the Arabs in Arabia",
+        "publisher": "Gulf Colleges",
+        "authorityId": "gulf-colleges",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Gulf Colleges academic text independently identifies Ukaz as a major historical Arabian market."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

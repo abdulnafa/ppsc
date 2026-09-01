@@ -1,0 +1,2622 @@
+[
+  {
+    "id": "ADV2E102-U0016-Q068-SRC",
+    "pairId": "ADV2E102-U0016-Q068",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "The Sun is a:",
+    "questionUrdu": "سورج کیا ہے؟",
+    "options": [
+      "Planet",
+      "Comet",
+      "Asteroid",
+      "Star"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Star ہے۔ NASA اور Smithsonian دونوں سورج کو ایک ستارہ قرار دیتے ہیں؛ یہ ہمارے نظامِ شمسی کا واحد ستارہ ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Our Sun: Facts",
+      "referenceUrl": "https://science.nasa.gov/sun/facts/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://science.nasa.gov/sun/facts/",
+        "label": "Our Sun: Facts",
+        "publisher": "NASA Science",
+        "authorityId": "nasa-science",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA identifies the Sun as a yellow dwarf star and the only star in our solar system."
+      },
+      {
+        "url": "https://www.si.edu/sites/default/files/educators_guides_group_sales/journey_to_the_stars.pdf",
+        "label": "Journey to the Stars educator guide",
+        "publisher": "Smithsonian Institution",
+        "authorityId": "smithsonian-institution",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Smithsonian guide independently identifies the Sun as a star."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source omitted 'Star' and therefore keyed 'None of these'; the scientifically correct explicit option was inserted at the same answer index."
+  },
+  {
+    "id": "ADV2E102-U0016-Q068-SIM",
+    "pairId": "ADV2E102-U0016-Q068",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which listed celestial body is the star of our solar system?",
+    "questionUrdu": "درج ذیل میں سے کون سا آسمانی جسم ہمارے نظامِ شمسی کا ستارہ ہے؟",
+    "options": [
+      "The Sun",
+      "Earth",
+      "Halley's Comet",
+      "Ceres"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The Sun ہے۔ سورج کوئی سیارہ، دمدار ستارہ یا سیارچہ نہیں بلکہ ہمارے نظامِ شمسی کا ستارہ ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Our Sun: Facts",
+      "referenceUrl": "https://science.nasa.gov/sun/facts/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://science.nasa.gov/sun/facts/",
+        "label": "Our Sun: Facts",
+        "publisher": "NASA Science",
+        "authorityId": "nasa-science",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NASA identifies the Sun as the only star in our solar system."
+      },
+      {
+        "url": "https://www.si.edu/sites/default/files/educators_guides_group_sales/journey_to_the_stars.pdf",
+        "label": "Journey to the Stars educator guide",
+        "publisher": "Smithsonian Institution",
+        "authorityId": "smithsonian-institution",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Smithsonian educator guide independently identifies the Sun as a star."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q070-SRC",
+    "pairId": "ADV2E102-U0016-Q070",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Meteorology is the science of:",
+    "questionUrdu": "Meteorology کس چیز کا علم ہے؟",
+    "options": [
+      "Weather",
+      "Earth",
+      "Metal",
+      "Earthquake"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Weather ہے۔ Meteorology فضا اور اس کے مظاہر، بالخصوص موسم اور آب و ہوا، کے سائنسی مطالعے کو کہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "WMO glossary of meteorological terms",
+      "referenceUrl": "https://www.bom.gov.au/wmo/quality_management/forms/WMO258_Latest_Version.pdf",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.bom.gov.au/wmo/quality_management/forms/WMO258_Latest_Version.pdf",
+        "label": "WMO glossary of meteorological terms",
+        "publisher": "World Meteorological Organization",
+        "authorityId": "world-meteorological-organization",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The WMO defines meteorology as study of the atmosphere and its phenomena, especially weather and climate."
+      },
+      {
+        "url": "https://www.nssl.noaa.gov/people/jobs/careers.php",
+        "label": "Career options for meteorologists",
+        "publisher": "NOAA National Severe Storms Laboratory",
+        "authorityId": "noaa-nssl",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NOAA independently describes meteorology as the study of the atmosphere and weather-related work."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed option 'Weather' is the only listed subject that matches the authoritative definitions; meteorology more broadly studies the atmosphere."
+  },
+  {
+    "id": "ADV2E102-U0016-Q070-SIM",
+    "pairId": "ADV2E102-U0016-Q070",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which domain surrounding Earth is the principal subject of meteorology?",
+    "questionUrdu": "زمین کے گرد موجود کون سا دائرہ meteorology کے مطالعے کا بنیادی موضوع ہے؟",
+    "options": [
+      "The atmosphere",
+      "The inner core",
+      "The ocean floor",
+      "The mantle"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The atmosphere ہے۔ Meteorology فضا میں ہونے والے موسم اور متعلقہ مظاہر کا مطالعہ کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "WMO glossary of meteorological terms",
+      "referenceUrl": "https://www.bom.gov.au/wmo/quality_management/forms/WMO258_Latest_Version.pdf",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.bom.gov.au/wmo/quality_management/forms/WMO258_Latest_Version.pdf",
+        "label": "WMO glossary of meteorological terms",
+        "publisher": "World Meteorological Organization",
+        "authorityId": "world-meteorological-organization",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The WMO defines meteorology through study of the atmosphere and its weather and climate phenomena."
+      },
+      {
+        "url": "https://www.nssl.noaa.gov/people/jobs/careers.php",
+        "label": "Career options for meteorologists",
+        "publisher": "NOAA National Severe Storms Laboratory",
+        "authorityId": "noaa-nssl",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NOAA independently describes meteorology as the study of the atmosphere and weather."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q071-SRC",
+    "pairId": "ADV2E102-U0016-Q071",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Among the listed choices, a main function of the kidneys is:",
+    "questionUrdu": "درج شدہ اختیارات میں kidneys کا ایک بنیادی کام کیا ہے؟",
+    "options": [
+      "To control blood pressure only",
+      "To control blood temperature",
+      "To remove waste products and extra water from the body",
+      "To digest food"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب جسم سے waste products اور extra water نکالنا ہے۔ گردے خون کو فلٹر کرکے فاضل مادے اور اضافی پانی پیشاب کی صورت میں خارج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Your Kidneys and How They Work",
+      "referenceUrl": "https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work",
+        "label": "Your Kidneys and How They Work",
+        "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases",
+        "authorityId": "us-niddk",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIDDK explains that kidneys filter blood and remove wastes and extra water as urine."
+      },
+      {
+        "url": "https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd",
+        "label": "Chronic kidney disease",
+        "publisher": "National Kidney Foundation",
+        "authorityId": "national-kidney-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Kidney Foundation independently lists removal of natural waste products and extra water as a kidney function."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The qualifier 'among the listed choices' avoids implying that waste removal is the kidneys' only function; option wording was made precise."
+  },
+  {
+    "id": "ADV2E102-U0016-Q071-SIM",
+    "pairId": "ADV2E102-U0016-Q071",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "After the kidneys filter blood, wastes and extra water leave the body mainly in what form?",
+    "questionUrdu": "گردے خون کو فلٹر کرنے کے بعد فاضل مادے اور اضافی پانی کو بنیادی طور پر کس شکل میں جسم سے خارج کرتے ہیں؟",
+    "options": [
+      "Urine",
+      "Bile",
+      "Saliva",
+      "Sweat only"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Urine ہے۔ گردے فلٹر شدہ waste اور اضافی پانی کو پیشاب میں منتقل کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Your Kidneys and How They Work",
+      "referenceUrl": "https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work",
+        "label": "Your Kidneys and How They Work",
+        "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases",
+        "authorityId": "us-niddk",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NIDDK explains that the kidneys turn filtered wastes and extra water into urine."
+      },
+      {
+        "url": "https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd",
+        "label": "Chronic kidney disease",
+        "publisher": "National Kidney Foundation",
+        "authorityId": "national-kidney-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The National Kidney Foundation independently explains that kidneys remove wastes and extra water by making urine."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q072-SRC",
+    "pairId": "ADV2E102-U0016-Q072",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Dialysis removes waste products and excess fluid primarily from the:",
+    "questionUrdu": "Dialysis بنیادی طور پر کس چیز سے waste products اور excess fluid نکالتی ہے؟",
+    "options": [
+      "Liver",
+      "Blood",
+      "Gall bladder",
+      "Heart"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Blood ہے۔ Hemodialysis خون سے فضلہ، اضافی نمک اور پانی فلٹر کرتی ہے جب گردے یہ کام مناسب طور پر نہ کر سکیں۔",
+    "source": {
+      "type": "book",
+      "label": "Hemodialysis",
+      "referenceUrl": "https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis",
+        "label": "Hemodialysis",
+        "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases",
+        "authorityId": "us-niddk",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIDDK explains that hemodialysis filters wastes, extra salt and water from the blood."
+      },
+      {
+        "url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+        "label": "Chronic kidney disease treatment",
+        "publisher": "National Health Service",
+        "authorityId": "uk-national-health-service",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NHS independently defines dialysis as removal of waste products and excess fluid from the blood."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed item incorrectly described dialysis as cleaning the kidneys. Dialysis filters the blood when kidneys cannot do so adequately, so option B was corrected from 'Kidneys' to 'Blood'."
+  },
+  {
+    "id": "ADV2E102-U0016-Q072-SIM",
+    "pairId": "ADV2E102-U0016-Q072",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which treatment filters wastes and excess fluid from the blood when the kidneys fail?",
+    "questionUrdu": "گردوں کے ناکام ہونے پر کون سا علاج خون سے فاضل مادے اور اضافی سیال فلٹر کرتا ہے؟",
+    "options": [
+      "Dialysis",
+      "Radiotherapy",
+      "Vaccination",
+      "Endoscopy"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Dialysis ہے۔ یہ علاج خون صاف کرنے کے گردوں کے کام کا ایک حصہ انجام دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Hemodialysis",
+      "referenceUrl": "https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis",
+        "label": "Hemodialysis",
+        "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases",
+        "authorityId": "us-niddk",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NIDDK describes hemodialysis as filtering wastes, extra salt and water from blood."
+      },
+      {
+        "url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+        "label": "Chronic kidney disease treatment",
+        "publisher": "National Health Service",
+        "authorityId": "uk-national-health-service",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The NHS independently defines dialysis as removing waste products and excess fluid from blood."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q073-SRC",
+    "pairId": "ADV2E102-U0016-Q073",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Which substance did Alexander Fleming discover in 1928?",
+    "questionUrdu": "Alexander Fleming نے 1928 میں کون سا مادہ دریافت کیا؟",
+    "options": [
+      "Vitamin C",
+      "Aspirin",
+      "Penicillin",
+      "Insulin"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Penicillin ہے۔ معتبر سائنسی تاریخ کے مطابق Fleming نے 1928 میں وہ مشاہدہ کیا جس سے penicillin کی دریافت ہوئی۔",
+    "source": {
+      "type": "book",
+      "label": "Sir Alexander Fleming: questions and answers",
+      "referenceUrl": "https://www.nobelprize.org/prizes/medicine/1945/fleming/questions-and-answers/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/medicine/1945/fleming/questions-and-answers/",
+        "label": "Sir Alexander Fleming: questions and answers",
+        "publisher": "Nobel Prize Outreach",
+        "authorityId": "nobel-prize",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Nobel Prize account records Fleming's 1928 discovery that led to penicillin."
+      },
+      {
+        "url": "https://www.sciencehistory.org/education/scientific-biographies/alexander-fleming/",
+        "label": "Alexander Fleming",
+        "publisher": "Science History Institute",
+        "authorityId": "science-history-institute",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Science History Institute independently states that Fleming discovered penicillin in 1928."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1928",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The subjective claim about a 'great revolution' was replaced with the precise discoverer, substance and year; the catch-all option was replaced."
+  },
+  {
+    "id": "ADV2E102-U0016-Q073-SIM",
+    "pairId": "ADV2E102-U0016-Q073",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Penicillin, discovered through Fleming's work, belongs to which class of medicines?",
+    "questionUrdu": "Fleming کی تحقیق سے دریافت ہونے والی penicillin ادویات کی کس قسم سے تعلق رکھتی ہے؟",
+    "options": [
+      "Antibiotics",
+      "Antacids",
+      "Antihistamines",
+      "Anaesthetics"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Antibiotics ہے۔ Penicillin جراثیمی انفیکشن کے خلاف استعمال ہونے والی antibiotic دوا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Sir Alexander Fleming: questions and answers",
+      "referenceUrl": "https://www.nobelprize.org/prizes/medicine/1945/fleming/questions-and-answers/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/medicine/1945/fleming/questions-and-answers/",
+        "label": "Sir Alexander Fleming: questions and answers",
+        "publisher": "Nobel Prize Outreach",
+        "authorityId": "nobel-prize",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Nobel Prize account describes Fleming's discovery of the antibacterial substance penicillin."
+      },
+      {
+        "url": "https://www.sciencehistory.org/education/scientific-biographies/alexander-fleming/",
+        "label": "Alexander Fleming",
+        "publisher": "Science History Institute",
+        "authorityId": "science-history-institute",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Science History Institute independently identifies penicillin as the antibiotic discovered by Fleming."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q074-SRC",
+    "pairId": "ADV2E102-U0016-Q074",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Insects that transmit disease-causing pathogens between hosts are called:",
+    "questionUrdu": "وہ insects جو بیماری پیدا کرنے والے pathogens کو ایک host سے دوسرے host تک پہنچاتے ہیں کیا کہلاتے ہیں؟",
+    "options": [
+      "Drones",
+      "Vectors",
+      "Hybrids",
+      "Producers"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Vectors ہے۔ CDC اور WHO کے مطابق مچھر اور دوسرے کئی حشرات pathogens منتقل کرکے disease vectors کا کام کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "About vector-borne diseases",
+      "referenceUrl": "https://www.cdc.gov/vector-borne-diseases/about/index.html",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cdc.gov/vector-borne-diseases/about/index.html",
+        "label": "About vector-borne diseases",
+        "publisher": "Centers for Disease Control and Prevention",
+        "authorityId": "us-cdc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CDC states that mosquitoes, ticks and fleas that spread pathogens are called vectors."
+      },
+      {
+        "url": "https://www.who.int/news-room/fact-sheets/detail/vector-borne-diseases",
+        "label": "Vector-borne diseases",
+        "publisher": "World Health Organization",
+        "authorityId": "world-health-organization",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WHO independently describes many disease vectors as bloodsucking insects that transmit pathogens to new hosts."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was made biologically precise and the catch-all distractor was replaced."
+  },
+  {
+    "id": "ADV2E102-U0016-Q074-SIM",
+    "pairId": "ADV2E102-U0016-Q074",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Which listed insect is a well-known vector that can transmit human disease pathogens?",
+    "questionUrdu": "درج ذیل میں سے کون سا insect معروف vector ہے جو انسانی بیماری کے pathogens منتقل کر سکتا ہے؟",
+    "options": [
+      "Mosquito",
+      "Silkworm",
+      "Honeybee worker",
+      "House cricket"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Mosquito ہے۔ مچھر کئی pathogens کو hosts کے درمیان منتقل کرنے والا اہم disease vector ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "About vector-borne diseases",
+      "referenceUrl": "https://www.cdc.gov/vector-borne-diseases/about/index.html",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cdc.gov/vector-borne-diseases/about/index.html",
+        "label": "About vector-borne diseases",
+        "publisher": "Centers for Disease Control and Prevention",
+        "authorityId": "us-cdc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "CDC lists mosquitoes among vectors that spread pathogens to people."
+      },
+      {
+        "url": "https://www.who.int/news-room/fact-sheets/detail/vector-borne-diseases",
+        "label": "Vector-borne diseases",
+        "publisher": "World Health Organization",
+        "authorityId": "world-health-organization",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "WHO independently identifies mosquitoes among insect vectors that transmit disease-causing pathogens."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q075-SRC",
+    "pairId": "ADV2E102-U0016-Q075",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "What is the common name for Sodium Chloride?",
+    "questionUrdu": "Sodium Chloride کا عام نام کیا ہے؟",
+    "options": [
+      "Salt",
+      "Baking Soda",
+      "Chalk",
+      "Vinegar"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Salt ہے۔ عام کھانے کا نمک اپنے کیمیائی نام sodium chloride سے بھی جانا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Sodium in Your Diet",
+      "referenceUrl": "https://www.fda.gov/Food/ResourcesForYou/Consumers/ucm315393.htm",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.fda.gov/Food/ResourcesForYou/Consumers/ucm315393.htm",
+        "label": "Sodium in Your Diet",
+        "publisher": "U.S. Food and Drug Administration",
+        "authorityId": "us-fda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The FDA states that table salt is also known by its chemical name, sodium chloride."
+      },
+      {
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-Chloride",
+        "label": "Sodium Chloride",
+        "publisher": "PubChem, National Library of Medicine",
+        "authorityId": "pubchem",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PubChem independently lists salt, common salt and table salt as names for sodium chloride."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "FDA and PubChem independently confirm the printed answer."
+  },
+  {
+    "id": "ADV2E102-U0016-Q075-SIM",
+    "pairId": "ADV2E102-U0016-Q075",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Table salt is chemically made chiefly from which two kinds of ions?",
+    "questionUrdu": "Table salt کیمیائی طور پر بنیادی طور پر کن دو اقسام کے ions سے بنتا ہے؟",
+    "options": [
+      "Sodium and chloride",
+      "Calcium and carbonate",
+      "Potassium and nitrate",
+      "Magnesium and sulfate"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sodium and chloride ہے۔ Sodium chloride میں مثبت sodium ions اور منفی chloride ions شامل ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Sodium in Your Diet",
+      "referenceUrl": "https://www.fda.gov/Food/ResourcesForYou/Consumers/ucm315393.htm",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.fda.gov/Food/ResourcesForYou/Consumers/ucm315393.htm",
+        "label": "Sodium in Your Diet",
+        "publisher": "U.S. Food and Drug Administration",
+        "authorityId": "us-fda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "FDA explains that table salt is sodium chloride, identifying its sodium and chloride components."
+      },
+      {
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-Chloride",
+        "label": "Sodium Chloride",
+        "publisher": "PubChem, National Library of Medicine",
+        "authorityId": "pubchem",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "PubChem independently describes sodium chloride as the compound formed from sodium and chloride ions."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q086-SRC",
+    "pairId": "ADV2E102-U0016-Q086",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "As of 2026, Microsoft Corporation's global headquarters are located in which country?",
+    "questionUrdu": "2026 تک Microsoft Corporation کا global headquarters کس country میں واقع ہے؟",
+    "options": [
+      "United Kingdom",
+      "United States",
+      "Japan",
+      "Italy"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب United States ہے۔ Microsoft کا عالمی صدر دفتر Redmond, Washington, United States میں واقع ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Microsoft office locations",
+      "referenceUrl": "https://www.microsoft.com/en-us/about/office-locations",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.microsoft.com/en-us/about/office-locations",
+        "label": "Microsoft office locations",
+        "publisher": "Microsoft",
+        "authorityId": "microsoft",
+        "sourceClass": "primary",
+        "claimSummary": "Microsoft states that its global headquarters are in Redmond, Washington, in the United States.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "label": "Microsoft Corporation 2026 Form 10-K",
+        "publisher": "U.S. Securities and Exchange Commission",
+        "authorityId": "us-sec",
+        "sourceClass": "official",
+        "claimSummary": "Microsoft's filed 2026 Form 10-K independently gives its corporate headquarters in Redmond, Washington, United States.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": "2019",
+      "asOf": "2026-08-29",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-08-29"
+    },
+    "sourceNotes": "The vague phrase 'Microsoft located in' was narrowed to global headquarters and dated because corporate locations can change."
+  },
+  {
+    "id": "ADV2E102-U0016-Q086-SIM",
+    "pairId": "ADV2E102-U0016-Q086",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "As of 2026, Microsoft's global headquarters are in Redmond, in which U.S. state?",
+    "questionUrdu": "2026 تک Microsoft کا global headquarters Redmond میں ہے؛ یہ U.S. کی کس state میں واقع ہے؟",
+    "options": [
+      "Washington",
+      "California",
+      "Texas",
+      "New York"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Washington ہے۔ Microsoft کا corporate headquarters Redmond، ریاست Washington میں ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Microsoft office locations",
+      "referenceUrl": "https://www.microsoft.com/en-us/about/office-locations",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.microsoft.com/en-us/about/office-locations",
+        "label": "Microsoft office locations",
+        "publisher": "Microsoft",
+        "authorityId": "microsoft",
+        "sourceClass": "primary",
+        "claimSummary": "Microsoft's official locations page places its global headquarters in Redmond, Washington.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "label": "Microsoft Corporation 2026 Form 10-K",
+        "publisher": "U.S. Securities and Exchange Commission",
+        "authorityId": "us-sec",
+        "sourceClass": "official",
+        "claimSummary": "Microsoft's SEC filing independently gives its headquarters address in Redmond, Washington.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": "2019",
+      "asOf": "2026-08-29",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-08-29"
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q088-SRC",
+    "pairId": "ADV2E102-U0016-Q088",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "In its conventional standalone form, which listed operating system allows only one user application program to run at a time?",
+    "questionUrdu": "اپنی روایتی standalone شکل میں درج شدہ operating systems میں سے کون سا ایک وقت میں صرف ایک user application program چلاتا ہے؟",
+    "options": [
+      "Windows XP",
+      "Unix",
+      "MS-DOS",
+      "Linux"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب MS-DOS ہے۔ اسے single-tasking نظام سمجھا جاتا ہے کیونکہ روایتی طور پر ایک وقت میں صرف ایک user application چل سکتی تھی۔",
+    "source": {
+      "type": "book",
+      "label": "Operating System Concepts: system structures",
+      "referenceUrl": "https://codex.cs.yale.edu/avi/os-book/OS8/os8c/slide-dir/PDF-dir/ch2.pdf",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q088"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://codex.cs.yale.edu/avi/os-book/OS8/os8c/slide-dir/PDF-dir/ch2.pdf",
+        "label": "Operating System Concepts: system structures",
+        "publisher": "Yale University",
+        "authorityId": "yale-university",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The Operating System Concepts course slides hosted by Yale identify MS-DOS as single-tasking.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://computerhistory.org/blog/microsoft-ms-dos-early-source-code/",
+        "label": "Microsoft MS-DOS early source code",
+        "publisher": "Computer History Museum",
+        "authorityId": "computer-history-museum",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The Computer History Museum independently states that only one user application program could run at a time under early MS-DOS.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "'Not multitasking' was made operationally precise and DOS was normalized to MS-DOS; unusual add-ons and the unreleased Multitasking DOS branch are outside the conventional standalone scope."
+  },
+  {
+    "id": "ADV2E102-U0016-Q088-SIM",
+    "pairId": "ADV2E102-U0016-Q088",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "How many user application programs could early standalone MS-DOS normally run at one time?",
+    "questionUrdu": "ابتدائی standalone MS-DOS عام طور پر ایک وقت میں کتنے user application programs چلا سکتا تھا؟",
+    "options": [
+      "One",
+      "Two",
+      "Four",
+      "Unlimited"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب One ہے۔ Early MS-DOS single-tasking تھا، اس لیے ایک وقت میں ایک ہی user application program چلتا تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "Operating System Concepts: system structures",
+      "referenceUrl": "https://codex.cs.yale.edu/avi/os-book/OS8/os8c/slide-dir/PDF-dir/ch2.pdf",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q088",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://codex.cs.yale.edu/avi/os-book/OS8/os8c/slide-dir/PDF-dir/ch2.pdf",
+        "label": "Operating System Concepts: system structures",
+        "publisher": "Yale University",
+        "authorityId": "yale-university",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "Yale-hosted Operating System Concepts material classifies MS-DOS as single-tasking.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://computerhistory.org/blog/microsoft-ms-dos-early-source-code/",
+        "label": "Microsoft MS-DOS early source code",
+        "publisher": "Computer History Museum",
+        "authorityId": "computer-history-museum",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The Computer History Museum independently states that early MS-DOS ran only one user application at a time.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q089-SRC",
+    "pairId": "ADV2E102-U0016-Q089",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "In the U.S. short-scale convention, how many zeros are in one trillion?",
+    "questionUrdu": "U.S. short-scale convention میں one trillion میں کتنے zeros ہوتے ہیں؟",
+    "options": [
+      "10",
+      "9",
+      "12",
+      "13"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 12 ہے۔ امریکی short scale میں one trillion کو 1 کے بعد 12 صفر لکھ کر ظاہر کیا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "How big is a trillion?",
+      "referenceUrl": "https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/how_big_is_a_trillion.htm",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q089"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/how_big_is_a_trillion.htm",
+        "label": "How big is a trillion?",
+        "publisher": "NASA Glenn Research Center",
+        "authorityId": "nasa-glenn",
+        "sourceClass": "official",
+        "claimSummary": "NASA states that in U.S. usage one trillion is written as 1 followed by 12 zeros.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "label": "Metric SI prefixes",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "us-nist",
+        "sourceClass": "official",
+        "claimSummary": "NIST independently equates the U.S. term trillion with 10 to the power 12.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The short-scale convention was stated explicitly because historical long-scale usage differs; the verified answer is 12 zeros."
+  },
+  {
+    "id": "ADV2E102-U0016-Q089-SIM",
+    "pairId": "ADV2E102-U0016-Q089",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "In U.S. short-scale notation, one trillion equals which power of ten?",
+    "questionUrdu": "U.S. short-scale notation میں one trillion عدد 10 کی کون سی power کے برابر ہے؟",
+    "options": [
+      "10^9",
+      "10^10",
+      "10^12",
+      "10^15"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 10^12 ہے۔ One trillion میں 12 zeros ہوتے ہیں، اس لیے اس کی قدر دس کی بارہویں طاقت ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "How big is a trillion?",
+      "referenceUrl": "https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/how_big_is_a_trillion.htm",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q089",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/how_big_is_a_trillion.htm",
+        "label": "How big is a trillion?",
+        "publisher": "NASA Glenn Research Center",
+        "authorityId": "nasa-glenn",
+        "sourceClass": "official",
+        "claimSummary": "NASA states that U.S. one trillion is 1 followed by 12 zeros, equivalent to 10^12.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "label": "Metric SI prefixes",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "us-nist",
+        "sourceClass": "official",
+        "claimSummary": "NIST independently equates the U.S. term trillion with 10 to the power 12.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q090-SRC",
+    "pairId": "ADV2E102-U0016-Q090",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Which of the following is divisible by 2, 3 and 5?",
+    "questionUrdu": "درج ذیل میں سے کون سا عدد 2، 3 اور 5 تینوں سے divisible ہے؟",
+    "options": [
+      "390",
+      "575",
+      "590",
+      "675"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 390 ہے۔ یہ even ہے، اس کے digits کا sum 12 ہے اور آخری digit 0 ہے؛ لہٰذا یہ 2، 3 اور 5 سے پورا تقسیم ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Find multiples and factors",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-4-find-multiples-and-factors",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q090"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/2-4-find-multiples-and-factors",
+        "label": "Find multiples and factors",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives the divisibility tests for 2, 3, and 5; applying all three tests leaves 390 as the only listed number.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=390%2F2%2C+390%2F3%2C+390%2F5",
+        "label": "Check 390 divided by 2, 3, and 5",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculations give integer quotients 195, 130, and 78, confirming that 390 is divisible by all three.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "390 ends in 0 and has digit sum 12, so it passes the 2, 3, and 5 tests; each distractor fails at least one test."
+  },
+  {
+    "id": "ADV2E102-U0016-Q090-SIM",
+    "pairId": "ADV2E102-U0016-Q090",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Which listed number is divisible by 2, 3 and 5 without a remainder?",
+    "questionUrdu": "درج ذیل میں سے کون سا عدد 2، 3 اور 5 سے بغیر remainder کے تقسیم ہوتا ہے؟",
+    "options": [
+      "420",
+      "425",
+      "430",
+      "435"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 420 ہے۔ یہ even ہے، digits کا sum 6 ہے اور آخری digit 0 ہے، اس لیے تینوں divisibility tests پورے ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Find multiples and factors",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-4-find-multiples-and-factors",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q090",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/2-4-find-multiples-and-factors",
+        "label": "Find multiples and factors",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives the divisibility tests for 2, 3 and 5; 420 satisfies all three tests.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=420%2F2%2C+420%2F3%2C+420%2F5",
+        "label": "Independent divisibility calculation for 420",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation gives integer quotients 210, 140 and 84 for 420 divided by 2, 3 and 5.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q091-SRC",
+    "pairId": "ADV2E102-U0016-Q091",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "When A finishes a 1 km race, B is 28 m short of the finish and takes another 7 seconds at the same speed. How long did A take?",
+    "questionUrdu": "جب A نے 1 km race مکمل کی تو B finish سے 28 m پیچھے تھا اور اسی رفتار پر مزید 7 seconds میں پہنچا۔ A نے کتنا وقت لیا؟",
+    "options": [
+      "4 minutes 3 seconds",
+      "3 minutes 4 seconds",
+      "5 minutes",
+      "4 minutes 20 seconds"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 4 minutes 3 seconds ہے۔ B کی رفتار 28/7 = 4 m/s بنی؛ 1 km کا وقت 250 seconds تھا، لہٰذا A کا وقت 250 − 7 = 243 seconds ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Distance, rate, and time",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q091"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+        "label": "Distance, rate, and time",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives d=rt for uniform motion; B's last 28 m in 7 seconds fixes B's rate at 4 m/s.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1000%2F%2828%2F7%29-7",
+        "label": "Race-time calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation gives 243 seconds, which is 4 minutes 3 seconds.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The original wording could be read several ways. The intended condition was stated explicitly: B needs 7 more seconds for the final 28 m. Thus B's full-race time is 250 seconds and A's is 243 seconds."
+  },
+  {
+    "id": "ADV2E102-U0016-Q091-SIM",
+    "pairId": "ADV2E102-U0016-Q091",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A cyclist covers 30 m in 6 seconds at constant speed. What is the cyclist's speed?",
+    "questionUrdu": "ایک cyclist مستقل رفتار سے 30 m فاصلہ 6 seconds میں طے کرتا ہے۔ اس کی speed کیا ہے؟",
+    "options": [
+      "3 m/s",
+      "4 m/s",
+      "5 m/s",
+      "6 m/s"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 5 m/s ہے۔ Uniform motion میں speed = distance/time، اس لیے 30/6 = 5 m/s۔",
+    "source": {
+      "type": "practice",
+      "label": "Distance, rate, and time",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q091",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+        "label": "Distance, rate, and time",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives the uniform-motion relationship d=rt, so rate equals distance divided by time.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=30%2F6",
+        "label": "Independent speed calculation for 30 metres in 6 seconds",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates 30 divided by 6 as 5.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q092-SRC",
+    "pairId": "ADV2E102-U0016-Q092",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If 3/11 of a number is 22, what is 6/11 of that number?",
+    "questionUrdu": "اگر کسی number کا 3/11 حصہ 22 ہو تو اسی number کا 6/11 حصہ کیا ہوگا؟",
+    "options": [
+      "6",
+      "12",
+      "33",
+      "44"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 44 ہے۔ 6/11، 3/11 سے دو گنا ہے، اس لیے متعلقہ value بھی 22 کا دو گنا یعنی 44 ہوگی۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and their applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q092"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and their applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax explains equivalent ratios and cross products; 6/11 is twice 3/11, so its value is twice 22.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%286%2F11%29*%2822*11%2F3%29",
+        "label": "Evaluate the fraction of the number",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates six elevenths of the implied number as 44.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source options omitted the mathematically correct answer and offered 48. That choice was corrected to 44: the number is 22x11/3, and 6/11 of it is 44."
+  },
+  {
+    "id": "ADV2E102-U0016-Q092-SIM",
+    "pairId": "ADV2E102-U0016-Q092",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 4/9 of a number is 20, what is 2/9 of that number?",
+    "questionUrdu": "اگر کسی number کا 4/9 حصہ 20 ہو تو اسی number کا 2/9 حصہ کیا ہوگا؟",
+    "options": [
+      "5",
+      "10",
+      "20",
+      "40"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 10 ہے۔ 2/9، 4/9 کا نصف ہے، اس لیے مطلوبہ value بھی 20 کا نصف یعنی 10 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve proportions and their applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q092",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and their applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax explains equivalent proportions; halving 4/9 to 2/9 halves the corresponding value 20 to 10.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%282%2F9%29*%2820*9%2F4%29",
+        "label": "Independent proportion calculation for two ninths",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent proportional calculation evaluates two ninths of the implied number as 10.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q093-SRC",
+    "pairId": "ADV2E102-U0016-Q093",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "18 is 75% of which value?",
+    "questionUrdu": "یہ سوال پوچھتا ہے کہ 18 کس مکمل value کا 75% ہے؟",
+    "options": [
+      "34",
+      "24",
+      "22",
+      "20"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 24 ہے۔ اگر 18 = 0.75x ہو تو x = 18/0.75 = 24 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve general applications of percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q093"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "Solve general applications of percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax models percent questions as amount equals percent times base; here 18=0.75x.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=18%2F0.75",
+        "label": "Evaluate 18 divided by 0.75",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates 18 divided by 0.75 as 24.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Solving 18=75% of x gives x=18/0.75=24."
+  },
+  {
+    "id": "ADV2E102-U0016-Q093-SIM",
+    "pairId": "ADV2E102-U0016-Q093",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 30% of 80?",
+    "questionUrdu": "80 کا 30% کیا ہے؟",
+    "options": [
+      "18",
+      "24",
+      "30",
+      "40"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 24 ہے۔ 30% کو 0.30 لکھ کر 80 سے multiply کریں: 0.30 × 80 = 24۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve general applications of percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q093",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "Solve general applications of percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax models a percentage amount as percent multiplied by the base value.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=30%25+of+80",
+        "label": "Independent calculation of 30 percent of 80",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates 30 percent of 80 as 24.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q094-SRC",
+    "pairId": "ADV2E102-U0016-Q094",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Under simple interest, Rs. 12,500 amounts to Rs. 15,500 in 4 years. What is the annual interest rate?",
+    "questionUrdu": "Simple interest پر Rs. 12,500 کی رقم 4 years میں Rs. 15,500 ہو جاتی ہے۔ سالانہ interest rate کیا ہے؟",
+    "options": [
+      "3%",
+      "5%",
+      "6%",
+      "7%"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 6% ہے۔ Interest Rs. 3,000 ہے اور I = Prt کے مطابق rate = 3000/(12500 × 4) = 0.06 یعنی 6% بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve simple interest applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-4-solve-simple-interest-applications",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q094"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-4-solve-simple-interest-applications",
+        "label": "Solve simple interest applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives I=Prt and shows how to recover the annual rate from principal, interest, and years.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%2815500-12500%29%2F%2812500*4%29*100",
+        "label": "Simple-interest rate calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation gives an annual rate of 6 percent.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source intended simple interest but did not say so. Adding that condition makes the problem determinate: I=3,000 and r=I/(Pt)=0.06."
+  },
+  {
+    "id": "ADV2E102-U0016-Q094-SIM",
+    "pairId": "ADV2E102-U0016-Q094",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Under simple interest, how much interest is earned on Rs. 8,000 at 5% per year for 3 years?",
+    "questionUrdu": "Simple interest کے تحت Rs. 8,000 پر 5% سالانہ شرح سے 3 years میں کتنا interest حاصل ہوگا؟",
+    "options": [
+      "Rs. 800",
+      "Rs. 1,000",
+      "Rs. 1,200",
+      "Rs. 1,500"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Rs. 1,200 ہے۔ I = Prt کے مطابق 8,000 × 0.05 × 3 = 1,200۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve simple interest applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-4-solve-simple-interest-applications",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q094",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-4-solve-simple-interest-applications",
+        "label": "Solve simple interest applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives the simple-interest formula I=Prt.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=8000*0.05*3",
+        "label": "Independent simple-interest calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates Rs. 8,000 at 5 percent for 3 years as Rs. 1,200 interest.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q095-SRC",
+    "pairId": "ADV2E102-U0016-Q095",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is the speed of a car that travels 700 km in 3 hours and 30 minutes?",
+    "questionUrdu": "جو car 700 km فاصلہ 3 hours 30 minutes میں طے کرے اس کی speed کیا ہوگی؟",
+    "options": [
+      "150 km/h",
+      "175 km/h",
+      "185 km/h",
+      "200 km/h"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 200 km/h ہے۔ 3 hours 30 minutes برابر 3.5 hours ہیں، اس لیے speed = 700/3.5 = 200 km/h۔",
+    "source": {
+      "type": "book",
+      "label": "Distance, rate, and time",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q095"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+        "label": "Distance, rate, and time",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives d=rt and therefore rate=d/t for uniform motion; 3 hours 30 minutes is 3.5 hours.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=700%2F3.5",
+        "label": "Speed calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates 700 divided by 3.5 as 200.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Using rate=distance/time gives 700 km / 3.5 h = 200 km/h."
+  },
+  {
+    "id": "ADV2E102-U0016-Q095-SIM",
+    "pairId": "ADV2E102-U0016-Q095",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A car covers 450 km in 5 hours. What is its average speed?",
+    "questionUrdu": "ایک car 450 km فاصلہ 5 hours میں طے کرتی ہے۔ اس کی average speed کیا ہے؟",
+    "options": [
+      "75 km/h",
+      "80 km/h",
+      "90 km/h",
+      "100 km/h"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 90 km/h ہے۔ Speed = distance/time، اس لیے 450/5 = 90 km/h۔",
+    "source": {
+      "type": "practice",
+      "label": "Distance, rate, and time",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q095",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+        "label": "Distance, rate, and time",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives d=rt and therefore rate equals distance divided by time.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=450%2F5",
+        "label": "Independent speed calculation for 450 kilometres",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates 450 divided by 5 as 90.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q096-SRC",
+    "pairId": "ADV2E102-U0016-Q096",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If x + y = 6, y + z = 7, and z + x = 9, the average (arithmetic mean) of x, y and z is:",
+    "questionUrdu": "اگر x + y = 6، y + z = 7 اور z + x = 9 ہوں تو x، y اور z کا average کیا ہے؟",
+    "options": [
+      "11/3",
+      "11/2",
+      "22/3",
+      "11"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 11/3 ہے۔ تینوں equations جمع کرنے سے 2(x+y+z)=22، لہٰذا sum 11 اور average 11/3 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q096"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax defines the arithmetic mean as the sum of the values divided by their number.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+x%2By%3D6%2C+y%2Bz%3D7%2C+z%2Bx%3D9%3B+%28x%2By%2Bz%29%2F3",
+        "label": "Solve the system and compute its mean",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent system calculation gives x+y+z=11 and an arithmetic mean of 11/3.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Adding the three equations gives 2(x+y+z)=22, so the sum is 11 and the mean is 11/3."
+  },
+  {
+    "id": "ADV2E102-U0016-Q096-SIM",
+    "pairId": "ADV2E102-U0016-Q096",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If x + y = 6, y + z = 7, and z + x = 9, what is x + y + z?",
+    "questionUrdu": "اگر x + y = 6، y + z = 7 اور z + x = 9 ہوں تو x + y + z کیا ہوگا؟",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "22"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 11 ہے۔ تینوں equations کو جمع کرنے سے 2(x+y+z)=22 ملتا ہے، اس لیے x+y+z=11۔",
+    "source": {
+      "type": "practice",
+      "label": "Averages and probability",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q096",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax's arithmetic-mean relationship connects the sum of three values with three times their mean.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+x%2By%3D6%2C+y%2Bz%3D7%2C+z%2Bx%3D9%3B+%28x%2By%2Bz%29%2F3",
+        "label": "Solve the system and compute its mean",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent system calculation explicitly gives x+y+z as 11.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q097-SRC",
+    "pairId": "ADV2E102-U0016-Q097",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "0.014 x 0.014 = ?",
+    "questionUrdu": "0.014 × 0.014 کی value کیا ہے؟",
+    "options": [
+      "0.196",
+      "19.6",
+      "0.00196",
+      "0.000196"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 0.000196 ہے۔ 14 × 14 = 196 اور دونوں factors میں مجموعی طور پر 6 decimal places ہیں، اس لیے result 0.000196 بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q097"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax explains that the product has the combined number of decimal places in the two factors.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=0.014*0.014",
+        "label": "Decimal multiplication",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates 0.014 times 0.014 as 0.000196.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "14x14=196 and the factors contain six decimal places in total, giving 0.000196."
+  },
+  {
+    "id": "ADV2E102-U0016-Q097-SIM",
+    "pairId": "ADV2E102-U0016-Q097",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 0.025 multiplied by 0.04?",
+    "questionUrdu": "0.025 کو 0.04 سے multiply کرنے پر کیا حاصل ہوگا؟",
+    "options": [
+      "0.0001",
+      "0.001",
+      "0.01",
+      "0.1"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 0.001 ہے۔ 25 × 4 = 100 اور factors کی مجموعی 5 decimal places لگانے پر product 0.001 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimal operations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q097",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax explains placing the decimal in a product using the combined decimal places of the factors.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=0.025*0.04",
+        "label": "Independent decimal multiplication calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates 0.025 times 0.04 as 0.001.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q099-SRC",
+    "pairId": "ADV2E102-U0016-Q099",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Abdul purchased 20 dozen of toys at the rate of Rs. 375 per dozen. He sold each toy for Rs. 33. What was his percentage profit?",
+    "questionUrdu": "Abdul نے 20 dozen toys، Rs. 375 فی dozen خریدے اور ہر toy Rs. 33 میں بیچا۔ اس کا percentage profit کیا تھا؟",
+    "options": [
+      "3.5%",
+      "4.5%",
+      "5.6%",
+      "6.5%"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 5.6% ہے۔ Cost Rs. 7,500 اور revenue Rs. 7,920 ہے؛ profit Rs. 420 ہے، جو cost کا 5.6% بنتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve general applications of percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q099"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "Solve general applications of percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax defines percent increase relative to the original amount, which here is the total purchase cost.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%2820*12*33-20*375%29%2F%2820*375%29*100",
+        "label": "Profit-percentage calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates the profit as 5.6 percent of cost.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Twenty dozen is 240 toys. Cost is Rs. 7,500, revenue is Rs. 7,920, profit is Rs. 420, and 420/7,500x100=5.6%."
+  },
+  {
+    "id": "ADV2E102-U0016-Q099-SIM",
+    "pairId": "ADV2E102-U0016-Q099",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A shop buys 10 dozen items at Rs. 240 per dozen and sells each item for Rs. 22. What is the profit percentage?",
+    "questionUrdu": "ایک shop 10 dozen items کو Rs. 240 فی dozen خریدتی اور ہر item Rs. 22 میں بیچتی ہے۔ profit percentage کیا ہے؟",
+    "options": [
+      "5%",
+      "8%",
+      "10%",
+      "12%"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 10% ہے۔ Cost Rs. 2,400 اور revenue Rs. 2,640 ہے؛ Rs. 240 profit، original cost کا 10% ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve general applications of percent",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q099",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "Solve general applications of percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax defines percent increase relative to the original amount, here the purchase cost.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%2810*12*22-10*240%29%2F%2810*240%29*100",
+        "label": "Independent percentage-profit calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates the profit as 10 percent of the cost.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0016-Q100-SRC",
+    "pairId": "ADV2E102-U0016-Q100",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If 2x - 10 = 20, what is x - 5?",
+    "questionUrdu": "اگر 2x - 10 = 20 ہو تو x - 5 کیا ہوگا؟",
+    "options": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 10 ہے۔ Equation سے 2x=30 اور x=15 ملتا ہے، اس لیے x−5=10۔",
+    "source": {
+      "type": "book",
+      "label": "Solve linear equations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/8-3-solve-equations-with-variables-and-constants-on-both-sides",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q100"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/8-3-solve-equations-with-variables-and-constants-on-both-sides",
+        "label": "Solve linear equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives the addition, subtraction, and division steps for solving linear equations and checking the result.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+2x-10%3D20%3B+x-5",
+        "label": "Solve the equation and evaluate x minus 5",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation solves x=15 and evaluates x-5 as 10.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Adding 10 and dividing by 2 gives x=15; substituting gives x-5=10."
+  },
+  {
+    "id": "ADV2E102-U0016-Q100-SIM",
+    "pairId": "ADV2E102-U0016-Q100",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 3x - 12 = 24, what is x - 4?",
+    "questionUrdu": "اگر 3x - 12 = 24 ہو تو x - 4 کیا ہوگا؟",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "12"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 8 ہے۔ Equation سے 3x=36، پھر x=12؛ لہٰذا x−4=8۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve linear equations",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/8-3-solve-equations-with-variables-and-constants-on-both-sides",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0016-q100",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/8-3-solve-equations-with-variables-and-constants-on-both-sides",
+        "label": "Solve linear equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax explains the addition, subtraction and division steps used to solve linear equations.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+3x-12%3D24%3B+x-4",
+        "label": "Independent linear-equation calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation solves x as 12 and evaluates x minus 4 as 8.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

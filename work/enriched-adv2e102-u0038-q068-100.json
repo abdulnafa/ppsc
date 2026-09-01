@@ -1,0 +1,3227 @@
+[
+  {
+    "id": "ADV2E102-U0038-Q068-SRC",
+    "pairId": "ADV2E102-U0038-Q068",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which listed storage holds parts of executing programs and their data for fast reuse?",
+    "questionUrdu": "درج ذخیرہ گاہوں میں سے کون سی چلتے ہوئے پروگراموں اور ان کے ڈیٹا کے حصے تیز رفتار دوبارہ استعمال کے لیے محفوظ رکھتی ہے؟",
+    "options": [
+      "Temp",
+      "Memory",
+      "Static",
+      "Cache"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Cache ہے۔ کیش عارضی طور پر وہ ہدایات اور ڈیٹا رکھتی ہے جن کی دوبارہ ضرورت پڑنے کا امکان زیادہ ہو، اس لیے درست جواب کیش ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Cache and translation lookaside buffers",
+      "referenceUrl": "https://www.ibm.com/docs/en/aix/7.1.0?topic=implementation-cache-tlbs",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ibm.com/docs/en/aix/7.1.0?topic=implementation-cache-tlbs",
+        "label": "Cache and translation lookaside buffers",
+        "publisher": "IBM Documentation",
+        "authorityId": "ibm-docs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM explains that caches hold parts of executing programs and data used by those programs."
+      },
+      {
+        "url": "https://www.nist.gov/glossary-term/37306",
+        "label": "Cache",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST defines a cache as temporary storage for data that is likely to be needed frequently."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The malformed possessive and 'files' wording were repaired to the documented cache proposition. Cache remains answer D."
+  },
+  {
+    "id": "ADV2E102-U0038-Q068-SIM",
+    "pairId": "ADV2E102-U0038-Q068",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "What is the principal performance benefit of a computer cache?",
+    "questionUrdu": "کمپیوٹر کی کیش کا بنیادی کارکردگی سے متعلق فائدہ کیا ہے؟",
+    "options": [
+      "Faster access to frequently needed data",
+      "Permanent archival storage",
+      "Printing without a printer",
+      "Replacing all main memory"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب بار بار درکار ڈیٹا تک تیز رسائی ہے۔ آئی بی ایم اور نِسٹ دونوں کیش کو فوری دوبارہ استعمال کے لیے عارضی ذخیرہ قرار دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Cache and translation lookaside buffers",
+      "referenceUrl": "https://www.ibm.com/docs/en/aix/7.1.0?topic=implementation-cache-tlbs",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ibm.com/docs/en/aix/7.1.0?topic=implementation-cache-tlbs",
+        "label": "Cache and translation lookaside buffers",
+        "publisher": "IBM Documentation",
+        "authorityId": "ibm-docs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBM explains that a cache keeps executing-program data available for fast reuse."
+      },
+      {
+        "url": "https://www.nist.gov/glossary-term/37306",
+        "label": "Cache",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST independently defines cache as temporary storage for data likely to be needed frequently."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q071-SRC",
+    "pairId": "ADV2E102-U0038-Q071",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "Which listed feature is used to add a free-standing block of text to a presentation slide?",
+    "questionUrdu": "پریزنٹیشن سلائیڈ پر الگ اور آزاد متنی حصہ شامل کرنے کے لیے درج خصوصیات میں سے کون سی استعمال ہوتی ہے؟",
+    "options": [
+      "Text box",
+      "Note box",
+      "Text layer",
+      "Comment box"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Text box ہے۔ ٹیکسٹ باکس سلائیڈ پر ایک الگ قابلِ حرکت خانہ بناتا ہے جس میں صارف اپنی مطلوبہ عبارت لکھ سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Add text to a slide",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/add-text-to-a-slide",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/powerpoint/add-text-to-a-slide",
+        "label": "Add text to a slide",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft instructs users to add free-standing text to a PowerPoint slide with a text box."
+      },
+      {
+        "url": "https://support.google.com/docs/answer/1696521?co=GENIE.Platform%3DDesktop&hl=en",
+        "label": "Insert and arrange text, shapes, diagrams, and lines",
+        "publisher": "Google Docs Editors Help",
+        "authorityId": "google-docs-editors-help",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Google's official Slides help directs users to insert a text box to place text on a slide."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was made grammatical and scoped to free-standing slide text. Text box is answer A."
+  },
+  {
+    "id": "ADV2E102-U0038-Q071-SIM",
+    "pairId": "ADV2E102-U0038-Q071",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "After a text box is inserted on a slide, what is it designed to receive?",
+    "questionUrdu": "سلائیڈ پر ٹیکسٹ باکس داخل کرنے کے بعد اس میں بنیادی طور پر کیا شامل کیا جاتا ہے؟",
+    "options": [
+      "Typed text",
+      "A printer cartridge",
+      "An operating-system password",
+      "A disk partition"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب لکھی جانے والی عبارت ہے۔ مائیکروسافٹ اور گوگل کی سرکاری رہنمائی دونوں ٹیکسٹ باکس بنانے کے بعد اس میں متن لکھنے کی ہدایت دیتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Add text to a slide",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/add-text-to-a-slide",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/powerpoint/add-text-to-a-slide",
+        "label": "Add text to a slide",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft instructs users to insert a text box and type text into it on a slide."
+      },
+      {
+        "url": "https://support.google.com/docs/answer/1696521?co=GENIE.Platform%3DDesktop&hl=en",
+        "label": "Insert and arrange text, shapes, diagrams, and lines",
+        "publisher": "Google Docs Editors Help",
+        "authorityId": "google-docs-editors-help",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Google Slides Help independently directs users to insert a text box and enter text in it."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q072-SRC",
+    "pairId": "ADV2E102-U0038-Q072",
+    "kind": "source",
+    "categoryId": "basic-computer-studies",
+    "question": "To select multiple nonadjacent slides in PowerPoint for Windows, which listed method is used?",
+    "questionUrdu": "ونڈوز کے پاورپوائنٹ میں متعدد غیر متصل سلائیڈیں منتخب کرنے کے لیے درج طریقوں میں سے کون سا استعمال ہوتا ہے؟",
+    "options": [
+      "Ctrl+click",
+      "Shift+click",
+      "Ctrl+Shift+click",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ctrl+click ہے۔ کنٹرول کی دبائے رکھ کر ہر مطلوبہ سلائیڈ پر کلک کرنے سے غیر متصل سلائیڈیں ایک ساتھ منتخب ہو جاتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Copy and paste your slides",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/copy-and-paste-your-slides",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/powerpoint/copy-and-paste-your-slides",
+        "label": "Copy and paste your slides",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft says to hold Ctrl and click each non-sequential slide to select multiple slides in PowerPoint for Windows."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/simpress/guide/individual.html?DbPAR=IMPRESS&System=WIN",
+        "label": "Creating a custom slide show",
+        "publisher": "LibreOffice Help",
+        "authorityId": "libreoffice-help",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice independently documents Ctrl-click for selecting several individual slides."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The ambiguous phrase 'a multiple slide' was repaired and the platform was stated. Microsoft documents Ctrl-click; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q072-SIM",
+    "pairId": "ADV2E102-U0038-Q072",
+    "kind": "similar",
+    "categoryId": "basic-computer-studies",
+    "question": "Which modifier key selects multiple nonadjacent slides on macOS?",
+    "questionUrdu": "میک او ایس میں متعدد غیر متصل سلائیڈیں منتخب کرنے کے لیے کون سی ترمیمی کلید دبائی جاتی ہے؟",
+    "options": [
+      "Command",
+      "Caps Lock",
+      "Tab",
+      "Escape"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب کمانڈ کلید ہے۔ مائیکروسافٹ اور لائبرے آفس دونوں میک او ایس پر الگ الگ سلائیڈیں منتخب کرنے کے لیے کمانڈ کے ساتھ کلک کرنے کی ہدایت دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Copy and paste your slides",
+      "referenceUrl": "https://support.microsoft.com/en-us/powerpoint/copy-and-paste-your-slides",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/powerpoint/copy-and-paste-your-slides",
+        "label": "Copy and paste your slides",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Microsoft documents Command-click for selecting multiple non-sequential slides in PowerPoint on macOS."
+      },
+      {
+        "url": "https://help.libreoffice.org/latest/en-US/text/simpress/guide/individual.html?DbPAR=IMPRESS&System=MAC",
+        "label": "Selecting multiple slides in Impress on macOS",
+        "publisher": "LibreOffice Help",
+        "authorityId": "libreoffice-help",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreOffice Help independently documents Command-click for selecting individual nonadjacent slides on macOS."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q074-SRC",
+    "pairId": "ADV2E102-U0038-Q074",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If 1 inch corresponds to 60 equal units, how many such units correspond to 2.5 inches?",
+    "questionUrdu": "اگر 1 انچ 60 مساوی اکائیوں کے برابر ہو تو 2.5 انچ کتنی ایسی اکائیوں کے برابر ہوں گے؟",
+    "options": [
+      "150",
+      "120",
+      "180",
+      "140"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 150 ہے۔ براہِ راست تناسب کے مطابق 60 کو 2.5 سے ضرب دینے پر 150 حاصل ہوتا ہے، اس لیے درست جواب 150 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve proportions and their applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-6-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-6-solve-proportions-and-their-applications",
+        "label": "Solve proportions and their applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains proportional reasoning and solving equal-rate relationships."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=60*2.5",
+        "label": "Compute 60 times 2.5",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent calculation evaluates 60 multiplied by 2.5 as 150."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The missing target unit was made explicit without changing the proportional calculation: 60 x 2.5 = 150, answer A."
+  },
+  {
+    "id": "ADV2E102-U0038-Q074-SIM",
+    "pairId": "ADV2E102-U0038-Q074",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 1 inch corresponds to 60 equal units, how many units correspond to 1.5 inches?",
+    "questionUrdu": "اگر 1 انچ 60 مساوی اکائیوں کے برابر ہو تو 1.5 انچ کتنی اکائیوں کے برابر ہوں گے؟",
+    "options": [
+      "90",
+      "75",
+      "120",
+      "150"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 90 ہے۔ براہِ راست تناسب میں 60 کو 1.5 سے ضرب دی جاتی ہے اور نتیجہ 90 آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve proportions and their applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-6-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-6-solve-proportions-and-their-applications",
+        "label": "Solve proportions and their applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains solving equal-rate situations by setting up and evaluating a direct proportion."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=60*1.5",
+        "label": "Calculate 60 x 1.5",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently evaluates 60 multiplied by 1.5 as 90."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q075-SRC",
+    "pairId": "ADV2E102-U0038-Q075",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "294 must be multiplied by which listed positive integer to produce a perfect square?",
+    "questionUrdu": "294 کو درج مثبت صحیح اعداد میں سے کس سے ضرب دی جائے تو حاصل ضرب مکمل مربع بن جائے؟",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 6 ہے۔ اولی تجزیے میں 294 برابر 2 ضرب 3 ضرب 7 کی قوت 2 ہے؛ غیر جوڑی عوامل 2 اور 3 کو پورا کرنے کے لیے 6 سے ضرب دی جاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Prime factorization",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-5-prime-factorization-and-the-least-common-multiple",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/2-5-prime-factorization-and-the-least-common-multiple",
+        "label": "Prime factorization",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains prime factorization, the method used to pair prime exponents when forming a perfect square."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=factor+294+and+sqrt%28294*6%29",
+        "label": "Factor 294 and evaluate sqrt(294 x 6)",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation gives 294 = 2 x 3 x 7^2 and 294 x 6 = 1764 = 42^2."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The grammar was repaired. Since 294 = 2 x 3 x 7^2, multiplication by 6 gives 42^2; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q075-SIM",
+    "pairId": "ADV2E102-U0038-Q075",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "By which positive integer should 75 be multiplied to make a perfect square?",
+    "questionUrdu": "75 کو کس مثبت صحیح عدد سے ضرب دی جائے تاکہ حاصل ضرب مکمل مربع بن جائے؟",
+    "options": [
+      "3",
+      "2",
+      "5",
+      "7"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 3 ہے۔ 75 کا اولی تجزیہ 3 ضرب 5 کی قوت 2 ہے، لہٰذا ایک مزید 3 اسے 225 یعنی 15 کی قوت 2 بنا دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Prime factorization",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-5-prime-factorization-and-the-least-common-multiple",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/2-5-prime-factorization-and-the-least-common-multiple",
+        "label": "Prime factorization",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains using prime factorization and paired prime exponents to identify perfect squares."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=factor+75+and+sqrt%2875*3%29",
+        "label": "Factor 75 and evaluate sqrt(75 x 3)",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently confirms that 75 multiplied by 3 is 225, the square of 15."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q076-SRC",
+    "pairId": "ADV2E102-U0038-Q076",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Which listed numerical statement is wrong at the stated precision?",
+    "questionUrdu": "درج عددی بیانات میں سے کون سا بیان دی گئی درستی کے لحاظ سے غلط ہے؟",
+    "options": [
+      "22/7 ≈ 3.2",
+      "33/11 = 3",
+      "22/7 ≈ 3.14",
+      "22/11 = 2"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 22/7 ≈ 3.2 ہے۔ بائیس بٹا سات تقریباً 3.142857 ہے، اس لیے ایک اعشاری جگہ تک اس کی درست قریب ترین قیمت 3.1 بنتی ہے، 3.2 نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Decimals",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-5-decimals",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-5-decimals",
+        "label": "Decimals",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains decimal place value and rounding to a specified number of decimal places."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=22%2F7",
+        "label": "Compute 22/7",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation gives 22/7 as about 3.142857, which rounds to 3.1 at one decimal place and 3.14 at two decimal places."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The OCR-corrupted '227' was restored to 22/7 and approximation signs were added where intended. Since 22/7 rounds to 3.1, not 3.2, at one decimal place, A is the uniquely wrong statement."
+  },
+  {
+    "id": "ADV2E102-U0038-Q076-SIM",
+    "pairId": "ADV2E102-U0038-Q076",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is 22/7 rounded to two decimal places?",
+    "questionUrdu": "22/7 کو دو اعشاری جگہوں تک قریب ترین لکھا جائے تو کیا قیمت بنتی ہے؟",
+    "options": [
+      "3.14",
+      "3.20",
+      "3.12",
+      "3.41"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 3.14 ہے۔ بائیس بٹا سات کی اعشاری قیمت 3.142857 کے قریب ہے، جو دو اعشاری جگہوں تک 3.14 بنتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Decimals",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/1-5-decimals",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/1-5-decimals",
+        "label": "Decimals",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax's decimal-place rules show how a value is rounded to a stated number of decimal places."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=22%2F7",
+        "label": "Compute 22/7",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently gives 22/7 as approximately 3.142857, which rounds to 3.14."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q077-SRC",
+    "pairId": "ADV2E102-U0038-Q077",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If 2x + 7 = 19, what is x?",
+    "questionUrdu": "اگر 2x + 7 = 19 ہو تو x کی قیمت کیا ہوگی؟",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "10"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 6 ہے۔ دونوں طرف سے 7 منہا کرنے پر 2x برابر 12 رہتا ہے اور 2 سے تقسیم کرنے پر x برابر 6 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve equations using equality properties",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q077"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/2-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality",
+        "label": "Solve equations using equality properties",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains isolating a variable by applying the same operation to both sides of an equation."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+2x%2B7%3D19",
+        "label": "Solve 2x + 7 = 19",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent equation solver gives x = 6."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Punctuation was standardized. Subtracting 7 and dividing by 2 gives x = 6; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q077-SIM",
+    "pairId": "ADV2E102-U0038-Q077",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 3x - 5 = 16, what is x?",
+    "questionUrdu": "اگر 3x - 5 = 16 ہو تو x کی قیمت کیا ہوگی؟",
+    "options": [
+      "7",
+      "5",
+      "6",
+      "9"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 7 ہے۔ دونوں طرف 5 جمع کرنے پر 3x برابر 21 بنتا ہے اور 3 سے تقسیم کرنے پر x برابر 7 آتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve equations using equality properties",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q077",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/2-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality",
+        "label": "Solve equations using equality properties",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains solving a linear equation by applying equal operations to both sides and isolating the variable."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+3x-5%3D16",
+        "label": "Solve 3x - 5 = 16",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently solves 3x - 5 = 16 and returns x = 7."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q080-SRC",
+    "pairId": "ADV2E102-U0038-Q080",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What is one fourth of 15?",
+    "questionUrdu": "15 کا ایک چوتھائی کتنا ہوتا ہے؟",
+    "options": [
+      "3.72",
+      "3.73",
+      "3.75",
+      "3.80"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 3.75 ہے۔ پندرہ کو چار سے تقسیم کرنے پر 3.75 حاصل ہوتا ہے، اس لیے درست جواب 3.75 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Multiply and divide fractions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q080"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+        "label": "Multiply and divide fractions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains multiplying a whole number by a fraction, including finding a fractional part of a quantity."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=15%2F4",
+        "label": "Compute 15/4",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation evaluates one fourth of 15 as 3.75."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The grammar was standardized. 15 divided by 4 is 3.75; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q080-SIM",
+    "pairId": "ADV2E102-U0038-Q080",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is one third of 15?",
+    "questionUrdu": "15 کا ایک تہائی کتنا ہوتا ہے؟",
+    "options": [
+      "5",
+      "3",
+      "4",
+      "6"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 5 ہے۔ کسی مقدار کا ایک تہائی معلوم کرنے کے لیے اسے 3 سے تقسیم کیا جاتا ہے، لہٰذا 15 بٹا 3 برابر 5 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Multiply and divide fractions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q080",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+        "label": "Multiply and divide fractions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains finding a fractional part of a whole number through fraction multiplication or division."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=15%2F3",
+        "label": "Calculate 15 divided by 3",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently evaluates 15 divided by 3 as 5."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q081-SRC",
+    "pairId": "ADV2E102-U0038-Q081",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is an antonym of 'frugal'?",
+    "questionUrdu": "درج الفاظ میں سے کون سا لفظ فرُوگل یعنی کفایت شعار کا متضاد ہے؟",
+    "options": [
+      "Funny",
+      "Simple",
+      "Spendthrift",
+      "Economical"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Spendthrift ہے۔ فرُوگل کم خرچ اور محتاط شخص کو کہتے ہیں، جبکہ اسپینڈ تھرفٹ فضول خرچی سے رقم خرچ کرنے والے شخص کو کہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Frugal: synonyms and antonyms",
+      "referenceUrl": "https://www.merriam-webster.com/thesaurus/frugal",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q081"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/frugal",
+        "label": "Frugal: synonyms and antonyms",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster explicitly lists spendthrift among the antonyms and near antonyms of frugal."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english-thesaurus/frugal",
+        "label": "Synonyms of frugal",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently lists spendthrift among the opposites of frugal."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was standardized. Two independent dictionaries explicitly give spendthrift as an opposite of frugal; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q081-SIM",
+    "pairId": "ADV2E102-U0038-Q081",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the noun 'spendthrift' mean?",
+    "questionUrdu": "اسم اسپینڈ تھرفٹ سے کس قسم کا شخص مراد ہوتا ہے؟",
+    "options": [
+      "A person who spends money wastefully",
+      "A person who never speaks",
+      "A careful archivist",
+      "A skilled carpenter"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب رقم فضول خرچی سے خرچ کرنے والا شخص ہے۔ میریئم ویبسٹر اور کیمبرج دونوں اسپینڈ تھرفٹ کی یہی وضاحت کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Spendthrift",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/spendthrift",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q081",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/spendthrift",
+        "label": "Spendthrift",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines a spendthrift as a person who spends money wastefully or improvidently."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/spendthrift",
+        "label": "Spendthrift",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge independently defines a spendthrift as someone who spends too much money carelessly."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q082-SRC",
+    "pairId": "ADV2E102-U0038-Q082",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is the closest antonym of 'affluence'?",
+    "questionUrdu": "درج الفاظ میں سے کون سا لفظ افلوئنس یعنی خوش حالی کا قریب ترین متضاد ہے؟",
+    "options": [
+      "Dearth",
+      "Trash",
+      "Indignant",
+      "Pungent"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Dearth ہے۔ افلوئنس دولت اور فراوانی کو کہتے ہیں، جبکہ ڈرتھ کسی چیز کی کمی یا قلت کو ظاہر کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Affluence: synonyms and antonyms",
+      "referenceUrl": "https://dictionary.cambridge.org/us/thesaurus/affluence",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q082"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/affluence",
+        "label": "Affluence: synonyms and antonyms",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge treats affluence as prosperity and abundance and lists want and shortage among its antonyms."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english/dearth",
+        "label": "Dearth",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins defines dearth as scarcity or lack and gives abundance and plenty as its antonyms, making dearth the listed contrast to affluence."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was scoped to the closest listed opposite. Affluence denotes abundance or prosperity, while dearth denotes scarcity or lack; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q082-SIM",
+    "pairId": "ADV2E102-U0038-Q082",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the word 'dearth' mean?",
+    "questionUrdu": "لفظ ڈرتھ کا کیا مطلب ہے؟",
+    "options": [
+      "A scarcity or lack",
+      "Great prosperity",
+      "A public celebration",
+      "A precise measurement"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب کمی یا قلت ہے۔ میریئم ویبسٹر اور کولنز دونوں ڈرتھ کو کسی چیز کی ناکافی مقدار یا شدید کمی کہتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Dearth",
+      "referenceUrl": "https://www.merriam-webster.com/dictionary/dearth",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q082",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/dearth",
+        "label": "Dearth",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines dearth as scarcity or an inadequate supply."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english/dearth",
+        "label": "Dearth",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently defines dearth as scarcity, lack, or an insufficient quantity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q083-SRC",
+    "pairId": "ADV2E102-U0038-Q083",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If PEACH is transformed to HCAEP by reversing the character order, how should 26541 be transformed?",
+    "questionUrdu": "اگر پی ای اے سی ایچ کے حروف الٹ کر ایچ سی اے ای پی بنائے جائیں تو اسی قاعدے سے 26541 کس طرح بدلے گا؟",
+    "options": [
+      "62541",
+      "14562",
+      "56241",
+      "14265"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 14562 ہے۔ قاعدہ ترتیب کو مکمل طور پر الٹنا ہے، اس لیے 26541 کے ہندسے الٹنے پر 14562 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Python reversed() documentation",
+      "referenceUrl": "https://docs.python.org/3/library/functions.html#reversed",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://docs.python.org/3/library/functions.html#reversed",
+        "label": "Python reversed() documentation",
+        "publisher": "Python Software Foundation",
+        "authorityId": "python-docs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Python's official documentation defines reversed() as returning items in reverse order; applying the demonstrated PEACH-to-HCAEP rule reverses 26541 to 14562."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=reverse+digits+of+26541",
+        "label": "Reverse the digits of 26541",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation reverses the digit order of 26541 to 14562."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The transformation rule implicit in the example was stated explicitly. Reversing 26541 gives 14562; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q083-SIM",
+    "pairId": "ADV2E102-U0038-Q083",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If a code reverses character order, how should 7314 be transformed?",
+    "questionUrdu": "اگر کسی رمز میں حروف یا ہندسوں کی ترتیب الٹ دی جائے تو 7314 کس طرح بدلے گا؟",
+    "options": [
+      "4137",
+      "7341",
+      "1437",
+      "4173"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 4137 ہے۔ ترتیب الٹنے پر آخری ہندسہ پہلے اور پہلا ہندسہ آخر میں آتا ہے، اس لیے 7314 بدل کر 4137 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Python reversed() documentation",
+      "referenceUrl": "https://docs.python.org/3/library/functions.html#reversed",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://docs.python.org/3/library/functions.html#reversed",
+        "label": "Python reversed() documentation",
+        "publisher": "Python Software Foundation",
+        "authorityId": "python-docs",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Python's official documentation defines reversal as returning the items of a sequence in reverse order."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=reverse+digits+of+7314",
+        "label": "Reverse the digits of 7314",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently reverses the digit order of 7314 to 4137."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q085-SRC",
+    "pairId": "ADV2E102-U0038-Q085",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What does the Urdu poetic genre 'Munajat' mean?",
+    "questionUrdu": "اردو کی شعری صنف مناجات سے کیا مراد ہے؟",
+    "options": [
+      "جس میں خدا تعالیٰ کی تعریف ہو",
+      "جس میں ملکی حالات کا ذکر نہ ہو",
+      "جس میں بندے اللہ سے اپنی حاجات بیان کریں",
+      "جس میں اولیاء اللہ اور بزرگان دین کی تعریف ہو"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب جس میں بندے اللہ سے اپنی حاجات بیان کریں ہے۔ مناجات ایسی عاجزانہ دعا اور عرضِ حاجت ہے جس میں بندہ براہِ راست اللہ تعالیٰ سے اپنی ضروریات بیان کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Urdu poetic genres course book",
+      "referenceUrl": "https://online.aiou.edu.pk/LIVE_SITE/SoftBooks/9009.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q085"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://online.aiou.edu.pk/LIVE_SITE/SoftBooks/9009.pdf",
+        "label": "Urdu poetic genres course book",
+        "publisher": "Allama Iqbal Open University",
+        "authorityId": "allama-iqbal-open-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The course material defines munajat as an intimate supplication and plea addressed to God."
+      },
+      {
+        "url": "https://www.udb.gov.pk/result.php?pn=1&search=%D9%85%D9%86%D8%A7%D8%AC%D8%A7%D8%AA",
+        "label": "Urdu Dictionary Board: مناجات",
+        "publisher": "Urdu Dictionary Board, Government of Pakistan",
+        "authorityId": "pakistan-urdu-dictionary-board",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government Urdu dictionary defines munajat as humble private prayer, entreaty or supplication to God."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original Urdu: مصنف نظم \"مناجات\" سے کیا مراد ہے؟ The unnecessary word مصنف was removed from the verified English stem. Munajat is a servant's supplication and expression of needs before Allah; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q085-SIM",
+    "pairId": "ADV2E102-U0038-Q085",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "To whom is a munajat directly addressed?",
+    "questionUrdu": "مناجات میں دعا اور عرضِ حاجت براہِ راست کس سے کی جاتی ہے؟",
+    "options": [
+      "Allah",
+      "A fictional narrator",
+      "A newspaper editor",
+      "A court historian"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب اللہ تعالیٰ ہے۔ علامہ اقبال اوپن یونیورسٹی اور اردو لغت بورڈ دونوں مناجات کو خدا کے حضور عاجزانہ دعا اور التجا قرار دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Urdu poetic genres course book",
+      "referenceUrl": "https://online.aiou.edu.pk/LIVE_SITE/SoftBooks/9009.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q085",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://online.aiou.edu.pk/LIVE_SITE/SoftBooks/9009.pdf",
+        "label": "Urdu poetic genres course book",
+        "publisher": "Allama Iqbal Open University",
+        "authorityId": "allama-iqbal-open-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "AIOU defines munajat as an intimate supplication or plea addressed to God."
+      },
+      {
+        "url": "https://www.udb.gov.pk/result.php?pn=1&search=%D9%85%D9%86%D8%A7%D8%AC%D8%A7%D8%AA",
+        "label": "Urdu Dictionary Board: مناجات",
+        "publisher": "Urdu Dictionary Board, Government of Pakistan",
+        "authorityId": "pakistan-urdu-dictionary-board",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Urdu Dictionary Board independently defines munajat as a humble private prayer and entreaty to God."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q086-SRC",
+    "pairId": "ADV2E102-U0038-Q086",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What does the Urdu idiom 'gular ka phool khilna' mean?",
+    "questionUrdu": "اردو محاورے گولر کا پھول کھلنا کا کیا مطلب ہے؟",
+    "options": [
+      "اشیاء کا ارزاں ملنا",
+      "ان ہونی بات ہونا",
+      "راز منکشف ہونا",
+      "خوشی کا اظہار کرنا"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب ان ہونی بات ہونا ہے۔ یہ محاورہ ایسی بات یا واقعے کے لیے بولا جاتا ہے جس کا ہونا ناممکن یا نہایت غیر معمولی سمجھا جائے۔",
+    "source": {
+      "type": "book",
+      "label": "گولر کا پھول کھلنا",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-guular-kaa-phuul-khilnaa?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-guular-kaa-phuul-khilnaa?lang=ur",
+        "label": "گولر کا پھول کھلنا",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines the idiom as an impossible or extraordinary occurrence."
+      },
+      {
+        "url": "https://ignca.gov.in/coilnet/dharti12.htm",
+        "label": "Gular flower in Indian tradition",
+        "publisher": "Indira Gandhi National Centre for the Arts",
+        "authorityId": "ignca",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IGNCA independently records the gular flower as a symbol for an impossible thing."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original Urdu: \"گولر کا پھول کھلنا\" محاورہ ہے، اس سے کیا مراد ہے؟ Both authorities define the idiom as an impossible or extraordinary occurrence; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q086-SIM",
+    "pairId": "ADV2E102-U0038-Q086",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu idiom describes an occurrence thought impossible?",
+    "questionUrdu": "ایسے واقعے کے لیے کون سا اردو محاورہ بولا جاتا ہے جس کا ہونا ناممکن سمجھا جائے؟",
+    "options": [
+      "گولر کا پھول کھلنا",
+      "آگ بگولا ہونا",
+      "ہاتھ پیر پھولنا",
+      "منہ کی کھانا"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب گولر کا پھول کھلنا ہے۔ ریختہ لغت اور اندرا گاندھی قومی مرکز برائے فنون دونوں گولر کے پھول کو ناممکن واقعے کی علامت بتاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "گولر کا پھول کھلنا",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-guular-kaa-phuul-khilnaa?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-guular-kaa-phuul-khilnaa?lang=ur",
+        "label": "گولر کا پھول کھلنا",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines گولر کا پھول کھلنا as an impossible or extraordinary occurrence."
+      },
+      {
+        "url": "https://ignca.gov.in/coilnet/dharti12.htm",
+        "label": "Gular flower in Indian tradition",
+        "publisher": "Indira Gandhi National Centre for the Arts",
+        "authorityId": "ignca",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IGNCA independently records the gular flower as a symbol of something impossible."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q087-SRC",
+    "pairId": "ADV2E102-U0038-Q087",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who is regarded as the founder of modern national and patriotic poetry in Urdu?",
+    "questionUrdu": "اردو میں جدید قومی اور وطنی شاعری کا بانی کس شاعر کو قرار دیا جاتا ہے؟",
+    "options": [
+      "مولانا حالی",
+      "ابراہیم ذوق",
+      "اکبر الہ آبادی",
+      "نظیر اکبر آبادی"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب مولانا حالی ہے۔ مولانا حالی نے جدید اردو نظم میں قومی بیداری اور حبِ وطن کے موضوعات کو بنیاد فراہم کی، اس لیے درست جواب مولانا حالی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Modern Urdu poetry course material",
+      "referenceUrl": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/MA-Urdu-4th-Semseter/UrduNazm31jul724.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q087"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/MA-Urdu-4th-Semseter/UrduNazm31jul724.pdf",
+        "label": "Modern Urdu poetry course material",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official university course material identifies Hali with the beginning of modern national and patriotic Urdu poetry."
+      },
+      {
+        "url": "https://www.rekhta.org/articles/haali-ki-shayarana-ahmiyat-sajjad-zaheer-articles?lang=ur",
+        "label": "Hali ki shayarana ahmiyat",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent literary essay says Hali's patriotic poetry laid the foundation of national poetry."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original Urdu: ملی اور قومی شاعری کا بانی کسے کہا جاتا ہے؟ The absolute 'founder' wording was scoped to modern Urdu national and patriotic poetry. Academic sources associate that foundation with Hali; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q087-SIM",
+    "pairId": "ADV2E102-U0038-Q087",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which two poetic currents are linked with Hali's foundational modern Urdu verse?",
+    "questionUrdu": "حالی کی بنیادی جدید اردو شاعری کن دو نمایاں رجحانات سے وابستہ ہے؟",
+    "options": [
+      "National and patriotic poetry",
+      "Comic and detective poetry",
+      "Pastoral and nautical poetry",
+      "Scientific and legal poetry"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب قومی اور وطنی شاعری ہے۔ مولانا آزاد قومی اردو یونیورسٹی اور ریختہ فاؤنڈیشن دونوں حالی کو انہی جدید شعری رجحانات کی بنیاد سے جوڑتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Modern Urdu poetry course material",
+      "referenceUrl": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/MA-Urdu-4th-Semseter/UrduNazm31jul724.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q087",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/MA-Urdu-4th-Semseter/UrduNazm31jul724.pdf",
+        "label": "Modern Urdu poetry course material",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The MANUU course material links Hali with the beginning of modern national and patriotic Urdu poetry."
+      },
+      {
+        "url": "https://www.rekhta.org/articles/haali-ki-shayarana-ahmiyat-sajjad-zaheer-articles?lang=ur",
+        "label": "Hali ki shayarana ahmiyat",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Rekhta literary essay independently credits Hali's patriotic verse with laying the foundation of national poetry."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q088-SRC",
+    "pairId": "ADV2E102-U0038-Q088",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who wrote the Urdu novel 'Pressure Cooker'?",
+    "questionUrdu": "اردو ناول پریشر ککر کس مصنف نے لکھا؟",
+    "options": [
+      "اے حمید",
+      "احمد علی",
+      "انتظار حسین",
+      "صدیق سالک"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب صدیق سالک ہے۔ پریشر ککر صدیق سالک کا تحریر کردہ اردو ناول ہے اور دونوں کتابی فہرستیں اسے انہی سے منسوب کرتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Pressure Cooker",
+      "referenceUrl": "https://www.rekhta.org/ebooks/detail/pressure-cooker-siddiq-salik-ebooks",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q088"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/pressure-cooker-siddiq-salik-ebooks",
+        "label": "Pressure Cooker",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's bibliographic record classifies Pressure Cooker as a novel by Siddiq Salik."
+      },
+      {
+        "url": "https://dpllahore.org/wp-content/uploads/2017/06/opac-dpllahore.pdf",
+        "label": "Public library catalogue",
+        "publisher": "Dayal Singh Public Library Lahore",
+        "authorityId": "dpl-lahore",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent public-library catalogue lists Pressure Cooker under Siddiq Salik."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original Urdu: \"پریشر ککر\" کس کا لکھا ہوا ناول ہے؟ Two independent bibliographic sources attribute the novel to Siddiq Salik; answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q088-SIM",
+    "pairId": "ADV2E102-U0038-Q088",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "To which literary genre does Siddiq Salik's 'Pressure Cooker' belong?",
+    "questionUrdu": "صدیق سالک کی کتاب پریشر ککر کس ادبی صنف سے تعلق رکھتی ہے؟",
+    "options": [
+      "Novel",
+      "Epic poem",
+      "Dictionary",
+      "Travel map"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ناول ہے۔ ریختہ اسے صدیق سالک کا ناول قرار دیتا ہے اور دیال سنگھ پبلک لائبریری کا کتابی ریکارڈ بھی اسی تصنیف کی تائید کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Pressure Cooker",
+      "referenceUrl": "https://www.rekhta.org/ebooks/detail/pressure-cooker-siddiq-salik-ebooks",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q088",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/pressure-cooker-siddiq-salik-ebooks",
+        "label": "Pressure Cooker",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's bibliographic record explicitly classifies Pressure Cooker as a novel by Siddiq Salik."
+      },
+      {
+        "url": "https://dpllahore.org/wp-content/uploads/2017/06/opac-dpllahore.pdf",
+        "label": "Public library catalogue",
+        "publisher": "Dayal Singh Public Library Lahore",
+        "authorityId": "dpl-lahore",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Dayal Singh Public Library catalogue independently records Pressure Cooker under Siddiq Salik in its literary holdings."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q090-SRC",
+    "pairId": "ADV2E102-U0038-Q090",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who wrote the verse meaning, 'Was this the grace of insight or the miracle of schooling; who taught Ishmael the manners of filial devotion?'",
+    "questionUrdu": "وہ شعر کس شاعر نے کہا جس کا مفہوم ہے کہ یہ فیضانِ نظر تھا یا مکتب کی کرامت، جس نے اسماعیل کو آدابِ فرزندی سکھائے؟",
+    "options": [
+      "جوش ملیح آبادی",
+      "علامہ محمد اقبال",
+      "اکبر الہ آبادی",
+      "مولانا محمد علی جوہر"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب علامہ محمد اقبال ہے۔ یہ شعر علامہ محمد اقبال سے منسوب ہے اور ان کے مجموعۂ کلام بالِ جبریل میں شامل ہے۔",
+    "source": {
+      "type": "book",
+      "label": "آداب فرزندی",
+      "referenceUrl": "https://www.rekhta.org/allusions/aadab-e-farzandi?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q090"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/allusions/aadab-e-farzandi?lang=ur",
+        "label": "آداب فرزندی",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta attributes the quoted Ismail and filial-conduct verse to Muhammad Iqbal."
+      },
+      {
+        "url": "https://iqbalcyberlibrary.net/files/009/IRE-OCT-1981.pdf",
+        "label": "Iqbal Review, October 1981",
+        "publisher": "Iqbal Academy Pakistan",
+        "authorityId": "iqbal-academy-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Iqbal Academy publication independently prints the verse in its discussion of Iqbal and cites Bal-e-Jibril."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original Urdu: یہ فیضان نظر تھا یا کہ مکتب کی کرامت تھی، سکھائے کس نے اسماعیل کو آداب فرزندی۔ یہ شعر کس کا ہے؟ Both authorities attribute the verse to Allama Muhammad Iqbal; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q090-SIM",
+    "pairId": "ADV2E102-U0038-Q090",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "In which poetry collection does Iqbal's verse about Ismail and filial conduct appear?",
+    "questionUrdu": "اسماعیل اور آدابِ فرزندی سے متعلق اقبال کا شعر کس شعری مجموعے میں شامل ہے؟",
+    "options": [
+      "Bal-e-Jibril",
+      "Bang-e-Dara",
+      "Zarb-e-Kalim",
+      "Armughan-e-Hijaz"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب بالِ جبریل ہے۔ ریختہ اور اقبال اکادمی پاکستان دونوں اس شعر کو اقبال کے مجموعے بالِ جبریل سے منسوب کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "آداب فرزندی",
+      "referenceUrl": "https://www.rekhta.org/allusions/aadab-e-farzandi?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q090",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/allusions/aadab-e-farzandi?lang=ur",
+        "label": "آداب فرزندی",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta attributes the Ismail and filial-conduct verse to Iqbal and identifies its source context."
+      },
+      {
+        "url": "https://iqbalcyberlibrary.net/files/009/IRE-OCT-1981.pdf",
+        "label": "Iqbal Review, October 1981",
+        "publisher": "Iqbal Academy Pakistan",
+        "authorityId": "iqbal-academy-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Iqbal Academy publication independently prints the verse and cites Bal-e-Jibril as its collection."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q091-SRC",
+    "pairId": "ADV2E102-U0038-Q091",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which poet is known as 'Shair-e-Inquilab' (Poet of Revolution)?",
+    "questionUrdu": "شاعرِ انقلاب کے لقب سے کون سا شاعر مشہور ہے؟",
+    "options": [
+      "احسان دانش",
+      "جوش ملیح آبادی",
+      "افتخار کاشمیری",
+      "میر تقی میر"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب جوش ملیح آبادی ہے۔ جوش ملیح آبادی اپنی انقلابی شاعری کی وجہ سے شاعرِ انقلاب کے معروف لقب سے پہچانے جاتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Josh Malihabadi profile",
+      "referenceUrl": "https://www.rekhta.org/poets/josh-malihabadi/profile?lang=Ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q091"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/poets/josh-malihabadi/profile?lang=Ur",
+        "label": "Josh Malihabadi profile",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta identifies Josh Malihabadi by the title Shair-e-Inquilab."
+      },
+      {
+        "url": "https://urducouncil.nic.in/sites/default/files/policy-planning/English_Annual_Report_2020-21_%28final%29.pdf",
+        "label": "Annual Report 2020-21",
+        "publisher": "National Council for Promotion of Urdu Language",
+        "authorityId": "ncpul-india",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official council report uses the title Shair-e-Inquilab for Josh Malihabadi."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original Urdu: شاعر انقلاب کس شاعر کو کہا جاتا ہے؟ Both authorities apply the title Shair-e-Inquilab to Josh Malihabadi; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q091-SIM",
+    "pairId": "ADV2E102-U0038-Q091",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "What idea is expressed by Josh Malihabadi's title 'Shair-e-Inquilab'?",
+    "questionUrdu": "جوش ملیح آبادی کے لقب شاعرِ انقلاب میں کس تصور کی نسبت ظاہر ہوتی ہے؟",
+    "options": [
+      "Revolution",
+      "Navigation",
+      "Agriculture",
+      "Medicine"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب انقلاب ہے۔ ریختہ اور قومی کونسل برائے فروغِ اردو زبان دونوں جوش ملیح آبادی کے لیے شاعرِ انقلاب کا لقب استعمال کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Josh Malihabadi profile",
+      "referenceUrl": "https://www.rekhta.org/poets/josh-malihabadi/profile?lang=Ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q091",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/poets/josh-malihabadi/profile?lang=Ur",
+        "label": "Josh Malihabadi profile",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta identifies Josh Malihabadi with the title Shair-e-Inquilab, literally Poet of Revolution."
+      },
+      {
+        "url": "https://urducouncil.nic.in/sites/default/files/policy-planning/English_Annual_Report_2020-21_%28final%29.pdf",
+        "label": "Annual Report 2020-21",
+        "publisher": "National Council for Promotion of Urdu Language",
+        "authorityId": "ncpul-india",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NCPUL independently uses the same Poet of Revolution title for Josh Malihabadi."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q092-SRC",
+    "pairId": "ADV2E102-U0038-Q092",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which Urdu poet is known as 'Sayyid al-Ahrar'?",
+    "questionUrdu": "سید الاحرار کے لقب سے کون سا اردو شاعر معروف ہے؟",
+    "options": [
+      "جوش ملیح آبادی",
+      "مولانا حسرت موہانی",
+      "محمد علی جوہر",
+      "جگر مراد آبادی"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب مولانا حسرت موہانی ہے۔ مولانا حسرت موہانی کو ان کی آزادی پسند سیاسی اور ادبی خدمات کے باعث سید الاحرار کے لقب سے یاد کیا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Syed-ul-Ahrar Hasrat Mohani",
+      "referenceUrl": "https://www.rekhta.org/ebooks/detail/syed-ul-ahrar-hasrat-mohani-ki-hayat-aur-karname-ishtiyaq-azhar-ebooks",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q092"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/syed-ul-ahrar-hasrat-mohani-ki-hayat-aur-karname-ishtiyaq-azhar-ebooks",
+        "label": "Syed-ul-Ahrar Hasrat Mohani",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's bibliographic record explicitly associates the epithet Syed-ul-Ahrar with Hasrat Mohani."
+      },
+      {
+        "url": "https://allamaiqbal.com/pdf/8u1_66.pdf",
+        "label": "Iqbal Academy bibliographic publication",
+        "publisher": "Iqbal Academy Pakistan",
+        "authorityId": "iqbal-academy-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent Iqbal Academy publication catalogues a work titled Syed-ul-Ahrar Maulana Hasrat Mohani."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original Urdu: اردو میں \"سید الاحرار\" کس شاعر کو کہا جاتا ہے؟ Two independent bibliographic sources associate the title Sayyid al-Ahrar with Maulana Hasrat Mohani; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q092-SIM",
+    "pairId": "ADV2E102-U0038-Q092",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which honorific is attached to Maulana Hasrat Mohani in both cited records?",
+    "questionUrdu": "دونوں مراجع میں مولانا حسرت موہانی کے ساتھ کون سا اعزازی لقب درج ہے؟",
+    "options": [
+      "Sayyid al-Ahrar",
+      "Shair-e-Inquilab",
+      "Shair-e-Mashriq",
+      "Khalil Allah"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب سید الاحرار ہے۔ ریختہ اور اقبال اکادمی پاکستان دونوں اپنے کتابی ریکارڈ میں مولانا حسرت موہانی کے ساتھ یہی لقب درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Syed-ul-Ahrar Hasrat Mohani",
+      "referenceUrl": "https://www.rekhta.org/ebooks/detail/syed-ul-ahrar-hasrat-mohani-ki-hayat-aur-karname-ishtiyaq-azhar-ebooks",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q092",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/syed-ul-ahrar-hasrat-mohani-ki-hayat-aur-karname-ishtiyaq-azhar-ebooks",
+        "label": "Syed-ul-Ahrar Hasrat Mohani",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's bibliographic record explicitly attaches the epithet Syed-ul-Ahrar to Hasrat Mohani."
+      },
+      {
+        "url": "https://allamaiqbal.com/pdf/8u1_66.pdf",
+        "label": "Iqbal Academy bibliographic publication",
+        "publisher": "Iqbal Academy Pakistan",
+        "authorityId": "iqbal-academy-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Iqbal Academy Pakistan independently catalogues Maulana Hasrat Mohani with the title Syed-ul-Ahrar."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q093-SRC",
+    "pairId": "ADV2E102-U0038-Q093",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "From which city was the Urdu monthly magazine 'Makhzan' launched?",
+    "questionUrdu": "اردو ماہنامہ مخزن کا اجرا کس شہر سے ہوا؟",
+    "options": [
+      "لاہور",
+      "لکھنؤ",
+      "دہلی",
+      "کلکتہ"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب لاہور ہے۔ مخزن اپریل 1901ء میں لاہور سے شائع ہونا شروع ہوا، اس لیے درست جواب لاہور ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Makhzan archive catalogue",
+      "referenceUrl": "https://searcharchives.bl.uk/catalog/036-002896705",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q093"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://searcharchives.bl.uk/catalog/036-002896705",
+        "label": "Makhzan archive catalogue",
+        "publisher": "British Library",
+        "authorityId": "british-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Library catalogue states that the Urdu periodical Makhzan began publication in Lahore in April 1901."
+      },
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/makhzan-lahore-shumara-number-001-shaikh-abdul-qadir-magazines-5",
+        "label": "Makhzan Lahore, issue 1",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's first-issue bibliographic record identifies the periodical as Makhzan, Lahore."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original Urdu: ماہنامہ مخزن کہاں سے جاری ہوا؟ The British Library and an independent bibliographic record identify Lahore as the launch city; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q093-SIM",
+    "pairId": "ADV2E102-U0038-Q093",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "In which month and year did the Urdu periodical 'Makhzan' begin publication?",
+    "questionUrdu": "اردو رسالہ مخزن کی اشاعت کس مہینے اور سال میں شروع ہوئی؟",
+    "options": [
+      "April 1901",
+      "August 1947",
+      "January 1910",
+      "March 1930"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب اپریل 1901ء ہے۔ برٹش لائبریری اور ریختہ کے پہلے شمارے کا ریکارڈ مخزن کے آغاز کو اسی وقت سے جوڑتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Makhzan archive catalogue",
+      "referenceUrl": "https://searcharchives.bl.uk/catalog/036-002896705",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q093",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://searcharchives.bl.uk/catalog/036-002896705",
+        "label": "Makhzan archive catalogue",
+        "publisher": "British Library",
+        "authorityId": "british-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Library catalogue states that Makhzan began publication in Lahore in April 1901."
+      },
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/makhzan-lahore-shumara-number-001-shaikh-abdul-qadir-magazines-5",
+        "label": "Makhzan Lahore, issue 1",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's first-issue record independently identifies the opening Makhzan issue as the Lahore publication from 1901."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q094-SRC",
+    "pairId": "ADV2E102-U0038-Q094",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Shawwal is which month of the Islamic calendar?",
+    "questionUrdu": "شوال اسلامی ہجری تقویم کا کون سا مہینہ ہے؟",
+    "options": [
+      "10th",
+      "9th",
+      "7th",
+      "8th"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 10th ہے۔ ہجری مہینوں کی ترتیب میں شوال رمضان کے بعد آتا ہے اور دسویں مہینے کی حیثیت رکھتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "The Hijra and the Islamic calendar",
+      "referenceUrl": "https://www.dar-alifta.org/en/article/details/4310/the-hijra-and-the-islamic-calendar",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q094"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.dar-alifta.org/en/article/details/4310/the-hijra-and-the-islamic-calendar",
+        "label": "The Hijra and the Islamic calendar",
+        "publisher": "Egypt's Dar Al-Ifta",
+        "authorityId": "egypt-dar-al-ifta",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Dar Al-Ifta's ordered list of Hijri months places Shawwal tenth."
+      },
+      {
+        "url": "https://www.islamic-relief.org.uk/resources/islamic-calendar/shawwal/",
+        "label": "Shawwal",
+        "publisher": "Islamic Relief UK",
+        "authorityId": "islamic-relief-uk",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Islamic Relief independently identifies Shawwal as the tenth month of the Islamic calendar."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Spelling and grammar were standardized. Shawwal is the tenth Hijri month; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q094-SIM",
+    "pairId": "ADV2E102-U0038-Q094",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which Hijri month immediately precedes Shawwal?",
+    "questionUrdu": "ہجری تقویم میں شوال سے فوراً پہلے کون سا مہینہ آتا ہے؟",
+    "options": [
+      "Ramadan",
+      "Rajab",
+      "Muharram",
+      "Dhu al-Hijjah"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب رمضان ہے۔ مصر کے دار الافتاء کی مرتب فہرست اور اسلامک ریلیف دونوں شوال کو رمضان کے بعد آنے والا مہینہ بتاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "The Hijra and the Islamic calendar",
+      "referenceUrl": "https://www.dar-alifta.org/en/article/details/4310/the-hijra-and-the-islamic-calendar",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q094",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.dar-alifta.org/en/article/details/4310/the-hijra-and-the-islamic-calendar",
+        "label": "The Hijra and the Islamic calendar",
+        "publisher": "Egypt's Dar Al-Ifta",
+        "authorityId": "egypt-dar-al-ifta",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Dar Al-Ifta's ordered Hijri-month list places Ramadan immediately before Shawwal."
+      },
+      {
+        "url": "https://www.islamic-relief.org.uk/resources/islamic-calendar/shawwal/",
+        "label": "Shawwal",
+        "publisher": "Islamic Relief UK",
+        "authorityId": "islamic-relief-uk",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Islamic Relief independently describes Shawwal as the month following Ramadan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q095-SRC",
+    "pairId": "ADV2E102-U0038-Q095",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "According to the conventional report that Umar ibn al-Khattab died on 1 Muharram 24 AH, in which Hijri month did he die?",
+    "questionUrdu": "اس روایتی قول کے مطابق کہ عمر بن خطاب 1 محرم 24 ہجری کو وفات پا گئے، ان کی وفات کس ہجری مہینے میں ہوئی؟",
+    "options": [
+      "Muharram",
+      "Safar",
+      "Dhu al-Hijjah",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Muharram ہے۔ درج روایت میں تاریخ 1 محرم 24 ہجری ہے، اس لیے مطلوبہ ہجری مہینہ محرم ہے۔",
+    "source": {
+      "type": "book",
+      "label": "New Islamic year 1446 Hijrah",
+      "referenceUrl": "https://www.radio.gov.pk/currentaffairs/08-07-2024/new-islamic-year-1446-hijrah",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q095"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.radio.gov.pk/currentaffairs/08-07-2024/new-islamic-year-1446-hijrah",
+        "label": "New Islamic year 1446 Hijrah",
+        "publisher": "Radio Pakistan",
+        "authorityId": "radio-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Radio Pakistan identifies 1 Muharram as the conventionally observed martyrdom day of Umar."
+      },
+      {
+        "url": "https://www.alhakam.org/friday-sermon-men-of-excellence-hazrat-umar-ibn-al-khattab-8-october-2021",
+        "label": "Men of Excellence: Umar ibn al-Khattab",
+        "publisher": "Al Hakam",
+        "authorityId": "al-hakam",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent historical account reports that the majority of historians place Umar's death on 1 Muharram 24 AH."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source conflated the late-Dhu-al-Hijjah attack with the conventionally reported death date. The repaired stem states the convention explicitly; the answer is Muharram (A)."
+  },
+  {
+    "id": "ADV2E102-U0038-Q095-SIM",
+    "pairId": "ADV2E102-U0038-Q095",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "On which day of Muharram is Umar ibn al-Khattab's death conventionally observed?",
+    "questionUrdu": "روایتی بیان کے مطابق عمر بن خطاب کی وفات محرم کی کس تاریخ کو یاد کی جاتی ہے؟",
+    "options": [
+      "1 Muharram",
+      "10 Muharram",
+      "15 Muharram",
+      "27 Muharram"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب یکم محرم ہے۔ ریڈیو پاکستان اور تاریخی جائزہ دونوں عمر بن خطاب کی وفات کے لیے 1 محرم کی تاریخ درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "New Islamic year 1446 Hijrah",
+      "referenceUrl": "https://www.radio.gov.pk/currentaffairs/08-07-2024/new-islamic-year-1446-hijrah",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q095",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.radio.gov.pk/currentaffairs/08-07-2024/new-islamic-year-1446-hijrah",
+        "label": "New Islamic year 1446 Hijrah",
+        "publisher": "Radio Pakistan",
+        "authorityId": "radio-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Radio Pakistan identifies 1 Muharram as the conventionally observed martyrdom day of Umar."
+      },
+      {
+        "url": "https://www.alhakam.org/friday-sermon-men-of-excellence-hazrat-umar-ibn-al-khattab-8-october-2021",
+        "label": "Men of Excellence: Umar ibn al-Khattab",
+        "publisher": "Al Hakam",
+        "authorityId": "al-hakam",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Al Hakam independently reports that the majority historical view dates Umar's death to 1 Muharram."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q096-SRC",
+    "pairId": "ADV2E102-U0038-Q096",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "On which date is Shab-e-Mi'raj traditionally commemorated?",
+    "questionUrdu": "شبِ معراج روایتی طور پر کس تاریخ کو منائی جاتی ہے؟",
+    "options": [
+      "27 Rajab",
+      "17 Rajab",
+      "17 Ramadan",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 27 Rajab ہے۔ رائج روایت کے مطابق اسراء و معراج کی یاد ستائیس رجب کی رات منائی جاتی ہے، اس لیے درست جواب 27 رجب ہے۔",
+    "source": {
+      "type": "book",
+      "label": "27th Rajab: Al-Isra wal-Mi'raj",
+      "referenceUrl": "https://www.islamic-relief.org.uk/resources/islamic-calendar/rajab/27th-rajab-al-isra-wal-miraj/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q096"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.islamic-relief.org.uk/resources/islamic-calendar/rajab/27th-rajab-al-isra-wal-miraj/",
+        "label": "27th Rajab: Al-Isra wal-Mi'raj",
+        "publisher": "Islamic Relief UK",
+        "authorityId": "islamic-relief-uk",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Islamic Relief identifies 27 Rajab as the traditional date on which Isra and Mi'raj is commemorated."
+      },
+      {
+        "url": "https://www.dar-alifta.org/en/article/details/1871/the-miracle-of-the-night-journey-and-heavenly-ascension-of-prophet-muhammad",
+        "label": "The Night Journey and Heavenly Ascension",
+        "publisher": "Egypt's Dar Al-Ifta",
+        "authorityId": "egypt-dar-al-ifta",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Dar Al-Ifta independently states that the prevalent scholarly view commemorates the event on the night of 27 Rajab."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The disputed historical dating was repaired to the established traditional commemoration. Both authorities give 27 Rajab; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q096-SIM",
+    "pairId": "ADV2E102-U0038-Q096",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "What two events are named by the expression 'Isra and Mi'raj'?",
+    "questionUrdu": "اسراء و معراج کی اصطلاح کن دو واقعات کے ناموں پر مشتمل ہے؟",
+    "options": [
+      "The Night Journey and the Ascension",
+      "The Migration and the Treaty",
+      "The Birth and the Farewell Pilgrimage",
+      "The First Revelation and the Battle of Badr"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب رات کا سفر اور آسمانی عروج ہے۔ اسلامک ریلیف اور مصر کے دار الافتاء دونوں اسراء کو شبانہ سفر اور معراج کو آسمانی عروج کے طور پر بیان کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "27th Rajab: Al-Isra wal-Mi'raj",
+      "referenceUrl": "https://www.islamic-relief.org.uk/resources/islamic-calendar/rajab/27th-rajab-al-isra-wal-miraj/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q096",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.islamic-relief.org.uk/resources/islamic-calendar/rajab/27th-rajab-al-isra-wal-miraj/",
+        "label": "27th Rajab: Al-Isra wal-Mi'raj",
+        "publisher": "Islamic Relief UK",
+        "authorityId": "islamic-relief-uk",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Islamic Relief describes al-Isra wal-Mi'raj as the Night Journey and Ascension."
+      },
+      {
+        "url": "https://www.dar-alifta.org/en/article/details/1871/the-miracle-of-the-night-journey-and-heavenly-ascension-of-prophet-muhammad",
+        "label": "The Night Journey and Heavenly Ascension",
+        "publisher": "Egypt's Dar Al-Ifta",
+        "authorityId": "egypt-dar-al-ifta",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Dar Al-Ifta independently describes the event as the Night Journey followed by the Heavenly Ascension."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q097-SRC",
+    "pairId": "ADV2E102-U0038-Q097",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which scripture was revealed to Prophet Dawud?",
+    "questionUrdu": "حضرت داؤد علیہ السلام پر کون سی آسمانی کتاب نازل ہوئی؟",
+    "options": [
+      "Zabur",
+      "Tawrat",
+      "Quran",
+      "Injil"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Zabur ہے۔ قرآن کی سورۂ نساء آیت 163 کے مطابق حضرت داؤد علیہ السلام کو زبور عطا کی گئی۔",
+    "source": {
+      "type": "book",
+      "label": "Quran 4:163",
+      "referenceUrl": "https://quran.com/4/163",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q097"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://quran.com/4/163",
+        "label": "Quran 4:163",
+        "publisher": "Quran.com",
+        "authorityId": "quran-com",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Quran 4:163 states that Allah gave the Zabur to Dawud."
+      },
+      {
+        "url": "https://corpus.quran.com/translation.jsp?chapter=4&verse=163",
+        "label": "Quranic Arabic Corpus: 4:163",
+        "publisher": "University of Leeds",
+        "authorityId": "quranic-arabic-corpus",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university corpus independently translates the verse as giving the Psalms to David."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and transliterations were standardized. Quran 4:163 says Dawud was given the Zabur; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q097-SIM",
+    "pairId": "ADV2E102-U0038-Q097",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which English name is commonly used for the Zabur given to Dawud?",
+    "questionUrdu": "حضرت داؤد علیہ السلام کو دی گئی زبور کے لیے انگریزی میں عام طور پر کون سا نام استعمال ہوتا ہے؟",
+    "options": [
+      "Psalms",
+      "Genesis",
+      "Gospels",
+      "Proverbs"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب زبور یعنی پامز ہے۔ قرآن ڈاٹ کام اور یونیورسٹی آف لیڈز کا قرآنی متن دونوں آیت میں داؤد کو دی گئی کتاب کا ترجمہ پامز کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Quran 4:163",
+      "referenceUrl": "https://quran.com/4/163",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q097",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://quran.com/4/163",
+        "label": "Quran 4:163",
+        "publisher": "Quran.com",
+        "authorityId": "quran-com",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Quran.com's translation of 4:163 renders the scripture given to Dawud as the Psalms."
+      },
+      {
+        "url": "https://corpus.quran.com/translation.jsp?chapter=4&verse=163",
+        "label": "Quranic Arabic Corpus: 4:163",
+        "publisher": "University of Leeds",
+        "authorityId": "quranic-arabic-corpus",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Leeds Quranic corpus independently translates the same scripture as the Psalms."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q098-SRC",
+    "pairId": "ADV2E102-U0038-Q098",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Bani Israel literally denotes the children or descendants of which prophet, also called Israel?",
+    "questionUrdu": "بنی اسرائیل سے لفظی طور پر کس نبی کی اولاد یا نسل مراد ہے، جنہیں اسرائیل بھی کہا جاتا ہے؟",
+    "options": [
+      "Prophet Musa",
+      "Prophet Yaqub",
+      "Prophet Ibrahim",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Prophet Yaqub ہے۔ اسرائیل حضرت یعقوب علیہ السلام کا دوسرا نام ہے، اس لیے بنی اسرائیل سے ان ہی کی اولاد اور نسل مراد ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Quranic concept: Israel",
+      "referenceUrl": "https://corpus.quran.com/concept.jsp?id=israel",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q098"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://corpus.quran.com/concept.jsp?id=israel",
+        "label": "Quranic concept: Israel",
+        "publisher": "University of Leeds",
+        "authorityId": "quranic-arabic-corpus",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Leeds corpus identifies Israel as Prophet Yaqub and Bani Israel as his children or descendants."
+      },
+      {
+        "url": "https://islamansiklopedisi.org.tr/israil-beni-israil",
+        "label": "İsrâil and Benî İsrâil",
+        "publisher": "TDV İslâm Ansiklopedisi",
+        "authorityId": "tdv-islam-encyclopedia",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly encyclopedia independently explains Bani Israel as the descendants of Yaqub, who is called Israel."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The inaccurate phrase 'nation of' was repaired to the documented lineage meaning. Israel is Yaqub and Bani Israel are his descendants; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q098-SIM",
+    "pairId": "ADV2E102-U0038-Q098",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "By what other name is Prophet Yaqub identified in the phrase Bani Israel?",
+    "questionUrdu": "بنی اسرائیل کی نسبت میں حضرت یعقوب علیہ السلام کو کس دوسرے نام سے پہچانا جاتا ہے؟",
+    "options": [
+      "Israel",
+      "Ishmael",
+      "David",
+      "Solomon"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب اسرائیل ہے۔ یونیورسٹی آف لیڈز کے قرآنی ذخیرے اور ترک اسلامی دائرۃ المعارف دونوں یعقوب علیہ السلام کو اسرائیل کے نام سے شناخت کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Quranic concept: Israel",
+      "referenceUrl": "https://corpus.quran.com/concept.jsp?id=israel",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q098",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://corpus.quran.com/concept.jsp?id=israel",
+        "label": "Quranic concept: Israel",
+        "publisher": "University of Leeds",
+        "authorityId": "quranic-arabic-corpus",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Leeds corpus identifies Prophet Yaqub by the name Israel."
+      },
+      {
+        "url": "https://islamansiklopedisi.org.tr/israil-beni-israil",
+        "label": "İsrâil and Benî İsrâil",
+        "publisher": "TDV İslâm Ansiklopedisi",
+        "authorityId": "tdv-islam-encyclopedia",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The TDV Islamic Encyclopedia independently explains that Yaqub is called Israel."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0038-Q099-SRC",
+    "pairId": "ADV2E102-U0038-Q099",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "In the conventional hierarchy of Sunni Islamic jurisprudence, which listed source comes second after the Quran?",
+    "questionUrdu": "سنی اسلامی فقہ کی معروف درجہ بندی میں قرآن کے بعد درج مصادر میں سے کون سا دوسرا ماخذ ہے؟",
+    "options": [
+      "Quran",
+      "Ijma",
+      "Hadith/Sunnah",
+      "All of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Hadith/Sunnah ہے۔ اسلامی قانون کے بنیادی مصادر میں قرآن پہلے اور حدیث یا سنت اس کے بعد دوسرا بنیادی ماخذ شمار ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Sunnah as a source of Islamic law",
+      "referenceUrl": "https://albasirah.numl.edu.pk/index.php/alb/article/view/206",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q099"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://albasirah.numl.edu.pk/index.php/alb/article/view/206",
+        "label": "Sunnah as a source of Islamic law",
+        "publisher": "National University of Modern Languages",
+        "authorityId": "numl",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university journal identifies the Sunnah as the second source of Islamic law after the Quran."
+      },
+      {
+        "url": "https://jmqs.usim.edu.my/index.php/jmqs/article/view/68",
+        "label": "Hadith and Sunnah in Islamic law",
+        "publisher": "Universiti Sains Islam Malaysia",
+        "authorityId": "usim",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university journal identifies Hadith or Sunnah as the second source of Islamic law after the Quran."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The unqualified stem was scoped to the conventional Sunni hierarchy and 'Hadiths' was standardized to Hadith/Sunnah. Two university sources identify it as second after the Quran; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0038-Q099-SIM",
+    "pairId": "ADV2E102-U0038-Q099",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which source ranks first in the conventional Sunni hierarchy of Islamic jurisprudence?",
+    "questionUrdu": "سنی اسلامی فقہ کے معروف سلسلۂ مصادر میں پہلا درجہ کس ماخذ کو حاصل ہے؟",
+    "options": [
+      "Quran",
+      "Local custom",
+      "A modern newspaper",
+      "A geography atlas"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب قرآن ہے۔ نمل اور یونیورسٹی سائنس اسلام ملیشیا کے علمی مجلات دونوں حدیث و سنت کو قرآن کے بعد دوسرا ماخذ کہتے ہیں، جس سے قرآن کا پہلا درجہ واضح ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Sunnah as a source of Islamic law",
+      "referenceUrl": "https://albasirah.numl.edu.pk/index.php/alb/article/view/206",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0038-q099",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://albasirah.numl.edu.pk/index.php/alb/article/view/206",
+        "label": "Sunnah as a source of Islamic law",
+        "publisher": "National University of Modern Languages",
+        "authorityId": "numl",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NUML journal identifies the Quran as the first source and Sunnah as the second source of Islamic law."
+      },
+      {
+        "url": "https://jmqs.usim.edu.my/index.php/jmqs/article/view/68",
+        "label": "Hadith and Sunnah in Islamic law",
+        "publisher": "Universiti Sains Islam Malaysia",
+        "authorityId": "usim",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The USIM journal independently places the Quran first and Hadith or Sunnah second in the hierarchy."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

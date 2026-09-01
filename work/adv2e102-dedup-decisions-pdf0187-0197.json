@@ -165,10 +165,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0021-Q009",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
+    "duplicateOf": "ADV2E102-U0017-Q014",
+    "reason": "The earlier-source-order U0017 canonical asks the identical annual date of International Literacy Day and answers 8 September.",
     "testedProposition": "On which date is International Literacy Day observed each year? Correct answer: 8 September.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -180,17 +180,18 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0001-Q003-SIM"
+        "ADV2E102-U0001-Q003-SIM",
+        "ADV2E102-U0017-Q014"
       ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0021-Q010",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced items test related or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
+    "duplicateOf": "ADV2E102-U0018-Q007",
+    "reason": "Earlier source-order U0018 Q7 asks the identical SAARC observer-versus-member proposition and answers Myanmar.",
     "testedProposition": "Which listed country is an observer rather than a member of SAARC? Correct answer: Myanmar.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -202,7 +203,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0010-Q023-SRC"
+        "ADV2E102-U0010-Q023-SRC",
+        "ADV2E102-U0018-Q007"
       ],
       "answerConflictReviewed": true
     }

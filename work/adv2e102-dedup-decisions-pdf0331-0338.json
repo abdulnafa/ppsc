@@ -1,0 +1,2112 @@
+[
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q001",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0009-Q014",
+    "reason": "Earlier retained U0009 asks the identical capital-of-Egypt proposition and answers Cairo.",
+    "testedProposition": "What is the capital of Egypt? Correct answer: Cairo.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0009-Q014"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q002",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Frédéric Passy, a co-recipient of the first Nobel Peace Prize in 1901, belonged to which country? Correct answer: France.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q003",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier BRICS material asks what the letter S represents; this row instead identifies a listed non-member in the 2020 five-country grouping.",
+    "testedProposition": "Regarding BRICS membership in 2020, which listed country was not a member? Correct answer: Canada.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0026-Q009"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q004",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "AB de Villiers represented which country in international cricket? Correct answer: South Africa.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q005",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0035-Q032",
+    "reason": "Earlier retained U0035 asks the exact same 1974 First Amendment substitution of Article 1's territorial clauses.",
+    "testedProposition": "Which 1974 amendment to Pakistan's 1973 Constitution substituted Article 1's clauses defining the territories of Pakistan? Correct answer: First.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0035-Q032"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q006",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "P239-Q005-SRC",
+    "reason": "The pinned source asks who was Pakistan's second Governor-General; that is the same succession proposition and answers Khawaja Nazimuddin.",
+    "testedProposition": "Who succeeded Muhammad Ali Jinnah as Governor-General of Pakistan in 1948? Correct answer: Khawaja Nazimuddin.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P239-Q005-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q007",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier U0015 asks the duration of Suri-dynasty rule; this row asks Humayun's personal exile interval, a different subject despite the same dates.",
+    "testedProposition": "After Sher Shah Suri ousted Emperor Humayun in 1540, approximately how long did Humayun remain in exile before his restoration in 1555? Correct answer: 15 years.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0015-Q032"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q008",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0022-Q045",
+    "reason": "Earlier retained U0022 asks the same 1906-1910 central-office location of the All-India Muslim League and answers Aligarh.",
+    "testedProposition": "When the All-India Muslim League was established in 1906, which city was selected for its central office? Correct answer: Aligarh.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q045"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q009",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0007-Q015",
+    "reason": "The retained U0007 companion asks the same normal constitutional term of Pakistan's President and answers five years.",
+    "testedProposition": "Under Article 44 of Pakistan's 1973 Constitution, what is the President's term of office? Correct answer: 5 years.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q015"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q010",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "On what date was Pakistan admitted to the United Nations? Correct answer: 30 September 1947.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q011",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "As of 2026, how many recipients are counted for Pakistan's Nishan-i-Haider? Correct answer: 11.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q012",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "With which listed regional literary tradition is Sachal Sarmast especially associated? Correct answer: Sindhi.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q013",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0019-Q023",
+    "reason": "Earlier retained U0019 asks the exact same ruler during Ibn Battuta's service at the Delhi court and answers Muhammad ibn Tughluq.",
+    "testedProposition": "Ibn Battuta visited India and joined the Delhi court during whose reign? Correct answer: Muhammad ibn Tughluq.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0019-Q023"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q014",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier constitutional rows ask chairs or members of other bodies; this row asks which office-holder is excluded from the Council of Common Interests.",
+    "testedProposition": "Which listed office-holder is not a member of Pakistan's Council of Common Interests under Article 153? Correct answer: Provincial Governors.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0032-Q035"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q015",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0034-Q027",
+    "reason": "Earlier retained U0034 asks the same year in which the Cripps Mission was sent to India and answers 1942.",
+    "testedProposition": "In which year did the Cripps Mission arrive in India? Correct answer: 1942.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0034-Q027"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q016",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0019-Q040",
+    "reason": "Earlier retained U0019 asks the identical Bradlaugh Hall city proposition and answers Lahore.",
+    "testedProposition": "In which city is Bradlaugh Hall located? Correct answer: Lahore.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0019-Q040"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q017",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "In which region did the Faraizi movement begin? Correct answer: Bengal.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q018",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "P238-Q010-SRC",
+    "reason": "The pinned source asks the identical Indus Waters Treaty signing-year proposition and answers 1960.",
+    "testedProposition": "In which year was the Indus Waters Treaty signed? Correct answer: 1960.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P238-Q010-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q019",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: the source's phrase 'first secretary of Trustee' does not identify a specific board, office or date. Accessible accounts conflict between Sir Syed as life Honorary Secretary and Syed Mahmud as a trustee-board secretary; no two independent direct authorities resolve the exact proposition, so the printed key was not promoted.",
+    "testedProposition": "Who was the first secretary under the trustee administration of the Muhammadan Anglo-Oriental College at Aligarh? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q020",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "In Pakistan's official parliamentary history, the movement for a separate homeland is described as based on which theory? Correct answer: Two-Nation Theory.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q021",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier U0036 asks Atta Shad's language; this row asks Mast Tawakali's language, a different poet proposition.",
+    "testedProposition": "Mast Tawakali is renowned as a poet in which language? Correct answer: Balochi.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0036-Q031"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q022",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "The compared FIA rows concern different office-holders and explicitly different dates (2018, 2020, and 2026).",
+    "testedProposition": "Who served as Director General of Pakistan's Federal Investigation Agency in 2020? Correct answer: Wajid Zia.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q044",
+        "P239-Q013-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q023",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Who served as Chairman of PEMRA in 2020? Correct answer: Muhammad Saleem Baig.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q024",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0010-Q036",
+    "reason": "The retained U0010 companion asks the same source of the Jhelum River and answers Verinag Spring in Kashmir.",
+    "testedProposition": "The Jhelum River rises at which listed location? Correct answer: Verinag spring in the Kashmir Valley.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0010-Q036"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q025",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which plane lies midway between the North and South Poles and divides Earth into Northern and Southern Hemispheres? Correct answer: Equatorial plane.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q026",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "In which country is the Dasht-e-Lut desert located? Correct answer: Iran.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q027",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier U0016 asks which organ contains the medulla oblongata; this row asks the principal organ affected by Parkinson's disease.",
+    "testedProposition": "Parkinson's disease primarily affects which organ? Correct answer: Brain.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0016-Q066"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q028",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "A cataract affects the lens of which organ? Correct answer: Eye.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q029",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "An object has a mass of 100 kg on Earth. What is its mass on the Moon? Correct answer: 100 kg.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q030",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which branch of medicine specializes in the study and treatment of cancer? Correct answer: Oncology.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q031",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed factor is a common trigger of allergic asthma? Correct answer: Allergy.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q032",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed term is not a documented standard Microsoft Excel chart type? Correct answer: T-graph.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q033",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q1065-SRC",
+    "reason": "The pinned IBES source asks the identical modern Excel worksheet column-count proposition and answers 16,384.",
+    "testedProposition": "How many columns does a worksheet in Microsoft Excel 2007 contain? Correct answer: 16,384.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1065-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q034",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0187-SIM",
+    "reason": "The pinned IBES companion asks the identical name of physical printer output and answers hard copy.",
+    "testedProposition": "What kind of output does a printer normally produce on paper? Correct answer: Hard copy.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0187-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q035",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0744-SRC",
+    "reason": "The pinned IBES source asks the identical Word italic-formatting shortcut and answers Ctrl+I.",
+    "testedProposition": "In Microsoft Word for Windows desktop, which keyboard shortcut applies italic formatting to selected text? Correct answer: Ctrl+I.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0744-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q036",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which unit measures the frequency of a periodic analog signal? Correct answer: Hertz.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q037",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "The pinned item asks broadly whether audio and video can be inserted; this row separately tests the listed JPG, WAV, and GIF formats, including still and animated images.",
+    "testedProposition": "In Desktop Microsoft PowerPoint, which of the listed media file formats can be inserted or used? Correct answer: All of these.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1259-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q038",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0726-SRC",
+    "reason": "The pinned IBES source tests the same repeated-F8 selection stage in Word: the unit after the whole word, or the third press from no selection, is a sentence.",
+    "testedProposition": "In Microsoft Word for Windows desktop, starting with no selection, what is selected after pressing F8 three times? Correct answer: A sentence.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0726-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q039",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier items locate specific commands such as Shapes or Drawing Canvas; this row locates the Illustrations group itself, a different Ribbon object.",
+    "testedProposition": "In Microsoft Word desktop, on which Ribbon tab is the Illustrations group found? Correct answer: Insert.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0962-SRC",
+        "IBES-Q0942-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q040",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "In Microsoft Excel desktop, which can be assigned a new name: a worksheet tab or a saved workbook file? Correct answer: Both worksheet and workbook.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q041",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q1037-SRC",
+    "reason": "The pinned IBES source asks the identical Word interface element that shows or sets tab stops and paragraph indents and answers the ruler.",
+    "testedProposition": "Which Microsoft Word desktop interface element is used to set paragraph indents and tab stops? Correct answer: Ruler.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1037-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q042",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which action selects a contiguous range of slides in Microsoft PowerPoint desktop? Correct answer: Hold Shift and click the last slide in the range.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q043",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "In Microsoft PowerPoint desktop, unless Apply to All is chosen, a transition is applied to which slide? Correct answer: The currently selected slide.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q044",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "The pinned item asks where Excel shows a workbook name; this row asks the Word element displaying a document name, a different application proposition.",
+    "testedProposition": "Which Microsoft Word desktop interface element displays the open document's name? Correct answer: Title bar.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1103-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q045",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Other Word items locate Cover Page or Shapes; this row locates the distinct Screenshot command.",
+    "testedProposition": "In Microsoft Word 2016 for Windows, on which Ribbon tab is the Screenshot command found? Correct answer: Insert.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0944-SRC",
+        "IBES-Q0962-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q046",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0994-SRC",
+    "reason": "The pinned IBES source asks the identical Word table command for combining selected cells and answers Merge Cells.",
+    "testedProposition": "Which Microsoft Word desktop table command combines two or more selected cells into one? Correct answer: Merge Cells.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0994-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q047",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q1084-SRC",
+    "reason": "The pinned IBES source asks the identical reference type that remains fixed when a spreadsheet formula is copied and answers absolute reference.",
+    "testedProposition": "In Spreadsheet applications, which reference type keeps a referenced cell fixed when a formula is copied? Correct answer: Absolute reference.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1084-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q048",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0967-SRC",
+    "reason": "The pinned IBES source asks the identical Word Ribbon tab for Header and Footer commands and answers Insert.",
+    "testedProposition": "In Microsoft Word desktop, on which Ribbon tab are the Header and Footer commands found? Correct answer: Insert.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0967-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q049",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "In Microsoft Word desktop, what default name is initially given to the first new, unsaved blank document in a session? Correct answer: Document1.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q050",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0884-SRC",
+    "reason": "The pinned IBES source tests the same primary Word output-item proposition and answers a document.",
+    "testedProposition": "Microsoft Word desktop is primarily used to create and edit which type of item? Correct answer: Documents.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0884-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q051",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "The pinned item counts Excel page orientations; this row independently asks the count in Word.",
+    "testedProposition": "How many standard page-orientation choices does Microsoft Word desktop provide? Correct answer: 2.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1149-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q052",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0005-Q026",
+    "reason": "Earlier retained U0005 asks the same copy-and-paste operation for duplicating content while leaving the original in place.",
+    "testedProposition": "In Microsoft Office desktop, which pair of commands makes a duplicate through the Clipboard while leaving the original in place? Correct answer: Copy and Paste.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q026"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q053",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "On which Microsoft Word desktop Ribbon tab are the Mail Merge commands found? Correct answer: Mailings.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q054",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which keyboard shortcut opens Find in Microsoft Word for Windows? Correct answer: Ctrl+F.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q055",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "What is the smallest nonempty table, by rows and columns, that can be created in Microsoft Word desktop? Correct answer: 1 row by 1 column.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q056",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q1251-SRC",
+    "reason": "The pinned IBES source asks the same supported PowerPoint maximum slide magnification proposition and answers 400 percent.",
+    "testedProposition": "What is the maximum zoom percentage in Desktop Microsoft PowerPoint 2010-2016? Correct answer: 400%.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1251-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q057",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "The pinned item asks Excel's AutoRecover interval; this row asks Word's separately configured default interval.",
+    "testedProposition": "Under the Microsoft Word desktop AutoRecover default, how often is recovery information saved? Correct answer: Every 10 minutes.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1107-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q058",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q1061-SRC",
+    "reason": "The pinned IBES source asks the identical worksheet row-column intersection proposition and answers cell.",
+    "testedProposition": "In a worksheet, what is formed at the intersection of a row and a column? Correct answer: Cell.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1061-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q059",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which symbol must an ordinary Microsoft Excel desktop formula begin with? Correct answer: =.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q060",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q1213-SRC",
+    "reason": "The pinned IBES source already tests actions that advance a PowerPoint slide show and explicitly includes Spacebar, the same functional proposition.",
+    "testedProposition": "During a Microsoft PowerPoint desktop slide show, which listed key advances to the next slide? Correct answer: Spacebar.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1213-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q061",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which horizontal-alignment choice spaces cell contents evenly across the cell width in Microsoft Excel desktop? Correct answer: Distributed.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q062",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "The pinned companion asks for the Shift+F7 shortcut; this row asks for the named tool, Thesaurus, a different requested field.",
+    "testedProposition": "Which Microsoft Word desktop tool is used to find synonyms for a selected word? Correct answer: Thesaurus.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0729-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q063",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0005-Q026",
+    "reason": "The retained U0005 companion asks which editing action places selected content on the Clipboard while leaving the original, and answers Copy.",
+    "testedProposition": "Which listed Microsoft PowerPoint desktop action places selected content on the Office Clipboard? Correct answer: Copy.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q026"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q064",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "What is a drop cap in word-processing typography? Correct answer: A large initial capital extending down through several lines.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q065",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "P238-Q039-SIM",
+    "reason": "The pinned companion asks the exact same PowerPoint key for starting a slide show from the beginning and answers F5.",
+    "testedProposition": "Which key starts a Microsoft PowerPoint desktop slide show from the beginning? Correct answer: F5.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P238-Q039-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q066",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0731-SRC",
+    "reason": "The pinned IBES source asks the identical Word function key for updating selected fields and answers F9.",
+    "testedProposition": "Which function key updates a selected field in Microsoft Word desktop, including a bibliography field? Correct answer: F9.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0731-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q067",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0580-SRC",
+    "reason": "The pinned IBES source asks the identical expansion of DNS and answers Domain Name System.",
+    "testedProposition": "What does DNS stand for in computer networking? Correct answer: Domain Name System.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0580-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q068",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier cache rows ask CPU-proximity performance or relative speed; this row identifies storage that holds parts of executing programs and their data.",
+    "testedProposition": "Which listed storage holds parts of executing programs and their data for fast reuse? Correct answer: Cache.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0020-Q055",
+        "ADV2E102-U0006-Q045"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q069",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0602-SRC",
+    "reason": "The pinned IBES source asks the same clickable connection to another page or resource and answers hyperlink.",
+    "testedProposition": "What is a word or other element on a web page that opens another document or resource when clicked? Correct answer: Hyperlink.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0602-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q070",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0314-SIM",
+    "reason": "The pinned IBES companion asks the identical meaning of RW in CD-RW and answers rewritable.",
+    "testedProposition": "Which two-letter element in the acronym CD-RW indicates reusable, rewritable optical storage? Correct answer: RW.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0314-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q071",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "The pinned Word item locates Text Box in Word's Insert-tab Text group; this row asks the feature used to add free-standing text on a PowerPoint slide.",
+    "testedProposition": "Which listed feature is used to add a free-standing block of text to a presentation slide? Correct answer: Text box.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0970-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q072",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "To select multiple nonadjacent slides in PowerPoint for Windows, which listed method is used? Correct answer: Ctrl+click.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q073",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: a finite number sequence does not determine a unique continuation without a stated rule. Several rules can fit the five terms, so the prep-page key was not promoted as a fact.",
+    "testedProposition": "Complete the series: 2, 4, 6, 10, 28, ... Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q074",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "If 1 inch corresponds to 60 equal units, how many such units correspond to 2.5 inches? Correct answer: 150.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q075",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "294 must be multiplied by which listed positive integer to produce a perfect square? Correct answer: 6.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q076",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed numerical statement is wrong at the stated precision? Correct answer: 22/7 ≈ 3.2.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q077",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "If 2x + 7 = 19, what is x? Correct answer: 6.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q078",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0005-Q073",
+    "reason": "Earlier retained U0005 uses the same Rs. 220 sale and 10-percent-on-cost profit calculation and answers Rs. 200.",
+    "testedProposition": "A toy is sold for Rs. 220 at a profit equal to 10% of its cost. What was its cost? Correct answer: Rs. 200.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q073"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q079",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: alternating +1 and +3 suggests 15, but a short finite sequence admits many valid continuation rules. No authoritative source can establish an unstated intended rule, so the printed answer was not promoted.",
+    "testedProposition": "Complete the series: 3, 4, 7, 8, 11, 12, ... Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q080",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "What is one fourth of 15? Correct answer: 3.75.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q081",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed word is an antonym of 'frugal'? Correct answer: Spendthrift.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q082",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed word is the closest antonym of 'affluence'? Correct answer: Dearth.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q083",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "If PEACH is transformed to HCAEP by reversing the character order, how should 26541 be transformed? Correct answer: 14562.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q084",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0038-Q021",
+    "reason": "Earlier in this same source unit, Q21 asks the exact same Mast Tawakali language proposition and answers Balochi; the later Urdu-option repeat is skipped in source order.",
+    "testedProposition": "Mast Tawakali is renowned as a poet in which language? Correct answer: بلوچی.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0038-Q021"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q085",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "What does the Urdu poetic genre 'Munajat' mean? Correct answer: جس میں بندے اللہ سے اپنی حاجات بیان کریں.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q086",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "What does the Urdu idiom 'gular ka phool khilna' mean? Correct answer: ان ہونی بات ہونا.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q087",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Who is regarded as the founder of modern national and patriotic poetry in Urdu? Correct answer: مولانا حالی.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q088",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Who wrote the Urdu novel 'Pressure Cooker'? Correct answer: صدیق سالک.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q089",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0021-Q086",
+    "reason": "Earlier retained U0021 asks the same Urdu-grammar definition of a descriptive name famous for a person's quality and answers laqab.",
+    "testedProposition": "What is a descriptive name that becomes widely known because of a person's quality or attribute—for example, 'Khalil Allah' or 'Shair-e-Mashriq'—called? Correct answer: لقب.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q086"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q090",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Who wrote the verse meaning, 'Was this the grace of insight or the miracle of schooling; who taught Ishmael the manners of filial devotion?' Correct answer: علامہ محمد اقبال.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q091",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which poet is known as 'Shair-e-Inquilab' (Poet of Revolution)? Correct answer: جوش ملیح آبادی.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q092",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which Urdu poet is known as 'Sayyid al-Ahrar'? Correct answer: مولانا حسرت موہانی.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q093",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier U0036 asks who founded Makhzan; this row asks the city from which it was launched, a different requested field.",
+    "testedProposition": "From which city was the Urdu monthly magazine 'Makhzan' launched? Correct answer: لاہور.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0036-Q090"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q094",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier rows ask the ordinal positions of Ramadan or Rajab; this row asks Shawwal's separate ordinal position.",
+    "testedProposition": "Shawwal is which month of the Islamic calendar? Correct answer: 10th.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0018-Q097",
+        "ADV2E102-U0011-Q098"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q095",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "According to the conventional report that Umar ibn al-Khattab died on 1 Muharram 24 AH, in which Hijri month did he die? Correct answer: Muharram.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q096",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "On which date is Shab-e-Mi'raj traditionally commemorated? Correct answer: 27 Rajab.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q097",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier scripture rows pair different prophets or verses with Injil or Tawrat; this row asks the Dawud-Zabur proposition.",
+    "testedProposition": "Which scripture was revealed to Prophet Dawud? Correct answer: Zabur.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0002-Q098",
+        "ADV2E102-U0033-Q095"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q098",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no same-proposition repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Bani Israel literally denotes the children or descendants of which prophet, also called Israel? Correct answer: Prophet Yaqub.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q099",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier U0021 asks the third source, ijma, or what follows ijma; this row asks the second source, Hadith/Sunnah.",
+    "testedProposition": "In the conventional hierarchy of Sunni Islamic jurisprudence, which listed source comes second after the Quran? Correct answer: Hadith/Sunnah.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0021-Q100"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0038-Q100",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0019-Q095",
+    "reason": "Earlier retained U0019 asks the exact same caliph who established the Hijra epoch of the Islamic calendar and answers Umar ibn al-Khattab.",
+    "testedProposition": "Which caliph established the Prophet's Hijra as the epoch of the Islamic calendar? Correct answer: Umar ibn al-Khattab.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0019-Q095"
+      ],
+      "answerConflictReviewed": true
+    }
+  }
+]

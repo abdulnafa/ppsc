@@ -1,0 +1,3356 @@
+[
+  {
+    "id": "ADV2E102-U0040-Q068-SRC",
+    "pairId": "ADV2E102-U0040-Q068",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "An article's selling prices at profits of 4% and 6% differ by Rs. 3. What is the ratio of the two selling prices, in that order?",
+    "questionUrdu": "ایک چیز کی 4% اور 6% نفع والی فروختی قیمتوں میں 3 روپے کا فرق ہے۔ اسی ترتیب سے دونوں فروختی قیمتوں کا تناسب کیا ہے؟",
+    "options": [
+      "51:52",
+      "52:53",
+      "53:54",
+      "54:55"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 52:53 ہے۔ نفع کی شرحوں کا 2% فرق 3 روپے کے برابر ہے، اس لیے لاگت 150 روپے بنتی ہے۔ فروختی قیمتیں 156 اور 159 روپے، یعنی 52:53 کے تناسب میں ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Discounts, Markups, and Sales Tax",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+        "label": "Discounts, Markups, and Sales Tax",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the percent-markup relationship between an original cost and its marked selling price."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+1.06x-1.04x%3D3%2C+%281.04x%29%2F%281.06x%29",
+        "label": "Solve the two selling-price relationship",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation gives x = 150 and 156/159 = 52/53."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and the order of the ratio were clarified. If cost is C, 0.02C = 3, so C = 150 and the prices are 156 and 159; their ratio is 52:53, retaining printed answer B."
+  },
+  {
+    "id": "ADV2E102-U0040-Q068-SIM",
+    "pairId": "ADV2E102-U0040-Q068",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "An article's selling prices at 4% and 6% profit differ by Rs. 3. What is its cost price?",
+    "questionUrdu": "ایک چیز کی 4% اور 6% نفع والی فروختی قیمتوں میں 3 روپے فرق ہو تو اس کی لاگت کیا ہے؟",
+    "options": [
+      "Rs. 150",
+      "Rs. 120",
+      "Rs. 180",
+      "Rs. 200"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 150 روپے ہے۔ نفع کی شرح میں 2% کا فرق 3 روپے ہے، لہٰذا 100% لاگت 150 روپے بنتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Discounts, Markups, and Sales Tax",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+        "label": "Discounts, Markups, and Sales Tax",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the markup relationship used to equate the two-percentage-point profit difference with Rs. 3 of cost."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+1.06x-1.04x%3D3%2C+%281.04x%29%2F%281.06x%29",
+        "label": "Solve the two selling-price relationship",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha independently solves 1.06x minus 1.04x equals 3 and returns the cost x as 150."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q069-SRC",
+    "pairId": "ADV2E102-U0040-Q069",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A tank requires 25 bucketfuls at the original bucket capacity. How many bucketfuls are required if the bucket capacity is reduced to two-fifths of its original capacity?",
+    "questionUrdu": "اصل گنجائش والی بالٹی سے ٹینک بھرنے کے لیے 25 بالٹیاں درکار ہیں۔ اگر بالٹی کی گنجائش اصل کا دو پنجم رہ جائے تو کتنی بالٹیاں درکار ہوں گی؟",
+    "options": [
+      "30",
+      "35",
+      "62.5",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 62.5 ہے۔ گنجائش دو پنجم رہنے پر بالٹیوں کی تعداد الٹے تناسب سے پانچ دوم گنا ہو جاتی ہے۔ 25 کو دو پنجم سے تقسیم کرنے پر 62.5 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Solve Proportions and Their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and Their Applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains inverse-scale applications using equivalent proportions."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=25%2F%282%2F5%29",
+        "label": "Compute 25 divided by two-fifths",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation evaluates 25/(2/5) as 62.5."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague phrase 'buckets of water' was repaired to bucketfuls, which may include a final partial fill. The fixed tank volume requires 25/(2/5) = 62.5 bucketfuls, retaining printed answer C."
+  },
+  {
+    "id": "ADV2E102-U0040-Q069-SIM",
+    "pairId": "ADV2E102-U0040-Q069",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If a bucket's capacity is reduced to 2/5 of its original capacity, by what factor does the required bucket count increase?",
+    "questionUrdu": "اگر بالٹی کی گنجائش اصل کا 2/5 رہ جائے تو مطلوبہ بالٹیوں کی تعداد کتنے گنا بڑھتی ہے؟",
+    "options": [
+      "5/2 times",
+      "2/5 times",
+      "5 times",
+      "2 times"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 5/2 گنا ہے۔ مقدار اور گنجائش الٹے تناسب میں ہیں، اس لیے عامل 1 تقسیم 2/5 یعنی 5/2 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Solve Proportions and Their Applications",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve Proportions and Their Applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains the inverse proportional scaling used when a fixed volume is filled with a smaller container."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=25%2F%282%2F5%29",
+        "label": "Compute 25 divided by two-fifths",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha's independent computation of 25 divided by 2/5 embodies the multiplier 1 divided by 2/5, which is 5/2."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q070-SRC",
+    "pairId": "ADV2E102-U0040-Q070",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If the average of five numbers is 6.92, what is their sum?",
+    "questionUrdu": "اگر پانچ اعداد کی اوسط 6.92 ہو تو ان کا مجموعہ کیا ہوگا؟",
+    "options": [
+      "34",
+      "34.6",
+      "34.4",
+      "34.8"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 34.6 ہے۔ اوسط کو تعداد سے ضرب دینے پر مجموعہ ملتا ہے۔ اس لیے 6.92 ضرب 5 سے 34.6 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Measures of Location: Mean",
+      "referenceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "label": "Measures of Location: Mean",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST defines the arithmetic mean as the sum of observations divided by their number."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=5*6.92",
+        "label": "Compute five times 6.92",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation evaluates 5 multiplied by 6.92 as 34.6."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar was standardized. Sum = count × mean = 5 × 6.92 = 34.6, retaining printed answer B."
+  },
+  {
+    "id": "ADV2E102-U0040-Q070-SIM",
+    "pairId": "ADV2E102-U0040-Q070",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If five numbers have a sum of 34.6, what is their arithmetic mean?",
+    "questionUrdu": "اگر 5 اعداد کا مجموعہ 34.6 ہو تو ان کی حسابی اوسط کیا ہوگی؟",
+    "options": [
+      "6.92",
+      "6.46",
+      "7.20",
+      "5.92"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 6.92 ہے۔ مجموعہ 34.6 کو اعداد کی تعداد 5 سے تقسیم کرنے پر یہی اوسط ملتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Measures of Location: Mean",
+      "referenceUrl": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+        "label": "Measures of Location: Mean",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST defines the arithmetic mean as the sum of observations divided by their count, giving 34.6 divided by five."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=5*6.92",
+        "label": "Compute five times 6.92",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha independently confirms the equivalent relationship five multiplied by 6.92 equals 34.6."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q071-SRC",
+    "pairId": "ADV2E102-U0040-Q071",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Solve for ?: √729 − √441 = √? + 1.",
+    "questionUrdu": "درج ذیل مربع جذر والی مساوات حل کریں: √729 − √441 = √؟ + 1۔",
+    "options": [
+      "49",
+      "36",
+      "25",
+      "16"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 25 ہے۔ √729 برابر 27 اور √441 برابر 21 ہے۔ فرق 6 ہے، اس لیے √؟ برابر 5 اور مطلوبہ عدد 25 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Simplify and Use Square Roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+        "label": "Simplify and Use Square Roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains principal square roots and perfect squares."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%28sqrt%28729%29-sqrt%28441%29-1%29%5E2",
+        "label": "Evaluate the square-root equation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation evaluates (sqrt(729) - sqrt(441) - 1)^2 as 25."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The equation punctuation was standardized. Since 27 − 21 = 6, √? = 5 and ? = 25; printed answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q071-SIM",
+    "pairId": "ADV2E102-U0040-Q071",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "In the equation √729 − √441 = √x + 1, what is √x?",
+    "questionUrdu": "مساوات √729 − √441 = √x + 1 میں √x کی قیمت کیا ہے؟",
+    "options": [
+      "5",
+      "6",
+      "4",
+      "7"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 5 ہے۔ 27 میں سے 21 منفی کرنے پر 6 آتا ہے، پھر 1 منفی کرنے سے √x برابر 5 رہ جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Simplify and Use Square Roots",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-7-simplify-and-use-square-roots",
+        "label": "Simplify and Use Square Roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains evaluation of the principal square roots of the perfect squares 729 and 441."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%28sqrt%28729%29-sqrt%28441%29-1%29%5E2",
+        "label": "Evaluate the square-root equation",
+        "publisher": "WolframAlpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WolframAlpha independently evaluates the squared expression after subtracting one as 25, so its principal square root is 5."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q072-SRC",
+    "pairId": "ADV2E102-U0040-Q072",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "How many sides does a hexagon have?",
+    "questionUrdu": "مسدس کے کتنے ضلع ہوتے ہیں؟",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 6 ہے۔ برٹانیکا اور میتھ ورلڈ دونوں مسدس کو چھ ضلع رکھنے والی کثیر الاضلاع شکل کے طور پر بیان کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Hexagon",
+      "referenceUrl": "https://www.britannica.com/science/hexagon",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britannica.com/science/hexagon",
+        "label": "Hexagon",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica defines a hexagon as a six-sided polygon."
+      },
+      {
+        "url": "https://mathworld.wolfram.com/Hexagon.html",
+        "label": "Hexagon",
+        "publisher": "Wolfram MathWorld",
+        "authorityId": "wolfram-mathworld",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "MathWorld independently identifies a hexagon as a six-sided polygon."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and capitalization were standardized. Both geometry authorities support six sides; printed answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q072-SIM",
+    "pairId": "ADV2E102-U0040-Q072",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What is a six-sided polygon called?",
+    "questionUrdu": "چھ ضلع رکھنے والی کثیر الاضلاع شکل کو کیا کہتے ہیں؟",
+    "options": [
+      "Hexagon",
+      "Pentagon",
+      "Heptagon",
+      "Octagon"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب مسدس یعنی ہیکساگون ہے۔ دونوں ریاضیاتی مراجع اسے چھ اضلاع والی شکل کی تعریف دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Hexagon",
+      "referenceUrl": "https://www.britannica.com/science/hexagon",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britannica.com/science/hexagon",
+        "label": "Hexagon",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica defines a hexagon as a polygon with six sides."
+      },
+      {
+        "url": "https://mathworld.wolfram.com/Hexagon.html",
+        "label": "Hexagon",
+        "publisher": "Wolfram MathWorld",
+        "authorityId": "wolfram-mathworld",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram MathWorld independently defines a hexagon as a six-sided polygon."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q073-SRC",
+    "pairId": "ADV2E102-U0040-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the most appropriate antonym of 'vilify'.",
+    "questionUrdu": "لفظ vilify کا سب سے موزوں متضاد کیا ہے؟",
+    "options": [
+      "To praise",
+      "To sing",
+      "To weep",
+      "To sleep"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب To praise ہے۔ کیمبرج اور میریئم ویبسٹر دونوں vilify کے متضاد الفاظ میں praise یعنی تعریف کرنا درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Vilify: synonyms and antonyms",
+      "referenceUrl": "https://dictionary.cambridge.org/thesaurus/vilify",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/thesaurus/vilify",
+        "label": "Vilify: synonyms and antonyms",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge lists praise among the antonyms of vilify."
+      },
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/vilify",
+        "label": "Vilify: similar and opposite words",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently lists praise among the antonyms and near-antonyms of vilify."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Capitalization and punctuation were standardized. Both thesauri explicitly list praise as an antonym of vilify; printed answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q073-SIM",
+    "pairId": "ADV2E102-U0040-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which meaning best matches the verb 'vilify'?",
+    "questionUrdu": "فعل vilify کا کون سا مفہوم سب سے درست ہے؟",
+    "options": [
+      "To criticize or defame harshly",
+      "To praise warmly",
+      "To sing softly",
+      "To remain silent"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب سخت مذمت یا بدنام کرنا ہے۔ دونوں لغات vilify کو شدید تنقید اور بدنامی کے مفہوم میں بیان کرتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Vilify: synonyms and antonyms",
+      "referenceUrl": "https://dictionary.cambridge.org/thesaurus/vilify",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/thesaurus/vilify",
+        "label": "Vilify: synonyms and antonyms",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines vilify through severe criticism and contrasts it with praise."
+      },
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/vilify",
+        "label": "Vilify: similar and opposite words",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines vilify as uttering slanderous and abusive statements about someone."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q074-SRC",
+    "pairId": "ADV2E102-U0040-Q074",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed description best defines 'small talk'?",
+    "questionUrdu": "small talk کی بہترین تعریف کون سی ہے؟",
+    "options": [
+      "To praise",
+      "A discussion carried on for a long time",
+      "A brief, casual conversation about unimportant matters",
+      "A debate"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب A brief, casual conversation about unimportant matters ہے۔ کیمبرج اور میریئم ویبسٹر کے مطابق small talk ہلکی پھلکی، مختصر اور غیر اہم موضوعات پر ہونے والی گفتگو ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Small talk",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/small-talk",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/small-talk",
+        "label": "Small talk",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines small talk as conversation about unimportant matters, often between people who do not know one another well."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/small%20talk",
+        "label": "Small talk",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines small talk as light or casual conversation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's incomplete option 'a brief discussion' was repaired to the dictionaries' documented meaning: a brief, casual conversation about unimportant matters. The answer remains printed option C."
+  },
+  {
+    "id": "ADV2E102-U0040-Q074-SIM",
+    "pairId": "ADV2E102-U0040-Q074",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "A brief casual conversation about the weather between acquaintances is an example of what?",
+    "questionUrdu": "واقف افراد کے درمیان موسم پر مختصر غیر رسمی گفتگو کس چیز کی مثال ہے؟",
+    "options": [
+      "Small talk",
+      "A formal debate",
+      "A lecture",
+      "A legal argument"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب small talk ہے۔ دونوں لغات اسے غیر اہم موضوعات پر ہلکی اور غیر رسمی گفتگو قرار دیتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Small talk",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/small-talk",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/small-talk",
+        "label": "Small talk",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines small talk as conversation about unimportant matters, fitting a brief chat about weather."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/small%20talk",
+        "label": "Small talk",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines small talk as light or casual conversation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q076-SRC",
+    "pairId": "ADV2E102-U0040-Q076",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Change the following passive sentence to active voice: 'Sweets are not liked by us.'",
+    "questionUrdu": "اس مجہول جملے کو معروف میں بدلیں: Sweets are not liked by us۔",
+    "options": [
+      "We do not like sweets",
+      "Sweets have not been liked by us",
+      "We are not liking sweets",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب We do not like sweets ہے۔ مجہول جملے میں by us والا فاعل معروف جملے میں We بنتا ہے، اس لیے درست جملہ We do not like sweets ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Passive voice",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/passive-voice",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-voice",
+        "label": "Passive voice",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains how passive clauses reverse the active subject-object relationship and form the verb with be plus a past participle."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+        "label": "Passives",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council independently explains active and passive transformations, supporting 'We do not like sweets.'"
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The requested direction of the voice change was made explicit. 'We do not like sweets' preserves subject, object, tense, and negation; printed answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q076-SIM",
+    "pairId": "ADV2E102-U0040-Q076",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "When 'We do not like sweets' is changed to the passive voice, which phrase identifies the agent?",
+    "questionUrdu": "We do not like sweets کو مجہول میں بدلنے پر کون سا فقرہ عمل کرنے والے کی نشان دہی کرتا ہے؟",
+    "options": [
+      "by us",
+      "by sweets",
+      "to us",
+      "from us"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب by us ہے۔ معروف جملے کا فاعل We مجہول جملے میں by کے بعد us کی صورت اختیار کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Passive voice",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/passive-voice",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-voice",
+        "label": "Passive voice",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that the active subject can appear as a by-agent in the corresponding passive clause."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+        "label": "Passives",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council independently explains active-passive reversal, supporting 'by us' as the agent phrase for active 'we'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q077-SRC",
+    "pairId": "ADV2E102-U0040-Q077",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Select the correctly spelled word.",
+    "questionUrdu": "درست املا والا لفظ منتخب کریں۔",
+    "options": [
+      "Victory",
+      "Victary",
+      "Victery",
+      "Victon"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Victory ہے۔ کیمبرج اور میریئم ویبسٹر دونوں کامیابی کے مفہوم والے لفظ کا معیاری املا Victory درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Victory",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/victory",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q077"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/victory",
+        "label": "Victory",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records the standard spelling victory."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/victory",
+        "label": "Victory",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently records the spelling victory."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The plural 'spellings' was repaired to the singular task. Both dictionaries record Victory; printed answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q077-SIM",
+    "pairId": "ADV2E102-U0040-Q077",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which correctly spelled noun means success in a contest or struggle?",
+    "questionUrdu": "مقابلے یا جدوجہد میں کامیابی کے معنی رکھنے والا درست ہجے والا اسم کون سا ہے؟",
+    "options": [
+      "Victory",
+      "Victary",
+      "Victery",
+      "Vicktory"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Victory ہے۔ دونوں معتبر لغات اسی املا کے ساتھ اسے کامیابی کے معنی میں درج کرتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Victory",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/victory",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q077",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/victory",
+        "label": "Victory",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records 'victory' as the correctly spelled noun for success in a competition or struggle."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/victory",
+        "label": "Victory",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently records the spelling and success-related meaning of 'victory'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q078-SRC",
+    "pairId": "ADV2E102-U0040-Q078",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Under the formal subjunctive convention, choose the verb that correctly completes: 'If he ______ here, he would enjoy this.'",
+    "questionUrdu": "رسمی سبجنکٹیو اصول کے تحت جملہ مکمل کریں: If he ______ here, he would enjoy this۔",
+    "options": [
+      "Be",
+      "Had been",
+      "Was",
+      "Were"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Were ہے۔ فرضی یا خلافِ واقعہ حالت میں واحد فاعل he کے ساتھ رسمی سبجنکٹیو were استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Conditionals: zero, first and second",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-zero-first-second",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q078"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-zero-first-second",
+        "label": "Conditionals: zero, first and second",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council states that formal hypothetical conditionals may use were with he: 'if he were'."
+      },
+      {
+        "url": "https://www.merriam-webster.com/grammar/getting-in-the-subjunctive-mood",
+        "label": "Getting in the subjunctive mood",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently explains were in imagined and contrary-to-fact clauses."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source sentence was recast without time-sensitive wording while preserving its hypothetical grammar and answer choices. Both authorities support 'were' in the hypothetical clause; printed answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q078-SIM",
+    "pairId": "ADV2E102-U0040-Q078",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Under the formal subjunctive convention, complete: 'If she ______ here, she would help us.'",
+    "questionUrdu": "رسمی سبجنکٹیو اصول کے تحت مکمل کریں: If she ______ here, she would help us۔",
+    "options": [
+      "were",
+      "was",
+      "is",
+      "be"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب were ہے۔ فرضی دوسری شرطیہ ساخت میں she کے ساتھ بھی رسمی طور پر were استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Conditionals: zero, first and second",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-zero-first-second",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q078",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-zero-first-second",
+        "label": "Conditionals: zero, first and second",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council states that formal hypothetical conditionals may use were with singular subjects such as he or she."
+      },
+      {
+        "url": "https://www.merriam-webster.com/grammar/getting-in-the-subjunctive-mood",
+        "label": "Getting in the subjunctive mood",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently explains were in imagined or contrary-to-fact subjunctive clauses."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q081-SRC",
+    "pairId": "ADV2E102-U0040-Q081",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'to end in smoke' mean?",
+    "questionUrdu": "محاورہ to end in smoke کا کیا مطلب ہے؟",
+    "options": [
+      "To come to nothing",
+      "To keep away from",
+      "Extremely hard work",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب To come to nothing ہے۔ کیمبرج اور وردھمان مہاویر اوپن یونیورسٹی دونوں اس محاورے کا مطلب ناکام ہونا یا بے نتیجہ رہنا بتاتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "End in smoke",
+      "referenceUrl": "https://dictionary.cambridge.org/us/thesaurus/end-in-smoke",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q081"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/end-in-smoke",
+        "label": "End in smoke",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge lists fail and come to nothing as equivalents of end in smoke."
+      },
+      {
+        "url": "https://assets.vmou.ac.in/CFE01.pdf",
+        "label": "English idioms",
+        "publisher": "Vardhman Mahaveer Open University",
+        "authorityId": "vmou",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university language material independently defines 'to end in smoke' as to come to nothing or bear no fruit."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem and distractor grammar were standardized. Both sources define the idiom as coming to nothing or failing; printed answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q081-SIM",
+    "pairId": "ADV2E102-U0040-Q081",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which outcome can idiomatically be described as 'ending in smoke'?",
+    "questionUrdu": "کون سا نتیجہ محاورۃً ending in smoke کہلا سکتا ہے؟",
+    "options": [
+      "A plan fails and produces nothing",
+      "A project succeeds early",
+      "A person avoids danger",
+      "A task requires hard work"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب منصوبے کا ناکام اور بے نتیجہ رہنا ہے۔ دونوں مراجع محاورے کو fail یا come to nothing کے برابر بتاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "End in smoke",
+      "referenceUrl": "https://dictionary.cambridge.org/us/thesaurus/end-in-smoke",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q081",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/end-in-smoke",
+        "label": "End in smoke",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge equates 'end in smoke' with fail or come to nothing, matching a plan that produces no result."
+      },
+      {
+        "url": "https://assets.vmou.ac.in/CFE01.pdf",
+        "label": "English idioms",
+        "publisher": "Vardhman Mahaveer Open University",
+        "authorityId": "vmou",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Vardhman Mahaveer Open University independently defines the idiom as coming to nothing or bearing no fruit."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q082-SRC",
+    "pairId": "ADV2E102-U0040-Q082",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Fill in the blank: Do you always come to the office ______ bike?",
+    "questionUrdu": "خالی جگہ پُر کریں: Do you always come to the office ______ bike?",
+    "options": [
+      "On",
+      "By",
+      "In",
+      "From"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب By ہے۔ ذرائع آمدورفت بتانے کے لیے by استعمال ہوتا ہے، اس لیے درست ترکیب by bike ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Prepositions and prepositional phrases",
+      "referenceUrl": "https://studentsuccess.temple.edu/sites/studentsuccess/files/PrepositionsvsPrepositionalphraseshandout.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q082"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://studentsuccess.temple.edu/sites/studentsuccess/files/PrepositionsvsPrepositionalphraseshandout.pdf",
+        "label": "Prepositions and prepositional phrases",
+        "publisher": "Temple University Student Success Center",
+        "authorityId": "temple-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university handout explains by as a method of travel and gives the example 'I got here by bike.'"
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/sites/podcasts/files/BCSW%20-%20Harry%20-%20support%20pack.pdf",
+        "label": "Big City Small World support pack",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council exercise independently uses 'by bike' as the answer to how someone gets to work."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Both English-learning authorities use 'by bike' for method of travel; printed answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q082-SIM",
+    "pairId": "ADV2E102-U0040-Q082",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Complete the sentence: 'She travels to campus ______ bike.'",
+    "questionUrdu": "جملہ مکمل کریں: She travels to campus ______ bike۔",
+    "options": [
+      "by",
+      "on",
+      "with",
+      "from"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب by ہے۔ ٹیمپل یونیورسٹی اور برٹش کونسل دونوں سفر کے ذریعے کے لیے by bike استعمال کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Prepositions and prepositional phrases",
+      "referenceUrl": "https://studentsuccess.temple.edu/sites/studentsuccess/files/PrepositionsvsPrepositionalphraseshandout.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q082",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://studentsuccess.temple.edu/sites/studentsuccess/files/PrepositionsvsPrepositionalphraseshandout.pdf",
+        "label": "Prepositions and prepositional phrases",
+        "publisher": "Temple University Student Success Center",
+        "authorityId": "temple-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Temple University's handout teaches 'by' for a method of travel and gives the construction 'by bike'."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/sites/podcasts/files/BCSW%20-%20Harry%20-%20support%20pack.pdf",
+        "label": "Big City Small World support pack",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council independently uses 'by bike' for describing how someone travels to work."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q083-SRC",
+    "pairId": "ADV2E102-U0040-Q083",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What is the antonym of the Urdu word 'qillat' (scarcity)?",
+    "questionUrdu": "اردو لفظ قلت کا متضاد کیا ہے؟",
+    "options": [
+      "کسرت",
+      "کثرت",
+      "بیشتر",
+      "اکثر"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب کثرت ہے۔ خیبر پختونخوا کے سرکاری تدریسی مواد اور آزاد قواعدی حل دونوں قلت اور کثرت کو متضاد جوڑا قرار دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "SNC-based Urdu lesson plans",
+      "referenceUrl": "https://kpese.gov.pk/vtwkaf/uploads/2021/09/SNC-based-LPs-Grade-3-English-Urdu-Mathematics-and-General-Knowledge_2021.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://kpese.gov.pk/vtwkaf/uploads/2021/09/SNC-based-LPs-Grade-3-English-Urdu-Mathematics-and-General-Knowledge_2021.pdf",
+        "label": "SNC-based Urdu lesson plans",
+        "publisher": "Khyber Pakhtunkhwa Elementary and Secondary Education Department",
+        "authorityId": "kp-education-department",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Urdu teaching material presents کثرت and قلت as an opposite-word pair."
+      },
+      {
+        "url": "https://albakio.com.pk/wp-content/uploads/2025/03/Solutions.-Gul-e-Urdu.-Qawaid-o-Ansha.-Grade-4.pdf",
+        "label": "Gul-e-Urdu Qawaid-o-Ansha solutions",
+        "publisher": "Al Bakio International School",
+        "authorityId": "al-bakio-school",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent Urdu grammar solution table gives کثرت as the antonym of قلت."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The main question was translated completely into English; the exact printed Urdu question and all four Urdu options are preserved separately. Both teaching authorities give kasrat (abundance) as the antonym; printed answer B is retained, including the source's misspelled distractor کسرت."
+  },
+  {
+    "id": "ADV2E102-U0040-Q083-SIM",
+    "pairId": "ADV2E102-U0040-Q083",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "What is the antonym of the Urdu word 'kasrat' (abundance)?",
+    "questionUrdu": "اردو لفظ کثرت کا متضاد کیا ہے؟",
+    "options": [
+      "قلت",
+      "کثرت",
+      "بیشتر",
+      "اکثر"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب قلت ہے۔ دونوں اردو تدریسی مراجع قلت اور کثرت کو ایک دوسرے کے متضاد الفاظ کے طور پر دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "SNC-based Urdu lesson plans",
+      "referenceUrl": "https://kpese.gov.pk/vtwkaf/uploads/2021/09/SNC-based-LPs-Grade-3-English-Urdu-Mathematics-and-General-Knowledge_2021.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://kpese.gov.pk/vtwkaf/uploads/2021/09/SNC-based-LPs-Grade-3-English-Urdu-Mathematics-and-General-Knowledge_2021.pdf",
+        "label": "SNC-based Urdu lesson plans",
+        "publisher": "Khyber Pakhtunkhwa Elementary and Secondary Education Department",
+        "authorityId": "kp-education-department",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Khyber Pakhtunkhwa official lesson material presents قلت and کثرت as an opposite-word pair."
+      },
+      {
+        "url": "https://albakio.com.pk/wp-content/uploads/2025/03/Solutions.-Gul-e-Urdu.-Qawaid-o-Ansha.-Grade-4.pdf",
+        "label": "Gul-e-Urdu Qawaid-o-Ansha solutions",
+        "publisher": "Al Bakio International School",
+        "authorityId": "al-bakio-school",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent Urdu grammar solution likewise gives قلت and کثرت as antonyms, supporting the inverse question."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q084-SRC",
+    "pairId": "ADV2E102-U0040-Q084",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Whose poetry collection is 'Sar-e Wadi-e Sina'?",
+    "questionUrdu": "سرِ وادیِ سینا کس شاعر کا شعری مجموعہ ہے؟",
+    "options": [
+      "علامہ اقبال",
+      "احمد فراز",
+      "منیر نیازی",
+      "فیض احمد فیض"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب فیض احمد فیض ہے۔ گورنمنٹ کالج یونیورسٹی لاہور کی فہرست اور جامعہ بہاؤالدین زکریا کے تحقیقی جریدے دونوں اسے فیض احمد فیض کا شعری مجموعہ بتاتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "ASRC Urdu books catalogue",
+      "referenceUrl": "https://library.gcu.edu.pk/Collections/ASRC/ASRC-Books-Urdu.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q084"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://library.gcu.edu.pk/Collections/ASRC/ASRC-Books-Urdu.pdf",
+        "label": "ASRC Urdu books catalogue",
+        "publisher": "Government College University Lahore Library",
+        "authorityId": "gcu-lahore",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university library catalogue lists سر وادی سینا under the authorship of فیض احمد فیض."
+      },
+      {
+        "url": "https://jorurdu.bzu.edu.pk/website/journal/article/5e83ccec8a200/file/5e83cd192646b/download",
+        "label": "Faiz's poetry collections",
+        "publisher": "Journal of Research (Urdu), Bahauddin Zakariya University",
+        "authorityId": "bzu-journal-urdu",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university journal independently includes سرِ وادی سینا among Faiz Ahmad Faiz's poetry collections."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The main question was translated completely into English; the exact printed Urdu question and options are preserved separately. Both university sources attribute the collection to Faiz Ahmad Faiz; printed answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q084-SIM",
+    "pairId": "ADV2E102-U0040-Q084",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which listed poetry collection was written by Faiz Ahmad Faiz?",
+    "questionUrdu": "درج ذیل میں سے کون سا شعری مجموعہ فیض احمد فیض نے لکھا؟",
+    "options": [
+      "سرِ وادیِ سینا",
+      "بانگِ درا",
+      "برگِ نے",
+      "کلیاتِ میر"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب سرِ وادیِ سینا ہے۔ دونوں جامعاتی مراجع اس مجموعے کو فیض احمد فیض سے منسوب کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "ASRC Urdu books catalogue",
+      "referenceUrl": "https://library.gcu.edu.pk/Collections/ASRC/ASRC-Books-Urdu.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q084",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://library.gcu.edu.pk/Collections/ASRC/ASRC-Books-Urdu.pdf",
+        "label": "ASRC Urdu books catalogue",
+        "publisher": "Government College University Lahore Library",
+        "authorityId": "gcu-lahore",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Government College University Lahore's catalogue lists Sar-e Wadi-e Sina under Faiz Ahmad Faiz's authorship."
+      },
+      {
+        "url": "https://jorurdu.bzu.edu.pk/website/journal/article/5e83ccec8a200/file/5e83cd192646b/download",
+        "label": "Faiz's poetry collections",
+        "publisher": "Journal of Research (Urdu), Bahauddin Zakariya University",
+        "authorityId": "bzu-journal-urdu",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Bahauddin Zakariya University's Urdu research journal independently includes Sar-e Wadi-e Sina among Faiz's poetry collections."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q085-SRC",
+    "pairId": "ADV2E102-U0040-Q085",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What does the Urdu idiom 'pil parna' mean?",
+    "questionUrdu": "اردو محاورہ پل پڑنا کیا معنی رکھتا ہے؟",
+    "options": [
+      "سر پر پاؤں رکھ کر بھاگنا",
+      "بحث مباحثہ کرنا",
+      "غور و فکر کرنا",
+      "حملہ کرنا یا ٹوٹ پڑنا"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب حملہ کرنا یا ٹوٹ پڑنا ہے۔ ریختہ اور سرکاری انگریزی اردو لغت دونوں پل پڑنا کو زور سے حملہ کرنے یا کسی پر ٹوٹ پڑنے کے معنی میں بیان کرتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "پِل پڑنا",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-pil-padnaa?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q085"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-pil-padnaa?lang=ur",
+        "label": "پِل پڑنا",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines پِل پڑنا as rushing against or attacking with force."
+      },
+      {
+        "url": "https://www.urducouncil.nic.in/sites/default/files/2024-06/English_Urdu_Dictionary_Volume_Two_D-G.pdf",
+        "label": "English-Urdu Dictionary, volume 2",
+        "publisher": "National Council for Promotion of Urdu Language, Government of India",
+        "authorityId": "ncpul",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official bilingual dictionary independently connects 'to go at it' with پل پڑنا and حملہ کرنا."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The main question was translated completely into English; the exact printed Urdu question and options are preserved separately. Both dictionaries support attacking or rushing upon someone; printed answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q085-SIM",
+    "pairId": "ADV2E102-U0040-Q085",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu idiom means 'to attack or rush forcefully at someone'?",
+    "questionUrdu": "کون سا اردو محاورہ کسی پر حملہ کرنے یا زور سے ٹوٹ پڑنے کے معنی دیتا ہے؟",
+    "options": [
+      "پل پڑنا",
+      "اوس پڑنا",
+      "پاؤں پڑنا",
+      "دل پڑنا"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب پل پڑنا ہے۔ دونوں لغوی مراجع اسے حملہ کرنے اور زور سے کسی کی طرف لپکنے کے مفہوم میں درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "پِل پڑنا",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-pil-padnaa?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q085",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-pil-padnaa?lang=ur",
+        "label": "پِل پڑنا",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines پل پڑنا as rushing against or attacking someone forcefully."
+      },
+      {
+        "url": "https://www.urducouncil.nic.in/sites/default/files/2024-06/English_Urdu_Dictionary_Volume_Two_D-G.pdf",
+        "label": "English-Urdu Dictionary, volume 2",
+        "publisher": "National Council for Promotion of Urdu Language, Government of India",
+        "authorityId": "ncpul",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NCPUL official bilingual dictionary independently associates پل پڑنا with حملہ کرنا and going at someone."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q086-SRC",
+    "pairId": "ADV2E102-U0040-Q086",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which Urdu grammatical verb form can convey both haal and mustaqbil meanings?",
+    "questionUrdu": "اردو قواعد میں کون سی فعلی صورت حال اور مستقبل دونوں کے معنی دے سکتی ہے؟",
+    "options": [
+      "فعل مستقبل",
+      "فعل حال",
+      "فعل امر",
+      "فعل مضارع"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب فعل مضارع ہے۔ مولانا آزاد نیشنل اردو یونیورسٹی اور آزاد لسانی تجزیہ دونوں فعل مضارع کو حال اور مستقبل کے معنی ادا کرنے والی صورت بتاتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Urdu grammar self-learning material",
+      "referenceUrl": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/122_Inner.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/122_Inner.pdf",
+        "label": "Urdu grammar self-learning material",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official university material explains that فعل مضارع can express both present and future time."
+      },
+      {
+        "url": "https://alsharia.org/2015/jan/urdu-tarajum-quran-3-dr-mohiuddin-ghazi",
+        "label": "Urdu translations of the Quran and tense",
+        "publisher": "Al-Sharia",
+        "authorityId": "al-sharia",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent language analysis states that فعل مضارع is used for present and future meanings."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The main question was translated completely into English; the exact printed Urdu question and options are preserved separately. Both sources identify fail muzare as the form used for haal and mustaqbil meanings; printed answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q086-SIM",
+    "pairId": "ADV2E102-U0040-Q086",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which two time meanings can Urdu فعل مضارع express?",
+    "questionUrdu": "اردو کا فعل مضارع کن دو زمانی معنوں کو ظاہر کر سکتا ہے؟",
+    "options": [
+      "حال اور مستقبل",
+      "صرف ماضی",
+      "ماضی اور امر",
+      "صرف حال"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب حال اور مستقبل ہے۔ دونوں قواعدی مراجع واضح کرتے ہیں کہ فعل مضارع دونوں زمانوں کے لیے آ سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Urdu grammar self-learning material",
+      "referenceUrl": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/122_Inner.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/122_Inner.pdf",
+        "label": "Urdu grammar self-learning material",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Maulana Azad National Urdu University's grammar material states that فعل مضارع can express present and future time."
+      },
+      {
+        "url": "https://alsharia.org/2015/jan/urdu-tarajum-quran-3-dr-mohiuddin-ghazi",
+        "label": "Urdu translations of the Quran and tense",
+        "publisher": "Al-Sharia",
+        "authorityId": "al-sharia",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent Al-Sharia language analysis likewise states that فعل مضارع is used for both present and future meanings."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q087-SRC",
+    "pairId": "ADV2E102-U0040-Q087",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What does the Urdu idiom 'os parna' mean?",
+    "questionUrdu": "اردو محاورہ اوس پڑنا کیا معنی رکھتا ہے؟",
+    "options": [
+      "مایوسی کی حالت",
+      "سفر کی تیاری",
+      "خوشی کی کیفیت",
+      "آدھی رات کے بعد کا وقت"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب مایوسی کی حالت ہے۔ ریختہ اور آزاد اردو تدریسی صفحہ دونوں اوس پڑنا کو مایوسی، اداسی یا رونق ختم ہونے کی کیفیت سے جوڑتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "اوس پڑنا",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-os-padnaa",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q087"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-os-padnaa",
+        "label": "اوس پڑنا",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines the idiom اوس پڑنا through loss of brightness, sadness, dejection, or failure."
+      },
+      {
+        "url": "https://zoneurdu.com/urdu-muhavare-with-meanings-and-sentences-1/",
+        "label": "Urdu idioms with meanings",
+        "publisher": "Zone Urdu",
+        "authorityId": "zone-urdu",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent Urdu teaching page gives مایوسی کی حالت as the meaning of اوس پڑنا and cites کلید اردو."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The main question was translated completely into English; the exact printed Urdu question and options are preserved separately. The sources support sadness, dejection, or a state of disappointment; printed answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q087-SIM",
+    "pairId": "ADV2E102-U0040-Q087",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu idiom conveys dejection or a loss of brightness?",
+    "questionUrdu": "کون سا اردو محاورہ مایوسی یا رونق ختم ہونے کی کیفیت ظاہر کرتا ہے؟",
+    "options": [
+      "اوس پڑنا",
+      "پل پڑنا",
+      "آگ لگنا",
+      "رنگ چڑھنا"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب اوس پڑنا ہے۔ دونوں مراجع اس محاورے کو اداسی، مایوسی اور رونق ماند پڑنے کے معنی میں دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "اوس پڑنا",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-os-padnaa",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q087",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-os-padnaa",
+        "label": "اوس پڑنا",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines اوس پڑنا through sadness, dejection, failure, or loss of brightness."
+      },
+      {
+        "url": "https://zoneurdu.com/urdu-muhavare-with-meanings-and-sentences-1/",
+        "label": "Urdu idioms with meanings",
+        "publisher": "Zone Urdu",
+        "authorityId": "zone-urdu",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Zone Urdu independently gives مایوسی کی حالت as the meaning of اوس پڑنا."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q088-SRC",
+    "pairId": "ADV2E102-U0040-Q088",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which of the following Urdu proverbs is written correctly?",
+    "questionUrdu": "درج ذیل میں سے کون سی اردو کہاوت درست لکھی گئی ہے؟",
+    "options": [
+      "سمندر میں رہنا اور مگر مچھ سے بیر",
+      "جھیل میں رہنا اور مگر مچھ سے بیر",
+      "دریا میں رہنا اور مگر مچھ سے بیر",
+      "تالاب میں رہنا اور مگر مچھ سے بیر"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب دریا میں رہنا اور مگر مچھ سے بیر ہے۔ ڈیلی ایکسپریس اردو اور اردو پوائنٹ دونوں معیاری کہاوت دریا میں رہنا اور مگر مچھ سے بیر اسی صورت میں درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Idioms and proverbs in Urdu",
+      "referenceUrl": "https://www.express.pk/story/171064/ardw-zban-myn-mhawre-171064",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q088"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.express.pk/story/171064/ardw-zban-myn-mhawre-171064",
+        "label": "Idioms and proverbs in Urdu",
+        "publisher": "Daily Express Urdu",
+        "authorityId": "express-urdu",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Urdu-language reference reproduces the established proverb دریا میں رہنا اور مگر مچھ سے بیر."
+      },
+      {
+        "url": "https://www.urdupoint.com/adab/article/kahawatain/dariya-mein-rehna-or-magur-mach-say-bair-1659.html",
+        "label": "دریا میں رہنا اور مگر مچھ سے بیر",
+        "publisher": "UrduPoint",
+        "authorityId": "urdupoint",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UrduPoint independently records the same proverb in its standard form."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The main question was translated completely into English; the exact printed Urdu question and options are preserved separately. Both independent Urdu sources record the river-and-crocodile wording; printed answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q088-SIM",
+    "pairId": "ADV2E102-U0040-Q088",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Complete the Urdu proverb: 'دریا میں رہنا اور ______ سے بیر'.",
+    "questionUrdu": "اردو کہاوت مکمل کریں: دریا میں رہنا اور ______ سے بیر۔",
+    "options": [
+      "مگر مچھ",
+      "شیر",
+      "مچھلی",
+      "سانپ"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب مگر مچھ ہے۔ دونوں اردو مراجع پوری کہاوت دریا میں رہنا اور مگر مچھ سے بیر کی صورت میں نقل کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Idioms and proverbs in Urdu",
+      "referenceUrl": "https://www.express.pk/story/171064/ardw-zban-myn-mhawre-171064",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q088",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.express.pk/story/171064/ardw-zban-myn-mhawre-171064",
+        "label": "Idioms and proverbs in Urdu",
+        "publisher": "Daily Express Urdu",
+        "authorityId": "express-urdu",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Daily Express Urdu records the established proverb with مگر مچھ completing the phrase."
+      },
+      {
+        "url": "https://www.urdupoint.com/adab/article/kahawatain/dariya-mein-rehna-or-magur-mach-say-bair-1659.html",
+        "label": "دریا میں رہنا اور مگر مچھ سے بیر",
+        "publisher": "UrduPoint",
+        "authorityId": "urdupoint",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UrduPoint independently records the same complete proverb and therefore supports مگر مچھ as the missing words."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q090-SRC",
+    "pairId": "ADV2E102-U0040-Q090",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who wrote the Urdu couplet meaning, 'I set out alone toward the destination, but people kept joining me and a caravan formed'?",
+    "questionUrdu": "اس شعر کے شاعر کون ہیں جس کا مفہوم ہے کہ میں اکیلا منزل کی طرف نکلا مگر لوگ ملتے گئے اور کارواں بنتا گیا؟",
+    "options": [
+      "بسمل عظیم آبادی",
+      "مجروح سلطانپوری",
+      "شکیل بدایونی",
+      "مرزا غالب"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب مجروح سلطانپوری ہے۔ ریختہ اور قومی کونسل برائے فروغ اردو زبان دونوں یہ شعر مجروح سلطان پوری کا نقل کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Majrooh Sultanpuri",
+      "referenceUrl": "https://rekhta.org/poets/majrooh-sultanpuri?lang=ur&wref=rweb",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q090"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhta.org/poets/majrooh-sultanpuri?lang=ur&wref=rweb",
+        "label": "Majrooh Sultanpuri",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta prints the complete couplet on Majrooh Sultanpuri's poet page."
+      },
+      {
+        "url": "https://urducouncil.nic.in/ncpulblog/2021/03/26/%D9%85%D8%AC%D8%B1%D9%88%D8%AD-%D8%B3%D9%84%D8%B7%D8%A7%D9%86%D9%BE%D9%88%D8%B1%DB%8C-%D8%A7%D9%88%D8%B1-%D9%81%D9%84%D9%85%DB%8C-%D9%86%D8%BA%D9%85%DB%92-%D9%85%D8%B6%D9%85%D9%88%D9%86-%D9%86%DA%AF/",
+        "label": "Majrooh Sultanpuri and film songs",
+        "publisher": "National Council for Promotion of Urdu Language, Government of India",
+        "authorityId": "ncpul",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The government Urdu council article independently quotes the couplet as Majrooh Sultanpuri's own."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The main question and the couplet's sense were rendered completely in English; the exact printed Urdu question and options are preserved separately. Both sources attribute it to Majrooh Sultanpuri; printed answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q090-SIM",
+    "pairId": "ADV2E102-U0040-Q090",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Complete Majrooh Sultanpuri's couplet: 'Log saath aate gaye aur ______.'",
+    "questionUrdu": "مجروح سلطان پوری کا شعر مکمل کریں: لوگ ساتھ آتے گئے اور ______۔",
+    "options": [
+      "کارواں بنتا گیا",
+      "راستہ مٹتا گیا",
+      "قافلہ رکتا گیا",
+      "منزل دور ہوتی گئی"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب کارواں بنتا گیا ہے۔ دونوں ادبی مراجع مجروح سلطان پوری کا مکمل شعر اسی مصرعے کے ساتھ نقل کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Majrooh Sultanpuri",
+      "referenceUrl": "https://rekhta.org/poets/majrooh-sultanpuri?lang=ur&wref=rweb",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q090",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhta.org/poets/majrooh-sultanpuri?lang=ur&wref=rweb",
+        "label": "Majrooh Sultanpuri",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta prints Majrooh Sultanpuri's full couplet with the second hemistich ending کارواں بنتا گیا."
+      },
+      {
+        "url": "https://urducouncil.nic.in/ncpulblog/2021/03/26/%D9%85%D8%AC%D8%B1%D9%88%D8%AD-%D8%B3%D9%84%D8%B7%D8%A7%D9%86%D9%BE%D9%88%D8%B1%DB%8C-%D8%A7%D9%88%D8%B1-%D9%81%D9%84%D9%85%DB%8C-%D9%86%D8%BA%D9%85%DB%92-%D9%85%D8%B6%D9%85%D9%88%D9%86-%D9%86%DA%AF/",
+        "label": "Majrooh Sultanpuri and film songs",
+        "publisher": "National Council for Promotion of Urdu Language, Government of India",
+        "authorityId": "ncpul",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NCPUL independently quotes the same couplet and wording in its article on Majrooh Sultanpuri."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q091-SRC",
+    "pairId": "ADV2E102-U0040-Q091",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "In Urdu grammar, how are words such as brick, tree, wall, rock, and mountain classified?",
+    "questionUrdu": "اردو قواعد میں اینٹ، درخت، دیوار، چٹان اور پہاڑ جیسے الفاظ کس قسم کے اسم ہیں؟",
+    "options": [
+      "اسم مصدر",
+      "اسم مشتق",
+      "اسم جامد",
+      "اسم معرفہ"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب اسم جامد ہے۔ نمل کے سرکاری مواد اور آزاد قواعدی سبق دونوں ان بنیادی غیر مشتق ناموں کو اسم جامد کی مثالیں قرار دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Urdu noun classifications",
+      "referenceUrl": "https://norr.numl.edu.pk/repository/filedownload/1072",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q091"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://norr.numl.edu.pk/repository/filedownload/1072",
+        "label": "Urdu noun classifications",
+        "publisher": "National University of Modern Languages",
+        "authorityId": "numl",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official university material defines اسم جامد and gives پہاڑ and درخت among its examples."
+      },
+      {
+        "url": "https://zoneurdu.com/%D8%A7%D8%B3%D9%85-%DA%A9%DB%8C-%D8%B3%D8%A7%D8%AE%D8%AA-%DA%A9%DB%92-%D8%A7%D8%B9%D8%AA%D8%A8%D8%A7%D8%B1-%D8%B3%DB%92-%D9%82%D8%B3%D9%85%DB%8C%DA%BA/",
+        "label": "اسم کی ساخت کے اعتبار سے قسمیں",
+        "publisher": "Zone Urdu",
+        "authorityId": "zone-urdu",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent grammar lesson explicitly lists اینٹ، درخت، چٹان، پہاڑ and دیوار as اسم جامد examples."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The main question was translated completely into English; the exact printed Urdu question and options are preserved separately. Both grammar sources classify these examples as ism jamid; printed answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q091-SIM",
+    "pairId": "ADV2E102-U0040-Q091",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which listed Urdu noun is an example of اسم جامد?",
+    "questionUrdu": "درج ذیل میں سے کون سا اردو اسم، اسم جامد کی مثال ہے؟",
+    "options": [
+      "پہاڑ",
+      "لکھائی",
+      "محبت",
+      "پاکستانی"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب پہاڑ ہے۔ دونوں قواعدی مراجع پہاڑ کو اسم جامد کی واضح مثال کے طور پر درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Urdu noun classifications",
+      "referenceUrl": "https://norr.numl.edu.pk/repository/filedownload/1072",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q091",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://norr.numl.edu.pk/repository/filedownload/1072",
+        "label": "Urdu noun classifications",
+        "publisher": "National University of Modern Languages",
+        "authorityId": "numl",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NUML's official material defines اسم جامد and explicitly lists پہاڑ among its examples."
+      },
+      {
+        "url": "https://zoneurdu.com/%D8%A7%D8%B3%D9%85-%DA%A9%DB%8C-%D8%B3%D8%A7%D8%AE%D8%AA-%DA%A9%DB%92-%D8%A7%D8%B9%D8%AA%D8%A8%D8%A7%D8%B1-%D8%B3%DB%92-%D9%82%D8%B3%D9%85%DB%8C%DA%BA/",
+        "label": "اسم کی ساخت کے اعتبار سے قسمیں",
+        "publisher": "Zone Urdu",
+        "authorityId": "zone-urdu",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Zone Urdu independently lists پہاڑ with other examples of اسم جامد."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q092-SRC",
+    "pairId": "ADV2E102-U0040-Q092",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "With which literary movement was Akhtar Husain Raipuri associated?",
+    "questionUrdu": "اختر حسین رائے پوری کس ادبی تحریک سے وابستہ تھے؟",
+    "options": [
+      "ترقی پسند تحریک",
+      "رومانی تحریک",
+      "اسلامی ادب کی تحریک",
+      "علی گڑھ تحریک"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ترقی پسند تحریک ہے۔ ریختہ اور نمل کی تحقیقی اشاعت دونوں اختر حسین رائے پوری کو ترقی پسند تحریک کا اہم اور ابتدائی نام بتاتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Progressive Writers Movement",
+      "referenceUrl": "https://rekhta.org/urdu-resources/progressive-writers-movement-taraqqi-pasand-tehreek",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q092"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhta.org/urdu-resources/progressive-writers-movement-taraqqi-pasand-tehreek",
+        "label": "Progressive Writers Movement",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta identifies Akhtar Husain Raipuri as associated with and formative to the Progressive Writers Movement."
+      },
+      {
+        "url": "https://norr.numl.edu.pk/repository/filedownload/820",
+        "label": "Urdu literary criticism and movements",
+        "publisher": "National University of Modern Languages",
+        "authorityId": "numl",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official university research material independently calls Akhtar Husain Raipuri an important name of the Progressive Movement."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The main question was translated completely into English; the exact printed Urdu question and options are preserved separately. Both scholarly sources associate him with the Progressive Writers Movement; printed answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q092-SIM",
+    "pairId": "ADV2E102-U0040-Q092",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which writer is identified by both cited sources as an important figure in the Progressive Writers Movement?",
+    "questionUrdu": "دونوں مراجع کس ادیب کو ترقی پسند تحریک کی اہم شخصیت قرار دیتے ہیں؟",
+    "options": [
+      "Akhtar Husain Raipuri",
+      "Muhammad Husain Azad",
+      "Altaf Husain Hali",
+      "Ratan Nath Sarshar"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب اختر حسین رائے پوری ہے۔ دونوں ادبی مراجع ان کی ترقی پسند تحریک سے نمایاں وابستگی درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Progressive Writers Movement",
+      "referenceUrl": "https://rekhta.org/urdu-resources/progressive-writers-movement-taraqqi-pasand-tehreek",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q092",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhta.org/urdu-resources/progressive-writers-movement-taraqqi-pasand-tehreek",
+        "label": "Progressive Writers Movement",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta identifies Akhtar Husain Raipuri as associated with and formative to the Progressive Writers Movement."
+      },
+      {
+        "url": "https://norr.numl.edu.pk/repository/filedownload/820",
+        "label": "Urdu literary criticism and movements",
+        "publisher": "National University of Modern Languages",
+        "authorityId": "numl",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NUML's official research independently calls Akhtar Husain Raipuri an important name of the Progressive Movement."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q093-SRC",
+    "pairId": "ADV2E102-U0040-Q093",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Who was the first convert to Islam among the following?",
+    "questionUrdu": "درج ذیل میں سب سے پہلے اسلام قبول کرنے والی شخصیت کون تھیں؟",
+    "options": [
+      "Hazrat Abu Bakr",
+      "Hazrat Ali",
+      "Hazrat Khadija",
+      "Hazrat Zaid ibn Harithah"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Hazrat Khadija ہے۔ کیمبرج یونیورسٹی پریس اور ایریزونا اسٹیٹ یونیورسٹی دونوں حضرت خدیجہ کو اسلام قبول کرنے والی پہلی شخصیت بتاتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Islam across the Oxus",
+      "referenceUrl": "https://www.cambridge.org/core/books/islam-and-asia/islam-across-the-oxus-seventh-to-seventeenth-centuries/A8C0B8A95E9A6049D6EC0B098784A287",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q093"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cambridge.org/core/books/islam-and-asia/islam-across-the-oxus-seventh-to-seventeenth-centuries/A8C0B8A95E9A6049D6EC0B098784A287",
+        "label": "Islam across the Oxus",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Cambridge history chapter identifies Khadija, Muhammad's first wife, as the first convert."
+      },
+      {
+        "url": "https://news.asu.edu/20190813-global-engagement-asu-prof-explores-feminism-islam-and-politics-new-book?page=3",
+        "label": "ASU professor explores feminism, Islam and politics",
+        "publisher": "Arizona State University",
+        "authorityId": "arizona-state-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ASU independently states that Khadija was the first person to embrace Islam."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The awkward stem and honorific grammar were standardized. Cambridge and ASU identify Khadija as the first convert/person to embrace Islam; printed answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q093-SIM",
+    "pairId": "ADV2E102-U0040-Q093",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which distinction is traditionally associated with Hazrat Khadija?",
+    "questionUrdu": "روایتی طور پر حضرت خدیجہ کے ساتھ کون سا امتیاز منسوب ہے؟",
+    "options": [
+      "She was the first person to embrace Islam",
+      "She was the first caliph",
+      "She led the first migration to Abyssinia",
+      "She compiled the first hadith collection"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب یہ ہے کہ وہ اسلام قبول کرنے والی پہلی شخصیت تھیں۔ دونوں جامعاتی مراجع یہی تاریخی امتیاز بیان کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Islam across the Oxus",
+      "referenceUrl": "https://www.cambridge.org/core/books/islam-and-asia/islam-across-the-oxus-seventh-to-seventeenth-centuries/A8C0B8A95E9A6049D6EC0B098784A287",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q093",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cambridge.org/core/books/islam-and-asia/islam-across-the-oxus-seventh-to-seventeenth-centuries/A8C0B8A95E9A6049D6EC0B098784A287",
+        "label": "Islam across the Oxus",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-university-press",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge University Press identifies Khadija as the first convert to Islam."
+      },
+      {
+        "url": "https://news.asu.edu/20190813-global-engagement-asu-prof-explores-feminism-islam-and-politics-new-book?page=3",
+        "label": "ASU professor explores feminism, Islam and politics",
+        "publisher": "Arizona State University",
+        "authorityId": "arizona-state-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Arizona State University independently states that Khadija was the first person to embrace Islam."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q094-SRC",
+    "pairId": "ADV2E102-U0040-Q094",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which listed concept expresses divine oneness, in contrast to shirk (associating partners with God)?",
+    "questionUrdu": "درج ذیل میں سے کون سا تصور شرک کے برخلاف خدائی وحدانیت ظاہر کرتا ہے؟",
+    "options": [
+      "Ukhuwwah",
+      "Tawhid",
+      "Insaf",
+      "Sin"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Tawhid ہے۔ انڈیانا یونیورسٹی اور آکسفورڈ دونوں توحید کو اللہ کی وحدانیت کہتے ہیں، جو شرک کے تصور کے مقابل ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Tawhid and Shirk",
+      "referenceUrl": "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/4beb0647-5ec3-43ad-855a-74ad876df2e9/content",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q094"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/4beb0647-5ec3-43ad-855a-74ad876df2e9/content",
+        "label": "Tawhid and Shirk",
+        "publisher": "Indiana University Indianapolis ScholarWorks",
+        "authorityId": "indiana-university-indianapolis",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university text explicitly contrasts Tawhid, the unicity of God, with its opposite concept Shirk."
+      },
+      {
+        "url": "https://academic.oup.com/book/726/chapter-abstract/135389976",
+        "label": "Divine unicity",
+        "publisher": "Oxford Academic",
+        "authorityId": "oxford-academic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford independently defines tawhid as making one or divine unicity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The imprecise request for a simple 'opposite' was repaired to the documented theological contrast, and transliterations were standardized. Tawhid is the supported answer, retaining printed option B."
+  },
+  {
+    "id": "ADV2E102-U0040-Q094-SIM",
+    "pairId": "ADV2E102-U0040-Q094",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which concept is the direct opposite of shirk in the cited theological contrast?",
+    "questionUrdu": "مذکورہ مذہبی تقابل میں شرک کے براہِ راست برعکس کون سا تصور ہے؟",
+    "options": [
+      "Tawhid",
+      "Ukhuwwah",
+      "Insaf",
+      "Sabr"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب توحید ہے۔ دونوں علمی مراجع توحید کو خدائی وحدانیت اور شرک کے متقابل تصور کے طور پر بیان کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Tawhid and Shirk",
+      "referenceUrl": "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/4beb0647-5ec3-43ad-855a-74ad876df2e9/content",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q094",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/4beb0647-5ec3-43ad-855a-74ad876df2e9/content",
+        "label": "Tawhid and Shirk",
+        "publisher": "Indiana University Indianapolis ScholarWorks",
+        "authorityId": "indiana-university-indianapolis",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Indiana University explicitly contrasts Tawhid, divine oneness, with its opposite concept Shirk."
+      },
+      {
+        "url": "https://academic.oup.com/book/726/chapter-abstract/135389976",
+        "label": "Divine unicity",
+        "publisher": "Oxford Academic",
+        "authorityId": "oxford-academic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford Academic independently defines Tawhid as divine unicity, supporting it as the opposite of associating partners with God."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q097-SRC",
+    "pairId": "ADV2E102-U0040-Q097",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "In the traditional account of Zamzam, what words is Hajar said to have repeated while trying to contain the flowing water?",
+    "questionUrdu": "زمزم کے روایتی واقعے میں بہتے پانی کو جمع رکھنے کی کوشش کے دوران حضرت ہاجرہ نے کون سے الفاظ دہرائے؟",
+    "options": [
+      "To flow",
+      "Zam zam ('stop, stop')",
+      "To burst",
+      "To outflow"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Zam zam ('stop, stop') ہے۔ اسلامک ریلیف اور الجزیرہ دونوں روایتی بیان نقل کرتے ہیں کہ حضرت ہاجرہ نے زم زم یعنی رک جا، رک جا کے مفہوم والے الفاظ کہے۔",
+    "source": {
+      "type": "book",
+      "label": "The story of Zamzam water",
+      "referenceUrl": "https://islamic-relief.org/hajj/steps-of-hajj/zamzam-water/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q097"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamic-relief.org/hajj/steps-of-hajj/zamzam-water/",
+        "label": "The story of Zamzam water",
+        "publisher": "Islamic Relief Worldwide",
+        "authorityId": "islamic-relief-worldwide",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Islamic Relief explains that Hajar is traditionally said to have repeated zamzam, often interpreted as 'stop, stop' or 'stay gathered'."
+      },
+      {
+        "url": "https://www.aljazeera.com/amp/news/2025/6/4/the-water-of-hajj-a-simple-illustrated-guide-to-zamzam",
+        "label": "The water of Hajj: guide to Zamzam",
+        "publisher": "Al Jazeera",
+        "authorityId": "al-jazeera",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Al Jazeera independently reports the traditional interpretation of Hajar's exclamation as 'stop, stop' while containing the spring."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Because the linguistic derivation is disputed, the broad etymology question was repaired to the traditional Hajar account. Both sources support the traditional 'stop, stop' interpretation, retaining printed answer B."
+  },
+  {
+    "id": "ADV2E102-U0040-Q097-SIM",
+    "pairId": "ADV2E102-U0040-Q097",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which sacred spring's name is traditionally linked to Hajar's repeated words meaning 'stop, stop'?",
+    "questionUrdu": "کس مقدس چشمے کا نام روایتی طور پر حضرت ہاجرہ کے رک جا، رک جا کے معنی والے الفاظ سے جوڑا جاتا ہے؟",
+    "options": [
+      "Zamzam",
+      "Salsabil",
+      "Kawthar",
+      "Ayn Zubaydah"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب زمزم ہے۔ دونوں مراجع چشمے کے نام کو حضرت ہاجرہ کے روایتی الفاظ زم زم سے جوڑتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "The story of Zamzam water",
+      "referenceUrl": "https://islamic-relief.org/hajj/steps-of-hajj/zamzam-water/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q097",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamic-relief.org/hajj/steps-of-hajj/zamzam-water/",
+        "label": "The story of Zamzam water",
+        "publisher": "Islamic Relief Worldwide",
+        "authorityId": "islamic-relief-worldwide",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Islamic Relief links the name Zamzam to Hajar's repeated words traditionally interpreted as 'stop, stop'."
+      },
+      {
+        "url": "https://www.aljazeera.com/amp/news/2025/6/4/the-water-of-hajj-a-simple-illustrated-guide-to-zamzam",
+        "label": "The water of Hajj: guide to Zamzam",
+        "publisher": "Al Jazeera",
+        "authorityId": "al-jazeera",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Al Jazeera independently reports the same traditional explanation for the name of the Zamzam spring."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q098-SRC",
+    "pairId": "ADV2E102-U0040-Q098",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "How many hadith narrations are traditionally attributed to Hazrat Aisha?",
+    "questionUrdu": "روایتی شمار کے مطابق حضرت عائشہ سے کتنی احادیث منسوب ہیں؟",
+    "options": [
+      "1,630",
+      "2,210",
+      "1,286",
+      "583"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 2,210 ہے۔ ایریزونا اسٹیٹ یونیورسٹی اور بوسٹن یونیورسٹی دونوں حضرت عائشہ سے 2,210 حدیثی روایات منسوب ہونے کا شمار دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "ASU professor explores feminism, Islam and politics",
+      "referenceUrl": "https://news.asu.edu/20190813-global-engagement-asu-prof-explores-feminism-islam-and-politics-new-book?page=3",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q098"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://news.asu.edu/20190813-global-engagement-asu-prof-explores-feminism-islam-and-politics-new-book?page=3",
+        "label": "ASU professor explores feminism, Islam and politics",
+        "publisher": "Arizona State University",
+        "authorityId": "arizona-state-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ASU reports the scholarly attribution of 2,210 hadith narratives to Aisha."
+      },
+      {
+        "url": "https://open.bu.edu/bitstreams/11d051c3-32ef-46ad-9390-7c4c81d5e751/download",
+        "label": "Women, Islamic learning, and hadith transmission",
+        "publisher": "Boston University OpenBU",
+        "authorityId": "boston-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university work states that Aisha is reported to have narrated 2,210 hadiths."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Grammar and number formatting were standardized, and 'traditionally attributed' avoids treating compilation counts as a modern census. Both university sources support 2,210; printed answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q098-SIM",
+    "pairId": "ADV2E102-U0040-Q098",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which female Companion is traditionally credited with narrating 2,210 hadiths?",
+    "questionUrdu": "روایتی طور پر 2,210 احادیث روایت کرنے کا اعزاز کس صحابیہ سے منسوب ہے؟",
+    "options": [
+      "Hazrat Aisha",
+      "Hazrat Hafsa",
+      "Hazrat Khadija",
+      "Hazrat Umm Salama"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب حضرت عائشہ ہیں۔ دونوں جامعاتی مراجع 2,210 احادیث کی روایت انہی سے منسوب کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "ASU professor explores feminism, Islam and politics",
+      "referenceUrl": "https://news.asu.edu/20190813-global-engagement-asu-prof-explores-feminism-islam-and-politics-new-book?page=3",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q098",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://news.asu.edu/20190813-global-engagement-asu-prof-explores-feminism-islam-and-politics-new-book?page=3",
+        "label": "ASU professor explores feminism, Islam and politics",
+        "publisher": "Arizona State University",
+        "authorityId": "arizona-state-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Arizona State University attributes 2,210 hadith narratives to Aisha."
+      },
+      {
+        "url": "https://open.bu.edu/bitstreams/11d051c3-32ef-46ad-9390-7c4c81d5e751/download",
+        "label": "Women, Islamic learning, and hadith transmission",
+        "publisher": "Boston University OpenBU",
+        "authorityId": "boston-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Boston University's independent scholarship likewise states that Aisha is reported to have narrated 2,210 hadiths."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0040-Q100-SRC",
+    "pairId": "ADV2E102-U0040-Q100",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which ghazwa took place in Ramadan, 2 AH?",
+    "questionUrdu": "رمضان 2 ہجری میں کون سا غزوہ پیش آیا؟",
+    "options": [
+      "Badr",
+      "Uhud",
+      "Mu'tah",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Badr ہے۔ برٹانیکا 624ء کی بڑی جنگ کو بدر قرار دیتا ہے، جبکہ اسلامک فائنڈر اسے صراحت سے رمضان 2 ہجری کا غزوۂ بدر بتاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Battle of Badr",
+      "referenceUrl": "https://www.britannica.com/event/Battle-of-Badr",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q100"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britannica.com/event/Battle-of-Badr",
+        "label": "Battle of Badr",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies Badr as the major 624 battle between Muhammad's followers and the Quraysh."
+      },
+      {
+        "url": "https://www.islamicfinder.org/knowledge/islam-and-sunnah/battle-of-badr-ghazwah-badr/",
+        "label": "Battle of Badr (Ghazwah Badr)",
+        "publisher": "IslamicFinder",
+        "authorityId": "islamicfinder",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent historical account dates the Battle of Badr to Ramadan 2 AH."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The Hijri date notation and battle-name spelling were standardized. The sources identify the Battle of Badr and date it to Ramadan 2 AH; printed answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0040-Q100-SIM",
+    "pairId": "ADV2E102-U0040-Q100",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which battle fought against the Quraysh in 624 is traditionally dated to Ramadan, 2 AH?",
+    "questionUrdu": "624ء میں قریش کے خلاف لڑی گئی کون سی جنگ روایتی طور پر رمضان 2 ہجری کی تاریخ رکھتی ہے؟",
+    "options": [
+      "Battle of Badr",
+      "Battle of Uhud",
+      "Battle of Mu'tah",
+      "Battle of Tabuk"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب غزوۂ بدر ہے۔ دونوں تاریخی مراجع جنگ کو بدر کے نام سے شناخت کرتے ہیں اور اسلامی حوالہ رمضان 2 ہجری کی تاریخ دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Battle of Badr",
+      "referenceUrl": "https://www.britannica.com/event/Battle-of-Badr",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0040-q100",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.britannica.com/event/Battle-of-Badr",
+        "label": "Battle of Badr",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies the 624 battle between Muhammad's followers and the Quraysh as the Battle of Badr."
+      },
+      {
+        "url": "https://www.islamicfinder.org/knowledge/islam-and-sunnah/battle-of-badr-ghazwah-badr/",
+        "label": "Battle of Badr (Ghazwah Badr)",
+        "publisher": "IslamicFinder",
+        "authorityId": "islamicfinder",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IslamicFinder independently identifies the battle as Ghazwah Badr and dates it to Ramadan 2 AH."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

@@ -180,10 +180,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0167-Q001",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found that surfaced candidates merely share a person, answer word, date, grammar family, topic, or an inverse but genuinely different fact. It is retained because a confusing-but-distinct PPSC proposition is useful and not an exact repeat.",
+    "duplicateOf": "ADV2E102-U0017-Q077",
+    "reason": "The earlier-source-order U0017 canonical asks the identical most-abundant-element-in-the-Universe proposition and answers hydrogen.",
     "testedProposition": "Which of the following is the most abundant element in the Universe? Correct answer: Hydrogen.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -195,7 +195,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0167-Q001-SRC"
+        "ADV2E102-U0167-Q001-SRC",
+        "ADV2E102-U0017-Q077"
       ],
       "answerConflictReviewed": true
     }
@@ -217,6 +218,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0006-Q068-SIM",
         "ADV2E102-U0043-Q081-SIM",
         "ADV2E102-U0121-Q074-SIM",
         "ADV2E102-U0163-Q003-SIM"
@@ -596,7 +598,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P234-Q014-SRC"
+        "P234-Q014-SRC",
+        "ADV2E102-U0009-Q055-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -640,6 +643,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0009-Q009-SIM",
         "ADV2E102-U0091-Q012-SRC"
       ],
       "answerConflictReviewed": true
@@ -917,6 +921,7 @@
         "ADV2E102-U0121-Q068-SIM",
         "ADV2E102-U0051-Q080-SRC",
         "ADV2E102-U0005-Q093-SRC",
+        "ADV2E102-U0009-Q074-SIM",
         "ADV2E102-U0043-Q074-SIM",
         "P238-Q062-SIM",
         "P239-Q046-SIM",
@@ -928,7 +933,7 @@
         "P237-Q060-SIM",
         "ADV2E102-U0091-Q077-SIM",
         "ADV2E102-U0159-Q070-SIM",
-        "ADV2E102-U0033-Q078-SIM",
+        "ADV2E102-U0008-Q073-SIM",
         "ADV2E102-U0081-Q073-SIM",
         "ADV2E102-U0003-Q025-SRC",
         "ADV2E102-U0021-Q072-SIM",
@@ -1041,13 +1046,13 @@
         "ADV2E102-U0051-Q080-SRC",
         "P236-Q056-SIM",
         "ADV2E102-U0168-Q017-SRC",
+        "ADV2E102-U0009-Q074-SRC",
+        "ADV2E102-U0014-Q082-SRC",
         "ADV2E102-U0101-Q069-SRC",
         "ADV2E102-U0101-Q076-SRC",
         "ADV2E102-U0101-Q070-SRC",
         "ADV2E102-U0041-Q073-SRC",
-        "ADV2E102-U0011-Q071-SRC",
-        "ADV2E102-U0011-Q079-SRC",
-        "ADV2E102-U0011-Q079-SIM"
+        "ADV2E102-U0011-Q071-SRC"
       ],
       "answerConflictReviewed": true
     }

@@ -415,10 +415,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0034-Q021",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "The related Balochistan item tests the dissolution of One Unit and creation of a province; this item tests the scheme's establishment year, so the propositions are distinct.",
+    "duplicateOf": "ADV2E102-U0017-Q050",
+    "reason": "The earlier-source-order U0017 canonical asks the identical establishment year of Pakistan's One Unit scheme and answers 1955.",
     "testedProposition": "In which year was the One Unit scheme established? Correct answer: 1955.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -429,7 +429,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0017-Q050"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -475,10 +477,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0034-Q024",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "The existing Simla item tests the signing date, whereas this item tests the agreement's creation of the post-war Line of Control; these are distinct date-versus-effect facts.",
+    "duplicateOf": "ADV2E102-U0027-Q031",
+    "reason": "The earlier-source-order U0027 canonical asks the identical Line of Control length proposition and has the same verified answer.",
     "testedProposition": "Which 1972 agreement established the post-war Line of Control in Jammu and Kashmir? Correct answer: Simla Agreement.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -489,7 +491,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0027-Q031"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1054,8 +1058,8 @@
     "sourceRecordId": "ADV2E102-U0034-Q052",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0033-Q044",
-    "reason": "The completed practice item already asks the atmospheric layer in which the protective ozone layer is concentrated and gives the stratosphere.",
+    "duplicateOf": "ADV2E102-U0018-Q052",
+    "reason": "The earlier retained U0018 pair's practice item already asks the atmospheric layer in which the protective ozone layer is concentrated and gives the stratosphere.",
     "testedProposition": "Most atmospheric ozone is concentrated in which layer of Earth's atmosphere? Correct answer: Stratosphere.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1069,7 +1073,7 @@
       "semanticCandidateIds": [
         "ADV2E102-U0033-Q044-SIM",
         "ADV2E102-U0001-Q044-SIM",
-        "ADV2E102-U0033-Q044"
+        "ADV2E102-U0018-Q052"
       ],
       "answerConflictReviewed": true
     }

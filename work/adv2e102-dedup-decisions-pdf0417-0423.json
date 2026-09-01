@@ -428,7 +428,7 @@
     "sourceRecordId": "ADV2E102-U0051-Q019",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0043-Q025",
+    "duplicateOf": "ADV2E102-U0017-Q016",
     "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Who wrote both 'Hard Times' and 'A Tale of Two Cities'? Correct answer: Charles Dickens.",
     "reviewedAgainst": {
@@ -441,7 +441,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0043-Q025",
+        "ADV2E102-U0017-Q016",
         "ADV2E102-U0043-Q025-SRC"
       ],
       "answerConflictReviewed": true
@@ -489,10 +489,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q022",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0017-Q009",
+    "reason": "The earlier-source-order U0017 canonical asks the identical sport associated with the butterfly stroke and answers swimming.",
     "testedProposition": "The butterfly is a competitive stroke in which sport? Correct answer: Swimming.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -503,7 +503,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0017-Q009"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -552,10 +554,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q025",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0026-Q013",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Which United Nations body specializes in population and reproductive-health issues? Correct answer: UNFPA.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -566,7 +568,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0026-Q013"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1079,10 +1083,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0051-Q048",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0027-Q084",
+    "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Who wrote 'Asar-us-Sanadid'? Correct answer: Sir Sayyid Ahmad Khan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1093,7 +1097,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0027-Q084"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1245,7 +1251,6 @@
         "ADV2E102-U0009-Q040",
         "ADV2E102-U0009-Q040-SRC",
         "ADV2E102-U0043-Q052-SRC",
-        "ADV2E102-U0043-Q052-SIM",
         "ADV2E102-U0009-Q040-SIM"
       ],
       "answerConflictReviewed": true
@@ -1349,8 +1354,8 @@
     "sourceRecordId": "ADV2E102-U0051-Q060",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0032-Q065",
-    "reason": "The earlier retained pair's similar item asks the same approximate elevation of Nanga Parbat and gives 8,126 m.",
+    "duplicateOf": "ADV2E102-U0022-Q054",
+    "reason": "The earlier retained U0022 pair's similar item asks the same approximate elevation of Nanga Parbat and gives 8,126 m.",
     "testedProposition": "What is the commonly cited elevation of Nanga Parbat? Correct answer: 8,126m.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1362,10 +1367,10 @@
     "similaritySignals": {
       "exactFingerprintMatch": true,
       "semanticCandidateIds": [
-        "ADV2E102-U0032-Q065",
-        "ADV2E102-U0032-Q065-SIM",
+        "ADV2E102-U0022-Q054",
         "ADV2E102-U0022-Q054-SIM",
-        "ADV2E102-U0043-Q060-SRC"
+        "ADV2E102-U0043-Q060-SRC",
+        "ADV2E102-U0032-Q065-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -1420,8 +1425,8 @@
     "sourceRecordId": "ADV2E102-U0051-Q063",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "P236-Q023-SIM",
-    "reason": "The existing canonical already tests the same Wakhan-Corridor relation: it separates Pakistan from Tajikistan.",
+    "duplicateOf": "ADV2E102-U0017-Q067",
+    "reason": "The earlier-source-order U0017 canonical asks the same Wakhan-Corridor relation: it separates Pakistan from Tajikistan.",
     "testedProposition": "The Wakhan Corridor separates Pakistan from which country? Correct answer: Tajikistan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1433,7 +1438,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P236-Q023-SIM"
+        "ADV2E102-U0017-Q067",
+        "ADV2E102-U0017-Q067-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1489,7 +1495,7 @@
     "sourceRecordId": "ADV2E102-U0051-Q066",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0043-Q065",
+    "duplicateOf": "ADV2E102-U0017-Q072",
     "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "White blood cells, also called leukocytes, primarily help the body fight: Correct answer: Disease.",
     "reviewedAgainst": {
@@ -1502,7 +1508,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0043-Q065"
+        "ADV2E102-U0017-Q072"
       ],
       "answerConflictReviewed": true
     }
@@ -1879,7 +1885,7 @@
     "sourceRecordId": "ADV2E102-U0051-Q083",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0043-Q091",
+    "duplicateOf": "ADV2E102-U0026-Q089",
     "reason": "The earlier source-order canonical pair already contains the same source or paired-practice proposition, so the later U0051 pair is omitted as a unit.",
     "testedProposition": "Who wrote the Urdu novel Raja Gidh? Correct answer: Bano Qudsia.",
     "reviewedAgainst": {
@@ -1892,7 +1898,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": true,
       "semanticCandidateIds": [
-        "ADV2E102-U0043-Q091",
+        "ADV2E102-U0026-Q089",
         "ADV2E102-U0043-Q091-SRC",
         "ADV2E102-U0051-Q082-SRC",
         "ADV2E102-U0034-Q087-SRC",

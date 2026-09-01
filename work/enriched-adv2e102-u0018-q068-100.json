@@ -1,0 +1,4063 @@
+[
+  {
+    "id": "ADV2E102-U0018-Q068-SRC",
+    "pairId": "ADV2E102-U0018-Q068",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If A is two years older than B, B is twice as old as C, and their ages total 27, how old is B?",
+    "questionUrdu": "اگر A، B سے دو سال بڑا ہے، B کی عمر C سے دگنی ہے اور تینوں عمروں کا مجموعہ 27 ہے تو B کی عمر کیا ہے؟",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 10 ہے۔ C کو x مانیں تو B = 2x اور A = 2x + 2 ہوگا؛ مجموعہ 5x + 2 = 27 سے x = 5 اور B = 10 آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Use a Problem-Solving Strategy",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/3-1-use-a-problem-solving-strategy",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/3-1-use-a-problem-solving-strategy",
+        "label": "Use a Problem-Solving Strategy",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax shows how related quantities in a word problem can be expressed using one variable, translated into an equation, solved and checked."
+      },
+      {
+        "url": "https://math.libretexts.org/Courses/Long_Beach_City_College/Intermediate_Algebra/05%3A_Systems_of_Linear_Equations/5.4%3A_Solve_Applications_with_Systems_of_Equations",
+        "label": "Solve Applications with Systems of Equations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "mathematics-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "LibreTexts demonstrates translating age relationships into equations and checking the resulting ages."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The punctuation was normalized. Let B = b, so A = b + 2 and C = b/2; (b + 2) + b + b/2 = 27 gives b = 10. The printed key marks option A (9), which is arithmetically incorrect, so it was overridden."
+  },
+  {
+    "id": "ADV2E102-U0018-Q068-SIM",
+    "pairId": "ADV2E102-U0018-Q068",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "D is three years older than E, E is twice as old as F, and their ages total 33. How old is E?",
+    "questionUrdu": "D، E سے تین سال بڑا ہے، E کی عمر F سے دگنی ہے اور عمروں کا مجموعہ 33 ہے۔ E کی عمر کیا ہے؟",
+    "options": [
+      "12",
+      "10",
+      "15",
+      "18"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 12 ہے۔ F کو x مانیں تو E = 2x اور D = 2x + 3؛ یوں 5x + 3 = 33، x = 6 اور E = 12 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Use a Problem-Solving Strategy",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/3-1-use-a-problem-solving-strategy",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/3-1-use-a-problem-solving-strategy",
+        "label": "Use a Problem-Solving Strategy",
+        "publisher": "OpenStax",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "OpenStax's one-variable word-problem method gives E = 12 for the stated age relationships."
+      },
+      {
+        "url": "https://math.libretexts.org/Courses/Long_Beach_City_College/Intermediate_Algebra/05%3A_Systems_of_Linear_Equations/5.4%3A_Solve_Applications_with_Systems_of_Equations",
+        "label": "Solve Applications with Systems of Equations",
+        "publisher": "Mathematics LibreTexts",
+        "authorityId": "mathematics-libretexts",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "LibreTexts independently demonstrates the same equation method for related-age problems."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q069-SRC",
+    "pairId": "ADV2E102-U0018-Q069",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "One kilometre is approximately equal to how many miles?",
+    "questionUrdu": "ایک kilometre تقریباً کتنے miles کے برابر ہے؟",
+    "options": [
+      "0.85",
+      "0.5",
+      "0.62",
+      "1.6"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 0.62 ہے۔ درست تبدیلی تقریباً 0.62137 mile فی kilometre ہے، جو دو اعشاری مقامات پر 0.62 بنتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "NIST Handbook 137: kilometre-to-mile conversion",
+      "referenceUrl": "https://www.nist.gov/system/files/documents/pml/wmd/NBS-Handbook-1371.pdf",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nist.gov/system/files/documents/pml/wmd/NBS-Handbook-1371.pdf",
+        "label": "NIST Handbook 137: kilometre-to-mile conversion",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIST gives one kilometre as approximately 0.62137 mile."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1+kilometer+in+miles",
+        "label": "Convert 1 kilometre to miles",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently converts one kilometre to approximately 0.621371 mile, which rounds to 0.62."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The question was marked as an approximation because the exact conversion is longer than any listed option."
+  },
+  {
+    "id": "ADV2E102-U0018-Q069-SIM",
+    "pairId": "ADV2E102-U0018-Q069",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Five kilometres are approximately how many miles?",
+    "questionUrdu": "پانچ kilometres تقریباً کتنے miles کے برابر ہیں؟",
+    "options": [
+      "3.11",
+      "5.62",
+      "8.05",
+      "2.48"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 3.11 ہے۔ ایک kilometre تقریباً 0.62137 mile ہے؛ اسے پانچ سے ضرب دینے پر تقریباً 3.11 miles حاصل ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "NBS Handbook 137",
+      "referenceUrl": "https://www.nist.gov/system/files/documents/pml/wmd/NBS-Handbook-1371.pdf",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nist.gov/system/files/documents/pml/wmd/NBS-Handbook-1371.pdf",
+        "label": "NBS Handbook 137",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "nist",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "NIST's conversion factor gives five kilometres as approximately 3.11 miles."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=5+kilometers+in+miles",
+        "label": "5 kilometers in miles",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Wolfram Alpha independently converts five kilometres to about 3.10686 miles."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q070-SRC",
+    "pairId": "ADV2E102-U0018-Q070",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "What value does the Roman numeral 'C' represent?",
+    "questionUrdu": "Roman numeral 'C' کس عدد کو ظاہر کرتا ہے؟",
+    "options": [
+      "10",
+      "100",
+      "1000",
+      "10,000"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 100 ہے۔ UK National Archives اور Britannica دونوں Roman numeral C کی قدر 100 درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Roman numerals",
+      "referenceUrl": "https://www.nationalarchives.gov.uk/help-with-your-research/reading-old-documents/roman-numerals/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nationalarchives.gov.uk/help-with-your-research/reading-old-documents/roman-numerals/",
+        "label": "Roman numerals",
+        "publisher": "The National Archives (UK)",
+        "authorityId": "uk-national-archives",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Archives conversion table identifies C as the Roman numeral for 100."
+      },
+      {
+        "url": "https://www.britannica.com/topic/Roman-numeral",
+        "label": "Roman numeral",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently lists C as the Roman symbol for 100."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The wording was lightly normalized."
+  },
+  {
+    "id": "ADV2E102-U0018-Q070-SIM",
+    "pairId": "ADV2E102-U0018-Q070",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "What value does the Roman numeral 'L' represent?",
+    "questionUrdu": "Roman numeral 'L' کس عدد کو ظاہر کرتا ہے؟",
+    "options": [
+      "50",
+      "100",
+      "500",
+      "10"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 50 ہے۔ Roman numeral نظام میں L کی مستقل عددی قدر پچاس ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Roman numerals",
+      "referenceUrl": "https://www.nationalarchives.gov.uk/help-with-your-research/reading-old-documents/roman-numerals/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.nationalarchives.gov.uk/help-with-your-research/reading-old-documents/roman-numerals/",
+        "label": "Roman numerals",
+        "publisher": "The National Archives (UK)",
+        "authorityId": "uk-national-archives",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The UK National Archives Roman-numeral table identifies L as 50."
+      },
+      {
+        "url": "https://www.britannica.com/topic/Roman-numeral",
+        "label": "Roman numeral",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Britannica independently lists L as the Roman symbol for 50."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q072-SRC",
+    "pairId": "ADV2E102-U0018-Q072",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Change to standard indirect speech: He looked at the boy sternly and asked him, 'What did you run away for?'",
+    "questionUrdu": "معیاری indirect speech میں بدلیں: He looked at the boy sternly and asked him, 'What did you run away for?'",
+    "options": [
+      "He looked at the boy sternly and enquired of him what did he ran away for",
+      "He looked at the boy sternly and asked him that what he had run away with.",
+      "He looked at the boy sternly and asked him what he had run away for",
+      "He looked at the boy sternly and asked him what had made him run away."
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب He looked at the boy sternly and asked him what he had run away for ہے۔ Reported wh-question میں statement order آتا ہے، did حذف ہوتا اور tense backshift ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Reported speech: questions",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-questions",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-questions",
+        "label": "Reported speech: questions",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council explains that reported wh-questions retain the question word, use statement order, omit did and may backshift the tense."
+      },
+      {
+        "url": "https://www.sjsu.edu/ajeep/docs/QuitedandReportedSpeech.pdf",
+        "label": "Quoted and reported speech",
+        "publisher": "San Jose State University",
+        "authorityId": "san-jose-state-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university guide independently requires statement word order in reported questions and explains tense backshift."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The instruction and punctuation were normalized. Option C correctly uses 'what he had run away for'; the other choices have invalid reported-question structure or alter the meaning."
+  },
+  {
+    "id": "ADV2E102-U0018-Q072-SIM",
+    "pairId": "ADV2E102-U0018-Q072",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Change to indirect speech: She asked me, 'Where are you going?'",
+    "questionUrdu": "Indirect speech میں بدلیں: She asked me, 'Where are you going?'",
+    "options": [
+      "She asked me where I was going.",
+      "She asked me where was I going.",
+      "She asked me where am I going.",
+      "She asked me that where I was going."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب She asked me where I was going ہے۔ Reported question میں where برقرار رہتا، لفظی ترتیب statement والی ہوتی اور are going بدل کر was going ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Reported speech: questions",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-questions",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-questions",
+        "label": "Reported speech: questions",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The British Council rules produce 'She asked me where I was going' with statement order and backshift."
+      },
+      {
+        "url": "https://www.sjsu.edu/ajeep/docs/QuitedandReportedSpeech.pdf",
+        "label": "Quoted and reported speech",
+        "publisher": "San Jose State University",
+        "authorityId": "san-jose-state-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "San Jose State University's guide independently supports the same reported-question transformation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q073-SRC",
+    "pairId": "ADV2E102-U0018-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed expression is opposite in meaning to 'pseudonym'?",
+    "questionUrdu": "درج expressions میں سے pseudonym کے معنی کا الٹ کون سا ہے؟",
+    "options": [
+      "Real name",
+      "Famous name",
+      "Assumed name",
+      "Mentality"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Real name ہے۔ Pseudonym ایک فرضی یا متبادل نام ہوتا ہے جو اصل نام کی جگہ استعمال کیا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "pseudonym",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/pseudonym",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/pseudonym",
+        "label": "pseudonym",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a pseudonym as a name used instead of a person's real name."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/pseudonym",
+        "label": "pseudonym",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines a pseudonym as a fictitious name, so 'real name' is the opposite listed choice."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Capitalization and grammar were normalized."
+  },
+  {
+    "id": "ADV2E102-U0018-Q073-SIM",
+    "pairId": "ADV2E102-U0018-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which listed word is closest in meaning to 'pseudonym'?",
+    "questionUrdu": "درج الفاظ میں سے pseudonym کے قریب ترین معنی کون سے ہیں؟",
+    "options": [
+      "Alias",
+      "Signature",
+      "Biography",
+      "Surname"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Alias ہے۔ Pseudonym اور alias دونوں ایسے اختیار کیے گئے نام کے لیے آ سکتے ہیں جو کسی شخص کے حقیقی نام کے بجائے استعمال ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "pseudonym",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/pseudonym",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/pseudonym",
+        "label": "pseudonym",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge defines pseudonym as a name used instead of a real name, supporting alias as the closest listed synonym."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/pseudonym",
+        "label": "pseudonym",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Merriam-Webster independently defines pseudonym as a fictitious or assumed name."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q074-SRC",
+    "pairId": "ADV2E102-U0018-Q074",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "In legal usage, what is an amicus curiae?",
+    "questionUrdu": "قانونی استعمال میں amicus curiae کیا ہوتا ہے؟",
+    "options": [
+      "Most expensive lawyer",
+      "Arbitrator appointed by a Court of Law",
+      "Eminent Jurist",
+      "Friend of the court and disinterested advisor"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب عدالت کا دوست اور غیر جانب دار معاون ہے۔ یہ مقدمے کا فریق نہ ہوتے ہوئے عدالت کو متعلقہ معلومات یا قانونی نقطۂ نظر فراہم کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Amicus curiae",
+      "referenceUrl": "https://www.law.cornell.edu/wex/amicus_curiae",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.law.cornell.edu/wex/amicus_curiae",
+        "label": "Amicus curiae",
+        "publisher": "Cornell Law School Legal Information Institute",
+        "authorityId": "cornell-law-lii",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cornell explains that amicus curiae means 'friend of the court' and is a non-party who assists the court."
+      },
+      {
+        "url": "https://www.osce.org/sites/default/files/f/documents/2/6/523437.pdf",
+        "label": "Amicus curiae brief guidance",
+        "publisher": "Organization for Security and Co-operation in Europe",
+        "authorityId": "osce",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OSCE guidance independently describes an amicus as a non-party offering information or perspective to assist a court."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was made explicit about legal usage; option D is the only choice matching the established friend-of-the-court role."
+  },
+  {
+    "id": "ADV2E102-U0018-Q074-SIM",
+    "pairId": "ADV2E102-U0018-Q074",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Is an amicus curiae normally a party to the case?",
+    "questionUrdu": "کیا amicus curiae عموماً مقدمے کا باقاعدہ فریق ہوتا ہے؟",
+    "options": [
+      "No, it is normally a non-party",
+      "Yes, it must be the plaintiff",
+      "Yes, it must be the defendant",
+      "Only when it is the judge"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب No, it is normally a non-party ہے۔ Amicus curiae مقدمے کا فریق نہیں ہوتا بلکہ عدالت کی معاونت کے لیے معلومات یا دلیل دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Amicus curiae",
+      "referenceUrl": "https://www.law.cornell.edu/wex/amicus_curiae",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.law.cornell.edu/wex/amicus_curiae",
+        "label": "Amicus curiae",
+        "publisher": "Cornell Law School Legal Information Institute",
+        "authorityId": "cornell-law-lii",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cornell Law explains that an amicus curiae is a non-party who assists the court."
+      },
+      {
+        "url": "https://www.osce.org/sites/default/files/f/documents/2/6/523437.pdf",
+        "label": "Amicus curiae brief guidance",
+        "publisher": "Organization for Security and Co-operation in Europe",
+        "authorityId": "osce",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "OSCE guidance independently describes an amicus as a non-party participant offering information or perspective."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q075-SRC",
+    "pairId": "ADV2E102-U0018-Q075",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does 'to be in two minds' mean?",
+    "questionUrdu": "To be in two minds کا کیا مطلب ہے؟",
+    "options": [
+      "To be uncertain",
+      "To work on someone else's advice",
+      "To be dominated by someone",
+      "To be of unsound mind"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب To be uncertain ہے۔ یہ محاورہ اس وقت بولا جاتا ہے جب کوئی شخص فیصلہ نہ کر پا رہا ہو۔",
+    "source": {
+      "type": "book",
+      "label": "be in two minds",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/be-in-two-minds",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/be-in-two-minds",
+        "label": "be in two minds",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines being in two minds as being unable to decide about something."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/in-two-minds",
+        "label": "in two minds",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently defines the expression as being uncertain about what to do."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The wording was lightly normalized."
+  },
+  {
+    "id": "ADV2E102-U0018-Q075-SIM",
+    "pairId": "ADV2E102-U0018-Q075",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which situation best illustrates being 'in two minds'?",
+    "questionUrdu": "کون سی صورتِ حال in two minds ہونے کی بہترین مثال ہے؟",
+    "options": [
+      "Being unable to choose between two options",
+      "Being completely certain",
+      "Forgetting both options",
+      "Agreeing with everyone"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Being unable to choose between two options ہے۔ In two minds ہونے کا مطلب کسی فیصلے کے بارے میں تذبذب یا غیر یقینی میں ہونا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "be in two minds",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/be-in-two-minds",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/be-in-two-minds",
+        "label": "be in two minds",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge defines being in two minds as being unable to decide, matching the stated situation."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/in-two-minds",
+        "label": "in two minds",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Collins independently defines the idiom as uncertainty about what to do."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q076-SRC",
+    "pairId": "ADV2E102-U0018-Q076",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is closest in meaning to 'laudable'?",
+    "questionUrdu": "درج الفاظ میں سے laudable کے قریب ترین معنی کون سے ہیں؟",
+    "options": [
+      "Profitable",
+      "Lovable",
+      "Affectionate",
+      "Commendable"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Commendable ہے۔ Laudable ایسے کام یا رویے کو کہتے ہیں جو تعریف اور تحسین کے قابل ہو۔",
+    "source": {
+      "type": "book",
+      "label": "laudable",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/laudable",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/laudable",
+        "label": "laudable",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines laudable as deserving praise and lists commendable as a synonym."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/laudable",
+        "label": "laudable",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines laudable as worthy of praise and equates it with commendable."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was rewritten as a direct synonym question."
+  },
+  {
+    "id": "ADV2E102-U0018-Q076-SIM",
+    "pairId": "ADV2E102-U0018-Q076",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is most nearly opposite in meaning to 'laudable'?",
+    "questionUrdu": "درج الفاظ میں سے laudable کے تقریباً متضاد معنی کون سے ہیں؟",
+    "options": [
+      "Reprehensible",
+      "Praiseworthy",
+      "Admirable",
+      "Commendable"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Reprehensible ہے۔ Laudable کا مطلب تعریف کے قابل جبکہ reprehensible کا مطلب قابلِ مذمت ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Reprehensible",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/reprehensible",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/reprehensible",
+        "label": "Reprehensible",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge defines reprehensible as very bad and deserving criticism, the opposite of laudable."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/reprehensible",
+        "label": "Reprehensible",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Merriam-Webster independently defines reprehensible as worthy of condemnation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q077-SRC",
+    "pairId": "ADV2E102-U0018-Q077",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which option is misspelled?",
+    "questionUrdu": "کون سا option غلط ہجے کے ساتھ لکھا گیا ہے؟",
+    "options": [
+      "Transpyre",
+      "Transfer",
+      "Tranquil",
+      "Calmness"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Transpyre ہے۔ معتبر لغات میں درست spelling transpire درج ہے، اس لیے y والا لفظ غلط ہے۔",
+    "source": {
+      "type": "book",
+      "label": "transpire",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/transpire",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q077"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/transpire",
+        "label": "transpire",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records the correct spelling as 'transpire', not 'Transpyre'."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/transpire",
+        "label": "transpire",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently records the spelling 'transpire'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The plural 'spellings' was corrected to singular because exactly one option is misspelled; the tested misspelling itself was preserved."
+  },
+  {
+    "id": "ADV2E102-U0018-Q077-SIM",
+    "pairId": "ADV2E102-U0018-Q077",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the verb 'transpire' commonly mean?",
+    "questionUrdu": "Verb transpire کا عام مطلب کیا ہے؟",
+    "options": [
+      "To happen or become known",
+      "To perspire only",
+      "To translate",
+      "To disappear"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب To happen or become known ہے۔ Transpire عام استعمال میں کسی واقعے کے رونما ہونے یا حقیقت کے ظاہر ہونے کے معنی دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "transpire",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/transpire",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q077",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/transpire",
+        "label": "transpire",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge defines transpire as happening or becoming known."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/transpire",
+        "label": "transpire",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Merriam-Webster independently records the senses 'to take place' and 'to become known'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q078-SRC",
+    "pairId": "ADV2E102-U0018-Q078",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Fill in the blank: 'It was kind ______ you to help.'",
+    "questionUrdu": "خالی جگہ پُر کریں: 'It was kind ______ you to help.'",
+    "options": [
+      "Of",
+      "By",
+      "About",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Of ہے۔ کسی شخص کے عمل کی خوبی بیان کرتے وقت adjective + of + person کا pattern آتا ہے: kind of you۔",
+    "source": {
+      "type": "book",
+      "label": "kind of",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/kind-of",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q078"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/kind-of",
+        "label": "kind of",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge gives the construction 'It is very kind of you' for praising a person's action."
+      },
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/kind_2",
+        "label": "kind adjective",
+        "publisher": "Oxford Learner's Dictionaries",
+        "authorityId": "oxford-learners-dictionaries",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford independently gives the exact pattern 'It was really kind of you to help me.'"
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The punctuation was normalized; the idiomatic adjective-plus-person construction requires 'of'."
+  },
+  {
+    "id": "ADV2E102-U0018-Q078-SIM",
+    "pairId": "ADV2E102-U0018-Q078",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Fill in the blank: 'It was careless ______ him to forget the keys.'",
+    "questionUrdu": "خالی جگہ پُر کریں: 'It was careless ______ him to forget the keys.'",
+    "options": [
+      "of",
+      "for",
+      "with",
+      "by"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب of ہے۔ کسی شخص کے رویے پر adjective لگانے کے لیے It was careless of him جیسی ساخت استعمال ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "kind of",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/kind-of",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q078",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/kind-of",
+        "label": "kind of",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge's adjective construction 'kind of you' supports the same adjective + of + person pattern."
+      },
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/kind_2",
+        "label": "kind adjective",
+        "publisher": "Oxford Learner's Dictionaries",
+        "authorityId": "oxford-learners-dictionaries",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Oxford Learner's Dictionaries independently illustrates the adjective + of + person construction."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q079-SRC",
+    "pairId": "ADV2E102-U0018-Q079",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What part of speech is 'eat' in the sentence 'He also likes to eat strawberries'?",
+    "questionUrdu": "جملے 'He also likes to eat strawberries' میں eat کون سا part of speech ہے؟",
+    "options": [
+      "Noun",
+      "Adverb",
+      "Adjective",
+      "Verb"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Verb ہے۔ Eat عمل ظاہر کرتا ہے اور Cambridge و Merriam-Webster دونوں اسے verb کی حیثیت سے درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "eat",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/eat",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q079"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/eat",
+        "label": "eat",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge classifies 'eat' as a verb."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/eat",
+        "label": "eat",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently classifies 'eat' as a verb."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The unavailable underlining was replaced by quotation marks around the tested word."
+  },
+  {
+    "id": "ADV2E102-U0018-Q079-SIM",
+    "pairId": "ADV2E102-U0018-Q079",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What part of speech is 'quickly' in the sentence 'She ate quickly'?",
+    "questionUrdu": "جملے 'She ate quickly' میں quickly کون سا part of speech ہے؟",
+    "options": [
+      "Adverb",
+      "Adjective",
+      "Noun",
+      "Preposition"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Adverb ہے۔ Quickly فعل ate کے انداز کو بیان کرتا ہے، اس لیے یہ جملے میں adverb کا کام کر رہا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Quickly",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/quickly",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q079",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/quickly",
+        "label": "Quickly",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge classifies quickly as an adverb."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/quickly",
+        "label": "Quickly",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Merriam-Webster independently classifies quickly as an adverb."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q080-SRC",
+    "pairId": "ADV2E102-U0018-Q080",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'There is no smoke without fire' mean?",
+    "questionUrdu": "محاورے 'There is no smoke without fire' کا کیا مطلب ہے؟",
+    "options": [
+      "Fire always emits smoke",
+      "Fire is a source of pollution in environment",
+      "There is some truth in a rumor",
+      "For smoke we need to have fire"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب افواہ میں کچھ نہ کچھ سچائی ہوتی ہے۔ یہ کہاوت بتاتی ہے کہ مسلسل الزام یا خبر کے پیچھے عموماً کوئی وجہ موجود ہوتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "there's no smoke without fire",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/there-s-no-smoke-without-fire",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q080"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/there-s-no-smoke-without-fire",
+        "label": "there's no smoke without fire",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that if unpleasant things are said about someone, there is probably a reason or some truth behind them."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/theres-no-smoke-without-fire",
+        "label": "there's no smoke without fire",
+        "publisher": "Collins Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently explains that a rumour is likely to contain at least some truth."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was normalized to a direct meaning question."
+  },
+  {
+    "id": "ADV2E102-U0018-Q080-SIM",
+    "pairId": "ADV2E102-U0018-Q080",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which meaning best fits the idiom 'add fuel to the fire'?",
+    "questionUrdu": "محاورے add fuel to the fire کے لیے کون سا مطلب سب سے موزوں ہے؟",
+    "options": [
+      "To make a bad situation worse",
+      "To solve a dispute",
+      "To hide the truth",
+      "To start cooking"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب To make a bad situation worse ہے۔ آگ میں ایندھن ڈالنے کی تشبیہ کسی پہلے سے خراب یا کشیدہ حالت کو مزید بگاڑنے کے لیے آتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Add fuel to the fire",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/add-fuel-to-the-fire",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q080",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/add-fuel-to-the-fire",
+        "label": "Add fuel to the fire",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge defines the idiom as making an argument or bad situation worse."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/add%20fuel%20to%20the%20fire",
+        "label": "Add fuel to the fire",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Merriam-Webster independently defines it as making a bad situation worse."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q081-SRC",
+    "pairId": "ADV2E102-U0018-Q081",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Change the active question to the passive voice: 'Does she write a letter?'",
+    "questionUrdu": "Active question کو passive voice میں بدلیں: 'Does she write a letter?'",
+    "options": [
+      "A letter is written by her",
+      "Is she writing a letter?",
+      "Is a letter written by her?",
+      "Has the letter been written by her?"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Is a letter written by her? ہے۔ Simple present passive question میں is + object-as-subject + past participle + by-agent آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Passives",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q081"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+        "label": "Passives",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council explains that the passive uses the object as subject plus the appropriate form of be and a past participle."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-voice",
+        "label": "Passive voice",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge independently gives the passive construction with be plus past participle and preserves the clause's tense and question function."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The instruction was normalized. The printed key marks option A, but that option is a statement and loses the interrogative form; option C, 'Is a letter written by her?', is the correct present-simple passive question."
+  },
+  {
+    "id": "ADV2E102-U0018-Q081-SIM",
+    "pairId": "ADV2E102-U0018-Q081",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Change to passive voice: 'Did the manager approve the plan?'",
+    "questionUrdu": "Passive voice میں بدلیں: 'Did the manager approve the plan?'",
+    "options": [
+      "Was the plan approved by the manager?",
+      "Did the plan approve by the manager?",
+      "Is the plan approved by the manager?",
+      "Was the manager approved by the plan?"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Was the plan approved by the manager? ہے۔ Simple past سوال میں object کو subject بنا کر was اور past participle approved استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Passives",
+      "referenceUrl": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q081",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/passives",
+        "label": "Passives",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The British Council passive rules produce 'Was the plan approved by the manager?' for the simple-past question."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/passive-voice",
+        "label": "Passive voice",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge Grammar independently supports be plus past participle while preserving tense and question form."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q082-SRC",
+    "pairId": "ADV2E102-U0018-Q082",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is the most appropriate antonym of 'selfish'?",
+    "questionUrdu": "درج الفاظ میں سے selfish کا سب سے مناسب antonym کون سا ہے؟",
+    "options": [
+      "Altruistic",
+      "Helpful",
+      "Greedy",
+      "Courageous"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Altruistic ہے۔ Altruistic دوسروں کی بھلائی کو ترجیح دینے والا رویہ ہے، جو selfish کے برعکس ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Thesaurus entry for selfish",
+      "referenceUrl": "https://www.merriam-webster.com/thesaurus/selfish",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q082"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/selfish",
+        "label": "Thesaurus entry for selfish",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster lists altruistic among the antonyms of selfish."
+      },
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/selfish",
+        "label": "Thesaurus entry for selfish",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge independently lists altruistic as an antonym of selfish."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Capitalization was normalized."
+  },
+  {
+    "id": "ADV2E102-U0018-Q082-SIM",
+    "pairId": "ADV2E102-U0018-Q082",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the adjective 'altruistic' describe?",
+    "questionUrdu": "Adjective altruistic کس رویے کو بیان کرتا ہے؟",
+    "options": [
+      "Concern for others' welfare",
+      "Exclusive concern for oneself",
+      "Fear of strangers",
+      "Indifference to everyone"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Concern for others' welfare ہے۔ Altruistic شخص اپنی منفعت کے بجائے دوسروں کی مدد اور بھلائی کو اہمیت دیتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Altruistic",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/altruistic",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q082",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/altruistic",
+        "label": "Altruistic",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge defines altruistic as caring about other people's needs and happiness."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/altruistic",
+        "label": "Altruistic",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Merriam-Webster independently defines altruistic conduct as unselfish concern for others."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q083-SRC",
+    "pairId": "ADV2E102-U0018-Q083",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "In studies of Iqbal's symbolic Shaheen, which listed quality is explicitly emphasized?",
+    "questionUrdu": "اقبال کے علامتی شاہین کے مطالعے میں درج صفات میں سے کون سی صفت واضح طور پر نمایاں کی گئی ہے؟",
+    "options": [
+      "پرندوں کا بادشاہ ہے",
+      "فضا میں شکار کرتا ہے",
+      "بلند پرواز ہے",
+      "کئی کئی دن بھوکا رہ سکتا ہے"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب بلند پرواز ہے۔ اقبال کا شاہین بلند ہمتی، بلند پروازی اور آزادی و خود داری کی علامت کے طور پر پیش ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Fikr-e-Iqbal mein Shaheen",
+      "referenceUrl": "https://khayaban.uop.edu.pk/Shumaray/38_Bahar_2018/12_faqar_e_iqbal.html",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://khayaban.uop.edu.pk/Shumaray/38_Bahar_2018/12_faqar_e_iqbal.html",
+        "label": "Fikr-e-Iqbal mein Shaheen",
+        "publisher": "Khayaban, University of Peshawar",
+        "authorityId": "university-peshawar-khayaban",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Peshawar journal discussion identifies high flight as a defining characteristic of Iqbal's Shaheen."
+      },
+      {
+        "url": "https://iqbalreview.allamaiqbal.com/index.php/ire/article/view/124",
+        "label": "Kargas ka jahan aur hai, Shaheen ka jahan aur",
+        "publisher": "Iqbal Review / Iqbal Academy Pakistan",
+        "authorityId": "iqbal-review",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Iqbal Review abstract independently names high ambition and high flight among the symbolic qualities for which Iqbal chose the Shaheen."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake Urdu was restored. The subjective claim that one quality is the single 'most important' was narrowed to a quality explicitly emphasized by the cited Iqbal studies."
+  },
+  {
+    "id": "ADV2E102-U0018-Q083-SIM",
+    "pairId": "ADV2E102-U0018-Q083",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which symbolic trait accompanies high flight in scholarly discussions of Iqbal's Shaheen?",
+    "questionUrdu": "اقبال کے شاہین کی علمی تشریح میں بلند پروازی کے ساتھ کون سی علامتی صفت بیان ہوتی ہے؟",
+    "options": [
+      "Lofty ambition",
+      "Love of captivity",
+      "Dependence on comfort",
+      "Fear of solitude"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Lofty ambition ہے۔ اقبال کے شاہین کی بلند پرواز اس کی بلند ہمتی، بڑے مقصد اور محدود حالات سے اوپر اٹھنے کی علامت ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Fikr-e-Iqbal mein Shaheen",
+      "referenceUrl": "https://khayaban.uop.edu.pk/Shumaray/38_Bahar_2018/12_faqar_e_iqbal.html",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://khayaban.uop.edu.pk/Shumaray/38_Bahar_2018/12_faqar_e_iqbal.html",
+        "label": "Fikr-e-Iqbal mein Shaheen",
+        "publisher": "Khayaban, University of Peshawar",
+        "authorityId": "university-peshawar-khayaban",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The University of Peshawar journal links Iqbal's Shaheen with high flight and elevated aspiration."
+      },
+      {
+        "url": "https://iqbalreview.allamaiqbal.com/index.php/ire/article/view/124",
+        "label": "Kargas ka jahan aur hai, Shaheen ka jahan aur",
+        "publisher": "Iqbal Review / Iqbal Academy Pakistan",
+        "authorityId": "iqbal-review",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Iqbal Review independently names high ambition together with high flight among the Shaheen's symbolic qualities."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q084-SRC",
+    "pairId": "ADV2E102-U0018-Q084",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Complete the traditional saying: 'صبح بنارس، شام ______'",
+    "questionUrdu": "روایتی کہاوت مکمل کریں: 'صبح بنارس، شام ______'",
+    "options": [
+      "کشمیر",
+      "آگرہ",
+      "پنجاب",
+      "اودھ"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب اودھ ہے۔ برصغیر کی معروف ثقافتی ترکیب میں بنارس کی صبح اور اودھ کی شام کو حسن و دلکشی کی علامت سمجھا جاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Urdu sahafat ki khisht-e-awwal",
+      "referenceUrl": "https://urducouncil.nic.in/ncpulblog/2022/04/12/%D8%A7%D8%B1%D8%AF%D9%88-%D8%B5%D8%AD%D8%A7%D9%81%D8%AA-%DA%A9%DB%8C-%D8%AE%D8%B4%D8%AA%D9%90-%D8%A7%D9%88%D9%91%D9%84-%D8%AC%D8%A7%D9%85-%D8%AC%DB%81%D8%A7%DA%BA-%D9%86%D9%85%D8%A7-%D9%85%D8%B6/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q084"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://urducouncil.nic.in/ncpulblog/2022/04/12/%D8%A7%D8%B1%D8%AF%D9%88-%D8%B5%D8%AD%D8%A7%D9%81%D8%AA-%DA%A9%DB%8C-%D8%AE%D8%B4%D8%AA%D9%90-%D8%A7%D9%88%D9%91%D9%84-%D8%AC%D8%A7%D9%85-%D8%AC%DB%81%D8%A7%DA%BA-%D9%86%D9%85%D8%A7-%D9%85%D8%B6/",
+        "label": "Urdu sahafat ki khisht-e-awwal",
+        "publisher": "National Council for Promotion of Urdu Language",
+        "authorityId": "ncpul",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Government of India Urdu council article records the celebrated pairing of the morning of Banaras and the evening of Awadh."
+      },
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/119_Inner.pdf",
+        "label": "Urdu self-learning material",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "maulana-azad-national-urdu-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university learning material independently lists Subh-e-Banaras together with Sham-e-Awadh."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake Urdu was restored and punctuation was standardized."
+  },
+  {
+    "id": "ADV2E102-U0018-Q084-SIM",
+    "pairId": "ADV2E102-U0018-Q084",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which place is traditionally associated with 'Subh' in the saying 'Subh-e-Banaras, Sham-e-Awadh'?",
+    "questionUrdu": "کہاوت 'صبح بنارس، شام اودھ' میں صبح کس مقام سے منسوب ہے؟",
+    "options": [
+      "Banaras",
+      "Awadh",
+      "Delhi",
+      "Agra"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Banaras ہے۔ اس روایتی جوڑی میں بنارس کی صبح اور اودھ کی شام کی خوب صورتی کا ذکر کیا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Urdu sahafat ki khisht-e-awwal",
+      "referenceUrl": "https://urducouncil.nic.in/ncpulblog/2022/04/12/%D8%A7%D8%B1%D8%AF%D9%88-%D8%B5%D8%AD%D8%A7%D9%81%D8%AA-%DA%A9%DB%8C-%D8%AE%D8%B4%D8%AA%D9%90-%D8%A7%D9%88%D9%91%D9%84-%D8%AC%D8%A7%D9%85-%D8%AC%DB%81%D8%A7%DA%BA-%D9%86%D9%85%D8%A7-%D9%85%D8%B6/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q084",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://urducouncil.nic.in/ncpulblog/2022/04/12/%D8%A7%D8%B1%D8%AF%D9%88-%D8%B5%D8%AD%D8%A7%D9%81%D8%AA-%DA%A9%DB%8C-%D8%AE%D8%B4%D8%AA%D9%90-%D8%A7%D9%88%D9%91%D9%84-%D8%AC%D8%A7%D9%85-%D8%AC%DB%81%D8%A7%DA%BA-%D9%86%D9%85%D8%A7-%D9%85%D8%B6/",
+        "label": "Urdu sahafat ki khisht-e-awwal",
+        "publisher": "National Council for Promotion of Urdu Language",
+        "authorityId": "ncpul",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The National Council for Promotion of Urdu Language records the pairing of Banaras with morning and Awadh with evening."
+      },
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/119_Inner.pdf",
+        "label": "Urdu self-learning material",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "maulana-azad-national-urdu-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "MANUU learning material independently lists Subh-e-Banaras together with Sham-e-Awadh."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q085-SRC",
+    "pairId": "ADV2E102-U0018-Q085",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who wrote 'اردو شاعری پر ایک نظر' (Urdu Shairi Par Ek Nazar)?",
+    "questionUrdu": "'اردو شاعری پر ایک نظر' کس نے لکھی؟",
+    "options": [
+      "کلیم الدین احمد",
+      "ڈاکٹر عبادت بریلوی",
+      "مسعود حسن رضوی ادیب",
+      "ڈاکٹر رؤف پاریکھ"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب کلیم الدین احمد ہے۔ Rekhta اور IGNOU دونوں اس تنقیدی کتاب کی تصنیف کلیم الدین احمد کے نام درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Urdu Shairi Par Ek Nazar, volume 1",
+      "referenceUrl": "https://rekhta.org/ebooks/detail/urdu-shairi-par-ek-nazar-volume-001-kaleemuddin-ahmad-ebooks?lang=ur",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q085"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhta.org/ebooks/detail/urdu-shairi-par-ek-nazar-volume-001-kaleemuddin-ahmad-ebooks?lang=ur",
+        "label": "Urdu Shairi Par Ek Nazar, volume 1",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's bibliographic record identifies Kaleemuddin Ahmad as the author of Urdu Shairi Par Ek Nazar."
+      },
+      {
+        "url": "https://egyankosh.ac.in/bitstream/123456789/106229/1/Unit-9.pdf",
+        "label": "Kaleemuddin Ahmad ki tanqeed nigari",
+        "publisher": "IGNOU eGyanKosh",
+        "authorityId": "ignou-egyankosh",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IGNOU's study unit independently attributes Urdu Shairi Par Ek Nazar to Kaleemuddin Ahmad."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake Urdu was restored and the stem was rendered bilingually for auditability."
+  },
+  {
+    "id": "ADV2E102-U0018-Q085-SIM",
+    "pairId": "ADV2E102-U0018-Q085",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which literary form is the principal subject of Kaleemuddin Ahmad's Urdu Shairi Par Ek Nazar?",
+    "questionUrdu": "کلیم الدین احمد کی 'اردو شاعری پر ایک نظر' کا بنیادی موضوع کون سی ادبی صنف ہے؟",
+    "options": [
+      "Urdu poetry",
+      "Urdu drama",
+      "Persian prose",
+      "Arabic lexicography"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Urdu poetry ہے۔ جیسا کہ عنوان واضح کرتا ہے، یہ کتاب اردو شاعری کے رجحانات اور شعری تنقید کا مطالعہ ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Urdu Shairi Par Ek Nazar, volume 1",
+      "referenceUrl": "https://rekhta.org/ebooks/detail/urdu-shairi-par-ek-nazar-volume-001-kaleemuddin-ahmad-ebooks?lang=ur",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q085",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhta.org/ebooks/detail/urdu-shairi-par-ek-nazar-volume-001-kaleemuddin-ahmad-ebooks?lang=ur",
+        "label": "Urdu Shairi Par Ek Nazar, volume 1",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Rekhta catalogs the work as Kaleemuddin Ahmad's study of Urdu poetry."
+      },
+      {
+        "url": "https://egyankosh.ac.in/bitstream/123456789/106229/1/Unit-9.pdf",
+        "label": "Kaleemuddin Ahmad ki tanqeed nigari",
+        "publisher": "IGNOU eGyanKosh",
+        "authorityId": "ignou-egyankosh",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "IGNOU independently discusses Urdu Shairi Par Ek Nazar as a work of Urdu poetic criticism."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q086-SRC",
+    "pairId": "ADV2E102-U0018-Q086",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who wrote the well-known television drama serial 'سونا چاندی' (Sona Chandi)?",
+    "questionUrdu": "مشہور ٹیلی ویژن ڈراما سیریل 'سونا چاندی' کس نے لکھا؟",
+    "options": [
+      "منو بھائی",
+      "امجد اسلام امجد",
+      "ڈاکٹر انور سجاد",
+      "حسینہ معین"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب منو بھائی ہے۔ Associated Press of Pakistan اور Dawn دونوں منو بھائی کو سونا چاندی کا مصنف قرار دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Munnu Bhai remembered on sixth death anniversary",
+      "referenceUrl": "https://www.app.com.pk/national/renowned-columnist-playwright-munnu-bhai-remembered-on-sixth-death-anniversary/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.app.com.pk/national/renowned-columnist-playwright-munnu-bhai-remembered-on-sixth-death-anniversary/",
+        "label": "Munnu Bhai remembered on sixth death anniversary",
+        "publisher": "Associated Press of Pakistan",
+        "authorityId": "associated-press-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Pakistan's national news agency states that Munnu Bhai penned the television drama Sona Chandi."
+      },
+      {
+        "url": "https://www.dawn.com/news/amp/1244486",
+        "label": "The man behind Sona Chandi",
+        "publisher": "Dawn",
+        "authorityId": "dawn",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Dawn independently identifies Munnu Bhai as the writer of Sona Chandi."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake Urdu was restored and the title was transliterated for auditability."
+  },
+  {
+    "id": "ADV2E102-U0018-Q086-SIM",
+    "pairId": "ADV2E102-U0018-Q086",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "For which medium was Munnu Bhai's Sona Chandi written?",
+    "questionUrdu": "منو بھائی کا 'سونا چاندی' کس ذریعے کے لیے لکھا گیا تھا؟",
+    "options": [
+      "Television",
+      "Radio only",
+      "Cinema",
+      "Stage opera"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Television ہے۔ سونا چاندی پاکستان ٹیلی ویژن کے لیے لکھا گیا معروف ڈراما سیریل تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "Munnu Bhai remembered on sixth death anniversary",
+      "referenceUrl": "https://www.app.com.pk/national/renowned-columnist-playwright-munnu-bhai-remembered-on-sixth-death-anniversary/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.app.com.pk/national/renowned-columnist-playwright-munnu-bhai-remembered-on-sixth-death-anniversary/",
+        "label": "Munnu Bhai remembered on sixth death anniversary",
+        "publisher": "Associated Press of Pakistan",
+        "authorityId": "associated-press-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Associated Press of Pakistan identifies Sona Chandi as a television drama penned by Munnu Bhai."
+      },
+      {
+        "url": "https://www.dawn.com/news/amp/1244486",
+        "label": "The man behind Sona Chandi",
+        "publisher": "Dawn",
+        "authorityId": "dawn",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Dawn independently describes Sona Chandi as Munnu Bhai's television serial."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q087-SRC",
+    "pairId": "ADV2E102-U0018-Q087",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which listed literary figure was a close associate of Sir Syed Ahmad Khan?",
+    "questionUrdu": "درج ادبی شخصیات میں سے Sir Syed Ahmad Khan کے قریبی ساتھی کون تھے؟",
+    "options": [
+      "الطاف حسین حالی",
+      "مومن خان مومن",
+      "ساغر صدیقی",
+      "ان میں سے کوئی نہیں"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب الطاف حسین حالی ہے۔ AMU اور سرکاری اردو کونسل دونوں حالی کی Sir Syed سے قریبی رفاقت بیان کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Sir Syed Academy publications",
+      "referenceUrl": "https://www.amu.ac.in/ur/academies/sir-syed-academy/publications",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q087"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.amu.ac.in/ur/academies/sir-syed-academy/publications",
+        "label": "Sir Syed Academy publications",
+        "publisher": "Aligarh Muslim University",
+        "authorityId": "aligarh-muslim-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Sir Syed Academy describes Altaf Hussain Hali's close association with Sir Syed and his authorship of Hayat-e-Javed."
+      },
+      {
+        "url": "https://www.urducouncil.nic.in/sites/default/files/2024-07/0448-%20Urdu%20-%20Readings%20In%20Literary%20Urdu%20Prose.1.pdf",
+        "label": "Readings in Literary Urdu Prose",
+        "publisher": "National Council for Promotion of Urdu Language",
+        "authorityId": "ncpul",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Government of India Urdu council text independently describes Hali as a close friend of Sir Syed Ahmad Khan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake Urdu was restored, and 'رفقا' was rendered as the clearer 'close associate'."
+  },
+  {
+    "id": "ADV2E102-U0018-Q087-SIM",
+    "pairId": "ADV2E102-U0018-Q087",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which biography of Sir Syed Ahmad Khan was written by Altaf Hussain Hali?",
+    "questionUrdu": "الطاف حسین حالی نے Sir Syed Ahmad Khan کی کون سی سوانح لکھی؟",
+    "options": [
+      "Hayat-e-Javed",
+      "Hayat-e-Saadi",
+      "Yadgar-e-Ghalib",
+      "Muqaddama-e-Sher-o-Shairi"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Hayat-e-Javed ہے۔ حالی نے اپنے قریبی رفیق Sir Syed Ahmad Khan کی زندگی اور خدمات پر یہ معروف سوانح لکھی۔",
+    "source": {
+      "type": "practice",
+      "label": "Sir Syed Academy publications",
+      "referenceUrl": "https://www.amu.ac.in/ur/academies/sir-syed-academy/publications",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q087",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.amu.ac.in/ur/academies/sir-syed-academy/publications",
+        "label": "Sir Syed Academy publications",
+        "publisher": "Aligarh Muslim University",
+        "authorityId": "aligarh-muslim-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Aligarh Muslim University's Sir Syed Academy identifies Hali as the author of Hayat-e-Javed."
+      },
+      {
+        "url": "https://www.urducouncil.nic.in/sites/default/files/2024-07/0448-%20Urdu%20-%20Readings%20In%20Literary%20Urdu%20Prose.1.pdf",
+        "label": "Readings in Literary Urdu Prose",
+        "publisher": "National Council for Promotion of Urdu Language",
+        "authorityId": "ncpul",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Urdu council text independently connects Hali's close association with Sir Syed to his biographical writing."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q088-SRC",
+    "pairId": "ADV2E102-U0018-Q088",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What does the Urdu idiom 'رات دن ایک کرنا' mean?",
+    "questionUrdu": "اردو محاورے 'رات دن ایک کرنا' کا کیا مطلب ہے؟",
+    "options": [
+      "خوب محنت کرنا",
+      "رات کو گھر میں زیادہ روشنی رکھنا",
+      "دن کو سوئے رہنا",
+      "رات کو جاگتے رہنا"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب خوب محنت کرنا ہے۔ یہ محاورہ مسلسل، بھرپور اور دن رات کوشش کرنے کے مفہوم میں استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "raat din",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-raat-din?lang=ur",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q088"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-raat-din?lang=ur",
+        "label": "raat din",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta records the idiomatic expression 'din raat ek karna' in the sense of sustained effort."
+      },
+      {
+        "url": "https://www.sobider.net/FileUpload/ep842424/File/23.turkce_ile_hintce.pdf",
+        "label": "Idioms in Hindi and Turkish",
+        "publisher": "International Journal of Social Sciences (SOBIDER)",
+        "authorityId": "sobider",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The comparative academic study independently glosses the expression as working very hard."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake Urdu was restored and the question was rendered bilingually."
+  },
+  {
+    "id": "ADV2E102-U0018-Q088-SIM",
+    "pairId": "ADV2E102-U0018-Q088",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which action best illustrates the Urdu idiom 'raat din ek karna'?",
+    "questionUrdu": "کون سا عمل اردو محاورے 'رات دن ایک کرنا' کی بہترین مثال ہے؟",
+    "options": [
+      "Working tirelessly toward a goal",
+      "Sleeping through the day",
+      "Avoiding all responsibility",
+      "Finishing without effort"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Working tirelessly toward a goal ہے۔ محاورہ کسی مقصد کے لیے مسلسل اور سخت محنت کرنے کی کیفیت بیان کرتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "raat din",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-raat-din?lang=ur",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q088",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-raat-din?lang=ur",
+        "label": "raat din",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Rekhta records the idiom in the sense of sustained effort."
+      },
+      {
+        "url": "https://www.sobider.net/FileUpload/ep842424/File/23.turkce_ile_hintce.pdf",
+        "label": "Idioms in Hindi and Turkish",
+        "publisher": "International Journal of Social Sciences (SOBIDER)",
+        "authorityId": "sobider",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The comparative academic study independently glosses the expression as working very hard."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q089-SRC",
+    "pairId": "ADV2E102-U0018-Q089",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What does the expression 'pros and cons' mean?",
+    "questionUrdu": "Expression 'pros and cons' کا کیا مطلب ہے؟",
+    "options": [
+      "عام لوگ",
+      "کھوٹے سکے",
+      "مشکل زندگی",
+      "موافق و مخالف باتیں"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب موافق و مخالف باتیں ہے۔ اس expression سے کسی معاملے کے فوائد و نقصانات یا حق اور مخالفت کی دلیلیں مراد ہوتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "pros and cons",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/pros-and-cons",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q089"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/pros-and-cons",
+        "label": "pros and cons",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines pros and cons as the advantages and disadvantages of something."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/pros%20and%20cons",
+        "label": "pros and cons",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines the expression as arguments for and against or advantages and disadvantages."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake Urdu options were restored; option D expresses the favorable and unfavorable sides."
+  },
+  {
+    "id": "ADV2E102-U0018-Q089-SIM",
+    "pairId": "ADV2E102-U0018-Q089",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "In the expression 'pros and cons', what do the 'pros' represent?",
+    "questionUrdu": "Expression 'pros and cons' میں pros کس چیز کی نمائندگی کرتے ہیں؟",
+    "options": [
+      "Arguments in favour",
+      "Arguments against",
+      "Unrelated facts",
+      "Final decisions"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Arguments in favour ہے۔ Pros کسی معاملے کے حق میں نکات یا فوائد جبکہ cons اس کے خلاف نکات یا نقصانات ہوتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "pros and cons",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/pros-and-cons",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q089",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/pros-and-cons",
+        "label": "pros and cons",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge defines pros as the advantages or arguments in favour within 'pros and cons'."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/pros%20and%20cons",
+        "label": "pros and cons",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Merriam-Webster independently defines the expression as arguments for and against."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q090-SRC",
+    "pairId": "ADV2E102-U0018-Q090",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which Urdu proverb is equivalent to the English idiom 'to carry coals to Newcastle'?",
+    "questionUrdu": "English idiom 'to carry coals to Newcastle' کے برابر کون سی اردو کہاوت ہے؟",
+    "options": [
+      "برف کو اس کے گھر تک پہنچانا",
+      "مشکل ترین کام کرنا",
+      "بلی کا گھر واپس آنا",
+      "الٹے بانس بریلی کو"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب الٹے بانس بریلی کو ہے۔ دونوں کہاوتیں ایسی چیز وہاں لے جانے کے بے فائدہ عمل کو ظاہر کرتی ہیں جہاں وہ پہلے ہی بہت موجود ہو۔",
+    "source": {
+      "type": "book",
+      "label": "carry/take coals to Newcastle",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/carry-take-coals-to-newcastle",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q090"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/carry-take-coals-to-newcastle",
+        "label": "carry/take coals to Newcastle",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines the idiom as taking something to a place that already has more than enough of it."
+      },
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-ulte-baans-barelii-ko",
+        "label": "ulte baans Bareli ko",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta directly gives 'carry coals to Newcastle' as the English equivalent of 'الٹے بانس بریلی کو'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake Urdu was restored, the standard English idiom's plural 'coals' was supplied, and the stem was clarified as an equivalence question."
+  },
+  {
+    "id": "ADV2E102-U0018-Q090-SIM",
+    "pairId": "ADV2E102-U0018-Q090",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which situation best matches 'carry coals to Newcastle'?",
+    "questionUrdu": "کون سی صورتِ حال carry coals to Newcastle کے مفہوم سے بہترین مطابقت رکھتی ہے؟",
+    "options": [
+      "Taking an abundant product to its own source",
+      "Bringing medicine to a patient",
+      "Exporting a scarce resource",
+      "Returning a borrowed item"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Taking an abundant product to its own source ہے۔ محاورہ غیر ضروری طور پر وہ چیز کسی جگہ لے جانے کو کہتا ہے جو وہاں پہلے ہی وافر ہو۔",
+    "source": {
+      "type": "practice",
+      "label": "carry/take coals to Newcastle",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/carry-take-coals-to-newcastle",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q090",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/carry-take-coals-to-newcastle",
+        "label": "carry/take coals to Newcastle",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Cambridge defines the idiom as taking something to a place that already has more than enough of it."
+      },
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-ulte-baans-barelii-ko",
+        "label": "ulte baans Bareli ko",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Rekhta independently equates the Urdu proverb with the same redundant action."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q091-SRC",
+    "pairId": "ADV2E102-U0018-Q091",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which language served as a court language under Mughal rule in India?",
+    "questionUrdu": "ہندوستان میں مغل حکومت کے تحت کون سی زبان درباری زبان تھی؟",
+    "options": [
+      "اردو",
+      "ہندی",
+      "فارسی",
+      "سنسکرت"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب فارسی ہے۔ سرکاری ثقافتی ماخذ اور Encyclopaedia Iranica دونوں فارسی کو مغل دربار اور انتظام کی اہم زبان قرار دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Persian language and literature in Mughal India",
+      "referenceUrl": "https://ignca.gov.in/Asi_data/21409.pdf",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q091"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ignca.gov.in/Asi_data/21409.pdf",
+        "label": "Persian language and literature in Mughal India",
+        "publisher": "Indira Gandhi National Centre for the Arts",
+        "authorityId": "ignca",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Government of India cultural centre text identifies Persian as the Mughal court and literary language."
+      },
+      {
+        "url": "https://www.iranicaonline.org/articles/akbar-i-mughal-india/",
+        "label": "Akbar I",
+        "publisher": "Encyclopaedia Iranica",
+        "authorityId": "encyclopaedia-iranica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Iranica independently identifies Persian as the language of Akbar's court."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake Urdu was restored and the broad source wording was clarified to Mughal rule in India."
+  },
+  {
+    "id": "ADV2E102-U0018-Q091-SIM",
+    "pairId": "ADV2E102-U0018-Q091",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Mughal emperor's court is specifically identified by Encyclopaedia Iranica as Persian-speaking?",
+    "questionUrdu": "Encyclopaedia Iranica خاص طور پر کس مغل بادشاہ کے دربار کو فارسی زبان سے وابستہ کرتی ہے؟",
+    "options": [
+      "Akbar",
+      "Babur",
+      "Aurangzeb",
+      "Bahadur Shah Zafar"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Akbar ہے۔ اکبر کے دربار میں فارسی انتظامی، ادبی اور علمی اظہار کی مرکزی زبان تھی۔",
+    "source": {
+      "type": "practice",
+      "label": "Persian language and literature in Mughal India",
+      "referenceUrl": "https://ignca.gov.in/Asi_data/21409.pdf",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q091",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://ignca.gov.in/Asi_data/21409.pdf",
+        "label": "Persian language and literature in Mughal India",
+        "publisher": "Indira Gandhi National Centre for the Arts",
+        "authorityId": "ignca",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The IGNCA text describes Persian as the Mughal court language, including under Akbar."
+      },
+      {
+        "url": "https://www.iranicaonline.org/articles/akbar-i-mughal-india/",
+        "label": "Akbar I",
+        "publisher": "Encyclopaedia Iranica",
+        "authorityId": "encyclopaedia-iranica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Encyclopaedia Iranica independently identifies Persian as the language of Akbar's court."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q092-SRC",
+    "pairId": "ADV2E102-U0018-Q092",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What was the original title of Hali's long poem commonly called 'Musaddas-e-Hali'?",
+    "questionUrdu": "حالی کی طویل نظم، جو عام طور پر 'مسدسِ حالی' کہلاتی ہے، کا اصل عنوان کیا تھا؟",
+    "options": [
+      "مد و جزر اسلام",
+      "مسلمانوں کا تابناک ماضی",
+      "حیات طیبہ ﷺ",
+      "مسلمانوں کے عروج و زوال کی داستان"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب مد و جزر اسلام ہے۔ Rekhta اور Royal Holloway دونوں نظم کا مکمل عنوان Musaddas-e Madd-o Jazr-e Islam درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Musaddas-e-Hali: Madd-o-Jazr-e-Islam",
+      "referenceUrl": "https://www.rekhta.org/ebooks/detail/musaddas-e-haali-madd-o-jazr-e-islam-altaf-hussain-hali-ebooks-8",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q092"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/musaddas-e-haali-madd-o-jazr-e-islam-altaf-hussain-hali-ebooks-8",
+        "label": "Musaddas-e-Hali: Madd-o-Jazr-e-Islam",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's bibliographic record gives Madd-o-Jazr-e-Islam as the full title of Hali's Musaddas."
+      },
+      {
+        "url": "https://pure.royalholloway.ac.uk/en/publications/a-note-on-the-origins-of-halis-musaddas-e-madd-o-jazr-e-isl%C4%81m/",
+        "label": "A note on the origins of Hali's Musaddas-e Madd-o Jazr-e Islam",
+        "publisher": "Royal Holloway, University of London",
+        "authorityId": "royal-holloway",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university research record independently identifies the poem by its title Musaddas-e Madd-o Jazr-e Islam."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The mojibake Urdu was restored and the title was transliterated in the stem."
+  },
+  {
+    "id": "ADV2E102-U0018-Q092-SIM",
+    "pairId": "ADV2E102-U0018-Q092",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Who wrote the long poem Madd-o-Jazr-e-Islam, commonly called Musaddas-e-Hali?",
+    "questionUrdu": "طویل نظم 'مد و جزر اسلام'، جو مسدسِ حالی کہلاتی ہے، کس نے لکھی؟",
+    "options": [
+      "Altaf Hussain Hali",
+      "Muhammad Iqbal",
+      "Akbar Allahabadi",
+      "Shibli Nomani"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Altaf Hussain Hali ہے۔ مد و جزر اسلام حالی کی اصلاحی طویل نظم ہے جو ادبی روایت میں مسدسِ حالی کے نام سے مشہور ہوئی۔",
+    "source": {
+      "type": "practice",
+      "label": "Musaddas-e-Hali: Madd-o-Jazr-e-Islam",
+      "referenceUrl": "https://www.rekhta.org/ebooks/detail/musaddas-e-haali-madd-o-jazr-e-islam-altaf-hussain-hali-ebooks-8",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q092",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/musaddas-e-haali-madd-o-jazr-e-islam-altaf-hussain-hali-ebooks-8",
+        "label": "Musaddas-e-Hali: Madd-o-Jazr-e-Islam",
+        "publisher": "Rekhta",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Rekhta identifies Altaf Hussain Hali as the author of Madd-o-Jazr-e-Islam."
+      },
+      {
+        "url": "https://pure.royalholloway.ac.uk/en/publications/a-note-on-the-origins-of-halis-musaddas-e-madd-o-jazr-e-isl%C4%81m/",
+        "label": "A note on the origins of Hali's Musaddas-e Madd-o Jazr-e Islam",
+        "publisher": "Royal Holloway, University of London",
+        "authorityId": "royal-holloway",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Royal Holloway's research record independently attributes the Musaddas to Hali."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q093-SRC",
+    "pairId": "ADV2E102-U0018-Q093",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "According to Islamic tradition, which act of worship was made obligatory during the Mi'raj?",
+    "questionUrdu": "اسلامی روایت کے مطابق معراج کے دوران کون سی عبادت فرض ہوئی؟",
+    "options": [
+      "Fasting",
+      "Five daily prayers",
+      "Zakat",
+      "Jihad"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب پانچ وقت کی نماز ہے۔ معتبر اسلامی اور علمی ماخذ معراج کی رات روزانہ پانچ نمازوں کی فرضیت بیان کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "The prescription of prayer in the Mi'raj journey",
+      "referenceUrl": "https://www.dar-alifta.org/en/fatwa/details/22380/the-meaning-of-the-prescription-of-prayer-in-the-mi%E2%80%99raj-journey",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q093"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.dar-alifta.org/en/fatwa/details/22380/the-meaning-of-the-prescription-of-prayer-in-the-mi%E2%80%99raj-journey",
+        "label": "The prescription of prayer in the Mi'raj journey",
+        "publisher": "Egypt's Dar Al-Ifta",
+        "authorityId": "egypt-dar-al-ifta",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Dar Al-Ifta states that the five daily prayers became obligatory on the night of Mi'raj."
+      },
+      {
+        "url": "https://sophia.repo.nii.ac.jp/record/2001323/files/SIAS23_1.pdf",
+        "label": "A study of the Mi'raj narrative",
+        "publisher": "Sophia University Repository",
+        "authorityId": "sophia-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university study independently explains the Mi'raj narrative's prescription and finalization of five daily prayers."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The grammar was normalized, and 'Fast' was corrected to the act name 'Fasting'."
+  },
+  {
+    "id": "ADV2E102-U0018-Q093-SIM",
+    "pairId": "ADV2E102-U0018-Q093",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "According to the Mi'raj narrative, how many daily prayers were initially prescribed before being reduced to five?",
+    "questionUrdu": "روایتِ معراج کے مطابق پانچ رہ جانے سے پہلے ابتدا میں روزانہ کتنی نمازیں مقرر ہوئی تھیں؟",
+    "options": [
+      "Fifty",
+      "Forty",
+      "Twenty-five",
+      "Ten"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Fifty ہے۔ روایت کے مطابق ابتدا میں پچاس نمازیں مقرر ہوئیں، پھر تخفیف کے بعد پانچ رہیں مگر اجر پچاس کا قرار پایا۔",
+    "source": {
+      "type": "practice",
+      "label": "The prescription of prayer in the Mi'raj journey",
+      "referenceUrl": "https://www.dar-alifta.org/en/fatwa/details/22380/the-meaning-of-the-prescription-of-prayer-in-the-mi%E2%80%99raj-journey",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q093",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.dar-alifta.org/en/fatwa/details/22380/the-meaning-of-the-prescription-of-prayer-in-the-mi%E2%80%99raj-journey",
+        "label": "The prescription of prayer in the Mi'raj journey",
+        "publisher": "Egypt's Dar Al-Ifta",
+        "authorityId": "egypt-dar-al-ifta",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Dar Al-Ifta recounts the initial prescription of fifty prayers during Mi'raj before reduction to five."
+      },
+      {
+        "url": "https://sophia.repo.nii.ac.jp/record/2001323/files/SIAS23_1.pdf",
+        "label": "A study of the Mi'raj narrative",
+        "publisher": "Sophia University Repository",
+        "authorityId": "sophia-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Sophia University study independently discusses the Mi'raj narrative's reduction from fifty to five daily prayers."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q094-SRC",
+    "pairId": "ADV2E102-U0018-Q094",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "According to the conventional classification of the earliest converts, who was the first child to accept Islam?",
+    "questionUrdu": "ابتدائی قبولِ اسلام کی روایتی درجہ بندی کے مطابق سب سے پہلے کس بچے نے اسلام قبول کیا؟",
+    "options": [
+      "Hazrat Abu Bakr (RA)",
+      "Hazrat Umar (RA)",
+      "Hazrat Uthman (RA)",
+      "Hazrat Ali (RA)"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Hazrat Ali (RA) ہے۔ اسلامی سوانحی ماخذ حضرت علیؓ کو سب سے پہلے اسلام قبول کرنے والا بچہ قرار دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Ali ibn Abi Talib: Courageous and Steadfast",
+      "referenceUrl": "https://yaqeeninstitute.org/watch/series/the-firsts/ali-ibn-abi-talib-courageous-and-steadfast",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q094"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://yaqeeninstitute.org/watch/series/the-firsts/ali-ibn-abi-talib-courageous-and-steadfast",
+        "label": "Ali ibn Abi Talib: Courageous and Steadfast",
+        "publisher": "Yaqeen Institute for Islamic Research",
+        "authorityId": "yaqeen-institute",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Yaqeen identifies Ali ibn Abi Talib as the first child to embrace Islam."
+      },
+      {
+        "url": "https://seekersguidance.org/articles/the-prophets-companions/the-ten-promised-paradise-sayyiduna-ali-ibn-abi-talib-allah-be-pleased-with-him-shaykh-faraz-rabbani/",
+        "label": "Sayyiduna Ali ibn Abi Talib",
+        "publisher": "SeekersGuidance",
+        "authorityId": "seekersguidance",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "SeekersGuidance independently states that Ali is conventionally considered the first child to accept Islam."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was scoped to the conventional category-based reconciliation because early-convert order is traditionally separated into woman, adult man, child and freedman categories; 'Usman' was standardized to 'Uthman'."
+  },
+  {
+    "id": "ADV2E102-U0018-Q094-SIM",
+    "pairId": "ADV2E102-U0018-Q094",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "What was Hazrat Ali's close family relationship to the Prophet Muhammad (PBUH)?",
+    "questionUrdu": "Hazrat Ali کا Prophet Muhammad (PBUH) سے قریبی خاندانی تعلق کیا تھا؟",
+    "options": [
+      "Cousin and son-in-law",
+      "Maternal uncle",
+      "Brother by birth",
+      "Grandfather"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Cousin and son-in-law ہے۔ حضرت علیؓ رسول اللہ ﷺ کے چچا زاد بھائی بھی تھے اور حضرت فاطمہؓ سے نکاح کے باعث داماد بھی۔",
+    "source": {
+      "type": "practice",
+      "label": "Ali ibn Abi Talib: Courageous and Steadfast",
+      "referenceUrl": "https://yaqeeninstitute.org/watch/series/the-firsts/ali-ibn-abi-talib-courageous-and-steadfast",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q094",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://yaqeeninstitute.org/watch/series/the-firsts/ali-ibn-abi-talib-courageous-and-steadfast",
+        "label": "Ali ibn Abi Talib: Courageous and Steadfast",
+        "publisher": "Yaqeen Institute for Islamic Research",
+        "authorityId": "yaqeen-institute",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Yaqeen Institute identifies Ali ibn Abi Talib as the Prophet's cousin and son-in-law."
+      },
+      {
+        "url": "https://seekersguidance.org/articles/the-prophets-companions/the-ten-promised-paradise-sayyiduna-ali-ibn-abi-talib-allah-be-pleased-with-him-shaykh-faraz-rabbani/",
+        "label": "Sayyiduna Ali ibn Abi Talib",
+        "publisher": "SeekersGuidance",
+        "authorityId": "seekersguidance",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "SeekersGuidance independently records both family relationships in its biography of Ali."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q096-SRC",
+    "pairId": "ADV2E102-U0018-Q096",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "According to conventional seerah chronology, in which Hijri year was jihad prescribed in its armed or combative sense?",
+    "questionUrdu": "روایتی سیرت chronology کے مطابق مسلح یا قتال کے معنی میں جہاد کس ہجری سال فرض ہوا؟",
+    "options": [
+      "1 AH",
+      "2 AH",
+      "3 AH",
+      "4 AH"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 2 AH ہے۔ Dar Al-Ifta اور جامعہ کے تحقیقی ماخذ مسلح جہاد کی اجازت یا فرضیت کو ہجرت کے دوسرے سال سے منسوب کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Jihad: concept, history and contemporary application",
+      "referenceUrl": "https://www.dar-alifta.org/en/article/details/78/jihad-concept-history-and-contemporary-application",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q096"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.dar-alifta.org/en/article/details/78/jihad-concept-history-and-contemporary-application",
+        "label": "Jihad: concept, history and contemporary application",
+        "publisher": "Egypt's Dar Al-Ifta",
+        "authorityId": "egypt-dar-al-ifta",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Dar Al-Ifta states that jihad in its combative sense was decreed in the second Hijri year."
+      },
+      {
+        "url": "https://kubanni-backend.abu.edu.ng/server/api/core/bitstreams/00c97e77-73fe-4952-82a7-9cb5ab2aa0f3/content",
+        "label": "Study discussing the prescription of jihad",
+        "publisher": "Ahmadu Bello University Repository",
+        "authorityId": "ahmadu-bello-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university-hosted study independently dates the prescription of armed jihad to the second year after the Hijra."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Because jihad has broader non-combat meanings, the stem was narrowed to the armed or combative prescription intended by the 2 AH choices."
+  },
+  {
+    "id": "ADV2E102-U0018-Q096-SIM",
+    "pairId": "ADV2E102-U0018-Q096",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which major early Muslim battle took place in 2 AH after armed fighting was permitted?",
+    "questionUrdu": "مسلح قتال کی اجازت کے بعد 2 AH میں مسلمانوں کی کون سی بڑی ابتدائی جنگ ہوئی؟",
+    "options": [
+      "Battle of Badr",
+      "Battle of Uhud",
+      "Battle of the Trench",
+      "Battle of Hunayn"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Battle of Badr ہے۔ غزوۂ بدر 2 AH میں پیش آیا اور اسلامی تاریخ کی پہلی بڑی فیصلہ کن مسلح جنگ سمجھا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Jihad: concept, history and contemporary application",
+      "referenceUrl": "https://www.dar-alifta.org/en/article/details/78/jihad-concept-history-and-contemporary-application",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q096",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.dar-alifta.org/en/article/details/78/jihad-concept-history-and-contemporary-application",
+        "label": "Jihad: concept, history and contemporary application",
+        "publisher": "Egypt's Dar Al-Ifta",
+        "authorityId": "egypt-dar-al-ifta",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Dar Al-Ifta's chronology places the decree of combative jihad in 2 AH and discusses the early armed phase associated with Badr."
+      },
+      {
+        "url": "https://kubanni-backend.abu.edu.ng/server/api/core/bitstreams/00c97e77-73fe-4952-82a7-9cb5ab2aa0f3/content",
+        "label": "Study discussing the prescription of jihad",
+        "publisher": "Ahmadu Bello University Repository",
+        "authorityId": "ahmadu-bello-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Ahmadu Bello University study independently links the second Hijri year with armed jihad and Badr."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q097-SRC",
+    "pairId": "ADV2E102-U0018-Q097",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Ramadan is which month of the Islamic calendar?",
+    "questionUrdu": "Ramadan اسلامی calendar کا کون سا مہینہ ہے؟",
+    "options": [
+      "9th",
+      "11th",
+      "10th",
+      "12th"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 9th ہے۔ National Geographic اور Islamic Relief دونوں Ramadan کو اسلامی قمری سال کا نواں مہینہ قرار دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Ramadan",
+      "referenceUrl": "https://education.nationalgeographic.org/resource/ramadan/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q097"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://education.nationalgeographic.org/resource/ramadan/",
+        "label": "Ramadan",
+        "publisher": "National Geographic Education",
+        "authorityId": "national-geographic",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Geographic identifies Ramadan as the ninth month of the Islamic lunar calendar."
+      },
+      {
+        "url": "https://www.islamic-relief.org.uk/giving/islamic-giving/ramadan/what-is-ramadan/",
+        "label": "What is Ramadan?",
+        "publisher": "Islamic Relief UK",
+        "authorityId": "islamic-relief-uk",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Islamic Relief independently identifies Ramadan as the ninth month of the Islamic calendar."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The fill-in-the-blank wording was converted to a direct question."
+  },
+  {
+    "id": "ADV2E102-U0018-Q097-SIM",
+    "pairId": "ADV2E102-U0018-Q097",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which festival marks the end of Ramadan?",
+    "questionUrdu": "Ramadan کے اختتام پر کون سا تہوار منایا جاتا ہے؟",
+    "options": [
+      "Eid al-Fitr",
+      "Eid al-Adha",
+      "Ashura",
+      "Mawlid"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Eid al-Fitr ہے۔ رمضان کے روزوں کا مہینہ مکمل ہونے کے بعد شوال کی پہلی تاریخ کو عید الفطر منائی جاتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Ramadan",
+      "referenceUrl": "https://education.nationalgeographic.org/resource/ramadan/",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q097",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://education.nationalgeographic.org/resource/ramadan/",
+        "label": "Ramadan",
+        "publisher": "National Geographic Education",
+        "authorityId": "national-geographic",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "National Geographic explains that Eid al-Fitr marks the end of Ramadan."
+      },
+      {
+        "url": "https://www.islamic-relief.org.uk/giving/islamic-giving/ramadan/what-is-ramadan/",
+        "label": "What is Ramadan?",
+        "publisher": "Islamic Relief UK",
+        "authorityId": "islamic-relief-uk",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Islamic Relief independently identifies Eid al-Fitr as the celebration concluding Ramadan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q098-SRC",
+    "pairId": "ADV2E102-U0018-Q098",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which listed Umayyad ruler was known as Umar-e-Sani (Umar II, or the Second Umar)?",
+    "questionUrdu": "درج اموی حکمرانوں میں سے کسے Umar-e-Sani یعنی Umar II کہا جاتا تھا؟",
+    "options": [
+      "Amir Muawiya",
+      "Marwan",
+      "Abd al-Malik",
+      "Umar ibn Abd al-Aziz"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Umar ibn Abd al-Aziz ہے۔ سوانحی ماخذ انہیں عمر ثانی، عمر دوم اور ایک اصلاح پسند اموی خلیفہ قرار دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Umar ibn Abd al-Aziz",
+      "referenceUrl": "https://www.encyclopedia.com/history/news-wires-white-papers-and-books/umar-ibn-abd-al-aziz",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q098"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.encyclopedia.com/history/news-wires-white-papers-and-books/umar-ibn-abd-al-aziz",
+        "label": "Umar ibn Abd al-Aziz",
+        "publisher": "Encyclopedia.com",
+        "authorityId": "encyclopedia-com",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The biographical reference identifies the Umayyad caliph Umar ibn Abd al-Aziz as Umar II."
+      },
+      {
+        "url": "https://www.islamiccentre.org/presentations/Umar-ibn-Abd-al-Aziz.pdf",
+        "label": "Umar ibn Abd al-Aziz",
+        "publisher": "Islamic Centre Leicester",
+        "authorityId": "islamic-centre-leicester",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent biographical study explicitly says Umar ibn Abd al-Aziz is known as the Second Umar and labels him Umar II."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The dynasty spelling and personal names were standardized, and the Urdu/Persian epithet was glossed to make the proposition explicit."
+  },
+  {
+    "id": "ADV2E102-U0018-Q098-SIM",
+    "pairId": "ADV2E102-U0018-Q098",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Umar ibn Abd al-Aziz, known as Umar II, belonged to which caliphate?",
+    "questionUrdu": "Umar ibn Abd al-Aziz، جو Umar II کہلاتے ہیں، کس خلافت سے تعلق رکھتے تھے؟",
+    "options": [
+      "Umayyad Caliphate",
+      "Abbasid Caliphate",
+      "Fatimid Caliphate",
+      "Ottoman Caliphate"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Umayyad Caliphate ہے۔ عمر بن عبدالعزیز اموی خاندان کے خلیفہ تھے اور عدل و اصلاحات کے باعث عمر ثانی کہلائے۔",
+    "source": {
+      "type": "practice",
+      "label": "Umar ibn Abd al-Aziz",
+      "referenceUrl": "https://www.encyclopedia.com/history/news-wires-white-papers-and-books/umar-ibn-abd-al-aziz",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q098",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.encyclopedia.com/history/news-wires-white-papers-and-books/umar-ibn-abd-al-aziz",
+        "label": "Umar ibn Abd al-Aziz",
+        "publisher": "Encyclopedia.com",
+        "authorityId": "encyclopedia-com",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Encyclopedia.com identifies Umar ibn Abd al-Aziz as an Umayyad caliph known as Umar II."
+      },
+      {
+        "url": "https://www.islamiccentre.org/presentations/Umar-ibn-Abd-al-Aziz.pdf",
+        "label": "Umar ibn Abd al-Aziz",
+        "publisher": "Islamic Centre Leicester",
+        "authorityId": "islamic-centre-leicester",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The Islamic Centre Leicester biography independently places the Second Umar in the Umayyad caliphate."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q099-SRC",
+    "pairId": "ADV2E102-U0018-Q099",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "According to traditional Muslim accounts, how large was Abraha's army when it advanced to demolish the Kaaba?",
+    "questionUrdu": "روایتی مسلم روایات کے مطابق کعبہ منہدم کرنے کے لیے آگے بڑھتے وقت Abraha کی فوج کتنی بڑی تھی؟",
+    "options": [
+      "60 thousand",
+      "50 thousand",
+      "40 thousand",
+      "30 thousand"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 60 thousand ہے۔ دونوں تفسیری ماخذ روایتی سیرت کی بنا پر ابرہہ کی فوج ساٹھ ہزار بیان کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Tazkirul Quran commentary on Surah al-Fil 105:1",
+      "referenceUrl": "https://quran.com/105%3A1/tafsirs/tazkirul-quran-en",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q099"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://quran.com/105%3A1/tafsirs/tazkirul-quran-en",
+        "label": "Tazkirul Quran commentary on Surah al-Fil 105:1",
+        "publisher": "Quran.com",
+        "authorityId": "quran-com",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The hosted commentary recounts the traditional report that Abraha advanced with an army of sixty thousand."
+      },
+      {
+        "url": "https://islamicstudies.info/quran/dawat.php?sura=105",
+        "label": "Commentary on Surah al-Fil",
+        "publisher": "IslamicStudies.info",
+        "authorityId": "islamic-studies-info",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent commentary likewise reports, with reference to the seerah tradition, an army of 60,000."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The claim was explicitly scoped to traditional Muslim accounts; the numerical strength is a transmitted narrative detail rather than an independently established modern historical count. 'Kaabah' was standardized to 'Kaaba'."
+  },
+  {
+    "id": "ADV2E102-U0018-Q099-SIM",
+    "pairId": "ADV2E102-U0018-Q099",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which Quranic surah recounts the destruction of the army of the Elephant?",
+    "questionUrdu": "قرآن کی کون سی سورت اصحابِ فیل کی فوج کی تباہی بیان کرتی ہے؟",
+    "options": [
+      "Surah al-Fil",
+      "Surah Quraysh",
+      "Surah al-Kawthar",
+      "Surah al-Nasr"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Surah al-Fil ہے۔ قرآن کی 105ویں سورت اصحابِ فیل کے واقعے اور اللہ کی طرف سے ان کی ناکامی کا ذکر کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Tazkirul Quran commentary on Surah al-Fil 105:1",
+      "referenceUrl": "https://quran.com/105%3A1/tafsirs/tazkirul-quran-en",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q099",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://quran.com/105%3A1/tafsirs/tazkirul-quran-en",
+        "label": "Tazkirul Quran commentary on Surah al-Fil 105:1",
+        "publisher": "Quran.com",
+        "authorityId": "quran-com",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "Quran.com's commentary is attached to Surah al-Fil and explains the army of the Elephant narrative."
+      },
+      {
+        "url": "https://islamicstudies.info/quran/dawat.php?sura=105",
+        "label": "Commentary on Surah al-Fil",
+        "publisher": "IslamicStudies.info",
+        "authorityId": "islamic-studies-info",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "IslamicStudies.info independently presents the same Abraha account under Quranic surah 105, al-Fil."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0018-Q100-SRC",
+    "pairId": "ADV2E102-U0018-Q100",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Who commanded the Quraysh-led Confederate force at the Battle of the Trench (Khandaq)?",
+    "questionUrdu": "Battle of the Trench یعنی Khandaq میں Quraysh کی قیادت والے اتحادی لشکر کا کمانڈر کون تھا؟",
+    "options": [
+      "Abu Sufyan",
+      "Abu Jahl",
+      "Abu Lahab",
+      "Utba ibn Rabi'a"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Abu Sufyan ہے۔ جامعہ کے دونوں تاریخی ماخذ غزوۂ خندق کے قریشی اتحادی لشکر کی قیادت ابو سفیان کے پاس بتاتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Study of Abu Sufyan and the Meccan opposition",
+      "referenceUrl": "https://etheses.whiterose.ac.uk/id/eprint/162/1/uk_bl_ethos_275523.pdf",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q100"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://etheses.whiterose.ac.uk/id/eprint/162/1/uk_bl_ethos_275523.pdf",
+        "label": "Study of Abu Sufyan and the Meccan opposition",
+        "publisher": "White Rose eTheses, University of Leeds",
+        "authorityId": "university-leeds-white-rose",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university thesis identifies the Quraysh cavalry at the Trench under Abu Sufyan's command and describes him ending the siege."
+      },
+      {
+        "url": "https://spi.web.uinsatu.ac.id/2023/06/29/diswara-4perjuangan-nabi-pada-masa-perang-khandaq/",
+        "label": "Perjuangan Nabi pada masa Perang Khandaq",
+        "publisher": "UIN Sayyid Ali Rahmatullah Tulungagung",
+        "authorityId": "uin-sayyid-ali-rahmatullah",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The state Islamic university account independently identifies Abu Sufyan as supreme commander of the Quraysh-led force at Khandaq."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The pejorative and imprecise word 'infidels' was replaced by the historically specific Quraysh-led Confederate force; distractor names were standardized."
+  },
+  {
+    "id": "ADV2E102-U0018-Q100-SIM",
+    "pairId": "ADV2E102-U0018-Q100",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "By what other Quranic-era name is the Battle of the Trench commonly known?",
+    "questionUrdu": "Battle of the Trench کو قرآنی دور کے کس دوسرے نام سے عام طور پر جانا جاتا ہے؟",
+    "options": [
+      "Battle of al-Ahzab",
+      "Battle of Badr",
+      "Battle of Mu'tah",
+      "Battle of Tabuk"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Battle of al-Ahzab ہے۔ مختلف قبائل کے اتحادی لشکر کی وجہ سے غزوۂ خندق کو غزوۂ احزاب بھی کہا جاتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Study of Abu Sufyan and the Meccan opposition",
+      "referenceUrl": "https://etheses.whiterose.ac.uk/id/eprint/162/1/uk_bl_ethos_275523.pdf",
+      "accessedOn": "2026-08-29"
+    },
+    "tags": [
+      "adv2e102",
+      "u0018-q100",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://etheses.whiterose.ac.uk/id/eprint/162/1/uk_bl_ethos_275523.pdf",
+        "label": "Study of Abu Sufyan and the Meccan opposition",
+        "publisher": "White Rose eTheses, University of Leeds",
+        "authorityId": "university-leeds-white-rose",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The University of Leeds thesis treats the Trench as the battle against the Confederate parties, al-Ahzab."
+      },
+      {
+        "url": "https://spi.web.uinsatu.ac.id/2023/06/29/diswara-4perjuangan-nabi-pada-masa-perang-khandaq/",
+        "label": "Perjuangan Nabi pada masa Perang Khandaq",
+        "publisher": "UIN Sayyid Ali Rahmatullah Tulungagung",
+        "authorityId": "uin-sayyid-ali-rahmatullah",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer",
+          "related-fact"
+        ],
+        "claimSummary": "The state Islamic university account independently identifies Khandaq as the Battle of al-Ahzab."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

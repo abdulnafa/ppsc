@@ -384,7 +384,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0032-Q019-SRC"
+        "ADV2E102-U0032-Q019-SRC",
+        "ADV2E102-U0014-Q012-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -456,8 +457,8 @@
     "sourceRecordId": "ADV2E102-U0032-Q023",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0021-Q010",
-    "reason": "Both verified items ask how many member states SAARC has and give the same answer, eight; the earlier source-order canonical is retained.",
+    "duplicateOf": "ADV2E102-U0018-Q007",
+    "reason": "The earlier retained U0018 pair's practice item already asks how many member states SAARC has and gives the same answer, eight.",
     "testedProposition": "How many countries are members of SAARC? Correct answer: 8.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -470,7 +471,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0021-Q010-SIM",
-        "ADV2E102-U0021-Q010"
+        "ADV2E102-U0018-Q007"
       ],
       "answerConflictReviewed": true
     }
@@ -866,7 +867,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0032-Q041-SRC"
+        "ADV2E102-U0032-Q041-SRC",
+        "ADV2E102-U0006-Q021-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -1219,9 +1221,9 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0032-Q058-SRC",
+        "ADV2E102-U0008-Q014-SIM",
         "ADV2E102-U0008-Q014-SRC",
-        "ADV2E102-U0006-Q011-SRC",
+        "ADV2E102-U0001-Q002-SRC",
         "ADV2E102-U0008-Q014"
       ],
       "answerConflictReviewed": true
@@ -1353,10 +1355,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0032-Q065",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0017-Q069",
+    "reason": "The earlier-source-order U0017 canonical asks the identical mountain-range classification of Nanga Parbat and answers the Himalayas.",
     "testedProposition": "Nanga Parbat belongs to which major mountain range? Correct answer: Himalayan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1368,7 +1370,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0022-Q054-SIM"
+        "ADV2E102-U0022-Q054-SIM",
+        "ADV2E102-U0017-Q069"
       ],
       "answerConflictReviewed": true
     }
@@ -1514,7 +1517,8 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P237-Q015-SRC",
-        "ADV2E102-U0012-Q042-SRC"
+        "ADV2E102-U0012-Q042-SRC",
+        "ADV2E102-U0009-Q099-SIM"
       ],
       "answerConflictReviewed": true
     }

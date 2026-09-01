@@ -140,7 +140,6 @@
       "semanticCandidateIds": [
         "ADV2E102-U0032-Q058-SRC",
         "ADV2E102-U0008-Q014-SIM",
-        "ADV2E102-U0032-Q058-SIM",
         "ADV2E102-U0008-Q014-SRC",
         "ADV2E102-U0111-Q089-SRC",
         "ADV2E102-U0001-Q002-SRC",
@@ -230,6 +229,7 @@
         "ADV2E102-U0051-Q008-SRC",
         "ADV2E102-U0012-Q008-SRC",
         "ADV2E102-U0013-Q007-SRC",
+        "ADV2E102-U0014-Q026-SRC",
         "ADV2E102-U0022-Q008-SRC",
         "ADV2E102-U0081-Q005-SRC",
         "ADV2E102-U0043-Q008-SRC",
@@ -837,6 +837,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0051-Q044-SIM",
+        "ADV2E102-U0010-Q089-SRC",
         "ADV2E102-U0022-Q046-SIM"
       ],
       "answerConflictReviewed": true
@@ -1766,6 +1767,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0141-Q056-SRC",
+        "ADV2E102-U0010-Q088-SRC",
         "ADV2E102-U0008-Q083-SRC",
         "ADV2E102-U0011-Q091-SRC",
         "ADV2E102-U0031-Q087-SRC"
@@ -1837,10 +1839,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0159-Q086",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced candidates test a different date, role, institution, title, measurement, application, language rule or numerical value. It is a potentially confusing but materially distinct verified fact and is retained.",
+    "duplicateOf": "ADV2E102-U0024-Q099",
+    "reason": "The earlier-source-order U0024 canonical asks the identical Battle-of-Uhud Hijri-year proposition and answers 3 AH.",
     "testedProposition": "In which Hijri year did the Battle of Uhud take place? Correct answer: 3 AH.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1854,9 +1856,9 @@
       "semanticCandidateIds": [
         "P237-Q066-SRC",
         "ADV2E102-U0008-Q090-SRC",
-        "ADV2E102-U0012-Q087-SIM",
         "ADV2E102-U0011-Q093-SRC",
-        "ADV2E102-U0008-Q090-SIM"
+        "ADV2E102-U0008-Q090-SIM",
+        "ADV2E102-U0024-Q099"
       ],
       "answerConflictReviewed": true
     }

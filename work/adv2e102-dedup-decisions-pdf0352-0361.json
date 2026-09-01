@@ -172,10 +172,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0041-Q009",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0017-Q035",
+    "reason": "The earlier-source-order U0017 canonical asks the identical Kyoto Protocol emissions-trading and certified-emission-reduction mechanism proposition.",
     "testedProposition": "Which agreement established international emissions trading and certified emission-reduction credits as climate-policy mechanisms? Correct answer: Kyoto Protocol.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -186,7 +186,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0017-Q035"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -589,6 +591,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P235-Q013-SRC",
+        "ADV2E102-U0009-Q032-SRC",
         "ADV2E102-U0033-Q017-SIM"
       ],
       "answerConflictReviewed": true
@@ -657,6 +660,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0008-Q037-SRC",
+        "ADV2E102-U0041-Q018-SRC",
         "ADV2E102-U0008-Q037"
       ],
       "answerConflictReviewed": true
@@ -1022,6 +1027,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0014-Q055-SRC",
         "ADV2E102-U0011-Q048-SRC",
         "ADV2E102-U0002-Q040-SRC",
         "ADV2E102-U0011-Q048"
@@ -1623,13 +1629,13 @@
         "P237-Q054-SRC",
         "P237-Q060-SIM",
         "ADV2E102-U0004-Q093-SIM",
-        "ADV2E102-U0033-Q078-SIM",
+        "ADV2E102-U0008-Q073-SIM",
         "ADV2E102-U0003-Q025-SRC",
         "ADV2E102-U0021-Q072-SIM",
         "ADV2E102-U0021-Q075-SIM",
+        "ADV2E102-U0008-Q070-SIM",
         "ADV2E102-U0013-Q073-SRC",
-        "ADV2E102-U0012-Q068-SRC",
-        "ADV2E102-U0004-Q011-SRC"
+        "ADV2E102-U0012-Q068-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -1866,10 +1872,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0041-Q087",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0027-Q085",
+    "reason": "The earlier-source-order U0027 canonical asks the identical proposition that Allama Iqbal stayed in Europe from 1905 to 1908.",
     "testedProposition": "During which years did Allama Muhammad Iqbal live and study in Europe? Correct answer: 1905-1908.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1880,7 +1886,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0027-Q085"
+      ],
       "answerConflictReviewed": true
     }
   },

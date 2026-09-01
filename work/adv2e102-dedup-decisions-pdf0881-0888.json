@@ -413,10 +413,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0121-Q021",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found that surfaced candidates test a different organization, title, date, mathematical expression, grammar application, lexical item, or otherwise materially distinct fact; this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0040-Q034",
+    "reason": "The earlier-source-order U0040 canonical asks the identical author of The Emergence of Pakistan proposition and answers Chaudhri Muhammad Ali.",
     "testedProposition": "Who wrote the book 'The Emergence of Pakistan'? Correct answer: Chaudhri Muhammad Ali.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -430,7 +430,8 @@
       "semanticCandidateIds": [
         "ADV2E102-U0081-Q033-SRC",
         "ADV2E102-U0081-Q016-SRC",
-        "ADV2E102-U0061-Q053-SRC"
+        "ADV2E102-U0061-Q053-SRC",
+        "ADV2E102-U0040-Q034"
       ],
       "answerConflictReviewed": true
     }
@@ -602,10 +603,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0121-Q030",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found that surfaced candidates test a different organization, title, date, mathematical expression, grammar application, lexical item, or otherwise materially distinct fact; this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0017-Q043",
+    "reason": "The earlier-source-order U0017 canonical asks the identical first Chairman of the Senate of Pakistan proposition and answers Habibullah Khan.",
     "testedProposition": "Who was the first Chairman of the Senate of Pakistan? Correct answer: Habibullah Khan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -620,7 +621,8 @@
         "P238-Q013-SIM",
         "P238-Q013-SRC",
         "ADV2E102-U0001-Q037-SRC",
-        "ADV2E102-U0005-Q014-SIM"
+        "ADV2E102-U0005-Q014-SIM",
+        "ADV2E102-U0017-Q043"
       ],
       "answerConflictReviewed": true
     }
@@ -664,7 +666,8 @@
       "semanticCandidateIds": [
         "P235-Q003-SIM",
         "ADV2E102-U0021-Q036-SRC",
-        "ADV2E102-U0004-Q015-SIM"
+        "ADV2E102-U0004-Q015-SIM",
+        "ADV2E102-U0009-Q030-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -848,6 +851,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0014-Q054-SRC",
         "ADV2E102-U0005-Q022-SRC",
         "ADV2E102-U0008-Q046-SRC"
       ],
@@ -1408,6 +1412,7 @@
       "semanticCandidateIds": [
         "ADV2E102-U0034-Q076-SRC",
         "ADV2E102-U0081-Q076-SIM",
+        "ADV2E102-U0014-Q073-SRC",
         "ADV2E102-U0034-Q073-SIM",
         "ADV2E102-U0021-Q075-SRC",
         "ADV2E102-U0021-Q072-SRC",
@@ -1479,6 +1484,7 @@
         "ADV2E102-U0034-Q076-SRC",
         "ADV2E102-U0121-Q068-SIM",
         "ADV2E102-U0081-Q076-SIM",
+        "ADV2E102-U0014-Q073-SRC",
         "ADV2E102-U0034-Q073-SIM",
         "ADV2E102-U0121-Q067-SRC",
         "ADV2E102-U0021-Q072-SRC",

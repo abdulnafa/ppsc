@@ -443,10 +443,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0043-Q022",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0026-Q009",
+    "reason": "The earlier-source-order U0026 canonical asks the identical five-country BRICS final-letter-S proposition and answers South Africa.",
     "testedProposition": "In the five-country BRICS grouping as it stood in 2020, what country did the final letter S represent? Correct answer: South Africa.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -457,7 +457,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0026-Q009"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -503,10 +505,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0043-Q025",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0017-Q016",
+    "reason": "The earlier-source-order U0017 canonical asks the identical authorship of A Tale of Two Cities and answers Charles Dickens.",
     "testedProposition": "Who wrote the novel 'A Tale of Two Cities'? Correct answer: Charles Dickens.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -517,7 +519,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0017-Q016"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -610,10 +614,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0043-Q030",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced items test related, inverse, different-sense, or otherwise materially distinct facts, so this verified proposition is retained as useful confusable practice.",
+    "duplicateOf": "ADV2E102-U0026-Q034",
+    "reason": "The earlier-source-order U0026 canonical asks the identical 1992 Cricket World Cup captain proposition and answers Imran Khan.",
     "testedProposition": "Who captained Pakistan when it won the 1992 ICC Cricket World Cup? Correct answer: Imran Khan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -626,7 +630,8 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "ADV2E102-U0010-Q033-SRC",
-        "ADV2E102-U0005-Q019-SRC"
+        "ADV2E102-U0005-Q019-SRC",
+        "ADV2E102-U0026-Q034"
       ],
       "answerConflictReviewed": true
     }
@@ -1356,10 +1361,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0043-Q065",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0017-Q072",
+    "reason": "The earlier-source-order U0017 canonical asks the identical white-blood-cells-protect-against-infection proposition.",
     "testedProposition": "Which blood cells primarily help protect the body against infection? Correct answer: White blood cells.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1370,7 +1375,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0017-Q072"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1981,10 +1988,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0043-Q091",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced items test related, inverse, different-sense, or otherwise materially distinct facts, so this verified proposition is retained as useful confusable practice.",
+    "duplicateOf": "ADV2E102-U0026-Q089",
+    "reason": "The earlier-source-order U0026 canonical asks the identical authorship proposition for Raja Gidh and answers Bano Qudsia.",
     "testedProposition": "Who wrote the Urdu novel 'Raja Gidh'? Correct answer: Bano Qudsia.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1998,7 +2005,8 @@
       "semanticCandidateIds": [
         "ADV2E102-U0043-Q088-SRC",
         "ADV2E102-U0034-Q087-SRC",
-        "ADV2E102-U0022-Q083-SIM"
+        "ADV2E102-U0022-Q083-SIM",
+        "ADV2E102-U0026-Q089"
       ],
       "answerConflictReviewed": true
     }
@@ -2035,10 +2043,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0043-Q093",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0024-Q095",
+    "reason": "The earlier-source-order U0024 canonical asks the identical meaning of 'When in Rome, do as the Romans do'.",
     "testedProposition": "What does the proverb 'When in Rome, do as the Romans do' advise? Correct answer: Adapt to the customs of the place you are visiting.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -2049,7 +2057,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0024-Q095"
+      ],
       "answerConflictReviewed": true
     }
   },

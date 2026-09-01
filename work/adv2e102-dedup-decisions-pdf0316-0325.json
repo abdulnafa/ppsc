@@ -1,0 +1,2100 @@
+[
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q001",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which Saudi king visited Pakistan for the 1974 Islamic Summit in Lahore? Correct answer: King Faisal.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q002",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Hoover Dam is located in which country? Correct answer: USA.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q003",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Buenos Aires is the capital city of which country? Correct answer: Argentina.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q004",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0062-SRC",
+    "reason": "The pinned IBES source asks the same Microsoft co-founder proposition and answers Bill Gates and Paul Allen.",
+    "testedProposition": "Which listed pair co-founded Microsoft in 1975? Correct answer: Paul Allen and Bill Gates.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0062-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q005",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "What does the acronym NASA stand for? Correct answer: National Aeronautics and Space Administration.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q006",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0017-Q035",
+    "reason": "Earlier retained U0017 asks the same Kyoto Protocol international-emissions-trading proposition.",
+    "testedProposition": "Which agreement introduced international emissions trading as a climate-policy mechanism? Correct answer: Kyoto Protocol.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0017-Q035"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q007",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Chichén Itzá is situated in which country? Correct answer: Mexico.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q008",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which former president of Egypt died on 25 February 2020? Correct answer: Hosni Mubarak.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q009",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier U0019 tests a declining bearish market; this row tests the opposite rising bullish condition, so the proposition is distinct.",
+    "testedProposition": "A stock market in which prices are generally rising is conventionally described as: Correct answer: Bullish.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0019-Q021"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q010",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed country took state control of the Congo in 1908, creating the Belgian Congo? Correct answer: Belgium.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q011",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0013-Q045",
+    "reason": "Earlier retained U0013 asks the identical Adam's Peak country proposition and answers Sri Lanka.",
+    "testedProposition": "Adam's Peak is located in which country? Correct answer: Sri Lanka.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q045"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q012",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier U0011 asks which organization made the designation; this row asks which observance the UN designated, so it tests the inverse field.",
+    "testedProposition": "Which observance did the United Nations designate for 18 July in 2009? Correct answer: Nelson Mandela International Day.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q012"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q013",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Abu Musa is subject to a sovereignty dispute between which two listed states? Correct answer: Iran and UAE.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q014",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Nazaré beach is located in which country? Correct answer: Portugal.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q015",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0023-Q028",
+    "reason": "Earlier retained U0023 asks the identical NATO expansion proposition.",
+    "testedProposition": "What does the acronym NATO stand for? Correct answer: North Atlantic Treaty Organisation.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0023-Q028"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q016",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed city is the capital of Italy? Correct answer: Rome.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q017",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "How many United Nations Member States comprise the African Group? Correct answer: 54.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q018",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Measured by catalogue size (number of items), which listed institution is the world's largest library? Correct answer: Library of Congress (USA).",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q019",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which movement did Mahatma Gandhi announce for inauguration on 1 August 1920? Correct answer: Non-Cooperation Movement.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q020",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0013-Q038",
+    "reason": "Earlier retained U0013 asks the identical 1905-to-1911 Bengal-partition interval proposition and answers six years.",
+    "testedProposition": "How many years after the 1905 Partition of Bengal was its annulment announced in 1911? Correct answer: 6.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q038"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q021",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "How many members were in the 1946 British Cabinet Mission to India? Correct answer: 3 members.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q022",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Related items test Iskander Mirza's shortest Governor-General tenure or first presidency; this row tests who was the last Governor-General.",
+    "testedProposition": "Who was Pakistan's last Governor-General before the office ended in 1956? Correct answer: Iskander Mirza.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0002-Q024",
+        "ADV2E102-U0021-Q025"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q023",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier U0011 asks only the anthem's approval year; this row asks the exact adoption date, so the requested field is more specific and distinct.",
+    "testedProposition": "On which date in 1954 was Pakistan's National Anthem officially adopted? Correct answer: 13 August 1954.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q036"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q024",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Jamsheed Marker principally distinguished himself in which field? Correct answer: Diplomacy.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q025",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0014-Q034",
+    "reason": "Earlier retained U0014 asks the identical year of the Benares Urdu-Hindi controversy and answers 1867.",
+    "testedProposition": "In which year did the Urdu-Hindi controversy become prominent in Benares? Correct answer: 1867.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0014-Q034"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q026",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Under whose government was Pakistan's Federal Security Force established in 1973? Correct answer: Z.A. Bhutto.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q027",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Who proposed creating an all-India Muslim political party at the 1906 Dhaka gathering? Correct answer: Nawab Salimullah Khan.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q028",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "The Institute of Sindhology at the University of Sindh is located in which city? Correct answer: Jamshoro.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q029",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "The Pakistan Army Command and Staff College is located in which city? Correct answer: Quetta.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q030",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "On which date is World Food Day observed each year? Correct answer: 16 October.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q031",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "The earlier Balochi item classifies the Makrani dialect; this row classifies Atta Shad's poetry, so the shared answer alone is not a repeat.",
+    "testedProposition": "Atta Shad is renowned for poetry in which listed language? Correct answer: Balochi.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0019-Q031"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q032",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "What was the code name of the U.S. Navy SEAL operation in Abbottabad on 2 May 2011 in which Osama bin Laden was killed? Correct answer: Neptune Spear.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q033",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0011-Q039",
+    "reason": "Earlier retained U0011 asks the identical Jawaharlal-to-Motilal Nehru relationship proposition and answers son.",
+    "testedProposition": "Jawaharlal Nehru was the ______ of Motilal Nehru. Correct answer: Son.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q039"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q034",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed Mughal ruler is conventionally associated with prohibiting music at the imperial court? Correct answer: Aurangzeb.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q035",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier U0031 asks whose government introduced the nationalisation programme; this row asks whether its initial takeover concerned management or ownership.",
+    "testedProposition": "In the initial January 1972 phase of Zulfikar Ali Bhutto's industrial nationalisation programme, what did the government take over in the selected industrial establishments? Correct answer: Management, rather than ownership.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0031-Q029"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q036",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "In which year was Muhammad Ali Jinnah elected permanent President of the All-India Muslim League? Correct answer: None of these.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q037",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "How many Nishan-e-Haider recipients were martyred during calendar year 1971? Correct answer: 5.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q038",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "In which month of 1858 did Queen Victoria's proclamation announce the transfer of India's government from the East India Company to the Crown? Correct answer: November.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q039",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Who was Punjab's Minister for School Education on 8 July 2019? Correct answer: Dr Murad Raas.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q040",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Who served as Commonwealth Secretary-General during 2020? Correct answer: Patricia Scotland.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q041",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0013-Q047",
+    "reason": "Earlier retained U0013 asks the identical Khunjerab Pass border-country proposition and answers China.",
+    "testedProposition": "The Khunjerab Pass border crossing connects Pakistan with which country? Correct answer: China.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0013-Q047"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q042",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier Mediterranean items test a city coast, desert boundary, or river outlet; this row tests the shared sea adjoining four named states.",
+    "testedProposition": "Which sea has coasts on Türkiye, Syria, Lebanon, and Israel? Correct answer: Mediterranean Sea.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0031-Q017",
+        "ADV2E102-U0009-Q015",
+        "ADV2E102-U0002-Q039",
+        "ADV2E102-U0017-Q063"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q043",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "In which ocean is the Bermuda Triangle located? Correct answer: Atlantic Ocean.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q044",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0031-Q046",
+    "reason": "Earlier retained U0031 asks the identical closest-planet-to-the-Sun proposition and answers Mercury.",
+    "testedProposition": "Which planet is closest to the Sun? Correct answer: Mercury.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0031-Q046"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q045",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0033-Q038",
+    "reason": "Earlier retained U0033 asks the same world's-deepest-lake proposition and answers Lake Baikal.",
+    "testedProposition": "Which is the deepest lake in the world? Correct answer: Lake Baikal.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0033-Q038"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q046",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier U0017 asks Siachen Glacier's length; this inverse row identifies the glacier from the stated 75-76 kilometre length.",
+    "testedProposition": "Which listed glacier is documented as approximately 75-76 kilometres long? Correct answer: Siachen Glacier.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0017-Q070"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q047",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "At either geographic pole, approximately how long does continuous daylight last each year? Correct answer: 6 months.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q048",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier U0035 tests Pakistan's shortest listed land boundary; this row tests the longest among the same neighbours, a different superlative.",
+    "testedProposition": "Among Afghanistan, India, Iran, and China, with which country does Pakistan share its longest land border? Correct answer: India.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0035-Q043"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q049",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "The light-carrying core of an optical fibre is usually made of which material? Correct answer: Glass or plastic.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q050",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "What is the process called when a solid absorbs enough atmospheric water vapour to dissolve in the absorbed water? Correct answer: Deliquescence.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q051",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed medicine is required for treating type 1 diabetes? Correct answer: Insulin.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q052",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which statement about sound is true? Correct answer: Sound cannot travel through a vacuum.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q053",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0023-Q064",
+    "reason": "Earlier retained U0023 asks the same first successful smallpox-vaccination experimenter proposition and answers Edward Jenner.",
+    "testedProposition": "Who carried out the 1796 experiment recognized as the world's first successful vaccination? Correct answer: Edward Jenner.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0023-Q064"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q054",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "During high summer temperatures, drinking sufficient water principally helps prevent which listed condition? Correct answer: Dehydration.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q055",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "The IBES source identifies Handout Master from its function; this inverse row asks which aspect Handout Master controls.",
+    "testedProposition": "In Microsoft PowerPoint 2016, which aspect is controlled in Handout Master view? Correct answer: The layout and appearance of printed handouts.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1264-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q056",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0875-SRC",
+    "reason": "The pinned IBES source asks the identical Excel file-containing-worksheets proposition and answers workbook.",
+    "testedProposition": "In Microsoft Excel desktop, what is a file containing one or more worksheets called? Correct answer: A workbook.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0875-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q057",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0410-SRC",
+    "reason": "The pinned IBES source tests the same Windows 7 classification: Recycle Bin is not a desktop gadget.",
+    "testedProposition": "In Microsoft Windows 7, which listed item is a desktop icon rather than a built-in desktop gadget? Correct answer: Recycle Bin.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0410-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q058",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0740-SRC",
+    "reason": "The pinned IBES source asks the identical Word Font-dialog shortcut proposition and answers Ctrl+D.",
+    "testedProposition": "In Microsoft Word 2016 for Windows, which shortcut opens the Font dialog box? Correct answer: Ctrl+D.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0740-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q059",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0813-SIM",
+    "reason": "The pinned IBES companion asks the identical key-for-ending-a-PowerPoint-slide-show proposition and answers Esc.",
+    "testedProposition": "Which key exits a slide show in Microsoft PowerPoint 2016 for Windows? Correct answer: Esc.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0813-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q060",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q1243-SRC",
+    "reason": "The pinned IBES source asks the identical PowerPoint tab for the On Mouse Click advance setting and answers Transitions.",
+    "testedProposition": "In Microsoft PowerPoint 2016, on which ribbon tab is the 'On Mouse Click' slide-advance setting found? Correct answer: Transitions.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1243-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q061",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0787-SRC",
+    "reason": "The pinned IBES source asks the identical Word Paste Special shortcut proposition and answers Ctrl+Alt+V.",
+    "testedProposition": "In Microsoft Word 2016 for Windows, which shortcut opens Paste Special? Correct answer: Ctrl+Alt+V.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0787-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q062",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "IBES items identify the ALU from its operations or name its component units; this row asks the operation categories performed, an inverse/different field.",
+    "testedProposition": "Which kinds of operations are performed by a processor's arithmetic logic unit (ALU)? Correct answer: Arithmetic and logical operations.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0090-SRC",
+        "IBES-Q0091-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q063",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier mean-proportional exercises use different operands and answers; 4 and 16 form a distinct worked calculation.",
+    "testedProposition": "What is the positive mean proportional between 4 and 16? Correct answer: 8.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0015-Q065"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q064",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Related ratio exercises use different totals or ask a different category percentage; this 3:5 seniors-share calculation is distinct.",
+    "testedProposition": "If the ratio of juniors to seniors on a team is 3:5, what percentage of the team members are seniors? Correct answer: 62.5%.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P238-Q049-SIM",
+        "ADV2E102-U0003-Q084"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q065",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q062",
+    "reason": "Earlier retained U0012 asks the same odd-one-out among perfect cubes proposition and answers 100.",
+    "testedProposition": "Which number is the odd one out because it is not a perfect cube: 8, 27, 64, 100, 125, 216, 343? Correct answer: 100.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q062"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q066",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "The earlier percentage item uses 12 of 36; this school-distance problem uses 13 of 39 and is a distinct worked example despite the same result.",
+    "testedProposition": "The total distance from school to home is 39 km, and Abid has covered 13 km. Approximately what percentage of the distance has he covered? Correct answer: 33.33%.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0003-Q091"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q067",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier divisibility items test different numbers and divisors; determining a divisor of 423 is a distinct calculation.",
+    "testedProposition": "Which listed number divides 423 exactly? Correct answer: 47.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0035-Q071"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q068",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier number sequences use different starting values and rules; this alternating divide-by-2/multiply-by-4 sequence is distinct.",
+    "testedProposition": "Starting at 6, alternately divide by 2 and multiply by 4: 6, 3, 12, 6, 24, ____. What is the next term? Correct answer: 12.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0003-Q064",
+        "ADV2E102-U0005-Q080"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q069",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "For the ordered pair (2, 4), which statement is correct? Correct answer: 2 is the abscissa and 4 is the ordinate.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q070",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0018-Q068",
+    "reason": "Earlier retained U0018 asks the identical A-B-C age problem with total 27 and answers 10 years.",
+    "testedProposition": "A is two years older than B, and B is twice as old as C. If their ages total 27 years, how old is B? Correct answer: 10 years.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0018-Q068"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q071",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier speed exercises use different distances, times, and unit conversions; this cyclist calculation is a distinct worked problem.",
+    "testedProposition": "A cyclist covers 750 metres in 2 minutes 30 seconds. What is the average speed? Correct answer: 18 km/h.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P237-Q044-SRC",
+        "ADV2E102-U0016-Q091"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q072",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0004-Q059",
+    "reason": "Earlier retained U0004 asks the identical decimal value of six tenths and answers 0.6.",
+    "testedProposition": "Six tenths is the same as: Correct answer: 0.6.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0004-Q059"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q073",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed word is a synonym of 'odour'? Correct answer: Smell.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q074",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier narration questions transform different statements and speech acts; this officer's explicit threat is a distinct grammar application.",
+    "testedProposition": "Which option explicitly reports the officer's words as a threat? The officer said to the peon, 'If you do not do your duty well, I will dismiss you.' Correct answer: The officer threatened to dismiss the peon if he did not do his duty well..",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0031-Q082",
+        "ADV2E102-U0033-Q074"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q075",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier reported-speech exercises use different speakers and clauses; this daily-exercise sentence is a distinct application.",
+    "testedProposition": "Using conventional tense backshift, report: They said, 'We take exercise every day.' Correct answer: They said that they took exercise every day..",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0035-Q076",
+        "ADV2E102-U0019-Q073"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q076",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "He gave his wife a large ____ of flowers on her birthday. Correct answer: Bouquet.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q077",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "____ to London on the train yesterday? Correct answer: Did Mary go.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q078",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed word is closest in meaning to 'conspicuous'? Correct answer: Discernible.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q079",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "You would have seen my garden at its best if you ____ here last week. Correct answer: Had been.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q080",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed word is the most suitable synonym of 'cataclysm'? Correct answer: Catastrophe.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q081",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: the printed key treats both pairs as effect : possible cause, but neither relation is necessary or uniquely defined, and analogy questions of this form have no objective direct authority that makes option D uniquely correct.",
+    "testedProposition": "Find the relationship most similar to Errors : Inexperience. Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q082",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed word is closest in meaning to 'haggard'? Correct answer: Exhausted.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q083",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which woman wrote the Urdu novel 'Neeli Bar'? Correct answer: طاہرہ اقبال.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q084",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Earlier material asks Amir Khusrau's named spiritual mentor; this row classifies his broader literary-spiritual tradition.",
+    "testedProposition": "Which tradition best describes Amir Khusrau's literary and spiritual affiliation? Correct answer: صوفیانہ روایت.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0022-Q086"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q085",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0009-Q087",
+    "reason": "Earlier retained U0009 asks the identical authorship proposition for the poetry collection Aatish Kada and answers Dr Muhammad Din Taseer.",
+    "testedProposition": "'Aatish Kada' is a poetry collection by which poet? Correct answer: ڈاکٹر محمد دین تاثیر.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0009-Q087"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q086",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "What are words such as 'wao' and 'aur' that join words or clauses called in Urdu grammar? Correct answer: حروفِ عطف.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q087",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed word is the closest antonym of 'intishar' in the sense of anxiety and restlessness? Correct answer: قرار.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q088",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed Urdu word is a synonym of 'falak'? Correct answer: چرخ.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q089",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "ادبی اصطلاح 'ناول' جس 'novella' روایت سے نکلی، وہ کس زبان کی ہے؟ Correct answer: اطالوی.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q090",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Who founded the Urdu monthly magazine 'Makhzan'? Correct answer: شیخ عبدالقادر.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q091",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0026-Q090",
+    "reason": "The retained U0026 companion asks the identical authorship proposition for Mirat-ul-Uroos and answers Deputy Nazir Ahmad.",
+    "testedProposition": "Who wrote the Urdu novel 'Mirat-ul-Uroos'? Correct answer: ڈپٹی نذیر احمد.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0026-Q090"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q092",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which poet wrote the famous hamd 'Wohi Khuda Hai'? Correct answer: مظفر وارثی.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q093",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: the rule is in Surah al-Nur 24:4, but scholarly chronology of the surah and the Ifk/Banu al-Mustaliq setting varies around 5-6 AH. The source provides no chronology authority, and its options omit 6 AH, so the printed 5 AH key was not promoted.",
+    "testedProposition": "In which Hijri year was the Qur'anic punishment for qadhf (false accusation of unchastity) revealed? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q094",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which surah is popularly called 'Aroos al-Quran' (the Bride of the Quran), although the report behind the epithet is weak? Correct answer: Al-Rahman.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q095",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0020-Q100",
+    "reason": "Earlier retained U0020 asks the identical personal-name proposition for Umm al-Fadl and answers Lubaba bint al-Harith.",
+    "testedProposition": "What was the personal name of the early Muslim woman known as Umm al-Fadl? Correct answer: Lubaba bint al-Harith.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0020-Q100"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q096",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: 'according to the Quran and reason' is not a standard definition that uniquely distinguishes sahih, qauli, mashhur or mawdu hadith. The stem supplies no school, treatise or technical criterion, so the printed key was not trusted.",
+    "testedProposition": "What is the name of the hadith that is 'according to the Holy Quran and reason'? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q097",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "Which listed name is used for Makkah in Qur'anic and Islamic tradition? Correct answer: Bakkah.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q098",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0033-Q099",
+    "reason": "Earlier retained U0033 asks the identical meaning of al-Aswad in al-Hajar al-Aswad and answers black.",
+    "testedProposition": "In the Arabic name al-Hajar al-Aswad, what does al-Aswad mean? Correct answer: Black stone.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0033-Q099"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q099",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer-only review found no exact or semantic repeat in the pinned baseline or earlier retained ADV2E102 material, so this verified fact is retained.",
+    "testedProposition": "What shared historical role best describes Ukaz, Dhu al-Majaz and Dumat al-Jandal? Correct answer: Trade centres.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0036-Q100",
+    "action": "hold",
+    "reviewStatus": "pending",
+    "duplicateOf": "",
+    "reason": "Held unresolved: direct hadith authorities describe the ring's material, inscription and custodianship but do not establish Ya'la ibn Umayyah as its maker. Searches found only derivative exam-preparation pages repeating the printed key, not two independent direct authorities.",
+    "testedProposition": "Who made the ring of Prophet Muhammad? Correct answer: No uniquely verified answer.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": false
+    }
+  }
+]

@@ -1300,10 +1300,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0158-Q061",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or same-proposition repeat in the pinned bank or earlier retained ADV2E102 canonicals, so the independently verified item is retained.",
+    "duplicateOf": "ADV2E102-U0045-Q096",
+    "reason": "The earlier source-order U0045 canonical already tests that Khalid ibn al-Walid accepted Islam in 8 AH, so this later source repeats the same proposition.",
     "testedProposition": "In which Hijri year did Khalid ibn al-Walid embrace Islam? Correct answer: 8 AH.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1314,7 +1314,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0045-Q096"
+      ],
       "answerConflictReviewed": true
     }
   },

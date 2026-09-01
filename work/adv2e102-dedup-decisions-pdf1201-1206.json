@@ -117,7 +117,8 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P236-Q015-SRC",
-        "ADV2E102-U0032-Q016-SRC"
+        "ADV2E102-U0032-Q016-SRC",
+        "ADV2E102-U0023-Q012-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -283,7 +284,9 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P235-Q008-SRC"
+        "P235-Q008-SRC",
+        "ADV2E102-U0042-Q053-SRC",
+        "ADV2E102-U0007-Q012-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -325,12 +328,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "IBES-Q0641-SRC",
-        "IBES-Q0629-SRC",
-        "IBES-Q0062-SIM",
-        "IBES-Q0635-SIM",
-        "IBES-Q0622-SIM",
-        "IBES-Q0624-SRC"
+        "ADV2E102-U0004-Q012-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -392,7 +390,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P235-Q015-SIM"
+        "ADV2E102-U0006-Q011-SRC",
+        "ADV2E102-U0160-Q019-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -564,7 +563,8 @@
       "semanticCandidateIds": [
         "ADV2E102-U0032-Q019-SIM",
         "ADV2E102-U0032-Q019-SRC",
-        "ADV2E102-U0160-Q027-SRC"
+        "ADV2E102-U0160-Q027-SRC",
+        "ADV2E102-U0002-Q002-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -573,8 +573,8 @@
     "sourceRecordId": "ADV2E102-U0160-Q028",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0091-Q009",
-    "reason": "Stephen Hawking's authorship of A Brief History of Time is already tested exactly.",
+    "duplicateOf": "ADV2E102-U0017-Q018",
+    "reason": "The earlier-source-order U0017 canonical already tests Stephen Hawking's authorship of A Brief History of Time exactly.",
     "testedProposition": "Who wrote 'A Brief History of Time'? Correct answer: Stephen Hawking.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -587,7 +587,8 @@
       "exactFingerprintMatch": true,
       "semanticCandidateIds": [
         "ADV2E102-U0091-Q009-SRC",
-        "ADV2E102-U0091-Q009"
+        "ADV2E102-U0006-Q009-SRC",
+        "ADV2E102-U0017-Q018"
       ],
       "answerConflictReviewed": true
     }
@@ -799,6 +800,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0159-Q012-SRC",
+        "ADV2E102-U0023-Q035-SRC",
         "ADV2E102-U0159-Q012"
       ],
       "answerConflictReviewed": true
@@ -806,10 +809,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0160-Q039",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0017-Q020",
+    "reason": "The earlier-source-order U0017 canonical asks the identical country associated with the Nikkei 225 index and answers Japan.",
     "testedProposition": "The Nikkei 225 is a benchmark stock-market index of which country? Correct answer: Japan.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -820,7 +823,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0017-Q020"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -842,6 +847,7 @@
       "exactFingerprintMatch": true,
       "semanticCandidateIds": [
         "ADV2E102-U0021-Q015-SRC",
+        "ADV2E102-U0042-Q029-SRC",
         "ADV2E102-U0021-Q015"
       ],
       "answerConflictReviewed": true
@@ -939,7 +945,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found that the surfaced items test a different entity, date, attribute, mechanism, classification, or calculation; this independently verified fact is retained as a useful confusable distinction.",
     "testedProposition": "Where and when was the first EU-Pakistan Summit held? Correct answer: Brussels in 2009.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -950,7 +956,10 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0014-Q002-SRC",
+        "ADV2E102-U0022-Q019-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1315,6 +1324,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0012-Q036-SIM",
         "ADV2E102-U0151-Q042-SIM",
         "ADV2E102-U0001-Q040-SRC"
       ],
@@ -1422,6 +1432,7 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P235-Q010-SRC",
+        "ADV2E102-U0010-Q049-SRC",
         "ADV2E102-U0021-Q041-SRC"
       ],
       "answerConflictReviewed": true
@@ -1465,13 +1476,14 @@
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
         "P236-Q024-SIM",
-        "ADV2E102-U0021-Q044-SIM",
         "ADV2E102-U0011-Q046-SRC",
         "ADV2E102-U0001-Q031-SRC",
         "ADV2E102-U0131-Q036-SRC",
         "ADV2E102-U0071-Q030-SIM",
+        "ADV2E102-U0013-Q018-SIM",
         "ADV2E102-U0011-Q047-SRC",
-        "ADV2E102-U0051-Q015-SIM"
+        "ADV2E102-U0013-Q032-SIM",
+        "ADV2E102-U0043-Q047-SIM"
       ],
       "answerConflictReviewed": true
     }
@@ -1818,6 +1830,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0002-Q070-SRC",
         "ADV2E102-U0001-Q061-SRC",
         "ADV2E102-U0081-Q052"
       ],
@@ -1954,10 +1967,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0160-Q094",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0017-Q002",
+    "reason": "The earlier-source-order U0017 canonical asks the identical high-technology industry association of Silicon Valley.",
     "testedProposition": "Silicon Valley is especially associated with which industry cluster? Correct answer: Semiconductors, computers and high technology.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1968,7 +1981,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0017-Q002"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1977,7 +1992,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found that the surfaced items test a different entity, date, attribute, mechanism, classification, or calculation; this independently verified fact is retained as a useful confusable distinction.",
     "testedProposition": "If the arithmetic mean of 7 values is 40, what is their sum? Correct answer: 280.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1988,7 +2003,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0003-Q066-SIM"
+      ],
       "answerConflictReviewed": true
     }
   },

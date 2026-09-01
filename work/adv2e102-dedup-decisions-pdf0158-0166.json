@@ -1,0 +1,2108 @@
+[
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q001",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "What is the name of Egypt's national news agency? Correct answer: Middle East News Agency (MENA).",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q002",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Silicon Valley is especially associated with which industry cluster? Correct answer: Semiconductors, computers and high technology.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q003",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0016-Q002",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0016-Q002 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Pope Francis, born Jorge Mario Bergoglio in 1936, was from which country? Correct answer: Argentina.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0016-Q002"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q004",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Kigali is the capital of which country? Correct answer: Rwanda.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q005",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0010-Q007",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0010-Q007 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "According to Pew Research Center's 2020 estimates, which listed country had the world's largest Muslim population? Correct answer: Indonesia.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0010-Q007"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q006",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0008-Q016",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0008-Q016 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "In which city is the headquarters of the Organisation of Islamic Cooperation (OIC)? Correct answer: Jeddah.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q016"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q007",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0010-Q006",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0010-Q006 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Human Rights Watch is headquartered in which city? Correct answer: New York.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0010-Q006"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q008",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Naval Station Guantanamo Bay is located on the coast of which country? Correct answer: Cuba.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q009",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "The butterfly is a competitive stroke in which sport? Correct answer: Swimming.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q010",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "In which year was the first FIFA World Cup held? Correct answer: 1930.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q011",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0011-Q005",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0011-Q005 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which listed leader shared the 1978 Nobel Peace Prize with Menachem Begin? Correct answer: Anwar Sadat.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q005"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q012",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Which country won the most gold medals at the 2018 Asian Games? Correct answer: China.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q013",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "The sixth Heart of Asia–Istanbul Process Ministerial Conference was held in which Indian city in 2016? Correct answer: Amritsar.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q014",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "On which date is International Literacy Day observed each year? Correct answer: 8 September.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q015",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "In which year did Baden-Powell organize the experimental Brownsea Island camp that marked the start of the Scout Movement? Correct answer: 1907.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q016",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Who wrote the novel 'A Tale of Two Cities'? Correct answer: Charles Dickens.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q017",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Aristotle served as tutor to which Macedonian ruler? Correct answer: Alexander the Great.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q018",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Who wrote 'A Brief History of Time'? Correct answer: Stephen Hawking.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q019",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "As of 29 August 2026, which cricket stadium had the world's largest seating capacity? Correct answer: Narendra Modi Stadium, Ahmedabad.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q020",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "The Nikkei 225 is a benchmark stock-market index of which country? Correct answer: Japan.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q021",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q001",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q001 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "What does the traditional Red Cross motto 'Inter arma caritas' mean? Correct answer: Charity in war.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q001"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q022",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q002",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q002 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Under the Laws of Badminton, how many feathers must a traditional feathered shuttle contain? Correct answer: 16.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q002"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q023",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q003",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q003 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Bagram Airfield is located in which country? Correct answer: Afghanistan.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q003"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q024",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q004",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q004 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Under the cited Laws of Badminton, what is the full length of a singles court? Correct answer: 13.40 m.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q004"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q025",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q005",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q005 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Who was the last king of Afghanistan? Correct answer: Muhammad Zahir Shah.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q005"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q026",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q007",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q007 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which listed city is in Türkiye? Correct answer: Istanbul.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q007"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q027",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q008",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q008 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Genoa is a city in which country? Correct answer: Italy.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q008"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q028",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q009",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q009 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "What is the capital of Bosnia and Herzegovina? Correct answer: Sarajevo.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q009"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q029",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q013",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q013 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "In which city did the United States Constitutional Convention assemble in 1787? Correct answer: Philadelphia.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q013"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q030",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q016",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q016 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Why did North Korea move its clocks forward by 30 minutes on 5 May 2018? Correct answer: To align its time zone with South Korea.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q016"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q031",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q018",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q018 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which listed English Romantic poet died at the age of 25? Correct answer: John Keats.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q018"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q032",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q019",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q019 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which Hillary Rodham Clinton memoir was published in 2014? Correct answer: Hard Choices.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q019"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q033",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q020",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q020 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which informal demonym commonly refers to an Australian? Correct answer: Aussie.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q020"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q034",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "The Ashes Test cricket series is contested by which two national teams? Correct answer: Australia and England.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q035",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Which agreement established international emissions trading and certified emission-reduction credits as climate-policy mechanisms? Correct answer: Kyoto Protocol.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q036",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0008-Q019",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0008-Q019 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which animal is depicted in the logo of the World Wide Fund for Nature (WWF)? Correct answer: Giant panda.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0008-Q019"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q037",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Who became South Africa's first democratically elected president in 1994 after spending 27 years in prison? Correct answer: Nelson Mandela.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q038",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "The Federal Bureau of Investigation (FBI) is a federal agency of which country? Correct answer: United States.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q039",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q012",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q012 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Who became President of Cuba's Council of State in April 2018? Correct answer: Miguel Díaz-Canel.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q012"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q040",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q015",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q015 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "What is the European Institute for Gender Equality (EIGE) primarily concerned with? Correct answer: Gender equality.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q015"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q041",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0615-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q0615-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Amazon.com is best classified as which type of website? Correct answer: E-commerce.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0615-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q042",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "What does the abbreviation PAEC stand for? Correct answer: Pakistan Atomic Energy Commission.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q043",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Who was the first Chairman of the Senate of Pakistan? Correct answer: Habibullah Khan.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q044",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Besides Nishan-e-Haider, which gallantry award did Major Shabbir Sharif receive for his service in the 1965 war? Correct answer: Sitara-e-Jurat.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q045",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0007-Q025",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0007-Q025 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Who became Acting President of Pakistan after President Zia-ul-Haq died on 17 August 1988? Correct answer: Ghulam Ishaq Khan.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0007-Q025"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q046",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Who immediately succeeded Muhammad Ali Bogra as Prime Minister of Pakistan in 1955? Correct answer: Chaudhry Muhammad Ali.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q047",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Who was Viceroy of India when Bengal was partitioned in 1905? Correct answer: Lord Curzon.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q048",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "On which river is Mangla Dam built? Correct answer: Jhelum.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q049",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "How many balls did Shahid Afridi take to reach his ODI century against Sri Lanka in Nairobi in 1996? Correct answer: 37 balls.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q050",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "In which year was Pakistan's One Unit scheme established? Correct answer: 1955.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q051",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "In which year did the Governor-General of India also begin to serve as Viceroy under Crown rule? Correct answer: 1858.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q052",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Who served as caretaker Prime Minister of Pakistan from June to August 2018? Correct answer: Justice Nasir-ul-Mulk.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q053",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Mujaddid Alf Sani, Sheikh Ahmad Sirhindi, belonged to which Sufi order? Correct answer: Naqshbandi order.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q054",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "P236-Q011-SRC",
+    "reason": "Manual source-order review confirmed that P236-Q011-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which Act served as Pakistan's working constitutional framework after independence until its first constitution came into force? Correct answer: Government of India Act 1935.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P236-Q011-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q055",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0004-Q015",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0004-Q015 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "In which city was the first regular annual session of the All-India Muslim League held in December 1907? Correct answer: Karachi.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0004-Q015"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q056",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "P235-Q003-SIM",
+    "reason": "Manual source-order review confirmed that P235-Q003-SIM already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "In which city was the All-India Muslim League founded in December 1906? Correct answer: Dhaka.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P235-Q003-SIM"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q057",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "The China-Pakistan Economic Corridor links Gwadar with which city in China's Xinjiang region? Correct answer: Kashgar.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q058",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "How many sittings of the India Round Table Conference were held in London from 1930 to 1932? Correct answer: 3.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q059",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q023",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q023 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which listed politician was not a member of Pakistan's first federal cabinet formed in August 1947? Correct answer: Huseyn Shaheed Suhrawardy.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q023"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q060",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q026",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q026 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "At which city did the Indian Rebellion of 1857 begin as a major sepoy uprising on 10 May? Correct answer: Meerut.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q026"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q061",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Who became Chief Justice of Pakistan in January 2019? Correct answer: Justice Asif Saeed Khosa.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q062",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0005-Q003",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0005-Q003 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "António Guterres, the United Nations Secretary-General serving in 2019, is a national of which country? Correct answer: Portugal.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q003"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q063",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "In which listed country does the Nile enter the Mediterranean Sea through its delta? Correct answer: Egypt.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q064",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0006-Q031",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0006-Q031 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which listed country is not a Scandinavian country? Correct answer: Poland.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0006-Q031"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q065",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Kazakhstan is the world's largest country in which geographic category? Correct answer: Landlocked country.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q066",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0005-Q022",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0005-Q022 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which mountain pass connects Pakistan with China? Correct answer: Khunjerab Pass.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0005-Q022"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q067",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "The Wakhan Corridor separates Pakistan from which country? Correct answer: Tajikistan.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q068",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0001-Q045",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0001-Q045 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Approximately what percentage of Earth's water is held in the oceans? Correct answer: 97%.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0001-Q045"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q069",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Nanga Parbat belongs to which major mountain range? Correct answer: Himalayan Range.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q070",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Approximately how long is the Siachen Glacier? Correct answer: 76 km.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q071",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q043",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q043 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "The Great Barrier Reef lies off the coast of which country? Correct answer: Australia.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q043"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q072",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Which blood cells primarily help protect the human body against infection? Correct answer: White blood cells.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q073",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Hydrophobia is a characteristic symptom of which disease? Correct answer: Rabies.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q074",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Which mineral in toothpaste helps prevent tooth decay? Correct answer: Fluoride.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q075",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0015-Q044",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0015-Q044 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Amnesia primarily concerns loss of what? Correct answer: Memory.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0015-Q044"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q076",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Which acids are the principal acidic components of acid rain? Correct answer: Sulfuric and nitric acids.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q077",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Which of the following is the most abundant element in the Universe? Correct answer: Hydrogen.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q078",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Paleontology principally studies the history of life through what evidence? Correct answer: Fossils.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q079",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q048",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q048 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "A sphygmomanometer is used to measure which quantity? Correct answer: Blood pressure.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q048"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q080",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0647-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q0647-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "An Internet email address normally contains a local part (often a username), an @ sign, and what second main part? Correct answer: Domain.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0647-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q081",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0817-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q0817-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which keyboard shortcut opens the Insert Hyperlink dialog in PowerPoint for Windows? Correct answer: Ctrl+K.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0817-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q082",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0545-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q0545-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "A web-based discussion group is best classified as which type of system? Correct answer: Online community.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0545-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q083",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0500-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q0500-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which listed device modulates and demodulates signals for a traditional telephone-line Internet connection? Correct answer: Modem.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0500-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q084",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0583-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q0583-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "At the Internet Protocol layer, which listed address identifies a network interface for packet delivery? Correct answer: IP address.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0583-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q085",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "P234-Q014-SRC",
+    "reason": "Manual source-order review confirmed that P234-Q014-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "In Microsoft Word 2007 and later, which extension identifies a standard Word document? Correct answer: .docx.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "P234-Q014-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q086",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Which listed pair consists of two audio-file extensions rather than image-file extensions? Correct answer: .wav and .mid.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q087",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0816-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q0816-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which shortcut opens the Font dialog box in PowerPoint for Windows? Correct answer: Ctrl+T.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0816-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q088",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q1203-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q1203-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "When a formula-containing Excel cell is selected outside edit mode, which listed key clears its contents while leaving the cell in place? Correct answer: Delete.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1203-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q089",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0760-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q0760-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which keyboard shortcut normally undoes the previous action in Microsoft Word for Windows? Correct answer: Ctrl+Z.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0760-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q090",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0811-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q0811-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which shortcut inserts a new slide in the active PowerPoint presentation? Correct answer: Ctrl+M.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0811-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q091",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q1044-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q1044-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Microsoft Excel is primarily what type of application? Correct answer: Spreadsheet program.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q1044-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q092",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "IBES-Q0980-SRC",
+    "reason": "Manual source-order review confirmed that IBES-Q0980-SRC already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Under Microsoft Word's standard default settings, what text-wrapping layout is applied when a picture is inserted? Correct answer: In Line with Text.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "IBES-Q0980-SRC"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q093",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Complete the sentence: She ran _____ him into the courtyard. Correct answer: after.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q094",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "duplicateOf": "",
+    "reason": "Manual source-order proposition and answer review found no earlier retained item testing the same fact; related entities, inverse fields, different dates, and adjacent facts were kept distinct.",
+    "testedProposition": "Complete the proverb: In for a penny, in for a _____. Correct answer: pound.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q095",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q047",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q047 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "What property allows a metal to be drawn into a thin wire? Correct answer: Ductility.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q047"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q096",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q065",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q065 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Which sentence correctly reports the command: She said to me, 'Go upstairs'? Correct answer: She told me to go upstairs..",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q065"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q097",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0011-Q069",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0011-Q069 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Complete the sentence: This work is _____ his capacity. Correct answer: beyond.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0011-Q069"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q098",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q067",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q067 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Complete the sentence: This merchant deals _____ silk goods. Correct answer: in.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q067"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q099",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0012-Q070",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0012-Q070 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Complete the proverb: You can lead a horse to water, but you cannot make it _____. Correct answer: drink.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0012-Q070"
+      ],
+      "answerConflictReviewed": true
+    }
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0017-Q100",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "duplicateOf": "ADV2E102-U0009-Q080",
+    "reason": "Manual source-order review confirmed that ADV2E102-U0009-Q080 already retains the same answer-bearing proposition, so this later repeat is excluded.",
+    "testedProposition": "Complete the idiom: His voice gets on my _____. Correct answer: nerves.",
+    "reviewedAgainst": {
+      "baselineQuestionCount": 3074,
+      "baselineSha256": "FBFAB0D3D94DFF7796716226A86B8A0585A5F1AA30C6296DE0BFFB958BEC9733",
+      "includesSourceAndSimilar": true,
+      "includesEarlierAdv2e102": true,
+      "candidateTool": "tools/deduplicate-adv2e102.js"
+    },
+    "similaritySignals": {
+      "exactFingerprintMatch": false,
+      "semanticCandidateIds": [
+        "ADV2E102-U0009-Q080"
+      ],
+      "answerConflictReviewed": true
+    }
+  }
+]

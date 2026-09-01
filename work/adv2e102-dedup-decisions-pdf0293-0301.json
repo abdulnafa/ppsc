@@ -160,8 +160,11 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0010-Q001-SRC",
+        "ADV2E102-U0014-Q002-SRC",
         "ADV2E102-U0022-Q019-SRC",
         "ADV2E102-U0033-Q008-SRC",
+        "ADV2E102-U0014-Q016-SRC",
         "ADV2E102-U0012-Q008-SRC",
         "ADV2E102-U0013-Q007-SRC"
       ],
@@ -364,7 +367,8 @@
       "semanticCandidateIds": [
         "P235-Q013-SIM",
         "P235-Q013-SRC",
-        "ADV2E102-U0033-Q017-SRC"
+        "ADV2E102-U0033-Q017-SRC",
+        "ADV2E102-U0009-Q032-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -686,10 +690,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0033-Q033",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0019-Q043",
+    "reason": "The earlier retained U0019 Q43 asks the identical 2021 IAEA 65th General Conference PAEC-chairman representation proposition and answers Muhammad Naeem.",
     "testedProposition": "Who represented Pakistan as Chairman of the Pakistan Atomic Energy Commission at the IAEA's 65th General Conference in 2021? Correct answer: Muhammad Naeem.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -700,16 +704,18 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0019-Q043"
+      ],
       "answerConflictReviewed": true
     }
   },
   {
     "sourceRecordId": "ADV2E102-U0033-Q034",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0024-Q013",
+    "reason": "The earlier-source-order U0024 canonical asks the identical Jacob-Zuma presidency-country proposition and answers South Africa.",
     "testedProposition": "Jacob Zuma served as President of which country from 2009 to 2018? Correct answer: South Africa.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -720,7 +726,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0024-Q013"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -804,9 +812,7 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [
-        "ADV2E102-U0008-Q052-SRC"
-      ],
+      "semanticCandidateIds": [],
       "answerConflictReviewed": true
     }
   },
@@ -916,10 +922,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0033-Q044",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned bank, so this independently verified fact is retained.",
+    "duplicateOf": "ADV2E102-U0018-Q052",
+    "reason": "Earlier source-order U0018 Q52 asks the identical atmospheric-gas absorption proposition and answers ozone.",
     "testedProposition": "Which atmospheric gas absorbs much of the Sun's harmful ultraviolet radiation? Correct answer: Ozone.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -930,7 +936,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0018-Q052"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1616,6 +1624,7 @@
       "semanticCandidateIds": [
         "ADV2E102-U0021-Q077-SRC",
         "ADV2E102-U0013-Q083-SRC",
+        "ADV2E102-U0010-Q082-SRC",
         "ADV2E102-U0013-Q083"
       ],
       "answerConflictReviewed": true
@@ -1660,22 +1669,6 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "P239-Q046-SIM",
-        "P238-Q062-SIM",
-        "P239-Q062-SIM",
-        "P237-Q048-SIM",
-        "P237-Q048-SRC",
-        "P239-Q049-SIM",
-        "P237-Q054-SRC",
-        "P237-Q060-SIM",
-        "ADV2E102-U0003-Q025-SRC",
-        "ADV2E102-U0021-Q072-SIM",
-        "ADV2E102-U0021-Q075-SIM",
-        "ADV2E102-U0004-Q093-SIM",
-        "ADV2E102-U0013-Q073-SRC",
-        "ADV2E102-U0012-Q068-SRC",
-        "ADV2E102-U0004-Q011-SRC",
-        "ADV2E102-U0013-Q075-SRC",
         "ADV2E102-U0008-Q073"
       ],
       "answerConflictReviewed": true
@@ -1805,6 +1798,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0009-Q086-SIM",
         "ADV2E102-U0033-Q084-SRC"
       ],
       "answerConflictReviewed": true
@@ -2136,6 +2130,7 @@
       "exactFingerprintMatch": true,
       "semanticCandidateIds": [
         "ADV2E102-U0011-Q095-SRC",
+        "ADV2E102-U0014-Q097-SRC",
         "ADV2E102-U0011-Q095-SIM",
         "ADV2E102-U0011-Q095"
       ],

@@ -1421,5 +1421,4355 @@
     },
     "confidence": "high",
     "sourceNotes": "The expired prediction was converted into a historically attributed PCRWR warning; it does not claim that the forecast was subsequently realized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q026",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 26,
+    "question": "Who wrote Principia Ethica?",
+    "options": [
+      "G. E. Moore",
+      "W. D. Ross",
+      "R. M. Hare",
+      "John Stuart Mill"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.nature.com/articles/110074b0",
+        "label": "Principia Ethica",
+        "publisher": "Nature",
+        "authorityId": "nature",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Nature's review identifies George Edward Moore as the author of Principia Ethica."
+      },
+      {
+        "url": "https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=olbp50735",
+        "label": "Principia Ethica",
+        "publisher": "University of Pennsylvania",
+        "authorityId": "university-of-pennsylvania",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university catalogue lists G. E. Moore as the author of Principia Ethica."
+      }
+    ],
+    "referenceUrl": "https://www.nature.com/articles/110074b0",
+    "referenceLabel": "Principia Ethica",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The abbreviated surname-only choices were expanded to uniquely identify the philosophers."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q027",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 27,
+    "question": "Napoleon Bonaparte became emperor of which country?",
+    "options": [
+      "France",
+      "Germany",
+      "United Kingdom",
+      "Italy"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.chateauversailles.fr/decouvrir/histoire/grands-personnages/napoleon-ier",
+        "label": "Napoleon I",
+        "publisher": "Palace of Versailles",
+        "authorityId": "palace-of-versailles",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Versailles history identifies Napoleon as Emperor of the French."
+      },
+      {
+        "url": "https://www.musee-orsay.fr/fr/ressources/repertoire-artistes-personnalites/napoleon-ier-219323",
+        "label": "Napoleon I",
+        "publisher": "Musee d'Orsay",
+        "authorityId": "musee-dorsay",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The French national museum identifies Napoleon Bonaparte as a French statesman and Emperor of the French."
+      }
+    ],
+    "referenceUrl": "https://www.chateauversailles.fr/decouvrir/histoire/grands-personnages/napoleon-ier",
+    "referenceLabel": "Napoleon I",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague nationality fragment was replaced by the documented imperial office, avoiding confusion about Corsican birth and family origins."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q028",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 28,
+    "question": "Who wrote On the Origin of Species?",
+    "options": [
+      "Isaac Newton",
+      "Albert Einstein",
+      "Charles Darwin",
+      "Charles Dickens"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.loc.gov/item/06017473/",
+        "label": "On the Origin of Species",
+        "publisher": "Library of Congress",
+        "authorityId": "us-library-of-congress",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Library of Congress catalogue attributes On the Origin of Species to Charles Darwin."
+      },
+      {
+        "url": "https://www.nhm.ac.uk/discover/charles-darwin-most-famous-biologist.html",
+        "label": "Charles Darwin: history's most famous biologist",
+        "publisher": "Natural History Museum, London",
+        "authorityId": "uk-natural-history-museum",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Natural History Museum independently records Darwin's publication of On the Origin of Species."
+      }
+    ],
+    "referenceUrl": "https://www.loc.gov/item/06017473/",
+    "referenceLabel": "On the Origin of Species",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The visibly nonsensical distractor 'Network' was repaired to Isaac Newton; previously verified Library of Congress and Natural History Museum evidence was reused."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q029",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 29,
+    "question": "Squash developed at Harrow School as an offshoot of which older game?",
+    "options": [
+      "Rackets",
+      "Real tennis",
+      "Badminton",
+      "Fives"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://squash.ca/history/",
+        "label": "History of squash",
+        "publisher": "Squash Canada",
+        "authorityId": "squash-canada",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Squash Canada's history states that squash arose at Harrow around 1830 as an offshoot of Rackets."
+      },
+      {
+        "url": "https://www.britannica.com/sports/squash-rackets",
+        "label": "Squash rackets",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica traces squash to the older game of rackets at Harrow School."
+      }
+    ],
+    "referenceUrl": "https://squash.ca/history/",
+    "referenceLabel": "History of squash",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The nonstandard 'old name' claim was repaired to the well-documented predecessor relationship, and corrupt distractors were replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q030",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 30,
+    "question": "Waterloo, the site of Napoleon's final defeat in 1815, is in which present-day country?",
+    "options": [
+      "Belgium",
+      "Denmark",
+      "Germany",
+      "France"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.waterloo.be/",
+        "label": "Official website of Waterloo",
+        "publisher": "Commune de Waterloo",
+        "authorityId": "waterloo-municipality",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official municipal website identifies Waterloo as a Belgian commune."
+      },
+      {
+        "url": "https://www.britannica.com/place/Waterloo-Belgium",
+        "label": "Waterloo, Belgium",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently locates Waterloo in Belgium and connects it with Napoleon's 1815 defeat."
+      }
+    ],
+    "referenceUrl": "https://www.waterloo.be/",
+    "referenceLabel": "Official website of Waterloo",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1815-06-18",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The historical event and present-day-country scope were made explicit; previously verified municipal and reference sources were reused."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q031",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 31,
+    "question": "Tennis player Rafael Nadal represents which country?",
+    "options": [
+      "Spain",
+      "Brazil",
+      "Germany",
+      "United Kingdom"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.itftennis.com/en/players/rafael-nadal/800226907/esp/mt/S/overview/",
+        "label": "Rafael Nadal player profile",
+        "publisher": "International Tennis Federation",
+        "authorityId": "itf",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ITF player profile identifies Rafael Nadal with Spain."
+      },
+      {
+        "url": "https://www.atptour.com/-/media/files/media-guide/2017/2017-atp-media-guide-player-bios-l-to-q.pdf",
+        "label": "Rafael Nadal (ESP)",
+        "publisher": "ATP Tour",
+        "authorityId": "atp-tour",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ATP media guide identifies Rafael Nadal as ESP and records his birthplace in Spain."
+      }
+    ],
+    "referenceUrl": "https://www.itftennis.com/en/players/rafael-nadal/800226907/esp/mt/S/overview/",
+    "referenceLabel": "Rafael Nadal player profile",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The grammar and country labels were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q032",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 154,
+    "sourceBookPage": 159,
+    "sourceQuestionNumber": 32,
+    "question": "Which novel was written by Pakistani-origin author Bapsi Sidhwa?",
+    "options": [
+      "Moth Smoke",
+      "A Suitable Boy",
+      "The Crow Eaters",
+      "A Case of Exploding Mangoes"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.penguin.co.in/book/the-crow-eaters/",
+        "label": "The Crow Eaters",
+        "publisher": "Penguin Random House India",
+        "authorityId": "penguin-random-house-india",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The publisher identifies Bapsi Sidhwa as the author of The Crow Eaters."
+      },
+      {
+        "url": "https://ils.iba.edu.pk/cgi-bin/koha/opac-detail.pl?biblionumber=117674",
+        "label": "The Crow Eaters",
+        "publisher": "Institute of Business Administration Karachi Library",
+        "authorityId": "iba-karachi-library",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IBA Karachi's library catalogue records The Crow Eaters by Bapsi Sidhwa."
+      }
+    ],
+    "referenceUrl": "https://www.penguin.co.in/book/the-crow-eaters/",
+    "referenceLabel": "The Crow Eaters",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Book titles and the author's description were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q033",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 33,
+    "question": "Who is remembered by the sobriquet 'Tiger of Mysore'?",
+    "options": [
+      "Mir Muin-ud-Din",
+      "Fateh Muhammad",
+      "Hyder Ali",
+      "Tipu Sultan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://newsonair.gov.in/bulletins-detail/aaj-savere-54/",
+        "label": "Tipu Sultan: Tiger of Mysore",
+        "publisher": "Akashvani, Government of India",
+        "authorityId": "india-akashvani",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Akashvani, Government of India supports that Tipu Sultan is remembered as the Tiger of Mysore."
+      },
+      {
+        "url": "https://www.nationalmuseumindia.gov.in/en/anubhav-a-tactile-experience",
+        "label": "Coin of Tipu Sultan",
+        "publisher": "National Museum, India",
+        "authorityId": "national-museum-india",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Museum, India supports that Tipu Sultan is remembered as the Tiger of Mysore."
+      }
+    ],
+    "referenceUrl": "https://newsonair.gov.in/bulletins-detail/aaj-savere-54/",
+    "referenceLabel": "Tipu Sultan: Tiger of Mysore",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The wording was normalized and previously verified independent institutional references were reused."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q034",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 34,
+    "question": "Quaid-e-Azam Solar Park is located near which city?",
+    "options": [
+      "Multan",
+      "Bahawalpur",
+      "Lahore",
+      "Rawalpindi"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://cpec.gov.pk/project-details/10",
+        "label": "1000MW Quaid-e-Azam Solar Park",
+        "publisher": "CPEC Secretariat",
+        "authorityId": "cpec-secretariat",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official CPEC project page gives the location as Bahawalpur, Punjab."
+      },
+      {
+        "url": "https://www.ppib.gov.pk/Solar_Quaid-e-Azam.htm",
+        "label": "Quaid-e-Azam Solar Power",
+        "publisher": "Private Power and Infrastructure Board",
+        "authorityId": "ppib",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PPIB's project record gives QASP, Bahawalpur as the location."
+      }
+    ],
+    "referenceUrl": "https://cpec.gov.pk/project-details/10",
+    "referenceLabel": "1000MW Quaid-e-Azam Solar Park",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The grammar was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q035",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 35,
+    "question": "Who was Prime Minister of India during the 1965 India-Pakistan War?",
+    "options": [
+      "Indira Gandhi",
+      "Lal Bahadur Shastri",
+      "Morarji Desai",
+      "Sanjay Gandhi"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.pmindia.gov.in/en/former_pm/shri-lal-bahadur-shastri/",
+        "label": "Shri Lal Bahadur Shastri",
+        "publisher": "Prime Minister of India",
+        "authorityId": "pm-india",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official prime-ministerial record gives Shastri's term as June 1964 to January 1966, covering the 1965 war."
+      },
+      {
+        "url": "https://www.britannica.com/biography/Lal-Bahadur-Shastri",
+        "label": "Lal Bahadur Shastri",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica identifies Shastri as India's prime minister during the 1965 conflict with Pakistan."
+      }
+    ],
+    "referenceUrl": "https://www.pmindia.gov.in/en/former_pm/shri-lal-bahadur-shastri/",
+    "referenceLabel": "Shri Lal Bahadur Shastri",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1965",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The event wording and names were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q036",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 36,
+    "question": "Which institution functions as the central bank of Pakistan?",
+    "options": [
+      "National Bank of Pakistan",
+      "Bank of Punjab",
+      "Central Bank of Pakistan",
+      "State Bank of Pakistan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.sbp.org.pk/about/Govr.asp",
+        "label": "About SBP",
+        "publisher": "State Bank of Pakistan",
+        "authorityId": "state-bank-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "SBP states that its governing Act authorizes it to function as Pakistan's central bank."
+      },
+      {
+        "url": "https://www.bis.org/about/member_cb.htm",
+        "label": "BIS member central banks",
+        "publisher": "Bank for International Settlements",
+        "authorityId": "bis",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The BIS lists the State Bank of Pakistan among its member central banks."
+      }
+    ],
+    "referenceUrl": "https://www.sbp.org.pk/about/Govr.asp",
+    "referenceLabel": "About SBP",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Institution abbreviations were expanded."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q037",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 37,
+    "question": "Who became Vice President of the Viceroy's Executive Council when India's Interim Government was sworn in on 2 September 1946?",
+    "options": [
+      "Jawaharlal Nehru",
+      "Lord Wavell",
+      "Liaquat Ali Khan",
+      "Vallabhbhai Patel"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://nehruarchive.in/documents/the-tasks-of-the-interim-government-2-september-1946-6npyo2",
+        "label": "The Tasks of the Interim Government",
+        "publisher": "Nehru Archive",
+        "authorityId": "nehru-archive",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archival note records that Nehru became Vice President of the reconstituted Executive Council on 2 September 1946."
+      },
+      {
+        "url": "https://www.keralapsc.gov.in/pscnew/sites/default/files/inline-files/psc_2015_july15_0.pdf",
+        "label": "Members of the Interim Government",
+        "publisher": "Kerala Public Service Commission",
+        "authorityId": "kerala-psc",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official publication lists Jawaharlal Nehru as External Affairs member and Vice President of the 1946 Interim Government."
+      }
+    ],
+    "referenceUrl": "https://nehruarchive.in/documents/the-tasks-of-the-interim-government-2-september-1946-6npyo2",
+    "referenceLabel": "The Tasks of the Interim Government",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1946-09-02",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The inaccurate title 'Prime Minister' was replaced with the formal office of Vice President of the Viceroy's Executive Council, and the catch-all option was removed."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q038",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 38,
+    "question": "Which party won an overwhelming victory in East Pakistan in Pakistan's 1970 general election?",
+    "options": [
+      "Pakistan Peoples Party",
+      "National Awami Party",
+      "Awami League",
+      "Jamaat-e-Islami"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://history.state.gov/historicaldocuments/frus1969-76ve07/d104",
+        "label": "Pakistan's 1970 election returns",
+        "publisher": "Office of the Historian, U.S. Department of State",
+        "authorityId": "us-state-historian",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The contemporaneous official record describes an overwhelming Awami League victory in East Pakistan."
+      },
+      {
+        "url": "https://www.police.gov.bd/en/supreme_sacrifice_in_1971",
+        "label": "Supreme sacrifice in 1971",
+        "publisher": "Bangladesh Police",
+        "authorityId": "bangladesh-police",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Bangladesh Police's official history records the Awami League's overwhelming majority in the 1970 National Assembly election."
+      }
+    ],
+    "referenceUrl": "https://history.state.gov/historicaldocuments/frus1969-76ve07/d104",
+    "referenceLabel": "Pakistan's 1970 election returns",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1970-12-07",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Party abbreviations were expanded and the election was precisely identified."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q039",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 39,
+    "question": "Which political party was founded by Air Marshal Asghar Khan?",
+    "options": [
+      "Pakistan Democratic Party",
+      "Justice Party of Pakistan",
+      "Pakistan Tehreek-e-Insaf",
+      "Tehreek-e-Istiqlal"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.app.com.pk/national/pm-approves-state-funeral-ex-paf-chief-air-marshal-asghar-khan/",
+        "label": "Asghar Khan state funeral",
+        "publisher": "Associated Press of Pakistan",
+        "authorityId": "associated-press-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "APP records that Asghar Khan founded Tehreek-e-Istiqlal."
+      },
+      {
+        "url": "https://oup.com.pk/media/pages/pressrelease/2009pr1.html",
+        "label": "Asghar Khan's political journey",
+        "publisher": "Oxford University Press Pakistan",
+        "authorityId": "oup-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The publisher's account identifies Tehrik-i-Istiqlal as Asghar Khan's political party."
+      }
+    ],
+    "referenceUrl": "https://www.app.com.pk/national/pm-approves-state-funeral-ex-paf-chief-air-marshal-asghar-khan/",
+    "referenceLabel": "Asghar Khan state funeral",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's disputed formation year was removed; both independent sources support the tested founder-party relationship, and spelling was normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q040",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 40,
+    "question": "Which listed group consists entirely of major cotton-growing districts of Punjab?",
+    "options": [
+      "Gujranwala, Sheikhupura and Sialkot",
+      "Vehari, Multan and Bahawalpur",
+      "Faisalabad, Jhang and Sargodha",
+      "Chakwal, Jhelum and Rawalpindi"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://agripunjab.gov.pk/aari-cvcotton",
+        "label": "Cotton",
+        "publisher": "Agriculture Department, Government of Punjab",
+        "authorityId": "punjab-agriculture",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Punjab Agriculture lists Vehari, Multan, and Bahawalpur among the province's major cotton-growing districts."
+      },
+      {
+        "url": "https://www.mnfsr.gov.pk/SiteImage/Downloads/Cap_2024%20updated%20Final.pdf",
+        "label": "Cotton production districts 2024",
+        "publisher": "Ministry of National Food Security and Research",
+        "authorityId": "pakistan-food-ministry",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The federal crop report independently documents major cotton production in Bahawalpur and Multan and the southern Punjab cotton belt."
+      }
+    ],
+    "referenceUrl": "https://agripunjab.gov.pk/aari-cvcotton",
+    "referenceLabel": "Cotton",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The grammar was normalized; all three districts in option B appear in the official Punjab list."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q041",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 41,
+    "question": "The archaeologically important Soan Valley lies in which plateau region?",
+    "options": [
+      "Balochistan Plateau",
+      "Pothohar Plateau",
+      "Azad Kashmir",
+      "Northern Areas"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/vol_I%20silk%20road_middle%20palaeolithic%20culture.pdf",
+        "label": "The Potwar plateau, Punjab",
+        "publisher": "UNESCO Silk Roads Programme",
+        "authorityId": "unesco",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UNESCO study places the middle Soan Valley within the Potwar plateau."
+      },
+      {
+        "url": "https://www.persee.fr/doc/paleo_0153-9345_1981_num_7_1_4291",
+        "label": "The Palaeolithic of the Potwar Plateau",
+        "publisher": "Persee / Cambridge University Archaeological Mission",
+        "authorityId": "persee",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The archaeological mission describes its Potwar Plateau survey as centred on the Soan River valley."
+      }
+    ],
+    "referenceUrl": "https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/vol_I%20silk%20road_middle%20palaeolithic%20culture.pdf",
+    "referenceLabel": "The Potwar plateau, Punjab",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The spelling Pothohar was standardized while preserving the familiar Pakistani form in the answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q042",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 42,
+    "question": "With which brother did Ghulam Farid Sabri form the famous Sabri Brothers qawwali duo?",
+    "options": [
+      "Maqbool Sabri",
+      "Raziuddin Sabri",
+      "Ayaz Sabri",
+      "Rahat Sabri"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.radio.gov.pk/05-04-2026/death-anniversary-of-qawwal-ghulam-farid-sabri-today",
+        "label": "Ghulam Farid Sabri death anniversary",
+        "publisher": "Radio Pakistan",
+        "authorityId": "radio-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Radio Pakistan identifies Ghulam Farid and his brother Maqbool as the Sabri Brothers."
+      },
+      {
+        "url": "https://www.app.com.pk/national/death-anniversary-of-qawwal-ghulam-farid-sabri-observed/",
+        "label": "Ghulam Farid Sabri death anniversary",
+        "publisher": "Associated Press of Pakistan",
+        "authorityId": "associated-press-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "APP independently identifies Maqbool Sabri as Ghulam Farid Sabri's brother and partner in the Sabri Brothers."
+      }
+    ],
+    "referenceUrl": "https://www.radio.gov.pk/05-04-2026/death-anniversary-of-qawwal-ghulam-farid-sabri-today",
+    "referenceLabel": "Ghulam Farid Sabri death anniversary",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The long assassination preface was removed because it was irrelevant to the tested family and music fact."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q043",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 43,
+    "question": "Which famous tomb is located at Uch Sharif?",
+    "options": [
+      "Tomb of Bibi Jawindi",
+      "Tomb of Nawab Salahuddin Abbasi",
+      "Tomb of Maulvi Barkhurdar",
+      "Tomb of Shams Tabrezi"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://whc.unesco.org/en/tentativelists/1883",
+        "label": "Tomb of Bibi Jawindi and related monuments",
+        "publisher": "UNESCO World Heritage Centre",
+        "authorityId": "unesco-world-heritage",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNESCO locates the Tomb of Bibi Jawindi at Uch Sharif, Punjab."
+      },
+      {
+        "url": "https://documents1.worldbank.org/curated/en/716131571027446741/pdf/Business-and-Entrepreneurship-Development-through-Tourism-Promotion-in-Punjab-Assessment-and-Improvement-of-Women-Participation-in-Economic-Activities-Around-Selected-Sites.pdf",
+        "label": "Tourism promotion in Punjab",
+        "publisher": "World Bank",
+        "authorityId": "world-bank",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The World Bank assessment independently identifies Bibi Jawindi's tomb among Uch Sharif's monuments."
+      }
+    ],
+    "referenceUrl": "https://whc.unesco.org/en/tentativelists/1883",
+    "referenceLabel": "Tomb of Bibi Jawindi and related monuments",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The subjective superlative was removed; the location fact is directly documented."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q044",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 44,
+    "question": "Pakistan's 2010 Eighteenth Constitutional Amendment principally reduced the discretionary powers of which office?",
+    "options": [
+      "Prime Minister",
+      "President",
+      "Chief Executive",
+      "Chairman NAB"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://pips.gov.pk/wp-content/uploads/2020/09/Constitution_18th_amendment_Act2010and_Devolution.pdf",
+        "label": "Constitution 18th Amendment and devolution",
+        "publisher": "Pakistan Institute for Parliamentary Services",
+        "authorityId": "pips",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The PIPS analysis documents removal of major presidential powers, including unilateral dissolution of parliament."
+      },
+      {
+        "url": "https://president.gov.pk/about/president-asif-ali-zardari",
+        "label": "President Asif Ali Zardari",
+        "publisher": "President of Pakistan",
+        "authorityId": "president-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official presidency biography states that key constitutional powers of the presidency were transferred to parliament through the Eighteenth Amendment."
+      }
+    ],
+    "referenceUrl": "https://pips.gov.pk/wp-content/uploads/2020/09/Constitution_18th_amendment_Act2010and_Devolution.pdf",
+    "referenceLabel": "Constitution 18th Amendment and devolution",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "2010-04-19",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The incomplete phrase 'stripped the powers of' was repaired to the documented reduction of presidential discretionary powers."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q045",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 45,
+    "question": "Who pioneered the political method of satyagraha?",
+    "options": [
+      "Jawaharlal Nehru",
+      "Jiv Shankar",
+      "Anil Shetty",
+      "Mohandas Karamchand Gandhi"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://gandhismriti.gov.in/more/chronology-mahatma-gandhi",
+        "label": "Chronology of Mahatma Gandhi",
+        "publisher": "Gandhi Smriti and Darshan Samiti",
+        "authorityId": "gandhi-smriti",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Government of India chronology records Gandhi's first satyagraha campaign in South Africa in 1906 and his subsequent campaigns."
+      },
+      {
+        "url": "https://presidentofindia.nic.in/smt-pratibha-devisingh-patil/speeches/speech-president-india-smt-pratibha-devisingh-patil-occasion",
+        "label": "Speech commemorating the Satyagraha movement",
+        "publisher": "President of India",
+        "authorityId": "president-india",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The President of India credits Mahatma Gandhi with giving humankind the philosophy used in the Satyagraha movement."
+      }
+    ],
+    "referenceUrl": "https://gandhismriti.gov.in/more/chronology-mahatma-gandhi",
+    "referenceLabel": "Chronology of Mahatma Gandhi",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague verb 'started' was repaired to the documented role of pioneering satyagraha as a political method."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q046",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 46,
+    "question": "What was a central objective of Anjuman-i-Himayat-i-Islam, founded in Lahore in 1884?",
+    "options": [
+      "Only to organize social gatherings",
+      "Only to secure government jobs",
+      "To avoid educational work",
+      "To counter missionary influence and combine modern education with religious instruction"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://files.eric.ed.gov/fulltext/EJ1244649.pdf",
+        "label": "Anjuman Himayat-i-Islam and Muslim education",
+        "publisher": "Bulletin of Education and Research / ERIC",
+        "authorityId": "eric",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The academic study lists religious instruction, social reform, and protection against adverse religious influence among the Anjuman's aims."
+      },
+      {
+        "url": "https://www.nihcr.edu.pk/Latest_English_Journal/pjhc%2034-2%202013/1%20Islamia%20Anjumans%20and%20Educational%2C%20masood%20akhtar%20zahid.pdf",
+        "label": "Islamia Anjumans and educational development",
+        "publisher": "National Institute of Historical and Cultural Research",
+        "authorityId": "nihcr",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The research explains the Anjuman's effort to combine Muslim religious education with Western sciences and general learning."
+      }
+    ],
+    "referenceUrl": "https://files.eric.ed.gov/fulltext/EJ1244649.pdf",
+    "referenceLabel": "Anjuman Himayat-i-Islam and Muslim education",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's long option was condensed while preserving the documented educational and religious objective."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q047",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 47,
+    "question": "On which date in 1951 was Prime Minister Liaquat Ali Khan assassinated?",
+    "options": [
+      "16 August 1951",
+      "16 September 1951",
+      "16 October 1951",
+      "16 November 1951"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.na.gov.pk/en/content.php?id=75",
+        "label": "Parliamentary history",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "national-assembly-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly's history records Liaquat Ali Khan's assassination on 16 October 1951."
+      },
+      {
+        "url": "https://www.pips.gov.pk/wp-content/uploads/2026/04/M.Phil-Working-growth-and-development-of-legislature-in-Pakistan-a-study-of-second-constituent-assembly-1954-1958-by-Farooq-Ahmed.pdf",
+        "label": "Legislative development in Pakistan",
+        "publisher": "Pakistan Institute for Parliamentary Services",
+        "authorityId": "pips",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The PIPS study independently records the assassination in Rawalpindi on 16 October 1951."
+      }
+    ],
+    "referenceUrl": "https://www.na.gov.pk/en/content.php?id=75",
+    "referenceLabel": "Parliamentary history",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1951-10-16",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Grammar and date formatting were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q048",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 48,
+    "question": "Simly Dam is built on which river?",
+    "options": [
+      "Jhelum",
+      "Korang",
+      "Soan",
+      "Gomal"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://pcrwr.gov.pk/wp-content/uploads/2023/02/Water-Quality-Profile-of-Surface-Water-Bodies-in-Pakistan-2022.pdf",
+        "label": "Water Quality Profile of Surface Water Bodies in Pakistan",
+        "publisher": "Pakistan Council of Research in Water Resources",
+        "authorityId": "pcrwr",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PCRWR's official inventory states that Simly Dam is built on the Soan River and distinguishes Rawal Dam on the Korang River."
+      },
+      {
+        "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/District-Census-Report-2023-Islamabad.pdf",
+        "label": "Islamabad District Census Report 2023",
+        "publisher": "Pakistan Bureau of Statistics",
+        "authorityId": "pakistan-bureau-statistics",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official district report states that the Soan River is dammed at Simly Lake while the Korang is dammed at Rawal Lake."
+      }
+    ],
+    "referenceUrl": "https://pcrwr.gov.pk/wp-content/uploads/2023/02/Water-Quality-Profile-of-Surface-Water-Bodies-in-Pakistan-2022.pdf",
+    "referenceLabel": "Water Quality Profile of Surface Water Bodies in Pakistan",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Independent official evidence confirms the printed answer Soan; the extraction note's contrary Korang suggestion was rejected because Korang is associated with Rawal Dam."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q049",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 49,
+    "question": "On 7 October 1958, President Iskander Mirza imposed Pakistan's first nationwide martial law. Which year was it?",
+    "options": [
+      "1952",
+      "1956",
+      "1959",
+      "1958"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://na.gov.pk/en/content.php/content.php?id=75",
+        "label": "Parliamentary history",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "national-assembly-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly records that President Iskander Mirza declared martial law on 7 October 1958."
+      },
+      {
+        "url": "https://history.state.gov/historicaldocuments/frus1958-60v15/d323",
+        "label": "Pakistan martial-law proclamation",
+        "publisher": "Office of the Historian, U.S. Department of State",
+        "authorityId": "us-state-historian",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The contemporaneous official record states that President Mirza proclaimed martial law on 7 October 1958."
+      }
+    ],
+    "referenceUrl": "https://na.gov.pk/en/content.php/content.php?id=75",
+    "referenceLabel": "Parliamentary history",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1958-10-07",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The event and office were made explicit."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q050",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 50,
+    "question": "On 8 September 1958, Pakistan acquired Gwadar from which country?",
+    "options": [
+      "Oman",
+      "Bahrain",
+      "Iran",
+      "Afghanistan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.uob.edu.pk/Journals/PakistanStudies/PSC/VOL-1.pdf",
+        "label": "Pakistan's Acquisition of Gwadar",
+        "publisher": "University of Balochistan",
+        "authorityId": "university-of-balochistan",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The academic history identifies Prime Minister Feroz Khan Noon as the Pakistani leader who concluded the Gwadar agreement with Oman's Sultan Said bin Taimur."
+      },
+      {
+        "url": "https://gda.gov.pk/history-of-gwadar",
+        "label": "History of Gwadar",
+        "publisher": "Gwadar Development Authority",
+        "authorityId": "gwadar-development-authority",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-28",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official history states that Pakistan purchased Gwadar from Oman on 8 September 1958, during Feroz Khan Noon's premiership."
+      }
+    ],
+    "referenceUrl": "https://www.uob.edu.pk/Journals/PakistanStudies/PSC/VOL-1.pdf",
+    "referenceLabel": "Pakistan's Acquisition of Gwadar",
+    "accessedOn": "2026-08-28",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1958-09-08",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The printed 9 September date was corrected to the official 8 September acquisition date, the catch-all option was replaced, and previously verified independent sources were reused."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q051",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 51,
+    "question": "Which listed Muslim leader announced his retirement from active politics after the 1911 annulment of the Partition of Bengal?",
+    "options": [
+      "Nawab Khwaja Salimullah",
+      "Khizr Hayat Khan Tiwana",
+      "Sir Syed Ahmad Khan",
+      "Nawab Najeebullah"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://en.banglapedia.org/index.php/Nawab_Family_of_Dhaka",
+        "label": "Nawab Family of Dhaka",
+        "publisher": "Banglapedia, Asiatic Society of Bangladesh",
+        "authorityId": "banglapedia",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Banglapedia records Salimullah's political role after the annulment and his later retirement from active politics."
+      },
+      {
+        "url": "https://ir.nbu.ac.in/bitstreams/7e64ca65-691c-4cbc-8135-cb73f2b2b7e7/download",
+        "label": "Bengal politics after the annulment of partition",
+        "publisher": "University of North Bengal",
+        "authorityId": "north-bengal-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university history records that Nawab Salimullah announced his decision to retire from active politics after the annulment."
+      }
+    ],
+    "referenceUrl": "https://en.banglapedia.org/index.php/Nawab_Family_of_Dhaka",
+    "referenceLabel": "Nawab Family of Dhaka",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1911",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source's causal wording was softened: the historical account places Salimullah's retirement after the annulment and also records ill health as his stated reason. Names were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q052",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 52,
+    "question": "When did Pakistan become an Islamic Republic?",
+    "options": [
+      "1947",
+      "1956",
+      "1965",
+      "1973"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.na.gov.pk/en/content.php?id=75.",
+        "label": "Constitutional history of Pakistan",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly states that under the 1956 Constitution Pakistan became an Islamic Republic."
+      },
+      {
+        "url": "https://constitutionnet.org/country/pakistan",
+        "label": "Constitutional history of Pakistan",
+        "publisher": "ConstitutionNet, International IDEA",
+        "authorityId": "constitutionnet-idea",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ConstitutionNet identifies the 1956 Constitution as Pakistan's first constitution and describes its Islamic character."
+      }
+    ],
+    "referenceUrl": "https://www.na.gov.pk/en/content.php?id=75.",
+    "referenceLabel": "Constitutional history of Pakistan",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Previously verified National Assembly and International IDEA evidence was reused for the same question and answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q053",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 53,
+    "question": "Wali Tangi Dam, about 20 kilometres east of Quetta, is in which province?",
+    "options": [
+      "Punjab",
+      "Sindh",
+      "Khyber Pakhtunkhwa",
+      "Balochistan"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.pbs.gov.pk/sites/default/files/population/census_reports/pcr_balochistan.pdf",
+        "label": "Provincial Census Report: Balochistan",
+        "publisher": "Pakistan Bureau of Statistics",
+        "authorityId": "pakistan-bureau-statistics",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Balochistan census report locates Wali Tangi Dam east of Quetta in the province."
+      },
+      {
+        "url": "https://www.radio.gov.pk/04-04-2024/measures-taken-for-clean-waters-supply-promotion-of-agriculture-in-balochistan",
+        "label": "Dams in Balochistan",
+        "publisher": "Radio Pakistan",
+        "authorityId": "radio-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Radio Pakistan lists Wali Tangi Dam in Urak Valley among dams constructed in Balochistan."
+      }
+    ],
+    "referenceUrl": "https://www.pbs.gov.pk/sites/default/files/population/census_reports/pcr_balochistan.pdf",
+    "referenceLabel": "Provincial Census Report: Balochistan",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The province question was made unambiguous by adding the officially documented Quetta location and expanding KPK."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q054",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 155,
+    "sourceBookPage": 160,
+    "sourceQuestionNumber": 54,
+    "question": "Which Chief Justice of Pakistan established the Diamer Bhasha and Mohmand Dams Fund in July 2018?",
+    "options": [
+      "Justice Mansoor Ali Shah",
+      "Justice Mian Saqib Nisar",
+      "Justice Iftikhar Muhammad Chaudhry",
+      "Justice Azmat Saeed"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://mofa.gov.pk/diamer-bhasha-and-mohmand-dams",
+        "label": "Diamer Bhasha and Mohmand Dams",
+        "publisher": "Ministry of Foreign Affairs, Pakistan",
+        "authorityId": "pakistan-foreign-ministry",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ministry states that Chief Justice Saqib Nisar created the dams fund in July 2018."
+      },
+      {
+        "url": "https://www.sbp.org.pk/circulars/fd-circular-no072018",
+        "label": "Prime Minister and Chief Justice Dams Fund circular",
+        "publisher": "State Bank of Pakistan",
+        "authorityId": "state-bank-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The SBP circular says the Prime Minister commended Chief Justice Saqib Nisar's initiative in establishing the fund."
+      }
+    ],
+    "referenceUrl": "https://mofa.gov.pk/diamer-bhasha-and-mohmand-dams",
+    "referenceLabel": "Diamer Bhasha and Mohmand Dams",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "2018-07-10",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The subjective phrase 'driving force' was replaced by the documented act of establishing the fund; corrupt distractor names were repaired."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q055",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 55,
+    "question": "In which tribal area was Operation Zarb-e-Azb launched on 15 June 2014?",
+    "options": [
+      "North Waziristan",
+      "Gwadar",
+      "Gilgit",
+      "Hyderabad"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.na.gov.pk/uploads/documents/1405409245_649.pdf",
+        "label": "National Assembly Gazette, July 2014",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly Gazette states that Zarb-e-Azb was launched in North Waziristan Agency on 15 June 2014."
+      },
+      {
+        "url": "https://margallapapers.ndu.edu.pk/site/issue/download/15/4",
+        "label": "Operation Zarb-e-Azb: Retrospective View",
+        "publisher": "National Defence University",
+        "authorityId": "pakistan-national-defence-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Defence University analysis independently identifies North Waziristan as the operation's launch area."
+      }
+    ],
+    "referenceUrl": "https://www.na.gov.pk/uploads/documents/1405409245_649.pdf",
+    "referenceLabel": "National Assembly Gazette, July 2014",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "2014-06-15",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The overly broad option 'Waziristan' was narrowed to the documented North Waziristan launch area and the date was made explicit."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q056",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 56,
+    "question": "Kotri Barrage, historically known as Ghulam Muhammad Barrage, is built on:",
+    "options": [
+      "River Indus at Khairpur",
+      "River Indus at Kotri / Hyderabad",
+      "River Indus at Sehwan Sharif",
+      "None of these"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://irrigation.sindh.gov.pk/files/Books/reports/24.pdf",
+        "label": "Sindh irrigation and barrages report",
+        "publisher": "Irrigation Department, Government of Sindh",
+        "authorityId": "sindh-irrigation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official report identifies Kotri (Ghulam Muhammad) Barrage on the Indus River."
+      },
+      {
+        "url": "https://ffc.gov.pk/wp-content/uploads/2021/04/Annual-Flood-Report-2020.pdf",
+        "label": "Annual Flood Report 2020",
+        "publisher": "Federal Flood Commission, Government of Pakistan",
+        "authorityId": "pakistan-federal-flood-commission",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The federal report lists Kotri Barrage among the barrages on the Indus."
+      }
+    ],
+    "referenceUrl": "https://irrigation.sindh.gov.pk/files/Books/reports/24.pdf",
+    "referenceLabel": "Sindh irrigation and barrages report",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The modern name Kotri Barrage was added to identify the structure; previously verified Sindh Irrigation and Federal Flood Commission evidence was reused."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q057",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 57,
+    "question": "Who was the youngest recipient of Pakistan's Nishan-i-Haider?",
+    "options": [
+      "Havaldar Lalak Jan",
+      "Captain Raja Muhammad Sarwar",
+      "Pilot Officer Rashid Minhas",
+      "Lance Naik Muhammad Mahfuz"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.radio.gov.pk/20-08-2020/50th-martyrdom-anniversary-of-rashid-minhas-shaheed-being-observed-today",
+        "label": "Rashid Minhas martyrdom anniversary",
+        "publisher": "Radio Pakistan",
+        "authorityId": "radio-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Radio Pakistan identifies Rashid Minhas as the youngest Pakistan Air Force officer awarded Nishan-e-Haider."
+      },
+      {
+        "url": "https://www.app.com.pk/national/death-anniversary-of-rashid-minhas-shaheed-observed/",
+        "label": "Rashid Minhas death anniversary",
+        "publisher": "Associated Press of Pakistan",
+        "authorityId": "associated-press-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "APP independently identifies Pilot Officer Rashid Minhas as the youngest recipient of Nishan-e-Haider."
+      }
+    ],
+    "referenceUrl": "https://www.radio.gov.pk/20-08-2020/50th-martyrdom-anniversary-of-rashid-minhas-shaheed-being-observed-today",
+    "referenceLabel": "Rashid Minhas martyrdom anniversary",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The grammar and award spelling were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q058",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 58,
+    "question": "Which listed reformer was a contemporary and known associate of Mirza Ghalib?",
+    "options": [
+      "Sir Syed Ahmad Khan",
+      "Allama Muhammad Iqbal",
+      "Aurangzeb Alamgir",
+      "Shah Waliullah"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://theses.gla.ac.uk/834/1/2009DeSondyPhD.pdf",
+        "label": "Representations of Muslim masculinity in Ghalib's work",
+        "publisher": "University of Glasgow",
+        "authorityId": "university-glasgow",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university thesis identifies Sir Syed Ahmad Khan as a key figure closely associated with Ghalib."
+      },
+      {
+        "url": "https://www.columbia.edu/itc/mealac/pritchett/00fwp/srf/srf_sirsayyid.pdf",
+        "label": "From Antiquary to Social Revolutionary: Syed Ahmad Khan",
+        "publisher": "Columbia University",
+        "authorityId": "columbia-university",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university-hosted study documents Ghalib's literary response addressed to Sir Syed Ahmad Khan."
+      }
+    ],
+    "referenceUrl": "https://theses.gla.ac.uk/834/1/2009DeSondyPhD.pdf",
+    "referenceLabel": "Representations of Muslim masculinity in Ghalib's work",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague word 'contemporary' was strengthened with the independently documented association; names were expanded and standardized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q059",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 59,
+    "question": "In July 2018, Pakistan Navy signed a contract to acquire four MILGEM-class warships from which country?",
+    "options": [
+      "Russia",
+      "China",
+      "Türkiye",
+      "United States"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://pid.gov.pk/site/press_detail/8782",
+        "label": "Pakistan Navy contract for four MILGEM warships",
+        "publisher": "Press Information Department, Government of Pakistan",
+        "authorityId": "pakistan-pid",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official release records the 5 July 2018 contract for four MILGEM ships with ASFAT of Türkiye."
+      },
+      {
+        "url": "https://www.stm.com.tr/en/press-releases/turkish-defense-firms-ink-deal-pakistan-project",
+        "label": "Turkish defence firms ink Pakistan project deal",
+        "publisher": "STM",
+        "authorityId": "stm-turkiye",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "STM independently records that Pakistan Navy contracted in July 2018 for four MILGEM ships from Turkish ASFAT."
+      }
+    ],
+    "referenceUrl": "https://pid.gov.pk/site/press_detail/8782",
+    "referenceLabel": "Pakistan Navy contract for four MILGEM warships",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "2018-07-05",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The country name's mojibake was corrected to Türkiye, USA was expanded, and the ship class was specified."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q060",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 60,
+    "question": "Which team finished as runner-up in the 2018 Pakistan Super League?",
+    "options": [
+      "Quetta Gladiators",
+      "Karachi Kings",
+      "Peshawar Zalmi",
+      "Islamabad United"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.pcb.com.pk/hbl-pakistan-super-league-2018/match/31212.html",
+        "label": "2018 PSL final scorecard",
+        "publisher": "Pakistan Cricket Board",
+        "authorityId": "pakistan-cricket-board",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official final scorecard shows Islamabad United defeated Peshawar Zalmi in the 2018 final."
+      },
+      {
+        "url": "https://www.icc-cricket.com/news/kamran-akmal-imam-ul-haq-power-peshawar-to-third-successive-psl-final/",
+        "label": "Peshawar reach a third successive PSL final",
+        "publisher": "International Cricket Council",
+        "authorityId": "international-cricket-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The ICC retrospective states that Peshawar's 2018 title hopes were ended by Islamabad in the final."
+      }
+    ],
+    "referenceUrl": "https://www.pcb.com.pk/hbl-pakistan-super-league-2018/match/31212.html",
+    "referenceLabel": "2018 PSL final scorecard",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "2018-03-25",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The grammar was normalized and the edition was stated explicitly."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q061",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 61,
+    "question": "As of 29 August 2026, who is Speaker of the National Assembly of Pakistan?",
+    "options": [
+      "Sardar Ayaz Sadiq",
+      "Qasim Suri",
+      "Asad Qaiser",
+      "Murtaza Javed Abbasi"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://na.gov.pk/en/speaker.php/content.php?id=176",
+        "label": "Speaker of the National Assembly",
+        "publisher": "National Assembly of Pakistan",
+        "authorityId": "pakistan-national-assembly",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Assembly identifies Sardar Ayaz Sadiq as Speaker and carries Speaker releases from 2026."
+      },
+      {
+        "url": "https://data.ipu.org/parliament/PK/PK-LC01/",
+        "label": "Pakistan National Assembly data",
+        "publisher": "Inter-Parliamentary Union",
+        "authorityId": "inter-parliamentary-union",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IPU Parline independently lists Sardar Ayaz Sadiq as Speaker of Pakistan's National Assembly."
+      }
+    ],
+    "referenceUrl": "https://na.gov.pk/en/speaker.php/content.php?id=176",
+    "referenceLabel": "Speaker of the National Assembly",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": "2019",
+      "asOf": "2026-08-29",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2026-09-29"
+    },
+    "confidence": "high",
+    "sourceNotes": "The source-paper key Asad Qaiser is obsolete. The dynamic question was anchored to 29 August 2026 and updated to the independently confirmed incumbent, Sardar Ayaz Sadiq."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q062",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 62,
+    "question": "The Red Sea is an inlet of the Indian Ocean between:",
+    "options": [
+      "North America and Africa",
+      "Africa and Europe",
+      "Asia and Europe",
+      "Africa and Asia"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://www.britannica.com/place/Red-Sea",
+        "label": "Red Sea",
+        "publisher": "Encyclopaedia Britannica",
+        "authorityId": "britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica locates the Red Sea between Africa and the Arabian Peninsula of Asia."
+      },
+      {
+        "url": "https://www.unep.org/explore-topics/oceans-seas/what-we-do/working-regional-seas/regional-seas-programmes/red-sea-and",
+        "label": "Red Sea and Gulf of Aden",
+        "publisher": "United Nations Environment Programme",
+        "authorityId": "un-environment-programme",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UNEP independently describes the Red Sea region between north-eastern Africa and the Arabian Peninsula."
+      }
+    ],
+    "referenceUrl": "https://www.britannica.com/place/Red-Sea",
+    "referenceLabel": "Red Sea",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Previously verified Britannica and UNEP evidence was reused for the same Africa-and-Asia geography fact."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q063",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 63,
+    "question": "Lake Saif-ul-Muluk is located in:",
+    "options": [
+      "Balochistan",
+      "Sindh",
+      "Kaghan Valley",
+      "Swat Valley"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://tourism.gov.pk/advertisements/Tourism%20in%20Pakistan%20English%20with%20PTDC%20%281%29.pdf",
+        "label": "Tourism in Pakistan",
+        "publisher": "Pakistan Tourism Development Corporation",
+        "authorityId": "pakistan-tourism-development-corporation",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official tourism guide lists Lake Saif-ul-Muluk among the attractions of Kaghan Valley."
+      },
+      {
+        "url": "https://www.app.com.pk/domestic/saiful-malook-the-fairytale-lake-beckons-eid-vacationers/",
+        "label": "Saiful Malook: the fairytale lake",
+        "publisher": "Associated Press of Pakistan",
+        "authorityId": "associated-press-pakistan",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "APP independently locates Saiful Malook in Mansehra's Kaghan Valley."
+      }
+    ],
+    "referenceUrl": "https://tourism.gov.pk/advertisements/Tourism%20in%20Pakistan%20English%20with%20PTDC%20%281%29.pdf",
+    "referenceLabel": "Tourism in Pakistan",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The lake and place spellings were standardized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q064",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 64,
+    "question": "Which desert covers parts of Bhakkar, Khushab, Mianwali, Layyah, Muzaffargarh and Jhang districts in Punjab?",
+    "options": [
+      "Thar Desert",
+      "Thal Desert",
+      "Cholistan Desert",
+      "Kharan Desert"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://bhakkar.punjab.gov.pk/natural_resources",
+        "label": "Natural resources: Thal Desert",
+        "publisher": "Government of Punjab, District Bhakkar",
+        "authorityId": "punjab-district-bhakkar",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Punjab district portal lists Bhakkar, Khushab, Mianwali, Layyah, Muzaffargarh and Jhang within the Thal Desert."
+      },
+      {
+        "url": "https://www.pcrwr.gov.pk/wp-content/uploads/2023/03/Improved-Land-and-Water-Conservation-Practices-to-Enhance-Wasteland-Productivity-in-Thal-Desert-2022.pdf",
+        "label": "Land and water conservation in the Thal Desert",
+        "publisher": "Pakistan Council of Research in Water Resources",
+        "authorityId": "pakistan-pcrwr",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The federal research report independently gives the same documented district extent for the Thal Desert."
+      }
+    ],
+    "referenceUrl": "https://bhakkar.punjab.gov.pk/natural_resources",
+    "referenceLabel": "Natural resources: Thal Desert",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Dera Ghazi Khan in the source stem is not included in the official Thal district lists; it was replaced with the documented Layyah, Muzaffargarh and Jhang districts."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q065",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 65,
+    "question": "Which is the world's largest inland saltwater body by surface area?",
+    "options": [
+      "Lake Baikal",
+      "Lake Superior",
+      "Caspian Sea",
+      "Great Salt Lake"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://science.nasa.gov/earth/earth-observatory/caspian-sea-44253/",
+        "label": "Caspian Sea",
+        "publisher": "NASA Earth Observatory",
+        "authorityId": "nasa-earth-observatory",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA identifies the saline Caspian Sea as the world's largest inland water body by surface area."
+      },
+      {
+        "url": "https://www.esa.int/Applications/Observing_the_Earth/The_Caspian_Sea",
+        "label": "The Caspian Sea",
+        "publisher": "European Space Agency",
+        "authorityId": "european-space-agency",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "ESA independently describes the salty Caspian as the world's largest landlocked water body."
+      }
+    ],
+    "referenceUrl": "https://science.nasa.gov/earth/earth-observatory/caspian-sea-44253/",
+    "referenceLabel": "Caspian Sea",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The ambiguous phrase 'salt water lake' was clarified to inland saltwater body by surface area, and the catch-all option was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q066",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 66,
+    "question": "The medulla oblongata is part of the human:",
+    "options": [
+      "Heart",
+      "Brain",
+      "Reproductive system",
+      "Large intestine"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D008526",
+        "label": "Medulla Oblongata MeSH descriptor",
+        "publisher": "U.S. National Library of Medicine",
+        "authorityId": "us-national-library-medicine",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NLM descriptor defines the medulla oblongata as the lower portion of the brain stem."
+      },
+      {
+        "url": "https://my.clevelandclinic.org/health/body/23001-medulla-oblongata",
+        "label": "Medulla Oblongata",
+        "publisher": "Cleveland Clinic",
+        "authorityId": "cleveland-clinic",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cleveland Clinic independently identifies the medulla oblongata as the bottom-most part of the brain and part of the brainstem."
+      }
+    ],
+    "referenceUrl": "https://meshb.nlm.nih.gov/record/ui?dcmsLinks=true&ui=D008526",
+    "referenceLabel": "Medulla Oblongata MeSH descriptor",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Capitalization and grammar were normalized."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q067",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 67,
+    "question": "Physiotherapy primarily helps restore or improve which of the following?",
+    "options": [
+      "Legal status",
+      "Physical movement and function",
+      "Financial accounts",
+      "Chemical manufacture"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.nhs.uk/tests-and-treatments/physiotherapy/",
+        "label": "Physiotherapy",
+        "publisher": "National Health Service",
+        "authorityId": "uk-national-health-service",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NHS explains that physiotherapy improves movement when injury, illness or disability affects a person."
+      },
+      {
+        "url": "https://www.medicare.gov/coverage/physical-therapy-services",
+        "label": "Physical therapy services",
+        "publisher": "Medicare",
+        "authorityId": "us-medicare",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Medicare independently states that physical therapy restores or improves physical movement and function after injury, illness or surgery."
+      }
+    ],
+    "referenceUrl": "https://www.nhs.uk/tests-and-treatments/physiotherapy/",
+    "referenceLabel": "Physiotherapy",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The original options were medically overlapping because physiotherapy can assist joint, neurological and cardiac conditions. The item was repaired to test the profession's documented core purpose."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q068",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 68,
+    "question": "The Sun is a:",
+    "options": [
+      "Planet",
+      "Comet",
+      "Asteroid",
+      "Star"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://science.nasa.gov/sun/facts/",
+        "label": "Our Sun: Facts",
+        "publisher": "NASA Science",
+        "authorityId": "nasa-science",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA identifies the Sun as a yellow dwarf star and the only star in our solar system."
+      },
+      {
+        "url": "https://www.si.edu/sites/default/files/educators_guides_group_sales/journey_to_the_stars.pdf",
+        "label": "Journey to the Stars educator guide",
+        "publisher": "Smithsonian Institution",
+        "authorityId": "smithsonian-institution",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Smithsonian guide independently identifies the Sun as a star."
+      }
+    ],
+    "referenceUrl": "https://science.nasa.gov/sun/facts/",
+    "referenceLabel": "Our Sun: Facts",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source omitted 'Star' and therefore keyed 'None of these'; the scientifically correct explicit option was inserted at the same answer index."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q069",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 69,
+    "question": "Sound cannot travel through:",
+    "options": [
+      "Air",
+      "Sand",
+      "Vacuum",
+      "Water"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://science.nasa.gov/ems/02_anatomy/",
+        "label": "Anatomy of an Electromagnetic Wave",
+        "publisher": "NASA Science",
+        "authorityId": "nasa-science",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NASA explains that sound waves cannot travel through a vacuum because no medium is present."
+      },
+      {
+        "url": "https://www.ligo.caltech.edu/LA/page/vacuum",
+        "label": "Ultra-High Vacuum",
+        "publisher": "LIGO Laboratory, Caltech and MIT",
+        "authorityId": "ligo-laboratory",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The LIGO Laboratory independently states that sound cannot travel through a vacuum."
+      }
+    ],
+    "referenceUrl": "https://science.nasa.gov/ems/02_anatomy/",
+    "referenceLabel": "Anatomy of an Electromagnetic Wave",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Independent institutional physics sources confirm the printed answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q070",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 70,
+    "question": "Meteorology is the science of:",
+    "options": [
+      "Weather",
+      "Earth",
+      "Metal",
+      "Earthquake"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.bom.gov.au/wmo/quality_management/forms/WMO258_Latest_Version.pdf",
+        "label": "WMO glossary of meteorological terms",
+        "publisher": "World Meteorological Organization",
+        "authorityId": "world-meteorological-organization",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The WMO defines meteorology as study of the atmosphere and its phenomena, especially weather and climate."
+      },
+      {
+        "url": "https://www.nssl.noaa.gov/people/jobs/careers.php",
+        "label": "Career options for meteorologists",
+        "publisher": "NOAA National Severe Storms Laboratory",
+        "authorityId": "noaa-nssl",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NOAA independently describes meteorology as the study of the atmosphere and weather-related work."
+      }
+    ],
+    "referenceUrl": "https://www.bom.gov.au/wmo/quality_management/forms/WMO258_Latest_Version.pdf",
+    "referenceLabel": "WMO glossary of meteorological terms",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The printed option 'Weather' is the only listed subject that matches the authoritative definitions; meteorology more broadly studies the atmosphere."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q071",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 71,
+    "question": "Among the listed choices, a main function of the kidneys is:",
+    "options": [
+      "To control blood pressure only",
+      "To control blood temperature",
+      "To remove waste products and extra water from the body",
+      "To digest food"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work",
+        "label": "Your Kidneys and How They Work",
+        "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases",
+        "authorityId": "us-niddk",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIDDK explains that kidneys filter blood and remove wastes and extra water as urine."
+      },
+      {
+        "url": "https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd",
+        "label": "Chronic kidney disease",
+        "publisher": "National Kidney Foundation",
+        "authorityId": "national-kidney-foundation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The National Kidney Foundation independently lists removal of natural waste products and extra water as a kidney function."
+      }
+    ],
+    "referenceUrl": "https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work",
+    "referenceLabel": "Your Kidneys and How They Work",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The qualifier 'among the listed choices' avoids implying that waste removal is the kidneys' only function; option wording was made precise."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q072",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 72,
+    "question": "Dialysis removes waste products and excess fluid primarily from the:",
+    "options": [
+      "Liver",
+      "Blood",
+      "Gall bladder",
+      "Heart"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis",
+        "label": "Hemodialysis",
+        "publisher": "National Institute of Diabetes and Digestive and Kidney Diseases",
+        "authorityId": "us-niddk",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "NIDDK explains that hemodialysis filters wastes, extra salt and water from the blood."
+      },
+      {
+        "url": "https://www.nhs.uk/conditions/kidney-disease/treatment/",
+        "label": "Chronic kidney disease treatment",
+        "publisher": "National Health Service",
+        "authorityId": "uk-national-health-service",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NHS independently defines dialysis as removal of waste products and excess fluid from the blood."
+      }
+    ],
+    "referenceUrl": "https://www.niddk.nih.gov/health-information/kidney-disease/kidney-failure/hemodialysis",
+    "referenceLabel": "Hemodialysis",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The printed item incorrectly described dialysis as cleaning the kidneys. Dialysis filters the blood when kidneys cannot do so adequately, so option B was corrected from 'Kidneys' to 'Blood'."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q073",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 73,
+    "question": "Which substance did Alexander Fleming discover in 1928?",
+    "options": [
+      "Vitamin C",
+      "Aspirin",
+      "Penicillin",
+      "Insulin"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/medicine/1945/fleming/questions-and-answers/",
+        "label": "Sir Alexander Fleming: questions and answers",
+        "publisher": "Nobel Prize Outreach",
+        "authorityId": "nobel-prize",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Nobel Prize account records Fleming's 1928 discovery that led to penicillin."
+      },
+      {
+        "url": "https://www.sciencehistory.org/education/scientific-biographies/alexander-fleming/",
+        "label": "Alexander Fleming",
+        "publisher": "Science History Institute",
+        "authorityId": "science-history-institute",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Science History Institute independently states that Fleming discovered penicillin in 1928."
+      }
+    ],
+    "referenceUrl": "https://www.nobelprize.org/prizes/medicine/1945/fleming/questions-and-answers/",
+    "referenceLabel": "Sir Alexander Fleming: questions and answers",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": "1928",
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The subjective claim about a 'great revolution' was replaced with the precise discoverer, substance and year; the catch-all option was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q074",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 74,
+    "question": "Insects that transmit disease-causing pathogens between hosts are called:",
+    "options": [
+      "Drones",
+      "Vectors",
+      "Hybrids",
+      "Producers"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.cdc.gov/vector-borne-diseases/about/index.html",
+        "label": "About vector-borne diseases",
+        "publisher": "Centers for Disease Control and Prevention",
+        "authorityId": "us-cdc",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "CDC states that mosquitoes, ticks and fleas that spread pathogens are called vectors."
+      },
+      {
+        "url": "https://www.who.int/news-room/fact-sheets/detail/vector-borne-diseases",
+        "label": "Vector-borne diseases",
+        "publisher": "World Health Organization",
+        "authorityId": "world-health-organization",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "WHO independently describes many disease vectors as bloodsucking insects that transmit pathogens to new hosts."
+      }
+    ],
+    "referenceUrl": "https://www.cdc.gov/vector-borne-diseases/about/index.html",
+    "referenceLabel": "About vector-borne diseases",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The stem was made biologically precise and the catch-all distractor was replaced."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q075",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 75,
+    "question": "What is the common name for Sodium Chloride?",
+    "options": [
+      "Salt",
+      "Baking Soda",
+      "Chalk",
+      "Vinegar"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://www.fda.gov/Food/ResourcesForYou/Consumers/ucm315393.htm",
+        "label": "Sodium in Your Diet",
+        "publisher": "U.S. Food and Drug Administration",
+        "authorityId": "us-fda",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The FDA states that table salt is also known by its chemical name, sodium chloride."
+      },
+      {
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-Chloride",
+        "label": "Sodium Chloride",
+        "publisher": "PubChem, National Library of Medicine",
+        "authorityId": "pubchem",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "PubChem independently lists salt, common salt and table salt as names for sodium chloride."
+      }
+    ],
+    "referenceUrl": "https://www.fda.gov/Food/ResourcesForYou/Consumers/ucm315393.htm",
+    "referenceLabel": "Sodium in Your Diet",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "FDA and PubChem independently confirm the printed answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q076",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 76,
+    "question": "HTML is the core markup language used to create and structure what?",
+    "options": [
+      "Databases",
+      "Spreadsheets",
+      "Web pages",
+      "Desktop publishing"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://html.spec.whatwg.org/dev/introduction.html",
+        "label": "HTML Standard: Introduction",
+        "publisher": "WHATWG",
+        "authorityId": "whatwg",
+        "sourceClass": "primary",
+        "claimSummary": "The HTML Standard describes HTML as the World Wide Web's core markup language and as a language for authoring web pages.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax",
+        "label": "Basic HTML syntax",
+        "publisher": "MDN Web Docs",
+        "authorityId": "mdn-web-docs",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "MDN independently explains that HTML tells web browsers how to structure web pages.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://html.spec.whatwg.org/dev/introduction.html",
+    "referenceLabel": "HTML Standard: Introduction",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague phrase 'basic language' was replaced with the standards-based description 'core markup language'; Web pages remains the verified answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q077",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 77,
+    "question": "The .mpg filename extension is conventionally associated with which media type?",
+    "options": [
+      "Audio",
+      "Image",
+      "Video",
+      "Flash"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000335.shtml",
+        "label": "MPEG-2 Encoding Family",
+        "publisher": "Library of Congress",
+        "authorityId": "us-library-of-congress",
+        "sourceClass": "official",
+        "claimSummary": "The Library of Congress lists mpg as an MPEG filename extension and video/mpeg as its Internet media type.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.archives.gov/preservation/digital-preservation/linked-data/digitalvideo",
+        "label": "Linked Open Data for Digital Video Formats",
+        "publisher": "U.S. National Archives and Records Administration",
+        "authorityId": "us-national-archives",
+        "sourceClass": "official",
+        "claimSummary": "The National Archives independently classifies mpg and mpeg extensions as MPEG Digital Video.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000335.shtml",
+    "referenceLabel": "MPEG-2 Encoding Family",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The stem was clarified as a conventional filename association because MPEG program streams can also carry audio; among the listed media categories, Video is the documented classification."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q078",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 156,
+    "sourceBookPage": 161,
+    "sourceQuestionNumber": 78,
+    "question": "In Microsoft Word for Windows, which shortcut extends a selection one word to the right?",
+    "options": [
+      "CTRL + ALT + LEFT ARROW",
+      "CTRL + SHIFT + RIGHT ARROW",
+      "ALT + CTRL + RIGHT ARROW",
+      "ALT + RIGHT ARROW"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+        "label": "Keyboard shortcuts in Word",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "primary",
+        "claimSummary": "Microsoft documents Ctrl+Shift+Right Arrow as extending a selection one word to the right in Word for Windows.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://solutions.sierracollege.edu/TDClient/1795/Portal/KB/PrintArticle?ID=155564",
+        "label": "Shortcuts for your keyboard",
+        "publisher": "Sierra College",
+        "authorityId": "sierra-college",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "Sierra College independently lists Ctrl+Shift+Right Arrow as selecting the next word in Windows text editing.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+    "referenceLabel": "Keyboard shortcuts in Word",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word for Windows",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The action was normalized from the Word 2007 wording to the documented Word-for-Windows shortcut, which remains Ctrl+Shift+Right Arrow."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q079",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 79,
+    "question": "In Microsoft Word for Windows, which shortcut selects all document content?",
+    "options": [
+      "Ctrl + A",
+      "Alt + F8",
+      "Shift + Ctrl + A",
+      "Alt + A"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+        "label": "Keyboard shortcuts in Word",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "primary",
+        "claimSummary": "Microsoft documents Ctrl+A as selecting all document content in Word for Windows.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.mercy.edu/information-technology/word-2013-formatting-text-and-using-styles",
+        "label": "Word formatting text and using styles",
+        "publisher": "Mercy University",
+        "authorityId": "mercy-university",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "Mercy University's Word shortcut guide independently lists Ctrl+A for selecting all text in a document.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+    "referenceLabel": "Keyboard shortcuts in Word",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word for Windows",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The application and platform were stated explicitly; Ctrl+A is the independently documented answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q080",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 80,
+    "question": "In Microsoft Excel, what is a saved sequence of commands or actions used to automate repeated tasks called?",
+    "options": [
+      "Program",
+      "Macro",
+      "Procedure",
+      "Workbook"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/excel/automate-tasks-with-the-macro-recorder",
+        "label": "Automate tasks with the Macro Recorder",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "primary",
+        "claimSummary": "Microsoft explains that Excel records a sequence of steps as a macro that can be replayed to automate a repetitive task.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://terpconnect.umd.edu/~toh/spectrum/AppendixN.html",
+        "label": "Using macros to extend spreadsheets",
+        "publisher": "University of Maryland",
+        "authorityId": "university-of-maryland",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The University of Maryland independently defines spreadsheet macros as saved sequences of commands or keystrokes used to automate repetitive tasks.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-us/excel/automate-tasks-with-the-macro-recorder",
+    "referenceLabel": "Automate tasks with the Macro Recorder",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The ambiguous phrase 'user developed instructions' was replaced with the documented macro concept, and the catch-all choice was removed."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q081",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 81,
+    "question": "In common computing usage, Linux is best classified as which type of software?",
+    "options": [
+      "A Malware",
+      "An Operating System",
+      "An Application Program",
+      "An Anti Virus"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.ibm.com/think/topics/linux",
+        "label": "What is Linux?",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "sourceClass": "primary",
+        "claimSummary": "IBM classifies Linux as an open-source operating system based on Unix and distinguishes the Linux kernel from the full OS.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.redhat.com/en/topics/linux/what-is-linux",
+        "label": "What is Linux?",
+        "publisher": "Red Hat",
+        "authorityId": "red-hat",
+        "sourceClass": "primary",
+        "claimSummary": "Red Hat independently classifies Linux as an open-source operating system and explains that distributions combine the kernel with supporting packages.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://www.ibm.com/think/topics/linux",
+    "referenceLabel": "What is Linux?",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The wording acknowledges common usage. Strictly, Linux can name the kernel, while complete Linux distributions are operating systems; among the original choices, Operating System is correct."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q082",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 82,
+    "question": "In Microsoft Word for Windows, what does Ctrl+R do?",
+    "options": [
+      "Open the print dialog",
+      "Refresh a web page",
+      "Close the window",
+      "Align the paragraph to the right"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+        "label": "Keyboard shortcuts in Word",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "primary",
+        "claimSummary": "Microsoft documents Ctrl+R as right-aligning the selected paragraph in Word for Windows.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://td.usd.edu/TDClient/33/Portal/KB/Article/8260/Word-Common-Keyboard-Shortcuts",
+        "label": "Word common keyboard shortcuts",
+        "publisher": "University of South Dakota",
+        "authorityId": "university-of-south-dakota",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The University of South Dakota independently lists Ctrl+R as the Word shortcut for right alignment.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-word-95ef89dd-7142-4b50-afb2-f762f663ceb2",
+    "referenceLabel": "Keyboard shortcuts in Word",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "version",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": "Microsoft Word for Windows",
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The expected Word function was absent from the source choices and hidden behind 'None of these'. It was inserted explicitly as Right Align."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q083",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 83,
+    "question": "Which compact-disc format can be erased and rewritten multiple times?",
+    "options": [
+      "CD-ROM",
+      "CD-RW",
+      "CDO",
+      "CAD"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/NISTspecialpublication500-252.pdf",
+        "label": "Care and handling of CDs and DVDs",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "us-nist",
+        "sourceClass": "official",
+        "claimSummary": "NIST lists CD-RW as a rewritable compact-disc type and distinguishes it from read-only CD-ROM and write-once CD-R.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://wwws.loc.gov/preservation/scientists/projects/cd-r_dvd-r_rw_longevity.html",
+        "label": "CD-R and DVD-R/RW longevity research",
+        "publisher": "Library of Congress",
+        "authorityId": "us-library-of-congress",
+        "sourceClass": "official",
+        "claimSummary": "The Library of Congress independently identifies CD-RW among rewritable optical-disc formats.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/NISTspecialpublication500-252.pdf",
+    "referenceLabel": "Care and handling of CDs and DVDs",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The grammar was simplified while preserving the tested distinction; CD-RW is rewritable."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q084",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 84,
+    "question": "In Windows applications that support multiple open documents, which listed shortcut closes the active document without exiting the entire app?",
+    "options": [
+      "CTRL + F1",
+      "CTRL + F2",
+      "CTRL + F3",
+      "CTRL + F4"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://support.microsoft.com/en-gb/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec",
+        "label": "Keyboard shortcuts in Windows",
+        "publisher": "Microsoft Support",
+        "authorityId": "microsoft-support",
+        "sourceClass": "primary",
+        "claimSummary": "Microsoft documents Ctrl+F4 as closing the active document, but not the entire app, when an app supports multiple documents.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://dsp.sa.ucsb.edu/sites/default/files/2020-07/dragon_naturally_user_guide.pdf",
+        "label": "Dragon NaturallySpeaking user guide",
+        "publisher": "Nuance Communications",
+        "authorityId": "nuance-communications",
+        "sourceClass": "primary",
+        "claimSummary": "The independent Dragon user guide likewise states that Ctrl+F4 closes the active document rather than the whole program.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://support.microsoft.com/en-gb/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec",
+    "referenceLabel": "Keyboard shortcuts in Windows",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The original said 'active window', for which Alt+F4 is the standard shortcut but was not offered. The stem was repaired to the precise Ctrl+F4 action supported by the listed answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q085",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 85,
+    "question": "In computing, what does BIOS stand for?",
+    "options": [
+      "Basic Input/Output System",
+      "Binary Input/Output System",
+      "Basic Internet/Output System",
+      "Broad Internet/Output System"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://csrc.nist.gov/glossary/term/basic_input_output_system",
+        "label": "Basic Input/Output System (BIOS)",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "us-nist",
+        "sourceClass": "official",
+        "claimSummary": "NIST expands BIOS as Basic Input/Output System.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.ibm.com/support/pages/zvm/related/tcpip/glos.html",
+        "label": "IBM glossary",
+        "publisher": "IBM",
+        "authorityId": "ibm",
+        "sourceClass": "primary",
+        "claimSummary": "IBM independently expands BIOS as Basic Input/Output System and describes its basic PC routines.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://csrc.nist.gov/glossary/term/basic_input_output_system",
+    "referenceLabel": "Basic Input/Output System (BIOS)",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The original wording and distinct options were already sound; Basic Input/Output System is independently confirmed."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q086",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 86,
+    "question": "As of 2026, Microsoft Corporation's global headquarters are located in which country?",
+    "options": [
+      "United Kingdom",
+      "United States",
+      "Japan",
+      "Italy"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://www.microsoft.com/en-us/about/office-locations",
+        "label": "Microsoft office locations",
+        "publisher": "Microsoft",
+        "authorityId": "microsoft",
+        "sourceClass": "primary",
+        "claimSummary": "Microsoft states that its global headquarters are in Redmond, Washington, in the United States.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "label": "Microsoft Corporation 2026 Form 10-K",
+        "publisher": "U.S. Securities and Exchange Commission",
+        "authorityId": "us-sec",
+        "sourceClass": "official",
+        "claimSummary": "Microsoft's filed 2026 Form 10-K independently gives its corporate headquarters in Redmond, Washington, United States.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://www.microsoft.com/en-us/about/office-locations",
+    "referenceLabel": "Microsoft office locations",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "as-of",
+      "sourcePaperDate": "2019",
+      "asOf": "2026-08-29",
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": "2027-08-29"
+    },
+    "confidence": "high",
+    "sourceNotes": "The vague phrase 'Microsoft located in' was narrowed to global headquarters and dated because corporate locations can change."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q087",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 87,
+    "question": "Charles Babbage, designer of the Difference and Analytical Engines, is documented as having which nationality?",
+    "options": [
+      "American",
+      "British",
+      "Finnish",
+      "German"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://collection.sciencemuseumgroup.org.uk/people/cp36993/charles-babbage",
+        "label": "Charles Babbage",
+        "publisher": "Science Museum Group",
+        "authorityId": "science-museum-group",
+        "sourceClass": "official",
+        "claimSummary": "The Science Museum Group identifies Babbage's nationality as English and British and documents his Difference Engine work.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://makingscience.royalsociety.org/people/na6626/charles-babbage",
+        "label": "Charles Babbage",
+        "publisher": "The Royal Society",
+        "authorityId": "royal-society",
+        "sourceClass": "official",
+        "claimSummary": "The Royal Society independently records Charles Babbage's nationality as British.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://collection.sciencemuseumgroup.org.uk/people/cp36993/charles-babbage",
+    "referenceLabel": "Charles Babbage",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The oversimplified claim that Babbage 'invented the first computer' was replaced with his documented engine designs and nationality; British is the verified answer."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q088",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 88,
+    "question": "In its conventional standalone form, which listed operating system allows only one user application program to run at a time?",
+    "options": [
+      "Windows XP",
+      "Unix",
+      "MS-DOS",
+      "Linux"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://codex.cs.yale.edu/avi/os-book/OS8/os8c/slide-dir/PDF-dir/ch2.pdf",
+        "label": "Operating System Concepts: system structures",
+        "publisher": "Yale University",
+        "authorityId": "yale-university",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The Operating System Concepts course slides hosted by Yale identify MS-DOS as single-tasking.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://computerhistory.org/blog/microsoft-ms-dos-early-source-code/",
+        "label": "Microsoft MS-DOS early source code",
+        "publisher": "Computer History Museum",
+        "authorityId": "computer-history-museum",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The Computer History Museum independently states that only one user application program could run at a time under early MS-DOS.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://codex.cs.yale.edu/avi/os-book/OS8/os8c/slide-dir/PDF-dir/ch2.pdf",
+    "referenceLabel": "Operating System Concepts: system structures",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "'Not multitasking' was made operationally precise and DOS was normalized to MS-DOS; unusual add-ons and the unreleased Multitasking DOS branch are outside the conventional standalone scope."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q089",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 89,
+    "question": "In the U.S. short-scale convention, how many zeros are in one trillion?",
+    "options": [
+      "10",
+      "9",
+      "12",
+      "13"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/how_big_is_a_trillion.htm",
+        "label": "How big is a trillion?",
+        "publisher": "NASA Glenn Research Center",
+        "authorityId": "nasa-glenn",
+        "sourceClass": "official",
+        "claimSummary": "NASA states that in U.S. usage one trillion is written as 1 followed by 12 zeros.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "label": "Metric SI prefixes",
+        "publisher": "National Institute of Standards and Technology",
+        "authorityId": "us-nist",
+        "sourceClass": "official",
+        "claimSummary": "NIST independently equates the U.S. term trillion with 10 to the power 12.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://www.grc.nasa.gov/WWW/K-12/Numbers/Math/Mathematical_Thinking/how_big_is_a_trillion.htm",
+    "referenceLabel": "How big is a trillion?",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The short-scale convention was stated explicitly because historical long-scale usage differs; the verified answer is 12 zeros."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q090",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 90,
+    "question": "Which of the following is divisible by 2, 3 and 5?",
+    "options": [
+      "390",
+      "575",
+      "590",
+      "675"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/2-4-find-multiples-and-factors",
+        "label": "Find multiples and factors",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives the divisibility tests for 2, 3, and 5; applying all three tests leaves 390 as the only listed number.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=390%2F2%2C+390%2F3%2C+390%2F5",
+        "label": "Check 390 divided by 2, 3, and 5",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculations give integer quotients 195, 130, and 78, confirming that 390 is divisible by all three.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-4-find-multiples-and-factors",
+    "referenceLabel": "Find multiples and factors",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "390 ends in 0 and has digit sum 12, so it passes the 2, 3, and 5 tests; each distractor fails at least one test."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q091",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 91,
+    "question": "When A finishes a 1 km race, B is 28 m short of the finish and takes another 7 seconds at the same speed. How long did A take?",
+    "options": [
+      "4 minutes 3 seconds",
+      "3 minutes 4 seconds",
+      "5 minutes",
+      "4 minutes 20 seconds"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+        "label": "Distance, rate, and time",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives d=rt for uniform motion; B's last 28 m in 7 seconds fixes B's rate at 4 m/s.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1000%2F%2828%2F7%29-7",
+        "label": "Race-time calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation gives 243 seconds, which is 4 minutes 3 seconds.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+    "referenceLabel": "Distance, rate, and time",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The original wording could be read several ways. The intended condition was stated explicitly: B needs 7 more seconds for the final 28 m. Thus B's full-race time is 250 seconds and A's is 243 seconds."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q092",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 92,
+    "question": "If 3/11 of a number is 22, what is 6/11 of that number?",
+    "options": [
+      "6",
+      "12",
+      "33",
+      "44"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+        "label": "Solve proportions and their applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax explains equivalent ratios and cross products; 6/11 is twice 3/11, so its value is twice 22.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%286%2F11%29*%2822*11%2F3%29",
+        "label": "Evaluate the fraction of the number",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates six elevenths of the implied number as 44.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+    "referenceLabel": "Solve proportions and their applications",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source options omitted the mathematically correct answer and offered 48. That choice was corrected to 44: the number is 22x11/3, and 6/11 of it is 44."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q093",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 157,
+    "sourceBookPage": 162,
+    "sourceQuestionNumber": 93,
+    "question": "18 is 75% of which value?",
+    "options": [
+      "34",
+      "24",
+      "22",
+      "20"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "Solve general applications of percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax models percent questions as amount equals percent times base; here 18=0.75x.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=18%2F0.75",
+        "label": "Evaluate 18 divided by 0.75",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates 18 divided by 0.75 as 24.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+    "referenceLabel": "Solve general applications of percent",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Solving 18=75% of x gives x=18/0.75=24."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q094",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 158,
+    "sourceBookPage": 163,
+    "sourceQuestionNumber": 94,
+    "question": "Under simple interest, Rs. 12,500 amounts to Rs. 15,500 in 4 years. What is the annual interest rate?",
+    "options": [
+      "3%",
+      "5%",
+      "6%",
+      "7%"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-4-solve-simple-interest-applications",
+        "label": "Solve simple interest applications",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives I=Prt and shows how to recover the annual rate from principal, interest, and years.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%2815500-12500%29%2F%2812500*4%29*100",
+        "label": "Simple-interest rate calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation gives an annual rate of 6 percent.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-4-solve-simple-interest-applications",
+    "referenceLabel": "Solve simple interest applications",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The source intended simple interest but did not say so. Adding that condition makes the problem determinate: I=3,000 and r=I/(Pt)=0.06."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q095",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 158,
+    "sourceBookPage": 163,
+    "sourceQuestionNumber": 95,
+    "question": "What is the speed of a car that travels 700 km in 3 hours and 30 minutes?",
+    "options": [
+      "150 km/h",
+      "175 km/h",
+      "185 km/h",
+      "200 km/h"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+        "label": "Distance, rate, and time",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives d=rt and therefore rate=d/t for uniform motion; 3 hours 30 minutes is 3.5 hours.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=700%2F3.5",
+        "label": "Speed calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates 700 divided by 3.5 as 200.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+    "referenceLabel": "Distance, rate, and time",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Using rate=distance/time gives 700 km / 3.5 h = 200 km/h."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q096",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 158,
+    "sourceBookPage": 163,
+    "sourceQuestionNumber": 96,
+    "question": "If x + y = 6, y + z = 7, and z + x = 9, the average (arithmetic mean) of x, y and z is:",
+    "options": [
+      "11/3",
+      "11/2",
+      "22/3",
+      "11"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 0,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+        "label": "Averages and probability",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax defines the arithmetic mean as the sum of the values divided by their number.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+x%2By%3D6%2C+y%2Bz%3D7%2C+z%2Bx%3D9%3B+%28x%2By%2Bz%29%2F3",
+        "label": "Solve the system and compute its mean",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent system calculation gives x+y+z=11 and an arithmetic mean of 11/3.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-5-averages-and-probability",
+    "referenceLabel": "Averages and probability",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Adding the three equations gives 2(x+y+z)=22, so the sum is 11 and the mean is 11/3."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q097",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 158,
+    "sourceBookPage": 163,
+    "sourceQuestionNumber": 97,
+    "question": "0.014 x 0.014 = ?",
+    "options": [
+      "0.196",
+      "19.6",
+      "0.00196",
+      "0.000196"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 3,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+        "label": "Decimal operations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax explains that the product has the combined number of decimal places in the two factors.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=0.014*0.014",
+        "label": "Decimal multiplication",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates 0.014 times 0.014 as 0.000196.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/5-2-decimal-operations",
+    "referenceLabel": "Decimal operations",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "14x14=196 and the factors contain six decimal places in total, giving 0.000196."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q098",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 158,
+    "sourceBookPage": 163,
+    "sourceQuestionNumber": 98,
+    "question": "Which number is the odd one out because it is not a perfect cube: 8, 27, 64, 100, 125, 216, 343?",
+    "options": [
+      "27",
+      "100",
+      "125",
+      "343"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/10-1-find-square-roots-and-cube-roots",
+        "label": "Find square roots and cube roots",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax defines perfect cubes and cube roots, providing the rule used to classify the listed integers.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://mathworld.wolfram.com/CubeNumber.html",
+        "label": "Cube number",
+        "publisher": "Wolfram MathWorld",
+        "authorityId": "wolfram-mathworld",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "MathWorld independently defines cube numbers as n cubed and lists the integer cube sequence containing every listed value except 100.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/10-1-find-square-roots-and-cube-roots",
+    "referenceLabel": "Find square roots and cube roots",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "The originally unstated pattern was made explicit. The other terms are 2^3 through 7^3; 100 is not a perfect cube."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q099",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 158,
+    "sourceBookPage": 163,
+    "sourceQuestionNumber": 99,
+    "question": "Abdul purchased 20 dozen of toys at the rate of Rs. 375 per dozen. He sold each toy for Rs. 33. What was his percentage profit?",
+    "options": [
+      "3.5%",
+      "4.5%",
+      "5.6%",
+      "6.5%"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 2,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "label": "Solve general applications of percent",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax defines percent increase relative to the original amount, which here is the total purchase cost.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%2820*12*33-20*375%29%2F%2820*375%29*100",
+        "label": "Profit-percentage calculation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation evaluates the profit as 5.6 percent of cost.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+    "referenceLabel": "Solve general applications of percent",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Twenty dozen is 240 toys. Cost is Rs. 7,500, revenue is Rs. 7,920, profit is Rs. 420, and 420/7,500x100=5.6%."
+  },
+  {
+    "sourceRecordId": "ADV2E102-U0016-Q100",
+    "corpusId": "ADV2-2025-V2-E102",
+    "sourceUnitId": "U0016",
+    "sourcePdfPage": 158,
+    "sourceBookPage": 163,
+    "sourceQuestionNumber": 100,
+    "question": "If 2x - 10 = 20, what is x - 5?",
+    "options": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "verificationStatus": "verified",
+    "verifiedCorrectIndex": 1,
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/8-3-solve-equations-with-variables-and-constants-on-both-sides",
+        "label": "Solve linear equations",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "OpenStax gives the addition, subtraction, and division steps for solving linear equations and checking the result.",
+        "role": "answer-primary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+2x-10%3D20%3B+x-5",
+        "label": "Solve the equation and evaluate x minus 5",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "claimSummary": "The independent calculation solves x=15 and evaluates x-5 as 10.",
+        "role": "answer-secondary",
+        "accessedOn": "2026-08-29",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/8-3-solve-equations-with-variables-and-constants-on-both-sides",
+    "referenceLabel": "Solve linear equations",
+    "accessedOn": "2026-08-29",
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": "2019",
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "confidence": "high",
+    "sourceNotes": "Adding 10 and dividing by 2 gives x=15; substituting gives x-5=10."
   }
 ]

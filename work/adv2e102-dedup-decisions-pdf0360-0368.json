@@ -1548,10 +1548,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0042-Q076",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced items related or potentially confusable but testing materially different facts, dates, entities, wording functions, or numerical applications, so this verified question is retained.",
+    "duplicateOf": "ADV2E102-U0035-Q050",
+    "reason": "The earlier-source-order U0035 canonical asks the identical iron-deficiency anaemia proposition.",
     "testedProposition": "A sufficiently severe deficiency of iron can cause which condition? Correct answer: Anaemia.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1561,9 +1561,10 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
-        "ADV2E102-U0001-Q083"
+        "ADV2E102-U0001-Q083",
+        "ADV2E102-U0035-Q050"
       ],
       "answerConflictReviewed": true
     }
@@ -1824,10 +1825,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0042-Q089",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned baseline bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0035-Q077",
+    "reason": "The earlier-source-order U0035 canonical asks the identical meaning of the phrase 'high time'.",
     "testedProposition": "What does 'It is high time to do something' imply? Correct answer: It should already have been done.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1837,8 +1838,10 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0035-Q077"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1992,10 +1995,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0042-Q097",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned baseline bank or earlier retained ADV2E102 material, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0015-Q100",
+    "reason": "Earlier-source-order U0015 Q100 asks the same traditional Khatib al-Anbiya epithet proposition and answers Prophet Shuayb.",
     "testedProposition": "According to the traditional epithet, which prophet is called Khatib al-Anbiya (the orator of the prophets)? Correct answer: Prophet Shuayb.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -2005,8 +2008,10 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "exactFingerprintMatch": true,
+      "semanticCandidateIds": [
+        "ADV2E102-U0015-Q100"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -2034,10 +2039,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0042-Q099",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced items related or potentially confusable but testing materially different facts, dates, entities, wording functions, or numerical applications, so this verified question is retained.",
+    "duplicateOf": "ADV2E102-U0035-Q096",
+    "reason": "The earlier-source-order U0035 canonical asks the identical Tabuk expedition proposition and has the same verified answer.",
     "testedProposition": "The 630 CE expedition to Tabuk was directed toward the frontier of which empire, although no pitched battle occurred? Correct answer: Byzantine (Roman) Empire.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -2047,9 +2052,10 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
-        "P237-Q065-SRC"
+        "P237-Q065-SRC",
+        "ADV2E102-U0035-Q096"
       ],
       "answerConflictReviewed": true
     }

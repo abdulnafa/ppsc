@@ -171,10 +171,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0091-Q009",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced items test related, inverse, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
+    "duplicateOf": "ADV2E102-U0017-Q018",
+    "reason": "The earlier-source-order U0017 canonical asks the identical authorship of A Brief History of Time and answers Stephen Hawking.",
     "testedProposition": "Who wrote 'A Brief History of Time'? Correct answer: Stephen Hawking.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -186,7 +186,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0006-Q009-SRC"
+        "ADV2E102-U0006-Q009-SRC",
+        "ADV2E102-U0017-Q018"
       ],
       "answerConflictReviewed": true
     }
@@ -586,6 +587,7 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
+        "ADV2E102-U0010-Q033-SRC",
         "ADV2E102-U0005-Q019-SIM",
         "ADV2E102-U0002-Q027-SRC",
         "ADV2E102-U0002-Q027-SIM",
@@ -639,10 +641,10 @@
         "ADV2E102-U0002-Q028-SRC",
         "ADV2E102-U0032-Q036-SRC",
         "ADV2E102-U0061-Q058-SRC",
+        "ADV2E102-U0009-Q032-SRC",
         "ADV2E102-U0041-Q028-SRC",
         "ADV2E102-U0051-Q046-SRC",
-        "ADV2E102-U0081-Q025-SRC",
-        "ADV2E102-U0032-Q036-SIM"
+        "ADV2E102-U0081-Q025-SRC"
       ],
       "answerConflictReviewed": true
     }
@@ -709,10 +711,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0091-Q034",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced items test related, inverse, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
+    "duplicateOf": "ADV2E102-U0044-Q023",
+    "reason": "The earlier retained U0044 source asks the identical Line of Actual Control de facto-boundary proposition and answers China and India.",
     "testedProposition": "The Line of Actual Control is the de facto boundary between which two countries? Correct answer: China and India.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -724,7 +726,8 @@
     "similaritySignals": {
       "exactFingerprintMatch": false,
       "semanticCandidateIds": [
-        "ADV2E102-U0023-Q034-SRC"
+        "ADV2E102-U0023-Q034-SRC",
+        "ADV2E102-U0044-Q023"
       ],
       "answerConflictReviewed": true
     }
@@ -1055,8 +1058,9 @@
       "candidateTool": "tools/deduplicate-adv2e102.js"
     },
     "similaritySignals": {
-      "exactFingerprintMatch": false,
+      "exactFingerprintMatch": true,
       "semanticCandidateIds": [
+        "ADV2E102-U0008-Q054-SIM",
         "ADV2E102-U0008-Q054"
       ],
       "answerConflictReviewed": true
@@ -1506,7 +1510,7 @@
     "action": "keep",
     "reviewStatus": "verified",
     "duplicateOf": "",
-    "reason": "Manual proposition review found no exact or semantic repeat in the pinned 3,074-item bank or earlier retained ADV2E102 material, so this independently verified fact is retained.",
+    "reason": "Manual proposition review found the surfaced items test related, inverse, or similarly worded but materially different facts, so this independently verified proposition is retained as a useful confusable distinction.",
     "testedProposition": "Which word is the closest synonym of 'repercussion' in the sense of a result of an action? Correct answer: Consequence.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1517,7 +1521,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0014-Q074-SRC"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1548,7 +1554,7 @@
         "ADV2E102-U0013-Q075-SRC",
         "ADV2E102-U0013-Q074-SIM",
         "ADV2E102-U0013-Q075-SIM",
-        "ADV2E102-U0033-Q078-SIM",
+        "ADV2E102-U0008-Q073-SIM",
         "ADV2E102-U0081-Q076-SRC",
         "ADV2E102-U0081-Q073-SIM",
         "ADV2E102-U0003-Q025-SRC",

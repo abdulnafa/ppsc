@@ -1,0 +1,3227 @@
+[
+  {
+    "id": "ADV2E102-U0035-Q069-SRC",
+    "pairId": "ADV2E102-U0035-Q069",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "If 15% sales tax on an article is Rs. 1,500, what is the article's pre-tax price?",
+    "questionUrdu": "اگر کسی چیز پر 15% سیلز ٹیکس 1,500 روپے ہو تو ٹیکس سے پہلے اس چیز کی قیمت کتنی ہوگی؟",
+    "options": [
+      "Rs. 1,000",
+      "Rs. 1,500",
+      "Rs. 10,000",
+      "Rs. 15,500"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Rs. 10,000 ہے۔ سیلز ٹیکس کی رقم اصل قیمت کو شرح سے ضرب دے کر نکلتی ہے، اس لیے اصل قیمت 1,500 کو 0.15 سے تقسیم کرنے پر 10,000 روپے بنتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Discounts, Markups, and Sales Tax",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+        "label": "Discounts, Markups, and Sales Tax",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives sales tax = purchase price multiplied by the tax rate and explains solving percentage applications."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1500%2F0.15",
+        "label": "Compute 1500 / 0.15",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation evaluates 1,500 divided by 0.15 as 10,000."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The ambiguous phrase 'actual price' was clarified to pre-tax price. Applying tax = price × rate gives 1,500 / 0.15 = Rs. 10,000; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0035-Q069-SIM",
+    "pairId": "ADV2E102-U0035-Q069",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "If 18% sales tax equals Rs. 900, what is the pre-tax price?",
+    "questionUrdu": "اگر 18% سیلز ٹیکس Rs. 900 ہو تو ٹیکس سے پہلے قیمت کتنی ہوگی؟",
+    "options": [
+      "Rs. 4,000",
+      "Rs. 5,000",
+      "Rs. 5,900",
+      "Rs. 16,200"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Rs. 5,000 ہے۔ اصل قیمت = 900 ÷ 0.18، لہٰذا جواب 5,000 روپے ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Discounts, Markups, and Sales Tax",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+        "label": "Discounts, Markups, and Sales Tax",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives sales tax as the original price multiplied by the tax rate, so the original price is tax divided by rate."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=900%2F0.18",
+        "label": "Evaluate 900 / 0.18",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently evaluates 900 divided by 0.18 as 5,000."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q070-SRC",
+    "pairId": "ADV2E102-U0035-Q070",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Find the marked price of a uniform shirt sold for Rs. 1,311 after a 5% discount.",
+    "questionUrdu": "ایک یونیفارم شرٹ 5% رعایت کے بعد Rs. 1,311 میں فروخت ہوئی؛ اس کی نشان زدہ قیمت معلوم کریں۔",
+    "options": [
+      "Rs. 1,380",
+      "Rs. 1,520",
+      "Rs. 1,320",
+      "Rs. 1,460"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Rs. 1,380 ہے۔ 5% رعایت کے بعد فروختی قیمت نشان زدہ قیمت کا 95% رہتی ہے، اس لیے 1,311 کو 0.95 سے تقسیم کرنے پر Rs. 1,380 آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Discounts, Markups, and Sales Tax",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+        "label": "Discounts, Markups, and Sales Tax",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives sale price = original price × (1 − percent discount) and shows how to recover the original price."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1311%2F%281-5%2F100%29",
+        "label": "Compute 1311 / (1 - 5/100)",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation evaluates the marked price as 1,380."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Currency formatting was standardized. Since Rs. 1,311 is 95% of the marked price, 1,311 / 0.95 = Rs. 1,380; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0035-Q070-SIM",
+    "pairId": "ADV2E102-U0035-Q070",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A jacket sells for Rs. 1,710 after a 10% discount. What was its marked price?",
+    "questionUrdu": "ایک جیکٹ 10% رعایت کے بعد Rs. 1,710 میں بکتی ہے؛ اس کی نشان زدہ قیمت کیا تھی؟",
+    "options": [
+      "Rs. 1,800",
+      "Rs. 1,880",
+      "Rs. 1,900",
+      "Rs. 2,000"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Rs. 1,900 ہے۔ 10% رعایت کے بعد قیمت 90% رہتی ہے، لہٰذا 1,710 ÷ 0.90 = 1,900۔",
+    "source": {
+      "type": "practice",
+      "label": "Discounts, Markups, and Sales Tax",
+      "referenceUrl": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-2-discounts-markups-and-sales-tax",
+        "label": "Discounts, Markups, and Sales Tax",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives sale price as original price multiplied by one minus the discount rate."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=1710%2F%281-10%2F100%29",
+        "label": "Evaluate 1710 / (1 - 10/100)",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently evaluates 1,710 divided by 0.90 as 1,900."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q071-SRC",
+    "pairId": "ADV2E102-U0035-Q071",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "The number 329 is divisible by which listed number?",
+    "questionUrdu": "عدد 329 درج ذیل میں سے کس عدد سے پورا تقسیم ہوتا ہے؟",
+    "options": [
+      "11",
+      "9",
+      "8",
+      "7"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 7 ہے۔ 329 کو 7 سے تقسیم کرنے پر صحیح عدد 47 حاصل ہوتا ہے، اس لیے 329 عدد 7 سے قابلِ تقسیم ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Find Multiples and Factors",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-4-find-multiples-and-factors",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/2-4-find-multiples-and-factors",
+        "label": "Find Multiples and Factors",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax defines divisibility through whole-number factors and quotients."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=329%2F7",
+        "label": "Compute 329 / 7",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation gives 329 / 7 = 47, a whole number."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was made grammatical. Because 329 = 7 × 47, answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0035-Q071-SIM",
+    "pairId": "ADV2E102-U0035-Q071",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "When 391 is divided by 17, what whole-number quotient is obtained?",
+    "questionUrdu": "جب 391 کو 17 سے تقسیم کیا جائے تو کون سا صحیح عدد حاصل ہوتا ہے؟",
+    "options": [
+      "21",
+      "22",
+      "23",
+      "24"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 23 ہے۔ 17 × 23 = 391، اس لیے 391 ÷ 17 کا حاصل 23 ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Find Multiples and Factors",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-4-find-multiples-and-factors",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/2-4-find-multiples-and-factors",
+        "label": "Find Multiples and Factors",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax explains divisibility through factors and whole-number quotients."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=391%2F17",
+        "label": "Evaluate 391 / 17",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently evaluates 391 divided by 17 as 23."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q072-SRC",
+    "pairId": "ADV2E102-U0035-Q072",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "On a standard north-up map, Amir is north of Bilal and Saad is west of Bilal. In which direction is Amir from Saad?",
+    "questionUrdu": "شمال کو اوپر دکھانے والے نقشے میں امیر، بلال کے شمال میں اور سعد، بلال کے مغرب میں ہے؛ سعد کے لحاظ سے امیر کس سمت میں ہے؟",
+    "options": [
+      "Southwest",
+      "Northwest",
+      "Northeast",
+      "North"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Northeast ہے۔ سعد سے بلال مشرق میں ہے اور امیر بلال کے شمال میں، اس لیے سعد سے امیر کی سمت شمال مشرق بنتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Cardinal Directions and Maps",
+      "referenceUrl": "https://education.nationalgeographic.org/resource/cardinal-directions-and-maps/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://education.nationalgeographic.org/resource/cardinal-directions-and-maps/",
+        "label": "Cardinal Directions and Maps",
+        "publisher": "National Geographic Society",
+        "authorityId": "national-geographic",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Geographic explains north, south, east, west and their use on maps."
+      },
+      {
+        "url": "https://www.mathsisfun.com/definitions/compass-points.html",
+        "label": "Compass Points",
+        "publisher": "Math Is Fun",
+        "authorityId": "math-is-fun",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent compass guide identifies northeast as the direction between north and east."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "A north-up-map convention was supplied and malformed direction labels were standardized. From Saad to Amir the displacement is both east and north, so the answer is Northeast."
+  },
+  {
+    "id": "ADV2E102-U0035-Q072-SIM",
+    "pairId": "ADV2E102-U0035-Q072",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Hina is east of Kamal, and Sara is north of Hina. In which direction is Sara from Kamal?",
+    "questionUrdu": "حنا، کمال کے مشرق میں ہے اور سارہ، حنا کے شمال میں ہے؛ کمال سے سارہ کس سمت میں ہے؟",
+    "options": [
+      "Northwest",
+      "Northeast",
+      "Southwest",
+      "South"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Northeast ہے۔ کمال سے پہلے مشرق اور پھر شمال جانے سے مجموعی سمت شمال مشرق بنتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Cardinal Directions and Maps",
+      "referenceUrl": "https://education.nationalgeographic.org/resource/cardinal-directions-and-maps/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://education.nationalgeographic.org/resource/cardinal-directions-and-maps/",
+        "label": "Cardinal Directions and Maps",
+        "publisher": "National Geographic Society",
+        "authorityId": "national-geographic",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "National Geographic explains cardinal directions and their use on north-up maps."
+      },
+      {
+        "url": "https://www.mathsisfun.com/definitions/compass-points.html",
+        "label": "Compass Points",
+        "publisher": "Math Is Fun",
+        "authorityId": "math-is-fun",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Math Is Fun independently identifies northeast as the compass direction between north and east."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q073-SRC",
+    "pairId": "ADV2E102-U0035-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the correct antonym of 'ruthless'.",
+    "questionUrdu": "لفظ ruthless کا درست متضاد منتخب کریں۔",
+    "options": [
+      "Brutal",
+      "Compassionate",
+      "Ferocious",
+      "Cold-blooded"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Compassionate ہے۔ درست جواب Compassionate ہے۔ ruthless بے رحمی کو ظاہر کرتا ہے جبکہ compassionate ہمدرد اور رحم دل ہونے کے معنی دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Synonyms and antonyms of ruthless",
+      "referenceUrl": "https://dictionary.cambridge.org/us/thesaurus/ruthless",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/ruthless",
+        "label": "Synonyms and antonyms of ruthless",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge lists compassionate among the antonyms of ruthless."
+      },
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/ruthless",
+        "label": "Ruthless: similar and opposite words",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently lists compassionate as an antonym of ruthless."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Capitalization and hyphenation were normalized; answer B is independently confirmed."
+  },
+  {
+    "id": "ADV2E102-U0035-Q073-SIM",
+    "pairId": "ADV2E102-U0035-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which word is the closest synonym of 'ruthless'?",
+    "questionUrdu": "لفظ ruthless کا قریب ترین مترادف کون سا ہے؟",
+    "options": [
+      "Merciless",
+      "Compassionate",
+      "Gentle",
+      "Forgiving"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Merciless ہے۔ ruthless اور merciless دونوں بے رحم اور سخت رویے کو ظاہر کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Synonyms and antonyms of ruthless",
+      "referenceUrl": "https://dictionary.cambridge.org/us/thesaurus/ruthless",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/ruthless",
+        "label": "Synonyms and antonyms of ruthless",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge lists merciless and similarly cruel senses for ruthless."
+      },
+      {
+        "url": "https://www.merriam-webster.com/thesaurus/ruthless",
+        "label": "Ruthless: similar and opposite words",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently groups merciless with synonyms of ruthless."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q074-SRC",
+    "pairId": "ADV2E102-U0035-Q074",
+    "kind": "source",
+    "categoryId": "everyday-science",
+    "question": "Choose the correct meaning of 'torque'.",
+    "questionUrdu": "لفظ torque کا درست مفہوم منتخب کریں۔",
+    "options": [
+      "A turban",
+      "A jest",
+      "A Turkish sash",
+      "A force that tends to cause rotation"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب A force that tends to cause rotation ہے۔ درست جواب A force that tends to cause rotation ہے۔ torque کسی محور کے گرد جسم کو گھمانے کی قوت کے اثر کو بیان کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "The Second Condition for Equilibrium",
+      "referenceUrl": "https://openstax.org/books/college-physics-2e/pages/9-2-the-second-condition-for-equilibrium",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/9-2-the-second-condition-for-equilibrium",
+        "label": "The Second Condition for Equilibrium",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax describes torque as the rotational equivalent of force and a measure of a force's effectiveness in changing rotation."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/torque",
+        "label": "Torque",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines torque as a force that produces or tends to produce rotation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Articles were added to make the choices parallel; the physics meaning in option D is retained."
+  },
+  {
+    "id": "ADV2E102-U0035-Q074-SIM",
+    "pairId": "ADV2E102-U0035-Q074",
+    "kind": "similar",
+    "categoryId": "everyday-science",
+    "question": "Torque is commonly described as the rotational counterpart of which quantity?",
+    "questionUrdu": "Torque کو عموماً کس مقدار کا گردشی ہم پلہ کہا جاتا ہے؟",
+    "options": [
+      "Force",
+      "Temperature",
+      "Electric charge",
+      "Density"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Force ہے۔ خطی حرکت میں force جو کردار ادا کرتی ہے، گردشی حرکت میں torque اس کا ہم پلہ اثر ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "The Second Condition for Equilibrium",
+      "referenceUrl": "https://openstax.org/books/college-physics-2e/pages/9-2-the-second-condition-for-equilibrium",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/college-physics-2e/pages/9-2-the-second-condition-for-equilibrium",
+        "label": "The Second Condition for Equilibrium",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax describes torque as the rotational equivalent of force."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/torque",
+        "label": "Torque",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines torque through a force that produces or tends to produce rotation."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q076-SRC",
+    "pairId": "ADV2E102-U0035-Q076",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Using conventional tense backshift, change to reported speech: Saleem said, 'I do not eat mangoes.'",
+    "questionUrdu": "معمول کے tense backshift کے مطابق جملہ Saleem said, 'I do not eat mangoes.' کو reported speech میں بدلیں۔",
+    "options": [
+      "Saleem said that I did not eat mangoes.",
+      "Saleem said that he did not eat mangoes.",
+      "Saleem says that he did not eat mangoes.",
+      "Saleem exclaimed that he did not eat mangoes."
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Saleem said that he did not eat mangoes. ہے۔ درست جواب Saleem said that he did not eat mangoes ہے۔ past reporting verb کے بعد I کی جگہ he اور do not کی جگہ did not آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Reported speech: indirect speech",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+        "label": "Reported speech: indirect speech",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge shows that can normally backshifts to could when a past statement is reported."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/reported-speech",
+        "label": "Reported speech",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council explains tense and pronoun changes when direct speech is reported after a past reporting verb."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The task was scoped to conventional backshift. The source's first choice differed chiefly by faulty punctuation and optional 'that', so it was repaired to a distinct pronoun distractor; answer B is now unique."
+  },
+  {
+    "id": "ADV2E102-U0035-Q076-SIM",
+    "pairId": "ADV2E102-U0035-Q076",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Change to reported speech: Mina said, 'I work here.'",
+    "questionUrdu": "جملہ Mina said, 'I work here.' کو reported speech میں تبدیل کریں۔",
+    "options": [
+      "Mina said that she worked there.",
+      "Mina said that I work here.",
+      "Mina says that she worked here.",
+      "Mina said that she will work there."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Mina said that she worked there ہے۔ past reporting verb کے ساتھ work، worked اور here، there میں بدلتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Reported speech: indirect speech",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+        "label": "Reported speech: indirect speech",
+        "publisher": "Cambridge Dictionary Grammar",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains normal tense, pronoun and place-word changes in reported speech after a past reporting verb."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/reported-speech",
+        "label": "Reported speech",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "British Council independently teaches present-to-past backshift and related pronoun or place changes in reported speech."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q077-SRC",
+    "pairId": "ADV2E102-U0035-Q077",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does 'It is high time to do something' imply?",
+    "questionUrdu": "فقرہ It is high time to do something کیا مفہوم دیتا ہے؟",
+    "options": [
+      "It should already have been done",
+      "It is merely a convenient time",
+      "It is an optional future wish",
+      "It is an auspicious moment"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب It should already have been done ہے۔ درست جواب It should already have been done ہے۔ high time بتاتا ہے کہ کام پہلے ہو جانا چاہیے تھا اور اب مزید تاخیر مناسب نہیں۔",
+    "source": {
+      "type": "book",
+      "label": "About time / high time",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/about-time",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q077"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/about-time",
+        "label": "About time / high time",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that high time means something should have happened sooner or a long time ago."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/it-is-high-time",
+        "label": "It is high time",
+        "publisher": "Collins English Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently says the expression means something should have been done already."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague source option 'Already late' was repaired to the idiom's precise overdue implication. Answer A is retained and clarified."
+  },
+  {
+    "id": "ADV2E102-U0035-Q077-SIM",
+    "pairId": "ADV2E102-U0035-Q077",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "If a teacher says, 'It is high time you submitted the assignment,' what is implied?",
+    "questionUrdu": "اگر استاد کہے 'It is high time you submitted the assignment' تو اس کا کیا مطلب ہے؟",
+    "options": [
+      "The submission is already overdue",
+      "Submission is permanently forbidden",
+      "The task is optional",
+      "The assignment was cancelled"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The submission is already overdue ہے۔ high time اس بات کی طرف اشارہ کرتا ہے کہ کام پہلے ہی ہو جانا چاہیے تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "About time / high time",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/about-time",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q077",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/about-time",
+        "label": "About time / high time",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that high time means an action should have happened sooner."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/dictionary/english/it-is-high-time",
+        "label": "It is high time",
+        "publisher": "Collins English Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently states that the expression means something should already have been done."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q078-SRC",
+    "pairId": "ADV2E102-U0035-Q078",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "In the Australian slang sense attested for 'knock down', fill in the blank: 'He knocked ______ two bottles of milk in ten minutes.'",
+    "questionUrdu": "آسٹریلوی slang کے مستند مفہوم میں خالی جگہ پُر کریں: He knocked ______ two bottles of milk in ten minutes.",
+    "options": [
+      "down",
+      "about",
+      "against",
+      "up"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب down ہے۔ درست جواب down ہے۔ اس مخصوص slang میں knock down کسی مشروب کو پی لینے کے معنی دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Knock down",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/knock-down",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q078"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english/knock-down",
+        "label": "Knock down",
+        "publisher": "Collins English Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins records Australian slang 'knock down' with the meaning 'to drink'."
+      },
+      {
+        "url": "https://staff.tiiame.uz/storage/users/265/books/nEahWgCuMt5clJsvTCUFV8cD07vC163sr3eN2jSQ.pdf",
+        "label": "McGraw-Hill's Dictionary of American Idioms and Phrasal Verbs",
+        "publisher": "McGraw-Hill",
+        "authorityId": "mcgraw-hill",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent idioms dictionary attests 'knock down' for consuming a drink and supplies a bottle-of-beer example."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The otherwise unusual source sentence was scoped to the attested Australian slang sense 'drink'. Under that explicit scope, 'down' is the supported completion; confidence is medium because the sense is regional."
+  },
+  {
+    "id": "ADV2E102-U0035-Q078-SIM",
+    "pairId": "ADV2E102-U0035-Q078",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "In the attested Australian slang sense, what did Ali do if he 'knocked down' a glass of milk?",
+    "questionUrdu": "مستند آسٹریلوی slang کے مطابق اگر علی نے دودھ کا گلاس 'knocked down' کیا تو اس نے کیا کیا؟",
+    "options": [
+      "He drank it",
+      "He spilled it",
+      "He sold it",
+      "He heated it"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب He drank it ہے۔ اس slang استعمال میں knock down کا مطلب مشروب پی لینا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Knock down",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/knock-down",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q078",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english/knock-down",
+        "label": "Knock down",
+        "publisher": "Collins English Dictionary",
+        "authorityId": "collins-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins records the Australian slang sense of knock down as to drink."
+      },
+      {
+        "url": "https://staff.tiiame.uz/storage/users/265/books/nEahWgCuMt5clJsvTCUFV8cD07vC163sr3eN2jSQ.pdf",
+        "label": "McGraw-Hill's Dictionary of American Idioms and Phrasal Verbs",
+        "publisher": "McGraw-Hill",
+        "authorityId": "mcgraw-hill",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "McGraw-Hill's idioms dictionary independently attests knock down for consuming a drink."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q079-SRC",
+    "pairId": "ADV2E102-U0035-Q079",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which option is a synonym of 'luminary' when it refers to a person?",
+    "questionUrdu": "جب luminary کسی شخص کے لیے آئے تو اس کا مترادف کون سا لفظ ہے؟",
+    "options": [
+      "Celebrity",
+      "Glowing",
+      "Shining",
+      "Commoner"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Celebrity ہے۔ درست جواب Celebrity ہے۔ luminary کسی شعبے کی معروف، نمایاں اور بااثر شخصیت کو کہا جا سکتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Luminary",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/luminary",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q079"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/luminary",
+        "label": "Luminary",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a luminary as a famous and important person in a field."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/luminary",
+        "label": "Luminary",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines a luminary as a person of prominence or brilliant achievement and, in its learner definition, a very famous person."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The personal sense was specified, 'Shinning' was corrected to 'Shining', and the obscure distractor 'Pleb' was normalized to 'Commoner'. Celebrity remains answer A."
+  },
+  {
+    "id": "ADV2E102-U0035-Q079-SIM",
+    "pairId": "ADV2E102-U0035-Q079",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "A scientist described as a 'luminary' is best understood as what?",
+    "questionUrdu": "کسی سائنس دان کو luminary کہا جائے تو اس سے کیا مراد ہوگی؟",
+    "options": [
+      "A prominent and accomplished person",
+      "An unknown beginner",
+      "A laboratory instrument",
+      "A fictional place"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A prominent and accomplished person ہے۔ luminary کسی شعبے کی بہت معروف اور نمایاں شخصیت ہوتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Luminary",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/luminary",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q079",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/luminary",
+        "label": "Luminary",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines a luminary as a famous and important person in a field."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/luminary",
+        "label": "Luminary",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines a luminary as a person of prominence or brilliant achievement."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q081-SRC",
+    "pairId": "ADV2E102-U0035-Q081",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the widely quoted saying: 'Keep your friends close and your enemies ______.'",
+    "questionUrdu": "مشہور قول مکمل کریں: Keep your friends close and your enemies ______.",
+    "options": [
+      "close",
+      "closer",
+      "away",
+      "apart"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب closer ہے۔ درست جواب closer ہے۔ معروف قول میں دوستوں کو close اور دشمنوں کو اس سے بھی closer رکھنے کی بات کی گئی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Never Put Too Much Trust in Friends, Learn How to Use Enemies",
+      "referenceUrl": "https://folklore.usc.edu/never-put-too-much-trust-in-friends-learn-how-to-use-enemies/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q081"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://folklore.usc.edu/never-put-too-much-trust-in-friends-learn-how-to-use-enemies/",
+        "label": "Never Put Too Much Trust in Friends, Learn How to Use Enemies",
+        "publisher": "USC Digital Folklore Archives",
+        "authorityId": "usc-digital-folklore",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Southern California archive records the familiar wording 'Keep your friends close, and your enemies closer'."
+      },
+      {
+        "url": "https://www.govinfo.gov/content/pkg/CREC-2010-12-22/pdf/CREC-2010-12-22-pt1-PgS10964-2.pdf",
+        "label": "Congressional Record, December 22, 2010",
+        "publisher": "U.S. Government Publishing Office",
+        "authorityId": "us-gpo",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Congressional Record independently prints the saying with 'enemies closer'."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's inaccurate genre label 'proverb' was replaced by the neutral 'widely quoted saying'; the completion remains 'closer'."
+  },
+  {
+    "id": "ADV2E102-U0035-Q081-SIM",
+    "pairId": "ADV2E102-U0035-Q081",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What comparative form of the adjective 'close' is used in the familiar saying about enemies?",
+    "questionUrdu": "دشمنوں والے معروف قول میں adjective close کی کون سی comparative شکل استعمال ہوتی ہے؟",
+    "options": [
+      "Closer",
+      "Closest",
+      "Closely",
+      "Closure"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Closer ہے۔ قول میں close کے مقابلے کی comparative شکل closer استعمال کی گئی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Never Put Too Much Trust in Friends, Learn How to Use Enemies",
+      "referenceUrl": "https://folklore.usc.edu/never-put-too-much-trust-in-friends-learn-how-to-use-enemies/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q081",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://folklore.usc.edu/never-put-too-much-trust-in-friends-learn-how-to-use-enemies/",
+        "label": "Never Put Too Much Trust in Friends, Learn How to Use Enemies",
+        "publisher": "USC Digital Folklore Archives",
+        "authorityId": "usc-digital-folklore",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The USC archive records the saying with the comparative word closer after enemies."
+      },
+      {
+        "url": "https://www.govinfo.gov/content/pkg/CREC-2010-12-22/pdf/CREC-2010-12-22-pt1-PgS10964-2.pdf",
+        "label": "Congressional Record, December 22, 2010",
+        "publisher": "U.S. Government Publishing Office",
+        "authorityId": "us-gpo",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The U.S. Congressional Record independently prints the same close-and-closer wording."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q082-SRC",
+    "pairId": "ADV2E102-U0035-Q082",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does 'drought' mean?",
+    "questionUrdu": "لفظ drought کا کیا مطلب ہے؟",
+    "options": [
+      "A long period with little or no rain",
+      "A shooting game",
+      "Fleeing from war",
+      "Outdated syrup"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A long period with little or no rain ہے۔ درست جواب A long period with little or no rain ہے۔ drought طویل عرصے تک بارش کی شدید کمی یا خشک موسم کو کہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Drought",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/drought",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q082"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/drought",
+        "label": "Drought",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines drought as a long period with little or no rain."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/drought",
+        "label": "Drought",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines drought as a prolonged period of dryness or dry weather."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The awkward 'one word substitution' wording and distractor grammar were repaired; the source answer remains A."
+  },
+  {
+    "id": "ADV2E102-U0035-Q082-SIM",
+    "pairId": "ADV2E102-U0035-Q082",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which long-term weather condition most directly characterizes a drought?",
+    "questionUrdu": "کون سی طویل مدتی موسمی حالت drought کی بنیادی پہچان ہے؟",
+    "options": [
+      "Persistent lack of rainfall",
+      "Continuous heavy snowfall",
+      "Daily thunderstorms",
+      "A single windy afternoon"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Persistent lack of rainfall ہے۔ drought میں طویل عرصے تک بارش بہت کم یا بالکل نہیں ہوتی۔",
+    "source": {
+      "type": "practice",
+      "label": "Drought",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/drought",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q082",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/drought",
+        "label": "Drought",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines drought as a long period with little or no rain."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/drought",
+        "label": "Drought",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines drought as a prolonged period of dryness or deficient rainfall."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q083-SRC",
+    "pairId": "ADV2E102-U0035-Q083",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "In Urdu rhetoric, the saying 'میں نے یہ بال دھوپ میں سفید نہیں کیے' is an example of which figure?",
+    "questionUrdu": "علمِ بیان کی رو سے قول 'میں نے یہ بال دھوپ میں سفید نہیں کیے' کس صنعت کی مثال ہے؟",
+    "options": [
+      "تشبیہ",
+      "مجازِ مرسل",
+      "کنایہ",
+      "استعارہ"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب کنایہ ہے۔ درست جواب کنایہ ہے۔ ظاہری الفاظ بال سفید ہونے کا ذکر کرتے ہیں مگر پوشیدہ مقصود عمر اور تجربہ بیان کرنا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "دھوپ میں بال سفید نہیں کیے",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-dhuup-men-baal-safed-nahiin-kiye?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-dhuup-men-baal-safed-nahiin-kiye?lang=ur",
+        "label": "دھوپ میں بال سفید نہیں کیے",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta gives the expression's concealed intended meaning as having much experience rather than having wasted one's years."
+      },
+      {
+        "url": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2025_26/UrduA-MS.pdf",
+        "label": "Class X Urdu A marking scheme",
+        "publisher": "Central Board of Secondary Education",
+        "authorityId": "cbse",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official marking scheme defines kinaya as expressing something while keeping the intended statement concealed."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Punctuation and the standard form مجازِ مرسل were normalized. The expression keeps its surface wording while conveying the concealed sense 'I am experienced', which identifies کنایہ; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0035-Q083-SIM",
+    "pairId": "ADV2E102-U0035-Q083",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "In kinaya, how is the intended meaning normally conveyed?",
+    "questionUrdu": "کنایہ میں اصل مقصود معنی عموماً کس طرح پہنچایا جاتا ہے؟",
+    "options": [
+      "Indirectly, behind the apparent wording",
+      "Only through a numerical formula",
+      "By naming the meaning directly",
+      "Without using any words"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Indirectly, behind the apparent wording ہے۔ کنایہ میں ظاہر عبارت کے پیچھے ایک غیر مستقیم مقصود معنی ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "دھوپ میں بال سفید نہیں کیے",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-dhuup-men-baal-safed-nahiin-kiye?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-dhuup-men-baal-safed-nahiin-kiye?lang=ur",
+        "label": "دھوپ میں بال سفید نہیں کیے",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta explains the saying through its concealed intended sense of experience."
+      },
+      {
+        "url": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2025_26/UrduA-MS.pdf",
+        "label": "Class X Urdu A marking scheme",
+        "publisher": "Central Board of Secondary Education",
+        "authorityId": "cbse",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official CBSE marking scheme independently defines kinaya as wording whose intended statement remains concealed."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q085-SRC",
+    "pairId": "ADV2E102-U0035-Q085",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What is the literal sense of the Urdu word 'نظم'?",
+    "questionUrdu": "اردو لفظ نظم کا لغوی مفہوم کیا ہے؟",
+    "options": [
+      "تصویر کشی کرنا",
+      "تنظیم اور ترتیب کرنا",
+      "ہیروں کی چیخ",
+      "رائے بیان کرنا"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب تنظیم اور ترتیب کرنا ہے۔ درست جواب تنظیم اور ترتیب کرنا ہے۔ نظم کے بنیادی لغوی معنی چیزوں کو باقاعدہ ترتیب اور ربط میں لانا ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "نَظم",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-nazm?keyword=arrangement&lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q085"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-nazm?keyword=arrangement&lang=ur",
+        "label": "نَظم",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta gives order, arrangement, organization and arranging or assembling among the meanings of نظم."
+      },
+      {
+        "url": "https://vajehyab.com/dehkhoda/%D9%86%D8%B8%D9%85",
+        "label": "نظم in Dehkhoda Dictionary",
+        "publisher": "Vajehyab / Dehkhoda Dictionary",
+        "authorityId": "dehkhoda-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Dehkhoda independently records the lexical senses of arranging, composing and bringing things into an ordered string."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The soft third option was conservatively transcribed as visible. The two dictionaries independently support organization and arrangement, so answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0035-Q085-SIM",
+    "pairId": "ADV2E102-U0035-Q085",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Classical lexical explanations of 'nazm' compare orderly arrangement with stringing what objects?",
+    "questionUrdu": "نظم کی کلاسیکی لغوی وضاحت میں باقاعدہ ترتیب کو کن چیزوں کو دھاگے میں پرونے سے تشبیہ دی جاتی ہے؟",
+    "options": [
+      "Pearls",
+      "Stones",
+      "Leaves",
+      "Coins"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Pearls ہے۔ نظم کی لغوی تصویر موتیوں کو دھاگے میں ترتیب سے پرونے اور مربوط کرنے سے بنتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "نَظم",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-nazm?keyword=arrangement&lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q085",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-nazm?keyword=arrangement&lang=ur",
+        "label": "نَظم",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta records arrangement and the ordered stringing sense within the lexical meanings of nazm."
+      },
+      {
+        "url": "https://vajehyab.com/dehkhoda/%D9%86%D8%B8%D9%85",
+        "label": "نظم in Dehkhoda Dictionary",
+        "publisher": "Vajehyab / Dehkhoda Dictionary",
+        "authorityId": "dehkhoda-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Dehkhoda independently explains nazm through arranging and stringing pearls in order."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q086-SRC",
+    "pairId": "ADV2E102-U0035-Q086",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "'ماورا' is a poetry collection by which poet?",
+    "questionUrdu": "'ماورا' کس شاعر کا مجموعۂ کلام ہے؟",
+    "options": [
+      "ن۔ م۔ راشد",
+      "ناصر کاظمی",
+      "احمد فراز",
+      "امجد اسلام امجد"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب ن۔ م۔ راشد ہے۔ درست جواب ن۔ م۔ راشد ہے۔ ماورا جدید اردو نظم کا معروف شعری مجموعہ ہے جس کے مصنف نون میم راشد ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Syed Waqar Azeem Collection catalogue",
+      "referenceUrl": "https://library.gcu.edu.pk/Collections/Syed%20Waqar%20Azeem.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q086"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://library.gcu.edu.pk/Collections/Syed%20Waqar%20Azeem.pdf",
+        "label": "Syed Waqar Azeem Collection catalogue",
+        "publisher": "Government College University Lahore Library",
+        "authorityId": "gcu-lahore-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university library catalogue lists ماورا under ن م راشد."
+      },
+      {
+        "url": "https://rekhta.org/ebooks/detail/mawara-noon-meem-rashid-ebooks?lang=ur",
+        "label": "ماورا",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta's independent bibliographic record identifies Noon Meem Rashid as the author of the poetry collection Mawara."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The poet's initials and punctuation were standardized; answer A is independently confirmed."
+  },
+  {
+    "id": "ADV2E102-U0035-Q086-SIM",
+    "pairId": "ADV2E102-U0035-Q086",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "What kind of literary work is N. M. Rashid's 'Mawara'?",
+    "questionUrdu": "ن۔ م۔ راشد کی 'ماورا' کس نوع کی ادبی تصنیف ہے؟",
+    "options": [
+      "A poetry collection",
+      "A historical novel",
+      "A stage comedy",
+      "A grammar textbook"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A poetry collection ہے۔ ماورا ن۔ م۔ راشد کا شعری مجموعہ ہے، نثر یا ڈراما نہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Syed Waqar Azeem Collection catalogue",
+      "referenceUrl": "https://library.gcu.edu.pk/Collections/Syed%20Waqar%20Azeem.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q086",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://library.gcu.edu.pk/Collections/Syed%20Waqar%20Azeem.pdf",
+        "label": "Syed Waqar Azeem Collection catalogue",
+        "publisher": "Government College University Lahore Library",
+        "authorityId": "gcu-lahore-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The GCU Lahore library catalogue lists Mawara as a poetic work by N. M. Rashid."
+      },
+      {
+        "url": "https://rekhta.org/ebooks/detail/mawara-noon-meem-rashid-ebooks?lang=ur",
+        "label": "ماورا",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta independently catalogues Mawara as N. M. Rashid's poetry collection."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q089-SRC",
+    "pairId": "ADV2E102-U0035-Q089",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which Urdu punctuation mark is used when a preceding idea is followed by its explanation or detail?",
+    "questionUrdu": "جب پہلے خیال کے بعد اس کی وضاحت یا تفصیل آئے تو اردو میں کون سی علامتِ اوقاف استعمال ہوتی ہے؟",
+    "options": [
+      "تفصیلیہ",
+      "رابطہ",
+      "سکتہ",
+      "ختمہ"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب تفصیلیہ ہے۔ درست جواب تفصیلیہ ہے۔ یہ علامت وضاحت، تفصیل یا فہرست شروع ہونے سے پہلے لگائی جاتی ہے۔",
+    "source": {
+      "type": "book",
+      "label": "تَفْصِیلْیَہ",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-tafsiiilya",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q089"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-tafsiiilya",
+        "label": "تَفْصِیلْیَہ",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines تفصیلیہ as the punctuation mark used before an explanation, detail or list."
+      },
+      {
+        "url": "https://intermediate.fccollege.edu.pk/wp-content/uploads/2019/07/2nd-Year-UQB-2019.pdf",
+        "label": "Second-Year Urdu Question Bank: رموز اوقاف",
+        "publisher": "Forman Christian College",
+        "authorityId": "fc-college",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The college Urdu question bank independently tests تفصیلیہ as the mark used to introduce detail or a list."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The long Urdu stem was translated into concise English while preserving all four Urdu terms. تفصیلیہ is the directly supported answer A."
+  },
+  {
+    "id": "ADV2E102-U0035-Q089-SIM",
+    "pairId": "ADV2E102-U0035-Q089",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu punctuation mark can introduce a list after a complete introductory phrase?",
+    "questionUrdu": "مکمل ابتدائی فقرے کے بعد فہرست شروع کرنے کے لیے اردو کی کون سی علامت استعمال ہو سکتی ہے؟",
+    "options": [
+      "تفصیلیہ",
+      "ختمہ",
+      "سکتہ",
+      "علامتِ سوال"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب تفصیلیہ ہے۔ تفصیلیہ وضاحت کے ساتھ کسی فہرست یا تفصیل کا آغاز بھی ظاہر کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "تَفْصِیلْیَہ",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-tafsiiilya",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q089",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-tafsiiilya",
+        "label": "تَفْصِیلْیَہ",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines tafsiliya as the mark used before an explanation, detail or list."
+      },
+      {
+        "url": "https://intermediate.fccollege.edu.pk/wp-content/uploads/2019/07/2nd-Year-UQB-2019.pdf",
+        "label": "Second-Year Urdu Question Bank: رموز اوقاف",
+        "publisher": "Forman Christian College",
+        "authorityId": "fc-college",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Forman Christian College's Urdu question bank independently identifies tafsiliya as introducing detail or a list."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q090-SRC",
+    "pairId": "ADV2E102-U0035-Q090",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which listed work is the novel by Khalida Hussain?",
+    "questionUrdu": "درج ذیل میں خالدہ حسین کا ناول کون سا ہے؟",
+    "options": [
+      "مصروف عورت",
+      "خواب میں ہنوز",
+      "کاغذی گھاٹ",
+      "میں یہاں ہوں"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب کاغذی گھاٹ ہے۔ درست جواب کاغذی گھاٹ ہے۔ خالدہ حسین کے افسانوی ادب میں کاغذی گھاٹ ان کا معروف اور واحد ناول شمار ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Khalida Hussain and Kaghazi Ghat",
+      "referenceUrl": "https://imtezaaj.uok.edu.pk/website/journal/article/63b025c2ab152/references",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q090"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://imtezaaj.uok.edu.pk/website/journal/article/63b025c2ab152/references",
+        "label": "Khalida Hussain and Kaghazi Ghat",
+        "publisher": "Imtezaaj, University of Karachi",
+        "authorityId": "university-of-karachi-imtezaaj",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Karachi journal identifies Kaghazi Ghat as Khalida Hussain's sole novel."
+      },
+      {
+        "url": "https://www.rekhta.org/authors/khalida-hussain/profile?lang=ur",
+        "label": "Khalida Hussain: profile",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta independently states that Khalida Hussain wrote the novel کاغذی گھاٹ."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source misprints the female author's name as خالد حسین; it was transparently repaired to خالدہ حسین. The other listed works are story collections, while کاغذی گھاٹ is her novel."
+  },
+  {
+    "id": "ADV2E102-U0035-Q090-SIM",
+    "pairId": "ADV2E102-U0035-Q090",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Who wrote the Urdu novel 'Kaghazi Ghat'?",
+    "questionUrdu": "اردو ناول 'کاغذی گھاٹ' کس نے لکھا؟",
+    "options": [
+      "Khalida Hussain",
+      "Bano Qudsia",
+      "Jamila Hashmi",
+      "Khadija Mastoor"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Khalida Hussain ہے۔ کاغذی گھاٹ خالدہ حسین کی ناول نگاری سے منسوب تصنیف ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Khalida Hussain and Kaghazi Ghat",
+      "referenceUrl": "https://imtezaaj.uok.edu.pk/website/journal/article/63b025c2ab152/references",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q090",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://imtezaaj.uok.edu.pk/website/journal/article/63b025c2ab152/references",
+        "label": "Khalida Hussain and Kaghazi Ghat",
+        "publisher": "Imtezaaj, University of Karachi",
+        "authorityId": "university-of-karachi-imtezaaj",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Karachi journal identifies Kaghazi Ghat as Khalida Hussain's novel."
+      },
+      {
+        "url": "https://www.rekhta.org/authors/khalida-hussain/profile?lang=ur",
+        "label": "Khalida Hussain: profile",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta independently states that Khalida Hussain wrote Kaghazi Ghat."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q091-SRC",
+    "pairId": "ADV2E102-U0035-Q091",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What was Nawab Mohsin-ul-Mulk's original name?",
+    "questionUrdu": "نواب محسن الملک کا اصل نام کیا تھا؟",
+    "options": [
+      "سید مہدی علی خان",
+      "عبدالحق",
+      "چراغ علی",
+      "بدرالدین طیب"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب سید مہدی علی خان ہے۔ درست جواب سید مہدی علی خان ہے۔ یہی شخصیت بعد میں محسن الملک کے لقب سے علمی اور سیاسی خدمات کے لیے مشہور ہوئی۔",
+    "source": {
+      "type": "book",
+      "label": "Mohsinul Mulk Hall: Syed Mehdi Ali Khan Mohsinul Mulk",
+      "referenceUrl": "https://www.amu.ac.in/hi/halls/mohsinul-mulk-hall",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q091"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.amu.ac.in/hi/halls/mohsinul-mulk-hall",
+        "label": "Mohsinul Mulk Hall: Syed Mehdi Ali Khan Mohsinul Mulk",
+        "publisher": "Aligarh Muslim University",
+        "authorityId": "aligarh-muslim-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Aligarh Muslim University identifies Mohsin-ul-Mulk as Syed Mehdi Ali Khan."
+      },
+      {
+        "url": "https://pu.edu.pk/images/journal/HistoryPStudies/PDF_Files/9_V-30-No1-Jun17.pdf",
+        "label": "Nawab Mohsin-ul-Mulk and the Aligarh Movement",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-of-the-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university history journal independently identifies Syed Mehdi Ali as the man commonly known as Nawab Mohsin-ul-Mulk."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The title was standardized and the Urdu spelling joined; source answer A is independently confirmed."
+  },
+  {
+    "id": "ADV2E102-U0035-Q091-SIM",
+    "pairId": "ADV2E102-U0035-Q091",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "By which title did Syed Mehdi Ali Khan become widely known?",
+    "questionUrdu": "سید مہدی علی خان کس لقب سے وسیع طور پر مشہور ہوئے؟",
+    "options": [
+      "Nawab Mohsin-ul-Mulk",
+      "Nawab Viqar-ul-Mulk",
+      "Maulvi Abdul Haq",
+      "Sir Syed Ahmad Khan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Nawab Mohsin-ul-Mulk ہے۔ سید مہدی علی خان نے محسن الملک کے لقب سے شہرت پائی۔",
+    "source": {
+      "type": "practice",
+      "label": "Mohsinul Mulk Hall: Syed Mehdi Ali Khan Mohsinul Mulk",
+      "referenceUrl": "https://www.amu.ac.in/hi/halls/mohsinul-mulk-hall",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q091",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.amu.ac.in/hi/halls/mohsinul-mulk-hall",
+        "label": "Mohsinul Mulk Hall: Syed Mehdi Ali Khan Mohsinul Mulk",
+        "publisher": "Aligarh Muslim University",
+        "authorityId": "aligarh-muslim-university",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Aligarh Muslim University identifies Mohsin-ul-Mulk as Syed Mehdi Ali Khan."
+      },
+      {
+        "url": "https://pu.edu.pk/images/journal/HistoryPStudies/PDF_Files/9_V-30-No1-Jun17.pdf",
+        "label": "Nawab Mohsin-ul-Mulk and the Aligarh Movement",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-of-the-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of the Punjab independently identifies Syed Mehdi Ali as the person known as Nawab Mohsin-ul-Mulk."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q092-SRC",
+    "pairId": "ADV2E102-U0035-Q092",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "In which city did the Urdu poet Meeraji die in 1949?",
+    "questionUrdu": "اردو شاعر میراجی 1949 میں کس شہر میں وفات پا گئے؟",
+    "options": [
+      "لاہور",
+      "دہلی",
+      "گوجرانوالہ",
+      "بمبئی (ممبئی)"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب بمبئی (ممبئی) ہے۔ درست جواب بمبئی (ممبئی) ہے۔ میراجی کی وفات 1949 میں ممبئی میں ہوئی اور یہی شہر ان کی آخری زندگی سے وابستہ ہے۔",
+    "source": {
+      "type": "book",
+      "label": "In the Halo of a Moment: Mira ji's Life, Times, and Poetry",
+      "referenceUrl": "https://religionlab.virginia.edu/research/in-the-halo-of-a-moment-mira-jis-life-times-and-poetry/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q092"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://religionlab.virginia.edu/research/in-the-halo-of-a-moment-mira-jis-life-times-and-poetry/",
+        "label": "In the Halo of a Moment: Mira ji's Life, Times, and Poetry",
+        "publisher": "University of Virginia Religion Lab",
+        "authorityId": "university-of-virginia",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university research page states that Mira ji died in Mumbai on 3 November 1949."
+      },
+      {
+        "url": "https://www.rekhta.org/poets/meeraji/ebooks",
+        "label": "Meeraji: profile and books",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta independently records Meeraji's lifespan as 1912–1949 and associates his death with Mumbai."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source asks for the burial city, for which strong direct documentation was not located. It was transparently narrowed to the independently documented city of death; Bombay and Mumbai were joined in option D."
+  },
+  {
+    "id": "ADV2E102-U0035-Q092-SIM",
+    "pairId": "ADV2E102-U0035-Q092",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "In which year did the Urdu poet Meeraji die in Mumbai?",
+    "questionUrdu": "اردو شاعر میراجی ممبئی میں کس سال وفات پا گئے؟",
+    "options": [
+      "1947",
+      "1948",
+      "1949",
+      "1950"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 1949 ہے۔ معتبر سوانحی ماخذ میراجی کی وفات ممبئی میں 1949 درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "In the Halo of a Moment: Mira ji's Life, Times, and Poetry",
+      "referenceUrl": "https://religionlab.virginia.edu/research/in-the-halo-of-a-moment-mira-jis-life-times-and-poetry/",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q092",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://religionlab.virginia.edu/research/in-the-halo-of-a-moment-mira-jis-life-times-and-poetry/",
+        "label": "In the Halo of a Moment: Mira ji's Life, Times, and Poetry",
+        "publisher": "University of Virginia Religion Lab",
+        "authorityId": "university-of-virginia",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Virginia research page dates Mira ji's death in Mumbai to 3 November 1949."
+      },
+      {
+        "url": "https://www.rekhta.org/poets/meeraji/ebooks",
+        "label": "Meeraji: profile and books",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta independently records Meeraji's lifespan as ending in 1949 and associates his death with Mumbai."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q093-SRC",
+    "pairId": "ADV2E102-U0035-Q093",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "In which Hijri year did Imam Malik ibn Anas die?",
+    "questionUrdu": "امام مالک بن انس کس ہجری سال میں وفات پا گئے؟",
+    "options": [
+      "179 AH",
+      "180 AH",
+      "189 AH",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 179 AH ہے۔ درست جواب 179 AH ہے۔ معتبر سوانحی اور علمی ماخذ امام مالک کی وفات 179 ہجری درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Mâlik b. Enes",
+      "referenceUrl": "https://islamansiklopedisi.org.tr/malik-b-enes",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q093"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/malik-b-enes",
+        "label": "Mâlik b. Enes",
+        "publisher": "TDV Encyclopedia of Islam",
+        "authorityId": "tdv-encyclopedia-of-islam",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The TDV scholarly encyclopedia dates Imam Malik's death to 179 AH (795 CE)."
+      },
+      {
+        "url": "https://kubanni-backend.abu.edu.ng/server/api/core/bitstreams/5b218b4d-0687-40d2-82ab-37a388e54364/content",
+        "label": "Academic study of Imam Malik and Al-Muwatta",
+        "publisher": "Ahmadu Bello University",
+        "authorityId": "ahmadu-bello-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university study records Imam Malik's death on 14 Rabi al-Awwal 179 AH."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The scholar's name and Hijri notation were standardized; answer A is independently confirmed."
+  },
+  {
+    "id": "ADV2E102-U0035-Q093-SIM",
+    "pairId": "ADV2E102-U0035-Q093",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which major jurist died in 179 AH?",
+    "questionUrdu": "179 AH میں کس بڑے فقیہ کی وفات ہوئی؟",
+    "options": [
+      "Imam Malik ibn Anas",
+      "Imam Abu Hanifa",
+      "Imam al-Shafi'i",
+      "Imam Ahmad ibn Hanbal"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Imam Malik ibn Anas ہے۔ امام مالک بن انس کی وفات 179 ہجری میں ہوئی۔",
+    "source": {
+      "type": "practice",
+      "label": "Mâlik b. Enes",
+      "referenceUrl": "https://islamansiklopedisi.org.tr/malik-b-enes",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q093",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/malik-b-enes",
+        "label": "Mâlik b. Enes",
+        "publisher": "TDV Encyclopedia of Islam",
+        "authorityId": "tdv-encyclopedia-of-islam",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The TDV Encyclopedia dates Imam Malik ibn Anas's death to 179 AH."
+      },
+      {
+        "url": "https://kubanni-backend.abu.edu.ng/server/api/core/bitstreams/5b218b4d-0687-40d2-82ab-37a388e54364/content",
+        "label": "Academic study of Imam Malik and Al-Muwatta",
+        "publisher": "Ahmadu Bello University",
+        "authorityId": "ahmadu-bello-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Ahmadu Bello University study independently records Imam Malik's death in 179 AH."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q094-SRC",
+    "pairId": "ADV2E102-U0035-Q094",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which listed prophet is explicitly placed alongside Prophet Abraham in Qur'an 29:26?",
+    "questionUrdu": "قرآن 29:26 میں حضرت ابراہیم کے ساتھ صراحت سے کس نبی کا ذکر آیا ہے؟",
+    "options": [
+      "Prophet Lot",
+      "Prophet Hud",
+      "Prophet Idris",
+      "Prophet Isaac"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Prophet Lot ہے۔ درست جواب Prophet Lot ہے۔ آیت میں حضرت لوط کے حضرت ابراہیم پر ایمان لانے کے بعد ہجرت کا ذکر آتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Qur'an 29:26",
+      "referenceUrl": "https://node.quran.com/29/26?translations=20",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q094"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://node.quran.com/29/26?translations=20",
+        "label": "Qur'an 29:26",
+        "publisher": "Quran.com",
+        "authorityId": "quran-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The verse states that Lot believed Abraham and immediately continues Abraham's speech, directly placing the two in the same narrative."
+      },
+      {
+        "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Lot",
+        "label": "Lot",
+        "publisher": "Encyclopaedia Britannica, 11th edition",
+        "authorityId": "encyclopaedia-britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently records Lot as Abraham's nephew and companion in the migration from Haran to Canaan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The vague word 'contemporary' was repaired to a directly sourced relationship in Qur'an 29:26; names and honorifics were standardized. Lot remains answer A."
+  },
+  {
+    "id": "ADV2E102-U0035-Q094-SIM",
+    "pairId": "ADV2E102-U0035-Q094",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "After Lot believed Abraham in Qur'an 29:26, what did Abraham announce he would do?",
+    "questionUrdu": "قرآن 29:26 میں حضرت لوط کے ایمان لانے کے بعد حضرت ابراہیم نے کیا کرنے کا اعلان کیا؟",
+    "options": [
+      "Migrate to his Lord",
+      "Return to Egypt",
+      "Build a palace",
+      "Abandon his mission"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Migrate to his Lord ہے۔ آیت میں حضرت ابراہیم اپنے رب کی طرف ہجرت کا اعلان کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Qur'an 29:26",
+      "referenceUrl": "https://node.quran.com/29/26?translations=20",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q094",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://node.quran.com/29/26?translations=20",
+        "label": "Qur'an 29:26",
+        "publisher": "Quran.com",
+        "authorityId": "quran-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Qur'an 29:26 explicitly records Abraham saying that he would emigrate to his Lord after Lot believed him."
+      },
+      {
+        "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Lot",
+        "label": "Lot",
+        "publisher": "Encyclopaedia Britannica, 11th edition",
+        "authorityId": "encyclopaedia-britannica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica independently recounts Abraham and Lot's migration together from Haran toward Canaan."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q095-SRC",
+    "pairId": "ADV2E102-U0035-Q095",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "During the migration from Makkah to Madinah, in which cave did Prophet Muhammad and Abu Bakr take shelter?",
+    "questionUrdu": "مکہ سے مدینہ ہجرت کے دوران نبی کریم اور حضرت ابوبکر نے کس غار میں پناہ لی؟",
+    "options": [
+      "Cave of Hira",
+      "Dar al-Arqam",
+      "Cave of Thawr",
+      "The Kaaba"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Cave of Thawr ہے۔ درست جواب Cave of Thawr ہے۔ ہجرت کے آغاز میں نبی کریم اور حضرت ابوبکر نے غارِ ثور میں قیام کیا۔",
+    "source": {
+      "type": "book",
+      "label": "Mount and Cave Thawr",
+      "referenceUrl": "https://www.discovermakkah.sa/en/places-worth-visiting/stories-from-the-heart-of-mecca/mount-and-cave-thawr",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q095"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.discovermakkah.sa/en/places-worth-visiting/stories-from-the-heart-of-mecca/mount-and-cave-thawr",
+        "label": "Mount and Cave Thawr",
+        "publisher": "Discover Makkah",
+        "authorityId": "discover-makkah",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Makkah destination resource identifies Cave Thawr as the migration refuge of Prophet Muhammad and Abu Bakr."
+      },
+      {
+        "url": "https://eprints.soas.ac.uk/29357/1/10731452.pdf",
+        "label": "Early sources of the Prophet's biography",
+        "publisher": "SOAS University of London",
+        "authorityId": "soas-university-london",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The academic study independently records the migration of Prophet Muhammad and Abu Bakr and their refuge in the Cave of Thawr."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Place names and transliteration were standardized; Cave of Thawr remains answer C."
+  },
+  {
+    "id": "ADV2E102-U0035-Q095-SIM",
+    "pairId": "ADV2E102-U0035-Q095",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Who accompanied Prophet Muhammad in the refuge at Cave Thawr during the Hijra?",
+    "questionUrdu": "ہجرت کے دوران غارِ ثور میں نبی کریم کے ساتھ کون تھے؟",
+    "options": [
+      "Abu Bakr",
+      "Umar ibn al-Khattab",
+      "Ali ibn Abi Talib",
+      "Uthman ibn Affan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Abu Bakr ہے۔ ہجرت کے سفر میں غارِ ثور کی پناہ نبی کریم اور حضرت ابوبکر نے مشترک طور پر لی۔",
+    "source": {
+      "type": "practice",
+      "label": "Mount and Cave Thawr",
+      "referenceUrl": "https://www.discovermakkah.sa/en/places-worth-visiting/stories-from-the-heart-of-mecca/mount-and-cave-thawr",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q095",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.discovermakkah.sa/en/places-worth-visiting/stories-from-the-heart-of-mecca/mount-and-cave-thawr",
+        "label": "Mount and Cave Thawr",
+        "publisher": "Discover Makkah",
+        "authorityId": "discover-makkah",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official Discover Makkah resource identifies Prophet Muhammad and Abu Bakr together in the Cave Thawr refuge."
+      },
+      {
+        "url": "https://eprints.soas.ac.uk/29357/1/10731452.pdf",
+        "label": "Early sources of the Prophet's biography",
+        "publisher": "SOAS University of London",
+        "authorityId": "soas-university-london",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The SOAS study independently records Muhammad and Abu Bakr taking refuge in Cave Thawr during the migration."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q096-SRC",
+    "pairId": "ADV2E102-U0035-Q096",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "The 630 CE expedition to Tabuk was directed toward the frontier of which empire, although no pitched battle occurred?",
+    "questionUrdu": "630 CE کی مہمِ تبوک کس سلطنت کی سرحد کی جانب تھی، اگرچہ باقاعدہ جنگ پیش نہیں آئی؟",
+    "options": [
+      "Jewish communities",
+      "Byzantine (Roman) Empire",
+      "Sasanian Persian Empire",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Byzantine (Roman) Empire ہے۔ درست جواب Byzantine (Roman) Empire ہے۔ تبوک بازنطینی سرحد کی سمت ایک فوجی مہم تھی مگر براہِ راست بڑی جنگ نہیں ہوئی۔",
+    "source": {
+      "type": "book",
+      "label": "The Tabuk Expedition in its Byzantine context",
+      "referenceUrl": "https://www.mdpi.com/2077-1444/15/5/545",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q096"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.mdpi.com/2077-1444/15/5/545",
+        "label": "The Tabuk Expedition in its Byzantine context",
+        "publisher": "Religions, MDPI",
+        "authorityId": "mdpi-religions",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly article situates Tabuk against the Byzantine frontier and notes that it did not result in direct confrontation."
+      },
+      {
+        "url": "https://academic.oup.com/book/57350/chapter-abstract/464649519",
+        "label": "Expeditions to the Byzantine Frontiers",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-university-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford independently places the Tabuk expedition among campaigns toward the Byzantine frontiers."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source incorrectly says Tabuk was 'fought against' the Romans. The item was repaired to identify the Byzantine frontier while explicitly noting that no pitched battle occurred; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0035-Q096-SIM",
+    "pairId": "ADV2E102-U0035-Q096",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "What was the immediate battlefield outcome of the Tabuk expedition?",
+    "questionUrdu": "مہمِ تبوک کا فوری میدانِ جنگ کا نتیجہ کیا تھا؟",
+    "options": [
+      "No pitched battle occurred",
+      "The Byzantine capital fell",
+      "The Sasanian army surrendered",
+      "Medina was captured"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب No pitched battle occurred ہے۔ تبوک تک پیش قدمی ہوئی لیکن وہاں باقاعدہ بڑی جنگ نہیں ہوئی۔",
+    "source": {
+      "type": "practice",
+      "label": "The Tabuk Expedition in its Byzantine context",
+      "referenceUrl": "https://www.mdpi.com/2077-1444/15/5/545",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q096",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.mdpi.com/2077-1444/15/5/545",
+        "label": "The Tabuk Expedition in its Byzantine context",
+        "publisher": "Religions, MDPI",
+        "authorityId": "mdpi-religions",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The MDPI scholarly article states that the Tabuk expedition did not result in direct confrontation."
+      },
+      {
+        "url": "https://academic.oup.com/book/57350/chapter-abstract/464649519",
+        "label": "Expeditions to the Byzantine Frontiers",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-university-press",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford's scholarly treatment independently places Tabuk on the Byzantine frontier without a pitched battlefield engagement."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q097-SRC",
+    "pairId": "ADV2E102-U0035-Q097",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which Gregorian year do standard biographical references pair with the widely cited birth year 80 AH for Imam Abu Hanifa?",
+    "questionUrdu": "امام ابو حنیفہ کے مشہور سنِ پیدائش 80 AH کے ساتھ معتبر ماخذ کون سا عیسوی سال بیان کرتے ہیں؟",
+    "options": [
+      "696 CE",
+      "692 CE",
+      "698 CE",
+      "699 CE"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب 699 CE ہے۔ درست جواب 699 CE ہے۔ سوانحی مآخذ 80 ہجری کو عموماً 699 عیسوی کے برابر درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Abu Hanifa an-Nu'man ibn Thabit",
+      "referenceUrl": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Ab%C5%AB_%E1%B8%A4an%C4%ABfa_an-Nu%E2%80%9Bm%C4%81n_ibn_Th%C4%81bit",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q097"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Ab%C5%AB_%E1%B8%A4an%C4%ABfa_an-Nu%E2%80%9Bm%C4%81n_ibn_Th%C4%81bit",
+        "label": "Abu Hanifa an-Nu'man ibn Thabit",
+        "publisher": "Encyclopaedia Britannica, 11th edition",
+        "authorityId": "encyclopaedia-britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica pairs Abu Hanifa's birth in AH 80 with AD 699."
+      },
+      {
+        "url": "https://www.iranicaonline.org/articles/abu-hanifa-noman-b/",
+        "label": "Abu Hanifa",
+        "publisher": "Encyclopaedia Iranica",
+        "authorityId": "encyclopaedia-iranica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Iranica independently states that Abu Hanifa was born in Kufa in 80/699."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's bare birth-year claim was scoped to the conventional 80 AH / 699 CE pairing because alternative historical reports exist. Under that explicit scope, answer D is supported."
+  },
+  {
+    "id": "ADV2E102-U0035-Q097-SIM",
+    "pairId": "ADV2E102-U0035-Q097",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "In which city was Imam Abu Hanifa born according to standard biographical references?",
+    "questionUrdu": "معتبر سوانحی مآخذ کے مطابق امام ابو حنیفہ کس شہر میں پیدا ہوئے؟",
+    "options": [
+      "Kufa",
+      "Medina",
+      "Damascus",
+      "Cairo"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Kufa ہے۔ امام ابو حنیفہ کی پیدائش کوفہ میں 80 ہجری یا 699 عیسوی کے قریب ہوئی۔",
+    "source": {
+      "type": "practice",
+      "label": "Abu Hanifa an-Nu'man ibn Thabit",
+      "referenceUrl": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Ab%C5%AB_%E1%B8%A4an%C4%ABfa_an-Nu%E2%80%9Bm%C4%81n_ibn_Th%C4%81bit",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q097",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Ab%C5%AB_%E1%B8%A4an%C4%ABfa_an-Nu%E2%80%9Bm%C4%81n_ibn_Th%C4%81bit",
+        "label": "Abu Hanifa an-Nu'man ibn Thabit",
+        "publisher": "Encyclopaedia Britannica, 11th edition",
+        "authorityId": "encyclopaedia-britannica",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Britannica's biographical entry identifies Kufa in connection with Abu Hanifa's birth and life."
+      },
+      {
+        "url": "https://www.iranicaonline.org/articles/abu-hanifa-noman-b/",
+        "label": "Abu Hanifa",
+        "publisher": "Encyclopaedia Iranica",
+        "authorityId": "encyclopaedia-iranica",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Encyclopaedia Iranica independently states that Abu Hanifa was born in Kufa in 80/699."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0035-Q099-SRC",
+    "pairId": "ADV2E102-U0035-Q099",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "According to the report in Sahih al-Bukhari, which ruler tore Prophet Muhammad's letter into pieces?",
+    "questionUrdu": "صحیح البخاری کی روایت کے مطابق کس حکمران نے نبی کریم کا خط پھاڑ دیا؟",
+    "options": [
+      "Khosrow II (Khusrow Parviz)",
+      "Al-Muqawqis",
+      "Heraclius",
+      "The Negus"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Khosrow II (Khusrow Parviz) ہے۔ درست جواب Khosrow II (Khusrow Parviz) ہے۔ فارس کے حکمران خسرو پرویز نے دعوتی خط کو ٹکڑے کر دیا تھا۔",
+    "source": {
+      "type": "book",
+      "label": "Sahih al-Bukhari 4424",
+      "referenceUrl": "https://sunnah.com/bukhari/64/446",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q099"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://sunnah.com/bukhari/64/446",
+        "label": "Sahih al-Bukhari 4424",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The hadith report states that the letter was delivered to Khosrow and that he tore it into pieces."
+      },
+      {
+        "url": "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/0c41049c-934a-4792-a1ec-95bd4f3b9b11/content",
+        "label": "Indiana University master's thesis on Muhammad's diplomacy",
+        "publisher": "Indiana University ScholarWorks",
+        "authorityId": "indiana-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university thesis discusses Ibn Abbas's report that Khusrau II immediately tore the letter into pieces."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The claim was explicitly scoped to the cited hadith report rather than presented as an uncontested material event. Ruler names were standardized; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0035-Q099-SIM",
+    "pairId": "ADV2E102-U0035-Q099",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Khosrow II, who tore Prophet Muhammad's letter in the report, ruled which realm?",
+    "questionUrdu": "روایت میں نبی کریم کا خط پھاڑنے والا خسرو دوم کس سلطنت کا حکمران تھا؟",
+    "options": [
+      "Sasanian Persia",
+      "Byzantine Rome",
+      "Aksum",
+      "Egypt"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sasanian Persia ہے۔ خسرو دوم ساسانی ایران یا فارس کا بادشاہ تھا۔",
+    "source": {
+      "type": "practice",
+      "label": "Sahih al-Bukhari 4424",
+      "referenceUrl": "https://sunnah.com/bukhari/64/446",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0035-q099",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://sunnah.com/bukhari/64/446",
+        "label": "Sahih al-Bukhari 4424",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Sahih al-Bukhari report identifies Khosrow as the Persian ruler who received and tore the letter."
+      },
+      {
+        "url": "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/0c41049c-934a-4792-a1ec-95bd4f3b9b11/content",
+        "label": "Indiana University master's thesis on Muhammad's diplomacy",
+        "publisher": "Indiana University ScholarWorks",
+        "authorityId": "indiana-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Indiana University thesis independently identifies Khusrau II as the Sasanian Persian ruler in the letter episode."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

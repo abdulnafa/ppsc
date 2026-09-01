@@ -1,0 +1,2840 @@
+[
+  {
+    "id": "ADV2E102-U0037-Q068-SRC",
+    "pairId": "ADV2E102-U0037-Q068",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Solve: (1/10) × (3/5) × (6/5) = ?",
+    "questionUrdu": "درج ذیل کسری حاصلِ ضرب حل کریں: (1/10) × (3/5) × (6/5) = ؟",
+    "options": [
+      "9/225",
+      "9/125",
+      "2/125",
+      "7/125"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب 9/125 ہے۔ Numerators اور denominators کو multiply اور پھر simplify کرنے سے 18/250 یعنی 9/125 حاصل ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Multiply and Divide Fractions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q068"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+        "label": "Multiply and Divide Fractions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives the rule for multiplying fractions: multiply the numerators and multiply the denominators."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%281%2F10%29*%283%2F5%29*%286%2F5%29",
+        "label": "Compute (1/10)(3/5)(6/5)",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent computation evaluates the printed product as 9/125."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Multiplying numerators gives 18 and denominators 250; reducing 18/250 gives 9/125. The printed answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q068-SIM",
+    "pairId": "ADV2E102-U0037-Q068",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Evaluate: (2/3) × (3/5)",
+    "questionUrdu": "درج ذیل کسری حاصلِ ضرب کی قیمت معلوم کریں: (2/3) × (3/5)",
+    "options": [
+      "2/5",
+      "6/8",
+      "1/5",
+      "5/2"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 2/5 ہے۔ Numerators اور denominators کو multiply کرنے سے 6/15 آتا ہے، جو simplify ہو کر 2/5 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Multiply and Divide Fractions",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q068",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/4-3-multiply-and-divide-fractions",
+        "label": "Multiply and Divide Fractions",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax-rice",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax's fraction-multiplication rule gives (2×3)/(3×5), which simplifies to 2/5."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%282%2F3%29*%283%2F5%29",
+        "label": "Evaluate (2/3) x (3/5)",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Wolfram Alpha independently evaluates (2/3)×(3/5) as 2/5."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q069-SRC",
+    "pairId": "ADV2E102-U0037-Q069",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is an antonym of 'ambiguous'?",
+    "questionUrdu": "Listed words میں ambiguous کا antonym کون سا ہے؟",
+    "options": [
+      "Obscure",
+      "Secular",
+      "Explicit",
+      "Equivocate"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Explicit ہے۔ Ambiguous کا مطلب ایک سے زیادہ ممکنہ meanings والا ہے، جبکہ explicit واضح اور غیر مبہم ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ambiguous",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/ambiguous",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/ambiguous",
+        "label": "Ambiguous",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines ambiguous as having more than one possible meaning and therefore possibly confusing."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/ambiguous",
+        "label": "Ambiguous",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines ambiguous as capable of being understood in two or more possible senses and contrasts it with clear or explicit wording."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was standardized. Explicit, meaning clearly stated, contrasts with ambiguous; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q069-SIM",
+    "pairId": "ADV2E102-U0037-Q069",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the word 'ambiguous' mean?",
+    "questionUrdu": "Word 'ambiguous' کا کیا مطلب ہے؟",
+    "options": [
+      "Open to more than one meaning",
+      "Perfectly explicit",
+      "Physically heavy",
+      "Always humorous"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Open to more than one meaning ہے۔ Cambridge اور Merriam-Webster دونوں ambiguous کو متعدد ممکنہ meanings والا لفظ define کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Ambiguous",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/ambiguous",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/ambiguous",
+        "label": "Ambiguous",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines ambiguous as having more than one possible meaning."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/ambiguous",
+        "label": "Ambiguous",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines ambiguous as capable of two or more possible senses."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q070-SRC",
+    "pairId": "ADV2E102-U0037-Q070",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Report the request: 'Meet me at the cinema,' he said.",
+    "questionUrdu": "Request کو reported speech میں بدلیں: 'Meet me at the cinema,' he said۔",
+    "options": [
+      "He asked me to meet him at the cinema.",
+      "He asked me where the cinema was.",
+      "He told me that he had met me at the cinema.",
+      "He asked whether I had met him at the cinema."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب He asked me to meet him at the cinema. ہے۔ Request report کرتے وقت asked + object + to-infinitive آتا ہے، اس لیے درست sentence 'He asked me to meet him at the cinema' ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Reported Speech and Reporting Verbs",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reporting-verbs",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reporting-verbs",
+        "label": "Reported Speech and Reporting Verbs",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains indirect reporting and the use of reporting verbs for commands and requests."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/verbs-followed-infinitive",
+        "label": "Verbs Followed by the Infinitive",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council gives the verb + object + to-infinitive pattern, including 'She asked him to send her a text message.'"
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction contained identical A and C choices. The duplicate and competing distractors were replaced with distinct question or past-event reports; A remains the conventional verb + object + to-infinitive report."
+  },
+  {
+    "id": "ADV2E102-U0037-Q070-SIM",
+    "pairId": "ADV2E102-U0037-Q070",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Report the request: Sara said to Ali, 'Please close the door.'",
+    "questionUrdu": "Request کو report کریں: Sara نے Ali سے کہا، 'Please close the door.'",
+    "options": [
+      "Sara asked Ali to close the door.",
+      "Sara said Ali closing the door.",
+      "Sara asked that Ali closed the door yesterday.",
+      "Sara told whether the door closes."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sara asked Ali to close the door ہے۔ Request کے لیے asked + object + to-infinitive استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Reported Speech and Reporting Verbs",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reporting-verbs",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reporting-verbs",
+        "label": "Reported Speech and Reporting Verbs",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains using reporting verbs to report requests and commands."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/verbs-followed-infinitive",
+        "label": "Verbs Followed by the Infinitive",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently gives the ask + object + to-infinitive pattern used in the answer."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q071-SRC",
+    "pairId": "ADV2E102-U0037-Q071",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "We should not be blind ____ his defects.",
+    "questionUrdu": "We should not be blind ____ his defects میں درست preposition کیا ہے؟",
+    "options": [
+      "In",
+      "To",
+      "For",
+      "At"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب To ہے۔ Standard expression blind to ہے، جس کا مطلب کسی چیز کو محسوس یا سمجھ نہ پانا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Blind",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/blind",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q071"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/blind",
+        "label": "Blind",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records 'blind to' for being unwilling or unable to notice or understand something."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/blind",
+        "label": "Blind",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently records the construction 'blind to' for lacking perception or discernment of something."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The printed key selected B, but extraction option B read 'Of'. It was transparently repaired to the standard idiom 'blind to'; answer index B is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q071-SIM",
+    "pairId": "ADV2E102-U0037-Q071",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the expression 'blind to a problem' mean?",
+    "questionUrdu": "Expression 'blind to a problem' کا کیا مطلب ہے؟",
+    "options": [
+      "Unable or unwilling to notice it",
+      "Able to solve it immediately",
+      "Physically carrying it",
+      "Publicly praising it"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Unable or unwilling to notice it ہے۔ دونوں dictionaries blind to کو کسی حقیقت یا مسئلے کو نہ دیکھنے یا نہ سمجھنے کے معنی میں درج کرتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Blind",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/blind",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q071",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/blind",
+        "label": "Blind",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines blind to something as unwilling or unable to notice or understand it."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/blind",
+        "label": "Blind",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines blind to as lacking perception or discernment of something."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q073-SRC",
+    "pairId": "ADV2E102-U0037-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "The teacher congratulated him ____ his success.",
+    "questionUrdu": "The teacher congratulated him ____ his success میں درست preposition کیا ہے؟",
+    "options": [
+      "For",
+      "On",
+      "At",
+      "With"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب On ہے۔ Standard construction congratulate someone on something ہے، اس لیے on درست ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Congratulate",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/congratulate",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/congratulate",
+        "label": "Congratulate",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge gives the construction congratulate someone on something."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/congratulate",
+        "label": "Congratulate",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently gives congratulate someone on an achievement or success."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source offered both 'on' and 'upon', which can both be standard. Option D was repaired from 'Upon' to the distinct distractor 'With'; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q073-SIM",
+    "pairId": "ADV2E102-U0037-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which pattern is standard after the verb 'congratulate'?",
+    "questionUrdu": "Verb 'congratulate' کے بعد کون سا standard pattern آتا ہے؟",
+    "options": [
+      "Congratulate someone on something",
+      "Congratulate someone at something",
+      "Congratulate someone from something",
+      "Congratulate someone into something"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Congratulate someone on something ہے۔ Cambridge اور Merriam-Webster دونوں یہی construction دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Congratulate",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/congratulate",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/congratulate",
+        "label": "Congratulate",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge gives the construction congratulate someone on something."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/congratulate",
+        "label": "Congratulate",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently gives congratulate someone on an achievement or success."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q074-SRC",
+    "pairId": "ADV2E102-U0037-Q074",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "In traditional biographical lists, Imam Ahmad ibn Hanbal is classed as what in relation to Imam al-Bukhari?",
+    "questionUrdu": "Traditional biographical lists میں Imam Ahmad ibn Hanbal کو Imam al-Bukhari کے relation میں کیا مانا جاتا ہے؟",
+    "options": [
+      "A teacher",
+      "A student",
+      "His father",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A teacher ہے۔ Biographical sources Imam Ahmad ibn Hanbal کو Imam al-Bukhari کے teachers میں شمار کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Imam al-Bukhari (Part 3)",
+      "referenceUrl": "https://bukhari.uz/?lang=en&p=793",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://bukhari.uz/?lang=en&p=793",
+        "label": "Imam al-Bukhari (Part 3)",
+        "publisher": "Imam Bukhari International Scientific Research Center",
+        "authorityId": "imam-bukhari-research-center",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The research center's biography describes Ahmad ibn Hanbal as al-Bukhari's teacher."
+      },
+      {
+        "url": "https://mek.oszk.hu/20900/20902/pdf/20902_1.pdf",
+        "label": "Imam al-Bukhari: Biography and Hadith Scholarship",
+        "publisher": "Hungarian Electronic Library, National Széchényi Library",
+        "authorityId": "hungarian-electronic-library",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent biographical text lists Imam Ahmad ibn Hanbal among Imam al-Bukhari's teachers."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The original order-sensitive wording was ambiguous. It was repaired to ask Ahmad ibn Hanbal's documented relation to al-Bukhari; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q074-SIM",
+    "pairId": "ADV2E102-U0037-Q074",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which famous hadith scholar is listed as a student of Imam Ahmad ibn Hanbal?",
+    "questionUrdu": "Imam Ahmad ibn Hanbal کے student کے طور پر کس مشہور hadith scholar کا نام آتا ہے؟",
+    "options": [
+      "Imam al-Bukhari",
+      "Imam Abu Hanifa",
+      "Imam Malik",
+      "Ibn Hazm"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Imam al-Bukhari ہے۔ دونوں biographical authorities Ahmad ibn Hanbal کو al-Bukhari کا teacher بتاتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Imam al-Bukhari (Part 3)",
+      "referenceUrl": "https://bukhari.uz/?lang=en&p=793",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://bukhari.uz/?lang=en&p=793",
+        "label": "Imam al-Bukhari (Part 3)",
+        "publisher": "Imam Bukhari International Scientific Research Center",
+        "authorityId": "imam-bukhari-research-center",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Imam Bukhari research center identifies al-Bukhari as a student of Ahmad ibn Hanbal."
+      },
+      {
+        "url": "https://mek.oszk.hu/20900/20902/pdf/20902_1.pdf",
+        "label": "Imam al-Bukhari: Biography and Hadith Scholarship",
+        "publisher": "Hungarian Electronic Library, National Széchényi Library",
+        "authorityId": "hungarian-electronic-library",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent biographical text likewise lists Ahmad ibn Hanbal among al-Bukhari's teachers."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q075-SRC",
+    "pairId": "ADV2E102-U0037-Q075",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Graceful : Movement. Which pair has the most similar adjective-to-noun relationship?",
+    "questionUrdu": "Graceful : Movement کے سب سے مشابہ adjective-to-noun relation والی pair کون سی ہے؟",
+    "options": [
+      "Articulate : Speech",
+      "Fastidious : Grime",
+      "Humorous : Laughter",
+      "Servile : Rebellion"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Articulate : Speech ہے۔ Graceful movement کی quality بیان کرتا ہے، اسی طرح articulate speech کی quality بیان کرتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Graceful",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/graceful",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/graceful",
+        "label": "Graceful",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines graceful movement as smooth, relaxed and attractive."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/articulate",
+        "label": "Articulate",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines articulate expression as clear and effective, supporting articulate as a quality of speech."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The relation was made explicit: graceful characterizes movement, and articulate can characterize clear speech. The other listed pairs express opposition or a different relation; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q075-SIM",
+    "pairId": "ADV2E102-U0037-Q075",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does 'articulate' mean when it describes a person's speech?",
+    "questionUrdu": "جب 'articulate' کسی شخص کی speech کو describe کرے تو اس کا کیا مطلب ہے؟",
+    "options": [
+      "Clear and effective",
+      "Completely silent",
+      "Deliberately vague",
+      "Without any words"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Clear and effective ہے۔ Cambridge اور Merriam-Webster دونوں articulate speech کو clear اور effective expression سے مربوط کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Articulate",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/articulate",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/articulate",
+        "label": "Articulate",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines an articulate person as able to express ideas clearly and effectively."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/articulate",
+        "label": "Articulate",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines articulate expression as clear and effective."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q076-SRC",
+    "pairId": "ADV2E102-U0037-Q076",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "These are my glasses ____ reading.",
+    "questionUrdu": "These are my glasses ____ reading میں درست word کیا ہے؟",
+    "options": [
+      "For",
+      "To",
+      "With",
+      "On"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب For ہے۔ Purpose ظاہر کرنے کے لیے glasses for reading درست phrase ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Reading Glasses",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/reading-glasses",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/reading-glasses",
+        "label": "Reading Glasses",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines reading glasses as glasses worn to help a person read."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/reading%20glasses",
+        "label": "Reading Glasses",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines reading glasses as eyeglasses used for reading."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Wording was lightly standardized. 'Glasses for reading' expresses their function; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q076-SIM",
+    "pairId": "ADV2E102-U0037-Q076",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What is the primary purpose of reading glasses?",
+    "questionUrdu": "Reading glasses کا بنیادی purpose کیا ہے؟",
+    "options": [
+      "To help a person read",
+      "To measure air pressure",
+      "To improve hearing",
+      "To record sound"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب To help a person read ہے۔ Cambridge اور Merriam-Webster دونوں reading glasses کو reading میں مدد دینے والی eyeglasses define کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Reading Glasses",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/reading-glasses",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/reading-glasses",
+        "label": "Reading Glasses",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines reading glasses as glasses worn to help a person read."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/reading%20glasses",
+        "label": "Reading Glasses",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines reading glasses as eyeglasses used for reading."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q078-SRC",
+    "pairId": "ADV2E102-U0037-Q078",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is a synonym of 'bravery'?",
+    "questionUrdu": "Listed words میں bravery کا synonym کون سا ہے؟",
+    "options": [
+      "Coward",
+      "Stable",
+      "Boldness",
+      "Purge"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Boldness ہے۔ Boldness میں fearlessness اور daring شامل ہیں، اس لیے یہ bravery کا مناسب synonym ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Bravery",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/bravery",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q078"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/bravery",
+        "label": "Bravery",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines bravery as brave behaviour or actions."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/boldness",
+        "label": "Boldness",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines boldness as the quality of being fearless or daring, matching bravery among the listed choices."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The stem was made grammatical. Boldness is the only listed synonym; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q078-SIM",
+    "pairId": "ADV2E102-U0037-Q078",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which meaning best matches the word 'bravery'?",
+    "questionUrdu": "Word 'bravery' کے معنی کے سب سے قریب کون سا option ہے؟",
+    "options": [
+      "Courageous behaviour",
+      "Extreme confusion",
+      "Careless silence",
+      "Physical weakness"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Courageous behaviour ہے۔ Cambridge اور Merriam-Webster دونوں bravery کو courage یا brave conduct کے طور پر define کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Bravery",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/bravery",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q078",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/bravery",
+        "label": "Bravery",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines bravery as brave behaviour or actions."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/bravery",
+        "label": "Bravery",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines bravery as courageous behaviour or character."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q079-SRC",
+    "pairId": "ADV2E102-U0037-Q079",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed word is the direct antonym of 'immutable'?",
+    "questionUrdu": "Listed words میں immutable کا direct antonym کون سا ہے؟",
+    "options": [
+      "Important",
+      "Determinate",
+      "Mutable",
+      "Serene"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Mutable ہے۔ Immutable کا مطلب change نہ ہو سکنے والا ہے، جبکہ mutable کا مطلب change ہو سکنے والا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Immutable",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/immutable",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q079"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/immutable",
+        "label": "Immutable",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines immutable as not changing or unable to be changed."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/mutable",
+        "label": "Mutable",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines mutable as capable of change, the direct contrast required by the repaired option."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source's approximate option 'Flexible' was replaced by the exact antonym 'Mutable'. The printed answer index C is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q079-SIM",
+    "pairId": "ADV2E102-U0037-Q079",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What does the word 'mutable' mean?",
+    "questionUrdu": "Word 'mutable' کا کیا مطلب ہے؟",
+    "options": [
+      "Capable of change",
+      "Unable to change",
+      "Impossible to describe",
+      "Always hidden"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Capable of change ہے۔ Cambridge اور Merriam-Webster دونوں mutable کو change ہو سکنے والا define کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Mutable",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/mutable",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q079",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/mutable",
+        "label": "Mutable",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines mutable as capable of changing or being changed."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/mutable",
+        "label": "Mutable",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines mutable as capable of change."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q080-SRC",
+    "pairId": "ADV2E102-U0037-Q080",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "I am exhausted; let's ____ a day.",
+    "questionUrdu": "I am exhausted; let's ____ a day میں درست idiom کیا ہے؟",
+    "options": [
+      "Call it",
+      "Call off",
+      "Call at",
+      "Call for"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Call it ہے۔ Call it a day کا مطلب موجودہ work یا activity کو اب روک دینا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Call It a Day",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/call-it-a-day",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q080"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/call-it-a-day",
+        "label": "Call It a Day",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines call it a day as stopping an activity for the rest of the day."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/call%20it%20a%20day",
+        "label": "Call It a Day",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines the idiom as stopping work or another activity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source omitted 'it' and offered malformed choices. Option A was repaired from 'Call in' to complete the documented idiom 'call it a day'; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q080-SIM",
+    "pairId": "ADV2E102-U0037-Q080",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "After several hours of work, the team decided to ____ and continue tomorrow.",
+    "questionUrdu": "کئی گھنٹے کام کے بعد team نے فیصلہ کیا کہ وہ ____ اور کل دوبارہ کام کرے گی۔",
+    "options": [
+      "call it a day",
+      "break the ice",
+      "spill the beans",
+      "miss the boat"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب call it a day ہے۔ یہ idiom موجودہ work یا activity کو روکنے کے لیے استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Call It a Day",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/call-it-a-day",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q080",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/call-it-a-day",
+        "label": "Call It a Day",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines call it a day as stopping an activity for the rest of the day."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/call%20it%20a%20day",
+        "label": "Call It a Day",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines the idiom as stopping work or another activity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q082-SRC",
+    "pairId": "ADV2E102-U0037-Q082",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who wrote the Urdu novel 'Ali Pur Ka Aili'?",
+    "questionUrdu": "Urdu novel 'Ali Pur Ka Aili' کس نے لکھی؟",
+    "options": [
+      "مستنصر حسین تارڑ",
+      "اشفاق احمد",
+      "ممتاز مفتی",
+      "عبداللہ حسین"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب ممتاز مفتی ہے۔ Ali Pur Ka Aili، Mumtaz Mufti کی معروف Urdu novel ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Ali Pur Ka Aili",
+      "referenceUrl": "https://lrc.umt.edu.pk/bib/38279",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q082"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://lrc.umt.edu.pk/bib/38279",
+        "label": "Ali Pur Ka Aili",
+        "publisher": "University of Management and Technology Library",
+        "authorityId": "umt-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university catalogue attributes Ali Pur Ka Aili to Mumtaz Mufti."
+      },
+      {
+        "url": "https://jorurdu.bzu.edu.pk/website/journal/article/5e8204a7df9db/page",
+        "label": "Study of Ali Pur Ka Aili",
+        "publisher": "Bahauddin Zakariya University",
+        "authorityId": "bahauddin-zakariya-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university research journal independently identifies Ali Pur Ka Aili as Mumtaz Mufti's Urdu novel."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored. Independent university sources attribute the novel to Mumtaz Mufti; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q082-SIM",
+    "pairId": "ADV2E102-U0037-Q082",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu work was written by Mumtaz Mufti?",
+    "questionUrdu": "Mumtaz Mufti نے کون سی Urdu work لکھی؟",
+    "options": [
+      "Ali Pur Ka Aili",
+      "Basti",
+      "Raja Gidh",
+      "Khuda Ki Basti"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Ali Pur Ka Aili ہے۔ UMT catalogue اور BZU research journal دونوں اس work کو Mumtaz Mufti سے منسوب کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Ali Pur Ka Aili",
+      "referenceUrl": "https://lrc.umt.edu.pk/bib/38279",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q082",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://lrc.umt.edu.pk/bib/38279",
+        "label": "Ali Pur Ka Aili",
+        "publisher": "University of Management and Technology Library",
+        "authorityId": "umt-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The UMT catalogue attributes Ali Pur Ka Aili to Mumtaz Mufti."
+      },
+      {
+        "url": "https://jorurdu.bzu.edu.pk/website/journal/article/5e8204a7df9db/page",
+        "label": "Study of Ali Pur Ka Aili",
+        "publisher": "Bahauddin Zakariya University",
+        "authorityId": "bahauddin-zakariya-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Bahauddin Zakariya University journal independently identifies Ali Pur Ka Aili as Mumtaz Mufti's novel."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q083-SRC",
+    "pairId": "ADV2E102-U0037-Q083",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What was Munnu Bhai's birth name?",
+    "questionUrdu": "Munnu Bhai کا birth name کیا تھا؟",
+    "options": [
+      "جاوید چوہدری",
+      "منیر احمد قریشی",
+      "منیر لطیف",
+      "احمد ندیم قاسمی"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب منیر احمد قریشی ہے۔ Munnu Bhai کا اصل نام Munir Ahmad Qureshi تھا۔",
+    "source": {
+      "type": "book",
+      "label": "A Tribute to Munnu Bhai",
+      "referenceUrl": "https://www.radio.gov.pk/19-01-2024/a-tribute-to-munnu-bhai-on-his-sixth-death-anniversary",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.radio.gov.pk/19-01-2024/a-tribute-to-munnu-bhai-on-his-sixth-death-anniversary",
+        "label": "A Tribute to Munnu Bhai",
+        "publisher": "Radio Pakistan",
+        "authorityId": "radio-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Radio Pakistan gives Munnu Bhai's birth name as Munir Ahmed Qureshi."
+      },
+      {
+        "url": "https://pu.edu.pk/images/journal/HistoryPStudies/PDF_Files/01_V-31-No1-Jan18.pdf",
+        "label": "Munnu Bhai: Life and Work",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-of-the-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university source identifies Munnu Bhai as Munir Ahmad Qureshi."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored. Both authorities give Munir Ahmad Qureshi; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q083-SIM",
+    "pairId": "ADV2E102-U0037-Q083",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Munir Ahmad Qureshi was better known by which pen name?",
+    "questionUrdu": "Munir Ahmad Qureshi کس pen name سے زیادہ مشہور تھے؟",
+    "options": [
+      "Munnu Bhai",
+      "Patras Bokhari",
+      "Ibn-e-Insha",
+      "Manto"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Munnu Bhai ہے۔ Radio Pakistan اور University of the Punjab دونوں Munnu Bhai کا اصل نام Munir Ahmad Qureshi بتاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "A Tribute to Munnu Bhai",
+      "referenceUrl": "https://www.radio.gov.pk/19-01-2024/a-tribute-to-munnu-bhai-on-his-sixth-death-anniversary",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.radio.gov.pk/19-01-2024/a-tribute-to-munnu-bhai-on-his-sixth-death-anniversary",
+        "label": "A Tribute to Munnu Bhai",
+        "publisher": "Radio Pakistan",
+        "authorityId": "radio-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Radio Pakistan identifies Munir Ahmed Qureshi as the writer known as Munnu Bhai."
+      },
+      {
+        "url": "https://pu.edu.pk/images/journal/HistoryPStudies/PDF_Files/01_V-31-No1-Jan18.pdf",
+        "label": "Munnu Bhai: Life and Work",
+        "publisher": "University of the Punjab",
+        "authorityId": "university-of-the-punjab",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of the Punjab independently identifies Munnu Bhai as Munir Ahmad Qureshi."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q084-SRC",
+    "pairId": "ADV2E102-U0037-Q084",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "For which literary genre is Hafeez Taib best known?",
+    "questionUrdu": "Hafeez Taib کس literary genre کے لیے سب سے زیادہ مشہور ہیں؟",
+    "options": [
+      "شعر گوئی",
+      "غزل گوئی",
+      "نعت گوئی",
+      "کالم نگاری"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب نعت گوئی ہے۔ Hafeez Taib خاص طور پر Urdu naat poetry کے ممتاز شاعر مانے جاتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Creative Aspects of Hafeez Taib's Naat",
+      "referenceUrl": "https://daryaft.numl.edu.pk/index.php/daryaft/article/view/277",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q084"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://daryaft.numl.edu.pk/index.php/daryaft/article/view/277",
+        "label": "Creative Aspects of Hafeez Taib's Naat",
+        "publisher": "National University of Modern Languages",
+        "authorityId": "numl",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The academic article studies Hafeez Taib specifically as a naat poet."
+      },
+      {
+        "url": "https://www.ojs.mul.edu.pk/index.php/zoraiz/article/view/648",
+        "label": "Quranic References in Hafeez Taib's Naat",
+        "publisher": "Minhaj University Lahore",
+        "authorityId": "minhaj-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent university journal examines Hafeez Taib's naat poetry, confirming the field for which he is known."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored and noun forms standardized. Academic sources center Hafeez Taib's work as a naat poet; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q084-SIM",
+    "pairId": "ADV2E102-U0037-Q084",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Hafeez Taib is best described as which kind of poet?",
+    "questionUrdu": "Hafeez Taib کو کس قسم کا poet کہنا سب سے درست ہے؟",
+    "options": [
+      "A naat poet",
+      "A comic playwright",
+      "A detective novelist",
+      "A travel writer"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب A naat poet ہے۔ NUML اور Minhaj University کے academic articles دونوں ان کی naat poetry کا مطالعہ کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Creative Aspects of Hafeez Taib's Naat",
+      "referenceUrl": "https://daryaft.numl.edu.pk/index.php/daryaft/article/view/277",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q084",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://daryaft.numl.edu.pk/index.php/daryaft/article/view/277",
+        "label": "Creative Aspects of Hafeez Taib's Naat",
+        "publisher": "National University of Modern Languages",
+        "authorityId": "numl",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NUML academic article identifies Hafeez Taib specifically as a naat poet."
+      },
+      {
+        "url": "https://www.ojs.mul.edu.pk/index.php/zoraiz/article/view/648",
+        "label": "Quranic References in Hafeez Taib's Naat",
+        "publisher": "Minhaj University Lahore",
+        "authorityId": "minhaj-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Minhaj University journal independently confirms Hafeez Taib's specialization in naat poetry."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q085-SRC",
+    "pairId": "ADV2E102-U0037-Q085",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What does the Urdu idiom 'pet kaatna' mean?",
+    "questionUrdu": "Urdu idiom 'pet kaatna' کا کیا مطلب ہے؟",
+    "options": [
+      "اپنی ضروریات کم کر کے کفایت کرنا",
+      "آزمودہ کار ہونا",
+      "بے عزت ہونا",
+      "ان میں سے کوئی نہیں"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب اپنی ضروریات کم کر کے کفایت کرنا ہے۔ پیٹ کاٹنا اپنی ضروریات کم کرکے کفایت اور مشکل سے گزارا کرنے کو کہتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "پیٹ کاٹنا",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-petikaa?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q085"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-petikaa?lang=ur",
+        "label": "پیٹ کاٹنا",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines پیٹ کاٹنا as eating less, enduring hardship and reducing one's real necessities."
+      },
+      {
+        "url": "https://www.teachifyme.com/wp-content/uploads/2020/09/3248_s20_ms_2.pdf",
+        "label": "Cambridge O Level Urdu Mark Scheme 3248/02",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-assessment",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent Cambridge mark scheme glosses پیٹ کاٹنا as کفایت کرنا and کم کھا کر گزر کرنا."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored. Option A was made precise from the broad 'reducing expenses' to the documented idiomatic sense of economizing by reducing one's own needs; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q085-SIM",
+    "pairId": "ADV2E102-U0037-Q085",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu idiom means to economize by reducing one's own necessities?",
+    "questionUrdu": "اپنی ضروریات کم کرکے کفایت کرنے کے معنی میں کون سا Urdu idiom آتا ہے؟",
+    "options": [
+      "پیٹ کاٹنا",
+      "ٹس سے مس نہ ہونا",
+      "آگ بگولا ہونا",
+      "ہاتھ پیر پھولنا"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب پیٹ کاٹنا ہے۔ Rekhta Dictionary اور Cambridge mark scheme دونوں اس idiom کو کفایت اور ضروریات کم کرنے کے معنی میں دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "پیٹ کاٹنا",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-petikaa?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q085",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-petikaa?lang=ur",
+        "label": "پیٹ کاٹنا",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines پیٹ کاٹنا as reducing one's necessities and enduring hardship."
+      },
+      {
+        "url": "https://www.teachifyme.com/wp-content/uploads/2020/09/3248_s20_ms_2.pdf",
+        "label": "Cambridge O Level Urdu Mark Scheme 3248/02",
+        "publisher": "Cambridge University Press & Assessment",
+        "authorityId": "cambridge-assessment",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Cambridge mark scheme independently glosses پیٹ کاٹنا as economizing and getting by with less."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q089-SRC",
+    "pairId": "ADV2E102-U0037-Q089",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which listed Urdu word can be used for both masculine and feminine referents?",
+    "questionUrdu": "Listed Urdu words میں کون سا masculine اور feminine دونوں referents کے لیے استعمال ہو سکتا ہے؟",
+    "options": [
+      "آپ",
+      "ماں",
+      "لڑکا",
+      "زمین"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب آپ ہے۔ Urdu personal pronoun آپ masculine اور feminine دونوں کے لیے ایک ہی form میں استعمال ہوتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Urdu Pronoun Grammar Rules",
+      "referenceUrl": "https://www.cle.org.pk/Downloads/ling_resources/Grammar/Urdu_Grammar_POS_And_Rules/POS/MT-UPOS105%20pro.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q089"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cle.org.pk/Downloads/ling_resources/Grammar/Urdu_Grammar_POS_And_Rules/POS/MT-UPOS105%20pro.pdf",
+        "label": "Urdu Pronoun Grammar Rules",
+        "publisher": "Center for Language Engineering",
+        "authorityId": "center-language-engineering",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Urdu grammar rule document states that Urdu pronouns carry both masculine and feminine gender values."
+      },
+      {
+        "url": "https://journals.au.edu.pk/ojserevna/index.php/erevna/article/download/396/153/826",
+        "label": "Gender in Urdu Pronouns",
+        "publisher": "Air University",
+        "authorityId": "air-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent linguistics study explains that Urdu personal pronoun forms are generally shared across genders."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored. The original option C 'وارث' can also denote a person of either sex, so it was repaired to the unambiguously masculine distractor 'لڑکا'. Academic grammar sources support pronouns such as آپ across genders; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q089-SIM",
+    "pairId": "ADV2E102-U0037-Q089",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "How do Urdu personal-pronoun forms generally behave with respect to grammatical gender?",
+    "questionUrdu": "Urdu personal-pronoun forms عموماً grammatical gender کے لحاظ سے کیسے behave کرتے ہیں؟",
+    "options": [
+      "The same form can be shared across genders",
+      "Every pronoun must be masculine",
+      "Every pronoun must be feminine",
+      "Pronouns cannot refer to people"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The same form can be shared across genders ہے۔ CLE grammar rules اور Air University study دونوں Urdu pronoun forms کو genders کے درمیان مشترک بتاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Urdu Pronoun Grammar Rules",
+      "referenceUrl": "https://www.cle.org.pk/Downloads/ling_resources/Grammar/Urdu_Grammar_POS_And_Rules/POS/MT-UPOS105%20pro.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q089",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.cle.org.pk/Downloads/ling_resources/Grammar/Urdu_Grammar_POS_And_Rules/POS/MT-UPOS105%20pro.pdf",
+        "label": "Urdu Pronoun Grammar Rules",
+        "publisher": "Center for Language Engineering",
+        "authorityId": "center-language-engineering",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Center for Language Engineering states that Urdu pronouns can carry both masculine and feminine gender values."
+      },
+      {
+        "url": "https://journals.au.edu.pk/ojserevna/index.php/erevna/article/download/396/153/826",
+        "label": "Gender in Urdu Pronouns",
+        "publisher": "Air University",
+        "authorityId": "air-university",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Air University study independently explains that Urdu personal-pronoun forms are generally shared across genders."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q090-SRC",
+    "pairId": "ADV2E102-U0037-Q090",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who wrote the autobiography 'Gard-e-Rah'?",
+    "questionUrdu": "Autobiography 'Gard-e-Rah' کس نے لکھی؟",
+    "options": [
+      "اختر حسین رائے پوری",
+      "مستنصر حسین تارڑ",
+      "پرتو روہیلہ",
+      "ابن انشا"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب اختر حسین رائے پوری ہے۔ Gard-e-Rah، Akhtar Husain Raipuri کی autobiographical prose work ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Gard-e-Rah",
+      "referenceUrl": "https://www.rekhta.org/ebooks/detail/gard-e-rah-akhtar-husain-raipurii-ebooks?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q090"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/gard-e-rah-akhtar-husain-raipurii-ebooks?lang=ur",
+        "label": "Gard-e-Rah",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta attributes Gard-e-Rah to Akhtar Husain Raipuri and classifies it as autobiographical prose."
+      },
+      {
+        "url": "https://uos.edu.pk/upload/department/Urdu%20_%20Oriental%20Languages_1609323069.pdf",
+        "label": "Urdu Non-Fictional Prose Syllabus",
+        "publisher": "University of Sargodha",
+        "authorityId": "university-of-sargodha",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university syllabus independently lists Gard-e-Rah by Dr Akhtar Husain Raipuri."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The extraction's mojibake was restored. The inaccurate genre label 'travelogue' was repaired to the authorities' classification as autobiography; the documented author Akhtar Husain Raipuri remains answer A."
+  },
+  {
+    "id": "ADV2E102-U0037-Q090-SIM",
+    "pairId": "ADV2E102-U0037-Q090",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "To which literary form does 'Gard-e-Rah' belong?",
+    "questionUrdu": "Gard-e-Rah کس literary form سے تعلق رکھتی ہے؟",
+    "options": [
+      "Autobiography",
+      "Epic poem",
+      "Detective novel",
+      "Drama"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Autobiography ہے۔ Rekhta اسے autobiographical prose اور University of Sargodha اسے autobiography کے syllabus context میں درج کرتی ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Gard-e-Rah",
+      "referenceUrl": "https://www.rekhta.org/ebooks/detail/gard-e-rah-akhtar-husain-raipurii-ebooks?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q090",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/ebooks/detail/gard-e-rah-akhtar-husain-raipurii-ebooks?lang=ur",
+        "label": "Gard-e-Rah",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta-foundation",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta classifies Gard-e-Rah as autobiographical prose."
+      },
+      {
+        "url": "https://uos.edu.pk/upload/department/Urdu%20_%20Oriental%20Languages_1609323069.pdf",
+        "label": "Urdu Non-Fictional Prose Syllabus",
+        "publisher": "University of Sargodha",
+        "authorityId": "university-of-sargodha",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Sargodha independently lists Gard-e-Rah as an autobiographical work by Akhtar Husain Raipuri."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q092-SRC",
+    "pairId": "ADV2E102-U0037-Q092",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "In the traditional sira account, which servant of Khadijah accompanied Muhammad on the business journey to Syria?",
+    "questionUrdu": "Traditional sira account میں Khadijah کے کون سے servant نے Muhammad ﷺ کے Syria business journey میں ساتھ دیا؟",
+    "options": [
+      "Utba",
+      "Musaib",
+      "Maysara",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب Maysara ہے۔ Traditional narrative کے مطابق Khadijah رضی اللہ عنہا نے اپنے servant Maysara کو اس journey میں ساتھ بھیجا تھا۔",
+    "source": {
+      "type": "book",
+      "label": "Khadijah",
+      "referenceUrl": "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/khadijah",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q092"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/khadijah",
+        "label": "Khadijah",
+        "publisher": "Encyclopedia.com",
+        "authorityId": "encyclopedia-com",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The biographical encyclopedia says Muhammad was accompanied on Khadijah's Syria caravan by her servant Maysara."
+      },
+      {
+        "url": "https://www.scienceopen.com/hosted-document?doi=10.13169%2Freorient.8.1.0101",
+        "label": "The Historical Authenticity of Numbers in the Sira",
+        "publisher": "ReOrient / ScienceOpen",
+        "authorityId": "scienceopen-reorient",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent academic article recounts the traditional sira narrative in which Khadijah sent Maysara to accompany Muhammad to Bosra."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The question was explicitly scoped to the traditional sira account and spellings standardized. Two independent biographical sources name Maysara; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q092-SIM",
+    "pairId": "ADV2E102-U0037-Q092",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Maysara, who accompanied Muhammad on the Syria caravan, was whose servant?",
+    "questionUrdu": "Syria caravan میں Muhammad ﷺ کے ساتھ جانے والے Maysara کس کے servant تھے؟",
+    "options": [
+      "Khadijah",
+      "Abu Talib",
+      "Abu Bakr",
+      "Umar ibn al-Khattab"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Khadijah ہے۔ Encyclopedia.com اور academic ReOrient article دونوں Maysara کو Khadijah کا servant بتاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Khadijah",
+      "referenceUrl": "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/khadijah",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q092",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/khadijah",
+        "label": "Khadijah",
+        "publisher": "Encyclopedia.com",
+        "authorityId": "encyclopedia-com",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The biographical encyclopedia identifies Maysara as Khadijah's servant on the Syria caravan."
+      },
+      {
+        "url": "https://www.scienceopen.com/hosted-document?doi=10.13169%2Freorient.8.1.0101",
+        "label": "The Historical Authenticity of Numbers in the Sira",
+        "publisher": "ReOrient / ScienceOpen",
+        "authorityId": "scienceopen-reorient",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent academic article likewise identifies Maysara as the servant sent by Khadijah."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q093-SRC",
+    "pairId": "ADV2E102-U0037-Q093",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "How many daily prayers were finally prescribed after the reduction during the Mi'raj?",
+    "questionUrdu": "Mi'raj کے دوران reduction کے بعد آخرکار کتنی daily prayers فرض ہوئیں؟",
+    "options": [
+      "5",
+      "7",
+      "9",
+      "11"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 5 ہے۔ Mi'raj narrative میں ابتدائی تعداد پچاس سے کم ہوکر پانچ daily prayers رہ گئی تھی۔",
+    "source": {
+      "type": "book",
+      "label": "Sahih al-Bukhari 3887",
+      "referenceUrl": "https://sunnah.com/bukhari%3A3887",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q093"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://sunnah.com/bukhari%3A3887",
+        "label": "Sahih al-Bukhari 3887",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The hadith reports that the Night Journey prescription was reduced from fifty prayers to five daily prayers."
+      },
+      {
+        "url": "https://www.dar-alifta.org/en/fatwa/details/22380/the-meaning-of-the-prescription-of-prayer-in-the-mi%E2%80%99raj-journey",
+        "label": "Prescription of Prayer in the Mi'raj",
+        "publisher": "Egypt's Dar al-Ifta",
+        "authorityId": "egypt-dar-al-ifta",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Egypt's official fatwa authority independently states that the five daily prayers were made obligatory on the night of Mi'raj."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The source wording could be read as the initial fifty-prayer prescription. It was repaired to ask the final daily obligation after reduction; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q093-SIM",
+    "pairId": "ADV2E102-U0037-Q093",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "The obligation of five daily prayers is traditionally linked to which event?",
+    "questionUrdu": "Five daily prayers کی فرضیت traditionally کس event سے linked ہے؟",
+    "options": [
+      "The Mi'raj",
+      "The Battle of Badr",
+      "The Treaty of Hudaybiyyah",
+      "The Conquest of Makkah"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب The Mi'raj ہے۔ Sahih al-Bukhari report اور Egypt's Dar al-Ifta دونوں five daily prayers کی فرضیت کو Mi'raj سے جوڑتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Sahih al-Bukhari 3887",
+      "referenceUrl": "https://sunnah.com/bukhari%3A3887",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q093",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://sunnah.com/bukhari%3A3887",
+        "label": "Sahih al-Bukhari 3887",
+        "publisher": "Sunnah.com",
+        "authorityId": "sunnah-com",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Sahih al-Bukhari report links the final prescription of five daily prayers to the Mi'raj."
+      },
+      {
+        "url": "https://www.dar-alifta.org/en/fatwa/details/22380/the-meaning-of-the-prescription-of-prayer-in-the-mi%E2%80%99raj-journey",
+        "label": "Prescription of Prayer in the Mi'raj",
+        "publisher": "Egypt's Dar al-Ifta",
+        "authorityId": "egypt-dar-al-ifta",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Egypt's Dar al-Ifta independently states that the five daily prayers were made obligatory on the night of Mi'raj."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q094-SRC",
+    "pairId": "ADV2E102-U0037-Q094",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Aminah bint Wahb, mother of Prophet Muhammad, belonged to which clan?",
+    "questionUrdu": "Prophet Muhammad ﷺ کی mother Aminah bint Wahb کس clan سے تعلق رکھتی تھیں؟",
+    "options": [
+      "Banu Umayya",
+      "Banu Khuzayma",
+      "Banu Asad",
+      "Banu Zuhra"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب Banu Zuhra ہے۔ Aminah bint Wahb، Quraysh کے Banu Zuhra clan سے تعلق رکھتی تھیں۔",
+    "source": {
+      "type": "book",
+      "label": "Islamic History Research",
+      "referenceUrl": "https://repository.sustech.edu/bitstream/handle/123456789/11889/Research.pdf?isAllowed=y&sequence=3",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q094"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://repository.sustech.edu/bitstream/handle/123456789/11889/Research.pdf?isAllowed=y&sequence=3",
+        "label": "Islamic History Research",
+        "publisher": "Sudan University of Science and Technology",
+        "authorityId": "sudan-university-science-technology",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university research identifies Aminah daughter of Wahb as belonging to the Zuhra family."
+      },
+      {
+        "url": "https://daruliftabirmingham.co.uk/wp-content/uploads/2014/04/Al-Mujeeb-Magazine-6..pdf",
+        "label": "Family Lineage of the Messenger Muhammad",
+        "publisher": "Darul Ifta Birmingham",
+        "authorityId": "darul-ifta-birmingham",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent lineage chart identifies Wahb ibn Abd Manaf and Aminah with Banu Zuhrah."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Honorific clutter and spellings were standardized. Independent lineage sources identify Banu Zuhra; answer D is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q094-SIM",
+    "pairId": "ADV2E102-U0037-Q094",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Who was the father of Aminah bint Wahb?",
+    "questionUrdu": "Aminah bint Wahb کے father کون تھے؟",
+    "options": [
+      "Wahb ibn Abd Manaf",
+      "Abu Talib",
+      "Abdullah ibn Abd al-Muttalib",
+      "Harith ibn Abd al-Uzza"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Wahb ibn Abd Manaf ہے۔ Sudan University research اور lineage chart دونوں Aminah کو Wahb ibn Abd Manaf کی daughter بتاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Islamic History Research",
+      "referenceUrl": "https://repository.sustech.edu/bitstream/handle/123456789/11889/Research.pdf?isAllowed=y&sequence=3",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q094",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://repository.sustech.edu/bitstream/handle/123456789/11889/Research.pdf?isAllowed=y&sequence=3",
+        "label": "Islamic History Research",
+        "publisher": "Sudan University of Science and Technology",
+        "authorityId": "sudan-university-science-technology",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Sudan University research identifies Aminah as the daughter of Wahb of the Zuhra family."
+      },
+      {
+        "url": "https://daruliftabirmingham.co.uk/wp-content/uploads/2014/04/Al-Mujeeb-Magazine-6..pdf",
+        "label": "Family Lineage of the Messenger Muhammad",
+        "publisher": "Darul Ifta Birmingham",
+        "authorityId": "darul-ifta-birmingham",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent lineage chart identifies Wahb ibn Abd Manaf as Aminah's father."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q095-SRC",
+    "pairId": "ADV2E102-U0037-Q095",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Choose the correct indirect speech: She says, 'I am a little bit nervous.'",
+    "questionUrdu": "Correct indirect speech منتخب کریں: She says, 'I am a little bit nervous.'",
+    "options": [
+      "She says that she is a little bit nervous.",
+      "She tells that she is a little bit nervous.",
+      "She tells that I am a little bit nervous.",
+      "She told that she is a little bit nervous."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب She says that she is a little bit nervous. ہے۔ Present reporting verb says کے ساتھ present tense برقرار رہ سکتا ہے، اس لیے 'She says that she is...' درست ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Reported Speech: Indirect Speech",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q095"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+        "label": "Reported Speech: Indirect Speech",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that tense backshift is associated with past reporting contexts; present reporting can retain present tense."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-statements",
+        "label": "Reported Speech: Statements",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently explains reported statements and pronoun changes, supporting 'She says that she is ...' for a present reporting verb."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Punctuation was standardized. The present reporting verb permits retained present tense and I changes to she; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q095-SIM",
+    "pairId": "ADV2E102-U0037-Q095",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Report the statement: He says, 'I am ready.'",
+    "questionUrdu": "اس بیان کو بالواسطہ انداز میں لکھیں: He says, 'I am ready.'",
+    "options": [
+      "He says that he is ready.",
+      "He said that he was ready yesterday.",
+      "He asks whether I am ready.",
+      "He says that he were ready."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب He says that he is ready ہے۔ Present reporting verb کے ساتھ pronoun بدلتا ہے مگر present tense برقرار رہ سکتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Reported Speech: Indirect Speech",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q095",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+        "label": "Reported Speech: Indirect Speech",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that present reporting contexts need not trigger tense backshift."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/reported-speech-statements",
+        "label": "Reported Speech: Statements",
+        "publisher": "British Council LearnEnglish",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently supports pronoun change with present tense in reported statements."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0037-Q099-SRC",
+    "pairId": "ADV2E102-U0037-Q099",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "Which listed scholar was a pupil and transmitter from Abu Hurayra?",
+    "questionUrdu": "Listed scholars میں Abu Hurayra کے pupil اور transmitter کون تھے؟",
+    "options": [
+      "Ali ibn Abi Talib",
+      "Hammam ibn Munabbih",
+      "Abd al-Rahman ibn Awf",
+      "Sa'd ibn Abi Waqqas"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Hammam ibn Munabbih ہے۔ Hammam ibn Munabbih نے Abu Hurayra سے hadith سیکھی اور ان reports کو transmit کیا۔",
+    "source": {
+      "type": "book",
+      "label": "Hemmâm b. Münebbih",
+      "referenceUrl": "https://islamansiklopedisi.org.tr/hemmam-b-munebbih",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q099"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/hemmam-b-munebbih",
+        "label": "Hemmâm b. Münebbih",
+        "publisher": "TDV İslâm Ansiklopedisi",
+        "authorityId": "tdv-islam-encyclopedia",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly encyclopedia states that Hammam went to Medina, learned hadith from Abu Hurayra and compiled those reports."
+      },
+      {
+        "url": "https://acikbilim.yok.gov.tr/handle/20.500.12812/448022",
+        "label": "Hammam and Wahb ibn Munabbih in Hadith Scholarship",
+        "publisher": "Council of Higher Education Thesis Center, Türkiye",
+        "authorityId": "turkey-yok-thesis-center",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The national thesis record independently identifies Hammam ibn Munabbih as a student of Abu Hurayra."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Names and the stem were standardized. Two independent scholarly authorities identify Hammam ibn Munabbih as a student of Abu Hurayra; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0037-Q099-SIM",
+    "pairId": "ADV2E102-U0037-Q099",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "From which Companion did Hammam ibn Munabbih learn and transmit hadith?",
+    "questionUrdu": "Hammam ibn Munabbih نے کس Companion سے hadith سیکھی اور transmit کی؟",
+    "options": [
+      "Abu Hurayra",
+      "Abu Dharr",
+      "Salman al-Farsi",
+      "Bilal ibn Rabah"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Abu Hurayra ہے۔ TDV encyclopedia اور Türkiye thesis record دونوں Hammam کو Abu Hurayra کا student بتاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Hemmâm b. Münebbih",
+      "referenceUrl": "https://islamansiklopedisi.org.tr/hemmam-b-munebbih",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0037-q099",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/hemmam-b-munebbih",
+        "label": "Hemmâm b. Münebbih",
+        "publisher": "TDV İslâm Ansiklopedisi",
+        "authorityId": "tdv-islam-encyclopedia",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The TDV encyclopedia states that Hammam ibn Munabbih learned hadith from Abu Hurayra."
+      },
+      {
+        "url": "https://acikbilim.yok.gov.tr/handle/20.500.12812/448022",
+        "label": "Hammam and Wahb ibn Munabbih in Hadith Scholarship",
+        "publisher": "Council of Higher Education Thesis Center, Türkiye",
+        "authorityId": "turkey-yok-thesis-center",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Turkish national thesis record independently identifies Hammam as a student of Abu Hurayra."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

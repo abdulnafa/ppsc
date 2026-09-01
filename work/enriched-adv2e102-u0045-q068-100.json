@@ -1,0 +1,2453 @@
+[
+  {
+    "id": "ADV2E102-U0045-Q069-SRC",
+    "pairId": "ADV2E102-U0045-Q069",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "A 130-metre train travels at 45 km/h and completely crosses a bridge in 30 seconds. What is the bridge's length?",
+    "questionUrdu": "130 میٹر لمبی ریل گاڑی 45 کلومیٹر فی گھنٹہ کی رفتار سے چلتے ہوئے ایک پل کو 30 سیکنڈ میں مکمل عبور کرتی ہے؛ پل کی لمبائی کیا ہے؟",
+    "options": [
+      "245 m",
+      "230 m",
+      "140 m",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 245 m ہے۔ 45 کلومیٹر فی گھنٹہ کو 12.5 میٹر فی سیکنڈ میں بدلنے پر 30 سیکنڈ میں کل فاصلہ 375 میٹر بنتا ہے؛ اس میں سے 130 میٹر ریل گاڑی کی لمبائی نکالنے پر پل 245 میٹر رہتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Distance, rate and time formula",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q069"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+        "label": "Distance, rate and time formula",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax gives d = rt and explains that units must agree; converting 45 km/h gives 12.5 m/s and therefore 375 m in 30 seconds."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%2845*1000%2F3600%29*30-130",
+        "label": "Calculate bridge length",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent exact calculation subtracts the 130-metre train length from the 375-metre total crossing distance and returns 245 metres."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The units and complete-crossing condition were stated explicitly. At 12.5 m/s the train covers 375 m; subtracting its 130 m length leaves a 245 m bridge, answer A."
+  },
+  {
+    "id": "ADV2E102-U0045-Q069-SIM",
+    "pairId": "ADV2E102-U0045-Q069",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "A 100-metre train moving at 54 km/h completely crosses a bridge in 20 seconds. How long is the bridge?",
+    "questionUrdu": "100 میٹر لمبی ریل گاڑی 54 کلومیٹر فی گھنٹہ کی رفتار سے ایک پل کو 20 سیکنڈ میں مکمل عبور کرتی ہے؛ پل کی لمبائی کیا ہے؟",
+    "options": [
+      "200 m",
+      "180 m",
+      "250 m",
+      "300 m"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 200 میٹر ہے۔ رفتار 15 میٹر فی سیکنڈ بنتی ہے، اس لیے کل فاصلہ 300 میٹر ہے؛ ریل گاڑی کی 100 میٹر لمبائی نکالنے سے پل 200 میٹر رہتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Distance, rate and time formula",
+      "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q069",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-7-solve-a-formula-for-a-specific-variable",
+        "label": "Distance, rate and time formula",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "claimSummary": "OpenStax gives the distance-rate-time formula and explains consistent unit conversion.",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=%2854*1000%2F3600%29*20-100",
+        "label": "Calculate the bridge length",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "claimSummary": "The independent exact calculation returns a bridge length of 200 metres.",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q070-SRC",
+    "pairId": "ADV2E102-U0045-Q070",
+    "kind": "source",
+    "categoryId": "basic-mathematics",
+    "question": "Two consecutive positive even integers have a difference of squares of 84. What is their sum?",
+    "questionUrdu": "دو مسلسل مثبت جفت اعداد کے مربعوں کا فرق 84 ہے؛ ان اعداد کا مجموعہ کیا ہے؟",
+    "options": [
+      "42",
+      "44",
+      "46",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 42 ہے۔ مسلسل جفت اعداد کو x اور x جمع 2 ماننے پر مربعوں کے فرق کی مساوات سے اعداد 20 اور 22 ملتے ہیں، جن کا مجموعہ 42 ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Consecutive even integers",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/3-1-use-a-problem-solving-strategy",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q070"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/3-1-use-a-problem-solving-strategy",
+        "label": "Consecutive even integers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "OpenStax represents consecutive even integers by n and n + 2 and demonstrates translating an integer problem into an equation."
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+%28x%2B2%29%5E2-x%5E2%3D84",
+        "label": "Solve the difference-of-squares equation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The exact equation solver gives x = 20, hence the consecutive positive even integers are 20 and 22 and their sum is 42."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The malformed stem was repaired and positive integers were specified to remove the negative-solution ambiguity. Solving (x + 2)^2 - x^2 = 84 gives 20 and 22, whose sum is 42; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q070-SIM",
+    "pairId": "ADV2E102-U0045-Q070",
+    "kind": "similar",
+    "categoryId": "basic-mathematics",
+    "question": "Two consecutive positive even integers have a difference of squares of 100. What is their sum?",
+    "questionUrdu": "دو مسلسل مثبت جفت اعداد کے مربعوں کا فرق 100 ہے؛ ان اعداد کا مجموعہ کیا ہے؟",
+    "options": [
+      "50",
+      "48",
+      "52",
+      "54"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 50 ہے۔ اعداد x اور x جمع 2 مان کر مساوات حل کرنے سے 24 اور 26 ملتے ہیں، اور ان کا مجموعہ 50 بنتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Consecutive even integers",
+      "referenceUrl": "https://openstax.org/books/elementary-algebra-2e/pages/3-1-use-a-problem-solving-strategy",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q070",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://openstax.org/books/elementary-algebra-2e/pages/3-1-use-a-problem-solving-strategy",
+        "label": "Consecutive even integers",
+        "publisher": "OpenStax, Rice University",
+        "authorityId": "openstax",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "claimSummary": "OpenStax models consecutive even integers as n and n plus 2 and explains translating the words into an equation.",
+        "role": "answer-primary",
+        "supports": [
+          "answer"
+        ]
+      },
+      {
+        "url": "https://www.wolframalpha.com/input?i=solve+%28x%2B2%29%5E2-x%5E2%3D100",
+        "label": "Solve the difference-of-squares equation",
+        "publisher": "Wolfram Alpha",
+        "authorityId": "wolfram-alpha",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "claimSummary": "The independent equation solver returns x = 24, so the two integers sum to 50.",
+        "role": "answer-secondary",
+        "supports": [
+          "answer"
+        ]
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q072-SRC",
+    "pairId": "ADV2E102-U0045-Q072",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the proverb: 'You cannot have your ________ and eat it.'",
+    "questionUrdu": "کہاوت مکمل کریں: You cannot have your ________ and eat it۔",
+    "options": [
+      "Apple",
+      "Cake",
+      "Bun",
+      "Biscuit"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Cake ہے۔ کیمبرج اور میریئم ویبسٹر دونوں اس مستقل انگریزی کہاوت میں خالی جگہ پر cake کا لفظ درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Have your cake and eat it",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/have-cake-and-eat-it-too",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q072"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/have-cake-and-eat-it-too",
+        "label": "Have your cake and eat it",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records the idiom with cake as the fixed noun."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/have%20one%27s%20cake%20and%20eat%20it%20too",
+        "label": "Have one's cake and eat it too",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently records the expression with cake."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Both dictionaries record the fixed proverb with cake; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q072-SIM",
+    "pairId": "ADV2E102-U0045-Q072",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "What idea does the idiom 'have your cake and eat it too' express?",
+    "questionUrdu": "محاورہ have your cake and eat it too کس خیال کو ظاہر کرتا ہے؟",
+    "options": [
+      "Trying to keep two incompatible benefits",
+      "Sharing food generously",
+      "Finishing work early",
+      "Buying an expensive dessert"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب دو باہم متضاد فائدے ایک ساتھ رکھنے کی کوشش ہے۔ دونوں مستند لغات اس محاورے کو ایسی دو چیزیں بیک وقت چاہنے کے معنی میں بیان کرتی ہیں جو اکٹھی ممکن نہ ہوں۔",
+    "source": {
+      "type": "practice",
+      "label": "Have your cake and eat it",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/have-cake-and-eat-it-too",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q072",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/have-cake-and-eat-it-too",
+        "label": "Have your cake and eat it",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines the idiom as wanting two incompatible advantages at the same time."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/have%20one%27s%20cake%20and%20eat%20it%20too",
+        "label": "Have one's cake and eat it too",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently explains the expression as retaining something while also using or consuming it."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q073-SRC",
+    "pairId": "ADV2E102-U0045-Q073",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which option correctly reports Abdul's earlier statement that it was four o'clock at the time he spoke?",
+    "questionUrdu": "عبدال کے پہلے بیان کو، جس میں اس نے کہا تھا کہ اس وقت چار بجے تھے، بالواسطہ کلام میں کون سا جملہ درست ظاہر کرتا ہے؟",
+    "options": [
+      "Abdul said that it had been four o'clock.",
+      "Abdul said that it was four o'clock then.",
+      "Abdul said that it had been four o'clock then.",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Abdul said that it was four o'clock then. ہے۔ ماضی کے reporting verb کے بعد معیاری بالواسطہ کلام میں وقت کے اشارے کو then سے ظاہر کیا جاتا ہے؛ اسی بنا پر دوسرا جملہ درست ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Reported speech: indirect speech",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q073"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+        "label": "Reported speech: indirect speech",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-grammar",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains tense backshift in reported speech and the corresponding change from a speaker-time expression to then."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/reported-speech-statements",
+        "label": "Reported speech: statements",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently teaches past-tense backshift after a past reporting verb and gives standard reported-statement structure."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The malformed direct-speech prompt and ungrammatical use of 'told' without an object were repaired. Conventional backshift gives 'Abdul said that it was four o'clock then,' answer B."
+  },
+  {
+    "id": "ADV2E102-U0045-Q073-SIM",
+    "pairId": "ADV2E102-U0045-Q073",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Sara said, 'I am tired.' Which option is the standard reported form after a past reporting verb?",
+    "questionUrdu": "سارہ نے کہا: I am tired۔ ماضی کے reporting verb کے بعد اس کا معیاری بالواسطہ جملہ کون سا ہے؟",
+    "options": [
+      "Sara said that she was tired.",
+      "Sara says that she is tired yesterday.",
+      "Sara said that I am tired.",
+      "Sara told that she tired."
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Sara said that she was tired ہے۔ بالواسطہ کلام میں ضمیر بدلتا ہے اور ماضی کے reporting verb کے بعد حال کا فعل عموماً ماضی میں منتقل ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Reported speech: indirect speech",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q073",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech",
+        "label": "Reported speech: indirect speech",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-grammar",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains pronoun adjustment and normal tense backshift in reported statements after a past reporting verb."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/reported-speech-statements",
+        "label": "Reported speech: statements",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently teaches that present-tense statements normally backshift to the past in this reported-speech pattern."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q074-SRC",
+    "pairId": "ADV2E102-U0045-Q074",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the location sentence: 'He lived ________ Model Town, a neighbourhood ________ Lahore.'",
+    "questionUrdu": "مقام والا جملہ مکمل کریں: He lived ________ Model Town, a neighbourhood ________ Lahore۔",
+    "options": [
+      "at; at",
+      "in; in",
+      "of; at",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب in; in ہے۔ کیمبرج اور برٹش کونسل دونوں علاقوں، محلوں اور شہروں کے اندر مقام بیان کرنے کے لیے in استعمال کرتے ہیں، اس لیے دونوں جگہ in درست ہے۔",
+    "source": {
+      "type": "book",
+      "label": "At, on and in: place",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/at-on-and-in-place",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q074"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/at-on-and-in-place",
+        "label": "At, on and in: place",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-grammar",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains that in is used for areas and enclosed geographic places such as towns and cities."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/a1-a2-grammar/prepositions-place",
+        "label": "Prepositions of place",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently uses in for places within larger areas and for cities or neighbourhood contexts."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The fragment was repaired to make both place relationships explicit. Areas and cities take in, so option B was transparently repaired from 'in; at' to 'in; in'."
+  },
+  {
+    "id": "ADV2E102-U0045-Q074-SIM",
+    "pairId": "ADV2E102-U0045-Q074",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Complete the place sentence: 'She lives ________ a village ________ Punjab.'",
+    "questionUrdu": "مقام والا جملہ مکمل کریں: She lives ________ a village ________ Punjab۔",
+    "options": [
+      "in; in",
+      "at; at",
+      "on; in",
+      "in; at"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب in; in ہے۔ گاؤں اور وسیع صوبائی علاقے دونوں کے اندر رہائش کا مقام ظاہر کرنے کے لیے اس جملے میں in استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "At, on and in: place",
+      "referenceUrl": "https://dictionary.cambridge.org/grammar/british-grammar/at-on-and-in-place",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q074",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/grammar/british-grammar/at-on-and-in-place",
+        "label": "At, on and in: place",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-grammar",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explains the use of in for places within geographic areas such as settlements and regions."
+      },
+      {
+        "url": "https://learnenglish.britishcouncil.org/grammar/a1-a2-grammar/prepositions-place",
+        "label": "Prepositions of place",
+        "publisher": "British Council",
+        "authorityId": "british-council",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The British Council independently teaches in for a location contained within a larger area."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q075-SRC",
+    "pairId": "ADV2E102-U0045-Q075",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the idiom 'take a leaf out of someone's book' mean?",
+    "questionUrdu": "انگریزی محاورے take a leaf out of someone's book کا کیا مطلب ہے؟",
+    "options": [
+      "To snatch something",
+      "Imitate or emulate someone in particular way",
+      "To cheat",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Imitate or emulate someone in particular way ہے۔ کیمبرج اور میریئم ویبسٹر دونوں اسے کسی دوسرے شخص کے مفید طریقے یا عمل کی نقل اور پیروی کرنے کے معنی میں بیان کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Take a leaf out of someone's book",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/take-a-leaf-out-of-book",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q075"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/take-a-leaf-out-of-book",
+        "label": "Take a leaf out of someone's book",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines the idiom as copying something another person does."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/take%20a%20leaf%20out%20of%20someone%27s%20book",
+        "label": "Take a leaf out of someone's book",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines it as doing the same thing someone else did."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The grammar was standardized. Both dictionaries define the idiom as following or imitating another person's example; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q075-SIM",
+    "pairId": "ADV2E102-U0045-Q075",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Sara copies her mentor's successful study method. Which idiom best describes this?",
+    "questionUrdu": "سارہ اپنی استاد کا کامیاب مطالعہ طریقہ اپناتی ہے؛ اس عمل کو کون سا محاورہ بہتر بیان کرتا ہے؟",
+    "options": [
+      "Take a leaf out of her book",
+      "Spill the beans",
+      "Break the ice",
+      "Miss the boat"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب take a leaf out of her book ہے۔ یہ محاورہ کسی کے کامیاب طریقے کو مثال بنا کر اپنانے کے لیے استعمال ہوتا ہے۔",
+    "source": {
+      "type": "practice",
+      "label": "Take a leaf out of someone's book",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/take-a-leaf-out-of-book",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q075",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/take-a-leaf-out-of-book",
+        "label": "Take a leaf out of someone's book",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines taking a leaf out of someone's book as copying something that person does."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/take%20a%20leaf%20out%20of%20someone%27s%20book",
+        "label": "Take a leaf out of someone's book",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines the idiom as doing the same thing another person did."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q076-SRC",
+    "pairId": "ADV2E102-U0045-Q076",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Complete the standard sentence: 'Who is knocking ________ the door?'",
+    "questionUrdu": "معیاری جملہ مکمل کریں: Who is knocking ________ the door؟",
+    "options": [
+      "at",
+      "of",
+      "by",
+      "in"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب at ہے۔ کیمبرج اور آکسفورڈ دونوں دروازے پر دستک دینے کے لیے knock at the door کی معیاری ترکیب درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Knock at something",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/knock-at",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q076"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/knock-at",
+        "label": "Knock at something",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explicitly gives 'There's someone knocking at the door' as standard usage."
+      },
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/knock_2",
+        "label": "Knock",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-learners-dictionaries",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford independently records knock at/on a door and gives 'a knock at the door' as a standard construction."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Cambridge and Oxford both recognize knock at the door; since 'on' is not among the listed alternatives, answer A is uniquely supported and retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q076-SIM",
+    "pairId": "ADV2E102-U0045-Q076",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Choose the standard preposition: 'We heard a knock ________ the door.'",
+    "questionUrdu": "معیاری حرفِ جار منتخب کریں: We heard a knock ________ the door۔",
+    "options": [
+      "at",
+      "for",
+      "from",
+      "with"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب at ہے۔ دونوں معتبر لغات a knock at the door کو درست اور معروف انگریزی ترکیب کے طور پر درج کرتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Knock at something",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/knock-at",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q076",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/knock-at",
+        "label": "Knock at something",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge records knock at a door as standard usage."
+      },
+      {
+        "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/knock_2",
+        "label": "Knock",
+        "publisher": "Oxford University Press",
+        "authorityId": "oxford-learners-dictionaries",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Oxford independently gives 'a knock at the door' as a standard construction."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q077-SRC",
+    "pairId": "ADV2E102-U0045-Q077",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which listed noun is a synonym of 'blasphemy'?",
+    "questionUrdu": "درج ذیل اسموں میں سے blasphemy کا مترادف کون سا ہے؟",
+    "options": [
+      "Irrespective",
+      "Irreverence",
+      "Unholy",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Irreverence ہے۔ کیمبرج تھیسارس اور کولنز دونوں blasphemy کے مترادفات میں irreverence درج کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Blasphemy synonyms",
+      "referenceUrl": "https://dictionary.cambridge.org/us/thesaurus/blasphemy",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q077"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/blasphemy",
+        "label": "Blasphemy synonyms",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-thesaurus",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge lists irreverence among the synonyms of blasphemy."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english-thesaurus/blasphemy",
+        "label": "Synonyms of blasphemy",
+        "publisher": "HarperCollins",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently gives irreverence as a synonym of blasphemy."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The number agreement was repaired. Cambridge and Collins both list irreverence as a synonym of blasphemy; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q077-SIM",
+    "pairId": "ADV2E102-U0045-Q077",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which noun means irreverence toward something regarded as sacred?",
+    "questionUrdu": "کون سا اسم کسی مقدس سمجھی جانے والی چیز کے بارے میں بے حرمتی کے معنی دیتا ہے؟",
+    "options": [
+      "Blasphemy",
+      "Courtesy",
+      "Harmony",
+      "Patience"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب blasphemy ہے۔ دونوں لغوی ماخذ اسے مقدس امور کے خلاف بے حرمتی یا irreverence کے مفہوم سے جوڑتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Blasphemy synonyms",
+      "referenceUrl": "https://dictionary.cambridge.org/us/thesaurus/blasphemy",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q077",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/thesaurus/blasphemy",
+        "label": "Blasphemy synonyms",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-thesaurus",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge's thesaurus links blasphemy with irreverence toward sacred things."
+      },
+      {
+        "url": "https://www.collinsdictionary.com/us/dictionary/english-thesaurus/blasphemy",
+        "label": "Synonyms of blasphemy",
+        "publisher": "HarperCollins",
+        "authorityId": "collins-dictionary",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Collins independently gives irreverence as a central synonym of blasphemy."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q078-SRC",
+    "pairId": "ADV2E102-U0045-Q078",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "Which word completes the sentence: 'This work is beyond his ________'?",
+    "questionUrdu": "جملہ مکمل کریں: This work is beyond his ________۔",
+    "options": [
+      "Capacity",
+      "Strength",
+      "Worth",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Capacity ہے۔ کیمبرج beyond someone's capacity کو کسی کے لیے حد سے زیادہ مشکل ہونے کی ترکیب بتاتا ہے، جبکہ میریئم ویبسٹر بھی beyond کو پہنچ یا قابلیت سے باہر کے معنی دیتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Beyond the capacity of someone or something",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/beyond-the-capacity-of",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q078"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/beyond-the-capacity-of",
+        "label": "Beyond the capacity of someone or something",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines the collocation as meaning too difficult for someone to do and gives the example 'beyond his capacity'."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/beyond",
+        "label": "Beyond",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster defines the preposition beyond as outside a person's reach or sphere, as in a task beyond his strength."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The instruction was added and capitalization normalized. Both dictionaries support the collocation beyond his capacity; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q078-SIM",
+    "pairId": "ADV2E102-U0045-Q078",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "If a task is 'beyond someone's capacity', what does that mean?",
+    "questionUrdu": "اگر کوئی کام beyond someone's capacity ہو تو اس کا کیا مطلب ہے؟",
+    "options": [
+      "It is too difficult for that person",
+      "It has already been completed",
+      "It belongs to someone else",
+      "It requires no effort"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب یہ ہے کہ کام اس شخص کی قابلیت سے زیادہ مشکل ہے۔ دونوں لغات beyond capacity کو صلاحیت یا پہنچ سے باہر ہونے کے معنی میں بیان کرتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Beyond the capacity of someone or something",
+      "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/beyond-the-capacity-of",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q078",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/us/dictionary/english/beyond-the-capacity-of",
+        "label": "Beyond the capacity of someone or something",
+        "publisher": "Cambridge Dictionary",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines beyond someone's capacity as too difficult for that person to do."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/beyond",
+        "label": "Beyond",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines beyond as outside a person's reach or sphere."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q079-SRC",
+    "pairId": "ADV2E102-U0045-Q079",
+    "kind": "source",
+    "categoryId": "english",
+    "question": "What does the phrase 'give up smoking' mean?",
+    "questionUrdu": "فقرے give up smoking کا کیا مطلب ہے؟",
+    "options": [
+      "Stop smoking",
+      "Arrange smoking",
+      "Both a & b",
+      "None of these"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب Stop smoking ہے۔ کیمبرج اور میریئم ویبسٹر دونوں give up کو کسی عادت یا سرگرمی کو چھوڑ دینے اور روک دینے کے معنی میں بیان کرتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Give up",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/give-up",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q079"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/give-up",
+        "label": "Give up",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge explicitly states that giving up a habit such as smoking means stopping doing it."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/give%20up",
+        "label": "Give up",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines give up as ceasing or quitting an activity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Both dictionaries explicitly define giving up smoking as stopping or quitting the habit; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q079-SIM",
+    "pairId": "ADV2E102-U0045-Q079",
+    "kind": "similar",
+    "categoryId": "english",
+    "question": "Which phrasal verb means to stop a habit permanently?",
+    "questionUrdu": "کون سا phrasal verb کسی عادت کو مستقل طور پر چھوڑ دینے کے معنی دیتا ہے؟",
+    "options": [
+      "Give up",
+      "Set up",
+      "Bring up",
+      "Turn up"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب give up ہے۔ دونوں مستند لغات اس phrasal verb کو کسی سرگرمی یا عادت کو ختم کرنے کے معنی میں درج کرتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Give up",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/give-up",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q079",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dictionary.cambridge.org/dictionary/english/give-up",
+        "label": "Give up",
+        "publisher": "Cambridge University Press",
+        "authorityId": "cambridge-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Cambridge defines give up as stopping an activity or habit such as smoking."
+      },
+      {
+        "url": "https://www.merriam-webster.com/dictionary/give%20up",
+        "label": "Give up",
+        "publisher": "Merriam-Webster",
+        "authorityId": "merriam-webster",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Merriam-Webster independently defines give up as ceasing or quitting an activity."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q081-SRC",
+    "pairId": "ADV2E102-U0045-Q081",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Which line of a classical rubai is conventionally described as its culmination or 'hasil-e-rubai'?",
+    "questionUrdu": "کلاسیکی رباعی کے کس مصرعے کو عموماً اس کا نقطۂ عروج یا حاصلِ رباعی کہا جاتا ہے؟",
+    "options": [
+      "تیسرے مصرعے کو",
+      "دوسرے مصرعے کو",
+      "پہلے مصرعے کو",
+      "ان میں سے کوئی نہیں"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب ان میں سے کوئی نہیں ہے۔ جامعہ کے ادبی متن اور آزاد تنقیدی مضمون دونوں چوتھے مصرعے کو خیال کی تکمیل اور رباعی کا حاصل قرار دیتے ہیں؛ چونکہ چوتھا مصرع آپشنز میں نہیں، اصل درست انتخاب ان میں سے کوئی نہیں ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Urdu poetry self-learning material",
+      "referenceUrl": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/120_Inner.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q081"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/120_Inner.pdf",
+        "label": "Urdu poetry self-learning material",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university text explains that the fourth line completes the poet's thought and functions as the rubai's summary."
+      },
+      {
+        "url": "https://suayharam.com/articles/2168",
+        "label": "Umar Khayyam and the rubai",
+        "publisher": "Suay-e-Haram",
+        "authorityId": "suay-e-haram",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent literary discussion describes the fourth line as the rubai's jaan-e-kalam, its culminating line."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The exact Urdu source question and options are preserved separately. Both literary authorities identify the fourth line as the culmination, but the listed options name only the first three lines; therefore None of these at D is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q081-SIM",
+    "pairId": "ADV2E102-U0045-Q081",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which line normally completes the thought and serves as the culmination of a classical rubai?",
+    "questionUrdu": "کلاسیکی رباعی میں عموماً کون سا مصرع خیال مکمل کرکے نقطۂ عروج بناتا ہے؟",
+    "options": [
+      "Fourth line",
+      "First line",
+      "Second line",
+      "Third line"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب چوتھا مصرع ہے۔ دونوں ادبی ماخذ اسے خیال کی تکمیل، خلاصہ اور رباعی کی جان قرار دیتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Urdu poetry self-learning material",
+      "referenceUrl": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/120_Inner.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q081",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/120_Inner.pdf",
+        "label": "Urdu poetry self-learning material",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university Urdu-poetry text explains that the fourth line completes the thought and serves as the rubai's summary."
+      },
+      {
+        "url": "https://suayharam.com/articles/2168",
+        "label": "Umar Khayyam and the rubai",
+        "publisher": "Suay-e-Haram",
+        "authorityId": "suay-e-haram",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent literary discussion likewise describes the fourth line as the culminating line of the rubai."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q083-SRC",
+    "pairId": "ADV2E102-U0045-Q083",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who wrote the Urdu novel 'Khaak aur Khoon'?",
+    "questionUrdu": "اردو ناول خاک اور خون کس نے لکھا؟",
+    "options": [
+      "نسیم حجازی",
+      "قرۃ العین",
+      "بانو قدسیہ",
+      "ان میں سے کوئی نہیں"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب نسیم حجازی ہے۔ نیشنل یونیورسٹی آف سائنسز اینڈ ٹیکنالوجی اور پنجاب یونیورسٹی کی الگ سرکاری فہرستیں خاک اور خون کے مصنف کے طور پر نسیم حجازی کا نام درج کرتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "PNEC library book inventory",
+      "referenceUrl": "https://pnec.nust.edu.pk/wp-content/uploads/2020/06/Inventory-list-of-books-PNEC-Library.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q083"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pnec.nust.edu.pk/wp-content/uploads/2020/06/Inventory-list-of-books-PNEC-Library.pdf",
+        "label": "PNEC library book inventory",
+        "publisher": "National University of Sciences and Technology",
+        "authorityId": "nust-pnec-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official university library inventory lists Khaak aur Khoon under author Naseem Hijazi."
+      },
+      {
+        "url": "https://pu.edu.pk/images/image/Departments/Punjabi/Punjabi-Urdu-Books-Deptt-Punjabi.pdf",
+        "label": "Punjabi and Urdu books catalogue",
+        "publisher": "University of the Punjab",
+        "authorityId": "punjab-university-library",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official university catalogue independently lists Khak aur Khoon with Naseem Hijazi."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The exact Urdu source question and options are preserved separately. Independent official university catalogues attribute the novel to Naseem Hijazi; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q083-SIM",
+    "pairId": "ADV2E102-U0045-Q083",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu novel is listed in the cited university catalogues under Naseem Hijazi's authorship?",
+    "questionUrdu": "مذکورہ جامعاتی فہرستوں میں نسیم حجازی کی تصنیف کے طور پر کون سا اردو ناول درج ہے؟",
+    "options": [
+      "Khaak aur Khoon",
+      "Raja Gidh",
+      "Aag Ka Darya",
+      "Udas Naslain"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب خاک اور خون ہے۔ دونوں جامعاتی کتابی فہرستیں اس ناول کو نسیم حجازی کے نام کے ساتھ درج کرتی ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "PNEC library book inventory",
+      "referenceUrl": "https://pnec.nust.edu.pk/wp-content/uploads/2020/06/Inventory-list-of-books-PNEC-Library.pdf",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q083",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://pnec.nust.edu.pk/wp-content/uploads/2020/06/Inventory-list-of-books-PNEC-Library.pdf",
+        "label": "PNEC library book inventory",
+        "publisher": "National University of Sciences and Technology",
+        "authorityId": "nust-pnec-library",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The NUST PNEC library inventory lists Khaak aur Khoon under Naseem Hijazi."
+      },
+      {
+        "url": "https://pu.edu.pk/images/image/Departments/Punjabi/Punjabi-Urdu-Books-Deptt-Punjabi.pdf",
+        "label": "Punjabi and Urdu books catalogue",
+        "publisher": "University of the Punjab",
+        "authorityId": "punjab-university-library",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of the Punjab catalogue independently lists Khak aur Khoon with Naseem Hijazi."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q084-SRC",
+    "pairId": "ADV2E102-U0045-Q084",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Who wrote the Urdu essay 'Marhoom Ki Yaad Mein'?",
+    "questionUrdu": "اردو مضمون مرحوم کی یاد میں کس نے لکھا؟",
+    "options": [
+      "رشید احمد صدیقی",
+      "پطرس بخاری",
+      "امتیاز علی تاج",
+      "ان میں سے کوئی نہیں"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب پطرس بخاری ہے۔ ریختہ کے پطرس کے مضامین اور مولانا آزاد نیشنل اردو یونیورسٹی کے نصابی متن دونوں مرحوم کی یاد میں کو پطرس بخاری کی تحریر قرار دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Patras ke Mazameen",
+      "referenceUrl": "https://www.rekhta.org/Ebooks/patras-ke-mazameen-patras-bukhari-ebooks-2?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q084"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/Ebooks/patras-ke-mazameen-patras-bukhari-ebooks-2?lang=ur",
+        "label": "Patras ke Mazameen",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta identifies Patras Bukhari as the author and lists Marhoom Ki Yaad Mein in the collection's contents."
+      },
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/MA-Urdu-4th-Semseter/Tanz-o-Mazaah31jul2024.pdf",
+        "label": "Urdu satire and humour self-learning material",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official university text independently lists Marhoom Ki Yaad Mein among Patras Bukhari's essays."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The exact Urdu source question and options are preserved separately. Rekhta and MANUU identify the essay as a work of Patras Bukhari; answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q084-SIM",
+    "pairId": "ADV2E102-U0045-Q084",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which essay is included in Patras Bukhari's collection 'Patras Ke Mazameen'?",
+    "questionUrdu": "پطرس بخاری کے مجموعے پطرس کے مضامین میں کون سا مضمون شامل ہے؟",
+    "options": [
+      "Marhoom Ki Yaad Mein",
+      "Aab-e-Gum",
+      "Ghubar-e-Khatir",
+      "Pitras Ka Khat"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب مرحوم کی یاد میں ہے۔ ریختہ کی فہرستِ مضامین اور جامعہ کا نصابی ماخذ دونوں اسے پطرس بخاری کے مضامین میں شمار کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Patras ke Mazameen",
+      "referenceUrl": "https://www.rekhta.org/Ebooks/patras-ke-mazameen-patras-bukhari-ebooks-2?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q084",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhta.org/Ebooks/patras-ke-mazameen-patras-bukhari-ebooks-2?lang=ur",
+        "label": "Patras ke Mazameen",
+        "publisher": "Rekhta Foundation",
+        "authorityId": "rekhta",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta lists Marhoom Ki Yaad Mein in Patras Bukhari's Patras Ke Mazameen."
+      },
+      {
+        "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/MA-Urdu-4th-Semseter/Tanz-o-Mazaah31jul2024.pdf",
+        "label": "Urdu satire and humour self-learning material",
+        "publisher": "Maulana Azad National Urdu University",
+        "authorityId": "manuu",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The MANUU Urdu text independently lists Marhoom Ki Yaad Mein among Patras Bukhari's essays."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q085-SRC",
+    "pairId": "ADV2E102-U0045-Q085",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What does the Urdu idiom 'joo-e-sheer laana' mean?",
+    "questionUrdu": "اردو محاورے جوئے شیر لانا کا کیا مطلب ہے؟",
+    "options": [
+      "مشکل کام سر انجام دینا",
+      "انتظار کرنا",
+      "تکلیف میں ہونا",
+      "ان میں سے کوئی نہیں"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب مشکل کام سر انجام دینا ہے۔ ریختہ ڈکشنری اور دہلی نظامتِ تعلیم کی سرکاری جوابی اسکیم دونوں اس محاورے کو نہایت مشکل کام سر انجام دینے کے معنی میں بیان کرتی ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Juu-e-shiir laana",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-juu-e-shiir-laanaa?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q085"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-juu-e-shiir-laanaa?lang=ur",
+        "label": "Juu-e-shiir laana",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines the idiom as completing an extremely difficult or seemingly impossible task."
+      },
+      {
+        "url": "https://www.edudel.nic.in/welcome_folder/cbsesampleqpandms_201718/12/Urdu_Core_MS.pdf",
+        "label": "Urdu Core marking scheme",
+        "publisher": "Directorate of Education, Delhi",
+        "authorityId": "delhi-directorate-education",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official marking scheme glosses joo-e-sheer laana as performing a difficult task."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The exact Urdu source question and options are preserved separately. A dictionary and an official marking scheme define it as accomplishing a very difficult task; answer A is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q085-SIM",
+    "pairId": "ADV2E102-U0045-Q085",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which Urdu idiom means accomplishing an extremely difficult task?",
+    "questionUrdu": "کون سا اردو محاورہ نہایت مشکل کام سر انجام دینے کے معنی دیتا ہے؟",
+    "options": [
+      "جوئے شیر لانا",
+      "ہاتھ پر ہاتھ دھرنا",
+      "آنکھیں دکھانا",
+      "کان بھرنا"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب جوئے شیر لانا ہے۔ دونوں مستند ماخذ اسے انتہائی مشکل یا بظاہر ناممکن کام مکمل کرنے کے مفہوم میں درج کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Juu-e-shiir laana",
+      "referenceUrl": "https://rekhtadictionary.com/meaning-of-juu-e-shiir-laanaa?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q085",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://rekhtadictionary.com/meaning-of-juu-e-shiir-laanaa?lang=ur",
+        "label": "Juu-e-shiir laana",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary defines joo-e-sheer laana as completing an extremely difficult task."
+      },
+      {
+        "url": "https://www.edudel.nic.in/welcome_folder/cbsesampleqpandms_201718/12/Urdu_Core_MS.pdf",
+        "label": "Urdu Core marking scheme",
+        "publisher": "Directorate of Education, Delhi",
+        "authorityId": "delhi-directorate-education",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Delhi Directorate of Education marking scheme independently glosses it as performing a difficult task."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q087-SRC",
+    "pairId": "ADV2E102-U0045-Q087",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "What does the Urdu idiom 'maatha thankna' mean?",
+    "questionUrdu": "اردو محاورے ماتھا ٹھنکنا کا کیا مطلب ہے؟",
+    "options": [
+      "کسی کام کے متعلق برے آثار پیدا ہونا",
+      "کچھ بھول جانا",
+      "افسوس کرنا",
+      "ان میں سے کوئی نہیں"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب کسی کام کے متعلق برے آثار پیدا ہونا ہے۔ ریختہ ڈکشنری اسے کسی ناخوشگوار واقعے سے پہلے برے آثار محسوس کرنے کے معنی میں دیتی ہے، جبکہ اردو پوائنٹ اسے پیشگی اندیشے کے مترادف بتاتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Maathaa thanaknaa",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-maathaa-thanaknaa?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q087"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-maathaa-thanaknaa?lang=ur",
+        "label": "Maathaa thanaknaa",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta defines the idiom as sensing bad signs or danger before an unpleasant event occurs."
+      },
+      {
+        "url": "https://www.urdupoint.com/dictionary/english-to-urdu/presentiment-meaning-in-urdu/99919.html",
+        "label": "Presentiment: maatha thankna",
+        "publisher": "UrduPoint",
+        "authorityId": "urdupoint",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The independent dictionary equates maatha thankna with a presentiment or foreboding of something unpleasant."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The exact Urdu source question and options are preserved separately. Both dictionaries describe a foreboding or awareness of bad signs, corresponding to option A."
+  },
+  {
+    "id": "ADV2E102-U0045-Q087-SIM",
+    "pairId": "ADV2E102-U0045-Q087",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Which English noun is closest to the Urdu idiom 'maatha thankna'?",
+    "questionUrdu": "اردو محاورے ماتھا ٹھنکنا کے مفہوم کے سب سے قریب کون سا انگریزی اسم ہے؟",
+    "options": [
+      "Presentiment",
+      "Celebration",
+      "Certainty",
+      "Amusement"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب presentiment یعنی پیشگی اندیشہ ہے۔ دونوں لغوی ماخذ اس محاورے کو کسی آنے والی ناخوشگوار بات کے احساس سے جوڑتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Maathaa thanaknaa",
+      "referenceUrl": "https://www.rekhtadictionary.com/meaning-of-maathaa-thanaknaa?lang=ur",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q087",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.rekhtadictionary.com/meaning-of-maathaa-thanaknaa?lang=ur",
+        "label": "Maathaa thanaknaa",
+        "publisher": "Rekhta Dictionary",
+        "authorityId": "rekhta-dictionary",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Rekhta Dictionary defines maatha thankna as sensing bad signs before an unpleasant event."
+      },
+      {
+        "url": "https://www.urdupoint.com/dictionary/english-to-urdu/presentiment-meaning-in-urdu/99919.html",
+        "label": "Presentiment: maatha thankna",
+        "publisher": "UrduPoint",
+        "authorityId": "urdupoint",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "UrduPoint independently equates the idiom with presentiment or foreboding."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q089-SRC",
+    "pairId": "ADV2E102-U0045-Q089",
+    "kind": "source",
+    "categoryId": "urdu",
+    "question": "Within modern Urdu literature, which listed writer is often described as the father or founder of the Urdu short story?",
+    "questionUrdu": "جدید اردو ادب میں کس ادیب کو اکثر اردو افسانے کا باپ یا بانی کہا جاتا ہے؟",
+    "options": [
+      "پریم چند",
+      "ڈپٹی نذیر احمد",
+      "احمد ندیم قاسمی",
+      "ان میں سے کوئی نہیں"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب پریم چند ہے۔ اندرا گاندھی نیشنل اوپن یونیورسٹی اور گورنمنٹ کالج ویمن یونیورسٹی فیصل آباد کے علمی ماخذ دونوں پریم چند کو اردو افسانے کا باپ یا بانی قرار دیتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "MA Urdu programme: Premchand",
+      "referenceUrl": "https://www.ignou.ac.in/schools/programme/MAUD",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q089"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ignou.ac.in/schools/programme/MAUD",
+        "label": "MA Urdu programme: Premchand",
+        "publisher": "Indira Gandhi National Open University",
+        "authorityId": "ignou",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The official university course description states that Premchand is often considered the father of the Urdu short story."
+      },
+      {
+        "url": "https://zabanoadab.gcuf.edu.pk/index.php/1/article/view/183",
+        "label": "A linguistic analysis of Premchand's translated play",
+        "publisher": "Government College Women University Faisalabad",
+        "authorityId": "gcwuf-zaban-o-adab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university journal independently describes Premchand as commonly regarded as the founder of Urdu short story."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The exact Urdu source question and options are preserved separately. The overbroad word 'inventor' was scoped to a conventional Urdu-literary attribution; two university authorities identify Premchand, answer A."
+  },
+  {
+    "id": "ADV2E102-U0045-Q089-SIM",
+    "pairId": "ADV2E102-U0045-Q089",
+    "kind": "similar",
+    "categoryId": "urdu",
+    "question": "Premchand is often described as the father or founder of which Urdu literary form?",
+    "questionUrdu": "پریم چند کو اکثر اردو کی کس ادبی صنف کا باپ یا بانی کہا جاتا ہے؟",
+    "options": [
+      "Short story",
+      "Rubai",
+      "Marsiya",
+      "Travelogue"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب افسانہ ہے۔ دونوں جامعاتی ماخذ پریم چند کی بنیادی نسبت اردو مختصر افسانے کی بانیانہ روایت سے قائم کرتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "MA Urdu programme: Premchand",
+      "referenceUrl": "https://www.ignou.ac.in/schools/programme/MAUD",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q089",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.ignou.ac.in/schools/programme/MAUD",
+        "label": "MA Urdu programme: Premchand",
+        "publisher": "Indira Gandhi National Open University",
+        "authorityId": "ignou",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "IGNOU states that Premchand is often considered the father of the Urdu short story."
+      },
+      {
+        "url": "https://zabanoadab.gcuf.edu.pk/index.php/1/article/view/183",
+        "label": "A linguistic analysis of Premchand's translated play",
+        "publisher": "Government College Women University Faisalabad",
+        "authorityId": "gcwuf-zaban-o-adab",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university journal independently describes Premchand as commonly regarded as founder of Urdu short story."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q096-SRC",
+    "pairId": "ADV2E102-U0045-Q096",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "In which Hijri year did Khalid ibn al-Walid embrace Islam?",
+    "questionUrdu": "خالد بن ولید نے کس ہجری سال اسلام قبول کیا؟",
+    "options": [
+      "6 AH",
+      "7 AH",
+      "8 AH",
+      "None of these"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "درست جواب 8 AH ہے۔ ٹی ڈی وی انسائیکلوپیڈیا قبولِ اسلام کی تاریخ یکم صفر 8 ہجری دیتا ہے، جبکہ کولمبیا انسائیکلوپیڈیا 629 عیسوی درج کرتا ہے جو اسی زمانی دور سے مطابقت رکھتا ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Khalid ibn al-Walid",
+      "referenceUrl": "https://islamansiklopedisi.org.tr/halid-b-velid",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q096"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/halid-b-velid",
+        "label": "Khalid ibn al-Walid",
+        "publisher": "TDV Encyclopedia of Islam",
+        "authorityId": "tdv-islam-encyclopedia",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The scholarly encyclopedia dates Khalid's conversion to 1 Safar 8 AH."
+      },
+      {
+        "url": "https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/khalid",
+        "label": "Khalid",
+        "publisher": "The Columbia Encyclopedia via Encyclopedia.com",
+        "authorityId": "columbia-encyclopedia",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Columbia Encyclopedia independently dates Khalid's acceptance of Islam to 629 CE, corresponding to 8 AH in the documented chronology."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The grammar, name and AH notation were standardized. Two independent encyclopedic authorities date his conversion to 8 AH; answer C is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q096-SIM",
+    "pairId": "ADV2E102-U0045-Q096",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "Which companion accepted Islam in 8 AH according to the cited biographical references?",
+    "questionUrdu": "مذکورہ سوانحی ماخذ کے مطابق 8 ہجری میں کس صحابی نے اسلام قبول کیا؟",
+    "options": [
+      "Khalid ibn al-Walid",
+      "Abu Ubaydah ibn al-Jarrah",
+      "Sa'd ibn Abi Waqqas",
+      "Bilal ibn Rabah"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب خالد بن ولید ہیں۔ دونوں علمی سوانحی ماخذ ان کے قبولِ اسلام کو 8 ہجری یا اس کے مطابق 629 عیسوی میں رکھتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Khalid ibn al-Walid",
+      "referenceUrl": "https://islamansiklopedisi.org.tr/halid-b-velid",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q096",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://islamansiklopedisi.org.tr/halid-b-velid",
+        "label": "Khalid ibn al-Walid",
+        "publisher": "TDV Encyclopedia of Islam",
+        "authorityId": "tdv-islam-encyclopedia",
+        "role": "answer-primary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The TDV Encyclopedia of Islam dates Khalid ibn al-Walid's conversion to 1 Safar 8 AH."
+      },
+      {
+        "url": "https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/khalid",
+        "label": "Khalid",
+        "publisher": "The Columbia Encyclopedia via Encyclopedia.com",
+        "authorityId": "columbia-encyclopedia",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Columbia Encyclopedia independently dates Khalid's acceptance of Islam to 629 CE, corresponding to 8 AH."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q097-SRC",
+    "pairId": "ADV2E102-U0045-Q097",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "During the reign of Umar ibn Abd al-Aziz, which listed institution was used to fund poor relief and repayment of debts?",
+    "questionUrdu": "عمر بن عبدالعزیز کے دور میں غریبوں کی مدد اور قرضوں کی ادائیگی کے لیے کس ادارے کے وسائل استعمال ہوئے؟",
+    "options": [
+      "Diwan al-Kharaj",
+      "Bayt al-Mal",
+      "Diwan al-Barid (postal department)",
+      "None of these"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "درست جواب Bayt al-Mal ہے۔ اقبال اکیڈمی پاکستان اور بین الاقوامی اسلامی یونیورسٹی ملائیشیا کے مطالعات دونوں بیت المال کے وسائل کو عوامی بہبود، ضرورت مندوں کی مدد اور قرضوں کی ادائیگی سے جوڑتے ہیں۔",
+    "source": {
+      "type": "book",
+      "label": "Economic and social reforms of Umar ibn Abd al-Aziz",
+      "referenceUrl": "https://www.allamaiqbal.com/publications/journals/review/oct74/1.htm",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q097"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.allamaiqbal.com/publications/journals/review/oct74/1.htm",
+        "label": "Economic and social reforms of Umar ibn Abd al-Aziz",
+        "publisher": "Iqbal Academy Pakistan",
+        "authorityId": "iqbal-academy-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The historical study states that under Umar II the poor received public support and debts were repaid from Bayt al-Mal."
+      },
+      {
+        "url": "https://journals.iium.edu.my/shajarah/index.php/shaj/article/download/330/213/596",
+        "label": "Fiscal policy of Umar ibn Abd al-Aziz",
+        "publisher": "International Islamic University Malaysia",
+        "authorityId": "iium-al-shajarah",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The peer-reviewed study independently explains that Umar II directed Bayt al-Mal resources toward public welfare and support for people in need."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The malformed and historically false phrase 'got functional' was not retained: all three listed administrative institutions predated Umar II. The stem was transparently repaired to the specifically documented welfare use during his reign. Both studies identify Bayt al-Mal, so answer B is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q097-SIM",
+    "pairId": "ADV2E102-U0045-Q097",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "What was the public treasury supporting welfare under Umar ibn Abd al-Aziz called?",
+    "questionUrdu": "عمر بن عبدالعزیز کے دور میں عوامی بہبود کے لیے استعمال ہونے والے سرکاری خزانے کو کیا کہا جاتا تھا؟",
+    "options": [
+      "Bayt al-Mal",
+      "Diwan al-Barid",
+      "Dar al-Nadwa",
+      "Bayt al-Hikmah"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب بیت المال ہے۔ دونوں تاریخی مطالعات اسے اس دور کا عوامی خزانہ بتاتے ہیں جس سے محتاجوں کی مدد اور سماجی اخراجات پورے ہوتے تھے۔",
+    "source": {
+      "type": "practice",
+      "label": "Economic and social reforms of Umar ibn Abd al-Aziz",
+      "referenceUrl": "https://www.allamaiqbal.com/publications/journals/review/oct74/1.htm",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q097",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://www.allamaiqbal.com/publications/journals/review/oct74/1.htm",
+        "label": "Economic and social reforms of Umar ibn Abd al-Aziz",
+        "publisher": "Iqbal Academy Pakistan",
+        "authorityId": "iqbal-academy-pakistan",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The Iqbal Academy study identifies Bayt al-Mal as the treasury used for poor relief and debt repayment under Umar II."
+      },
+      {
+        "url": "https://journals.iium.edu.my/shajarah/index.php/shaj/article/download/330/213/596",
+        "label": "Fiscal policy of Umar ibn Abd al-Aziz",
+        "publisher": "International Islamic University Malaysia",
+        "authorityId": "iium-al-shajarah",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The IIUM study independently explains that Umar II directed Bayt al-Mal resources toward public welfare."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  },
+  {
+    "id": "ADV2E102-U0045-Q098-SRC",
+    "pairId": "ADV2E102-U0045-Q098",
+    "kind": "source",
+    "categoryId": "islamic-studies",
+    "question": "In which surah does the verse containing 'There is no compulsion in religion' (2:256) occur?",
+    "questionUrdu": "There is no compulsion in religion والے الفاظ پر مشتمل آیت 2:256 کس سورت میں ہے؟",
+    "options": [
+      "Al-Ma'idah",
+      "An-Nur",
+      "Hud",
+      "None of these"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "درست جواب None of these ہے۔ قرآن فاؤنڈیشن اور یونیورسٹی آف لیڈز کا قرآنی عربی کارپس دونوں آیت 2:256 کو سورۃ البقرہ میں رکھتے ہیں؛ اصل اختیارات میں یہ نام موجود نہیں تھا، اس لیے None of these درست ہے۔",
+    "source": {
+      "type": "book",
+      "label": "Surah Al-Baqarah 2:256",
+      "referenceUrl": "https://quran.com/2/256",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q098"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://quran.com/2/256",
+        "label": "Surah Al-Baqarah 2:256",
+        "publisher": "Quran Foundation",
+        "authorityId": "quran-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The complete verse page identifies 'There is no compulsion in religion' as verse 2:256 of Al-Baqarah."
+      },
+      {
+        "url": "https://corpus.quran.com/translation.jsp?chapter=2&verse=256",
+        "label": "Quran 2:256 translations",
+        "publisher": "Quranic Arabic Corpus, University of Leeds",
+        "authorityId": "quranic-arabic-corpus",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The university corpus independently places the phrase in chapter 2, Al-Baqarah, verse 256."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "The grammar and verse number were added. Both complete Quran sources place the phrase in Surah Al-Baqarah, which is absent from the listed options; None of these at D is retained."
+  },
+  {
+    "id": "ADV2E102-U0045-Q098-SIM",
+    "pairId": "ADV2E102-U0045-Q098",
+    "kind": "similar",
+    "categoryId": "islamic-studies",
+    "question": "What is the chapter number of Surah Al-Baqarah, which contains verse 2:256?",
+    "questionUrdu": "سورۃ البقرہ، جس میں آیت 2:256 ہے، قرآن کا کون سا باب نمبر ہے؟",
+    "options": [
+      "2",
+      "3",
+      "5",
+      "24"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب 2 ہے۔ دونوں براہِ راست قرآنی ماخذ 2:256 کو دوسرے باب، سورۃ البقرہ، کی آیت کے طور پر دکھاتے ہیں۔",
+    "source": {
+      "type": "practice",
+      "label": "Surah Al-Baqarah 2:256",
+      "referenceUrl": "https://quran.com/2/256",
+      "accessedOn": "2026-08-30"
+    },
+    "tags": [
+      "adv2e102",
+      "u0045-q098",
+      "similar-practice"
+    ],
+    "verificationStatus": "verified",
+    "references": [
+      {
+        "url": "https://quran.com/2/256",
+        "label": "Surah Al-Baqarah 2:256",
+        "publisher": "Quran Foundation",
+        "authorityId": "quran-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "Quran Foundation identifies the passage as verse 256 of chapter 2, Surah Al-Baqarah."
+      },
+      {
+        "url": "https://corpus.quran.com/translation.jsp?chapter=2&verse=256",
+        "label": "Quran 2:256 translations",
+        "publisher": "Quranic Arabic Corpus, University of Leeds",
+        "authorityId": "quranic-arabic-corpus",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-08-30",
+        "supports": [
+          "answer"
+        ],
+        "claimSummary": "The University of Leeds Quranic Arabic Corpus independently places the verse in chapter 2."
+      }
+    ],
+    "temporalScope": {
+      "type": "static",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": null,
+      "version": null,
+      "reverifyAfter": null
+    },
+    "sourceNotes": "Original PPSC-style practice question derived from the cited authorities; it is not copied from the source book."
+  }
+]

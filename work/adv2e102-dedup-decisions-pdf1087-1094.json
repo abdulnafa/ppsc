@@ -617,7 +617,7 @@
     "sourceRecordId": "ADV2E102-U0151-Q030",
     "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "ADV2E102-U0121-Q021",
+    "duplicateOf": "ADV2E102-U0040-Q034",
     "reason": "The earlier retained ADV source asks the identical author of The Emergence of Pakistan and answers Chaudhri Muhammad Ali.",
     "testedProposition": "Who wrote the book The Emergence of Pakistan: Correct answer: Chaudhri Muhammad Ali.",
     "reviewedAgainst": {
@@ -635,7 +635,7 @@
         "ADV2E102-U0081-Q033-SRC",
         "ADV2E102-U0081-Q016-SRC",
         "ADV2E102-U0061-Q053-SRC",
-        "ADV2E102-U0121-Q021"
+        "ADV2E102-U0040-Q034"
       ],
       "answerConflictReviewed": true
     }
@@ -787,10 +787,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0151-Q038",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual proposition review found the surfaced candidates test a different date, office, document feature, measurement, location, language rule, or otherwise materially distinct fact; this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0017-Q046",
+    "reason": "The earlier-source-order U0017 canonical asks the identical immediate successor to Muhammad Ali Bogra as Prime Minister and answers Chaudhry Muhammad Ali.",
     "testedProposition": "Who was the fourth Prime Minister of Pakistan? Correct answer: Chaudhri Muhammad Ali.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -804,7 +804,8 @@
       "semanticCandidateIds": [
         "P235-Q011-SRC",
         "P235-Q011-SIM",
-        "ADV2E102-U0021-Q025-SRC"
+        "ADV2E102-U0021-Q025-SRC",
+        "ADV2E102-U0017-Q046"
       ],
       "answerConflictReviewed": true
     }
@@ -933,10 +934,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0151-Q045",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or semantic repeat in the pinned bank or earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0017-Q047",
+    "reason": "The earlier-source-order U0017 canonical asks the identical Viceroy-at-the-1905-Partition-of-Bengal proposition and answers Lord Curzon.",
     "testedProposition": "Who was Viceroy of India when Bengal was partitioned in 1905? Correct answer: Lord Curzon.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -947,7 +948,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0017-Q047"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1111,10 +1114,10 @@
   },
   {
     "sourceRecordId": "ADV2E102-U0151-Q053",
-    "action": "keep",
+    "action": "skip",
     "reviewStatus": "verified",
-    "duplicateOf": "",
-    "reason": "Manual review found no exact, inverse, or semantic repeat in the pinned bank or earlier retained ADV2E102 canonicals, so this independently verified proposition is retained.",
+    "duplicateOf": "ADV2E102-U0017-Q070",
+    "reason": "The earlier-source-order U0017 canonical asks the identical approximate length of Siachen Glacier and gives 76 km as the listed answer.",
     "testedProposition": "Approximately how long is the Siachen Glacier? Correct answer: 76 km.",
     "reviewedAgainst": {
       "baselineQuestionCount": 3074,
@@ -1125,7 +1128,9 @@
     },
     "similaritySignals": {
       "exactFingerprintMatch": false,
-      "semanticCandidateIds": [],
+      "semanticCandidateIds": [
+        "ADV2E102-U0017-Q070"
+      ],
       "answerConflictReviewed": true
     }
   },
@@ -1281,6 +1286,7 @@
         "ADV2E102-U0091-Q028-SRC",
         "ADV2E102-U0091-Q028-SIM",
         "ADV2E102-U0005-Q019-SIM",
+        "ADV2E102-U0010-Q033-SRC",
         "ADV2E102-U0002-Q027-SRC"
       ],
       "answerConflictReviewed": true
@@ -1655,6 +1661,7 @@
       "exactFingerprintMatch": true,
       "semanticCandidateIds": [
         "ADV2E102-U0022-Q055-SRC",
+        "ADV2E102-U0010-Q046-SRC",
         "ADV2E102-U0022-Q055"
       ],
       "answerConflictReviewed": true
