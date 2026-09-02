@@ -61,6 +61,17 @@ function fail(message) {
   throw new Error(message);
 }
 
+function containsCharactersInOrder(displayText, sourceText) {
+  const sourceCharacters = [...String(sourceText).replace(/\s+/g, "")];
+  let displayOffset = 0;
+  for (const character of sourceCharacters) {
+    displayOffset = String(displayText).indexOf(character, displayOffset);
+    if (displayOffset < 0) return false;
+    displayOffset += character.length;
+  }
+  return true;
+}
+
 function loadBatches() {
   const allNames = fs.readdirSync(workDirectory);
   const files = allNames
@@ -215,6 +226,91 @@ function loadQuestionTranslations(questions) {
     }
   }
   return translations;
+}
+
+function loadUrduCategoryDisplay(questions) {
+  const files = fs.readdirSync(workDirectory)
+    .filter((name) => /^urdu-category-display-\d{3}\.json$/i.test(name))
+    .sort();
+  const urduQuestions = questions.filter((question) => question.categoryId === "urdu");
+  const urduQuestionsById = new Map(urduQuestions.map((question) => [question.id, question]));
+  const records = new Map();
+
+  if (!files.length) fail("Urdu category display files are missing.");
+
+  for (const name of files) {
+    const value = JSON.parse(fs.readFileSync(path.join(workDirectory, name), "utf8"));
+    if (!value || Array.isArray(value) || typeof value !== "object" || value.version !== 1) {
+      fail(`${name} must contain an Urdu category display object with version 1.`);
+    }
+    if (!value.records || Array.isArray(value.records) || typeof value.records !== "object") {
+      fail(`${name} must contain a records object keyed by question ID.`);
+    }
+
+    for (const [id, record] of Object.entries(value.records)) {
+      const question = urduQuestionsById.get(id);
+      if (!question) fail(`${name} contains unknown or non-Urdu question ID ${id}.`);
+      if (records.has(id)) fail(`${id} has duplicate Urdu category display records.`);
+      if (!record || Array.isArray(record) || typeof record !== "object") {
+        fail(`${id} Urdu category display record must be an object.`);
+      }
+
+      const canonicalOptions = question.options.map(optionText);
+      if (!Array.isArray(record.sourceOptions) || JSON.stringify(record.sourceOptions) !== JSON.stringify(canonicalOptions)) {
+        fail(`${id} Urdu display sourceOptions no longer match the canonical option order.`);
+      }
+
+      const questionUrdu = String(record.questionUrdu || "").replace(/\s+/g, " ").trim();
+      if (questionUrdu.length < 3 || !/\p{Script=Arabic}/u.test(questionUrdu)) {
+        fail(`${id} needs a useful Urdu display question.`);
+      }
+      if (/[A-Za-z\uFFFD]/u.test(questionUrdu)) {
+        fail(`${id} Urdu display question contains Latin letters.`);
+      }
+      const questionNumericTokens = [...new Set(String(question.question).match(/\d+(?:[.,]\d+)*/g) || [])];
+      for (const token of questionNumericTokens) {
+        if (!questionUrdu.includes(token)) fail(`${id} Urdu display question must preserve numeric token ${token}.`);
+      }
+      if (String(question.question).includes("____") && !questionUrdu.includes("____") && !/[؟?]/u.test(questionUrdu)) {
+        fail(`${id} Urdu display question must preserve the blank or render it as a direct question.`);
+      }
+
+      if (!Array.isArray(record.optionsUrdu) || record.optionsUrdu.length !== optionLabels.length) {
+        fail(`${id} must have exactly four Urdu display options.`);
+      }
+      const optionsUrdu = record.optionsUrdu.map((option) => String(option || "").replace(/\s+/g, " ").trim());
+      if (optionsUrdu.some((option) => !option)) fail(`${id} has an empty Urdu display option.`);
+      if (optionsUrdu.some((option) => /[A-Za-z\uFFFD]/u.test(option))) {
+        fail(`${id} Urdu display options must not contain Latin letters.`);
+      }
+      if (new Set(optionsUrdu.map((option) => option.normalize("NFKC").toLocaleLowerCase("ur"))).size !== optionLabels.length) {
+        fail(`${id} Urdu display options must remain distinct.`);
+      }
+
+      canonicalOptions.forEach((option, index) => {
+        const numericTokens = [...new Set(String(option).match(/\d+(?:[.,]\d+)*/g) || [])];
+        for (const token of numericTokens) {
+          if (!optionsUrdu[index].includes(token)) {
+            fail(`${id} Urdu option ${optionLabels[index]} must preserve numeric token ${token}.`);
+          }
+        }
+        if (!/\p{Script=Arabic}/u.test(optionsUrdu[index]) && /[A-Za-z]/.test(option)) {
+          fail(`${id} Urdu option ${optionLabels[index]} needs Urdu script.`);
+        }
+        if (!/[A-Za-z\p{Script=Arabic}]/u.test(option) && !containsCharactersInOrder(optionsUrdu[index], option)) {
+          fail(`${id} symbol-only Urdu option ${optionLabels[index]} must preserve its characters in order.`);
+        }
+      });
+
+      records.set(id, { questionUrdu, optionsUrdu });
+    }
+  }
+
+  if (records.size !== urduQuestions.length) {
+    const missing = urduQuestions.filter((question) => !records.has(question.id)).map((question) => question.id);
+    fail(`Urdu category display has ${records.size} records; expected ${urduQuestions.length}. Missing: ${missing.slice(0, 10).join(", ")}${missing.length > 10 ? ", ..." : ""}`);
+  }
+  return records;
 }
 
 function validate(questions) {
@@ -372,11 +468,13 @@ function rebalanceSimilarOptions(questions) {
   });
 }
 
-function websiteQuestion(question, pairsById, translations, repeatEvidence) {
+function websiteQuestion(question, pairsById, translations, urduCategoryDisplay, repeatEvidence) {
   const pair = pairsById.get(question.pairId) || [];
   const relatedQuestion = pair.find((item) => item.id !== question.id);
   if (!relatedQuestion) fail(`${question.id} has no related pair for background history.`);
   const verifiedSkipCount = repeatEvidence.skipCountsByTargetId.get(question.id) || 0;
+
+  const urduDisplay = urduCategoryDisplay.get(question.id);
 
   return {
     id: question.id,
@@ -384,8 +482,9 @@ function websiteQuestion(question, pairsById, translations, repeatEvidence) {
     kind: question.kind,
     categoryId: question.categoryId,
     question: question.question,
-    questionUrdu: translations.get(question.id),
+    questionUrdu: urduDisplay ? urduDisplay.questionUrdu : translations.get(question.id),
     options: question.options,
+    ...(urduDisplay ? { optionsUrdu: urduDisplay.optionsUrdu } : {}),
     correctOptionIndex: question.correctOptionIndex,
     explanationUrdu: question.explanationUrdu,
     relatedHistoryUrdu: buildRelatedHistory(question, relatedQuestion),
@@ -449,7 +548,7 @@ function validateGeneratedRepeatMetadata(questions, repeatEvidence) {
   }
 }
 
-function buildJavaScript(questions, translations, repeatEvidence) {
+function buildJavaScript(questions, translations, urduCategoryDisplay, repeatEvidence) {
   const generatedOn = questions
     .map((question) => question.source.accessedOn)
     .sort()
@@ -460,7 +559,13 @@ function buildJavaScript(questions, translations, repeatEvidence) {
     pair.push(question);
     pairsById.set(question.pairId, pair);
   });
-  const websiteQuestions = questions.map((question) => websiteQuestion(question, pairsById, translations, repeatEvidence));
+  const websiteQuestions = questions.map((question) => websiteQuestion(
+    question,
+    pairsById,
+    translations,
+    urduCategoryDisplay,
+    repeatEvidence
+  ));
   validateGeneratedRepeatMetadata(websiteQuestions, repeatEvidence);
   const releaseData = {
     version: 5,
@@ -531,7 +636,13 @@ validate(questions);
 const repeatEvidence = loadRepeatEvidence();
 validateRepeatEvidence(questions, repeatEvidence);
 const translations = loadQuestionTranslations(questions);
-const { javascript: generatedJavaScript, releaseData } = buildJavaScript(questions, translations, repeatEvidence);
+const urduCategoryDisplay = loadUrduCategoryDisplay(questions);
+const { javascript: generatedJavaScript, releaseData } = buildJavaScript(
+  questions,
+  translations,
+  urduCategoryDisplay,
+  repeatEvidence
+);
 const releaseRepeatEvidence = buildReleaseRepeatEvidence(releaseData, repeatEvidence);
 const validateOnly = process.argv.includes("--validate-only");
 if (!validateOnly) {

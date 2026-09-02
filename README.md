@@ -9,7 +9,7 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 - The current partial release of `Advanced PPSC MCQs Papers, Volume 2` contains 4,169 independently verified, retained source MCQs and 4,169 original researched related questions. Work on the remaining supplied scan continues in restart-safe batches; unresolved and unreviewed records are excluded from the website.
 - **5,706 retained source MCQs + 5,706 original researched PPSC-style related questions = 11,412 website questions.**
 - 10 advertised syllabus subjects, plus a separate **Finance, Taxation & Job-related** category for questions found in the supplied papers but outside that syllabus.
-- English question stems and four answer options, with a readable Urdu translation directly below every question.
+- Non-Urdu subjects show English question stems and options with a readable Urdu translation below each question. The Urdu category shows its question and all four answer choices directly in Urdu with right-to-left typography.
 - A Learn mode that preselects and highlights the correct answer immediately.
 - A Quiz mode with instant Correct/Incorrect feedback after an answer is submitted.
 - A **Start Paper Here** flow builds a 100-MCQ paper from any selected combination of categories, using random questions and shuffled options.
@@ -41,7 +41,7 @@ ppsc-project/
 └── README.md
 ```
 
-`data/questions.js`, `data/release-repeat-evidence.json`, and the Markdown banks in the parent folder are generated outputs. The verified enrichment JSON and `question-translations-ur*.json` files under `work/` are the source of truth.
+`data/questions.js`, `data/release-repeat-evidence.json`, and the Markdown banks in the parent folder are generated outputs. The verified enrichment JSON, `question-translations-ur*.json`, and `urdu-category-display-*.json` files under `work/` are the source of truth.
 
 ## Preview locally
 
@@ -95,7 +95,7 @@ Each pair must:
 - Use `kind: "source"` with `source.type: "user"` for the supplied MCQ.
 - Use `kind: "similar"` with `source.type: "practice"` for the original related MCQ.
 - Include a useful Urdu explanation and a direct researched `referenceUrl` for both items.
-- Include a clear `questionUrdu` translation for both English question stems; the four options remain in English.
+- Include a clear `questionUrdu` translation for both English question stems. If an item belongs to the Urdu category, also add its aligned four-choice Urdu display record so the website can render the complete MCQ in Urdu without changing its canonical answer index.
 - Record the verification date as `source.accessedOn` in `YYYY-MM-DD` format.
 - Be closely related and keep the paired question's explanation and evidence link verified in the research data.
 

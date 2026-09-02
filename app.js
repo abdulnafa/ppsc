@@ -2,6 +2,7 @@
   "use strict";
 
   var OPTION_LABELS = ["A", "B", "C", "D"];
+  var URDU_OPTION_LABELS = ["الف", "ب", "ج", "د"];
   var CANONICAL_OPTION_ORDER = [0, 1, 2, 3];
   var POSITION_DEPENDENT_OPTION_PATTERN = /(?:\b(?:both|either|neither)\s+\(?\s*(?:(?:options?|choices?|answers?)\s*)?[A-D]\s*(?:and|or|&|\+)\s*(?:(?:options?|choices?|answers?)\s*)?[A-D]\s*\)?(?=\s|[.,;:)\]-]|$)|\bboth\s+of\s+(?:the\s+)?(?:above|below|these|them)\b|\b(?:all|none)\s+of\s+(?:the\s+)?(?:above|below)\b|\b(?:options?|choices?|answers?)\s*\(?[A-D]\)?(?=\s|[.,;:)\]-]|$))/i;
   var PAPER_QUESTION_COUNT = 100;
@@ -150,8 +151,10 @@
         question.id,
         question.categoryId,
         question.question,
+        question.questionUrdu,
         question.correctOptionIndex,
-        question.options
+        question.options,
+        question.optionsUrdu
       ]));
       hash = hashText(hash, "\n");
     });
@@ -1273,9 +1276,13 @@
       return Object.assign({}, option, { label: OPTION_LABELS[index] });
     });
     var shuffledCorrectIndex = optionOrder.indexOf(question.correctOptionIndex);
+    var shuffledOptionsUrdu = Array.isArray(question.optionsUrdu)
+      ? optionOrder.map(function (originalIndex) { return question.optionsUrdu[originalIndex]; })
+      : null;
 
     return Object.assign({}, question, {
       options: shuffledOptions,
+      ...(shuffledOptionsUrdu ? { optionsUrdu: shuffledOptionsUrdu } : {}),
       correctOptionIndex: shuffledCorrectIndex,
       _sessionOptionOrder: optionOrder.slice()
     });
@@ -1429,6 +1436,24 @@
     };
   }
 
+  function isUrduCategoryQuestion(question) {
+    return Boolean(question) && question.categoryId === "urdu";
+  }
+
+  function displayQuestionText(question) {
+    if (isUrduCategoryQuestion(question)) return String(question.questionUrdu || question.question || "").trim();
+    return String(question.question || "").trim();
+  }
+
+  function displayOption(question, index) {
+    var option = normalizeOption(question.options[index], index);
+    if (isUrduCategoryQuestion(question) && Array.isArray(question.optionsUrdu)) {
+      option.label = URDU_OPTION_LABELS[index];
+      option.text = String(question.optionsUrdu[index] || option.text).trim();
+    }
+    return option;
+  }
+
   function renderQuestion() {
     var question = currentQuestion();
     if (!question) {
@@ -1454,18 +1479,35 @@
       elements.questionKind.textContent = kindLabel;
       elements.questionKind.classList.toggle("is-important", isImportantQuestion(question));
     }
+    var urduCategoryQuestion = isUrduCategoryQuestion(question);
     if (elements.questionText) {
-      elements.questionText.textContent = question.question;
+      elements.questionText.textContent = displayQuestionText(question);
       elements.questionText.dataset.questionId = question.id;
+      elements.questionText.classList.toggle("is-urdu", urduCategoryQuestion);
+      if (urduCategoryQuestion) {
+        elements.questionText.lang = "ur";
+        elements.questionText.dir = "rtl";
+      } else {
+        elements.questionText.removeAttribute("lang");
+        elements.questionText.removeAttribute("dir");
+      }
     }
     var questionUrdu = String(question.questionUrdu || "").trim();
     if (elements.questionTextUrdu) elements.questionTextUrdu.textContent = questionUrdu;
-    if (elements.questionUrduBlock) setHidden(elements.questionUrduBlock, !questionUrdu);
+    if (elements.questionUrduBlock) setHidden(elements.questionUrduBlock, urduCategoryQuestion || !questionUrdu);
     if (elements.optionsList) {
       elements.optionsList.setAttribute(
         "aria-labelledby",
-        questionUrdu ? "question-text question-text-urdu" : "question-text"
+        !urduCategoryQuestion && questionUrdu ? "question-text question-text-urdu" : "question-text"
       );
+      elements.optionsList.classList.toggle("is-urdu", urduCategoryQuestion);
+      if (urduCategoryQuestion) {
+        elements.optionsList.lang = "ur";
+        elements.optionsList.dir = "rtl";
+      } else {
+        elements.optionsList.removeAttribute("lang");
+        elements.optionsList.removeAttribute("dir");
+      }
     }
     renderOptions(question);
     updateProgress();
@@ -1524,10 +1566,13 @@
     if (!elements.optionsList) return;
     elements.optionsList.textContent = "";
     elements.optionsList.setAttribute("role", "radiogroup");
-    elements.optionsList.setAttribute("aria-label", "Answer options");
+    elements.optionsList.setAttribute(
+      "aria-label",
+      isUrduCategoryQuestion(question) ? "جواب کے اختیارات" : "Answer options"
+    );
 
     question.options.forEach(function (rawOption, index) {
-      var option = normalizeOption(rawOption, index);
+      var option = displayOption(question, index);
       var button = document.createElement("button");
       button.type = "button";
       button.className = "option-button";
@@ -1538,10 +1583,16 @@
       var label = document.createElement("span");
       label.className = "option-label";
       label.textContent = option.label;
+      label.lang = isUrduCategoryQuestion(question) ? "ur" : "en";
+      label.dir = isUrduCategoryQuestion(question) ? "rtl" : "ltr";
 
       var text = document.createElement("span");
       text.className = "option-text";
       text.textContent = option.text;
+      if (isUrduCategoryQuestion(question)) {
+        text.lang = "ur";
+        text.dir = "rtl";
+      }
 
       button.appendChild(label);
       button.appendChild(text);
@@ -1579,7 +1630,7 @@
     }
 
     state.submitted = true;
-    showLearnFeedback();
+    showLearnFeedback(question);
 
     if (elements.actionButton) {
       var isLast = state.currentIndex === state.questions.length - 1;
@@ -1710,11 +1761,17 @@
   function showSelectionPrompt() {
     if (!elements.feedback) return;
     ensureFeedbackChildren();
+    var urduCategoryQuestion = isUrduCategoryQuestion(currentQuestion());
     elements.feedback.classList.remove("is-correct", "is-incorrect");
     elements.feedback.classList.add("feedback", "is-warning");
+    elements.feedback.classList.toggle("is-urdu", urduCategoryQuestion);
+    elements.feedback.lang = urduCategoryQuestion ? "ur" : "en";
+    elements.feedback.dir = urduCategoryQuestion ? "rtl" : "ltr";
     setHidden(elements.feedback, false);
-    elements.feedbackTitle.textContent = "Select an option";
-    elements.feedbackText.textContent = "Please choose one answer before checking.";
+    elements.feedbackTitle.textContent = urduCategoryQuestion ? "ایک جواب منتخب کریں" : "Select an option";
+    elements.feedbackText.textContent = urduCategoryQuestion
+      ? "جواب چیک کرنے سے پہلے ایک اختیار منتخب کریں۔"
+      : "Please choose one answer before checking.";
   }
 
   function markSubmittedOptions(question) {
@@ -1751,37 +1808,56 @@
     if (!elements.feedback) return;
     ensureFeedbackChildren();
 
-    var correctOption = normalizeOption(question.options[question.correctOptionIndex], question.correctOptionIndex);
+    var correctOption = displayOption(question, question.correctOptionIndex);
+    var urduCategoryQuestion = isUrduCategoryQuestion(question);
     elements.feedback.classList.remove("is-warning", "is-correct", "is-incorrect");
     elements.feedback.classList.add("feedback", isCorrect ? "is-correct" : "is-incorrect");
+    elements.feedback.classList.toggle("is-urdu", urduCategoryQuestion);
     elements.feedback.setAttribute("role", "status");
     elements.feedback.setAttribute("aria-live", "polite");
+    elements.feedback.lang = urduCategoryQuestion ? "ur" : "en";
+    elements.feedback.dir = urduCategoryQuestion ? "rtl" : "ltr";
     setHidden(elements.feedback, false);
 
-    elements.feedbackTitle.textContent = isCorrect ? "Correct!" : "Incorrect";
-    elements.feedbackText.textContent = isCorrect
-      ? "Well done — you selected the right answer."
-      : "The correct answer is " + correctOption.label + ". " + correctOption.text + ".";
+    elements.feedbackTitle.textContent = urduCategoryQuestion
+      ? (isCorrect ? "درست!" : "غلط")
+      : (isCorrect ? "Correct!" : "Incorrect");
+    elements.feedbackText.textContent = urduCategoryQuestion
+      ? (isCorrect
+        ? "بہت خوب — آپ نے صحیح جواب منتخب کیا۔"
+        : "درست جواب " + correctOption.label + "۔ " + correctOption.text + " ہے۔")
+      : (isCorrect
+        ? "Well done — you selected the right answer."
+        : "The correct answer is " + correctOption.label + ". " + correctOption.text + ".");
   }
 
-  function showLearnFeedback() {
+  function showLearnFeedback(question) {
     if (!elements.feedback) return;
     ensureFeedbackChildren();
 
+    var urduCategoryQuestion = isUrduCategoryQuestion(question);
     elements.feedback.classList.remove("is-warning", "is-incorrect");
     elements.feedback.classList.add("feedback", "is-correct");
+    elements.feedback.classList.toggle("is-urdu", urduCategoryQuestion);
     elements.feedback.setAttribute("role", "status");
     elements.feedback.setAttribute("aria-live", "polite");
+    elements.feedback.lang = urduCategoryQuestion ? "ur" : "en";
+    elements.feedback.dir = urduCategoryQuestion ? "rtl" : "ltr";
     setHidden(elements.feedback, false);
-    elements.feedbackTitle.textContent = "Correct answer";
-    elements.feedbackText.textContent = "The correct option is selected. Mark it as difficult if needed, then continue.";
+    elements.feedbackTitle.textContent = urduCategoryQuestion ? "درست جواب" : "Correct answer";
+    elements.feedbackText.textContent = urduCategoryQuestion
+      ? "درست جواب منتخب ہے۔ ضرورت ہو تو اسے مشکل نشان زد کریں، پھر آگے بڑھیں۔"
+      : "The correct option is selected. Mark it as difficult if needed, then continue.";
   }
 
   function resetFeedback() {
     if (elements.feedback) {
       elements.feedback.classList.remove("is-warning", "is-correct", "is-incorrect");
+      elements.feedback.classList.remove("is-urdu");
       elements.feedback.classList.add("feedback");
       setHidden(elements.feedback, true);
+      elements.feedback.removeAttribute("lang");
+      elements.feedback.removeAttribute("dir");
     }
     if (elements.feedbackTitle) elements.feedbackTitle.textContent = "";
     if (elements.feedbackText) elements.feedbackText.textContent = "";
@@ -1871,35 +1947,44 @@
       var question = state.questions[questionIndex];
       var response = state.responses[questionIndex];
       var category = findCategory(question.categoryId);
-      var selectedOption = normalizeOption(question.options[response.selectedIndex], response.selectedIndex);
-      var correctOption = normalizeOption(
-        question.options[question.correctOptionIndex],
-        question.correctOptionIndex
-      );
+      var selectedOption = displayOption(question, response.selectedIndex);
+      var correctOption = displayOption(question, question.correctOptionIndex);
+      var urduCategoryQuestion = isUrduCategoryQuestion(question);
 
       var item = document.createElement("li");
       item.className = "result-review-item " + (showCorrect ? "is-correct" : "is-wrong");
+      item.classList.toggle("is-urdu", urduCategoryQuestion);
+      if (urduCategoryQuestion) {
+        item.lang = "ur";
+        item.dir = "rtl";
+      }
       var heading = document.createElement("strong");
-      heading.textContent = "Question " + (questionIndex + 1) + ". " + question.question;
+      heading.textContent = urduCategoryQuestion
+        ? "سوال " + (questionIndex + 1) + "۔ " + displayQuestionText(question)
+        : "Question " + (questionIndex + 1) + ". " + displayQuestionText(question);
       item.appendChild(heading);
       appendPaperReviewText(
         item,
         "result-review-meta",
-        category ? "Category: " + category.name : "",
-        ""
+        category ? (urduCategoryQuestion ? "زمرہ: اردو" : "Category: " + category.name) : "",
+        urduCategoryQuestion ? "ur" : ""
       );
-      appendPaperReviewText(item, "result-review-question-urdu", String(question.questionUrdu || "").trim(), "ur");
+      if (!urduCategoryQuestion) {
+        appendPaperReviewText(item, "result-review-question-urdu", String(question.questionUrdu || "").trim(), "ur");
+      }
       appendPaperReviewText(
         item,
         "result-review-answer",
-        "Your answer: " + selectedOption.label + ". " + selectedOption.text,
-        ""
+        (urduCategoryQuestion ? "آپ کا جواب: " : "Your answer: ")
+          + selectedOption.label + (urduCategoryQuestion ? "۔ " : ". ") + selectedOption.text,
+        urduCategoryQuestion ? "ur" : ""
       );
       appendPaperReviewText(
         item,
         "result-review-answer",
-        "Correct answer: " + correctOption.label + ". " + correctOption.text,
-        ""
+        (urduCategoryQuestion ? "درست جواب: " : "Correct answer: ")
+          + correctOption.label + (urduCategoryQuestion ? "۔ " : ". ") + correctOption.text,
+        urduCategoryQuestion ? "ur" : ""
       );
       appendPaperReviewText(
         item,

@@ -33,6 +33,17 @@ function error(message) {
   errors.push(message);
 }
 
+function containsCharactersInOrder(displayText, sourceText) {
+  const sourceCharacters = [...String(sourceText).replace(/\s+/g, "")];
+  let displayOffset = 0;
+  for (const character of sourceCharacters) {
+    displayOffset = String(displayText).indexOf(character, displayOffset);
+    if (displayOffset < 0) return false;
+    displayOffset += character.length;
+  }
+  return true;
+}
+
 function loadData() {
   const sandbox = { window: {} };
   vm.createContext(sandbox);
@@ -168,6 +179,48 @@ function validateData(data) {
       error(`${location}: must have exactly four options`);
     } else if (question.options.some((option) => !String(typeof option === "object" ? option.text : option).trim())) {
       error(`${location}: has an empty option`);
+    }
+    if (question.categoryId === "urdu") {
+      const questionUrdu = String(question.questionUrdu || "").trim();
+      if (!/\p{Script=Arabic}/u.test(questionUrdu) || /[A-Za-z\uFFFD]/u.test(questionUrdu)) {
+        error(`${location}: Urdu-category questionUrdu must use Urdu script without Latin or replacement characters`);
+      }
+      const questionNumericTokens = [...new Set(String(question.question || "").match(/\d+(?:[.,]\d+)*/g) || [])];
+      for (const token of questionNumericTokens) {
+        if (!questionUrdu.includes(token)) error(`${location}: questionUrdu must preserve numeric token ${token}`);
+      }
+      if (!Array.isArray(question.optionsUrdu) || question.optionsUrdu.length !== 4) {
+        error(`${location}: Urdu-category question must have exactly four optionsUrdu`);
+      } else {
+        const optionsUrdu = question.optionsUrdu.map((option) => String(option || "").trim());
+        if (optionsUrdu.some((option) => !option)) error(`${location}: has an empty Urdu display option`);
+        if (optionsUrdu.some((option) => /[A-Za-z\uFFFD]/u.test(option))) {
+          error(`${location}: Urdu display options must not contain Latin or replacement characters`);
+        }
+        if (new Set(optionsUrdu.map((option) => option.normalize("NFKC").toLocaleLowerCase("ur"))).size !== 4) {
+          error(`${location}: Urdu display options must remain distinct`);
+        }
+        if (Array.isArray(question.options) && question.options.length === 4) {
+          question.options.forEach((option, optionIndex) => {
+            const sourceText = String(typeof option === "object" ? option.text : option);
+            const numericTokens = [...new Set(sourceText.match(/\d+(?:[.,]\d+)*/g) || [])];
+            for (const token of numericTokens) {
+              if (!optionsUrdu[optionIndex].includes(token)) {
+                error(`${location}: Urdu option ${optionIndex + 1} must preserve numeric token ${token}`);
+              }
+            }
+            if (/[A-Za-z]/.test(sourceText) && !/\p{Script=Arabic}/u.test(optionsUrdu[optionIndex])) {
+              error(`${location}: translated option ${optionIndex + 1} needs Urdu script`);
+            }
+            if (!/[A-Za-z\p{Script=Arabic}]/u.test(sourceText)
+              && !containsCharactersInOrder(optionsUrdu[optionIndex], sourceText)) {
+              error(`${location}: symbol-only Urdu option ${optionIndex + 1} must preserve its characters in order`);
+            }
+          });
+        }
+      }
+    } else if (Object.prototype.hasOwnProperty.call(question, "optionsUrdu")) {
+      error(`${location}: non-Urdu category must not define optionsUrdu`);
     }
     if (!Number.isInteger(question.correctOptionIndex) || question.correctOptionIndex < 0 || question.correctOptionIndex > 3) {
       error(`${location}: invalid correctOptionIndex`);

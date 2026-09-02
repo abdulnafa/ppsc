@@ -140,6 +140,7 @@ async function main() {
   const pageUrl = pathToFileURL(path.join(projectDirectory, "index.html")).href;
   const browser = spawn(chromePath, [
     "--headless=new",
+    "--no-sandbox",
     "--disable-gpu",
     "--no-first-run",
     "--no-default-browser-check",
@@ -201,6 +202,28 @@ async function main() {
       if (importantQuestions.length !== 1071) errors.push("Expected 1,071 evidence-based important questions.");
       if (importantQuestions.some((question) => !Number.isInteger(question.repeatCount) || question.repeatCount < 2)) errors.push("Important repeat metadata is invalid.");
       if (data && data.questions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) errors.push("A question is missing its Urdu translation.");
+      const urduQuestions = data ? data.questions.filter((question) => question.categoryId === "urdu") : [];
+      if (urduQuestions.length !== 882) errors.push("Expected 882 Urdu-category questions.");
+      if (urduQuestions.some((question) => {
+        const text = String(question.questionUrdu || "").trim();
+        return !text || !/[\u0600-\u06ff]/u.test(text) || /[A-Za-z]/.test(text);
+      })) {
+        errors.push("An Urdu-category question is empty, lacks Urdu script, or still contains Latin letters.");
+      }
+      if (urduQuestions.some((question) => !Array.isArray(question.optionsUrdu) || question.optionsUrdu.length !== 4)) {
+        errors.push("An Urdu-category question is missing four localized options.");
+      }
+      if (urduQuestions.some((question) => Array.isArray(question.optionsUrdu)
+        && question.optionsUrdu.some((option) => !String(option || "").trim() || /[A-Za-z]/.test(option)))) {
+        errors.push("An Urdu-category answer is empty or still contains Latin letters.");
+      }
+      if (urduQuestions.some((question) => Array.isArray(question.optionsUrdu)
+        && new Set(question.optionsUrdu.map((option) => String(option || "").trim().normalize("NFKC").toLocaleLowerCase("ur"))).size !== 4)) {
+        errors.push("An Urdu-category question has duplicate localized options.");
+      }
+      if (data && data.questions.some((question) => question.categoryId !== "urdu" && Object.prototype.hasOwnProperty.call(question, "optionsUrdu"))) {
+        errors.push("A non-Urdu category question unexpectedly defines Urdu-only options.");
+      }
       if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("Category cards did not render.");
       if (visible(document.querySelector("#continue-session-card"))) errors.push("A fresh profile incorrectly showed Continue.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Mobile layout has horizontal overflow.");
@@ -252,6 +275,9 @@ async function main() {
       const allCategoryQuestions = data.questions.filter((question) => question.categoryId === activeCategory);
       const categoryQuestions = allCategoryQuestions;
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const displayOptions = (question) => question.categoryId === "urdu" && Array.isArray(question.optionsUrdu)
+        ? question.optionsUrdu.map(String)
+        : question.options.map(optionText);
       const findCurrent = () => {
         const questionId = document.querySelector("#question-text").dataset.questionId;
         return categoryQuestions.find((question) => question.id === questionId);
@@ -259,10 +285,10 @@ async function main() {
       const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
         .map((element) => element.textContent);
       const correctRenderedIndex = (question) => renderedOptionTexts().indexOf(
-        optionText(question.options[question.correctOptionIndex])
+        displayOptions(question)[question.correctOptionIndex]
       );
       const verifyQuizOptionShuffle = (question) => {
-        const original = question.options.map(optionText);
+        const original = displayOptions(question);
         const rendered = renderedOptionTexts();
         if (JSON.stringify(rendered) === JSON.stringify(original)) {
           errors.push("Quiz options were not shuffled for " + question.id + ".");
@@ -354,7 +380,7 @@ async function main() {
       let question = findCurrent();
       let correctButton = document.querySelector('[data-option-index="' + correctRenderedIndex(question) + '"]');
       if (!correctButton.disabled || !correctButton.classList.contains("is-correct")) errors.push("Learn mode did not reveal and lock the correct answer.");
-      if (JSON.stringify(renderedOptionTexts()) !== JSON.stringify(question.options.map(optionText))) errors.push("Learn mode changed the source option order.");
+      if (JSON.stringify(renderedOptionTexts()) !== JSON.stringify(displayOptions(question))) errors.push("Learn mode changed the source option order.");
       if (!visible(document.querySelector("#question-urdu-block")) || document.querySelector("#question-text-urdu").textContent !== question.questionUrdu) errors.push("Urdu question translation did not render in Learn mode.");
       if (document.querySelector("#score-text").textContent !== "Learn Mode") errors.push("Learn mode displayed a score.");
       if (document.querySelector("#action-button").textContent !== "Next Question" && categoryQuestions.length > 1) errors.push("Learn mode did not offer the next question immediately.");
@@ -962,6 +988,9 @@ async function main() {
       const expectedMarkedIds = ${JSON.stringify(normalResult.markedQuestionIds)};
       const categoryQuestions = data.questions.filter((question) => question.categoryId === expectedCategoryId);
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const displayOptions = (question) => question.categoryId === "urdu" && Array.isArray(question.optionsUrdu)
+        ? question.optionsUrdu.map(String)
+        : question.options.map(optionText);
       const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
         .map((element) => element.textContent);
       const findCurrent = () => {
@@ -969,7 +998,7 @@ async function main() {
         return categoryQuestions.find((question) => question.id === questionId);
       };
       const correctRenderedIndex = (question) => renderedOptionTexts().indexOf(
-        optionText(question.options[question.correctOptionIndex])
+        displayOptions(question)[question.correctOptionIndex]
       );
       const progressMatches = (number, total) => {
         const input = document.querySelector("#question-number-input");
@@ -1043,7 +1072,7 @@ async function main() {
         difficultQuizIds.push(quizQuestion.id);
         const renderedOrder = JSON.stringify(renderedOptionTexts());
         difficultQuizOptionOrders[quizQuestion.id] = renderedOrder;
-        if (renderedOrder === JSON.stringify(quizQuestion.options.map(optionText))) errors.push("Difficult Quiz options were not shuffled.");
+        if (renderedOrder === JSON.stringify(displayOptions(quizQuestion))) errors.push("Difficult Quiz options were not shuffled.");
         const correctIndex = correctRenderedIndex(quizQuestion);
         document.querySelector('[data-option-index="' + correctIndex + '"]').click();
         document.querySelector("#action-button").click();
@@ -1311,6 +1340,261 @@ async function main() {
       return { errors };
     })()`);
 
+    const urduSetupResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
+      const errors = [];
+      const data = window.PPSC_QUIZ_DATA;
+      const storageKey = "ppsc-prep:active-session:v1";
+      const urduLabels = ["الف", "ب", "ج", "د"];
+      const urduQuestions = data.questions.filter((question) => question.categoryId === "urdu");
+      const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
+      const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
+        .map((element) => element.textContent);
+      const renderedOptionLabels = () => [...document.querySelectorAll("#options-container .option-label")]
+        .map((element) => element.textContent);
+      const assertUrduSurface = (question, expectedOptions, context) => {
+        const questionText = document.querySelector("#question-text");
+        const secondaryBlock = document.querySelector("#question-urdu-block");
+        const optionsContainer = document.querySelector("#options-container");
+        const optionTexts = [...document.querySelectorAll("#options-container .option-text")];
+        const optionLabels = [...document.querySelectorAll("#options-container .option-label")];
+        if (!question || questionText.dataset.questionId !== question.id) errors.push(context + " rendered the wrong Urdu question.");
+        if (!question || questionText.textContent !== question.questionUrdu) errors.push(context + " did not use questionUrdu as the main question text.");
+        if (visible(secondaryBlock)) errors.push(context + " displayed the duplicate secondary Urdu block.");
+        if (!questionText.classList.contains("is-urdu") || questionText.lang !== "ur" || questionText.dir !== "rtl") errors.push(context + " main question lacks Urdu class/lang/dir.");
+        if (!getComputedStyle(questionText).fontFamily.includes("Noto Nastaliq Urdu")) errors.push(context + " main question lacks the Urdu font.");
+        if (!optionsContainer.classList.contains("is-urdu") || optionsContainer.lang !== "ur" || optionsContainer.dir !== "rtl") errors.push(context + " options container lacks Urdu class/lang/dir.");
+        if (JSON.stringify(renderedOptionTexts()) !== JSON.stringify(expectedOptions)) errors.push(context + " rendered options do not match the aligned optionsUrdu order.");
+        if (JSON.stringify(renderedOptionLabels()) !== JSON.stringify(urduLabels)) errors.push(context + " did not render Urdu option labels.");
+        if (optionTexts.some((element) => element.lang !== "ur" || element.dir !== "rtl" || /[A-Za-z]/.test(element.textContent))) errors.push(context + " has a non-Urdu option surface.");
+        if (optionTexts.some((element) => !getComputedStyle(element).fontFamily.includes("Noto Nastaliq Urdu"))) errors.push(context + " option text lacks the Urdu font.");
+        if (optionLabels.some((element) => element.lang !== "ur" || element.dir !== "rtl")) errors.push(context + " option labels lack Urdu language/direction attributes.");
+      };
+
+      if (visible(document.querySelector("#quiz-screen"))) {
+        document.querySelector("#back-button").click();
+        await pause();
+      }
+      localStorage.removeItem(storageKey);
+      const urduCategoryButton = document.querySelector('#category-grid .category-card[data-category="urdu"]');
+      if (!urduCategoryButton || urduQuestions.length !== 882) {
+        errors.push("Could not start the dedicated Urdu display test.");
+        return { errors, expected: {} };
+      }
+
+      urduCategoryButton.click();
+      document.querySelector("#learn-mode-button").click();
+      await pause();
+      const learnQuestion = questionById.get(String(document.querySelector("#question-text").dataset.questionId));
+      assertUrduSurface(learnQuestion, learnQuestion ? learnQuestion.optionsUrdu : [], "Urdu Learn");
+      if (!learnQuestion || learnQuestion.id !== urduQuestions[0].id) errors.push("Urdu Learn did not retain canonical source order.");
+      const learnCorrectButton = learnQuestion
+        ? document.querySelector('[data-option-index="' + learnQuestion.correctOptionIndex + '"]')
+        : null;
+      if (!learnCorrectButton || !learnCorrectButton.disabled || !learnCorrectButton.classList.contains("is-selected") || !learnCorrectButton.classList.contains("is-correct") || learnCorrectButton.getAttribute("aria-checked") !== "true") {
+        errors.push("Urdu Learn did not select, reveal, and lock the correct answer.");
+      }
+      const learnFeedback = document.querySelector("#feedback");
+      if (!visible(learnFeedback) || !learnFeedback.classList.contains("is-urdu") || learnFeedback.lang !== "ur" || learnFeedback.dir !== "rtl" || document.querySelector("#feedback-title").textContent !== "درست جواب") {
+        errors.push("Urdu Learn feedback did not use its Urdu presentation.");
+      }
+
+      document.querySelector("#back-button").click();
+      await pause();
+      urduCategoryButton.click();
+      document.querySelector("#quiz-mode-button").click();
+      await pause();
+      const initialSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
+      const firstQuestion = questionById.get(String(document.querySelector("#question-text").dataset.questionId));
+      const firstOrder = initialSnapshot && Array.isArray(initialSnapshot.optionOrders)
+        ? initialSnapshot.optionOrders[0]
+        : [];
+      const firstExpectedOptions = firstQuestion && firstOrder.length === 4
+        ? firstOrder.map((originalIndex) => firstQuestion.optionsUrdu[originalIndex])
+        : [];
+      assertUrduSurface(firstQuestion, firstExpectedOptions, "Urdu Quiz");
+      if (!initialSnapshot || initialSnapshot.version !== 6 || initialSnapshot.sessionKind !== "category" || initialSnapshot.categoryId !== "urdu" || initialSnapshot.paperCategoryIds !== null || initialSnapshot.mode !== "quiz" || initialSnapshot.scope !== "all") {
+        errors.push("Urdu Quiz did not use the v6 category-session schema.");
+      }
+      document.querySelector("#action-button").click();
+      await pause();
+      const selectionPrompt = document.querySelector("#feedback");
+      if (!visible(selectionPrompt) || !selectionPrompt.classList.contains("is-warning") || !selectionPrompt.classList.contains("is-urdu") || selectionPrompt.lang !== "ur" || selectionPrompt.dir !== "rtl" || document.querySelector("#feedback-title").textContent !== "ایک جواب منتخب کریں" || document.querySelector("#feedback-text").textContent !== "جواب چیک کرنے سے پہلے ایک اختیار منتخب کریں۔" || /[A-Za-z]/.test(selectionPrompt.textContent)) {
+        errors.push("Urdu Quiz no-selection warning was not fully localized.");
+      }
+      if (document.querySelector("#action-button").textContent !== "Check Answer" || document.querySelector("#score-text").textContent !== "Score: 0") errors.push("Urdu no-selection warning changed action or scoring state.");
+      const firstCorrectRenderedIndex = firstQuestion && firstOrder.length === 4
+        ? firstOrder.indexOf(firstQuestion.correctOptionIndex)
+        : -1;
+      const firstWrongRenderedIndex = firstCorrectRenderedIndex >= 0 ? (firstCorrectRenderedIndex + 1) % 4 : -1;
+      const firstWrongButton = document.querySelector('[data-option-index="' + firstWrongRenderedIndex + '"]');
+      if (firstCorrectRenderedIndex < 0 || !firstWrongButton) {
+        errors.push("Urdu Quiz could not map the canonical correct index through stored optionOrder.");
+      } else {
+        firstWrongButton.click();
+        document.querySelector("#action-button").click();
+        await pause();
+      }
+      const firstCorrectText = firstCorrectRenderedIndex >= 0 ? firstExpectedOptions[firstCorrectRenderedIndex] : "";
+      if (document.querySelector("#score-text").textContent !== "Score: 0") errors.push("Urdu Quiz scored a wrong answer as correct.");
+      if (document.querySelector("#feedback-title").textContent !== "غلط" || !document.querySelector("#feedback-text").textContent.includes(firstCorrectText)) errors.push("Urdu Quiz wrong feedback did not reveal the Urdu correct answer.");
+      if (!document.querySelector("#feedback").classList.contains("is-urdu") || document.querySelector("#feedback").lang !== "ur" || document.querySelector("#feedback").dir !== "rtl" || /[A-Za-z]/.test(document.querySelector("#feedback-text").textContent)) errors.push("Urdu Quiz wrong feedback was not fully localized.");
+      const mappedCorrectButton = document.querySelector('[data-option-index="' + firstCorrectRenderedIndex + '"]');
+      if (!mappedCorrectButton || !mappedCorrectButton.disabled || !mappedCorrectButton.classList.contains("is-correct")) errors.push("Urdu Quiz did not mark the remapped correct answer.");
+
+      document.querySelector("#action-button").click();
+      await pause();
+      const secondQuestion = questionById.get(String(document.querySelector("#question-text").dataset.questionId));
+      const afterAdvanceSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
+      const secondOrder = afterAdvanceSnapshot && Array.isArray(afterAdvanceSnapshot.optionOrders)
+        ? afterAdvanceSnapshot.optionOrders[1]
+        : [];
+      const secondExpectedOptions = secondQuestion && secondOrder.length === 4
+        ? secondOrder.map((originalIndex) => secondQuestion.optionsUrdu[originalIndex])
+        : [];
+      const secondCorrectRenderedIndex = secondQuestion && secondOrder.length === 4
+        ? secondOrder.indexOf(secondQuestion.correctOptionIndex)
+        : -1;
+      assertUrduSurface(secondQuestion, secondExpectedOptions, "Urdu Quiz pending question");
+      const pendingButton = document.querySelector('[data-option-index="' + secondCorrectRenderedIndex + '"]');
+      if (secondCorrectRenderedIndex < 0 || !pendingButton) {
+        errors.push("Urdu Quiz could not prepare a pending localized answer.");
+      } else {
+        pendingButton.click();
+        await pause();
+      }
+      const resumeSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!resumeSnapshot || resumeSnapshot.version !== 6 || resumeSnapshot.currentIndex !== 1 || resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== secondCorrectRenderedIndex || resumeSnapshot.score !== 0) errors.push("Urdu Quiz pending checkpoint is invalid.");
+      if (!resumeSnapshot || !resumeSnapshot.answerHistory[0] || resumeSnapshot.answerHistory[0][0] !== firstWrongRenderedIndex || resumeSnapshot.answerHistory[0][1] !== true || !resumeSnapshot.answerHistory[1] || resumeSnapshot.answerHistory[1][0] !== secondCorrectRenderedIndex || resumeSnapshot.answerHistory[1][1] !== false) {
+        errors.push("Urdu Quiz did not persist its submitted and pending answer states.");
+      }
+
+      return {
+        errors,
+        expected: {
+          questionIds: resumeSnapshot ? resumeSnapshot.questionIds : [],
+          optionOrders: resumeSnapshot ? resumeSnapshot.optionOrders : [],
+          answerHistory: resumeSnapshot ? resumeSnapshot.answerHistory : [],
+          first: {
+            id: firstQuestion ? firstQuestion.id : "",
+            optionTexts: firstExpectedOptions,
+            wrongIndex: firstWrongRenderedIndex,
+            correctIndex: firstCorrectRenderedIndex,
+            correctText: firstCorrectText
+          },
+          pending: {
+            id: secondQuestion ? secondQuestion.id : "",
+            optionTexts: secondExpectedOptions,
+            selectedIndex: secondCorrectRenderedIndex
+          }
+        }
+      };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for Urdu Continue verification in time."));
+        }
+      }, 50);
+    })`);
+
+    const urduResumeResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element &&
+        !element.hidden &&
+        getComputedStyle(element).display !== "none" &&
+        element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(urduSetupResult.expected)};
+      const data = window.PPSC_QUIZ_DATA;
+      const storageKey = "ppsc-prep:active-session:v1";
+      const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
+      const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
+        .map((element) => element.textContent);
+      const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!visible(document.querySelector("#continue-session-card")) || !document.querySelector("#continue-session-title").textContent.includes("Urdu")) errors.push("Reload did not offer Continue for the Urdu Quiz.");
+      if (!storedBeforeContinue || storedBeforeContinue.version !== 6 || storedBeforeContinue.categoryId !== "urdu" || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds) || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders) || JSON.stringify(storedBeforeContinue.answerHistory) !== JSON.stringify(expected.answerHistory)) {
+        errors.push("Reload changed the saved Urdu Quiz IDs, option order, or answer states.");
+      }
+      document.querySelector("#continue-session-button").click();
+      await pause();
+      if (document.querySelector("#question-text").dataset.questionId !== expected.pending.id || document.querySelector("#question-text").textContent !== questionById.get(expected.pending.id).questionUrdu) errors.push("Urdu Continue restored the wrong pending question or stem.");
+      if (JSON.stringify(renderedOptionTexts()) !== JSON.stringify(expected.pending.optionTexts)) errors.push("Urdu Continue changed the pending localized option order.");
+      const pendingButton = document.querySelector('[data-option-index="' + expected.pending.selectedIndex + '"]');
+      if (!pendingButton || !pendingButton.classList.contains("is-selected") || pendingButton.disabled || visible(document.querySelector("#feedback"))) errors.push("Urdu Continue did not restore the pending selection state.");
+      if (!document.querySelector("#question-text").classList.contains("is-urdu") || document.querySelector("#question-text").lang !== "ur" || document.querySelector("#question-text").dir !== "rtl" || visible(document.querySelector("#question-urdu-block"))) errors.push("Urdu Continue lost the RTL primary-question surface.");
+
+      const numberInput = document.querySelector("#question-number-input");
+      numberInput.value = "1";
+      numberInput.dispatchEvent(new Event("change", { bubbles: true }));
+      await pause();
+      if (document.querySelector("#question-text").dataset.questionId !== expected.first.id || JSON.stringify(renderedOptionTexts()) !== JSON.stringify(expected.first.optionTexts)) errors.push("Urdu Continue did not preserve the submitted question/order.");
+      const restoredWrongButton = document.querySelector('[data-option-index="' + expected.first.wrongIndex + '"]');
+      if (!restoredWrongButton || !restoredWrongButton.disabled || !restoredWrongButton.classList.contains("is-incorrect") || document.querySelector("#feedback-title").textContent !== "غلط" || !document.querySelector("#feedback-text").textContent.includes(expected.first.correctText)) {
+        errors.push("Urdu Continue did not restore submitted wrong-answer feedback.");
+      }
+      numberInput.value = "2";
+      numberInput.dispatchEvent(new Event("change", { bubbles: true }));
+      await pause();
+      if (document.querySelector("#question-text").dataset.questionId !== expected.pending.id || JSON.stringify(renderedOptionTexts()) !== JSON.stringify(expected.pending.optionTexts)) errors.push("Urdu Continue changed the pending state after navigation.");
+      const pendingAgain = document.querySelector('[data-option-index="' + expected.pending.selectedIndex + '"]');
+      if (!pendingAgain || !pendingAgain.classList.contains("is-selected") || pendingAgain.disabled || visible(document.querySelector("#feedback"))) errors.push("Urdu pending selection did not survive submitted-question navigation.");
+      document.querySelector("#action-button").click();
+      await pause();
+      const submittedPendingButton = document.querySelector('[data-option-index="' + expected.pending.selectedIndex + '"]');
+      if (document.querySelector("#score-text").textContent !== "Score: 1" || document.querySelector("#feedback-title").textContent !== "درست!" || !submittedPendingButton || !submittedPendingButton.disabled || !submittedPendingButton.classList.contains("is-correct")) errors.push("Urdu Quiz did not map and score the restored correct answer.");
+      if (!document.querySelector("#feedback").classList.contains("is-urdu") || document.querySelector("#feedback").lang !== "ur" || document.querySelector("#feedback").dir !== "rtl" || /[A-Za-z]/.test(document.querySelector("#feedback").textContent)) errors.push("Urdu Quiz correct feedback was not fully localized.");
+
+      document.querySelector("#back-button").click();
+      await pause();
+      const generalButton = document.querySelector('#category-grid .category-card[data-category="general-knowledge"]');
+      generalButton.click();
+      document.querySelector("#learn-mode-button").click();
+      await pause();
+      const generalQuestion = questionById.get(String(document.querySelector("#question-text").dataset.questionId));
+      const mainQuestion = document.querySelector("#question-text");
+      const optionsContainer = document.querySelector("#options-container");
+      const secondaryBlock = document.querySelector("#question-urdu-block");
+      const optionLabels = [...document.querySelectorAll("#options-container .option-label")];
+      const optionTexts = [...document.querySelectorAll("#options-container .option-text")];
+      const sourceOptionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      if (!generalQuestion || mainQuestion.textContent !== generalQuestion.question) errors.push("Transition from Urdu did not restore the non-Urdu main stem.");
+      if (mainQuestion.classList.contains("is-urdu") || mainQuestion.hasAttribute("lang") || mainQuestion.hasAttribute("dir")) errors.push("Transition from Urdu left RTL attributes on the non-Urdu question.");
+      if (optionsContainer.classList.contains("is-urdu") || optionsContainer.hasAttribute("lang") || optionsContainer.hasAttribute("dir")) errors.push("Transition from Urdu left RTL attributes on the non-Urdu options.");
+      if (!visible(secondaryBlock) || document.querySelector("#question-text-urdu").textContent !== generalQuestion.questionUrdu) errors.push("Transition from Urdu did not restore the secondary Urdu translation.");
+      if (JSON.stringify(renderedOptionTexts()) !== JSON.stringify(generalQuestion.options.map(sourceOptionText))) errors.push("Transition from Urdu did not restore canonical non-Urdu options.");
+      if (JSON.stringify(optionLabels.map((element) => element.textContent)) !== JSON.stringify(["A", "B", "C", "D"]) || optionLabels.some((element) => element.lang !== "en" || element.dir !== "ltr")) errors.push("Transition from Urdu did not restore English option labels.");
+      if (optionTexts.some((element) => element.hasAttribute("lang") || element.hasAttribute("dir"))) errors.push("Transition from Urdu left language/direction attributes on option text.");
+      const feedback = document.querySelector("#feedback");
+      if (feedback.classList.contains("is-urdu") || feedback.lang !== "en" || feedback.dir !== "ltr" || document.querySelector("#feedback-title").textContent !== "Correct answer") errors.push("Transition from Urdu did not reset feedback language/direction.");
+      document.querySelector("#back-button").click();
+      await pause();
+      localStorage.removeItem(storageKey);
+
+      return {
+        errors,
+        learnLocalized: true,
+        quizOrderRestored: true,
+        submittedAndPendingRestored: true,
+        nonUrduReset: true
+      };
+    })()`);
+
     const paperSetupResult = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
       const visible = (element) => Boolean(
@@ -1322,9 +1606,12 @@ async function main() {
       const errors = [];
       const data = window.PPSC_QUIZ_DATA;
       const storageKey = "ppsc-prep:active-session:v1";
-      const selectedCategoryIds = ["general-knowledge", "pakistan-studies"];
+      const selectedCategoryIds = ["general-knowledge", "urdu"];
       const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const displayOptions = (question) => question && question.categoryId === "urdu" && Array.isArray(question.optionsUrdu)
+        ? question.optionsUrdu.map(String)
+        : (question ? question.options.map(optionText) : []);
       const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
         .map((element) => element.textContent);
       const currentCanonicalQuestion = () => questionById.get(
@@ -1333,24 +1620,31 @@ async function main() {
       const currentCorrectRenderedIndex = () => {
         const question = currentCanonicalQuestion();
         return question
-          ? renderedOptionTexts().indexOf(optionText(question.options[question.correctOptionIndex]))
+          ? renderedOptionTexts().indexOf(displayOptions(question)[question.correctOptionIndex])
           : -1;
       };
       const answerCurrent = async (correct) => {
+        const question = currentCanonicalQuestion();
         const correctIndex = currentCorrectRenderedIndex();
         if (correctIndex < 0) {
           errors.push("Custom Paper could not map the current correct answer.");
-          return;
+          return null;
         }
         const selectedIndex = correct ? correctIndex : (correctIndex + 1) % 4;
         const button = document.querySelector('[data-option-index="' + selectedIndex + '"]');
         if (!button) {
           errors.push("Custom Paper answer option was missing.");
-          return;
+          return null;
         }
         button.click();
         document.querySelector("#action-button").click();
         await pause();
+        return {
+          question,
+          correctIndex,
+          selectedIndex,
+          correctText: renderedOptionTexts()[correctIndex]
+        };
       };
 
       const backButton = document.querySelector("#back-button");
@@ -1423,29 +1717,55 @@ async function main() {
         categoryId,
         sampledQuestions.filter((question) => question.categoryId === categoryId).length
       ]));
-      if (selectedCategoryIds.some((categoryId) => sampledCategoryCounts[categoryId] < 1)) errors.push("A selected category was omitted from the Custom Paper.");
-      if (Math.max(...Object.values(sampledCategoryCounts)) - Math.min(...Object.values(sampledCategoryCounts)) > 1) errors.push("Custom Paper category allocation was not balanced within one question.");
+      if (selectedCategoryIds.some((categoryId) => sampledCategoryCounts[categoryId] !== 50)) errors.push("Custom Paper did not allocate exactly 50 General Knowledge and 50 Urdu questions.");
       if (document.querySelector("#question-total").textContent.trim() !== "100" || document.querySelector("#question-number-input").max !== "100") errors.push("Custom Paper progress did not use exactly 100 questions.");
       if (document.querySelector("#score-text").textContent !== "C:0 W:0 Marks:0") errors.push("Custom Paper live score did not start at zero.");
 
-      for (let index = 0; index < 4; index += 1) {
-        await answerCurrent(false);
-        const expectedMark = String(-0.25 * (index + 1));
-        if (document.querySelector("#feedback-title").textContent !== "Incorrect") errors.push("Custom Paper did not show instant Incorrect feedback.");
-        if (!document.querySelector("#feedback-text").textContent.includes("The correct answer is")) errors.push("Custom Paper did not reveal the correct answer after a wrong response.");
-        if (document.querySelector("#score-text").textContent !== "C:0 W:" + (index + 1) + " Marks:" + expectedMark) errors.push("Custom Paper live wrong count/negative mark was incorrect after answer " + (index + 1) + ".");
-        if (index < 3) {
+      const firstUrduIndex = sampledQuestions.findIndex((question) => question.categoryId === "urdu");
+      const firstThreeContainUrdu = sampledQuestions.slice(0, 3).some((question) => question.categoryId === "urdu");
+      const fourthWrongIndex = firstThreeContainUrdu ? 3 : firstUrduIndex;
+      const wrongIndexes = [...new Set([0, 1, 2, fourthWrongIndex])].sort((left, right) => left - right);
+      const checkpointLastSubmittedIndex = Math.max(...wrongIndexes);
+      const formatMarks = (correct, wrong) => Number((correct - (wrong * 0.25)).toFixed(2)).toString();
+      if (firstUrduIndex < 0 || wrongIndexes.length !== 4 || fourthWrongIndex < 3) errors.push("Custom Paper could not prepare four distinct wrong answers including Urdu.");
+
+      let checkpointCorrect = 0;
+      let checkpointWrong = 0;
+      for (let index = 0; index <= checkpointLastSubmittedIndex; index += 1) {
+        const shouldAnswerCorrectly = !wrongIndexes.includes(index);
+        const answered = await answerCurrent(shouldAnswerCorrectly);
+        if (answered) {
+          const isUrdu = answered.question && answered.question.categoryId === "urdu";
+          const expectedTitle = shouldAnswerCorrectly
+            ? (isUrdu ? "درست!" : "Correct!")
+            : (isUrdu ? "غلط" : "Incorrect");
+          if (document.querySelector("#feedback-title").textContent !== expectedTitle) errors.push("Custom Paper instant feedback was not localized for question " + (index + 1) + ".");
+          if (!shouldAnswerCorrectly && !document.querySelector("#feedback-text").textContent.includes(answered.correctText)) errors.push("Custom Paper did not reveal the localized correct answer after wrong response " + (index + 1) + ".");
+          if (isUrdu) {
+            const feedback = document.querySelector("#feedback");
+            if (!feedback.classList.contains("is-urdu") || feedback.lang !== "ur" || feedback.dir !== "rtl" || /[A-Za-z]/.test(feedback.textContent)) errors.push("Custom Paper Urdu feedback was not fully localized.");
+          }
+        }
+        if (shouldAnswerCorrectly) checkpointCorrect += 1;
+        else checkpointWrong += 1;
+        const expectedLiveScore = "C:" + checkpointCorrect + " W:" + checkpointWrong + " Marks:" + formatMarks(checkpointCorrect, checkpointWrong);
+        if (document.querySelector("#score-text").textContent !== expectedLiveScore) errors.push("Custom Paper live score was incorrect after answer " + (index + 1) + ".");
+        if (index < checkpointLastSubmittedIndex) {
           document.querySelector("#action-button").click();
           await pause();
         }
       }
-      if (document.querySelector("#score-text").textContent !== "C:0 W:4 Marks:-1") errors.push("Four Custom Paper wrong answers did not deduct exactly one mark.");
+      if (checkpointWrong !== 4 || document.querySelector("#score-text").textContent !== "C:" + checkpointCorrect + " W:4 Marks:" + formatMarks(checkpointCorrect, 4)) errors.push("Four Custom Paper wrong answers did not deduct exactly one mark.");
 
       document.querySelector("#action-button").click();
       await pause();
-      await answerCurrent(true);
-      if (document.querySelector("#feedback-title").textContent !== "Correct!") errors.push("Custom Paper did not show instant Correct feedback.");
-      if (document.querySelector("#score-text").textContent !== "C:1 W:4 Marks:0") errors.push("Custom Paper live correct/wrong/net score was incorrect after the first correct answer.");
+      const checkpointCorrectAnswer = await answerCurrent(true);
+      checkpointCorrect += 1;
+      if (checkpointCorrectAnswer) {
+        const expectedTitle = checkpointCorrectAnswer.question.categoryId === "urdu" ? "درست!" : "Correct!";
+        if (document.querySelector("#feedback-title").textContent !== expectedTitle) errors.push("Custom Paper did not localize instant correct feedback.");
+      }
+      if (document.querySelector("#score-text").textContent !== "C:" + checkpointCorrect + " W:4 Marks:" + formatMarks(checkpointCorrect, 4)) errors.push("Custom Paper live score was incorrect after the checkpoint correct answer.");
       document.querySelector("#action-button").click();
       await pause();
 
@@ -1458,8 +1778,15 @@ async function main() {
         await pause();
       }
       const resumeSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!resumeSnapshot || resumeSnapshot.currentIndex !== 5 || resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== pendingCorrectIndex || resumeSnapshot.score !== 1) errors.push("Custom Paper pending Continue checkpoint was incorrect.");
-      if (!resumeSnapshot || resumeSnapshot.answerHistory.filter((entry) => entry && entry[1]).length !== 5) errors.push("Custom Paper checkpoint did not preserve four wrong and one correct submitted response.");
+      const expectedCurrentIndex = checkpointLastSubmittedIndex + 2;
+      if (!resumeSnapshot || resumeSnapshot.currentIndex !== expectedCurrentIndex || resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== pendingCorrectIndex || resumeSnapshot.score !== checkpointCorrect) errors.push("Custom Paper pending Continue checkpoint was incorrect.");
+      if (!resumeSnapshot || resumeSnapshot.answerHistory.filter((entry) => entry && entry[1]).length !== expectedCurrentIndex) errors.push("Custom Paper checkpoint did not preserve the submitted response prefix.");
+      if (resumeSnapshot) {
+        const persistedWrongIndexes = resumeSnapshot.answerHistory
+          .map((entry, index) => entry && entry[1] && entry[0] !== resumeSnapshot.optionOrders[index].indexOf(questionById.get(String(resumeSnapshot.questionIds[index])).correctOptionIndex) ? index : -1)
+          .filter((index) => index >= 0);
+        if (JSON.stringify(persistedWrongIndexes) !== JSON.stringify(wrongIndexes)) errors.push("Custom Paper checkpoint did not preserve the intended four wrong question indexes.");
+      }
 
       return {
         errors,
@@ -1473,7 +1800,8 @@ async function main() {
           currentQuestionId: document.querySelector("#question-text").dataset.questionId,
           currentOptionTexts: renderedOptionTexts(),
           selectedIndex: pendingCorrectIndex,
-          score: 1
+          score: checkpointCorrect,
+          wrongIndexes
         }
       };
     })()`);
@@ -1506,6 +1834,9 @@ async function main() {
       const storageKey = "ppsc-prep:active-session:v1";
       const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const displayOptions = (question) => question && question.categoryId === "urdu" && Array.isArray(question.optionsUrdu)
+        ? question.optionsUrdu.map(String)
+        : (question ? question.options.map(optionText) : []);
       const renderedOptionTexts = () => [...document.querySelectorAll("#options-container .option-text")]
         .map((element) => element.textContent);
       const currentCanonicalQuestion = () => questionById.get(
@@ -1514,28 +1845,30 @@ async function main() {
       const currentCorrectRenderedIndex = () => {
         const question = currentCanonicalQuestion();
         return question
-          ? renderedOptionTexts().indexOf(optionText(question.options[question.correctOptionIndex]))
+          ? renderedOptionTexts().indexOf(displayOptions(question)[question.correctOptionIndex])
           : -1;
       };
       const selectAndCheckCorrect = async () => {
+        const question = currentCanonicalQuestion();
         const correctIndex = currentCorrectRenderedIndex();
         const button = document.querySelector('[data-option-index="' + correctIndex + '"]');
         if (correctIndex < 0 || !button) {
           errors.push("Custom Paper Continue could not map a correct answer.");
-          return false;
+          return null;
         }
         button.click();
         document.querySelector("#action-button").click();
         await pause();
-        if (document.querySelector("#feedback-title").textContent !== "Correct!") errors.push("Custom Paper completion lost instant Correct feedback.");
-        return true;
+        const expectedTitle = question && question.categoryId === "urdu" ? "درست!" : "Correct!";
+        if (document.querySelector("#feedback-title").textContent !== expectedTitle) errors.push("Custom Paper completion lost localized instant correct feedback.");
+        return question;
       };
 
       if (!visible(document.querySelector("#category-screen"))) errors.push("Custom Paper reload did not return to categories before Continue.");
       if (!visible(document.querySelector("#continue-session-card"))) errors.push("Custom Paper reload did not show Continue.");
       if (document.querySelector("#continue-session-title").textContent !== "Continue Custom Paper") errors.push("Custom Paper Continue title was incorrect.");
       const continueMeta = document.querySelector("#continue-session-meta").textContent;
-      if (!continueMeta.includes("Custom Paper") || !continueMeta.includes("2 categories") || !continueMeta.includes("Question 6 of 100")) errors.push("Custom Paper Continue metadata was incomplete.");
+      if (!continueMeta.includes("Custom Paper") || !continueMeta.includes("2 categories") || !continueMeta.includes("Question " + (expected.currentIndex + 1) + " of 100")) errors.push("Custom Paper Continue metadata was incomplete.");
       const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
       if (!storedBeforeContinue || storedBeforeContinue.version !== 6 || storedBeforeContinue.sessionKind !== "paper" || storedBeforeContinue.categoryId !== null) errors.push("Reload changed the Custom Paper session schema.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.paperCategoryIds) !== JSON.stringify(expected.selectedCategoryIds)) errors.push("Reload changed the selected Custom Paper categories.");
@@ -1553,7 +1886,8 @@ async function main() {
       const restoredPendingButton = document.querySelector('[data-option-index="' + expected.selectedIndex + '"]');
       if (!restoredPendingButton || !restoredPendingButton.classList.contains("is-selected") || restoredPendingButton.disabled) errors.push("Continue did not restore the pending Custom Paper selection.");
       if (visible(document.querySelector("#feedback")) || document.querySelector("#action-button").textContent !== "Check Answer") errors.push("Continue incorrectly submitted the pending Custom Paper answer.");
-      if (document.querySelector("#score-text").textContent !== "C:1 W:4 Marks:0") errors.push("Continue did not restore the Custom Paper live correct/wrong/marks score.");
+      const formatMarks = (correct, wrong) => Number((correct - (wrong * 0.25)).toFixed(2)).toString();
+      if (document.querySelector("#score-text").textContent !== "C:" + expected.score + " W:4 Marks:" + formatMarks(expected.score, 4)) errors.push("Continue did not restore the Custom Paper live correct/wrong/marks score.");
       const storedAfterContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
       if (!storedAfterContinue || JSON.stringify(storedAfterContinue.questionIds) !== JSON.stringify(expected.questionIds) || JSON.stringify(storedAfterContinue.optionOrders) !== JSON.stringify(expected.optionOrders) || JSON.stringify(storedAfterContinue.answerHistory) !== JSON.stringify(expected.answerHistory)) errors.push("Continue changed Custom Paper IDs, options, or responses.");
 
@@ -1563,7 +1897,7 @@ async function main() {
       await pause();
       if (visible(document.querySelector("#results-screen"))) errors.push("Custom Paper opened results after jumping to an unanswered last question.");
       await selectAndCheckCorrect();
-      if (document.querySelector("#score-text").textContent !== "C:2 W:4 Marks:1") errors.push("Custom Paper score was incorrect after answering the last question.");
+      if (document.querySelector("#score-text").textContent !== "C:" + (expected.score + 1) + " W:4 Marks:" + formatMarks(expected.score + 1, 4)) errors.push("Custom Paper score was incorrect after answering the last question.");
       if (document.querySelector("#action-button").textContent !== "Next Unanswered" || document.querySelector("#action-button").dataset.action !== "next-unanswered") errors.push("Custom Paper last question did not offer Next Unanswered.");
       document.querySelector("#action-button").click();
       await pause();
@@ -1573,7 +1907,9 @@ async function main() {
       if (!pendingAfterGuard || !pendingAfterGuard.classList.contains("is-selected") || pendingAfterGuard.disabled) errors.push("Next Unanswered lost the pending Custom Paper selection.");
       document.querySelector("#action-button").click();
       await pause();
-      if (document.querySelector("#feedback-title").textContent !== "Correct!" || document.querySelector("#score-text").textContent !== "C:3 W:4 Marks:2") errors.push("Submitting the restored pending answer produced the wrong Custom Paper score.");
+      const pendingQuestion = questionById.get(String(expected.currentQuestionId));
+      const pendingFeedbackTitle = pendingQuestion && pendingQuestion.categoryId === "urdu" ? "درست!" : "Correct!";
+      if (document.querySelector("#feedback-title").textContent !== pendingFeedbackTitle || document.querySelector("#score-text").textContent !== "C:" + (expected.score + 2) + " W:4 Marks:" + formatMarks(expected.score + 2, 4)) errors.push("Submitting the restored pending answer produced the wrong Custom Paper score or feedback language.");
       document.querySelector("#action-button").click();
       await pause();
 
@@ -1598,13 +1934,71 @@ async function main() {
       if (!document.querySelector("#result-summary").textContent.includes("96 correct") || !document.querySelector("#result-summary").textContent.includes("4 wrong") || !document.querySelector("#result-summary").textContent.includes("95 out of 100")) errors.push("Custom Paper summary omitted correct, wrong, or net marks.");
       if (document.querySelector("#play-again-button").textContent !== "Attempt New Paper") errors.push("Custom Paper result did not offer Attempt New Paper.");
 
+      const urduLabels = ["الف", "ب", "ج", "د"];
+      const englishLabels = ["A", "B", "C", "D"];
+      const expectedWrongIndexes = Array.isArray(expected.wrongIndexes) ? expected.wrongIndexes : [];
+      const expectedCorrectIndexes = Array.from({ length: 100 }, (_, index) => index)
+        .filter((index) => !expectedWrongIndexes.includes(index));
+      const assertReviewRows = (items, questionIndexes, reviewKind) => {
+        let sawUrdu = false;
+        if (items.length !== questionIndexes.length) {
+          errors.push(reviewKind + " review rows did not match the expected response indexes.");
+          return sawUrdu;
+        }
+        items.forEach((item, rowIndex) => {
+          const questionIndex = questionIndexes[rowIndex];
+          const question = questionById.get(String(expected.questionIds[questionIndex]));
+          const optionOrder = expected.optionOrders[questionIndex];
+          const heading = item.querySelector("strong");
+          const meta = item.querySelector(".result-review-meta");
+          const secondaryUrdu = item.querySelector(".result-review-question-urdu");
+          const answers = [...item.querySelectorAll(".result-review-answer")];
+          if (!question || !Array.isArray(optionOrder) || optionOrder.length !== 4) {
+            errors.push(reviewKind + " review row could not be mapped to canonical data.");
+            return;
+          }
+          const renderedOptions = optionOrder.map((originalIndex) => displayOptions(question)[originalIndex]);
+          const correctRenderedIndex = optionOrder.indexOf(question.correctOptionIndex);
+          const selectedRenderedIndex = reviewKind === "correct"
+            ? correctRenderedIndex
+            : (correctRenderedIndex + 1) % 4;
+          if (correctRenderedIndex < 0 || answers.length !== 2) {
+            errors.push(reviewKind + " review row did not expose two mapped answers.");
+            return;
+          }
+
+          if (question.categoryId === "urdu") {
+            sawUrdu = true;
+            const expectedHeading = "سوال " + (questionIndex + 1) + "۔ " + question.questionUrdu;
+            const expectedSelected = "آپ کا جواب: " + urduLabels[selectedRenderedIndex] + "۔ " + renderedOptions[selectedRenderedIndex];
+            const expectedCorrect = "درست جواب: " + urduLabels[correctRenderedIndex] + "۔ " + renderedOptions[correctRenderedIndex];
+            if (!item.classList.contains("is-urdu") || item.lang !== "ur" || item.dir !== "rtl") errors.push("An Urdu " + reviewKind + " review row lacked RTL language attributes.");
+            if (!heading || heading.textContent !== expectedHeading || /[A-Za-z]/.test(heading.textContent)) errors.push("An Urdu " + reviewKind + " review row did not show only its Urdu stem.");
+            if (secondaryUrdu) errors.push("An Urdu " + reviewKind + " review row duplicated its stem in a secondary Urdu paragraph.");
+            if (!meta || meta.textContent !== "زمرہ: اردو" || meta.lang !== "ur" || meta.dir !== "rtl" || /[A-Za-z]/.test(meta.textContent)) errors.push("An Urdu " + reviewKind + " review row did not localize its category metadata.");
+            if (answers.length !== 2 || answers[0].textContent !== expectedSelected || answers[1].textContent !== expectedCorrect || answers.some((answer) => answer.lang !== "ur" || answer.dir !== "rtl" || /[A-Za-z]/.test(answer.textContent))) errors.push("An Urdu " + reviewKind + " review row did not show the aligned Urdu selected/correct options.");
+          } else {
+            const category = data.categories.find((candidate) => candidate.id === question.categoryId);
+            const expectedHeading = "Question " + (questionIndex + 1) + ". " + question.question;
+            const expectedSelected = "Your answer: " + englishLabels[selectedRenderedIndex] + ". " + renderedOptions[selectedRenderedIndex];
+            const expectedCorrect = "Correct answer: " + englishLabels[correctRenderedIndex] + ". " + renderedOptions[correctRenderedIndex];
+            if (item.classList.contains("is-urdu") || item.hasAttribute("lang") || item.hasAttribute("dir")) errors.push("A non-Urdu " + reviewKind + " review row retained Urdu RTL attributes.");
+            if (!heading || heading.textContent !== expectedHeading) errors.push("A non-Urdu " + reviewKind + " review row had the wrong canonical stem.");
+            if (!meta || meta.textContent !== "Category: " + (category ? category.name : "")) errors.push("A non-Urdu " + reviewKind + " review row had the wrong category metadata.");
+            if (!secondaryUrdu || secondaryUrdu.textContent !== question.questionUrdu || secondaryUrdu.lang !== "ur" || secondaryUrdu.dir !== "rtl") errors.push("A non-Urdu " + reviewKind + " review row lost its secondary Urdu translation.");
+            if (answers.length !== 2 || answers[0].textContent !== expectedSelected || answers[1].textContent !== expectedCorrect) errors.push("A non-Urdu " + reviewKind + " review row had the wrong selected/correct options.");
+          }
+        });
+        return sawUrdu;
+      };
+
       const correctControl = document.querySelector("#result-correct-button");
       correctControl.click();
       await pause();
       const correctItems = [...document.querySelectorAll("#result-review-list .result-review-item.is-correct")];
       if (!visible(document.querySelector("#result-review-panel")) || correctControl.getAttribute("aria-expanded") !== "true") errors.push("Correct result control did not open its review list.");
       if (correctItems.length !== 96 || document.querySelectorAll("#result-review-list > li").length !== 96) errors.push("Correct review list did not contain exactly 96 answers.");
-      if (correctItems.some((item) => !item.textContent.includes("Question ") || !item.textContent.includes("Category:") || !item.textContent.includes("Your answer:") || !item.textContent.includes("Correct answer:"))) errors.push("A correct review row was missing question/category/answer content.");
+      if (!assertReviewRows(correctItems, expectedCorrectIndexes, "correct")) errors.push("Correct review did not include an Urdu row.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Correct-answer review has horizontal overflow on mobile.");
       document.querySelector("#result-review-close-button").click();
       await pause();
@@ -1616,11 +2010,7 @@ async function main() {
       const wrongItems = [...document.querySelectorAll("#result-review-list .result-review-item.is-wrong")];
       if (!visible(document.querySelector("#result-review-panel")) || wrongControl.getAttribute("aria-expanded") !== "true") errors.push("Wrong result control did not open its review list.");
       if (wrongItems.length !== 4 || document.querySelectorAll("#result-review-list > li").length !== 4) errors.push("Wrong review list did not contain exactly four answers.");
-      if (wrongItems.some((item) => !item.textContent.includes("Question ") || !item.textContent.includes("Category:") || !item.textContent.includes("Your answer:") || !item.textContent.includes("Correct answer:"))) errors.push("A wrong review row was missing question/category/answer content.");
-      if (wrongItems.some((item) => {
-        const answers = item.querySelectorAll(".result-review-answer");
-        return answers.length !== 2 || answers[0].textContent.replace(/^Your answer:\s*/, "") === answers[1].textContent.replace(/^Correct answer:\s*/, "");
-      })) errors.push("A wrong review row did not distinguish the selected and correct answers.");
+      if (!assertReviewRows(wrongItems, expectedWrongIndexes, "wrong")) errors.push("Wrong review did not include an Urdu row.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Wrong-answer review has horizontal overflow on mobile.");
       document.querySelector("#result-review-close-button").click();
       await pause();
@@ -1663,6 +2053,8 @@ async function main() {
         .concat(difficultResumeResult.errors)
         .concat(learnResumeSetup.errors)
         .concat(learnResumeResult.errors)
+        .concat(urduSetupResult.errors)
+        .concat(urduResumeResult.errors)
         .concat(paperSetupResult.errors)
         .concat(paperResumeResult.errors),
       resume: {
@@ -1670,6 +2062,7 @@ async function main() {
         pendingSelectionRestored: pendingResumeResult.errors.length === 0,
         difficultLearnRestored: difficultResumeSetup.errors.length === 0 && difficultResumeResult.errors.length === 0,
         learnVisitedIdsRestored: learnResumeSetup.errors.length === 0 && learnResumeResult.errors.length === 0,
+        urduQuizRestored: urduSetupResult.errors.length === 0 && urduResumeResult.errors.length === 0,
         corruptDataRecovered: !positionGuardSetupResult.errors.some((message) => message.includes("Corrupt resume data")),
         malformedPositionOrderRejected: positionGuardRecoveryResult.errors.length === 0,
         staleDataRecovered: !difficultResult.errors.some((message) => message.includes("Legacy Part resume data"))
@@ -1682,6 +2075,7 @@ async function main() {
         malformedSnapshotRejected: positionGuardRecoveryResult.errors.length === 0
       },
       difficult: difficultResult,
+      urdu: urduResumeResult,
       paper: paperResumeResult
     };
     console.log(JSON.stringify(result, null, 2));
