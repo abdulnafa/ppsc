@@ -7,12 +7,16 @@
   var POSITION_DEPENDENT_OPTION_PATTERN = /(?:\b(?:both|either|neither)\s+\(?\s*(?:(?:options?|choices?|answers?)\s*)?[A-D]\s*(?:and|or|&|\+)\s*(?:(?:options?|choices?|answers?)\s*)?[A-D]\s*\)?(?=\s|[.,;:)\]-]|$)|\bboth\s+of\s+(?:the\s+)?(?:above|below|these|them)\b|\b(?:all|none)\s+of\s+(?:the\s+)?(?:above|below)\b|\b(?:options?|choices?|answers?)\s*\(?[A-D]\)?(?=\s|[.,;:)\]-]|$))/i;
   var PAPER_QUESTION_COUNT = 100;
   var PAPER_WRONG_PENALTY = 0.25;
+  var GK_NOTES_PAGE_SIZE = 40;
   var DIFFICULT_STORAGE_KEY = "ppsc-prep:difficult-question-ids:v1";
   var SESSION_STORAGE_KEY = "ppsc-prep:active-session:v1";
   var SESSION_STORAGE_VERSION = 6;
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
+  var gkNotesData = window.PPSC_GK_STUDY_NOTES_DATA || {};
+  var gkNoteTopics = Array.isArray(gkNotesData.topics) ? gkNotesData.topics : [];
+  var gkStudyNotes = Array.isArray(gkNotesData.notes) ? gkNotesData.notes : [];
   var knownQuestionIds = new Set(allQuestions.map(function (question) {
     return String(question.id);
   }));
@@ -24,6 +28,13 @@
   var activeSessionSnapshot = null;
   var previousQuestionOrders = Object.create(null);
   var previousOptionOrders = Object.create(null);
+  var gkNoteSearchEntries = [];
+  var gkNotesState = {
+    topicId: "all",
+    query: "",
+    importantOnly: false,
+    visibleLimit: GK_NOTES_PAGE_SIZE
+  };
 
   var state = {
     category: null,
@@ -55,11 +66,22 @@
 
   function collectElements() {
     elements.categoryScreen = firstElement(["#category-screen", "[data-screen='categories']"]);
+    elements.gkNotesScreen = firstElement(["#gk-notes-screen", "[data-screen='gk-notes']"]);
     elements.paperSetupScreen = firstElement(["#paper-setup-screen", "[data-screen='paper-setup']"]);
     elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
     elements.quizScreen = firstElement(["#quiz-screen", "[data-screen='quiz']"]);
     elements.resultScreen = firstElement(["#result-screen", "#results-screen", "[data-screen='results']"]);
     elements.categoryGrid = firstElement(["#category-grid", "[data-category-grid]"]);
+    elements.gkStudyNotesCard = firstElement(["#gk-study-notes-card", "[data-gk-study-notes-card]"]);
+    elements.gkNotesBackButton = firstElement(["#gk-notes-back-button", "[data-gk-notes-back]"]);
+    elements.gkNotesSearch = firstElement(["#gk-notes-search", "[data-gk-notes-search]"]);
+    elements.gkNotesClearButton = firstElement(["#gk-notes-clear-button", "[data-gk-notes-clear]"]);
+    elements.gkNotesTopicFilters = firstElement(["#gk-notes-topic-filters", "[data-gk-notes-topic-filters]"]);
+    elements.gkNotesImportantOnly = firstElement(["#gk-notes-important-only", "[data-gk-notes-important-only]"]);
+    elements.gkNotesResultsStatus = firstElement(["#gk-notes-results-status", "[data-gk-notes-results-status]"]);
+    elements.gkNotesList = firstElement(["#gk-notes-list", "[data-gk-notes-list]"]);
+    elements.gkNotesLoadMoreButton = firstElement(["#gk-notes-load-more-button", "[data-gk-notes-load-more]"]);
+    elements.gkNotesEmpty = firstElement(["#gk-notes-empty", "[data-gk-notes-empty]"]);
     elements.paperBuilderCard = firstElement(["#paper-builder-card", "[data-paper-builder]"]);
     elements.paperSetupBackButton = firstElement(["#paper-setup-back-button", "[data-paper-setup-back]"]);
     elements.paperCategoryOptions = firstElement(["#paper-category-options", "[data-paper-category-options]"]);
@@ -793,12 +815,15 @@
 
   function showScreen(screenName) {
     setHidden(elements.categoryScreen, screenName !== "categories");
+    setHidden(elements.gkNotesScreen, screenName !== "gk-notes");
     setHidden(elements.paperSetupScreen, screenName !== "paper-setup");
     setHidden(elements.modeScreen, screenName !== "mode");
     setHidden(elements.quizScreen, screenName !== "quiz");
     setHidden(elements.resultScreen, screenName !== "results");
 
-    var activeScreen = screenName === "paper-setup"
+    var activeScreen = screenName === "gk-notes"
+      ? elements.gkNotesScreen
+      : screenName === "paper-setup"
       ? elements.paperSetupScreen
       : screenName === "quiz"
       ? elements.quizScreen
@@ -814,6 +839,386 @@
         heading.setAttribute("tabindex", "-1");
         heading.focus({ preventScroll: true });
       }
+    }
+  }
+
+  function normalizeGkNotesText(value) {
+    return String(value == null ? "" : value)
+      .normalize("NFKC")
+      .toLocaleLowerCase()
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function collectGkNotesSearchValues(value, values) {
+    if (value == null) return;
+    if (Array.isArray(value)) {
+      value.forEach(function (item) { collectGkNotesSearchValues(item, values); });
+      return;
+    }
+    if (typeof value === "object") {
+      Object.keys(value).forEach(function (key) {
+        collectGkNotesSearchValues(value[key], values);
+      });
+      return;
+    }
+    values.push(String(value));
+  }
+
+  function gkNoteSearchText(note) {
+    var values = [];
+    collectGkNotesSearchValues(note, values);
+    return normalizeGkNotesText(values.join(" "));
+  }
+
+  function createGkNotesTextElement(tagName, className, textValue) {
+    var element = document.createElement(tagName);
+    if (className) element.className = className;
+    element.textContent = String(textValue == null ? "" : textValue);
+    return element;
+  }
+
+  function gkNotesTopicLabel(topicId) {
+    var topic = gkNoteTopics.find(function (candidate) {
+      return candidate && String(candidate.id) === String(topicId);
+    });
+    return topic ? String(topic.label || topic.id) : String(topicId || "General Knowledge");
+  }
+
+  function gkNotesDataAvailable() {
+    return Number(gkNotesData.schemaVersion) === 1
+      && gkNoteTopics.length > 0
+      && gkStudyNotes.length > 0;
+  }
+
+  function temporalScopeLabel(scope) {
+    if (!scope || typeof scope !== "object") return "Evidence checked";
+    var type = String(scope.type || "static");
+    if (type === "as-of" && scope.asOf) return "As of " + scope.asOf;
+    if (type === "event-date" && scope.eventDate) return "Event: " + scope.eventDate;
+    if (type === "version" && scope.version) return "Version: " + scope.version;
+    if (scope.sourcePaperDate) return "Stable · source " + scope.sourcePaperDate;
+    return type === "static" ? "Stable fact" : "Evidence checked";
+  }
+
+  function gkFactNarrativeText(value) {
+    var original = String(value || "").trim();
+    var withoutAnswerLead = original.replace(
+      /^(?:\u062f\u0631\u0633\u062a \u062c\u0648\u0627\u0628[^\u06d4!?]*[\u06d4!?]\s*)+/u,
+      ""
+    ).trim();
+    return withoutAnswerLead || original;
+  }
+
+  function gkFactCitations(fact) {
+    var citations = [];
+    var seenUrls = new Set();
+
+    function addCitation(source, primary) {
+      if (!source || typeof source !== "object") return;
+      var url = String(source.referenceUrl || source.url || "").trim();
+      if (!/^https:\/\//i.test(url) || seenUrls.has(url)) return;
+      seenUrls.add(url);
+      citations.push({
+        url: url,
+        label: String(source.label || source.publisher || (primary ? "Original source" : "Reference")),
+        publisher: String(source.publisher || ""),
+        accessedOn: String(source.accessedOn || "")
+      });
+    }
+
+    addCitation(fact && fact.source, true);
+    (fact && Array.isArray(fact.references) ? fact.references : []).forEach(function (reference) {
+      addCitation(reference, false);
+    });
+    return citations;
+  }
+
+  function createGkFactElement(fact, factIndex) {
+    var factElement = document.createElement("article");
+    factElement.className = "gk-note-fact";
+    factElement.dataset.gkNoteFact = String(factIndex + 1);
+    factElement.dataset.questionId = String(fact && fact.questionId || "");
+    factElement.lang = "ur";
+    factElement.dir = "rtl";
+
+    var meta = document.createElement("div");
+    meta.className = "gk-note-fact-meta";
+    var factKind = fact && fact.kind === "similar" ? "RELATED FACT" : "SOURCE FACT";
+    meta.appendChild(createGkNotesTextElement("span", "gk-note-fact-number", factKind));
+
+    var temporalBadge = createGkNotesTextElement(
+      "span",
+      "gk-note-temporal-badge",
+      temporalScopeLabel(fact && fact.temporalScope)
+    );
+    temporalBadge.dataset.temporalStatus = String(fact && fact.temporalScope && fact.temporalScope.type || "static");
+    meta.appendChild(temporalBadge);
+    factElement.appendChild(meta);
+
+    var factText = createGkNotesTextElement(
+      "p",
+      "gk-note-fact-question",
+      gkFactNarrativeText(fact && fact.textUrdu)
+    );
+    factText.lang = "ur";
+    factText.dir = "rtl";
+    factElement.appendChild(factText);
+
+    var answer = createGkNotesTextElement(
+      "p",
+      "gk-note-correct-answer",
+      "یاد رکھنے والا جواب: " + String(fact && fact.answer || "")
+    );
+    answer.lang = "ur";
+    answer.dir = "rtl";
+    factElement.appendChild(answer);
+
+    var citations = gkFactCitations(fact);
+    if (citations.length > 0) {
+      var citationList = document.createElement("ul");
+      citationList.className = "gk-note-citations";
+      citationList.setAttribute("aria-label", "Sources for this fact");
+      citationList.dir = "ltr";
+      citations.forEach(function (citation) {
+        var item = document.createElement("li");
+        var link = document.createElement("a");
+        link.className = "gk-note-source-link";
+        link.href = citation.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        var citationLabel = citation.publisher && citation.publisher !== citation.label
+          ? citation.label + " · " + citation.publisher
+          : citation.label;
+        link.textContent = citation.accessedOn
+          ? citationLabel + " · checked " + citation.accessedOn
+          : citationLabel;
+        link.setAttribute("aria-label", link.textContent + " (opens in a new tab)");
+        item.appendChild(link);
+        citationList.appendChild(item);
+      });
+      factElement.appendChild(citationList);
+    }
+
+    return factElement;
+  }
+
+  function createGkNoteElement(note) {
+    var topicIds = Array.isArray(note && note.topicIds) ? note.topicIds.map(String) : [];
+    var card = document.createElement("details");
+    card.className = "gk-note-card";
+    card.dataset.gkNoteId = String(note && note.id || "");
+    card.dataset.gkNoteTopics = topicIds.join(" ");
+    card.dataset.gkNoteImportant = note && note.important === true ? "true" : "false";
+
+    var summary = document.createElement("summary");
+    summary.className = "gk-note-summary";
+    var summaryCopy = document.createElement("span");
+    summaryCopy.className = "gk-note-summary-copy";
+    var topicLabel = createGkNotesTextElement(
+      "span",
+      "gk-note-topic-label",
+      topicIds.map(gkNotesTopicLabel).join(" · ") || "General Knowledge"
+    );
+    var title = createGkNotesTextElement("strong", "gk-note-title", note && note.title || "General Knowledge fact pair");
+    var subtitle = createGkNotesTextElement("span", "gk-note-summary-text", note && note.subtitleUrdu || "");
+    subtitle.lang = "ur";
+    subtitle.dir = "rtl";
+    summaryCopy.appendChild(topicLabel);
+    summaryCopy.appendChild(title);
+    summaryCopy.appendChild(subtitle);
+    summary.appendChild(summaryCopy);
+    card.appendChild(summary);
+
+    var body = document.createElement("div");
+    body.className = "gk-note-body";
+    var facts = document.createElement("div");
+    facts.className = "gk-note-facts";
+    (note && Array.isArray(note.facts) ? note.facts : []).forEach(function (fact, factIndex) {
+      facts.appendChild(createGkFactElement(fact, factIndex));
+    });
+    body.appendChild(facts);
+
+    var memoryHook = document.createElement("p");
+    memoryHook.className = "gk-note-memory-hook";
+    memoryHook.lang = "ur";
+    memoryHook.dir = "rtl";
+    var memoryLabel = createGkNotesTextElement("strong", "", "MEMORY HOOK");
+    memoryLabel.setAttribute("aria-hidden", "true");
+    memoryHook.appendChild(memoryLabel);
+    memoryHook.appendChild(document.createTextNode(String(note && note.memoryHookUrdu || "")));
+    body.appendChild(memoryHook);
+
+    var sourceNotes = (note && Array.isArray(note.facts) ? note.facts : []).map(function (fact) {
+      return {
+        label: fact && fact.kind === "similar" ? "Related fact" : "Source fact",
+        text: String(fact && fact.sourceNotes || "").trim()
+      };
+    }).filter(function (sourceNote) { return sourceNote.text; });
+
+    if (sourceNotes.length > 0) {
+      var evidenceDetails = document.createElement("details");
+      evidenceDetails.className = "gk-note-evidence-details";
+      evidenceDetails.appendChild(createGkNotesTextElement(
+        "summary",
+        "gk-note-evidence-summary",
+        "Source and correction notes"
+      ));
+      sourceNotes.forEach(function (sourceNote) {
+        var noteText = createGkNotesTextElement(
+          "p",
+          "gk-note-evidence-note",
+          sourceNote.label + ": " + sourceNote.text
+        );
+        noteText.dir = "auto";
+        evidenceDetails.appendChild(noteText);
+      });
+      body.appendChild(evidenceDetails);
+    }
+
+    card.appendChild(body);
+    return card;
+  }
+
+  function renderGkNotesTopicFilters() {
+    if (!elements.gkNotesTopicFilters) return;
+    elements.gkNotesTopicFilters.textContent = "";
+    var fragment = document.createDocumentFragment();
+    var topics = [{ id: "all", label: "All topics", noteCount: gkStudyNotes.length }].concat(gkNoteTopics);
+
+    topics.forEach(function (topic) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "gk-notes-topic-button";
+      button.dataset.gkNotesTopic = String(topic.id);
+      button.setAttribute("aria-pressed", topic.id === gkNotesState.topicId ? "true" : "false");
+      button.textContent = String(topic.label || topic.id) + " (" + Number(topic.noteCount || 0) + ")";
+      fragment.appendChild(button);
+    });
+    elements.gkNotesTopicFilters.appendChild(fragment);
+  }
+
+  function gkNoteMatchesFilters(note, searchText) {
+    var topicIds = Array.isArray(note && note.topicIds) ? note.topicIds.map(String) : [];
+    if (gkNotesState.topicId !== "all" && !topicIds.includes(gkNotesState.topicId)) return false;
+    if (gkNotesState.importantOnly && (!note || note.important !== true)) return false;
+    return !gkNotesState.query || searchText.includes(gkNotesState.query);
+  }
+
+  function updateGkNotesResults(resetPage) {
+    if (resetPage) gkNotesState.visibleLimit = GK_NOTES_PAGE_SIZE;
+    var matchingEntries = gkNoteSearchEntries.filter(function (entry) {
+      return gkNoteMatchesFilters(entry.note, entry.searchText);
+    });
+    var renderedCount = Math.min(matchingEntries.length, gkNotesState.visibleLimit);
+
+    if (elements.gkNotesList) {
+      var existingCards = Array.from(elements.gkNotesList.children);
+      var canAppend = !resetPage
+        && existingCards.length <= renderedCount
+        && existingCards.every(function (card, index) {
+          return card.classList.contains("gk-note-card")
+            && card.dataset.gkNoteId === String(matchingEntries[index].note.id);
+        });
+      var appendFrom = canAppend ? existingCards.length : 0;
+      if (!canAppend) elements.gkNotesList.textContent = "";
+      var fragment = document.createDocumentFragment();
+      matchingEntries.slice(appendFrom, renderedCount).forEach(function (entry) {
+        fragment.appendChild(createGkNoteElement(entry.note));
+      });
+      elements.gkNotesList.appendChild(fragment);
+    }
+
+    if (elements.gkNotesTopicFilters) {
+      elements.gkNotesTopicFilters.querySelectorAll("[data-gk-notes-topic]").forEach(function (button) {
+        button.setAttribute("aria-pressed", button.dataset.gkNotesTopic === gkNotesState.topicId ? "true" : "false");
+      });
+    }
+    if (elements.gkNotesImportantOnly) elements.gkNotesImportantOnly.checked = gkNotesState.importantOnly;
+    if (elements.gkNotesClearButton) {
+      elements.gkNotesClearButton.disabled = !gkNotesState.query
+        && gkNotesState.topicId === "all"
+        && !gkNotesState.importantOnly;
+    }
+    if (elements.gkNotesResultsStatus) {
+      elements.gkNotesResultsStatus.textContent = matchingEntries.length === gkStudyNotes.length
+        ? "Showing " + renderedCount + " of " + gkStudyNotes.length + " study notes."
+        : "Showing " + renderedCount + " of " + matchingEntries.length
+          + " matching study notes (" + gkStudyNotes.length + " total).";
+    }
+    if (elements.gkNotesLoadMoreButton) {
+      var remaining = Math.max(0, matchingEntries.length - renderedCount);
+      elements.gkNotesLoadMoreButton.textContent = remaining > 0
+        ? "Load " + Math.min(GK_NOTES_PAGE_SIZE, remaining) + " more notes"
+        : "All matching notes loaded";
+      setHidden(elements.gkNotesLoadMoreButton, remaining === 0);
+    }
+    setHidden(elements.gkNotesEmpty, matchingEntries.length > 0);
+  }
+
+  function renderGkStudyNotes() {
+    if (!elements.gkNotesList) return;
+    elements.gkNotesList.textContent = "";
+    gkNoteSearchEntries = [];
+
+    if (!gkNotesDataAvailable()) {
+      if (elements.gkStudyNotesCard) {
+        elements.gkStudyNotesCard.disabled = true;
+        elements.gkStudyNotesCard.setAttribute("aria-disabled", "true");
+        var description = elements.gkStudyNotesCard.querySelector(".category-copy small");
+        if (description) description.textContent = "Study notes are temporarily unavailable. MCQ practice is still ready.";
+      }
+      if (elements.gkNotesResultsStatus) elements.gkNotesResultsStatus.textContent = "Study notes are unavailable.";
+      setHidden(elements.gkNotesEmpty, false);
+      return;
+    }
+
+    if (elements.gkStudyNotesCard) {
+      elements.gkStudyNotesCard.disabled = false;
+      elements.gkStudyNotesCard.removeAttribute("aria-disabled");
+    }
+    gkNoteSearchEntries = gkStudyNotes.map(function (note) {
+      return {
+        note: note,
+        searchText: gkNoteSearchText(note)
+      };
+    });
+    renderGkNotesTopicFilters();
+    updateGkNotesResults(true);
+  }
+
+  function setGkNotesTopic(topicId) {
+    var normalizedTopicId = String(topicId || "all");
+    if (normalizedTopicId !== "all" && !gkNoteTopics.some(function (topic) {
+      return topic && String(topic.id) === normalizedTopicId;
+    })) return;
+    gkNotesState.topicId = normalizedTopicId;
+    updateGkNotesResults(true);
+  }
+
+  function clearGkNotesFilters() {
+    gkNotesState.topicId = "all";
+    gkNotesState.query = "";
+    gkNotesState.importantOnly = false;
+    if (elements.gkNotesSearch) elements.gkNotesSearch.value = "";
+    updateGkNotesResults(true);
+  }
+
+  function loadMoreGkStudyNotes() {
+    gkNotesState.visibleLimit += GK_NOTES_PAGE_SIZE;
+    updateGkNotesResults(false);
+  }
+
+  function openGkStudyNotes() {
+    if (!gkNotesDataAvailable() || !elements.gkNotesScreen) return;
+    if (!gkNoteSearchEntries.length) renderGkStudyNotes();
+    showScreen("gk-notes");
+  }
+
+  function closeGkStudyNotes() {
+    showScreen("categories");
+    if (elements.gkStudyNotesCard && typeof elements.gkStudyNotesCard.focus === "function") {
+      elements.gkStudyNotesCard.focus({ preventScroll: true });
     }
   }
 
@@ -2208,6 +2613,33 @@
   }
 
   function bindEvents() {
+    if (elements.gkStudyNotesCard) elements.gkStudyNotesCard.addEventListener("click", openGkStudyNotes);
+    if (elements.gkNotesBackButton) elements.gkNotesBackButton.addEventListener("click", closeGkStudyNotes);
+    if (elements.gkNotesSearch) {
+      elements.gkNotesSearch.addEventListener("input", function () {
+        gkNotesState.query = normalizeGkNotesText(elements.gkNotesSearch.value);
+        updateGkNotesResults(true);
+      });
+    }
+    if (elements.gkNotesClearButton) {
+      elements.gkNotesClearButton.addEventListener("click", clearGkNotesFilters);
+    }
+    if (elements.gkNotesLoadMoreButton) {
+      elements.gkNotesLoadMoreButton.addEventListener("click", loadMoreGkStudyNotes);
+    }
+    if (elements.gkNotesTopicFilters) {
+      elements.gkNotesTopicFilters.addEventListener("click", function (event) {
+        var button = event.target.closest("[data-gk-notes-topic]");
+        if (!button || !elements.gkNotesTopicFilters.contains(button)) return;
+        setGkNotesTopic(button.dataset.gkNotesTopic);
+      });
+    }
+    if (elements.gkNotesImportantOnly) {
+      elements.gkNotesImportantOnly.addEventListener("change", function () {
+        gkNotesState.importantOnly = elements.gkNotesImportantOnly.checked;
+        updateGkNotesResults(true);
+      });
+    }
     if (elements.categoryGrid) elements.categoryGrid.addEventListener("click", onCategoryClick);
     if (elements.paperBuilderCard) elements.paperBuilderCard.addEventListener("click", openPaperSetup);
     if (elements.paperSetupBackButton) elements.paperSetupBackButton.addEventListener("click", returnToCategories);
@@ -2310,6 +2742,7 @@
     ensureDifficultControl();
     difficultQuestionIds = loadDifficultQuestionIds();
     loadActiveSession();
+    if (!gkNotesDataAvailable()) renderGkStudyNotes();
     renderCategories();
     renderPaperCategoryOptions();
     bindEvents();

@@ -6,9 +6,10 @@
   <meta name="description" content="Free category-wise MCQ practice for the PPSC General Ability test.">
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
-  <link rel="stylesheet" href="styles.css?v=20260902-1">
-  <script src="data/questions.js?v=20260902-1" defer></script>
-  <script src="app.js?v=20260902-1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260902-2">
+  <script src="data/questions.js?v=20260902-2" defer></script>
+  <script src="data/gk-study-notes.js?v=20260902-2" defer></script>
+  <script src="app.js?v=20260902-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -76,6 +77,18 @@
         </button>
       </div>
 
+      <div id="gk-notes-entry-grid" class="category-grid gk-notes-entry-grid">
+        <button id="gk-study-notes-card" class="category-card gk-study-notes-card" type="button" aria-controls="gk-notes-screen">
+          <span class="category-icon gk-study-notes-icon" aria-hidden="true">GK</span>
+          <span class="category-copy">
+            <strong>GK Study Notes</strong>
+            <small>Learn names, dates, countries, organizations and events through connected Urdu reading notes.</small>
+          </span>
+          <span class="gk-study-notes-badge" aria-hidden="true">READ</span>
+          <span class="card-arrow" aria-hidden="true">&rarr;</span>
+        </button>
+      </div>
+
       <div id="category-grid" class="category-grid">
         <button class="category-card" type="button" data-category="general-knowledge">
           <span class="category-icon icon-blue" aria-hidden="true">GK</span>
@@ -128,6 +141,61 @@
           <span class="card-arrow" aria-hidden="true">→</span>
         </button>
       </div>
+    </section>
+
+    <section id="gk-notes-screen" class="screen gk-notes-screen" aria-labelledby="gk-notes-title" hidden>
+      <button id="gk-notes-back-button" class="text-button gk-notes-back-button" type="button">
+        <span aria-hidden="true">&larr;</span> Categories
+      </button>
+
+      <article class="gk-notes-shell">
+        <header class="gk-notes-header">
+          <span class="eyebrow">GENERAL KNOWLEDGE READING LIBRARY</span>
+          <h1 id="gk-notes-title">Remember facts as connected stories</h1>
+          <p>Read each linked source-and-similar pair together, so its names, dates, places and events stay connected in memory.</p>
+
+          <div class="gk-notes-coverage" aria-label="Study notes coverage">
+            <span><strong>708</strong> Urdu notes</span>
+            <span><strong>1,416</strong> fully referenced MCQs</span>
+            <span><strong>18</strong> older single-source pairs withheld for evidence upgrade</span>
+          </div>
+        </header>
+
+        <section class="gk-notes-tools" aria-labelledby="gk-notes-tools-title">
+          <h2 id="gk-notes-tools-title" class="visually-hidden">Find study notes</h2>
+
+          <div class="gk-notes-search-field">
+            <label for="gk-notes-search">Search names, dates, countries, agencies or events</label>
+            <div class="gk-notes-search-control">
+              <input id="gk-notes-search" class="gk-notes-search-input" type="search" autocomplete="off" placeholder="For example: United Nations, 1945, Geneva">
+              <button id="gk-notes-clear-button" class="secondary-button gk-notes-clear-button" type="button">Clear</button>
+            </div>
+          </div>
+
+          <div id="gk-notes-topic-filters" class="gk-notes-topic-filters" aria-label="Filter notes by topic"></div>
+
+          <label class="gk-notes-important-filter" for="gk-notes-important-only">
+            <input id="gk-notes-important-only" type="checkbox">
+            <span>
+              <strong>Important repeated facts only</strong>
+              <small>Show notes linked to MCQs marked as important.</small>
+            </span>
+          </label>
+
+          <p id="gk-notes-results-status" class="gk-notes-results-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <div id="gk-notes-list" class="gk-notes-list"></div>
+        <div class="gk-notes-load-more-wrap">
+          <button id="gk-notes-load-more-button" class="secondary-button gk-notes-load-more-button" type="button" hidden>
+            Load more notes
+          </button>
+        </div>
+        <div id="gk-notes-empty" class="gk-notes-empty" role="status" hidden>
+          <strong>No matching notes found</strong>
+          <p>Try another name, date, country or topic, or clear the filters.</p>
+        </div>
+      </article>
     </section>
 
     <section id="paper-setup-screen" class="screen paper-setup-screen" aria-labelledby="paper-setup-title" hidden>

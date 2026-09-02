@@ -167,7 +167,7 @@ async function main() {
     await client.evaluate(`new Promise((resolve, reject) => {
       const deadline = Date.now() + 30000;
       const timer = setInterval(() => {
-        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+        if (window.PPSC_QUIZ_DATA && window.PPSC_GK_STUDY_NOTES_DATA && document.readyState === "complete") {
           clearInterval(timer);
           resolve(true);
         } else if (Date.now() >= deadline) {
@@ -229,6 +229,193 @@ async function main() {
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Mobile layout has horizontal overflow.");
       if (data.questions.some((question) => !/^https?:\\/\\//.test(question.source.referenceUrl))) errors.push("A research URL is missing.");
       if (document.querySelector("#details-toggle, #details-panel, #explanation-text, #related-history, #option-rationales, #source-notes, #details-source")) errors.push("Removed answer-explanation UI is still present.");
+
+      const notesData = window.PPSC_GK_STUDY_NOTES_DATA;
+      const notesEntry = document.querySelector("#gk-study-notes-card");
+      const storageSnapshot = () => JSON.stringify(
+        Array.from({ length: localStorage.length }, (_, index) => {
+          const key = localStorage.key(index);
+          return [key, localStorage.getItem(key)];
+        }).sort((left, right) => left[0].localeCompare(right[0]))
+      );
+      const storageBeforeNotes = storageSnapshot();
+      if (!notesData || notesData.schemaVersion !== 1 || !Array.isArray(notesData.notes) || notesData.notes.length !== 708) {
+        errors.push("Expected the schema-v1 708-card GK Study Notes dataset.");
+      }
+      if (!Array.isArray(window.PPSC_GK_STUDY_NOTES) || window.PPSC_GK_STUDY_NOTES !== notesData.notes) {
+        errors.push("GK Study Notes convenience global did not expose the notes array.");
+      }
+      if (!notesEntry || !visible(notesEntry)) errors.push("GK Study Notes entry card was not visible.");
+      if (notesEntry && notesEntry.closest("#category-grid")) errors.push("GK Study Notes entry card was rendered inside the subject category grid.");
+      if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("GK Study Notes changed the 11 subject categories.");
+      if (document.querySelectorAll("#gk-notes-list .gk-note-card").length !== 0) errors.push("GK Study Notes eagerly built its 708-card DOM before the library was opened.");
+
+      if (notesEntry) {
+        notesEntry.click();
+        await pause();
+        const notesScreen = document.querySelector("#gk-notes-screen");
+        const notesList = document.querySelector("#gk-notes-list");
+        const notesSearch = document.querySelector("#gk-notes-search");
+        const notesClear = document.querySelector("#gk-notes-clear-button");
+        const notesLoadMore = document.querySelector("#gk-notes-load-more-button");
+        const importantOnly = document.querySelector("#gk-notes-important-only");
+        const resultsStatus = document.querySelector("#gk-notes-results-status");
+        const emptyState = document.querySelector("#gk-notes-empty");
+        const allNoteCards = () => [...document.querySelectorAll("#gk-notes-list .gk-note-card")];
+        const visibleNoteCards = () => allNoteCards().filter(visible);
+
+        if (!visible(notesScreen) || visible(document.querySelector("#category-screen"))) errors.push("GK Study Notes screen did not replace the category screen.");
+        if (document.documentElement.scrollWidth > window.innerWidth) errors.push("GK Study Notes has horizontal overflow on mobile.");
+        if (!notesList || allNoteCards().length !== 40 || visibleNoteCards().length !== 40) errors.push("GK Study Notes did not render the first 40-card page.");
+        if (!resultsStatus || !resultsStatus.textContent.includes("40 of 708")) errors.push("GK Study Notes result status did not report its progressive 40-of-708 page.");
+        if (!notesLoadMore || !visible(notesLoadMore)) errors.push("GK Study Notes Load more control was not available for the first page.");
+        if (visible(emptyState)) errors.push("GK Study Notes empty state was visible before filtering.");
+        const topicButtons = [...document.querySelectorAll("#gk-notes-topic-filters .gk-notes-topic-button[data-gk-notes-topic]")];
+        if (notesData && topicButtons.length !== notesData.topics.length + 1) errors.push("GK Study Notes topic controls did not include every topic plus All.");
+        if (topicButtons.filter((button) => button.getAttribute("aria-pressed") === "true").length !== 1) errors.push("GK Study Notes did not start with one active topic control.");
+
+        const firstCard = allNoteCards()[0];
+        if (!firstCard || firstCard.tagName !== "DETAILS" || firstCard.open) {
+          errors.push("GK Study Notes cards must begin as collapsed native details elements.");
+        } else {
+          const firstSummary = firstCard.querySelector(".gk-note-summary");
+          firstSummary.click();
+          await pause();
+          if (!firstCard.open) errors.push("GK Study Notes summary did not open its native details card.");
+          const facts = [...firstCard.querySelectorAll(".gk-note-fact[data-question-id]")];
+          const renderedNote = notesData.notes.find((note) => note.id === firstCard.dataset.gkNoteId);
+          if (facts.length !== 2 || !renderedNote || facts[0].dataset.questionId !== renderedNote.facts[0].questionId
+            || facts[1].dataset.questionId !== renderedNote.facts[1].questionId
+            || renderedNote.facts[0].kind !== "source" || renderedNote.facts[1].kind !== "similar") {
+            errors.push("An open GK Study Note did not show exactly source then similar facts.");
+          }
+          if (facts.some((fact) => !fact.querySelector(".gk-note-fact-question")?.textContent.trim()
+            || !fact.querySelector(".gk-note-correct-answer")?.textContent.trim())) {
+            errors.push("A GK Study Note fact omitted its question context or correct-answer key fact.");
+          }
+          if (facts.some((fact) => fact.querySelector(".gk-note-fact-question")?.textContent.trim().startsWith("\u062f\u0631\u0633\u062a \u062c\u0648\u0627\u0628"))) {
+            errors.push("A GK Study Note still exposed MCQ-style correct-answer boilerplate in its reading prose.");
+          }
+          const temporalBadges = [...firstCard.querySelectorAll(".gk-note-temporal-badge[data-temporal-status]")];
+          if (temporalBadges.length !== 2 || temporalBadges.some((badge) => !badge.textContent.trim())) {
+            errors.push("A GK Study Note did not show a temporal badge for both facts.");
+          }
+          const citationLists = [...firstCard.querySelectorAll(".gk-note-citations")];
+          const sourceLinks = [...firstCard.querySelectorAll(".gk-note-source-link")];
+          if (citationLists.length !== 2 || citationLists.some((list) => list.querySelectorAll("a.gk-note-source-link").length < 2)) {
+            errors.push("A GK Study Note did not expose at least two citations for each fact.");
+          }
+          if (sourceLinks.some((link) => !/^https:\\/\\//i.test(link.href))) errors.push("A GK Study Note citation was not HTTPS.");
+          if (sourceLinks.some((link) => !/checked \\d{4}-\\d{2}-\\d{2}/.test(link.textContent))) errors.push("A GK Study Note citation omitted its evidence-check date.");
+          if (!firstCard.querySelector(".gk-note-memory-hook")?.textContent.trim()) errors.push("A GK Study Note omitted its memory hook.");
+        }
+
+        const evidenceDetails = document.querySelector("details.gk-note-evidence-details");
+        if (!evidenceDetails || evidenceDetails.open || !evidenceDetails.querySelector(".gk-note-evidence-note")?.textContent.trim()) {
+          errors.push("GK Study Notes did not provide a collapsed source/correction disclosure.");
+        } else {
+          const evidenceCard = evidenceDetails.closest("details.gk-note-card");
+          if (evidenceCard && !evidenceCard.open) evidenceCard.querySelector(".gk-note-summary").click();
+          await pause();
+          evidenceDetails.querySelector(".gk-note-evidence-summary").click();
+          await pause();
+          if (!evidenceDetails.open || !visible(evidenceDetails.querySelector(".gk-note-evidence-note"))) errors.push("GK Study Notes source/correction disclosure did not open.");
+        }
+
+        if (notesLoadMore) {
+          notesLoadMore.click();
+          await pause();
+          if (allNoteCards().length !== 80 || visibleNoteCards().length !== 80 || !resultsStatus.textContent.includes("80 of 708")) {
+            errors.push("GK Study Notes Load more did not append the next 40-card page.");
+          }
+        }
+
+        const firstTitle = allNoteCards()[0]?.querySelector(".gk-note-title")?.textContent.trim();
+        if (!notesSearch || !notesClear || !firstTitle) {
+          errors.push("GK Study Notes search controls or searchable title were missing.");
+        } else {
+          notesSearch.value = firstTitle;
+          notesSearch.dispatchEvent(new Event("input", { bubbles: true }));
+          await pause();
+          const titleMatchVisible = visibleNoteCards().some((card) => card.querySelector(".gk-note-title")?.textContent.trim() === firstTitle);
+          if (!titleMatchVisible || visibleNoteCards().length < 1 || visibleNoteCards().length >= 40) {
+            errors.push("GK Study Notes search did not narrow results while retaining the matching title.");
+          }
+          notesClear.click();
+          await pause();
+          if (notesSearch.value || visibleNoteCards().length !== 40 || !resultsStatus.textContent.includes("40 of 708")) errors.push("GK Study Notes Clear did not restore the first full-list page after search.");
+        }
+
+        const datedNote = notesData.notes.find((note) => note.facts.some((fact) => ["as-of", "version"].includes(fact.temporalScope?.type)));
+        if (!datedNote || !notesSearch || !notesClear) {
+          errors.push("GK Study Notes lacked a searchable dated/version-specific note.");
+        } else {
+          notesSearch.value = datedNote.id;
+          notesSearch.dispatchEvent(new Event("input", { bubbles: true }));
+          await pause();
+          const datedCard = allNoteCards()[0];
+          const datedBadge = datedCard?.querySelector('.gk-note-temporal-badge[data-temporal-status="as-of"], .gk-note-temporal-badge[data-temporal-status="version"]');
+          if (datedCard && !datedCard.open) datedCard.querySelector(".gk-note-summary").click();
+          await pause();
+          if (!datedCard || !datedCard.open || !datedBadge || !visible(datedBadge) || !datedBadge.textContent.trim()) {
+            errors.push("A dated/version GK Study Note did not reveal its temporal caveat when opened.");
+          }
+          notesClear.click();
+          await pause();
+          if (visibleNoteCards().length !== 40) errors.push("Clearing the dated-note search did not restore the first page.");
+        }
+
+        const specificTopicButton = topicButtons.find((button) => button.dataset.gkNotesTopic !== "all");
+        const allTopicButton = topicButtons.find((button) => button.dataset.gkNotesTopic === "all");
+        if (!specificTopicButton || !allTopicButton) {
+          errors.push("GK Study Notes All/specific topic controls were missing.");
+        } else {
+          specificTopicButton.click();
+          await pause();
+          const selectedTopic = specificTopicButton.dataset.gkNotesTopic;
+          const topicMatches = visibleNoteCards();
+          if (specificTopicButton.getAttribute("aria-pressed") !== "true" || !topicMatches.length || topicMatches.length > 40) {
+            errors.push("GK Study Notes topic filter did not narrow the list.");
+          }
+          if (topicMatches.some((card) => !String(card.dataset.gkNoteTopics || "").includes(selectedTopic))) {
+            errors.push("GK Study Notes topic filter displayed an unrelated card.");
+          }
+          allTopicButton.click();
+          await pause();
+          if (visibleNoteCards().length !== 40 || allTopicButton.getAttribute("aria-pressed") !== "true") errors.push("GK Study Notes All topic did not restore the first full-list page.");
+        }
+
+        if (!importantOnly) {
+          errors.push("GK Study Notes Important-only control was missing.");
+        } else {
+          importantOnly.click();
+          await pause();
+          const importantMatches = visibleNoteCards();
+          if (!importantMatches.length || importantMatches.length > 40) errors.push("GK Study Notes Important-only filter did not return its first filtered page.");
+          if (importantMatches.some((card) => card.dataset.gkNoteImportant !== "true")) errors.push("Important-only displayed a non-important GK Study Note.");
+          importantOnly.click();
+          await pause();
+          if (visibleNoteCards().length !== 40) errors.push("Clearing Important-only did not restore the first full-list page.");
+        }
+
+        if (notesSearch && notesClear) {
+          notesSearch.value = "zzzz-no-such-gk-study-note-708";
+          notesSearch.dispatchEvent(new Event("input", { bubbles: true }));
+          await pause();
+          if (visibleNoteCards().length !== 0 || !visible(emptyState) || !resultsStatus.textContent.includes("0")) {
+            errors.push("GK Study Notes no-results state was not shown for an impossible search.");
+          }
+          notesClear.click();
+          await pause();
+          if (visible(emptyState) || visibleNoteCards().length !== 40) errors.push("GK Study Notes Clear did not recover the first page after no results.");
+        }
+
+        document.querySelector("#gk-notes-back-button")?.click();
+        await pause();
+        if (!visible(document.querySelector("#category-screen")) || visible(notesScreen)) errors.push("GK Study Notes Back did not return to categories.");
+        if (document.activeElement !== notesEntry) errors.push("GK Study Notes Back did not restore focus to its entry card.");
+        if (storageSnapshot() !== storageBeforeNotes) errors.push("Browsing GK Study Notes changed localStorage.");
+      }
 
       const ibesQuestions = data.questions.filter((question) => question.id.startsWith("IBES-"));
       const ibesSourceQuestions = ibesQuestions.filter((question) => question.kind === "source");
@@ -659,6 +846,7 @@ async function main() {
       return {
         errors,
         categoryCards: document.querySelectorAll("#category-grid .category-card").length,
+        gkStudyNotes: notesData && Array.isArray(notesData.notes) ? notesData.notes.length : 0,
         totalQuestions: data.questions.length,
         testedCategory: activeCategory,
         testedCategoryQuestions: categoryQuestions.length,
@@ -1979,7 +2167,7 @@ async function main() {
             if (answers.length !== 2 || answers[0].textContent !== expectedSelected || answers[1].textContent !== expectedCorrect || answers.some((answer) => answer.lang !== "ur" || answer.dir !== "rtl" || /[A-Za-z]/.test(answer.textContent))) errors.push("An Urdu " + reviewKind + " review row did not show the aligned Urdu selected/correct options.");
           } else {
             const category = data.categories.find((candidate) => candidate.id === question.categoryId);
-            const expectedHeading = "Question " + (questionIndex + 1) + ". " + question.question;
+            const expectedHeading = "Question " + (questionIndex + 1) + ". " + question.question.trim();
             const expectedSelected = "Your answer: " + englishLabels[selectedRenderedIndex] + ". " + renderedOptions[selectedRenderedIndex];
             const expectedCorrect = "Correct answer: " + englishLabels[correctRenderedIndex] + ". " + renderedOptions[correctRenderedIndex];
             if (item.classList.contains("is-urdu") || item.hasAttribute("lang") || item.hasAttribute("dir")) errors.push("A non-Urdu " + reviewKind + " review row retained Urdu RTL attributes.");

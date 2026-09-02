@@ -16,13 +16,14 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 - Custom papers award 1 mark per correct answer and deduct 0.25 per wrong answer; the final Correct and Wrong totals open filtered answer-review lists.
 - Learn and Quiz include the full selected category by default; the question-number input above the progress bar lets you jump directly to any question in the active session.
 - An evidence-based **Important repeated MCQs** filter uses verified deduplication records and displays how many times each marked fact occurred.
+- A separate **GK Study Notes** reading library turns 708 fully evidenced General Knowledge pairs into connected Urdu fact cards. It supports search, nine topic filters and an Important-only view, while progressively rendering 40 cards at a time for low-end phones without changing the 11 subject categories or MCQ sessions.
 - Learn always follows the stable source/data order; Quiz creates a fresh question order and safely reshuffles ordinary options without changing the correct answer. Questions whose choices refer to fixed labels such as “Both A and B” or “All of the above” retain their canonical A–D order so their meaning stays correct.
 - Previous and Next navigation lets you revisit earlier questions; Quiz restores each pending or submitted answer, its feedback, shuffled options, and score without counting an answer twice.
 - A compact Continue card restores the exact active Learn, Quiz, Difficult, or Custom Paper session after a refresh or browser restart, including its selected categories, progress, option order, answer history, submitted feedback, and score.
 - A persistent, always-visible **Mark as difficult** checkbox below every question, plus category-wise Difficult Learn and Difficult Quiz sessions containing only marked questions.
 - A focused question screen without Answer explained, View details, related-history or research-source panels.
 
-The standard flow is: choose a category → optionally limit it to all **Important repeated MCQs** in that category → choose Learn, Quiz or Difficult. Learn and Quiz start with the full active scope, and the editable question number above the progress bar can jump directly to a specific question. Difficult opens its own Learn/Quiz choice and uses only marked questions inside the active category/filter. Learn mode preselects the correct answer and keeps the source/data order. After a learning session, **Start Quiz** opens the same category/filter and full or difficult-only scope in scored Quiz mode. Quiz gives instant Correct/Incorrect feedback, creates a fresh question and option order, and remaps the correct answer safely. Alternatively, **Start Paper Here** lets you select multiple categories and creates a complete 100-question mixed paper with live feedback, negative marking and end-of-paper answer review.
+The standard flow is: choose a category → optionally limit it to all **Important repeated MCQs** in that category → choose Learn, Quiz or Difficult. Learn and Quiz start with the full active scope, and the editable question number above the progress bar can jump directly to a specific question. Difficult opens its own Learn/Quiz choice and uses only marked questions inside the active category/filter. Learn mode preselects the correct answer and keeps the source/data order. After a learning session, **Start Quiz** opens the same category/filter and full or difficult-only scope in scored Quiz mode. Quiz gives instant Correct/Incorrect feedback, creates a fresh question and option order, and remaps the correct answer safely. Alternatively, **Start Paper Here** creates a 100-question mixed paper, while **GK Study Notes** opens a non-MCQ reading screen with two verified facts, a memory link, temporal labels and evidence sources on every card.
 
 Difficult marks and the compact active-session checkpoint are stored in that browser and device using local storage. They survive normal reloads and visits; clearing the site's browser data removes them. Completed sessions are removed from Continue automatically.
 
@@ -32,6 +33,7 @@ Difficult marks and the compact active-session checkpoint are stored in that bro
 ppsc-project/
 ├── .github/workflows/pages.yml  # GitHub Pages deployment
 ├── data/questions.js            # Generated browser question bank
+├── data/gk-study-notes.js       # Generated, evidence-bound GK reading cards
 ├── data/release-repeat-evidence.json # Pinned repeat evidence for that release
 ├── tools/                       # Build and validation scripts
 ├── work/                        # Verified source/enrichment JSON
@@ -41,7 +43,9 @@ ppsc-project/
 └── README.md
 ```
 
-`data/questions.js`, `data/release-repeat-evidence.json`, and the Markdown banks in the parent folder are generated outputs. The verified enrichment JSON, `question-translations-ur*.json`, and `urdu-category-display-*.json` files under `work/` are the source of truth.
+`data/questions.js`, `data/gk-study-notes.js`, `data/release-repeat-evidence.json`, and the Markdown banks in the parent folder are generated outputs. The verified enrichment JSON, `question-translations-ur*.json`, and `urdu-category-display-*.json` files under `work/` are the source of truth.
+
+GK Study Notes do not generate new historical claims. Each card preserves the exact Urdu explanations, correct answers, sources, structured references and temporal scope of one verified General Knowledge source/similar pair. The strict release includes 708 pairs (1,416 questions); 18 older pairs (36 questions) remain available for MCQ practice but are deliberately excluded from reading notes until they receive the same two-reference and temporal metadata.
 
 ## Preview locally
 
@@ -67,20 +71,23 @@ node tools/validate-adv2e102-verification.js
 node tools/validate-adv2e102-dedup.js
 node tools/validate-adv2e102-enriched.js
 node tools/build-question-bank.js
+node tools/build-gk-study-notes.js
 node tools/validate-site-data.js --expected=11412 --verify-work-repeat-evidence
 node tools/browser-smoke.js
 ```
 
 The strict repeat-evidence flag belongs to a deliberate question-bank rebuild, after the source validators and builder are clean. GitHub Pages deployment validates the committed question bank against its pinned, hashed release-evidence snapshot without coupling it to newer restart-safe work-in-progress decision files.
 
-The browser smoke test requires local Chrome or Edge. It exercises Learn, Quiz, Difficult and Custom Paper flows at mobile width, including Previous/Next answer restoration, stable Learn order, shuffled questions/options, answer remapping, 100-question paper construction, negative marking, Correct/Wrong review lists, the Learn-complete **Start Quiz** transition, the persistent mark/unmark control, and exact Continue restoration for answer history, pending selections, submitted feedback, score, paper categories, Difficult scope, corrupt/stale storage recovery, and completed-session clearing.
+The browser smoke test requires local Chrome or Edge. It exercises Learn, Quiz, Difficult and Custom Paper flows at mobile width, including Previous/Next answer restoration, stable Learn order, shuffled questions/options, answer remapping, 100-question paper construction, negative marking, Correct/Wrong review lists, the Learn-complete **Start Quiz** transition, the persistent mark/unmark control, and exact Continue restoration for answer history, pending selections, submitted feedback, score, paper categories, Difficult scope, corrupt/stale storage recovery, and completed-session clearing. It also covers the GK Study Notes entry, search, Clear, topic and Important filters, empty state, fact accordion, citations, temporal labels, mobile overflow, focus return and the guarantee that reading notes leaves local storage unchanged.
 
-The build script validates all six `PPSC 110 Edition` papers, all 1,088 retained IBES pairs, and every currently retained ADV2E102 pair before including it. It balances only the generated similar-question answer positions and creates:
+The question-bank build script validates all six `PPSC 110 Edition` papers, all 1,088 retained IBES pairs, and every currently retained ADV2E102 pair before including it. It balances only the generated similar-question answer positions and creates:
 
 - `data/questions.js` with the complete website bank.
 - `data/release-repeat-evidence.json` with the exact hashed decision evidence used by that release.
 - `..\ppsc_mcqs.md` with all similar practice questions.
 - Eleven category Markdown files in the parent folder.
+
+The dedicated `tools/build-gk-study-notes.js` command then reads the committed question-bank asset and creates `data/gk-study-notes.js` with the strict 708-card library and its explicit 18-pair exclusion evidence.
 
 The original PDF option order is never rearranged.
 
@@ -118,7 +125,7 @@ Do not save a GitHub password or personal access token in the project.
 
 ## GitHub Pages
 
-The workflow at `.github/workflows/pages.yml` publishes the required site files, `data/questions.js`, and the two local font assets; internal research/work files are not included in the deployed artifact.
+The workflow at `.github/workflows/pages.yml` publishes the required site files, `data/questions.js`, `data/gk-study-notes.js`, and the two local font assets; internal research/work files are not included in the deployed artifact.
 
 In the repository, open **Settings → Pages**, set **Source** to **GitHub Actions**, then push to `main`. The expected site URL is:
 

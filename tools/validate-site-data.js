@@ -8,6 +8,7 @@ const vm = require("vm");
 const projectDirectory = path.resolve(__dirname, "..");
 const workDirectory = path.join(projectDirectory, "work");
 const dataPath = path.join(projectDirectory, "data", "questions.js");
+const gkStudyNotesPath = path.join(projectDirectory, "data", "gk-study-notes.js");
 const releaseRepeatEvidencePath = path.join(projectDirectory, "data", "release-repeat-evidence.json");
 const htmlPath = path.join(projectDirectory, "index.html");
 const stylesPath = path.join(projectDirectory, "styles.css");
@@ -54,6 +55,22 @@ function loadData() {
     return { categories: [], questions: [] };
   }
   return sandbox.window.PPSC_QUIZ_DATA || { categories: [], questions: [] };
+}
+
+function loadGkStudyNotes() {
+  const sandbox = { window: {} };
+  vm.createContext(sandbox);
+  try {
+    vm.runInContext(fs.readFileSync(gkStudyNotesPath, "utf8"), sandbox, { filename: gkStudyNotesPath });
+  } catch (reason) {
+    error(`gk-study-notes.js could not be evaluated: ${reason.message}`);
+    return { data: null, aliasIsNotes: false };
+  }
+  const data = sandbox.window.PPSC_GK_STUDY_NOTES_DATA || null;
+  return {
+    data,
+    aliasIsNotes: Boolean(data && sandbox.window.PPSC_GK_STUDY_NOTES === data.notes)
+  };
 }
 
 function sha256Json(value) {
@@ -259,6 +276,280 @@ function validateData(data) {
   }
 
   return { categories, questions };
+}
+
+function jsonEqual(left, right) {
+  return JSON.stringify(left) === JSON.stringify(right);
+}
+
+function optionText(option) {
+  return String(option && typeof option === "object" ? option.text : option).trim();
+}
+
+function findForbiddenMcqFields(value, location = "GK Study Notes") {
+  if (!value || typeof value !== "object") return;
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => findForbiddenMcqFields(item, `${location}[${index}]`));
+    return;
+  }
+  for (const [key, child] of Object.entries(value)) {
+    if (["options", "optionsUrdu", "correctOptionIndex"].includes(key)) {
+      error(`${location}: must not expose MCQ field ${key}`);
+    }
+    findForbiddenMcqFields(child, `${location}.${key}`);
+  }
+}
+
+function validateGkStudyNotes(bundle, questionData, questions) {
+  const notesData = bundle && bundle.data;
+  if (!notesData || typeof notesData !== "object" || Array.isArray(notesData)) {
+    error("gk-study-notes.js must expose window.PPSC_GK_STUDY_NOTES_DATA");
+    return;
+  }
+  if (!bundle.aliasIsNotes) {
+    error("gk-study-notes.js must expose window.PPSC_GK_STUDY_NOTES as the exact notes array");
+  }
+  if (notesData.schemaVersion !== 1) {
+    error(`GK Study Notes schemaVersion is ${notesData.schemaVersion}; expected 1`);
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(notesData.generatedOn || ""))) {
+    error("GK Study Notes generatedOn must use YYYY-MM-DD");
+  }
+  if (notesData.sourceBankVersion !== questionData.version) {
+    error(`GK Study Notes sourceBankVersion is ${notesData.sourceBankVersion}; expected ${questionData.version}`);
+  }
+  if (notesData.sourceBankGeneratedOn !== questionData.generatedOn) {
+    error(`GK Study Notes sourceBankGeneratedOn is ${notesData.sourceBankGeneratedOn}; expected ${questionData.generatedOn}`);
+  }
+  if (notesData.sourceBankQuestionCount !== questions.length) {
+    error(`GK Study Notes sourceBankQuestionCount is ${notesData.sourceBankQuestionCount}; expected ${questions.length}`);
+  }
+  if (!/^sha256:[a-f0-9]{64}$/.test(String(notesData.sourceBankSignature || ""))) {
+    error("GK Study Notes sourceBankSignature must be a sha256: digest");
+  } else {
+    const expectedSignature = `sha256:${crypto.createHash("sha256").update(fs.readFileSync(dataPath)).digest("hex")}`;
+    if (notesData.sourceBankSignature !== expectedSignature) {
+      error(`GK Study Notes sourceBankSignature is ${notesData.sourceBankSignature}; expected ${expectedSignature}`);
+    }
+  }
+
+  const topics = Array.isArray(notesData.topics) ? notesData.topics : [];
+  const notes = Array.isArray(notesData.notes) ? notesData.notes : [];
+  const exclusions = Array.isArray(notesData.exclusions) ? notesData.exclusions : [];
+  if (!Array.isArray(notesData.topics) || !topics.length) error("GK Study Notes topics must be a nonempty array");
+  if (!Array.isArray(notesData.notes)) error("GK Study Notes notes must be an array");
+  if (!Array.isArray(notesData.exclusions) || !exclusions.length) {
+    error("GK Study Notes exclusions must document the omitted legacy evidence");
+  }
+
+  const questionById = new Map(questions.map((question) => [question.id, question]));
+  const gkQuestions = questions.filter((question) => question.categoryId === "general-knowledge");
+  const gkPairs = new Map();
+  for (const question of gkQuestions) {
+    const pair = gkPairs.get(question.pairId) || [];
+    pair.push(question);
+    gkPairs.set(question.pairId, pair);
+  }
+  const validPair = (pair) => pair.length === 2
+    && pair[0].kind === "source"
+    && pair[1].kind === "similar";
+  const hasStructuredEvidence = (question) => question.temporalScope
+    && typeof question.temporalScope === "object"
+    && !Array.isArray(question.temporalScope)
+    && Array.isArray(question.references)
+    && question.references.length >= 2;
+  const eligiblePairs = [...gkPairs.entries()].filter(([, pair]) => (
+    validPair(pair) && pair.every(hasStructuredEvidence)
+  ));
+  const excludedPairs = [...gkPairs.entries()].filter(([, pair]) => (
+    !validPair(pair) || !pair.every(hasStructuredEvidence)
+  ));
+  const eligiblePairIds = eligiblePairs.map(([pairId]) => pairId);
+  const excludedPairIds = excludedPairs.map(([pairId]) => pairId);
+  const eligibleQuestionIds = eligiblePairs.flatMap(([, pair]) => pair.map((question) => question.id));
+  const excludedQuestionIds = excludedPairs.flatMap(([, pair]) => pair.map((question) => question.id));
+
+  if (gkQuestions.length !== 1452 || gkPairs.size !== 726) {
+    error(`GK Study Notes source scope is ${gkQuestions.length} questions/${gkPairs.size} pairs; expected 1452/726`);
+  }
+  if (eligiblePairIds.length !== 708 || eligibleQuestionIds.length !== 1416) {
+    error(`GK Study Notes eligible scope is ${eligiblePairIds.length} pairs/${eligibleQuestionIds.length} questions; expected 708/1416`);
+  }
+  if (excludedPairIds.length !== 18 || excludedQuestionIds.length !== 36) {
+    error(`GK Study Notes legacy exclusion is ${excludedPairIds.length} pairs/${excludedQuestionIds.length} questions; expected 18/36`);
+  }
+  for (const [field, actual, expected] of [
+    ["includedPairCount", notesData.includedPairCount, 708],
+    ["includedQuestionCount", notesData.includedQuestionCount, 1416],
+    ["excludedPairCount", notesData.excludedPairCount, 18],
+    ["excludedQuestionCount", notesData.excludedQuestionCount, 36]
+  ]) {
+    if (actual !== expected) error(`GK Study Notes ${field} is ${actual}; expected ${expected}`);
+  }
+  if (notes.length !== 708) error(`GK Study Notes contains ${notes.length} notes; expected 708`);
+
+  const documentedPairIds = exclusions.flatMap((entry) => Array.isArray(entry && entry.pairIds) ? entry.pairIds : []);
+  const documentedQuestionIds = exclusions.flatMap((entry) => Array.isArray(entry && entry.questionIds) ? entry.questionIds : []);
+  for (const [offset, exclusion] of exclusions.entries()) {
+    const location = `GK Study Notes exclusion ${offset + 1}`;
+    if (!exclusion || typeof exclusion !== "object" || Array.isArray(exclusion)) {
+      error(`${location}: must be an object`);
+      continue;
+    }
+    if (!String(exclusion.reason || "").trim()) error(`${location}: reason is missing`);
+    const pairIds = Array.isArray(exclusion.pairIds) ? exclusion.pairIds : [];
+    const questionIds = Array.isArray(exclusion.questionIds) ? exclusion.questionIds : [];
+    if (exclusion.pairCount !== pairIds.length) error(`${location}: pairCount does not match pairIds`);
+    if (exclusion.questionCount !== questionIds.length) error(`${location}: questionCount does not match questionIds`);
+  }
+  if (!jsonEqual(documentedPairIds, excludedPairIds)) {
+    error("GK Study Notes exclusions do not list the exact 18 legacy pair IDs in bank order");
+  }
+  if (!jsonEqual(documentedQuestionIds, excludedQuestionIds)) {
+    error("GK Study Notes exclusions do not list the exact 36 legacy question IDs in bank order");
+  }
+  if (new Set(documentedPairIds).size !== documentedPairIds.length
+    || new Set(documentedQuestionIds).size !== documentedQuestionIds.length) {
+    error("GK Study Notes exclusions contain duplicate IDs");
+  }
+
+  const topicIds = new Set();
+  for (const [offset, topic] of topics.entries()) {
+    const location = topic && topic.id ? `GK Study Notes topic ${topic.id}` : `GK Study Notes topic ${offset + 1}`;
+    if (!topic || typeof topic !== "object" || Array.isArray(topic)) {
+      error(`${location}: must be an object`);
+      continue;
+    }
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(String(topic.id || ""))) error(`${location}: invalid id`);
+    if (topicIds.has(topic.id)) error(`${location}: duplicate id`);
+    topicIds.add(topic.id);
+    for (const field of ["label", "labelUrdu", "description", "descriptionUrdu"]) {
+      if (!String(topic[field] || "").trim()) error(`${location}: ${field} is missing`);
+    }
+    if (!/[\u0600-\u06ff]/u.test(String(topic.labelUrdu || ""))
+      || !/[\u0600-\u06ff]/u.test(String(topic.descriptionUrdu || ""))) {
+      error(`${location}: Urdu label and description must contain Urdu script`);
+    }
+    if (!Number.isInteger(topic.noteCount) || topic.noteCount < 1) error(`${location}: noteCount must be positive`);
+  }
+  if (!topicIds.has("general-world-facts")) {
+    error("GK Study Notes topics must include the general-world-facts fallback");
+  }
+
+  const noteIds = new Set();
+  const representedPairIds = [];
+  const representedQuestionIds = [];
+  const today = new Date().toISOString().slice(0, 10);
+  for (const [offset, note] of notes.entries()) {
+    const location = note && note.id ? note.id : `GK Study Note ${offset + 1}`;
+    if (!note || typeof note !== "object" || Array.isArray(note)) {
+      error(`${location}: must be an object`);
+      continue;
+    }
+    if (!String(note.id || "").trim()) error(`${location}: id is missing`);
+    if (noteIds.has(note.id)) error(`${location}: duplicate id`);
+    noteIds.add(note.id);
+    if (note.id !== `GKNOTE-${note.pairId}`) error(`${location}: id must be derived from pairId`);
+    representedPairIds.push(note.pairId);
+    const pair = gkPairs.get(note.pairId);
+    if (!pair || !eligiblePairIds.includes(note.pairId)) {
+      error(`${location}: pairId is not an eligible General Knowledge pair`);
+      continue;
+    }
+    if (!String(note.title || "").trim()) error(`${location}: title is missing`);
+    if (!String(note.subtitleUrdu || "").trim() || !/[\u0600-\u06ff]/u.test(note.subtitleUrdu)) {
+      error(`${location}: subtitleUrdu must contain a readable Urdu story summary`);
+    }
+    if (!String(note.memoryHookUrdu || "").trim() || !/[\u0600-\u06ff]/u.test(note.memoryHookUrdu)) {
+      error(`${location}: memoryHookUrdu must contain Urdu text`);
+    }
+    if (!Array.isArray(note.topicIds) || !note.topicIds.length) {
+      error(`${location}: topicIds must contain at least one topic or the fallback`);
+    } else {
+      if (new Set(note.topicIds).size !== note.topicIds.length) error(`${location}: topicIds contain duplicates`);
+      for (const topicId of note.topicIds) {
+        if (!topicIds.has(topicId)) error(`${location}: unknown topic ${topicId}`);
+      }
+    }
+    const expectedImportant = pair.some((question) => question.isImportant === true);
+    const expectedRepeatCount = Math.max(...pair.map((question) => (
+      Number.isInteger(question.repeatCount) ? question.repeatCount : 1
+    )));
+    if (note.important !== expectedImportant) error(`${location}: important does not match its source pair`);
+    if (note.repeatCount !== expectedRepeatCount) error(`${location}: repeatCount does not match its source pair`);
+    if (!Array.isArray(note.facts) || note.facts.length !== 2) {
+      error(`${location}: facts must contain exactly source then similar`);
+      continue;
+    }
+
+    for (const [factOffset, fact] of note.facts.entries()) {
+      const canonical = pair[factOffset];
+      const factLocation = `${location} fact ${factOffset + 1}`;
+      if (!fact || typeof fact !== "object" || Array.isArray(fact)) {
+        error(`${factLocation}: must be an object`);
+        continue;
+      }
+      representedQuestionIds.push(fact.questionId);
+      if (!questionById.has(fact.questionId)) error(`${factLocation}: related question ID does not exist`);
+      if (fact.questionId !== canonical.id) error(`${factLocation}: questionId must preserve source-then-similar order`);
+      if (fact.kind !== canonical.kind) error(`${factLocation}: kind does not match canonical question`);
+      if (fact.answer !== optionText(canonical.options[canonical.correctOptionIndex])) {
+        error(`${factLocation}: answer does not match the canonical correct option`);
+      }
+      if (fact.textUrdu !== canonical.explanationUrdu) {
+        error(`${factLocation}: textUrdu must exactly preserve canonical explanationUrdu`);
+      }
+      if (!jsonEqual(fact.source, canonical.source)) error(`${factLocation}: source differs from canonical evidence`);
+      if (!jsonEqual(fact.references, canonical.references)) error(`${factLocation}: references differ from canonical evidence`);
+      if (!jsonEqual(fact.temporalScope, canonical.temporalScope)) error(`${factLocation}: temporalScope differs from canonical evidence`);
+      if (fact.sourceNotes !== canonical.sourceNotes) error(`${factLocation}: sourceNotes differs from canonical disclosure`);
+      if (!Array.isArray(fact.references) || fact.references.length < 2) {
+        error(`${factLocation}: needs at least two structured references`);
+      } else if (fact.references.some((reference) => !/^https:\/\//i.test(String(reference && reference.url || "")))) {
+        error(`${factLocation}: every structured reference URL must use HTTPS`);
+      }
+      if (!fact.source || !/^https:\/\//i.test(String(fact.source.referenceUrl || ""))) {
+        error(`${factLocation}: canonical source URL must use HTTPS`);
+      }
+      const temporal = fact.temporalScope || {};
+      if (!["static", "event-date", "as-of", "version"].includes(temporal.type)) {
+        error(`${factLocation}: unsupported temporalScope type ${temporal.type}`);
+      }
+      if (temporal.type === "as-of") {
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(String(temporal.asOf || ""))) {
+          error(`${factLocation}: as-of fact needs an exact asOf date`);
+        }
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(String(temporal.reverifyAfter || ""))) {
+          error(`${factLocation}: as-of fact needs an exact reverifyAfter date`);
+        } else if (temporal.reverifyAfter < today) {
+          error(`${factLocation}: as-of evidence became overdue on ${temporal.reverifyAfter}`);
+        }
+      }
+      if (temporal.type === "event-date" && !String(temporal.eventDate || "").trim()) {
+        error(`${factLocation}: event-date fact needs eventDate`);
+      }
+      if (temporal.type === "version" && !String(temporal.version || "").trim()) {
+        error(`${factLocation}: version fact needs its exact version label`);
+      }
+    }
+  }
+
+  if (!jsonEqual(representedPairIds, eligiblePairIds)) {
+    error("GK Study Notes must represent each eligible GK pair exactly once in bank order");
+  }
+  if (!jsonEqual(representedQuestionIds, eligibleQuestionIds)) {
+    error("GK Study Notes must represent the exact 1,416 eligible GK question IDs in source/similar order");
+  }
+  if (new Set(representedQuestionIds).size !== representedQuestionIds.length) {
+    error("GK Study Notes repeat a related question ID");
+  }
+  for (const topic of topics) {
+    const actualCount = notes.filter((note) => Array.isArray(note.topicIds) && note.topicIds.includes(topic.id)).length;
+    if (topic.noteCount !== actualCount) {
+      error(`GK Study Notes topic ${topic.id}: noteCount is ${topic.noteCount}; expected ${actualCount}`);
+    }
+  }
+  findForbiddenMcqFields(notesData);
 }
 
 function validateQuestionsAgainstRepeatEvidence(questions, evidence, label) {
@@ -514,6 +805,10 @@ function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
     "category-screen", "paper-builder-card", "paper-setup-screen", "paper-setup-back-button",
+    "gk-study-notes-card", "gk-notes-screen", "gk-notes-back-button",
+    "gk-notes-search", "gk-notes-clear-button", "gk-notes-topic-filters",
+    "gk-notes-important-only", "gk-notes-results-status", "gk-notes-list",
+    "gk-notes-load-more-button", "gk-notes-empty",
     "paper-category-options", "paper-select-all-button", "paper-clear-all-button",
     "paper-selection-summary", "paper-setup-status", "paper-start-button",
     "mode-screen", "quiz-screen", "results-screen", "category-grid",
@@ -558,9 +853,11 @@ function validateHtml() {
     }
   }
   const dataScript = html.search(/src=["']data\/questions\.js(?:\?[^"']*)?["']/);
+  const gkNotesScript = html.search(/src=["']data\/gk-study-notes\.js(?:\?[^"']*)?["']/);
   const appScript = html.search(/src=["']app\.js(?:\?[^"']*)?["']/);
-  if (dataScript < 0 || appScript < 0 || dataScript > appScript) {
-    error("index.html: data/questions.js must load before app.js");
+  if (dataScript < 0 || gkNotesScript < 0 || appScript < 0
+    || dataScript > gkNotesScript || gkNotesScript > appScript) {
+    error("index.html: questions.js and gk-study-notes.js must load in that order before app.js");
   }
   if (/fonts\.googleapis\.com|fonts\.gstatic\.com/i.test(html)) {
     error("index.html: fonts must be self-hosted instead of loaded from Google Fonts");
@@ -586,6 +883,8 @@ function validateFonts() {
 
 const data = loadData();
 const result = validateData(data);
+const gkStudyNotesBundle = loadGkStudyNotes();
+validateGkStudyNotes(gkStudyNotesBundle, data, result.questions);
 validateRepeatMetadata(data, result.questions);
 validateKnownCorrections(result.questions);
 validateIbesBank(result.questions);
@@ -594,6 +893,7 @@ validateHtml();
 validateFonts();
 
 console.log(`Site data: ${result.categories.length} categories, ${result.questions.length} questions.`);
+console.log(`GK Study Notes: ${gkStudyNotesBundle.data && Array.isArray(gkStudyNotesBundle.data.notes) ? gkStudyNotesBundle.data.notes.length : 0} notes.`);
 console.log(`Repeat evidence: pinned release snapshot${verifyWorkRepeatEvidence ? " + strict current work/ cross-check" : ""}.`);
 const counts = Object.fromEntries(result.categories.map((category) => [
   category.name,
