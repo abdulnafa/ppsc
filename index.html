@@ -6,10 +6,10 @@
   <meta name="description" content="Free category-wise MCQ practice for the PPSC General Ability test.">
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
-  <link rel="stylesheet" href="styles.css?v=20260902-2">
+  <link rel="stylesheet" href="styles.css?v=20260904-1">
   <script src="data/questions.js?v=20260902-2" defer></script>
   <script src="data/gk-study-notes.js?v=20260902-2" defer></script>
-  <script src="app.js?v=20260902-2" defer></script>
+  <script src="app.js?v=20260904-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -77,18 +77,6 @@
         </button>
       </div>
 
-      <div id="gk-notes-entry-grid" class="category-grid gk-notes-entry-grid">
-        <button id="gk-study-notes-card" class="category-card gk-study-notes-card" type="button" aria-controls="gk-notes-screen">
-          <span class="category-icon gk-study-notes-icon" aria-hidden="true">GK</span>
-          <span class="category-copy">
-            <strong>GK Study Notes</strong>
-            <small>Learn names, dates, countries, organizations and events through connected Urdu reading notes.</small>
-          </span>
-          <span class="gk-study-notes-badge" aria-hidden="true">READ</span>
-          <span class="card-arrow" aria-hidden="true">&rarr;</span>
-        </button>
-      </div>
-
       <div id="category-grid" class="category-grid">
         <button class="category-card" type="button" data-category="general-knowledge">
           <span class="category-icon icon-blue" aria-hidden="true">GK</span>
@@ -143,9 +131,68 @@
       </div>
     </section>
 
+    <section id="quick-notes-screen" class="screen quick-notes-screen" aria-labelledby="quick-notes-title" hidden>
+      <button id="quick-notes-back-button" class="text-button quick-notes-back-button" type="button">
+        <span aria-hidden="true">&larr;</span> Study modes
+      </button>
+
+      <article class="quick-notes-shell">
+        <header class="quick-notes-header">
+          <span class="eyebrow">CATEGORY STUDY NOTES</span>
+          <span id="quick-notes-category" class="quick-notes-category">Selected category</span>
+          <h1 id="quick-notes-title">Question and answer notes</h1>
+          <p id="quick-notes-language-note">Each short cue includes the exact question in its original language, with its correct answer alongside it.</p>
+          <p class="quick-notes-count"><strong id="quick-notes-count">0</strong> notes in this category</p>
+        </header>
+
+        <section class="quick-notes-tools" aria-labelledby="quick-notes-tools-title">
+          <h2 id="quick-notes-tools-title" class="visually-hidden">Find category notes</h2>
+
+          <div class="quick-notes-search-field">
+            <label for="quick-notes-search">Search a question, cue or answer</label>
+            <div class="quick-notes-search-control">
+              <input id="quick-notes-search" class="quick-notes-search-input" type="search" autocomplete="off" placeholder="Type a name, date, term or answer">
+              <button id="quick-notes-clear-button" class="secondary-button quick-notes-clear-button" type="button">Clear</button>
+            </div>
+          </div>
+
+          <label class="quick-notes-important-filter" for="quick-notes-important-only">
+            <input id="quick-notes-important-only" type="checkbox">
+            <span>
+              <strong>Important repeated MCQs only</strong>
+              <small>Show only questions marked as important in this category.</small>
+            </span>
+          </label>
+
+          <button id="gk-study-notes-card" class="category-card gk-study-notes-card quick-notes-gk-card" type="button" aria-controls="gk-notes-screen" hidden>
+            <span class="category-icon gk-study-notes-icon" aria-hidden="true">GK</span>
+            <span class="category-copy">
+              <strong>Detailed GK Stories</strong>
+              <small>Remember names, dates, countries, organizations and events through connected Urdu reading notes.</small>
+            </span>
+            <span class="gk-study-notes-badge" aria-hidden="true">DETAILED</span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+
+          <p id="quick-notes-results-status" class="quick-notes-results-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <div id="quick-notes-list" class="quick-notes-list"></div>
+        <div class="quick-notes-load-more-wrap">
+          <button id="quick-notes-load-more-button" class="secondary-button quick-notes-load-more-button" type="button" hidden>
+            Load more notes
+          </button>
+        </div>
+        <div id="quick-notes-empty" class="quick-notes-empty" role="status" hidden>
+          <strong>No matching notes found</strong>
+          <p>Try another question, keyword or answer, or clear the filters.</p>
+        </div>
+      </article>
+    </section>
+
     <section id="gk-notes-screen" class="screen gk-notes-screen" aria-labelledby="gk-notes-title" hidden>
       <button id="gk-notes-back-button" class="text-button gk-notes-back-button" type="button">
-        <span aria-hidden="true">&larr;</span> Categories
+        <span aria-hidden="true">&larr;</span> Category notes
       </button>
 
       <article class="gk-notes-shell">
@@ -256,7 +303,7 @@
         <h1 id="mode-title">How would you like to prepare?</h1>
         <p class="mode-intro">Learn each answer, test yourself in quiz mode, or practise only the questions you marked as difficult.</p>
 
-        <section class="study-scope-panel" aria-labelledby="study-scope-title">
+        <section id="study-scope-panel" class="study-scope-panel" aria-labelledby="study-scope-title">
           <div class="study-scope-heading">
             <div>
               <span class="eyebrow">STUDY SCOPE</span>
@@ -304,6 +351,15 @@
             </span>
             <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
           </button>
+
+          <button id="study-notes-mode-button" class="mode-option mode-option-notes" type="button" aria-controls="quick-notes-screen">
+            <span class="mode-option-icon" aria-hidden="true">N</span>
+            <span class="mode-option-copy">
+              <strong>Study Notes</strong>
+              <small>Review every MCQ as a short cue, exact question and correct answer.</small>
+            </span>
+            <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
+          </button>
         </div>
 
         <section id="difficult-mode-options" class="difficult-mode-options" aria-labelledby="difficult-mode-title" hidden>
@@ -344,6 +400,40 @@
               <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
             </button>
           </div>
+        </section>
+
+        <section id="question-range-options" class="question-range-options" aria-labelledby="question-range-title" hidden>
+          <button id="question-range-back-button" class="text-button question-range-back-button" type="button">
+            <span aria-hidden="true">&larr;</span> All modes
+          </button>
+
+          <div class="question-range-heading">
+            <span class="eyebrow">SELECT QUESTION RANGE</span>
+            <h2 id="question-range-title">Choose where to start and finish</h2>
+            <p id="question-range-context">Set an inclusive range for this session.</p>
+          </div>
+
+          <form id="question-range-form" class="question-range-form" novalidate>
+            <div class="question-range-fields">
+              <label class="question-range-field" for="question-range-start-input">
+                <span>Starting question</span>
+                <input id="question-range-start-input" type="number" min="1" step="1" inputmode="numeric" required aria-describedby="question-range-help question-range-summary question-range-error">
+              </label>
+
+              <span class="question-range-separator" aria-hidden="true">to</span>
+
+              <label class="question-range-field" for="question-range-end-input">
+                <span>Ending question</span>
+                <input id="question-range-end-input" type="number" min="1" step="1" inputmode="numeric" required aria-describedby="question-range-help question-range-summary question-range-error">
+              </label>
+            </div>
+
+            <p id="question-range-help" class="question-range-help">Numbers refer to the currently selected list and both are included. For example, 1 to 50 includes questions 1 through 50; Quiz shuffles those questions after the range is selected.</p>
+            <p id="question-range-summary" class="question-range-summary" role="status" aria-live="polite"></p>
+            <p id="question-range-error" class="question-range-error" role="alert" hidden></p>
+
+            <button id="question-range-submit-button" class="primary-button question-range-submit-button" type="submit">Start session</button>
+          </form>
         </section>
       </article>
     </section>

@@ -805,6 +805,11 @@ function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
     "category-screen", "paper-builder-card", "paper-setup-screen", "paper-setup-back-button",
+    "quick-notes-screen", "quick-notes-back-button", "quick-notes-category",
+    "quick-notes-title", "quick-notes-count", "quick-notes-language-note",
+    "quick-notes-search", "quick-notes-clear-button", "quick-notes-important-only",
+    "quick-notes-results-status", "quick-notes-list", "quick-notes-load-more-button",
+    "quick-notes-empty",
     "gk-study-notes-card", "gk-notes-screen", "gk-notes-back-button",
     "gk-notes-search", "gk-notes-clear-button", "gk-notes-topic-filters",
     "gk-notes-important-only", "gk-notes-results-status", "gk-notes-list",
@@ -813,7 +818,11 @@ function validateHtml() {
     "paper-selection-summary", "paper-setup-status", "paper-start-button",
     "mode-screen", "quiz-screen", "results-screen", "category-grid",
     "continue-session-card", "continue-session-button", "continue-session-title", "continue-session-meta",
-    "mode-category", "standard-mode-options", "learn-mode-button", "quiz-mode-button",
+    "mode-category", "study-scope-panel", "standard-mode-options", "learn-mode-button", "quiz-mode-button",
+    "study-notes-mode-button", "question-range-options", "question-range-title",
+    "question-range-context", "question-range-form", "question-range-start-input",
+    "question-range-end-input", "question-range-help", "question-range-summary",
+    "question-range-error", "question-range-submit-button", "question-range-back-button",
     "difficult-mode-button", "difficult-mode-options", "difficult-back-button",
     "difficult-count", "difficult-empty", "difficult-learn-button", "difficult-quiz-button",
     "mode-back-button",
@@ -846,10 +855,36 @@ function validateHtml() {
   if (/\bid=["']part-select["']|\bdata-part-select\b/i.test(html)) {
     error("index.html: the removed Study Part selector must not be present");
   }
+  if (/\bid=["']gk-notes-entry-grid["']/i.test(html)) {
+    error("index.html: Detailed GK Stories must not have a separate homepage entry");
+  }
+  const quickNotesStart = html.search(/<section\b[^>]*\bid=["']quick-notes-screen["']/i);
+  const detailedNotesStart = html.search(/<section\b[^>]*\bid=["']gk-notes-screen["']/i);
+  const detailedGkCard = html.search(/\bid=["']gk-study-notes-card["']/i);
+  if (quickNotesStart < 0 || detailedNotesStart < 0 || detailedGkCard < quickNotesStart || detailedGkCard > detailedNotesStart) {
+    error("index.html: #gk-study-notes-card must be nested in the Quick Notes screen, not on the homepage");
+  }
+  const standardModesStart = html.search(/\bid=["']standard-mode-options["']/i);
+  const difficultModesStart = html.search(/<section\b[^>]*\bid=["']difficult-mode-options["']/i);
+  const standardModesHtml = standardModesStart >= 0 && difficultModesStart > standardModesStart
+    ? html.slice(standardModesStart, difficultModesStart)
+    : "";
+  const standardModeButtons = standardModesHtml.match(/<button\b[^>]*\bclass=["'][^"']*\bmode-option\b[^"']*["']/gi) || [];
+  if (standardModeButtons.length !== 4) {
+    error(`index.html: expected four standard preparation mode buttons, found ${standardModeButtons.length}`);
+  }
   const questionNumberInput = html.match(/<input\b[^>]*\bid=["']question-number-input["'][^>]*>/i)?.[0] || "";
   for (const [attribute, expectedValue] of [["type", "number"], ["min", "1"], ["step", "1"], ["inputmode", "numeric"]]) {
     if (!new RegExp(`\\b${attribute}=["']${expectedValue}["']`, "i").test(questionNumberInput)) {
       error(`index.html: #question-number-input must use ${attribute}="${expectedValue}"`);
+    }
+  }
+  for (const id of ["question-range-start-input", "question-range-end-input"]) {
+    const rangeInput = html.match(new RegExp(`<input\\b[^>]*\\bid=["']${id}["'][^>]*>`, "i"))?.[0] || "";
+    for (const [attribute, expectedValue] of [["type", "number"], ["min", "1"], ["step", "1"], ["inputmode", "numeric"]]) {
+      if (!new RegExp(`\\b${attribute}=["']${expectedValue}["']`, "i").test(rangeInput)) {
+        error(`index.html: #${id} must use ${attribute}="${expectedValue}"`);
+      }
     }
   }
   const dataScript = html.search(/src=["']data\/questions\.js(?:\?[^"']*)?["']/);

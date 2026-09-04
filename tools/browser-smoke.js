@@ -194,6 +194,42 @@ async function main() {
         element.getClientRects().length > 0
       );
       const errors = [];
+      const setRangeValues = (start, end) => {
+        const startInput = document.querySelector("#question-range-start-input");
+        const endInput = document.querySelector("#question-range-end-input");
+        if (!startInput || !endInput) return false;
+        startInput.value = start == null ? "" : String(start);
+        endInput.value = end == null ? "" : String(end);
+        startInput.dispatchEvent(new Event("input", { bubbles: true }));
+        endInput.dispatchEvent(new Event("input", { bubbles: true }));
+        return true;
+      };
+      const submitRange = async () => {
+        const form = document.querySelector("#question-range-form");
+        if (form) form.requestSubmit();
+        await pause();
+      };
+      const startModeWithRange = async (buttonSelector, start, end) => {
+        const button = document.querySelector(buttonSelector);
+        if (!button) {
+          errors.push("Missing range-launching mode button " + buttonSelector + ".");
+          return false;
+        }
+        button.click();
+        await pause();
+        const panel = document.querySelector("#question-range-options");
+        const startInput = document.querySelector("#question-range-start-input");
+        const endInput = document.querySelector("#question-range-end-input");
+        if (!visible(panel) || !startInput || !endInput) {
+          errors.push(buttonSelector + " did not open the question-range panel.");
+          return false;
+        }
+        const chosenStart = start == null ? Number(startInput.min || 1) : start;
+        const chosenEnd = end == null ? Number(endInput.max) : end;
+        setRangeValues(chosenStart, chosenEnd);
+        await submitRange();
+        return visible(document.querySelector("#quiz-screen"));
+      };
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
       if (!data || data.questions.length !== 11412) errors.push("Expected the current 11,412-question release bank.");
@@ -230,8 +266,6 @@ async function main() {
       if (data.questions.some((question) => !/^https?:\\/\\//.test(question.source.referenceUrl))) errors.push("A research URL is missing.");
       if (document.querySelector("#details-toggle, #details-panel, #explanation-text, #related-history, #option-rationales, #source-notes, #details-source")) errors.push("Removed answer-explanation UI is still present.");
 
-      const notesData = window.PPSC_GK_STUDY_NOTES_DATA;
-      const notesEntry = document.querySelector("#gk-study-notes-card");
       const storageSnapshot = () => JSON.stringify(
         Array.from({ length: localStorage.length }, (_, index) => {
           const key = localStorage.key(index);
@@ -239,18 +273,183 @@ async function main() {
         }).sort((left, right) => left[0].localeCompare(right[0]))
       );
       const storageBeforeNotes = storageSnapshot();
+      const quickDisplayQuestion = (question) => question.categoryId === "urdu"
+        ? String(question.questionUrdu || "").trim()
+        : String(question.question || "").trim();
+      const quickDisplayAnswer = (question) => {
+        const options = question.categoryId === "urdu" && Array.isArray(question.optionsUrdu)
+          ? question.optionsUrdu
+          : question.options;
+        const option = options[question.correctOptionIndex];
+        return String(option && typeof option === "object" ? option.text : option).trim();
+      };
+      const quickNormalize = (value) => String(value || "").normalize("NFKC").toLocaleLowerCase().replace(/\\s+/g, " ").trim();
+      const quickRows = () => [...document.querySelectorAll("#quick-notes-list .quick-note-row[data-question-id]")];
+      const categoryCards = [...document.querySelectorAll("#category-grid .category-card[data-category]")];
+
+      if (categoryCards.length !== data.categories.length || new Set(categoryCards.map((card) => card.dataset.category)).size !== data.categories.length) {
+        errors.push("The homepage did not keep exactly one category card for each of the 11 categories.");
+      }
+      if (document.querySelector("#gk-notes-entry-grid")) errors.push("A separate GK notes entry still appeared on the homepage.");
+      if (visible(document.querySelector("#gk-study-notes-card"))) errors.push("Detailed GK Stories was visible outside General Knowledge Quick Notes.");
+      if (document.querySelectorAll("#quick-notes-list .quick-note-row").length !== 0) errors.push("Quick Notes eagerly rendered rows before a category was opened.");
+
+      for (const category of data.categories) {
+        const categoryButtonForNotes = document.querySelector('#category-grid .category-card[data-category="' + category.id + '"]');
+        const expectedQuestions = data.questions.filter((question) => question.categoryId === category.id);
+        if (!categoryButtonForNotes) {
+          errors.push("Quick Notes could not open missing category " + category.id + ".");
+          continue;
+        }
+
+        categoryButtonForNotes.click();
+        await pause();
+        if (!visible(document.querySelector("#mode-screen"))) errors.push(category.name + " did not open its mode screen.");
+        if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 4) errors.push(category.name + " did not show all four preparation modes.");
+        const quickNotesButton = document.querySelector("#study-notes-mode-button");
+        quickNotesButton?.click();
+        await pause();
+
+        const quickScreen = document.querySelector("#quick-notes-screen");
+        const quickSearch = document.querySelector("#quick-notes-search");
+        const quickClear = document.querySelector("#quick-notes-clear-button");
+        const quickImportant = document.querySelector("#quick-notes-important-only");
+        const quickLoadMore = document.querySelector("#quick-notes-load-more-button");
+        const quickEmpty = document.querySelector("#quick-notes-empty");
+        const quickStatus = document.querySelector("#quick-notes-results-status");
+        const expectedFirstPageCount = Math.min(100, expectedQuestions.length);
+
+        if (!visible(quickScreen) || visible(document.querySelector("#mode-screen"))) errors.push(category.name + " Quick Notes did not replace the mode screen.");
+        if (document.querySelector("#quick-notes-category")?.textContent.trim() !== category.name) errors.push(category.name + " Quick Notes showed the wrong category label.");
+        if (document.querySelector("#quick-notes-count")?.textContent.trim() !== String(expectedQuestions.length)) errors.push(category.name + " Quick Notes showed the wrong total.");
+        if (quickRows().length !== expectedFirstPageCount) errors.push(category.name + " Quick Notes did not render its first 100-row page.");
+        if (!quickStatus?.textContent.includes(expectedFirstPageCount + " of " + expectedQuestions.length)) errors.push(category.name + " Quick Notes status showed the wrong first-page coverage.");
+        if (document.documentElement.scrollWidth > window.innerWidth) errors.push(category.name + " Quick Notes has horizontal overflow at 430px.");
+        if (visible(document.querySelector("#gk-study-notes-card")) !== (category.id === "general-knowledge")) errors.push("Detailed GK Stories visibility was wrong for " + category.name + ".");
+
+        const firstPageRows = quickRows();
+        const firstRowIdentity = firstPageRows[0] || null;
+        if (expectedQuestions.length > 100) {
+          if (!quickLoadMore || !visible(quickLoadMore)) {
+            errors.push(category.name + " Quick Notes did not offer progressive loading.");
+          } else {
+            quickLoadMore.click();
+            await pause();
+            if (quickRows().length !== Math.min(200, expectedQuestions.length) || quickRows()[0] !== firstRowIdentity) {
+              errors.push(category.name + " Quick Notes did not append the second 100 rows without replacing the first page.");
+            }
+          }
+        }
+
+        let loadGuard = 0;
+        while (quickLoadMore && visible(quickLoadMore) && loadGuard < 40) {
+          quickLoadMore.click();
+          await pause();
+          loadGuard += 1;
+        }
+        const allRows = quickRows();
+        const allRenderedIds = allRows.map((row) => row.dataset.questionId);
+        const expectedIds = expectedQuestions.map((question) => String(question.id));
+        if (allRows.length !== expectedQuestions.length || new Set(allRenderedIds).size !== expectedQuestions.length) {
+          errors.push(category.name + " Quick Notes lost or duplicated an MCQ row.");
+        }
+        if (JSON.stringify(allRenderedIds) !== JSON.stringify(expectedIds)) errors.push(category.name + " Quick Notes changed the canonical stable order.");
+        allRows.forEach((row, index) => {
+          const expectedQuestion = expectedQuestions[index];
+          if (!expectedQuestion) return;
+          const cue = row.querySelector(".quick-note-cue")?.textContent.trim() || "";
+          const fullQuestion = row.querySelector(".quick-note-full-question")?.textContent.trim() || "";
+          const answer = row.querySelector(".quick-note-answer-text")?.textContent.trim() || "";
+          if (!cue || !row.querySelector(".quick-note-answer-label")) errors.push(category.name + " Quick Notes omitted a scan cue or answer label for " + expectedQuestion.id + ".");
+          if (row.dataset.questionNumber !== String(index + 1)) errors.push(category.name + " Quick Notes showed the wrong stable question ordinal for " + expectedQuestion.id + ".");
+          const expectedCuePrefix = category.id === "urdu"
+            ? "سوال " + (index + 1) + " · فوری اشارہ · "
+            : "Q" + (index + 1) + " · SCAN CUE · ";
+          if (!cue.startsWith(expectedCuePrefix) || cue.length <= expectedCuePrefix.length) errors.push(category.name + " Quick Notes omitted its visible numbered recall cue for " + expectedQuestion.id + ".");
+          if (fullQuestion !== quickDisplayQuestion(expectedQuestion)) errors.push(category.name + " Quick Notes changed the exact question for " + expectedQuestion.id + ".");
+          if (answer !== quickDisplayAnswer(expectedQuestion)) errors.push(category.name + " Quick Notes showed the wrong answer for " + expectedQuestion.id + ".");
+          if (category.id === "urdu") {
+            if (row.lang !== "ur" || row.dir !== "rtl" || /[A-Za-z]/.test(fullQuestion) || /[A-Za-z]/.test(answer)) errors.push("An Urdu Quick Note did not keep its prompt and answer in Urdu RTL for " + expectedQuestion.id + ".");
+          } else if (row.lang === "ur" || row.dir === "rtl") {
+            errors.push(category.name + " Quick Notes retained Urdu language direction on a non-Urdu row.");
+          }
+        });
+
+        const searchTarget = [...expectedQuestions].reverse().find((candidate) => {
+          const candidateText = quickNormalize(quickDisplayQuestion(candidate));
+          return candidateText && expectedQuestions.filter((item) => quickNormalize(quickDisplayQuestion(item)) === candidateText).length === 1;
+        });
+        if (!quickSearch || !quickClear || !searchTarget) {
+          errors.push(category.name + " Quick Notes search controls or unique target were unavailable.");
+        } else {
+          quickSearch.value = quickDisplayQuestion(searchTarget);
+          quickSearch.dispatchEvent(new Event("input", { bubbles: true }));
+          await pause();
+          if (!quickRows().some((row) => row.dataset.questionId === String(searchTarget.id))) errors.push(category.name + " Quick Notes search did not find an item beyond the first page.");
+          quickClear.click();
+          await pause();
+          if (quickSearch.value || quickRows().length !== expectedFirstPageCount) errors.push(category.name + " Quick Notes Clear did not restore its first page.");
+        }
+
+        const expectedImportant = expectedQuestions.filter((question) => question.isImportant === true);
+        if (!quickImportant) {
+          errors.push(category.name + " Quick Notes Important-only control was missing.");
+        } else {
+          quickImportant.click();
+          await pause();
+          let importantGuard = 0;
+          while (quickLoadMore && visible(quickLoadMore) && importantGuard < 40) {
+            quickLoadMore.click();
+            await pause();
+            importantGuard += 1;
+          }
+          const renderedImportantIds = quickRows().map((row) => row.dataset.questionId);
+          if (JSON.stringify(renderedImportantIds) !== JSON.stringify(expectedImportant.map((question) => String(question.id)))) {
+            errors.push(category.name + " Quick Notes Important-only filter did not preserve the complete filtered order.");
+          }
+          if (quickRows().some((row) => !row.querySelector(".quick-note-important"))) errors.push(category.name + " Quick Notes Important-only filter showed an unmarked row.");
+          quickClear?.click();
+          await pause();
+          if (quickImportant.checked || quickRows().length !== expectedFirstPageCount) errors.push(category.name + " Quick Notes Clear did not reset Important-only.");
+        }
+
+        if (quickSearch && quickClear) {
+          quickSearch.value = "zzzz-no-such-quick-note-11412";
+          quickSearch.dispatchEvent(new Event("input", { bubbles: true }));
+          await pause();
+          if (quickRows().length !== 0 || !visible(quickEmpty) || !quickStatus?.textContent.includes("0")) errors.push(category.name + " Quick Notes did not show its empty state.");
+          quickClear.click();
+          await pause();
+          if (visible(quickEmpty) || quickRows().length !== expectedFirstPageCount) errors.push(category.name + " Quick Notes did not recover after an empty search.");
+        }
+
+        document.querySelector("#quick-notes-back-button")?.click();
+        await pause();
+        if (!visible(document.querySelector("#mode-screen")) || document.activeElement !== quickNotesButton) errors.push(category.name + " Quick Notes Back did not restore its Study Notes launcher and focus.");
+        document.querySelector("#mode-back-button")?.click();
+        await pause();
+        if (!visible(document.querySelector("#category-screen"))) errors.push(category.name + " Quick Notes did not return to categories.");
+        if (storageSnapshot() !== storageBeforeNotes) errors.push("Browsing " + category.name + " Quick Notes changed localStorage.");
+      }
+
+      const notesData = window.PPSC_GK_STUDY_NOTES_DATA;
+      const notesEntry = document.querySelector("#gk-study-notes-card");
       if (!notesData || notesData.schemaVersion !== 1 || !Array.isArray(notesData.notes) || notesData.notes.length !== 708) {
         errors.push("Expected the schema-v1 708-card GK Study Notes dataset.");
       }
       if (!Array.isArray(window.PPSC_GK_STUDY_NOTES) || window.PPSC_GK_STUDY_NOTES !== notesData.notes) {
         errors.push("GK Study Notes convenience global did not expose the notes array.");
       }
-      if (!notesEntry || !visible(notesEntry)) errors.push("GK Study Notes entry card was not visible.");
-      if (notesEntry && notesEntry.closest("#category-grid")) errors.push("GK Study Notes entry card was rendered inside the subject category grid.");
+      if (!notesEntry || !notesEntry.closest("#quick-notes-screen") || visible(notesEntry)) errors.push("Detailed GK Stories was not confined to the hidden Quick Notes screen on the homepage.");
       if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("GK Study Notes changed the 11 subject categories.");
       if (document.querySelectorAll("#gk-notes-list .gk-note-card").length !== 0) errors.push("GK Study Notes eagerly built its 708-card DOM before the library was opened.");
 
       if (notesEntry) {
+        document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
+        await pause();
+        document.querySelector("#study-notes-mode-button")?.click();
+        await pause();
+        if (!visible(notesEntry)) errors.push("Detailed GK Stories did not appear inside General Knowledge Quick Notes.");
         notesEntry.click();
         await pause();
         const notesScreen = document.querySelector("#gk-notes-screen");
@@ -412,8 +611,12 @@ async function main() {
 
         document.querySelector("#gk-notes-back-button")?.click();
         await pause();
-        if (!visible(document.querySelector("#category-screen")) || visible(notesScreen)) errors.push("GK Study Notes Back did not return to categories.");
+        if (!visible(document.querySelector("#quick-notes-screen")) || visible(notesScreen)) errors.push("Detailed GK Stories Back did not return to General Knowledge Quick Notes.");
         if (document.activeElement !== notesEntry) errors.push("GK Study Notes Back did not restore focus to its entry card.");
+        document.querySelector("#quick-notes-back-button")?.click();
+        await pause();
+        document.querySelector("#mode-back-button")?.click();
+        await pause();
         if (storageSnapshot() !== storageBeforeNotes) errors.push("Browsing GK Study Notes changed localStorage.");
       }
 
@@ -443,8 +646,7 @@ async function main() {
         data.questions.splice(ibesTargetIndex, 1);
         data.questions.splice(firstComputerIndex, 0, ibesRenderTarget);
         document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]').click();
-        document.querySelector("#learn-mode-button").click();
-        await pause();
+        await startModeWithRange("#learn-mode-button");
         const renderedIbesId = document.querySelector("#question-text").dataset.questionId;
         if (renderedIbesId !== ibesRenderTarget.id) errors.push("The deterministic IBES question did not render in Basic Computer Learn mode.");
         if (document.querySelector("#question-text-urdu").textContent !== ibesRenderTarget.questionUrdu) errors.push("The rendered IBES Urdu translation did not match its data.");
@@ -508,11 +710,174 @@ async function main() {
         await pause();
       };
 
+      const rangeStorageKey = "ppsc-prep:active-session:v1";
+      const rangeCategory = data.categories.find((category) => {
+        const categoryItems = data.questions.filter((question) => question.categoryId === category.id);
+        return categoryItems.length >= 4 && categoryItems.filter((question) => question.isImportant === true).length >= 4;
+      });
+      const rangeCategoryButton = rangeCategory
+        ? document.querySelector('#category-grid .category-card[data-category="' + rangeCategory.id + '"]')
+        : null;
+      const rangeQuestions = rangeCategory
+        ? data.questions.filter((question) => question.categoryId === rangeCategory.id)
+        : [];
+      const rangePoolIds = rangeQuestions.map((question) => String(question.id));
+
+      if (!rangeCategory || !rangeCategoryButton) {
+        errors.push("Could not find a category suitable for question-range testing.");
+      } else {
+        rangeCategoryButton.click();
+        await pause();
+
+        document.querySelector("#quiz-mode-button")?.click();
+        await pause();
+        if (!visible(document.querySelector("#question-range-options"))) errors.push("Quiz did not open the range selector.");
+        if (document.querySelector("#question-range-start-input")?.value !== "1"
+          || document.querySelector("#question-range-end-input")?.value !== String(rangeQuestions.length)
+          || document.querySelector("#question-range-end-input")?.max !== String(rangeQuestions.length)) {
+          errors.push("The range selector did not default to the complete active list.");
+        }
+        document.querySelector("#question-range-back-button")?.click();
+        await pause();
+        if (!visible(document.querySelector("#standard-mode-options")) || document.activeElement !== document.querySelector("#quiz-mode-button")) {
+          errors.push("Range Back did not restore the initiating Quiz button and focus.");
+        }
+
+        document.querySelector("#learn-mode-button")?.click();
+        await pause();
+        const storageBeforeInvalidRanges = localStorage.getItem(rangeStorageKey);
+        const invalidRanges = [
+          [null, 4, "blank"],
+          [1.5, 4, "decimal"],
+          [0, 4, "zero"],
+          [4, 2, "reversed"],
+          [1, rangeQuestions.length + 1, "out-of-range"]
+        ];
+        for (const [start, end, label] of invalidRanges) {
+          setRangeValues(start, end);
+          await submitRange();
+          if (!visible(document.querySelector("#question-range-options")) || visible(document.querySelector("#quiz-screen"))) {
+            errors.push("The " + label + " range incorrectly started a session.");
+          }
+          if (localStorage.getItem(rangeStorageKey) !== storageBeforeInvalidRanges) {
+            errors.push("The " + label + " range overwrote resumable-session storage.");
+          }
+        }
+
+        setRangeValues(3, 3);
+        await submitRange();
+        if (!visible(document.querySelector("#quiz-screen"))
+          || document.querySelector("#question-text")?.dataset.questionId !== String(rangeQuestions[2].id)) {
+          errors.push("A valid start=end range did not open exactly the selected canonical question.");
+        }
+        let singleRangeSnapshot = JSON.parse(localStorage.getItem(rangeStorageKey) || "null");
+        if (!singleRangeSnapshot || singleRangeSnapshot.version !== 7 || singleRangeSnapshot.rangeStart !== 3
+          || singleRangeSnapshot.rangeEnd !== 3 || singleRangeSnapshot.rangePoolSize !== rangeQuestions.length
+          || JSON.stringify(singleRangeSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(rangePoolIds)
+          || JSON.stringify(singleRangeSnapshot.rangeQuestionIds || []) !== JSON.stringify([String(rangeQuestions[2].id)])
+          || JSON.stringify(singleRangeSnapshot.questionIds) !== JSON.stringify([String(rangeQuestions[2].id)])) {
+          errors.push("The start=end range was not saved with exact v7 metadata.");
+        }
+        document.querySelector("#restart-button")?.click();
+        await pause();
+        singleRangeSnapshot = JSON.parse(localStorage.getItem(rangeStorageKey) || "null");
+        if (document.querySelector("#question-text")?.dataset.questionId !== String(rangeQuestions[2].id)
+          || singleRangeSnapshot?.rangeStart !== 3 || singleRangeSnapshot?.rangeEnd !== 3) {
+          errors.push("Restart did not retain a one-question selected range.");
+        }
+        document.querySelector("#action-button")?.click();
+        await pause();
+        document.querySelector("#change-category-button")?.click();
+        await pause();
+
+        rangeCategoryButton.click();
+        await pause();
+        await startModeWithRange("#learn-mode-button", 2, 4);
+        const expectedRangeIds = rangeQuestions.slice(1, 4).map((question) => String(question.id));
+        const observedLearnRangeIds = [];
+        for (let number = 1; number <= 3; number += 1) {
+          await jumpByChange(number);
+          observedLearnRangeIds.push(String(document.querySelector("#question-text")?.dataset.questionId || ""));
+        }
+        if (JSON.stringify(observedLearnRangeIds) !== JSON.stringify(expectedRangeIds)) errors.push("Learn range 2–4 did not preserve the exact canonical IDs.");
+        let selectedRangeSnapshot = JSON.parse(localStorage.getItem(rangeStorageKey) || "null");
+        if (!selectedRangeSnapshot || selectedRangeSnapshot.version !== 7 || selectedRangeSnapshot.rangeStart !== 2
+          || selectedRangeSnapshot.rangeEnd !== 4 || selectedRangeSnapshot.rangePoolSize !== rangeQuestions.length
+          || JSON.stringify(selectedRangeSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(rangePoolIds)
+          || JSON.stringify(selectedRangeSnapshot.rangeQuestionIds || []) !== JSON.stringify(expectedRangeIds)
+          || JSON.stringify(selectedRangeSnapshot.questionIds) !== JSON.stringify(expectedRangeIds)) {
+          errors.push("Learn range 2–4 did not persist exact v7 range metadata and order.");
+        }
+
+        document.querySelector("#restart-button")?.click();
+        await pause();
+        selectedRangeSnapshot = JSON.parse(localStorage.getItem(rangeStorageKey) || "null");
+        if (document.querySelector("#question-text")?.dataset.questionId !== expectedRangeIds[0]
+          || selectedRangeSnapshot?.rangeStart !== 2 || selectedRangeSnapshot?.rangeEnd !== 4
+          || JSON.stringify(selectedRangeSnapshot?.questionIds || []) !== JSON.stringify(expectedRangeIds)) {
+          errors.push("Restart did not retain Learn range 2–4.");
+        }
+        await jumpByChange(2);
+        await jumpByChange(3);
+        document.querySelector("#action-button")?.click();
+        await pause();
+        if (!visible(document.querySelector("#results-screen"))) errors.push("The complete three-question Learn range did not finish.");
+        document.querySelector("#play-again-button")?.click();
+        await pause();
+        const rangeQuizSnapshot = JSON.parse(localStorage.getItem(rangeStorageKey) || "null");
+        const rangeQuizIds = rangeQuizSnapshot?.questionIds || [];
+        if (!visible(document.querySelector("#quiz-screen")) || rangeQuizSnapshot?.mode !== "quiz"
+          || rangeQuizSnapshot?.rangeStart !== 2 || rangeQuizSnapshot?.rangeEnd !== 4
+          || JSON.stringify(rangeQuizSnapshot?.rangePoolQuestionIds || []) !== JSON.stringify(rangePoolIds)
+          || JSON.stringify(rangeQuizSnapshot?.rangeQuestionIds || []) !== JSON.stringify(expectedRangeIds)
+          || rangeQuizIds.length !== 3 || rangeQuizIds.some((id) => !expectedRangeIds.includes(id))
+          || JSON.stringify(rangeQuizIds) === JSON.stringify(expectedRangeIds)) {
+          errors.push("Start Quiz did not retain and freshly shuffle the same Learn range 2–4 set.");
+        }
+        for (let index = 0; index < 3; index += 1) {
+          const currentId = document.querySelector("#question-text")?.dataset.questionId;
+          const currentQuestion = rangeQuestions.find((question) => String(question.id) === String(currentId));
+          const renderedAnswers = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
+          const canonicalAnswer = currentQuestion ? displayOptions(currentQuestion)[currentQuestion.correctOptionIndex] : "";
+          const correctIndex = renderedAnswers.indexOf(canonicalAnswer);
+          const selectedIndex = index === 0 ? (correctIndex + 1) % 4 : correctIndex;
+          document.querySelector('[data-option-index="' + selectedIndex + '"]')?.click();
+          document.querySelector("#action-button")?.click();
+          await pause();
+          document.querySelector("#action-button")?.click();
+          await pause();
+        }
+        if (!visible(document.querySelector("#results-screen"))
+          || document.querySelector("#result-score")?.textContent.replace(/\\s/g, "") !== "2/3") {
+          errors.push("Quiz range 2–4 changed the existing answer scoring behaviour.");
+        }
+        document.querySelector("#change-category-button")?.click();
+        await pause();
+
+        rangeCategoryButton.click();
+        await pause();
+        document.querySelector("#important-only-checkbox")?.click();
+        await pause();
+        const rangeImportantQuestions = rangeQuestions.filter((question) => question.isImportant === true);
+        await startModeWithRange("#learn-mode-button", 2, 4);
+        const importantRangeSnapshot = JSON.parse(localStorage.getItem(rangeStorageKey) || "null");
+        const expectedImportantRangeIds = rangeImportantQuestions.slice(1, 4).map((question) => String(question.id));
+        if (!importantRangeSnapshot || importantRangeSnapshot.importantOnly !== true
+          || importantRangeSnapshot.rangePoolSize !== rangeImportantQuestions.length
+          || JSON.stringify(importantRangeSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(rangeImportantQuestions.map((question) => String(question.id)))
+          || JSON.stringify(importantRangeSnapshot.rangeQuestionIds || []) !== JSON.stringify(expectedImportantRangeIds)
+          || JSON.stringify(importantRangeSnapshot.questionIds) !== JSON.stringify(expectedImportantRangeIds)) {
+          errors.push("Important range 2–4 was not applied after filtering the category.");
+        }
+        document.querySelector("#back-button")?.click();
+        await pause();
+      }
+
       categoryButton.click();
       await pause();
       if (!visible(document.querySelector("#mode-screen"))) errors.push("Mode chooser did not open after selecting a category.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Mode chooser has horizontal overflow on mobile.");
-      if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 3) errors.push("Mode chooser did not show Learn, Quiz and Difficult.");
+      if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 4) errors.push("Mode chooser did not show Learn, Quiz, Difficult and Study Notes.");
       if (document.querySelector("#part-select, [data-part-select]")) errors.push("Removed Part dropdown is still present.");
       if (!document.querySelector("#study-scope-summary").textContent.includes(String(allCategoryQuestions.length))) errors.push("Study summary did not show the full-category total.");
       const expectedImportant = allCategoryQuestions.filter((question) => question.isImportant === true);
@@ -525,8 +890,7 @@ async function main() {
         importantCheckbox.click();
         await pause();
         if (document.querySelector("#learn-mode-button").disabled || document.querySelector("#quiz-mode-button").disabled) errors.push("Important Learn/Quiz was disabled despite matching questions.");
-        document.querySelector("#learn-mode-button").click();
-        await pause();
+        await startModeWithRange("#learn-mode-button");
         const importantRenderedId = document.querySelector("#question-text").dataset.questionId;
         if (!expectedImportant.some((question) => question.id === importantRenderedId)) errors.push("Important Learn rendered a non-important question.");
         assertProgress(1, expectedImportant.length, "Important Learn");
@@ -557,8 +921,7 @@ async function main() {
       if (!visible(document.querySelector("#category-screen"))) errors.push("Mode chooser back button failed.");
 
       categoryButton.click();
-      document.querySelector("#learn-mode-button").click();
-      await pause();
+      await startModeWithRange("#learn-mode-button");
       if (!visible(document.querySelector("#quiz-screen"))) errors.push("Learn mode did not open.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Question screen has horizontal overflow on mobile.");
       const questionNumberInput = document.querySelector("#question-number-input");
@@ -605,7 +968,7 @@ async function main() {
             : []
         );
         const firstUnvisitedLearnIndex = categoryQuestions.findIndex((item) => !visitedLearnIds.has(item.id));
-        if (!learnGuardSnapshot || learnGuardSnapshot.version !== 6 || learnGuardSnapshot.sessionKind !== "category" || learnGuardSnapshot.paperCategoryIds !== null || learnGuardSnapshot.mode !== "learn" || learnGuardSnapshot.partIndex !== null) errors.push("Learn completion guard was not stored with the v6 category-session schema.");
+        if (!learnGuardSnapshot || learnGuardSnapshot.version !== 7 || learnGuardSnapshot.sessionKind !== "category" || learnGuardSnapshot.paperCategoryIds !== null || learnGuardSnapshot.mode !== "learn" || learnGuardSnapshot.partIndex !== null) errors.push("Learn completion guard was not stored with the v7 category-session schema.");
         if (!learnGuardSnapshot || learnGuardSnapshot.currentIndex !== categoryQuestions.length - 1 || !visitedLearnIds.has(categoryQuestions[categoryQuestions.length - 1].id)) errors.push("Learn visited IDs did not persist the directly visited last question.");
         if (firstUnvisitedLearnIndex < 0) errors.push("Learn completion guard could not identify an unvisited question.");
         if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Last Learn question did not offer Next Unvisited while questions remained unseen.");
@@ -825,8 +1188,7 @@ async function main() {
       if (localStorage.getItem(sessionStorageKey) !== null) errors.push("Completed Quiz session was not cleared from resume storage.");
       document.querySelector("#change-category-button").click();
       categoryButton.click();
-      document.querySelector("#quiz-mode-button").click();
-      await pause();
+      await startModeWithRange("#quiz-mode-button");
       const resumeQuestion = findCurrent();
       const resumeCorrectIndex = correctRenderedIndex(resumeQuestion);
       const resumeSelectedIndex = (resumeCorrectIndex + 1) % 4;
@@ -834,10 +1196,12 @@ async function main() {
       document.querySelector("#action-button").click();
       await pause();
       const resumeSnapshot = JSON.parse(localStorage.getItem(sessionStorageKey) || "null");
-      if (!resumeSnapshot || resumeSnapshot.version !== 6) errors.push("Active Quiz was not saved with the v6 resume schema.");
-      if (!resumeSnapshot || resumeSnapshot.sessionKind !== "category" || resumeSnapshot.paperCategoryIds !== null) errors.push("Saved Quiz did not use the v6 category-session fields.");
+      if (!resumeSnapshot || resumeSnapshot.version !== 7) errors.push("Active Quiz was not saved with the v7 resume schema.");
+      if (!resumeSnapshot || resumeSnapshot.sessionKind !== "category" || resumeSnapshot.paperCategoryIds !== null) errors.push("Saved Quiz did not use the v7 category-session fields.");
       if (!resumeSnapshot || resumeSnapshot.mode !== "quiz" || resumeSnapshot.scope !== "all") errors.push("Saved Quiz resume mode/scope was incorrect.");
       if (!resumeSnapshot || resumeSnapshot.partIndex !== null || resumeSnapshot.importantOnly !== false) errors.push("Saved Quiz full-category/Important scope was incorrect.");
+      if (!resumeSnapshot || resumeSnapshot.rangeStart !== 1 || resumeSnapshot.rangeEnd !== categoryQuestions.length || resumeSnapshot.rangePoolSize !== categoryQuestions.length) errors.push("Saved Quiz did not preserve its exact full-range metadata.");
+      if (!resumeSnapshot || JSON.stringify(resumeSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(categoryQuestions.map((question) => String(question.id)))) errors.push("Saved Quiz did not preserve its complete eligible-pool order.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.questionIds) || resumeSnapshot.questionIds.length !== categoryQuestions.length) errors.push("Saved Quiz question order was incomplete.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.optionOrders) || resumeSnapshot.optionOrders.length !== categoryQuestions.length) errors.push("Saved Quiz option orders were incomplete.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.answerHistory) || resumeSnapshot.answerHistory.length !== categoryQuestions.length) errors.push("Saved Quiz answer history was incomplete.");
@@ -866,11 +1230,62 @@ async function main() {
           questionId: resumeQuestion ? resumeQuestion.id : "",
           optionTexts: renderedOptionTexts(),
           selectedIndex: resumeSelectedIndex,
-          score: 0
+          score: 0,
+          rangeStart: resumeSnapshot ? resumeSnapshot.rangeStart : 0,
+          rangeEnd: resumeSnapshot ? resumeSnapshot.rangeEnd : 0,
+          rangePoolSize: resumeSnapshot ? resumeSnapshot.rangePoolSize : 0,
+          rangePoolQuestionIds: resumeSnapshot ? resumeSnapshot.rangePoolQuestionIds : [],
+          rangeQuestionIds: resumeSnapshot ? resumeSnapshot.rangeQuestionIds : []
         },
+        legacyV6Snapshot: resumeSnapshot ? (() => {
+          const legacy = JSON.parse(JSON.stringify(resumeSnapshot));
+          legacy.version = 6;
+          delete legacy.rangeStart;
+          delete legacy.rangeEnd;
+          delete legacy.rangePoolSize;
+          delete legacy.rangePoolQuestionIds;
+          delete legacy.rangeQuestionIds;
+          return legacy;
+        })() : null,
         sourceNotesAvailable: data.questions.filter((item) => item.sourceNotes).length
       };
     })()`);
+
+    await client.send("Emulation.setDeviceMetricsOverride", {
+      width: 320,
+      height: 1000,
+      deviceScaleFactor: 1,
+      mobile: true
+    });
+    const quickNotes320Result = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      document.querySelector("#back-button")?.click();
+      await pause();
+      document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
+      await pause();
+      document.querySelector("#study-notes-mode-button")?.click();
+      await pause();
+      const firstRow = document.querySelector("#quick-notes-list .quick-note-row");
+      if (!visible(document.querySelector("#quick-notes-screen")) || !firstRow) errors.push("Quick Notes did not render at the 320px viewport.");
+      if (document.documentElement.scrollWidth > window.innerWidth || (firstRow && firstRow.getBoundingClientRect().right > window.innerWidth + 1)) {
+        errors.push("Quick Notes has horizontal overflow at 320px.");
+      }
+      document.querySelector("#quick-notes-back-button")?.click();
+      await pause();
+      document.querySelector("#mode-back-button")?.click();
+      await pause();
+      return { errors };
+    })()`);
+    await client.send("Emulation.setDeviceMetricsOverride", {
+      width: 430,
+      height: 1200,
+      deviceScaleFactor: 1,
+      mobile: true
+    });
 
     await client.send("Page.reload", { ignoreCache: true });
     await client.evaluate(`new Promise((resolve, reject) => {
@@ -902,9 +1317,17 @@ async function main() {
       if (!visible(card)) errors.push("Continue card was not shown for an active saved session.");
       if (!document.querySelector("#continue-session-title").textContent.includes(expected.categoryName)) errors.push("Continue card did not label the saved category.");
       const continueMeta = document.querySelector("#continue-session-meta").textContent;
-      if (!continueMeta.includes("Quiz") || !continueMeta.includes("All Questions") || !continueMeta.includes("Question 1 of " + expected.questionCount)) errors.push("Continue card did not label Quiz mode, All Questions and progress.");
+      if (!continueMeta.includes("Quiz") || !continueMeta.includes("All Questions")
+        || !continueMeta.includes("Questions " + expected.rangeStart + "–" + expected.rangeEnd + " of " + expected.rangePoolSize)
+        || !continueMeta.includes("Question 1 of " + expected.questionCount)) errors.push("Continue card did not label Quiz mode, exact range and progress.");
 
       const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!storedBeforeContinue || storedBeforeContinue.version !== 7
+        || storedBeforeContinue.rangeStart !== expected.rangeStart
+        || storedBeforeContinue.rangeEnd !== expected.rangeEnd
+        || storedBeforeContinue.rangePoolSize !== expected.rangePoolSize
+        || JSON.stringify(storedBeforeContinue.rangePoolQuestionIds || []) !== JSON.stringify(expected.rangePoolQuestionIds)
+        || JSON.stringify(storedBeforeContinue.rangeQuestionIds || []) !== JSON.stringify(expected.rangeQuestionIds)) errors.push("Reload changed the saved v7 range metadata.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds)) errors.push("Reload changed the saved Quiz question order.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders)) errors.push("Reload changed the saved Quiz option orders.");
 
@@ -934,6 +1357,9 @@ async function main() {
       await pause();
       const pendingSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
       if (!pendingSnapshot || pendingSnapshot.currentIndex !== 1 || pendingSnapshot.submitted || pendingSnapshot.selectedIndex !== pendingSelectedIndex) errors.push("Unsubmitted selected option was not saved for Continue.");
+      if (!pendingSnapshot || pendingSnapshot.rangeStart !== expected.rangeStart || pendingSnapshot.rangeEnd !== expected.rangeEnd || pendingSnapshot.rangePoolSize !== expected.rangePoolSize
+        || JSON.stringify(pendingSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(expected.rangePoolQuestionIds)
+        || JSON.stringify(pendingSnapshot.rangeQuestionIds || []) !== JSON.stringify(expected.rangeQuestionIds)) errors.push("Pending selection changed the saved range metadata.");
 
       return {
         errors,
@@ -943,7 +1369,12 @@ async function main() {
           questionId: pendingQuestionId,
           optionTexts: pendingOptionTexts,
           selectedIndex: pendingSelectedIndex,
-          score: expected.score
+          score: expected.score,
+          rangeStart: expected.rangeStart,
+          rangeEnd: expected.rangeEnd,
+          rangePoolSize: expected.rangePoolSize,
+          rangePoolQuestionIds: expected.rangePoolQuestionIds,
+          rangeQuestionIds: expected.rangeQuestionIds
         }
       };
     })()`);
@@ -973,7 +1404,8 @@ async function main() {
       const errors = [];
       const expected = ${JSON.stringify(resumeResult.pending)};
       const meta = document.querySelector("#continue-session-meta").textContent;
-      if (!visible(document.querySelector("#continue-session-card")) || !meta.includes("Question 2 of " + expected.questionCount)) errors.push("Continue card did not show the pending question index.");
+      if (!visible(document.querySelector("#continue-session-card")) || !meta.includes("Question 2 of " + expected.questionCount)
+        || !meta.includes("Questions " + expected.rangeStart + "–" + expected.rangeEnd + " of " + expected.rangePoolSize)) errors.push("Continue card did not show the pending question index and exact range.");
       document.querySelector("#continue-session-button").click();
       await pause();
       const renderedOptionTexts = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
@@ -1006,6 +1438,78 @@ async function main() {
       }, 50);
     })`);
 
+    const legacyV6SeedResult = await client.evaluate(`(() => {
+      const errors = [];
+      const storageKey = "ppsc-prep:active-session:v1";
+      const legacySnapshot = ${JSON.stringify(normalResult.legacyV6Snapshot)};
+      const card = document.querySelector("#continue-session-card");
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      if (visible(card) || localStorage.getItem(storageKey) !== null) errors.push("Corrupt resume data was not cleared before the v6 migration test.");
+      if (!legacySnapshot || legacySnapshot.version !== 6) {
+        errors.push("Could not construct a valid v6 full-session migration fixture.");
+      } else {
+        localStorage.setItem(storageKey, JSON.stringify(legacySnapshot));
+      }
+      return { errors };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not load the valid v6 migration fixture in time."));
+        }
+      }, 50);
+    })`);
+
+    const legacyV6MigrationResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const storageKey = "ppsc-prep:active-session:v1";
+      const expected = ${JSON.stringify(normalResult.resumeExpected)};
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      if (!visible(document.querySelector("#continue-session-card"))) errors.push("A valid v6 full session was rejected instead of offered for migration.");
+      const beforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!beforeContinue || beforeContinue.version !== 6) errors.push("The v6 fixture changed before Continue was used.");
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      const migrated = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!visible(document.querySelector("#quiz-screen")) || !migrated || migrated.version !== 7) errors.push("Continue did not migrate the valid v6 full session to v7.");
+      if (!migrated || migrated.rangeStart !== 1 || migrated.rangeEnd !== expected.questionCount
+        || migrated.rangePoolSize !== expected.questionCount
+        || JSON.stringify(migrated.rangePoolQuestionIds || []) !== JSON.stringify(expected.rangePoolQuestionIds)
+        || JSON.stringify(migrated.rangeQuestionIds || []) !== JSON.stringify(expected.rangeQuestionIds)) {
+        errors.push("The migrated v6 session did not receive complete full-range metadata.");
+      }
+      document.querySelector("#back-button")?.click();
+      await pause();
+      localStorage.removeItem(storageKey);
+      return { errors };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not clear the migrated v6 test state in time."));
+        }
+      }, 50);
+    })`);
+
     const positionGuardSetupResult = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
       const errors = [];
@@ -1016,6 +1520,20 @@ async function main() {
         element.getClientRects().length > 0
       );
       const storageKey = "ppsc-prep:active-session:v1";
+      const startFullRange = async (selector) => {
+        document.querySelector(selector)?.click();
+        await pause();
+        const startInput = document.querySelector("#question-range-start-input");
+        const endInput = document.querySelector("#question-range-end-input");
+        if (!startInput || !endInput || !visible(document.querySelector("#question-range-options"))) {
+          errors.push(selector + " did not open a full-range selector.");
+          return;
+        }
+        startInput.value = "1";
+        endInput.value = endInput.max;
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+      };
       if (visible(document.querySelector("#continue-session-card"))) errors.push("Corrupt resume data left the Continue card visible.");
       if (localStorage.getItem(storageKey) !== null) errors.push("Corrupt resume data was not removed safely.");
       const data = window.PPSC_QUIZ_DATA;
@@ -1043,12 +1561,11 @@ async function main() {
           continue;
         }
         categoryButton.click();
-        document.querySelector("#quiz-mode-button").click();
-        await pause();
+        await startFullRange("#quiz-mode-button");
 
         const snapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
-        if (!snapshot || snapshot.version !== 6 || snapshot.sessionKind !== "category" || snapshot.categoryId !== categoryId || snapshot.mode !== "quiz") {
-          errors.push("Positional-option audit did not create a valid v6 Quiz snapshot for " + categoryId + ".");
+        if (!snapshot || snapshot.version !== 7 || snapshot.sessionKind !== "category" || snapshot.categoryId !== categoryId || snapshot.mode !== "quiz") {
+          errors.push("Positional-option audit did not create a valid v7 Quiz snapshot for " + categoryId + ".");
         } else {
           const idsInCategory = sensitiveIds.filter((questionId) => {
             const question = questionById.get(questionId);
@@ -1089,7 +1606,7 @@ async function main() {
       }
       if (!normalOptionOrderShuffled) errors.push("Ordinary Quiz options did not remain shuffled during the positional-option audit.");
       if (!malformedSnapshot || !malformedQuestionId) {
-        errors.push("Could not construct a malformed v6 positional-option snapshot.");
+        errors.push("Could not construct a malformed v7 positional-option snapshot.");
         localStorage.removeItem(storageKey);
       } else {
         localStorage.setItem(storageKey, JSON.stringify(malformedSnapshot));
@@ -1126,8 +1643,49 @@ async function main() {
         element.getClientRects().length > 0
       );
       const storageKey = "ppsc-prep:active-session:v1";
-      if (visible(document.querySelector("#continue-session-card"))) errors.push("Malformed v6 positional-option data left the Continue card visible.");
-      if (localStorage.getItem(storageKey) !== null) errors.push("Malformed v6 positional-option data was not rejected and removed.");
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("Malformed v7 positional-option data left the Continue card visible.");
+      if (localStorage.getItem(storageKey) !== null) errors.push("Malformed v7 positional-option data was not rejected and removed.");
+      const tamperedRangeSnapshot = ${JSON.stringify(normalResult.legacyV6Snapshot)};
+      const expectedRange = ${JSON.stringify(normalResult.resumeExpected)};
+      if (!tamperedRangeSnapshot || expectedRange.rangePoolQuestionIds.length < 2) {
+        errors.push("Could not construct the v7 eligible-pool tamper fixture.");
+      } else {
+        tamperedRangeSnapshot.version = 7;
+        tamperedRangeSnapshot.rangeStart = expectedRange.rangeStart;
+        tamperedRangeSnapshot.rangeEnd = expectedRange.rangeEnd;
+        tamperedRangeSnapshot.rangePoolSize = expectedRange.rangePoolSize;
+        tamperedRangeSnapshot.rangePoolQuestionIds = expectedRange.rangePoolQuestionIds.slice();
+        tamperedRangeSnapshot.rangeQuestionIds = expectedRange.rangeQuestionIds.slice();
+        const firstPoolId = tamperedRangeSnapshot.rangePoolQuestionIds[0];
+        tamperedRangeSnapshot.rangePoolQuestionIds[0] = tamperedRangeSnapshot.rangePoolQuestionIds[1];
+        tamperedRangeSnapshot.rangePoolQuestionIds[1] = firstPoolId;
+        localStorage.setItem(storageKey, JSON.stringify(tamperedRangeSnapshot));
+      }
+      return { errors };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reject a tampered v7 eligible range pool in time."));
+        }
+      }, 50);
+    })`);
+
+    const rangePoolGuardRecoveryResult = await client.evaluate(`(() => {
+      const errors = [];
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const storageKey = "ppsc-prep:active-session:v1";
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("A tampered v7 eligible range pool left Continue visible.");
+      if (localStorage.getItem(storageKey) !== null) errors.push("A tampered v7 eligible range pool was not rejected and removed.");
       localStorage.setItem(storageKey, JSON.stringify({
         version: 3,
         bankSignature: ${JSON.stringify(normalResult.resumeExpected.bankSignature)},
@@ -1198,6 +1756,20 @@ async function main() {
           totalElement.textContent.trim() === String(total)
         );
       };
+      const startDifficultRange = async (start, end) => {
+        document.querySelector("#difficult-learn-button")?.click();
+        await pause();
+        const startInput = document.querySelector("#question-range-start-input");
+        const endInput = document.querySelector("#question-range-end-input");
+        if (!startInput || !endInput || !visible(document.querySelector("#question-range-options"))) {
+          errors.push("Difficult Learn did not open its range selector.");
+          return;
+        }
+        startInput.value = String(start);
+        endInput.value = String(end);
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+      };
 
       if (visible(document.querySelector("#continue-session-card"))) errors.push("Legacy Part resume data left the Continue card visible.");
       if (localStorage.getItem("ppsc-prep:active-session:v1") !== null) errors.push("Legacy Part resume data was not removed safely.");
@@ -1217,8 +1789,22 @@ async function main() {
       if (visible(document.querySelector("#difficult-empty"))) errors.push("Difficult empty state remained visible with saved questions.");
       if (document.querySelector("#difficult-learn-button").disabled || document.querySelector("#difficult-quiz-button").disabled) errors.push("Saved Difficult Learn/Quiz actions were disabled.");
 
-      document.querySelector("#difficult-learn-button").click();
+      await startDifficultRange(1, 1);
+      const oneDifficultSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      if (!visible(document.querySelector("#quiz-screen")) || !progressMatches(1, 1)
+        || document.querySelector("#question-text")?.dataset.questionId !== expectedMarkedIds[0]
+        || oneDifficultSnapshot?.rangeStart !== 1 || oneDifficultSnapshot?.rangeEnd !== 1
+        || oneDifficultSnapshot?.rangePoolSize !== expectedMarkedIds.length
+        || JSON.stringify(oneDifficultSnapshot?.rangePoolQuestionIds || []) !== JSON.stringify(expectedMarkedIds)
+        || JSON.stringify(oneDifficultSnapshot?.rangeQuestionIds || []) !== JSON.stringify([expectedMarkedIds[0]])) {
+        errors.push("Difficult range 1–1 did not select exactly the first marked question.");
+      }
+      document.querySelector("#back-button")?.click();
       await pause();
+      categoryButton.click();
+      document.querySelector("#difficult-mode-button")?.click();
+      await pause();
+      await startDifficultRange(1, expectedMarkedIds.length);
       if (document.querySelector("#quiz-screen").dataset.scope !== "difficult") errors.push("Difficult Learn did not retain difficult scope.");
       if (document.querySelector("#quiz-screen").dataset.mode !== "learn") errors.push("Difficult Learn did not enter Learn mode.");
       if (!progressMatches(1, expectedMarkedIds.length)) errors.push("Difficult Learn progress did not match marked questions.");
@@ -1285,6 +1871,18 @@ async function main() {
       const remainingId = expectedMarkedIds.find((id) => id !== removedId);
       document.querySelector("#play-again-button").click();
       await pause();
+      const repeatedRangeStart = document.querySelector("#question-range-start-input");
+      const repeatedRangeEnd = document.querySelector("#question-range-end-input");
+      const changedDifficultRangeError = document.querySelector("#question-range-error");
+      if (!visible(document.querySelector("#question-range-options")) || repeatedRangeStart?.value !== "1"
+        || repeatedRangeEnd?.value !== "1" || repeatedRangeEnd?.max !== "1") {
+        errors.push("Practice Again did not reopen a safe 1–1 range after the Difficult pool shrank.");
+      } else if (!visible(changedDifficultRangeError) || !changedDifficultRangeError.textContent.includes("Difficult list changed")) {
+        errors.push("Practice Again did not explain that the Difficult list changed before requiring a new range.");
+      } else {
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+      }
       if (!progressMatches(1, 1)) errors.push("Practice Again did not filter Difficult Quiz to the remaining mark.");
       const finalQuizQuestion = findCurrent();
       if (!finalQuizQuestion || finalQuizQuestion.id !== remainingId) errors.push("Repeated Difficult Quiz rendered the wrong question.");
@@ -1384,11 +1982,24 @@ async function main() {
       document.querySelector("#difficult-mode-button").click();
       document.querySelector("#difficult-learn-button").click();
       await pause();
+      const rangeStartInput = document.querySelector("#question-range-start-input");
+      const rangeEndInput = document.querySelector("#question-range-end-input");
+      if (!rangeStartInput || !rangeEndInput || !visible(document.querySelector("#question-range-options"))) {
+        errors.push("Difficult Continue setup did not open its range selector.");
+      } else {
+        rangeStartInput.value = "1";
+        rangeEndInput.value = "1";
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+      }
       const optionTexts = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
       const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
-      if (!snapshot || snapshot.version !== 6 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.partIndex !== null || snapshot.importantOnly !== false) errors.push("Difficult Learn was not stored with the v6 category-session resume schema.");
+      if (!snapshot || snapshot.version !== 7 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.partIndex !== null || snapshot.importantOnly !== false) errors.push("Difficult Learn was not stored with the v7 category-session resume schema.");
       if (!snapshot || snapshot.mode !== "learn" || snapshot.scope !== "difficult") errors.push("Difficult Learn was not stored with the correct resume scope/mode.");
       if (!snapshot || snapshot.questionIds.length !== 1 || snapshot.questionIds[0] !== seed.questionId) errors.push("Difficult Learn resume snapshot did not keep its marked-question scope.");
+      if (!snapshot || snapshot.rangeStart !== 1 || snapshot.rangeEnd !== 1 || snapshot.rangePoolSize !== 1
+        || JSON.stringify(snapshot.rangePoolQuestionIds || []) !== JSON.stringify([seed.questionId])
+        || JSON.stringify(snapshot.rangeQuestionIds || []) !== JSON.stringify([seed.questionId])) errors.push("Difficult Learn resume snapshot did not keep its exact range and pool.");
       if (!snapshot || !snapshot.submitted || snapshot.score !== 0) errors.push("Difficult Learn resume answer state was incorrect.");
       return {
         errors,
@@ -1457,6 +2068,16 @@ async function main() {
       categoryButton.click();
       document.querySelector("#learn-mode-button").click();
       await pause();
+      const rangeStartInput = document.querySelector("#question-range-start-input");
+      const rangeEndInput = document.querySelector("#question-range-end-input");
+      if (!rangeStartInput || !rangeEndInput) {
+        errors.push("Learn Continue setup did not open its range selector.");
+      } else {
+        rangeStartInput.value = "1";
+        rangeEndInput.value = rangeEndInput.max;
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+      }
       const total = Number(document.querySelector("#question-total").textContent);
       const numberInput = document.querySelector("#question-number-input");
       numberInput.value = String(total);
@@ -1469,7 +2090,10 @@ async function main() {
       const firstUnvisitedIndex = snapshot
         ? snapshot.questionIds.findIndex((questionId) => !visitedIds.includes(questionId))
         : -1;
-      if (!snapshot || snapshot.version !== 6 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.mode !== "learn" || snapshot.scope !== "all" || snapshot.partIndex !== null) errors.push("Learn guard resume setup did not use the v6 category-session schema.");
+      if (!snapshot || snapshot.version !== 7 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.mode !== "learn" || snapshot.scope !== "all" || snapshot.partIndex !== null) errors.push("Learn guard resume setup did not use the v7 category-session schema.");
+      if (!snapshot || snapshot.rangeStart !== 1 || snapshot.rangeEnd !== total || snapshot.rangePoolSize !== total) errors.push("Learn guard resume setup did not preserve its full range.");
+      if (!snapshot || JSON.stringify(snapshot.rangePoolQuestionIds || []) !== JSON.stringify(snapshot.rangeQuestionIds || [])
+        || JSON.stringify(snapshot.rangeQuestionIds || []) !== JSON.stringify(snapshot.questionIds || [])) errors.push("Learn guard resume setup did not preserve its full eligible pool/slice order.");
       if (!snapshot || snapshot.currentIndex !== total - 1 || visitedIds.length !== 2 || !visitedIds.includes(snapshot.questionIds[0]) || !visitedIds.includes(snapshot.questionIds[total - 1])) errors.push("Learn guard resume setup did not persist the first and directly visited last IDs.");
       if (firstUnvisitedIndex < 0) errors.push("Learn guard resume setup did not retain an unvisited question.");
       return {
@@ -1515,7 +2139,7 @@ async function main() {
       await pause();
       if (document.querySelector("#question-text").dataset.questionId !== expected.lastQuestionId) errors.push("Learn Continue restored the wrong completion-guard question.");
       const restoredSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
-      if (!restoredSnapshot || restoredSnapshot.version !== 6 || restoredSnapshot.sessionKind !== "category" || restoredSnapshot.paperCategoryIds !== null || JSON.stringify(restoredSnapshot.learnVisitedQuestionIds) !== JSON.stringify(expected.visitedIds)) errors.push("Learn Continue changed the persisted visited-ID snapshot.");
+      if (!restoredSnapshot || restoredSnapshot.version !== 7 || restoredSnapshot.sessionKind !== "category" || restoredSnapshot.paperCategoryIds !== null || JSON.stringify(restoredSnapshot.learnVisitedQuestionIds) !== JSON.stringify(expected.visitedIds)) errors.push("Learn Continue changed the persisted visited-ID snapshot.");
       if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Restored Learn guard did not offer Next Unvisited.");
       document.querySelector("#action-button").click();
       await pause();
@@ -1564,6 +2188,20 @@ async function main() {
         if (optionTexts.some((element) => !getComputedStyle(element).fontFamily.includes("Noto Nastaliq Urdu"))) errors.push(context + " option text lacks the Urdu font.");
         if (optionLabels.some((element) => element.lang !== "ur" || element.dir !== "rtl")) errors.push(context + " option labels lack Urdu language/direction attributes.");
       };
+      const startFullRange = async (selector) => {
+        document.querySelector(selector)?.click();
+        await pause();
+        const startInput = document.querySelector("#question-range-start-input");
+        const endInput = document.querySelector("#question-range-end-input");
+        if (!startInput || !endInput || !visible(document.querySelector("#question-range-options"))) {
+          errors.push(selector + " did not open the Urdu range selector.");
+          return;
+        }
+        startInput.value = "1";
+        endInput.value = endInput.max;
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+      };
 
       if (visible(document.querySelector("#quiz-screen"))) {
         document.querySelector("#back-button").click();
@@ -1577,8 +2215,7 @@ async function main() {
       }
 
       urduCategoryButton.click();
-      document.querySelector("#learn-mode-button").click();
-      await pause();
+      await startFullRange("#learn-mode-button");
       const learnQuestion = questionById.get(String(document.querySelector("#question-text").dataset.questionId));
       assertUrduSurface(learnQuestion, learnQuestion ? learnQuestion.optionsUrdu : [], "Urdu Learn");
       if (!learnQuestion || learnQuestion.id !== urduQuestions[0].id) errors.push("Urdu Learn did not retain canonical source order.");
@@ -1596,8 +2233,7 @@ async function main() {
       document.querySelector("#back-button").click();
       await pause();
       urduCategoryButton.click();
-      document.querySelector("#quiz-mode-button").click();
-      await pause();
+      await startFullRange("#quiz-mode-button");
       const initialSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
       const firstQuestion = questionById.get(String(document.querySelector("#question-text").dataset.questionId));
       const firstOrder = initialSnapshot && Array.isArray(initialSnapshot.optionOrders)
@@ -1607,9 +2243,10 @@ async function main() {
         ? firstOrder.map((originalIndex) => firstQuestion.optionsUrdu[originalIndex])
         : [];
       assertUrduSurface(firstQuestion, firstExpectedOptions, "Urdu Quiz");
-      if (!initialSnapshot || initialSnapshot.version !== 6 || initialSnapshot.sessionKind !== "category" || initialSnapshot.categoryId !== "urdu" || initialSnapshot.paperCategoryIds !== null || initialSnapshot.mode !== "quiz" || initialSnapshot.scope !== "all") {
-        errors.push("Urdu Quiz did not use the v6 category-session schema.");
+      if (!initialSnapshot || initialSnapshot.version !== 7 || initialSnapshot.sessionKind !== "category" || initialSnapshot.categoryId !== "urdu" || initialSnapshot.paperCategoryIds !== null || initialSnapshot.mode !== "quiz" || initialSnapshot.scope !== "all") {
+        errors.push("Urdu Quiz did not use the v7 category-session schema.");
       }
+      if (!initialSnapshot || initialSnapshot.rangeStart !== 1 || initialSnapshot.rangeEnd !== urduQuestions.length || initialSnapshot.rangePoolSize !== urduQuestions.length) errors.push("Urdu Quiz did not store its full selected range.");
       document.querySelector("#action-button").click();
       await pause();
       const selectionPrompt = document.querySelector("#feedback");
@@ -1658,7 +2295,7 @@ async function main() {
         await pause();
       }
       const resumeSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!resumeSnapshot || resumeSnapshot.version !== 6 || resumeSnapshot.currentIndex !== 1 || resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== secondCorrectRenderedIndex || resumeSnapshot.score !== 0) errors.push("Urdu Quiz pending checkpoint is invalid.");
+      if (!resumeSnapshot || resumeSnapshot.version !== 7 || resumeSnapshot.currentIndex !== 1 || resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== secondCorrectRenderedIndex || resumeSnapshot.score !== 0) errors.push("Urdu Quiz pending checkpoint is invalid.");
       if (!resumeSnapshot || !resumeSnapshot.answerHistory[0] || resumeSnapshot.answerHistory[0][0] !== firstWrongRenderedIndex || resumeSnapshot.answerHistory[0][1] !== true || !resumeSnapshot.answerHistory[1] || resumeSnapshot.answerHistory[1][0] !== secondCorrectRenderedIndex || resumeSnapshot.answerHistory[1][1] !== false) {
         errors.push("Urdu Quiz did not persist its submitted and pending answer states.");
       }
@@ -1716,7 +2353,7 @@ async function main() {
         .map((element) => element.textContent);
       const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
       if (!visible(document.querySelector("#continue-session-card")) || !document.querySelector("#continue-session-title").textContent.includes("Urdu")) errors.push("Reload did not offer Continue for the Urdu Quiz.");
-      if (!storedBeforeContinue || storedBeforeContinue.version !== 6 || storedBeforeContinue.categoryId !== "urdu" || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds) || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders) || JSON.stringify(storedBeforeContinue.answerHistory) !== JSON.stringify(expected.answerHistory)) {
+      if (!storedBeforeContinue || storedBeforeContinue.version !== 7 || storedBeforeContinue.categoryId !== "urdu" || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds) || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders) || JSON.stringify(storedBeforeContinue.answerHistory) !== JSON.stringify(expected.answerHistory)) {
         errors.push("Reload changed the saved Urdu Quiz IDs, option order, or answer states.");
       }
       document.querySelector("#continue-session-button").click();
@@ -1752,8 +2389,18 @@ async function main() {
       await pause();
       const generalButton = document.querySelector('#category-grid .category-card[data-category="general-knowledge"]');
       generalButton.click();
-      document.querySelector("#learn-mode-button").click();
+      document.querySelector("#learn-mode-button")?.click();
       await pause();
+      const generalRangeStart = document.querySelector("#question-range-start-input");
+      const generalRangeEnd = document.querySelector("#question-range-end-input");
+      if (!generalRangeStart || !generalRangeEnd || !visible(document.querySelector("#question-range-options"))) {
+        errors.push("Transition from Urdu did not open the General Knowledge range selector.");
+      } else {
+        generalRangeStart.value = "1";
+        generalRangeEnd.value = generalRangeEnd.max;
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+      }
       const generalQuestion = questionById.get(String(document.querySelector("#question-text").dataset.questionId));
       const mainQuestion = document.querySelector("#question-text");
       const optionsContainer = document.querySelector("#options-container");
@@ -1883,6 +2530,7 @@ async function main() {
       await pause();
 
       if (!visible(document.querySelector("#quiz-screen"))) errors.push("Starting a Custom Paper did not open the question screen.");
+      if (visible(document.querySelector("#question-range-options"))) errors.push("Custom Paper incorrectly opened the category range selector.");
       if (document.querySelector("#quiz-screen").dataset.sessionKind !== "paper") errors.push("Custom Paper question screen did not expose paper session kind.");
       if (document.querySelector("#quiz-screen").dataset.mode !== "quiz" || document.querySelector("#quiz-screen").dataset.scope !== "all") errors.push("Custom Paper did not reuse scored Quiz/all scope.");
       if (!document.querySelector("#quiz-category").textContent.includes("Custom Paper") || !document.querySelector("#quiz-category").textContent.includes("100 MCQs")) errors.push("Custom Paper header did not describe the paper.");
@@ -1890,8 +2538,9 @@ async function main() {
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Custom Paper question screen has horizontal overflow on mobile.");
 
       const initialSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!initialSnapshot || initialSnapshot.version !== 6 || initialSnapshot.sessionKind !== "paper") errors.push("Custom Paper was not stored with the v6 paper-session schema.");
+      if (!initialSnapshot || initialSnapshot.version !== 7 || initialSnapshot.sessionKind !== "paper") errors.push("Custom Paper was not stored with the v7 paper-session schema.");
       if (!initialSnapshot || initialSnapshot.categoryId !== null || initialSnapshot.mode !== "quiz" || initialSnapshot.scope !== "all" || initialSnapshot.partIndex !== null || initialSnapshot.importantOnly !== false) errors.push("Custom Paper stored invalid category/mode/scope fields.");
+      if (!initialSnapshot || initialSnapshot.rangeStart !== null || initialSnapshot.rangeEnd !== null || initialSnapshot.rangePoolSize !== null || initialSnapshot.rangePoolQuestionIds !== null || initialSnapshot.rangeQuestionIds !== null) errors.push("Custom Paper incorrectly stored category-range metadata.");
       if (!initialSnapshot || JSON.stringify(initialSnapshot.paperCategoryIds) !== JSON.stringify(selectedCategoryIds)) errors.push("Custom Paper did not store the selected category IDs in data order.");
       if (!initialSnapshot || !Array.isArray(initialSnapshot.questionIds) || initialSnapshot.questionIds.length !== 100 || new Set(initialSnapshot.questionIds).size !== 100) errors.push("Custom Paper did not contain exactly 100 unique question IDs.");
       if (!initialSnapshot || !Array.isArray(initialSnapshot.optionOrders) || initialSnapshot.optionOrders.length !== 100) errors.push("Custom Paper did not store 100 option orders.");
@@ -2058,7 +2707,8 @@ async function main() {
       const continueMeta = document.querySelector("#continue-session-meta").textContent;
       if (!continueMeta.includes("Custom Paper") || !continueMeta.includes("2 categories") || !continueMeta.includes("Question " + (expected.currentIndex + 1) + " of 100")) errors.push("Custom Paper Continue metadata was incomplete.");
       const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!storedBeforeContinue || storedBeforeContinue.version !== 6 || storedBeforeContinue.sessionKind !== "paper" || storedBeforeContinue.categoryId !== null) errors.push("Reload changed the Custom Paper session schema.");
+      if (!storedBeforeContinue || storedBeforeContinue.version !== 7 || storedBeforeContinue.sessionKind !== "paper" || storedBeforeContinue.categoryId !== null) errors.push("Reload changed the Custom Paper session schema.");
+      if (!storedBeforeContinue || storedBeforeContinue.rangeStart !== null || storedBeforeContinue.rangeEnd !== null || storedBeforeContinue.rangePoolSize !== null || storedBeforeContinue.rangePoolQuestionIds !== null || storedBeforeContinue.rangeQuestionIds !== null) errors.push("Reload added range metadata to Custom Paper.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.paperCategoryIds) !== JSON.stringify(expected.selectedCategoryIds)) errors.push("Reload changed the selected Custom Paper categories.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds)) errors.push("Reload changed the Custom Paper question IDs/order.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders)) errors.push("Reload changed the Custom Paper option orders.");
@@ -2228,14 +2878,18 @@ async function main() {
       };
     })()`);
 
-    const { resumeExpected, ...normalSummary } = normalResult;
+    const { resumeExpected, legacyV6Snapshot, ...normalSummary } = normalResult;
     const result = {
       ...normalSummary,
       errors: normalResult.errors
+        .concat(quickNotes320Result.errors)
         .concat(resumeResult.errors)
         .concat(pendingResumeResult.errors)
+        .concat(legacyV6SeedResult.errors)
+        .concat(legacyV6MigrationResult.errors)
         .concat(positionGuardSetupResult.errors)
         .concat(positionGuardRecoveryResult.errors)
+        .concat(rangePoolGuardRecoveryResult.errors)
         .concat(difficultResult.errors)
         .concat(difficultResumeSetup.errors)
         .concat(difficultResumeResult.errors)
@@ -2248,11 +2902,13 @@ async function main() {
       resume: {
         submittedStateRestored: resumeResult.errors.length === 0,
         pendingSelectionRestored: pendingResumeResult.errors.length === 0,
+        legacyV6Migrated: legacyV6SeedResult.errors.length === 0 && legacyV6MigrationResult.errors.length === 0,
         difficultLearnRestored: difficultResumeSetup.errors.length === 0 && difficultResumeResult.errors.length === 0,
         learnVisitedIdsRestored: learnResumeSetup.errors.length === 0 && learnResumeResult.errors.length === 0,
         urduQuizRestored: urduSetupResult.errors.length === 0 && urduResumeResult.errors.length === 0,
         corruptDataRecovered: !positionGuardSetupResult.errors.some((message) => message.includes("Corrupt resume data")),
         malformedPositionOrderRejected: positionGuardRecoveryResult.errors.length === 0,
+        tamperedRangePoolRejected: rangePoolGuardRecoveryResult.errors.length === 0,
         staleDataRecovered: !difficultResult.errors.some((message) => message.includes("Legacy Part resume data"))
           && !difficultResumeSetup.errors.some((message) => message.includes("Stale-bank resume data"))
       },
@@ -2260,7 +2916,8 @@ async function main() {
         verifiedSensitiveCount: positionGuardSetupResult.verifiedSensitiveCount,
         normalOptionsStillShuffle: positionGuardSetupResult.normalOptionOrderShuffled,
         malformedQuestionId: positionGuardSetupResult.malformedQuestionId,
-        malformedSnapshotRejected: positionGuardRecoveryResult.errors.length === 0
+        malformedSnapshotRejected: positionGuardRecoveryResult.errors.length === 0,
+        tamperedRangePoolRejected: rangePoolGuardRecoveryResult.errors.length === 0
       },
       difficult: difficultResult,
       urdu: urduResumeResult,

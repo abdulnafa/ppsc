@@ -8,9 +8,11 @@
   var PAPER_QUESTION_COUNT = 100;
   var PAPER_WRONG_PENALTY = 0.25;
   var GK_NOTES_PAGE_SIZE = 40;
+  var QUICK_NOTES_PAGE_SIZE = 100;
   var DIFFICULT_STORAGE_KEY = "ppsc-prep:difficult-question-ids:v1";
   var SESSION_STORAGE_KEY = "ppsc-prep:active-session:v1";
-  var SESSION_STORAGE_VERSION = 6;
+  var SESSION_STORAGE_VERSION = 7;
+  var LEGACY_SESSION_STORAGE_VERSION = 6;
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
@@ -35,6 +37,15 @@
     importantOnly: false,
     visibleLimit: GK_NOTES_PAGE_SIZE
   };
+  var quickNotesState = {
+    categoryId: "",
+    query: "",
+    importantOnly: false,
+    visibleLimit: QUICK_NOTES_PAGE_SIZE,
+    searchEntries: []
+  };
+  var pendingRangeChoice = null;
+  var gkNotesReturnTarget = "quick-notes";
 
   var state = {
     category: null,
@@ -45,6 +56,11 @@
     scope: "all",
     partIndex: null,
     importantOnly: false,
+    rangeStart: null,
+    rangeEnd: null,
+    rangePoolSize: null,
+    rangePoolQuestionIds: null,
+    rangeQuestionIds: null,
     responses: [],
     learnVisitedQuestionIds: new Set(),
     currentIndex: 0,
@@ -66,12 +82,24 @@
 
   function collectElements() {
     elements.categoryScreen = firstElement(["#category-screen", "[data-screen='categories']"]);
+    elements.quickNotesScreen = firstElement(["#quick-notes-screen", "[data-screen='quick-notes']"]);
     elements.gkNotesScreen = firstElement(["#gk-notes-screen", "[data-screen='gk-notes']"]);
     elements.paperSetupScreen = firstElement(["#paper-setup-screen", "[data-screen='paper-setup']"]);
     elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
     elements.quizScreen = firstElement(["#quiz-screen", "[data-screen='quiz']"]);
     elements.resultScreen = firstElement(["#result-screen", "#results-screen", "[data-screen='results']"]);
     elements.categoryGrid = firstElement(["#category-grid", "[data-category-grid]"]);
+    elements.quickNotesBackButton = firstElement(["#quick-notes-back-button", "[data-quick-notes-back]"]);
+    elements.quickNotesCategory = firstElement(["#quick-notes-category", "[data-quick-notes-category]"]);
+    elements.quickNotesTitle = firstElement(["#quick-notes-title", "[data-quick-notes-title]"]);
+    elements.quickNotesCount = firstElement(["#quick-notes-count", "[data-quick-notes-count]"]);
+    elements.quickNotesSearch = firstElement(["#quick-notes-search", "[data-quick-notes-search]"]);
+    elements.quickNotesClearButton = firstElement(["#quick-notes-clear-button", "[data-quick-notes-clear]"]);
+    elements.quickNotesImportantOnly = firstElement(["#quick-notes-important-only", "[data-quick-notes-important-only]"]);
+    elements.quickNotesResultsStatus = firstElement(["#quick-notes-results-status", "[data-quick-notes-results-status]"]);
+    elements.quickNotesList = firstElement(["#quick-notes-list", "[data-quick-notes-list]"]);
+    elements.quickNotesLoadMoreButton = firstElement(["#quick-notes-load-more-button", "[data-quick-notes-load-more]"]);
+    elements.quickNotesEmpty = firstElement(["#quick-notes-empty", "[data-quick-notes-empty]"]);
     elements.gkStudyNotesCard = firstElement(["#gk-study-notes-card", "[data-gk-study-notes-card]"]);
     elements.gkNotesBackButton = firstElement(["#gk-notes-back-button", "[data-gk-notes-back]"]);
     elements.gkNotesSearch = firstElement(["#gk-notes-search", "[data-gk-notes-search]"]);
@@ -98,8 +126,10 @@
     elements.importantOnlyCheckbox = firstElement(["#important-only-checkbox", "[data-important-only]"]);
     elements.importantCount = firstElement(["#important-count", "[data-important-count]"]);
     elements.studyScopeSummary = firstElement(["#study-scope-summary", "[data-study-scope-summary]"]);
+    elements.studyScopePanel = firstElement(["#study-scope-panel", "[data-study-scope-panel]"]);
     elements.learnModeButton = firstElement(["#learn-mode-button", "[data-start-learn]"]);
     elements.quizModeButton = firstElement(["#quiz-mode-button", "[data-start-quiz]"]);
+    elements.studyNotesModeButton = firstElement(["#study-notes-mode-button", "[data-open-study-notes]"]);
     elements.standardModeOptions = firstElement(["#standard-mode-options", "[data-standard-mode-options]", ".mode-options"]);
     elements.difficultModeButton = firstElement(["#difficult-mode-button", "[data-open-difficult]", "[data-difficult-mode]"]);
     elements.difficultModeOptions = firstElement(["#difficult-mode-options", "[data-difficult-mode-options]"]);
@@ -108,6 +138,17 @@
     elements.difficultBackButton = firstElement(["#difficult-back-button", "[data-difficult-back]"]);
     elements.difficultCount = firstElement(["#difficult-count", "[data-difficult-count]"]);
     elements.difficultEmpty = firstElement(["#difficult-empty", "[data-difficult-empty]"]);
+    elements.questionRangeOptions = firstElement(["#question-range-options", "[data-question-range-options]"]);
+    elements.questionRangeTitle = firstElement(["#question-range-title", "[data-question-range-title]"]);
+    elements.questionRangeContext = firstElement(["#question-range-context", "[data-question-range-context]"]);
+    elements.questionRangeForm = firstElement(["#question-range-form", "[data-question-range-form]"]);
+    elements.questionRangeStartInput = firstElement(["#question-range-start-input", "#question-range-start", "[data-question-range-start]"]);
+    elements.questionRangeEndInput = firstElement(["#question-range-end-input", "#question-range-end", "[data-question-range-end]"]);
+    elements.questionRangeHelp = firstElement(["#question-range-help", "[data-question-range-help]"]);
+    elements.questionRangeSummary = firstElement(["#question-range-summary", "[data-question-range-summary]"]);
+    elements.questionRangeError = firstElement(["#question-range-error", "[data-question-range-error]"]);
+    elements.questionRangeSubmitButton = firstElement(["#question-range-submit-button", "#question-range-submit", "[data-question-range-submit]"]);
+    elements.questionRangeBackButton = firstElement(["#question-range-back-button", "#question-range-back", "[data-question-range-back]"]);
     elements.modeBackButton = firstElement(["#mode-back-button", "[data-mode-back]"]);
     elements.quizCategory = firstElement(["#quiz-category", "[data-quiz-category]"]);
     elements.questionKind = firstElement(["#question-kind", "[data-question-kind]"]);
@@ -210,8 +251,25 @@
     return scope === "difficult" ? "Difficult " + modeName : modeName;
   }
 
-  function sessionSelectionLabel(partIndex, importantOnly) {
-    return importantOnly ? "All Important Questions" : "All Questions";
+  function hasValidRangeMetadata(rangeStart, rangeEnd, rangePoolSize) {
+    return Number.isInteger(rangeStart)
+      && Number.isInteger(rangeEnd)
+      && Number.isInteger(rangePoolSize)
+      && rangeStart >= 1
+      && rangeStart <= rangeEnd
+      && rangeEnd <= rangePoolSize;
+  }
+
+  function sessionRangeLabel(rangeStart, rangeEnd, rangePoolSize) {
+    return hasValidRangeMetadata(rangeStart, rangeEnd, rangePoolSize)
+      ? "Questions " + rangeStart + "\u2013" + rangeEnd + " of " + rangePoolSize
+      : "";
+  }
+
+  function sessionSelectionLabel(partIndex, importantOnly, rangeStart, rangeEnd, rangePoolSize) {
+    var filterLabel = importantOnly ? "All Important Questions" : "All Questions";
+    var rangeLabel = sessionRangeLabel(rangeStart, rangeEnd, rangePoolSize);
+    return rangeLabel ? filterLabel + " \u00b7 " + rangeLabel : filterLabel;
   }
 
   function scoreForResponses(responses, questions) {
@@ -259,7 +317,13 @@
     var modeLabel = paperSession ? "Custom Paper" : sessionModeLabel(snapshot.mode, snapshot.scope);
     var selectionLabel = paperSession
       ? snapshot.paperCategoryIds.length + (snapshot.paperCategoryIds.length === 1 ? " category" : " categories")
-      : sessionSelectionLabel(snapshot.partIndex, snapshot.importantOnly);
+      : sessionSelectionLabel(
+          snapshot.partIndex,
+          snapshot.importantOnly,
+          snapshot.rangeStart,
+          snapshot.rangeEnd,
+          snapshot.rangePoolSize
+        );
     if (elements.continueSessionTitle) {
       elements.continueSessionTitle.textContent = paperSession ? "Continue Custom Paper" : "Continue " + category.name;
     }
@@ -289,7 +353,8 @@
 
   function normalizeStoredSession(savedValue) {
     if (!savedValue || typeof savedValue !== "object" || Array.isArray(savedValue)) return null;
-    if (savedValue.version !== SESSION_STORAGE_VERSION) return null;
+    var legacySession = savedValue.version === LEGACY_SESSION_STORAGE_VERSION;
+    if (!legacySession && savedValue.version !== SESSION_STORAGE_VERSION) return null;
     if (savedValue.bankSignature !== questionBankSignature) return null;
     if (savedValue.sessionKind !== "category" && savedValue.sessionKind !== "paper") return null;
     if (savedValue.mode !== "learn" && savedValue.mode !== "quiz") return null;
@@ -333,7 +398,19 @@
     if (canonicalQuestions.some(function (question) { return !question; })) return null;
 
     var selectedQuestionIds = [];
+    var rangeStart = null;
+    var rangeEnd = null;
+    var rangePoolSize = null;
+    var rangePoolQuestionIds = null;
+    var rangeQuestionIds = null;
     if (paperSession) {
+      if (!legacySession && (
+        savedValue.rangeStart !== null
+        || savedValue.rangeEnd !== null
+        || savedValue.rangePoolSize !== null
+        || savedValue.rangePoolQuestionIds !== null
+        || savedValue.rangeQuestionIds !== null
+      )) return null;
       if (canonicalQuestions.some(function (question) {
         return !paperCategoryIds.includes(String(question.categoryId));
       })) return null;
@@ -347,23 +424,67 @@
       selectedQuestionIds = questionsForSelection(category.id, partIndex, importantOnly).map(function (question) {
         return String(question.id);
       });
-      if (savedValue.scope === "all") {
-        var savedIdSet = new Set(questionIds);
-        if (
+      var questionIdSet = new Set(questionIds);
+
+      if (legacySession) {
+        if (savedValue.scope === "all" && (
           questionIds.length !== selectedQuestionIds.length
-          || selectedQuestionIds.some(function (questionId) { return !savedIdSet.has(questionId); })
+          || selectedQuestionIds.some(function (questionId) { return !questionIdSet.has(questionId); })
+        )) return null;
+        if (questionIds.some(function (questionId) { return !selectedQuestionIds.includes(questionId); })) return null;
+
+        rangeQuestionIds = selectedQuestionIds.filter(function (questionId) {
+          return questionIdSet.has(questionId);
+        });
+        rangeStart = 1;
+        rangeEnd = rangeQuestionIds.length;
+        rangePoolSize = rangeQuestionIds.length;
+        rangePoolQuestionIds = rangeQuestionIds.slice();
+      } else {
+        rangeStart = savedValue.rangeStart;
+        rangeEnd = savedValue.rangeEnd;
+        rangePoolSize = savedValue.rangePoolSize;
+        if (!hasValidRangeMetadata(rangeStart, rangeEnd, rangePoolSize)) return null;
+        if (!Array.isArray(savedValue.rangePoolQuestionIds)) return null;
+        if (!Array.isArray(savedValue.rangeQuestionIds)) return null;
+        rangePoolQuestionIds = savedValue.rangePoolQuestionIds.map(String);
+        rangeQuestionIds = savedValue.rangeQuestionIds.map(String);
+        if (
+          rangePoolQuestionIds.length !== rangePoolSize
+          || new Set(rangePoolQuestionIds).size !== rangePoolQuestionIds.length
+          || rangePoolQuestionIds.some(function (questionId) { return !selectedQuestionIds.includes(questionId); })
+          ||
+          rangeQuestionIds.length !== rangeEnd - rangeStart + 1
+          || rangeQuestionIds.length !== questionIds.length
+          || new Set(rangeQuestionIds).size !== rangeQuestionIds.length
         ) return null;
-      } else if (questionIds.some(function (questionId) { return !selectedQuestionIds.includes(questionId); })) {
-        return null;
+        if (rangeQuestionIds.some(function (questionId) {
+          return !selectedQuestionIds.includes(questionId) || !questionIdSet.has(questionId);
+        })) return null;
+        if (questionIds.some(function (questionId) {
+          return !rangeQuestionIds.includes(questionId);
+        })) return null;
+
+        var canonicalPoolOrder = selectedQuestionIds.filter(function (questionId) {
+          return rangePoolQuestionIds.includes(questionId);
+        });
+        if (orderKey(rangePoolQuestionIds, function (questionId) { return questionId; })
+          !== orderKey(canonicalPoolOrder, function (questionId) { return questionId; })) return null;
+
+        var expectedRangeIds = rangePoolQuestionIds.slice(rangeStart - 1, rangeEnd);
+        if (orderKey(rangeQuestionIds, function (questionId) { return questionId; })
+          !== orderKey(expectedRangeIds, function (questionId) { return questionId; })) return null;
+
+        if (savedValue.scope === "all") {
+          if (rangePoolSize !== selectedQuestionIds.length) return null;
+          if (orderKey(rangePoolQuestionIds, function (questionId) { return questionId; })
+            !== orderKey(selectedQuestionIds, function (questionId) { return questionId; })) return null;
+        }
       }
 
-      if (savedValue.mode === "learn") {
-        var includedIds = new Set(questionIds);
-        var expectedLearnOrder = selectedQuestionIds.filter(function (questionId) {
-          return includedIds.has(questionId);
-        });
-        if (orderKey(questionIds, function (questionId) { return questionId; })
-          !== orderKey(expectedLearnOrder, function (questionId) { return questionId; })) return null;
+      if (savedValue.mode === "learn" && orderKey(questionIds, function (questionId) { return questionId; })
+        !== orderKey(rangeQuestionIds, function (questionId) { return questionId; })) {
+        return null;
       }
     }
 
@@ -391,7 +512,7 @@
     if (!Number.isInteger(currentIndex) || currentIndex < 0 || currentIndex >= sessionQuestions.length) return null;
     if (selectedIndex !== null && (!Number.isInteger(selectedIndex) || selectedIndex < 0 || selectedIndex >= OPTION_LABELS.length)) return null;
     if (typeof submitted !== "boolean") return null;
-    if (!Number.isInteger(score) || score < 0) return null;
+    if (!Number.isInteger(score) || score < 0 || score > sessionQuestions.length) return null;
 
     var responses = new Array(sessionQuestions.length).fill(null);
     var learnVisitedQuestionIds = new Set();
@@ -433,6 +554,11 @@
       scope: savedValue.scope,
       partIndex: partIndex,
       importantOnly: importantOnly,
+      rangeStart: rangeStart,
+      rangeEnd: rangeEnd,
+      rangePoolSize: rangePoolSize,
+      rangePoolQuestionIds: rangePoolQuestionIds ? rangePoolQuestionIds.slice() : null,
+      rangeQuestionIds: rangeQuestionIds ? rangeQuestionIds.slice() : null,
       questionIds: questionIds,
       optionOrders: optionOrders,
       answerHistory: savedValue.mode === "quiz" ? responses.map(function (response) {
@@ -500,6 +626,19 @@
   function saveActiveSession() {
     if (!state.mode || state.questions.length === 0) return false;
     if (!isPaperSession() && !state.category) return false;
+    if (!isPaperSession() && (
+      !hasValidRangeMetadata(state.rangeStart, state.rangeEnd, state.rangePoolSize)
+      || !Array.isArray(state.rangePoolQuestionIds)
+      || state.rangePoolQuestionIds.length !== state.rangePoolSize
+      || !Array.isArray(state.rangeQuestionIds)
+      || state.rangeQuestionIds.length !== state.questions.length
+      || state.rangeQuestionIds.length !== state.rangeEnd - state.rangeStart + 1
+      || orderKey(state.rangeQuestionIds, function (questionId) { return questionId; })
+        !== orderKey(
+          state.rangePoolQuestionIds.slice(state.rangeStart - 1, state.rangeEnd),
+          function (questionId) { return questionId; }
+        )
+    )) return false;
     if (isPaperSession() && (
       state.mode !== "quiz"
       || state.questions.length !== PAPER_QUESTION_COUNT
@@ -532,6 +671,15 @@
       scope: state.scope,
       partIndex: null,
       importantOnly: state.importantOnly,
+      rangeStart: isPaperSession() ? null : state.rangeStart,
+      rangeEnd: isPaperSession() ? null : state.rangeEnd,
+      rangePoolSize: isPaperSession() ? null : state.rangePoolSize,
+      rangePoolQuestionIds: isPaperSession() || !Array.isArray(state.rangePoolQuestionIds)
+        ? null
+        : state.rangePoolQuestionIds.slice(),
+      rangeQuestionIds: isPaperSession() || !Array.isArray(state.rangeQuestionIds)
+        ? null
+        : state.rangeQuestionIds.slice(),
       questionIds: state.questions.map(function (question) { return String(question.id); }),
       optionOrders: optionOrders,
       answerHistory: state.mode === "quiz" ? state.responses.map(function (response) {
@@ -579,6 +727,15 @@
     state.scope = normalized.snapshot.scope;
     state.partIndex = normalized.snapshot.partIndex;
     state.importantOnly = normalized.snapshot.importantOnly;
+    state.rangeStart = normalized.snapshot.rangeStart;
+    state.rangeEnd = normalized.snapshot.rangeEnd;
+    state.rangePoolSize = normalized.snapshot.rangePoolSize;
+    state.rangePoolQuestionIds = normalized.snapshot.rangePoolQuestionIds
+      ? normalized.snapshot.rangePoolQuestionIds.slice()
+      : null;
+    state.rangeQuestionIds = normalized.snapshot.rangeQuestionIds
+      ? normalized.snapshot.rangeQuestionIds.slice()
+      : null;
     state.responses = normalized.responses;
     state.learnVisitedQuestionIds = normalized.learnVisitedQuestionIds;
     state.currentIndex = normalized.snapshot.currentIndex;
@@ -815,13 +972,16 @@
 
   function showScreen(screenName) {
     setHidden(elements.categoryScreen, screenName !== "categories");
+    setHidden(elements.quickNotesScreen, screenName !== "quick-notes");
     setHidden(elements.gkNotesScreen, screenName !== "gk-notes");
     setHidden(elements.paperSetupScreen, screenName !== "paper-setup");
     setHidden(elements.modeScreen, screenName !== "mode");
     setHidden(elements.quizScreen, screenName !== "quiz");
     setHidden(elements.resultScreen, screenName !== "results");
 
-    var activeScreen = screenName === "gk-notes"
+    var activeScreen = screenName === "quick-notes"
+      ? elements.quickNotesScreen
+      : screenName === "gk-notes"
       ? elements.gkNotesScreen
       : screenName === "paper-setup"
       ? elements.paperSetupScreen
@@ -848,6 +1008,204 @@
       .toLocaleLowerCase()
       .replace(/\s+/g, " ")
       .trim();
+  }
+
+  function quickNoteScanCue(questionText) {
+    var words = String(questionText || "").replace(/\s+/g, " ").trim().split(" ").filter(Boolean);
+    if (words.length === 0) return "Question";
+    var genericWords = new Set([
+      "a", "an", "the", "what", "which", "who", "whom", "whose", "where", "when", "why", "how",
+      "is", "are", "was", "were", "has", "have", "had", "do", "does", "did", "can", "could",
+      "would", "should", "of", "in", "on", "at", "to", "for", "by", "with", "from", "as", "about",
+      "this", "that", "these", "following", "statement", "statements", "option", "options", "called",
+      "known", "according", "among", "\u06a9\u06cc\u0627", "\u06c1\u06d2", "\u06c1\u06cc\u06ba", "\u06a9\u0627", "\u06a9\u06cc", "\u06a9\u06d2", "\u06a9\u0648", "\u0645\u06cc\u06ba", "\u0633\u06d2",
+      "\u0645\u0646\u062f\u0631\u062c\u06c1", "\u0630\u06cc\u0644", "\u062f\u0631\u062c", "\u06a9\u0648\u0646", "\u06a9\u0648\u0646\u0633\u0627", "\u06a9\u0648\u0646\u0633\u06cc", "\u06a9\u0648\u0646\u0633\u06d2"
+    ]);
+    var keywords = words.filter(function (word) {
+      var comparable = word.toLocaleLowerCase().replace(/[.,?!:;'"()[\]{}\u061f\u060c\u06d4]/g, "");
+      return comparable && !genericWords.has(comparable) && (comparable.length >= 2 || /\d/.test(comparable));
+    });
+    var cueSource = keywords.length >= 2 ? keywords : words;
+    var cueWords = cueSource.slice(0, 9);
+    return cueWords.join(" \u00b7 ") + (cueSource.length > 9 ? " \u2026" : "");
+  }
+
+  function quickNoteEntry(question, ordinal) {
+    var questionText = displayQuestionText(question);
+    var answerText = displayOption(question, question.correctOptionIndex).text;
+    var cueText = quickNoteScanCue(questionText);
+    return {
+      question: question,
+      ordinal: ordinal,
+      questionText: questionText,
+      answerText: answerText,
+      cueText: cueText,
+      searchText: normalizeGkNotesText([questionText, answerText, cueText].join(" "))
+    };
+  }
+
+  function createQuickNoteElement(entry) {
+    var question = entry.question;
+    var urdu = isUrduCategoryQuestion(question);
+    var row = document.createElement("article");
+    row.className = "quick-note-row" + (urdu ? " is-urdu" : "");
+    row.dataset.questionId = String(question.id);
+    row.dataset.questionNumber = String(entry.ordinal);
+    if (urdu) {
+      row.lang = "ur";
+      row.dir = "rtl";
+    }
+
+    var questionCopy = document.createElement("div");
+    questionCopy.className = "quick-note-question quick-note-question-copy";
+
+    var cue = document.createElement("span");
+    cue.className = "quick-note-cue";
+    cue.textContent = urdu
+      ? "\u0633\u0648\u0627\u0644 " + entry.ordinal + " \u00b7 \u0641\u0648\u0631\u06cc \u0627\u0634\u0627\u0631\u06c1 \u00b7 " + entry.cueText
+      : "Q" + entry.ordinal + " \u00b7 SCAN CUE \u00b7 " + entry.cueText;
+    var fullQuestion = document.createElement("p");
+    fullQuestion.className = "quick-note-full-question";
+    fullQuestion.textContent = entry.questionText;
+    if (urdu) {
+      cue.lang = "ur";
+      cue.dir = "rtl";
+      fullQuestion.lang = "ur";
+      fullQuestion.dir = "rtl";
+    }
+    questionCopy.appendChild(cue);
+    questionCopy.appendChild(fullQuestion);
+
+    if (isImportantQuestion(question)) {
+      var important = document.createElement("span");
+      important.className = "quick-note-important";
+      important.textContent = urdu ? "\u0627\u06c1\u0645 \u0633\u0648\u0627\u0644" : "IMPORTANT";
+      if (urdu) {
+        important.lang = "ur";
+        important.dir = "rtl";
+      }
+      questionCopy.appendChild(important);
+    }
+
+    var answer = document.createElement("div");
+    answer.className = "quick-note-answer";
+    var answerLabel = document.createElement("span");
+    answerLabel.className = "quick-note-answer-label";
+    answerLabel.textContent = urdu ? "\u062f\u0631\u0633\u062a \u062c\u0648\u0627\u0628" : "CORRECT ANSWER";
+    var answerText = document.createElement("strong");
+    answerText.className = "quick-note-answer-text";
+    answerText.textContent = entry.answerText;
+    if (urdu) {
+      answer.lang = "ur";
+      answer.dir = "rtl";
+      answerLabel.lang = "ur";
+      answerLabel.dir = "rtl";
+      answerText.lang = "ur";
+      answerText.dir = "rtl";
+    }
+    answer.appendChild(answerLabel);
+    answer.appendChild(answerText);
+
+    row.appendChild(questionCopy);
+    row.appendChild(answer);
+    return row;
+  }
+
+  function matchingQuickNoteEntries() {
+    return quickNotesState.searchEntries.filter(function (entry) {
+      if (quickNotesState.importantOnly && !isImportantQuestion(entry.question)) return false;
+      return !quickNotesState.query || entry.searchText.includes(quickNotesState.query);
+    });
+  }
+
+  function updateQuickNotesResults(resetPage) {
+    if (resetPage) quickNotesState.visibleLimit = QUICK_NOTES_PAGE_SIZE;
+    var matchingEntries = matchingQuickNoteEntries();
+    var renderedCount = Math.min(matchingEntries.length, quickNotesState.visibleLimit);
+
+    if (elements.quickNotesList) {
+      var existingRows = Array.from(elements.quickNotesList.children);
+      var canAppend = !resetPage
+        && existingRows.length <= renderedCount
+        && existingRows.every(function (row, index) {
+          return row.classList.contains("quick-note-row")
+            && row.dataset.questionId === String(matchingEntries[index].question.id);
+        });
+      var appendFrom = canAppend ? existingRows.length : 0;
+      if (!canAppend) elements.quickNotesList.textContent = "";
+      var fragment = document.createDocumentFragment();
+      matchingEntries.slice(appendFrom, renderedCount).forEach(function (entry) {
+        fragment.appendChild(createQuickNoteElement(entry));
+      });
+      elements.quickNotesList.appendChild(fragment);
+    }
+
+    if (elements.quickNotesImportantOnly) {
+      elements.quickNotesImportantOnly.checked = quickNotesState.importantOnly;
+    }
+    if (elements.quickNotesClearButton) {
+      elements.quickNotesClearButton.disabled = !quickNotesState.query && !quickNotesState.importantOnly;
+    }
+    if (elements.quickNotesResultsStatus) {
+      elements.quickNotesResultsStatus.textContent = matchingEntries.length === quickNotesState.searchEntries.length
+        ? "Showing " + renderedCount + " of " + quickNotesState.searchEntries.length + " notes."
+        : "Showing " + renderedCount + " of " + matchingEntries.length + " matching notes ("
+          + quickNotesState.searchEntries.length + " total).";
+    }
+    if (elements.quickNotesLoadMoreButton) {
+      var remaining = Math.max(0, matchingEntries.length - renderedCount);
+      elements.quickNotesLoadMoreButton.textContent = remaining > 0
+        ? "Load " + Math.min(QUICK_NOTES_PAGE_SIZE, remaining) + " more notes"
+        : "All matching notes loaded";
+      setHidden(elements.quickNotesLoadMoreButton, remaining === 0);
+    }
+    setHidden(elements.quickNotesEmpty, matchingEntries.length > 0);
+  }
+
+  function openQuickNotes() {
+    if (!state.category || !elements.quickNotesScreen) return;
+    var category = state.category;
+    var questions = categoryQuestions(category.id);
+    quickNotesState.categoryId = category.id;
+    quickNotesState.query = "";
+    quickNotesState.importantOnly = false;
+    quickNotesState.visibleLimit = QUICK_NOTES_PAGE_SIZE;
+    quickNotesState.searchEntries = questions.map(function (question, index) {
+      return quickNoteEntry(question, index + 1);
+    });
+
+    if (elements.quickNotesSearch) elements.quickNotesSearch.value = "";
+    if (elements.quickNotesCategory) elements.quickNotesCategory.textContent = category.name;
+    if (elements.quickNotesTitle) elements.quickNotesTitle.textContent = category.name + " Question & Answer Notes";
+    if (elements.quickNotesCount) elements.quickNotesCount.textContent = String(questions.length);
+    if (elements.gkStudyNotesCard) {
+      setHidden(elements.gkStudyNotesCard, category.id !== "general-knowledge");
+    }
+    updateQuickNotesResults(true);
+    showScreen("quick-notes");
+  }
+
+  function closeQuickNotes() {
+    if (!state.category) {
+      returnToCategories();
+      return;
+    }
+    showScreen("mode");
+    if (elements.studyNotesModeButton && typeof elements.studyNotesModeButton.focus === "function") {
+      elements.studyNotesModeButton.focus({ preventScroll: true });
+    }
+  }
+
+  function clearQuickNotesFilters() {
+    quickNotesState.query = "";
+    quickNotesState.importantOnly = false;
+    if (elements.quickNotesSearch) elements.quickNotesSearch.value = "";
+    updateQuickNotesResults(true);
+  }
+
+  function loadMoreQuickNotes() {
+    quickNotesState.visibleLimit += QUICK_NOTES_PAGE_SIZE;
+    updateQuickNotesResults(false);
   }
 
   function collectGkNotesSearchValues(value, values) {
@@ -1211,13 +1569,29 @@
 
   function openGkStudyNotes() {
     if (!gkNotesDataAvailable() || !elements.gkNotesScreen) return;
+    gkNotesReturnTarget = elements.quickNotesScreen && !elements.quickNotesScreen.hidden
+      ? "quick-notes"
+      : "categories";
     if (!gkNoteSearchEntries.length) renderGkStudyNotes();
     showScreen("gk-notes");
   }
 
   function closeGkStudyNotes() {
-    showScreen("categories");
-    if (elements.gkStudyNotesCard && typeof elements.gkStudyNotesCard.focus === "function") {
+    var returnToQuickNotes = (
+      gkNotesReturnTarget === "quick-notes"
+      && state.category
+      && state.category.id === "general-knowledge"
+      && quickNotesState.categoryId === "general-knowledge"
+      && elements.quickNotesScreen
+    );
+    if (returnToQuickNotes) {
+      setHidden(elements.gkStudyNotesCard, false);
+      showScreen("quick-notes");
+    } else {
+      showScreen("categories");
+      setHidden(elements.gkStudyNotesCard, true);
+    }
+    if (returnToQuickNotes && elements.gkStudyNotesCard && typeof elements.gkStudyNotesCard.focus === "function") {
       elements.gkStudyNotesCard.focus({ preventScroll: true });
     }
   }
@@ -1315,6 +1689,211 @@
     if (elements.difficultModeButton && typeof elements.difficultModeButton.focus === "function") {
       elements.difficultModeButton.focus({ preventScroll: true });
     }
+  }
+
+  function eligibleQuestionsForRange(categoryId, importantOnly, scope) {
+    return questionsForSelection(categoryId, null, importantOnly).filter(function (question) {
+      return scope !== "difficult" || difficultQuestionIds.has(String(question.id));
+    });
+  }
+
+  function setRangeInputInvalid(input, invalid, message) {
+    if (!input) return;
+    input.setAttribute("aria-invalid", invalid ? "true" : "false");
+    if (typeof input.setCustomValidity === "function") {
+      input.setCustomValidity(invalid ? message : "");
+    }
+  }
+
+  function clearQuestionRangeError() {
+    if (elements.questionRangeError) {
+      elements.questionRangeError.textContent = "";
+      setHidden(elements.questionRangeError, true);
+    }
+    setRangeInputInvalid(elements.questionRangeStartInput, false, "");
+    setRangeInputInvalid(elements.questionRangeEndInput, false, "");
+  }
+
+  function questionRangeValues() {
+    var startRaw = elements.questionRangeStartInput
+      ? String(elements.questionRangeStartInput.value || "").trim()
+      : "";
+    var endRaw = elements.questionRangeEndInput
+      ? String(elements.questionRangeEndInput.value || "").trim()
+      : "";
+    return {
+      startRaw: startRaw,
+      endRaw: endRaw,
+      start: Number(startRaw),
+      end: Number(endRaw),
+      startIsInteger: /^\d+$/.test(startRaw) && Number.isInteger(Number(startRaw)),
+      endIsInteger: /^\d+$/.test(endRaw) && Number.isInteger(Number(endRaw))
+    };
+  }
+
+  function validateQuestionRange(showError) {
+    if (!pendingRangeChoice) return null;
+    var values = questionRangeValues();
+    var poolSize = pendingRangeChoice.poolQuestionIds.length;
+    var message = "";
+    var startInvalid = false;
+    var endInvalid = false;
+
+    if (!values.startRaw || !values.endRaw) {
+      message = "Enter both a starting and an ending question number.";
+      startInvalid = !values.startRaw;
+      endInvalid = !values.endRaw;
+    } else if (!values.startIsInteger || !values.endIsInteger) {
+      message = "Use whole numbers only.";
+      startInvalid = !values.startIsInteger;
+      endInvalid = !values.endIsInteger;
+    } else if (values.start < 1 || values.start > poolSize) {
+      message = "Starting question must be from 1 to " + poolSize + ".";
+      startInvalid = true;
+    } else if (values.end < 1 || values.end > poolSize) {
+      message = "Ending question must be from 1 to " + poolSize + ".";
+      endInvalid = true;
+    } else if (values.start > values.end) {
+      message = "Starting question cannot be after the ending question.";
+      startInvalid = true;
+      endInvalid = true;
+    }
+
+    setRangeInputInvalid(elements.questionRangeStartInput, startInvalid, message);
+    setRangeInputInvalid(elements.questionRangeEndInput, endInvalid, message);
+    if (elements.questionRangeError) {
+      elements.questionRangeError.textContent = showError && message ? message : "";
+      setHidden(elements.questionRangeError, !showError || !message);
+    }
+    if (elements.questionRangeSummary) {
+      elements.questionRangeSummary.textContent = message
+        ? "Choose a range within the " + poolSize + " eligible questions."
+        : "Questions " + values.start + "\u2013" + values.end + " \u00b7 "
+          + (values.end - values.start + 1) + " MCQs in this session.";
+    }
+
+    return message ? null : {
+      start: values.start,
+      end: values.end,
+      poolSize: poolSize,
+      poolQuestionIds: pendingRangeChoice.poolQuestionIds.slice()
+    };
+  }
+
+  function questionRangePanelIsOpen() {
+    return Boolean(elements.questionRangeOptions && !elements.questionRangeOptions.hidden && pendingRangeChoice);
+  }
+
+  function openQuestionRangeOptions(mode, scope) {
+    if (!state.category || !elements.questionRangeOptions) return false;
+    var selectedMode = mode === "learn" ? "learn" : "quiz";
+    var selectedScope = scope === "difficult" ? "difficult" : "all";
+    var eligibleQuestions = eligibleQuestionsForRange(
+      state.category.id,
+      state.importantOnly,
+      selectedScope
+    );
+
+    if (eligibleQuestions.length === 0) {
+      if (selectedScope === "difficult") {
+        setDifficultModeChoiceOpen(true);
+        updateDifficultModeUI();
+        if (elements.difficultEmpty && typeof elements.difficultEmpty.focus === "function") {
+          elements.difficultEmpty.setAttribute("tabindex", "-1");
+          elements.difficultEmpty.focus({ preventScroll: true });
+        }
+      }
+      return false;
+    }
+
+    pendingRangeChoice = {
+      categoryId: state.category.id,
+      mode: selectedMode,
+      scope: selectedScope,
+      poolQuestionIds: eligibleQuestions.map(function (question) { return String(question.id); }),
+      returnFocus: selectedScope === "difficult"
+        ? (selectedMode === "learn" ? elements.difficultLearnButton : elements.difficultQuizButton)
+        : (selectedMode === "learn" ? elements.learnModeButton : elements.quizModeButton)
+    };
+
+    var poolSize = eligibleQuestions.length;
+    if (elements.questionRangeTitle) {
+      elements.questionRangeTitle.textContent = "Choose questions for "
+        + sessionModeLabel(selectedMode, selectedScope);
+    }
+    if (elements.questionRangeContext) {
+      var filterName = state.importantOnly ? "Important-only" : "All-question";
+      var scopeName = selectedScope === "difficult" ? " difficult" : "";
+      elements.questionRangeContext.textContent = filterName + scopeName + " filter applied first: "
+        + poolSize + (poolSize === 1 ? " question is" : " questions are") + " available in "
+        + state.category.name + ".";
+    }
+    if (elements.questionRangeHelp) {
+      elements.questionRangeHelp.textContent = "Both numbers are included and refer to the current selected list (1 to "
+        + poolSize + "). Quiz mode shuffles the chosen questions and their options only after this range is applied.";
+    }
+    [elements.questionRangeStartInput, elements.questionRangeEndInput].forEach(function (input) {
+      if (!input) return;
+      input.min = "1";
+      input.max = String(poolSize);
+      input.step = "1";
+    });
+    if (elements.questionRangeStartInput) elements.questionRangeStartInput.value = "1";
+    if (elements.questionRangeEndInput) elements.questionRangeEndInput.value = String(poolSize);
+    if (elements.questionRangeSubmitButton) {
+      elements.questionRangeSubmitButton.textContent = "Start " + sessionModeLabel(selectedMode, selectedScope);
+    }
+
+    clearQuestionRangeError();
+    validateQuestionRange(false);
+    setHidden(elements.studyScopePanel, true);
+    setHidden(elements.standardModeOptions, true);
+    setHidden(elements.difficultModeOptions, true);
+    setHidden(elements.questionRangeOptions, false);
+    if (elements.difficultModeButton) elements.difficultModeButton.setAttribute("aria-expanded", "false");
+    if (elements.questionRangeStartInput && typeof elements.questionRangeStartInput.focus === "function") {
+      elements.questionRangeStartInput.focus({ preventScroll: true });
+      if (typeof elements.questionRangeStartInput.select === "function") {
+        elements.questionRangeStartInput.select();
+      }
+    }
+    return true;
+  }
+
+  function closeQuestionRangeOptions() {
+    if (!pendingRangeChoice) return;
+    var closingChoice = pendingRangeChoice;
+    pendingRangeChoice = null;
+    clearQuestionRangeError();
+    setHidden(elements.questionRangeOptions, true);
+    setHidden(elements.studyScopePanel, false);
+    setDifficultModeChoiceOpen(closingChoice.scope === "difficult");
+    if (closingChoice.returnFocus && typeof closingChoice.returnFocus.focus === "function") {
+      closingChoice.returnFocus.focus({ preventScroll: true });
+    }
+  }
+
+  function submitQuestionRange(event) {
+    if (event) event.preventDefault();
+    if (!pendingRangeChoice) return false;
+    var range = validateQuestionRange(true);
+    if (!range) {
+      var invalidInput = elements.questionRangeStartInput
+        && elements.questionRangeStartInput.getAttribute("aria-invalid") === "true"
+        ? elements.questionRangeStartInput
+        : elements.questionRangeEndInput;
+      if (invalidInput && typeof invalidInput.focus === "function") invalidInput.focus({ preventScroll: true });
+      return false;
+    }
+
+    var choice = pendingRangeChoice;
+    var started = startQuiz(choice.categoryId, choice.mode, choice.scope, range);
+    if (started) {
+      pendingRangeChoice = null;
+      setHidden(elements.questionRangeOptions, true);
+      setHidden(elements.studyScopePanel, false);
+    }
+    return started;
   }
 
   function syncDifficultCheckbox(question) {
@@ -1564,6 +2143,11 @@
     state.scope = "all";
     state.partIndex = null;
     state.importantOnly = false;
+    state.rangeStart = null;
+    state.rangeEnd = null;
+    state.rangePoolSize = null;
+    state.rangePoolQuestionIds = null;
+    state.rangeQuestionIds = null;
     state.responses = new Array(PAPER_QUESTION_COUNT).fill(null);
     state.learnVisitedQuestionIds = new Set();
     state.currentIndex = 0;
@@ -1597,14 +2181,22 @@
     state.scope = "all";
     state.partIndex = null;
     state.importantOnly = false;
+    state.rangeStart = null;
+    state.rangeEnd = null;
+    state.rangePoolSize = null;
+    state.rangePoolQuestionIds = null;
+    state.rangeQuestionIds = null;
     state.responses = [];
     state.learnVisitedQuestionIds = new Set();
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
     state.score = 0;
+    pendingRangeChoice = null;
 
     populateStudyScopeUI(category.id);
+    setHidden(elements.studyScopePanel, false);
+    setHidden(elements.questionRangeOptions, true);
     setDifficultModeChoiceOpen(false);
     updateDifficultModeUI();
 
@@ -1726,7 +2318,13 @@
       } else if (state.category) {
         elements.quizCategory.textContent = state.category.name + " \u00b7 "
           + sessionModeLabel(state.mode, state.scope) + " \u00b7 "
-          + sessionSelectionLabel(state.partIndex, state.importantOnly);
+          + sessionSelectionLabel(
+              state.partIndex,
+              state.importantOnly,
+              state.rangeStart,
+              state.rangeEnd,
+              state.rangePoolSize
+            );
       }
     }
     if (elements.quizScreen) {
@@ -1736,53 +2334,39 @@
     }
   }
 
-  function startQuiz(categoryId, mode, scope) {
+  function startQuiz(categoryId, mode, scope, rangeConfig) {
     var category = findCategory(categoryId);
-    var selectedScope = scope === "difficult" ? "difficult" : "all";
-    state.partIndex = null;
-    var filteredQuestions = questionsForSelection(categoryId, null, state.importantOnly).filter(function (question) {
-      return selectedScope !== "difficult" || difficultQuestionIds.has(String(question.id));
-    });
-
     if (!category) return false;
-    if (filteredQuestions.length === 0) {
-      if (selectedScope === "difficult") {
-        state.category = category;
-        state.sessionKind = "category";
-        state.paperCategoryIds = [];
-        state.questions = [];
-        state.mode = null;
-        state.scope = "difficult";
-        state.responses = [];
-        state.learnVisitedQuestionIds = new Set();
-        state.currentIndex = 0;
-        state.selectedIndex = null;
-        state.submitted = false;
-        state.score = 0;
-        if (elements.modeScreen) {
-          showScreen("mode");
-          setDifficultModeChoiceOpen(true);
-        }
-        updateDifficultModeUI();
-        if (elements.difficultEmpty) {
-          setHidden(elements.difficultEmpty, false);
-          elements.difficultEmpty.setAttribute("tabindex", "-1");
-          if (typeof elements.difficultEmpty.focus === "function") {
-            elements.difficultEmpty.focus({ preventScroll: true });
-          }
-        }
+    var selectedScope = scope === "difficult" ? "difficult" : "all";
+    var filteredQuestions = eligibleQuestionsForRange(categoryId, state.importantOnly, selectedScope);
+
+    if (filteredQuestions.length === 0) return false;
+
+    var rangeStart = rangeConfig && rangeConfig.start;
+    var rangeEnd = rangeConfig && rangeConfig.end;
+    if (!rangeConfig) {
+      rangeStart = 1;
+      rangeEnd = filteredQuestions.length;
+    }
+    if (!hasValidRangeMetadata(rangeStart, rangeEnd, filteredQuestions.length)) return false;
+
+    var currentPoolIds = filteredQuestions.map(function (question) { return String(question.id); });
+    if (rangeConfig && Array.isArray(rangeConfig.poolQuestionIds)) {
+      if (orderKey(currentPoolIds, function (questionId) { return questionId; })
+        !== orderKey(rangeConfig.poolQuestionIds.map(String), function (questionId) { return questionId; })) {
+        return false;
       }
-      return false;
     }
 
     var selectedMode = mode === "learn" ? "learn" : "quiz";
-    var sessionQuestions = filteredQuestions.slice();
+    var canonicalRangeQuestions = filteredQuestions.slice(rangeStart - 1, rangeEnd);
+    var sessionQuestions = canonicalRangeQuestions.slice();
     if (selectedMode === "quiz") {
       var sessionOrderKey = categoryId + "::" + selectedScope + "::"
-        + (state.partIndex === null ? "all" : state.partIndex) + "::"
-        + (state.importantOnly ? "important" : "standard");
+        + (state.importantOnly ? "important" : "standard") + "::"
+        + rangeStart + "-" + rangeEnd + "-of-" + filteredQuestions.length;
       sessionQuestions = shuffledOrder(
-        filteredQuestions,
+        canonicalRangeQuestions,
         function (question) { return question.id; },
         previousQuestionOrders[sessionOrderKey]
       );
@@ -1798,6 +2382,12 @@
     state.questions = sessionQuestions;
     state.mode = selectedMode;
     state.scope = selectedScope;
+    state.partIndex = null;
+    state.rangeStart = rangeStart;
+    state.rangeEnd = rangeEnd;
+    state.rangePoolSize = filteredQuestions.length;
+    state.rangePoolQuestionIds = currentPoolIds.slice();
+    state.rangeQuestionIds = canonicalRangeQuestions.map(function (question) { return String(question.id); });
     state.responses = new Array(sessionQuestions.length).fill(null);
     state.learnVisitedQuestionIds = new Set();
     state.currentIndex = 0;
@@ -2449,6 +3039,8 @@
       ? difficultQuestionCount(state.category.id, state.partIndex, state.importantOnly)
       : total;
     var canRepeatScope = state.scope !== "difficult" || remainingInScope > 0;
+    var completedRangeLabel = sessionRangeLabel(state.rangeStart, state.rangeEnd, state.rangePoolSize);
+    var completedRangePrefix = completedRangeLabel ? completedRangeLabel + ". " : "";
     removeStoredActiveSession();
     showScreen("results");
 
@@ -2524,15 +3116,22 @@
         : (state.scope === "difficult" ? "Difficult practice complete!" : "Practice complete!");
     }
     if (elements.resultSummary && !canRepeatScope) {
-      elements.resultSummary.textContent = "You removed all difficult marks in this category. Mark a question again before starting another difficult session.";
+      elements.resultSummary.textContent = completedRangePrefix
+        + "You removed all difficult marks in this category. Mark a question again before starting another difficult session.";
     } else if (elements.resultSummary && state.mode === "learn" && state.scope === "difficult") {
-      elements.resultSummary.textContent = "This difficult learning set contains " + total + " questions. The quiz will use "
-        + remainingInScope + (remainingInScope === 1 ? " question" : " questions") + " still marked difficult.";
+      elements.resultSummary.textContent = completedRangePrefix + "This difficult learning set contains " + total
+        + " questions. Start Quiz will reuse this exact range if your marked list is unchanged; otherwise you will choose a new range.";
     } else if (elements.resultSummary && state.mode === "learn") {
       elements.resultSummary.textContent = "This learning set contains " + total + " questions in "
-        + sessionSelectionLabel(state.partIndex, state.importantOnly) + ". Now test yourself with the quiz.";
+        + sessionSelectionLabel(
+            state.partIndex,
+            state.importantOnly,
+            state.rangeStart,
+            state.rangeEnd,
+            state.rangePoolSize
+          ) + ". Now test yourself with the quiz.";
     } else if (elements.resultSummary) {
-      elements.resultSummary.textContent = resultMessage(percent);
+      elements.resultSummary.textContent = completedRangePrefix + resultMessage(percent);
     }
   }
 
@@ -2552,7 +3151,43 @@
       returnToCategories();
       return;
     }
-    startQuiz(state.category.id, state.mode, state.scope);
+    restartCategoryRange(state.mode);
+  }
+
+  function restartCategoryRange(mode) {
+    if (!state.category) return false;
+    var selectedMode = mode === "learn" ? "learn" : "quiz";
+    var currentPoolIds = eligibleQuestionsForRange(
+      state.category.id,
+      state.importantOnly,
+      state.scope
+    ).map(function (question) { return String(question.id); });
+    var difficultPoolChanged = state.scope === "difficult" && (
+      !Array.isArray(state.rangePoolQuestionIds)
+      || orderKey(currentPoolIds, function (questionId) { return questionId; })
+        !== orderKey(state.rangePoolQuestionIds, function (questionId) { return questionId; })
+    );
+    var range = {
+      start: state.rangeStart,
+      end: state.rangeEnd
+    };
+    if (!difficultPoolChanged && startQuiz(state.category.id, selectedMode, state.scope, range)) return true;
+
+    showScreen("mode");
+    populateStudyScopeUI(state.category.id);
+    setHidden(elements.studyScopePanel, false);
+    setHidden(elements.questionRangeOptions, true);
+    if (state.scope === "difficult") setDifficultModeChoiceOpen(true);
+    else setDifficultModeChoiceOpen(false);
+    var rangeOpened = openQuestionRangeOptions(selectedMode, state.scope);
+    if (rangeOpened && difficultPoolChanged && elements.questionRangeError) {
+      elements.questionRangeError.textContent = "Your Difficult list changed from "
+        + state.rangePoolSize + " to " + currentPoolIds.length
+        + (currentPoolIds.length === 1 ? " question" : " questions")
+        + ". Review the current selected list and choose a new range.";
+      setHidden(elements.questionRangeError, false);
+    }
+    return false;
   }
 
   function handlePlayAgain() {
@@ -2565,7 +3200,7 @@
       return;
     }
     if (state.mode === "learn") {
-      startQuiz(state.category.id, "quiz", state.scope);
+      restartCategoryRange("quiz");
       return;
     }
     restartQuiz();
@@ -2580,12 +3215,21 @@
     state.scope = "all";
     state.partIndex = null;
     state.importantOnly = false;
+    state.rangeStart = null;
+    state.rangeEnd = null;
+    state.rangePoolSize = null;
+    state.rangePoolQuestionIds = null;
+    state.rangeQuestionIds = null;
     state.responses = [];
     state.learnVisitedQuestionIds = new Set();
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
     state.score = 0;
+    pendingRangeChoice = null;
+    setHidden(elements.gkStudyNotesCard, true);
+    setHidden(elements.questionRangeOptions, true);
+    setHidden(elements.studyScopePanel, false);
     setHidden(elements.resultBreakdown, true);
     closePaperReview();
     showScreen("categories");
@@ -2603,7 +3247,11 @@
       returnToCategories();
       return;
     }
-    startQuiz(state.category.id, mode, scope);
+    if (!elements.questionRangeOptions) {
+      startQuiz(state.category.id, mode, scope);
+      return;
+    }
+    openQuestionRangeOptions(mode, scope);
   }
 
   function onOptionClick(event) {
@@ -2614,6 +3262,25 @@
 
   function bindEvents() {
     if (elements.gkStudyNotesCard) elements.gkStudyNotesCard.addEventListener("click", openGkStudyNotes);
+    if (elements.quickNotesBackButton) elements.quickNotesBackButton.addEventListener("click", closeQuickNotes);
+    if (elements.quickNotesSearch) {
+      elements.quickNotesSearch.addEventListener("input", function () {
+        quickNotesState.query = normalizeGkNotesText(elements.quickNotesSearch.value);
+        updateQuickNotesResults(true);
+      });
+    }
+    if (elements.quickNotesClearButton) {
+      elements.quickNotesClearButton.addEventListener("click", clearQuickNotesFilters);
+    }
+    if (elements.quickNotesImportantOnly) {
+      elements.quickNotesImportantOnly.addEventListener("change", function () {
+        quickNotesState.importantOnly = elements.quickNotesImportantOnly.checked;
+        updateQuickNotesResults(true);
+      });
+    }
+    if (elements.quickNotesLoadMoreButton) {
+      elements.quickNotesLoadMoreButton.addEventListener("click", loadMoreQuickNotes);
+    }
     if (elements.gkNotesBackButton) elements.gkNotesBackButton.addEventListener("click", closeGkStudyNotes);
     if (elements.gkNotesSearch) {
       elements.gkNotesSearch.addEventListener("input", function () {
@@ -2678,6 +3345,9 @@
         startSelectedMode("quiz", "all");
       });
     }
+    if (elements.studyNotesModeButton) {
+      elements.studyNotesModeButton.addEventListener("click", openQuickNotes);
+    }
     if (elements.difficultModeButton) {
       elements.difficultModeButton.addEventListener("click", openDifficultModeChoice);
     }
@@ -2693,6 +3363,19 @@
       elements.difficultQuizButton.addEventListener("click", function () {
         startSelectedMode("quiz", "difficult");
       });
+    }
+    if (elements.questionRangeForm) {
+      elements.questionRangeForm.noValidate = true;
+      elements.questionRangeForm.addEventListener("submit", submitQuestionRange);
+    }
+    [elements.questionRangeStartInput, elements.questionRangeEndInput].forEach(function (input) {
+      if (!input) return;
+      input.addEventListener("input", function () {
+        if (pendingRangeChoice) validateQuestionRange(false);
+      });
+    });
+    if (elements.questionRangeBackButton) {
+      elements.questionRangeBackButton.addEventListener("click", closeQuestionRangeOptions);
     }
     if (elements.modeBackButton) elements.modeBackButton.addEventListener("click", returnToCategories);
     if (elements.optionsList) elements.optionsList.addEventListener("click", onOptionClick);
@@ -2734,6 +3417,11 @@
     if (elements.difficultCheckbox) {
       elements.difficultCheckbox.addEventListener("change", handleDifficultCheckboxChange);
     }
+    document.addEventListener("keydown", function (event) {
+      if (event.key !== "Escape" || !questionRangePanelIsOpen()) return;
+      event.preventDefault();
+      closeQuestionRangeOptions();
+    });
   }
 
   function init() {
@@ -2750,6 +3438,9 @@
     updateDifficultModeUI();
     updatePaperSelectionUI();
     setHidden(elements.resultBreakdown, true);
+    setHidden(elements.gkStudyNotesCard, true);
+    setHidden(elements.questionRangeOptions, true);
+    setHidden(elements.studyScopePanel, false);
     closePaperReview();
     showScreen("categories");
     updateContinueSessionUI();
