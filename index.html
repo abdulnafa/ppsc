@@ -6,10 +6,10 @@
   <meta name="description" content="Free category-wise MCQ practice for the PPSC General Ability test.">
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
-  <link rel="stylesheet" href="styles.css?v=20260904-1">
+  <link rel="stylesheet" href="styles.css?v=20260906-2">
   <script src="data/questions.js?v=20260902-2" defer></script>
   <script src="data/gk-study-notes.js?v=20260902-2" defer></script>
-  <script src="app.js?v=20260906-1" defer></script>
+  <script src="app.js?v=20260906-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -452,8 +452,16 @@
           <span aria-hidden="true">of</span>
           <span id="question-total">1</span>
         </span>
-        <span id="score-text" aria-live="polite">Score: 0</span>
+        <div class="quiz-status-group">
+          <span id="retry-queue-chip" class="retry-queue-chip" hidden>
+            <span class="retry-queue-icon" aria-hidden="true">&#8635;</span>
+            <span>Review</span>
+            <strong id="retry-queue-count">0</strong>
+          </span>
+          <span id="score-text" aria-live="polite">Score: 0</span>
+        </div>
       </div>
+      <span id="retry-queue-announcer" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></span>
       <div class="progress-track">
         <span id="progress-fill" role="progressbar" aria-label="Session progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></span>
       </div>
@@ -492,6 +500,45 @@
         </div>
       </article>
     </section>
+
+    <dialog id="retry-dialog" class="retry-dialog" aria-modal="true" aria-labelledby="retry-dialog-title retry-question-text" aria-describedby="retry-dialog-progress retry-dialog-help">
+      <article class="retry-dialog-card">
+        <header class="retry-dialog-header">
+          <div>
+            <span class="eyebrow">SPACED REVIEW</span>
+            <h2 id="retry-dialog-title" tabindex="-1">Quick memory check</h2>
+          </div>
+          <span id="retry-dialog-queue-meta" class="retry-dialog-queue-meta">1 MCQ waiting</span>
+        </header>
+
+        <p id="retry-dialog-progress" class="retry-dialog-progress">Review 1 of 5 for this MCQ</p>
+
+        <section class="retry-question-card">
+          <span id="retry-question-kind" class="question-label">FROM YOUR WRONG ANSWERS</span>
+          <h3 id="retry-question-text" tabindex="-1"></h3>
+          <div id="retry-question-urdu-block" class="question-urdu-block retry-question-urdu-block" lang="ur" dir="rtl" hidden>
+            <span class="question-urdu-label">&#1575;&#1585;&#1583;&#1608; &#1578;&#1585;&#1580;&#1605;&#1729;</span>
+            <p id="retry-question-text-urdu"></p>
+          </div>
+          <div id="retry-options-container" class="options-container retry-options-container" role="radiogroup" aria-labelledby="retry-question-text"></div>
+
+          <div id="retry-feedback" class="feedback retry-feedback" role="status" aria-live="polite" hidden>
+            <span class="feedback-icon" aria-hidden="true"></span>
+            <div>
+              <strong id="retry-feedback-title"></strong>
+              <p id="retry-feedback-text"></p>
+            </div>
+          </div>
+        </section>
+
+        <p id="retry-dialog-help" class="retry-dialog-help">Extra practice only &mdash; it does not change your score or main question number.</p>
+
+        <div class="retry-dialog-actions">
+          <button id="retry-later-button" class="secondary-button" type="button">Not now</button>
+          <button id="retry-action-button" class="primary-button" type="button" disabled>Check answer</button>
+        </div>
+      </article>
+    </dialog>
 
     <section id="results-screen" class="screen results-screen" aria-labelledby="results-title" hidden>
       <div class="result-card">

@@ -11,6 +11,7 @@ const dataPath = path.join(projectDirectory, "data", "questions.js");
 const gkStudyNotesPath = path.join(projectDirectory, "data", "gk-study-notes.js");
 const releaseRepeatEvidencePath = path.join(projectDirectory, "data", "release-repeat-evidence.json");
 const htmlPath = path.join(projectDirectory, "index.html");
+const appPath = path.join(projectDirectory, "app.js");
 const stylesPath = path.join(projectDirectory, "styles.css");
 const fontPaths = [
   path.join(projectDirectory, "assets", "fonts", "inter-latin.woff2"),
@@ -828,6 +829,12 @@ function validateHtml() {
     "mode-back-button",
     "question-kind", "question-text", "question-urdu-block", "question-text-urdu",
     "options-container", "action-button", "feedback",
+    "retry-queue-chip", "retry-queue-count", "retry-queue-announcer",
+    "retry-dialog", "retry-dialog-title", "retry-dialog-queue-meta", "retry-dialog-progress",
+    "retry-question-kind", "retry-question-text", "retry-question-urdu-block",
+    "retry-question-text-urdu", "retry-options-container", "retry-feedback",
+    "retry-feedback-title", "retry-feedback-text", "retry-dialog-help",
+    "retry-later-button", "retry-action-button",
     "difficult-control", "difficult-checkbox",
     "difficult-mark-help", "difficult-mark-status",
     "question-counter", "question-number-input", "question-total", "progress-fill",
@@ -841,6 +848,42 @@ function validateHtml() {
   for (const id of requiredIds) {
     const matches = html.match(new RegExp(`\\bid=["']${id}["']`, "g")) || [];
     if (matches.length !== 1) error(`index.html: expected one #${id}, found ${matches.length}`);
+  }
+  const retryDialog = html.match(/<dialog\b[^>]*\bid=["']retry-dialog["'][^>]*>/i)?.[0] || "";
+  if (!retryDialog) {
+    error("index.html: #retry-dialog must use the native dialog element");
+  } else {
+    if (!/\baria-modal=["']true["']/i.test(retryDialog)) {
+      error('index.html: #retry-dialog must use aria-modal="true"');
+    }
+    const labelledBy = retryDialog.match(/\baria-labelledby=["']([^"']+)["']/i)?.[1].trim().split(/\s+/) || [];
+    if (labelledBy.join(" ") !== "retry-dialog-title retry-question-text") {
+      error("index.html: #retry-dialog must be labelled by its dialog title and question text");
+    }
+    const describedBy = retryDialog.match(/\baria-describedby=["']([^"']+)["']/i)?.[1].trim().split(/\s+/) || [];
+    if (describedBy.join(" ") !== "retry-dialog-progress retry-dialog-help") {
+      error("index.html: #retry-dialog must be described by its progress and help text");
+    }
+    if (/\b(?:hidden|open)(?:\s|=|>)/i.test(retryDialog)) {
+      error("index.html: #retry-dialog must begin closed without hidden/open attributes");
+    }
+  }
+  const retryOptions = html.match(/<[^>]+\bid=["']retry-options-container["'][^>]*>/i)?.[0] || "";
+  if (!/\brole=["']radiogroup["']/i.test(retryOptions)
+    || !/\baria-labelledby=["']retry-question-text["']/i.test(retryOptions)) {
+    error("index.html: #retry-options-container must be a radiogroup labelled by #retry-question-text");
+  }
+  const retryFeedback = html.match(/<[^>]+\bid=["']retry-feedback["'][^>]*>/i)?.[0] || "";
+  if (!/\brole=["']status["']/i.test(retryFeedback)
+    || !/\baria-live=["']polite["']/i.test(retryFeedback)
+    || !/\bhidden(?:\s|=|>)/i.test(retryFeedback)) {
+    error("index.html: #retry-feedback must begin hidden as a polite status region");
+  }
+  for (const id of ["retry-later-button", "retry-action-button"]) {
+    const button = html.match(new RegExp(`<button\\b[^>]*\\bid=["']${id}["'][^>]*>`, "i"))?.[0] || "";
+    if (!/\btype=["']button["']/i.test(button)) {
+      error(`index.html: #${id} must use type="button"`);
+    }
   }
   const removedDetailIds = [
     "details-toggle", "details-panel", "explanation-text", "related-history",
@@ -916,6 +959,22 @@ function validateFonts() {
   }
 }
 
+function validateRetryQueueContract() {
+  const app = fs.readFileSync(appPath, "utf8");
+  const requiredConstants = [
+    ["RETRY_QUEUE_STORAGE_KEY", '"ppsc-prep:retry-queue:v1"'],
+    ["RETRY_QUEUE_STORAGE_VERSION", "1"],
+    ["RETRY_QUEUE_INCREMENT", "5"],
+    ["RETRY_QUEUE_SPACING", "3"]
+  ];
+  for (const [name, value] of requiredConstants) {
+    const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    if (!new RegExp(`\\bvar\\s+${name}\\s*=\\s*${escapedValue}\\s*;`).test(app)) {
+      error(`app.js: ${name} must remain ${value} for the documented spaced-retry contract`);
+    }
+  }
+}
+
 const data = loadData();
 const result = validateData(data);
 const gkStudyNotesBundle = loadGkStudyNotes();
@@ -926,6 +985,7 @@ validateIbesBank(result.questions);
 validateAdv2e102Bank(result.questions);
 validateHtml();
 validateFonts();
+validateRetryQueueContract();
 
 console.log(`Site data: ${result.categories.length} categories, ${result.questions.length} questions.`);
 console.log(`GK Study Notes: ${gkStudyNotesBundle.data && Array.isArray(gkStudyNotesBundle.data.notes) ? gkStudyNotesBundle.data.notes.length : 0} notes.`);
