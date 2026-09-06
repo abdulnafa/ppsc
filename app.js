@@ -28,7 +28,6 @@
   var questionBankSignature = buildQuestionBankSignature();
   var difficultQuestionIds = new Set();
   var activeSessionSnapshot = null;
-  var previousQuestionOrders = Object.create(null);
   var previousOptionOrders = Object.create(null);
   var gkNoteSearchEntries = [];
   var gkNotesState = {
@@ -482,7 +481,7 @@
         }
       }
 
-      if (savedValue.mode === "learn" && orderKey(questionIds, function (questionId) { return questionId; })
+      if (orderKey(questionIds, function (questionId) { return questionId; })
         !== orderKey(rangeQuestionIds, function (questionId) { return questionId; })) {
         return null;
       }
@@ -633,6 +632,8 @@
       || !Array.isArray(state.rangeQuestionIds)
       || state.rangeQuestionIds.length !== state.questions.length
       || state.rangeQuestionIds.length !== state.rangeEnd - state.rangeStart + 1
+      || orderKey(state.questions, function (question) { return question.id; })
+        !== orderKey(state.rangeQuestionIds, function (questionId) { return questionId; })
       || orderKey(state.rangeQuestionIds, function (questionId) { return questionId; })
         !== orderKey(
           state.rangePoolQuestionIds.slice(state.rangeStart - 1, state.rangeEnd),
@@ -1830,7 +1831,7 @@
     }
     if (elements.questionRangeHelp) {
       elements.questionRangeHelp.textContent = "Both numbers are included and refer to the current selected list (1 to "
-        + poolSize + "). Quiz mode shuffles the chosen questions and their options only after this range is applied.";
+        + poolSize + "). Quiz keeps the chosen questions in this list order while ordinary answer choices may shuffle.";
     }
     [elements.questionRangeStartInput, elements.questionRangeEndInput].forEach(function (input) {
       if (!input) return;
@@ -2362,17 +2363,6 @@
     var canonicalRangeQuestions = filteredQuestions.slice(rangeStart - 1, rangeEnd);
     var sessionQuestions = canonicalRangeQuestions.slice();
     if (selectedMode === "quiz") {
-      var sessionOrderKey = categoryId + "::" + selectedScope + "::"
-        + (state.importantOnly ? "important" : "standard") + "::"
-        + rangeStart + "-" + rangeEnd + "-of-" + filteredQuestions.length;
-      sessionQuestions = shuffledOrder(
-        canonicalRangeQuestions,
-        function (question) { return question.id; },
-        previousQuestionOrders[sessionOrderKey]
-      );
-      previousQuestionOrders[sessionOrderKey] = orderKey(sessionQuestions, function (question) {
-        return question.id;
-      });
       sessionQuestions = sessionQuestions.map(shuffledQuizQuestion);
     }
 

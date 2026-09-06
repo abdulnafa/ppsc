@@ -830,9 +830,8 @@ async function main() {
           || rangeQuizSnapshot?.rangeStart !== 2 || rangeQuizSnapshot?.rangeEnd !== 4
           || JSON.stringify(rangeQuizSnapshot?.rangePoolQuestionIds || []) !== JSON.stringify(rangePoolIds)
           || JSON.stringify(rangeQuizSnapshot?.rangeQuestionIds || []) !== JSON.stringify(expectedRangeIds)
-          || rangeQuizIds.length !== 3 || rangeQuizIds.some((id) => !expectedRangeIds.includes(id))
-          || JSON.stringify(rangeQuizIds) === JSON.stringify(expectedRangeIds)) {
-          errors.push("Start Quiz did not retain and freshly shuffle the same Learn range 2–4 set.");
+          || JSON.stringify(rangeQuizIds) !== JSON.stringify(expectedRangeIds)) {
+          errors.push("Start Quiz did not retain the Learn range 2–4 in canonical source order.");
         }
         for (let index = 0; index < 3; index += 1) {
           const currentId = document.querySelector("#question-text")?.dataset.questionId;
@@ -868,6 +867,21 @@ async function main() {
           || JSON.stringify(importantRangeSnapshot.rangeQuestionIds || []) !== JSON.stringify(expectedImportantRangeIds)
           || JSON.stringify(importantRangeSnapshot.questionIds) !== JSON.stringify(expectedImportantRangeIds)) {
           errors.push("Important range 2–4 was not applied after filtering the category.");
+        }
+        document.querySelector("#back-button")?.click();
+        await pause();
+        rangeCategoryButton.click();
+        await pause();
+        document.querySelector("#important-only-checkbox")?.click();
+        await pause();
+        await startModeWithRange("#quiz-mode-button", 2, 4);
+        const importantQuizSnapshot = JSON.parse(localStorage.getItem(rangeStorageKey) || "null");
+        if (!importantQuizSnapshot || importantQuizSnapshot.mode !== "quiz"
+          || importantQuizSnapshot.importantOnly !== true
+          || JSON.stringify(importantQuizSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(rangeImportantQuestions.map((question) => String(question.id)))
+          || JSON.stringify(importantQuizSnapshot.rangeQuestionIds || []) !== JSON.stringify(expectedImportantRangeIds)
+          || JSON.stringify(importantQuizSnapshot.questionIds || []) !== JSON.stringify(expectedImportantRangeIds)) {
+          errors.push("Important Quiz range 2–4 did not retain the filtered canonical source order.");
         }
         document.querySelector("#back-button")?.click();
         await pause();
@@ -1156,9 +1170,9 @@ async function main() {
       if (document.querySelector("#result-score").textContent.replace(/\\s/g, "") !== expectedScore + "/" + categoryQuestions.length) {
         errors.push("Final score did not match the completed session.");
       }
-      if (quizOrder.length !== categoryQuestions.length || new Set(quizOrder).size !== categoryQuestions.length) errors.push("Quiz question shuffle lost or duplicated a question.");
-      if (JSON.stringify(quizOrder) === JSON.stringify(canonicalOrder)) errors.push("Quiz questions remained in source order.");
-      if (JSON.stringify(quizOrder) === JSON.stringify(learnOrder)) errors.push("Quiz reused the previous Learn question order.");
+      if (quizOrder.length !== categoryQuestions.length || new Set(quizOrder).size !== categoryQuestions.length) errors.push("Quiz source order lost or duplicated a question.");
+      if (JSON.stringify(quizOrder) !== JSON.stringify(canonicalOrder)) errors.push("Quiz questions did not stay in source/data order.");
+      if (JSON.stringify(quizOrder) !== JSON.stringify(learnOrder)) errors.push("Quiz question order did not match the previous Learn session.");
       const firstQuizScore = document.querySelector("#result-score").textContent;
 
       if (document.querySelector("#play-again-button").textContent !== "Practice Again") errors.push("Quiz completion did not offer Practice Again.");
@@ -1182,7 +1196,10 @@ async function main() {
         await pause();
       }
       if (repeatedQuizOrder.length !== categoryQuestions.length || new Set(repeatedQuizOrder).size !== categoryQuestions.length) errors.push("Practice Again lost or duplicated a question.");
-      if (JSON.stringify(repeatedQuizOrder) === JSON.stringify(quizOrder)) errors.push("Practice Again reused the previous question order.");
+      if (JSON.stringify(repeatedQuizOrder) !== JSON.stringify(canonicalOrder)
+        || JSON.stringify(repeatedQuizOrder) !== JSON.stringify(quizOrder)) {
+        errors.push("Practice Again did not keep the Quiz questions in canonical source order.");
+      }
 
       const sessionStorageKey = "ppsc-prep:active-session:v1";
       if (localStorage.getItem(sessionStorageKey) !== null) errors.push("Completed Quiz session was not cleared from resume storage.");
@@ -1202,7 +1219,7 @@ async function main() {
       if (!resumeSnapshot || resumeSnapshot.partIndex !== null || resumeSnapshot.importantOnly !== false) errors.push("Saved Quiz full-category/Important scope was incorrect.");
       if (!resumeSnapshot || resumeSnapshot.rangeStart !== 1 || resumeSnapshot.rangeEnd !== categoryQuestions.length || resumeSnapshot.rangePoolSize !== categoryQuestions.length) errors.push("Saved Quiz did not preserve its exact full-range metadata.");
       if (!resumeSnapshot || JSON.stringify(resumeSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(categoryQuestions.map((question) => String(question.id)))) errors.push("Saved Quiz did not preserve its complete eligible-pool order.");
-      if (!resumeSnapshot || !Array.isArray(resumeSnapshot.questionIds) || resumeSnapshot.questionIds.length !== categoryQuestions.length) errors.push("Saved Quiz question order was incomplete.");
+      if (!resumeSnapshot || JSON.stringify(resumeSnapshot.questionIds || []) !== JSON.stringify(canonicalOrder)) errors.push("Saved Quiz did not preserve the complete canonical question order.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.optionOrders) || resumeSnapshot.optionOrders.length !== categoryQuestions.length) errors.push("Saved Quiz option orders were incomplete.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.answerHistory) || resumeSnapshot.answerHistory.length !== categoryQuestions.length) errors.push("Saved Quiz answer history was incomplete.");
       if (!resumeSnapshot || !resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== resumeSelectedIndex || resumeSnapshot.score !== 0) errors.push("Saved submitted-answer state was incorrect.");
@@ -1216,8 +1233,8 @@ async function main() {
         testedCategoryQuestions: categoryQuestions.length,
         markedQuestionIds,
         learnedInSourceOrder: JSON.stringify(learnOrder) === JSON.stringify(canonicalOrder),
-        quizOrderShuffledAgain: JSON.stringify(quizOrder) !== JSON.stringify(learnOrder),
-        practiceAgainShuffled: JSON.stringify(repeatedQuizOrder) !== JSON.stringify(quizOrder),
+        quizInSourceOrder: JSON.stringify(quizOrder) === JSON.stringify(canonicalOrder),
+        practiceAgainInSourceOrder: JSON.stringify(repeatedQuizOrder) === JSON.stringify(canonicalOrder),
         firstQuizScore,
         repeatedQuizScore: document.querySelector("#result-score").textContent,
         resumeExpected: {
@@ -1487,8 +1504,9 @@ async function main() {
       if (!migrated || migrated.rangeStart !== 1 || migrated.rangeEnd !== expected.questionCount
         || migrated.rangePoolSize !== expected.questionCount
         || JSON.stringify(migrated.rangePoolQuestionIds || []) !== JSON.stringify(expected.rangePoolQuestionIds)
-        || JSON.stringify(migrated.rangeQuestionIds || []) !== JSON.stringify(expected.rangeQuestionIds)) {
-        errors.push("The migrated v6 session did not receive complete full-range metadata.");
+        || JSON.stringify(migrated.rangeQuestionIds || []) !== JSON.stringify(expected.rangeQuestionIds)
+        || JSON.stringify(migrated.questionIds || []) !== JSON.stringify(expected.rangeQuestionIds)) {
+        errors.push("The migrated v6 session did not receive complete full-range metadata and canonical Quiz order.");
       }
       document.querySelector("#back-button")?.click();
       await pause();
@@ -1567,6 +1585,12 @@ async function main() {
         if (!snapshot || snapshot.version !== 7 || snapshot.sessionKind !== "category" || snapshot.categoryId !== categoryId || snapshot.mode !== "quiz") {
           errors.push("Positional-option audit did not create a valid v7 Quiz snapshot for " + categoryId + ".");
         } else {
+          const expectedQuestionIds = data.questions
+            .filter((question) => question.categoryId === categoryId)
+            .map((question) => String(question.id));
+          if (JSON.stringify(snapshot.questionIds) !== JSON.stringify(expectedQuestionIds)) {
+            errors.push("Positional-option Quiz did not keep " + categoryId + " in canonical source order.");
+          }
           const idsInCategory = sensitiveIds.filter((questionId) => {
             const question = questionById.get(questionId);
             return question && question.categoryId === categoryId;
@@ -1686,6 +1710,54 @@ async function main() {
       const storageKey = "ppsc-prep:active-session:v1";
       if (visible(document.querySelector("#continue-session-card"))) errors.push("A tampered v7 eligible range pool left Continue visible.");
       if (localStorage.getItem(storageKey) !== null) errors.push("A tampered v7 eligible range pool was not rejected and removed.");
+      const permutedQuestionSnapshot = ${JSON.stringify(normalResult.legacyV6Snapshot)};
+      const expectedRange = ${JSON.stringify(normalResult.resumeExpected)};
+      if (!permutedQuestionSnapshot || expectedRange.rangeQuestionIds.length < 2) {
+        errors.push("Could not construct the v7 category question-order tamper fixture.");
+      } else {
+        permutedQuestionSnapshot.version = 7;
+        permutedQuestionSnapshot.rangeStart = expectedRange.rangeStart;
+        permutedQuestionSnapshot.rangeEnd = expectedRange.rangeEnd;
+        permutedQuestionSnapshot.rangePoolSize = expectedRange.rangePoolSize;
+        permutedQuestionSnapshot.rangePoolQuestionIds = expectedRange.rangePoolQuestionIds.slice();
+        permutedQuestionSnapshot.rangeQuestionIds = expectedRange.rangeQuestionIds.slice();
+        permutedQuestionSnapshot.answerHistory = new Array(permutedQuestionSnapshot.questionIds.length).fill(null);
+        permutedQuestionSnapshot.currentIndex = 0;
+        permutedQuestionSnapshot.selectedIndex = null;
+        permutedQuestionSnapshot.submitted = false;
+        permutedQuestionSnapshot.score = 0;
+        [permutedQuestionSnapshot.questionIds, permutedQuestionSnapshot.optionOrders].forEach((items) => {
+          const firstItem = items[0];
+          items[0] = items[1];
+          items[1] = firstItem;
+        });
+        localStorage.setItem(storageKey, JSON.stringify(permutedQuestionSnapshot));
+      }
+      return { errors };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reject a permuted v7 category Quiz order in time."));
+        }
+      }, 50);
+    })`);
+
+    const questionOrderGuardRecoveryResult = await client.evaluate(`(() => {
+      const errors = [];
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const storageKey = "ppsc-prep:active-session:v1";
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("A permuted v7 category Quiz order left Continue visible.");
+      if (localStorage.getItem(storageKey) !== null) errors.push("A permuted v7 category Quiz order was not rejected and removed.");
       localStorage.setItem(storageKey, JSON.stringify({
         version: 3,
         bankSignature: ${JSON.stringify(normalResult.resumeExpected.bankSignature)},
@@ -1823,8 +1895,8 @@ async function main() {
         document.querySelector("#action-button").click();
         await pause();
       }
-      if (difficultLearnIds.length !== expectedMarkedIds.length || expectedMarkedIds.some((id) => !difficultLearnIds.includes(id))) {
-        errors.push("Difficult Learn did not use a stable marked-question snapshot.");
+      if (JSON.stringify(difficultLearnIds) !== JSON.stringify(expectedMarkedIds)) {
+        errors.push("Difficult Learn did not use the marked questions in canonical source order.");
       }
       if (document.querySelector("#results-title").textContent !== "Difficult learning complete!") errors.push("Difficult Learn completion copy was incorrect.");
       if (document.querySelector("#play-again-button").textContent !== "Start Quiz" || document.querySelector("#play-again-button").disabled) errors.push("Difficult Learn did not offer Start Quiz.");
@@ -1863,8 +1935,10 @@ async function main() {
         document.querySelector("#action-button").click();
         await pause();
       }
-      if (difficultQuizIds.length !== expectedMarkedIds.length || expectedMarkedIds.some((id) => !difficultQuizIds.includes(id))) errors.push("Difficult Quiz did not keep its two-question session snapshot.");
-      if (JSON.stringify(difficultQuizIds) === JSON.stringify(difficultLearnIds)) errors.push("Two-question Difficult Quiz reused the Difficult Learn order.");
+      if (JSON.stringify(difficultQuizIds) !== JSON.stringify(expectedMarkedIds)
+        || JSON.stringify(difficultQuizIds) !== JSON.stringify(difficultLearnIds)) {
+        errors.push("Difficult Quiz did not keep the marked questions in canonical source order.");
+      }
       if (document.querySelector("#result-score").textContent.replace(/\\s/g, "") !== expectedMarkedIds.length + "/" + expectedMarkedIds.length) errors.push("Difficult Quiz score was incorrect.");
       if (document.querySelector("#play-again-button").textContent !== "Practice Again" || document.querySelector("#play-again-button").disabled) errors.push("Difficult Quiz did not offer Practice Again for the remaining mark.");
 
@@ -1916,7 +1990,7 @@ async function main() {
         persistedAcrossReload: true,
         difficultLearnCount: difficultLearnIds.length,
         difficultQuizCount: difficultQuizIds.length,
-        twoQuestionOrderChanged: JSON.stringify(difficultQuizIds) !== JSON.stringify(difficultLearnIds),
+        difficultQuizInSourceOrder: JSON.stringify(difficultQuizIds) === JSON.stringify(expectedMarkedIds),
         emptyStateRestored: visible(document.querySelector("#difficult-empty"))
       };
     })()`);
@@ -2247,6 +2321,11 @@ async function main() {
         errors.push("Urdu Quiz did not use the v7 category-session schema.");
       }
       if (!initialSnapshot || initialSnapshot.rangeStart !== 1 || initialSnapshot.rangeEnd !== urduQuestions.length || initialSnapshot.rangePoolSize !== urduQuestions.length) errors.push("Urdu Quiz did not store its full selected range.");
+      if (!initialSnapshot
+        || JSON.stringify(initialSnapshot.questionIds || []) !== JSON.stringify(urduQuestions.map((question) => String(question.id)))
+        || !firstQuestion || firstQuestion.id !== urduQuestions[0].id) {
+        errors.push("Urdu Quiz did not retain canonical source order.");
+      }
       document.querySelector("#action-button").click();
       await pause();
       const selectionPrompt = document.querySelector("#feedback");
@@ -2890,6 +2969,7 @@ async function main() {
         .concat(positionGuardSetupResult.errors)
         .concat(positionGuardRecoveryResult.errors)
         .concat(rangePoolGuardRecoveryResult.errors)
+        .concat(questionOrderGuardRecoveryResult.errors)
         .concat(difficultResult.errors)
         .concat(difficultResumeSetup.errors)
         .concat(difficultResumeResult.errors)
@@ -2909,6 +2989,8 @@ async function main() {
         corruptDataRecovered: !positionGuardSetupResult.errors.some((message) => message.includes("Corrupt resume data")),
         malformedPositionOrderRejected: positionGuardRecoveryResult.errors.length === 0,
         tamperedRangePoolRejected: rangePoolGuardRecoveryResult.errors.length === 0,
+        permutedCategoryQuizOrderRejected: rangePoolGuardRecoveryResult.errors.length === 0
+          && questionOrderGuardRecoveryResult.errors.length === 0,
         staleDataRecovered: !difficultResult.errors.some((message) => message.includes("Legacy Part resume data"))
           && !difficultResumeSetup.errors.some((message) => message.includes("Stale-bank resume data"))
       },
@@ -2917,7 +2999,9 @@ async function main() {
         normalOptionsStillShuffle: positionGuardSetupResult.normalOptionOrderShuffled,
         malformedQuestionId: positionGuardSetupResult.malformedQuestionId,
         malformedSnapshotRejected: positionGuardRecoveryResult.errors.length === 0,
-        tamperedRangePoolRejected: rangePoolGuardRecoveryResult.errors.length === 0
+        tamperedRangePoolRejected: rangePoolGuardRecoveryResult.errors.length === 0,
+        permutedCategoryQuizOrderRejected: rangePoolGuardRecoveryResult.errors.length === 0
+          && questionOrderGuardRecoveryResult.errors.length === 0
       },
       difficult: difficultResult,
       urdu: urduResumeResult,
