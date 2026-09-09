@@ -878,9 +878,46 @@
     };
   }
 
+  function isRetryEligibleQuizSession() {
+    return state.mode === "quiz"
+      && state.sessionKind === "category"
+      && !isPaperSession()
+      && Boolean(state.category && state.category.id);
+  }
+
+  function activeRetryCategoryId() {
+    if (
+      !isRetryEligibleQuizSession()
+      || !elements.quizScreen
+      || elements.quizScreen.hidden
+    ) return "";
+    return String(state.category.id);
+  }
+
+  function retryQuestionMatchesCategory(questionId, categoryId) {
+    var question = questionsById.get(String(questionId || ""));
+    return Boolean(question) && String(question.categoryId || "") === String(categoryId || "");
+  }
+
+  function activeCategoryRetryItems() {
+    var categoryId = activeRetryCategoryId();
+    if (!categoryId) return [];
+    return retryQueueState.items.filter(function (item) {
+      return retryQuestionMatchesCategory(item.questionId, categoryId);
+    });
+  }
+
+  function activeRetryAttemptMatchesSession() {
+    var attempt = retryQueueState.activeAttempt;
+    var categoryId = activeRetryCategoryId();
+    return Boolean(attempt && categoryId)
+      && retryQuestionMatchesCategory(attempt.questionId, categoryId);
+  }
+
   function updateRetryQueueUI(announcement) {
-    var itemCount = retryQueueState.items.length;
-    var totalRemaining = retryQueueState.items.reduce(function (total, item) {
+    var categoryItems = activeCategoryRetryItems();
+    var itemCount = categoryItems.length;
+    var totalRemaining = categoryItems.reduce(function (total, item) {
       return total + item.remaining;
     }, 0);
     if (elements.retryQueueCount) {
@@ -952,7 +989,11 @@
   }
 
   function recordMainPractice(question, wrongAnswer) {
-    if (!question) return null;
+    if (
+      !question
+      || !isRetryEligibleQuizSession()
+      || String(question.categoryId || "") !== String(state.category.id)
+    ) return null;
     retryQueueState.practiceStep += 1;
     var item = null;
     if (wrongAnswer) {
@@ -980,13 +1021,17 @@
     return item;
   }
 
-  function dueRetryQueueItem(excludedQuestionId) {
+  function dueRetryQueueItem(excludedQuestionId, includeFutureItems) {
+    var categoryId = activeRetryCategoryId();
+    if (!categoryId) return null;
     var excludedId = String(excludedQuestionId || "");
     var dueItems = retryQueueState.items.filter(function (item) {
-      return item.dueStep <= retryQueueState.practiceStep;
+      return retryQuestionMatchesCategory(item.questionId, categoryId)
+        && (includeFutureItems || item.dueStep <= retryQueueState.practiceStep);
     }).sort(function (left, right) {
       return left.sequence - right.sequence;
     });
+    if (includeFutureItems) return dueItems[0] || null;
     return dueItems.find(function (item) {
       return item.questionId !== excludedId;
     }) || (state.questions.length === 1 ? dueItems[0] : null) || null;
@@ -1155,10 +1200,17 @@
     var attempt = retryQueueState.activeAttempt;
     var item = attempt ? retryQueueItem(attempt.questionId) : null;
     var question = retryQuestionForAttempt(attempt);
-    if (!attempt || !item || !question || !elements.retryDialog) return false;
+    if (
+      !attempt
+      || !item
+      || !question
+      || !elements.retryDialog
+      || !activeRetryAttemptMatchesSession()
+    ) return false;
 
     var urduQuestion = isUrduCategoryQuestion(question);
     var category = findCategory(question.categoryId);
+    var categoryItemCount = activeCategoryRetryItems().length;
     elements.retryDialog.classList.toggle("is-urdu", urduQuestion);
     if (elements.retryDialogTitle) {
       elements.retryDialogTitle.textContent = urduQuestion ? "فوری دہرائی" : "Quick review";
@@ -1167,9 +1219,9 @@
     }
     if (elements.retryDialogQueueMeta) {
       elements.retryDialogQueueMeta.textContent = urduQuestion
-        ? "دہرائی کی قطار میں " + retryQueueState.items.length + " سوال"
-        : (category ? category.name + " \u00b7 " : "") + retryQueueState.items.length
-          + (retryQueueState.items.length === 1 ? " question queued" : " questions queued");
+        ? "دہرائی کی قطار میں " + categoryItemCount + " سوال"
+        : (category ? category.name + " \u00b7 " : "") + categoryItemCount
+          + (categoryItemCount === 1 ? " question queued" : " questions queued");
       elements.retryDialogQueueMeta.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogQueueMeta.dir = urduQuestion ? "rtl" : "ltr";
     }
@@ -1210,18 +1262,31 @@
     }
 
     if (elements.retryDialogHelp) {
-      elements.retryDialogHelp.textContent = urduQuestion
-        ? (attempt.submitted
-          ? "اپنے سیشن پر واپس جانے کے لیے جاری رکھیں۔"
-          : "یہ دہرائی آپ کے اصل اسکور کو تبدیل نہیں کرے گی۔")
-        : (attempt.submitted
-          ? "Continue to return to your session."
-          : "This review does not change your Learn, Quiz, or Paper score.");
+      var forcedCategoryDrain = attempt.resumeAction === "results";
+      if (forcedCategoryDrain) {
+        elements.retryDialogHelp.textContent = urduQuestion
+          ? (attempt.submitted
+            ? "باقی دہرائی مکمل کرکے نتائج کھولنے کے لیے جاری رکھیں۔"
+            : "نتائج دیکھنے کے لیے اس زمرے کے تمام دہرائی والے سوال مکمل کریں۔ اس دہرائی سے آپ کا کوئز اسکور تبدیل نہیں ہوگا۔")
+          : (attempt.submitted
+            ? "Continue through the remaining category reviews to unlock Results."
+            : "Complete every review for this category to unlock Results. Reviews do not change your Quiz score.");
+      } else {
+        elements.retryDialogHelp.textContent = urduQuestion
+          ? (attempt.submitted
+            ? "اپنے سیشن پر واپس جانے کے لیے جاری رکھیں۔"
+            : "یہ دہرائی آپ کے اصل اسکور کو تبدیل نہیں کرے گی۔")
+          : (attempt.submitted
+            ? "Continue to return to your session."
+            : "This review does not change your Quiz score.");
+      }
       elements.retryDialogHelp.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogHelp.dir = urduQuestion ? "rtl" : "ltr";
     }
     if (elements.retryLaterButton) {
-      setHidden(elements.retryLaterButton, attempt.submitted);
+      var retryCannotBePostponed = attempt.submitted || attempt.resumeAction === "results";
+      setHidden(elements.retryLaterButton, retryCannotBePostponed);
+      elements.retryLaterButton.disabled = retryCannotBePostponed;
       elements.retryLaterButton.textContent = urduQuestion ? "ابھی نہیں" : "Not now";
       elements.retryLaterButton.lang = urduQuestion ? "ur" : "en";
       elements.retryLaterButton.dir = urduQuestion ? "rtl" : "ltr";
@@ -1270,11 +1335,18 @@
   }
 
   function beginDueRetryAttempt(resumeAction, excludedQuestionId) {
-    if (!elements.retryDialog) return false;
+    if (!elements.retryDialog || !activeRetryCategoryId()) return false;
     if (retryQueueState.activeAttempt) {
-      return renderRetryAttempt() && openRetryDialog();
+      if (activeRetryAttemptMatchesSession()) {
+        return renderRetryAttempt() && openRetryDialog();
+      }
+      releaseActiveRetryAttempt();
     }
-    var item = dueRetryQueueItem(excludedQuestionId);
+    var forceCategoryDrain = resumeAction === "results";
+    var item = dueRetryQueueItem(
+      forceCategoryDrain ? "" : excludedQuestionId,
+      forceCategoryDrain
+    );
     if (!item) return false;
     var canonicalQuestion = questionsById.get(item.questionId);
     if (!canonicalQuestion) return false;
@@ -1294,9 +1366,10 @@
 
   function restoreActiveRetryAttempt() {
     if (!retryQueueState.activeAttempt) return false;
-    if (!renderRetryAttempt()) {
+    if (!activeRetryAttemptMatchesSession() || !renderRetryAttempt()) {
       retryQueueState.activeAttempt = null;
       saveRetryQueue();
+      closeRetryDialog();
       return false;
     }
     return openRetryDialog();
@@ -1330,7 +1403,10 @@
     markRetrySubmittedOptions(question, attempt.selectedIndex);
     showRetryFeedback(question, attempt);
     updateRetryAttemptProgress(item, attempt, isUrduCategoryQuestion(question));
-    if (elements.retryLaterButton) setHidden(elements.retryLaterButton, true);
+    if (elements.retryLaterButton) {
+      setHidden(elements.retryLaterButton, true);
+      elements.retryLaterButton.disabled = true;
+    }
     if (elements.retryActionButton) {
       elements.retryActionButton.textContent = isUrduCategoryQuestion(question) ? "جاری رکھیں" : "Continue";
       elements.retryActionButton.dataset.action = "continue";
@@ -1362,6 +1438,7 @@
     var item = attempt ? retryQueueItem(attempt.questionId) : null;
     if (!attempt || !item || !attempt.submitted) return;
     var resumeAction = attempt.resumeAction;
+    var forcedCategoryDrain = resumeAction === "results";
     var mastered = false;
     if (attempt.outcome === "correct") {
       item.remaining -= 1;
@@ -1381,7 +1458,9 @@
     retryQueueState.activeAttempt = null;
     saveRetryQueue(mastered
       ? "Review complete. This question has left the queue."
-      : "Review saved. The question will return after three new questions.");
+      : (forcedCategoryDrain
+        ? "Review saved. Complete the remaining category reviews to unlock Results."
+        : "Review saved. The question will return after three new questions."));
     closeRetryDialog();
     performRetryResumeAction(resumeAction);
   }
@@ -1392,6 +1471,11 @@
     if (!attempt || !item) return;
     if (attempt.submitted) {
       completeRetryAttempt();
+      return;
+    }
+    if (attempt.resumeAction === "results") {
+      var forcedQuestion = retryQuestionForAttempt(attempt);
+      if (forcedQuestion) showRetrySelectionPrompt(forcedQuestion);
       return;
     }
     var resumeAction = attempt.resumeAction;
@@ -1421,6 +1505,10 @@
     var attempt = retryQueueState.activeAttempt;
     if (!attempt) return;
     if (attempt.submitted) completeRetryAttempt();
+    else if (attempt.resumeAction === "results") {
+      var forcedQuestion = retryQuestionForAttempt(attempt);
+      if (forcedQuestion) showRetrySelectionPrompt(forcedQuestion);
+    }
     else postponeRetryAttempt();
   }
 
@@ -1660,6 +1748,7 @@
     setHidden(elements.modeScreen, screenName !== "mode");
     setHidden(elements.quizScreen, screenName !== "quiz");
     setHidden(elements.resultScreen, screenName !== "results");
+    updateRetryQueueUI();
 
     var activeScreen = screenName === "quick-notes"
       ? elements.quickNotesScreen
@@ -3202,7 +3291,7 @@
         markSubmittedOptions(question);
         var restoredAnswerIsCorrect = state.selectedIndex === question.correctOptionIndex;
         showFeedback(question, restoredAnswerIsCorrect);
-        if (!restoredAnswerIsCorrect) {
+        if (!restoredAnswerIsCorrect && isRetryEligibleQuizSession()) {
           var restoredRetryItem = retryQueueItem(question.id);
           if (restoredRetryItem) appendMainRetryQueueNotice(question, restoredRetryItem);
         }
@@ -3288,9 +3377,7 @@
     if (!(state.learnVisitedQuestionIds instanceof Set)) {
       state.learnVisitedQuestionIds = new Set();
     }
-    var firstVisit = !state.learnVisitedQuestionIds.has(String(question.id));
     state.learnVisitedQuestionIds.add(String(question.id));
-    if (firstVisit) recordMainPractice(question, false);
     state.selectedIndex = question.correctOptionIndex;
 
     if (elements.optionsList) {
@@ -3724,6 +3811,7 @@
       renderQuestion();
       return;
     }
+    if (beginDueRetryAttempt("results", "")) return;
 
     var total = state.questions.length;
     var percent = total > 0 ? Math.round((state.score / total) * 100) : 0;

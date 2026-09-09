@@ -192,8 +192,12 @@ async function main() {
       const data = window.PPSC_QUIZ_DATA;
       const retryKey = "ppsc-prep:retry-queue:v1";
       const sessionKey = "ppsc-prep:active-session:v1";
-      const questions = data.questions.filter((question) => question.categoryId === "urdu").slice(0, 8);
+      const questions = data.questions.filter((question) => question.categoryId === "urdu").slice(0, 12);
       const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const displayOptions = (question) => question?.categoryId === "urdu" && Array.isArray(question.optionsUrdu)
+        ? question.optionsUrdu.map(String)
+        : (question ? question.options.map(optionText) : []);
       const renderedMainOptions = () => [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
       const mainSnapshot = () => {
         const snapshot = JSON.parse(localStorage.getItem(sessionKey) || "null");
@@ -212,7 +216,7 @@ async function main() {
       const answerMain = async (correct) => {
         const question = currentQuestion();
         const rendered = renderedMainOptions();
-        const correctText = question?.optionsUrdu?.[question.correctOptionIndex];
+        const correctText = question ? displayOptions(question)[question.correctOptionIndex] : "";
         const correctIndex = rendered.indexOf(correctText);
         const selectedIndex = correct ? correctIndex : (correctIndex + 1) % 4;
         const button = document.querySelector('[data-option-index="' + selectedIndex + '"]');
@@ -231,7 +235,7 @@ async function main() {
       };
 
       const urduButton = document.querySelector('#category-grid .category-card[data-category="urdu"]');
-      if (!urduButton || questions.length !== 8) {
+      if (!urduButton || questions.length !== 12) {
         errors.push("Retry FIFO Urdu fixture is unavailable.");
         return { errors };
       }
@@ -239,7 +243,7 @@ async function main() {
       document.querySelector("#quiz-mode-button")?.click();
       await pause();
       document.querySelector("#question-range-start-input").value = "1";
-      document.querySelector("#question-range-end-input").value = "8";
+      document.querySelector("#question-range-end-input").value = "12";
       document.querySelector("#question-range-form")?.requestSubmit();
       await pause();
 
@@ -379,55 +383,297 @@ async function main() {
       document.querySelector("#retry-later-button")?.click();
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (!visible(document.querySelector("#results-screen"))
-        || document.querySelector("#result-score")?.textContent.replace(/\\s/g, "") !== "6/8") {
-        errors.push("Pending retry work changed or blocked the completed 6-of-8 Quiz result.");
+      if (dialog.open || document.querySelector("#question-number-input")?.value !== "9"
+        || document.querySelector("#score-text")?.textContent !== "Score: 6") {
+        errors.push("Mid-Quiz Later did not resume question nine with the unchanged score.");
       }
-      if (localStorage.getItem(sessionKey) !== null || retry?.items.length !== 2
+      if (retry?.items.length !== 2
         || retry.items.find((item) => item.questionId === firstId)?.remaining !== 4
         || retry.items.find((item) => item.questionId === secondId)?.remaining !== 10) {
-        errors.push("Nonempty retry queue did not survive normal results after active-session cleanup.");
+        errors.push("Mid-Quiz Later changed or removed persistent retry work.");
       }
       const queueAtResults = JSON.stringify(retry.items);
-      document.querySelector("#change-category-button")?.click();
+      const practiceStepAtResults = retry.practiceStep;
+      const difficultFixtureId = String(currentQuestion()?.id || "");
+      const difficultCheckbox = document.querySelector("#difficult-checkbox");
+      if (!difficultFixtureId || !difficultCheckbox) {
+        errors.push("Could not prepare an in-memory Difficult Quiz fixture.");
+      } else if (!difficultCheckbox.checked) {
+        difficultCheckbox.click();
+        await pause();
+      }
+      document.querySelector("#back-button")?.click();
       await pause();
       if (!visible(document.querySelector("#category-screen"))
         || JSON.stringify(JSON.parse(localStorage.getItem(retryKey) || "null")?.items) !== queueAtResults) {
         errors.push("Retry queue did not survive returning to categories.");
       }
 
-      const learnCategoryId = "job-related-finance-taxation";
-      document.querySelector('#category-grid .category-card[data-category="' + learnCategoryId + '"]')?.click();
+      const startRange = async (modeSelector, start, end) => {
+        document.querySelector(modeSelector)?.click();
+        await pause();
+        const startInput = document.querySelector("#question-range-start-input");
+        const endInput = document.querySelector("#question-range-end-input");
+        if (!startInput || !endInput) {
+          errors.push("Retry category-isolation range selector was unavailable.");
+          return false;
+        }
+        startInput.value = String(start);
+        endInput.value = String(end);
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+        return visible(document.querySelector("#quiz-screen"));
+      };
+
+      document.querySelector('#category-grid .category-card[data-category="urdu"]')?.click();
       document.querySelector("#learn-mode-button")?.click();
       await pause();
       document.querySelector("#question-range-start-input").value = "1";
       document.querySelector("#question-range-end-input").value = "3";
       document.querySelector("#question-range-form")?.requestSubmit();
       await pause();
-      await advance();
-      const learnBeforeRetry = mainSnapshot();
+      for (let index = 0; index < 3; index += 1) {
+        await advance();
+        if (dialog.open) errors.push("A queued Quiz review opened during Learn mode.");
+      }
+      retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!visible(document.querySelector("#results-screen")) || retry?.practiceStep !== practiceStepAtResults
+        || JSON.stringify(retry?.items) !== queueAtResults || retry?.activeAttempt !== null) {
+        errors.push("Learn did not leave the retry cadence and queued items completely unchanged.");
+      }
+      document.querySelector("#change-category-button")?.click();
+      await pause();
+
+      const mismatchCategoryId = "job-related-finance-taxation";
+      document.querySelector('#category-grid .category-card[data-category="' + mismatchCategoryId + '"]')?.click();
+      await startRange("#quiz-mode-button", 1, 3);
+      for (let index = 0; index < 3; index += 1) {
+        await answerMain(true);
+        await advance();
+        if (dialog.open) errors.push("An Urdu review opened inside another category's Quiz.");
+      }
+      retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!visible(document.querySelector("#results-screen")) || retry?.practiceStep !== practiceStepAtResults + 3
+        || JSON.stringify(retry?.items) !== queueAtResults || retry?.activeAttempt !== null) {
+        errors.push("Another category's queue blocked or mutated a completed Quiz.");
+      }
+      if (!document.querySelector("#retry-queue-chip")?.hidden
+        || document.querySelector("#retry-queue-count")?.textContent !== "0") {
+        errors.push("Another category displayed queued-review counts belonging to Urdu.");
+      }
+      document.querySelector("#change-category-button")?.click();
+      await pause();
+
+      document.querySelector('#category-grid .category-card[data-category="urdu"]')?.click();
+      document.querySelector("#difficult-mode-button")?.click();
+      await pause();
+      if (document.querySelector("#difficult-count")?.textContent.trim() !== "1") {
+        errors.push("Difficult Quiz fixture was not available in the current page state.");
+      }
+      await startRange("#difficult-quiz-button", 1, 1);
+      if (document.querySelector("#question-text")?.dataset.questionId !== difficultFixtureId) {
+        errors.push("Difficult Quiz did not start with the in-memory marked question.");
+      }
+      if (document.querySelector("#retry-queue-chip")?.hidden
+        || document.querySelector("#retry-queue-count")?.textContent !== "2") {
+        errors.push("Same-category Difficult Quiz did not show its two queued Urdu reviews.");
+      }
+      await answerMain(true);
+      const difficultScoreBeforeDrain = document.querySelector("#score-text")?.textContent;
       await advance();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (!dialog.open || document.querySelector("#quiz-screen")?.dataset.mode !== "learn"
-        || retry?.activeAttempt?.questionId !== firstId || document.querySelector("#score-text")?.textContent !== "Learn Mode") {
-        errors.push("A queued Quiz wrong answer did not surface later during Learn mode.");
+      const drainAttempt = retry?.activeAttempt;
+      const drainItem = retry?.items.find((item) => item.questionId === drainAttempt?.questionId);
+      if (!dialog.open || visible(document.querySelector("#results-screen"))
+        || document.querySelector("#quiz-screen")?.dataset.scope !== "difficult"
+        || document.querySelector("#quiz-screen")?.dataset.mode !== "quiz"
+        || questionById.get(String(drainAttempt?.questionId || ""))?.categoryId !== "urdu") {
+        errors.push("Difficult Quiz did not enter its same-category final retry drain.");
       }
-      if (JSON.stringify(mainSnapshot()) !== JSON.stringify(learnBeforeRetry)) {
-        errors.push("Opening a retry during Learn changed its visited history before resume.");
+      if (!document.querySelector("#retry-later-button")?.hidden) {
+        errors.push("Final retry drain left the Later bypass visible.");
       }
+      const activeBeforeBypass = JSON.stringify(drainAttempt || null);
       document.querySelector("#retry-later-button")?.click();
+      const cancelEvent = new Event("cancel", { cancelable: true });
+      dialog.dispatchEvent(cancelEvent);
       await pause();
-      document.querySelector("#back-button")?.click();
+      retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!cancelEvent.defaultPrevented || !dialog.open || visible(document.querySelector("#results-screen"))
+        || JSON.stringify(retry?.activeAttempt || null) !== activeBeforeBypass) {
+        errors.push("Later or Escape bypassed a required final retry drain.");
+      }
+
+      const drainQuestion = questionById.get(String(drainAttempt?.questionId || ""));
+      const drainCorrectIndex = drainAttempt && drainQuestion
+        ? drainAttempt.optionOrder.indexOf(drainQuestion.correctOptionIndex)
+        : -1;
+      const drainWrongIndex = drainCorrectIndex >= 0 ? (drainCorrectIndex + 1) % 4 : -1;
+      document.querySelector('[data-review-option-index="' + drainWrongIndex + '"]')?.click();
+      document.querySelector("#retry-action-button")?.click();
       await pause();
+      retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!retry?.activeAttempt?.submitted || retry.activeAttempt.outcome !== "wrong"
+        || retry.items.find((item) => item.questionId === drainAttempt?.questionId)?.remaining !== drainItem?.remaining) {
+        errors.push("Final-drain wrong Check was not persisted idempotently before Continue.");
+      }
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!dialog.open || visible(document.querySelector("#results-screen"))
+        || retry?.items.find((item) => item.questionId === drainAttempt?.questionId)?.remaining !== (drainItem?.remaining || 0) + 5
+        || document.querySelector("#score-text")?.textContent !== difficultScoreBeforeDrain) {
+        errors.push("A wrong final-drain retry did not add five cycles and keep Results blocked without changing score.");
+      }
+      await pause();
+      sessionStorage.setItem("ppsc-smoke:retry-seed", JSON.stringify(retry));
 
       return {
         errors,
         fifoIds: [firstId, secondId],
         wrongRemaining: 10,
-        resultScore: "6/8",
+        scoreBeforeExit: "Score: 6",
         survivedResults: true,
-        surfacedInLearn: true
+        suppressedInLearn: true,
+        mismatchDidNotBlock: true,
+        difficultQuizEligible: true,
+        finalDrainWrongRemaining: retry?.items.find((item) => item.questionId === drainAttempt?.questionId)?.remaining || null,
+        seedQueue: retry
       };
+    })()`);
+
+    await client.evaluate(`(() => {
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      return true;
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for retry category-mismatch seeding."));
+        }
+      }, 50);
+    })`);
+
+    const retryMismatchSeedResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const seed = sessionStorage.getItem("ppsc-smoke:retry-seed");
+      const categoryId = "job-related-finance-taxation";
+      document.querySelector('#category-grid .category-card[data-category="' + categoryId + '"]')?.click();
+      document.querySelector("#quiz-mode-button")?.click();
+      await pause();
+      const startInput = document.querySelector("#question-range-start-input");
+      const endInput = document.querySelector("#question-range-end-input");
+      if (!seed || !startInput || !endInput) {
+        errors.push("Could not prepare a saved active retry against a mismatched Quiz category.");
+        return { errors };
+      }
+      startInput.value = "1";
+      endInput.value = "2";
+      document.querySelector("#question-range-form")?.requestSubmit();
+      await pause();
+      const active = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      if (!active || active.categoryId !== categoryId || active.mode !== "quiz") {
+        errors.push("Mismatched-category active-session fixture was invalid.");
+      }
+      localStorage.setItem("ppsc-prep:retry-queue:v1", seed);
+      return { errors };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for retry category-mismatch recovery verification."));
+        }
+      }, 50);
+    })`);
+
+    const retryMismatchResumeResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const seed = JSON.parse(sessionStorage.getItem("ppsc-smoke:retry-seed") || "null");
+      if (!visible(document.querySelector("#continue-session-card"))) {
+        errors.push("Mismatched-category Quiz was not resumable after reload.");
+      }
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      const retry = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      if (document.querySelector("#retry-dialog")?.open
+        || document.querySelector("#quiz-screen")?.dataset.mode !== "quiz"
+        || JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null")?.categoryId !== "job-related-finance-taxation"
+        || retry?.activeAttempt !== null
+        || JSON.stringify(retry?.items || []) !== JSON.stringify(seed?.items || [])) {
+        errors.push("Continue opened or removed a saved retry belonging to another category.");
+      }
+      if (!document.querySelector("#retry-queue-chip")?.hidden
+        || document.querySelector("#retry-queue-count")?.textContent !== "0") {
+        errors.push("Mismatched-category Continue exposed the other category's queue count.");
+      }
+      document.querySelector("#back-button")?.click();
+      await pause();
+      document.querySelector('#category-grid .category-card[data-category="urdu"]')?.click();
+      document.querySelector("#learn-mode-button")?.click();
+      await pause();
+      document.querySelector("#question-range-start-input").value = "1";
+      document.querySelector("#question-range-end-input").value = "2";
+      document.querySelector("#question-range-form")?.requestSubmit();
+      await pause();
+      const learnSession = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      if (!learnSession || learnSession.categoryId !== "urdu" || learnSession.mode !== "learn") {
+        errors.push("Learn active-session fixture for saved-retry suppression was invalid.");
+      }
+      localStorage.setItem("ppsc-prep:retry-queue:v1", JSON.stringify(seed));
+      return { errors };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for saved retry Learn suppression."));
+        }
+      }, 50);
+    })`);
+
+    const retryLearnResumeResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const seed = JSON.parse(sessionStorage.getItem("ppsc-smoke:retry-seed") || "null");
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      const retry = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      if (document.querySelector("#retry-dialog")?.open
+        || document.querySelector("#quiz-screen")?.dataset.mode !== "learn"
+        || retry?.activeAttempt !== null
+        || JSON.stringify(retry?.items || []) !== JSON.stringify(seed?.items || [])) {
+        errors.push("Continue opened or removed a saved retry while restoring Learn.");
+      }
+      if (!document.querySelector("#retry-queue-chip")?.hidden
+        || document.querySelector("#retry-queue-count")?.textContent !== "0") {
+        errors.push("Learn Continue exposed a queued-review count.");
+      }
+      return { errors };
     })()`);
 
     await client.evaluate(`(() => {
@@ -532,39 +778,72 @@ async function main() {
         errors.push("Non-Urdu retry retained stale Urdu state or lost its secondary translation.");
       }
 
+      if (!dialog?.open || visible(document.querySelector("#results-screen"))
+        || retry?.activeAttempt?.questionId !== targetId || retry.activeAttempt.resumeAction !== "results") {
+        errors.push("The category Quiz reached Results before its matching retry queue was drained.");
+      }
+      if (!document.querySelector("#retry-later-button")?.hidden) {
+        errors.push("Final drain exposed the Later bypass.");
+      }
+      const activeBeforeBypass = JSON.stringify(retry?.activeAttempt || null);
+      document.querySelector("#retry-later-button")?.click();
       const cancelEvent = new Event("cancel", { cancelable: true });
       dialog.dispatchEvent(cancelEvent);
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      const postponed = retry?.items.find((item) => item.questionId === targetId);
-      if (!cancelEvent.defaultPrevented || dialog.open || postponed?.remaining !== 5
-        || postponed?.dueStep !== 7 || postponed?.sequence !== 2
-        || !visible(document.querySelector("#results-screen"))
-        || document.querySelector("#result-score")?.textContent.replace(/\\s/g, "") !== "3/4") {
-        errors.push("Escape before Check did not behave exactly like Later and resume results.");
+      if (!cancelEvent.defaultPrevented || !dialog.open || visible(document.querySelector("#results-screen"))
+        || JSON.stringify(retry?.activeAttempt || null) !== activeBeforeBypass) {
+        errors.push("Later or Escape bypassed the final category-Quiz retry drain.");
       }
 
-      for (let repeat = 1; repeat <= 3; repeat += 1) {
-        document.querySelector("#change-category-button")?.click();
-        await pause();
-        chooseCategory();
-        await startRange("#learn-mode-button", targetIndex + 1, targetIndex + 1);
-        document.querySelector("#action-button")?.click();
-        await pause();
-        if (repeat < 3) {
-          if (dialog.open || !visible(document.querySelector("#results-screen"))) {
-            errors.push("One-question retry fallback opened before its due step.");
-          }
+      const firstDrainAttempt = retry?.activeAttempt;
+      const firstDrainCorrectIndex = firstDrainAttempt?.optionOrder.indexOf(target.correctOptionIndex) ?? -1;
+      const firstDrainWrongIndex = firstDrainCorrectIndex >= 0 ? (firstDrainCorrectIndex + 1) % 4 : -1;
+      document.querySelector('[data-review-option-index="' + firstDrainWrongIndex + '"]')?.click();
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!retry?.activeAttempt?.submitted || retry.activeAttempt.outcome !== "wrong"
+        || retry.items.find((item) => item.questionId === targetId)?.remaining !== 5
+        || !document.querySelector("#retry-dialog-progress")?.textContent.includes("10 correct reviews remaining")) {
+        errors.push("Wrong final-drain Check did not project +5 without applying it early.");
+      }
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!dialog.open || visible(document.querySelector("#results-screen"))
+        || retry?.items.find((item) => item.questionId === targetId)?.remaining !== 10) {
+        errors.push("Wrong final-drain Continue did not add five and immediately continue draining.");
+      }
+
+      const drainCountdown = [];
+      for (let remaining = 10; remaining >= 1; remaining -= 1) {
+        retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+        const attempt = retry?.activeAttempt;
+        const item = retry?.items.find((entry) => entry.questionId === targetId);
+        drainCountdown.push(item?.remaining);
+        if (!dialog.open || attempt?.questionId !== targetId || item?.remaining !== remaining) {
+          errors.push("Final retry drain was interrupted at remaining count " + remaining + ".");
+          break;
         }
+        const correctIndex = attempt.optionOrder.indexOf(target.correctOptionIndex);
+        document.querySelector('[data-review-option-index="' + correctIndex + '"]')?.click();
+        document.querySelector("#retry-action-button")?.click();
+        await pause();
+        const checked = JSON.parse(localStorage.getItem(retryKey) || "null");
+        if (checked?.items.find((entry) => entry.questionId === targetId)?.remaining !== remaining) {
+          errors.push("Final retry Check applied a correct answer before Continue.");
+        }
+        document.querySelector("#retry-action-button")?.click();
+        await pause();
       }
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (!dialog.open || retry?.practiceStep !== 7 || retry?.activeAttempt?.questionId !== targetId
-        || retry.activeAttempt.resumeAction !== "results") {
-        errors.push("A due retry matching the only main question was starved instead of using the one-item fallback.");
+      if (JSON.stringify(drainCountdown) !== JSON.stringify([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
+        || dialog.open || !visible(document.querySelector("#results-screen"))
+        || retry?.items.some((item) => item.questionId === targetId)
+        || document.querySelector("#result-score")?.textContent.replace(/\\s/g, "") !== "3/4") {
+        errors.push("Results did not wait for complete future-due retry mastery without changing the Quiz score.");
       }
-      document.querySelector("#retry-later-button")?.click();
-      await pause();
-      if (!visible(document.querySelector("#results-screen"))) errors.push("One-question fallback Later did not resume completion.");
 
       document.querySelector("#change-category-button")?.click();
       await pause();
@@ -613,6 +892,7 @@ async function main() {
       }
       localStorage.removeItem("ppsc-prep:active-session:v1");
       localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      localStorage.removeItem("ppsc-prep:difficult-question-ids:v1");
       return { errors, queueCleared: true, activeSessionPreserved: true };
     })()`);
 
@@ -656,7 +936,7 @@ async function main() {
       const resolveRetryIfOpen = async () => {
         const dialog = document.querySelector("#retry-dialog");
         let safety = 0;
-        while (dialog && dialog.open && safety < 4) {
+        while (dialog && dialog.open && safety < 32) {
           safety += 1;
           const queue = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
           const attempt = queue && queue.activeAttempt;
@@ -3459,6 +3739,13 @@ async function main() {
       localStorage.removeItem("ppsc-prep:retry-queue:v1");
       return true;
     })()`);
+    await client.evaluate(`(() => {
+      const seed = JSON.parse(sessionStorage.getItem("ppsc-smoke:retry-seed") || "null");
+      if (!seed) return false;
+      seed.activeAttempt = null;
+      localStorage.setItem("ppsc-prep:retry-queue:v1", JSON.stringify(seed));
+      return true;
+    })()`);
     await client.send("Page.reload", { ignoreCache: true });
     await client.evaluate(`new Promise((resolve, reject) => {
       const deadline = Date.now() + 10000;
@@ -3477,6 +3764,7 @@ async function main() {
       const rawPause = () => new Promise((resolve) => setTimeout(resolve, 0));
       const resolveRetryIfOpen = async () => {
         const dialog = document.querySelector("#retry-dialog");
+        if (dialog && dialog.open) errors.push("Custom Paper unexpectedly opened a category Quiz review.");
         let safety = 0;
         while (dialog && dialog.open && safety < 4) {
           safety += 1;
@@ -3674,6 +3962,14 @@ async function main() {
         }
       }
       if (checkpointWrong !== 4 || document.querySelector("#score-text").textContent !== "C:" + checkpointCorrect + " W:4 Marks:" + formatMarks(checkpointCorrect, 4)) errors.push("Four Custom Paper wrong answers did not deduct exactly one mark.");
+      const paperRetryQueue = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      const paperRetrySeed = JSON.parse(sessionStorage.getItem("ppsc-smoke:retry-seed") || "null");
+      if (document.querySelector("#retry-dialog")?.open || paperRetryQueue?.activeAttempt
+        || JSON.stringify(paperRetryQueue?.items || []) !== JSON.stringify(paperRetrySeed?.items || [])
+        || !document.querySelector("#retry-queue-chip")?.hidden
+        || document.querySelector("#retry-queue-count")?.textContent !== "0") {
+        errors.push("Custom Paper displayed or mutated the pre-existing category Quiz review queue.");
+      }
 
       document.querySelector("#action-button").click();
       await pause();
@@ -3742,6 +4038,7 @@ async function main() {
       const rawPause = () => new Promise((resolve) => setTimeout(resolve, 0));
       const resolveRetryIfOpen = async () => {
         const dialog = document.querySelector("#retry-dialog");
+        if (dialog && dialog.open) errors.push("Resumed Custom Paper unexpectedly opened a category Quiz review.");
         let safety = 0;
         while (dialog && dialog.open && safety < 4) {
           safety += 1;
@@ -3833,6 +4130,14 @@ async function main() {
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders)) errors.push("Reload changed the Custom Paper option orders.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.answerHistory) !== JSON.stringify(expected.answerHistory)) errors.push("Reload changed the Custom Paper response history.");
       if (!storedBeforeContinue || storedBeforeContinue.currentIndex !== expected.currentIndex || storedBeforeContinue.score !== expected.score) errors.push("Reload changed the Custom Paper current position or score.");
+      const paperRetrySeed = JSON.parse(sessionStorage.getItem("ppsc-smoke:retry-seed") || "null");
+      const retryBeforePaperContinue = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      if (retryBeforePaperContinue?.activeAttempt
+        || JSON.stringify(retryBeforePaperContinue?.items || []) !== JSON.stringify(paperRetrySeed?.items || [])
+        || !document.querySelector("#retry-queue-chip")?.hidden
+        || document.querySelector("#retry-queue-count")?.textContent !== "0") {
+        errors.push("Reload exposed or changed category Quiz reviews while a Custom Paper was pending.");
+      }
 
       document.querySelector("#continue-session-button").click();
       await pause();
@@ -3847,6 +4152,13 @@ async function main() {
       if (document.querySelector("#score-text").textContent !== "C:" + expected.score + " W:4 Marks:" + formatMarks(expected.score, 4)) errors.push("Continue did not restore the Custom Paper live correct/wrong/marks score.");
       const storedAfterContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
       if (!storedAfterContinue || JSON.stringify(storedAfterContinue.questionIds) !== JSON.stringify(expected.questionIds) || JSON.stringify(storedAfterContinue.optionOrders) !== JSON.stringify(expected.optionOrders) || JSON.stringify(storedAfterContinue.answerHistory) !== JSON.stringify(expected.answerHistory)) errors.push("Continue changed Custom Paper IDs, options, or responses.");
+      const retryAfterPaperContinue = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      if (document.querySelector("#retry-dialog")?.open || retryAfterPaperContinue?.activeAttempt
+        || JSON.stringify(retryAfterPaperContinue?.items || []) !== JSON.stringify(paperRetrySeed?.items || [])
+        || !document.querySelector("#retry-queue-chip")?.hidden
+        || document.querySelector("#retry-queue-count")?.textContent !== "0") {
+        errors.push("Custom Paper Continue displayed or mutated category Quiz reviews.");
+      }
 
       const numberInput = document.querySelector("#question-number-input");
       numberInput.value = "100";
@@ -4001,6 +4313,9 @@ async function main() {
     const result = {
       ...normalSummary,
       errors: retryFifoResult.errors
+        .concat(retryMismatchSeedResult.errors)
+        .concat(retryMismatchResumeResult.errors)
+        .concat(retryLearnResumeResult.errors)
         .concat(retryPositionResult.errors)
         .concat(retryCorruptRecoveryResult.errors)
         .concat(normalResult.errors)
@@ -4062,8 +4377,13 @@ async function main() {
         mobileProbeMetrics: retryMobileProbe.metrics,
         fifo: retryFifoResult.fifoIds,
         wrongRetryRemaining: retryFifoResult.wrongRemaining,
-        survivedResults: retryFifoResult.survivedResults,
-        surfacedInLearn: retryFifoResult.surfacedInLearn,
+        survivedCategoryExit: retryFifoResult.survivedResults,
+        suppressedInLearn: retryFifoResult.suppressedInLearn,
+        mismatchDidNotBlock: retryFifoResult.mismatchDidNotBlock,
+        difficultQuizEligible: retryFifoResult.difficultQuizEligible,
+        savedMismatchSuppressed: retryMismatchResumeResult.errors.length === 0,
+        savedLearnSuppressed: retryLearnResumeResult.errors.length === 0,
+        finalDrainWrongRemaining: retryFifoResult.finalDrainWrongRemaining,
         positionDependentCanonical: retryPositionResult.errors.length === 0,
         corruptQueueRecovered: retryCorruptRecoveryResult.errors.length === 0,
         screenshots: [
