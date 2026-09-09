@@ -183,6 +183,211 @@ async function main() {
       }, 50);
     })`);
 
+    const computerSourceFixture = await client.evaluate(`(() => {
+      const errors = [];
+      const data = window.PPSC_QUIZ_DATA;
+      const important = (question) => question?.isImportant === true || Number(question?.repeatCount) >= 2;
+      const computerQuestions = data.questions.filter((question) => question.categoryId === "basic-computer-studies");
+      const sourceFor = (question) => String(question.id).startsWith("IBES-")
+        ? (question.kind === "source" ? "initial-original" : "initial-related")
+        : "other";
+      const scopeQuestions = {
+        all: computerQuestions,
+        "initial-original": computerQuestions.filter((question) => sourceFor(question) === "initial-original"),
+        "initial-related": computerQuestions.filter((question) => sourceFor(question) === "initial-related"),
+        other: computerQuestions.filter((question) => sourceFor(question) === "other")
+      };
+      const expectedCounts = {
+        all: [2554, 458],
+        "initial-original": [1088, 397],
+        "initial-related": [1088, 19],
+        other: [378, 42]
+      };
+      for (const [scope, questions] of Object.entries(scopeQuestions)) {
+        if (questions.length !== expectedCounts[scope][0] || questions.filter(important).length !== expectedCounts[scope][1]) {
+          errors.push("Basic Computer " + scope + " source fixture has unexpected total/important counts.");
+        }
+      }
+      if (scopeQuestions["initial-original"].some((question) => !/^IBES-Q\\d{4}-SRC$/.test(question.id) || question.kind !== "source")) {
+        errors.push("Initial-original fixture includes a non-IBES source question.");
+      }
+      if (scopeQuestions["initial-related"].some((question) => !/^IBES-Q\\d{4}-SIM$/.test(question.id) || question.kind !== "similar")) {
+        errors.push("Initial-related fixture includes a non-IBES related-practice question.");
+      }
+      if (scopeQuestions.other.some((question) => String(question.id).startsWith("IBES-"))
+        || scopeQuestions.other.filter((question) => question.kind === "source").length !== 189
+        || scopeQuestions.other.filter((question) => question.kind === "similar").length !== 189) {
+        errors.push("Other Papers fixture is not the expected non-IBES 189 source + 189 related partition.");
+      }
+      if (computerQuestions.some((question) => /^IBES-Q0254-/.test(question.id))) {
+        errors.push("Absent IBES Q254 was fabricated in the Basic Computer bank.");
+      }
+
+      const difficultByScope = {
+        "initial-original": scopeQuestions["initial-original"].slice(0, 2).map((question) => question.id),
+        "initial-related": scopeQuestions["initial-related"].slice(0, 2).map((question) => question.id),
+        other: scopeQuestions.other.slice(0, 2).map((question) => question.id)
+      };
+      const allDifficultIds = new Set(difficultByScope["initial-original"]
+        .concat(difficultByScope["initial-related"], difficultByScope.other));
+      difficultByScope.all = computerQuestions
+        .filter((question) => allDifficultIds.has(String(question.id)))
+        .map((question) => String(question.id));
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      localStorage.setItem("ppsc-prep:difficult-question-ids:v1", JSON.stringify({
+        version: 1,
+        questionIds: difficultByScope.all
+      }));
+      return {
+        errors,
+        scopes: Object.fromEntries(Object.entries(scopeQuestions).map(([scope, questions]) => [scope, {
+          ids: questions.map((question) => String(question.id)),
+          importantIds: questions.filter(important).map((question) => String(question.id)),
+          difficultIds: difficultByScope[scope]
+        }]))
+      };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for Basic Computer source UI testing."));
+        }
+      }, 50);
+    })`);
+
+    const computerSourceUiResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(computerSourceFixture.scopes)};
+      const definitions = [
+        ["all", "computer-source-all", "All Basic Computer", 2554, 458],
+        ["initial-original", "computer-source-initial-original", "Initial PDF — Original MCQs", 1088, 397],
+        ["initial-related", "computer-source-initial-related", "Initial PDF — Related Practice", 1088, 19],
+        ["other", "computer-source-other", "Other Papers", 378, 42]
+      ];
+
+      document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
+      await pause();
+      if (visible(document.querySelector("#computer-source-panel"))) {
+        errors.push("Basic Computer source panel was visible for a non-Basic category.");
+      }
+      document.querySelector("#mode-back-button")?.click();
+      await pause();
+      document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]')?.click();
+      await pause();
+
+      const panel = document.querySelector("#computer-source-panel");
+      const radios = [...document.querySelectorAll('input[name="computer-source"]')];
+      if (!visible(panel) || radios.length !== 4 || document.documentElement.scrollWidth > window.innerWidth) {
+        errors.push("Basic Computer source selector did not render four overflow-safe native radios.");
+      }
+      for (const [scope, id, label, total, importantCount] of definitions) {
+        const radio = document.querySelector("#" + id);
+        const labelText = radio?.closest("label")?.querySelector("strong")?.textContent.trim();
+        const count = document.querySelector("#computer-source-count-" + scope)?.textContent.trim();
+        if (!radio || radio.type !== "radio" || radio.name !== "computer-source" || radio.value !== scope
+          || labelText !== label || count !== String(total) || radio.disabled) {
+          errors.push("Basic Computer " + scope + " radio label/value/count contract is incorrect.");
+        }
+        if (expected[scope].ids.length !== total || expected[scope].importantIds.length !== importantCount) {
+          errors.push("Basic Computer " + scope + " rendered count disagrees with its classified data fixture.");
+        }
+      }
+      if (!document.querySelector("#computer-source-all")?.checked
+        || radios.filter((radio) => radio.checked).length !== 1
+        || !document.querySelector("#study-scope-summary")?.textContent.includes("2554")
+        || !document.querySelector("#important-count")?.textContent.startsWith("458")) {
+        errors.push("Basic Computer did not open with the All source and its exact total/important counts.");
+      }
+      return { errors };
+    })()`);
+
+    const computerSourceScreenshots = {
+      mobile430: path.join(os.tmpdir(), "ppsc-computer-source-430-smoke.png"),
+      mobile320: path.join(os.tmpdir(), "ppsc-computer-source-320-smoke.png"),
+      desktop: path.join(os.tmpdir(), "ppsc-computer-source-desktop-smoke.png")
+    };
+    await delay(250);
+    const sourceSelector430 = await client.send("Page.captureScreenshot", { format: "png" });
+    fs.writeFileSync(computerSourceScreenshots.mobile430, Buffer.from(sourceSelector430.data, "base64"));
+
+    await client.send("Emulation.setDeviceMetricsOverride", {
+      width: 320,
+      height: 1000,
+      deviceScaleFactor: 1,
+      mobile: true
+    });
+    await delay(150);
+    const computerSourceResponsiveResult = await client.evaluate(`(() => {
+      const panel = document.querySelector("#computer-source-panel");
+      const rect = panel?.getBoundingClientRect();
+      const radios = [...document.querySelectorAll('input[name="computer-source"]')];
+      const errors = [];
+      if (!panel || panel.hidden || document.documentElement.scrollWidth > window.innerWidth
+        || !rect || rect.left < -1 || rect.right > window.innerWidth + 1
+        || radios.length !== 4 || radios.some((radio) => radio.getClientRects().length === 0)) {
+        errors.push("Basic Computer source selector overflowed or lost a radio at 320px.");
+      }
+      return { errors, width: window.innerWidth, panelWidth: rect ? Math.round(rect.width) : 0 };
+    })()`);
+    const sourceSelector320 = await client.send("Page.captureScreenshot", { format: "png" });
+    fs.writeFileSync(computerSourceScreenshots.mobile320, Buffer.from(sourceSelector320.data, "base64"));
+
+    await client.send("Emulation.setDeviceMetricsOverride", {
+      width: 1366,
+      height: 900,
+      deviceScaleFactor: 1,
+      mobile: false
+    });
+    await delay(150);
+    const computerSourceDesktopResult = await client.evaluate(`(() => ({
+      errors: document.documentElement.scrollWidth > window.innerWidth
+        || document.querySelector("#computer-source-panel")?.hidden
+        ? ["Basic Computer source selector was hidden or overflowed at desktop width."]
+        : [],
+      width: window.innerWidth
+    }))()`);
+    const sourceSelectorDesktop = await client.send("Page.captureScreenshot", { format: "png" });
+    fs.writeFileSync(computerSourceScreenshots.desktop, Buffer.from(sourceSelectorDesktop.data, "base64"));
+
+    await client.send("Emulation.setDeviceMetricsOverride", {
+      width: 430,
+      height: 1200,
+      deviceScaleFactor: 1,
+      mobile: true
+    });
+
+    await client.evaluate(`(() => {
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      localStorage.removeItem("ppsc-prep:difficult-question-ids:v1");
+      return true;
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reset after Basic Computer source UI testing."));
+        }
+      }, 50);
+    })`);
+
     const retryFifoResult = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
       const visible = (element) => Boolean(
@@ -909,6 +1114,581 @@ async function main() {
         }
       }, 50);
     })`);
+
+    await client.evaluate(`(() => {
+      localStorage.setItem("ppsc-prep:difficult-question-ids:v1", JSON.stringify({
+        version: 1,
+        questionIds: ${JSON.stringify(computerSourceFixture.scopes.all.difficultIds)}
+      }));
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      return true;
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not load the Basic Computer source fixtures."));
+        }
+      }, 50);
+    })`);
+
+    const computerSourceFlowResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const data = window.PPSC_QUIZ_DATA;
+      const expected = ${JSON.stringify(computerSourceFixture.scopes)};
+      const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
+      const definitions = [
+        ["all", "All Basic Computer", 2554, 458],
+        ["initial-original", "Initial PDF — Original MCQs", 1088, 397],
+        ["initial-related", "Initial PDF — Related Practice", 1088, 19],
+        ["other", "Other Papers", 378, 42]
+      ];
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const answerText = (question) => optionText(question.options[question.correctOptionIndex]);
+      const normalize = (value) => String(value || "").normalize("NFKC").toLocaleLowerCase().replace(/\\s+/g, " ").trim();
+      const quickRows = () => [...document.querySelectorAll("#quick-notes-list .quick-note-row[data-question-id]")];
+      const storageSnapshot = () => JSON.stringify(
+        Array.from({ length: localStorage.length }, (_, index) => {
+          const key = localStorage.key(index);
+          return [key, localStorage.getItem(key)];
+        }).sort((left, right) => left[0].localeCompare(right[0]))
+      );
+      const setRange = (start, end) => {
+        const startInput = document.querySelector("#question-range-start-input");
+        const endInput = document.querySelector("#question-range-end-input");
+        if (!startInput || !endInput) return false;
+        startInput.value = String(start);
+        endInput.value = String(end);
+        startInput.dispatchEvent(new Event("input", { bubbles: true }));
+        endInput.dispatchEvent(new Event("input", { bubbles: true }));
+        return true;
+      };
+      const startRange = async (buttonSelector, start, end) => {
+        document.querySelector(buttonSelector)?.click();
+        await pause();
+        const endInput = document.querySelector("#question-range-end-input");
+        if (!visible(document.querySelector("#question-range-options")) || !endInput) return false;
+        setRange(start, end == null ? Number(endInput.max) : end);
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+        return visible(document.querySelector("#quiz-screen"));
+      };
+      const openScope = async (scope) => {
+        const card = document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]');
+        card?.click();
+        await pause();
+        const radio = document.querySelector('input[name="computer-source"][value="' + scope + '"]');
+        if (radio && !radio.checked) {
+          radio.click();
+          await pause();
+        }
+        return radio;
+      };
+      const backFromQuestion = async () => {
+        document.querySelector("#back-button")?.click();
+        await pause();
+      };
+      const loadAllNotes = async () => {
+        const button = document.querySelector("#quick-notes-load-more-button");
+        let guard = 0;
+        while (button && visible(button) && guard < 40) {
+          button.click();
+          await pause();
+          guard += 1;
+        }
+      };
+
+      for (const [scope, label, total, importantCount] of definitions) {
+        const scopeFixture = expected[scope];
+        const expectedQuestions = scopeFixture.ids.map((id) => questionById.get(id)).filter(Boolean);
+        const radio = await openScope(scope);
+        if (!radio?.checked || !document.querySelector("#mode-category")?.textContent.includes(label)
+          || !document.querySelector("#study-scope-summary")?.textContent.includes(String(total))
+          || !document.querySelector("#important-count")?.textContent.startsWith(String(importantCount))) {
+          errors.push("Basic Computer " + scope + " did not apply its label, total, and Important count.");
+        }
+
+        const storageBeforeNotes = storageSnapshot();
+        document.querySelector("#study-notes-mode-button")?.click();
+        await pause();
+        if (!visible(document.querySelector("#quick-notes-screen"))
+          || document.querySelector("#quick-notes-count")?.textContent.trim() !== String(total)
+          || !document.querySelector("#quick-notes-category")?.textContent.includes(label)) {
+          errors.push("Basic Computer " + scope + " Quick Notes did not retain its source/count label.");
+        }
+        await loadAllNotes();
+        const renderedIds = quickRows().map((row) => row.dataset.questionId);
+        if (JSON.stringify(renderedIds) !== JSON.stringify(scopeFixture.ids)
+          || quickRows().some((row, index) => row.dataset.questionNumber !== String(index + 1))) {
+          errors.push("Basic Computer " + scope + " Quick Notes changed IDs, order, count, or source-relative numbering.");
+        }
+        if (quickRows().length && (
+          quickRows()[0].querySelector(".quick-note-full-question")?.textContent.trim() !== String(expectedQuestions[0].question).trim()
+          || quickRows()[0].querySelector(".quick-note-answer-text")?.textContent.trim() !== answerText(expectedQuestions[0])
+        )) {
+          errors.push("Basic Computer " + scope + " Quick Notes changed the canonical question/answer mapping.");
+        }
+
+        const uniqueSearchTarget = [...expectedQuestions]
+          .sort((left, right) => String(right.question).length - String(left.question).length)
+          .find((question) => {
+            const query = normalize(question.question);
+            return query && expectedQuestions.filter((candidate) => (
+              normalize(candidate.question).includes(query) || normalize(answerText(candidate)).includes(query)
+            )).length === 1;
+          });
+        const search = document.querySelector("#quick-notes-search");
+        const clear = document.querySelector("#quick-notes-clear-button");
+        if (!uniqueSearchTarget || !search || !clear) {
+          errors.push("Basic Computer " + scope + " Quick Notes search fixture was unavailable.");
+        } else {
+          search.value = uniqueSearchTarget.question;
+          search.dispatchEvent(new Event("input", { bubbles: true }));
+          await pause();
+          if (JSON.stringify(quickRows().map((row) => row.dataset.questionId)) !== JSON.stringify([uniqueSearchTarget.id])) {
+            errors.push("Basic Computer " + scope + " Quick Notes search escaped its selected source or returned the wrong ID.");
+          }
+          clear.click();
+          await pause();
+        }
+
+        const importantOnly = document.querySelector("#quick-notes-important-only");
+        importantOnly?.click();
+        await pause();
+        await loadAllNotes();
+        if (JSON.stringify(quickRows().map((row) => row.dataset.questionId)) !== JSON.stringify(scopeFixture.importantIds)
+          || quickRows().some((row) => !row.querySelector(".quick-note-important"))) {
+          errors.push("Basic Computer " + scope + " Important Quick Notes changed the filtered IDs/order.");
+        }
+        clear?.click();
+        await pause();
+        document.querySelector("#quick-notes-back-button")?.click();
+        await pause();
+        if (!visible(document.querySelector("#mode-screen")) || !radio.checked) {
+          errors.push("Basic Computer " + scope + " Quick Notes Back lost the selected source.");
+        }
+        const storageAfterNotes = storageSnapshot();
+        if (storageAfterNotes !== storageBeforeNotes) {
+          errors.push("Browsing Basic Computer " + scope + " Quick Notes changed localStorage.");
+        }
+
+        await startRange("#learn-mode-button", 2, 4);
+        const learnSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+        const expectedRangeIds = scopeFixture.ids.slice(1, 4);
+        if (!learnSnapshot || learnSnapshot.version !== 8 || learnSnapshot.computerSourceScope !== scope
+          || learnSnapshot.mode !== "learn" || learnSnapshot.rangePoolSize !== total
+          || JSON.stringify(learnSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(scopeFixture.ids)
+          || JSON.stringify(learnSnapshot.rangeQuestionIds || []) !== JSON.stringify(expectedRangeIds)
+          || JSON.stringify(learnSnapshot.questionIds || []) !== JSON.stringify(expectedRangeIds)
+          || document.querySelector("#question-text")?.dataset.questionId !== expectedRangeIds[0]) {
+          errors.push("Basic Computer " + scope + " Learn range did not preserve the filtered source pool/order.");
+        }
+        await backFromQuestion();
+
+        await openScope(scope);
+        await startRange("#quiz-mode-button", 2, 4);
+        let quizSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+        if (!quizSnapshot || quizSnapshot.version !== 8 || quizSnapshot.computerSourceScope !== scope
+          || quizSnapshot.mode !== "quiz" || quizSnapshot.rangePoolSize !== total
+          || JSON.stringify(quizSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(scopeFixture.ids)
+          || JSON.stringify(quizSnapshot.questionIds || []) !== JSON.stringify(expectedRangeIds)) {
+          errors.push("Basic Computer " + scope + " Quiz range did not preserve the filtered source pool/order.");
+        }
+        const quizQuestion = questionById.get(String(document.querySelector("#question-text")?.dataset.questionId || ""));
+        const renderedOptions = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
+        const correctRenderedIndex = quizQuestion ? renderedOptions.indexOf(answerText(quizQuestion)) : -1;
+        document.querySelector('[data-option-index="' + correctRenderedIndex + '"]')?.click();
+        document.querySelector("#action-button")?.click();
+        await pause();
+        quizSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+        if (correctRenderedIndex < 0 || document.querySelector("#score-text")?.textContent !== "Score: 1"
+          || document.querySelector("#feedback-title")?.textContent !== "Correct!"
+          || quizSnapshot?.score !== 1 || !quizSnapshot?.answerHistory?.[0]?.[1]) {
+          errors.push("Basic Computer " + scope + " Quiz changed answer-option mapping or scoring.");
+        }
+        await backFromQuestion();
+
+        await openScope(scope);
+        const importantCheckbox = document.querySelector("#important-only-checkbox");
+        if (importantCheckbox && !importantCheckbox.checked) importantCheckbox.click();
+        await pause();
+        const importantEnd = Math.min(3, scopeFixture.importantIds.length);
+        await startRange("#learn-mode-button", 1, importantEnd);
+        const importantSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+        if (!importantSnapshot || importantSnapshot.computerSourceScope !== scope || importantSnapshot.importantOnly !== true
+          || importantSnapshot.rangePoolSize !== scopeFixture.importantIds.length
+          || JSON.stringify(importantSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(scopeFixture.importantIds)
+          || JSON.stringify(importantSnapshot.questionIds || []) !== JSON.stringify(scopeFixture.importantIds.slice(0, importantEnd))) {
+          errors.push("Basic Computer " + scope + " Important Learn range escaped its selected source/order.");
+        }
+        await backFromQuestion();
+
+        await openScope(scope);
+        document.querySelector("#difficult-mode-button")?.click();
+        await pause();
+        if (document.querySelector("#difficult-count")?.textContent.trim() !== String(scopeFixture.difficultIds.length)
+          || document.querySelector("#difficult-quiz-button")?.disabled) {
+          errors.push("Basic Computer " + scope + " Difficult count did not use the selected source.");
+        }
+        await startRange("#difficult-quiz-button", 1, scopeFixture.difficultIds.length);
+        const difficultSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+        if (!difficultSnapshot || difficultSnapshot.computerSourceScope !== scope || difficultSnapshot.scope !== "difficult"
+          || JSON.stringify(difficultSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(scopeFixture.difficultIds)
+          || JSON.stringify(difficultSnapshot.questionIds || []) !== JSON.stringify(scopeFixture.difficultIds)) {
+          errors.push("Basic Computer " + scope + " Difficult Quiz range escaped its selected source/order.");
+        }
+        await backFromQuestion();
+      }
+
+      await openScope("initial-related");
+      await startRange("#quiz-mode-button", 5, 7);
+      const resumeQuestion = questionById.get(String(document.querySelector("#question-text")?.dataset.questionId || ""));
+      const resumeOptions = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
+      const resumeCorrectIndex = resumeQuestion ? resumeOptions.indexOf(answerText(resumeQuestion)) : -1;
+      document.querySelector('[data-option-index="' + resumeCorrectIndex + '"]')?.click();
+      document.querySelector("#action-button")?.click();
+      await pause();
+      const resumeSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      if (!resumeSnapshot || resumeSnapshot.version !== 8 || resumeSnapshot.computerSourceScope !== "initial-related"
+        || resumeSnapshot.rangeStart !== 5 || resumeSnapshot.rangeEnd !== 7 || resumeSnapshot.score !== 1) {
+        errors.push("Basic Computer source persistence fixture was not saved as v8 initial-related.");
+      }
+      return {
+        errors,
+        resumeSnapshot,
+        resumeQuestionId: resumeQuestion?.id || "",
+        resumeOptionTexts: resumeOptions,
+        resumeCorrectIndex,
+        counts: Object.fromEntries(definitions.map(([scope, label, total, important]) => [scope, { label, total, important }]))
+      };
+    })()`);
+
+    const reloadForComputerSource = async (context) => {
+      await client.send("Page.reload", { ignoreCache: true });
+      await client.evaluate(`new Promise((resolve, reject) => {
+        const deadline = Date.now() + 10000;
+        const timer = setInterval(() => {
+          if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+            clearInterval(timer);
+            resolve(true);
+          } else if (Date.now() >= deadline) {
+            clearInterval(timer);
+            reject(new Error(${JSON.stringify("Basic Computer source reload timed out: ")} + ${JSON.stringify(context)}));
+          }
+        }, 50);
+      })`);
+    };
+
+    await reloadForComputerSource("v8 source persistence");
+    const computerSourceResumeResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(computerSourceFlowResult)};
+      const storageKey = "ppsc-prep:active-session:v1";
+      const stored = JSON.parse(localStorage.getItem(storageKey) || "null");
+      const meta = document.querySelector("#continue-session-meta")?.textContent || "";
+      if (!visible(document.querySelector("#continue-session-card"))
+        || !meta.includes("Initial PDF — Related Practice") || !meta.includes("Questions 5–7 of 1088")) {
+        errors.push("v8 Continue did not label the persisted Basic Computer source/range.");
+      }
+      if (!stored || stored.version !== 8 || stored.computerSourceScope !== "initial-related"
+        || JSON.stringify(stored) !== JSON.stringify(expected.resumeSnapshot)) {
+        errors.push("Reload changed the v8 Basic Computer source snapshot before Continue.");
+      }
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      const restored = JSON.parse(localStorage.getItem(storageKey) || "null");
+      const renderedOptions = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
+      if (!visible(document.querySelector("#quiz-screen")) || restored?.computerSourceScope !== "initial-related"
+        || document.querySelector("#question-text")?.dataset.questionId !== expected.resumeQuestionId
+        || JSON.stringify(renderedOptions) !== JSON.stringify(expected.resumeOptionTexts)
+        || document.querySelector("#score-text")?.textContent !== "Score: 1"
+        || !document.querySelector('[data-option-index="' + expected.resumeCorrectIndex + '"]')?.classList.contains("is-correct")) {
+        errors.push("Continue did not restore the exact v8 Basic Computer source/question/options/score.");
+      }
+
+      document.querySelector("#back-button")?.click();
+      await pause();
+      document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]')?.click();
+      await pause();
+      document.querySelector("#quiz-mode-button")?.click();
+      await pause();
+      document.querySelector("#question-range-start-input").value = "2";
+      document.querySelector("#question-range-end-input").value = "4";
+      document.querySelector("#question-range-form")?.requestSubmit();
+      await pause();
+      const currentV8 = JSON.parse(localStorage.getItem(storageKey) || "null");
+      const legacyV7 = currentV8 ? JSON.parse(JSON.stringify(currentV8)) : null;
+      if (!legacyV7 || legacyV7.computerSourceScope !== "all") {
+        errors.push("Could not construct an all-source v7 migration fixture.");
+      } else {
+        legacyV7.version = 7;
+        delete legacyV7.computerSourceScope;
+        localStorage.setItem(storageKey, JSON.stringify(legacyV7));
+      }
+      return { errors, expectedV8: currentV8 };
+    })()`);
+
+    await reloadForComputerSource("v7 migration");
+    const computerSourceV7MigrationResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(computerSourceResumeResult.expectedV8)};
+      const storageKey = "ppsc-prep:active-session:v1";
+      const before = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!before || before.version !== 7 || Object.prototype.hasOwnProperty.call(before, "computerSourceScope")
+        || !visible(document.querySelector("#continue-session-card"))
+        || !document.querySelector("#continue-session-meta")?.textContent.includes("All Basic Computer")) {
+        errors.push("Valid v7 Basic Computer session was not offered as All source before migration.");
+      }
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      const migrated = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!visible(document.querySelector("#quiz-screen")) || !migrated || migrated.version !== 8
+        || migrated.computerSourceScope !== "all"
+        || migrated.rangeStart !== expected.rangeStart || migrated.rangeEnd !== expected.rangeEnd
+        || JSON.stringify(migrated.rangePoolQuestionIds || []) !== JSON.stringify(expected.rangePoolQuestionIds || [])
+        || JSON.stringify(migrated.questionIds || []) !== JSON.stringify(expected.questionIds || [])) {
+        errors.push("v7 Continue did not migrate to v8 All source while retaining range metadata/order.");
+      }
+
+      document.querySelector("#back-button")?.click();
+      await pause();
+      document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]')?.click();
+      await pause();
+      document.querySelector("#learn-mode-button")?.click();
+      await pause();
+      document.querySelector("#question-range-form")?.requestSubmit();
+      await pause();
+      const fullV8 = JSON.parse(localStorage.getItem(storageKey) || "null");
+      const legacyV6 = fullV8 ? JSON.parse(JSON.stringify(fullV8)) : null;
+      if (!legacyV6 || legacyV6.computerSourceScope !== "all" || legacyV6.questionIds.length !== 2554) {
+        errors.push("Could not construct a full Basic Computer v6 migration fixture.");
+      } else {
+        legacyV6.version = 6;
+        delete legacyV6.computerSourceScope;
+        delete legacyV6.rangeStart;
+        delete legacyV6.rangeEnd;
+        delete legacyV6.rangePoolSize;
+        delete legacyV6.rangePoolQuestionIds;
+        delete legacyV6.rangeQuestionIds;
+        localStorage.setItem(storageKey, JSON.stringify(legacyV6));
+      }
+      return { errors, expectedFullV8: fullV8 };
+    })()`);
+
+    await reloadForComputerSource("v6 migration");
+    const computerSourceV6MigrationResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const storageKey = "ppsc-prep:active-session:v1";
+      const before = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!before || before.version !== 6 || Object.prototype.hasOwnProperty.call(before, "computerSourceScope")
+        || !visible(document.querySelector("#continue-session-card"))) {
+        errors.push("Valid full Basic Computer v6 session was not offered for migration.");
+      }
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      const migrated = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (!visible(document.querySelector("#quiz-screen")) || !migrated || migrated.version !== 8
+        || migrated.computerSourceScope !== "all" || migrated.rangeStart !== 1 || migrated.rangeEnd !== 2554
+        || migrated.rangePoolSize !== 2554 || migrated.rangePoolQuestionIds?.length !== 2554
+        || migrated.rangeQuestionIds?.length !== 2554 || migrated.questionIds?.length !== 2554) {
+        errors.push("v6 Continue did not migrate to the complete v8 All Basic Computer range.");
+      }
+      const invalidFixture = ${JSON.stringify(computerSourceFlowResult.resumeSnapshot)};
+      if (!invalidFixture) {
+        errors.push("Invalid source-scope fixture was unavailable.");
+      } else {
+        invalidFixture.computerSourceScope = "invalid-source";
+        localStorage.setItem(storageKey, JSON.stringify(invalidFixture));
+      }
+      return { errors };
+    })()`);
+
+    await reloadForComputerSource("invalid source rejection");
+    const computerSourceInvalidResult = await client.evaluate(`(() => {
+      const errors = [];
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const storageKey = "ppsc-prep:active-session:v1";
+      if (localStorage.getItem(storageKey) !== null || visible(document.querySelector("#continue-session-card"))) {
+        errors.push("Invalid v8 computerSourceScope was not rejected and removed.");
+      }
+      const tampered = ${JSON.stringify(computerSourceFlowResult.resumeSnapshot)};
+      if (!tampered) {
+        errors.push("Legal-but-tampered source fixture was unavailable.");
+      } else {
+        tampered.computerSourceScope = "initial-original";
+        localStorage.setItem(storageKey, JSON.stringify(tampered));
+      }
+      return { errors };
+    })()`);
+
+    await reloadForComputerSource("tampered source rejection");
+    const computerSourceTamperResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const sessionKey = "ppsc-prep:active-session:v1";
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      if (localStorage.getItem(sessionKey) !== null || visible(document.querySelector("#continue-session-card"))) {
+        errors.push("Legal source value with a mismatched question pool was not rejected and removed.");
+      }
+      const fixture = ${JSON.stringify(computerSourceFixture.scopes)};
+      document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]')?.click();
+      await pause();
+      document.querySelector("#computer-source-initial-original")?.click();
+      await pause();
+      document.querySelector("#quiz-mode-button")?.click();
+      await pause();
+      document.querySelector("#question-range-start-input").value = "2";
+      document.querySelector("#question-range-end-input").value = "2";
+      document.querySelector("#question-range-form")?.requestSubmit();
+      await pause();
+      const session = JSON.parse(localStorage.getItem(sessionKey) || "null");
+      const retryIds = [
+        fixture["initial-original"].ids[0],
+        fixture["initial-related"].ids[0],
+        fixture.other.ids[0]
+      ];
+      if (!session || session.version !== 8 || session.computerSourceScope !== "initial-original"
+        || session.questionIds[0] === retryIds[0]) {
+        errors.push("Could not construct an isolated Basic Computer retry-source session.");
+      } else {
+        localStorage.setItem(retryKey, JSON.stringify({
+          version: 1,
+          bankSignature: session.bankSignature,
+          practiceStep: 0,
+          nextSequence: 4,
+          items: retryIds.map((questionId, index) => ({
+            questionId,
+            remaining: 1,
+            dueStep: 0,
+            sequence: index + 1
+          })),
+          activeAttempt: null
+        }));
+      }
+      return { errors, retryIds, session };
+    })()`);
+
+    await reloadForComputerSource("source-scoped retry drain");
+    const computerSourceRetryResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(computerSourceTamperResult)};
+      const data = window.PPSC_QUIZ_DATA;
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const answerMainCorrect = async () => {
+        const question = questionById.get(String(document.querySelector("#question-text")?.dataset.questionId || ""));
+        const rendered = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
+        const correctText = question ? optionText(question.options[question.correctOptionIndex]) : "";
+        const correctIndex = rendered.indexOf(correctText);
+        document.querySelector('[data-option-index="' + correctIndex + '"]')?.click();
+        document.querySelector("#action-button")?.click();
+        await pause();
+        document.querySelector("#action-button")?.click();
+        await pause();
+        return correctIndex;
+      };
+      const solveCurrentRetry = async () => {
+        const queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+        const attempt = queue?.activeAttempt;
+        const question = attempt ? questionById.get(attempt.questionId) : null;
+        const correctIndex = attempt && question ? attempt.optionOrder.indexOf(question.correctOptionIndex) : -1;
+        document.querySelector('[data-review-option-index="' + correctIndex + '"]')?.click();
+        document.querySelector("#retry-action-button")?.click();
+        await pause();
+        document.querySelector("#retry-action-button")?.click();
+        await pause();
+        return attempt?.questionId || "";
+      };
+
+      const before = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      if (!visible(document.querySelector("#continue-session-card")) || before?.computerSourceScope !== "initial-original"
+        || !document.querySelector("#continue-session-meta")?.textContent.includes("Initial PDF — Original MCQs")) {
+        errors.push("Source-scoped retry fixture did not restore its Initial Original Continue card.");
+      }
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      await answerMainCorrect();
+      let queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!document.querySelector("#retry-dialog")?.open || queue?.activeAttempt?.questionId !== expected.retryIds[0]
+        || document.querySelector("#retry-queue-count")?.textContent !== "1"
+        || !document.querySelector("#retry-dialog-queue-meta")?.textContent.includes("Initial PDF — Original MCQs")) {
+        errors.push("Initial Original final drain did not show only its matching queued review.");
+      }
+      await solveCurrentRetry();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const remainingAfterOriginal = (queue?.items || []).map((item) => item.questionId);
+      if (!visible(document.querySelector("#results-screen"))
+        || JSON.stringify(remainingAfterOriginal) !== JSON.stringify(expected.retryIds.slice(1))) {
+        errors.push("Other Basic Computer sources blocked Initial Original results or were removed by its drain.");
+      }
+
+      document.querySelector("#change-category-button")?.click();
+      await pause();
+      document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]')?.click();
+      await pause();
+      if (!document.querySelector("#computer-source-all")?.checked) errors.push("Fresh Basic Computer choice did not reset retry testing to All source.");
+      document.querySelector("#quiz-mode-button")?.click();
+      await pause();
+      document.querySelector("#question-range-start-input").value = "2";
+      document.querySelector("#question-range-end-input").value = "2";
+      document.querySelector("#question-range-form")?.requestSubmit();
+      await pause();
+      await answerMainCorrect();
+      const allDrainIds = [];
+      let guard = 0;
+      while (document.querySelector("#retry-dialog")?.open && guard < 4) {
+        allDrainIds.push(await solveCurrentRetry());
+        guard += 1;
+      }
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (JSON.stringify(allDrainIds) !== JSON.stringify(expected.retryIds.slice(1))
+        || !visible(document.querySelector("#results-screen")) || queue?.items?.length !== 0) {
+        errors.push("All Basic Computer did not drain the remaining source queues in FIFO order.");
+      }
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      localStorage.removeItem("ppsc-prep:difficult-question-ids:v1");
+      return {
+        errors,
+        originalDrainId: expected.retryIds[0],
+        allDrainIds,
+        otherSourcesDidNotBlock: visible(document.querySelector("#results-screen"))
+      };
+    })()`);
+
+    await reloadForComputerSource("cleanup before legacy smoke flows");
     await client.send("Page.navigate", { url: pageUrl });
     await client.evaluate(`new Promise((resolve, reject) => {
       const deadline = Date.now() + 30000;
@@ -1092,7 +1872,8 @@ async function main() {
         const expectedFirstPageCount = Math.min(100, expectedQuestions.length);
 
         if (!visible(quickScreen) || visible(document.querySelector("#mode-screen"))) errors.push(category.name + " Quick Notes did not replace the mode screen.");
-        if (document.querySelector("#quick-notes-category")?.textContent.trim() !== category.name) errors.push(category.name + " Quick Notes showed the wrong category label.");
+        const expectedQuickNotesCategoryLabel = category.name + (category.id === "basic-computer-studies" ? " · All Basic Computer" : "");
+        if (document.querySelector("#quick-notes-category")?.textContent.trim() !== expectedQuickNotesCategoryLabel) errors.push(category.name + " Quick Notes showed the wrong category/source label.");
         if (document.querySelector("#quick-notes-count")?.textContent.trim() !== String(expectedQuestions.length)) errors.push(category.name + " Quick Notes showed the wrong total.");
         if (quickRows().length !== expectedFirstPageCount) errors.push(category.name + " Quick Notes did not render its first 100-row page.");
         if (!quickStatus?.textContent.includes(expectedFirstPageCount + " of " + expectedQuestions.length)) errors.push(category.name + " Quick Notes status showed the wrong first-page coverage.");
@@ -1543,12 +2324,12 @@ async function main() {
           errors.push("A valid start=end range did not open exactly the selected canonical question.");
         }
         let singleRangeSnapshot = JSON.parse(localStorage.getItem(rangeStorageKey) || "null");
-        if (!singleRangeSnapshot || singleRangeSnapshot.version !== 7 || singleRangeSnapshot.rangeStart !== 3
+        if (!singleRangeSnapshot || singleRangeSnapshot.version !== 8 || singleRangeSnapshot.computerSourceScope !== "all" || singleRangeSnapshot.rangeStart !== 3
           || singleRangeSnapshot.rangeEnd !== 3 || singleRangeSnapshot.rangePoolSize !== rangeQuestions.length
           || JSON.stringify(singleRangeSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(rangePoolIds)
           || JSON.stringify(singleRangeSnapshot.rangeQuestionIds || []) !== JSON.stringify([String(rangeQuestions[2].id)])
           || JSON.stringify(singleRangeSnapshot.questionIds) !== JSON.stringify([String(rangeQuestions[2].id)])) {
-          errors.push("The start=end range was not saved with exact v7 metadata.");
+          errors.push("The start=end range was not saved with exact v8 metadata.");
         }
         document.querySelector("#restart-button")?.click();
         await pause();
@@ -1573,12 +2354,12 @@ async function main() {
         }
         if (JSON.stringify(observedLearnRangeIds) !== JSON.stringify(expectedRangeIds)) errors.push("Learn range 2–4 did not preserve the exact canonical IDs.");
         let selectedRangeSnapshot = JSON.parse(localStorage.getItem(rangeStorageKey) || "null");
-        if (!selectedRangeSnapshot || selectedRangeSnapshot.version !== 7 || selectedRangeSnapshot.rangeStart !== 2
+        if (!selectedRangeSnapshot || selectedRangeSnapshot.version !== 8 || selectedRangeSnapshot.computerSourceScope !== "all" || selectedRangeSnapshot.rangeStart !== 2
           || selectedRangeSnapshot.rangeEnd !== 4 || selectedRangeSnapshot.rangePoolSize !== rangeQuestions.length
           || JSON.stringify(selectedRangeSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(rangePoolIds)
           || JSON.stringify(selectedRangeSnapshot.rangeQuestionIds || []) !== JSON.stringify(expectedRangeIds)
           || JSON.stringify(selectedRangeSnapshot.questionIds) !== JSON.stringify(expectedRangeIds)) {
-          errors.push("Learn range 2–4 did not persist exact v7 range metadata and order.");
+          errors.push("Learn range 2–4 did not persist exact v8 range metadata and order.");
         }
 
         document.querySelector("#restart-button")?.click();
@@ -1754,7 +2535,7 @@ async function main() {
             : []
         );
         const firstUnvisitedLearnIndex = categoryQuestions.findIndex((item) => !visitedLearnIds.has(item.id));
-        if (!learnGuardSnapshot || learnGuardSnapshot.version !== 7 || learnGuardSnapshot.sessionKind !== "category" || learnGuardSnapshot.paperCategoryIds !== null || learnGuardSnapshot.mode !== "learn" || learnGuardSnapshot.partIndex !== null) errors.push("Learn completion guard was not stored with the v7 category-session schema.");
+        if (!learnGuardSnapshot || learnGuardSnapshot.version !== 8 || learnGuardSnapshot.computerSourceScope !== "all" || learnGuardSnapshot.sessionKind !== "category" || learnGuardSnapshot.paperCategoryIds !== null || learnGuardSnapshot.mode !== "learn" || learnGuardSnapshot.partIndex !== null) errors.push("Learn completion guard was not stored with the v8 category-session schema.");
         if (!learnGuardSnapshot || learnGuardSnapshot.currentIndex !== categoryQuestions.length - 1 || !visitedLearnIds.has(categoryQuestions[categoryQuestions.length - 1].id)) errors.push("Learn visited IDs did not persist the directly visited last question.");
         if (firstUnvisitedLearnIndex < 0) errors.push("Learn completion guard could not identify an unvisited question.");
         if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Last Learn question did not offer Next Unvisited while questions remained unseen.");
@@ -1985,8 +2766,8 @@ async function main() {
       document.querySelector("#action-button").click();
       await pause();
       const resumeSnapshot = JSON.parse(localStorage.getItem(sessionStorageKey) || "null");
-      if (!resumeSnapshot || resumeSnapshot.version !== 7) errors.push("Active Quiz was not saved with the v7 resume schema.");
-      if (!resumeSnapshot || resumeSnapshot.sessionKind !== "category" || resumeSnapshot.paperCategoryIds !== null) errors.push("Saved Quiz did not use the v7 category-session fields.");
+      if (!resumeSnapshot || resumeSnapshot.version !== 8) errors.push("Active Quiz was not saved with the v8 resume schema.");
+      if (!resumeSnapshot || resumeSnapshot.sessionKind !== "category" || resumeSnapshot.paperCategoryIds !== null || resumeSnapshot.computerSourceScope !== "all") errors.push("Saved Quiz did not use the v8 category-session fields.");
       if (!resumeSnapshot || resumeSnapshot.mode !== "quiz" || resumeSnapshot.scope !== "all") errors.push("Saved Quiz resume mode/scope was incorrect.");
       if (!resumeSnapshot || resumeSnapshot.partIndex !== null || resumeSnapshot.importantOnly !== false) errors.push("Saved Quiz full-category/Important scope was incorrect.");
       if (!resumeSnapshot || resumeSnapshot.rangeStart !== 1 || resumeSnapshot.rangeEnd !== categoryQuestions.length || resumeSnapshot.rangePoolSize !== categoryQuestions.length) errors.push("Saved Quiz did not preserve its exact full-range metadata.");
@@ -2029,6 +2810,7 @@ async function main() {
         legacyV6Snapshot: resumeSnapshot ? (() => {
           const legacy = JSON.parse(JSON.stringify(resumeSnapshot));
           legacy.version = 6;
+          delete legacy.computerSourceScope;
           delete legacy.rangeStart;
           delete legacy.rangeEnd;
           delete legacy.rangePoolSize;
@@ -2111,12 +2893,12 @@ async function main() {
         || !continueMeta.includes("Question 1 of " + expected.questionCount)) errors.push("Continue card did not label Quiz mode, exact range and progress.");
 
       const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!storedBeforeContinue || storedBeforeContinue.version !== 7
+      if (!storedBeforeContinue || storedBeforeContinue.version !== 8 || storedBeforeContinue.computerSourceScope !== "all"
         || storedBeforeContinue.rangeStart !== expected.rangeStart
         || storedBeforeContinue.rangeEnd !== expected.rangeEnd
         || storedBeforeContinue.rangePoolSize !== expected.rangePoolSize
         || JSON.stringify(storedBeforeContinue.rangePoolQuestionIds || []) !== JSON.stringify(expected.rangePoolQuestionIds)
-        || JSON.stringify(storedBeforeContinue.rangeQuestionIds || []) !== JSON.stringify(expected.rangeQuestionIds)) errors.push("Reload changed the saved v7 range metadata.");
+        || JSON.stringify(storedBeforeContinue.rangeQuestionIds || []) !== JSON.stringify(expected.rangeQuestionIds)) errors.push("Reload changed the saved v8 range metadata.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds)) errors.push("Reload changed the saved Quiz question order.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders)) errors.push("Reload changed the saved Quiz option orders.");
 
@@ -2273,13 +3055,13 @@ async function main() {
       document.querySelector("#continue-session-button")?.click();
       await pause();
       const migrated = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!visible(document.querySelector("#quiz-screen")) || !migrated || migrated.version !== 7) errors.push("Continue did not migrate the valid v6 full session to v7.");
+      if (!visible(document.querySelector("#quiz-screen")) || !migrated || migrated.version !== 8 || migrated.computerSourceScope !== "all") errors.push("Continue did not migrate the valid v6 full session to v8/all source scope.");
       if (!migrated || migrated.rangeStart !== 1 || migrated.rangeEnd !== expected.questionCount
         || migrated.rangePoolSize !== expected.questionCount
         || JSON.stringify(migrated.rangePoolQuestionIds || []) !== JSON.stringify(expected.rangePoolQuestionIds)
         || JSON.stringify(migrated.rangeQuestionIds || []) !== JSON.stringify(expected.rangeQuestionIds)
         || JSON.stringify(migrated.questionIds || []) !== JSON.stringify(expected.rangeQuestionIds)) {
-        errors.push("The migrated v6 session did not receive complete full-range metadata and canonical Quiz order.");
+        errors.push("The migrated v6 session did not receive complete full-range metadata, all source scope, and canonical Quiz order.");
       }
       document.querySelector("#back-button")?.click();
       await pause();
@@ -2355,8 +3137,8 @@ async function main() {
         await startFullRange("#quiz-mode-button");
 
         const snapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
-        if (!snapshot || snapshot.version !== 7 || snapshot.sessionKind !== "category" || snapshot.categoryId !== categoryId || snapshot.mode !== "quiz") {
-          errors.push("Positional-option audit did not create a valid v7 Quiz snapshot for " + categoryId + ".");
+        if (!snapshot || snapshot.version !== 8 || snapshot.computerSourceScope !== "all" || snapshot.sessionKind !== "category" || snapshot.categoryId !== categoryId || snapshot.mode !== "quiz") {
+          errors.push("Positional-option audit did not create a valid v8 Quiz snapshot for " + categoryId + ".");
         } else {
           const expectedQuestionIds = data.questions
             .filter((question) => question.categoryId === categoryId)
@@ -2403,7 +3185,7 @@ async function main() {
       }
       if (!normalOptionOrderShuffled) errors.push("Ordinary Quiz options did not remain shuffled during the positional-option audit.");
       if (!malformedSnapshot || !malformedQuestionId) {
-        errors.push("Could not construct a malformed v7 positional-option snapshot.");
+        errors.push("Could not construct a malformed v8 positional-option snapshot.");
         localStorage.removeItem(storageKey);
       } else {
         localStorage.setItem(storageKey, JSON.stringify(malformedSnapshot));
@@ -2440,14 +3222,15 @@ async function main() {
         element.getClientRects().length > 0
       );
       const storageKey = "ppsc-prep:active-session:v1";
-      if (visible(document.querySelector("#continue-session-card"))) errors.push("Malformed v7 positional-option data left the Continue card visible.");
-      if (localStorage.getItem(storageKey) !== null) errors.push("Malformed v7 positional-option data was not rejected and removed.");
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("Malformed v8 positional-option data left the Continue card visible.");
+      if (localStorage.getItem(storageKey) !== null) errors.push("Malformed v8 positional-option data was not rejected and removed.");
       const tamperedRangeSnapshot = ${JSON.stringify(normalResult.legacyV6Snapshot)};
       const expectedRange = ${JSON.stringify(normalResult.resumeExpected)};
       if (!tamperedRangeSnapshot || expectedRange.rangePoolQuestionIds.length < 2) {
-        errors.push("Could not construct the v7 eligible-pool tamper fixture.");
+        errors.push("Could not construct the v8 eligible-pool tamper fixture.");
       } else {
-        tamperedRangeSnapshot.version = 7;
+        tamperedRangeSnapshot.version = 8;
+        tamperedRangeSnapshot.computerSourceScope = "all";
         tamperedRangeSnapshot.rangeStart = expectedRange.rangeStart;
         tamperedRangeSnapshot.rangeEnd = expectedRange.rangeEnd;
         tamperedRangeSnapshot.rangePoolSize = expectedRange.rangePoolSize;
@@ -2470,7 +3253,7 @@ async function main() {
           resolve(true);
         } else if (Date.now() >= deadline) {
           clearInterval(timer);
-          reject(new Error("Website did not reject a tampered v7 eligible range pool in time."));
+          reject(new Error("Website did not reject a tampered v8 eligible range pool in time."));
         }
       }, 50);
     })`);
@@ -2481,14 +3264,15 @@ async function main() {
         element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
       );
       const storageKey = "ppsc-prep:active-session:v1";
-      if (visible(document.querySelector("#continue-session-card"))) errors.push("A tampered v7 eligible range pool left Continue visible.");
-      if (localStorage.getItem(storageKey) !== null) errors.push("A tampered v7 eligible range pool was not rejected and removed.");
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("A tampered v8 eligible range pool left Continue visible.");
+      if (localStorage.getItem(storageKey) !== null) errors.push("A tampered v8 eligible range pool was not rejected and removed.");
       const permutedQuestionSnapshot = ${JSON.stringify(normalResult.legacyV6Snapshot)};
       const expectedRange = ${JSON.stringify(normalResult.resumeExpected)};
       if (!permutedQuestionSnapshot || expectedRange.rangeQuestionIds.length < 2) {
-        errors.push("Could not construct the v7 category question-order tamper fixture.");
+        errors.push("Could not construct the v8 category question-order tamper fixture.");
       } else {
-        permutedQuestionSnapshot.version = 7;
+        permutedQuestionSnapshot.version = 8;
+        permutedQuestionSnapshot.computerSourceScope = "all";
         permutedQuestionSnapshot.rangeStart = expectedRange.rangeStart;
         permutedQuestionSnapshot.rangeEnd = expectedRange.rangeEnd;
         permutedQuestionSnapshot.rangePoolSize = expectedRange.rangePoolSize;
@@ -2518,7 +3302,7 @@ async function main() {
           resolve(true);
         } else if (Date.now() >= deadline) {
           clearInterval(timer);
-          reject(new Error("Website did not reject a permuted v7 category Quiz order in time."));
+          reject(new Error("Website did not reject a permuted v8 category Quiz order in time."));
         }
       }, 50);
     })`);
@@ -2529,8 +3313,8 @@ async function main() {
         element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
       );
       const storageKey = "ppsc-prep:active-session:v1";
-      if (visible(document.querySelector("#continue-session-card"))) errors.push("A permuted v7 category Quiz order left Continue visible.");
-      if (localStorage.getItem(storageKey) !== null) errors.push("A permuted v7 category Quiz order was not rejected and removed.");
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("A permuted v8 category Quiz order left Continue visible.");
+      if (localStorage.getItem(storageKey) !== null) errors.push("A permuted v8 category Quiz order was not rejected and removed.");
       localStorage.setItem(storageKey, JSON.stringify({
         version: 3,
         bankSignature: ${JSON.stringify(normalResult.resumeExpected.bankSignature)},
@@ -2841,7 +3625,7 @@ async function main() {
       }
       const optionTexts = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
       const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
-      if (!snapshot || snapshot.version !== 7 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.partIndex !== null || snapshot.importantOnly !== false) errors.push("Difficult Learn was not stored with the v7 category-session resume schema.");
+      if (!snapshot || snapshot.version !== 8 || snapshot.computerSourceScope !== "all" || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.partIndex !== null || snapshot.importantOnly !== false) errors.push("Difficult Learn was not stored with the v8 category-session resume schema.");
       if (!snapshot || snapshot.mode !== "learn" || snapshot.scope !== "difficult") errors.push("Difficult Learn was not stored with the correct resume scope/mode.");
       if (!snapshot || snapshot.questionIds.length !== 1 || snapshot.questionIds[0] !== seed.questionId) errors.push("Difficult Learn resume snapshot did not keep its marked-question scope.");
       if (!snapshot || snapshot.rangeStart !== 1 || snapshot.rangeEnd !== 1 || snapshot.rangePoolSize !== 1
@@ -2937,7 +3721,7 @@ async function main() {
       const firstUnvisitedIndex = snapshot
         ? snapshot.questionIds.findIndex((questionId) => !visitedIds.includes(questionId))
         : -1;
-      if (!snapshot || snapshot.version !== 7 || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.mode !== "learn" || snapshot.scope !== "all" || snapshot.partIndex !== null) errors.push("Learn guard resume setup did not use the v7 category-session schema.");
+      if (!snapshot || snapshot.version !== 8 || snapshot.computerSourceScope !== "all" || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.mode !== "learn" || snapshot.scope !== "all" || snapshot.partIndex !== null) errors.push("Learn guard resume setup did not use the v8 category-session schema.");
       if (!snapshot || snapshot.rangeStart !== 1 || snapshot.rangeEnd !== total || snapshot.rangePoolSize !== total) errors.push("Learn guard resume setup did not preserve its full range.");
       if (!snapshot || JSON.stringify(snapshot.rangePoolQuestionIds || []) !== JSON.stringify(snapshot.rangeQuestionIds || [])
         || JSON.stringify(snapshot.rangeQuestionIds || []) !== JSON.stringify(snapshot.questionIds || [])) errors.push("Learn guard resume setup did not preserve its full eligible pool/slice order.");
@@ -2986,7 +3770,7 @@ async function main() {
       await pause();
       if (document.querySelector("#question-text").dataset.questionId !== expected.lastQuestionId) errors.push("Learn Continue restored the wrong completion-guard question.");
       const restoredSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
-      if (!restoredSnapshot || restoredSnapshot.version !== 7 || restoredSnapshot.sessionKind !== "category" || restoredSnapshot.paperCategoryIds !== null || JSON.stringify(restoredSnapshot.learnVisitedQuestionIds) !== JSON.stringify(expected.visitedIds)) errors.push("Learn Continue changed the persisted visited-ID snapshot.");
+      if (!restoredSnapshot || restoredSnapshot.version !== 8 || restoredSnapshot.computerSourceScope !== "all" || restoredSnapshot.sessionKind !== "category" || restoredSnapshot.paperCategoryIds !== null || JSON.stringify(restoredSnapshot.learnVisitedQuestionIds) !== JSON.stringify(expected.visitedIds)) errors.push("Learn Continue changed the persisted visited-ID snapshot.");
       if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Restored Learn guard did not offer Next Unvisited.");
       document.querySelector("#action-button").click();
       await pause();
@@ -3090,8 +3874,8 @@ async function main() {
         ? firstOrder.map((originalIndex) => firstQuestion.optionsUrdu[originalIndex])
         : [];
       assertUrduSurface(firstQuestion, firstExpectedOptions, "Urdu Quiz");
-      if (!initialSnapshot || initialSnapshot.version !== 7 || initialSnapshot.sessionKind !== "category" || initialSnapshot.categoryId !== "urdu" || initialSnapshot.paperCategoryIds !== null || initialSnapshot.mode !== "quiz" || initialSnapshot.scope !== "all") {
-        errors.push("Urdu Quiz did not use the v7 category-session schema.");
+      if (!initialSnapshot || initialSnapshot.version !== 8 || initialSnapshot.computerSourceScope !== "all" || initialSnapshot.sessionKind !== "category" || initialSnapshot.categoryId !== "urdu" || initialSnapshot.paperCategoryIds !== null || initialSnapshot.mode !== "quiz" || initialSnapshot.scope !== "all") {
+        errors.push("Urdu Quiz did not use the v8 category-session schema.");
       }
       if (!initialSnapshot || initialSnapshot.rangeStart !== 1 || initialSnapshot.rangeEnd !== urduQuestions.length || initialSnapshot.rangePoolSize !== urduQuestions.length) errors.push("Urdu Quiz did not store its full selected range.");
       if (!initialSnapshot
@@ -3147,7 +3931,7 @@ async function main() {
         await pause();
       }
       const resumeSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!resumeSnapshot || resumeSnapshot.version !== 7 || resumeSnapshot.currentIndex !== 1 || resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== secondCorrectRenderedIndex || resumeSnapshot.score !== 0) errors.push("Urdu Quiz pending checkpoint is invalid.");
+      if (!resumeSnapshot || resumeSnapshot.version !== 8 || resumeSnapshot.computerSourceScope !== "all" || resumeSnapshot.currentIndex !== 1 || resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== secondCorrectRenderedIndex || resumeSnapshot.score !== 0) errors.push("Urdu Quiz pending checkpoint is invalid.");
       if (!resumeSnapshot || !resumeSnapshot.answerHistory[0] || resumeSnapshot.answerHistory[0][0] !== firstWrongRenderedIndex || resumeSnapshot.answerHistory[0][1] !== true || !resumeSnapshot.answerHistory[1] || resumeSnapshot.answerHistory[1][0] !== secondCorrectRenderedIndex || resumeSnapshot.answerHistory[1][1] !== false) {
         errors.push("Urdu Quiz did not persist its submitted and pending answer states.");
       }
@@ -3205,7 +3989,7 @@ async function main() {
         .map((element) => element.textContent);
       const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
       if (!visible(document.querySelector("#continue-session-card")) || !document.querySelector("#continue-session-title").textContent.includes("Urdu")) errors.push("Reload did not offer Continue for the Urdu Quiz.");
-      if (!storedBeforeContinue || storedBeforeContinue.version !== 7 || storedBeforeContinue.categoryId !== "urdu" || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds) || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders) || JSON.stringify(storedBeforeContinue.answerHistory) !== JSON.stringify(expected.answerHistory)) {
+      if (!storedBeforeContinue || storedBeforeContinue.version !== 8 || storedBeforeContinue.computerSourceScope !== "all" || storedBeforeContinue.categoryId !== "urdu" || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds) || JSON.stringify(storedBeforeContinue.optionOrders) !== JSON.stringify(expected.optionOrders) || JSON.stringify(storedBeforeContinue.answerHistory) !== JSON.stringify(expected.answerHistory)) {
         errors.push("Reload changed the saved Urdu Quiz IDs, option order, or answer states.");
       }
       document.querySelector("#continue-session-button").click();
@@ -3907,8 +4691,8 @@ async function main() {
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Custom Paper question screen has horizontal overflow on mobile.");
 
       const initialSnapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!initialSnapshot || initialSnapshot.version !== 7 || initialSnapshot.sessionKind !== "paper") errors.push("Custom Paper was not stored with the v7 paper-session schema.");
-      if (!initialSnapshot || initialSnapshot.categoryId !== null || initialSnapshot.mode !== "quiz" || initialSnapshot.scope !== "all" || initialSnapshot.partIndex !== null || initialSnapshot.importantOnly !== false) errors.push("Custom Paper stored invalid category/mode/scope fields.");
+      if (!initialSnapshot || initialSnapshot.version !== 8 || initialSnapshot.sessionKind !== "paper") errors.push("Custom Paper was not stored with the v8 paper-session schema.");
+      if (!initialSnapshot || initialSnapshot.categoryId !== null || initialSnapshot.computerSourceScope !== null || initialSnapshot.mode !== "quiz" || initialSnapshot.scope !== "all" || initialSnapshot.partIndex !== null || initialSnapshot.importantOnly !== false) errors.push("Custom Paper stored invalid category/mode/scope fields.");
       if (!initialSnapshot || initialSnapshot.rangeStart !== null || initialSnapshot.rangeEnd !== null || initialSnapshot.rangePoolSize !== null || initialSnapshot.rangePoolQuestionIds !== null || initialSnapshot.rangeQuestionIds !== null) errors.push("Custom Paper incorrectly stored category-range metadata.");
       if (!initialSnapshot || JSON.stringify(initialSnapshot.paperCategoryIds) !== JSON.stringify(selectedCategoryIds)) errors.push("Custom Paper did not store the selected category IDs in data order.");
       if (!initialSnapshot || !Array.isArray(initialSnapshot.questionIds) || initialSnapshot.questionIds.length !== 100 || new Set(initialSnapshot.questionIds).size !== 100) errors.push("Custom Paper did not contain exactly 100 unique question IDs.");
@@ -4123,7 +4907,7 @@ async function main() {
       const continueMeta = document.querySelector("#continue-session-meta").textContent;
       if (!continueMeta.includes("Custom Paper") || !continueMeta.includes("2 categories") || !continueMeta.includes("Question " + (expected.currentIndex + 1) + " of 100")) errors.push("Custom Paper Continue metadata was incomplete.");
       const storedBeforeContinue = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (!storedBeforeContinue || storedBeforeContinue.version !== 7 || storedBeforeContinue.sessionKind !== "paper" || storedBeforeContinue.categoryId !== null) errors.push("Reload changed the Custom Paper session schema.");
+      if (!storedBeforeContinue || storedBeforeContinue.version !== 8 || storedBeforeContinue.sessionKind !== "paper" || storedBeforeContinue.categoryId !== null || storedBeforeContinue.computerSourceScope !== null) errors.push("Reload changed the Custom Paper session schema.");
       if (!storedBeforeContinue || storedBeforeContinue.rangeStart !== null || storedBeforeContinue.rangeEnd !== null || storedBeforeContinue.rangePoolSize !== null || storedBeforeContinue.rangePoolQuestionIds !== null || storedBeforeContinue.rangeQuestionIds !== null) errors.push("Reload added range metadata to Custom Paper.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.paperCategoryIds) !== JSON.stringify(expected.selectedCategoryIds)) errors.push("Reload changed the selected Custom Paper categories.");
       if (!storedBeforeContinue || JSON.stringify(storedBeforeContinue.questionIds) !== JSON.stringify(expected.questionIds)) errors.push("Reload changed the Custom Paper question IDs/order.");
@@ -4312,7 +5096,18 @@ async function main() {
     const { resumeExpected, legacyV6Snapshot, ...normalSummary } = normalResult;
     const result = {
       ...normalSummary,
-      errors: retryFifoResult.errors
+      errors: computerSourceFixture.errors
+        .concat(computerSourceUiResult.errors)
+        .concat(computerSourceResponsiveResult.errors)
+        .concat(computerSourceDesktopResult.errors)
+        .concat(computerSourceFlowResult.errors)
+        .concat(computerSourceResumeResult.errors)
+        .concat(computerSourceV7MigrationResult.errors)
+        .concat(computerSourceV6MigrationResult.errors)
+        .concat(computerSourceInvalidResult.errors)
+        .concat(computerSourceTamperResult.errors)
+        .concat(computerSourceRetryResult.errors)
+        .concat(retryFifoResult.errors)
         .concat(retryMismatchSeedResult.errors)
         .concat(retryMismatchResumeResult.errors)
         .concat(retryLearnResumeResult.errors)
@@ -4367,6 +5162,22 @@ async function main() {
       },
       difficult: difficultResult,
       urdu: urduResumeResult,
+      computerSources: {
+        counts: computerSourceFlowResult.counts,
+        uiAndResponsive: computerSourceUiResult.errors.length === 0
+          && computerSourceResponsiveResult.errors.length === 0
+          && computerSourceDesktopResult.errors.length === 0,
+        notesLearnQuizImportantDifficult: computerSourceFlowResult.errors.length === 0,
+        v8SourceRestored: computerSourceResumeResult.errors.length === 0,
+        v7MigratedToAll: computerSourceV7MigrationResult.errors.length === 0,
+        v6MigratedToAll: computerSourceV6MigrationResult.errors.length === 0,
+        invalidScopeRejected: computerSourceInvalidResult.errors.length === 0,
+        tamperedScopeRejected: computerSourceTamperResult.errors.length === 0,
+        retryOriginalDrainId: computerSourceRetryResult.originalDrainId,
+        retryAllDrainIds: computerSourceRetryResult.allDrainIds,
+        otherSourcesDidNotBlock: computerSourceRetryResult.otherSourcesDidNotBlock,
+        screenshots: computerSourceScreenshots
+      },
       retryQueue: {
         initialFiveAndCadence: retryLifecycleSetup.errors.length === 0,
         fiveCorrectReviews: retryLifecycleResume.fiveReviewCountdown,

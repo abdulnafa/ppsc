@@ -772,6 +772,67 @@ function validateIbesBank(questions) {
   }
 }
 
+function validateComputerSourceScopes(questions) {
+  const computerQuestions = questions.filter((question) => question.categoryId === "basic-computer-studies");
+  const scopes = {
+    all: computerQuestions,
+    "initial-original": computerQuestions.filter((question) => (
+      String(question.id || "").startsWith("IBES-") && question.kind === "source"
+    )),
+    "initial-related": computerQuestions.filter((question) => (
+      String(question.id || "").startsWith("IBES-") && question.kind === "similar"
+    )),
+    other: computerQuestions.filter((question) => !String(question.id || "").startsWith("IBES-"))
+  };
+  const expected = {
+    all: { total: 2554, important: 458 },
+    "initial-original": { total: 1088, important: 397 },
+    "initial-related": { total: 1088, important: 19 },
+    other: { total: 378, important: 42 }
+  };
+  const isImportant = (question) => question.isImportant === true || Number(question.repeatCount) >= 2;
+
+  for (const [scope, scopeQuestions] of Object.entries(scopes)) {
+    const importantCount = scopeQuestions.filter(isImportant).length;
+    if (scopeQuestions.length !== expected[scope].total) {
+      error(`Basic Computer ${scope} scope count is ${scopeQuestions.length}; expected ${expected[scope].total}`);
+    }
+    if (importantCount !== expected[scope].important) {
+      error(`Basic Computer ${scope} important count is ${importantCount}; expected ${expected[scope].important}`);
+    }
+  }
+
+  if (scopes["initial-original"].some((question) => !/^IBES-Q\d{4}-SRC$/.test(String(question.id || "")))) {
+    error("Basic Computer initial-original scope must contain only IBES source MCQs");
+  }
+  if (scopes["initial-related"].some((question) => !/^IBES-Q\d{4}-SIM$/.test(String(question.id || "")))) {
+    error("Basic Computer initial-related scope must contain only IBES generated related-practice MCQs");
+  }
+  if (scopes.other.some((question) => !/^(?:P23[4-9]-Q\d{3}|ADV2E102-U\d{4}-Q\d{3})-(?:SRC|SIM)$/.test(String(question.id || "")))) {
+    error("Basic Computer other scope must contain only PPSC 110 Edition or ADV2E102 MCQs");
+  }
+  if (scopes.other.filter((question) => question.kind === "source").length !== 189
+    || scopes.other.filter((question) => question.kind === "similar").length !== 189) {
+    error("Basic Computer other scope must contain exactly 189 source and 189 related-practice MCQs");
+  }
+  const scopedIds = scopes["initial-original"].concat(scopes["initial-related"], scopes.other)
+    .map((question) => String(question.id));
+  if (scopedIds.length !== computerQuestions.length || new Set(scopedIds).size !== computerQuestions.length) {
+    error("Basic Computer source scopes must form one exclusive, complete partition of the category");
+  }
+
+  const repeatEvidence = loadReleaseRepeatEvidence();
+  const ibesVerifiedSkips = repeatEvidence && Array.isArray(repeatEvidence.verifiedSkips)
+    ? repeatEvidence.verifiedSkips.filter((entry) => entry.corpus === "IBES").length
+    : 0;
+  if (ibesVerifiedSkips !== 207 || scopes["initial-original"].length + ibesVerifiedSkips !== 1295) {
+    error(`IBES source accounting is ${scopes["initial-original"].length} retained + ${ibesVerifiedSkips} repeats; expected 1,088 + 207 = 1,295 source-present MCQs`);
+  }
+  if (computerQuestions.some((question) => /^IBES-Q0254-(?:SRC|SIM)$/.test(String(question.id || "")))) {
+    error("Basic Computer source scopes must not fabricate absent printed Q254");
+  }
+}
+
 function validateAdv2e102Bank(questions) {
   const advQuestions = questions.filter((question) => String(question.id || "").startsWith("ADV2E102-"));
   const sourceQuestions = advQuestions.filter((question) => question.kind === "source");
@@ -819,7 +880,11 @@ function validateHtml() {
     "paper-selection-summary", "paper-setup-status", "paper-start-button",
     "mode-screen", "quiz-screen", "results-screen", "category-grid",
     "continue-session-card", "continue-session-button", "continue-session-title", "continue-session-meta",
-    "mode-category", "study-scope-panel", "standard-mode-options", "learn-mode-button", "quiz-mode-button",
+    "mode-category", "computer-source-panel", "computer-source-title", "computer-source-description",
+    "computer-source-all", "computer-source-initial-original", "computer-source-initial-related",
+    "computer-source-other", "computer-source-count-all", "computer-source-count-initial-original",
+    "computer-source-count-initial-related", "computer-source-count-other",
+    "study-scope-panel", "standard-mode-options", "learn-mode-button", "quiz-mode-button",
     "study-notes-mode-button", "question-range-options", "question-range-title",
     "question-range-context", "question-range-form", "question-range-start-input",
     "question-range-end-input", "question-range-help", "question-range-summary",
@@ -848,6 +913,31 @@ function validateHtml() {
   for (const id of requiredIds) {
     const matches = html.match(new RegExp(`\\bid=["']${id}["']`, "g")) || [];
     if (matches.length !== 1) error(`index.html: expected one #${id}, found ${matches.length}`);
+  }
+  const computerSourcePanel = html.match(/<section\b[^>]*\bid=["']computer-source-panel["'][^>]*>/i)?.[0] || "";
+  if (!/\bhidden(?:\s|=|>)/i.test(computerSourcePanel)
+    || !/\baria-labelledby=["']computer-source-title["']/i.test(computerSourcePanel)) {
+    error("index.html: #computer-source-panel must begin hidden and be labelled by #computer-source-title");
+  }
+  const computerSourceControls = [
+    ["computer-source-all", "all", true],
+    ["computer-source-initial-original", "initial-original", false],
+    ["computer-source-initial-related", "initial-related", false],
+    ["computer-source-other", "other", false]
+  ];
+  const computerSourceInputs = html.match(/<input\b[^>]*\bname=["']computer-source["'][^>]*>/gi) || [];
+  if (computerSourceInputs.length !== 4) {
+    error(`index.html: expected exactly four native computer-source radios, found ${computerSourceInputs.length}`);
+  }
+  for (const [id, value, checked] of computerSourceControls) {
+    const input = html.match(new RegExp(`<input\\b(?=[^>]*\\bid=["']${id}["'])(?=[^>]*\\bname=["']computer-source["'])(?=[^>]*\\btype=["']radio["'])(?=[^>]*\\bvalue=["']${value}["'])[^>]*>`, "i"))?.[0] || "";
+    if (!input) error(`index.html: #${id} must be a native radio named computer-source with value ${value}`);
+    if (/\bchecked(?:\s|=|>)/i.test(input) !== checked) {
+      error(`index.html: #${id} ${checked ? "must" : "must not"} be the default checked source scope`);
+    }
+    if (!new RegExp(`<label\\b[^>]*\\bfor=["']${id}["'][^>]*>`, "i").test(html)) {
+      error(`index.html: #${id} must have an associated label`);
+    }
   }
   const retryDialog = html.match(/<dialog\b[^>]*\bid=["']retry-dialog["'][^>]*>/i)?.[0] || "";
   if (!retryDialog) {
@@ -975,6 +1065,25 @@ function validateRetryQueueContract() {
   }
 }
 
+function validateComputerSourceAppContract() {
+  const app = fs.readFileSync(appPath, "utf8");
+  const requiredConstants = [
+    ["SESSION_STORAGE_VERSION", "8"],
+    ["RANGE_SESSION_STORAGE_VERSION", "7"],
+    ["LEGACY_SESSION_STORAGE_VERSION", "6"],
+    ["BASIC_COMPUTER_CATEGORY_ID", '"basic-computer-studies"']
+  ];
+  for (const [name, value] of requiredConstants) {
+    const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    if (!new RegExp(`\\bvar\\s+${name}\\s*=\\s*${escapedValue}\\s*;`).test(app)) {
+      error(`app.js: ${name} must remain ${value} for the Basic Computer source/session contract`);
+    }
+  }
+  if (!/\bvar\s+COMPUTER_SOURCE_SCOPES\s*=\s*\[\s*["']all["']\s*,\s*["']initial-original["']\s*,\s*["']initial-related["']\s*,\s*["']other["']\s*\]\s*;/.test(app)) {
+    error("app.js: COMPUTER_SOURCE_SCOPES must preserve all four documented values in order");
+  }
+}
+
 const data = loadData();
 const result = validateData(data);
 const gkStudyNotesBundle = loadGkStudyNotes();
@@ -982,10 +1091,12 @@ validateGkStudyNotes(gkStudyNotesBundle, data, result.questions);
 validateRepeatMetadata(data, result.questions);
 validateKnownCorrections(result.questions);
 validateIbesBank(result.questions);
+validateComputerSourceScopes(result.questions);
 validateAdv2e102Bank(result.questions);
 validateHtml();
 validateFonts();
 validateRetryQueueContract();
+validateComputerSourceAppContract();
 
 console.log(`Site data: ${result.categories.length} categories, ${result.questions.length} questions.`);
 console.log(`GK Study Notes: ${gkStudyNotesBundle.data && Array.isArray(gkStudyNotesBundle.data.notes) ? gkStudyNotesBundle.data.notes.length : 0} notes.`);

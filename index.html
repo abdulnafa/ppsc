@@ -6,10 +6,10 @@
   <meta name="description" content="Free category-wise MCQ practice for the PPSC General Ability test.">
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
-  <link rel="stylesheet" href="styles.css?v=20260906-2">
+  <link rel="stylesheet" href="styles.css?v=20260909-2">
   <script src="data/questions.js?v=20260902-2" defer></script>
   <script src="data/gk-study-notes.js?v=20260902-2" defer></script>
-  <script src="app.js?v=20260909-1" defer></script>
+  <script src="app.js?v=20260909-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -303,11 +303,56 @@
         <h1 id="mode-title">How would you like to prepare?</h1>
         <p class="mode-intro">Learn each answer, test yourself in quiz mode, or practise only the questions you marked as difficult.</p>
 
+        <section id="computer-source-panel" class="computer-source-panel" aria-labelledby="computer-source-title" hidden>
+          <div class="computer-source-heading">
+            <span class="eyebrow">QUESTION SOURCE</span>
+            <h2 id="computer-source-title">Choose Basic Computer questions</h2>
+            <p id="computer-source-description">The Initial PDF contained 1,295 readable entries; 207 repeated questions were merged, leaving 1,088 unique originals.</p>
+          </div>
+
+          <fieldset class="computer-source-fieldset" aria-describedby="computer-source-description">
+            <legend class="visually-hidden">Basic Computer question source</legend>
+            <div class="computer-source-options">
+              <label class="computer-source-option" for="computer-source-all">
+                <input id="computer-source-all" name="computer-source" type="radio" value="all" checked>
+                <span class="computer-source-option-copy">
+                  <strong>All Basic Computer</strong>
+                  <small><span id="computer-source-count-all">0</span> MCQs</small>
+                </span>
+              </label>
+
+              <label class="computer-source-option" for="computer-source-initial-original">
+                <input id="computer-source-initial-original" name="computer-source" type="radio" value="initial-original">
+                <span class="computer-source-option-copy">
+                  <strong>Initial PDF &mdash; Original MCQs</strong>
+                  <small>IBES CAPSULE Computer 2025 &middot; <span id="computer-source-count-initial-original">0</span> MCQs</small>
+                </span>
+              </label>
+
+              <label class="computer-source-option" for="computer-source-initial-related">
+                <input id="computer-source-initial-related" name="computer-source" type="radio" value="initial-related">
+                <span class="computer-source-option-copy">
+                  <strong>Initial PDF &mdash; Related Practice</strong>
+                  <small>Related practice based on Initial PDF topics &middot; <span id="computer-source-count-initial-related">0</span> MCQs</small>
+                </span>
+              </label>
+
+              <label class="computer-source-option" for="computer-source-other">
+                <input id="computer-source-other" name="computer-source" type="radio" value="other">
+                <span class="computer-source-option-copy">
+                  <strong>Other Papers</strong>
+                  <small>PPSC 110 and Advanced Volume 2 &middot; <span id="computer-source-count-other">0</span> MCQs</small>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+        </section>
+
         <section id="study-scope-panel" class="study-scope-panel" aria-labelledby="study-scope-title">
           <div class="study-scope-heading">
             <div>
               <span class="eyebrow">STUDY SCOPE</span>
-              <h2 id="study-scope-title">Study the full category</h2>
+              <h2 id="study-scope-title">Study the selected question set</h2>
             </div>
             <p id="study-scope-summary" data-study-scope-summary>All questions in this category will be included.</p>
           </div>

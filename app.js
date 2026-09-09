@@ -12,11 +12,14 @@
   var DIFFICULT_STORAGE_KEY = "ppsc-prep:difficult-question-ids:v1";
   var SESSION_STORAGE_KEY = "ppsc-prep:active-session:v1";
   var RETRY_QUEUE_STORAGE_KEY = "ppsc-prep:retry-queue:v1";
-  var SESSION_STORAGE_VERSION = 7;
+  var SESSION_STORAGE_VERSION = 8;
+  var RANGE_SESSION_STORAGE_VERSION = 7;
   var LEGACY_SESSION_STORAGE_VERSION = 6;
   var RETRY_QUEUE_STORAGE_VERSION = 1;
   var RETRY_QUEUE_INCREMENT = 5;
   var RETRY_QUEUE_SPACING = 3;
+  var BASIC_COMPUTER_CATEGORY_ID = "basic-computer-studies";
+  var COMPUTER_SOURCE_SCOPES = ["all", "initial-original", "initial-related", "other"];
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
   var allQuestions = Array.isArray(data.questions) ? data.questions : [];
@@ -58,6 +61,7 @@
     questions: [],
     mode: null,
     scope: "all",
+    computerSourceScope: "all",
     partIndex: null,
     importantOnly: false,
     rangeStart: null,
@@ -127,8 +131,15 @@
     elements.continueSessionTitle = firstElement(["#continue-session-title", "[data-continue-session-title]"]);
     elements.continueSessionMeta = firstElement(["#continue-session-meta", "[data-continue-session-meta]"]);
     elements.modeCategory = firstElement(["#mode-category", "[data-mode-category]"]);
+    elements.computerSourcePanel = firstElement(["#computer-source-panel", "[data-computer-source-panel]"]);
+    elements.computerSourceRadios = document.querySelectorAll("input[name='computer-source']");
+    elements.computerSourceCountAll = firstElement(["#computer-source-count-all", "[data-computer-source-count='all']"]);
+    elements.computerSourceCountInitialOriginal = firstElement(["#computer-source-count-initial-original", "[data-computer-source-count='initial-original']"]);
+    elements.computerSourceCountInitialRelated = firstElement(["#computer-source-count-initial-related", "[data-computer-source-count='initial-related']"]);
+    elements.computerSourceCountOther = firstElement(["#computer-source-count-other", "[data-computer-source-count='other']"]);
     elements.importantOnlyCheckbox = firstElement(["#important-only-checkbox", "[data-important-only]"]);
     elements.importantCount = firstElement(["#important-count", "[data-important-count]"]);
+    elements.studyScopeTitle = firstElement(["#study-scope-title", "[data-study-scope-title]"]);
     elements.studyScopeSummary = firstElement(["#study-scope-summary", "[data-study-scope-summary]"]);
     elements.studyScopePanel = firstElement(["#study-scope-panel", "[data-study-scope-panel]"]);
     elements.learnModeButton = firstElement(["#learn-mode-button", "[data-start-learn]"]);
@@ -268,6 +279,40 @@
     });
   }
 
+  function isBasicComputerCategory(categoryId) {
+    return String(categoryId || "") === BASIC_COMPUTER_CATEGORY_ID;
+  }
+
+  function isComputerSourceScope(value) {
+    return COMPUTER_SOURCE_SCOPES.includes(value);
+  }
+
+  function computerSourceScopeForCategory(categoryId, value) {
+    if (!isBasicComputerCategory(categoryId)) return "all";
+    return isComputerSourceScope(value) ? value : "all";
+  }
+
+  function computerSourceScopeForQuestion(question) {
+    if (!question || !isBasicComputerCategory(question.categoryId)) return "all";
+    var questionId = String(question.id || "");
+    if (questionId.indexOf("IBES-Q") === 0 && question.kind === "source") return "initial-original";
+    if (questionId.indexOf("IBES-Q") === 0 && question.kind === "similar") return "initial-related";
+    return "other";
+  }
+
+  function questionMatchesComputerSourceScope(question, categoryId, computerSourceScope) {
+    if (!question || String(question.categoryId || "") !== String(categoryId || "")) return false;
+    var selectedScope = computerSourceScopeForCategory(categoryId, computerSourceScope);
+    return selectedScope === "all" || computerSourceScopeForQuestion(question) === selectedScope;
+  }
+
+  function computerSourceScopeLabel(computerSourceScope) {
+    if (computerSourceScope === "initial-original") return "Initial PDF \u2014 Original MCQs";
+    if (computerSourceScope === "initial-related") return "Initial PDF \u2014 Related Practice";
+    if (computerSourceScope === "other") return "Other Papers";
+    return "All Basic Computer";
+  }
+
   function sessionModeLabel(mode, scope) {
     var modeName = mode === "learn" ? "Learn" : "Quiz";
     return scope === "difficult" ? "Difficult " + modeName : modeName;
@@ -288,10 +333,24 @@
       : "";
   }
 
-  function sessionSelectionLabel(partIndex, importantOnly, rangeStart, rangeEnd, rangePoolSize) {
+  function sessionSelectionLabel(
+    partIndex,
+    importantOnly,
+    rangeStart,
+    rangeEnd,
+    rangePoolSize,
+    computerSourceScope,
+    categoryId
+  ) {
     var filterLabel = importantOnly ? "All Important Questions" : "All Questions";
     var rangeLabel = sessionRangeLabel(rangeStart, rangeEnd, rangePoolSize);
-    return rangeLabel ? filterLabel + " \u00b7 " + rangeLabel : filterLabel;
+    var labels = [];
+    if (isBasicComputerCategory(categoryId)) {
+      labels.push(computerSourceScopeLabel(computerSourceScopeForCategory(categoryId, computerSourceScope)));
+    }
+    labels.push(filterLabel);
+    if (rangeLabel) labels.push(rangeLabel);
+    return labels.join(" \u00b7 ");
   }
 
   function scoreForResponses(responses, questions) {
@@ -344,7 +403,9 @@
           snapshot.importantOnly,
           snapshot.rangeStart,
           snapshot.rangeEnd,
-          snapshot.rangePoolSize
+          snapshot.rangePoolSize,
+          snapshot.computerSourceScope,
+          snapshot.categoryId
         );
     if (elements.continueSessionTitle) {
       elements.continueSessionTitle.textContent = paperSession ? "Continue Custom Paper" : "Continue " + category.name;
@@ -376,7 +437,8 @@
   function normalizeStoredSession(savedValue) {
     if (!savedValue || typeof savedValue !== "object" || Array.isArray(savedValue)) return null;
     var legacySession = savedValue.version === LEGACY_SESSION_STORAGE_VERSION;
-    if (!legacySession && savedValue.version !== SESSION_STORAGE_VERSION) return null;
+    var rangeSession = savedValue.version === RANGE_SESSION_STORAGE_VERSION;
+    if (!legacySession && !rangeSession && savedValue.version !== SESSION_STORAGE_VERSION) return null;
     if (savedValue.bankSignature !== questionBankSignature) return null;
     if (savedValue.sessionKind !== "category" && savedValue.sessionKind !== "paper") return null;
     if (savedValue.mode !== "learn" && savedValue.mode !== "quiz") return null;
@@ -387,6 +449,17 @@
     var category = paperSession ? null : findCategory(String(savedValue.categoryId || ""));
     if (paperSession && savedValue.categoryId !== null) return null;
     if (!paperSession && !category) return null;
+    var computerSourceScope = paperSession ? null : "all";
+    if (savedValue.version === SESSION_STORAGE_VERSION) {
+      if (paperSession) {
+        if (savedValue.computerSourceScope !== null) return null;
+      } else if (isBasicComputerCategory(category.id)) {
+        if (!isComputerSourceScope(savedValue.computerSourceScope)) return null;
+        computerSourceScope = savedValue.computerSourceScope;
+      } else if (savedValue.computerSourceScope !== "all") {
+        return null;
+      }
+    }
     if (savedValue.partIndex !== null) return null;
     var partIndex = null;
     if (typeof savedValue.importantOnly !== "boolean") return null;
@@ -443,7 +516,12 @@
       if (canonicalQuestions.some(function (question) {
         return question.categoryId !== category.id;
       })) return null;
-      selectedQuestionIds = questionsForSelection(category.id, partIndex, importantOnly).map(function (question) {
+      selectedQuestionIds = questionsForSelection(
+        category.id,
+        partIndex,
+        importantOnly,
+        computerSourceScope
+      ).map(function (question) {
         return String(question.id);
       });
       var questionIdSet = new Set(questionIds);
@@ -574,6 +652,7 @@
       paperCategoryIds: paperSession ? paperCategoryIds.slice() : null,
       mode: savedValue.mode,
       scope: savedValue.scope,
+      computerSourceScope: computerSourceScope,
       partIndex: partIndex,
       importantOnly: importantOnly,
       rangeStart: rangeStart,
@@ -648,6 +727,13 @@
   function saveActiveSession() {
     if (!state.mode || state.questions.length === 0) return false;
     if (!isPaperSession() && !state.category) return false;
+    if (
+      (isPaperSession() && state.computerSourceScope !== null)
+      || (!isPaperSession() && isBasicComputerCategory(state.category.id)
+        && !isComputerSourceScope(state.computerSourceScope))
+      || (!isPaperSession() && !isBasicComputerCategory(state.category.id)
+        && state.computerSourceScope !== "all")
+    ) return false;
     if (!isPaperSession() && (
       !hasValidRangeMetadata(state.rangeStart, state.rangeEnd, state.rangePoolSize)
       || !Array.isArray(state.rangePoolQuestionIds)
@@ -693,6 +779,7 @@
       paperCategoryIds: isPaperSession() ? state.paperCategoryIds.slice() : null,
       mode: state.mode,
       scope: state.scope,
+      computerSourceScope: isPaperSession() ? null : state.computerSourceScope,
       partIndex: null,
       importantOnly: state.importantOnly,
       rangeStart: isPaperSession() ? null : state.rangeStart,
@@ -749,6 +836,7 @@
     state.questions = normalized.questions;
     state.mode = normalized.snapshot.mode;
     state.scope = normalized.snapshot.scope;
+    state.computerSourceScope = normalized.snapshot.computerSourceScope;
     state.partIndex = normalized.snapshot.partIndex;
     state.importantOnly = normalized.snapshot.importantOnly;
     state.rangeStart = normalized.snapshot.rangeStart;
@@ -894,16 +982,17 @@
     return String(state.category.id);
   }
 
-  function retryQuestionMatchesCategory(questionId, categoryId) {
+  function retryQuestionMatchesCategory(questionId, categoryId, computerSourceScope) {
     var question = questionsById.get(String(questionId || ""));
-    return Boolean(question) && String(question.categoryId || "") === String(categoryId || "");
+    return Boolean(question)
+      && questionMatchesComputerSourceScope(question, categoryId, computerSourceScope);
   }
 
   function activeCategoryRetryItems() {
     var categoryId = activeRetryCategoryId();
     if (!categoryId) return [];
     return retryQueueState.items.filter(function (item) {
-      return retryQuestionMatchesCategory(item.questionId, categoryId);
+      return retryQuestionMatchesCategory(item.questionId, categoryId, state.computerSourceScope);
     });
   }
 
@@ -911,7 +1000,7 @@
     var attempt = retryQueueState.activeAttempt;
     var categoryId = activeRetryCategoryId();
     return Boolean(attempt && categoryId)
-      && retryQuestionMatchesCategory(attempt.questionId, categoryId);
+      && retryQuestionMatchesCategory(attempt.questionId, categoryId, state.computerSourceScope);
   }
 
   function updateRetryQueueUI(announcement) {
@@ -992,7 +1081,11 @@
     if (
       !question
       || !isRetryEligibleQuizSession()
-      || String(question.categoryId || "") !== String(state.category.id)
+      || !questionMatchesComputerSourceScope(
+        question,
+        state.category.id,
+        state.computerSourceScope
+      )
     ) return null;
     retryQueueState.practiceStep += 1;
     var item = null;
@@ -1026,7 +1119,7 @@
     if (!categoryId) return null;
     var excludedId = String(excludedQuestionId || "");
     var dueItems = retryQueueState.items.filter(function (item) {
-      return retryQuestionMatchesCategory(item.questionId, categoryId)
+      return retryQuestionMatchesCategory(item.questionId, categoryId, state.computerSourceScope)
         && (includeFutureItems || item.dueStep <= retryQueueState.practiceStep);
     }).sort(function (left, right) {
       return left.sequence - right.sequence;
@@ -1211,6 +1304,10 @@
     var urduQuestion = isUrduCategoryQuestion(question);
     var category = findCategory(question.categoryId);
     var categoryItemCount = activeCategoryRetryItems().length;
+    var categorySelectionLabel = category ? category.name : "";
+    if (category && isBasicComputerCategory(category.id)) {
+      categorySelectionLabel += " \u00b7 " + computerSourceScopeLabel(state.computerSourceScope);
+    }
     elements.retryDialog.classList.toggle("is-urdu", urduQuestion);
     if (elements.retryDialogTitle) {
       elements.retryDialogTitle.textContent = urduQuestion ? "فوری دہرائی" : "Quick review";
@@ -1220,7 +1317,7 @@
     if (elements.retryDialogQueueMeta) {
       elements.retryDialogQueueMeta.textContent = urduQuestion
         ? "دہرائی کی قطار میں " + categoryItemCount + " سوال"
-        : (category ? category.name + " \u00b7 " : "") + categoryItemCount
+        : (categorySelectionLabel ? categorySelectionLabel + " \u00b7 " : "") + categoryItemCount
           + (categoryItemCount === 1 ? " question queued" : " questions queued");
       elements.retryDialogQueueMeta.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogQueueMeta.dir = urduQuestion ? "rtl" : "ltr";
@@ -1230,7 +1327,7 @@
     if (elements.retryQuestionKind) {
       elements.retryQuestionKind.textContent = urduQuestion
         ? "دہرائی کا سوال"
-        : "REVIEW QUEUE" + (category ? " \u00b7 " + category.name.toUpperCase() : "");
+        : "REVIEW QUEUE" + (categorySelectionLabel ? " \u00b7 " + categorySelectionLabel.toUpperCase() : "");
       elements.retryQuestionKind.classList.toggle("is-important", isImportantQuestion(question));
       elements.retryQuestionKind.lang = urduQuestion ? "ur" : "en";
       elements.retryQuestionKind.dir = urduQuestion ? "rtl" : "ltr";
@@ -1565,20 +1662,31 @@
     });
   }
 
-  function baseQuestionsForSelection(categoryId, partIndex) {
-    return categoryQuestions(categoryId);
+  function baseQuestionsForSelection(categoryId, partIndex, computerSourceScope) {
+    var selectedComputerSourceScope = computerSourceScopeForCategory(categoryId, computerSourceScope);
+    return categoryQuestions(categoryId).filter(function (question) {
+      return questionMatchesComputerSourceScope(question, categoryId, selectedComputerSourceScope);
+    });
   }
 
-  function questionsForSelection(categoryId, partIndex, importantOnly) {
-    return baseQuestionsForSelection(categoryId, partIndex).filter(function (question) {
+  function questionsForSelection(categoryId, partIndex, importantOnly, computerSourceScope) {
+    return baseQuestionsForSelection(categoryId, partIndex, computerSourceScope).filter(function (question) {
       return !importantOnly || isImportantQuestion(question);
     });
   }
 
-  function difficultQuestionCount(categoryId, partIndex, importantOnly) {
+  function difficultQuestionCount(categoryId, partIndex, importantOnly, computerSourceScope) {
     var selectedPart = arguments.length >= 2 ? partIndex : state.partIndex;
     var selectedImportantOnly = arguments.length >= 3 ? importantOnly : state.importantOnly;
-    return questionsForSelection(categoryId, selectedPart, selectedImportantOnly).filter(function (question) {
+    var selectedComputerSourceScope = arguments.length >= 4
+      ? computerSourceScope
+      : state.computerSourceScope;
+    return questionsForSelection(
+      categoryId,
+      selectedPart,
+      selectedImportantOnly,
+      selectedComputerSourceScope
+    ).filter(function (question) {
       return difficultQuestionIds.has(String(question.id));
     }).length;
   }
@@ -1936,7 +2044,15 @@
   function openQuickNotes() {
     if (!state.category || !elements.quickNotesScreen) return;
     var category = state.category;
-    var questions = categoryQuestions(category.id);
+    var questions = questionsForSelection(
+      category.id,
+      null,
+      false,
+      state.computerSourceScope
+    );
+    var sourceLabel = isBasicComputerCategory(category.id)
+      ? computerSourceScopeLabel(state.computerSourceScope)
+      : "";
     quickNotesState.categoryId = category.id;
     quickNotesState.query = "";
     quickNotesState.importantOnly = false;
@@ -1946,8 +2062,13 @@
     });
 
     if (elements.quickNotesSearch) elements.quickNotesSearch.value = "";
-    if (elements.quickNotesCategory) elements.quickNotesCategory.textContent = category.name;
-    if (elements.quickNotesTitle) elements.quickNotesTitle.textContent = category.name + " Question & Answer Notes";
+    if (elements.quickNotesCategory) {
+      elements.quickNotesCategory.textContent = category.name + (sourceLabel ? " \u00b7 " + sourceLabel : "");
+    }
+    if (elements.quickNotesTitle) {
+      elements.quickNotesTitle.textContent = category.name + " Question & Answer Notes"
+        + (sourceLabel ? " \u00b7 " + sourceLabel : "");
+    }
     if (elements.quickNotesCount) elements.quickNotesCount.textContent = String(questions.length);
     if (elements.gkStudyNotesCard) {
       setHidden(elements.gkStudyNotesCard, category.id !== "general-knowledge");
@@ -2371,14 +2492,68 @@
     return categoryQuestions(categoryId).length;
   }
 
-  function importantQuestionCount(categoryId) {
-    return categoryQuestions(categoryId).filter(isImportantQuestion).length;
+  function importantQuestionCount(categoryId, computerSourceScope) {
+    return baseQuestionsForSelection(categoryId, null, computerSourceScope).filter(isImportantQuestion).length;
+  }
+
+  function computerSourceCounts() {
+    var counts = {
+      all: 0,
+      "initial-original": 0,
+      "initial-related": 0,
+      other: 0
+    };
+    categoryQuestions(BASIC_COMPUTER_CATEGORY_ID).forEach(function (question) {
+      var sourceScope = computerSourceScopeForQuestion(question);
+      counts.all += 1;
+      if (Object.prototype.hasOwnProperty.call(counts, sourceScope) && sourceScope !== "all") {
+        counts[sourceScope] += 1;
+      }
+    });
+    return counts;
+  }
+
+  function updateComputerSourceUI(categoryId) {
+    var counts = computerSourceCounts();
+    var countElements = {
+      all: elements.computerSourceCountAll,
+      "initial-original": elements.computerSourceCountInitialOriginal,
+      "initial-related": elements.computerSourceCountInitialRelated,
+      other: elements.computerSourceCountOther
+    };
+    Object.keys(countElements).forEach(function (sourceScope) {
+      if (countElements[sourceScope]) countElements[sourceScope].textContent = String(counts[sourceScope]);
+    });
+
+    var basicComputerSelected = isBasicComputerCategory(categoryId);
+    var selectedScope = computerSourceScopeForCategory(categoryId, state.computerSourceScope);
+    if (state.sessionKind === "category") state.computerSourceScope = selectedScope;
+    if (elements.computerSourceRadios) {
+      elements.computerSourceRadios.forEach(function (radio) {
+        radio.checked = radio.value === selectedScope;
+        radio.disabled = !basicComputerSelected || !counts[radio.value];
+      });
+    }
+    setHidden(elements.computerSourcePanel, !basicComputerSelected);
+  }
+
+  function handleComputerSourceScopeChange(event) {
+    if (!state.category || !isBasicComputerCategory(state.category.id)) return;
+    var selectedScope = event && event.target ? event.target.value : "";
+    if (!isComputerSourceScope(selectedScope)) return;
+    state.computerSourceScope = selectedScope;
+    if (pendingRangeChoice) closeQuestionRangeOptions();
+    updateComputerSourceUI(state.category.id);
+    updateStudyScopeUI();
   }
 
   function populateStudyScopeUI(categoryId) {
     if (elements.importantOnlyCheckbox) {
       elements.importantOnlyCheckbox.checked = state.importantOnly;
-      elements.importantOnlyCheckbox.disabled = importantQuestionCount(categoryId) === 0;
+      elements.importantOnlyCheckbox.disabled = importantQuestionCount(
+        categoryId,
+        state.computerSourceScope
+      ) === 0;
     }
     updateStudyScopeUI();
   }
@@ -2387,23 +2562,55 @@
     if (!state.category) return;
 
     var categoryId = state.category.id;
-    var allInCategory = categoryQuestions(categoryId);
+    var allInCategory = baseQuestionsForSelection(categoryId, null, state.computerSourceScope);
     var importantInSelection = allInCategory.filter(isImportantQuestion).length;
-    var selectedQuestions = questionsForSelection(categoryId, null, state.importantOnly);
-    var selectionLabel = sessionSelectionLabel(state.partIndex, state.importantOnly);
+    if (state.importantOnly && importantInSelection === 0) state.importantOnly = false;
+    var selectedQuestions = questionsForSelection(
+      categoryId,
+      null,
+      state.importantOnly,
+      state.computerSourceScope
+    );
+    var selectionLabel = sessionSelectionLabel(
+      state.partIndex,
+      state.importantOnly,
+      null,
+      null,
+      null,
+      state.computerSourceScope,
+      categoryId
+    );
+
+    if (elements.importantOnlyCheckbox) {
+      elements.importantOnlyCheckbox.checked = state.importantOnly;
+      elements.importantOnlyCheckbox.disabled = importantInSelection === 0;
+    }
 
     if (elements.modeCategory) {
       elements.modeCategory.textContent = state.category.name + " · " + selectionLabel;
     }
+    if (elements.studyScopeTitle) {
+      elements.studyScopeTitle.textContent = isBasicComputerCategory(categoryId)
+        ? (state.computerSourceScope === "all"
+          ? "Study all Basic Computer questions"
+          : "Study the selected Basic Computer source")
+        : "Study the full category";
+    }
     if (elements.importantCount) {
+      var importantSelectionName = isBasicComputerCategory(categoryId)
+        ? " in this source selection"
+        : " in this category";
       elements.importantCount.textContent = importantInSelection + (importantInSelection === 1
-        ? " repeated MCQ in this category"
-        : " repeated MCQs in this category");
+        ? " repeated MCQ" + importantSelectionName
+        : " repeated MCQs" + importantSelectionName);
     }
     if (elements.studyScopeSummary) {
+      var sourceSummarySuffix = isBasicComputerCategory(categoryId)
+        ? " from " + computerSourceScopeLabel(state.computerSourceScope)
+        : "";
       elements.studyScopeSummary.textContent = state.importantOnly
-        ? "All " + selectedQuestions.length + " important questions selected"
-        : "All " + allInCategory.length + " questions selected";
+        ? "All " + selectedQuestions.length + " important questions selected" + sourceSummarySuffix
+        : "All " + allInCategory.length + " questions selected" + sourceSummarySuffix;
     }
 
     var hasSelectedQuestions = selectedQuestions.length > 0;
@@ -2414,12 +2621,27 @@
 
   function updateDifficultModeUI() {
     var categoryId = state.category ? state.category.id : "";
-    var count = categoryId ? difficultQuestionCount(categoryId, state.partIndex, state.importantOnly) : 0;
+    var count = categoryId ? difficultQuestionCount(
+      categoryId,
+      state.partIndex,
+      state.importantOnly,
+      state.computerSourceScope
+    ) : 0;
     var hasQuestions = count > 0;
 
     if (elements.difficultCount) {
       elements.difficultCount.textContent = String(count);
       elements.difficultCount.dataset.count = String(count);
+      var difficultSummary = elements.difficultCount.parentElement;
+      var difficultSummaryText = difficultSummary && Array.from(difficultSummary.childNodes).find(function (node) {
+        return node.nodeType === 3;
+      });
+      var difficultLocation = isBasicComputerCategory(categoryId) && state.computerSourceScope !== "all"
+        ? " in this source selection."
+        : " in this category.";
+      if (difficultSummaryText) {
+        difficultSummaryText.nodeValue = " questions marked as difficult" + difficultLocation;
+      }
     }
     if (elements.difficultLearnButton) elements.difficultLearnButton.disabled = !hasQuestions;
     if (elements.difficultQuizButton) elements.difficultQuizButton.disabled = !hasQuestions;
@@ -2429,7 +2651,15 @@
       elements.difficultModeButton.setAttribute(
         "aria-label",
         "Difficult questions, " + count + " marked in " + (state.category ? state.category.name : "this category")
-          + ", " + sessionSelectionLabel(state.partIndex, state.importantOnly)
+          + ", " + sessionSelectionLabel(
+            state.partIndex,
+            state.importantOnly,
+            null,
+            null,
+            null,
+            state.computerSourceScope,
+            categoryId
+          )
       );
     }
   }
@@ -2447,7 +2677,12 @@
     if (!state.category) return;
     setDifficultModeChoiceOpen(true);
 
-    var count = difficultQuestionCount(state.category.id, state.partIndex, state.importantOnly);
+    var count = difficultQuestionCount(
+      state.category.id,
+      state.partIndex,
+      state.importantOnly,
+      state.computerSourceScope
+    );
     var focusTarget = count > 0 ? elements.difficultLearnButton : elements.difficultEmpty;
     if (focusTarget && typeof focusTarget.focus === "function") {
       if (focusTarget === elements.difficultEmpty) focusTarget.setAttribute("tabindex", "-1");
@@ -2462,8 +2697,8 @@
     }
   }
 
-  function eligibleQuestionsForRange(categoryId, importantOnly, scope) {
-    return questionsForSelection(categoryId, null, importantOnly).filter(function (question) {
+  function eligibleQuestionsForRange(categoryId, importantOnly, scope, computerSourceScope) {
+    return questionsForSelection(categoryId, null, importantOnly, computerSourceScope).filter(function (question) {
       return scope !== "difficult" || difficultQuestionIds.has(String(question.id));
     });
   }
@@ -2559,10 +2794,15 @@
     if (!state.category || !elements.questionRangeOptions) return false;
     var selectedMode = mode === "learn" ? "learn" : "quiz";
     var selectedScope = scope === "difficult" ? "difficult" : "all";
+    var selectedComputerSourceScope = computerSourceScopeForCategory(
+      state.category.id,
+      state.computerSourceScope
+    );
     var eligibleQuestions = eligibleQuestionsForRange(
       state.category.id,
       state.importantOnly,
-      selectedScope
+      selectedScope,
+      selectedComputerSourceScope
     );
 
     if (eligibleQuestions.length === 0) {
@@ -2581,6 +2821,7 @@
       categoryId: state.category.id,
       mode: selectedMode,
       scope: selectedScope,
+      computerSourceScope: selectedComputerSourceScope,
       poolQuestionIds: eligibleQuestions.map(function (question) { return String(question.id); }),
       returnFocus: selectedScope === "difficult"
         ? (selectedMode === "learn" ? elements.difficultLearnButton : elements.difficultQuizButton)
@@ -2595,7 +2836,10 @@
     if (elements.questionRangeContext) {
       var filterName = state.importantOnly ? "Important-only" : "All-question";
       var scopeName = selectedScope === "difficult" ? " difficult" : "";
-      elements.questionRangeContext.textContent = filterName + scopeName + " filter applied first: "
+      var sourceName = isBasicComputerCategory(state.category.id)
+        ? computerSourceScopeLabel(selectedComputerSourceScope) + " \u00b7 "
+        : "";
+      elements.questionRangeContext.textContent = sourceName + filterName + scopeName + " filter applied first: "
         + poolSize + (poolSize === 1 ? " question is" : " questions are") + " available in "
         + state.category.name + ".";
     }
@@ -2618,6 +2862,7 @@
     clearQuestionRangeError();
     validateQuestionRange(false);
     setHidden(elements.studyScopePanel, true);
+    setHidden(elements.computerSourcePanel, true);
     setHidden(elements.standardModeOptions, true);
     setHidden(elements.difficultModeOptions, true);
     setHidden(elements.questionRangeOptions, false);
@@ -2638,6 +2883,7 @@
     clearQuestionRangeError();
     setHidden(elements.questionRangeOptions, true);
     setHidden(elements.studyScopePanel, false);
+    updateComputerSourceUI(state.category ? state.category.id : "");
     setDifficultModeChoiceOpen(closingChoice.scope === "difficult");
     if (closingChoice.returnFocus && typeof closingChoice.returnFocus.focus === "function") {
       closingChoice.returnFocus.focus({ preventScroll: true });
@@ -2658,7 +2904,13 @@
     }
 
     var choice = pendingRangeChoice;
-    var started = startQuiz(choice.categoryId, choice.mode, choice.scope, range);
+    var started = startQuiz(
+      choice.categoryId,
+      choice.mode,
+      choice.scope,
+      range,
+      choice.computerSourceScope
+    );
     if (started) {
       pendingRangeChoice = null;
       setHidden(elements.questionRangeOptions, true);
@@ -2913,6 +3165,7 @@
     state.questions = sessionQuestions;
     state.mode = "quiz";
     state.scope = "all";
+    state.computerSourceScope = null;
     state.partIndex = null;
     state.importantOnly = false;
     state.rangeStart = null;
@@ -2951,6 +3204,7 @@
     state.questions = [];
     state.mode = null;
     state.scope = "all";
+    state.computerSourceScope = "all";
     state.partIndex = null;
     state.importantOnly = false;
     state.rangeStart = null;
@@ -2966,6 +3220,7 @@
     state.score = 0;
     pendingRangeChoice = null;
 
+    updateComputerSourceUI(category.id);
     populateStudyScopeUI(category.id);
     setHidden(elements.studyScopePanel, false);
     setHidden(elements.questionRangeOptions, true);
@@ -3095,7 +3350,9 @@
               state.importantOnly,
               state.rangeStart,
               state.rangeEnd,
-              state.rangePoolSize
+              state.rangePoolSize,
+              state.computerSourceScope,
+              state.category.id
             );
       }
     }
@@ -3106,11 +3363,20 @@
     }
   }
 
-  function startQuiz(categoryId, mode, scope, rangeConfig) {
+  function startQuiz(categoryId, mode, scope, rangeConfig, computerSourceScope) {
     var category = findCategory(categoryId);
     if (!category) return false;
     var selectedScope = scope === "difficult" ? "difficult" : "all";
-    var filteredQuestions = eligibleQuestionsForRange(categoryId, state.importantOnly, selectedScope);
+    var selectedComputerSourceScope = computerSourceScopeForCategory(
+      categoryId,
+      arguments.length >= 5 ? computerSourceScope : state.computerSourceScope
+    );
+    var filteredQuestions = eligibleQuestionsForRange(
+      categoryId,
+      state.importantOnly,
+      selectedScope,
+      selectedComputerSourceScope
+    );
 
     if (filteredQuestions.length === 0) return false;
 
@@ -3144,6 +3410,7 @@
     state.questions = sessionQuestions;
     state.mode = selectedMode;
     state.scope = selectedScope;
+    state.computerSourceScope = selectedComputerSourceScope;
     state.partIndex = null;
     state.rangeStart = rangeStart;
     state.rangeEnd = rangeEnd;
@@ -3816,11 +4083,21 @@
     var total = state.questions.length;
     var percent = total > 0 ? Math.round((state.score / total) * 100) : 0;
     var remainingInScope = state.category && state.scope === "difficult"
-      ? difficultQuestionCount(state.category.id, state.partIndex, state.importantOnly)
+      ? difficultQuestionCount(
+          state.category.id,
+          state.partIndex,
+          state.importantOnly,
+          state.computerSourceScope
+        )
       : total;
     var canRepeatScope = state.scope !== "difficult" || remainingInScope > 0;
     var completedRangeLabel = sessionRangeLabel(state.rangeStart, state.rangeEnd, state.rangePoolSize);
-    var completedRangePrefix = completedRangeLabel ? completedRangeLabel + ". " : "";
+    var completedScopeLabels = [];
+    if (state.category && isBasicComputerCategory(state.category.id)) {
+      completedScopeLabels.push(computerSourceScopeLabel(state.computerSourceScope));
+    }
+    if (completedRangeLabel) completedScopeLabels.push(completedRangeLabel);
+    var completedRangePrefix = completedScopeLabels.length ? completedScopeLabels.join(" \u00b7 ") + ". " : "";
     removeStoredActiveSession();
     showScreen("results");
 
@@ -3908,7 +4185,9 @@
             state.importantOnly,
             state.rangeStart,
             state.rangeEnd,
-            state.rangePoolSize
+            state.rangePoolSize,
+            state.computerSourceScope,
+            state.category.id
           ) + ". Now test yourself with the quiz.";
     } else if (elements.resultSummary) {
       elements.resultSummary.textContent = completedRangePrefix + resultMessage(percent);
@@ -3940,7 +4219,8 @@
     var currentPoolIds = eligibleQuestionsForRange(
       state.category.id,
       state.importantOnly,
-      state.scope
+      state.scope,
+      state.computerSourceScope
     ).map(function (question) { return String(question.id); });
     var difficultPoolChanged = state.scope === "difficult" && (
       !Array.isArray(state.rangePoolQuestionIds)
@@ -3951,9 +4231,16 @@
       start: state.rangeStart,
       end: state.rangeEnd
     };
-    if (!difficultPoolChanged && startQuiz(state.category.id, selectedMode, state.scope, range)) return true;
+    if (!difficultPoolChanged && startQuiz(
+      state.category.id,
+      selectedMode,
+      state.scope,
+      range,
+      state.computerSourceScope
+    )) return true;
 
     showScreen("mode");
+    updateComputerSourceUI(state.category.id);
     populateStudyScopeUI(state.category.id);
     setHidden(elements.studyScopePanel, false);
     setHidden(elements.questionRangeOptions, true);
@@ -3993,6 +4280,7 @@
     state.questions = [];
     state.mode = null;
     state.scope = "all";
+    state.computerSourceScope = "all";
     state.partIndex = null;
     state.importantOnly = false;
     state.rangeStart = null;
@@ -4010,6 +4298,7 @@
     setHidden(elements.gkStudyNotesCard, true);
     setHidden(elements.questionRangeOptions, true);
     setHidden(elements.studyScopePanel, false);
+    updateComputerSourceUI("");
     setHidden(elements.resultBreakdown, true);
     closePaperReview();
     showScreen("categories");
@@ -4110,6 +4399,13 @@
       elements.importantOnlyCheckbox.addEventListener("change", function () {
         state.importantOnly = elements.importantOnlyCheckbox.checked;
         updateStudyScopeUI();
+      });
+    }
+    if (elements.computerSourcePanel) {
+      elements.computerSourcePanel.addEventListener("change", function (event) {
+        if (event.target.matches("input[name='computer-source']")) {
+          handleComputerSourceScopeChange(event);
+        }
       });
     }
     if (elements.continueSessionButton) {
@@ -4224,6 +4520,7 @@
     renderPaperCategoryOptions();
     bindEvents();
     resetFeedback();
+    updateComputerSourceUI("");
     updateDifficultModeUI();
     updatePaperSelectionUI();
     setHidden(elements.resultBreakdown, true);
