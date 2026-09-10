@@ -16,7 +16,7 @@
   var RANGE_SESSION_STORAGE_VERSION = 7;
   var LEGACY_SESSION_STORAGE_VERSION = 6;
   var RETRY_QUEUE_STORAGE_VERSION = 1;
-  var RETRY_QUEUE_INCREMENT = 5;
+  var RETRY_QUEUE_INCREMENT = 2;
   var RETRY_QUEUE_SPACING = 3;
   var BASIC_COMPUTER_CATEGORY_ID = "basic-computer-studies";
   var COMPUTER_SOURCE_SCOPES = ["all", "initial-original", "initial-related", "other"];
@@ -1281,11 +1281,11 @@
       elements.retryFeedbackText.textContent = urduQuestion
         ? (correct
           ? "بہت خوب۔ جاری رکھنے پر ایک دہرائی مکمل ہو جائے گی۔"
-          : "درست جواب " + correctOption.label + "۔ " + correctOption.text + " ہے۔ جاری رکھنے پر پانچ مزید دہرائیاں شامل ہوں گی۔")
+          : "درست جواب " + correctOption.label + "۔ " + correctOption.text + " ہے۔ جاری رکھنے پر دو مزید دہرائیاں شامل ہوں گی۔")
         : (correct
           ? "Well done. One required review will be completed when you continue."
           : "The correct answer is " + correctOption.label + ". " + correctOption.text
-            + ". Five extra reviews will be added when you continue.");
+            + ". Two extra reviews will be added when you continue.");
     }
   }
 

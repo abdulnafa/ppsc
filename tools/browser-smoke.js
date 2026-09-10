@@ -464,7 +464,7 @@ async function main() {
       const secondId = String(secondWrong?.question.id || "");
       if (!retry || retry.practiceStep !== 4
         || JSON.stringify(retry.items.map((item) => [item.questionId, item.remaining, item.dueStep, item.sequence]))
-          !== JSON.stringify([[firstId, 5, 4, 1], [secondId, 5, 5, 2]])) {
+          !== JSON.stringify([[firstId, 2, 4, 1], [secondId, 2, 5, 2]])) {
         errors.push("Two main wrong answers did not enter the retry queue once in FIFO order.");
       }
       const beforeFirstPopup = mainSnapshot();
@@ -506,9 +506,9 @@ async function main() {
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       const postponedFirst = retry?.items.find((item) => item.questionId === firstId);
       const waitingSecond = retry?.items.find((item) => item.questionId === secondId);
-      if (dialog.open || retry?.activeAttempt !== null || postponedFirst?.remaining !== 5
+      if (dialog.open || retry?.activeAttempt !== null || postponedFirst?.remaining !== 2
         || postponedFirst?.dueStep !== 7 || postponedFirst?.sequence !== 3
-        || waitingSecond?.remaining !== 5 || waitingSecond?.dueStep !== 5 || waitingSecond?.sequence !== 2) {
+        || waitingSecond?.remaining !== 2 || waitingSecond?.dueStep !== 5 || waitingSecond?.sequence !== 2) {
         errors.push("Not now did not postpone without decrementing and move the item behind FIFO work.");
       }
       if (document.querySelector("#question-number-input")?.value !== "5" || document.querySelector("#score-text")?.textContent !== "Score: 2") {
@@ -530,8 +530,8 @@ async function main() {
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       const checkedWrongItem = retry?.items.find((item) => item.questionId === secondId);
       if (!retry?.activeAttempt?.submitted || retry.activeAttempt.outcome !== "wrong"
-        || checkedWrongItem?.remaining !== 5 || !document.querySelector("#retry-dialog-progress")?.textContent.includes("10 درست دہرائیاں باقی ہیں")) {
-        errors.push("Wrong retry Check did not project exactly five added reviews without applying early.");
+        || checkedWrongItem?.remaining !== 2 || !document.querySelector("#retry-dialog-progress")?.textContent.includes("4 درست دہرائیاں باقی ہیں")) {
+        errors.push("Wrong retry Check did not project exactly two added reviews without applying early.");
       }
       const retryFeedback = document.querySelector("#retry-feedback");
       const mappedCorrectText = secondQuestion.optionsUrdu[secondQuestion.correctOptionIndex];
@@ -550,15 +550,15 @@ async function main() {
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       let secondItem = retry?.items.find((item) => item.questionId === secondId);
-      if (secondItem?.remaining !== 10 || secondItem?.dueStep !== 8 || secondItem?.sequence !== 4
+      if (secondItem?.remaining !== 4 || secondItem?.dueStep !== 8 || secondItem?.sequence !== 4
         || retry?.items.filter((item) => item.questionId === secondId).length !== 1) {
-        errors.push("Wrong retry Continue did not atomically add exactly five and coalesce the queue item.");
+        errors.push("Wrong retry Continue did not atomically add exactly two and coalesce the queue item.");
       }
       document.querySelector("#retry-action-button")?.click();
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       secondItem = retry?.items.find((item) => item.questionId === secondId);
-      if (secondItem?.remaining !== 10) errors.push("A second click after closing applied the wrong +5 more than once.");
+      if (secondItem?.remaining !== 4) errors.push("A second click after closing applied the wrong +2 more than once.");
       if (document.querySelector("#question-number-input")?.value !== "6" || document.querySelector("#score-text")?.textContent !== "Score: 3") {
         errors.push("Wrong retry did not resume the sixth main question with unchanged scoring.");
       }
@@ -576,7 +576,7 @@ async function main() {
       document.querySelector("#retry-action-button")?.click();
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (retry?.items.find((item) => item.questionId === firstId)?.remaining !== 4
+      if (retry?.items.find((item) => item.questionId === firstId)?.remaining !== 1
         || document.querySelector("#question-number-input")?.value !== "8") {
         errors.push("Correct FIFO retry did not decrement once and resume question eight.");
       }
@@ -593,8 +593,8 @@ async function main() {
         errors.push("Mid-Quiz Later did not resume question nine with the unchanged score.");
       }
       if (retry?.items.length !== 2
-        || retry.items.find((item) => item.questionId === firstId)?.remaining !== 4
-        || retry.items.find((item) => item.questionId === secondId)?.remaining !== 10) {
+        || retry.items.find((item) => item.questionId === firstId)?.remaining !== 1
+        || retry.items.find((item) => item.questionId === secondId)?.remaining !== 4) {
         errors.push("Mid-Quiz Later changed or removed persistent retry work.");
       }
       const queueAtResults = JSON.stringify(retry.items);
@@ -726,9 +726,9 @@ async function main() {
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (!dialog.open || visible(document.querySelector("#results-screen"))
-        || retry?.items.find((item) => item.questionId === drainAttempt?.questionId)?.remaining !== (drainItem?.remaining || 0) + 5
+        || retry?.items.find((item) => item.questionId === drainAttempt?.questionId)?.remaining !== (drainItem?.remaining || 0) + 2
         || document.querySelector("#score-text")?.textContent !== difficultScoreBeforeDrain) {
-        errors.push("A wrong final-drain retry did not add five cycles and keep Results blocked without changing score.");
+        errors.push("A wrong final-drain retry did not add two cycles and keep Results blocked without changing score.");
       }
       await pause();
       sessionStorage.setItem("ppsc-smoke:retry-seed", JSON.stringify(retry));
@@ -736,7 +736,7 @@ async function main() {
       return {
         errors,
         fifoIds: [firstId, secondId],
-        wrongRemaining: 10,
+        wrongRemaining: 4,
         scoreBeforeExit: "Score: 6",
         survivedResults: true,
         suppressedInLearn: true,
@@ -1009,20 +1009,20 @@ async function main() {
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (!retry?.activeAttempt?.submitted || retry.activeAttempt.outcome !== "wrong"
-        || retry.items.find((item) => item.questionId === targetId)?.remaining !== 5
-        || !document.querySelector("#retry-dialog-progress")?.textContent.includes("10 correct reviews remaining")) {
-        errors.push("Wrong final-drain Check did not project +5 without applying it early.");
+        || retry.items.find((item) => item.questionId === targetId)?.remaining !== 2
+        || !document.querySelector("#retry-dialog-progress")?.textContent.includes("4 correct reviews remaining")) {
+        errors.push("Wrong final-drain Check did not project +2 without applying it early.");
       }
       document.querySelector("#retry-action-button")?.click();
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (!dialog.open || visible(document.querySelector("#results-screen"))
-        || retry?.items.find((item) => item.questionId === targetId)?.remaining !== 10) {
-        errors.push("Wrong final-drain Continue did not add five and immediately continue draining.");
+        || retry?.items.find((item) => item.questionId === targetId)?.remaining !== 4) {
+        errors.push("Wrong final-drain Continue did not add two and immediately continue draining.");
       }
 
       const drainCountdown = [];
-      for (let remaining = 10; remaining >= 1; remaining -= 1) {
+      for (let remaining = 4; remaining >= 1; remaining -= 1) {
         retry = JSON.parse(localStorage.getItem(retryKey) || "null");
         const attempt = retry?.activeAttempt;
         const item = retry?.items.find((entry) => entry.questionId === targetId);
@@ -1043,7 +1043,7 @@ async function main() {
         await pause();
       }
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (JSON.stringify(drainCountdown) !== JSON.stringify([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
+      if (JSON.stringify(drainCountdown) !== JSON.stringify([4, 3, 2, 1])
         || dialog.open || !visible(document.querySelector("#results-screen"))
         || retry?.items.some((item) => item.questionId === targetId)
         || document.querySelector("#result-score")?.textContent.replace(/\\s/g, "") !== "3/4") {
@@ -4157,9 +4157,9 @@ async function main() {
       const session = JSON.parse(localStorage.getItem(sessionKey) || "null");
       if (!retry || retry.version !== 1 || retry.bankSignature !== session?.bankSignature
         || retry.practiceStep !== 1 || retry.nextSequence !== 2 || retry.items.length !== 1
-        || retry.items[0].questionId !== firstId || retry.items[0].remaining !== 5
+        || retry.items[0].questionId !== firstId || retry.items[0].remaining !== 2
         || retry.items[0].dueStep !== 4 || retry.items[0].sequence !== 1 || retry.activeAttempt !== null) {
-        errors.push("Initial main wrong answer did not create the exact five-review +3-step queue record.");
+        errors.push("Initial main wrong answer did not create the exact two-review +3-step queue record.");
       }
       if (document.querySelector("#retry-dialog")?.open) errors.push("Initial wrong answer opened its retry immediately.");
       const queueChip = document.querySelector("#retry-queue-chip");
@@ -4216,9 +4216,9 @@ async function main() {
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (!retry?.activeAttempt?.submitted || retry.activeAttempt.outcome !== "correct"
-        || retry.items[0]?.remaining !== 5 || document.querySelector("#retry-action-button")?.dataset.action !== "continue"
-        || !document.querySelector("#retry-dialog-progress")?.textContent.includes("4 correct reviews remaining")) {
-        errors.push("Correct retry Check did not persist an unapplied, projected 5-to-4 result.");
+        || retry.items[0]?.remaining !== 2 || document.querySelector("#retry-action-button")?.dataset.action !== "continue"
+        || !document.querySelector("#retry-dialog-progress")?.textContent.includes("1 correct review remaining")) {
+        errors.push("Correct retry Check did not persist an unapplied, projected 2-to-1 result.");
       }
       if (JSON.stringify(mainSnapshot()) !== JSON.stringify(beforeRetryMain)
         || document.querySelector("#score-text")?.textContent !== beforeRetryScore) {
@@ -4396,7 +4396,7 @@ async function main() {
       }
       if (document.querySelector("#retry-dialog")?.open) errors.push("Active retry opened before the user chose Continue.");
       if (JSON.stringify(storedBeforeContinue?.activeAttempt) !== JSON.stringify(expected.activeAttempt)
-        || storedBeforeContinue?.items[0]?.remaining !== 5) {
+        || storedBeforeContinue?.items[0]?.remaining !== 2) {
         errors.push("Reload changed the submitted active retry before Continue.");
       }
       document.querySelector("#continue-session-button")?.click();
@@ -4439,9 +4439,9 @@ async function main() {
       document.querySelector("#retry-action-button")?.click();
       await pause();
       let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (dialog?.open || retry?.activeAttempt !== null || retry?.items[0]?.remaining !== 4
+      if (dialog?.open || retry?.activeAttempt !== null || retry?.items[0]?.remaining !== 1
         || retry?.items[0]?.dueStep !== 7 || retry?.items[0]?.sequence !== 2) {
-        errors.push("Correct retry Continue was not applied exactly once as remaining 4, due +3.");
+        errors.push("Correct retry Continue was not applied exactly once as remaining 1, due +3.");
       }
       if (document.querySelector("#question-number-input")?.value !== "5" || document.querySelector("#score-text")?.textContent !== "Score: 3") {
         errors.push("Retry Continue did not resume the next main question with the same score.");
@@ -4455,7 +4455,7 @@ async function main() {
         const scoreBeforeTransition = document.querySelector("#score-text")?.textContent;
         document.querySelector("#action-button")?.click();
         await pause();
-        const shouldReview = [7, 10, 13, 16].includes(questionNumber);
+        const shouldReview = questionNumber === 7;
         if (!shouldReview) {
           if (dialog?.open) errors.push("Retry reopened before its exact three-question spacing at main question " + questionNumber + ".");
           continue;
@@ -4485,8 +4485,8 @@ async function main() {
       }
 
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (JSON.stringify(observedRemaining) !== JSON.stringify([4, 3, 2, 1])) {
-        errors.push("Five correct retry appearances did not count down 5,4,3,2,1.");
+      if (JSON.stringify(observedRemaining) !== JSON.stringify([1])) {
+        errors.push("Two correct retry appearances did not count down 2,1.");
       }
       if (!visible(document.querySelector("#results-screen"))
         || document.querySelector("#result-score")?.textContent.replace(/\\s/g, "") !== "15/16") {
@@ -4494,11 +4494,11 @@ async function main() {
       }
       if (!retry || retry.items.length !== 0 || retry.activeAttempt !== null
         || localStorage.getItem(sessionKey) !== null || !document.querySelector("#retry-queue-chip")?.hidden) {
-        errors.push("Fifth successful review did not remove the mastered queue item cleanly at results.");
+        errors.push("Second successful review did not remove the mastered queue item cleanly at results.");
       }
       return {
         errors,
-        fiveReviewCountdown: [5].concat(observedRemaining),
+        twoReviewCountdown: [2].concat(observedRemaining),
         finalScore: document.querySelector("#result-score")?.textContent || "",
         mobileWidth: window.innerWidth,
         mobileFocusMetrics: {
@@ -4518,17 +4518,20 @@ async function main() {
       mobile: true
     });
 
-    await client.evaluate(`(() => {
+    const retryExistingCountSeedResult = await client.evaluate(`(() => {
+      const errors = [];
       localStorage.removeItem("ppsc-prep:active-session:v1");
       localStorage.removeItem("ppsc-prep:retry-queue:v1");
-      return true;
-    })()`);
-    await client.evaluate(`(() => {
       const seed = JSON.parse(sessionStorage.getItem("ppsc-smoke:retry-seed") || "null");
-      if (!seed) return false;
+      if (!seed || !Array.isArray(seed.items) || seed.items.length === 0) {
+        errors.push("Existing retry-count preservation fixture was unavailable.");
+        return { errors, questionId: "", remaining: null };
+      }
       seed.activeAttempt = null;
+      seed.items[0].remaining = 5;
+      sessionStorage.setItem("ppsc-smoke:retry-seed", JSON.stringify(seed));
       localStorage.setItem("ppsc-prep:retry-queue:v1", JSON.stringify(seed));
-      return true;
+      return { errors, questionId: seed.items[0].questionId, remaining: 5 };
     })()`);
     await client.send("Page.reload", { ignoreCache: true });
     await client.evaluate(`new Promise((resolve, reject) => {
@@ -4543,6 +4546,17 @@ async function main() {
         }
       }, 50);
     })`);
+
+    const retryExistingCountPreservationResult = await client.evaluate(`(() => {
+      const errors = [];
+      const expected = ${JSON.stringify(retryExistingCountSeedResult)};
+      const stored = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      const item = stored?.items.find((entry) => entry.questionId === expected.questionId);
+      if (!stored || stored.version !== 1 || item?.remaining !== 5) {
+        errors.push("An existing saved retry count was reset or removed after the two-review rule update.");
+      }
+      return { errors, questionId: expected.questionId, remaining: item?.remaining ?? null };
+    })()`);
 
     const paperSetupResult = await client.evaluate(`(async () => {
       const rawPause = () => new Promise((resolve) => setTimeout(resolve, 0));
@@ -5134,6 +5148,8 @@ async function main() {
         .concat(retryDesktopProbe.errors)
         .concat(retryMobileProbe.errors)
         .concat(retryLifecycleResume.errors)
+        .concat(retryExistingCountSeedResult.errors)
+        .concat(retryExistingCountPreservationResult.errors)
         .concat(paperSetupResult.errors)
         .concat(paperResumeResult.errors),
       resume: {
@@ -5179,8 +5195,8 @@ async function main() {
         screenshots: computerSourceScreenshots
       },
       retryQueue: {
-        initialFiveAndCadence: retryLifecycleSetup.errors.length === 0,
-        fiveCorrectReviews: retryLifecycleResume.fiveReviewCountdown,
+        initialTwoAndCadence: retryLifecycleSetup.errors.length === 0,
+        twoCorrectReviews: retryLifecycleResume.twoReviewCountdown,
         finalMainScore: retryLifecycleResume.finalScore,
         mobileWidth: retryLifecycleResume.mobileWidth,
         mobileFocusMetrics: retryLifecycleResume.mobileFocusMetrics,
@@ -5195,6 +5211,7 @@ async function main() {
         savedMismatchSuppressed: retryMismatchResumeResult.errors.length === 0,
         savedLearnSuppressed: retryLearnResumeResult.errors.length === 0,
         finalDrainWrongRemaining: retryFifoResult.finalDrainWrongRemaining,
+        existingSavedCountPreserved: retryExistingCountPreservationResult.remaining,
         positionDependentCanonical: retryPositionResult.errors.length === 0,
         corruptQueueRecovered: retryCorruptRecoveryResult.errors.length === 0,
         screenshots: [
