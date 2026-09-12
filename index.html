@@ -1,17 +1,87 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="auth-pending">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Free category-wise MCQ practice for the PPSC General Ability test.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
-  <link rel="stylesheet" href="styles.css?v=20260909-2">
+  <link rel="stylesheet" href="styles.css?v=20260912-2">
+  <script src="firebase-config.js?v=20260912-2" defer></script>
+  <script src="firebase-sync.js?v=20260912-2" defer></script>
   <script src="data/questions.js?v=20260902-2" defer></script>
   <script src="data/gk-study-notes.js?v=20260902-2" defer></script>
-  <script src="app.js?v=20260912-1" defer></script>
+  <script src="app.js?v=20260912-2" defer></script>
 </head>
 <body>
+  <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
+    <div class="auth-card">
+      <div class="auth-brand" aria-hidden="true">
+        <span class="brand-mark">P</span>
+        <span>PPSC Prep</span>
+      </div>
+
+      <div class="auth-heading">
+        <span class="eyebrow">PRIVATE STUDY SPACE</span>
+        <h1 id="auth-gate-title" tabindex="-1">Your progress, on every device.</h1>
+        <p id="auth-gate-description">Sign in with your approved Google account to continue your learning, quizzes and review queue securely.</p>
+      </div>
+
+      <div class="auth-status-panel">
+        <span class="auth-status-spinner" aria-hidden="true"></span>
+        <p id="auth-gate-status" role="status" aria-live="polite">Checking your secure sign-in&hellip;</p>
+      </div>
+
+      <p id="auth-gate-error" class="auth-error" role="alert" hidden></p>
+
+      <button id="google-sign-in-button" class="google-sign-in-button" type="button" disabled>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+          <path fill="#4285f4" d="M21.6 12.2c0-.7-.1-1.4-.2-2.1H12v4h5.4a4.6 4.6 0 0 1-2 3v2.6h3.3c1.9-1.8 2.9-4.4 2.9-7.5Z"/>
+          <path fill="#34a853" d="M12 22c2.7 0 5-.9 6.7-2.3l-3.3-2.6c-.9.6-2.1 1-3.4 1a5.9 5.9 0 0 1-5.5-4.1H3.1v2.7A10 10 0 0 0 12 22Z"/>
+          <path fill="#fbbc05" d="M6.5 14a6 6 0 0 1 0-3.9V7.3H3.1a10 10 0 0 0 0 9.4L6.5 14Z"/>
+          <path fill="#ea4335" d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.9-2.8A9.7 9.7 0 0 0 3.1 7.3l3.4 2.8A5.9 5.9 0 0 1 12 5.9Z"/>
+        </svg>
+        <span>Continue with Google</span>
+      </button>
+
+      <section id="progress-choice-panel" class="progress-choice-panel" aria-labelledby="progress-choice-title" hidden>
+        <div class="progress-choice-heading">
+          <span class="eyebrow">ONE-TIME PROGRESS SETUP</span>
+          <h2 id="progress-choice-title">Choose the progress you want to keep</h2>
+          <p id="progress-choice-summary">We found saved study progress. Nothing will be replaced until you choose.</p>
+        </div>
+
+        <div class="progress-choice-grid">
+          <article class="progress-source-card progress-source-device">
+            <span class="progress-source-icon" aria-hidden="true">D</span>
+            <div>
+              <span>This device</span>
+              <strong id="device-progress-summary">Checking saved progress&hellip;</strong>
+            </div>
+          </article>
+          <article class="progress-source-card progress-source-cloud">
+            <span class="progress-source-icon" aria-hidden="true">C</span>
+            <div>
+              <span>Cloud backup</span>
+              <strong id="cloud-progress-summary">Checking cloud progress&hellip;</strong>
+            </div>
+          </article>
+        </div>
+
+        <div class="progress-choice-actions">
+          <button id="use-device-progress-button" class="primary-button" type="button">Use this device &amp; sync</button>
+          <button id="use-cloud-progress-button" class="secondary-button" type="button">Use cloud progress</button>
+        </div>
+        <p id="progress-choice-warning" class="progress-choice-warning">Choose carefully: the selected copy becomes your progress on both mobile and laptop.</p>
+      </section>
+
+      <p class="auth-privacy-note"><span aria-hidden="true">&#128274;</span> Your quiz position and review queue stay private to the approved account.</p>
+      <noscript><p class="auth-error">Please enable JavaScript to sign in and use PPSC Prep.</p></noscript>
+    </div>
+  </section>
+
+  <div id="protected-app" class="app-protected" hidden inert aria-hidden="true">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -22,8 +92,23 @@
         <small>Practice with purpose</small>
       </span>
     </a>
-    <span class="header-badge">General Ability</span>
+    <div class="header-actions">
+      <span class="header-badge">General Ability</span>
+      <div id="cloud-account-controls" class="cloud-account-controls" hidden>
+        <div id="cloud-sync-status" class="cloud-sync-status" data-sync-state="checking" role="status" aria-live="polite">
+          <span class="cloud-sync-dot" aria-hidden="true"></span>
+          <span id="cloud-sync-status-text">Checking sync&hellip;</span>
+        </div>
+        <span id="cloud-user-email" class="cloud-user-email" title="Signed-in Google account"></span>
+        <button id="sign-out-button" class="header-sign-out-button" type="button">Sign out</button>
+      </div>
+    </div>
   </header>
+
+  <aside id="cloud-sync-warning" class="cloud-sync-warning" role="alert" hidden>
+    <span id="cloud-sync-warning-text">Cloud sync needs attention. Your browser copy is still safe.</span>
+    <button id="cloud-sync-refresh-button" type="button">Refresh &amp; compare</button>
+  </aside>
 
   <main id="main-content" class="app-shell">
     <section id="category-screen" class="screen is-active" aria-labelledby="category-title">
@@ -640,5 +725,6 @@
     <p>Built for focused PPSC preparation.</p>
     <p>Keep practicing. Keep improving.</p>
   </footer>
+  </div>
 </body>
 </html>

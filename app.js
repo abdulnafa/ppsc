@@ -54,6 +54,26 @@
   };
   var pendingRangeChoice = null;
   var gkNotesReturnTarget = "quick-notes";
+  var appInitialized = false;
+
+  function notifyLocalStateChanged(storageKey, action) {
+    if (window.PPSC_CLOUD_APPLYING === true || typeof window.CustomEvent !== "function") return;
+    var value = null;
+    if (action !== "remove") {
+      try {
+        value = window.localStorage.getItem(storageKey);
+      } catch (error) {
+        return;
+      }
+    }
+    window.dispatchEvent(new CustomEvent("ppsc:local-state-changed", {
+      detail: {
+        key: storageKey,
+        action: action,
+        value: value
+      }
+    }));
+  }
 
   var state = {
     category: null,
@@ -428,6 +448,7 @@
   function removeStoredActiveSession() {
     try {
       window.localStorage.removeItem(SESSION_STORAGE_KEY);
+      notifyLocalStateChanged(SESSION_STORAGE_KEY, "remove");
     } catch (error) {
       // Storage can be unavailable. The in-memory state is still cleared.
     }
@@ -811,6 +832,7 @@
 
     try {
       window.localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(snapshot));
+      notifyLocalStateChanged(SESSION_STORAGE_KEY, "set");
       activeSessionSnapshot = snapshot;
       updateContinueSessionUI();
       return true;
@@ -1037,6 +1059,7 @@
     retryQueueState.bankSignature = questionBankSignature;
     try {
       window.localStorage.setItem(RETRY_QUEUE_STORAGE_KEY, JSON.stringify(retryQueueState));
+      notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "set");
     } catch (error) {
       // The queue remains available in memory when browser storage is blocked.
     }
@@ -1054,6 +1077,7 @@
       var normalized = normalizeRetryQueue(JSON.parse(rawValue));
       if (!normalized) {
         window.localStorage.removeItem(RETRY_QUEUE_STORAGE_KEY);
+        notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "remove");
         retryQueueState = createEmptyRetryQueueState();
       } else {
         retryQueueState = normalized;
@@ -1061,6 +1085,7 @@
     } catch (error) {
       try {
         window.localStorage.removeItem(RETRY_QUEUE_STORAGE_KEY);
+        notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "remove");
       } catch (removeError) {
         // Storage is unavailable; use the clean in-memory queue for this visit.
       }
@@ -1633,6 +1658,7 @@
         version: 1,
         questionIds: Array.from(difficultQuestionIds)
       }));
+      notifyLocalStateChanged(DIFFICULT_STORAGE_KEY, "set");
       return true;
     } catch (error) {
       return false;
@@ -4490,6 +4516,8 @@
   }
 
   function init() {
+    if (appInitialized) return;
+    appInitialized = true;
     collectElements();
     ensureDifficultModeUI();
     ensureDifficultControl();
@@ -4524,9 +4552,31 @@
     }
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init, { once: true });
-  } else {
-    init();
+  function isLocalDevelopment() {
+    var hostname = String(window.location.hostname || "").toLowerCase();
+    return window.location.protocol === "file:"
+      || hostname === "localhost"
+      || hostname === "127.0.0.1"
+      || hostname === "[::1]";
+  }
+
+  function startAppWhenDocumentIsReady() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init, { once: true });
+    } else {
+      init();
+    }
+  }
+
+  window.PPSC_APP_START = startAppWhenDocumentIsReady;
+  window.PPSC_APP_STORAGE_KEYS = Object.freeze({
+    activeSession: SESSION_STORAGE_KEY,
+    retryQueue: RETRY_QUEUE_STORAGE_KEY,
+    difficultQuestions: DIFFICULT_STORAGE_KEY
+  });
+  window.addEventListener("ppsc:cloud-ready", startAppWhenDocumentIsReady, { once: true });
+
+  if (isLocalDevelopment() || window.PPSC_CLOUD_READY === true) {
+    startAppWhenDocumentIsReady();
   }
 })();

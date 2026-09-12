@@ -1,6 +1,6 @@
 # PPSC MCQ Preparation
 
-A dependency-free, category-wise practice website for the PPSC General Ability test. It is designed for GitHub Pages and runs entirely in the browser.
+A category-wise PPSC General Ability practice website for GitHub Pages. Question rendering stays in the browser, while Firebase Google Authentication and Cloud Firestore keep the approved user's study progress synchronized across devices.
 
 ## Question bank
 
@@ -29,12 +29,36 @@ A dependency-free, category-wise practice website for the PPSC General Ability t
 
 The standard flow is: choose a category → for Basic Computer Studies optionally choose its question source → optionally limit it to **Important repeated MCQs** → choose Learn, Quiz, Difficult, or Study Notes. Learn and Quiz first show an inclusive Starting/Ending range; the range is applied after the source, Important, or Difficult filter, so 2–4 always means items 2, 3, and 4 of the active list. Blank, decimal, zero, reversed, and out-of-range values are rejected without replacing the current resumable session. Learn and Quiz keep the selected items in source/data order; Quiz may still shuffle ordinary answer choices and preserves the existing answer and scoring behaviour. Difficult opens its own Learn/Quiz choice and range selector using only marked questions from the selected source. **Start Quiz** after Learn and **Restart** retain the chosen range while the eligible list is unchanged; if Difficult marks change that list, the safe range chooser opens again instead of silently substituting questions. The editable question number above the progress bar still jumps within the active session. **Study Notes** opens the selected source's Quick Notes list for Basic Computer Studies and the complete category list elsewhere; General Knowledge additionally links to **Detailed GK Stories**. **Start Paper Here** remains a separate, random exact 100-question mixed paper and does not use the source or range selector.
 
-Difficult marks, the compact active-session checkpoint, and the spaced-retry queue are stored in that browser and device using local storage. They survive normal reloads and visits; clearing the site's browser data removes them. Continue restores a Basic Computer session's exact source choice; older saved sessions safely migrate to **All Basic Computer**. Completed sessions are removed from Continue automatically, while unfinished retry reviews remain pending across reloads and visits and can appear during any later category Quiz, including a Quiz in another category or Basic Computer source. Learn and Custom Paper ignore those pending reviews. Retry answers never alter the current Quiz's question number, answer history or score.
+Difficult marks, the compact active-session checkpoint, and the spaced-retry queue are saved locally first and synchronized to the approved user's private Cloud Firestore area after Google sign-in. They survive normal reloads and can continue on another signed-in device. Continue restores a Basic Computer session's exact source choice; older saved sessions safely migrate to **All Basic Computer**. Completed sessions are removed from Continue automatically, while unfinished retry reviews remain pending across reloads and visits and can appear during any later category Quiz, including a Quiz in another category or Basic Computer source. Learn and Custom Paper ignore those pending reviews. Retry answers never alter the current Quiz's question number, answer history or score.
+
+Existing saved retry counts are never reset during the first cloud migration. The current `+5` rule applies only when a question is answered incorrectly again; a previously saved item continues from its exact stored remaining count.
+
+If the internet disconnects while the unlocked app is open, Learn, Quiz, Difficult marks, and review-queue changes continue saving in browser storage and the header shows **Saved locally**. When the connection returns, the browser and cloud revisions are compared automatically: local-only changes upload, cloud-only changes restore, and changes made independently on both devices stop for an explicit conflict choice instead of overwriting either copy. A completely fresh offline load remains locked until Firebase can verify the Google account again; reconnect once to continue from the browser copy.
+
+## Google sign-in and first-device migration
+
+Production access is gated by Firebase Google Authentication and restricted to `developerabdulnafa@gmail.com` in both the client and `firestore.rules`. Local `file://`, `localhost`, and `127.0.0.1` previews intentionally use development mode so the offline browser tests still run.
+
+The first cloud migration must be performed on the mobile browser that already contains the saved session and retry queue:
+
+1. Deploy this release without clearing mobile browser data.
+2. Open the existing `https://abdulnafa.github.io/ppsc/` address on that same mobile browser.
+3. Sign in with the approved Google account.
+4. Choose **Upload this device's progress**, then wait until the header says **Synced**.
+5. Open the site on the laptop, sign in with the same account, and choose the cloud copy if a choice is shown.
+6. Confirm Continue and the review count on both devices before clearing any browser data.
+
+An empty new device cannot create or replace the first cloud copy. The first import must come from the browser that contains actual progress. If local and cloud records later differ, the gate remains closed until the user explicitly chooses which copy to keep; the copy being replaced is first retained in a local safety backup. The app automatically creates the required Firestore documents, so no collection needs to be entered manually in the Data tab.
+
+The Firebase web configuration is public by design; access control comes from Authentication and the deployed Firestore rules. The login gate protects normal app access and Firestore progress, but GitHub Pages is static hosting, so its question-bank asset itself is still publicly downloadable. Protecting the static question files as private content would require a later move to authenticated server-side hosting.
 
 ## Project structure
 
 ```text
 ppsc-project/
+├── firebase-config.js            # Public Firebase web configuration
+├── firebase-sync.js              # Google sign-in and progress synchronization
+├── firestore.rules               # Owner-only Firestore access rules
 ├── .github/workflows/pages.yml  # GitHub Pages deployment
 ├── data/questions.js            # Generated browser question bank
 ├── data/gk-study-notes.js       # Generated, evidence-bound GK reading cards
@@ -79,6 +103,7 @@ node tools/validate-adv2e102-enriched.js
 node tools/build-question-bank.js
 node tools/build-gk-study-notes.js
 node tools/validate-site-data.js --expected=11412 --verify-work-repeat-evidence
+node tools/cloud-sync-smoke.js
 node tools/browser-smoke.js
 ```
 
@@ -121,17 +146,18 @@ After adding a pair, run the validation and build commands again. For a bank lar
 The repository is already initialized on branch `main`, with `origin` set to `https://github.com/abdulnafa/ppsc.git`.
 
 ```powershell
-cd "D:\My documents\PPSC\codex\ppsc-project"
-git add .
-git commit -m "Publish first verified Advanced PPSC batch"
-git push
+cd "D:\PPSC\codex\ppsc-project"
+git add -- ".github/workflows/pages.yml" "README.md" "app.js" "index.html" "styles.css" "firebase-config.js" "firebase-sync.js" "firestore.rules" "tools/cloud-sync-smoke.js" "tools/validate-site-data.js"
+git commit -m "Add private Google login and cloud progress sync"
+git push origin main
+git status --short
 ```
 
-Do not save a GitHub password or personal access token in the project.
+Always stage the named files only; do not use `git add .`, because unrelated local tools may be present. Do not save a GitHub password, personal access token, Google password, or Firebase service-account key in the project.
 
 ## GitHub Pages
 
-The workflow at `.github/workflows/pages.yml` publishes the required site files, `data/questions.js`, `data/gk-study-notes.js`, and the two local font assets; internal research/work files are not included in the deployed artifact.
+The workflow at `.github/workflows/pages.yml` validates the question bank and cloud-sync migration contract, then publishes the required app, Firebase client, question data, notes, and local font assets. Firestore rules are versioned in this repository but are published separately in the Firebase console; internal research/work files are not included in the deployed artifact.
 
 In the repository, open **Settings → Pages**, set **Source** to **GitHub Actions**, then push to `main`. The expected site URL is:
 

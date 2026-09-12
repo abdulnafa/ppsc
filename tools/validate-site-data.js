@@ -13,6 +13,11 @@ const releaseRepeatEvidencePath = path.join(projectDirectory, "data", "release-r
 const htmlPath = path.join(projectDirectory, "index.html");
 const appPath = path.join(projectDirectory, "app.js");
 const stylesPath = path.join(projectDirectory, "styles.css");
+const firebaseConfigPath = path.join(projectDirectory, "firebase-config.js");
+const firebaseSyncPath = path.join(projectDirectory, "firebase-sync.js");
+const firestoreRulesPath = path.join(projectDirectory, "firestore.rules");
+const pagesWorkflowPath = path.join(projectDirectory, ".github", "workflows", "pages.yml");
+const cloudSyncSmokePath = path.join(projectDirectory, "tools", "cloud-sync-smoke.js");
 const fontPaths = [
   path.join(projectDirectory, "assets", "fonts", "inter-latin.woff2"),
   path.join(projectDirectory, "assets", "fonts", "noto-nastaliq-urdu-arabic.woff2")
@@ -1085,6 +1090,111 @@ function validateComputerSourceAppContract() {
   }
 }
 
+function validateCloudSyncContract() {
+  const requiredFiles = [firebaseConfigPath, firebaseSyncPath, firestoreRulesPath, pagesWorkflowPath, cloudSyncSmokePath];
+  for (const filePath of requiredFiles) {
+    if (!fs.existsSync(filePath)) error(`${path.relative(projectDirectory, filePath)}: required cloud-sync file is missing`);
+  }
+  if (requiredFiles.some((filePath) => !fs.existsSync(filePath))) return;
+
+  const configSource = fs.readFileSync(firebaseConfigPath, "utf8");
+  const syncSource = fs.readFileSync(firebaseSyncPath, "utf8");
+  const rulesSource = fs.readFileSync(firestoreRulesPath, "utf8");
+  const workflowSource = fs.readFileSync(pagesWorkflowPath, "utf8");
+  const html = fs.readFileSync(htmlPath, "utf8");
+  const app = fs.readFileSync(appPath, "utf8");
+  const allowedEmail = "developerabdulnafa@gmail.com";
+  const storageKeys = [
+    "ppsc-prep:active-session:v1",
+    "ppsc-prep:retry-queue:v1",
+    "ppsc-prep:difficult-question-ids:v1"
+  ];
+
+  for (const expected of [
+    allowedEmail,
+    "ppsc-prep-ffe86.firebaseapp.com",
+    'projectId: "ppsc-prep-ffe86"',
+    'appId: "1:46143324438:web:ed212ce2b4b3d75fa09037"',
+    'sdkVersion: "12.18.0"'
+  ]) {
+    if (!configSource.includes(expected)) error(`firebase-config.js: missing pinned value ${expected}`);
+  }
+  if (/private[_-]?key|service[_-]?account|google[_-]?password/i.test(configSource)) {
+    error("firebase-config.js: private credentials must never be committed");
+  }
+
+  for (const storageKey of storageKeys) {
+    if (!syncSource.includes(storageKey) || !app.includes(storageKey)) {
+      error(`cloud sync: ${storageKey} must match in firebase-sync.js and app.js`);
+    }
+  }
+  for (const requiredSnippet of [
+    "signInWithPopup",
+    "onAuthStateChanged",
+    "browserLocalPersistence",
+    "runTransaction",
+    "getDocFromServer",
+    "MAX_INLINE_BYTES",
+    "MAX_CHUNK_BYTES",
+    'addEventListener("offline"',
+    'addEventListener("online"',
+    'window.PPSC_CLOUD_APPLYING = true',
+    'window.PPSC_CLOUD_READY = true'
+  ]) {
+    if (!syncSource.includes(requiredSnippet)) error(`firebase-sync.js: missing ${requiredSnippet}`);
+  }
+  if (/location\.(?:search|hash)|URLSearchParams/.test(syncSource)) {
+    error("firebase-sync.js: production authentication must not have a query/hash bypass");
+  }
+  if (!syncSource.includes("https://www.gstatic.com/firebasejs/12.18.0/")) {
+    error("firebase-sync.js: Firebase CDN version must stay pinned to 12.18.0");
+  }
+
+  if (!rulesSource.includes(`request.auth.token.email == "${allowedEmail}"`)
+    || !rulesSource.includes("request.auth.token.email_verified == true")
+    || !rulesSource.includes("request.auth.uid == userId")
+    || !rulesSource.includes("allow read, write: if false")) {
+    error("firestore.rules: owner email/verification/UID deny-by-default contract is incomplete");
+  }
+
+  const authIds = [
+    "auth-gate", "google-sign-in-button", "progress-choice-panel", "protected-app",
+    "use-device-progress-button", "use-cloud-progress-button", "cloud-sync-warning",
+    "cloud-sync-refresh-button", "sign-out-button"
+  ];
+  for (const id of authIds) {
+    const matches = html.match(new RegExp(`\\bid=["']${id}["']`, "g")) || [];
+    if (matches.length !== 1) error(`index.html: expected one cloud/auth #${id}, found ${matches.length}`);
+  }
+  const protectedApp = html.match(/<div\b[^>]*\bid=["']protected-app["'][^>]*>/i)?.[0] || "";
+  if (!/\bhidden(?:\s|=|>)/i.test(protectedApp)
+    || !/\binert(?:\s|=|>)/i.test(protectedApp)
+    || !/\baria-hidden=["']true["']/i.test(protectedApp)) {
+    error("index.html: #protected-app must begin hidden, inert and aria-hidden");
+  }
+  const configScript = html.search(/src=["']firebase-config\.js(?:\?[^"']*)?["']/);
+  const syncScript = html.search(/src=["']firebase-sync\.js(?:\?[^"']*)?["']/);
+  const dataScript = html.search(/src=["']data\/questions\.js(?:\?[^"']*)?["']/);
+  if (configScript < 0 || syncScript < 0 || dataScript < 0 || configScript > syncScript || syncScript > dataScript) {
+    error("index.html: Firebase config and sync must load in order before question data");
+  }
+
+  if (!app.includes('new CustomEvent("ppsc:local-state-changed"')
+    || !app.includes('window.addEventListener("ppsc:cloud-ready"')
+    || !app.includes("window.PPSC_APP_START")) {
+    error("app.js: cloud-ready startup and local-state notification hooks are incomplete");
+  }
+  for (const requiredWorkflowText of [
+    "node tools/cloud-sync-smoke.js",
+    "firebase-config.js firebase-sync.js",
+    "node --check firebase-sync.js"
+  ]) {
+    if (!workflowSource.includes(requiredWorkflowText)) {
+      error(`pages.yml: missing cloud-sync deployment guard ${requiredWorkflowText}`);
+    }
+  }
+}
+
 const data = loadData();
 const result = validateData(data);
 const gkStudyNotesBundle = loadGkStudyNotes();
@@ -1098,6 +1208,7 @@ validateHtml();
 validateFonts();
 validateRetryQueueContract();
 validateComputerSourceAppContract();
+validateCloudSyncContract();
 
 console.log(`Site data: ${result.categories.length} categories, ${result.questions.length} questions.`);
 console.log(`GK Study Notes: ${gkStudyNotesBundle.data && Array.isArray(gkStudyNotesBundle.data.notes) ? gkStudyNotesBundle.data.notes.length : 0} notes.`);
