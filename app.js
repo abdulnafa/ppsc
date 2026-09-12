@@ -16,7 +16,8 @@
   var RANGE_SESSION_STORAGE_VERSION = 7;
   var LEGACY_SESSION_STORAGE_VERSION = 6;
   var RETRY_QUEUE_STORAGE_VERSION = 1;
-  var RETRY_QUEUE_INCREMENT = 2;
+  var RETRY_QUEUE_INCREMENT = 5;
+  var LEGACY_RETRY_QUEUE_INCREMENT = 2;
   var RETRY_QUEUE_SPACING = 3;
   var BASIC_COMPUTER_CATEGORY_ID = "basic-computer-studies";
   var COMPUTER_SOURCE_SCOPES = ["all", "initial-original", "initial-related", "other"];
@@ -946,12 +947,26 @@
         || (!attempt.submitted && attempt.outcome !== null)
       ) return null;
 
+      var wrongIncrement = null;
+      if (attempt.submitted && expectedOutcome === "wrong") {
+        if (typeof attempt.wrongIncrement === "undefined") {
+          wrongIncrement = LEGACY_RETRY_QUEUE_INCREMENT;
+        } else if (![LEGACY_RETRY_QUEUE_INCREMENT, RETRY_QUEUE_INCREMENT].includes(attempt.wrongIncrement)) {
+          return null;
+        } else {
+          wrongIncrement = attempt.wrongIncrement;
+        }
+      } else if (typeof attempt.wrongIncrement !== "undefined" && attempt.wrongIncrement !== null) {
+        return null;
+      }
+
       activeAttempt = {
         questionId: attemptQuestionId,
         optionOrder: attempt.optionOrder.slice(),
         selectedIndex: selectedIndex,
         submitted: attempt.submitted,
         outcome: attempt.outcome,
+        wrongIncrement: wrongIncrement,
         resumeAction: String(attempt.resumeAction)
       };
     }
@@ -1208,7 +1223,13 @@
     if (!item || !attempt || !attempt.submitted) return item ? item.remaining : 0;
     return attempt.outcome === "correct"
       ? Math.max(0, item.remaining - 1)
-      : item.remaining + RETRY_QUEUE_INCREMENT;
+      : item.remaining + retryWrongIncrement(attempt);
+  }
+
+  function retryWrongIncrement(attempt) {
+    return attempt && attempt.outcome === "wrong" && isSafeWholeNumber(attempt.wrongIncrement, 1)
+      ? attempt.wrongIncrement
+      : RETRY_QUEUE_INCREMENT;
   }
 
   function updateRetryAttemptProgress(item, attempt, urduQuestion) {
@@ -1251,6 +1272,7 @@
   function showRetryFeedback(question, attempt) {
     if (!elements.retryFeedback || !attempt || !attempt.submitted) return;
     var correct = attempt.outcome === "correct";
+    var wrongIncrement = retryWrongIncrement(attempt);
     var correctOption = displayOption(question, question.correctOptionIndex);
     var urduQuestion = isUrduCategoryQuestion(question);
     elements.retryFeedback.classList.remove("is-warning", "is-correct", "is-incorrect");
@@ -1268,11 +1290,12 @@
       elements.retryFeedbackText.textContent = urduQuestion
         ? (correct
           ? "بہت خوب۔ جاری رکھنے پر ایک دہرائی مکمل ہو جائے گی۔"
-          : "درست جواب " + correctOption.label + "۔ " + correctOption.text + " ہے۔ جاری رکھنے پر دو مزید دہرائیاں شامل ہوں گی۔")
+          : "درست جواب " + correctOption.label + "۔ " + correctOption.text + " ہے۔ جاری رکھنے پر "
+            + wrongIncrement + " مزید دہرائیاں شامل ہوں گی۔")
         : (correct
           ? "Well done. One required review will be completed when you continue."
           : "The correct answer is " + correctOption.label + ". " + correctOption.text
-            + ". Two extra reviews will be added when you continue.");
+            + ". " + wrongIncrement + " extra reviews will be added when you continue.");
     }
   }
 
@@ -1429,6 +1452,7 @@
       selectedIndex: null,
       submitted: false,
       outcome: null,
+      wrongIncrement: null,
       resumeAction: resumeAction
     };
     saveRetryQueue();
@@ -1470,6 +1494,7 @@
     }
     attempt.submitted = true;
     attempt.outcome = attempt.selectedIndex === question.correctOptionIndex ? "correct" : "wrong";
+    attempt.wrongIncrement = attempt.outcome === "wrong" ? RETRY_QUEUE_INCREMENT : null;
     saveRetryQueue();
     markRetrySubmittedOptions(question, attempt.selectedIndex);
     showRetryFeedback(question, attempt);
@@ -1519,7 +1544,7 @@
         mastered = true;
       }
     } else {
-      item.remaining += RETRY_QUEUE_INCREMENT;
+      item.remaining += retryWrongIncrement(attempt);
     }
     if (!mastered) {
       item.dueStep = retryQueueState.practiceStep + RETRY_QUEUE_SPACING;

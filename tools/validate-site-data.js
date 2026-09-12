@@ -1054,7 +1054,8 @@ function validateRetryQueueContract() {
   const requiredConstants = [
     ["RETRY_QUEUE_STORAGE_KEY", '"ppsc-prep:retry-queue:v1"'],
     ["RETRY_QUEUE_STORAGE_VERSION", "1"],
-    ["RETRY_QUEUE_INCREMENT", "2"],
+    ["RETRY_QUEUE_INCREMENT", "5"],
+    ["LEGACY_RETRY_QUEUE_INCREMENT", "2"],
     ["RETRY_QUEUE_SPACING", "3"]
   ];
   for (const [name, value] of requiredConstants) {

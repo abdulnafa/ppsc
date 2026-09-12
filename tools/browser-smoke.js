@@ -464,7 +464,7 @@ async function main() {
       const secondId = String(secondWrong?.question.id || "");
       if (!retry || retry.practiceStep !== 4
         || JSON.stringify(retry.items.map((item) => [item.questionId, item.remaining, item.dueStep, item.sequence]))
-          !== JSON.stringify([[firstId, 2, 4, 1], [secondId, 2, 5, 2]])) {
+          !== JSON.stringify([[firstId, 5, 4, 1], [secondId, 5, 5, 2]])) {
         errors.push("Two main wrong answers did not enter the retry queue once in FIFO order.");
       }
       const beforeFirstPopup = mainSnapshot();
@@ -506,9 +506,9 @@ async function main() {
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       const postponedFirst = retry?.items.find((item) => item.questionId === firstId);
       const waitingSecond = retry?.items.find((item) => item.questionId === secondId);
-      if (dialog.open || retry?.activeAttempt !== null || postponedFirst?.remaining !== 2
+      if (dialog.open || retry?.activeAttempt !== null || postponedFirst?.remaining !== 5
         || postponedFirst?.dueStep !== 7 || postponedFirst?.sequence !== 3
-        || waitingSecond?.remaining !== 2 || waitingSecond?.dueStep !== 5 || waitingSecond?.sequence !== 2) {
+        || waitingSecond?.remaining !== 5 || waitingSecond?.dueStep !== 5 || waitingSecond?.sequence !== 2) {
         errors.push("Not now did not postpone without decrementing and move the item behind FIFO work.");
       }
       if (document.querySelector("#question-number-input")?.value !== "5" || document.querySelector("#score-text")?.textContent !== "Score: 2") {
@@ -530,8 +530,9 @@ async function main() {
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       const checkedWrongItem = retry?.items.find((item) => item.questionId === secondId);
       if (!retry?.activeAttempt?.submitted || retry.activeAttempt.outcome !== "wrong"
-        || checkedWrongItem?.remaining !== 2 || !document.querySelector("#retry-dialog-progress")?.textContent.includes("4 درست دہرائیاں باقی ہیں")) {
-        errors.push("Wrong retry Check did not project exactly two added reviews without applying early.");
+        || retry.activeAttempt.wrongIncrement !== 5 || checkedWrongItem?.remaining !== 5
+        || !document.querySelector("#retry-dialog-progress")?.textContent.includes("10 درست دہرائیاں باقی ہیں")) {
+        errors.push("Wrong retry Check did not project exactly five added reviews without applying early.");
       }
       const retryFeedback = document.querySelector("#retry-feedback");
       const mappedCorrectText = secondQuestion.optionsUrdu[secondQuestion.correctOptionIndex];
@@ -550,15 +551,15 @@ async function main() {
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       let secondItem = retry?.items.find((item) => item.questionId === secondId);
-      if (secondItem?.remaining !== 4 || secondItem?.dueStep !== 8 || secondItem?.sequence !== 4
+      if (secondItem?.remaining !== 10 || secondItem?.dueStep !== 8 || secondItem?.sequence !== 4
         || retry?.items.filter((item) => item.questionId === secondId).length !== 1) {
-        errors.push("Wrong retry Continue did not atomically add exactly two and coalesce the queue item.");
+        errors.push("Wrong retry Continue did not atomically add exactly five and coalesce the queue item.");
       }
       document.querySelector("#retry-action-button")?.click();
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       secondItem = retry?.items.find((item) => item.questionId === secondId);
-      if (secondItem?.remaining !== 4) errors.push("A second click after closing applied the wrong +2 more than once.");
+      if (secondItem?.remaining !== 10) errors.push("A second click after closing applied the wrong +5 more than once.");
       if (document.querySelector("#question-number-input")?.value !== "6" || document.querySelector("#score-text")?.textContent !== "Score: 3") {
         errors.push("Wrong retry did not resume the sixth main question with unchanged scoring.");
       }
@@ -576,7 +577,7 @@ async function main() {
       document.querySelector("#retry-action-button")?.click();
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (retry?.items.find((item) => item.questionId === firstId)?.remaining !== 1
+      if (retry?.items.find((item) => item.questionId === firstId)?.remaining !== 4
         || document.querySelector("#question-number-input")?.value !== "8") {
         errors.push("Correct FIFO retry did not decrement once and resume question eight.");
       }
@@ -593,8 +594,8 @@ async function main() {
         errors.push("Mid-Quiz Later did not resume question nine with the unchanged score.");
       }
       if (retry?.items.length !== 2
-        || retry.items.find((item) => item.questionId === firstId)?.remaining !== 1
-        || retry.items.find((item) => item.questionId === secondId)?.remaining !== 4) {
+        || retry.items.find((item) => item.questionId === firstId)?.remaining !== 4
+        || retry.items.find((item) => item.questionId === secondId)?.remaining !== 10) {
         errors.push("Mid-Quiz Later changed or removed persistent retry work.");
       }
       const queueAtResults = JSON.stringify(retry.items);
@@ -702,7 +703,7 @@ async function main() {
       document.querySelector("#retry-later-button")?.click();
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (dialog.open || retry?.items.find((item) => item.questionId === secondId)?.remaining !== 4
+      if (dialog.open || retry?.items.find((item) => item.questionId === secondId)?.remaining !== 10
         || document.querySelector("#question-number-input")?.value !== "4") {
         errors.push("Postponing a cross-category review did not preserve it and resume the main Quiz.");
       }
@@ -712,7 +713,7 @@ async function main() {
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (!visible(document.querySelector("#results-screen")) || dialog.open || retry?.activeAttempt !== null
         || retry?.practiceStep !== practiceStepAtResults + 4
-        || retry?.items.find((item) => item.questionId === secondId)?.remaining !== 4) {
+        || retry?.items.find((item) => item.questionId === secondId)?.remaining !== 10) {
         errors.push("Quiz Results did not open immediately while global retry work remained saved.");
       }
       document.querySelector("#change-category-button")?.click();
@@ -729,38 +730,52 @@ async function main() {
         errors.push("Difficult Quiz did not start with the first in-memory marked question.");
       }
       if (document.querySelector("#retry-queue-chip")?.hidden
-        || document.querySelector("#retry-queue-count")?.textContent !== "1") {
-        errors.push("Difficult Quiz did not show the remaining global queue item.");
+        || document.querySelector("#retry-queue-count")?.textContent !== "2") {
+        errors.push("Difficult Quiz did not show the two remaining global queue items.");
       }
       await answerMain(true);
-      await advance();
-      await answerMain(true);
-      const difficultScoreBeforeReview = document.querySelector("#score-text")?.textContent;
+      const difficultScoreBeforeFirstReview = document.querySelector("#score-text")?.textContent;
       await advance();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      const difficultAttempt = retry?.activeAttempt;
-      if (!dialog.open || difficultAttempt?.questionId !== secondId
+      const firstDifficultAttempt = retry?.activeAttempt;
+      if (!dialog.open || firstDifficultAttempt?.questionId !== firstId
         || document.querySelector("#quiz-screen")?.dataset.scope !== "difficult") {
-        errors.push("A due global review did not appear during Difficult Quiz.");
+        errors.push("The first due global review did not appear during Difficult Quiz.");
       }
-      const difficultReviewQuestion = questionById.get(String(difficultAttempt?.questionId || ""));
-      const difficultCorrectIndex = difficultAttempt && difficultReviewQuestion
-        ? difficultAttempt.optionOrder.indexOf(difficultReviewQuestion.correctOptionIndex)
+      const firstDifficultReviewQuestion = questionById.get(String(firstDifficultAttempt?.questionId || ""));
+      const firstDifficultCorrectIndex = firstDifficultAttempt && firstDifficultReviewQuestion
+        ? firstDifficultAttempt.optionOrder.indexOf(firstDifficultReviewQuestion.correctOptionIndex)
         : -1;
-      document.querySelector('[data-review-option-index="' + difficultCorrectIndex + '"]')?.click();
+      document.querySelector('[data-review-option-index="' + firstDifficultCorrectIndex + '"]')?.click();
       document.querySelector("#retry-action-button")?.click();
       await pause();
       document.querySelector("#retry-action-button")?.click();
       await pause();
-      if (document.querySelector("#score-text")?.textContent !== difficultScoreBeforeReview
+      if (document.querySelector("#score-text")?.textContent !== difficultScoreBeforeFirstReview
+        || document.querySelector("#question-number-input")?.value !== "2") {
+        errors.push("First global Difficult review changed score or failed to resume question two.");
+      }
+
+      await answerMain(true);
+      const difficultScoreBeforeSecondReview = document.querySelector("#score-text")?.textContent;
+      await advance();
+      retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const secondDifficultAttempt = retry?.activeAttempt;
+      if (!dialog.open || secondDifficultAttempt?.questionId !== secondId) {
+        errors.push("The second due global review did not continue in FIFO order during Difficult Quiz.");
+      }
+      document.querySelector("#retry-later-button")?.click();
+      await pause();
+      if (document.querySelector("#score-text")?.textContent !== difficultScoreBeforeSecondReview
         || document.querySelector("#question-number-input")?.value !== "3") {
-        errors.push("Global Difficult review changed score or failed to resume its main Quiz.");
+        errors.push("Second global Difficult review changed score or failed to resume question three.");
       }
       await answerMain(true);
       await advance();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (!visible(document.querySelector("#results-screen")) || dialog.open || retry?.activeAttempt !== null
-        || retry?.items.find((item) => item.questionId === secondId)?.remaining !== 3) {
+        || retry?.items.find((item) => item.questionId === firstId)?.remaining !== 2
+        || retry?.items.find((item) => item.questionId === secondId)?.remaining !== 10) {
         errors.push("Difficult Quiz did not finish with its remaining global review saved for later.");
       }
       sessionStorage.setItem("ppsc-smoke:retry-seed", JSON.stringify(retry));
@@ -768,7 +783,7 @@ async function main() {
       return {
         errors,
         fifoIds: [firstId, secondId],
-        wrongRemaining: 4,
+        wrongRemaining: 10,
         scoreBeforeExit: "Score: 6",
         survivedResults: true,
         suppressedInLearn: true,
@@ -999,7 +1014,7 @@ async function main() {
       let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (dialog?.open || !visible(document.querySelector("#results-screen"))
         || retry?.activeAttempt !== null
-        || retry?.items.find((item) => item.questionId === targetId)?.remaining !== 2
+        || retry?.items.find((item) => item.questionId === targetId)?.remaining !== 5
         || document.querySelector("#result-score")?.textContent.replace(/\\s/g, "") !== "3/4") {
         errors.push("The source Quiz did not finish immediately with its retry item saved: " + JSON.stringify({
           dialogOpen: Boolean(dialog?.open),
@@ -1051,7 +1066,7 @@ async function main() {
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (dialog.open || retry?.activeAttempt !== null
-        || retry?.items.find((item) => item.questionId === targetId)?.remaining !== 2
+        || retry?.items.find((item) => item.questionId === targetId)?.remaining !== 5
         || document.querySelector("#question-number-input")?.value !== "2") {
         errors.push("Later did not preserve the global review and resume the host Quiz.");
       }
@@ -1061,7 +1076,7 @@ async function main() {
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (dialog.open || !visible(document.querySelector("#results-screen"))
         || retry?.activeAttempt !== null
-        || retry?.items.find((item) => item.questionId === targetId)?.remaining !== 2
+        || retry?.items.find((item) => item.questionId === targetId)?.remaining !== 5
         || document.querySelector("#result-score")?.textContent.replace(/\\s/g, "") !== "2/2") {
         errors.push("The host Quiz did not finish while the postponed cross-category review stayed saved.");
       }
@@ -4158,7 +4173,7 @@ async function main() {
       };
 
       const categoryButton = document.querySelector('#category-grid .category-card[data-category="' + categoryId + '"]');
-      if (!categoryButton || categoryQuestions.length < 16) {
+      if (!categoryButton || categoryQuestions.length < 17) {
         errors.push("Retry lifecycle category fixture is unavailable.");
         return { errors, expected: {} };
       }
@@ -4172,7 +4187,7 @@ async function main() {
         return { errors, expected: {} };
       }
       startInput.value = "1";
-      endInput.value = "16";
+      endInput.value = "17";
       document.querySelector("#question-range-form")?.requestSubmit();
       await pause();
 
@@ -4182,9 +4197,9 @@ async function main() {
       const session = JSON.parse(localStorage.getItem(sessionKey) || "null");
       if (!retry || retry.version !== 1 || retry.bankSignature !== session?.bankSignature
         || retry.practiceStep !== 1 || retry.nextSequence !== 2 || retry.items.length !== 1
-        || retry.items[0].questionId !== firstId || retry.items[0].remaining !== 2
+        || retry.items[0].questionId !== firstId || retry.items[0].remaining !== 5
         || retry.items[0].dueStep !== 4 || retry.items[0].sequence !== 1 || retry.activeAttempt !== null) {
-        errors.push("Initial main wrong answer did not create the exact two-review +3-step queue record.");
+        errors.push("Initial main wrong answer did not create the exact five-review +3-step queue record.");
       }
       if (document.querySelector("#retry-dialog")?.open) errors.push("Initial wrong answer opened its retry immediately.");
       const queueChip = document.querySelector("#retry-queue-chip");
@@ -4241,9 +4256,9 @@ async function main() {
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (!retry?.activeAttempt?.submitted || retry.activeAttempt.outcome !== "correct"
-        || retry.items[0]?.remaining !== 2 || document.querySelector("#retry-action-button")?.dataset.action !== "continue"
-        || !document.querySelector("#retry-dialog-progress")?.textContent.includes("1 correct review remaining")) {
-        errors.push("Correct retry Check did not persist an unapplied, projected 2-to-1 result.");
+        || retry.items[0]?.remaining !== 5 || document.querySelector("#retry-action-button")?.dataset.action !== "continue"
+        || !document.querySelector("#retry-dialog-progress")?.textContent.includes("4 correct reviews remaining")) {
+        errors.push("Correct retry Check did not persist an unapplied, projected 5-to-4 result.");
       }
       if (JSON.stringify(mainSnapshot()) !== JSON.stringify(beforeRetryMain)
         || document.querySelector("#score-text")?.textContent !== beforeRetryScore) {
@@ -4421,7 +4436,7 @@ async function main() {
       }
       if (document.querySelector("#retry-dialog")?.open) errors.push("Active retry opened before the user chose Continue.");
       if (JSON.stringify(storedBeforeContinue?.activeAttempt) !== JSON.stringify(expected.activeAttempt)
-        || storedBeforeContinue?.items[0]?.remaining !== 2) {
+        || storedBeforeContinue?.items[0]?.remaining !== 5) {
         errors.push("Reload changed the submitted active retry before Continue.");
       }
       document.querySelector("#continue-session-button")?.click();
@@ -4464,9 +4479,9 @@ async function main() {
       document.querySelector("#retry-action-button")?.click();
       await pause();
       let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (dialog?.open || retry?.activeAttempt !== null || retry?.items[0]?.remaining !== 1
+      if (dialog?.open || retry?.activeAttempt !== null || retry?.items[0]?.remaining !== 4
         || retry?.items[0]?.dueStep !== 7 || retry?.items[0]?.sequence !== 2) {
-        errors.push("Correct retry Continue was not applied exactly once as remaining 1, due +3.");
+        errors.push("Correct retry Continue was not applied exactly once as remaining 4, due +3.");
       }
       if (document.querySelector("#question-number-input")?.value !== "5" || document.querySelector("#score-text")?.textContent !== "Score: 3") {
         errors.push("Retry Continue did not resume the next main question with the same score.");
@@ -4474,13 +4489,13 @@ async function main() {
       if (document.activeElement !== document.querySelector("#question-text")) errors.push("Closing retry did not restore focus to resumed main content.");
 
       const observedRemaining = [];
-      for (let questionNumber = 5; questionNumber <= 16; questionNumber += 1) {
+      for (let questionNumber = 5; questionNumber <= 17; questionNumber += 1) {
         await answerMainCorrect();
         const mainBeforeTransition = mainSnapshot();
         const scoreBeforeTransition = document.querySelector("#score-text")?.textContent;
         document.querySelector("#action-button")?.click();
         await pause();
-        const shouldReview = questionNumber === 7;
+        const shouldReview = [7, 10, 13, 16].includes(questionNumber);
         if (!shouldReview) {
           if (dialog?.open) errors.push("Retry reopened before its exact three-question spacing at main question " + questionNumber + ".");
           continue;
@@ -4510,20 +4525,20 @@ async function main() {
       }
 
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (JSON.stringify(observedRemaining) !== JSON.stringify([1])) {
-        errors.push("Two correct retry appearances did not count down 2,1.");
+      if (JSON.stringify(observedRemaining) !== JSON.stringify([4, 3, 2, 1])) {
+        errors.push("Five correct retry appearances did not count down 5,4,3,2,1.");
       }
       if (!visible(document.querySelector("#results-screen"))
-        || document.querySelector("#result-score")?.textContent.replace(/\\s/g, "") !== "15/16") {
-        errors.push("Retry lifecycle completion changed the 15-of-16 main Quiz result.");
+        || document.querySelector("#result-score")?.textContent.replace(/\\s/g, "") !== "16/17") {
+        errors.push("Retry lifecycle completion changed the 16-of-17 main Quiz result.");
       }
       if (!retry || retry.items.length !== 0 || retry.activeAttempt !== null
         || localStorage.getItem(sessionKey) !== null || !document.querySelector("#retry-queue-chip")?.hidden) {
-        errors.push("Second successful review did not remove the mastered queue item cleanly at results.");
+        errors.push("Fifth successful review did not remove the mastered queue item cleanly at results.");
       }
       return {
         errors,
-        twoReviewCountdown: [2].concat(observedRemaining),
+        fiveReviewCountdown: [5].concat(observedRemaining),
         finalScore: document.querySelector("#result-score")?.textContent || "",
         mobileWidth: window.innerWidth,
         mobileFocusMetrics: {
@@ -4553,10 +4568,10 @@ async function main() {
         return { errors, questionId: "", remaining: null };
       }
       seed.activeAttempt = null;
-      seed.items[0].remaining = 5;
+      seed.items[0].remaining = 2;
       sessionStorage.setItem("ppsc-smoke:retry-seed", JSON.stringify(seed));
       localStorage.setItem("ppsc-prep:retry-queue:v1", JSON.stringify(seed));
-      return { errors, questionId: seed.items[0].questionId, remaining: 5 };
+      return { errors, questionId: seed.items[0].questionId, remaining: 2 };
     })()`);
     await client.send("Page.reload", { ignoreCache: true });
     await client.evaluate(`new Promise((resolve, reject) => {
@@ -4577,8 +4592,8 @@ async function main() {
       const expected = ${JSON.stringify(retryExistingCountSeedResult)};
       const stored = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
       const item = stored?.items.find((entry) => entry.questionId === expected.questionId);
-      if (!stored || stored.version !== 1 || item?.remaining !== 5) {
-        errors.push("An existing saved retry count was reset or removed after the two-review rule update.");
+      if (!stored || stored.version !== 1 || item?.remaining !== 2) {
+        errors.push("An existing saved retry count was reset or removed after the five-review rule update.");
       }
       return { errors, questionId: expected.questionId, remaining: item?.remaining ?? null };
     })()`);
@@ -5220,8 +5235,8 @@ async function main() {
         screenshots: computerSourceScreenshots
       },
       retryQueue: {
-        initialTwoAndCadence: retryLifecycleSetup.errors.length === 0,
-        twoCorrectReviews: retryLifecycleResume.twoReviewCountdown,
+        initialFiveAndCadence: retryLifecycleSetup.errors.length === 0,
+        fiveCorrectReviews: retryLifecycleResume.fiveReviewCountdown,
         finalMainScore: retryLifecycleResume.finalScore,
         mobileWidth: retryLifecycleResume.mobileWidth,
         mobileFocusMetrics: retryLifecycleResume.mobileFocusMetrics,
