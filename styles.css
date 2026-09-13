@@ -588,6 +588,36 @@ h2[tabindex="-1"]:focus {
   border: 1px solid #c9daf4;
   border-radius: 999px;
 }
+.category-card.retry-queue-card {
+  grid-column: 1 / -1;
+  min-height: 104px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #fffdf8 0%, #fff6e5 58%, #fffaf0 100%);
+  border-color: #e7c27c;
+}
+#retry-queue-card .retry-queue-card-icon {
+  color: #fff;
+  font-size: 1.25rem;
+  background: linear-gradient(145deg, #df941d, #ad5f08);
+  box-shadow: 0 7px 16px rgba(173, 95, 8, .2);
+}
+.retry-queue-card .category-copy strong { color: #774207; font-size: 1.02rem; }
+.retry-queue-card .category-copy small { line-height: 1.45; }
+.retry-queue-card-badge {
+  padding: 5px 9px;
+  color: #8a5206;
+  font-size: .64rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  background: #fff;
+  border: 1px solid #edcd91;
+  border-radius: 999px;
+}
+.category-card.retry-queue-card:not(:disabled):hover {
+  border-color: #d5a74e;
+  box-shadow: 0 13px 28px rgba(138, 82, 6, .12);
+}
 .category-card {
   width: 100%;
   min-height: 94px;
@@ -1972,6 +2002,8 @@ body.has-retry-dialog { overflow: hidden; }
   .category-card { min-height: 82px; padding: 14px; }
   .paper-builder-card { min-height: 96px; }
   .paper-card-badge { display: none; }
+  .retry-queue-card { min-height: 96px; }
+  .retry-queue-card-badge { display: none; }
   .gk-study-notes-card { min-height: 96px; }
   .gk-study-notes-badge { display: none; }
   .quick-notes-back-button { margin-bottom: 16px; }

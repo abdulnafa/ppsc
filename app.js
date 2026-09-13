@@ -18,7 +18,8 @@
   var RETRY_QUEUE_STORAGE_VERSION = 1;
   var RETRY_QUEUE_INCREMENT = 5;
   var LEGACY_RETRY_QUEUE_INCREMENT = 2;
-  var RETRY_QUEUE_SPACING = 3;
+  var RETRY_QUEUE_MIN_SPACING = 5;
+  var RETRY_QUEUE_MAX_SPACING = 6;
   var BASIC_COMPUTER_CATEGORY_ID = "basic-computer-studies";
   var COMPUTER_SOURCE_SCOPES = ["all", "initial-original", "initial-related", "other"];
   var data = window.PPSC_QUIZ_DATA || {};
@@ -37,6 +38,7 @@
   var difficultQuestionIds = new Set();
   var activeSessionSnapshot = null;
   var retryQueueState = createEmptyRetryQueueState();
+  var retryQueuePractice = { active: false };
   var previousOptionOrders = Object.create(null);
   var gkNoteSearchEntries = [];
   var gkNotesState = {
@@ -140,6 +142,8 @@
     elements.gkNotesLoadMoreButton = firstElement(["#gk-notes-load-more-button", "[data-gk-notes-load-more]"]);
     elements.gkNotesEmpty = firstElement(["#gk-notes-empty", "[data-gk-notes-empty]"]);
     elements.paperBuilderCard = firstElement(["#paper-builder-card", "[data-paper-builder]"]);
+    elements.retryQueueCard = firstElement(["#retry-queue-card", "[data-retry-queue-card]"]);
+    elements.retryQueueCardMeta = firstElement(["#retry-queue-card-meta", "[data-retry-queue-card-meta]"]);
     elements.paperSetupBackButton = firstElement(["#paper-setup-back-button", "[data-paper-setup-back]"]);
     elements.paperCategoryOptions = firstElement(["#paper-category-options", "[data-paper-category-options]"]);
     elements.paperSelectAllButton = firstElement(["#paper-select-all-button", "[data-paper-select-all]"]);
@@ -222,6 +226,7 @@
     elements.retryFeedbackTitle = firstElement(["#retry-feedback-title", "[data-retry-feedback-title]"]);
     elements.retryFeedbackText = firstElement(["#retry-feedback-text", "[data-retry-feedback-text]"]);
     elements.retryDialogHelp = firstElement(["#retry-dialog-help", "[data-retry-dialog-help]"]);
+    elements.retryQuestionCard = firstElement(["#retry-question-card", ".retry-question-card"]);
     elements.retryLaterButton = firstElement(["#retry-later-button", "[data-retry-later]"]);
     elements.retryActionButton = firstElement(["#retry-action-button", "[data-retry-action]"]);
     elements.resultScore = firstElement(["#result-score", "[data-result-score]"]);
@@ -890,7 +895,10 @@
       version: RETRY_QUEUE_STORAGE_VERSION,
       bankSignature: questionBankSignature,
       practiceStep: 0,
+      nextQuizReviewStep: null,
       nextSequence: 1,
+      dedicatedDeck: [],
+      dedicatedLastQuestionId: null,
       items: [],
       activeAttempt: null
     };
@@ -901,10 +909,25 @@
   }
 
   function isRetryResumeAction(value) {
-    return value === "results"
+    return value === "queue"
+      || value === "results"
       || /^next:\d+$/.test(String(value || ""))
       || /^next-unanswered:\d+$/.test(String(value || ""))
       || /^next-unvisited:\d+$/.test(String(value || ""));
+  }
+
+  function randomRetrySpacing() {
+    return RETRY_QUEUE_MIN_SPACING
+      + Math.floor(Math.random() * (RETRY_QUEUE_MAX_SPACING - RETRY_QUEUE_MIN_SPACING + 1));
+  }
+
+  function scheduleNextQuizReview() {
+    if (retryQueueState.items.length === 0) {
+      retryQueueState.nextQuizReviewStep = null;
+      return null;
+    }
+    retryQueueState.nextQuizReviewStep = retryQueueState.practiceStep + randomRetrySpacing();
+    return retryQueueState.nextQuizReviewStep;
   }
 
   function normalizeRetryQueue(savedValue) {
@@ -943,6 +966,38 @@
     }, 0);
     if (savedValue.nextSequence <= highestSequence) return null;
 
+    var nextQuizReviewStep = savedValue.nextQuizReviewStep;
+    if (typeof nextQuizReviewStep === "undefined") {
+      // Existing v1 queues did not have a global cadence gate. Migrate them
+      // without touching any saved question or repetition count.
+      nextQuizReviewStep = items.length > 0
+        ? savedValue.practiceStep + RETRY_QUEUE_MIN_SPACING
+        : null;
+    } else if (nextQuizReviewStep !== null && !isSafeWholeNumber(nextQuizReviewStep, 0)) {
+      return null;
+    }
+    if (items.length === 0) nextQuizReviewStep = null;
+
+    var dedicatedDeck = [];
+    if (Array.isArray(savedValue.dedicatedDeck)) {
+      var dedicatedDeckIds = new Set();
+      savedValue.dedicatedDeck.forEach(function (savedQuestionId) {
+        var questionId = String(savedQuestionId || "");
+        if (questionIds.has(questionId) && !dedicatedDeckIds.has(questionId)) {
+          dedicatedDeckIds.add(questionId);
+          dedicatedDeck.push(questionId);
+        }
+      });
+    }
+
+    var dedicatedLastQuestionId = savedValue.dedicatedLastQuestionId;
+    if (typeof dedicatedLastQuestionId === "undefined") {
+      dedicatedLastQuestionId = null;
+    } else if (dedicatedLastQuestionId !== null) {
+      dedicatedLastQuestionId = String(dedicatedLastQuestionId || "");
+      if (!knownQuestionIds.has(dedicatedLastQuestionId)) dedicatedLastQuestionId = null;
+    }
+
     var activeAttempt = null;
     if (savedValue.activeAttempt !== null) {
       var attempt = savedValue.activeAttempt;
@@ -950,14 +1005,20 @@
       var attemptQuestionId = String(attempt.questionId || "");
       var canonicalQuestion = questionsById.get(attemptQuestionId);
       var selectedIndex = attempt.selectedIndex;
+      var attemptContext = typeof attempt.context === "undefined" ? "embedded" : String(attempt.context);
       if (
         !canonicalQuestion
         || !questionIds.has(attemptQuestionId)
+        || !["embedded", "dedicated"].includes(attemptContext)
         || !isIndexPermutation(attempt.optionOrder)
         || (hasPositionDependentOptionWording(canonicalQuestion) && !isCanonicalOptionOrder(attempt.optionOrder))
         || (selectedIndex !== null && (!Number.isInteger(selectedIndex) || selectedIndex < 0 || selectedIndex >= OPTION_LABELS.length))
         || typeof attempt.submitted !== "boolean"
         || !isRetryResumeAction(attempt.resumeAction)
+      ) return null;
+      if (
+        (attemptContext === "dedicated" && attempt.resumeAction !== "queue")
+        || (attemptContext === "embedded" && attempt.resumeAction === "queue")
       ) return null;
 
       var reviewQuestion = quizQuestionWithOrder(canonicalQuestion, attempt.optionOrder);
@@ -989,15 +1050,30 @@
         submitted: attempt.submitted,
         outcome: attempt.outcome,
         wrongIncrement: wrongIncrement,
-        resumeAction: String(attempt.resumeAction)
+        resumeAction: String(attempt.resumeAction),
+        context: attemptContext
       };
+      if (attemptContext === "dedicated") {
+        dedicatedDeck = dedicatedDeck.filter(function (questionId) {
+          return questionId !== attemptQuestionId;
+        });
+        if (dedicatedLastQuestionId === null) dedicatedLastQuestionId = attemptQuestionId;
+      }
+    }
+
+    if (items.length === 0) {
+      dedicatedDeck = [];
+      dedicatedLastQuestionId = null;
     }
 
     return {
       version: RETRY_QUEUE_STORAGE_VERSION,
       bankSignature: questionBankSignature,
       practiceStep: savedValue.practiceStep,
+      nextQuizReviewStep: nextQuizReviewStep,
       nextSequence: savedValue.nextSequence,
+      dedicatedDeck: dedicatedDeck,
+      dedicatedLastQuestionId: dedicatedLastQuestionId,
       items: items,
       activeAttempt: activeAttempt
     };
@@ -1026,8 +1102,9 @@
 
   function activeRetryAttemptMatchesSession() {
     var attempt = retryQueueState.activeAttempt;
-    return Boolean(attempt && activeRetryCategoryId())
-      && questionsById.has(String(attempt.questionId || ""));
+    if (!attempt || !questionsById.has(String(attempt.questionId || ""))) return false;
+    if (attempt.context === "dedicated") return retryQueuePractice.active;
+    return Boolean(activeRetryCategoryId());
   }
 
   function updateRetryQueueUI(announcement) {
@@ -1047,6 +1124,46 @@
         "aria-label",
         itemCount + (itemCount === 1 ? " queued question" : " queued questions")
           + ", " + totalRemaining + (totalRemaining === 1 ? " correct review" : " correct reviews") + " remaining"
+      );
+    }
+    var allItems = retryQueueState.items.slice();
+    var allItemCount = allItems.length;
+    var allRemaining = allItems.reduce(function (total, item) {
+      return total + item.remaining;
+    }, 0);
+    var dedicatedAttempt = retryQueueState.activeAttempt
+      && retryQueueState.activeAttempt.context === "dedicated"
+      ? retryQueueState.activeAttempt
+      : null;
+    var hasDedicatedAttempt = Boolean(dedicatedAttempt);
+    var dedicatedCardPrefix = hasDedicatedAttempt
+      ? (dedicatedAttempt.submitted ? "Continue \u00b7 answer pending \u00b7 " : "Continue \u00b7 ")
+      : "";
+    if (elements.retryQueueCardMeta) {
+      elements.retryQueueCardMeta.textContent = allItemCount === 0
+        ? "No reviews waiting \u2014 wrong Quiz answers will appear here."
+        : dedicatedCardPrefix
+          + allRemaining + (allRemaining === 1 ? " review" : " reviews")
+          + " across " + allItemCount + (allItemCount === 1 ? " question" : " questions");
+      elements.retryQueueCardMeta.dataset.count = String(allItemCount);
+      elements.retryQueueCardMeta.dataset.remaining = String(allRemaining);
+    }
+    if (elements.retryQueueCard) {
+      elements.retryQueueCard.disabled = allItemCount === 0;
+      elements.retryQueueCard.classList.toggle("is-empty", allItemCount === 0);
+      elements.retryQueueCard.dataset.count = String(allItemCount);
+      elements.retryQueueCard.dataset.remaining = String(allRemaining);
+      elements.retryQueueCard.setAttribute(
+        "aria-label",
+        allItemCount === 0
+          ? "Review Queue is empty"
+          : (hasDedicatedAttempt
+            ? (dedicatedAttempt.submitted
+              ? "Continue Review Queue; checked answer is waiting to be applied. "
+              : "Continue Review Queue. ")
+            : "Open Review Queue. ")
+            + allRemaining + (allRemaining === 1 ? " review" : " reviews")
+            + " across " + allItemCount + (allItemCount === 1 ? " question" : " questions")
       );
     }
     if (elements.retryQueueAnnouncer && announcement) {
@@ -1122,7 +1239,7 @@
     if (wrongAnswer) {
       var questionId = String(question.id);
       item = retryQueueItem(questionId);
-      var nextDueStep = retryQueueState.practiceStep + RETRY_QUEUE_SPACING;
+      var nextDueStep = retryQueueState.practiceStep + randomRetrySpacing();
       if (item) {
         item.remaining += RETRY_QUEUE_INCREMENT;
         item.dueStep = Math.min(item.dueStep, nextDueStep);
@@ -1135,6 +1252,9 @@
         };
         retryQueueState.items.push(item);
       }
+      if (retryQueueState.nextQuizReviewStep === null) {
+        retryQueueState.nextQuizReviewStep = nextDueStep;
+      }
     }
     saveRetryQueue(wrongAnswer
       ? (isUrduCategoryQuestion(question)
@@ -1146,6 +1266,10 @@
 
   function dueRetryQueueItem(excludedQuestionId) {
     if (!activeRetryCategoryId()) return null;
+    if (
+      retryQueueState.nextQuizReviewStep === null
+      || retryQueueState.practiceStep < retryQueueState.nextQuizReviewStep
+    ) return null;
     var excludedId = String(excludedQuestionId || "");
     var dueItems = retryQueueState.items.filter(function (item) {
       return item.dueStep <= retryQueueState.practiceStep;
@@ -1197,6 +1321,7 @@
       button.dataset.reviewOptionIndex = String(index);
       button.setAttribute("role", "radio");
       button.setAttribute("aria-checked", "false");
+      button.tabIndex = index === 0 ? 0 : -1;
 
       var label = document.createElement("span");
       label.className = "option-label";
@@ -1226,6 +1351,7 @@
       var selected = Number(button.dataset.reviewOptionIndex) === index;
       button.classList.toggle("is-selected", selected);
       button.setAttribute("aria-checked", selected ? "true" : "false");
+      button.tabIndex = selected ? 0 : -1;
     });
   }
 
@@ -1249,6 +1375,34 @@
     return attempt.outcome === "correct"
       ? Math.max(0, item.remaining - 1)
       : item.remaining + retryWrongIncrement(attempt);
+  }
+
+  function projectedRetryQueueTotals(attempt) {
+    var itemCount = retryQueueState.items.length;
+    var remaining = retryQueueState.items.reduce(function (total, entry) {
+      return total + entry.remaining;
+    }, 0);
+    var item = attempt ? retryQueueItem(attempt.questionId) : null;
+    if (item && attempt.submitted) {
+      if (attempt.outcome === "correct") {
+        remaining = Math.max(0, remaining - 1);
+        if (item.remaining === 1) itemCount -= 1;
+      } else {
+        remaining += retryWrongIncrement(attempt);
+      }
+    }
+    return { itemCount: itemCount, remaining: remaining };
+  }
+
+  function updateRetryDialogQueueMeta(attempt, urduQuestion) {
+    if (!elements.retryDialogQueueMeta) return;
+    var totals = projectedRetryQueueTotals(attempt);
+    elements.retryDialogQueueMeta.textContent = urduQuestion
+      ? "قطار میں " + totals.remaining + " دہرائیاں، " + totals.itemCount + " سوال"
+      : totals.remaining + (totals.remaining === 1 ? " review" : " reviews")
+        + " across " + totals.itemCount + (totals.itemCount === 1 ? " question" : " questions");
+    elements.retryDialogQueueMeta.lang = urduQuestion ? "ur" : "en";
+    elements.retryDialogQueueMeta.dir = urduQuestion ? "rtl" : "ltr";
   }
 
   function retryWrongIncrement(attempt) {
@@ -1337,33 +1491,29 @@
     ) return false;
 
     var urduQuestion = isUrduCategoryQuestion(question);
+    var dedicatedPractice = attempt.context === "dedicated";
     var category = findCategory(question.categoryId);
-    var queuedItemCount = activeQuizRetryItems().length;
     var categorySelectionLabel = category ? category.name : "";
     if (category && isBasicComputerCategory(category.id)) {
       categorySelectionLabel += " \u00b7 " + computerSourceScopeLabel(computerSourceScopeForQuestion(question));
     }
     elements.retryDialog.classList.toggle("is-urdu", urduQuestion);
+    elements.retryDialog.classList.toggle("is-dedicated", dedicatedPractice);
     if (elements.retryDialogTitle) {
-      elements.retryDialogTitle.textContent = urduQuestion ? "فوری دہرائی" : "Quick review";
+      elements.retryDialogTitle.textContent = urduQuestion
+        ? "فوری دہرائی"
+        : (dedicatedPractice ? "Review Queue Practice" : "Quick review");
       elements.retryDialogTitle.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogTitle.dir = urduQuestion ? "rtl" : "ltr";
     }
-    if (elements.retryDialogQueueMeta) {
-      elements.retryDialogQueueMeta.textContent = urduQuestion
-        ? "تمام زمروں کی دہرائی کی قطار میں " + queuedItemCount + " سوال"
-        : queuedItemCount + (queuedItemCount === 1
-          ? " question queued across all categories"
-          : " questions queued across all categories");
-      elements.retryDialogQueueMeta.lang = urduQuestion ? "ur" : "en";
-      elements.retryDialogQueueMeta.dir = urduQuestion ? "rtl" : "ltr";
-    }
+    updateRetryDialogQueueMeta(attempt, urduQuestion);
     updateRetryAttemptProgress(item, attempt, urduQuestion);
 
     if (elements.retryQuestionKind) {
       elements.retryQuestionKind.textContent = urduQuestion
         ? "دہرائی کا سوال"
-        : "REVIEW QUEUE" + (categorySelectionLabel ? " \u00b7 " + categorySelectionLabel.toUpperCase() : "");
+        : (dedicatedPractice ? "RANDOM QUEUE PRACTICE" : "REVIEW QUEUE")
+          + (categorySelectionLabel ? " \u00b7 " + categorySelectionLabel.toUpperCase() : "");
       elements.retryQuestionKind.classList.toggle("is-important", isImportantQuestion(question));
       elements.retryQuestionKind.lang = urduQuestion ? "ur" : "en";
       elements.retryQuestionKind.dir = urduQuestion ? "rtl" : "ltr";
@@ -1399,9 +1549,13 @@
         ? (attempt.submitted
           ? "اپنے سیشن پر واپس جانے کے لیے جاری رکھیں۔"
           : "یہ دہرائی آپ کے اصل اسکور کو تبدیل نہیں کرے گی۔")
-        : (attempt.submitted
-          ? "Continue to return to your session."
-          : "This review does not change your Quiz score.");
+        : (dedicatedPractice
+          ? (attempt.submitted
+            ? "Continue for the next random queued review."
+            : "A correct answer removes one review; a wrong answer adds five. Your Quiz score is unchanged.")
+          : (attempt.submitted
+            ? "Continue to return to your session."
+            : "This review does not change your Quiz score."));
       elements.retryDialogHelp.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogHelp.dir = urduQuestion ? "rtl" : "ltr";
     }
@@ -1409,7 +1563,9 @@
       var retryCannotBePostponed = attempt.submitted;
       setHidden(elements.retryLaterButton, retryCannotBePostponed);
       elements.retryLaterButton.disabled = retryCannotBePostponed;
-      elements.retryLaterButton.textContent = urduQuestion ? "ابھی نہیں" : "Not now";
+      elements.retryLaterButton.textContent = urduQuestion
+        ? (dedicatedPractice ? "مشق ختم کریں" : "ابھی نہیں")
+        : (dedicatedPractice ? "End practice" : "Not now");
       elements.retryLaterButton.lang = urduQuestion ? "ur" : "en";
       elements.retryLaterButton.dir = urduQuestion ? "rtl" : "ltr";
     }
@@ -1437,7 +1593,9 @@
     var focusTarget = attempt && attempt.submitted
       ? elements.retryActionButton
       : (elements.retryOptionsList
-        ? elements.retryOptionsList.querySelector("[data-review-option-index]")
+        ? (elements.retryOptionsList.querySelector("[aria-checked='true']")
+          || elements.retryOptionsList.querySelector("[tabindex='0']")
+          || elements.retryOptionsList.querySelector("[data-review-option-index]"))
         : null);
     if (focusTarget && typeof focusTarget.focus === "function") {
       if (attempt && attempt.submitted) focusTarget.focus();
@@ -1456,6 +1614,111 @@
     if (document.body) document.body.classList.remove("has-retry-dialog");
   }
 
+  function resetDedicatedRetryPractice() {
+    retryQueuePractice.active = false;
+  }
+
+  function refillDedicatedRetryDeck() {
+    var liveQuestionIds = retryQueueState.items.map(function (item) {
+      return item.questionId;
+    });
+    var shuffledIds = fisherYates(liveQuestionIds);
+    var previousQuestionId = retryQueueState.dedicatedLastQuestionId;
+    if (shuffledIds.length > 1 && shuffledIds.includes(previousQuestionId)) {
+      shuffledIds = shuffledIds.filter(function (questionId) {
+        return questionId !== previousQuestionId;
+      });
+      shuffledIds.push(previousQuestionId);
+    }
+    retryQueueState.dedicatedDeck = shuffledIds;
+  }
+
+  function nextDedicatedRetryItem() {
+    retryQueueState.dedicatedDeck = retryQueueState.dedicatedDeck.filter(function (questionId) {
+      return Boolean(retryQueueItem(questionId));
+    });
+    if (retryQueueState.dedicatedDeck.length === 0) refillDedicatedRetryDeck();
+    while (retryQueueState.dedicatedDeck.length > 0) {
+      var questionId = retryQueueState.dedicatedDeck.shift();
+      var item = retryQueueItem(questionId);
+      if (item) return item;
+    }
+    return null;
+  }
+
+  function focusRetryQueueReturnTarget() {
+    var target = elements.retryQueueCard && !elements.retryQueueCard.disabled
+      ? elements.retryQueueCard
+      : (elements.categoryScreen
+        ? elements.categoryScreen.querySelector("h1, h2, [tabindex='-1']")
+        : null);
+    if (target && typeof target.focus === "function") target.focus({ preventScroll: true });
+  }
+
+  function finishDedicatedRetryPractice(announcement) {
+    resetDedicatedRetryPractice();
+    closeRetryDialog();
+    if (retryQueueState.items.length > 0 && retryQueueState.nextQuizReviewStep === null) {
+      scheduleNextQuizReview();
+      saveRetryQueue(announcement || "Review Queue practice ended. Your remaining reviews are saved.");
+    } else {
+      updateRetryQueueUI(announcement || "Review Queue practice ended. Your remaining reviews are saved.");
+    }
+    focusRetryQueueReturnTarget();
+  }
+
+  function beginDedicatedRetryAttempt() {
+    if (!retryQueuePractice.active || !elements.retryDialog) return false;
+    var existingAttempt = retryQueueState.activeAttempt;
+    if (existingAttempt && existingAttempt.context === "dedicated") {
+      retryQueueState.dedicatedLastQuestionId = existingAttempt.questionId;
+      return renderRetryAttempt() && openRetryDialog();
+    }
+    if (existingAttempt) return false;
+
+    var item = nextDedicatedRetryItem();
+    if (!item) {
+      finishDedicatedRetryPractice("Review Queue complete. Every queued review is finished.");
+      return false;
+    }
+    var canonicalQuestion = questionsById.get(item.questionId);
+    if (!canonicalQuestion) return false;
+    var reviewQuestion = shuffledQuizQuestion(canonicalQuestion);
+    if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
+    retryQueueState.dedicatedLastQuestionId = item.questionId;
+    retryQueueState.activeAttempt = {
+      questionId: item.questionId,
+      optionOrder: reviewQuestion._sessionOptionOrder.slice(),
+      selectedIndex: null,
+      submitted: false,
+      outcome: null,
+      wrongIncrement: null,
+      resumeAction: "queue",
+      context: "dedicated"
+    };
+    saveRetryQueue();
+    return renderRetryAttempt() && openRetryDialog();
+  }
+
+  function startDedicatedRetryPractice() {
+    if (retryQueueState.items.length === 0 || !elements.retryDialog) {
+      updateRetryQueueUI("Review Queue is empty.");
+      return false;
+    }
+    if (retryQueueState.activeAttempt && retryQueueState.activeAttempt.context !== "dedicated") {
+      releaseActiveRetryAttempt();
+    }
+    if (retryQueueState.items.length === 0) {
+      updateRetryQueueUI("Review Queue is empty.");
+      return false;
+    }
+    retryQueuePractice.active = true;
+    if (retryQueueState.activeAttempt) {
+      retryQueueState.dedicatedLastQuestionId = retryQueueState.activeAttempt.questionId;
+    }
+    return beginDedicatedRetryAttempt();
+  }
+
   function beginDueRetryAttempt(resumeAction, excludedQuestionId) {
     if (!elements.retryDialog || !activeRetryCategoryId()) return false;
     if (resumeAction === "results") return false;
@@ -1471,6 +1734,7 @@
     if (!canonicalQuestion) return false;
     var reviewQuestion = shuffledQuizQuestion(canonicalQuestion);
     if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
+    scheduleNextQuizReview();
     retryQueueState.activeAttempt = {
       questionId: item.questionId,
       optionOrder: reviewQuestion._sessionOptionOrder.slice(),
@@ -1478,7 +1742,8 @@
       submitted: false,
       outcome: null,
       wrongIncrement: null,
-      resumeAction: resumeAction
+      resumeAction: resumeAction,
+      context: "embedded"
     };
     saveRetryQueue();
     return renderRetryAttempt() && openRetryDialog();
@@ -1486,6 +1751,10 @@
 
   function restoreActiveRetryAttempt() {
     if (!retryQueueState.activeAttempt) return false;
+    if (
+      retryQueueState.activeAttempt.context === "dedicated"
+      && !retryQueuePractice.active
+    ) return false;
     if (!activeRetryAttemptMatchesSession() || !renderRetryAttempt()) {
       retryQueueState.activeAttempt = null;
       saveRetryQueue();
@@ -1524,6 +1793,7 @@
     markRetrySubmittedOptions(question, attempt.selectedIndex);
     showRetryFeedback(question, attempt);
     updateRetryAttemptProgress(item, attempt, isUrduCategoryQuestion(question));
+    updateRetryDialogQueueMeta(attempt, isUrduCategoryQuestion(question));
     if (elements.retryLaterButton) {
       setHidden(elements.retryLaterButton, true);
       elements.retryLaterButton.disabled = true;
@@ -1536,6 +1806,10 @@
   }
 
   function performRetryResumeAction(resumeAction) {
+    if (resumeAction === "queue") {
+      beginDedicatedRetryAttempt();
+      return;
+    }
     if (resumeAction === "results") {
       showResults();
       return;
@@ -1554,11 +1828,7 @@
     renderQuestion();
   }
 
-  function completeRetryAttempt() {
-    var attempt = retryQueueState.activeAttempt;
-    var item = attempt ? retryQueueItem(attempt.questionId) : null;
-    if (!attempt || !item || !attempt.submitted) return;
-    var resumeAction = attempt.resumeAction;
+  function applyRetryAttemptOutcome(attempt, item) {
     var mastered = false;
     if (attempt.outcome === "correct") {
       item.remaining -= 1;
@@ -1571,15 +1841,46 @@
     } else {
       item.remaining += retryWrongIncrement(attempt);
     }
+    return mastered;
+  }
+
+  function completeRetryAttempt() {
+    var attempt = retryQueueState.activeAttempt;
+    var item = attempt ? retryQueueItem(attempt.questionId) : null;
+    if (!attempt || !item || !attempt.submitted) return;
+    var resumeAction = attempt.resumeAction;
+    var dedicatedPractice = attempt.context === "dedicated";
+    var mastered = applyRetryAttemptOutcome(attempt, item);
     if (!mastered) {
-      item.dueStep = retryQueueState.practiceStep + RETRY_QUEUE_SPACING;
+      if (!dedicatedPractice) {
+        if (
+          retryQueueState.nextQuizReviewStep === null
+          || retryQueueState.nextQuizReviewStep <= retryQueueState.practiceStep
+        ) scheduleNextQuizReview();
+        item.dueStep = retryQueueState.nextQuizReviewStep;
+      }
       item.sequence = nextRetrySequence();
+    }
+    if (retryQueueState.items.length === 0) {
+      retryQueueState.nextQuizReviewStep = null;
+      retryQueueState.dedicatedDeck = [];
+      retryQueueState.dedicatedLastQuestionId = null;
     }
     retryQueueState.activeAttempt = null;
     saveRetryQueue(mastered
       ? "Review complete. This question has left the queue."
-      : "Review saved. The question will return after three new questions.");
+      : (dedicatedPractice
+        ? "Review saved. It will return in a later random round."
+        : "Review saved. Another review can appear after five or six new Quiz questions."));
     closeRetryDialog();
+    if (dedicatedPractice) {
+      if (retryQueueState.items.length === 0) {
+        finishDedicatedRetryPractice("Review Queue complete. Every queued review is finished.");
+      } else {
+        beginDedicatedRetryAttempt();
+      }
+      return;
+    }
     performRetryResumeAction(resumeAction);
   }
 
@@ -1591,11 +1892,21 @@
       completeRetryAttempt();
       return;
     }
+    if (attempt.context === "dedicated") {
+      retryQueueState.activeAttempt = null;
+      saveRetryQueue("Review Queue practice ended. No review was removed.");
+      finishDedicatedRetryPractice();
+      return;
+    }
     var resumeAction = attempt.resumeAction;
-    item.dueStep = retryQueueState.practiceStep + RETRY_QUEUE_SPACING;
+    if (
+      retryQueueState.nextQuizReviewStep === null
+      || retryQueueState.nextQuizReviewStep <= retryQueueState.practiceStep
+    ) scheduleNextQuizReview();
+    item.dueStep = retryQueueState.nextQuizReviewStep;
     item.sequence = nextRetrySequence();
     retryQueueState.activeAttempt = null;
-    saveRetryQueue("Review postponed for three new questions.");
+    saveRetryQueue("Review postponed for five or six new Quiz questions.");
     closeRetryDialog();
     performRetryResumeAction(resumeAction);
   }
@@ -1613,6 +1924,27 @@
     selectRetryOption(Number(button.dataset.reviewOptionIndex));
   }
 
+  function onRetryOptionKeydown(event) {
+    if (!elements.retryOptionsList) return;
+    var keys = ["ArrowDown", "ArrowRight", "ArrowUp", "ArrowLeft", "Home", "End"];
+    if (!keys.includes(event.key)) return;
+    var buttons = Array.from(elements.retryOptionsList.querySelectorAll("[data-review-option-index]"));
+    if (buttons.length === 0 || buttons.every(function (button) { return button.disabled; })) return;
+    var currentIndex = buttons.indexOf(document.activeElement);
+    if (currentIndex < 0) currentIndex = 0;
+    var nextIndex = currentIndex;
+    if (event.key === "Home") nextIndex = 0;
+    else if (event.key === "End") nextIndex = buttons.length - 1;
+    else if (event.key === "ArrowDown" || event.key === "ArrowRight") {
+      nextIndex = (currentIndex + 1) % buttons.length;
+    } else {
+      nextIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+    }
+    event.preventDefault();
+    selectRetryOption(Number(buttons[nextIndex].dataset.reviewOptionIndex));
+    buttons[nextIndex].focus({ preventScroll: true });
+  }
+
   function handleRetryDialogCancel(event) {
     event.preventDefault();
     var attempt = retryQueueState.activeAttempt;
@@ -1623,9 +1955,25 @@
 
   function releaseActiveRetryAttempt() {
     if (!retryQueueState.activeAttempt) return;
+    var attempt = retryQueueState.activeAttempt;
+    var item = retryQueueItem(attempt.questionId);
+    var mastered = false;
+    if (item && attempt.submitted) {
+      mastered = applyRetryAttemptOutcome(attempt, item);
+      if (!mastered) {
+        item.dueStep = retryQueueState.practiceStep + randomRetrySpacing();
+        item.sequence = nextRetrySequence();
+      }
+    }
+    if (retryQueueState.items.length === 0) {
+      retryQueueState.nextQuizReviewStep = null;
+      retryQueueState.dedicatedDeck = [];
+      retryQueueState.dedicatedLastQuestionId = null;
+    }
     retryQueueState.activeAttempt = null;
     saveRetryQueue();
     closeRetryDialog();
+    resetDedicatedRetryPractice();
   }
 
   function loadDifficultQuestionIds() {
@@ -3417,6 +3765,10 @@
     }
 
     releaseActiveRetryAttempt();
+    if (selectedMode === "quiz" && retryQueueState.items.length > 0) {
+      scheduleNextQuizReview();
+      saveRetryQueue();
+    }
     state.category = category;
     state.sessionKind = "category";
     state.paperCategoryIds = [];
@@ -4389,6 +4741,9 @@
     }
     if (elements.categoryGrid) elements.categoryGrid.addEventListener("click", onCategoryClick);
     if (elements.paperBuilderCard) elements.paperBuilderCard.addEventListener("click", openPaperSetup);
+    if (elements.retryQueueCard) {
+      elements.retryQueueCard.addEventListener("click", startDedicatedRetryPractice);
+    }
     if (elements.paperSetupBackButton) elements.paperSetupBackButton.addEventListener("click", returnToCategories);
     if (elements.paperCategoryOptions) {
       elements.paperCategoryOptions.addEventListener("change", function (event) {
@@ -4466,7 +4821,10 @@
     }
     if (elements.modeBackButton) elements.modeBackButton.addEventListener("click", returnToCategories);
     if (elements.optionsList) elements.optionsList.addEventListener("click", onOptionClick);
-    if (elements.retryOptionsList) elements.retryOptionsList.addEventListener("click", onRetryOptionClick);
+    if (elements.retryOptionsList) {
+      elements.retryOptionsList.addEventListener("click", onRetryOptionClick);
+      elements.retryOptionsList.addEventListener("keydown", onRetryOptionKeydown);
+    }
     if (elements.retryLaterButton) elements.retryLaterButton.addEventListener("click", postponeRetryAttempt);
     if (elements.retryActionButton) elements.retryActionButton.addEventListener("click", handleRetryAction);
     if (elements.retryDialog) elements.retryDialog.addEventListener("cancel", handleRetryDialogCancel);
@@ -4524,7 +4882,11 @@
     difficultQuestionIds = loadDifficultQuestionIds();
     loadRetryQueue();
     loadActiveSession();
-    if (!activeSessionSnapshot && retryQueueState.activeAttempt) {
+    if (
+      !activeSessionSnapshot
+      && retryQueueState.activeAttempt
+      && retryQueueState.activeAttempt.context !== "dedicated"
+    ) {
       retryQueueState.activeAttempt = null;
       saveRetryQueue();
     }

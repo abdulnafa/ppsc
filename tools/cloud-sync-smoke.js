@@ -51,6 +51,29 @@ const LEGACY_TWO_REVIEW_QUEUE_RAW = JSON.stringify({
   items: [{ questionId: SAMPLE_QUESTION_ID, remaining: 2, dueStep: 0, sequence: 1 }],
   activeAttempt: null
 });
+const DEDICATED_ATTEMPT_QUEUE_RAW = JSON.stringify({
+  version: 1,
+  bankSignature: BANK_SIGNATURE,
+  practiceStep: 9,
+  nextQuizReviewStep: 15,
+  nextSequence: 9,
+  dedicatedDeck: [SECOND_QUESTION_ID],
+  dedicatedLastQuestionId: SAMPLE_QUESTION_ID,
+  items: [
+    { questionId: SAMPLE_QUESTION_ID, remaining: 4, dueStep: 13, sequence: 7 },
+    { questionId: SECOND_QUESTION_ID, remaining: 2, dueStep: 14, sequence: 8 }
+  ],
+  activeAttempt: {
+    questionId: SAMPLE_QUESTION_ID,
+    optionOrder: [2, 0, 3, 1],
+    selectedIndex: 3,
+    submitted: true,
+    outcome: "correct",
+    wrongIncrement: null,
+    resumeAction: "queue",
+    context: "dedicated"
+  }
+});
 const SAMPLE_DIFFICULT_RAW = JSON.stringify({
   version: 1,
   questionIds: [SAMPLE_QUESTION_ID]
@@ -486,6 +509,40 @@ async function testCloudRestoreOnEmptyLaptop(seedStore) {
   assert.equal(readyEventMode(browser), "cloud-restored");
 }
 
+async function testDedicatedAttemptQueueRoundTrip() {
+  const store = new Map();
+  const source = createBrowser({
+    store,
+    local: { [RETRY_QUEUE_KEY]: DEDICATED_ATTEMPT_QUEUE_RAW }
+  });
+  const choice = await waitFor(
+    source,
+    (candidate) => candidate.phase === "migration-choice",
+    "dedicated queue upload choice"
+  );
+  assert.equal(choice.decision, "device-upload");
+
+  await source.window.PPSC_CLOUD.chooseLocal();
+  await waitFor(
+    source,
+    (candidate) => candidate.phase === "synced",
+    "dedicated queue upload"
+  );
+  assert.equal(
+    rawCloudValue(store, "retry-queue"),
+    DEDICATED_ATTEMPT_QUEUE_RAW,
+    "new queue cadence, random-round, and dedicated-attempt fields must upload byte-for-byte"
+  );
+
+  const restored = createBrowser({ store: cloneStore(store), local: {} });
+  await waitFor(restored, (candidate) => candidate.ready, "dedicated queue empty-device restore");
+  assert.equal(
+    restored.localStorage.getItem(RETRY_QUEUE_KEY),
+    DEDICATED_ATTEMPT_QUEUE_RAW,
+    "new queue cadence, random-round, and dedicated-attempt fields must restore byte-for-byte"
+  );
+}
+
 async function testConflictWaitsForChoice(seedStore) {
   const cloudQueue = rawCloudValue(seedStore, "retry-queue");
   const localQueue = JSON.stringify({
@@ -709,6 +766,7 @@ async function main() {
   const seedStore = await testFirstDeviceMigrationPreservesLegacyRemaining();
   await testEmptyFirstDeviceNeedsConfirmation();
   await testCloudRestoreOnEmptyLaptop(cloneStore(seedStore));
+  await testDedicatedAttemptQueueRoundTrip();
   await testConflictWaitsForChoice(cloneStore(seedStore));
   await testAllowedEmailIsEnforcedBeforeFirestore();
   await testStaleRevisionCannotOverwriteCloud(cloneStore(seedStore));
@@ -728,6 +786,7 @@ async function main() {
       "different local/cloud progress waits for owner choice",
       "unapproved Google account is rejected before Firestore",
       "legacy retry remaining=2 survives upload and restore",
+      "dedicated retry attempt, cadence, and random-round fields round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",
       "large progress round-trips through integrity-checked chunks",
       "offline local changes upload when the connection returns",

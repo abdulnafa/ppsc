@@ -7,12 +7,12 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
-  <link rel="stylesheet" href="styles.css?v=20260912-2">
+  <link rel="stylesheet" href="styles.css?v=20260913-1">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20260912-2" defer></script>
   <script src="data/questions.js?v=20260902-2" defer></script>
   <script src="data/gk-study-notes.js?v=20260902-2" defer></script>
-  <script src="app.js?v=20260912-2" defer></script>
+  <script src="app.js?v=20260913-1" defer></script>
 </head>
 <body>
   <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
@@ -158,6 +158,16 @@
             <small>Choose subjects and attempt a complete 100-MCQ practice paper.</small>
           </span>
           <span class="paper-card-badge" aria-hidden="true">FULL PAPER</span>
+          <span class="card-arrow" aria-hidden="true">&rarr;</span>
+        </button>
+
+        <button id="retry-queue-card" class="category-card retry-queue-card is-empty" type="button" aria-label="Review Queue" aria-controls="retry-dialog" aria-describedby="retry-queue-card-meta" aria-haspopup="dialog" disabled>
+          <span class="category-icon retry-queue-card-icon" aria-hidden="true">&#8635;</span>
+          <span class="category-copy">
+            <strong>Review Queue</strong>
+            <small id="retry-queue-card-meta" data-count="0" data-remaining="0">No reviews waiting. Wrong Quiz answers will appear here.</small>
+          </span>
+          <span class="retry-queue-card-badge" aria-hidden="true">ALL SUBJECTS</span>
           <span class="card-arrow" aria-hidden="true">&rarr;</span>
         </button>
       </div>

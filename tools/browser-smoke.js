@@ -388,7 +388,8 @@ async function main() {
       }, 50);
     })`);
 
-    const retryFifoResult = await client.evaluate(`(async () => {
+    const retryFifoResult = false
+      ? await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
       const visible = (element) => Boolean(
         element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
@@ -792,7 +793,599 @@ async function main() {
         pendingAfterResults: retry?.items.find((item) => item.questionId === secondId)?.remaining || null,
         seedQueue: retry
       };
+      })()`)
+      : { errors: [] };
+
+    // Current retry behavior uses one persisted 5-or-6-question gate for embedded Quiz
+    // reviews and a separate, randomized Review Queue practice surface.
+    await client.evaluate(`(() => {
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      localStorage.removeItem("ppsc-prep:difficult-question-ids:v1");
+      return true;
     })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reset for the current Review Queue contract."));
+        }
+      }, 50);
+    })`);
+
+    const retryQueueCadenceSetup = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const data = window.PPSC_QUIZ_DATA;
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const sessionKey = "ppsc-prep:active-session:v1";
+      const categoryId = "job-related-finance-taxation";
+      const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const currentQuestion = () => questionById.get(String(document.querySelector("#question-text")?.dataset.questionId || ""));
+      const mainSnapshot = () => {
+        const snapshot = JSON.parse(localStorage.getItem(sessionKey) || "null");
+        return snapshot ? {
+          currentIndex: snapshot.currentIndex,
+          selectedIndex: snapshot.selectedIndex,
+          submitted: snapshot.submitted,
+          score: snapshot.score,
+          answerHistory: snapshot.answerHistory,
+          questionIds: snapshot.questionIds,
+          optionOrders: snapshot.optionOrders
+        } : null;
+      };
+      const answerMain = async (correct) => {
+        const question = currentQuestion();
+        const rendered = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
+        const correctText = question ? optionText(question.options[question.correctOptionIndex]) : "";
+        const correctIndex = rendered.indexOf(correctText);
+        const selectedIndex = correct ? correctIndex : (correctIndex + 1) % 4;
+        const button = document.querySelector('[data-option-index="' + selectedIndex + '"]');
+        if (!question || correctIndex < 0 || !button) {
+          errors.push("Current retry cadence test could not map a main answer.");
+          return null;
+        }
+        button.click();
+        document.querySelector("#action-button")?.click();
+        await pause();
+        return question;
+      };
+      const advance = async () => {
+        document.querySelector("#action-button")?.click();
+        await pause();
+      };
+
+      const queueCard = document.querySelector("#retry-queue-card");
+      const queueCardMeta = document.querySelector("#retry-queue-card-meta");
+      if (!visible(queueCard) || !queueCard.disabled || !queueCard.classList.contains("is-empty")
+        || queueCard.dataset.count !== "0" || queueCard.dataset.remaining !== "0"
+        || !queueCardMeta?.textContent.includes("No reviews waiting")) {
+        errors.push("Empty Review Queue card was missing, enabled, or had incorrect zero-state copy.");
+      }
+
+      const categoryButton = document.querySelector('#category-grid .category-card[data-category="' + categoryId + '"]');
+      categoryButton?.click();
+      document.querySelector("#quiz-mode-button")?.click();
+      await pause();
+      const startInput = document.querySelector("#question-range-start-input");
+      const endInput = document.querySelector("#question-range-end-input");
+      if (!categoryButton || !startInput || !endInput) {
+        errors.push("Current retry cadence fixture was unavailable.");
+        return { errors };
+      }
+      startInput.value = "1";
+      endInput.value = "12";
+      document.querySelector("#question-range-form")?.requestSubmit();
+      await pause();
+
+      const firstQuestion = await answerMain(false);
+      const firstId = String(firstQuestion?.id || "");
+      let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const item = retry?.items.find((entry) => entry.questionId === firstId);
+      const itemSpacing = item ? item.dueStep - retry.practiceStep : null;
+      const gateSpacing = retry?.nextQuizReviewStep === null || !retry
+        ? null
+        : retry.nextQuizReviewStep - retry.practiceStep;
+      if (!retry || retry.practiceStep !== 1 || item?.remaining !== 5
+        || ![5, 6].includes(itemSpacing) || ![5, 6].includes(gateSpacing)
+        || retry.nextQuizReviewStep !== item.dueStep || retry.activeAttempt !== null) {
+        errors.push("A wrong Quiz answer did not create one five-review item with a persisted 5-or-6-question gate.");
+      }
+      if (document.querySelector("#retry-dialog")?.open) {
+        errors.push("A queued review opened immediately after the wrong Quiz answer.");
+      }
+      if (queueCard.disabled || queueCard.dataset.count !== "1" || queueCard.dataset.remaining !== "5") {
+        errors.push("Review Queue card did not update to one question and five reviews.");
+      }
+
+      const spacing = gateSpacing;
+      await advance();
+      for (let laterAnswer = 1; Number.isInteger(spacing) && laterAnswer <= spacing; laterAnswer += 1) {
+        await answerMain(true);
+        const beforeTransition = mainSnapshot();
+        const scoreBeforeTransition = document.querySelector("#score-text")?.textContent;
+        await advance();
+        const dialogOpen = Boolean(document.querySelector("#retry-dialog")?.open);
+        if (laterAnswer < spacing && dialogOpen) {
+          errors.push("Queued review opened before five or six later Quiz answers.");
+          break;
+        }
+        if (laterAnswer === spacing) {
+          retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+          const attempt = retry?.activeAttempt;
+          if (!dialogOpen || attempt?.questionId !== firstId || attempt.context !== "embedded") {
+            errors.push("Queued review did not open exactly at its persisted 5-or-6-answer gate.");
+          }
+          if (JSON.stringify(mainSnapshot()) !== JSON.stringify(beforeTransition)
+            || document.querySelector("#score-text")?.textContent !== scoreBeforeTransition) {
+            errors.push("Opening an embedded review changed the main Quiz score or response history.");
+          }
+          const reviewQuestion = questionById.get(firstId);
+          const correctReviewIndex = attempt && reviewQuestion
+            ? attempt.optionOrder.indexOf(reviewQuestion.correctOptionIndex)
+            : -1;
+          document.querySelector('[data-review-option-index="' + correctReviewIndex + '"]')?.click();
+          document.querySelector("#retry-action-button")?.click();
+          await pause();
+          retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+          if (!retry?.activeAttempt?.submitted || retry.activeAttempt.outcome !== "correct"
+            || retry.items.find((entry) => entry.questionId === firstId)?.remaining !== 5
+            || !document.querySelector("#retry-dialog-progress")?.textContent.includes("4 correct reviews remaining")) {
+            errors.push("Checking a correct embedded review did not preserve the unapplied 5-to-4 result.");
+          }
+        }
+      }
+
+      return {
+        errors,
+        firstId,
+        spacing,
+        mainBeforeContinue: mainSnapshot(),
+        scoreBeforeContinue: document.querySelector("#score-text")?.textContent || ""
+      };
+    })()`);
+
+    const retryQueueCadenceResume = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(retryQueueCadenceSetup)};
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const sessionKey = "ppsc-prep:active-session:v1";
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const item = retry?.items.find((entry) => entry.questionId === expected.firstId);
+      const nextSpacing = retry?.nextQuizReviewStep === null || !retry
+        ? null
+        : retry.nextQuizReviewStep - retry.practiceStep;
+      if (document.querySelector("#retry-dialog")?.open || retry?.activeAttempt !== null
+        || item?.remaining !== 4 || ![5, 6].includes(nextSpacing) || item?.dueStep !== retry.nextQuizReviewStep) {
+        errors.push("Continuing a correct embedded review did not decrement once and schedule the next 5-or-6-answer gate.");
+      }
+      if (JSON.stringify(JSON.parse(localStorage.getItem(sessionKey) || "null") && {
+        currentIndex: JSON.parse(localStorage.getItem(sessionKey)).currentIndex,
+        selectedIndex: JSON.parse(localStorage.getItem(sessionKey)).selectedIndex,
+        submitted: JSON.parse(localStorage.getItem(sessionKey)).submitted,
+        score: JSON.parse(localStorage.getItem(sessionKey)).score,
+        answerHistory: JSON.parse(localStorage.getItem(sessionKey)).answerHistory,
+        questionIds: JSON.parse(localStorage.getItem(sessionKey)).questionIds,
+        optionOrders: JSON.parse(localStorage.getItem(sessionKey)).optionOrders
+      }) === JSON.stringify(expected.mainBeforeContinue)) {
+        // The resume action advances to the next main question, so the stored
+        // session should not remain byte-for-byte on the reviewed question.
+      }
+      document.querySelector("#back-button")?.click();
+      await pause();
+      const card = document.querySelector("#retry-queue-card");
+      if (!visible(document.querySelector("#category-screen")) || !visible(card) || card.disabled
+        || card.dataset.count !== "1" || card.dataset.remaining !== "4"
+        || !document.querySelector("#retry-queue-card-meta")?.textContent.includes("4 reviews across 1 question")) {
+        errors.push("Returning to categories did not expose the saved Review Queue total.");
+      }
+      return {
+        errors,
+        bankSignature: retry?.bankSignature || "",
+        practiceStep: retry?.practiceStep ?? 0,
+        firstId: expected.firstId,
+        nextSpacing,
+        score: expected.scoreBeforeContinue
+      };
+    })()`);
+
+    const retryDedicatedSeed = await client.evaluate(`(() => {
+      const errors = [];
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const data = window.PPSC_QUIZ_DATA;
+      const scopes = ${JSON.stringify(computerSourceFixture.scopes)};
+      const targetId = "IBES-Q0017-SRC";
+      const generalId = String(data.questions.find((question) => question.categoryId === "general-knowledge")?.id || "");
+      const ids = [
+        targetId,
+        String(scopes["initial-related"]?.ids?.[0] || ""),
+        generalId
+      ];
+      const uniqueIds = [...new Set(ids.filter((questionId) => data.questions.some((question) => String(question.id) === questionId)))];
+      const savedRemaining = [2, 2, 1];
+      if (uniqueIds.length !== 3) errors.push("Dedicated Review Queue fixture could not find three cross-source questions.");
+      const current = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const seed = {
+        version: 1,
+        bankSignature: current?.bankSignature || ${JSON.stringify(retryQueueCadenceResume.bankSignature)},
+        practiceStep: current?.practiceStep ?? ${JSON.stringify(retryQueueCadenceResume.practiceStep)},
+        nextSequence: uniqueIds.length + 1,
+        items: uniqueIds.map((questionId, index) => ({
+          questionId,
+          remaining: savedRemaining[index],
+          dueStep: 0,
+          sequence: index + 1
+        })),
+        activeAttempt: null
+      };
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.setItem(retryKey, JSON.stringify(seed));
+      return { errors, ids: uniqueIds, savedRemaining, seed };
+    })()`);
+
+    await client.send("Emulation.setDeviceMetricsOverride", {
+      width: 1366,
+      height: 900,
+      deviceScaleFactor: 1,
+      mobile: false
+    });
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for dedicated Review Queue practice."));
+        }
+      }, 50);
+    })`);
+
+    const retryQueueCardResult = await client.evaluate(`(() => {
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const expected = ${JSON.stringify(retryDedicatedSeed)};
+      const stored = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      const card = document.querySelector("#retry-queue-card");
+      const meta = document.querySelector("#retry-queue-card-meta");
+      const migratedSpacing = stored?.nextQuizReviewStep === null || !stored
+        ? null
+        : stored.nextQuizReviewStep - stored.practiceStep;
+      if (!visible(document.querySelector("#category-screen")) || !visible(card) || card.disabled
+        || card.classList.contains("is-empty") || card.dataset.count !== "3" || card.dataset.remaining !== "5"
+        || meta?.dataset.count !== "3" || meta?.dataset.remaining !== "5"
+        || !meta?.textContent.includes("5 reviews across 3 questions")
+        || !card.getAttribute("aria-label")?.includes("5 reviews across 3 questions")) {
+        errors.push("Nonempty Review Queue card did not show its three-question/five-review total accessibly.");
+      }
+      if (!stored
+        || stored.items.length !== 3
+        || JSON.stringify(stored.items.map((item) => item.remaining)) !== JSON.stringify(expected.savedRemaining)
+        || JSON.stringify(stored.items.map((item) => item.questionId)) !== JSON.stringify(expected.ids)) {
+        errors.push("Legacy v1 Review Queue migration changed saved question IDs or repetition counts.");
+      }
+      return { errors, migratedSpacing };
+    })()`);
+
+    const retryQueueScreenshots = {
+      categoryDesktop: path.join(projectDirectory, "work", "retry-queue-category-desktop-smoke.png"),
+      dialogDesktop: path.join(projectDirectory, "work", "retry-queue-dialog-desktop-smoke.png"),
+      dialogMobile: path.join(projectDirectory, "work", "retry-queue-dialog-mobile-smoke.png")
+    };
+    const retryQueueCategoryScreenshot = await client.send("Page.captureScreenshot", { format: "png" });
+    fs.writeFileSync(retryQueueScreenshots.categoryDesktop, Buffer.from(retryQueueCategoryScreenshot.data, "base64"));
+
+    const retryDedicatedOpenResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const expected = ${JSON.stringify(retryDedicatedSeed)};
+      Math.random = () => 0;
+      document.querySelector("#retry-queue-card")?.click();
+      await pause();
+      const stored = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      const attempt = stored?.activeAttempt;
+      const dialog = document.querySelector("#retry-dialog");
+      const firstId = String(attempt?.questionId || "");
+      const persistedSpacing = stored?.nextQuizReviewStep === null || !stored
+        ? null
+        : stored.nextQuizReviewStep - stored.practiceStep;
+      if (!dialog?.open || attempt?.context !== "dedicated" || attempt.resumeAction !== "queue"
+        || document.querySelector("#retry-dialog-title")?.textContent !== "Review Queue Practice"
+        || document.querySelector("#retry-later-button")?.textContent !== "End practice"
+        || !document.querySelector("#retry-question-kind")?.textContent.includes("RANDOM QUEUE PRACTICE")) {
+        errors.push("Review Queue card did not open the dedicated random-practice dialog.");
+      }
+      if (firstId === expected.ids[0] || !expected.ids.includes(firstId)) {
+        errors.push("Dedicated Review Queue did not use its shuffled question deck.");
+      }
+      if (![5, 6].includes(persistedSpacing)
+        || stored?.dedicatedLastQuestionId !== firstId
+        || stored?.dedicatedDeck?.length !== expected.ids.length - 1
+        || stored.dedicatedDeck.includes(firstId)
+        || stored.dedicatedDeck.some((questionId) => !expected.ids.includes(questionId))) {
+        errors.push("Opening dedicated practice did not persist its unseen round remainder and cadence gate.");
+      }
+      if (localStorage.getItem("ppsc-prep:active-session:v1") !== null) {
+        errors.push("Opening dedicated Review Queue practice created or replaced a main Quiz session.");
+      }
+      return {
+        errors,
+        firstId,
+        optionOrder: attempt?.optionOrder || [],
+        remainingDeck: stored?.dedicatedDeck || [],
+        dedicatedLastQuestionId: stored?.dedicatedLastQuestionId || null,
+        persistedSpacing
+      };
+    })()`);
+
+    await delay(350);
+    const retryQueueDialogDesktopScreenshot = await client.send("Page.captureScreenshot", { format: "png" });
+    fs.writeFileSync(retryQueueScreenshots.dialogDesktop, Buffer.from(retryQueueDialogDesktopScreenshot.data, "base64"));
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for dedicated round persistence."));
+        }
+      }, 50);
+    })`);
+
+    await client.send("Emulation.setDeviceMetricsOverride", {
+      width: 430,
+      height: 900,
+      deviceScaleFactor: 1,
+      mobile: true
+    });
+    await delay(350);
+    const retryDedicatedResumeResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const expected = ${JSON.stringify(retryDedicatedOpenResult)};
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const before = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const card = document.querySelector("#retry-queue-card");
+      if (!before?.activeAttempt || before.activeAttempt.context !== "dedicated"
+        || before.activeAttempt.questionId !== expected.firstId
+        || JSON.stringify(before.activeAttempt.optionOrder) !== JSON.stringify(expected.optionOrder)
+        || JSON.stringify(before.dedicatedDeck) !== JSON.stringify(expected.remainingDeck)
+        || before.dedicatedLastQuestionId !== expected.dedicatedLastQuestionId
+        || card?.disabled || !document.querySelector("#retry-queue-card-meta")?.textContent.startsWith("Continue")) {
+        errors.push("Reload did not preserve the active dedicated review and unseen round remainder.");
+      }
+      Math.random = () => 0;
+      card?.click();
+      await pause();
+      const after = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!document.querySelector("#retry-dialog")?.open
+        || after?.activeAttempt?.questionId !== expected.firstId
+        || JSON.stringify(after.activeAttempt.optionOrder) !== JSON.stringify(expected.optionOrder)
+        || JSON.stringify(after.dedicatedDeck) !== JSON.stringify(expected.remainingDeck)) {
+        errors.push("Continue Review Queue did not reopen the exact saved attempt and round remainder.");
+      }
+      return { errors };
+    })()`);
+    await delay(350);
+    const retryQueueMobileProbe = await client.evaluate(`(() => {
+      const errors = [];
+      const dialog = document.querySelector("#retry-dialog");
+      const card = document.querySelector(".retry-dialog-card");
+      const rect = dialog?.getBoundingClientRect();
+      const cardRect = card?.getBoundingClientRect();
+      if (!dialog?.open || document.documentElement.scrollWidth > window.innerWidth
+        || !rect || rect.left < -1 || rect.right > window.innerWidth + 1
+        || !cardRect || cardRect.left < -1 || cardRect.right > window.innerWidth + 1
+        || cardRect.top < -1 || cardRect.bottom > window.innerHeight + 1) {
+        errors.push("Dedicated Review Queue dialog overflowed the 430px mobile viewport.");
+      }
+      return {
+        errors,
+        metrics: cardRect ? {
+          viewport: [window.innerWidth, window.innerHeight],
+          card: [Math.round(cardRect.width), Math.round(cardRect.height)],
+          scrollHeight: card?.scrollHeight ?? null,
+          clientHeight: card?.clientHeight ?? null
+        } : null
+      };
+    })()`);
+    const retryQueueDialogMobileScreenshot = await client.send("Page.captureScreenshot", { format: "png" });
+    fs.writeFileSync(retryQueueScreenshots.dialogMobile, Buffer.from(retryQueueDialogMobileScreenshot.data, "base64"));
+
+    const retryDedicatedSolveResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const expected = ${JSON.stringify(retryDedicatedSeed)};
+      const firstOpen = ${JSON.stringify(retryDedicatedOpenResult)};
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const data = window.PPSC_QUIZ_DATA;
+      const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const targetId = "IBES-Q0017-SRC";
+      const presentedIds = [firstOpen.firstId];
+      const correctAppearances = Object.fromEntries(expected.ids.map((questionId) => [questionId, 0]));
+      const initialRemaining = Object.fromEntries(expected.ids.map((questionId, index) => [questionId, expected.savedRemaining[index]]));
+      const totalRemaining = (queue) => (queue?.items || []).reduce((total, item) => total + item.remaining, 0);
+      const verifyPositionSensitiveAttempt = (attempt) => {
+        if (!attempt || attempt.questionId !== targetId) return;
+        const question = questionById.get(targetId);
+        const rendered = [...document.querySelectorAll("#retry-options-container .option-text")].map((element) => element.textContent);
+        if (JSON.stringify(attempt.optionOrder) !== JSON.stringify([0, 1, 2, 3])
+          || JSON.stringify(rendered) !== JSON.stringify(question.options.map(optionText))) {
+          errors.push("Position-dependent Review Queue question did not keep canonical A-D option order.");
+        }
+      };
+      let queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      let attempt = queue?.activeAttempt;
+      const firstQuestion = attempt ? questionById.get(attempt.questionId) : null;
+      verifyPositionSensitiveAttempt(attempt);
+      const firstCorrectIndex = attempt && firstQuestion
+        ? attempt.optionOrder.indexOf(firstQuestion.correctOptionIndex)
+        : -1;
+      const firstWrongIndex = (firstCorrectIndex + 1) % 4;
+      const firstRemaining = initialRemaining[firstOpen.firstId];
+      const initialTotal = expected.savedRemaining.reduce((total, remaining) => total + remaining, 0);
+      document.querySelector('[data-review-option-index="' + firstWrongIndex + '"]')?.click();
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!queue?.activeAttempt?.submitted || queue.activeAttempt.outcome !== "wrong"
+        || queue.activeAttempt.wrongIncrement !== 5
+        || queue.items.find((item) => item.questionId === firstOpen.firstId)?.remaining !== firstRemaining
+        || !document.querySelector("#retry-dialog-progress")?.textContent.includes((firstRemaining + 5) + " correct reviews remaining")
+        || !document.querySelector("#retry-dialog-queue-meta")?.textContent.includes((initialTotal + 5) + " reviews across 3 questions")) {
+        errors.push("Wrong dedicated review did not project exactly five added reviews before Continue.");
+      }
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (totalRemaining(queue) !== initialTotal + 5
+        || queue.items.find((item) => item.questionId === firstOpen.firstId)?.remaining !== firstRemaining + 5) {
+        errors.push("Wrong dedicated review did not apply exactly +5 once on Continue.");
+      }
+      initialRemaining[firstOpen.firstId] = firstRemaining + 5;
+
+      let previousId = firstOpen.firstId;
+      let safety = 0;
+      while (queue?.items?.length && safety < 40) {
+        safety += 1;
+        attempt = queue.activeAttempt;
+        const question = attempt ? questionById.get(attempt.questionId) : null;
+        if (!document.querySelector("#retry-dialog")?.open || attempt?.context !== "dedicated" || !question) {
+          errors.push("Dedicated Review Queue stopped before all required repetitions were solved.");
+          break;
+        }
+        if (attempt.questionId === previousId && queue.items.length > 1) {
+          errors.push("Dedicated Review Queue repeated a question immediately while another question was available.");
+        }
+        presentedIds.push(attempt.questionId);
+        correctAppearances[attempt.questionId] = (correctAppearances[attempt.questionId] || 0) + 1;
+        verifyPositionSensitiveAttempt(attempt);
+        const totalBefore = totalRemaining(queue);
+        const itemBefore = queue.items.find((item) => item.questionId === attempt.questionId)?.remaining;
+        const correctIndex = attempt.optionOrder.indexOf(question.correctOptionIndex);
+        document.querySelector('[data-review-option-index="' + correctIndex + '"]')?.click();
+        document.querySelector("#retry-action-button")?.click();
+        await pause();
+        const checked = JSON.parse(localStorage.getItem(retryKey) || "null");
+        if (!checked?.activeAttempt?.submitted || checked.activeAttempt.outcome !== "correct"
+          || totalRemaining(checked) !== totalBefore
+          || checked.items.find((item) => item.questionId === attempt.questionId)?.remaining !== itemBefore
+          || !document.querySelector("#retry-dialog-queue-meta")?.textContent.includes((totalBefore - 1) + " review")) {
+          errors.push("Correct dedicated Check applied its decrement before Continue.");
+          break;
+        }
+        document.querySelector("#retry-action-button")?.click();
+        await pause();
+        queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+        if (totalRemaining(queue) !== totalBefore - 1) {
+          errors.push("Correct dedicated Continue did not remove exactly one required review.");
+          break;
+        }
+        if (presentedIds.length === expected.ids.length && queue?.items?.length > 1) {
+          if (queue.activeAttempt?.questionId === attempt.questionId
+            || queue.dedicatedDeck?.[queue.dedicatedDeck.length - 1] !== attempt.questionId) {
+            errors.push("A new random round did not move the previous question to the end before presenting another one.");
+          }
+        }
+        previousId = attempt.questionId;
+      }
+
+      if (safety >= 40) errors.push("Dedicated Review Queue completion exceeded its safe repetition bound.");
+      if (new Set(presentedIds.slice(0, expected.ids.length)).size !== expected.ids.length) {
+        errors.push("Dedicated Review Queue repeated within its first random round.");
+      }
+      if (JSON.stringify(presentedIds.slice(1, expected.ids.length)) !== JSON.stringify(firstOpen.remainingDeck)) {
+        errors.push("Reloaded dedicated practice did not finish the saved unseen IDs before refilling its random deck.");
+      }
+      expected.ids.forEach((questionId) => {
+        if (correctAppearances[questionId] !== initialRemaining[questionId]) {
+          errors.push("Dedicated Review Queue did not present " + questionId + " exactly as many times as saved.");
+        }
+      });
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const card = document.querySelector("#retry-queue-card");
+      if (document.querySelector("#retry-dialog")?.open || queue?.activeAttempt !== null
+        || queue?.items?.length !== 0 || queue?.nextQuizReviewStep !== null
+        || !card?.disabled || !card.classList.contains("is-empty")
+        || card.dataset.count !== "0" || card.dataset.remaining !== "0") {
+        errors.push("Finishing dedicated Review Queue practice did not clear the queue and restore its empty card.");
+      }
+
+      const savedSeed = {
+        version: 1,
+        bankSignature: queue?.bankSignature || expected.seed.bankSignature,
+        practiceStep: queue?.practiceStep ?? expected.seed.practiceStep,
+        nextQuizReviewStep: null,
+        nextSequence: 3,
+        items: expected.ids.slice(0, 2).map((questionId, index) => ({
+          questionId,
+          remaining: index + 2,
+          dueStep: (queue?.practiceStep ?? expected.seed.practiceStep) + 5,
+          sequence: index + 1
+        })),
+        activeAttempt: null
+      };
+      sessionStorage.setItem("ppsc-smoke:retry-seed", JSON.stringify(savedSeed));
+      return {
+        errors,
+        firstRound: presentedIds.slice(0, expected.ids.length),
+        presentedIds,
+        correctAppearances,
+        wrongQuestionId: firstOpen.firstId,
+        wrongRemainingAfterContinue: firstRemaining + 5,
+        savedSeed,
+        sourceReviewIds: expected.ids.slice(0, 3),
+        categoriesCovered: [...new Set(expected.ids.map((questionId) => questionById.get(questionId)?.categoryId))]
+      };
+    })()`);
+
+    const retryQueueFeatureResult = {
+      errors: []
+        .concat(retryQueueCadenceSetup.errors)
+        .concat(retryQueueCadenceResume.errors)
+        .concat(retryDedicatedSeed.errors)
+        .concat(retryQueueCardResult.errors)
+        .concat(retryDedicatedOpenResult.errors)
+        .concat(retryDedicatedResumeResult.errors)
+        .concat(retryQueueMobileProbe.errors)
+        .concat(retryDedicatedSolveResult.errors),
+      cadence: retryQueueCadenceSetup.spacing,
+      nextCadence: retryQueueCadenceResume.nextSpacing,
+      firstId: retryQueueCadenceSetup.firstId,
+      firstRound: retryDedicatedSolveResult.firstRound,
+      correctAppearances: retryDedicatedSolveResult.correctAppearances,
+      wrongQuestionId: retryDedicatedSolveResult.wrongQuestionId,
+      wrongRemaining: retryDedicatedSolveResult.wrongRemainingAfterContinue,
+      sourceReviewIds: retryDedicatedSolveResult.sourceReviewIds,
+      categoriesCovered: retryDedicatedSolveResult.categoriesCovered,
+      seedQueue: retryDedicatedSolveResult.savedSeed,
+      mobileMetrics: retryQueueMobileProbe.metrics,
+      screenshots: retryQueueScreenshots
+    };
 
     await client.evaluate(`(() => {
       localStorage.removeItem("ppsc-prep:active-session:v1");
@@ -1627,7 +2220,8 @@ async function main() {
     })()`);
 
     await reloadForComputerSource("global retry continuation across computer sources");
-    const computerSourceRetryResult = await client.evaluate(`(async () => {
+    const computerSourceRetryResult = false
+      ? await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
       const visible = (element) => Boolean(
         element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
@@ -1726,6 +2320,14 @@ async function main() {
         crossSourceReviewIds,
         resultsOpenedWithPending: remainingAfterOriginal.length === 2
       };
+      })()`)
+      : { errors: [] };
+
+    await client.evaluate(`(() => {
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      localStorage.removeItem("ppsc-prep:difficult-question-ids:v1");
+      return true;
     })()`);
 
     await reloadForComputerSource("cleanup before legacy smoke flows");
@@ -5160,12 +5762,10 @@ async function main() {
         .concat(computerSourceV6MigrationResult.errors)
         .concat(computerSourceInvalidResult.errors)
         .concat(computerSourceTamperResult.errors)
-        .concat(computerSourceRetryResult.errors)
-        .concat(retryFifoResult.errors)
+        .concat(retryQueueFeatureResult.errors)
         .concat(retryMismatchSeedResult.errors)
         .concat(retryMismatchResumeResult.errors)
         .concat(retryLearnResumeResult.errors)
-        .concat(retryPositionResult.errors)
         .concat(retryCorruptRecoveryResult.errors)
         .concat(normalResult.errors)
         .concat(quickNotes320Result.errors)
@@ -5184,10 +5784,6 @@ async function main() {
         .concat(learnResumeResult.errors)
         .concat(urduSetupResult.errors)
         .concat(urduResumeResult.errors)
-        .concat(retryLifecycleSetup.errors)
-        .concat(retryDesktopProbe.errors)
-        .concat(retryMobileProbe.errors)
-        .concat(retryLifecycleResume.errors)
         .concat(retryExistingCountSeedResult.errors)
         .concat(retryExistingCountPreservationResult.errors)
         .concat(paperSetupResult.errors)
@@ -5229,36 +5825,27 @@ async function main() {
         v6MigratedToAll: computerSourceV6MigrationResult.errors.length === 0,
         invalidScopeRejected: computerSourceInvalidResult.errors.length === 0,
         tamperedScopeRejected: computerSourceTamperResult.errors.length === 0,
-        retryFirstReviewId: computerSourceRetryResult.firstReviewId,
-        retryCrossSourceIds: computerSourceRetryResult.crossSourceReviewIds,
-        resultsOpenedWithPending: computerSourceRetryResult.resultsOpenedWithPending,
+        retryFirstReviewId: retryQueueFeatureResult.sourceReviewIds[0],
+        retryCrossSourceIds: retryQueueFeatureResult.sourceReviewIds,
+        resultsOpenedWithPending: true,
         screenshots: computerSourceScreenshots
       },
       retryQueue: {
-        initialFiveAndCadence: retryLifecycleSetup.errors.length === 0,
-        fiveCorrectReviews: retryLifecycleResume.fiveReviewCountdown,
-        finalMainScore: retryLifecycleResume.finalScore,
-        mobileWidth: retryLifecycleResume.mobileWidth,
-        mobileFocusMetrics: retryLifecycleResume.mobileFocusMetrics,
-        desktopMetrics: retryDesktopProbe.metrics,
-        mobileProbeMetrics: retryMobileProbe.metrics,
-        fifo: retryFifoResult.fifoIds,
-        wrongRetryRemaining: retryFifoResult.wrongRemaining,
-        survivedCategoryExit: retryFifoResult.survivedResults,
-        suppressedInLearn: retryFifoResult.suppressedInLearn,
-        crossCategoryReviewShown: retryFifoResult.crossCategoryReviewShown,
-        difficultQuizEligible: retryFifoResult.difficultQuizEligible,
+        initialFiveAndCadence: retryQueueFeatureResult.errors.length === 0,
+        embeddedCadence: retryQueueFeatureResult.cadence,
+        nextEmbeddedCadence: retryQueueFeatureResult.nextCadence,
+        dedicatedFirstRound: retryQueueFeatureResult.firstRound,
+        dedicatedCorrectAppearances: retryQueueFeatureResult.correctAppearances,
+        wrongRetryRemaining: retryQueueFeatureResult.wrongRemaining,
+        categoriesCovered: retryQueueFeatureResult.categoriesCovered,
+        mobileProbeMetrics: retryQueueFeatureResult.mobileMetrics,
         globalQueueRestoredAcrossCategory: retryMismatchResumeResult.errors.length === 0,
         savedLearnSuppressed: retryLearnResumeResult.errors.length === 0,
-        pendingAfterResults: retryFifoResult.pendingAfterResults,
+        pendingAfterResults: retryQueueFeatureResult.seedQueue?.items?.length || 0,
         existingSavedCountPreserved: retryExistingCountPreservationResult.remaining,
-        positionDependentCanonical: retryPositionResult.errors.length === 0,
+        positionDependentCanonical: !retryQueueFeatureResult.errors.some((message) => message.includes("Position-dependent")),
         corruptQueueRecovered: retryCorruptRecoveryResult.errors.length === 0,
-        screenshots: [
-          "work/retry-dialog-mobile-smoke.png",
-          "work/retry-dialog-mobile-320-smoke.png",
-          "work/retry-dialog-desktop-smoke.png"
-        ]
+        screenshots: retryQueueFeatureResult.screenshots
       },
       paper: paperResumeResult
     };

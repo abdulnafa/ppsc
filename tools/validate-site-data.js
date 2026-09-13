@@ -871,7 +871,8 @@ function validateAdv2e102Bank(questions) {
 function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
-    "category-screen", "paper-builder-card", "paper-setup-screen", "paper-setup-back-button",
+    "category-screen", "paper-builder-card", "retry-queue-card", "retry-queue-card-meta",
+    "paper-setup-screen", "paper-setup-back-button",
     "quick-notes-screen", "quick-notes-back-button", "quick-notes-category",
     "quick-notes-title", "quick-notes-count", "quick-notes-language-note",
     "quick-notes-search", "quick-notes-clear-button", "quick-notes-important-only",
@@ -918,6 +919,25 @@ function validateHtml() {
   for (const id of requiredIds) {
     const matches = html.match(new RegExp(`\\bid=["']${id}["']`, "g")) || [];
     if (matches.length !== 1) error(`index.html: expected one #${id}, found ${matches.length}`);
+  }
+  const retryQueueCard = html.match(/<button\b[^>]*\bid=["']retry-queue-card["'][^>]*>/i)?.[0] || "";
+  if (!/\btype=["']button["']/i.test(retryQueueCard)
+    || !/\baria-controls=["']retry-dialog["']/i.test(retryQueueCard)
+    || !/\baria-describedby=["']retry-queue-card-meta["']/i.test(retryQueueCard)
+    || !/\baria-haspopup=["']dialog["']/i.test(retryQueueCard)
+    || !/\bdisabled(?:\s|=|>)/i.test(retryQueueCard)) {
+    error("index.html: #retry-queue-card must be an initially disabled button linked accessibly to the retry dialog and queue metadata");
+  }
+  const retryQueueCardMeta = html.match(/<[^>]+\bid=["']retry-queue-card-meta["'][^>]*>/i)?.[0] || "";
+  if (!/\bdata-count=["']0["']/i.test(retryQueueCardMeta)
+    || !/\bdata-remaining=["']0["']/i.test(retryQueueCardMeta)) {
+    error("index.html: #retry-queue-card-meta must begin with zero queued questions and zero remaining reviews");
+  }
+  const paperBuilderIndex = html.search(/\bid=["']paper-builder-card["']/i);
+  const retryQueueCardIndex = html.search(/\bid=["']retry-queue-card["']/i);
+  const categoryGridIndex = html.search(/\bid=["']category-grid["']/i);
+  if (paperBuilderIndex < 0 || retryQueueCardIndex <= paperBuilderIndex || categoryGridIndex <= retryQueueCardIndex) {
+    error("index.html: #retry-queue-card must appear after #paper-builder-card and before #category-grid");
   }
   const computerSourcePanel = html.match(/<section\b[^>]*\bid=["']computer-source-panel["'][^>]*>/i)?.[0] || "";
   if (!/\bhidden(?:\s|=|>)/i.test(computerSourcePanel)
@@ -1061,7 +1081,8 @@ function validateRetryQueueContract() {
     ["RETRY_QUEUE_STORAGE_VERSION", "1"],
     ["RETRY_QUEUE_INCREMENT", "5"],
     ["LEGACY_RETRY_QUEUE_INCREMENT", "2"],
-    ["RETRY_QUEUE_SPACING", "3"]
+    ["RETRY_QUEUE_MIN_SPACING", "5"],
+    ["RETRY_QUEUE_MAX_SPACING", "6"]
   ];
   for (const [name, value] of requiredConstants) {
     const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
