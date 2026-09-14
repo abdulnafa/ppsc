@@ -298,6 +298,43 @@ h2[tabindex="-1"]:focus {
 
 .header-actions,
 .cloud-account-controls { min-width: 0; display: flex; align-items: center; gap: 9px; }
+.global-retry-queue-button {
+  min-height: 34px;
+  padding: 4px 8px 4px 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  color: #774207;
+  white-space: nowrap;
+  background: #fff5df;
+  border: 1px solid #edcd91;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 850;
+}
+.global-retry-queue-button:not(:disabled):hover { background: #ffebc1; border-color: #daa84d; }
+.global-retry-queue-button:disabled { cursor: default; opacity: .58; }
+.global-retry-queue-icon {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #d08116;
+  border-radius: 50%;
+  font-size: .82rem;
+  line-height: 1;
+}
+#global-retry-queue-count {
+  min-width: 20px;
+  padding-inline: 5px;
+  color: #fff;
+  text-align: center;
+  background: #b9670a;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+}
 .cloud-sync-status {
   min-height: 30px;
   padding: 5px 9px;
@@ -1979,6 +2016,9 @@ body.has-retry-dialog { overflow: hidden; }
   .site-header { height: 68px; padding: 0 20px; }
   .header-badge { display: none; }
   .header-actions { max-width: calc(100% - 176px); }
+  .global-retry-queue-button { min-width: 40px; min-height: 40px; padding: 4px 6px 4px 4px; gap: 4px; }
+  .global-retry-queue-label { display: none; }
+  .global-retry-queue-icon { width: 24px; height: 24px; }
   .cloud-account-controls { gap: 6px; }
   .cloud-sync-status { max-width: 132px; overflow: hidden; text-overflow: ellipsis; }
   .header-sign-out-button { padding-inline: 8px; }
@@ -2108,6 +2148,18 @@ body.has-retry-dialog { overflow: hidden; }
 }
 
 @media (max-width: 520px) {
+  .header-actions,
+  .cloud-account-controls { gap: 4px; }
+  .cloud-sync-status { width: 32px; max-width: 32px; padding-inline: 5px; justify-content: center; }
+  #cloud-sync-status-text {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
   .progress-choice-grid,
   .progress-choice-actions { grid-template-columns: 1fr; }
   .progress-source-card { min-height: 61px; }
@@ -2127,7 +2179,11 @@ body.has-retry-dialog { overflow: hidden; }
   .auth-heading h1 { font-size: 1.75rem; }
   .auth-status-panel { padding-inline: 11px; }
   .site-header { padding-inline: 14px; }
-  .header-actions { max-width: calc(100% - 124px); }
+  .brand > span:last-child { display: none; }
+  .header-actions { max-width: calc(100% - 54px); }
+  .global-retry-queue-button { min-width: 38px; padding-right: 4px; }
+  .global-retry-queue-icon { width: 22px; height: 22px; }
+  #global-retry-queue-count { min-width: 18px; padding-inline: 4px; }
   .cloud-sync-status { max-width: 96px; padding-inline: 7px; }
   .header-sign-out-button { min-height: 30px; padding-inline: 7px; }
   .app-shell { width: calc(100% - 20px); }

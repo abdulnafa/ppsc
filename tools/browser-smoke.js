@@ -333,12 +333,33 @@ async function main() {
       const panel = document.querySelector("#computer-source-panel");
       const rect = panel?.getBoundingClientRect();
       const radios = [...document.querySelectorAll('input[name="computer-source"]')];
+      const globalQueue = document.querySelector("#global-retry-queue-button");
+      const globalQueueRect = globalQueue?.getBoundingClientRect();
       const errors = [];
       if (!panel || panel.hidden || document.documentElement.scrollWidth > window.innerWidth
         || !rect || rect.left < -1 || rect.right > window.innerWidth + 1
         || radios.length !== 4 || radios.some((radio) => radio.getClientRects().length === 0)) {
         errors.push("Basic Computer source selector overflowed or lost a radio at 320px.");
       }
+      if (!globalQueueRect || globalQueueRect.height < 38
+        || globalQueueRect.left < -1 || globalQueueRect.right > window.innerWidth + 1
+        || globalQueue?.hidden || getComputedStyle(globalQueue).display === "none") {
+        errors.push("Global Review Queue control was hidden, undersized, or overflowed the 320px header.");
+      }
+      const cloudControls = document.querySelector("#cloud-account-controls");
+      const cloudWasHidden = cloudControls?.hidden;
+      if (cloudControls) cloudControls.hidden = false;
+      const brandRect = document.querySelector(".site-header .brand")?.getBoundingClientRect();
+      const actionsRect = document.querySelector(".site-header .header-actions")?.getBoundingClientRect();
+      const productionQueueRect = globalQueue?.getBoundingClientRect();
+      if (!brandRect || !actionsRect || !productionQueueRect
+        || actionsRect.right > window.innerWidth + 1
+        || actionsRect.left < brandRect.right - 1
+        || productionQueueRect.left < brandRect.right - 1
+        || document.documentElement.scrollWidth > window.innerWidth) {
+        errors.push("Global Queue, sync status, and Sign out controls did not fit together in the 320px production header.");
+      }
+      if (cloudControls) cloudControls.hidden = cloudWasHidden;
       return { errors, width: window.innerWidth, panelWidth: rect ? Math.round(rect.width) : 0 };
     })()`);
     const sourceSelector320 = await client.send("Page.captureScreenshot", { format: "png" });
@@ -787,7 +808,7 @@ async function main() {
         wrongRemaining: 10,
         scoreBeforeExit: "Score: 6",
         survivedResults: true,
-        suppressedInLearn: true,
+        learnReviewEligible: true,
         crossCategoryReviewShown: true,
         difficultQuizEligible: true,
         pendingAfterResults: retry?.items.find((item) => item.questionId === secondId)?.remaining || null,
@@ -796,7 +817,7 @@ async function main() {
       })()`)
       : { errors: [] };
 
-    // Current retry behavior uses one persisted 5-or-6-question gate for embedded Quiz
+    // Current retry behavior uses one persisted 5-or-6-question gate for embedded Learn/Quiz
     // reviews and a separate, randomized Review Queue practice surface.
     await client.evaluate(`(() => {
       localStorage.removeItem("ppsc-prep:active-session:v1");
@@ -866,10 +887,16 @@ async function main() {
 
       const queueCard = document.querySelector("#retry-queue-card");
       const queueCardMeta = document.querySelector("#retry-queue-card-meta");
+      const emptyGlobalQueue = document.querySelector("#global-retry-queue-button");
       if (!visible(queueCard) || !queueCard.disabled || !queueCard.classList.contains("is-empty")
         || queueCard.dataset.count !== "0" || queueCard.dataset.remaining !== "0"
         || !queueCardMeta?.textContent.includes("No reviews waiting")) {
         errors.push("Empty Review Queue card was missing, enabled, or had incorrect zero-state copy.");
+      }
+      if (!visible(emptyGlobalQueue) || !emptyGlobalQueue.disabled
+        || emptyGlobalQueue.dataset.count !== "0" || emptyGlobalQueue.dataset.remaining !== "0"
+        || document.querySelector("#global-retry-queue-count")?.textContent !== "0") {
+        errors.push("Empty global Review Queue control was not visible in its disabled zero state.");
       }
 
       const categoryButton = document.querySelector('#category-grid .category-card[data-category="' + categoryId + '"]');
@@ -1067,6 +1094,7 @@ async function main() {
       const stored = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
       const card = document.querySelector("#retry-queue-card");
       const meta = document.querySelector("#retry-queue-card-meta");
+      const globalQueue = document.querySelector("#global-retry-queue-button");
       const migratedSpacing = stored?.nextQuizReviewStep === null || !stored
         ? null
         : stored.nextQuizReviewStep - stored.practiceStep;
@@ -1077,6 +1105,12 @@ async function main() {
         || !card.getAttribute("aria-label")?.includes("5 reviews across 3 questions")) {
         errors.push("Nonempty Review Queue card did not show its three-question/five-review total accessibly.");
       }
+      if (!visible(globalQueue) || globalQueue.disabled
+        || globalQueue.dataset.count !== "3" || globalQueue.dataset.remaining !== "5"
+        || document.querySelector("#global-retry-queue-count")?.textContent !== "5"
+        || !globalQueue.getAttribute("aria-label")?.includes("5 reviews across 3 questions")) {
+        errors.push("Global Review Queue control did not show the five-review total accessibly.");
+      }
       if (!stored
         || stored.items.length !== 3
         || JSON.stringify(stored.items.map((item) => item.remaining)) !== JSON.stringify(expected.savedRemaining)
@@ -1084,6 +1118,41 @@ async function main() {
         errors.push("Legacy v1 Review Queue migration changed saved question IDs or repetition counts.");
       }
       return { errors, migratedSpacing };
+    })()`);
+
+    const retryGlobalSurfaceResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
+      const errors = [];
+      const globalQueue = document.querySelector("#global-retry-queue-button");
+      const assertGlobalQueue = (screenSelector, label) => {
+        if (!visible(document.querySelector(screenSelector)) || !visible(globalQueue) || globalQueue?.disabled
+          || globalQueue?.dataset.count !== "3" || globalQueue?.dataset.remaining !== "5"
+          || !globalQueue.closest(".site-header")) {
+          errors.push("Global Review Queue was unavailable on the " + label + " screen.");
+        }
+      };
+
+      assertGlobalQueue("#category-screen", "category");
+      document.querySelector("#paper-builder-card")?.click();
+      await pause();
+      assertGlobalQueue("#paper-setup-screen", "paper setup");
+      document.querySelector("#paper-setup-back-button")?.click();
+      await pause();
+      document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
+      await pause();
+      assertGlobalQueue("#mode-screen", "mode choice");
+      document.querySelector("#study-notes-mode-button")?.click();
+      await pause();
+      assertGlobalQueue("#quick-notes-screen", "Study Notes");
+      document.querySelector("#quick-notes-back-button")?.click();
+      await pause();
+      document.querySelector("#mode-back-button")?.click();
+      await pause();
+      assertGlobalQueue("#category-screen", "returned category");
+      return { errors };
     })()`);
 
     const retryQueueScreenshots = {
@@ -1369,6 +1438,7 @@ async function main() {
         .concat(retryQueueCadenceResume.errors)
         .concat(retryDedicatedSeed.errors)
         .concat(retryQueueCardResult.errors)
+        .concat(retryGlobalSurfaceResult.errors)
         .concat(retryDedicatedOpenResult.errors)
         .concat(retryDedicatedResumeResult.errors)
         .concat(retryQueueMobileProbe.errors)
@@ -1476,14 +1546,18 @@ async function main() {
       document.querySelector("#learn-mode-button")?.click();
       await pause();
       document.querySelector("#question-range-start-input").value = "1";
-      document.querySelector("#question-range-end-input").value = "2";
+      document.querySelector("#question-range-end-input").value = "8";
       document.querySelector("#question-range-form")?.requestSubmit();
       await pause();
       const learnSession = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
       if (!learnSession || learnSession.categoryId !== "urdu" || learnSession.mode !== "learn") {
-        errors.push("Learn active-session fixture for saved-retry suppression was invalid.");
+        errors.push("Learn active-session fixture for saved-review visibility was invalid.");
       }
-      localStorage.setItem("ppsc-prep:retry-queue:v1", JSON.stringify(seed));
+      const learnQueue = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      sessionStorage.setItem("ppsc-smoke:learn-retry-seed", JSON.stringify(learnQueue));
+      if (!learnQueue || ![5, 6].includes(learnQueue.nextQuizReviewStep - learnQueue.practiceStep)) {
+        errors.push("Learn did not preserve a five-or-six-question review gate when it started.");
+      }
       return { errors };
     })()`);
 
@@ -1496,29 +1570,189 @@ async function main() {
           resolve(true);
         } else if (Date.now() >= deadline) {
           clearInterval(timer);
-          reject(new Error("Website did not reload for saved retry Learn suppression."));
+          reject(new Error("Website did not reload for saved retry Learn visibility."));
         }
       }, 50);
     })`);
 
     const retryLearnResumeResult = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(
+        element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
+      );
       const errors = [];
-      const seed = JSON.parse(sessionStorage.getItem("ppsc-smoke:retry-seed") || "null");
+      const seed = JSON.parse(sessionStorage.getItem("ppsc-smoke:learn-retry-seed") || "null");
+      const originalSeed = JSON.parse(sessionStorage.getItem("ppsc-smoke:retry-seed") || "null");
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const sessionKey = "ppsc-prep:active-session:v1";
+      const data = window.PPSC_QUIZ_DATA;
+      const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
       document.querySelector("#continue-session-button")?.click();
       await pause();
-      const retry = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (document.querySelector("#retry-dialog")?.open
         || document.querySelector("#quiz-screen")?.dataset.mode !== "learn"
         || retry?.activeAttempt !== null
-        || JSON.stringify(retry?.items || []) !== JSON.stringify(seed?.items || [])) {
+        || JSON.stringify(retry) !== JSON.stringify(seed)
+        || JSON.stringify(retry?.items || []) !== JSON.stringify(originalSeed?.items || [])) {
         errors.push("Continue opened or removed a saved retry while restoring Learn.");
       }
-      if (!document.querySelector("#retry-queue-chip")?.hidden
-        || document.querySelector("#retry-queue-count")?.textContent !== "0") {
-        errors.push("Learn Continue exposed a queued-review count.");
+      const expectedCount = String(seed?.items?.length || 0);
+      const expectedRemaining = (seed?.items || []).reduce((total, item) => total + item.remaining, 0);
+      const globalQueue = document.querySelector("#global-retry-queue-button");
+      if (document.querySelector("#retry-queue-chip")?.hidden
+        || document.querySelector("#retry-queue-count")?.textContent !== expectedCount
+        || !visible(globalQueue) || globalQueue?.disabled
+        || globalQueue?.dataset.count !== expectedCount
+        || globalQueue?.dataset.remaining !== String(expectedRemaining)
+        || document.querySelector("#global-retry-queue-count")?.textContent !== String(expectedRemaining)) {
+        errors.push("Learn Continue did not expose the saved queue in both study and global controls.");
       }
+
+      const spacing = retry?.nextQuizReviewStep - retry?.practiceStep;
+      const initialPracticeStep = retry?.practiceStep;
+      if (![5, 6].includes(spacing)) errors.push("Restored Learn queue lost its persisted five-or-six-question cadence.");
+
+      document.querySelector("#action-button")?.click();
+      await pause();
+      const afterFirst = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (afterFirst?.practiceStep !== initialPracticeStep + 1 || document.querySelector("#question-number-input")?.value !== "2") {
+        errors.push("Completing the first Learn question did not advance cadence and the main range once.");
+      }
+      document.querySelector("#previous-button")?.click();
+      await pause();
+      document.querySelector("#action-button")?.click();
+      await pause();
+      const afterRepeat = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (afterRepeat?.practiceStep !== afterFirst?.practiceStep || document.querySelector("#question-number-input")?.value !== "2") {
+        errors.push("Revisiting an already completed Learn question advanced the review cadence twice.");
+      }
+
+      for (let completion = 2; Number.isInteger(spacing) && completion <= spacing; completion += 1) {
+        const sessionBefore = JSON.parse(localStorage.getItem(sessionKey) || "null");
+        document.querySelector("#action-button")?.click();
+        await pause();
+        const dialogOpen = Boolean(document.querySelector("#retry-dialog")?.open);
+        if (completion < spacing && dialogOpen) {
+          errors.push("Learn review opened before its persisted five-or-six-question gate.");
+          break;
+        }
+        if (completion === spacing) {
+          retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+          const attempt = retry?.activeAttempt;
+          const sessionAtReview = JSON.parse(localStorage.getItem(sessionKey) || "null");
+          if (!dialogOpen || attempt?.context !== "embedded"
+            || retry.practiceStep !== initialPracticeStep + spacing
+            || sessionAtReview?.mode !== "learn" || sessionAtReview?.score !== 0
+            || sessionAtReview?.currentIndex !== sessionBefore?.currentIndex
+            || JSON.stringify(sessionAtReview?.learnVisitedQuestionIds) !== JSON.stringify(sessionBefore?.learnVisitedQuestionIds)
+            || sessionAtReview?.learnReviewCountedQuestionIds?.length !== spacing) {
+            errors.push("Learn review did not open exactly after its persisted number of completed main questions.");
+          }
+          const reviewQuestion = questionById.get(String(attempt?.questionId || ""));
+          const correctReviewIndex = reviewQuestion && attempt
+            ? attempt.optionOrder.indexOf(reviewQuestion.correctOptionIndex)
+            : -1;
+          const mainSessionDuringReview = localStorage.getItem(sessionKey);
+          const remainingBefore = retry?.items.find((item) => item.questionId === attempt?.questionId)?.remaining;
+          document.querySelector('[data-review-option-index="' + correctReviewIndex + '"]')?.click();
+          document.querySelector("#retry-action-button")?.click();
+          await pause();
+          const checked = JSON.parse(localStorage.getItem(retryKey) || "null");
+          if (!checked?.activeAttempt?.submitted || checked.activeAttempt.outcome !== "correct"
+            || checked.items.find((item) => item.questionId === attempt?.questionId)?.remaining !== remainingBefore
+            || localStorage.getItem(sessionKey) !== mainSessionDuringReview
+            || document.querySelector("#score-text")?.textContent !== "Learn Mode") {
+            errors.push("Checking an embedded Learn review changed its saved count or main Learn progress too early.");
+          }
+          document.querySelector("#retry-action-button")?.click();
+          await pause();
+          retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+          const resumedSession = JSON.parse(localStorage.getItem(sessionKey) || "null");
+          const nextSpacing = retry?.nextQuizReviewStep - retry?.practiceStep;
+          if (document.querySelector("#retry-dialog")?.open || retry?.activeAttempt !== null
+            || retry.items.find((item) => item.questionId === attempt?.questionId)?.remaining !== remainingBefore - 1
+            || ![5, 6].includes(nextSpacing)
+            || resumedSession?.mode !== "learn" || resumedSession?.score !== 0
+            || resumedSession?.currentIndex !== sessionBefore.currentIndex + 1) {
+            errors.push("Continuing a correct Learn review did not decrement once, reschedule, and resume Learn.");
+          }
+        }
+      }
+
+      const mainSessionBeforeDedicated = localStorage.getItem(sessionKey);
+      globalQueue?.click();
+      await pause();
+      retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!document.querySelector("#retry-dialog")?.open || retry?.activeAttempt?.context !== "dedicated"
+        || localStorage.getItem(sessionKey) !== mainSessionBeforeDedicated) {
+        errors.push("Global Queue did not open dedicated practice without replacing the active Learn session.");
+      }
+      document.querySelector("#retry-later-button")?.click();
+      await pause();
+      if (document.querySelector("#retry-dialog")?.open || localStorage.getItem(sessionKey) !== mainSessionBeforeDedicated
+        || document.activeElement !== globalQueue || document.querySelector("#quiz-screen")?.dataset.mode !== "learn") {
+        errors.push("Ending global Queue practice did not return focus and preserve the underlying Learn session.");
+      }
+      return { errors, spacing };
+    })()`);
+
+    const retryLegacyLearnMigrationSeed = await client.evaluate(`(() => {
+      const errors = [];
+      const sessionKey = "ppsc-prep:active-session:v1";
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const snapshot = JSON.parse(localStorage.getItem(sessionKey) || "null");
+      const queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!snapshot || snapshot.mode !== "learn" || !queue?.items?.length) {
+        errors.push("Legacy Learn migration fixture was unavailable.");
+        return { errors };
+      }
+      delete snapshot.learnReviewCountedQuestionIds;
+      queue.nextQuizReviewStep = queue.practiceStep;
+      queue.items.forEach((item) => { item.dueStep = Math.min(item.dueStep, queue.practiceStep); });
+      localStorage.setItem(sessionKey, JSON.stringify(snapshot));
+      localStorage.setItem(retryKey, JSON.stringify(queue));
+      sessionStorage.setItem("ppsc-smoke:legacy-learn-session", JSON.stringify(snapshot));
+      sessionStorage.setItem("ppsc-smoke:legacy-learn-queue", JSON.stringify(queue));
       return { errors };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for legacy Learn review migration."));
+        }
+      }, 50);
+    })`);
+
+    const retryLegacyLearnMigrationResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const sessionKey = "ppsc-prep:active-session:v1";
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const expectedSession = JSON.parse(sessionStorage.getItem("ppsc-smoke:legacy-learn-session") || "null");
+      const expectedQueue = JSON.parse(sessionStorage.getItem("ppsc-smoke:legacy-learn-queue") || "null");
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      const migratedSession = JSON.parse(localStorage.getItem(sessionKey) || "null");
+      const migratedQueue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const migratedSpacing = migratedQueue?.nextQuizReviewStep - migratedQueue?.practiceStep;
+      if (document.querySelector("#retry-dialog")?.open || migratedSession?.mode !== "learn"
+        || migratedSession?.currentIndex !== expectedSession?.currentIndex
+        || JSON.stringify(migratedSession?.learnReviewCountedQuestionIds)
+          !== JSON.stringify(expectedSession?.learnVisitedQuestionIds)
+        || migratedQueue?.practiceStep !== expectedQueue?.practiceStep
+        || JSON.stringify(migratedQueue?.items) !== JSON.stringify(expectedQueue?.items)
+        || ![5, 6].includes(migratedSpacing)) {
+        errors.push("Legacy v8 Learn Continue did not preserve counts and safely anchor the new five-or-six-question cadence.");
+      }
+      return { errors, migratedSpacing };
     })()`);
 
     await client.evaluate(`(() => {
@@ -5353,7 +5587,10 @@ async function main() {
       if (!initialSnapshot || JSON.stringify(initialSnapshot.paperCategoryIds) !== JSON.stringify(selectedCategoryIds)) errors.push("Custom Paper did not store the selected category IDs in data order.");
       if (!initialSnapshot || !Array.isArray(initialSnapshot.questionIds) || initialSnapshot.questionIds.length !== 100 || new Set(initialSnapshot.questionIds).size !== 100) errors.push("Custom Paper did not contain exactly 100 unique question IDs.");
       if (!initialSnapshot || !Array.isArray(initialSnapshot.optionOrders) || initialSnapshot.optionOrders.length !== 100) errors.push("Custom Paper did not store 100 option orders.");
-      if (!initialSnapshot || !Array.isArray(initialSnapshot.answerHistory) || initialSnapshot.answerHistory.length !== 100 || initialSnapshot.learnVisitedQuestionIds !== null) errors.push("Custom Paper did not store a 100-entry Quiz answer history.");
+      if (!initialSnapshot || !Array.isArray(initialSnapshot.answerHistory) || initialSnapshot.answerHistory.length !== 100
+        || initialSnapshot.learnVisitedQuestionIds !== null || initialSnapshot.learnReviewCountedQuestionIds !== null) {
+        errors.push("Custom Paper did not store a 100-entry Quiz answer history.");
+      }
       const sampledQuestions = initialSnapshot
         ? initialSnapshot.questionIds.map((questionId) => questionById.get(String(questionId))).filter(Boolean)
         : [];
@@ -5408,7 +5645,15 @@ async function main() {
         || JSON.stringify(paperRetryQueue?.items || []) !== JSON.stringify(paperRetrySeed?.items || [])
         || !document.querySelector("#retry-queue-chip")?.hidden
         || document.querySelector("#retry-queue-count")?.textContent !== "0") {
-        errors.push("Custom Paper displayed or mutated the pre-existing category Quiz review queue.");
+        errors.push("Custom Paper automatically displayed or mutated the pre-existing category Quiz review queue.");
+      }
+      const paperQueueRemaining = (paperRetrySeed?.items || []).reduce((total, item) => total + item.remaining, 0);
+      const paperGlobalQueue = document.querySelector("#global-retry-queue-button");
+      if (!visible(paperGlobalQueue) || paperGlobalQueue?.disabled
+        || paperGlobalQueue?.dataset.count !== String(paperRetrySeed?.items?.length || 0)
+        || paperGlobalQueue?.dataset.remaining !== String(paperQueueRemaining)
+        || document.querySelector("#global-retry-queue-count")?.textContent !== String(paperQueueRemaining)) {
+        errors.push("Custom Paper did not keep manual global Queue access visible.");
       }
 
       document.querySelector("#action-button").click();
@@ -5576,7 +5821,15 @@ async function main() {
         || JSON.stringify(retryBeforePaperContinue?.items || []) !== JSON.stringify(paperRetrySeed?.items || [])
         || !document.querySelector("#retry-queue-chip")?.hidden
         || document.querySelector("#retry-queue-count")?.textContent !== "0") {
-        errors.push("Reload exposed or changed category Quiz reviews while a Custom Paper was pending.");
+        errors.push("Reload automatically exposed or changed category Quiz reviews while a Custom Paper was pending.");
+      }
+      const paperQueueRemaining = (paperRetrySeed?.items || []).reduce((total, item) => total + item.remaining, 0);
+      const globalQueue = document.querySelector("#global-retry-queue-button");
+      if (!visible(globalQueue) || globalQueue?.disabled
+        || globalQueue?.dataset.count !== String(paperRetrySeed?.items?.length || 0)
+        || globalQueue?.dataset.remaining !== String(paperQueueRemaining)
+        || document.querySelector("#global-retry-queue-count")?.textContent !== String(paperQueueRemaining)) {
+        errors.push("Pending Custom Paper reload did not retain manual global Queue access.");
       }
 
       document.querySelector("#continue-session-button").click();
@@ -5597,7 +5850,11 @@ async function main() {
         || JSON.stringify(retryAfterPaperContinue?.items || []) !== JSON.stringify(paperRetrySeed?.items || [])
         || !document.querySelector("#retry-queue-chip")?.hidden
         || document.querySelector("#retry-queue-count")?.textContent !== "0") {
-        errors.push("Custom Paper Continue displayed or mutated category Quiz reviews.");
+        errors.push("Custom Paper Continue automatically displayed or mutated category Quiz reviews.");
+      }
+      if (!visible(globalQueue) || globalQueue?.disabled
+        || globalQueue?.dataset.remaining !== String(paperQueueRemaining)) {
+        errors.push("Resumed Custom Paper did not retain manual global Queue access.");
       }
 
       const numberInput = document.querySelector("#question-number-input");
@@ -5642,6 +5899,9 @@ async function main() {
       if (!document.querySelector("#result-penalty").textContent.includes("-1")) errors.push("Custom Paper did not show the one-mark penalty for four wrong answers.");
       if (!document.querySelector("#result-summary").textContent.includes("96 correct") || !document.querySelector("#result-summary").textContent.includes("4 wrong") || !document.querySelector("#result-summary").textContent.includes("95 out of 100")) errors.push("Custom Paper summary omitted correct, wrong, or net marks.");
       if (document.querySelector("#play-again-button").textContent !== "Attempt New Paper") errors.push("Custom Paper result did not offer Attempt New Paper.");
+      if (!visible(globalQueue) || globalQueue?.disabled || globalQueue?.dataset.remaining !== String(paperQueueRemaining)) {
+        errors.push("Custom Paper Results did not retain manual global Queue access.");
+      }
 
       const urduLabels = ["الف", "ب", "ج", "د"];
       const englishLabels = ["A", "B", "C", "D"];
@@ -5766,6 +6026,8 @@ async function main() {
         .concat(retryMismatchSeedResult.errors)
         .concat(retryMismatchResumeResult.errors)
         .concat(retryLearnResumeResult.errors)
+        .concat(retryLegacyLearnMigrationSeed.errors)
+        .concat(retryLegacyLearnMigrationResult.errors)
         .concat(retryCorruptRecoveryResult.errors)
         .concat(normalResult.errors)
         .concat(quickNotes320Result.errors)
@@ -5832,6 +6094,7 @@ async function main() {
       },
       retryQueue: {
         initialFiveAndCadence: retryQueueFeatureResult.errors.length === 0,
+        globalControlEverywhere: retryGlobalSurfaceResult.errors.length === 0,
         embeddedCadence: retryQueueFeatureResult.cadence,
         nextEmbeddedCadence: retryQueueFeatureResult.nextCadence,
         dedicatedFirstRound: retryQueueFeatureResult.firstRound,
@@ -5840,7 +6103,9 @@ async function main() {
         categoriesCovered: retryQueueFeatureResult.categoriesCovered,
         mobileProbeMetrics: retryQueueFeatureResult.mobileMetrics,
         globalQueueRestoredAcrossCategory: retryMismatchResumeResult.errors.length === 0,
-        savedLearnSuppressed: retryLearnResumeResult.errors.length === 0,
+        learnQueueCadenceRestored: retryLearnResumeResult.errors.length === 0,
+        legacyLearnCadenceMigrated: retryLegacyLearnMigrationSeed.errors.length === 0
+          && retryLegacyLearnMigrationResult.errors.length === 0,
         pendingAfterResults: retryQueueFeatureResult.seedQueue?.items?.length || 0,
         existingSavedCountPreserved: retryExistingCountPreservationResult.remaining,
         positionDependentCanonical: !retryQueueFeatureResult.errors.some((message) => message.includes("Position-dependent")),

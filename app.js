@@ -38,7 +38,7 @@
   var difficultQuestionIds = new Set();
   var activeSessionSnapshot = null;
   var retryQueueState = createEmptyRetryQueueState();
-  var retryQueuePractice = { active: false };
+  var retryQueuePractice = { active: false, returnTarget: null };
   var previousOptionOrders = Object.create(null);
   var gkNoteSearchEntries = [];
   var gkNotesState = {
@@ -94,6 +94,7 @@
     rangeQuestionIds: null,
     responses: [],
     learnVisitedQuestionIds: new Set(),
+    learnReviewCountedQuestionIds: new Set(),
     currentIndex: 0,
     selectedIndex: null,
     submitted: false,
@@ -142,6 +143,8 @@
     elements.gkNotesLoadMoreButton = firstElement(["#gk-notes-load-more-button", "[data-gk-notes-load-more]"]);
     elements.gkNotesEmpty = firstElement(["#gk-notes-empty", "[data-gk-notes-empty]"]);
     elements.paperBuilderCard = firstElement(["#paper-builder-card", "[data-paper-builder]"]);
+    elements.globalRetryQueueButton = firstElement(["#global-retry-queue-button", "[data-global-retry-queue]"]);
+    elements.globalRetryQueueCount = firstElement(["#global-retry-queue-count", "[data-global-retry-queue-count]"]);
     elements.retryQueueCard = firstElement(["#retry-queue-card", "[data-retry-queue-card]"]);
     elements.retryQueueCardMeta = firstElement(["#retry-queue-card-meta", "[data-retry-queue-card-meta]"]);
     elements.paperSetupBackButton = firstElement(["#paper-setup-back-button", "[data-paper-setup-back]"]);
@@ -643,6 +646,8 @@
 
     var responses = new Array(sessionQuestions.length).fill(null);
     var learnVisitedQuestionIds = new Set();
+    var learnReviewCountedQuestionIds = new Set();
+    var migratedLearnReviewCadence = false;
     if (savedValue.mode === "learn") {
       if (!Array.isArray(savedValue.learnVisitedQuestionIds)) return null;
       var visitedQuestionIds = savedValue.learnVisitedQuestionIds.map(String);
@@ -650,9 +655,23 @@
       if (visitedQuestionIds.some(function (questionId) { return !questionIds.includes(questionId); })) return null;
       if (!visitedQuestionIds.includes(questionIds[currentIndex])) return null;
       learnVisitedQuestionIds = new Set(visitedQuestionIds);
+      if (typeof savedValue.learnReviewCountedQuestionIds === "undefined") {
+        // Older v8 Learn sessions predate embedded reviews. Treat their
+        // already visited questions as counted without changing queue totals.
+        learnReviewCountedQuestionIds = new Set(visitedQuestionIds);
+        migratedLearnReviewCadence = true;
+      } else {
+        if (!Array.isArray(savedValue.learnReviewCountedQuestionIds)) return null;
+        var countedQuestionIds = savedValue.learnReviewCountedQuestionIds.map(String);
+        if (new Set(countedQuestionIds).size !== countedQuestionIds.length) return null;
+        if (countedQuestionIds.some(function (questionId) { return !learnVisitedQuestionIds.has(questionId); })) return null;
+        learnReviewCountedQuestionIds = new Set(countedQuestionIds);
+      }
       if (!submitted || score !== 0 || selectedIndex !== sessionQuestions[currentIndex].correctOptionIndex) return null;
     } else {
       if (savedValue.learnVisitedQuestionIds !== null) return null;
+      if (typeof savedValue.learnReviewCountedQuestionIds !== "undefined"
+        && savedValue.learnReviewCountedQuestionIds !== null) return null;
       if (!Array.isArray(savedValue.answerHistory) || savedValue.answerHistory.length !== sessionQuestions.length) return null;
       responses = savedValue.answerHistory.map(function (entry) {
         if (entry === null) return null;
@@ -693,6 +712,9 @@
         return response ? [response.selectedIndex, response.submitted] : null;
       }) : null,
       learnVisitedQuestionIds: savedValue.mode === "learn" ? Array.from(learnVisitedQuestionIds) : null,
+      learnReviewCountedQuestionIds: savedValue.mode === "learn"
+        ? Array.from(learnReviewCountedQuestionIds)
+        : null,
       currentIndex: currentIndex,
       selectedIndex: selectedIndex,
       submitted: submitted,
@@ -705,7 +727,9 @@
       category: category,
       questions: sessionQuestions,
       responses: responses,
-      learnVisitedQuestionIds: learnVisitedQuestionIds
+      learnVisitedQuestionIds: learnVisitedQuestionIds,
+      learnReviewCountedQuestionIds: learnReviewCountedQuestionIds,
+      migratedLearnReviewCadence: migratedLearnReviewCadence
     };
   }
 
@@ -828,6 +852,11 @@
       }).map(function (question) {
         return String(question.id);
       }) : null,
+      learnReviewCountedQuestionIds: state.mode === "learn" ? state.questions.filter(function (question) {
+        return state.learnReviewCountedQuestionIds.has(String(question.id));
+      }).map(function (question) {
+        return String(question.id);
+      }) : null,
       currentIndex: state.currentIndex,
       selectedIndex: state.selectedIndex,
       submitted: state.submitted,
@@ -878,10 +907,16 @@
       : null;
     state.responses = normalized.responses;
     state.learnVisitedQuestionIds = normalized.learnVisitedQuestionIds;
+    state.learnReviewCountedQuestionIds = normalized.learnReviewCountedQuestionIds;
     state.currentIndex = normalized.snapshot.currentIndex;
     state.selectedIndex = normalized.snapshot.selectedIndex;
     state.submitted = normalized.snapshot.submitted;
     state.score = normalized.snapshot.score;
+
+    if (normalized.migratedLearnReviewCadence && retryQueueState.items.length > 0) {
+      scheduleNextQuizReview();
+      saveRetryQueue();
+    }
 
     setQuizSessionLabel();
     showScreen("quiz");
@@ -1079,8 +1114,8 @@
     };
   }
 
-  function isRetryEligibleQuizSession() {
-    return state.mode === "quiz"
+  function isRetryEligibleStudySession() {
+    return (state.mode === "quiz" || state.mode === "learn")
       && state.sessionKind === "category"
       && !isPaperSession()
       && Boolean(state.category && state.category.id);
@@ -1088,14 +1123,14 @@
 
   function activeRetryCategoryId() {
     if (
-      !isRetryEligibleQuizSession()
+      !isRetryEligibleStudySession()
       || !elements.quizScreen
       || elements.quizScreen.hidden
     ) return "";
     return String(state.category.id);
   }
 
-  function activeQuizRetryItems() {
+  function activeStudyRetryItems() {
     if (!activeRetryCategoryId()) return [];
     return retryQueueState.items.slice();
   }
@@ -1108,9 +1143,9 @@
   }
 
   function updateRetryQueueUI(announcement) {
-    var quizItems = activeQuizRetryItems();
-    var itemCount = quizItems.length;
-    var totalRemaining = quizItems.reduce(function (total, item) {
+    var studyItems = activeStudyRetryItems();
+    var itemCount = studyItems.length;
+    var totalRemaining = studyItems.reduce(function (total, item) {
       return total + item.remaining;
     }, 0);
     if (elements.retryQueueCount) {
@@ -1139,6 +1174,24 @@
     var dedicatedCardPrefix = hasDedicatedAttempt
       ? (dedicatedAttempt.submitted ? "Continue \u00b7 answer pending \u00b7 " : "Continue \u00b7 ")
       : "";
+    if (elements.globalRetryQueueCount) {
+      elements.globalRetryQueueCount.textContent = String(allRemaining);
+      elements.globalRetryQueueCount.dataset.count = String(allItemCount);
+      elements.globalRetryQueueCount.dataset.remaining = String(allRemaining);
+    }
+    if (elements.globalRetryQueueButton) {
+      var globalQueueLabel = allItemCount === 0
+        ? "Review Queue is empty"
+        : (hasDedicatedAttempt ? "Continue Review Queue. " : "Open Review Queue. ")
+          + allRemaining + (allRemaining === 1 ? " review" : " reviews")
+          + " across " + allItemCount + (allItemCount === 1 ? " question" : " questions");
+      elements.globalRetryQueueButton.disabled = allItemCount === 0;
+      elements.globalRetryQueueButton.classList.toggle("is-empty", allItemCount === 0);
+      elements.globalRetryQueueButton.dataset.count = String(allItemCount);
+      elements.globalRetryQueueButton.dataset.remaining = String(allRemaining);
+      elements.globalRetryQueueButton.setAttribute("aria-label", globalQueueLabel);
+      elements.globalRetryQueueButton.title = globalQueueLabel;
+    }
     if (elements.retryQueueCardMeta) {
       elements.retryQueueCardMeta.textContent = allItemCount === 0
         ? "No reviews waiting \u2014 wrong Quiz answers will appear here."
@@ -1227,7 +1280,7 @@
   function recordMainPractice(question, wrongAnswer) {
     if (
       !question
-      || !isRetryEligibleQuizSession()
+      || !isRetryEligibleStudySession()
       || !questionMatchesComputerSourceScope(
         question,
         state.category.id,
@@ -1552,10 +1605,10 @@
         : (dedicatedPractice
           ? (attempt.submitted
             ? "Continue for the next random queued review."
-            : "A correct answer removes one review; a wrong answer adds five. Your Quiz score is unchanged.")
+            : "A correct answer removes one review; a wrong answer adds five. Your current screen and session stay unchanged.")
           : (attempt.submitted
             ? "Continue to return to your session."
-            : "This review does not change your Quiz score."));
+            : "This review does not change your Learn or Quiz progress."));
       elements.retryDialogHelp.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogHelp.dir = urduQuestion ? "rtl" : "ltr";
     }
@@ -1647,11 +1700,18 @@
   }
 
   function focusRetryQueueReturnTarget() {
-    var target = elements.retryQueueCard && !elements.retryQueueCard.disabled
-      ? elements.retryQueueCard
-      : (elements.categoryScreen
-        ? elements.categoryScreen.querySelector("h1, h2, [tabindex='-1']")
-        : null);
+    var savedTarget = retryQueuePractice.returnTarget;
+    retryQueuePractice.returnTarget = null;
+    var target = savedTarget
+      && document.contains(savedTarget)
+      && !savedTarget.disabled
+      && !savedTarget.hidden
+      ? savedTarget
+      : null;
+    if (!target) {
+      var activeScreen = document.querySelector(".screen:not([hidden])");
+      target = activeScreen ? activeScreen.querySelector("h1, h2, [tabindex='-1']") : null;
+    }
     if (target && typeof target.focus === "function") target.focus({ preventScroll: true });
   }
 
@@ -1700,11 +1760,15 @@
     return renderRetryAttempt() && openRetryDialog();
   }
 
-  function startDedicatedRetryPractice() {
+  function startDedicatedRetryPractice(event) {
     if (retryQueueState.items.length === 0 || !elements.retryDialog) {
       updateRetryQueueUI("Review Queue is empty.");
       return false;
     }
+    retryQueuePractice.returnTarget = event && event.currentTarget
+      && typeof event.currentTarget.focus === "function"
+      ? event.currentTarget
+      : document.activeElement;
     if (retryQueueState.activeAttempt && retryQueueState.activeAttempt.context !== "dedicated") {
       releaseActiveRetryAttempt();
     }
@@ -1871,7 +1935,7 @@
       ? "Review complete. This question has left the queue."
       : (dedicatedPractice
         ? "Review saved. It will return in a later random round."
-        : "Review saved. Another review can appear after five or six new Quiz questions."));
+        : "Review saved. Another review can appear after five or six new Learn or Quiz questions."));
     closeRetryDialog();
     if (dedicatedPractice) {
       if (retryQueueState.items.length === 0) {
@@ -1906,7 +1970,7 @@
     item.dueStep = retryQueueState.nextQuizReviewStep;
     item.sequence = nextRetrySequence();
     retryQueueState.activeAttempt = null;
-    saveRetryQueue("Review postponed for five or six new Quiz questions.");
+    saveRetryQueue("Review postponed for five or six new Learn or Quiz questions.");
     closeRetryDialog();
     performRetryResumeAction(resumeAction);
   }
@@ -3536,6 +3600,7 @@
     state.rangeQuestionIds = null;
     state.responses = new Array(PAPER_QUESTION_COUNT).fill(null);
     state.learnVisitedQuestionIds = new Set();
+    state.learnReviewCountedQuestionIds = new Set();
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -3575,6 +3640,7 @@
     state.rangeQuestionIds = null;
     state.responses = [];
     state.learnVisitedQuestionIds = new Set();
+    state.learnReviewCountedQuestionIds = new Set();
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -3765,7 +3831,7 @@
     }
 
     releaseActiveRetryAttempt();
-    if (selectedMode === "quiz" && retryQueueState.items.length > 0) {
+    if (retryQueueState.items.length > 0) {
       scheduleNextQuizReview();
       saveRetryQueue();
     }
@@ -3784,6 +3850,7 @@
     state.rangeQuestionIds = canonicalRangeQuestions.map(function (question) { return String(question.id); });
     state.responses = new Array(sessionQuestions.length).fill(null);
     state.learnVisitedQuestionIds = new Set();
+    state.learnReviewCountedQuestionIds = new Set();
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -3923,7 +3990,7 @@
         markSubmittedOptions(question);
         var restoredAnswerIsCorrect = state.selectedIndex === question.correctOptionIndex;
         showFeedback(question, restoredAnswerIsCorrect);
-        if (!restoredAnswerIsCorrect && isRetryEligibleQuizSession()) {
+        if (!restoredAnswerIsCorrect && isRetryEligibleStudySession()) {
           var restoredRetryItem = retryQueueItem(question.id);
           if (restoredRetryItem) appendMainRetryQueueNotice(question, restoredRetryItem);
         }
@@ -4057,6 +4124,19 @@
     setHidden(elements.feedback, true);
   }
 
+  function recordLearnReviewProgress(question) {
+    if (!question || state.mode !== "learn" || !isRetryEligibleStudySession()) return false;
+    if (!(state.learnReviewCountedQuestionIds instanceof Set)) {
+      state.learnReviewCountedQuestionIds = new Set();
+    }
+    var questionId = String(question.id);
+    if (state.learnReviewCountedQuestionIds.has(questionId)) return false;
+    state.learnReviewCountedQuestionIds.add(questionId);
+    recordMainPractice(question, false);
+    saveActiveSession();
+    return true;
+  }
+
   function handleAction() {
     if (!currentQuestion()) return;
     if (!state.submitted) {
@@ -4066,6 +4146,7 @@
 
     storeCurrentResponse();
     var completedQuestionId = String(currentQuestion().id);
+    if (state.mode === "learn") recordLearnReviewProgress(currentQuestion());
     var resumeAction;
     if (state.currentIndex >= state.questions.length - 1) {
       var pendingIndex = state.mode === "learn"
@@ -4653,6 +4734,7 @@
     state.rangeQuestionIds = null;
     state.responses = [];
     state.learnVisitedQuestionIds = new Set();
+    state.learnReviewCountedQuestionIds = new Set();
     state.currentIndex = 0;
     state.selectedIndex = null;
     state.submitted = false;
@@ -4741,6 +4823,9 @@
     }
     if (elements.categoryGrid) elements.categoryGrid.addEventListener("click", onCategoryClick);
     if (elements.paperBuilderCard) elements.paperBuilderCard.addEventListener("click", openPaperSetup);
+    if (elements.globalRetryQueueButton) {
+      elements.globalRetryQueueButton.addEventListener("click", startDedicatedRetryPractice);
+    }
     if (elements.retryQueueCard) {
       elements.retryQueueCard.addEventListener("click", startDedicatedRetryPractice);
     }

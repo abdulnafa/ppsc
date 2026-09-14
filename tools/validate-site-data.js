@@ -871,7 +871,8 @@ function validateAdv2e102Bank(questions) {
 function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
-    "category-screen", "paper-builder-card", "retry-queue-card", "retry-queue-card-meta",
+    "category-screen", "paper-builder-card", "global-retry-queue-button", "global-retry-queue-count",
+    "retry-queue-card", "retry-queue-card-meta",
     "paper-setup-screen", "paper-setup-back-button",
     "quick-notes-screen", "quick-notes-back-button", "quick-notes-category",
     "quick-notes-title", "quick-notes-count", "quick-notes-language-note",
@@ -919,6 +920,33 @@ function validateHtml() {
   for (const id of requiredIds) {
     const matches = html.match(new RegExp(`\\bid=["']${id}["']`, "g")) || [];
     if (matches.length !== 1) error(`index.html: expected one #${id}, found ${matches.length}`);
+  }
+  const globalRetryQueueButton = html.match(/<button\b[^>]*\bid=["']global-retry-queue-button["'][^>]*>/i)?.[0] || "";
+  if (!/\btype=["']button["']/i.test(globalRetryQueueButton)
+    || !/\baria-controls=["']retry-dialog["']/i.test(globalRetryQueueButton)
+    || !/\baria-haspopup=["']dialog["']/i.test(globalRetryQueueButton)
+    || !/\bdata-count=["']0["']/i.test(globalRetryQueueButton)
+    || !/\bdata-remaining=["']0["']/i.test(globalRetryQueueButton)
+    || !/\bdisabled(?:\s|=|>)/i.test(globalRetryQueueButton)) {
+    error("index.html: #global-retry-queue-button must be an initially disabled button linked accessibly to the retry dialog");
+  }
+  const globalRetryQueueCount = html.match(/<[^>]+\bid=["']global-retry-queue-count["'][^>]*>\s*0\s*<\/[^>]+>/i)?.[0] || "";
+  if (!globalRetryQueueCount) {
+    error("index.html: #global-retry-queue-count must begin at zero");
+  }
+  const headerStartIndex = html.search(/<header\b[^>]*\bclass=["'][^"']*\bsite-header\b[^"']*["'][^>]*>/i);
+  const headerEndIndex = headerStartIndex < 0 ? -1 : html.indexOf("</header>", headerStartIndex);
+  const globalRetryQueueIndex = html.search(/\bid=["']global-retry-queue-button["']/i);
+  const cloudAccountIndex = html.search(/\bid=["']cloud-account-controls["']/i);
+  const retryQueueAnnouncerIndex = html.search(/\bid=["']retry-queue-announcer["']/i);
+  const quizScreenIndex = html.search(/\bid=["']quiz-screen["']/i);
+  if (headerStartIndex < 0 || headerEndIndex < 0
+    || globalRetryQueueIndex <= headerStartIndex || globalRetryQueueIndex >= headerEndIndex
+    || cloudAccountIndex <= globalRetryQueueIndex || cloudAccountIndex >= headerEndIndex) {
+    error("index.html: the global Review Queue button must appear in the site header before cloud account controls");
+  }
+  if (retryQueueAnnouncerIndex <= headerEndIndex || quizScreenIndex <= retryQueueAnnouncerIndex) {
+    error("index.html: #retry-queue-announcer must stay globally available after the header and before the Quiz screen");
   }
   const retryQueueCard = html.match(/<button\b[^>]*\bid=["']retry-queue-card["'][^>]*>/i)?.[0] || "";
   if (!/\btype=["']button["']/i.test(retryQueueCard)
@@ -1088,6 +1116,17 @@ function validateRetryQueueContract() {
     const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     if (!new RegExp(`\\bvar\\s+${name}\\s*=\\s*${escapedValue}\\s*;`).test(app)) {
       error(`app.js: ${name} must remain ${value} for the documented spaced-retry contract`);
+    }
+  }
+  for (const requiredSnippet of [
+    'return (state.mode === "quiz" || state.mode === "learn")',
+    'elements.globalRetryQueueButton.addEventListener("click", startDedicatedRetryPractice)',
+    'learnReviewCountedQuestionIds',
+    'if (state.mode === "learn") recordLearnReviewProgress(currentQuestion())',
+    'five or six new Learn or Quiz questions'
+  ]) {
+    if (!app.includes(requiredSnippet)) {
+      error(`app.js: missing Learn/global Review Queue contract snippet ${requiredSnippet}`);
     }
   }
 }
