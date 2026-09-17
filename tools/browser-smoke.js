@@ -2714,13 +2714,19 @@ async function main() {
       const quickNormalize = (value) => String(value || "").normalize("NFKC").toLocaleLowerCase().replace(/\\s+/g, " ").trim();
       const quickRows = () => [...document.querySelectorAll("#quick-notes-list .quick-note-row[data-question-id]")];
       const categoryCards = [...document.querySelectorAll("#category-grid .category-card[data-category]")];
+      const detailedLearningData = window.PPSC_DETAILED_LEARNING_DATA;
 
       if (categoryCards.length !== data.categories.length || new Set(categoryCards.map((card) => card.dataset.category)).size !== data.categories.length) {
         errors.push("The homepage did not keep exactly one category card for each of the 11 categories.");
       }
+      if (!detailedLearningData || !Array.isArray(detailedLearningData.categories)
+        || detailedLearningData.categories.length !== data.categories.length) {
+        errors.push("Detailed Learning data did not cover all 11 categories.");
+      }
       if (document.querySelector("#gk-notes-entry-grid")) errors.push("A separate GK notes entry still appeared on the homepage.");
       if (visible(document.querySelector("#gk-study-notes-card"))) errors.push("Detailed GK Stories was visible outside General Knowledge Quick Notes.");
       if (document.querySelectorAll("#quick-notes-list .quick-note-row").length !== 0) errors.push("Quick Notes eagerly rendered rows before a category was opened.");
+      if (document.querySelector("#detailed-learning-list")?.children.length) errors.push("Detailed Learning eagerly rendered topic panels before a category was opened.");
 
       for (const category of data.categories) {
         const categoryButtonForNotes = document.querySelector('#category-grid .category-card[data-category="' + category.id + '"]');
@@ -2733,7 +2739,7 @@ async function main() {
         categoryButtonForNotes.click();
         await pause();
         if (!visible(document.querySelector("#mode-screen"))) errors.push(category.name + " did not open its mode screen.");
-        if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 4) errors.push(category.name + " did not show all four preparation modes.");
+        if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 5) errors.push(category.name + " did not show all five preparation modes.");
         const quickNotesButton = document.querySelector("#study-notes-mode-button");
         quickNotesButton?.click();
         await pause();
@@ -2855,10 +2861,115 @@ async function main() {
         document.querySelector("#quick-notes-back-button")?.click();
         await pause();
         if (!visible(document.querySelector("#mode-screen")) || document.activeElement !== quickNotesButton) errors.push(category.name + " Quick Notes Back did not restore its Study Notes launcher and focus.");
+
+        const detailedLearningButton = document.querySelector("#detailed-learning-mode-button");
+        detailedLearningButton?.click();
+        await pause();
+        const detailedLearningScreen = document.querySelector("#detailed-learning-screen");
+        const detailedLearningSearch = document.querySelector("#detailed-learning-search");
+        const detailedLearningClear = document.querySelector("#detailed-learning-clear-button");
+        const detailedLearningFilters = document.querySelector("#detailed-learning-topic-filters");
+        const detailedLearningList = document.querySelector("#detailed-learning-list");
+        const detailedLearningEmpty = document.querySelector("#detailed-learning-empty");
+        const detailedLearningStatus = document.querySelector("#detailed-learning-results-status");
+        const visibleDetailedPanels = () => detailedLearningList
+          ? [...detailedLearningList.children].filter(visible)
+          : [];
+
+        if (!detailedLearningButton) {
+          errors.push(category.name + " Detailed Learning launcher was missing.");
+        } else if (!visible(detailedLearningScreen) || visible(document.querySelector("#mode-screen"))) {
+          errors.push(category.name + " Detailed Learning did not replace the mode screen.");
+        } else {
+          if (!document.querySelector("#detailed-learning-category")?.textContent.includes(category.name)) {
+            errors.push(category.name + " Detailed Learning showed the wrong category identity.");
+          }
+          const initialDetailedPanels = visibleDetailedPanels();
+          const topicButtons = detailedLearningFilters
+            ? [...detailedLearningFilters.querySelectorAll("button")]
+            : [];
+          if (!initialDetailedPanels.length || !detailedLearningList) {
+            errors.push(category.name + " Detailed Learning did not render any topic panels.");
+          }
+          if (topicButtons.length < 2 || topicButtons.filter((button) => button.getAttribute("aria-pressed") === "true").length !== 1) {
+            errors.push(category.name + " Detailed Learning topic filters were incomplete or lacked one active filter.");
+          }
+          if (!detailedLearningStatus?.textContent.trim()) {
+            errors.push(category.name + " Detailed Learning did not announce its result coverage.");
+          }
+          if (document.documentElement.scrollWidth > window.innerWidth) {
+            errors.push(category.name + " Detailed Learning has horizontal overflow at 430px.");
+          }
+          if (category.id === "urdu") {
+            const urduSurface = [...detailedLearningScreen.querySelectorAll('[lang="ur"], [dir="rtl"]')].find(visible);
+            if (!urduSurface || urduSurface.lang !== "ur" || urduSurface.dir !== "rtl") {
+              errors.push("Urdu Detailed Learning did not render a visible Urdu RTL surface.");
+            }
+          }
+
+          const allTopicButton = topicButtons[0];
+          const specificTopicButton = topicButtons.find((button) => button !== allTopicButton);
+          if (allTopicButton && specificTopicButton && initialDetailedPanels.length) {
+            specificTopicButton.click();
+            await pause();
+            const filteredDetailedPanels = visibleDetailedPanels();
+            if (specificTopicButton.getAttribute("aria-pressed") !== "true"
+              || !filteredDetailedPanels.length
+              || filteredDetailedPanels.length > initialDetailedPanels.length) {
+              errors.push(category.name + " Detailed Learning topic filter did not show its matching list.");
+            }
+            allTopicButton.click();
+            await pause();
+            if (allTopicButton.getAttribute("aria-pressed") !== "true"
+              || visibleDetailedPanels().length !== initialDetailedPanels.length) {
+              errors.push(category.name + " Detailed Learning All filter did not restore every topic panel.");
+            }
+          }
+
+          if (!detailedLearningSearch || !detailedLearningClear) {
+            errors.push(category.name + " Detailed Learning search controls were missing.");
+          } else {
+            const detailedCategoryData = window.PPSC_DETAILED_LEARNING_DATA?.categories
+              ?.find((entry) => entry.id === category.id);
+            const searchProbe = String(detailedCategoryData?.topics?.[0]?.rows?.[0]?.[0] || "").trim();
+            if (!searchProbe) {
+              errors.push(category.name + " Detailed Learning had no searchable reference row.");
+            } else {
+              detailedLearningSearch.value = searchProbe;
+              detailedLearningSearch.dispatchEvent(new Event("input", { bubbles: true }));
+              await pause();
+              if (!visibleDetailedPanels().length || detailedLearningStatus?.textContent.includes("0 results")) {
+                errors.push(category.name + " Detailed Learning search did not find a known reference row.");
+              }
+              detailedLearningClear.click();
+              await pause();
+            }
+            detailedLearningSearch.value = "zzzz-no-such-detailed-learning-entry-11412";
+            detailedLearningSearch.dispatchEvent(new Event("input", { bubbles: true }));
+            await pause();
+            if (visibleDetailedPanels().length !== 0 || !visible(detailedLearningEmpty)
+              || !detailedLearningStatus?.textContent.includes("0")) {
+              errors.push(category.name + " Detailed Learning search did not show its no-results state.");
+            }
+            detailedLearningClear.click();
+            await pause();
+            if (detailedLearningSearch.value || visible(detailedLearningEmpty)
+              || visibleDetailedPanels().length !== initialDetailedPanels.length) {
+              errors.push(category.name + " Detailed Learning Clear did not restore every topic panel.");
+            }
+          }
+        }
+
+        document.querySelector("#detailed-learning-back-button")?.click();
+        await pause();
+        if (!visible(document.querySelector("#mode-screen")) || visible(detailedLearningScreen)
+          || (detailedLearningButton && document.activeElement !== detailedLearningButton)) {
+          errors.push(category.name + " Detailed Learning Back did not restore its launcher and focus.");
+        }
         document.querySelector("#mode-back-button")?.click();
         await pause();
-        if (!visible(document.querySelector("#category-screen"))) errors.push(category.name + " Quick Notes did not return to categories.");
-        if (storageSnapshot() !== storageBeforeNotes) errors.push("Browsing " + category.name + " Quick Notes changed localStorage.");
+        if (!visible(document.querySelector("#category-screen"))) errors.push(category.name + " reading modes did not return to categories.");
+        if (storageSnapshot() !== storageBeforeNotes) errors.push("Browsing " + category.name + " reading modes changed localStorage.");
       }
 
       const notesData = window.PPSC_GK_STUDY_NOTES_DATA;
@@ -3320,7 +3431,7 @@ async function main() {
       await pause();
       if (!visible(document.querySelector("#mode-screen"))) errors.push("Mode chooser did not open after selecting a category.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Mode chooser has horizontal overflow on mobile.");
-      if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 4) errors.push("Mode chooser did not show Learn, Quiz, Difficult and Study Notes.");
+      if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 5) errors.push("Mode chooser did not show Learn, Quiz, Difficult, Study Notes and Detailed Learning.");
       if (document.querySelector("#part-select, [data-part-select]")) errors.push("Removed Part dropdown is still present.");
       if (!document.querySelector("#study-scope-summary").textContent.includes(String(allCategoryQuestions.length))) errors.push("Study summary did not show the full-category total.");
       const expectedImportant = allCategoryQuestions.filter((question) => question.isImportant === true);
@@ -3722,6 +3833,19 @@ async function main() {
         errors.push("Quick Notes has horizontal overflow at 320px.");
       }
       document.querySelector("#quick-notes-back-button")?.click();
+      await pause();
+      document.querySelector("#detailed-learning-mode-button")?.click();
+      await pause();
+      const detailedList = document.querySelector("#detailed-learning-list");
+      const firstDetailedPanel = detailedList ? [...detailedList.children].find(visible) : null;
+      if (!visible(document.querySelector("#detailed-learning-screen")) || !firstDetailedPanel) {
+        errors.push("Detailed Learning did not render at the 320px viewport.");
+      }
+      if (document.documentElement.scrollWidth > window.innerWidth
+        || (firstDetailedPanel && firstDetailedPanel.getBoundingClientRect().right > window.innerWidth + 1)) {
+        errors.push("Detailed Learning has horizontal overflow at 320px.");
+      }
+      document.querySelector("#detailed-learning-back-button")?.click();
       await pause();
       document.querySelector("#mode-back-button")?.click();
       await pause();

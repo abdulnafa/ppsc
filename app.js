@@ -28,6 +28,10 @@
   var gkNotesData = window.PPSC_GK_STUDY_NOTES_DATA || {};
   var gkNoteTopics = Array.isArray(gkNotesData.topics) ? gkNotesData.topics : [];
   var gkStudyNotes = Array.isArray(gkNotesData.notes) ? gkNotesData.notes : [];
+  var detailedLearningData = window.PPSC_DETAILED_LEARNING_DATA || {};
+  var detailedLearningCategories = Array.isArray(detailedLearningData.categories)
+    ? detailedLearningData.categories
+    : [];
   var knownQuestionIds = new Set(allQuestions.map(function (question) {
     return String(question.id);
   }));
@@ -53,6 +57,11 @@
     importantOnly: false,
     visibleLimit: QUICK_NOTES_PAGE_SIZE,
     searchEntries: []
+  };
+  var detailedLearningState = {
+    categoryId: "",
+    topicId: "all",
+    query: ""
   };
   var pendingRangeChoice = null;
   var gkNotesReturnTarget = "quick-notes";
@@ -116,6 +125,7 @@
     elements.categoryScreen = firstElement(["#category-screen", "[data-screen='categories']"]);
     elements.quickNotesScreen = firstElement(["#quick-notes-screen", "[data-screen='quick-notes']"]);
     elements.gkNotesScreen = firstElement(["#gk-notes-screen", "[data-screen='gk-notes']"]);
+    elements.detailedLearningScreen = firstElement(["#detailed-learning-screen", "[data-screen='detailed-learning']"]);
     elements.paperSetupScreen = firstElement(["#paper-setup-screen", "[data-screen='paper-setup']"]);
     elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
     elements.quizScreen = firstElement(["#quiz-screen", "[data-screen='quiz']"]);
@@ -142,6 +152,17 @@
     elements.gkNotesList = firstElement(["#gk-notes-list", "[data-gk-notes-list]"]);
     elements.gkNotesLoadMoreButton = firstElement(["#gk-notes-load-more-button", "[data-gk-notes-load-more]"]);
     elements.gkNotesEmpty = firstElement(["#gk-notes-empty", "[data-gk-notes-empty]"]);
+    elements.detailedLearningBackButton = firstElement(["#detailed-learning-back-button", "[data-detailed-learning-back]"]);
+    elements.detailedLearningCategory = firstElement(["#detailed-learning-category", "[data-detailed-learning-category]"]);
+    elements.detailedLearningTitle = firstElement(["#detailed-learning-title", "[data-detailed-learning-title]"]);
+    elements.detailedLearningDescription = firstElement(["#detailed-learning-description", "[data-detailed-learning-description]"]);
+    elements.detailedLearningCoverage = firstElement(["#detailed-learning-coverage", "[data-detailed-learning-coverage]"]);
+    elements.detailedLearningSearch = firstElement(["#detailed-learning-search", "[data-detailed-learning-search]"]);
+    elements.detailedLearningClearButton = firstElement(["#detailed-learning-clear-button", "[data-detailed-learning-clear]"]);
+    elements.detailedLearningTopicFilters = firstElement(["#detailed-learning-topic-filters", "[data-detailed-learning-topic-filters]"]);
+    elements.detailedLearningResultsStatus = firstElement(["#detailed-learning-results-status", "[data-detailed-learning-results-status]"]);
+    elements.detailedLearningList = firstElement(["#detailed-learning-list", "[data-detailed-learning-list]"]);
+    elements.detailedLearningEmpty = firstElement(["#detailed-learning-empty", "[data-detailed-learning-empty]"]);
     elements.paperBuilderCard = firstElement(["#paper-builder-card", "[data-paper-builder]"]);
     elements.globalRetryQueueButton = firstElement(["#global-retry-queue-button", "[data-global-retry-queue]"]);
     elements.globalRetryQueueCount = firstElement(["#global-retry-queue-count", "[data-global-retry-queue-count]"]);
@@ -173,6 +194,7 @@
     elements.learnModeButton = firstElement(["#learn-mode-button", "[data-start-learn]"]);
     elements.quizModeButton = firstElement(["#quiz-mode-button", "[data-start-quiz]"]);
     elements.studyNotesModeButton = firstElement(["#study-notes-mode-button", "[data-open-study-notes]"]);
+    elements.detailedLearningModeButton = firstElement(["#detailed-learning-mode-button", "[data-open-detailed-learning]"]);
     elements.standardModeOptions = firstElement(["#standard-mode-options", "[data-standard-mode-options]", ".mode-options"]);
     elements.difficultModeButton = firstElement(["#difficult-mode-button", "[data-open-difficult]", "[data-difficult-mode]"]);
     elements.difficultModeOptions = firstElement(["#difficult-mode-options", "[data-difficult-mode-options]"]);
@@ -2277,6 +2299,7 @@
     setHidden(elements.categoryScreen, screenName !== "categories");
     setHidden(elements.quickNotesScreen, screenName !== "quick-notes");
     setHidden(elements.gkNotesScreen, screenName !== "gk-notes");
+    setHidden(elements.detailedLearningScreen, screenName !== "detailed-learning");
     setHidden(elements.paperSetupScreen, screenName !== "paper-setup");
     setHidden(elements.modeScreen, screenName !== "mode");
     setHidden(elements.quizScreen, screenName !== "quiz");
@@ -2287,6 +2310,8 @@
       ? elements.quickNotesScreen
       : screenName === "gk-notes"
       ? elements.gkNotesScreen
+      : screenName === "detailed-learning"
+      ? elements.detailedLearningScreen
       : screenName === "paper-setup"
       ? elements.paperSetupScreen
       : screenName === "quiz"
@@ -2910,6 +2935,413 @@
     }
     if (returnToQuickNotes && elements.gkStudyNotesCard && typeof elements.gkStudyNotesCard.focus === "function") {
       elements.gkStudyNotesCard.focus({ preventScroll: true });
+    }
+  }
+
+  function detailedLearningCategoryData(categoryId) {
+    var normalizedId = String(categoryId || "");
+    return detailedLearningCategories.find(function (category) {
+      return category && String(category.id || category.categoryId) === normalizedId;
+    }) || null;
+  }
+
+  function detailedLearningTopicsFor(categoryData) {
+    if (!categoryData) return [];
+    if (Array.isArray(categoryData.topics)) return categoryData.topics;
+    if (Array.isArray(categoryData.sections)) return categoryData.sections;
+    return [];
+  }
+
+  function detailedLearningRowsFor(topic) {
+    if (!topic) return [];
+    if (Array.isArray(topic.rows)) return topic.rows;
+    if (Array.isArray(topic.entries)) return topic.entries;
+    if (Array.isArray(topic.items)) return topic.items;
+    return [];
+  }
+
+  function detailedLearningText(value) {
+    if (value == null) return "";
+    if (Array.isArray(value)) {
+      return value.map(detailedLearningText).filter(Boolean).join(", ");
+    }
+    if (typeof value === "object") {
+      if (value.text != null) return detailedLearningText(value.text);
+      if (value.label != null) return detailedLearningText(value.label);
+      return Object.keys(value).map(function (key) {
+        return detailedLearningText(value[key]);
+      }).filter(Boolean).join(" ");
+    }
+    return String(value).replace(/\s+/g, " ").trim();
+  }
+
+  function detailedLearningColumnsFor(topic, rows) {
+    var supplied = topic && Array.isArray(topic.columns) ? topic.columns : [];
+    if (supplied.length) {
+      return supplied.map(function (column, index) {
+        if (typeof column === "string") return { key: column, label: column };
+        return {
+          key: String(column && (column.key || column.id || column.field) || index),
+          label: String(column && (column.label || column.title || column.key || column.id) || "Detail")
+        };
+      });
+    }
+
+    var firstObjectRow = rows.find(function (row) {
+      return row && !Array.isArray(row) && typeof row === "object";
+    });
+    var rowObject = firstObjectRow && firstObjectRow.values && typeof firstObjectRow.values === "object"
+      ? firstObjectRow.values
+      : firstObjectRow;
+    if (rowObject) {
+      return Object.keys(rowObject).filter(function (key) {
+        return !["id", "sources", "source", "language", "direction"].includes(key);
+      }).map(function (key) {
+        return {
+          key: key,
+          label: key.replace(/([a-z0-9])([A-Z])/g, "$1 $2").replace(/[-_]+/g, " ")
+        };
+      });
+    }
+
+    var widestRow = rows.reduce(function (width, row) {
+      return Math.max(width, Array.isArray(row) ? row.length : 1);
+    }, 0);
+    return Array.from({ length: widestRow }, function (_, index) {
+      return { key: String(index), label: index === 0 ? "Item" : "Detail " + (index + 1) };
+    });
+  }
+
+  function detailedLearningCellValue(row, column, columnIndex) {
+    if (Array.isArray(row)) return row[columnIndex];
+    if (!row || typeof row !== "object") return columnIndex === 0 ? row : "";
+    var values = row.values && typeof row.values === "object" ? row.values : row;
+    if (Object.prototype.hasOwnProperty.call(values, column.key)) return values[column.key];
+    if (Object.prototype.hasOwnProperty.call(values, String(columnIndex))) return values[String(columnIndex)];
+    return "";
+  }
+
+  function detailedLearningRowSearchText(row, columns) {
+    return normalizeGkNotesText(columns.map(function (column, index) {
+      return detailedLearningText(detailedLearningCellValue(row, column, index));
+    }).join(" "));
+  }
+
+  function detailedLearningIsUrdu(categoryData, topic) {
+    var language = String(
+      topic && (topic.language || topic.lang)
+      || categoryData && (categoryData.language || categoryData.lang)
+      || ""
+    ).toLowerCase();
+    return language === "ur" || language === "urdu" || String(categoryData && categoryData.id) === "urdu";
+  }
+
+  function detailedLearningTotalRows(categoryData) {
+    return detailedLearningTopicsFor(categoryData).reduce(function (total, topic) {
+      return total + detailedLearningRowsFor(topic).length;
+    }, 0);
+  }
+
+  function detailedLearningAvailable(categoryId) {
+    var categoryData = detailedLearningCategoryData(categoryId);
+    return detailedLearningTopicsFor(categoryData).some(function (topic) {
+      return detailedLearningRowsFor(topic).length > 0;
+    });
+  }
+
+  function updateDetailedLearningAvailability(categoryId) {
+    if (!elements.detailedLearningModeButton) return;
+    var available = detailedLearningAvailable(categoryId);
+    elements.detailedLearningModeButton.disabled = !available;
+    elements.detailedLearningModeButton.setAttribute("aria-disabled", available ? "false" : "true");
+    var description = elements.detailedLearningModeButton.querySelector(".mode-option-copy small");
+    if (description) {
+      description.textContent = available
+        ? "Read complete topic-wise lists related to this category, including useful facts beyond the current MCQ bank."
+        : "Detailed reference lists are not available for this category yet.";
+    }
+  }
+
+  function renderDetailedLearningTopicFilters(categoryData) {
+    if (!elements.detailedLearningTopicFilters) return;
+    elements.detailedLearningTopicFilters.textContent = "";
+    var topics = detailedLearningTopicsFor(categoryData);
+    var filterItems = [{
+      id: "all",
+      label: detailedLearningIsUrdu(categoryData) ? "تمام موضوعات" : "All topics",
+      count: detailedLearningTotalRows(categoryData)
+    }].concat(topics.map(function (topic, index) {
+      return {
+        id: String(topic.id || "topic-" + (index + 1)),
+        label: String(topic.label || topic.title || "Topic " + (index + 1)),
+        count: detailedLearningRowsFor(topic).length
+      };
+    }));
+
+    var fragment = document.createDocumentFragment();
+    filterItems.forEach(function (item) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "detailed-learning-topic-button";
+      button.dataset.detailedLearningTopic = item.id;
+      button.setAttribute("aria-pressed", item.id === detailedLearningState.topicId ? "true" : "false");
+      button.textContent = item.label + " (" + item.count + ")";
+      if (detailedLearningIsUrdu(categoryData)) {
+        button.lang = "ur";
+        button.dir = "rtl";
+      }
+      fragment.appendChild(button);
+    });
+    elements.detailedLearningTopicFilters.appendChild(fragment);
+  }
+
+  function detailedLearningSafeUrl(value) {
+    var url = String(value || "").trim();
+    if (!/^https?:\/\//i.test(url)) return "";
+    return url;
+  }
+
+  function detailedLearningSourcesFor(topic) {
+    if (!topic) return [];
+    if (Array.isArray(topic.sources)) return topic.sources;
+    if (topic.source) return [topic.source];
+    return [];
+  }
+
+  function createDetailedLearningPanel(categoryData, topic, rows, topicIndex) {
+    var panel = document.createElement("section");
+    var topicId = String(topic.id || "topic-" + (topicIndex + 1));
+    var isUrdu = detailedLearningIsUrdu(categoryData, topic);
+    panel.className = "detailed-learning-panel" + (isUrdu ? " is-urdu" : "");
+    panel.dataset.detailedLearningTopicPanel = topicId;
+    if (isUrdu) {
+      panel.lang = "ur";
+      panel.dir = "rtl";
+    }
+
+    var heading = document.createElement("header");
+    heading.className = "detailed-learning-panel-header";
+    var headingCopy = document.createElement("div");
+    headingCopy.className = "detailed-learning-panel-copy";
+    var title = document.createElement("h2");
+    title.textContent = String(topic.title || topic.label || "Reference list");
+    headingCopy.appendChild(title);
+    if (topic.description) {
+      var description = document.createElement("p");
+      description.textContent = detailedLearningText(topic.description);
+      headingCopy.appendChild(description);
+    }
+    var metadata = document.createElement("div");
+    metadata.className = "detailed-learning-panel-meta";
+    var count = document.createElement("span");
+    count.textContent = rows.length + (rows.length === 1 ? " reference point" : " reference points");
+    metadata.appendChild(count);
+    if (topic.asOf) {
+      var asOf = document.createElement("span");
+      asOf.textContent = "As of " + detailedLearningText(topic.asOf);
+      metadata.appendChild(asOf);
+    }
+    if (topic.reverifyAfter) {
+      var review = document.createElement("span");
+      review.textContent = "Recheck after " + detailedLearningText(topic.reverifyAfter);
+      metadata.appendChild(review);
+    }
+    heading.appendChild(headingCopy);
+    heading.appendChild(metadata);
+    panel.appendChild(heading);
+
+    var columns = detailedLearningColumnsFor(topic, rows);
+    var tableWrap = document.createElement("div");
+    tableWrap.className = "detailed-learning-table-wrap";
+    var table = document.createElement("table");
+    table.className = "detailed-learning-table";
+    var caption = document.createElement("caption");
+    caption.className = "visually-hidden";
+    caption.textContent = title.textContent;
+    table.appendChild(caption);
+    var tableHead = document.createElement("thead");
+    var headingRow = document.createElement("tr");
+    columns.forEach(function (column) {
+      var cell = document.createElement("th");
+      cell.scope = "col";
+      cell.textContent = column.label;
+      headingRow.appendChild(cell);
+    });
+    tableHead.appendChild(headingRow);
+    table.appendChild(tableHead);
+
+    var tableBody = document.createElement("tbody");
+    rows.forEach(function (row, rowIndex) {
+      var tableRow = document.createElement("tr");
+      tableRow.dataset.detailedLearningRow = String(row && row.id || rowIndex + 1);
+      columns.forEach(function (column, columnIndex) {
+        var cell = document.createElement("td");
+        cell.dataset.label = column.label;
+        cell.textContent = detailedLearningText(detailedLearningCellValue(row, column, columnIndex)) || "\u2014";
+        tableRow.appendChild(cell);
+      });
+      tableBody.appendChild(tableRow);
+    });
+    table.appendChild(tableBody);
+    tableWrap.appendChild(table);
+    panel.appendChild(tableWrap);
+
+    var sources = detailedLearningSourcesFor(topic);
+    if (sources.length) {
+      var sourceList = document.createElement("ul");
+      sourceList.className = "detailed-learning-sources";
+      sources.forEach(function (source, sourceIndex) {
+        var item = document.createElement("li");
+        var label = detailedLearningText(
+          typeof source === "object" ? source.label || source.name || source.title : source
+        ) || "Reference " + (sourceIndex + 1);
+        var url = detailedLearningSafeUrl(typeof source === "object" ? source.url || source.href : "");
+        if (url) {
+          var link = document.createElement("a");
+          link.href = url;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = label;
+          item.appendChild(link);
+        } else {
+          item.textContent = label;
+        }
+        sourceList.appendChild(item);
+      });
+      panel.appendChild(sourceList);
+    }
+
+    return panel;
+  }
+
+  function matchingDetailedLearningTopics(categoryData) {
+    return detailedLearningTopicsFor(categoryData).map(function (topic, index) {
+      var topicId = String(topic.id || "topic-" + (index + 1));
+      if (detailedLearningState.topicId !== "all" && detailedLearningState.topicId !== topicId) return null;
+      var rows = detailedLearningRowsFor(topic);
+      var columns = detailedLearningColumnsFor(topic, rows);
+      var topicMatches = detailedLearningState.query && normalizeGkNotesText([
+        topic.title,
+        topic.label,
+        topic.description
+      ].map(detailedLearningText).join(" ")).includes(detailedLearningState.query);
+      var matchingRows = detailedLearningState.query && !topicMatches
+        ? rows.filter(function (row) {
+            return detailedLearningRowSearchText(row, columns).includes(detailedLearningState.query);
+          })
+        : rows;
+      return matchingRows.length ? { topic: topic, rows: matchingRows, index: index } : null;
+    }).filter(Boolean);
+  }
+
+  function updateDetailedLearningResults() {
+    var categoryData = detailedLearningCategoryData(detailedLearningState.categoryId);
+    var topicResults = matchingDetailedLearningTopics(categoryData);
+    var visibleRows = topicResults.reduce(function (total, result) {
+      return total + result.rows.length;
+    }, 0);
+    var totalRows = detailedLearningTotalRows(categoryData);
+    var totalTopics = detailedLearningTopicsFor(categoryData).length;
+
+    if (elements.detailedLearningList) {
+      elements.detailedLearningList.textContent = "";
+      var fragment = document.createDocumentFragment();
+      topicResults.forEach(function (result) {
+        fragment.appendChild(createDetailedLearningPanel(categoryData, result.topic, result.rows, result.index));
+      });
+      elements.detailedLearningList.appendChild(fragment);
+    }
+    if (elements.detailedLearningTopicFilters) {
+      elements.detailedLearningTopicFilters.querySelectorAll("[data-detailed-learning-topic]").forEach(function (button) {
+        button.setAttribute(
+          "aria-pressed",
+          button.dataset.detailedLearningTopic === detailedLearningState.topicId ? "true" : "false"
+        );
+      });
+    }
+    if (elements.detailedLearningClearButton) {
+      elements.detailedLearningClearButton.disabled = !detailedLearningState.query
+        && detailedLearningState.topicId === "all";
+    }
+    if (elements.detailedLearningResultsStatus) {
+      elements.detailedLearningResultsStatus.textContent = "Showing " + visibleRows
+        + " reference points across " + topicResults.length
+        + (topicResults.length === 1 ? " topic list" : " topic lists")
+        + " (" + totalRows + " points in " + totalTopics + " lists total).";
+    }
+    setHidden(elements.detailedLearningEmpty, topicResults.length > 0);
+  }
+
+  function setDetailedLearningTopic(topicId) {
+    var categoryData = detailedLearningCategoryData(detailedLearningState.categoryId);
+    var normalizedId = String(topicId || "all");
+    if (normalizedId !== "all" && !detailedLearningTopicsFor(categoryData).some(function (topic, index) {
+      return String(topic.id || "topic-" + (index + 1)) === normalizedId;
+    })) return;
+    detailedLearningState.topicId = normalizedId;
+    updateDetailedLearningResults();
+  }
+
+  function clearDetailedLearningFilters() {
+    detailedLearningState.topicId = "all";
+    detailedLearningState.query = "";
+    if (elements.detailedLearningSearch) elements.detailedLearningSearch.value = "";
+    updateDetailedLearningResults();
+  }
+
+  function openDetailedLearning() {
+    if (!state.category || !elements.detailedLearningScreen) return;
+    var categoryData = detailedLearningCategoryData(state.category.id);
+    if (!categoryData || !detailedLearningAvailable(state.category.id)) return;
+    detailedLearningState.categoryId = state.category.id;
+    detailedLearningState.topicId = "all";
+    detailedLearningState.query = "";
+    if (elements.detailedLearningSearch) elements.detailedLearningSearch.value = "";
+    if (elements.detailedLearningCategory) elements.detailedLearningCategory.textContent = state.category.name;
+    var isUrduLibrary = detailedLearningIsUrdu(categoryData);
+    if (elements.detailedLearningTitle) {
+      elements.detailedLearningTitle.textContent = String(
+        categoryData.title
+        || (state.category.id === "urdu" ? "\u0627\u0631\u062f\u0648 \u062a\u0641\u0635\u06cc\u0644\u06cc \u0645\u0637\u0627\u0644\u0639\u06c1" : state.category.name + " Detailed Learning")
+      );
+      if (isUrduLibrary) {
+        elements.detailedLearningTitle.lang = "ur";
+        elements.detailedLearningTitle.dir = "rtl";
+      } else {
+        elements.detailedLearningTitle.removeAttribute("lang");
+        elements.detailedLearningTitle.removeAttribute("dir");
+      }
+    }
+    if (elements.detailedLearningDescription) {
+      elements.detailedLearningDescription.textContent = detailedLearningText(categoryData.description)
+        || "Complete topic lists related to your MCQs, expanded with surrounding facts for future papers.";
+      if (isUrduLibrary) {
+        elements.detailedLearningDescription.lang = "ur";
+        elements.detailedLearningDescription.dir = "rtl";
+      } else {
+        elements.detailedLearningDescription.removeAttribute("lang");
+        elements.detailedLearningDescription.removeAttribute("dir");
+      }
+    }
+    var topicCount = detailedLearningTopicsFor(categoryData).length;
+    var rowCount = detailedLearningTotalRows(categoryData);
+    if (elements.detailedLearningCoverage) {
+      elements.detailedLearningCoverage.textContent = topicCount + (topicCount === 1 ? " topic list" : " topic lists")
+        + " \u00b7 " + rowCount + (rowCount === 1 ? " reference point" : " reference points");
+    }
+    renderDetailedLearningTopicFilters(categoryData);
+    updateDetailedLearningResults();
+    showScreen("detailed-learning");
+  }
+
+  function closeDetailedLearning() {
+    if (!state.category) {
+      returnToCategories();
+      return;
+    }
+    showScreen("mode");
+    if (elements.detailedLearningModeButton && typeof elements.detailedLearningModeButton.focus === "function") {
+      elements.detailedLearningModeButton.focus({ preventScroll: true });
     }
   }
 
@@ -3648,6 +4080,7 @@
     pendingRangeChoice = null;
 
     updateComputerSourceUI(category.id);
+    updateDetailedLearningAvailability(category.id);
     populateStudyScopeUI(category.id);
     setHidden(elements.studyScopePanel, false);
     setHidden(elements.questionRangeOptions, true);
@@ -4744,6 +5177,7 @@
     setHidden(elements.questionRangeOptions, true);
     setHidden(elements.studyScopePanel, false);
     updateComputerSourceUI("");
+    updateDetailedLearningAvailability("");
     setHidden(elements.resultBreakdown, true);
     closePaperReview();
     showScreen("categories");
@@ -4775,6 +5209,25 @@
   }
 
   function bindEvents() {
+    if (elements.detailedLearningBackButton) {
+      elements.detailedLearningBackButton.addEventListener("click", closeDetailedLearning);
+    }
+    if (elements.detailedLearningSearch) {
+      elements.detailedLearningSearch.addEventListener("input", function () {
+        detailedLearningState.query = normalizeGkNotesText(elements.detailedLearningSearch.value);
+        updateDetailedLearningResults();
+      });
+    }
+    if (elements.detailedLearningClearButton) {
+      elements.detailedLearningClearButton.addEventListener("click", clearDetailedLearningFilters);
+    }
+    if (elements.detailedLearningTopicFilters) {
+      elements.detailedLearningTopicFilters.addEventListener("click", function (event) {
+        var button = event.target.closest("[data-detailed-learning-topic]");
+        if (!button || !elements.detailedLearningTopicFilters.contains(button)) return;
+        setDetailedLearningTopic(button.dataset.detailedLearningTopic);
+      });
+    }
     if (elements.gkStudyNotesCard) elements.gkStudyNotesCard.addEventListener("click", openGkStudyNotes);
     if (elements.quickNotesBackButton) elements.quickNotesBackButton.addEventListener("click", closeQuickNotes);
     if (elements.quickNotesSearch) {
@@ -4874,6 +5327,9 @@
     }
     if (elements.studyNotesModeButton) {
       elements.studyNotesModeButton.addEventListener("click", openQuickNotes);
+    }
+    if (elements.detailedLearningModeButton) {
+      elements.detailedLearningModeButton.addEventListener("click", openDetailedLearning);
     }
     if (elements.difficultModeButton) {
       elements.difficultModeButton.addEventListener("click", openDifficultModeChoice);
@@ -4981,6 +5437,7 @@
     bindEvents();
     resetFeedback();
     updateComputerSourceUI("");
+    updateDetailedLearningAvailability("");
     updateDifficultModeUI();
     updatePaperSelectionUI();
     setHidden(elements.resultBreakdown, true);

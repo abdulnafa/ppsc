@@ -7,12 +7,13 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
-  <link rel="stylesheet" href="styles.css?v=20260913-1">
+  <link rel="stylesheet" href="styles.css?v=20260917-1">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20260912-2" defer></script>
   <script src="data/questions.js?v=20260902-2" defer></script>
   <script src="data/gk-study-notes.js?v=20260902-2" defer></script>
-  <script src="app.js?v=20260913-1" defer></script>
+  <script src="data/detailed-learning.js?v=20260917-1" defer></script>
+  <script src="app.js?v=20260917-1" defer></script>
 </head>
 <body>
   <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
@@ -347,6 +348,41 @@
       </article>
     </section>
 
+    <section id="detailed-learning-screen" class="screen detailed-learning-screen" aria-labelledby="detailed-learning-title" hidden>
+      <button id="detailed-learning-back-button" class="text-button detailed-learning-back-button" type="button">
+        <span aria-hidden="true">&larr;</span> Study modes
+      </button>
+
+      <article class="detailed-learning-shell">
+        <header class="detailed-learning-header">
+          <span class="eyebrow">COMPLETE CATEGORY REFERENCE</span>
+          <span id="detailed-learning-category" class="detailed-learning-category">Selected category</span>
+          <h1 id="detailed-learning-title">Detailed Learning Library</h1>
+          <p id="detailed-learning-description">Complete topic lists related to your MCQs, expanded with the surrounding facts that can appear in future papers.</p>
+          <p id="detailed-learning-coverage" class="detailed-learning-coverage">0 topic lists &middot; 0 reference points</p>
+        </header>
+
+        <section class="detailed-learning-tools" aria-labelledby="detailed-learning-tools-title">
+          <h2 id="detailed-learning-tools-title" class="visually-hidden">Find detailed reference facts</h2>
+          <div class="detailed-learning-search-field">
+            <label for="detailed-learning-search">Search names, dates, places or terms</label>
+            <div class="detailed-learning-search-control">
+              <input id="detailed-learning-search" class="detailed-learning-search-input" type="search" autocomplete="off" placeholder="Type a name, date, place or key term">
+              <button id="detailed-learning-clear-button" class="secondary-button detailed-learning-clear-button" type="button">Clear</button>
+            </div>
+          </div>
+          <div id="detailed-learning-topic-filters" class="detailed-learning-topic-filters" aria-label="Filter detailed learning by topic"></div>
+          <p id="detailed-learning-results-status" class="detailed-learning-results-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <div id="detailed-learning-list" class="detailed-learning-list"></div>
+        <div id="detailed-learning-empty" class="detailed-learning-empty" role="status" hidden>
+          <strong>No matching reference facts found</strong>
+          <p>Try another name, date, place or topic, or clear the filters.</p>
+        </div>
+      </article>
+    </section>
+
     <section id="paper-setup-screen" class="screen paper-setup-screen" aria-labelledby="paper-setup-title" hidden>
       <button id="paper-setup-back-button" class="text-button paper-setup-back-button" type="button">
         <span aria-hidden="true">&larr;</span> Categories
@@ -403,7 +439,7 @@
         <span class="eyebrow">CHOOSE YOUR STUDY STYLE</span>
         <span id="mode-category" class="mode-category">Selected category</span>
         <h1 id="mode-title">How would you like to prepare?</h1>
-        <p class="mode-intro">Learn each answer, test yourself in quiz mode, or practise only the questions you marked as difficult.</p>
+        <p class="mode-intro">Learn each answer, test yourself, review your notes, or explore complete topic-wise reference lists.</p>
 
         <section id="computer-source-panel" class="computer-source-panel" aria-labelledby="computer-source-title" hidden>
           <div class="computer-source-heading">
@@ -504,6 +540,15 @@
             <span class="mode-option-copy">
               <strong>Study Notes</strong>
               <small>Review every MCQ as a short cue, exact question and correct answer.</small>
+            </span>
+            <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+
+          <button id="detailed-learning-mode-button" class="mode-option mode-option-detailed" type="button" aria-controls="detailed-learning-screen">
+            <span class="mode-option-icon" aria-hidden="true">DL</span>
+            <span class="mode-option-copy">
+              <strong>Detailed Learning</strong>
+              <small>Read complete topic-wise lists related to this category, including useful facts beyond the current MCQ bank.</small>
             </span>
             <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
           </button>

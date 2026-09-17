@@ -9,6 +9,7 @@ const projectDirectory = path.resolve(__dirname, "..");
 const workDirectory = path.join(projectDirectory, "work");
 const dataPath = path.join(projectDirectory, "data", "questions.js");
 const gkStudyNotesPath = path.join(projectDirectory, "data", "gk-study-notes.js");
+const detailedLearningPath = path.join(projectDirectory, "data", "detailed-learning.js");
 const releaseRepeatEvidencePath = path.join(projectDirectory, "data", "release-repeat-evidence.json");
 const htmlPath = path.join(projectDirectory, "index.html");
 const appPath = path.join(projectDirectory, "app.js");
@@ -77,6 +78,18 @@ function loadGkStudyNotes() {
     data,
     aliasIsNotes: Boolean(data && sandbox.window.PPSC_GK_STUDY_NOTES === data.notes)
   };
+}
+
+function loadDetailedLearning() {
+  const sandbox = { window: {} };
+  vm.createContext(sandbox);
+  try {
+    vm.runInContext(fs.readFileSync(detailedLearningPath, "utf8"), sandbox, { filename: detailedLearningPath });
+  } catch (reason) {
+    error(`detailed-learning.js could not be evaluated: ${reason.message}`);
+    return null;
+  }
+  return sandbox.window.PPSC_DETAILED_LEARNING_DATA || null;
 }
 
 function sha256Json(value) {
@@ -558,6 +571,123 @@ function validateGkStudyNotes(bundle, questionData, questions) {
   findForbiddenMcqFields(notesData);
 }
 
+function validateDetailedLearning(library, questionData) {
+  if (!library || typeof library !== "object") {
+    error("detailed-learning.js must expose window.PPSC_DETAILED_LEARNING_DATA");
+    return;
+  }
+  if (!Number.isInteger(library.schemaVersion) || library.schemaVersion < 1) {
+    error("Detailed Learning schemaVersion must be a positive integer");
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(library.generatedOn || ""))) {
+    error("Detailed Learning generatedOn must use YYYY-MM-DD");
+  }
+  if (!Array.isArray(library.categories)) {
+    error("Detailed Learning categories must be an array");
+    return;
+  }
+
+  const expectedCategoryIds = (Array.isArray(questionData.categories) ? questionData.categories : [])
+    .map((category) => String(category && category.id || "").trim())
+    .filter(Boolean);
+  const actualCategoryIds = library.categories
+    .map((category) => String(category && category.id || "").trim())
+    .filter(Boolean);
+  if (!jsonEqual(actualCategoryIds, expectedCategoryIds)) {
+    error("Detailed Learning must cover every question-bank category exactly once in canonical order");
+  }
+  if (new Set(actualCategoryIds).size !== actualCategoryIds.length) {
+    error("Detailed Learning category IDs must be unique");
+  }
+
+  for (const [categoryOffset, category] of library.categories.entries()) {
+    const categoryId = String(category && category.id || "").trim();
+    const location = categoryId ? `Detailed Learning category ${categoryId}` : `Detailed Learning category ${categoryOffset + 1}`;
+    if (!category || typeof category !== "object") {
+      error(`${location} must be an object`);
+      continue;
+    }
+    for (const field of ["id", "name", "title", "description"]) {
+      if (!String(category[field] || "").trim()) error(`${location}: ${field} must be nonempty`);
+    }
+    if (!["en", "ur"].includes(category.language)) {
+      error(`${location}: language must be en or ur`);
+    }
+    if (!["ltr", "rtl"].includes(category.direction)) {
+      error(`${location}: direction must be ltr or rtl`);
+    }
+    if (categoryId === "urdu" && (category.language !== "ur" || category.direction !== "rtl")) {
+      error(`${location}: Urdu content must use language ur and direction rtl`);
+    }
+    if (!Array.isArray(category.topics) || category.topics.length < 4 || category.topics.length > 6) {
+      error(`${location}: topics must contain four to six reference lists`);
+      continue;
+    }
+    const topicIds = category.topics.map((topic) => String(topic && topic.id || "").trim());
+    if (topicIds.some((id) => !id) || new Set(topicIds).size !== topicIds.length) {
+      error(`${location}: topic IDs must be nonempty and unique within the category`);
+    }
+
+    for (const [topicOffset, topic] of category.topics.entries()) {
+      const topicId = String(topic && topic.id || "").trim();
+      const topicLocation = `${location}, topic ${topicId || topicOffset + 1}`;
+      if (!topic || typeof topic !== "object") {
+        error(`${topicLocation} must be an object`);
+        continue;
+      }
+      for (const field of ["title", "description", "coverage"]) {
+        if (!String(topic[field] || "").trim()) error(`${topicLocation}: ${field} must be nonempty`);
+      }
+      if (!Array.isArray(topic.columns) || topic.columns.length < 2) {
+        error(`${topicLocation}: columns must contain at least two labels`);
+        continue;
+      }
+      const columnLabels = topic.columns.map((column) => String(column || "").trim());
+      if (columnLabels.some((label) => !label) || new Set(columnLabels).size !== columnLabels.length) {
+        error(`${topicLocation}: column labels must be nonempty and unique`);
+      }
+      if (!Array.isArray(topic.rows) || !topic.rows.length) {
+        error(`${topicLocation}: rows must be a nonempty array`);
+      } else {
+        for (const [rowOffset, row] of topic.rows.entries()) {
+          if (!Array.isArray(row)) {
+            error(`${topicLocation}: row ${rowOffset + 1} must be an array`);
+            continue;
+          }
+          if (row.length !== columnLabels.length) {
+            error(`${topicLocation}: row ${rowOffset + 1} has ${row.length} cells; expected ${columnLabels.length}`);
+          }
+          for (const [cellOffset, cell] of row.entries()) {
+            if (!String(cell ?? "").trim()) {
+              error(`${topicLocation}: row ${rowOffset + 1}, cell ${cellOffset + 1} must be nonempty`);
+            }
+          }
+        }
+      }
+      if (topic.asOf || topic.reverifyAfter) {
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(String(topic.asOf || ""))
+          || !/^\d{4}-\d{2}-\d{2}$/.test(String(topic.reverifyAfter || ""))) {
+          error(`${topicLocation}: asOf and reverifyAfter must both use YYYY-MM-DD when either is present`);
+        }
+      }
+      if (topic.sources !== undefined && !Array.isArray(topic.sources)) {
+        error(`${topicLocation}: sources must be an array when present`);
+      } else if (Array.isArray(topic.sources)) {
+        for (const [sourceOffset, source] of topic.sources.entries()) {
+          if (!source || typeof source !== "object" || !String(source.label || "").trim()
+            || !/^https:\/\//i.test(String(source.url || ""))) {
+            error(`${topicLocation}: source ${sourceOffset + 1} needs a label and HTTPS URL`);
+          }
+        }
+      }
+    }
+  }
+
+  if (fs.existsSync(detailedLearningPath) && fs.statSync(detailedLearningPath).size > 512 * 1024) {
+    error("data/detailed-learning.js must stay below 512 KiB for responsive static loading");
+  }
+}
+
 function validateQuestionsAgainstRepeatEvidence(questions, evidence, label) {
   const questionsById = new Map(questions.map((question) => [question.id, question]));
   let markedCount = 0;
@@ -883,6 +1013,11 @@ function validateHtml() {
     "gk-notes-search", "gk-notes-clear-button", "gk-notes-topic-filters",
     "gk-notes-important-only", "gk-notes-results-status", "gk-notes-list",
     "gk-notes-load-more-button", "gk-notes-empty",
+    "detailed-learning-mode-button", "detailed-learning-screen", "detailed-learning-back-button",
+    "detailed-learning-category", "detailed-learning-title", "detailed-learning-description",
+    "detailed-learning-coverage", "detailed-learning-search", "detailed-learning-clear-button",
+    "detailed-learning-topic-filters", "detailed-learning-results-status",
+    "detailed-learning-list", "detailed-learning-empty",
     "paper-category-options", "paper-select-all-button", "paper-clear-all-button",
     "paper-selection-summary", "paper-setup-status", "paper-start-button",
     "mode-screen", "quiz-screen", "results-screen", "category-grid",
@@ -1056,8 +1191,8 @@ function validateHtml() {
     ? html.slice(standardModesStart, difficultModesStart)
     : "";
   const standardModeButtons = standardModesHtml.match(/<button\b[^>]*\bclass=["'][^"']*\bmode-option\b[^"']*["']/gi) || [];
-  if (standardModeButtons.length !== 4) {
-    error(`index.html: expected four standard preparation mode buttons, found ${standardModeButtons.length}`);
+  if (standardModeButtons.length !== 5) {
+    error(`index.html: expected five standard preparation mode buttons, found ${standardModeButtons.length}`);
   }
   const questionNumberInput = html.match(/<input\b[^>]*\bid=["']question-number-input["'][^>]*>/i)?.[0] || "";
   for (const [attribute, expectedValue] of [["type", "number"], ["min", "1"], ["step", "1"], ["inputmode", "numeric"]]) {
@@ -1075,10 +1210,11 @@ function validateHtml() {
   }
   const dataScript = html.search(/src=["']data\/questions\.js(?:\?[^"']*)?["']/);
   const gkNotesScript = html.search(/src=["']data\/gk-study-notes\.js(?:\?[^"']*)?["']/);
+  const detailedLearningScript = html.search(/src=["']data\/detailed-learning\.js(?:\?[^"']*)?["']/);
   const appScript = html.search(/src=["']app\.js(?:\?[^"']*)?["']/);
-  if (dataScript < 0 || gkNotesScript < 0 || appScript < 0
-    || dataScript > gkNotesScript || gkNotesScript > appScript) {
-    error("index.html: questions.js and gk-study-notes.js must load in that order before app.js");
+  if (dataScript < 0 || gkNotesScript < 0 || detailedLearningScript < 0 || appScript < 0
+    || dataScript > gkNotesScript || gkNotesScript > detailedLearningScript || detailedLearningScript > appScript) {
+    error("index.html: questions.js, gk-study-notes.js and detailed-learning.js must load in that order before app.js");
   }
   if (/fonts\.googleapis\.com|fonts\.gstatic\.com/i.test(html)) {
     error("index.html: fonts must be self-hosted instead of loaded from Google Fonts");
@@ -1247,7 +1383,9 @@ function validateCloudSyncContract() {
   for (const requiredWorkflowText of [
     "node tools/cloud-sync-smoke.js",
     "firebase-config.js firebase-sync.js",
-    "node --check firebase-sync.js"
+    "node --check firebase-sync.js",
+    "node --check data/detailed-learning.js",
+    "data/detailed-learning.js _site/data/"
   ]) {
     if (!workflowSource.includes(requiredWorkflowText)) {
       error(`pages.yml: missing cloud-sync deployment guard ${requiredWorkflowText}`);
@@ -1259,6 +1397,8 @@ const data = loadData();
 const result = validateData(data);
 const gkStudyNotesBundle = loadGkStudyNotes();
 validateGkStudyNotes(gkStudyNotesBundle, data, result.questions);
+const detailedLearningLibrary = loadDetailedLearning();
+validateDetailedLearning(detailedLearningLibrary, data);
 validateRepeatMetadata(data, result.questions);
 validateKnownCorrections(result.questions);
 validateIbesBank(result.questions);
@@ -1272,6 +1412,7 @@ validateCloudSyncContract();
 
 console.log(`Site data: ${result.categories.length} categories, ${result.questions.length} questions.`);
 console.log(`GK Study Notes: ${gkStudyNotesBundle.data && Array.isArray(gkStudyNotesBundle.data.notes) ? gkStudyNotesBundle.data.notes.length : 0} notes.`);
+console.log(`Detailed Learning: ${detailedLearningLibrary && Array.isArray(detailedLearningLibrary.categories) ? detailedLearningLibrary.categories.length : 0} categories.`);
 console.log(`Repeat evidence: pinned release snapshot${verifyWorkRepeatEvidence ? " + strict current work/ cross-check" : ""}.`);
 const counts = Object.fromEntries(result.categories.map((category) => [
   category.name,
