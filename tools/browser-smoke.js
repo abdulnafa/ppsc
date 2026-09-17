@@ -981,6 +981,29 @@ async function main() {
       };
     })()`);
 
+    await client.evaluate(`(() => {
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (queue?.activeAttempt?.context === "embedded") {
+        delete queue.dedicatedLastQuestionId;
+        localStorage.setItem(retryKey, JSON.stringify(queue));
+      }
+      return true;
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for legacy embedded-review shuffle migration."));
+        }
+      }, 50);
+    })`);
+
     const retryQueueCadenceResume = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
       const visible = (element) => Boolean(
@@ -990,6 +1013,16 @@ async function main() {
       const expected = ${JSON.stringify(retryQueueCadenceSetup)};
       const retryKey = "ppsc-prep:retry-queue:v1";
       const sessionKey = "ppsc-prep:active-session:v1";
+      if (visible(document.querySelector("#continue-session-card"))) {
+        document.querySelector("#continue-session-button")?.click();
+        await pause();
+      }
+      const restoredLegacyAttempt = JSON.parse(localStorage.getItem(retryKey) || "null")?.activeAttempt;
+      if (!document.querySelector("#retry-dialog")?.open
+        || restoredLegacyAttempt?.context !== "embedded"
+        || restoredLegacyAttempt?.questionId !== expected.firstId) {
+        errors.push("Legacy embedded review did not restore before shuffle-marker migration.");
+      }
       document.querySelector("#retry-action-button")?.click();
       await pause();
       let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
@@ -998,7 +1031,8 @@ async function main() {
         ? null
         : retry.nextQuizReviewStep - retry.practiceStep;
       if (document.querySelector("#retry-dialog")?.open || retry?.activeAttempt !== null
-        || item?.remaining !== 4 || ![5, 6].includes(nextSpacing) || item?.dueStep !== retry.nextQuizReviewStep) {
+        || item?.remaining !== 4 || ![5, 6].includes(nextSpacing) || item?.dueStep !== retry.nextQuizReviewStep
+        || retry?.dedicatedLastQuestionId !== expected.firstId) {
         errors.push("Continuing a correct embedded review did not decrement once and schedule the next 5-or-6-answer gate.");
       }
       if (JSON.stringify(JSON.parse(localStorage.getItem(sessionKey) || "null") && {
@@ -1027,7 +1061,8 @@ async function main() {
         practiceStep: retry?.practiceStep ?? 0,
         firstId: expected.firstId,
         nextSpacing,
-        score: expected.scoreBeforeContinue
+        score: expected.scoreBeforeContinue,
+        legacyActiveAttemptAnchored: retry?.dedicatedLastQuestionId === expected.firstId
       };
     })()`);
 
@@ -1409,8 +1444,10 @@ async function main() {
         bankSignature: queue?.bankSignature || expected.seed.bankSignature,
         practiceStep: queue?.practiceStep ?? expected.seed.practiceStep,
         nextQuizReviewStep: null,
-        nextSequence: 3,
-        items: expected.ids.slice(0, 2).map((questionId, index) => ({
+        nextSequence: 4,
+        dedicatedDeck: [],
+        dedicatedLastQuestionId: expected.ids[0],
+        items: expected.ids.slice(0, 3).map((questionId, index) => ({
           questionId,
           remaining: index + 2,
           dueStep: (queue?.practiceStep ?? expected.seed.practiceStep) + 5,
@@ -1590,6 +1627,8 @@ async function main() {
       document.querySelector("#continue-session-button")?.click();
       await pause();
       let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const initialCounts = Object.fromEntries((retry?.items || []).map((item) => [item.questionId, item.remaining]));
+      let embeddedDueShuffled = false;
       if (document.querySelector("#retry-dialog")?.open
         || document.querySelector("#quiz-screen")?.dataset.mode !== "learn"
         || retry?.activeAttempt !== null
@@ -1612,6 +1651,7 @@ async function main() {
       const spacing = retry?.nextQuizReviewStep - retry?.practiceStep;
       const initialPracticeStep = retry?.practiceStep;
       if (![5, 6].includes(spacing)) errors.push("Restored Learn queue lost its persisted five-or-six-question cadence.");
+      Math.random = () => 0;
 
       document.querySelector("#action-button")?.click();
       await pause();
@@ -1641,6 +1681,14 @@ async function main() {
           retry = JSON.parse(localStorage.getItem(retryKey) || "null");
           const attempt = retry?.activeAttempt;
           const sessionAtReview = JSON.parse(localStorage.getItem(sessionKey) || "null");
+          const expectedShuffledId = originalSeed?.items?.[2]?.questionId;
+          const lastPresentedId = originalSeed?.dedicatedLastQuestionId;
+          embeddedDueShuffled = Boolean(
+            attempt?.questionId
+            && attempt.questionId === expectedShuffledId
+            && attempt.questionId !== originalSeed?.items?.[0]?.questionId
+            && attempt.questionId !== lastPresentedId
+          );
           if (!dialogOpen || attempt?.context !== "embedded"
             || retry.practiceStep !== initialPracticeStep + spacing
             || sessionAtReview?.mode !== "learn" || sessionAtReview?.score !== 0
@@ -1648,6 +1696,13 @@ async function main() {
             || JSON.stringify(sessionAtReview?.learnVisitedQuestionIds) !== JSON.stringify(sessionBefore?.learnVisitedQuestionIds)
             || sessionAtReview?.learnReviewCountedQuestionIds?.length !== spacing) {
             errors.push("Learn review did not open exactly after its persisted number of completed main questions.");
+          }
+          if (!embeddedDueShuffled) {
+            errors.push("Embedded Learn review did not shuffle multiple due MCQs or avoid the last-presented queue question.");
+          }
+          if (JSON.stringify(Object.fromEntries((retry?.items || []).map((item) => [item.questionId, item.remaining])))
+            !== JSON.stringify(initialCounts)) {
+            errors.push("Opening a shuffled embedded review changed saved repetition counts.");
           }
           const reviewQuestion = questionById.get(String(attempt?.questionId || ""));
           const correctReviewIndex = reviewQuestion && attempt
@@ -1670,8 +1725,13 @@ async function main() {
           retry = JSON.parse(localStorage.getItem(retryKey) || "null");
           const resumedSession = JSON.parse(localStorage.getItem(sessionKey) || "null");
           const nextSpacing = retry?.nextQuizReviewStep - retry?.practiceStep;
+          const countsAfter = Object.fromEntries((retry?.items || []).map((item) => [item.questionId, item.remaining]));
+          const untouchedCountsChanged = Object.keys(initialCounts).some((questionId) => (
+            questionId !== attempt?.questionId && countsAfter[questionId] !== initialCounts[questionId]
+          ));
           if (document.querySelector("#retry-dialog")?.open || retry?.activeAttempt !== null
             || retry.items.find((item) => item.questionId === attempt?.questionId)?.remaining !== remainingBefore - 1
+            || untouchedCountsChanged
             || ![5, 6].includes(nextSpacing)
             || resumedSession?.mode !== "learn" || resumedSession?.score !== 0
             || resumedSession?.currentIndex !== sessionBefore.currentIndex + 1) {
@@ -1694,7 +1754,7 @@ async function main() {
         || document.activeElement !== globalQueue || document.querySelector("#quiz-screen")?.dataset.mode !== "learn") {
         errors.push("Ending global Queue practice did not return focus and preserve the underlying Learn session.");
       }
-      return { errors, spacing };
+      return { errors, spacing, embeddedDueShuffled };
     })()`);
 
     const retryLegacyLearnMigrationSeed = await client.evaluate(`(() => {
@@ -6221,6 +6281,7 @@ async function main() {
         globalControlEverywhere: retryGlobalSurfaceResult.errors.length === 0,
         embeddedCadence: retryQueueFeatureResult.cadence,
         nextEmbeddedCadence: retryQueueFeatureResult.nextCadence,
+        legacyEmbeddedAttemptAnchored: retryQueueCadenceResume.legacyActiveAttemptAnchored === true,
         dedicatedFirstRound: retryQueueFeatureResult.firstRound,
         dedicatedCorrectAppearances: retryQueueFeatureResult.correctAppearances,
         wrongRetryRemaining: retryQueueFeatureResult.wrongRemaining,
@@ -6228,6 +6289,7 @@ async function main() {
         mobileProbeMetrics: retryQueueFeatureResult.mobileMetrics,
         globalQueueRestoredAcrossCategory: retryMismatchResumeResult.errors.length === 0,
         learnQueueCadenceRestored: retryLearnResumeResult.errors.length === 0,
+        embeddedDueShuffled: retryLearnResumeResult.embeddedDueShuffled === true,
         legacyLearnCadenceMigrated: retryLegacyLearnMigrationSeed.errors.length === 0
           && retryLegacyLearnMigrationResult.errors.length === 0,
         pendingAfterResults: retryQueueFeatureResult.seedQueue?.items?.length || 0,

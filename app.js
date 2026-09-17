@@ -1114,8 +1114,11 @@
         dedicatedDeck = dedicatedDeck.filter(function (questionId) {
           return questionId !== attemptQuestionId;
         });
-        if (dedicatedLastQuestionId === null) dedicatedLastQuestionId = attemptQuestionId;
       }
+      // Older saved embedded attempts did not persist a last-presented marker.
+      // Anchor either restored context so its next shuffled review can avoid
+      // an immediate repeat whenever another due question is available.
+      dedicatedLastQuestionId = attemptQuestionId;
     }
 
     if (items.length === 0) {
@@ -1348,12 +1351,20 @@
     var excludedId = String(excludedQuestionId || "");
     var dueItems = retryQueueState.items.filter(function (item) {
       return item.dueStep <= retryQueueState.practiceStep;
-    }).sort(function (left, right) {
-      return left.sequence - right.sequence;
     });
-    return dueItems.find(function (item) {
+    var eligibleItems = dueItems.filter(function (item) {
       return item.questionId !== excludedId;
-    }) || (state.questions.length === 1 ? dueItems[0] : null) || null;
+    });
+    if (eligibleItems.length === 0 && state.questions.length === 1) {
+      eligibleItems = dueItems.slice();
+    }
+    if (eligibleItems.length > 1 && retryQueueState.dedicatedLastQuestionId) {
+      var withoutPrevious = eligibleItems.filter(function (item) {
+        return item.questionId !== retryQueueState.dedicatedLastQuestionId;
+      });
+      if (withoutPrevious.length > 0) eligibleItems = withoutPrevious;
+    }
+    return fisherYates(eligibleItems)[0] || null;
   }
 
   function retryQuestionForAttempt(attempt) {
@@ -1821,6 +1832,9 @@
     var reviewQuestion = shuffledQuizQuestion(canonicalQuestion);
     if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
     scheduleNextQuizReview();
+    // This legacy field now protects spacing across both embedded and dedicated
+    // queue practice, while remaining compatible with every saved v1 queue.
+    retryQueueState.dedicatedLastQuestionId = item.questionId;
     retryQueueState.activeAttempt = {
       questionId: item.questionId,
       optionOrder: reviewQuestion._sessionOptionOrder.slice(),
