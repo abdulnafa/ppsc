@@ -1050,9 +1050,15 @@ async function main() {
       document.querySelector("#back-button")?.click();
       await pause();
       const card = document.querySelector("#retry-queue-card");
+      const savedItemCount = Array.isArray(retry?.items) ? retry.items.length : 0;
+      const savedRemaining = Array.isArray(retry?.items)
+        ? retry.items.reduce((total, entry) => total + entry.remaining, 0)
+        : 0;
       if (!visible(document.querySelector("#category-screen")) || !visible(card) || card.disabled
-        || card.dataset.count !== "1" || card.dataset.remaining !== "4"
-        || !document.querySelector("#retry-queue-card-meta")?.textContent.includes("4 reviews across 1 question")) {
+        || card.dataset.count !== String(savedItemCount) || card.dataset.remaining !== String(savedRemaining)
+        || !document.querySelector("#retry-queue-card-meta")?.textContent.includes(
+          savedRemaining + " reviews across " + savedItemCount + " questions"
+        )) {
         errors.push("Returning to categories did not expose the saved Review Queue total.");
       }
       return {
@@ -6193,6 +6199,365 @@ async function main() {
       };
     })()`);
 
+    // New Quiz answers now seed finite confirmation work. A correct answer
+    // creates exactly one confirmation only when the MCQ is not already
+    // waiting; queue reviews still apply their outcome only on Continue.
+    await client.evaluate(`(() => {
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      localStorage.removeItem("ppsc-prep:difficult-question-ids:v1");
+      return true;
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reset for correct-confirmation queue testing."));
+        }
+      }, 50);
+    })`);
+
+    const confirmationQueueResult = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const categoryId = "job-related-finance-taxation";
+      const questions = window.PPSC_QUIZ_DATA.questions;
+      const byId = new Map(questions.map((question) => [String(question.id), question]));
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const startSingleQuiz = async () => {
+        document.querySelector('#category-grid .category-card[data-category="' + categoryId + '"]')?.click();
+        document.querySelector("#quiz-mode-button")?.click();
+        const start = document.querySelector("#question-range-start-input");
+        const end = document.querySelector("#question-range-end-input");
+        if (!start || !end) return false;
+        start.value = "1";
+        end.value = "1";
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+        return true;
+      };
+      const answerMain = async (correct) => {
+        const questionId = String(document.querySelector("#question-text")?.dataset.questionId || "");
+        const question = byId.get(questionId);
+        const renderedOptions = [...document.querySelectorAll("#options-container .option-text")]
+          .map((element) => element.textContent);
+        const correctText = question ? optionText(question.options[question.correctOptionIndex]) : "";
+        const correctIndex = renderedOptions.indexOf(correctText);
+        const selectedIndex = correct ? correctIndex : (correctIndex + 1) % 4;
+        document.querySelector('[data-option-index="' + selectedIndex + '"]')?.click();
+        document.querySelector("#action-button")?.click();
+        await pause();
+        return question;
+      };
+      const answerDedicated = async (correct) => {
+        const queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+        const attempt = queue?.activeAttempt;
+        const question = byId.get(String(attempt?.questionId || ""));
+        const correctIndex = attempt && question
+          ? attempt.optionOrder.indexOf(question.correctOptionIndex)
+          : -1;
+        const selectedIndex = correct ? correctIndex : (correctIndex + 1) % 4;
+        document.querySelector('[data-review-option-index="' + selectedIndex + '"]')?.click();
+        document.querySelector("#retry-action-button")?.click();
+        await pause();
+        return { attempt, question };
+      };
+
+      if (!await startSingleQuiz()) {
+        return { errors: ["Correct-confirmation fixture could not start."], questionId: "" };
+      }
+      const firstQuestion = await answerMain(true);
+      const questionId = String(firstQuestion?.id || "");
+      let queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      let item = queue?.items.find((entry) => entry.questionId === questionId);
+      const firstRecord = item ? JSON.stringify(item) : "";
+      if (!item || item.remaining !== 1 || queue.items.length !== 1) {
+        errors.push("A new correct category Quiz answer did not create exactly one confirmation review.");
+      }
+
+      document.querySelector("#back-button")?.click();
+      await pause();
+      await startSingleQuiz();
+      await answerMain(true);
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      item = queue?.items.find((entry) => entry.questionId === questionId);
+      if (!item || item.remaining !== 1 || queue.items.length !== 1 || JSON.stringify(item) !== firstRecord) {
+        errors.push("A repeated correct main Quiz answer changed or duplicated its pending confirmation.");
+      }
+
+      document.querySelector("#back-button")?.click();
+      await pause();
+      document.querySelector("#retry-queue-card")?.click();
+      await pause();
+      await answerDedicated(true);
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (queue?.items.find((entry) => entry.questionId === questionId)?.remaining !== 1
+        || !queue?.activeAttempt?.submitted
+        || !document.querySelector("#retry-dialog-progress")?.textContent.includes("Mastered after you continue")) {
+        errors.push("Correct confirmation Check applied before Continue or projected the wrong result.");
+      }
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (queue?.items.some((entry) => entry.questionId === questionId)) {
+        errors.push("Correct confirmation Continue did not remove the one-review item.");
+      }
+
+      await startSingleQuiz();
+      await answerMain(true);
+      document.querySelector("#back-button")?.click();
+      await pause();
+      document.querySelector("#retry-queue-card")?.click();
+      await pause();
+      await answerDedicated(false);
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (queue?.items.find((entry) => entry.questionId === questionId)?.remaining !== 1
+        || queue?.activeAttempt?.wrongIncrement !== 5
+        || !document.querySelector("#retry-dialog-progress")?.textContent.includes("6 correct reviews remaining")) {
+        errors.push("Wrong confirmation Check did not preserve 1 and project exactly five added reviews.");
+      }
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      item = queue?.items.find((entry) => entry.questionId === questionId);
+      if (item?.remaining !== 6 || queue.items.filter((entry) => entry.questionId === questionId).length !== 1) {
+        errors.push("Wrong confirmation Continue did not atomically change one review to six.");
+      }
+      document.querySelector("#retry-later-button")?.click();
+      await pause();
+
+      return { errors, questionId, finalRemaining: item?.remaining || null };
+    })()`);
+
+    // Permanent Important practice uses an all-category shuffled deck. It is
+    // deliberately separate from finite queue items, even if the same MCQ is
+    // present in both lanes.
+    await client.evaluate(`(() => {
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      return true;
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reset for permanent Important practice testing."));
+        }
+      }, 50);
+    })`);
+
+    const importantPracticeSeed = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const hostCategoryId = "job-related-finance-taxation";
+      const questions = window.PPSC_QUIZ_DATA.questions;
+      const important = questions.filter((question) => question.isImportant === true || Number(question.repeatCount) >= 2);
+      const first = important.find((question) => question.categoryId === "general-knowledge");
+      const second = important.find((question) => question.categoryId === "pakistan-studies");
+      document.querySelector('#category-grid .category-card[data-category="' + hostCategoryId + '"]')?.click();
+      document.querySelector("#learn-mode-button")?.click();
+      const start = document.querySelector("#question-range-start-input");
+      const end = document.querySelector("#question-range-end-input");
+      if (!start || !end || !first || !second) {
+        return { errors: ["Permanent Important fixture could not find its categories or range controls."] };
+      }
+      start.value = "1";
+      end.value = "30";
+      document.querySelector("#question-range-form")?.requestSubmit();
+      await pause();
+      document.querySelector("#action-button")?.click();
+      await pause();
+      const queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!queue || queue.items.length !== 0) {
+        errors.push("Learn created a finite confirmation item before Important testing.");
+      }
+      queue.nextQuizReviewStep = 999999;
+      queue.nextImportantReviewStep = queue.practiceStep + 1;
+      queue.nextSequence = 2;
+      queue.dedicatedDeck = [];
+      queue.dedicatedLastQuestionId = null;
+      queue.importantDeck = [String(first.id), String(second.id)];
+      queue.importantLastQuestionId = null;
+      queue.items = [{
+        questionId: String(first.id),
+        remaining: 2,
+        dueStep: 999999,
+        sequence: 1
+      }];
+      queue.activeAttempt = null;
+      localStorage.setItem(retryKey, JSON.stringify(queue));
+      return {
+        errors,
+        firstId: String(first.id),
+        secondId: String(second.id),
+        hostCategoryId,
+        finiteItems: JSON.stringify(queue.items)
+      };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for the first permanent Important review."));
+        }
+      }, 50);
+    })`);
+
+    const importantPracticeCorrect = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const expected = ${JSON.stringify(importantPracticeSeed)};
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const questions = new Map(window.PPSC_QUIZ_DATA.questions.map((question) => [String(question.id), question]));
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      document.querySelector("#action-button")?.click();
+      await pause();
+      let queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const attempt = queue?.activeAttempt;
+      const question = questions.get(String(attempt?.questionId || ""));
+      if (!document.querySelector("#retry-dialog")?.open || attempt?.kind !== "important"
+        || attempt?.questionId !== expected.firstId || question?.categoryId === expected.hostCategoryId
+        || !document.querySelector("#retry-dialog-title")?.textContent.includes("Important")
+        || !document.querySelector("#retry-dialog-queue-meta")?.textContent.includes("totals stay unchanged")) {
+        errors.push("The due permanent Important review was not global, labeled, or opened at its saved gate.");
+      }
+      const correctIndex = attempt && question ? attempt.optionOrder.indexOf(question.correctOptionIndex) : -1;
+      document.querySelector('[data-review-option-index="' + correctIndex + '"]')?.click();
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (JSON.stringify(queue?.items) !== expected.finiteItems || queue?.activeAttempt?.outcome !== "correct") {
+        errors.push("Correct permanent Important Check changed the finite Review Queue.");
+      }
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const spacing = queue?.nextImportantReviewStep - queue?.practiceStep;
+      if (JSON.stringify(queue?.items) !== expected.finiteItems || queue?.activeAttempt !== null
+        || !Number.isInteger(spacing) || spacing < 10 || spacing > 20
+        || queue?.importantLastQuestionId !== expected.firstId) {
+        errors.push("Correct permanent Important Continue changed queue totals or failed to save a 10–20 cadence.");
+      }
+      queue.nextImportantReviewStep = queue.practiceStep + 1;
+      queue.importantDeck = [expected.secondId, expected.firstId];
+      localStorage.setItem(retryKey, JSON.stringify(queue));
+      return { errors, finiteItems: expected.finiteItems, firstId: expected.firstId, secondId: expected.secondId };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for the second permanent Important review."));
+        }
+      }, 50);
+    })`);
+
+    const importantPracticeWrongSeed = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const expected = ${JSON.stringify(importantPracticeCorrect)};
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const questions = new Map(window.PPSC_QUIZ_DATA.questions.map((question) => [String(question.id), question]));
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      document.querySelector("#action-button")?.click();
+      await pause();
+      let queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const attempt = queue?.activeAttempt;
+      const question = questions.get(String(attempt?.questionId || ""));
+      if (!document.querySelector("#retry-dialog")?.open || attempt?.kind !== "important"
+        || attempt?.questionId !== expected.secondId || attempt.questionId === expected.firstId) {
+        errors.push("The shuffled permanent Important deck repeated the previous MCQ instead of using its next saved item.");
+      }
+      const correctIndex = attempt && question ? attempt.optionOrder.indexOf(question.correctOptionIndex) : -1;
+      const wrongIndex = (correctIndex + 1) % 4;
+      document.querySelector('[data-review-option-index="' + wrongIndex + '"]')?.click();
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (JSON.stringify(queue?.items) !== expected.finiteItems || queue?.activeAttempt?.outcome !== "wrong"
+        || queue?.activeAttempt?.wrongIncrement !== null) {
+        errors.push("Wrong permanent Important Check changed finite queue work or staged a +5 increment.");
+      }
+      return { errors, finiteItems: expected.finiteItems, secondId: expected.secondId };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for submitted Important-attempt recovery."));
+        }
+      }, 50);
+    })`);
+
+    const importantPracticeResume = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const expected = ${JSON.stringify(importantPracticeWrongSeed)};
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      let queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!document.querySelector("#retry-dialog")?.open || queue?.activeAttempt?.kind !== "important"
+        || !queue.activeAttempt.submitted || queue.activeAttempt.outcome !== "wrong"
+        || queue.activeAttempt.questionId !== expected.secondId) {
+        errors.push("A submitted wrong permanent Important attempt did not restore exactly after reload.");
+      }
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const spacing = queue?.nextImportantReviewStep - queue?.practiceStep;
+      if (JSON.stringify(queue?.items) !== expected.finiteItems || queue?.activeAttempt !== null
+        || !Number.isInteger(spacing) || spacing < 10 || spacing > 20
+        || queue?.importantLastQuestionId !== expected.secondId) {
+        errors.push("Wrong permanent Important Continue changed queue totals or failed to persist its next cadence.");
+      }
+      return { errors, nextSpacing: spacing, finiteRemaining: queue?.items?.[0]?.remaining || null };
+    })()`);
+
+    const permanentImportantResult = {
+      errors: []
+        .concat(importantPracticeSeed.errors)
+        .concat(importantPracticeCorrect.errors)
+        .concat(importantPracticeWrongSeed.errors)
+        .concat(importantPracticeResume.errors),
+      firstId: importantPracticeSeed.firstId,
+      secondId: importantPracticeSeed.secondId,
+      nextSpacing: importantPracticeResume.nextSpacing,
+      finiteRemaining: importantPracticeResume.finiteRemaining
+    };
+
     const { resumeExpected, legacyV6Snapshot, ...normalSummary } = normalResult;
     const result = {
       ...normalSummary,
@@ -6232,6 +6597,8 @@ async function main() {
         .concat(urduResumeResult.errors)
         .concat(retryExistingCountSeedResult.errors)
         .concat(retryExistingCountPreservationResult.errors)
+        .concat(confirmationQueueResult.errors)
+        .concat(permanentImportantResult.errors)
         .concat(paperSetupResult.errors)
         .concat(paperResumeResult.errors),
       resume: {
@@ -6294,6 +6661,8 @@ async function main() {
           && retryLegacyLearnMigrationResult.errors.length === 0,
         pendingAfterResults: retryQueueFeatureResult.seedQueue?.items?.length || 0,
         existingSavedCountPreserved: retryExistingCountPreservationResult.remaining,
+        correctConfirmation: confirmationQueueResult,
+        permanentImportant: permanentImportantResult,
         positionDependentCanonical: !retryQueueFeatureResult.errors.some((message) => message.includes("Position-dependent")),
         corruptQueueRecovered: retryCorruptRecoveryResult.errors.length === 0,
         screenshots: retryQueueFeatureResult.screenshots

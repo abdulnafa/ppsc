@@ -321,11 +321,17 @@
       ? queue.items.reduce(function (total, item) {
           return total + (item && Number.isFinite(item.remaining) ? item.remaining : 0);
         }, 0) : 0;
+    var importantPractice = Boolean(queue && (
+      Number.isSafeInteger(queue.nextImportantReviewStep)
+      || (Array.isArray(queue.importantDeck) && queue.importantDeck.length > 0)
+      || queue.importantLastQuestionId
+      || (queue.activeAttempt && queue.activeAttempt.kind === "important")
+    ));
     var difficultIds = Array.isArray(difficult) ? difficult
       : difficult && Array.isArray(difficult.questionIds) ? difficult.questionIds
         : difficult && Array.isArray(difficult.ids) ? difficult.ids : [];
     var hasProgress = malformed || sessionCount > 0 || retryCount > 0
-      || Boolean(queue && queue.activeAttempt) || difficultIds.length > 0;
+      || importantPractice || Boolean(queue && queue.activeAttempt) || difficultIds.length > 0;
     var totalBytes = STORAGE_SLOTS.reduce(function (total, slot) {
       return total + (typeof snapshot[slot.key] === "string" ? utf8Length(snapshot[slot.key]) : 0);
     }, 0);
@@ -338,6 +344,7 @@
       sessionCount: sessionCount,
       retryCount: retryCount,
       retryReviews: retryReviews,
+      importantPractice: importantPractice,
       difficultCount: difficultIds.length,
       totalBytes: totalBytes
     };
@@ -353,6 +360,7 @@
         + (summary.sessionCategory ? " · " + summary.sessionCategory : ""));
     }
     if (summary.retryCount) parts.push(summary.retryCount + " queued · " + summary.retryReviews + " reviews left");
+    if (summary.importantPractice) parts.push("global Important practice saved");
     if (summary.difficultCount) parts.push(summary.difficultCount + " difficult questions");
     return parts.length ? parts.join("; ") : "No active session, review queue or difficult marks.";
   }

@@ -74,6 +74,30 @@ const DEDICATED_ATTEMPT_QUEUE_RAW = JSON.stringify({
     context: "dedicated"
   }
 });
+const IMPORTANT_ATTEMPT_QUEUE_RAW = JSON.stringify({
+  version: 1,
+  bankSignature: BANK_SIGNATURE,
+  practiceStep: 20,
+  nextQuizReviewStep: null,
+  nextImportantReviewStep: 34,
+  nextSequence: 1,
+  dedicatedDeck: [],
+  dedicatedLastQuestionId: null,
+  importantDeck: [SECOND_QUESTION_ID],
+  importantLastQuestionId: SAMPLE_QUESTION_ID,
+  items: [],
+  activeAttempt: {
+    questionId: SAMPLE_QUESTION_ID,
+    optionOrder: [2, 0, 3, 1],
+    selectedIndex: 3,
+    submitted: true,
+    outcome: "wrong",
+    wrongIncrement: null,
+    resumeAction: "next:4",
+    context: "embedded",
+    kind: "important"
+  }
+});
 const SAMPLE_DIFFICULT_RAW = JSON.stringify({
   version: 1,
   questionIds: [SAMPLE_QUESTION_ID]
@@ -543,6 +567,40 @@ async function testDedicatedAttemptQueueRoundTrip() {
   );
 }
 
+async function testImportantPracticeRoundTrip() {
+  const store = new Map();
+  const source = createBrowser({
+    store,
+    local: { [RETRY_QUEUE_KEY]: IMPORTANT_ATTEMPT_QUEUE_RAW }
+  });
+  const choice = await waitFor(
+    source,
+    (candidate) => candidate.phase === "migration-choice",
+    "Important practice upload choice"
+  );
+  assert.equal(choice.decision, "device-upload");
+  assert.equal(choice.localSummary.hasProgress, true);
+  assert.equal(choice.localSummary.importantPractice, true);
+  assert.equal(choice.localSummary.retryCount, 0);
+
+  await source.window.PPSC_CLOUD.chooseLocal();
+  await waitFor(source, (candidate) => candidate.phase === "synced", "Important practice upload");
+  assert.equal(
+    rawCloudValue(store, "retry-queue"),
+    IMPORTANT_ATTEMPT_QUEUE_RAW,
+    "permanent Important cadence, deck, marker, and active attempt must upload byte-for-byte"
+  );
+
+  const restored = createBrowser({ store: cloneStore(store), local: {} });
+  const restoredStatus = await waitFor(restored, (candidate) => candidate.ready, "Important practice restore");
+  assert.equal(restoredStatus.localSummary.importantPractice, true);
+  assert.equal(
+    restored.localStorage.getItem(RETRY_QUEUE_KEY),
+    IMPORTANT_ATTEMPT_QUEUE_RAW,
+    "permanent Important state must restore byte-for-byte on another device"
+  );
+}
+
 async function testConflictWaitsForChoice(seedStore) {
   const cloudQueue = rawCloudValue(seedStore, "retry-queue");
   const localQueue = JSON.stringify({
@@ -767,6 +825,7 @@ async function main() {
   await testEmptyFirstDeviceNeedsConfirmation();
   await testCloudRestoreOnEmptyLaptop(cloneStore(seedStore));
   await testDedicatedAttemptQueueRoundTrip();
+  await testImportantPracticeRoundTrip();
   await testConflictWaitsForChoice(cloneStore(seedStore));
   await testAllowedEmailIsEnforcedBeforeFirestore();
   await testStaleRevisionCannotOverwriteCloud(cloneStore(seedStore));
@@ -787,6 +846,7 @@ async function main() {
       "unapproved Google account is rejected before Firestore",
       "legacy retry remaining=2 survives upload and restore",
       "dedicated retry attempt, cadence, and random-round fields round-trip byte-for-byte",
+      "permanent Important cadence, shuffled deck, and active attempt round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",
       "large progress round-trips through integrity-checked chunks",
       "offline local changes upload when the connection returns",

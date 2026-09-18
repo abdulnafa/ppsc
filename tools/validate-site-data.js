@@ -1246,7 +1246,9 @@ function validateRetryQueueContract() {
     ["RETRY_QUEUE_INCREMENT", "5"],
     ["LEGACY_RETRY_QUEUE_INCREMENT", "2"],
     ["RETRY_QUEUE_MIN_SPACING", "5"],
-    ["RETRY_QUEUE_MAX_SPACING", "6"]
+    ["RETRY_QUEUE_MAX_SPACING", "6"],
+    ["IMPORTANT_REVIEW_MIN_SPACING", "10"],
+    ["IMPORTANT_REVIEW_MAX_SPACING", "20"]
   ];
   for (const [name, value] of requiredConstants) {
     const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -1259,7 +1261,11 @@ function validateRetryQueueContract() {
     'elements.globalRetryQueueButton.addEventListener("click", startDedicatedRetryPractice)',
     'learnReviewCountedQuestionIds',
     'if (state.mode === "learn") recordLearnReviewProgress(currentQuestion())',
-    'five or six new Learn or Quiz questions'
+    'five or six new Learn or Quiz questions',
+    'remaining: 1',
+    'kind: "important"',
+    'scheduleNextImportantReview()',
+    'importantQuestionIds'
   ]) {
     if (!app.includes(requiredSnippet)) {
       error(`app.js: missing Learn/global Review Queue contract snippet ${requiredSnippet}`);
@@ -1335,7 +1341,8 @@ function validateCloudSyncContract() {
     'addEventListener("offline"',
     'addEventListener("online"',
     'window.PPSC_CLOUD_APPLYING = true',
-    'window.PPSC_CLOUD_READY = true'
+    'window.PPSC_CLOUD_READY = true',
+    'importantPractice'
   ]) {
     if (!syncSource.includes(requiredSnippet)) error(`firebase-sync.js: missing ${requiredSnippet}`);
   }

@@ -20,6 +20,8 @@
   var LEGACY_RETRY_QUEUE_INCREMENT = 2;
   var RETRY_QUEUE_MIN_SPACING = 5;
   var RETRY_QUEUE_MAX_SPACING = 6;
+  var IMPORTANT_REVIEW_MIN_SPACING = 10;
+  var IMPORTANT_REVIEW_MAX_SPACING = 20;
   var BASIC_COMPUTER_CATEGORY_ID = "basic-computer-studies";
   var COMPUTER_SOURCE_SCOPES = ["all", "initial-original", "initial-related", "other"];
   var data = window.PPSC_QUIZ_DATA || {};
@@ -38,12 +40,17 @@
   var questionsById = new Map(allQuestions.map(function (question) {
     return [String(question.id), question];
   }));
+  var importantQuestionIds = allQuestions.filter(isImportantQuestion).map(function (question) {
+    return String(question.id);
+  });
+  var importantQuestionIdSet = new Set(importantQuestionIds);
   var questionBankSignature = buildQuestionBankSignature();
   var difficultQuestionIds = new Set();
   var activeSessionSnapshot = null;
   var retryQueueState = createEmptyRetryQueueState();
   var retryQueuePractice = { active: false, returnTarget: null };
   var previousOptionOrders = Object.create(null);
+  var previousReviewOptionOrders = Object.create(null);
   var gkNoteSearchEntries = [];
   var gkNotesState = {
     topicId: "all",
@@ -953,9 +960,12 @@
       bankSignature: questionBankSignature,
       practiceStep: 0,
       nextQuizReviewStep: null,
+      nextImportantReviewStep: importantQuestionIds.length > 0 ? randomImportantSpacing() : null,
       nextSequence: 1,
       dedicatedDeck: [],
       dedicatedLastQuestionId: null,
+      importantDeck: [],
+      importantLastQuestionId: null,
       items: [],
       activeAttempt: null
     };
@@ -976,6 +986,20 @@
   function randomRetrySpacing() {
     return RETRY_QUEUE_MIN_SPACING
       + Math.floor(Math.random() * (RETRY_QUEUE_MAX_SPACING - RETRY_QUEUE_MIN_SPACING + 1));
+  }
+
+  function randomImportantSpacing() {
+    return IMPORTANT_REVIEW_MIN_SPACING
+      + Math.floor(Math.random() * (IMPORTANT_REVIEW_MAX_SPACING - IMPORTANT_REVIEW_MIN_SPACING + 1));
+  }
+
+  function scheduleNextImportantReview() {
+    if (importantQuestionIds.length === 0) {
+      retryQueueState.nextImportantReviewStep = null;
+      return null;
+    }
+    retryQueueState.nextImportantReviewStep = retryQueueState.practiceStep + randomImportantSpacing();
+    return retryQueueState.nextImportantReviewStep;
   }
 
   function scheduleNextQuizReview() {
@@ -1035,6 +1059,18 @@
     }
     if (items.length === 0) nextQuizReviewStep = null;
 
+    var nextImportantReviewStep = savedValue.nextImportantReviewStep;
+    if (typeof nextImportantReviewStep === "undefined") {
+      // Start the permanent Important cadence from this upgrade onward. Old
+      // Learn/Quiz activity must never cause an immediate retroactive popup.
+      nextImportantReviewStep = importantQuestionIds.length > 0
+        ? savedValue.practiceStep + randomImportantSpacing()
+        : null;
+    } else if (nextImportantReviewStep !== null && !isSafeWholeNumber(nextImportantReviewStep, 0)) {
+      return null;
+    }
+    if (importantQuestionIds.length === 0) nextImportantReviewStep = null;
+
     var dedicatedDeck = [];
     if (Array.isArray(savedValue.dedicatedDeck)) {
       var dedicatedDeckIds = new Set();
@@ -1055,6 +1091,26 @@
       if (!knownQuestionIds.has(dedicatedLastQuestionId)) dedicatedLastQuestionId = null;
     }
 
+    var importantDeck = [];
+    if (Array.isArray(savedValue.importantDeck)) {
+      var importantDeckIds = new Set();
+      savedValue.importantDeck.forEach(function (savedQuestionId) {
+        var questionId = String(savedQuestionId || "");
+        if (importantQuestionIdSet.has(questionId) && !importantDeckIds.has(questionId)) {
+          importantDeckIds.add(questionId);
+          importantDeck.push(questionId);
+        }
+      });
+    }
+
+    var importantLastQuestionId = savedValue.importantLastQuestionId;
+    if (typeof importantLastQuestionId === "undefined") {
+      importantLastQuestionId = null;
+    } else if (importantLastQuestionId !== null) {
+      importantLastQuestionId = String(importantLastQuestionId || "");
+      if (!importantQuestionIdSet.has(importantLastQuestionId)) importantLastQuestionId = null;
+    }
+
     var activeAttempt = null;
     if (savedValue.activeAttempt !== null) {
       var attempt = savedValue.activeAttempt;
@@ -1063,9 +1119,12 @@
       var canonicalQuestion = questionsById.get(attemptQuestionId);
       var selectedIndex = attempt.selectedIndex;
       var attemptContext = typeof attempt.context === "undefined" ? "embedded" : String(attempt.context);
+      var attemptKind = typeof attempt.kind === "undefined" ? "queue" : String(attempt.kind);
       if (
         !canonicalQuestion
-        || !questionIds.has(attemptQuestionId)
+        || !["queue", "important"].includes(attemptKind)
+        || (attemptKind === "queue" && !questionIds.has(attemptQuestionId))
+        || (attemptKind === "important" && !importantQuestionIdSet.has(attemptQuestionId))
         || !["embedded", "dedicated"].includes(attemptContext)
         || !isIndexPermutation(attempt.optionOrder)
         || (hasPositionDependentOptionWording(canonicalQuestion) && !isCanonicalOptionOrder(attempt.optionOrder))
@@ -1076,6 +1135,7 @@
       if (
         (attemptContext === "dedicated" && attempt.resumeAction !== "queue")
         || (attemptContext === "embedded" && attempt.resumeAction === "queue")
+        || (attemptKind === "important" && attemptContext !== "embedded")
       ) return null;
 
       var reviewQuestion = quizQuestionWithOrder(canonicalQuestion, attempt.optionOrder);
@@ -1088,7 +1148,9 @@
       ) return null;
 
       var wrongIncrement = null;
-      if (attempt.submitted && expectedOutcome === "wrong") {
+      if (attemptKind === "important") {
+        if (typeof attempt.wrongIncrement !== "undefined" && attempt.wrongIncrement !== null) return null;
+      } else if (attempt.submitted && expectedOutcome === "wrong") {
         if (typeof attempt.wrongIncrement === "undefined") {
           wrongIncrement = LEGACY_RETRY_QUEUE_INCREMENT;
         } else if (![LEGACY_RETRY_QUEUE_INCREMENT, RETRY_QUEUE_INCREMENT].includes(attempt.wrongIncrement)) {
@@ -1108,9 +1170,15 @@
         outcome: attempt.outcome,
         wrongIncrement: wrongIncrement,
         resumeAction: String(attempt.resumeAction),
-        context: attemptContext
+        context: attemptContext,
+        kind: attemptKind
       };
-      if (attemptContext === "dedicated") {
+      if (attemptKind === "important") {
+        importantDeck = importantDeck.filter(function (questionId) {
+          return questionId !== attemptQuestionId;
+        });
+        importantLastQuestionId = attemptQuestionId;
+      } else if (attemptContext === "dedicated") {
         dedicatedDeck = dedicatedDeck.filter(function (questionId) {
           return questionId !== attemptQuestionId;
         });
@@ -1118,7 +1186,7 @@
       // Older saved embedded attempts did not persist a last-presented marker.
       // Anchor either restored context so its next shuffled review can avoid
       // an immediate repeat whenever another due question is available.
-      dedicatedLastQuestionId = attemptQuestionId;
+      if (attemptKind === "queue") dedicatedLastQuestionId = attemptQuestionId;
     }
 
     if (items.length === 0) {
@@ -1131,9 +1199,12 @@
       bankSignature: questionBankSignature,
       practiceStep: savedValue.practiceStep,
       nextQuizReviewStep: nextQuizReviewStep,
+      nextImportantReviewStep: nextImportantReviewStep,
       nextSequence: savedValue.nextSequence,
       dedicatedDeck: dedicatedDeck,
       dedicatedLastQuestionId: dedicatedLastQuestionId,
+      importantDeck: importantDeck,
+      importantLastQuestionId: importantLastQuestionId,
       items: items,
       activeAttempt: activeAttempt
     };
@@ -1219,7 +1290,7 @@
     }
     if (elements.retryQueueCardMeta) {
       elements.retryQueueCardMeta.textContent = allItemCount === 0
-        ? "No reviews waiting \u2014 wrong Quiz answers will appear here."
+        ? "No reviews waiting \u2014 new Quiz answers will add confirmation practice here."
         : dedicatedCardPrefix
           + allRemaining + (allRemaining === 1 ? " review" : " reviews")
           + " across " + allItemCount + (allItemCount === 1 ? " question" : " questions");
@@ -1313,10 +1384,14 @@
       )
     ) return null;
     retryQueueState.practiceStep += 1;
-    var item = null;
-    if (wrongAnswer) {
-      var questionId = String(question.id);
-      item = retryQueueItem(questionId);
+    if (retryQueueState.nextImportantReviewStep === null && importantQuestionIds.length > 0) {
+      scheduleNextImportantReview();
+    }
+    var questionId = String(question.id);
+    var item = retryQueueItem(questionId);
+    var queueChanged = false;
+    var quizAnswer = state.mode === "quiz";
+    if (quizAnswer && wrongAnswer) {
       var nextDueStep = retryQueueState.practiceStep + randomRetrySpacing();
       if (item) {
         item.remaining += RETRY_QUEUE_INCREMENT;
@@ -1330,16 +1405,32 @@
         };
         retryQueueState.items.push(item);
       }
+      queueChanged = true;
       if (retryQueueState.nextQuizReviewStep === null) {
         retryQueueState.nextQuizReviewStep = nextDueStep;
       }
+    } else if (quizAnswer && !item) {
+      var confirmationDueStep = retryQueueState.practiceStep + randomRetrySpacing();
+      item = {
+        questionId: questionId,
+        remaining: 1,
+        dueStep: confirmationDueStep,
+        sequence: nextRetrySequence()
+      };
+      retryQueueState.items.push(item);
+      queueChanged = true;
+      if (retryQueueState.nextQuizReviewStep === null) {
+        retryQueueState.nextQuizReviewStep = confirmationDueStep;
+      }
     }
-    saveRetryQueue(wrongAnswer
+    saveRetryQueue(queueChanged && wrongAnswer
       ? (isUrduCategoryQuestion(question)
         ? "دہرائی کی قطار اپ ڈیٹ ہو گئی ہے۔ اس سوال کے " + item.remaining + " درست جواب باقی ہیں۔"
         : "Review queue updated. This question needs " + item.remaining + " correct reviews.")
-      : "");
-    return item;
+      : (queueChanged
+        ? "One confirmation review was added for this correct Quiz answer."
+        : ""));
+    return { item: item, queueChanged: queueChanged };
   }
 
   function dueRetryQueueItem(excludedQuestionId) {
@@ -1367,10 +1458,55 @@
     return fisherYates(eligibleItems)[0] || null;
   }
 
+  function refillImportantReviewDeck() {
+    var shuffledIds = fisherYates(importantQuestionIds);
+    var previousQuestionId = retryQueueState.importantLastQuestionId;
+    if (shuffledIds.length > 1 && shuffledIds[0] === previousQuestionId) {
+      shuffledIds.push(shuffledIds.shift());
+    }
+    retryQueueState.importantDeck = shuffledIds;
+  }
+
+  function nextImportantReviewQuestionId(excludedQuestionId) {
+    retryQueueState.importantDeck = retryQueueState.importantDeck.filter(function (questionId, index, deck) {
+      return importantQuestionIdSet.has(questionId) && deck.indexOf(questionId) === index;
+    });
+    if (retryQueueState.importantDeck.length === 0) refillImportantReviewDeck();
+    if (retryQueueState.importantDeck.length === 0) return null;
+
+    var avoidIds = [
+      String(excludedQuestionId || ""),
+      String(retryQueueState.importantLastQuestionId || "")
+    ].filter(Boolean);
+    if (retryQueueState.importantDeck.length > 1 && avoidIds.includes(retryQueueState.importantDeck[0])) {
+      var alternativeIndex = retryQueueState.importantDeck.findIndex(function (questionId) {
+        return !avoidIds.includes(questionId);
+      });
+      if (alternativeIndex > 0) {
+        var alternativeQuestionId = retryQueueState.importantDeck.splice(alternativeIndex, 1)[0];
+        retryQueueState.importantDeck.unshift(alternativeQuestionId);
+      }
+    }
+    return retryQueueState.importantDeck.shift() || null;
+  }
+
+  function isImportantReviewDue() {
+    return Boolean(
+      activeRetryCategoryId()
+      && retryQueueState.nextImportantReviewStep !== null
+      && retryQueueState.practiceStep >= retryQueueState.nextImportantReviewStep
+      && importantQuestionIds.length > 0
+    );
+  }
+
   function retryQuestionForAttempt(attempt) {
     if (!attempt) return null;
     var canonicalQuestion = questionsById.get(String(attempt.questionId));
     return canonicalQuestion ? quizQuestionWithOrder(canonicalQuestion, attempt.optionOrder) : null;
+  }
+
+  function isImportantPracticeAttempt(attempt) {
+    return Boolean(attempt && attempt.kind === "important");
   }
 
   function resetRetryFeedback() {
@@ -1469,7 +1605,7 @@
       return total + entry.remaining;
     }, 0);
     var item = attempt ? retryQueueItem(attempt.questionId) : null;
-    if (item && attempt.submitted) {
+    if (item && attempt.submitted && !isImportantPracticeAttempt(attempt)) {
       if (attempt.outcome === "correct") {
         remaining = Math.max(0, remaining - 1);
         if (item.remaining === 1) itemCount -= 1;
@@ -1483,10 +1619,16 @@
   function updateRetryDialogQueueMeta(attempt, urduQuestion) {
     if (!elements.retryDialogQueueMeta) return;
     var totals = projectedRetryQueueTotals(attempt);
-    elements.retryDialogQueueMeta.textContent = urduQuestion
-      ? "قطار میں " + totals.remaining + " دہرائیاں، " + totals.itemCount + " سوال"
-      : totals.remaining + (totals.remaining === 1 ? " review" : " reviews")
-        + " across " + totals.itemCount + (totals.itemCount === 1 ? " question" : " questions");
+    if (isImportantPracticeAttempt(attempt)) {
+      elements.retryDialogQueueMeta.textContent = urduQuestion
+        ? "مستقل اہم مشق — قطار کی گنتی تبدیل نہیں ہوگی"
+        : "Permanent Important practice · Review Queue totals stay unchanged";
+    } else {
+      elements.retryDialogQueueMeta.textContent = urduQuestion
+        ? "قطار میں " + totals.remaining + " دہرائیاں، " + totals.itemCount + " سوال"
+        : totals.remaining + (totals.remaining === 1 ? " review" : " reviews")
+          + " across " + totals.itemCount + (totals.itemCount === 1 ? " question" : " questions");
+    }
     elements.retryDialogQueueMeta.lang = urduQuestion ? "ur" : "en";
     elements.retryDialogQueueMeta.dir = urduQuestion ? "rtl" : "ltr";
   }
@@ -1499,6 +1641,14 @@
 
   function updateRetryAttemptProgress(item, attempt, urduQuestion) {
     if (!elements.retryDialogProgress) return;
+    if (isImportantPracticeAttempt(attempt)) {
+      elements.retryDialogProgress.textContent = urduQuestion
+        ? "یہ اہم سوال مستقل مشق میں رہے گا"
+        : "This Important MCQ stays in the permanent global rotation";
+      elements.retryDialogProgress.lang = urduQuestion ? "ur" : "en";
+      elements.retryDialogProgress.dir = urduQuestion ? "rtl" : "ltr";
+      return;
+    }
     var remaining = projectedRetryRemaining(item, attempt);
     if (urduQuestion) {
       elements.retryDialogProgress.textContent = remaining === 0
@@ -1540,6 +1690,7 @@
     var wrongIncrement = retryWrongIncrement(attempt);
     var correctOption = displayOption(question, question.correctOptionIndex);
     var urduQuestion = isUrduCategoryQuestion(question);
+    var importantPractice = isImportantPracticeAttempt(attempt);
     elements.retryFeedback.classList.remove("is-warning", "is-correct", "is-incorrect");
     elements.retryFeedback.classList.add(correct ? "is-correct" : "is-incorrect");
     elements.retryFeedback.classList.toggle("is-urdu", urduQuestion);
@@ -1552,7 +1703,17 @@
         : (correct ? "Correct!" : "Incorrect");
     }
     if (elements.retryFeedbackText) {
-      elements.retryFeedbackText.textContent = urduQuestion
+      elements.retryFeedbackText.textContent = importantPractice
+        ? (urduQuestion
+          ? (correct
+            ? "بہت خوب۔ یہ اہم سوال مستقل مشق میں رہے گا اور قطار کی گنتی تبدیل نہیں ہوگی۔"
+            : "درست جواب " + correctOption.label + "۔ " + correctOption.text
+              + " ہے۔ یہ اہم سوال مستقل مشق میں رہے گا اور قطار کی گنتی تبدیل نہیں ہوگی۔")
+          : (correct
+            ? "Well done. This Important MCQ stays in permanent practice; Review Queue totals will not change."
+            : "The correct answer is " + correctOption.label + ". " + correctOption.text
+              + ". This Important MCQ stays in permanent practice; Review Queue totals will not change."))
+        : (urduQuestion
         ? (correct
           ? "بہت خوب۔ جاری رکھنے پر ایک دہرائی مکمل ہو جائے گی۔"
           : "درست جواب " + correctOption.label + "۔ " + correctOption.text + " ہے۔ جاری رکھنے پر "
@@ -1560,7 +1721,7 @@
         : (correct
           ? "Well done. One required review will be completed when you continue."
           : "The correct answer is " + correctOption.label + ". " + correctOption.text
-            + ". " + wrongIncrement + " extra reviews will be added when you continue.");
+            + ". " + wrongIncrement + " extra reviews will be added when you continue."));
     }
   }
 
@@ -1568,9 +1729,10 @@
     var attempt = retryQueueState.activeAttempt;
     var item = attempt ? retryQueueItem(attempt.questionId) : null;
     var question = retryQuestionForAttempt(attempt);
+    var importantPractice = isImportantPracticeAttempt(attempt);
     if (
       !attempt
-      || !item
+      || (!importantPractice && !item)
       || !question
       || !elements.retryDialog
       || !activeRetryAttemptMatchesSession()
@@ -1585,10 +1747,11 @@
     }
     elements.retryDialog.classList.toggle("is-urdu", urduQuestion);
     elements.retryDialog.classList.toggle("is-dedicated", dedicatedPractice);
+    elements.retryDialog.classList.toggle("is-important-practice", importantPractice);
     if (elements.retryDialogTitle) {
       elements.retryDialogTitle.textContent = urduQuestion
-        ? "فوری دہرائی"
-        : (dedicatedPractice ? "Review Queue Practice" : "Quick review");
+        ? (importantPractice ? "اہم سوال کی مستقل مشق" : "فوری دہرائی")
+        : (importantPractice ? "Global Important Practice" : (dedicatedPractice ? "Review Queue Practice" : "Quick review"));
       elements.retryDialogTitle.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogTitle.dir = urduQuestion ? "rtl" : "ltr";
     }
@@ -1597,8 +1760,8 @@
 
     if (elements.retryQuestionKind) {
       elements.retryQuestionKind.textContent = urduQuestion
-        ? "دہرائی کا سوال"
-        : (dedicatedPractice ? "RANDOM QUEUE PRACTICE" : "REVIEW QUEUE")
+        ? (importantPractice ? "تمام زمروں کا اہم سوال" : "دہرائی کا سوال")
+        : (importantPractice ? "PERMANENT IMPORTANT" : (dedicatedPractice ? "RANDOM QUEUE PRACTICE" : "REVIEW QUEUE"))
           + (categorySelectionLabel ? " \u00b7 " + categorySelectionLabel.toUpperCase() : "");
       elements.retryQuestionKind.classList.toggle("is-important", isImportantQuestion(question));
       elements.retryQuestionKind.lang = urduQuestion ? "ur" : "en";
@@ -1632,16 +1795,20 @@
 
     if (elements.retryDialogHelp) {
       elements.retryDialogHelp.textContent = urduQuestion
-        ? (attempt.submitted
+        ? (importantPractice
+          ? "درست یا غلط، یہ اہم سوال مستقل مشق میں رہے گا اور عام قطار کی گنتی نہیں بدلے گا۔"
+          : (attempt.submitted
           ? "اپنے سیشن پر واپس جانے کے لیے جاری رکھیں۔"
-          : "یہ دہرائی آپ کے اصل اسکور کو تبدیل نہیں کرے گی۔")
-        : (dedicatedPractice
+          : "یہ دہرائی آپ کے اصل اسکور کو تبدیل نہیں کرے گی۔"))
+        : (importantPractice
+          ? "Correct or wrong, this Important MCQ stays in global practice and never changes finite Queue totals."
+          : (dedicatedPractice
           ? (attempt.submitted
             ? "Continue for the next random queued review."
             : "A correct answer removes one review; a wrong answer adds five. Your current screen and session stay unchanged.")
           : (attempt.submitted
             ? "Continue to return to your session."
-            : "This review does not change your Learn or Quiz progress."));
+            : "This review does not change your Learn or Quiz progress.")));
       elements.retryDialogHelp.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogHelp.dir = urduQuestion ? "rtl" : "ltr";
     }
@@ -1776,7 +1943,7 @@
     }
     var canonicalQuestion = questionsById.get(item.questionId);
     if (!canonicalQuestion) return false;
-    var reviewQuestion = shuffledQuizQuestion(canonicalQuestion);
+    var reviewQuestion = shuffledReviewQuestion(canonicalQuestion);
     if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
     retryQueueState.dedicatedLastQuestionId = item.questionId;
     retryQueueState.activeAttempt = {
@@ -1787,7 +1954,8 @@
       outcome: null,
       wrongIncrement: null,
       resumeAction: "queue",
-      context: "dedicated"
+      context: "dedicated",
+      kind: "queue"
     };
     saveRetryQueue();
     return renderRetryAttempt() && openRetryDialog();
@@ -1816,6 +1984,36 @@
     return beginDedicatedRetryAttempt();
   }
 
+  function beginDueImportantAttempt(resumeAction, excludedQuestionId) {
+    if (!elements.retryDialog || !activeRetryCategoryId() || resumeAction === "results") return false;
+    if (retryQueueState.activeAttempt) {
+      if (activeRetryAttemptMatchesSession()) {
+        return renderRetryAttempt() && openRetryDialog();
+      }
+      releaseActiveRetryAttempt();
+    }
+    if (!isImportantReviewDue()) return false;
+    var questionId = nextImportantReviewQuestionId(excludedQuestionId);
+    var canonicalQuestion = questionId ? questionsById.get(questionId) : null;
+    if (!canonicalQuestion || !isImportantQuestion(canonicalQuestion)) return false;
+    var reviewQuestion = shuffledReviewQuestion(canonicalQuestion);
+    if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
+    retryQueueState.importantLastQuestionId = questionId;
+    retryQueueState.activeAttempt = {
+      questionId: questionId,
+      optionOrder: reviewQuestion._sessionOptionOrder.slice(),
+      selectedIndex: null,
+      submitted: false,
+      outcome: null,
+      wrongIncrement: null,
+      resumeAction: resumeAction,
+      context: "embedded",
+      kind: "important"
+    };
+    saveRetryQueue();
+    return renderRetryAttempt() && openRetryDialog();
+  }
+
   function beginDueRetryAttempt(resumeAction, excludedQuestionId) {
     if (!elements.retryDialog || !activeRetryCategoryId()) return false;
     if (resumeAction === "results") return false;
@@ -1829,7 +2027,7 @@
     if (!item) return false;
     var canonicalQuestion = questionsById.get(item.questionId);
     if (!canonicalQuestion) return false;
-    var reviewQuestion = shuffledQuizQuestion(canonicalQuestion);
+    var reviewQuestion = shuffledReviewQuestion(canonicalQuestion);
     if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
     scheduleNextQuizReview();
     // This legacy field now protects spacing across both embedded and dedicated
@@ -1843,7 +2041,8 @@
       outcome: null,
       wrongIncrement: null,
       resumeAction: resumeAction,
-      context: "embedded"
+      context: "embedded",
+      kind: "queue"
     };
     saveRetryQueue();
     return renderRetryAttempt() && openRetryDialog();
@@ -1881,14 +2080,15 @@
     var attempt = retryQueueState.activeAttempt;
     var item = attempt ? retryQueueItem(attempt.questionId) : null;
     var question = retryQuestionForAttempt(attempt);
-    if (!attempt || !item || !question || attempt.submitted) return;
+    var importantPractice = isImportantPracticeAttempt(attempt);
+    if (!attempt || (!importantPractice && !item) || !question || attempt.submitted) return;
     if (attempt.selectedIndex === null) {
       showRetrySelectionPrompt(question);
       return;
     }
     attempt.submitted = true;
     attempt.outcome = attempt.selectedIndex === question.correctOptionIndex ? "correct" : "wrong";
-    attempt.wrongIncrement = attempt.outcome === "wrong" ? RETRY_QUEUE_INCREMENT : null;
+    attempt.wrongIncrement = !importantPractice && attempt.outcome === "wrong" ? RETRY_QUEUE_INCREMENT : null;
     saveRetryQueue();
     markRetrySubmittedOptions(question, attempt.selectedIndex);
     showRetryFeedback(question, attempt);
@@ -1947,8 +2147,17 @@
   function completeRetryAttempt() {
     var attempt = retryQueueState.activeAttempt;
     var item = attempt ? retryQueueItem(attempt.questionId) : null;
-    if (!attempt || !item || !attempt.submitted) return;
+    if (!attempt || !attempt.submitted) return;
     var resumeAction = attempt.resumeAction;
+    if (isImportantPracticeAttempt(attempt)) {
+      retryQueueState.activeAttempt = null;
+      scheduleNextImportantReview();
+      saveRetryQueue("Important practice saved. This MCQ remains in the permanent global rotation.");
+      closeRetryDialog();
+      performRetryResumeAction(resumeAction);
+      return;
+    }
+    if (!item) return;
     var dedicatedPractice = attempt.context === "dedicated";
     var mastered = applyRetryAttemptOutcome(attempt, item);
     if (!mastered) {
@@ -1987,11 +2196,24 @@
   function postponeRetryAttempt() {
     var attempt = retryQueueState.activeAttempt;
     var item = attempt ? retryQueueItem(attempt.questionId) : null;
-    if (!attempt || !item) return;
+    if (!attempt) return;
     if (attempt.submitted) {
       completeRetryAttempt();
       return;
     }
+    if (isImportantPracticeAttempt(attempt)) {
+      if (!retryQueueState.importantDeck.includes(attempt.questionId)) {
+        retryQueueState.importantDeck.push(attempt.questionId);
+      }
+      var importantResumeAction = attempt.resumeAction;
+      retryQueueState.activeAttempt = null;
+      scheduleNextImportantReview();
+      saveRetryQueue("Important practice postponed. It remains in the permanent global rotation.");
+      closeRetryDialog();
+      performRetryResumeAction(importantResumeAction);
+      return;
+    }
+    if (!item) return;
     if (attempt.context === "dedicated") {
       retryQueueState.activeAttempt = null;
       saveRetryQueue("Review Queue practice ended. No review was removed.");
@@ -2056,6 +2278,17 @@
   function releaseActiveRetryAttempt() {
     if (!retryQueueState.activeAttempt) return;
     var attempt = retryQueueState.activeAttempt;
+    if (isImportantPracticeAttempt(attempt)) {
+      if (!attempt.submitted && !retryQueueState.importantDeck.includes(attempt.questionId)) {
+        retryQueueState.importantDeck.push(attempt.questionId);
+      }
+      retryQueueState.activeAttempt = null;
+      scheduleNextImportantReview();
+      saveRetryQueue();
+      closeRetryDialog();
+      resetDedicatedRetryPractice();
+      return;
+    }
     var item = retryQueueItem(attempt.questionId);
     var mastered = false;
     if (item && attempt.submitted) {
@@ -4186,9 +4419,9 @@
     });
   }
 
-  function shuffledQuizQuestion(question) {
+  function shuffledQuestionWithHistory(question, orderHistory) {
     if (hasPositionDependentOptionWording(question)) {
-      previousOptionOrders[question.id] = orderKey(CANONICAL_OPTION_ORDER, function (originalIndex) {
+      orderHistory[question.id] = orderKey(CANONICAL_OPTION_ORDER, function (originalIndex) {
         return originalIndex;
       });
       return quizQuestionWithOrder(question, CANONICAL_OPTION_ORDER);
@@ -4200,16 +4433,24 @@
     var shuffledEntries = shuffledOrder(
       optionEntries,
       function (entry) { return entry.originalIndex; },
-      previousOptionOrders[question.id]
+      orderHistory[question.id]
     );
     var optionOrder = shuffledEntries.map(function (entry) {
       return entry.originalIndex;
     });
-    previousOptionOrders[question.id] = orderKey(optionOrder, function (originalIndex) {
+    orderHistory[question.id] = orderKey(optionOrder, function (originalIndex) {
       return originalIndex;
     });
 
     return quizQuestionWithOrder(question, optionOrder);
+  }
+
+  function shuffledQuizQuestion(question) {
+    return shuffledQuestionWithHistory(question, previousOptionOrders);
+  }
+
+  function shuffledReviewQuestion(question) {
+    return shuffledQuestionWithHistory(question, previousReviewOptionOrders);
   }
 
   function setQuizSessionLabel() {
@@ -4437,7 +4678,7 @@
         markSubmittedOptions(question);
         var restoredAnswerIsCorrect = state.selectedIndex === question.correctOptionIndex;
         showFeedback(question, restoredAnswerIsCorrect);
-        if (!restoredAnswerIsCorrect && isRetryEligibleStudySession()) {
+        if (isRetryEligibleStudySession()) {
           var restoredRetryItem = retryQueueItem(question.id);
           if (restoredRetryItem) appendMainRetryQueueNotice(question, restoredRetryItem);
         }
@@ -4608,6 +4849,7 @@
       resumeAction = "next:" + (state.currentIndex + 1);
     }
 
+    if (beginDueImportantAttempt(resumeAction, completedQuestionId)) return;
     if (beginDueRetryAttempt(resumeAction, completedQuestionId)) return;
     performRetryResumeAction(resumeAction);
   }
@@ -4663,11 +4905,13 @@
     state.submitted = true;
     var isCorrect = state.selectedIndex === question.correctOptionIndex;
     storeCurrentResponse();
-    var queuedRetryItem = recordMainPractice(question, !isCorrect);
+    var queueUpdate = recordMainPractice(question, !isCorrect);
 
     markSubmittedOptions(question);
     showFeedback(question, isCorrect);
-    if (!isCorrect && queuedRetryItem) appendMainRetryQueueNotice(question, queuedRetryItem);
+    if (queueUpdate && queueUpdate.queueChanged && queueUpdate.item) {
+      appendMainRetryQueueNotice(question, queueUpdate.item);
+    }
     updateProgress();
 
     if (elements.actionButton) {
