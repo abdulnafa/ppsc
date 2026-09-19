@@ -1263,6 +1263,9 @@ function validateRetryQueueContract() {
     'if (state.mode === "learn") recordLearnReviewProgress(currentQuestion())',
     'five or six new Learn or Quiz questions',
     'remaining: 1',
+    'function prioritizedRetryItems(items, excludedQuestionId, allowExcludedFallback)',
+    'return Math.max(highest, item.remaining);',
+    'PRIORITY QUEUE PRACTICE',
     'kind: "important"',
     'scheduleNextImportantReview()',
     'importantQuestionIds'

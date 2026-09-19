@@ -555,7 +555,7 @@ async function testDedicatedAttemptQueueRoundTrip() {
   assert.equal(
     rawCloudValue(store, "retry-queue"),
     DEDICATED_ATTEMPT_QUEUE_RAW,
-    "new queue cadence, random-round, and dedicated-attempt fields must upload byte-for-byte"
+    "new queue cadence, priority-tie deck, and dedicated-attempt fields must upload byte-for-byte"
   );
 
   const restored = createBrowser({ store: cloneStore(store), local: {} });
@@ -563,7 +563,7 @@ async function testDedicatedAttemptQueueRoundTrip() {
   assert.equal(
     restored.localStorage.getItem(RETRY_QUEUE_KEY),
     DEDICATED_ATTEMPT_QUEUE_RAW,
-    "new queue cadence, random-round, and dedicated-attempt fields must restore byte-for-byte"
+    "new queue cadence, priority-tie deck, and dedicated-attempt fields must restore byte-for-byte"
   );
 }
 
@@ -845,7 +845,7 @@ async function main() {
       "different local/cloud progress waits for owner choice",
       "unapproved Google account is rejected before Firestore",
       "legacy retry remaining=2 survives upload and restore",
-      "dedicated retry attempt, cadence, and random-round fields round-trip byte-for-byte",
+      "dedicated retry attempt, cadence, and priority-tie deck fields round-trip byte-for-byte",
       "permanent Important cadence, shuffled deck, and active attempt round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",
       "large progress round-trips through integrity-checked chunks",

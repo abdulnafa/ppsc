@@ -1184,8 +1184,8 @@
         });
       }
       // Older saved embedded attempts did not persist a last-presented marker.
-      // Anchor either restored context so its next shuffled review can avoid
-      // an immediate repeat whenever another due question is available.
+      // Anchor either restored context so the next equal-priority tie can avoid
+      // an immediate repeat; a unique highest-count item may repeat by design.
       if (attemptKind === "queue") dedicatedLastQuestionId = attemptQuestionId;
     }
 
@@ -1433,29 +1433,43 @@
     return { item: item, queueChanged: queueChanged };
   }
 
+  function prioritizedRetryItems(items, excludedQuestionId, allowExcludedFallback) {
+    var excludedId = String(excludedQuestionId || "");
+    var eligibleItems = items.filter(function (item) {
+      return item.questionId !== excludedId;
+    });
+    if (eligibleItems.length === 0 && allowExcludedFallback) {
+      eligibleItems = items.slice();
+    }
+    var highestRemaining = eligibleItems.reduce(function (highest, item) {
+      return Math.max(highest, item.remaining);
+    }, 0);
+    var highestPriorityItems = eligibleItems.filter(function (item) {
+      return item.remaining === highestRemaining;
+    });
+    if (highestPriorityItems.length > 1 && retryQueueState.dedicatedLastQuestionId) {
+      var withoutPreviousTie = highestPriorityItems.filter(function (item) {
+        return item.questionId !== retryQueueState.dedicatedLastQuestionId;
+      });
+      if (withoutPreviousTie.length > 0) highestPriorityItems = withoutPreviousTie;
+    }
+    return fisherYates(highestPriorityItems);
+  }
+
   function dueRetryQueueItem(excludedQuestionId) {
     if (!activeRetryCategoryId()) return null;
     if (
       retryQueueState.nextQuizReviewStep === null
       || retryQueueState.practiceStep < retryQueueState.nextQuizReviewStep
     ) return null;
-    var excludedId = String(excludedQuestionId || "");
     var dueItems = retryQueueState.items.filter(function (item) {
       return item.dueStep <= retryQueueState.practiceStep;
     });
-    var eligibleItems = dueItems.filter(function (item) {
-      return item.questionId !== excludedId;
-    });
-    if (eligibleItems.length === 0 && state.questions.length === 1) {
-      eligibleItems = dueItems.slice();
-    }
-    if (eligibleItems.length > 1 && retryQueueState.dedicatedLastQuestionId) {
-      var withoutPrevious = eligibleItems.filter(function (item) {
-        return item.questionId !== retryQueueState.dedicatedLastQuestionId;
-      });
-      if (withoutPrevious.length > 0) eligibleItems = withoutPrevious;
-    }
-    return fisherYates(eligibleItems)[0] || null;
+    return prioritizedRetryItems(
+      dueItems,
+      excludedQuestionId,
+      state.questions.length === 1
+    )[0] || null;
   }
 
   function refillImportantReviewDeck() {
@@ -1761,7 +1775,7 @@
     if (elements.retryQuestionKind) {
       elements.retryQuestionKind.textContent = urduQuestion
         ? (importantPractice ? "تمام زمروں کا اہم سوال" : "دہرائی کا سوال")
-        : (importantPractice ? "PERMANENT IMPORTANT" : (dedicatedPractice ? "RANDOM QUEUE PRACTICE" : "REVIEW QUEUE"))
+        : (importantPractice ? "PERMANENT IMPORTANT" : (dedicatedPractice ? "PRIORITY QUEUE PRACTICE" : "REVIEW QUEUE"))
           + (categorySelectionLabel ? " \u00b7 " + categorySelectionLabel.toUpperCase() : "");
       elements.retryQuestionKind.classList.toggle("is-important", isImportantQuestion(question));
       elements.retryQuestionKind.lang = urduQuestion ? "ur" : "en";
@@ -1804,7 +1818,7 @@
           ? "Correct or wrong, this Important MCQ stays in global practice and never changes finite Queue totals."
           : (dedicatedPractice
           ? (attempt.submitted
-            ? "Continue for the next random queued review."
+            ? "Continue to the waiting MCQ with the highest remaining count."
             : "A correct answer removes one review; a wrong answer adds five. Your current screen and session stay unchanged.")
           : (attempt.submitted
             ? "Continue to return to your session."
@@ -1872,23 +1886,22 @@
   }
 
   function refillDedicatedRetryDeck() {
-    var liveQuestionIds = retryQueueState.items.map(function (item) {
+    retryQueueState.dedicatedDeck = prioritizedRetryItems(
+      retryQueueState.items,
+      "",
+      true
+    ).map(function (item) {
       return item.questionId;
     });
-    var shuffledIds = fisherYates(liveQuestionIds);
-    var previousQuestionId = retryQueueState.dedicatedLastQuestionId;
-    if (shuffledIds.length > 1 && shuffledIds.includes(previousQuestionId)) {
-      shuffledIds = shuffledIds.filter(function (questionId) {
-        return questionId !== previousQuestionId;
-      });
-      shuffledIds.push(previousQuestionId);
-    }
-    retryQueueState.dedicatedDeck = shuffledIds;
   }
 
   function nextDedicatedRetryItem() {
-    retryQueueState.dedicatedDeck = retryQueueState.dedicatedDeck.filter(function (questionId) {
-      return Boolean(retryQueueItem(questionId));
+    var prioritizedItems = prioritizedRetryItems(retryQueueState.items, "", true);
+    var prioritizedIds = prioritizedItems.map(function (item) {
+      return item.questionId;
+    });
+    retryQueueState.dedicatedDeck = retryQueueState.dedicatedDeck.filter(function (questionId, index, deck) {
+      return prioritizedIds.includes(questionId) && deck.indexOf(questionId) === index;
     });
     if (retryQueueState.dedicatedDeck.length === 0) refillDedicatedRetryDeck();
     while (retryQueueState.dedicatedDeck.length > 0) {
@@ -2030,8 +2043,8 @@
     var reviewQuestion = shuffledReviewQuestion(canonicalQuestion);
     if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
     scheduleNextQuizReview();
-    // This legacy field now protects spacing across both embedded and dedicated
-    // queue practice, while remaining compatible with every saved v1 queue.
+    // This legacy field now avoids back-to-back equal-priority ties across both
+    // embedded and dedicated practice while remaining compatible with v1 saves.
     retryQueueState.dedicatedLastQuestionId = item.questionId;
     retryQueueState.activeAttempt = {
       questionId: item.questionId,
@@ -2179,7 +2192,7 @@
     saveRetryQueue(mastered
       ? "Review complete. This question has left the queue."
       : (dedicatedPractice
-        ? "Review saved. It will return in a later random round."
+        ? "Review saved. The next highest-count waiting MCQ will be shown."
         : "Review saved. Another review can appear after five or six new Learn or Quiz questions."));
     closeRetryDialog();
     if (dedicatedPractice) {

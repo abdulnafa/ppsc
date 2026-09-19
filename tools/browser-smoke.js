@@ -818,7 +818,7 @@ async function main() {
       : { errors: [] };
 
     // Current retry behavior uses one persisted 5-or-6-question gate for embedded Learn/Quiz
-    // reviews and a separate, randomized Review Queue practice surface.
+    // reviews and a separate, highest-remaining-first Review Queue surface.
     await client.evaluate(`(() => {
       localStorage.removeItem("ppsc-prep:active-session:v1");
       localStorage.removeItem("ppsc-prep:retry-queue:v1");
@@ -1099,6 +1099,7 @@ async function main() {
           dueStep: 0,
           sequence: index + 1
         })),
+        dedicatedDeck: [uniqueIds[2]],
         activeAttempt: null
       };
       localStorage.removeItem("ppsc-prep:active-session:v1");
@@ -1215,24 +1216,29 @@ async function main() {
       const attempt = stored?.activeAttempt;
       const dialog = document.querySelector("#retry-dialog");
       const firstId = String(attempt?.questionId || "");
+      const highestRemaining = Math.max(...expected.savedRemaining);
+      const highestIds = expected.ids.filter((questionId, index) => expected.savedRemaining[index] === highestRemaining);
       const persistedSpacing = stored?.nextQuizReviewStep === null || !stored
         ? null
         : stored.nextQuizReviewStep - stored.practiceStep;
       if (!dialog?.open || attempt?.context !== "dedicated" || attempt.resumeAction !== "queue"
         || document.querySelector("#retry-dialog-title")?.textContent !== "Review Queue Practice"
         || document.querySelector("#retry-later-button")?.textContent !== "End practice"
-        || !document.querySelector("#retry-question-kind")?.textContent.includes("RANDOM QUEUE PRACTICE")) {
-        errors.push("Review Queue card did not open the dedicated random-practice dialog.");
+        || !document.querySelector("#retry-question-kind")?.textContent.includes("PRIORITY QUEUE PRACTICE")) {
+        errors.push("Review Queue card did not open the dedicated priority-practice dialog.");
       }
-      if (firstId === expected.ids[0] || !expected.ids.includes(firstId)) {
-        errors.push("Dedicated Review Queue did not use its shuffled question deck.");
+      if (!highestIds.includes(firstId)) {
+        errors.push("Dedicated Review Queue did not select from the highest remaining-count MCQs first.");
+      }
+      if (highestIds.length !== 2 || firstId !== highestIds[1]) {
+        errors.push("Dedicated Review Queue did not shuffle the equal highest-count tie deterministically.");
       }
       if (![5, 6].includes(persistedSpacing)
         || stored?.dedicatedLastQuestionId !== firstId
-        || stored?.dedicatedDeck?.length !== expected.ids.length - 1
+        || stored?.dedicatedDeck?.length !== highestIds.length - 1
         || stored.dedicatedDeck.includes(firstId)
-        || stored.dedicatedDeck.some((questionId) => !expected.ids.includes(questionId))) {
-        errors.push("Opening dedicated practice did not persist its unseen round remainder and cadence gate.");
+        || stored.dedicatedDeck.some((questionId) => !highestIds.includes(questionId))) {
+        errors.push("Opening dedicated practice did not persist its shuffled highest-count tie remainder and cadence gate.");
       }
       if (localStorage.getItem("ppsc-prep:active-session:v1") !== null) {
         errors.push("Opening dedicated Review Queue practice created or replaced a main Quiz session.");
@@ -1260,7 +1266,7 @@ async function main() {
           resolve(true);
         } else if (Date.now() >= deadline) {
           clearInterval(timer);
-          reject(new Error("Website did not reload for dedicated round persistence."));
+          reject(new Error("Website did not reload for dedicated priority persistence."));
         }
       }, 50);
     })`);
@@ -1285,7 +1291,7 @@ async function main() {
         || JSON.stringify(before.dedicatedDeck) !== JSON.stringify(expected.remainingDeck)
         || before.dedicatedLastQuestionId !== expected.dedicatedLastQuestionId
         || card?.disabled || !document.querySelector("#retry-queue-card-meta")?.textContent.startsWith("Continue")) {
-        errors.push("Reload did not preserve the active dedicated review and unseen round remainder.");
+        errors.push("Reload did not preserve the active dedicated review and saved priority tie remainder.");
       }
       Math.random = () => 0;
       card?.click();
@@ -1295,7 +1301,7 @@ async function main() {
         || after?.activeAttempt?.questionId !== expected.firstId
         || JSON.stringify(after.activeAttempt.optionOrder) !== JSON.stringify(expected.optionOrder)
         || JSON.stringify(after.dedicatedDeck) !== JSON.stringify(expected.remainingDeck)) {
-        errors.push("Continue Review Queue did not reopen the exact saved attempt and round remainder.");
+        errors.push("Continue Review Queue did not reopen the exact saved attempt and priority tie remainder.");
       }
       return { errors };
     })()`);
@@ -1336,6 +1342,7 @@ async function main() {
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
       const targetId = "IBES-Q0017-SRC";
       const presentedIds = [firstOpen.firstId];
+      let priorityOrderValid = true;
       const correctAppearances = Object.fromEntries(expected.ids.map((questionId) => [questionId, 0]));
       const initialRemaining = Object.fromEntries(expected.ids.map((questionId, index) => [questionId, expected.savedRemaining[index]]));
       const totalRemaining = (queue) => (queue?.items || []).reduce((total, item) => total + item.remaining, 0);
@@ -1376,6 +1383,9 @@ async function main() {
         || queue.items.find((item) => item.questionId === firstOpen.firstId)?.remaining !== firstRemaining + 5) {
         errors.push("Wrong dedicated review did not apply exactly +5 once on Continue.");
       }
+      if (queue?.activeAttempt?.questionId !== firstOpen.firstId) {
+        errors.push("The newly unique highest-count MCQ was not presented again immediately after its +5 increase.");
+      }
       initialRemaining[firstOpen.firstId] = firstRemaining + 5;
 
       let previousId = firstOpen.firstId;
@@ -1388,8 +1398,19 @@ async function main() {
           errors.push("Dedicated Review Queue stopped before all required repetitions were solved.");
           break;
         }
-        if (attempt.questionId === previousId && queue.items.length > 1) {
-          errors.push("Dedicated Review Queue repeated a question immediately while another question was available.");
+        const priorityCandidates = queue.items.slice();
+        const highestRemaining = Math.max(...priorityCandidates.map((item) => item.remaining));
+        const highestIds = priorityCandidates
+          .filter((item) => item.remaining === highestRemaining)
+          .map((item) => item.questionId);
+        const presentedRemaining = queue.items.find((item) => item.questionId === attempt.questionId)?.remaining;
+        if (presentedRemaining !== highestRemaining) {
+          priorityOrderValid = false;
+          errors.push("Dedicated Review Queue did not continuously select the highest remaining-count eligible MCQ.");
+          break;
+        }
+        if (attempt.questionId === previousId && highestIds.length > 1) {
+          errors.push("Dedicated Review Queue repeated the previous MCQ despite an equal highest-count alternative.");
         }
         presentedIds.push(attempt.questionId);
         correctAppearances[attempt.questionId] = (correctAppearances[attempt.questionId] || 0) + 1;
@@ -1415,22 +1436,10 @@ async function main() {
           errors.push("Correct dedicated Continue did not remove exactly one required review.");
           break;
         }
-        if (presentedIds.length === expected.ids.length && queue?.items?.length > 1) {
-          if (queue.activeAttempt?.questionId === attempt.questionId
-            || queue.dedicatedDeck?.[queue.dedicatedDeck.length - 1] !== attempt.questionId) {
-            errors.push("A new random round did not move the previous question to the end before presenting another one.");
-          }
-        }
         previousId = attempt.questionId;
       }
 
       if (safety >= 40) errors.push("Dedicated Review Queue completion exceeded its safe repetition bound.");
-      if (new Set(presentedIds.slice(0, expected.ids.length)).size !== expected.ids.length) {
-        errors.push("Dedicated Review Queue repeated within its first random round.");
-      }
-      if (JSON.stringify(presentedIds.slice(1, expected.ids.length)) !== JSON.stringify(firstOpen.remainingDeck)) {
-        errors.push("Reloaded dedicated practice did not finish the saved unseen IDs before refilling its random deck.");
-      }
       expected.ids.forEach((questionId) => {
         if (correctAppearances[questionId] !== initialRemaining[questionId]) {
           errors.push("Dedicated Review Queue did not present " + questionId + " exactly as many times as saved.");
@@ -1464,7 +1473,8 @@ async function main() {
       sessionStorage.setItem("ppsc-smoke:retry-seed", JSON.stringify(savedSeed));
       return {
         errors,
-        firstRound: presentedIds.slice(0, expected.ids.length),
+        prioritySequence: presentedIds.slice(),
+        priorityOrderValid,
         presentedIds,
         correctAppearances,
         wrongQuestionId: firstOpen.firstId,
@@ -1489,7 +1499,8 @@ async function main() {
       cadence: retryQueueCadenceSetup.spacing,
       nextCadence: retryQueueCadenceResume.nextSpacing,
       firstId: retryQueueCadenceSetup.firstId,
-      firstRound: retryDedicatedSolveResult.firstRound,
+      prioritySequence: retryDedicatedSolveResult.prioritySequence,
+      priorityOrderValid: retryDedicatedSolveResult.priorityOrderValid,
       correctAppearances: retryDedicatedSolveResult.correctAppearances,
       wrongQuestionId: retryDedicatedSolveResult.wrongQuestionId,
       wrongRemaining: retryDedicatedSolveResult.wrongRemainingAfterContinue,
@@ -1634,7 +1645,7 @@ async function main() {
       await pause();
       let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       const initialCounts = Object.fromEntries((retry?.items || []).map((item) => [item.questionId, item.remaining]));
-      let embeddedDueShuffled = false;
+      let embeddedHighestPriority = false;
       if (document.querySelector("#retry-dialog")?.open
         || document.querySelector("#quiz-screen")?.dataset.mode !== "learn"
         || retry?.activeAttempt !== null
@@ -1687,13 +1698,15 @@ async function main() {
           retry = JSON.parse(localStorage.getItem(retryKey) || "null");
           const attempt = retry?.activeAttempt;
           const sessionAtReview = JSON.parse(localStorage.getItem(sessionKey) || "null");
-          const expectedShuffledId = originalSeed?.items?.[2]?.questionId;
+          const highestRemaining = Math.max(...(originalSeed?.items || []).map((item) => item.remaining));
+          const highestIds = (originalSeed?.items || [])
+            .filter((item) => item.remaining === highestRemaining)
+            .map((item) => item.questionId);
           const lastPresentedId = originalSeed?.dedicatedLastQuestionId;
-          embeddedDueShuffled = Boolean(
+          embeddedHighestPriority = Boolean(
             attempt?.questionId
-            && attempt.questionId === expectedShuffledId
-            && attempt.questionId !== originalSeed?.items?.[0]?.questionId
-            && attempt.questionId !== lastPresentedId
+            && highestIds.includes(attempt.questionId)
+            && (highestIds.length === 1 || attempt.questionId !== lastPresentedId)
           );
           if (!dialogOpen || attempt?.context !== "embedded"
             || retry.practiceStep !== initialPracticeStep + spacing
@@ -1703,8 +1716,8 @@ async function main() {
             || sessionAtReview?.learnReviewCountedQuestionIds?.length !== spacing) {
             errors.push("Learn review did not open exactly after its persisted number of completed main questions.");
           }
-          if (!embeddedDueShuffled) {
-            errors.push("Embedded Learn review did not shuffle multiple due MCQs or avoid the last-presented queue question.");
+          if (!embeddedHighestPriority) {
+            errors.push("Embedded Learn review did not select the highest remaining-count due MCQ or break its top-count tie safely.");
           }
           if (JSON.stringify(Object.fromEntries((retry?.items || []).map((item) => [item.questionId, item.remaining])))
             !== JSON.stringify(initialCounts)) {
@@ -1760,7 +1773,7 @@ async function main() {
         || document.activeElement !== globalQueue || document.querySelector("#quiz-screen")?.dataset.mode !== "learn") {
         errors.push("Ending global Queue practice did not return focus and preserve the underlying Learn session.");
       }
-      return { errors, spacing, embeddedDueShuffled };
+      return { errors, spacing, embeddedHighestPriority };
     })()`);
 
     const retryLegacyLearnMigrationSeed = await client.evaluate(`(() => {
@@ -6649,14 +6662,15 @@ async function main() {
         embeddedCadence: retryQueueFeatureResult.cadence,
         nextEmbeddedCadence: retryQueueFeatureResult.nextCadence,
         legacyEmbeddedAttemptAnchored: retryQueueCadenceResume.legacyActiveAttemptAnchored === true,
-        dedicatedFirstRound: retryQueueFeatureResult.firstRound,
+        dedicatedPrioritySequence: retryQueueFeatureResult.prioritySequence,
+        dedicatedPriorityOrderValid: retryQueueFeatureResult.priorityOrderValid === true,
         dedicatedCorrectAppearances: retryQueueFeatureResult.correctAppearances,
         wrongRetryRemaining: retryQueueFeatureResult.wrongRemaining,
         categoriesCovered: retryQueueFeatureResult.categoriesCovered,
         mobileProbeMetrics: retryQueueFeatureResult.mobileMetrics,
         globalQueueRestoredAcrossCategory: retryMismatchResumeResult.errors.length === 0,
         learnQueueCadenceRestored: retryLearnResumeResult.errors.length === 0,
-        embeddedDueShuffled: retryLearnResumeResult.embeddedDueShuffled === true,
+        embeddedHighestPriority: retryLearnResumeResult.embeddedHighestPriority === true,
         legacyLearnCadenceMigrated: retryLegacyLearnMigrationSeed.errors.length === 0
           && retryLegacyLearnMigrationResult.errors.length === 0,
         pendingAfterResults: retryQueueFeatureResult.seedQueue?.items?.length || 0,
