@@ -16,8 +16,9 @@
   var RANGE_SESSION_STORAGE_VERSION = 7;
   var LEGACY_SESSION_STORAGE_VERSION = 6;
   var RETRY_QUEUE_STORAGE_VERSION = 1;
-  var RETRY_QUEUE_INCREMENT = 5;
+  var RETRY_QUEUE_INCREMENT = 2;
   var LEGACY_RETRY_QUEUE_INCREMENT = 2;
+  var PREVIOUS_RETRY_QUEUE_INCREMENT = 5;
   var RETRY_QUEUE_MIN_SPACING = 5;
   var RETRY_QUEUE_MAX_SPACING = 6;
   var IMPORTANT_REVIEW_MIN_SPACING = 10;
@@ -1153,7 +1154,7 @@
       } else if (attempt.submitted && expectedOutcome === "wrong") {
         if (typeof attempt.wrongIncrement === "undefined") {
           wrongIncrement = LEGACY_RETRY_QUEUE_INCREMENT;
-        } else if (![LEGACY_RETRY_QUEUE_INCREMENT, RETRY_QUEUE_INCREMENT].includes(attempt.wrongIncrement)) {
+        } else if (![LEGACY_RETRY_QUEUE_INCREMENT, PREVIOUS_RETRY_QUEUE_INCREMENT].includes(attempt.wrongIncrement)) {
           return null;
         } else {
           wrongIncrement = attempt.wrongIncrement;
@@ -1819,7 +1820,7 @@
           : (dedicatedPractice
           ? (attempt.submitted
             ? "Continue to the waiting MCQ with the highest remaining count."
-            : "A correct answer removes one review; a wrong answer adds five. Your current screen and session stay unchanged.")
+            : "A correct answer removes one review; a wrong answer adds two. Your current screen and session stay unchanged.")
           : (attempt.submitted
             ? "Continue to return to your session."
             : "This review does not change your Learn or Quiz progress.")));
