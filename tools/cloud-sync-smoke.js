@@ -51,9 +51,25 @@ const LEGACY_TWO_REVIEW_QUEUE_RAW = JSON.stringify({
   items: [{ questionId: SAMPLE_QUESTION_ID, remaining: 2, dueStep: 0, sequence: 1 }],
   activeAttempt: null
 });
+const BASELINED_FIVE_REVIEW_QUEUE_RAW = JSON.stringify({
+  version: 1,
+  bankSignature: BANK_SIGNATURE,
+  countBaselineVersion: 1,
+  practiceStep: 0,
+  nextQuizReviewStep: 5,
+  nextImportantReviewStep: 14,
+  nextSequence: 2,
+  dedicatedDeck: [],
+  dedicatedLastQuestionId: null,
+  importantDeck: [],
+  importantLastQuestionId: null,
+  items: [{ questionId: SAMPLE_QUESTION_ID, remaining: 5, dueStep: 0, sequence: 1 }],
+  activeAttempt: null
+});
 const DEDICATED_ATTEMPT_QUEUE_RAW = JSON.stringify({
   version: 1,
   bankSignature: BANK_SIGNATURE,
+  countBaselineVersion: 1,
   practiceStep: 9,
   nextQuizReviewStep: 15,
   nextSequence: 9,
@@ -77,6 +93,7 @@ const DEDICATED_ATTEMPT_QUEUE_RAW = JSON.stringify({
 const IMPORTANT_ATTEMPT_QUEUE_RAW = JSON.stringify({
   version: 1,
   bankSignature: BANK_SIGNATURE,
+  countBaselineVersion: 1,
   practiceStep: 20,
   nextQuizReviewStep: null,
   nextImportantReviewStep: 34,
@@ -430,7 +447,7 @@ function rawCloudValue(store, slotId) {
   return chunks.join("");
 }
 
-function localProgress() {
+function legacyLocalProgress() {
   return {
     [ACTIVE_SESSION_KEY]: SAMPLE_SESSION_RAW,
     [RETRY_QUEUE_KEY]: LEGACY_TWO_REVIEW_QUEUE_RAW,
@@ -442,6 +459,7 @@ function retryQueueRaw(questionId, remaining, padding = "") {
   const queue = {
     version: 1,
     bankSignature: BANK_SIGNATURE,
+    countBaselineVersion: 1,
     practiceStep: 0,
     nextSequence: 2,
     items: [{ questionId, remaining, dueStep: 0, sequence: 1 }],
@@ -472,7 +490,7 @@ async function testDevelopmentBypassNeedsNoSdk() {
 
 async function testFirstDeviceMigrationPreservesLegacyRemaining() {
   const store = new Map();
-  const local = localProgress();
+  const local = legacyLocalProgress();
   const browser = createBrowser({ store, local });
   const choice = await waitFor(
     browser,
@@ -531,6 +549,38 @@ async function testCloudRestoreOnEmptyLaptop(seedStore) {
   assert.equal(browser.localStorage.getItem(DIFFICULT_IDS_KEY), SAMPLE_DIFFICULT_RAW);
   assert.equal(JSON.parse(browser.localStorage.getItem(RETRY_QUEUE_KEY)).items[0].remaining, 2);
   assert.equal(readyEventMode(browser), "cloud-restored");
+}
+
+async function testRestoredLegacyQueueUploadsAppBaselineAndRestoresExactly(seedStore) {
+  const store = cloneStore(seedStore);
+  const first = createBrowser({ store, local: {} });
+  await waitFor(first, (candidate) => candidate.ready, "legacy queue restore before app baseline");
+  assert.equal(first.localStorage.getItem(RETRY_QUEUE_KEY), LEGACY_TWO_REVIEW_QUEUE_RAW);
+
+  first.localStorage.setItem(RETRY_QUEUE_KEY, BASELINED_FIVE_REVIEW_QUEUE_RAW);
+  first.window.dispatchEvent(new MiniCustomEvent("ppsc:local-state-changed", {
+    detail: { key: RETRY_QUEUE_KEY, action: "set", value: BASELINED_FIVE_REVIEW_QUEUE_RAW }
+  }));
+  const synced = await waitFor(
+    first,
+    (candidate) => candidate.phase === "synced"
+      && candidate.revision === 2
+      && rawCloudValue(store, "retry-queue") === BASELINED_FIVE_REVIEW_QUEUE_RAW,
+    "post-restore app baseline upload",
+    3000
+  );
+  assert.equal(synced.localSummary.retryReviews, 5);
+  assert.equal(synced.cloudSummary.retryReviews, 5);
+  const uploadedQueue = JSON.parse(rawCloudValue(store, "retry-queue"));
+  assert.equal(uploadedQueue.countBaselineVersion, 1);
+  assert.equal(uploadedQueue.items[0].remaining, 5);
+
+  const second = createBrowser({ store, local: {} });
+  const restored = await waitFor(second, (candidate) => candidate.ready, "marked queue second-device restore");
+  assert.equal(restored.revision, 2);
+  assert.equal(restored.localSummary.retryReviews, 5);
+  assert.equal(second.localStorage.getItem(RETRY_QUEUE_KEY), BASELINED_FIVE_REVIEW_QUEUE_RAW);
+  assert.equal(readyEventMode(second), "cloud-restored");
 }
 
 async function testDedicatedAttemptQueueRoundTrip() {
@@ -606,6 +656,7 @@ async function testConflictWaitsForChoice(seedStore) {
   const localQueue = JSON.stringify({
     version: 1,
     bankSignature: BANK_SIGNATURE,
+    countBaselineVersion: 1,
     practiceStep: 0,
     nextSequence: 2,
     items: [{ questionId: SECOND_QUESTION_ID, remaining: 5, dueStep: 0, sequence: 1 }],
@@ -636,7 +687,7 @@ async function testAllowedEmailIsEnforcedBeforeFirestore() {
     emailVerified: true,
     displayName: "Wrong User"
   };
-  const browser = createBrowser({ store: new Map(), local: localProgress(), user: wrongUser });
+  const browser = createBrowser({ store: new Map(), local: legacyLocalProgress(), user: wrongUser });
   const status = await waitFor(browser, (candidate) => candidate.phase === "unauthorized", "unauthorized sign-out");
   assert.equal(status.ready, false);
   assert.equal(status.user, null);
@@ -652,6 +703,7 @@ async function testStaleRevisionCannotOverwriteCloud(seedStore) {
   const localQueue = JSON.stringify({
     version: 1,
     bankSignature: BANK_SIGNATURE,
+    countBaselineVersion: 1,
     practiceStep: 0,
     nextSequence: 2,
     items: [{ questionId: SECOND_QUESTION_ID, remaining: 99, dueStep: 0, sequence: 1 }],
@@ -739,11 +791,11 @@ async function testReconnectPullsRemoteOnlyChange(seedStore) {
   assert.equal(first.localStorage.getItem(RETRY_QUEUE_KEY), remoteQueue);
 }
 
-async function testFirstUploadQueuesConcurrentLocalChange() {
+async function testFirstUploadQueuesBaselineMigrationFollowUp() {
   const store = new Map();
-  const browser = createBrowser({ store, local: localProgress() });
+  const browser = createBrowser({ store, local: legacyLocalProgress() });
   await waitFor(browser, (candidate) => candidate.phase === "migration-choice", "concurrent first upload setup");
-  const newestQueue = retryQueueRaw(SAMPLE_QUESTION_ID, 9);
+  const newestQueue = BASELINED_FIVE_REVIEW_QUEUE_RAW;
   browser.fake.controls.beforeTransaction = async () => {
     browser.localStorage.setItem(RETRY_QUEUE_KEY, newestQueue);
   };
@@ -755,16 +807,20 @@ async function testFirstUploadQueuesConcurrentLocalChange() {
     3000
   );
   assert.equal(browser.localStorage.getItem(RETRY_QUEUE_KEY), newestQueue);
+  assert.equal(store.get(metaPath()).revision, 2);
+  const uploadedQueue = JSON.parse(rawCloudValue(store, "retry-queue"));
+  assert.equal(uploadedQueue.countBaselineVersion, 1);
+  assert.equal(uploadedQueue.items[0].remaining, 5);
 }
 
-async function testEquivalentConcurrentSyncConflictReconciles(seedStore) {
+async function testEquivalentConcurrentBaselineSyncConflictReconciles(seedStore) {
   const store = cloneStore(seedStore);
   const loser = createBrowser({ store, local: {} });
   const winner = createBrowser({ store, local: {} });
   await waitFor(loser, (candidate) => candidate.ready, "race loser initial restore");
   await waitFor(winner, (candidate) => candidate.ready, "race winner initial restore");
 
-  const sameFinalQueue = retryQueueRaw(SAMPLE_QUESTION_ID, 10);
+  const sameFinalQueue = BASELINED_FIVE_REVIEW_QUEUE_RAW;
   loser.localStorage.setItem(RETRY_QUEUE_KEY, sameFinalQueue);
   winner.localStorage.setItem(RETRY_QUEUE_KEY, sameFinalQueue);
 
@@ -804,8 +860,11 @@ async function testEquivalentConcurrentSyncConflictReconciles(seedStore) {
   assert.equal(reconciled.error, "");
   assert.equal(loser.localStorage.getItem(RETRY_QUEUE_KEY), sameFinalQueue);
   assert.equal(rawCloudValue(store, "retry-queue"), sameFinalQueue);
+  const reconciledQueue = JSON.parse(rawCloudValue(store, "retry-queue"));
+  assert.equal(reconciledQueue.countBaselineVersion, 1);
+  assert.equal(reconciledQueue.items[0].remaining, 5);
 
-  const followUpQueue = retryQueueRaw(SAMPLE_QUESTION_ID, 11);
+  const followUpQueue = retryQueueRaw(SAMPLE_QUESTION_ID, 7);
   loser.localStorage.setItem(RETRY_QUEUE_KEY, followUpQueue);
   loser.window.PPSC_CLOUD.notifyLocalChange(RETRY_QUEUE_KEY);
   await waitFor(
@@ -824,6 +883,7 @@ async function main() {
   const seedStore = await testFirstDeviceMigrationPreservesLegacyRemaining();
   await testEmptyFirstDeviceNeedsConfirmation();
   await testCloudRestoreOnEmptyLaptop(cloneStore(seedStore));
+  await testRestoredLegacyQueueUploadsAppBaselineAndRestoresExactly(seedStore);
   await testDedicatedAttemptQueueRoundTrip();
   await testImportantPracticeRoundTrip();
   await testConflictWaitsForChoice(cloneStore(seedStore));
@@ -832,8 +892,8 @@ async function main() {
   await testLargeProgressUsesIntegrityCheckedChunks();
   await testOfflineChangeSyncsWhenConnectionReturns(seedStore);
   await testReconnectPullsRemoteOnlyChange(seedStore);
-  await testFirstUploadQueuesConcurrentLocalChange();
-  await testEquivalentConcurrentSyncConflictReconciles(seedStore);
+  await testFirstUploadQueuesBaselineMigrationFollowUp();
+  await testEquivalentConcurrentBaselineSyncConflictReconciles(seedStore);
 
   console.log(JSON.stringify({
     ok: true,
@@ -842,17 +902,18 @@ async function main() {
       "first-device migration waits for explicit upload",
       "empty first device cannot initialize or overwrite cloud progress",
       "empty laptop restores cloud progress",
+      "a restored legacy queue uploads marker=1/count=5 and restores exactly on a second device",
       "different local/cloud progress waits for owner choice",
       "unapproved Google account is rejected before Firestore",
       "legacy retry remaining=2 survives upload and restore",
-      "dedicated retry attempt, cadence, and priority-tie deck fields round-trip byte-for-byte",
-      "permanent Important cadence, shuffled deck, and active attempt round-trip byte-for-byte",
+      "dedicated retry attempt, count-baseline marker, cadence, and priority-tie deck fields round-trip byte-for-byte",
+      "permanent Important cadence, count-baseline marker, shuffled deck, and active attempt round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",
       "large progress round-trips through integrity-checked chunks",
       "offline local changes upload when the connection returns",
       "remote-only reconnect changes pull safely before reload",
-      "a local change during first upload is queued and synced",
-      "equivalent concurrent writes reconcile without pausing the losing client"
+      "the marker=1/count=5 baseline change during first upload is queued and synced",
+      "equivalent concurrent marked-five baseline writes reconcile without pausing the losing client"
     ]
   }, null, 2));
 }

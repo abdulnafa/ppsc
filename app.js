@@ -19,6 +19,8 @@
   var RETRY_QUEUE_INCREMENT = 2;
   var LEGACY_RETRY_QUEUE_INCREMENT = 2;
   var PREVIOUS_RETRY_QUEUE_INCREMENT = 5;
+  var RETRY_QUEUE_COUNT_BASELINE_VERSION = 1;
+  var RETRY_QUEUE_COUNT_BASELINE = 5;
   var RETRY_QUEUE_MIN_SPACING = 5;
   var RETRY_QUEUE_MAX_SPACING = 6;
   var IMPORTANT_REVIEW_MIN_SPACING = 10;
@@ -959,6 +961,7 @@
     return {
       version: RETRY_QUEUE_STORAGE_VERSION,
       bankSignature: questionBankSignature,
+      countBaselineVersion: RETRY_QUEUE_COUNT_BASELINE_VERSION,
       practiceStep: 0,
       nextQuizReviewStep: null,
       nextImportantReviewStep: importantQuestionIds.length > 0 ? randomImportantSpacing() : null,
@@ -1020,6 +1023,12 @@
     if (!isSafeWholeNumber(savedValue.nextSequence, 1)) return null;
     if (!Array.isArray(savedValue.items)) return null;
 
+    var savedCountBaselineVersion = typeof savedValue.countBaselineVersion === "undefined"
+      ? 0
+      : savedValue.countBaselineVersion;
+    if (!isSafeWholeNumber(savedCountBaselineVersion, 0)) return null;
+    var applyCountBaseline = savedCountBaselineVersion < RETRY_QUEUE_COUNT_BASELINE_VERSION;
+
     var questionIds = new Set();
     var sequences = new Set();
     var items = savedValue.items.map(function (entry) {
@@ -1037,7 +1046,7 @@
       sequences.add(entry.sequence);
       return {
         questionId: questionId,
-        remaining: entry.remaining,
+        remaining: applyCountBaseline ? RETRY_QUEUE_COUNT_BASELINE : entry.remaining,
         dueStep: entry.dueStep,
         sequence: entry.sequence
       };
@@ -1193,11 +1202,18 @@
     if (items.length === 0) {
       dedicatedDeck = [];
       dedicatedLastQuestionId = null;
+    } else if (applyCountBaseline) {
+      // Rebuild priority practice from the newly equal five-review baseline.
+      dedicatedDeck = [];
     }
 
     return {
       version: RETRY_QUEUE_STORAGE_VERSION,
       bankSignature: questionBankSignature,
+      countBaselineVersion: Math.max(
+        savedCountBaselineVersion,
+        RETRY_QUEUE_COUNT_BASELINE_VERSION
+      ),
       practiceStep: savedValue.practiceStep,
       nextQuizReviewStep: nextQuizReviewStep,
       nextImportantReviewStep: nextImportantReviewStep,
@@ -1324,6 +1340,12 @@
   function saveRetryQueue(announcement) {
     retryQueueState.version = RETRY_QUEUE_STORAGE_VERSION;
     retryQueueState.bankSignature = questionBankSignature;
+    retryQueueState.countBaselineVersion = Math.max(
+      isSafeWholeNumber(retryQueueState.countBaselineVersion, 0)
+        ? retryQueueState.countBaselineVersion
+        : 0,
+      RETRY_QUEUE_COUNT_BASELINE_VERSION
+    );
     try {
       window.localStorage.setItem(RETRY_QUEUE_STORAGE_KEY, JSON.stringify(retryQueueState));
       notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "set");
@@ -1341,13 +1363,25 @@
         updateRetryQueueUI();
         return;
       }
-      var normalized = normalizeRetryQueue(JSON.parse(rawValue));
+      var savedValue = JSON.parse(rawValue);
+      var savedCountBaselineVersion = typeof savedValue.countBaselineVersion === "undefined"
+        ? 0
+        : savedValue.countBaselineVersion;
+      var countBaselineApplied = isSafeWholeNumber(savedCountBaselineVersion, 0)
+        && savedCountBaselineVersion < RETRY_QUEUE_COUNT_BASELINE_VERSION;
+      var normalized = normalizeRetryQueue(savedValue);
       if (!normalized) {
         window.localStorage.removeItem(RETRY_QUEUE_STORAGE_KEY);
         notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "remove");
         retryQueueState = createEmptyRetryQueueState();
       } else {
         retryQueueState = normalized;
+        if (countBaselineApplied) {
+          saveRetryQueue(retryQueueState.items.length > 0
+            ? "Existing Review Queue counts were set to five once. Wrong answers now add two."
+            : "");
+          return;
+        }
       }
     } catch (error) {
       try {

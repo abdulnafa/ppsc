@@ -1091,6 +1091,7 @@ async function main() {
       const seed = {
         version: 1,
         bankSignature: current?.bankSignature || ${JSON.stringify(retryQueueCadenceResume.bankSignature)},
+        countBaselineVersion: 1,
         practiceStep: current?.practiceStep ?? ${JSON.stringify(retryQueueCadenceResume.practiceStep)},
         nextSequence: uniqueIds.length + 1,
         items: uniqueIds.map((questionId, index) => ({
@@ -1457,6 +1458,7 @@ async function main() {
       const savedSeed = {
         version: 1,
         bankSignature: queue?.bankSignature || expected.seed.bankSignature,
+        countBaselineVersion: 1,
         practiceStep: queue?.practiceStep ?? expected.seed.practiceStep,
         nextQuizReviewStep: null,
         nextSequence: 4,
@@ -2518,6 +2520,7 @@ async function main() {
         localStorage.setItem(retryKey, JSON.stringify({
           version: 1,
           bankSignature: session.bankSignature,
+          countBaselineVersion: 1,
           practiceStep: 0,
           nextSequence: 4,
           items: retryIds.map((questionId, index) => ({
@@ -5588,18 +5591,32 @@ async function main() {
 
     const retryExistingCountSeedResult = await client.evaluate(`(() => {
       const errors = [];
+      const key = "ppsc-prep:retry-queue:v1";
       localStorage.removeItem("ppsc-prep:active-session:v1");
-      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      localStorage.removeItem(key);
       const seed = JSON.parse(sessionStorage.getItem("ppsc-smoke:retry-seed") || "null");
-      if (!seed || !Array.isArray(seed.items) || seed.items.length === 0) {
-        errors.push("Existing retry-count preservation fixture was unavailable.");
-        return { errors, questionId: "", remaining: null };
+      const legacyCounts = [1, 5, 17];
+      if (!seed || !Array.isArray(seed.items) || seed.items.length !== legacyCounts.length) {
+        errors.push("One-time retry-count baseline fixture was unavailable.");
+        return { errors, ids: [], legacyCounts, itemShape: [] };
       }
+      delete seed.countBaselineVersion;
       seed.activeAttempt = null;
-      seed.items[0].remaining = 5;
-      sessionStorage.setItem("ppsc-smoke:retry-seed", JSON.stringify(seed));
-      localStorage.setItem("ppsc-prep:retry-queue:v1", JSON.stringify(seed));
-      return { errors, questionId: seed.items[0].questionId, remaining: 5 };
+      seed.dedicatedDeck = [seed.items[2].questionId];
+      seed.items.forEach((item, index) => { item.remaining = legacyCounts[index]; });
+      const itemShape = seed.items.map((item) => ({
+        questionId: item.questionId,
+        dueStep: item.dueStep,
+        sequence: item.sequence
+      }));
+      sessionStorage.setItem("ppsc-smoke:retry-baseline-legacy", JSON.stringify(seed));
+      localStorage.setItem(key, JSON.stringify(seed));
+      return {
+        errors,
+        ids: seed.items.map((item) => item.questionId),
+        legacyCounts,
+        itemShape
+      };
     })()`);
     await client.send("Page.reload", { ignoreCache: true });
     await client.evaluate(`new Promise((resolve, reject) => {
@@ -5610,33 +5627,126 @@ async function main() {
           resolve(true);
         } else if (Date.now() >= deadline) {
           clearInterval(timer);
-          reject(new Error("Website did not reset after retry lifecycle testing."));
+          reject(new Error("Website did not reload for one-time retry-count baselining."));
         }
       }, 50);
     })`);
 
-    const retryExistingCountPreservationResult = await client.evaluate(`(() => {
+    const retryExistingCountPreservationResult = await client.evaluate(`(async () => {
       const errors = [];
       const expected = ${JSON.stringify(retryExistingCountSeedResult)};
-      const stored = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
-      const item = stored?.items.find((entry) => entry.questionId === expected.questionId);
-      if (!stored || stored.version !== 1 || item?.remaining !== 5) {
-        errors.push("An existing saved five-review count was reset or removed after the two-review rule update.");
+      const key = "ppsc-prep:retry-queue:v1";
+      const questionById = new Map(window.PPSC_QUIZ_DATA.questions.map((question) => [String(question.id), question]));
+      let stored = JSON.parse(localStorage.getItem(key) || "null");
+      const migratedShape = (stored?.items || []).map((item) => ({
+        questionId: item.questionId,
+        dueStep: item.dueStep,
+        sequence: item.sequence
+      }));
+      if (!stored || stored.version !== 1 || stored.countBaselineVersion !== 1
+        || JSON.stringify((stored.items || []).map((item) => item.remaining)) !== JSON.stringify([5, 5, 5])
+        || JSON.stringify(migratedShape) !== JSON.stringify(expected.itemShape)
+        || stored.dedicatedDeck?.length !== 0) {
+        errors.push("Markerless counts below, equal to, and above five were not baselined exactly once without changing item identity or cadence fields.");
       }
-      return { errors, questionId: expected.questionId, remaining: item?.remaining ?? null };
+      const card = document.querySelector("#retry-queue-card");
+      if (card?.dataset.count !== "3" || card?.dataset.remaining !== "15") {
+        errors.push("The migrated Review Queue UI did not show three questions and fifteen total reviews.");
+      }
+
+      document.querySelector("#retry-queue-card")?.click();
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      stored = JSON.parse(localStorage.getItem(key) || "null");
+      const firstAttempt = stored?.activeAttempt;
+      const firstQuestion = questionById.get(String(firstAttempt?.questionId || ""));
+      const correctIndex = firstAttempt && firstQuestion
+        ? firstAttempt.optionOrder.indexOf(firstQuestion.correctOptionIndex)
+        : -1;
+      const wrongIndex = (correctIndex + 1) % 4;
+      if (!document.querySelector("#retry-dialog")?.open || !firstQuestion || correctIndex < 0) {
+        errors.push("Migrated five-count queue did not open for wrong +2 verification.");
+      } else {
+        document.querySelector('[data-review-option-index="' + wrongIndex + '"]')?.click();
+        document.querySelector("#retry-action-button")?.click();
+        await new Promise((resolve) => setTimeout(resolve, 0));
+        stored = JSON.parse(localStorage.getItem(key) || "null");
+        if (!stored?.activeAttempt?.submitted || stored.activeAttempt.outcome !== "wrong"
+          || stored.activeAttempt.wrongIncrement !== 2
+          || stored.items.find((item) => item.questionId === firstAttempt.questionId)?.remaining !== 5
+          || !document.querySelector("#retry-dialog-progress")?.textContent.includes("7 correct reviews remaining")) {
+          errors.push("A new wrong review after baselining did not preserve five on Check and project exactly +2.");
+        }
+        document.querySelector("#retry-action-button")?.click();
+        await new Promise((resolve) => setTimeout(resolve, 0));
+        stored = JSON.parse(localStorage.getItem(key) || "null");
+        if (stored?.items.find((item) => item.questionId === firstAttempt.questionId)?.remaining !== 7
+          || stored?.activeAttempt?.questionId !== firstAttempt.questionId) {
+          errors.push("Wrong Continue did not produce seven reviews and immediately reselect the unique max-count MCQ.");
+        }
+        document.querySelector("#retry-later-button")?.click();
+        await new Promise((resolve) => setTimeout(resolve, 0));
+      }
+      stored = JSON.parse(localStorage.getItem(key) || "null");
+      sessionStorage.setItem("ppsc-smoke:retry-baseline-current", JSON.stringify(stored));
+      return {
+        errors,
+        questionId: firstAttempt?.questionId || "",
+        remaining: stored?.items.find((item) => item.questionId === firstAttempt?.questionId)?.remaining ?? null,
+        itemShape: expected.itemShape
+      };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for retry-count baseline idempotence."));
+        }
+      }, 50);
+    })`);
+
+    const retryBaselineReloadResult = await client.evaluate(`(async () => {
+      const errors = [];
+      const expected = ${JSON.stringify(retryExistingCountPreservationResult)};
+      const key = "ppsc-prep:retry-queue:v1";
+      let queue = JSON.parse(localStorage.getItem(key) || "null");
+      const target = queue?.items.find((item) => item.questionId === expected.questionId);
+      const otherCounts = (queue?.items || [])
+        .filter((item) => item.questionId !== expected.questionId)
+        .map((item) => item.remaining);
+      if (queue?.countBaselineVersion !== 1 || target?.remaining !== 7
+        || JSON.stringify(otherCounts) !== JSON.stringify([5, 5])) {
+        errors.push("A second reload re-applied the five-count baseline or changed untouched items.");
+      }
+      document.querySelector("#retry-queue-card")?.click();
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      queue = JSON.parse(localStorage.getItem(key) || "null");
+      if (!document.querySelector("#retry-dialog")?.open
+        || queue?.activeAttempt?.questionId !== expected.questionId) {
+        errors.push("After reload, dedicated practice did not select the persisted seven-count maximum first.");
+      }
+      document.querySelector("#retry-later-button")?.click();
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      const current = localStorage.getItem(key);
+      if (current) sessionStorage.setItem("ppsc-smoke:retry-baseline-current", current);
+      return { errors, remaining: target?.remaining ?? null, maxFirstId: queue?.activeAttempt?.questionId || "" };
     })()`);
 
     const legacyWrongAttemptSeed = await client.evaluate(`(() => {
       const errors = [];
       const key = "ppsc-prep:retry-queue:v1";
-      const queue = JSON.parse(localStorage.getItem(key) || "null");
+      const queue = JSON.parse(sessionStorage.getItem("ppsc-smoke:retry-baseline-legacy") || "null");
       const questionId = ${JSON.stringify(retryExistingCountPreservationResult.questionId)};
       const question = window.PPSC_QUIZ_DATA.questions.find((entry) => String(entry.id) === questionId);
-      if (!queue || !question || queue.items.find((entry) => entry.questionId === questionId)?.remaining !== 5) {
-        errors.push("Saved five-review attempt fixture was unavailable.");
+      if (!queue || !question || queue.countBaselineVersion !== undefined) {
+        errors.push("Submitted legacy +5 migration fixture was unavailable or already marked.");
         return { errors, questionId };
       }
-      sessionStorage.setItem("ppsc-smoke:legacy-five-queue", JSON.stringify(queue));
       queue.activeAttempt = {
         questionId,
         optionOrder: [0, 1, 2, 3],
@@ -5670,8 +5780,9 @@ async function main() {
       const expectedId = ${JSON.stringify(legacyWrongAttemptSeed.questionId)};
       let queue = JSON.parse(localStorage.getItem(key) || "null");
       if (queue?.activeAttempt?.questionId !== expectedId || queue.activeAttempt.wrongIncrement !== 5
-        || queue.items.find((entry) => entry.questionId === expectedId)?.remaining !== 5) {
-        errors.push("Reload changed the saved five-review count or its submitted +5 attempt.");
+        || queue.countBaselineVersion !== 1
+        || queue.items.some((entry) => entry.remaining !== 5)) {
+        errors.push("One-time baselining did not preserve the already-submitted +5 outcome atomically.");
       }
       document.querySelector("#retry-queue-card")?.click();
       await new Promise((resolve) => setTimeout(resolve, 0));
@@ -5682,15 +5793,25 @@ async function main() {
       document.querySelector("#retry-action-button")?.click();
       await new Promise((resolve) => setTimeout(resolve, 0));
       queue = JSON.parse(localStorage.getItem(key) || "null");
-      if (queue?.items.find((entry) => entry.questionId === expectedId)?.remaining !== 10) {
+      if (queue?.items.find((entry) => entry.questionId === expectedId)?.remaining !== 10
+        || queue?.activeAttempt?.questionId !== expectedId) {
         errors.push("Continuing a saved submitted +5 attempt did not apply its original increment exactly once.");
       }
+      document.querySelector("#retry-later-button")?.click();
+      await new Promise((resolve) => setTimeout(resolve, 0));
       return { errors, remaining: queue?.items.find((entry) => entry.questionId === expectedId)?.remaining ?? null };
     })()`);
     await client.evaluate(`(() => {
-      const saved = sessionStorage.getItem("ppsc-smoke:legacy-five-queue");
-      if (saved) localStorage.setItem("ppsc-prep:retry-queue:v1", saved);
-      sessionStorage.removeItem("ppsc-smoke:legacy-five-queue");
+      const saved = sessionStorage.getItem("ppsc-smoke:retry-baseline-current");
+      if (saved) {
+        localStorage.setItem("ppsc-prep:retry-queue:v1", saved);
+        // Downstream Custom Paper checks compare against this canonical saved
+        // Queue fixture. Keep it aligned with the post-migration, post-+2 state
+        // that was restored above rather than the pre-migration priority seed.
+        sessionStorage.setItem("ppsc-smoke:retry-seed", saved);
+      }
+      sessionStorage.removeItem("ppsc-smoke:retry-baseline-legacy");
+      sessionStorage.removeItem("ppsc-smoke:retry-baseline-current");
       return true;
     })()`);
     await client.send("Page.reload", { ignoreCache: true });
@@ -6682,6 +6803,7 @@ async function main() {
         .concat(retryLifecycleResume.errors)
         .concat(retryExistingCountSeedResult.errors)
         .concat(retryExistingCountPreservationResult.errors)
+        .concat(retryBaselineReloadResult.errors)
         .concat(legacyWrongAttemptSeed.errors)
         .concat(legacyWrongAttemptResult.errors)
         .concat(confirmationQueueResult.errors)
@@ -6748,7 +6870,13 @@ async function main() {
         legacyLearnCadenceMigrated: retryLegacyLearnMigrationSeed.errors.length === 0
           && retryLegacyLearnMigrationResult.errors.length === 0,
         pendingAfterResults: retryQueueFeatureResult.seedQueue?.items?.length || 0,
-        existingSavedCountPreserved: retryExistingCountPreservationResult.remaining,
+        existingCountsBaselinedToFive: retryExistingCountPreservationResult.remaining === 7
+          && retryExistingCountSeedResult.errors.length === 0
+          && retryExistingCountPreservationResult.errors.length === 0,
+        countBaselineIdempotent: retryBaselineReloadResult.remaining === 7
+          && retryBaselineReloadResult.maxFirstId === retryExistingCountPreservationResult.questionId
+          && retryBaselineReloadResult.errors.length === 0,
+        newWrongAfterBaselineAddsTwo: retryExistingCountPreservationResult.remaining === 7,
         legacySubmittedWrongFiveApplied: legacyWrongAttemptResult.remaining === 10
           && legacyWrongAttemptSeed.errors.length === 0 && legacyWrongAttemptResult.errors.length === 0,
         correctConfirmation: confirmationQueueResult,
