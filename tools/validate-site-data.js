@@ -13,6 +13,7 @@ const detailedLearningPath = path.join(projectDirectory, "data", "detailed-learn
 const releaseRepeatEvidencePath = path.join(projectDirectory, "data", "release-repeat-evidence.json");
 const htmlPath = path.join(projectDirectory, "index.html");
 const appPath = path.join(projectDirectory, "app.js");
+const themePath = path.join(projectDirectory, "theme.js");
 const stylesPath = path.join(projectDirectory, "styles.css");
 const firebaseConfigPath = path.join(projectDirectory, "firebase-config.js");
 const firebaseSyncPath = path.join(projectDirectory, "firebase-sync.js");
@@ -1238,6 +1239,67 @@ function validateFonts() {
   }
 }
 
+function validateThemeContract() {
+  if (!fs.existsSync(themePath)) {
+    error("theme.js: required early theme bootstrap is missing");
+    return;
+  }
+
+  const html = fs.readFileSync(htmlPath, "utf8");
+  const theme = fs.readFileSync(themePath, "utf8");
+  const styles = fs.readFileSync(stylesPath, "utf8");
+  const themeScriptTag = html.match(/<script\b[^>]*\bsrc=["']theme\.js(?:\?[^"']*)?["'][^>]*><\/script>/i)?.[0] || "";
+  const themeScriptIndex = themeScriptTag ? html.indexOf(themeScriptTag) : -1;
+  const stylesIndex = html.search(/<link\b[^>]*\bhref=["']styles\.css(?:\?[^"']*)?["'][^>]*>/i);
+
+  if (themeScriptIndex < 0) {
+    error("index.html: theme.js must be loaded in the document head");
+  } else {
+    if (/\b(?:async|defer)\b/i.test(themeScriptTag)) {
+      error("index.html: theme.js must load synchronously to prevent a light-theme flash");
+    }
+    if (stylesIndex < 0 || themeScriptIndex > stylesIndex) {
+      error("index.html: theme.js must run before styles.css is requested");
+    }
+  }
+
+  for (const id of ["auth-theme-toggle-button", "theme-toggle-button"]) {
+    const button = html.match(new RegExp(`<button\\b[^>]*\\bid=["']${id}["'][^>]*>`, "i"))?.[0] || "";
+    if (!button || !/\bdata-theme-toggle\b/i.test(button) || !/\btype=["']button["']/i.test(button)) {
+      error(`index.html: #${id} must be a safe data-theme-toggle button`);
+    }
+  }
+
+  for (const requiredSnippet of [
+    '"ppsc-prep:theme:v1"',
+    "prefers-color-scheme: dark",
+    'setAttribute("data-theme"',
+    'querySelectorAll("[data-theme-toggle]")',
+    'meta[name="theme-color"]',
+    'window.addEventListener("storage"',
+    'aria-pressed'
+  ]) {
+    if (!theme.includes(requiredSnippet)) {
+      error(`theme.js: missing appearance contract snippet ${requiredSnippet}`);
+    }
+  }
+
+  for (const requiredStyle of [
+    ".theme-toggle",
+    "#0d1522",
+    "#172236",
+    "#e7edf7",
+    "#33445d"
+  ]) {
+    if (!styles.includes(requiredStyle)) {
+      error(`styles.css: missing dark-theme contract token ${requiredStyle}`);
+    }
+  }
+  if (!/html\[data-theme=["']dark["']\]/.test(styles)) {
+    error("styles.css: missing html[data-theme=\"dark\"] overrides");
+  }
+}
+
 function validateRetryQueueContract() {
   const app = fs.readFileSync(appPath, "utf8");
   const requiredConstants = [
@@ -1421,6 +1483,7 @@ validateComputerSourceScopes(result.questions);
 validateAdv2e102Bank(result.questions);
 validateHtml();
 validateFonts();
+validateThemeContract();
 validateRetryQueueContract();
 validateComputerSourceAppContract();
 validateCloudSyncContract();

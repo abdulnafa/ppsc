@@ -163,10 +163,15 @@ async function main() {
       deviceScaleFactor: 1,
       mobile: true
     });
+    await client.send("Emulation.setEmulatedMedia", {
+      media: "screen",
+      features: [{ name: "prefers-color-scheme", value: "light" }]
+    });
 
     await client.evaluate(`(() => {
       localStorage.removeItem("ppsc-prep:active-session:v1");
       localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      localStorage.removeItem("ppsc-prep:theme:v1");
       return true;
     })()`);
     await client.send("Page.reload", { ignoreCache: true });
@@ -182,6 +187,277 @@ async function main() {
         }
       }, 50);
     })`);
+
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (document.querySelector("#auth-theme-toggle-button")
+          && document.querySelector("#theme-toggle-button")
+          && document.querySelector("#category-grid .category-card")) {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Theme controls or category surface did not become ready."));
+        }
+      }, 50);
+    })`);
+
+    const themeScreenshots = {
+      dark430: path.join(os.tmpdir(), "ppsc-theme-dark-430-smoke.png"),
+      light430: path.join(os.tmpdir(), "ppsc-theme-light-430-smoke.png")
+    };
+    const themeInitialResult = await client.evaluate(`(async () => {
+      const errors = [];
+      const storageKey = "ppsc-prep:theme:v1";
+      const expected = {
+        light: {
+          bodyBackground: "rgb(244, 247, 251)",
+          bodyColor: "rgb(23, 36, 59)",
+          cardBackground: "rgb(255, 255, 255)",
+          cardBorder: "rgb(220, 228, 240)",
+          themeColor: "#12366b",
+          pressed: "false",
+          actionLabel: "Switch to dark mode"
+        },
+        dark: {
+          bodyBackground: "rgb(13, 21, 34)",
+          bodyColor: "rgb(231, 237, 247)",
+          cardBackground: "rgb(23, 34, 54)",
+          cardBorder: "rgb(51, 68, 93)",
+          themeColor: "#0d1522",
+          pressed: "true",
+          actionLabel: "Switch to light mode"
+        }
+      };
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 250));
+      const inspect = () => {
+        const root = document.documentElement;
+        const bodyStyle = getComputedStyle(document.body);
+        const card = document.querySelector("#category-grid .category-card");
+        const cardStyle = card ? getComputedStyle(card) : null;
+        const buttons = [...document.querySelectorAll("[data-theme-toggle]")];
+        return {
+          theme: root.dataset.theme || "",
+          colorScheme: getComputedStyle(root).colorScheme,
+          stored: localStorage.getItem(storageKey),
+          themeColor: (document.querySelector('meta[name="theme-color"]')?.content || "").toLowerCase(),
+          bodyBackground: bodyStyle.backgroundColor,
+          bodyColor: bodyStyle.color,
+          cardBackground: cardStyle?.backgroundColor || "",
+          cardBorder: cardStyle?.borderTopColor || "",
+          buttons: buttons.map((button) => ({
+            id: button.id,
+            tagName: button.tagName,
+            type: button.type,
+            pressed: button.getAttribute("aria-pressed"),
+            label: button.getAttribute("aria-label"),
+            title: button.getAttribute("title")
+          }))
+        };
+      };
+      const assertState = (snapshot, theme, stage) => {
+        const target = expected[theme];
+        if (snapshot.theme !== theme || snapshot.colorScheme !== theme) {
+          errors.push(stage + " did not expose the resolved " + theme + " theme and color-scheme on the root.");
+        }
+        if (snapshot.themeColor !== target.themeColor) {
+          errors.push(stage + " did not expose the expected browser theme-color.");
+        }
+        if (snapshot.bodyBackground !== target.bodyBackground || snapshot.bodyColor !== target.bodyColor
+          || snapshot.cardBackground !== target.cardBackground || snapshot.cardBorder !== target.cardBorder) {
+          errors.push(stage + " did not apply the expected body and category-card palette.");
+        }
+        const ids = snapshot.buttons.map((button) => button.id).sort();
+        if (snapshot.buttons.length !== 2
+          || JSON.stringify(ids) !== JSON.stringify(["auth-theme-toggle-button", "theme-toggle-button"])) {
+          errors.push(stage + " did not expose exactly the auth and protected-app theme toggles.");
+        }
+        if (snapshot.buttons.some((button) => button.tagName !== "BUTTON" || button.type !== "button"
+          || button.pressed !== target.pressed || button.label !== target.actionLabel
+          || button.title !== target.actionLabel)) {
+          errors.push(stage + " did not keep both native theme buttons' ARIA state and action labels synchronized.");
+        }
+      };
+
+      const light = inspect();
+      assertState(light, "light", "First light render");
+      if (light.stored !== null) {
+        errors.push("The system-derived first light render unexpectedly created an explicit theme preference.");
+      }
+
+      const visibleToggle = document.querySelector("#theme-toggle-button");
+      if (!visibleToggle || visibleToggle.hidden || getComputedStyle(visibleToggle).display === "none"
+        || visibleToggle.getClientRects().length === 0) {
+        errors.push("The protected-app theme toggle was not visible.");
+      } else {
+        visibleToggle.click();
+        await pause();
+      }
+      const dark = inspect();
+      assertState(dark, "dark", "Dark toggle");
+      if (dark.stored !== "dark") errors.push("Dark toggle did not save the explicit dark preference.");
+
+      return {
+        errors,
+        initialTheme: light.theme,
+        toggledTheme: dark.theme,
+        lightColors: {
+          bodyBackground: light.bodyBackground,
+          bodyColor: light.bodyColor,
+          cardBackground: light.cardBackground,
+          cardBorder: light.cardBorder
+        },
+        darkColors: {
+          bodyBackground: dark.bodyBackground,
+          bodyColor: dark.bodyColor,
+          cardBackground: dark.cardBackground,
+          cardBorder: dark.cardBorder
+        }
+      };
+    })()`);
+    const themeDarkScreenshot = await client.send("Page.captureScreenshot", { format: "png" });
+    fs.writeFileSync(themeScreenshots.dark430, Buffer.from(themeDarkScreenshot.data, "base64"));
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete"
+          && document.querySelector("#theme-toggle-button")
+          && document.querySelector("#category-grid .category-card")) {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for persisted theme testing."));
+        }
+      }, 50);
+    })`);
+
+    const themePersistenceResult = await client.evaluate(`(async () => {
+      const errors = [];
+      const storageKey = "ppsc-prep:theme:v1";
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 250));
+      const inspect = () => {
+        const root = document.documentElement;
+        const bodyStyle = getComputedStyle(document.body);
+        const cardStyle = getComputedStyle(document.querySelector("#category-grid .category-card"));
+        return {
+          theme: root.dataset.theme || "",
+          colorScheme: getComputedStyle(root).colorScheme,
+          stored: localStorage.getItem(storageKey),
+          themeColor: (document.querySelector('meta[name="theme-color"]')?.content || "").toLowerCase(),
+          bodyBackground: bodyStyle.backgroundColor,
+          bodyColor: bodyStyle.color,
+          cardBackground: cardStyle.backgroundColor,
+          cardBorder: cardStyle.borderTopColor,
+          buttons: [...document.querySelectorAll("[data-theme-toggle]")].map((button) => ({
+            pressed: button.getAttribute("aria-pressed"),
+            label: button.getAttribute("aria-label"),
+            title: button.getAttribute("title")
+          }))
+        };
+      };
+
+      const persistedDark = inspect();
+      if (persistedDark.theme !== "dark" || persistedDark.colorScheme !== "dark"
+        || persistedDark.stored !== "dark" || persistedDark.themeColor !== "#0d1522"
+        || persistedDark.bodyBackground !== "rgb(13, 21, 34)"
+        || persistedDark.bodyColor !== "rgb(231, 237, 247)"
+        || persistedDark.cardBackground !== "rgb(23, 34, 54)"
+        || persistedDark.cardBorder !== "rgb(51, 68, 93)") {
+        errors.push("Reload did not preserve the explicit dark theme and computed palette.");
+      }
+      if (persistedDark.buttons.length !== 2 || persistedDark.buttons.some((button) => (
+        button.pressed !== "true" || button.label !== "Switch to light mode"
+        || button.title !== "Switch to light mode"
+      ))) {
+        errors.push("Reload did not preserve the synchronized dark ARIA state on both theme toggles.");
+      }
+
+      document.querySelector("#theme-toggle-button")?.click();
+      await pause();
+      const restoredLight = inspect();
+      if (restoredLight.theme !== "light" || restoredLight.colorScheme !== "light"
+        || restoredLight.stored !== "light" || restoredLight.themeColor !== "#12366b"
+        || restoredLight.bodyBackground !== "rgb(244, 247, 251)"
+        || restoredLight.bodyColor !== "rgb(23, 36, 59)"
+        || restoredLight.cardBackground !== "rgb(255, 255, 255)"
+        || restoredLight.cardBorder !== "rgb(220, 228, 240)") {
+        errors.push("Switching back did not save and render the explicit light theme.");
+      }
+      if (restoredLight.buttons.length !== 2 || restoredLight.buttons.some((button) => (
+        button.pressed !== "false" || button.label !== "Switch to dark mode"
+        || button.title !== "Switch to dark mode"
+      ))) {
+        errors.push("Switching back did not synchronize the light ARIA state on both theme toggles.");
+      }
+      return {
+        errors,
+        persistedTheme: persistedDark.theme,
+        persistedPreference: persistedDark.stored,
+        restoredTheme: restoredLight.theme,
+        restoredPreference: restoredLight.stored
+      };
+    })()`);
+    const themeLightScreenshot = await client.send("Page.captureScreenshot", { format: "png" });
+    fs.writeFileSync(themeScreenshots.light430, Buffer.from(themeLightScreenshot.data, "base64"));
+
+    await client.send("Emulation.setDeviceMetricsOverride", {
+      width: 320,
+      height: 1000,
+      deviceScaleFactor: 1,
+      mobile: true
+    });
+    await delay(150);
+    const themeMobileResult = await client.evaluate(`(() => {
+      const errors = [];
+      const toggle = document.querySelector("#theme-toggle-button");
+      const authToggle = document.querySelector("#auth-theme-toggle-button");
+      const cloudControls = document.querySelector("#cloud-account-controls");
+      const authGate = document.querySelector("#auth-gate");
+      const cloudWasHidden = cloudControls?.hidden;
+      const authGateWasHidden = authGate?.hidden;
+      if (cloudControls) cloudControls.hidden = false;
+      const toggleRect = toggle?.getBoundingClientRect();
+      const brandRect = document.querySelector(".site-header .brand")?.getBoundingClientRect();
+      const actionsRect = document.querySelector(".site-header .header-actions")?.getBoundingClientRect();
+      const headerRect = document.querySelector(".site-header")?.getBoundingClientRect();
+      if (!toggleRect || toggleRect.width < 40 || toggleRect.height < 40
+        || toggleRect.left < -1 || toggleRect.right > window.innerWidth + 1
+        || !headerRect || toggleRect.top < headerRect.top - 1 || toggleRect.bottom > headerRect.bottom + 1) {
+        errors.push("The protected-app theme toggle was hidden, undersized, or outside the 320px header.");
+      }
+      if (!brandRect || !actionsRect || actionsRect.right > window.innerWidth + 1
+        || actionsRect.left < brandRect.right - 1 || document.documentElement.scrollWidth > window.innerWidth) {
+        errors.push("Theme, Queue, sync status, and Sign out controls did not fit the 320px production header.");
+      }
+      if (cloudControls) cloudControls.hidden = cloudWasHidden;
+
+      if (authGate) authGate.hidden = false;
+      const authToggleRect = authToggle?.getBoundingClientRect();
+      if (!authToggleRect || authToggleRect.width < 40 || authToggleRect.height < 40
+        || authToggleRect.left < -1 || authToggleRect.right > window.innerWidth + 1
+        || authToggleRect.top < -1 || authToggleRect.bottom > window.innerHeight + 1
+        || document.documentElement.scrollWidth > window.innerWidth) {
+        errors.push("The auth-gate theme toggle was hidden, undersized, or overflowed at 320px.");
+      }
+      if (authGate) authGate.hidden = authGateWasHidden;
+      return {
+        errors,
+        viewport: [window.innerWidth, window.innerHeight],
+        headerToggle: toggleRect ? [Math.round(toggleRect.width), Math.round(toggleRect.height)] : null,
+        authToggle: authToggleRect ? [Math.round(authToggleRect.width), Math.round(authToggleRect.height)] : null
+      };
+    })()`);
+    await client.send("Emulation.setDeviceMetricsOverride", {
+      width: 430,
+      height: 1200,
+      deviceScaleFactor: 1,
+      mobile: true
+    });
+    await delay(150);
 
     const computerSourceFixture = await client.evaluate(`(() => {
       const errors = [];
@@ -6765,7 +7041,10 @@ async function main() {
     const { resumeExpected, legacyV6Snapshot, ...normalSummary } = normalResult;
     const result = {
       ...normalSummary,
-      errors: computerSourceFixture.errors
+      errors: themeInitialResult.errors
+        .concat(themePersistenceResult.errors)
+        .concat(themeMobileResult.errors)
+        .concat(computerSourceFixture.errors)
         .concat(computerSourceUiResult.errors)
         .concat(computerSourceResponsiveResult.errors)
         .concat(computerSourceDesktopResult.errors)
@@ -6836,6 +7115,21 @@ async function main() {
       },
       difficult: difficultResult,
       urdu: urduResumeResult,
+      theme: {
+        initialLight: themeInitialResult.initialTheme === "light",
+        toggledDark: themeInitialResult.toggledTheme === "dark",
+        persistedDark: themePersistenceResult.persistedTheme === "dark"
+          && themePersistenceResult.persistedPreference === "dark",
+        restoredExplicitLight: themePersistenceResult.restoredTheme === "light"
+          && themePersistenceResult.restoredPreference === "light",
+        controlsAccessibleAndSynchronized: themeInitialResult.errors.length === 0
+          && themePersistenceResult.errors.length === 0,
+        mobileNoOverflow: themeMobileResult.errors.length === 0,
+        mobileMetrics: themeMobileResult,
+        lightColors: themeInitialResult.lightColors,
+        darkColors: themeInitialResult.darkColors,
+        screenshots: themeScreenshots
+      },
       computerSources: {
         counts: computerSourceFlowResult.counts,
         uiAndResponsive: computerSourceUiResult.errors.length === 0

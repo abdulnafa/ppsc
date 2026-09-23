@@ -7,7 +7,8 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
-  <link rel="stylesheet" href="styles.css?v=20260917-1">
+  <script src="theme.js?v=20260923-1"></script>
+  <link rel="stylesheet" href="styles.css?v=20260923-1">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20260912-2" defer></script>
   <script src="data/questions.js?v=20260902-2" defer></script>
@@ -18,9 +19,15 @@
 <body>
   <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
     <div class="auth-card">
-      <div class="auth-brand" aria-hidden="true">
-        <span class="brand-mark">P</span>
-        <span>PPSC Prep</span>
+      <div class="auth-toolbar">
+        <div class="auth-brand" aria-hidden="true">
+          <span class="brand-mark">P</span>
+          <span>PPSC Prep</span>
+        </div>
+        <button id="auth-theme-toggle-button" class="theme-toggle-button" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode" title="Switch to dark mode">
+          <span class="theme-toggle-icon" data-theme-toggle-icon aria-hidden="true">&#9789;</span>
+          <span class="theme-toggle-label" data-theme-toggle-label>Dark mode</span>
+        </button>
       </div>
 
       <div class="auth-heading">
@@ -95,6 +102,10 @@
     </a>
     <div class="header-actions">
       <span class="header-badge">General Ability</span>
+      <button id="theme-toggle-button" class="theme-toggle-button" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode" title="Switch to dark mode">
+        <span class="theme-toggle-icon" data-theme-toggle-icon aria-hidden="true">&#9789;</span>
+        <span class="theme-toggle-label" data-theme-toggle-label>Dark mode</span>
+      </button>
       <button id="global-retry-queue-button" class="global-retry-queue-button is-empty" type="button" aria-controls="retry-dialog" aria-haspopup="dialog" aria-label="Review Queue is empty" title="Review Queue is empty" data-count="0" data-remaining="0" disabled>
         <span class="global-retry-queue-icon" aria-hidden="true">&#8635;</span>
         <span class="global-retry-queue-label">Queue</span>
