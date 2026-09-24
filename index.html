@@ -8,13 +8,13 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20260923-1">
+  <link rel="stylesheet" href="styles.css?v=20260924-1">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20260912-2" defer></script>
   <script src="data/questions.js?v=20260902-2" defer></script>
   <script src="data/gk-study-notes.js?v=20260902-2" defer></script>
   <script src="data/detailed-learning.js?v=20260917-1" defer></script>
-  <script src="app.js?v=20260923-1" defer></script>
+  <script src="app.js?v=20260924-1" defer></script>
 </head>
 <body>
   <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
@@ -180,15 +180,30 @@
           <span class="card-arrow" aria-hidden="true">&rarr;</span>
         </button>
 
-        <button id="retry-queue-card" class="category-card retry-queue-card is-empty" type="button" aria-label="Review Queue" aria-controls="retry-dialog" aria-describedby="retry-queue-card-meta" aria-haspopup="dialog" disabled>
-          <span class="category-icon retry-queue-card-icon" aria-hidden="true">&#8635;</span>
-          <span class="category-copy">
-            <strong>Review Queue</strong>
-            <small id="retry-queue-card-meta" data-count="0" data-remaining="0">No reviews waiting. New Quiz answers will add confirmation practice here.</small>
-          </span>
-          <span class="retry-queue-card-badge" aria-hidden="true">ALL SUBJECTS</span>
-          <span class="card-arrow" aria-hidden="true">&rarr;</span>
-        </button>
+        <div class="retry-queue-panel">
+          <button id="retry-queue-card" class="category-card retry-queue-card is-empty" type="button" aria-label="Review Queue" aria-controls="retry-dialog" aria-describedby="retry-queue-card-meta" aria-haspopup="dialog" disabled>
+            <span class="category-icon retry-queue-card-icon" aria-hidden="true">&#8635;</span>
+            <span class="category-copy">
+              <strong>Review Queue</strong>
+              <small id="retry-queue-card-meta" data-count="0" data-remaining="0">No reviews waiting. New Quiz answers will add confirmation practice here.</small>
+            </span>
+            <span class="retry-queue-card-badge" aria-hidden="true">ALL SUBJECTS</span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+
+          <div class="retry-repeat-gap-control">
+            <label for="retry-repeat-gap-select">
+              <strong>Repeat the same MCQ after</strong>
+              <small>Choose the memory gap for dedicated Queue practice.</small>
+            </label>
+            <select id="retry-repeat-gap-select" class="retry-repeat-gap-select" aria-describedby="retry-repeat-gap-status" data-retry-repeat-gap>
+              <option value="3">3 other MCQs</option>
+              <option value="5" selected>5 other MCQs (recommended)</option>
+              <option value="10">10 other MCQs</option>
+            </select>
+            <small id="retry-repeat-gap-status" class="retry-repeat-gap-status" data-retry-repeat-gap-status data-gap="5">Same MCQ returns after up to 5 other Queue questions; small queues use the widest possible gap.</small>
+          </div>
+        </div>
       </div>
 
       <div id="category-grid" class="category-grid">

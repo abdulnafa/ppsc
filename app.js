@@ -23,6 +23,9 @@
   var RETRY_QUEUE_COUNT_BASELINE = 5;
   var RETRY_QUEUE_MIN_SPACING = 5;
   var RETRY_QUEUE_MAX_SPACING = 6;
+  var DEDICATED_RETRY_GAP_OPTIONS = [3, 5, 10];
+  var DEDICATED_RETRY_DEFAULT_GAP = 5;
+  var DEDICATED_RETRY_MAX_GAP = 10;
   var IMPORTANT_REVIEW_MIN_SPACING = 10;
   var IMPORTANT_REVIEW_MAX_SPACING = 20;
   var BASIC_COMPUTER_CATEGORY_ID = "basic-computer-studies";
@@ -178,6 +181,8 @@
     elements.globalRetryQueueCount = firstElement(["#global-retry-queue-count", "[data-global-retry-queue-count]"]);
     elements.retryQueueCard = firstElement(["#retry-queue-card", "[data-retry-queue-card]"]);
     elements.retryQueueCardMeta = firstElement(["#retry-queue-card-meta", "[data-retry-queue-card-meta]"]);
+    elements.retryRepeatGapSelect = firstElement(["#retry-repeat-gap-select", "[data-retry-repeat-gap]"]);
+    elements.retryRepeatGapStatus = firstElement(["#retry-repeat-gap-status", "[data-retry-repeat-gap-status]"]);
     elements.paperSetupBackButton = firstElement(["#paper-setup-back-button", "[data-paper-setup-back]"]);
     elements.paperCategoryOptions = firstElement(["#paper-category-options", "[data-paper-category-options]"]);
     elements.paperSelectAllButton = firstElement(["#paper-select-all-button", "[data-paper-select-all]"]);
@@ -968,6 +973,8 @@
       nextSequence: 1,
       dedicatedDeck: [],
       dedicatedLastQuestionId: null,
+      dedicatedRepeatGap: DEDICATED_RETRY_DEFAULT_GAP,
+      dedicatedRecentQuestionIds: [],
       importantDeck: [],
       importantLastQuestionId: null,
       items: [],
@@ -977,6 +984,13 @@
 
   function isSafeWholeNumber(value, minimum) {
     return Number.isSafeInteger(value) && value >= minimum;
+  }
+
+  function normalizedDedicatedRepeatGap(value) {
+    var numericValue = Number(value);
+    return DEDICATED_RETRY_GAP_OPTIONS.includes(numericValue)
+      ? numericValue
+      : DEDICATED_RETRY_DEFAULT_GAP;
   }
 
   function isRetryResumeAction(value) {
@@ -1101,6 +1115,15 @@
       if (!knownQuestionIds.has(dedicatedLastQuestionId)) dedicatedLastQuestionId = null;
     }
 
+    var dedicatedRepeatGap = normalizedDedicatedRepeatGap(savedValue.dedicatedRepeatGap);
+    var dedicatedRecentQuestionIds = Array.isArray(savedValue.dedicatedRecentQuestionIds)
+      ? savedValue.dedicatedRecentQuestionIds.map(function (savedQuestionId) {
+        return String(savedQuestionId || "");
+      }).filter(function (questionId) {
+        return knownQuestionIds.has(questionId);
+      }).slice(-DEDICATED_RETRY_MAX_GAP)
+      : [];
+
     var importantDeck = [];
     if (Array.isArray(savedValue.importantDeck)) {
       var importantDeckIds = new Set();
@@ -1194,14 +1217,15 @@
         });
       }
       // Older saved embedded attempts did not persist a last-presented marker.
-      // Anchor either restored context so the next equal-priority tie can avoid
-      // an immediate repeat; a unique highest-count item may repeat by design.
+      // Anchor either restored context so priority ties and short legacy queues
+      // can still avoid an immediate repeat.
       if (attemptKind === "queue") dedicatedLastQuestionId = attemptQuestionId;
     }
 
     if (items.length === 0) {
       dedicatedDeck = [];
       dedicatedLastQuestionId = null;
+      dedicatedRecentQuestionIds = [];
     } else if (applyCountBaseline) {
       // Rebuild priority practice from the newly equal five-review baseline.
       dedicatedDeck = [];
@@ -1220,6 +1244,8 @@
       nextSequence: savedValue.nextSequence,
       dedicatedDeck: dedicatedDeck,
       dedicatedLastQuestionId: dedicatedLastQuestionId,
+      dedicatedRepeatGap: dedicatedRepeatGap,
+      dedicatedRecentQuestionIds: dedicatedRecentQuestionIds,
       importantDeck: importantDeck,
       importantLastQuestionId: importantLastQuestionId,
       items: items,
@@ -1332,9 +1358,26 @@
             + " across " + allItemCount + (allItemCount === 1 ? " question" : " questions")
       );
     }
+    var dedicatedRepeatGap = normalizedDedicatedRepeatGap(retryQueueState.dedicatedRepeatGap);
+    if (elements.retryRepeatGapSelect) {
+      elements.retryRepeatGapSelect.value = String(dedicatedRepeatGap);
+      elements.retryRepeatGapSelect.dataset.gap = String(dedicatedRepeatGap);
+    }
+    if (elements.retryRepeatGapStatus) {
+      elements.retryRepeatGapStatus.textContent = "Same MCQ returns after up to " + dedicatedRepeatGap
+        + " other Queue questions; small queues use the widest possible gap.";
+      elements.retryRepeatGapStatus.dataset.gap = String(dedicatedRepeatGap);
+    }
     if (elements.retryQueueAnnouncer && announcement) {
       elements.retryQueueAnnouncer.textContent = announcement;
     }
+  }
+
+  function setDedicatedRepeatGap(value) {
+    var repeatGap = normalizedDedicatedRepeatGap(value);
+    retryQueueState.dedicatedRepeatGap = repeatGap;
+    retryQueueState.dedicatedDeck = [];
+    saveRetryQueue("Review Queue gap set to " + repeatGap + " other questions. Saved queue counts are unchanged.");
   }
 
   function saveRetryQueue(announcement) {
@@ -1370,16 +1413,22 @@
       var countBaselineApplied = isSafeWholeNumber(savedCountBaselineVersion, 0)
         && savedCountBaselineVersion < RETRY_QUEUE_COUNT_BASELINE_VERSION;
       var normalized = normalizeRetryQueue(savedValue);
+      var dedicatedSpacingApplied = Boolean(normalized) && (
+        savedValue.dedicatedRepeatGap !== normalized.dedicatedRepeatGap
+        || JSON.stringify(savedValue.dedicatedRecentQuestionIds) !== JSON.stringify(normalized.dedicatedRecentQuestionIds)
+      );
       if (!normalized) {
         window.localStorage.removeItem(RETRY_QUEUE_STORAGE_KEY);
         notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "remove");
         retryQueueState = createEmptyRetryQueueState();
       } else {
         retryQueueState = normalized;
-        if (countBaselineApplied) {
-          saveRetryQueue(retryQueueState.items.length > 0
+        if (countBaselineApplied || dedicatedSpacingApplied) {
+          saveRetryQueue(countBaselineApplied && retryQueueState.items.length > 0
             ? "Existing Review Queue counts were set to five once. Wrong answers now add two."
-            : "");
+            : (dedicatedSpacingApplied
+              ? "Review Queue spacing is ready. Saved question counts were kept unchanged."
+              : ""));
           return;
         }
       }
@@ -1489,6 +1538,36 @@
       if (withoutPreviousTie.length > 0) highestPriorityItems = withoutPreviousTie;
     }
     return fisherYates(highestPriorityItems);
+  }
+
+  function rememberDedicatedRetryQuestion(questionId) {
+    var normalizedId = String(questionId || "");
+    if (!knownQuestionIds.has(normalizedId)) return;
+    retryQueueState.dedicatedRecentQuestionIds.push(normalizedId);
+    retryQueueState.dedicatedRecentQuestionIds = retryQueueState.dedicatedRecentQuestionIds
+      .slice(-DEDICATED_RETRY_MAX_GAP);
+  }
+
+  function dedicatedRetryCandidates() {
+    var items = retryQueueState.items.slice();
+    if (items.length <= 1) return items;
+    var repeatGap = normalizedDedicatedRepeatGap(retryQueueState.dedicatedRepeatGap);
+    var recentQuestionIds = retryQueueState.dedicatedRecentQuestionIds.slice(-repeatGap);
+    var recentQuestionIdSet = new Set(recentQuestionIds);
+    var eligibleItems = items.filter(function (item) {
+      return !recentQuestionIdSet.has(item.questionId);
+    });
+    if (eligibleItems.length > 0) return eligibleItems;
+
+    // A small queue cannot always provide the full selected gap. Continue with
+    // the least-recently shown item so every available MCQ is cycled before a
+    // repeat and practice can never deadlock.
+    var oldestRecentIndex = items.reduce(function (oldest, item) {
+      return Math.min(oldest, recentQuestionIds.lastIndexOf(item.questionId));
+    }, Number.POSITIVE_INFINITY);
+    return items.filter(function (item) {
+      return recentQuestionIds.lastIndexOf(item.questionId) === oldestRecentIndex;
+    });
   }
 
   function dueRetryQueueItem(excludedQuestionId) {
@@ -1853,8 +1932,10 @@
           ? "Correct or wrong, this Important MCQ stays in global practice and never changes finite Queue totals."
           : (dedicatedPractice
           ? (attempt.submitted
-            ? "Continue to the waiting MCQ with the highest remaining count."
-            : "A correct answer removes one review; a wrong answer adds two. Your current screen and session stay unchanged.")
+            ? "Continue to the highest-count eligible MCQ. Recent MCQs stay apart by up to "
+              + normalizedDedicatedRepeatGap(retryQueueState.dedicatedRepeatGap) + " other Queue questions."
+            : "A correct answer removes one review; a wrong answer adds two. The same MCQ returns after up to "
+              + normalizedDedicatedRepeatGap(retryQueueState.dedicatedRepeatGap) + " other Queue questions.")
           : (attempt.submitted
             ? "Continue to return to your session."
             : "This review does not change your Learn or Quiz progress.")));
@@ -1922,8 +2003,8 @@
 
   function refillDedicatedRetryDeck() {
     retryQueueState.dedicatedDeck = prioritizedRetryItems(
-      retryQueueState.items,
-      "",
+      dedicatedRetryCandidates(),
+      retryQueueState.dedicatedLastQuestionId,
       true
     ).map(function (item) {
       return item.questionId;
@@ -1931,7 +2012,11 @@
   }
 
   function nextDedicatedRetryItem() {
-    var prioritizedItems = prioritizedRetryItems(retryQueueState.items, "", true);
+    var prioritizedItems = prioritizedRetryItems(
+      dedicatedRetryCandidates(),
+      retryQueueState.dedicatedLastQuestionId,
+      true
+    );
     var prioritizedIds = prioritizedItems.map(function (item) {
       return item.questionId;
     });
@@ -2208,6 +2293,10 @@
     if (!item) return;
     var dedicatedPractice = attempt.context === "dedicated";
     var mastered = applyRetryAttemptOutcome(attempt, item);
+    if (dedicatedPractice) {
+      rememberDedicatedRetryQuestion(item.questionId);
+      retryQueueState.dedicatedDeck = [];
+    }
     if (!mastered) {
       if (!dedicatedPractice) {
         if (
@@ -2222,12 +2311,13 @@
       retryQueueState.nextQuizReviewStep = null;
       retryQueueState.dedicatedDeck = [];
       retryQueueState.dedicatedLastQuestionId = null;
+      retryQueueState.dedicatedRecentQuestionIds = [];
     }
     retryQueueState.activeAttempt = null;
     saveRetryQueue(mastered
       ? "Review complete. This question has left the queue."
       : (dedicatedPractice
-        ? "Review saved. The next highest-count waiting MCQ will be shown."
+        ? "Review saved. The highest-count eligible MCQ will be shown next; recent MCQs stay spaced apart."
         : "Review saved. Another review can appear after five or six new Learn or Quiz questions."));
     closeRetryDialog();
     if (dedicatedPractice) {
@@ -2341,8 +2431,14 @@
     var mastered = false;
     if (item && attempt.submitted) {
       mastered = applyRetryAttemptOutcome(attempt, item);
+      if (attempt.context === "dedicated") {
+        rememberDedicatedRetryQuestion(item.questionId);
+        retryQueueState.dedicatedDeck = [];
+      }
       if (!mastered) {
-        item.dueStep = retryQueueState.practiceStep + randomRetrySpacing();
+        if (attempt.context !== "dedicated") {
+          item.dueStep = retryQueueState.practiceStep + randomRetrySpacing();
+        }
         item.sequence = nextRetrySequence();
       }
     }
@@ -2350,6 +2446,7 @@
       retryQueueState.nextQuizReviewStep = null;
       retryQueueState.dedicatedDeck = [];
       retryQueueState.dedicatedLastQuestionId = null;
+      retryQueueState.dedicatedRecentQuestionIds = [];
     }
     retryQueueState.activeAttempt = null;
     saveRetryQueue();
@@ -5587,6 +5684,11 @@
     }
     if (elements.retryQueueCard) {
       elements.retryQueueCard.addEventListener("click", startDedicatedRetryPractice);
+    }
+    if (elements.retryRepeatGapSelect) {
+      elements.retryRepeatGapSelect.addEventListener("change", function () {
+        setDedicatedRepeatGap(elements.retryRepeatGapSelect.value);
+      });
     }
     if (elements.paperSetupBackButton) elements.paperSetupBackButton.addEventListener("click", returnToCategories);
     if (elements.paperCategoryOptions) {

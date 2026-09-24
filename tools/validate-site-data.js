@@ -1003,7 +1003,7 @@ function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
     "category-screen", "paper-builder-card", "global-retry-queue-button", "global-retry-queue-count",
-    "retry-queue-card", "retry-queue-card-meta",
+    "retry-queue-card", "retry-queue-card-meta", "retry-repeat-gap-select", "retry-repeat-gap-status",
     "paper-setup-screen", "paper-setup-back-button",
     "quick-notes-screen", "quick-notes-back-button", "quick-notes-category",
     "quick-notes-title", "quick-notes-count", "quick-notes-language-note",
@@ -1102,6 +1102,29 @@ function validateHtml() {
   const categoryGridIndex = html.search(/\bid=["']category-grid["']/i);
   if (paperBuilderIndex < 0 || retryQueueCardIndex <= paperBuilderIndex || categoryGridIndex <= retryQueueCardIndex) {
     error("index.html: #retry-queue-card must appear after #paper-builder-card and before #category-grid");
+  }
+  const retryRepeatGapSelect = html.match(/<select\b[^>]*\bid=["']retry-repeat-gap-select["'][^>]*>[\s\S]*?<\/select>/i)?.[0] || "";
+  if (!/\baria-describedby=["']retry-repeat-gap-status["']/i.test(retryRepeatGapSelect)
+    || !/\bdata-retry-repeat-gap(?:\s|=|>)/i.test(retryRepeatGapSelect)) {
+    error("index.html: #retry-repeat-gap-select must be a native, described Queue gap control");
+  }
+  const retryRepeatGapOptions = retryRepeatGapSelect.match(/<option\b[^>]*>/gi) || [];
+  const retryRepeatGapValues = retryRepeatGapOptions.map((option) => {
+    return option.match(/\bvalue=["'](\d+)["']/i)?.[1] || "";
+  });
+  const selectedRetryRepeatGaps = retryRepeatGapOptions.filter((option) => {
+    return /\bselected(?:\s|=|>)/i.test(option);
+  }).map((option) => option.match(/\bvalue=["'](\d+)["']/i)?.[1] || "");
+  if (retryRepeatGapValues.join(",") !== "3,5,10" || selectedRetryRepeatGaps.join(",") !== "5") {
+    error("index.html: Queue repeat gap options must be 3, 5 (default), and 10");
+  }
+  if (!/<label\b[^>]*\bfor=["']retry-repeat-gap-select["'][^>]*>/i.test(html)) {
+    error("index.html: #retry-repeat-gap-select must have an associated label");
+  }
+  const retryRepeatGapStatus = html.match(/<[^>]+\bid=["']retry-repeat-gap-status["'][^>]*>/i)?.[0] || "";
+  if (!/\bdata-retry-repeat-gap-status(?:\s|=|>)/i.test(retryRepeatGapStatus)
+    || !/\bdata-gap=["']5["']/i.test(retryRepeatGapStatus)) {
+    error("index.html: #retry-repeat-gap-status must expose the default five-question gap");
   }
   const computerSourcePanel = html.match(/<section\b[^>]*\bid=["']computer-source-panel["'][^>]*>/i)?.[0] || "";
   if (!/\bhidden(?:\s|=|>)/i.test(computerSourcePanel)
@@ -1302,6 +1325,7 @@ function validateThemeContract() {
 
 function validateRetryQueueContract() {
   const app = fs.readFileSync(appPath, "utf8");
+  const styles = fs.readFileSync(stylesPath, "utf8");
   const requiredConstants = [
     ["RETRY_QUEUE_STORAGE_KEY", '"ppsc-prep:retry-queue:v1"'],
     ["RETRY_QUEUE_STORAGE_VERSION", "1"],
@@ -1312,6 +1336,8 @@ function validateRetryQueueContract() {
     ["RETRY_QUEUE_COUNT_BASELINE", "5"],
     ["RETRY_QUEUE_MIN_SPACING", "5"],
     ["RETRY_QUEUE_MAX_SPACING", "6"],
+    ["DEDICATED_RETRY_DEFAULT_GAP", "5"],
+    ["DEDICATED_RETRY_MAX_GAP", "10"],
     ["IMPORTANT_REVIEW_MIN_SPACING", "10"],
     ["IMPORTANT_REVIEW_MAX_SPACING", "20"]
   ];
@@ -1329,6 +1355,14 @@ function validateRetryQueueContract() {
     'five or six new Learn or Quiz questions',
     'remaining: 1',
     'function prioritizedRetryItems(items, excludedQuestionId, allowExcludedFallback)',
+    'var DEDICATED_RETRY_GAP_OPTIONS = [3, 5, 10];',
+    'function dedicatedRetryCandidates()',
+    'function rememberDedicatedRetryQuestion(questionId)',
+    'dedicatedRepeatGap: DEDICATED_RETRY_DEFAULT_GAP',
+    'dedicatedRecentQuestionIds: []',
+    'var dedicatedSpacingApplied = Boolean(normalized)',
+    'retryQueueState.dedicatedDeck = [];',
+    'setDedicatedRepeatGap(elements.retryRepeatGapSelect.value)',
     'return Math.max(highest, item.remaining);',
     'remaining: applyCountBaseline ? RETRY_QUEUE_COUNT_BASELINE : entry.remaining',
     'countBaselineVersion: Math.max(',
@@ -1339,6 +1373,17 @@ function validateRetryQueueContract() {
   ]) {
     if (!app.includes(requiredSnippet)) {
       error(`app.js: missing Learn/global Review Queue contract snippet ${requiredSnippet}`);
+    }
+  }
+  for (const requiredStyle of [
+    ".retry-queue-panel",
+    ".retry-repeat-gap-control",
+    ".retry-repeat-gap-select",
+    "html[data-theme='dark'] .retry-repeat-gap-control",
+    "html[data-theme='dark'] .retry-repeat-gap-select"
+  ]) {
+    if (!styles.includes(requiredStyle)) {
+      error(`styles.css: missing dedicated Queue gap control style ${requiredStyle}`);
     }
   }
 }

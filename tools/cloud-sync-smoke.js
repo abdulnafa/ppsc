@@ -75,6 +75,8 @@ const DEDICATED_ATTEMPT_QUEUE_RAW = JSON.stringify({
   nextSequence: 9,
   dedicatedDeck: [SECOND_QUESTION_ID],
   dedicatedLastQuestionId: SAMPLE_QUESTION_ID,
+  dedicatedRepeatGap: 10,
+  dedicatedRecentQuestionIds: [SECOND_QUESTION_ID, SAMPLE_QUESTION_ID],
   items: [
     { questionId: SAMPLE_QUESTION_ID, remaining: 4, dueStep: 13, sequence: 7 },
     { questionId: SECOND_QUESTION_ID, remaining: 2, dueStep: 14, sequence: 8 }
@@ -589,6 +591,9 @@ async function testDedicatedAttemptQueueRoundTrip() {
     store,
     local: { [RETRY_QUEUE_KEY]: DEDICATED_ATTEMPT_QUEUE_RAW }
   });
+  const sourceQueue = JSON.parse(source.localStorage.getItem(RETRY_QUEUE_KEY));
+  assert.equal(sourceQueue.dedicatedRepeatGap, 10);
+  assert.deepEqual(sourceQueue.dedicatedRecentQuestionIds, [SECOND_QUESTION_ID, SAMPLE_QUESTION_ID]);
   const choice = await waitFor(
     source,
     (candidate) => candidate.phase === "migration-choice",
@@ -605,16 +610,22 @@ async function testDedicatedAttemptQueueRoundTrip() {
   assert.equal(
     rawCloudValue(store, "retry-queue"),
     DEDICATED_ATTEMPT_QUEUE_RAW,
-    "new queue cadence, priority-tie deck, and dedicated-attempt fields must upload byte-for-byte"
+    "new queue cadence, repeat-spacing history, priority-tie deck, and dedicated-attempt fields must upload byte-for-byte"
   );
+  const uploadedQueue = JSON.parse(rawCloudValue(store, "retry-queue"));
+  assert.equal(uploadedQueue.dedicatedRepeatGap, 10);
+  assert.deepEqual(uploadedQueue.dedicatedRecentQuestionIds, [SECOND_QUESTION_ID, SAMPLE_QUESTION_ID]);
 
   const restored = createBrowser({ store: cloneStore(store), local: {} });
   await waitFor(restored, (candidate) => candidate.ready, "dedicated queue empty-device restore");
   assert.equal(
     restored.localStorage.getItem(RETRY_QUEUE_KEY),
     DEDICATED_ATTEMPT_QUEUE_RAW,
-    "new queue cadence, priority-tie deck, and dedicated-attempt fields must restore byte-for-byte"
+    "new queue cadence, repeat-spacing history, priority-tie deck, and dedicated-attempt fields must restore byte-for-byte"
   );
+  const restoredQueue = JSON.parse(restored.localStorage.getItem(RETRY_QUEUE_KEY));
+  assert.equal(restoredQueue.dedicatedRepeatGap, 10);
+  assert.deepEqual(restoredQueue.dedicatedRecentQuestionIds, [SECOND_QUESTION_ID, SAMPLE_QUESTION_ID]);
 }
 
 async function testImportantPracticeRoundTrip() {
@@ -906,7 +917,7 @@ async function main() {
       "different local/cloud progress waits for owner choice",
       "unapproved Google account is rejected before Firestore",
       "legacy retry remaining=2 survives upload and restore",
-      "dedicated retry attempt, count-baseline marker, cadence, and priority-tie deck fields round-trip byte-for-byte",
+      "dedicated retry attempt, count-baseline marker, cadence, repeat-spacing history, and priority-tie deck fields round-trip byte-for-byte",
       "permanent Important cadence, count-baseline marker, shuffled deck, and active attempt round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",
       "large progress round-trips through integrity-checked chunks",
