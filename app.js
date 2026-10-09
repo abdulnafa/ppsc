@@ -21,9 +21,11 @@
   var PREVIOUS_RETRY_QUEUE_INCREMENT = 5;
   var RETRY_QUEUE_COUNT_BASELINE_VERSION = 1;
   var RETRY_QUEUE_COUNT_BASELINE = 5;
-  var EMBEDDED_RETRY_CADENCE_VERSION = 1;
-  var RETRY_QUEUE_MIN_SPACING = 10;
-  var RETRY_QUEUE_MAX_SPACING = 15;
+  var EMBEDDED_RETRY_CADENCE_VERSION = 2;
+  var RETRY_QUEUE_MIN_SPACING = 5;
+  var RETRY_QUEUE_MAX_SPACING = 6;
+  var WRONG_RETRY_MIN_SPACING = 10;
+  var WRONG_RETRY_MAX_SPACING = 15;
   var DEDICATED_RETRY_GAP_OPTIONS = [3, 5, 10];
   var DEDICATED_RETRY_DEFAULT_GAP = 5;
   var DEDICATED_RETRY_MAX_GAP = 10;
@@ -1008,6 +1010,11 @@
       + Math.floor(Math.random() * (RETRY_QUEUE_MAX_SPACING - RETRY_QUEUE_MIN_SPACING + 1));
   }
 
+  function randomWrongRetrySpacing() {
+    return WRONG_RETRY_MIN_SPACING
+      + Math.floor(Math.random() * (WRONG_RETRY_MAX_SPACING - WRONG_RETRY_MIN_SPACING + 1));
+  }
+
   function randomImportantSpacing() {
     return IMPORTANT_REVIEW_MIN_SPACING
       + Math.floor(Math.random() * (IMPORTANT_REVIEW_MAX_SPACING - IMPORTANT_REVIEW_MIN_SPACING + 1));
@@ -1050,6 +1057,9 @@
       : savedValue.embeddedCadenceVersion;
     if (!isSafeWholeNumber(savedEmbeddedCadenceVersion, 0)) return null;
     var applyEmbeddedCadence = savedEmbeddedCadenceVersion < EMBEDDED_RETRY_CADENCE_VERSION;
+    var migratedEmbeddedReviewStep = applyEmbeddedCadence && savedValue.items.length > 0
+      ? savedValue.practiceStep + RETRY_QUEUE_MIN_SPACING
+      : null;
 
     var questionIds = new Set();
     var sequences = new Set();
@@ -1066,12 +1076,27 @@
       ) return null;
       questionIds.add(questionId);
       sequences.add(entry.sequence);
-      return {
+      var normalizedItem = {
         questionId: questionId,
         remaining: applyCountBaseline ? RETRY_QUEUE_COUNT_BASELINE : entry.remaining,
-        dueStep: entry.dueStep,
+        dueStep: migratedEmbeddedReviewStep === null
+          ? entry.dueStep
+          : Math.min(entry.dueStep, migratedEmbeddedReviewStep),
         sequence: entry.sequence
       };
+      if (typeof entry.wrongRetryDueStep !== "undefined") {
+        if (
+          !isSafeWholeNumber(entry.wrongRetryDueStep, 0)
+          || entry.wrongRetryDueStep !== entry.dueStep
+        ) return null;
+        normalizedItem.wrongRetryDueStep = applyEmbeddedCadence
+          ? undefined
+          : entry.wrongRetryDueStep;
+        if (typeof normalizedItem.wrongRetryDueStep === "undefined") {
+          delete normalizedItem.wrongRetryDueStep;
+        }
+      }
+      return normalizedItem;
     });
     if (items.some(function (entry) { return !entry; })) return null;
     var highestSequence = items.reduce(function (highest, entry) {
@@ -1081,11 +1106,10 @@
 
     var nextQuizReviewStep = savedValue.nextQuizReviewStep;
     if (applyEmbeddedCadence) {
-      // Existing queues keep every question and count, but their next embedded
-      // Learn/Quiz review is moved onto the new 10-to-15-question cadence once.
-      nextQuizReviewStep = items.length > 0
-        ? savedValue.practiceStep + randomRetrySpacing()
-        : null;
+      // Restore the regular finite-Queue cadence once without changing any
+      // saved question or remaining count. Only a specifically wrong MCQ uses
+      // the separate 10-to-15-question cooldown after this migration.
+      nextQuizReviewStep = migratedEmbeddedReviewStep;
     } else if (typeof nextQuizReviewStep === "undefined") {
       // Repair a current-format payload that is missing its global gate
       // without touching any saved question or repetition count.
@@ -1456,7 +1480,7 @@
           saveRetryQueue(countBaselineApplied && retryQueueState.items.length > 0
             ? "Existing Review Queue counts were set to five once. Wrong answers now add two."
             : (embeddedCadenceApplied && retryQueueState.items.length > 0
-              ? "Learn and Quiz reviews now return after ten to fifteen main questions. Saved Queue counts were kept unchanged."
+              ? "Regular Queue timing was restored. A wrong MCQ alone now waits ten to fifteen questions; saved Queue counts were kept unchanged."
               : (dedicatedSpacingApplied
               ? "Review Queue spacing is ready. Saved question counts were kept unchanged."
               : "")));
@@ -1507,22 +1531,24 @@
     var queueChanged = false;
     var quizAnswer = state.mode === "quiz";
     if (quizAnswer && wrongAnswer) {
-      var nextDueStep = retryQueueState.practiceStep + randomRetrySpacing();
+      var nextDueStep = retryQueueState.practiceStep + randomWrongRetrySpacing();
       if (item) {
         item.remaining += RETRY_QUEUE_INCREMENT;
-        item.dueStep = Math.min(item.dueStep, nextDueStep);
+        item.dueStep = nextDueStep;
+        item.wrongRetryDueStep = nextDueStep;
       } else {
         item = {
           questionId: questionId,
           remaining: RETRY_QUEUE_INCREMENT,
           dueStep: nextDueStep,
+          wrongRetryDueStep: nextDueStep,
           sequence: nextRetrySequence()
         };
         retryQueueState.items.push(item);
       }
       queueChanged = true;
       if (retryQueueState.nextQuizReviewStep === null) {
-        retryQueueState.nextQuizReviewStep = nextDueStep;
+        scheduleNextQuizReview();
       }
     } else if (quizAnswer && !item) {
       var confirmationDueStep = retryQueueState.practiceStep + randomRetrySpacing();
@@ -1540,8 +1566,10 @@
     }
     saveRetryQueue(queueChanged && wrongAnswer
       ? (isUrduCategoryQuestion(question)
-        ? "دہرائی کی قطار اپ ڈیٹ ہو گئی ہے۔ اس سوال کے " + item.remaining + " درست جواب باقی ہیں۔"
-        : "Review queue updated. This question needs " + item.remaining + " correct reviews.")
+        ? "دہرائی کی قطار اپ ڈیٹ ہو گئی ہے۔ اس سوال کے " + item.remaining
+          + " درست جواب باقی ہیں۔ یہ سوال 10 سے 15 دوسرے سوالات کے بعد دوبارہ آئے گا۔"
+        : "Review queue updated. This question needs " + item.remaining
+          + " correct reviews and will return after 10 to 15 other questions.")
       : (queueChanged
         ? "One confirmation review was added for this correct Quiz answer."
         : ""));
@@ -1603,13 +1631,16 @@
 
   function dueRetryQueueItem(excludedQuestionId) {
     if (!activeRetryCategoryId()) return null;
-    if (
-      retryQueueState.nextQuizReviewStep === null
-      || retryQueueState.practiceStep < retryQueueState.nextQuizReviewStep
-    ) return null;
+    var regularQueueDue = retryQueueState.nextQuizReviewStep !== null
+      && retryQueueState.practiceStep >= retryQueueState.nextQuizReviewStep;
     var dueItems = retryQueueState.items.filter(function (item) {
-      return item.dueStep <= retryQueueState.practiceStep;
+      if (item.dueStep > retryQueueState.practiceStep) return false;
+      return regularQueueDue || (
+        isSafeWholeNumber(item.wrongRetryDueStep, 0)
+        && item.wrongRetryDueStep <= retryQueueState.practiceStep
+      );
     });
+    if (dueItems.length === 0) return null;
     return prioritizedRetryItems(
       dueItems,
       excludedQuestionId,
@@ -2193,7 +2224,11 @@
     if (!canonicalQuestion) return false;
     var reviewQuestion = shuffledReviewQuestion(canonicalQuestion);
     if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
-    scheduleNextQuizReview();
+    var regularQueueDue = retryQueueState.nextQuizReviewStep !== null
+      && retryQueueState.practiceStep >= retryQueueState.nextQuizReviewStep;
+    // A specifically wrong MCQ may return on its own 10-to-15-question clock.
+    // Do not restart the independent five-or-six-question Queue clock when it does.
+    if (regularQueueDue) scheduleNextQuizReview();
     // This legacy field now avoids back-to-back equal-priority ties across both
     // embedded and dedicated practice while remaining compatible with v1 saves.
     retryQueueState.dedicatedLastQuestionId = item.questionId;
@@ -2325,6 +2360,9 @@
     var dedicatedPractice = attempt.context === "dedicated";
     var mastered = applyRetryAttemptOutcome(attempt, item);
     if (dedicatedPractice) {
+      // Dedicated Queue practice has its own 3/5/10-question repeat-gap rules;
+      // an older embedded wrong-answer timer must not leak back out of it.
+      delete item.wrongRetryDueStep;
       rememberDedicatedRetryQuestion(item.questionId);
       retryQueueState.dedicatedDeck = [];
     }
@@ -2334,7 +2372,11 @@
           retryQueueState.nextQuizReviewStep === null
           || retryQueueState.nextQuizReviewStep <= retryQueueState.practiceStep
         ) scheduleNextQuizReview();
-        item.dueStep = retryQueueState.nextQuizReviewStep;
+        item.dueStep = retryQueueState.practiceStep + (
+          attempt.outcome === "wrong" ? randomWrongRetrySpacing() : randomRetrySpacing()
+        );
+        if (attempt.outcome === "wrong") item.wrongRetryDueStep = item.dueStep;
+        else delete item.wrongRetryDueStep;
       }
       item.sequence = nextRetrySequence();
     }
@@ -2349,7 +2391,9 @@
       ? "Review complete. This question has left the queue."
       : (dedicatedPractice
         ? "Review saved. The highest-count eligible MCQ will be shown next; recent MCQs stay spaced apart."
-        : "Review saved. Another review can appear after ten to fifteen new Learn or Quiz questions."));
+        : (attempt.outcome === "wrong"
+          ? "Review saved. This MCQ will return after ten to fifteen other Learn or Quiz questions; the Queue keeps its normal timing."
+          : "Review saved. Another Queue review can appear after five or six new Learn or Quiz questions.")));
     closeRetryDialog();
     if (dedicatedPractice) {
       if (retryQueueState.items.length === 0) {
@@ -2395,9 +2439,10 @@
       || retryQueueState.nextQuizReviewStep <= retryQueueState.practiceStep
     ) scheduleNextQuizReview();
     item.dueStep = retryQueueState.nextQuizReviewStep;
+    delete item.wrongRetryDueStep;
     item.sequence = nextRetrySequence();
     retryQueueState.activeAttempt = null;
-    saveRetryQueue("Review postponed for ten to fifteen new Learn or Quiz questions.");
+    saveRetryQueue("Review postponed to the next regular Queue opportunity.");
     closeRetryDialog();
     performRetryResumeAction(resumeAction);
   }
@@ -2463,12 +2508,17 @@
     if (item && attempt.submitted) {
       mastered = applyRetryAttemptOutcome(attempt, item);
       if (attempt.context === "dedicated") {
+        delete item.wrongRetryDueStep;
         rememberDedicatedRetryQuestion(item.questionId);
         retryQueueState.dedicatedDeck = [];
       }
       if (!mastered) {
         if (attempt.context !== "dedicated") {
-          item.dueStep = retryQueueState.practiceStep + randomRetrySpacing();
+          item.dueStep = retryQueueState.practiceStep + (
+            attempt.outcome === "wrong" ? randomWrongRetrySpacing() : randomRetrySpacing()
+          );
+          if (attempt.outcome === "wrong") item.wrongRetryDueStep = item.dueStep;
+          else delete item.wrongRetryDueStep;
         }
         item.sequence = nextRetrySequence();
       }
@@ -4695,7 +4745,7 @@
     }
 
     releaseActiveRetryAttempt();
-    if (retryQueueState.items.length > 0) {
+    if (retryQueueState.items.length > 0 && retryQueueState.nextQuizReviewStep === null) {
       scheduleNextQuizReview();
       saveRetryQueue();
     }
@@ -5025,8 +5075,8 @@
       resumeAction = "next:" + (state.currentIndex + 1);
     }
 
-    if (beginDueRetryAttempt(resumeAction, completedQuestionId)) return;
     if (beginDueImportantAttempt(resumeAction, completedQuestionId)) return;
+    if (beginDueRetryAttempt(resumeAction, completedQuestionId)) return;
     performRetryResumeAction(resumeAction);
   }
 
