@@ -55,8 +55,9 @@ const BASELINED_FIVE_REVIEW_QUEUE_RAW = JSON.stringify({
   version: 1,
   bankSignature: BANK_SIGNATURE,
   countBaselineVersion: 1,
+  embeddedCadenceVersion: 1,
   practiceStep: 0,
-  nextQuizReviewStep: 5,
+  nextQuizReviewStep: 12,
   nextImportantReviewStep: 14,
   nextSequence: 2,
   dedicatedDeck: [],
@@ -70,8 +71,9 @@ const DEDICATED_ATTEMPT_QUEUE_RAW = JSON.stringify({
   version: 1,
   bankSignature: BANK_SIGNATURE,
   countBaselineVersion: 1,
+  embeddedCadenceVersion: 1,
   practiceStep: 9,
-  nextQuizReviewStep: 15,
+  nextQuizReviewStep: 21,
   nextSequence: 9,
   dedicatedDeck: [SECOND_QUESTION_ID],
   dedicatedLastQuestionId: SAMPLE_QUESTION_ID,
@@ -96,6 +98,7 @@ const IMPORTANT_ATTEMPT_QUEUE_RAW = JSON.stringify({
   version: 1,
   bankSignature: BANK_SIGNATURE,
   countBaselineVersion: 1,
+  embeddedCadenceVersion: 1,
   practiceStep: 20,
   nextQuizReviewStep: null,
   nextImportantReviewStep: 34,
@@ -462,7 +465,9 @@ function retryQueueRaw(questionId, remaining, padding = "") {
     version: 1,
     bankSignature: BANK_SIGNATURE,
     countBaselineVersion: 1,
+    embeddedCadenceVersion: 1,
     practiceStep: 0,
+    nextQuizReviewStep: 12,
     nextSequence: 2,
     items: [{ questionId, remaining, dueStep: 0, sequence: 1 }],
     activeAttempt: null
@@ -575,6 +580,12 @@ async function testRestoredLegacyQueueUploadsAppBaselineAndRestoresExactly(seedS
   assert.equal(synced.cloudSummary.retryReviews, 5);
   const uploadedQueue = JSON.parse(rawCloudValue(store, "retry-queue"));
   assert.equal(uploadedQueue.countBaselineVersion, 1);
+  assert.equal(uploadedQueue.embeddedCadenceVersion, 1);
+  assert.ok(
+    uploadedQueue.nextQuizReviewStep - uploadedQueue.practiceStep >= 10
+      && uploadedQueue.nextQuizReviewStep - uploadedQueue.practiceStep <= 15,
+    "the migrated finite Queue cadence must remain between ten and fifteen main questions"
+  );
   assert.equal(uploadedQueue.items[0].remaining, 5);
 
   const second = createBrowser({ store, local: {} });
@@ -592,6 +603,12 @@ async function testDedicatedAttemptQueueRoundTrip() {
     local: { [RETRY_QUEUE_KEY]: DEDICATED_ATTEMPT_QUEUE_RAW }
   });
   const sourceQueue = JSON.parse(source.localStorage.getItem(RETRY_QUEUE_KEY));
+  assert.equal(sourceQueue.embeddedCadenceVersion, 1);
+  assert.ok(
+    sourceQueue.nextQuizReviewStep - sourceQueue.practiceStep >= 10
+      && sourceQueue.nextQuizReviewStep - sourceQueue.practiceStep <= 15,
+    "dedicated practice must preserve the independent embedded 10-to-15 cadence marker"
+  );
   assert.equal(sourceQueue.dedicatedRepeatGap, 10);
   assert.deepEqual(sourceQueue.dedicatedRecentQuestionIds, [SECOND_QUESTION_ID, SAMPLE_QUESTION_ID]);
   const choice = await waitFor(
@@ -613,6 +630,7 @@ async function testDedicatedAttemptQueueRoundTrip() {
     "new queue cadence, repeat-spacing history, priority-tie deck, and dedicated-attempt fields must upload byte-for-byte"
   );
   const uploadedQueue = JSON.parse(rawCloudValue(store, "retry-queue"));
+  assert.equal(uploadedQueue.embeddedCadenceVersion, 1);
   assert.equal(uploadedQueue.dedicatedRepeatGap, 10);
   assert.deepEqual(uploadedQueue.dedicatedRecentQuestionIds, [SECOND_QUESTION_ID, SAMPLE_QUESTION_ID]);
 
@@ -624,6 +642,7 @@ async function testDedicatedAttemptQueueRoundTrip() {
     "new queue cadence, repeat-spacing history, priority-tie deck, and dedicated-attempt fields must restore byte-for-byte"
   );
   const restoredQueue = JSON.parse(restored.localStorage.getItem(RETRY_QUEUE_KEY));
+  assert.equal(restoredQueue.embeddedCadenceVersion, 1);
   assert.equal(restoredQueue.dedicatedRepeatGap, 10);
   assert.deepEqual(restoredQueue.dedicatedRecentQuestionIds, [SECOND_QUESTION_ID, SAMPLE_QUESTION_ID]);
 }
@@ -643,6 +662,10 @@ async function testImportantPracticeRoundTrip() {
   assert.equal(choice.localSummary.hasProgress, true);
   assert.equal(choice.localSummary.importantPractice, true);
   assert.equal(choice.localSummary.retryCount, 0);
+  assert.equal(
+    JSON.parse(source.localStorage.getItem(RETRY_QUEUE_KEY)).embeddedCadenceVersion,
+    1
+  );
 
   await source.window.PPSC_CLOUD.chooseLocal();
   await waitFor(source, (candidate) => candidate.phase === "synced", "Important practice upload");
@@ -668,7 +691,9 @@ async function testConflictWaitsForChoice(seedStore) {
     version: 1,
     bankSignature: BANK_SIGNATURE,
     countBaselineVersion: 1,
+    embeddedCadenceVersion: 1,
     practiceStep: 0,
+    nextQuizReviewStep: 12,
     nextSequence: 2,
     items: [{ questionId: SECOND_QUESTION_ID, remaining: 5, dueStep: 0, sequence: 1 }],
     activeAttempt: null
@@ -715,7 +740,9 @@ async function testStaleRevisionCannotOverwriteCloud(seedStore) {
     version: 1,
     bankSignature: BANK_SIGNATURE,
     countBaselineVersion: 1,
+    embeddedCadenceVersion: 1,
     practiceStep: 0,
+    nextQuizReviewStep: 12,
     nextSequence: 2,
     items: [{ questionId: SECOND_QUESTION_ID, remaining: 99, dueStep: 0, sequence: 1 }],
     activeAttempt: null
@@ -821,6 +848,7 @@ async function testFirstUploadQueuesBaselineMigrationFollowUp() {
   assert.equal(store.get(metaPath()).revision, 2);
   const uploadedQueue = JSON.parse(rawCloudValue(store, "retry-queue"));
   assert.equal(uploadedQueue.countBaselineVersion, 1);
+  assert.equal(uploadedQueue.embeddedCadenceVersion, 1);
   assert.equal(uploadedQueue.items[0].remaining, 5);
 }
 
@@ -873,6 +901,7 @@ async function testEquivalentConcurrentBaselineSyncConflictReconciles(seedStore)
   assert.equal(rawCloudValue(store, "retry-queue"), sameFinalQueue);
   const reconciledQueue = JSON.parse(rawCloudValue(store, "retry-queue"));
   assert.equal(reconciledQueue.countBaselineVersion, 1);
+  assert.equal(reconciledQueue.embeddedCadenceVersion, 1);
   assert.equal(reconciledQueue.items[0].remaining, 5);
 
   const followUpQueue = retryQueueRaw(SAMPLE_QUESTION_ID, 7);

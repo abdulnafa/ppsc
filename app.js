@@ -21,8 +21,9 @@
   var PREVIOUS_RETRY_QUEUE_INCREMENT = 5;
   var RETRY_QUEUE_COUNT_BASELINE_VERSION = 1;
   var RETRY_QUEUE_COUNT_BASELINE = 5;
-  var RETRY_QUEUE_MIN_SPACING = 5;
-  var RETRY_QUEUE_MAX_SPACING = 6;
+  var EMBEDDED_RETRY_CADENCE_VERSION = 1;
+  var RETRY_QUEUE_MIN_SPACING = 10;
+  var RETRY_QUEUE_MAX_SPACING = 15;
   var DEDICATED_RETRY_GAP_OPTIONS = [3, 5, 10];
   var DEDICATED_RETRY_DEFAULT_GAP = 5;
   var DEDICATED_RETRY_MAX_GAP = 10;
@@ -967,6 +968,7 @@
       version: RETRY_QUEUE_STORAGE_VERSION,
       bankSignature: questionBankSignature,
       countBaselineVersion: RETRY_QUEUE_COUNT_BASELINE_VERSION,
+      embeddedCadenceVersion: EMBEDDED_RETRY_CADENCE_VERSION,
       practiceStep: 0,
       nextQuizReviewStep: null,
       nextImportantReviewStep: importantQuestionIds.length > 0 ? randomImportantSpacing() : null,
@@ -1043,6 +1045,12 @@
     if (!isSafeWholeNumber(savedCountBaselineVersion, 0)) return null;
     var applyCountBaseline = savedCountBaselineVersion < RETRY_QUEUE_COUNT_BASELINE_VERSION;
 
+    var savedEmbeddedCadenceVersion = typeof savedValue.embeddedCadenceVersion === "undefined"
+      ? 0
+      : savedValue.embeddedCadenceVersion;
+    if (!isSafeWholeNumber(savedEmbeddedCadenceVersion, 0)) return null;
+    var applyEmbeddedCadence = savedEmbeddedCadenceVersion < EMBEDDED_RETRY_CADENCE_VERSION;
+
     var questionIds = new Set();
     var sequences = new Set();
     var items = savedValue.items.map(function (entry) {
@@ -1072,8 +1080,14 @@
     if (savedValue.nextSequence <= highestSequence) return null;
 
     var nextQuizReviewStep = savedValue.nextQuizReviewStep;
-    if (typeof nextQuizReviewStep === "undefined") {
-      // Existing v1 queues did not have a global cadence gate. Migrate them
+    if (applyEmbeddedCadence) {
+      // Existing queues keep every question and count, but their next embedded
+      // Learn/Quiz review is moved onto the new 10-to-15-question cadence once.
+      nextQuizReviewStep = items.length > 0
+        ? savedValue.practiceStep + randomRetrySpacing()
+        : null;
+    } else if (typeof nextQuizReviewStep === "undefined") {
+      // Repair a current-format payload that is missing its global gate
       // without touching any saved question or repetition count.
       nextQuizReviewStep = items.length > 0
         ? savedValue.practiceStep + RETRY_QUEUE_MIN_SPACING
@@ -1238,6 +1252,10 @@
         savedCountBaselineVersion,
         RETRY_QUEUE_COUNT_BASELINE_VERSION
       ),
+      embeddedCadenceVersion: Math.max(
+        savedEmbeddedCadenceVersion,
+        EMBEDDED_RETRY_CADENCE_VERSION
+      ),
       practiceStep: savedValue.practiceStep,
       nextQuizReviewStep: nextQuizReviewStep,
       nextImportantReviewStep: nextImportantReviewStep,
@@ -1389,6 +1407,12 @@
         : 0,
       RETRY_QUEUE_COUNT_BASELINE_VERSION
     );
+    retryQueueState.embeddedCadenceVersion = Math.max(
+      isSafeWholeNumber(retryQueueState.embeddedCadenceVersion, 0)
+        ? retryQueueState.embeddedCadenceVersion
+        : 0,
+      EMBEDDED_RETRY_CADENCE_VERSION
+    );
     try {
       window.localStorage.setItem(RETRY_QUEUE_STORAGE_KEY, JSON.stringify(retryQueueState));
       notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "set");
@@ -1412,6 +1436,11 @@
         : savedValue.countBaselineVersion;
       var countBaselineApplied = isSafeWholeNumber(savedCountBaselineVersion, 0)
         && savedCountBaselineVersion < RETRY_QUEUE_COUNT_BASELINE_VERSION;
+      var savedEmbeddedCadenceVersion = typeof savedValue.embeddedCadenceVersion === "undefined"
+        ? 0
+        : savedValue.embeddedCadenceVersion;
+      var embeddedCadenceApplied = isSafeWholeNumber(savedEmbeddedCadenceVersion, 0)
+        && savedEmbeddedCadenceVersion < EMBEDDED_RETRY_CADENCE_VERSION;
       var normalized = normalizeRetryQueue(savedValue);
       var dedicatedSpacingApplied = Boolean(normalized) && (
         savedValue.dedicatedRepeatGap !== normalized.dedicatedRepeatGap
@@ -1423,12 +1452,14 @@
         retryQueueState = createEmptyRetryQueueState();
       } else {
         retryQueueState = normalized;
-        if (countBaselineApplied || dedicatedSpacingApplied) {
+        if (countBaselineApplied || dedicatedSpacingApplied || embeddedCadenceApplied) {
           saveRetryQueue(countBaselineApplied && retryQueueState.items.length > 0
             ? "Existing Review Queue counts were set to five once. Wrong answers now add two."
-            : (dedicatedSpacingApplied
+            : (embeddedCadenceApplied && retryQueueState.items.length > 0
+              ? "Learn and Quiz reviews now return after ten to fifteen main questions. Saved Queue counts were kept unchanged."
+              : (dedicatedSpacingApplied
               ? "Review Queue spacing is ready. Saved question counts were kept unchanged."
-              : ""));
+              : "")));
           return;
         }
       }
@@ -2318,7 +2349,7 @@
       ? "Review complete. This question has left the queue."
       : (dedicatedPractice
         ? "Review saved. The highest-count eligible MCQ will be shown next; recent MCQs stay spaced apart."
-        : "Review saved. Another review can appear after five or six new Learn or Quiz questions."));
+        : "Review saved. Another review can appear after ten to fifteen new Learn or Quiz questions."));
     closeRetryDialog();
     if (dedicatedPractice) {
       if (retryQueueState.items.length === 0) {
@@ -2366,7 +2397,7 @@
     item.dueStep = retryQueueState.nextQuizReviewStep;
     item.sequence = nextRetrySequence();
     retryQueueState.activeAttempt = null;
-    saveRetryQueue("Review postponed for five or six new Learn or Quiz questions.");
+    saveRetryQueue("Review postponed for ten to fifteen new Learn or Quiz questions.");
     closeRetryDialog();
     performRetryResumeAction(resumeAction);
   }
@@ -4994,8 +5025,8 @@
       resumeAction = "next:" + (state.currentIndex + 1);
     }
 
-    if (beginDueImportantAttempt(resumeAction, completedQuestionId)) return;
     if (beginDueRetryAttempt(resumeAction, completedQuestionId)) return;
+    if (beginDueImportantAttempt(resumeAction, completedQuestionId)) return;
     performRetryResumeAction(resumeAction);
   }
 

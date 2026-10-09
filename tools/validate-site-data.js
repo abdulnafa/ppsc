@@ -1334,8 +1334,9 @@ function validateRetryQueueContract() {
     ["PREVIOUS_RETRY_QUEUE_INCREMENT", "5"],
     ["RETRY_QUEUE_COUNT_BASELINE_VERSION", "1"],
     ["RETRY_QUEUE_COUNT_BASELINE", "5"],
-    ["RETRY_QUEUE_MIN_SPACING", "5"],
-    ["RETRY_QUEUE_MAX_SPACING", "6"],
+    ["EMBEDDED_RETRY_CADENCE_VERSION", "1"],
+    ["RETRY_QUEUE_MIN_SPACING", "10"],
+    ["RETRY_QUEUE_MAX_SPACING", "15"],
     ["DEDICATED_RETRY_DEFAULT_GAP", "5"],
     ["DEDICATED_RETRY_MAX_GAP", "10"],
     ["IMPORTANT_REVIEW_MIN_SPACING", "10"],
@@ -1352,7 +1353,7 @@ function validateRetryQueueContract() {
     'elements.globalRetryQueueButton.addEventListener("click", startDedicatedRetryPractice)',
     'learnReviewCountedQuestionIds',
     'if (state.mode === "learn") recordLearnReviewProgress(currentQuestion())',
-    'five or six new Learn or Quiz questions',
+    'ten to fifteen new Learn or Quiz questions',
     'remaining: 1',
     'function prioritizedRetryItems(items, excludedQuestionId, allowExcludedFallback)',
     'var DEDICATED_RETRY_GAP_OPTIONS = [3, 5, 10];',
@@ -1366,6 +1367,11 @@ function validateRetryQueueContract() {
     'return Math.max(highest, item.remaining);',
     'remaining: applyCountBaseline ? RETRY_QUEUE_COUNT_BASELINE : entry.remaining',
     'countBaselineVersion: Math.max(',
+    'embeddedCadenceVersion: EMBEDDED_RETRY_CADENCE_VERSION',
+    'var applyEmbeddedCadence = savedEmbeddedCadenceVersion < EMBEDDED_RETRY_CADENCE_VERSION;',
+    'savedValue.practiceStep + randomRetrySpacing()',
+    'embeddedCadenceVersion: Math.max(',
+    'retryQueueState.embeddedCadenceVersion = Math.max(',
     'PRIORITY QUEUE PRACTICE',
     'kind: "important"',
     'scheduleNextImportantReview()',
@@ -1374,6 +1380,9 @@ function validateRetryQueueContract() {
     if (!app.includes(requiredSnippet)) {
       error(`app.js: missing Learn/global Review Queue contract snippet ${requiredSnippet}`);
     }
+  }
+  if (!/if \(beginDueRetryAttempt\(resumeAction, completedQuestionId\)\) return;\s*if \(beginDueImportantAttempt\(resumeAction, completedQuestionId\)\) return;/.test(app)) {
+    error("app.js: finite Queue review must be checked before Permanent Important when both embedded cadences are due");
   }
   for (const requiredStyle of [
     ".retry-queue-panel",
