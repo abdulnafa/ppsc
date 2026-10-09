@@ -693,7 +693,6 @@
       var visitedQuestionIds = savedValue.learnVisitedQuestionIds.map(String);
       if (new Set(visitedQuestionIds).size !== visitedQuestionIds.length) return null;
       if (visitedQuestionIds.some(function (questionId) { return !questionIds.includes(questionId); })) return null;
-      if (!visitedQuestionIds.includes(questionIds[currentIndex])) return null;
       learnVisitedQuestionIds = new Set(visitedQuestionIds);
       if (typeof savedValue.learnReviewCountedQuestionIds === "undefined") {
         // Older v8 Learn sessions predate embedded reviews. Treat their
@@ -707,7 +706,17 @@
         if (countedQuestionIds.some(function (questionId) { return !learnVisitedQuestionIds.has(questionId); })) return null;
         learnReviewCountedQuestionIds = new Set(countedQuestionIds);
       }
-      if (!submitted || score !== 0 || selectedIndex !== sessionQuestions[currentIndex].correctOptionIndex) return null;
+      var currentLearnQuestionId = questionIds[currentIndex];
+      var currentLearnAnswerRevealed = learnVisitedQuestionIds.has(currentLearnQuestionId);
+      if (score !== 0) return null;
+      if (submitted) {
+        if (
+          !currentLearnAnswerRevealed
+          || selectedIndex !== sessionQuestions[currentIndex].correctOptionIndex
+        ) return null;
+      } else if (currentLearnAnswerRevealed || selectedIndex !== null) {
+        return null;
+      }
     } else {
       if (savedValue.learnVisitedQuestionIds !== null) return null;
       if (typeof savedValue.learnReviewCountedQuestionIds !== "undefined"
@@ -4834,8 +4843,10 @@
     if (state.mode === "quiz") {
       loadCurrentResponse();
     } else {
-      state.selectedIndex = null;
-      state.submitted = false;
+      var learnAnswerRevealed = state.learnVisitedQuestionIds instanceof Set
+        && state.learnVisitedQuestionIds.has(String(question.id));
+      state.selectedIndex = learnAnswerRevealed ? question.correctOptionIndex : null;
+      state.submitted = learnAnswerRevealed;
     }
 
     if (elements.questionKind) {
@@ -4910,6 +4921,7 @@
         }
       }
       if (elements.actionButton) {
+        elements.actionButton.removeAttribute("aria-keyshortcuts");
         var isLast = state.currentIndex === state.questions.length - 1;
         var nextUnansweredIndex = isLast && state.submitted
           ? firstUnansweredQuizQuestionIndex()
@@ -4990,35 +5002,55 @@
     if (!(state.learnVisitedQuestionIds instanceof Set)) {
       state.learnVisitedQuestionIds = new Set();
     }
-    state.learnVisitedQuestionIds.add(String(question.id));
-    state.selectedIndex = question.correctOptionIndex;
+    var answerRevealed = state.learnVisitedQuestionIds.has(String(question.id));
+    state.selectedIndex = answerRevealed ? question.correctOptionIndex : null;
+    state.submitted = answerRevealed;
 
     if (elements.optionsList) {
       var buttons = elements.optionsList.querySelectorAll(".option-button, [data-option-index]");
       buttons.forEach(function (button) {
-        var isCorrect = Number(button.dataset.optionIndex) === question.correctOptionIndex;
+        var isCorrect = answerRevealed
+          && Number(button.dataset.optionIndex) === question.correctOptionIndex;
         button.disabled = true;
         button.classList.toggle("is-selected", isCorrect);
         button.classList.toggle("is-correct", isCorrect);
+        button.classList.remove("is-incorrect");
         button.setAttribute("aria-checked", isCorrect ? "true" : "false");
       });
     }
 
-    state.submitted = true;
-    showLearnFeedback(question);
+    if (answerRevealed) showLearnFeedback(question);
 
     if (elements.actionButton) {
+      elements.actionButton.setAttribute("aria-keyshortcuts", "Enter Space ArrowRight");
       var isLast = state.currentIndex === state.questions.length - 1;
-      var nextUnvisitedIndex = isLast ? firstUnvisitedLearnQuestionIndex() : -1;
+      var nextUnvisitedIndex = isLast && answerRevealed ? firstUnvisitedLearnQuestionIndex() : -1;
       setHidden(elements.actionButton, false);
-      elements.actionButton.textContent = isLast
-        ? (nextUnvisitedIndex >= 0 ? "Next Unvisited" : "Finish Learning")
-        : "Next Question";
+      elements.actionButton.textContent = answerRevealed
+        ? (isLast
+          ? (nextUnvisitedIndex >= 0 ? "Next Unvisited" : "Finish Learning")
+          : "Next Question")
+        : "Show Answer";
       elements.actionButton.disabled = false;
-      elements.actionButton.dataset.action = isLast
-        ? (nextUnvisitedIndex >= 0 ? "next-unvisited" : "results")
-        : "next";
+      elements.actionButton.dataset.action = answerRevealed
+        ? (isLast
+          ? (nextUnvisitedIndex >= 0 ? "next-unvisited" : "results")
+          : "next")
+        : "reveal";
     }
+  }
+
+  function revealLearnAnswer(question) {
+    if (!question || state.mode !== "learn" || state.submitted) return false;
+    if (!(state.learnVisitedQuestionIds instanceof Set)) {
+      state.learnVisitedQuestionIds = new Set();
+    }
+    state.learnVisitedQuestionIds.add(String(question.id));
+    state.selectedIndex = question.correctOptionIndex;
+    state.submitted = true;
+    prepareLearnQuestion(question);
+    saveActiveSession();
+    return true;
   }
 
   function selectOption(index) {
@@ -5054,7 +5086,8 @@
   function handleAction() {
     if (!currentQuestion()) return;
     if (!state.submitted) {
-      submitAnswer();
+      if (state.mode === "learn") revealLearnAnswer(currentQuestion());
+      else submitAnswer();
       return;
     }
 
@@ -5078,6 +5111,45 @@
     if (beginDueImportantAttempt(resumeAction, completedQuestionId)) return;
     if (beginDueRetryAttempt(resumeAction, completedQuestionId)) return;
     performRetryResumeAction(resumeAction);
+  }
+
+  function handleLearnAdvanceKeydown(event) {
+    var supportedKey = event.key === "Enter"
+      || event.key === "ArrowRight"
+      || event.key === " "
+      || event.key === "Space"
+      || event.key === "Spacebar"
+      || event.code === "Space";
+    if (
+      !supportedKey
+      || event.defaultPrevented
+      || event.isComposing
+      || event.ctrlKey
+      || event.altKey
+      || event.metaKey
+      || event.shiftKey
+      || state.mode !== "learn"
+      || !currentQuestion()
+      || !elements.quizScreen
+      || elements.quizScreen.hidden
+      || document.querySelector("dialog[open]")
+    ) return;
+
+    var target = event.target && typeof event.target.closest === "function"
+      ? event.target
+      : null;
+    var interactiveControl = target
+      ? target.closest(
+          "input, textarea, select, button, a[href], [contenteditable]:not([contenteditable='false'])"
+        )
+      : null;
+    if (interactiveControl && interactiveControl !== elements.actionButton) return;
+
+    // Handle the primary button's shortcuts ourselves so native Enter/Space
+    // activation cannot double-fire or advance during a held-key repeat.
+    event.preventDefault();
+    if (event.repeat) return;
+    handleAction();
   }
 
   function handlePrevious() {
@@ -5896,6 +5968,7 @@
     if (elements.difficultCheckbox) {
       elements.difficultCheckbox.addEventListener("change", handleDifficultCheckboxChange);
     }
+    document.addEventListener("keydown", handleLearnAdvanceKeydown);
     document.addEventListener("keydown", function (event) {
       if (event.key !== "Escape" || !questionRangePanelIsOpen()) return;
       event.preventDefault();

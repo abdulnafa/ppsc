@@ -1409,6 +1409,122 @@ function validateRetryQueueContract() {
   }
 }
 
+function validateLearnRevealContract() {
+  const app = fs.readFileSync(appPath, "utf8");
+  function appSection(startMarker, endMarker) {
+    const startIndex = app.indexOf(startMarker);
+    if (startIndex < 0) return null;
+    const endIndex = app.indexOf(endMarker, startIndex + startMarker.length);
+    if (endIndex < 0) return null;
+    return app.slice(startIndex + startMarker.length, endIndex);
+  }
+  const prepareLearn = appSection(
+    "function prepareLearnQuestion(question) {",
+    "function revealLearnAnswer(question) {"
+  );
+  const revealLearn = appSection(
+    "function revealLearnAnswer(question) {",
+    "function selectOption(index) {"
+  );
+  const learnKeyboard = appSection(
+    "function handleLearnAdvanceKeydown(event) {",
+    "function handlePrevious() {"
+  );
+
+  if (!/var currentLearnAnswerRevealed = learnVisitedQuestionIds\.has\(currentLearnQuestionId\);[\s\S]*?if \(score !== 0\) return null;[\s\S]*?if \(submitted\) \{[\s\S]*?!currentLearnAnswerRevealed[\s\S]*?selectedIndex !== sessionQuestions\[currentIndex\]\.correctOptionIndex[\s\S]*?\} else if \(currentLearnAnswerRevealed \|\| selectedIndex !== null\) \{[\s\S]*?return null;[\s\S]*?\}/.test(app)) {
+    error("app.js: stored Learn sessions must accept only matching hidden or revealed current-question state");
+  }
+  if (!/var learnAnswerRevealed = state\.learnVisitedQuestionIds instanceof Set\s*&& state\.learnVisitedQuestionIds\.has\(String\(question\.id\)\);\s*state\.selectedIndex = learnAnswerRevealed \? question\.correctOptionIndex : null;\s*state\.submitted = learnAnswerRevealed;/.test(app)) {
+    error("app.js: rendering Learn must restore hidden/revealed state from learnVisitedQuestionIds");
+  }
+
+  if (prepareLearn === null) {
+    error("app.js: missing two-stage prepareLearnQuestion/revealLearnAnswer flow");
+  } else {
+    for (const requiredSnippet of [
+      "var answerRevealed = state.learnVisitedQuestionIds.has(String(question.id));",
+      "state.selectedIndex = answerRevealed ? question.correctOptionIndex : null;",
+      "state.submitted = answerRevealed;",
+      "button.disabled = true;",
+      'button.classList.toggle("is-selected", isCorrect);',
+      'button.classList.toggle("is-correct", isCorrect);',
+      'button.setAttribute("aria-checked", isCorrect ? "true" : "false");',
+      "if (answerRevealed) showLearnFeedback(question);",
+      ': "Show Answer";',
+      ': "reveal";'
+    ]) {
+      if (!prepareLearn.includes(requiredSnippet)) {
+        error(`app.js: Learn preparation is missing hidden/revealed contract snippet ${requiredSnippet}`);
+      }
+    }
+    if (!/var isCorrect = answerRevealed\s*&& Number\(button\.dataset\.optionIndex\) === question\.correctOptionIndex;/.test(prepareLearn)) {
+      error("app.js: Learn options must stay unmarked until the answer is revealed");
+    }
+    if (prepareLearn.includes("state.learnVisitedQuestionIds.add")) {
+      error("app.js: preparing a Learn question must not mark its answer as revealed");
+    }
+  }
+
+  if (revealLearn === null) {
+    error("app.js: missing revealLearnAnswer for the first Learn action");
+  } else {
+    for (const requiredSnippet of [
+      'state.mode !== "learn"',
+      "state.learnVisitedQuestionIds.add(String(question.id));",
+      "state.selectedIndex = question.correctOptionIndex;",
+      "state.submitted = true;",
+      "prepareLearnQuestion(question);",
+      "saveActiveSession();"
+    ]) {
+      if (!revealLearn.includes(requiredSnippet)) {
+        error(`app.js: revealLearnAnswer is missing contract snippet ${requiredSnippet}`);
+      }
+    }
+    if (revealLearn.includes("recordLearnReviewProgress") || revealLearn.includes("recordMainPractice")) {
+      error("app.js: revealing a Learn answer must not advance Queue/Important cadence before the next action");
+    }
+  }
+  if (!/if \(!state\.submitted\) \{\s*if \(state\.mode === "learn"\) revealLearnAnswer\(currentQuestion\(\)\);\s*else submitAnswer\(\);\s*return;\s*\}/.test(app)) {
+    error("app.js: the first Learn action must reveal while Quiz keeps its existing submit path");
+  }
+
+  if (learnKeyboard === null) {
+    error("app.js: missing Learn Space/Enter/ArrowRight keyboard handler");
+  } else {
+    for (const requiredSnippet of [
+      'event.key === "Enter"',
+      'event.key === "ArrowRight"',
+      'event.code === "Space"',
+      "event.defaultPrevented",
+      "event.repeat",
+      "event.isComposing",
+      "event.ctrlKey",
+      "event.altKey",
+      "event.metaKey",
+      "event.shiftKey",
+      'state.mode !== "learn"',
+      "!currentQuestion()",
+      "!elements.quizScreen",
+      "elements.quizScreen.hidden",
+      'document.querySelector("dialog[open]")',
+      '"input, textarea, select, button, a[href], [contenteditable]:not([contenteditable=\'false\'])"',
+      "if (interactiveControl && interactiveControl !== elements.actionButton) return;",
+      "event.preventDefault();",
+      "handleAction();"
+    ]) {
+      if (!learnKeyboard.includes(requiredSnippet)) {
+        error(`app.js: Learn keyboard handler is missing safety/shortcut snippet ${requiredSnippet}`);
+      }
+    }
+    if (!/event\.preventDefault\(\);\s*if \(event\.repeat\) return;\s*handleAction\(\);/.test(learnKeyboard)) {
+      error("app.js: Learn shortcuts must prevent native action-button activation before suppressing held-key repeats");
+    }
+  }
+  if (!app.includes('document.addEventListener("keydown", handleLearnAdvanceKeydown);')) {
+    error("app.js: Learn keyboard handler must be bound once at document level");
+  }
+}
+
 function validateComputerSourceAppContract() {
   const app = fs.readFileSync(appPath, "utf8");
   const requiredConstants = [
@@ -1551,6 +1667,7 @@ validateHtml();
 validateFonts();
 validateThemeContract();
 validateRetryQueueContract();
+validateLearnRevealContract();
 validateComputerSourceAppContract();
 validateCloudSyncContract();
 

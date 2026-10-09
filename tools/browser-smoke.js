@@ -2278,9 +2278,21 @@ async function main() {
 
       document.querySelector("#action-button")?.click();
       await pause();
+      const afterFirstReveal = JSON.parse(localStorage.getItem(retryKey) || "null");
+      const firstRevealSession = JSON.parse(localStorage.getItem(sessionKey) || "null");
+      if (afterFirstReveal?.practiceStep !== initialPracticeStep
+        || firstRevealSession?.learnReviewCountedQuestionIds?.length !== 0
+        || firstRevealSession?.submitted !== true
+        || document.querySelector("#question-number-input")?.value !== "1") {
+        errors.push("Revealing the first Learn answer changed cadence or advanced the range.");
+      }
+      document.querySelector("#action-button")?.click();
+      await pause();
       const afterFirst = JSON.parse(localStorage.getItem(retryKey) || "null");
-      if (afterFirst?.practiceStep !== initialPracticeStep + 1 || document.querySelector("#question-number-input")?.value !== "2") {
-        errors.push("Completing the first Learn question did not advance cadence and the main range once.");
+      if (afterFirst?.practiceStep !== initialPracticeStep + 1
+        || JSON.parse(localStorage.getItem(sessionKey) || "null")?.learnReviewCountedQuestionIds?.length !== 1
+        || document.querySelector("#question-number-input")?.value !== "2") {
+        errors.push("Leaving the first revealed Learn question did not advance cadence and the main range once.");
       }
       document.querySelector("#previous-button")?.click();
       await pause();
@@ -2292,7 +2304,17 @@ async function main() {
       }
 
       for (let completion = 2; Number.isInteger(spacing) && completion <= spacing; completion += 1) {
+        document.querySelector("#action-button")?.click();
+        await pause();
+        const queueAfterReveal = JSON.parse(localStorage.getItem(retryKey) || "null");
         const sessionBefore = JSON.parse(localStorage.getItem(sessionKey) || "null");
+        if (queueAfterReveal?.practiceStep !== initialPracticeStep + completion - 1
+          || sessionBefore?.learnReviewCountedQuestionIds?.length !== completion - 1
+          || sessionBefore?.submitted !== true
+          || document.querySelector("#retry-dialog")?.open) {
+          errors.push("Learn answer reveal changed cadence before completion " + completion + ".");
+          break;
+        }
         document.querySelector("#action-button")?.click();
         await pause();
         const dialogOpen = Boolean(document.querySelector("#retry-dialog")?.open);
@@ -4013,6 +4035,12 @@ async function main() {
         }
         document.querySelector("#action-button")?.click();
         await pause();
+        if (visible(document.querySelector("#results-screen"))
+          || document.querySelector("#action-button")?.textContent !== "Finish Learning") {
+          errors.push("Single-question Learn range did not reveal before finishing.");
+        }
+        document.querySelector("#action-button")?.click();
+        await pause();
         document.querySelector("#change-category-button")?.click();
         await pause();
 
@@ -4043,10 +4071,21 @@ async function main() {
           || JSON.stringify(selectedRangeSnapshot?.questionIds || []) !== JSON.stringify(expectedRangeIds)) {
           errors.push("Restart did not retain Learn range 2–4.");
         }
-        await jumpByChange(2);
-        await jumpByChange(3);
-        document.querySelector("#action-button")?.click();
-        await pause();
+        for (let learnRangeIndex = 0; learnRangeIndex < expectedRangeIds.length; learnRangeIndex += 1) {
+          const expectedId = expectedRangeIds[learnRangeIndex];
+          if (document.querySelector("#question-text")?.dataset.questionId !== expectedId) {
+            errors.push("Learn range completion left canonical order before question " + (learnRangeIndex + 1) + ".");
+            break;
+          }
+          document.querySelector("#action-button")?.click();
+          await pause();
+          if (document.querySelector("#question-text")?.dataset.questionId !== expectedId) {
+            errors.push("Learn range reveal advanced before showing question " + (learnRangeIndex + 1) + " answer.");
+            break;
+          }
+          document.querySelector("#action-button")?.click();
+          await pause();
+        }
         if (!visible(document.querySelector("#results-screen"))) errors.push("The complete three-question Learn range did not finish.");
         document.querySelector("#play-again-button")?.click();
         await pause();
@@ -4167,34 +4206,174 @@ async function main() {
       const questionNumberInput = document.querySelector("#question-number-input");
       if (!questionNumberInput || (!questionNumberInput.labels.length && !questionNumberInput.getAttribute("aria-label"))) errors.push("Question-number input has no accessible name.");
 
+      const activeSessionSnapshot = () => JSON.parse(
+        localStorage.getItem("ppsc-prep:active-session:v1") || "null"
+      );
+      const retryQueueSnapshot = () => JSON.parse(
+        localStorage.getItem("ppsc-prep:retry-queue:v1") || "null"
+      );
+      const learnOptionButtons = () => [...document.querySelectorAll("#options-container .option-button")];
+      const assertLearnHidden = (context) => {
+        const snapshot = activeSessionSnapshot();
+        const buttons = learnOptionButtons();
+        if (buttons.length !== 4 || buttons.some((button) => (
+          !button.disabled
+          || button.classList.contains("is-selected")
+          || button.classList.contains("is-correct")
+          || button.classList.contains("is-incorrect")
+          || button.getAttribute("aria-checked") !== "false"
+        ))) errors.push(context + " did not keep all Learn options inert and unmarked before reveal.");
+        if (visible(document.querySelector("#feedback"))) errors.push(context + " showed feedback before reveal.");
+        if (!snapshot || snapshot.submitted !== false || snapshot.selectedIndex !== null
+          || snapshot.learnVisitedQuestionIds.includes(String(document.querySelector("#question-text")?.dataset.questionId || ""))) {
+          errors.push(context + " did not persist the hidden Learn phase.");
+        }
+        if (document.querySelector("#action-button")?.textContent !== "Show Answer"
+          || document.querySelector("#action-button")?.dataset.action !== "reveal"
+          || document.querySelector("#action-button")?.getAttribute("aria-keyshortcuts") !== "Enter Space ArrowRight") {
+          errors.push(context + " did not expose the Show Answer action and keyboard shortcuts.");
+        }
+      };
+      const assertLearnRevealed = (question, context) => {
+        const snapshot = activeSessionSnapshot();
+        const correctIndex = correctRenderedIndex(question);
+        const buttons = learnOptionButtons();
+        const correct = buttons[correctIndex];
+        if (!correct || buttons.some((button) => !button.disabled)
+          || !correct.classList.contains("is-selected")
+          || !correct.classList.contains("is-correct")
+          || correct.getAttribute("aria-checked") !== "true"
+          || buttons.some((button, index) => index !== correctIndex && (
+            button.classList.contains("is-selected")
+            || button.classList.contains("is-correct")
+            || button.classList.contains("is-incorrect")
+            || button.getAttribute("aria-checked") !== "false"
+          ))) errors.push(context + " did not reveal and lock only the correct Learn option.");
+        if (!visible(document.querySelector("#feedback"))
+          || document.querySelector("#feedback-title")?.textContent !== "Correct answer") {
+          errors.push(context + " did not show Learn feedback after reveal.");
+        }
+        if (!snapshot || snapshot.submitted !== true || snapshot.selectedIndex !== correctIndex
+          || !snapshot.learnVisitedQuestionIds.includes(String(question.id))) {
+          errors.push(context + " did not persist the revealed Learn phase.");
+        }
+      };
+      const pressLearnKey = async (key, code, targetSelector, repeat) => {
+        const target = document.querySelector(targetSelector || "#question-text");
+        const accepted = target?.dispatchEvent(new KeyboardEvent("keydown", {
+          key,
+          code: code || "",
+          repeat: Boolean(repeat),
+          bubbles: true,
+          cancelable: true
+        }));
+        await pause();
+        return accepted === false;
+      };
+
       let question = findCurrent();
-      let correctButton = document.querySelector('[data-option-index="' + correctRenderedIndex(question) + '"]');
-      if (!correctButton.disabled || !correctButton.classList.contains("is-correct")) errors.push("Learn mode did not reveal and lock the correct answer.");
+      assertLearnHidden("Initial Learn question");
       if (JSON.stringify(renderedOptionTexts()) !== JSON.stringify(displayOptions(question))) errors.push("Learn mode changed the source option order.");
       if (!visible(document.querySelector("#question-urdu-block")) || document.querySelector("#question-text-urdu").textContent !== question.questionUrdu) errors.push("Urdu question translation did not render in Learn mode.");
       if (document.querySelector("#score-text").textContent !== "Learn Mode") errors.push("Learn mode displayed a score.");
-      if (document.querySelector("#action-button").textContent !== "Next Question" && categoryQuestions.length > 1) errors.push("Learn mode did not offer the next question immediately.");
       if (!document.querySelector("#previous-button").disabled) errors.push("Previous was enabled on the first Learn question.");
       assertProgress(1, categoryQuestions.length, "Initial Learn");
       if (categoryQuestions.length > 1) {
         const firstLearnId = question.id;
+        const initialHiddenSnapshot = JSON.stringify(activeSessionSnapshot());
+        learnOptionButtons()[0]?.click();
+        await pause();
+        if (JSON.stringify(activeSessionSnapshot()) !== initialHiddenSnapshot) {
+          errors.push("Clicking an inert pre-reveal Learn option changed the saved answer state.");
+        }
+        const practiceBeforeReveal = retryQueueSnapshot()?.practiceStep;
+        document.querySelector("#action-button").click();
+        await pause();
+        if (document.querySelector("#question-text")?.dataset.questionId !== firstLearnId) {
+          errors.push("First Learn action advanced instead of revealing the current answer.");
+        }
+        assertProgress(1, categoryQuestions.length, "Learn click reveal");
+        assertLearnRevealed(question, "Learn click reveal");
+        if (retryQueueSnapshot()?.practiceStep !== practiceBeforeReveal
+          || activeSessionSnapshot()?.learnReviewCountedQuestionIds?.length !== 0) {
+          errors.push("Revealing a Learn answer advanced review cadence before leaving the question.");
+        }
+
         document.querySelector("#action-button").click();
         await pause();
         assertProgress(2, categoryQuestions.length, "Learn Next");
         if (document.querySelector("#previous-button").disabled) errors.push("Previous stayed disabled after advancing in Learn mode.");
+        assertLearnHidden("Second Learn question");
+        const practiceAfterFirstCompletion = retryQueueSnapshot()?.practiceStep;
+        if (practiceAfterFirstCompletion !== practiceBeforeReveal + 1
+          || activeSessionSnapshot()?.learnReviewCountedQuestionIds?.length !== 1) {
+          errors.push("Leaving a revealed Learn answer did not advance review cadence exactly once.");
+        }
         document.querySelector("#previous-button").click();
         await pause();
         assertProgress(1, categoryQuestions.length, "Learn Previous");
         if (document.querySelector("#question-text").dataset.questionId !== firstLearnId) errors.push("Previous did not restore the first Learn question.");
         if (!document.querySelector("#previous-button").disabled) errors.push("Previous was not disabled after returning to the first Learn question.");
+        assertLearnRevealed(question, "Learn Previous");
+        document.querySelector("#action-button").click();
+        await pause();
+        assertProgress(2, categoryQuestions.length, "Learn Previous return");
+        assertLearnHidden("Learn Previous return target");
+        if (retryQueueSnapshot()?.practiceStep !== practiceAfterFirstCompletion) {
+          errors.push("Revisiting and leaving an already counted Learn question advanced cadence twice.");
+        }
+
+        const beforeHeldKey = JSON.stringify(activeSessionSnapshot());
+        const heldKeyId = document.querySelector("#question-text")?.dataset.questionId;
+        if (!await pressLearnKey(" ", "Space", "#action-button", true)) {
+          errors.push("Held Space on the Learn action did not prevent native page behavior.");
+        }
+        if (document.querySelector("#question-text")?.dataset.questionId !== heldKeyId
+          || JSON.stringify(activeSessionSnapshot()) !== beforeHeldKey) {
+          errors.push("Held-key repeat changed or advanced the hidden Learn question.");
+        }
+        assertLearnHidden("Held-key repeat guard");
+
+        const shortcutCases = [
+          [" ", "Space", "Space", "#action-button"],
+          ["Enter", "Enter", "Enter", "#question-text"],
+          ["ArrowRight", "ArrowRight", "ArrowRight", "#action-button"]
+        ];
+        for (const [key, code, label, targetSelector] of shortcutCases) {
+          const shortcutQuestion = findCurrent();
+          const shortcutId = shortcutQuestion?.id;
+          const shortcutNumber = Number(document.querySelector("#question-number-input")?.value || 0);
+          if (!shortcutQuestion) {
+            errors.push(label + " shortcut could not identify its Learn question.");
+            break;
+          }
+          assertLearnHidden(label + " shortcut initial phase");
+          if (!await pressLearnKey(key, code, targetSelector)) errors.push(label + " shortcut reveal did not prevent the page default.");
+          if (document.querySelector("#question-text")?.dataset.questionId !== shortcutId
+            || Number(document.querySelector("#question-number-input")?.value || 0) !== shortcutNumber) {
+            errors.push(label + " shortcut reveal advanced the Learn question.");
+          }
+          assertLearnRevealed(shortcutQuestion, label + " shortcut reveal");
+          if (!await pressLearnKey(key, code, targetSelector)) errors.push(label + " shortcut advance did not prevent the page default.");
+          if (shortcutNumber < categoryQuestions.length
+            && Number(document.querySelector("#question-number-input")?.value || 0) !== shortcutNumber + 1) {
+            errors.push(label + " shortcut second press did not advance exactly one Learn question.");
+          }
+        }
 
         const manualLearnNumber = Math.min(3, categoryQuestions.length);
         await jumpByChange(manualLearnNumber);
         if (document.querySelector("#question-text").dataset.questionId !== categoryQuestions[manualLearnNumber - 1].id) errors.push("Learn change jump opened the wrong question.");
         assertProgress(manualLearnNumber, categoryQuestions.length, "Learn change jump");
+        if (activeSessionSnapshot()?.learnVisitedQuestionIds?.includes(categoryQuestions[manualLearnNumber - 1].id)) {
+          assertLearnRevealed(findCurrent(), "Learn change jump to revealed question");
+        } else {
+          assertLearnHidden("Learn change jump to unseen question");
+        }
         await jumpByEnter(2);
         if (document.querySelector("#question-text").dataset.questionId !== categoryQuestions[1].id) errors.push("Learn Enter jump opened the wrong question.");
         assertProgress(2, categoryQuestions.length, "Learn Enter jump");
+        assertLearnRevealed(categoryQuestions[1], "Learn Enter jump to revealed question");
         const beforeInvalidLearnId = document.querySelector("#question-text").dataset.questionId;
         await jumpByChange(0);
         if (document.querySelector("#question-text").dataset.questionId !== beforeInvalidLearnId) errors.push("Invalid Learn jump changed the current question.");
@@ -4209,15 +4388,23 @@ async function main() {
         );
         const firstUnvisitedLearnIndex = categoryQuestions.findIndex((item) => !visitedLearnIds.has(item.id));
         if (!learnGuardSnapshot || learnGuardSnapshot.version !== 8 || learnGuardSnapshot.computerSourceScope !== "all" || learnGuardSnapshot.sessionKind !== "category" || learnGuardSnapshot.paperCategoryIds !== null || learnGuardSnapshot.mode !== "learn" || learnGuardSnapshot.partIndex !== null) errors.push("Learn completion guard was not stored with the v8 category-session schema.");
-        if (!learnGuardSnapshot || learnGuardSnapshot.currentIndex !== categoryQuestions.length - 1 || !visitedLearnIds.has(categoryQuestions[categoryQuestions.length - 1].id)) errors.push("Learn visited IDs did not persist the directly visited last question.");
+        if (!learnGuardSnapshot || learnGuardSnapshot.currentIndex !== categoryQuestions.length - 1 || visitedLearnIds.has(categoryQuestions[categoryQuestions.length - 1].id)) errors.push("Jumping directly to the last Learn question incorrectly revealed or visited it.");
         if (firstUnvisitedLearnIndex < 0) errors.push("Learn completion guard could not identify an unvisited question.");
-        if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Last Learn question did not offer Next Unvisited while questions remained unseen.");
+        assertLearnHidden("Directly visited last Learn question");
+        document.querySelector("#action-button").click();
+        await pause();
+        if (visible(document.querySelector("#results-screen"))
+          || document.querySelector("#question-text")?.dataset.questionId !== categoryQuestions[categoryQuestions.length - 1].id) {
+          errors.push("First action on the last Learn question did not stay in place for answer reveal.");
+        }
+        if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Revealed last Learn question did not offer Next Unvisited while questions remained unseen.");
         document.querySelector("#action-button").click();
         await pause();
         if (visible(document.querySelector("#results-screen"))) errors.push("Learn opened results while questions remained unvisited.");
         if (firstUnvisitedLearnIndex >= 0) {
           if (document.querySelector("#question-text").dataset.questionId !== categoryQuestions[firstUnvisitedLearnIndex].id) errors.push("Next Unvisited did not wrap to the first unvisited Learn question.");
           assertProgress(firstUnvisitedLearnIndex + 1, categoryQuestions.length, "Learn Next Unvisited");
+          assertLearnHidden("Learn Next Unvisited target");
         }
       }
       document.querySelector("#restart-button").click();
@@ -4242,6 +4429,11 @@ async function main() {
           if (!difficultCheckbox.checked) errors.push("Difficult checkbox did not mark the question.");
           if (!document.querySelector("#difficult-mark-status").textContent.includes("Marked")) errors.push("Difficult mark status was not announced.");
           markedQuestionIds.push(question.id);
+        }
+        if (!activeSessionSnapshot()?.submitted) {
+          document.querySelector("#action-button").click();
+          await pause();
+          assertLearnRevealed(question, "Learn completion-loop reveal");
         }
         document.querySelector("#action-button").click();
         await pause();
@@ -5141,6 +5333,17 @@ async function main() {
         const checkbox = document.querySelector("#difficult-checkbox");
         if (!visible(document.querySelector("#difficult-control")) || !checkbox.checked) errors.push("Marked Difficult Learn question was not checked.");
         if (checkbox.dataset.questionId !== question.id) errors.push("Difficult Learn checkbox targeted the wrong question.");
+        const hiddenOptions = [...document.querySelectorAll("#options-container .option-button")];
+        if (document.querySelector("#action-button")?.textContent !== "Show Answer"
+          || hiddenOptions.some((button) => !button.disabled || button.classList.contains("is-correct"))) {
+          errors.push("Difficult Learn did not start its question in the hidden-answer phase.");
+        }
+        document.querySelector("#action-button").click();
+        await pause();
+        if (document.querySelector("#question-text")?.dataset.questionId !== question.id
+          || !document.querySelector('[data-option-index="' + correctRenderedIndex(question) + '"]')?.classList.contains("is-correct")) {
+          errors.push("Difficult Learn first action did not reveal the current correct answer in place.");
+        }
         document.querySelector("#action-button").click();
         await pause();
       }
@@ -5315,6 +5518,16 @@ async function main() {
         document.querySelector("#question-range-form")?.requestSubmit();
         await pause();
       }
+      const hiddenSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      const hiddenOptions = [...document.querySelectorAll("#options-container .option-button")];
+      if (!hiddenSnapshot || hiddenSnapshot.submitted !== false || hiddenSnapshot.selectedIndex !== null
+        || hiddenSnapshot.learnVisitedQuestionIds.length !== 0
+        || document.querySelector("#action-button")?.textContent !== "Show Answer"
+        || hiddenOptions.some((button) => !button.disabled || button.classList.contains("is-correct"))) {
+        errors.push("Difficult Learn resume fixture did not begin with a persisted hidden answer.");
+      }
+      document.querySelector("#action-button")?.click();
+      await pause();
       const optionTexts = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
       const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
       if (!snapshot || snapshot.version !== 8 || snapshot.computerSourceScope !== "all" || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.partIndex !== null || snapshot.importantOnly !== false) errors.push("Difficult Learn was not stored with the v8 category-session resume schema.");
@@ -5323,7 +5536,10 @@ async function main() {
       if (!snapshot || snapshot.rangeStart !== 1 || snapshot.rangeEnd !== 1 || snapshot.rangePoolSize !== 1
         || JSON.stringify(snapshot.rangePoolQuestionIds || []) !== JSON.stringify([seed.questionId])
         || JSON.stringify(snapshot.rangeQuestionIds || []) !== JSON.stringify([seed.questionId])) errors.push("Difficult Learn resume snapshot did not keep its exact range and pool.");
-      if (!snapshot || !snapshot.submitted || snapshot.score !== 0) errors.push("Difficult Learn resume answer state was incorrect.");
+      if (!snapshot || !snapshot.submitted || snapshot.score !== 0
+        || !snapshot.learnVisitedQuestionIds.includes(seed.questionId)) {
+        errors.push("Difficult Learn revealed resume answer state was incorrect.");
+      }
       return {
         errors,
         expected: {
@@ -5417,7 +5633,11 @@ async function main() {
       if (!snapshot || snapshot.rangeStart !== 1 || snapshot.rangeEnd !== total || snapshot.rangePoolSize !== total) errors.push("Learn guard resume setup did not preserve its full range.");
       if (!snapshot || JSON.stringify(snapshot.rangePoolQuestionIds || []) !== JSON.stringify(snapshot.rangeQuestionIds || [])
         || JSON.stringify(snapshot.rangeQuestionIds || []) !== JSON.stringify(snapshot.questionIds || [])) errors.push("Learn guard resume setup did not preserve its full eligible pool/slice order.");
-      if (!snapshot || snapshot.currentIndex !== total - 1 || visitedIds.length !== 2 || !visitedIds.includes(snapshot.questionIds[0]) || !visitedIds.includes(snapshot.questionIds[total - 1])) errors.push("Learn guard resume setup did not persist the first and directly visited last IDs.");
+      if (!snapshot || snapshot.currentIndex !== total - 1 || snapshot.submitted !== false
+        || snapshot.selectedIndex !== null || visitedIds.length !== 0
+        || visitedIds.includes(snapshot.questionIds[total - 1])) {
+        errors.push("Learn guard resume setup did not persist the hidden last-question phase.");
+      }
       if (firstUnvisitedIndex < 0) errors.push("Learn guard resume setup did not retain an unvisited question.");
       return {
         errors,
@@ -5463,7 +5683,24 @@ async function main() {
       if (document.querySelector("#question-text").dataset.questionId !== expected.lastQuestionId) errors.push("Learn Continue restored the wrong completion-guard question.");
       const restoredSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
       if (!restoredSnapshot || restoredSnapshot.version !== 8 || restoredSnapshot.computerSourceScope !== "all" || restoredSnapshot.sessionKind !== "category" || restoredSnapshot.paperCategoryIds !== null || JSON.stringify(restoredSnapshot.learnVisitedQuestionIds) !== JSON.stringify(expected.visitedIds)) errors.push("Learn Continue changed the persisted visited-ID snapshot.");
-      if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Restored Learn guard did not offer Next Unvisited.");
+      const hiddenButtons = [...document.querySelectorAll("#options-container .option-button")];
+      if (restoredSnapshot?.submitted !== false || restoredSnapshot?.selectedIndex !== null
+        || document.querySelector("#action-button").textContent !== "Show Answer"
+        || document.querySelector("#action-button").dataset.action !== "reveal"
+        || visible(document.querySelector("#feedback"))
+        || hiddenButtons.some((button) => !button.disabled || button.classList.contains("is-correct"))) {
+        errors.push("Learn Continue did not restore the hidden answer phase.");
+      }
+      document.querySelector("#action-button").click();
+      await pause();
+      const revealedSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      if (document.querySelector("#question-text").dataset.questionId !== expected.lastQuestionId
+        || !revealedSnapshot?.submitted
+        || !revealedSnapshot?.learnVisitedQuestionIds?.includes(expected.lastQuestionId)
+        || document.querySelector("#action-button").textContent !== "Next Unvisited"
+        || document.querySelector("#action-button").dataset.action !== "next-unvisited") {
+        errors.push("Restored hidden Learn answer did not reveal in place before offering Next Unvisited.");
+      }
       document.querySelector("#action-button").click();
       await pause();
       if (visible(document.querySelector("#results-screen"))) errors.push("Restored Learn guard opened results with an unvisited question remaining.");
@@ -5564,10 +5801,22 @@ async function main() {
       const learnCorrectButton = learnQuestion
         ? document.querySelector('[data-option-index="' + learnQuestion.correctOptionIndex + '"]')
         : null;
-      if (!learnCorrectButton || !learnCorrectButton.disabled || !learnCorrectButton.classList.contains("is-selected") || !learnCorrectButton.classList.contains("is-correct") || learnCorrectButton.getAttribute("aria-checked") !== "true") {
-        errors.push("Urdu Learn did not select, reveal, and lock the correct answer.");
+      if (!learnCorrectButton || !learnCorrectButton.disabled
+        || learnCorrectButton.classList.contains("is-selected")
+        || learnCorrectButton.classList.contains("is-correct")
+        || learnCorrectButton.getAttribute("aria-checked") !== "false"
+        || document.querySelector("#action-button")?.textContent !== "Show Answer") {
+        errors.push("Urdu Learn did not start with its correct answer hidden and locked.");
       }
       const learnFeedback = document.querySelector("#feedback");
+      if (visible(learnFeedback)) errors.push("Urdu Learn showed feedback before answer reveal.");
+      document.querySelector("#action-button")?.click();
+      await pause();
+      if (!learnCorrectButton.classList.contains("is-selected")
+        || !learnCorrectButton.classList.contains("is-correct")
+        || learnCorrectButton.getAttribute("aria-checked") !== "true") {
+        errors.push("Urdu Learn reveal did not select and mark the correct answer.");
+      }
       if (!visible(learnFeedback) || !learnFeedback.classList.contains("is-urdu") || learnFeedback.lang !== "ur" || learnFeedback.dir !== "rtl" || document.querySelector("#feedback-title").textContent !== "درست جواب") {
         errors.push("Urdu Learn feedback did not use its Urdu presentation.");
       }
@@ -5763,7 +6012,10 @@ async function main() {
       if (JSON.stringify(optionLabels.map((element) => element.textContent)) !== JSON.stringify(["A", "B", "C", "D"]) || optionLabels.some((element) => element.lang !== "en" || element.dir !== "ltr")) errors.push("Transition from Urdu did not restore English option labels.");
       if (optionTexts.some((element) => element.hasAttribute("lang") || element.hasAttribute("dir"))) errors.push("Transition from Urdu left language/direction attributes on option text.");
       const feedback = document.querySelector("#feedback");
-      if (feedback.classList.contains("is-urdu") || feedback.lang !== "en" || feedback.dir !== "ltr" || document.querySelector("#feedback-title").textContent !== "Correct answer") errors.push("Transition from Urdu did not reset feedback language/direction.");
+      if (visible(feedback) || feedback.classList.contains("is-urdu")
+        || feedback.hasAttribute("lang") || feedback.hasAttribute("dir")) {
+        errors.push("Transition from Urdu did not reset to hidden non-Urdu Learn feedback.");
+      }
       document.querySelector("#back-button").click();
       await pause();
       localStorage.removeItem(storageKey);
@@ -7287,6 +7539,8 @@ async function main() {
       await pause();
       document.querySelector("#action-button")?.click();
       await pause();
+      document.querySelector("#action-button")?.click();
+      await pause();
       const queue = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (!queue || queue.items.length !== 0) {
         errors.push("Learn created a finite confirmation item before Important testing.");
@@ -7341,6 +7595,12 @@ async function main() {
       document.querySelector("#action-button")?.click();
       await pause();
       let queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (document.querySelector("#retry-dialog")?.open) {
+        errors.push("Revealing the Learn answer opened the Important/finite collision too early.");
+      }
+      document.querySelector("#action-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
       let attempt = queue?.activeAttempt;
       let question = questions.get(String(attempt?.questionId || ""));
       const importantOpenedFirst = Boolean(
@@ -7373,6 +7633,13 @@ async function main() {
         || queue?.importantLastQuestionId !== expected.firstId
         || queue?.nextQuizReviewStep > queue?.practiceStep) {
         errors.push("Correct permanent Important Continue changed finite work, moved its due gate, or failed to save a 10-to-20 Important cadence.");
+      }
+      const gateBeforeFiniteReveal = queue?.practiceStep;
+      document.querySelector("#action-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (document.querySelector("#retry-dialog")?.open || queue?.practiceStep !== gateBeforeFiniteReveal) {
+        errors.push("Revealing the next Learn answer opened or advanced the still-due finite Queue review.");
       }
       document.querySelector("#action-button")?.click();
       await pause();
@@ -7436,6 +7703,12 @@ async function main() {
       document.querySelector("#action-button")?.click();
       await pause();
       let queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (document.querySelector("#retry-dialog")?.open) {
+        errors.push("Revealing the reloaded Learn answer opened Important practice too early.");
+      }
+      document.querySelector("#action-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
       const attempt = queue?.activeAttempt;
       const question = questions.get(String(attempt?.questionId || ""));
       if (!document.querySelector("#retry-dialog")?.open || attempt?.kind !== "important"
