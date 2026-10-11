@@ -1525,6 +1525,214 @@ function validateLearnRevealContract() {
   }
 }
 
+function validateKeyboardControlContract() {
+  const app = fs.readFileSync(appPath, "utf8");
+  function appSection(startMarker, endMarker) {
+    const startIndex = app.indexOf(startMarker);
+    if (startIndex < 0) return null;
+    const endIndex = app.indexOf(endMarker, startIndex + startMarker.length);
+    if (endIndex < 0) return null;
+    return app.slice(startIndex + startMarker.length, endIndex);
+  }
+
+  const moveQuizOption = appSection(
+    "function moveQuizOptionSelection(event) {",
+    "function onOptionKeydown(event) {"
+  );
+  const quizOptionKeydown = appSection(
+    "function onOptionKeydown(event) {",
+    "function handleQuizKeyboardShortcut(event) {"
+  );
+  const quizShortcut = appSection(
+    "function handleQuizKeyboardShortcut(event) {",
+    "function handlePrevious() {"
+  );
+  const retryOptionKeydown = appSection(
+    "function onRetryOptionKeydown(event) {",
+    "function handleRetryKeyboardShortcut(event) {"
+  );
+  const retryShortcut = appSection(
+    "function handleRetryKeyboardShortcut(event) {",
+    "function handleRetryDialogCancel(event) {"
+  );
+
+  if (!app.includes("button.tabIndex = index === 0 ? 0 : -1;")
+    || !app.includes("button.tabIndex = isSelected ? 0 : -1;")) {
+    error("app.js: Quiz choices must use one roving tabindex that follows keyboard selection");
+  }
+
+  if (moveQuizOption === null) {
+    error("app.js: missing Quiz arrow/Home/End option-selection helper");
+  } else {
+    for (const requiredSnippet of [
+      'state.mode !== "quiz"',
+      "state.submitted",
+      'event.key === "Home"',
+      'event.key === "End"',
+      'event.key === "ArrowUp"',
+      'event.key === "ArrowLeft"',
+      'event.key === "ArrowDown"',
+      'event.key === "ArrowRight"',
+      "buttons.length - 1",
+      "(currentIndex + 1) % buttons.length",
+      "(currentIndex - 1 + buttons.length) % buttons.length",
+      "event.preventDefault();",
+      "selectOption(Number(buttons[nextIndex].dataset.optionIndex));",
+      "buttons[nextIndex].focus({ preventScroll: true });"
+    ]) {
+      if (!moveQuizOption.includes(requiredSnippet)) {
+        error(`app.js: Quiz option navigation is missing contract snippet ${requiredSnippet}`);
+      }
+    }
+  }
+
+  if (quizOptionKeydown === null) {
+    error("app.js: missing Quiz option Enter/check handler");
+  } else {
+    for (const requiredSnippet of [
+      'state.mode !== "quiz"',
+      "state.submitted",
+      "event.defaultPrevented",
+      '"ArrowDown", "ArrowRight", "ArrowUp", "ArrowLeft", "Home", "End"',
+      "moveQuizOptionSelection(event);",
+      'event.key !== "Enter"',
+      "event.isComposing",
+      "event.ctrlKey",
+      "event.altKey",
+      "event.metaKey",
+      "event.shiftKey",
+      "event.preventDefault();",
+      "event.repeat",
+      "handleAction();"
+    ]) {
+      if (!quizOptionKeydown.includes(requiredSnippet)) {
+        error(`app.js: Quiz option keyboard handler is missing contract snippet ${requiredSnippet}`);
+      }
+    }
+    if (!/event\.preventDefault\(\);\s*if \(event\.repeat\) return;\s*handleAction\(\);/.test(quizOptionKeydown)) {
+      error("app.js: Quiz option Enter must suppress native activation before held-key repeats and Check");
+    }
+    if (/Space|Spacebar|event\.code\s*===\s*["']Space["']/.test(quizOptionKeydown)) {
+      error("app.js: Space on an unsubmitted Quiz option must remain selection-only, not Check");
+    }
+  }
+
+  if (quizShortcut === null) {
+    error("app.js: missing Quiz Check/Next document-level keyboard handler");
+  } else {
+    for (const requiredSnippet of [
+      "event.defaultPrevented",
+      "event.isComposing",
+      "event.ctrlKey",
+      "event.altKey",
+      "event.metaKey",
+      "event.shiftKey",
+      'state.mode !== "quiz"',
+      "!currentQuestion()",
+      "!elements.quizScreen",
+      "elements.quizScreen.hidden",
+      'document.querySelector("dialog[open]")',
+      '"input, textarea, select, button, a[href], [contenteditable]:not([contenteditable=\'false\'])"',
+      "if (!state.submitted)",
+      'event.key !== "Enter"',
+      'event.key === "ArrowRight"',
+      'event.code === "Space"',
+      "if (interactiveControl && interactiveControl !== elements.actionButton) return;",
+      "event.preventDefault();",
+      "event.repeat",
+      "handleAction();"
+    ]) {
+      if (!quizShortcut.includes(requiredSnippet)) {
+        error(`app.js: Quiz global keyboard handler is missing safety/shortcut snippet ${requiredSnippet}`);
+      }
+    }
+    if (!/event\.preventDefault\(\);\s*if \(event\.repeat\) return;\s*handleAction\(\);/.test(quizShortcut)) {
+      error("app.js: Quiz Check/Next shortcuts must prevent native action before suppressing held-key repeats");
+    }
+  }
+
+  if (retryOptionKeydown === null) {
+    error("app.js: missing Queue/Important option arrow handler");
+  } else {
+    for (const requiredSnippet of [
+      "event.defaultPrevented",
+      "event.isComposing",
+      "event.ctrlKey",
+      "event.altKey",
+      "event.metaKey",
+      "event.shiftKey",
+      '"ArrowDown", "ArrowRight", "ArrowUp", "ArrowLeft", "Home", "End"',
+      "event.preventDefault();",
+      "selectRetryOption(Number(buttons[nextIndex].dataset.reviewOptionIndex));",
+      "buttons[nextIndex].focus({ preventScroll: true });"
+    ]) {
+      if (!retryOptionKeydown.includes(requiredSnippet)) {
+        error(`app.js: Queue/Important option navigation is missing guard/selection snippet ${requiredSnippet}`);
+      }
+    }
+  }
+
+  if (retryShortcut === null) {
+    error("app.js: missing shared Queue/Important popup keyboard handler");
+  } else {
+    for (const requiredSnippet of [
+      "retryQueueState.activeAttempt",
+      "elements.retryDialog.open",
+      'elements.retryDialog.hasAttribute("open")',
+      "event.defaultPrevented",
+      "event.isComposing",
+      "event.ctrlKey",
+      "event.altKey",
+      "event.metaKey",
+      "event.shiftKey",
+      'event.key === "Enter"',
+      'event.key === "ArrowRight"',
+      'event.code === "Space"',
+      'target.closest("[data-review-option-index]")',
+      "interactiveControl !== elements.retryActionButton",
+      "!retryOption",
+      "event.preventDefault();",
+      "event.repeat",
+      "handleRetryAction();"
+    ]) {
+      if (!retryShortcut.includes(requiredSnippet)) {
+        error(`app.js: shared Queue/Important keyboard handler is missing contract snippet ${requiredSnippet}`);
+      }
+    }
+    if (!/if \(attempt\.submitted \? !advanceKey : event\.key !== ["']Enter["']\) return;/.test(retryShortcut)) {
+      error("app.js: Queue/Important Enter must Check before submission while Space/Enter/Right Arrow Continue afterward");
+    }
+    if (!/event\.preventDefault\(\);\s*if \(event\.repeat\) return;\s*handleRetryAction\(\);/.test(retryShortcut)) {
+      error("app.js: Queue/Important shortcuts must prevent native activation before suppressing held-key repeats");
+    }
+    if (/attempt\.kind\s*===|attempt\.kind\s*!==/.test(retryShortcut)) {
+      error("app.js: popup keyboard controls must remain shared by finite Queue and permanent Important attempts");
+    }
+  }
+
+  for (const requiredBinding of [
+    'elements.optionsList.addEventListener("keydown", onOptionKeydown);',
+    'elements.retryOptionsList.addEventListener("keydown", onRetryOptionKeydown);',
+    'elements.retryDialog.addEventListener("keydown", handleRetryKeyboardShortcut);',
+    'document.addEventListener("keydown", handleQuizKeyboardShortcut);'
+  ]) {
+    if (!app.includes(requiredBinding)) {
+      error(`app.js: missing keyboard binding ${requiredBinding}`);
+    }
+  }
+
+  for (const requiredShortcutHint of [
+    'state.submitted ? "Enter Space ArrowRight" : "Enter"',
+    'attempt.submitted ? "Enter Space ArrowRight" : "Enter"',
+    'elements.actionButton.setAttribute("aria-keyshortcuts", "Enter Space ArrowRight");',
+    'elements.retryActionButton.setAttribute("aria-keyshortcuts", "Enter Space ArrowRight");'
+  ]) {
+    if (!app.includes(requiredShortcutHint)) {
+      error(`app.js: missing dynamic keyboard shortcut hint ${requiredShortcutHint}`);
+    }
+  }
+}
+
 function validateComputerSourceAppContract() {
   const app = fs.readFileSync(appPath, "utf8");
   const requiredConstants = [
@@ -1668,6 +1876,7 @@ validateFonts();
 validateThemeContract();
 validateRetryQueueContract();
 validateLearnRevealContract();
+validateKeyboardControlContract();
 validateComputerSourceAppContract();
 validateCloudSyncContract();
 

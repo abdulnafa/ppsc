@@ -7780,6 +7780,591 @@ async function main() {
       importantFirstCollision: importantPracticeCorrect.importantFirstCollision === true
     };
 
+    // Quiz, finite Queue reviews, and permanent Important reviews must all be
+    // operable without a pointer. This isolated pass also protects against
+    // native button activation and held-key repeats firing an action twice.
+    await client.evaluate(`(() => {
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      return true;
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reset for keyboard-control testing."));
+        }
+      }, 50);
+    })`);
+
+    const keyboardControlResult = await client.evaluate(`(async () => {
+      const errors = [];
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const sessionKey = "ppsc-prep:active-session:v1";
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const categoryId = "job-related-finance-taxation";
+      const questions = new Map(
+        window.PPSC_QUIZ_DATA.questions.map((question) => [String(question.id), question])
+      );
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const displayOptions = (question) => question.categoryId === "urdu" && Array.isArray(question.optionsUrdu)
+        ? question.optionsUrdu.map(String)
+        : question.options.map(optionText);
+      const session = () => JSON.parse(localStorage.getItem(sessionKey) || "null");
+      const queue = () => JSON.parse(localStorage.getItem(retryKey) || "null");
+      const mainButtons = () => [...document.querySelectorAll("#options-container [data-option-index]")];
+      const retryButtons = () => [...document.querySelectorAll("#retry-options-container [data-review-option-index]")];
+      const currentQuestion = () => questions.get(
+        String(document.querySelector("#question-text")?.dataset.questionId || "")
+      );
+      const renderedMainOptions = () => mainButtons().map((button) => button.querySelector(".option-text")?.textContent || "");
+      const renderedRetryOptions = () => retryButtons().map((button) => button.querySelector(".option-text")?.textContent || "");
+      const currentMainCorrectIndex = () => {
+        const question = currentQuestion();
+        return question
+          ? renderedMainOptions().indexOf(displayOptions(question)[question.correctOptionIndex])
+          : -1;
+      };
+      const press = async (target, key, code, repeat, modifiers) => {
+        const keys = modifiers || {};
+        const accepted = target?.dispatchEvent(new KeyboardEvent("keydown", {
+          key,
+          code: code || key,
+          repeat: Boolean(repeat),
+          isComposing: Boolean(keys.isComposing),
+          ctrlKey: Boolean(keys.ctrlKey),
+          altKey: Boolean(keys.altKey),
+          metaKey: Boolean(keys.metaKey),
+          shiftKey: Boolean(keys.shiftKey),
+          bubbles: true,
+          cancelable: true
+        }));
+        await pause();
+        return accepted;
+      };
+      const assertMainRadio = (expectedIndex, context) => {
+        const buttons = mainButtons();
+        const selected = buttons.filter((button) => button.getAttribute("aria-checked") === "true");
+        const tabbable = buttons.filter((button) => button.tabIndex === 0);
+        if (buttons.length !== 4 || selected.length !== 1 || selected[0] !== buttons[expectedIndex]
+          || !buttons[expectedIndex].classList.contains("is-selected")
+          || document.activeElement !== buttons[expectedIndex]
+          || tabbable.length !== 1 || tabbable[0] !== buttons[expectedIndex]
+          || session()?.selectedIndex !== expectedIndex || session()?.submitted !== false) {
+          errors.push(context + " did not keep Quiz radio selection, focus, tabindex, and saved state aligned.");
+        }
+      };
+      const assertRetryRadio = (expectedIndex, context) => {
+        const buttons = retryButtons();
+        const selected = buttons.filter((button) => button.getAttribute("aria-checked") === "true");
+        const tabbable = buttons.filter((button) => button.tabIndex === 0);
+        if (buttons.length !== 4 || selected.length !== 1 || selected[0] !== buttons[expectedIndex]
+          || !buttons[expectedIndex].classList.contains("is-selected")
+          || document.activeElement !== buttons[expectedIndex]
+          || tabbable.length !== 1 || tabbable[0] !== buttons[expectedIndex]
+          || queue()?.activeAttempt?.selectedIndex !== expectedIndex
+          || queue()?.activeAttempt?.submitted !== false) {
+          errors.push(context + " did not keep review radio selection, focus, tabindex, and saved state aligned.");
+        }
+      };
+      const selectMainIndex = async (targetIndex) => {
+        const buttons = mainButtons();
+        buttons[0]?.focus({ preventScroll: true });
+        await press(buttons[0], "Home", "Home");
+        for (let index = 0; index < targetIndex; index += 1) {
+          await press(document.activeElement, "ArrowDown", "ArrowDown");
+        }
+      };
+      const selectRetryIndex = async (targetIndex) => {
+        const buttons = retryButtons();
+        buttons[0]?.focus({ preventScroll: true });
+        await press(buttons[0], "Home", "Home");
+        for (let index = 0; index < targetIndex; index += 1) {
+          await press(document.activeElement, "ArrowDown", "ArrowDown");
+        }
+      };
+      const retryCorrectIndex = () => {
+        const snapshot = queue();
+        const attempt = snapshot?.activeAttempt;
+        const question = questions.get(String(attempt?.questionId || ""));
+        return attempt && question
+          ? attempt.optionOrder.indexOf(question.correctOptionIndex)
+          : -1;
+      };
+
+      const categoryButton = document.querySelector(
+        '#category-grid .category-card[data-category="' + categoryId + '"]'
+      );
+      categoryButton?.click();
+      document.querySelector("#quiz-mode-button")?.click();
+      await pause();
+      const start = document.querySelector("#question-range-start-input");
+      const end = document.querySelector("#question-range-end-input");
+      if (!categoryButton || !start || !end) {
+        return { errors: ["Keyboard fixture could not open its category Quiz."], mainKeys: [], popupKeys: [] };
+      }
+      start.value = "1";
+      end.value = "30";
+      document.querySelector("#question-range-form")?.requestSubmit();
+      await pause();
+
+      // All four arrows plus Home/End select and focus Quiz choices, including
+      // wrap-around. The first question is deliberately answered wrong so its
+      // real finite Queue item can drive the popup checks below.
+      let buttons = mainButtons();
+      buttons[0]?.focus({ preventScroll: true });
+      await press(buttons[0], "ArrowRight", "ArrowRight");
+      assertMainRadio(1, "Quiz ArrowRight");
+      await press(document.activeElement, "ArrowDown", "ArrowDown");
+      assertMainRadio(2, "Quiz ArrowDown");
+      await press(document.activeElement, "End", "End");
+      assertMainRadio(3, "Quiz End");
+      await press(document.activeElement, "ArrowRight", "ArrowRight");
+      assertMainRadio(0, "Quiz forward wrap");
+      await press(document.activeElement, "ArrowLeft", "ArrowLeft");
+      assertMainRadio(3, "Quiz ArrowLeft wrap");
+      await press(document.activeElement, "Home", "Home");
+      assertMainRadio(0, "Quiz Home");
+      await press(document.activeElement, "ArrowUp", "ArrowUp");
+      assertMainRadio(3, "Quiz ArrowUp wrap");
+
+      const beforeModifiedMainArrow = JSON.stringify(session());
+      const modifiedMainTarget = document.activeElement;
+      for (const [label, key, modifiers] of [
+        ["Ctrl", "ArrowRight", { ctrlKey: true }],
+        ["Alt", "ArrowDown", { altKey: true }],
+        ["Meta", "ArrowLeft", { metaKey: true }],
+        ["Shift", "ArrowUp", { shiftKey: true }],
+        ["composition", "ArrowRight", { isComposing: true }]
+      ]) {
+        if (await press(modifiedMainTarget, key, key, false, modifiers) !== true
+          || JSON.stringify(session()) !== beforeModifiedMainArrow
+          || document.activeElement !== modifiedMainTarget) {
+          errors.push(label + " + arrow was hijacked by Quiz option navigation.");
+        }
+      }
+
+      buttons = mainButtons();
+      buttons[1]?.focus({ preventScroll: true });
+      await press(buttons[1], " ", "Space");
+      buttons[1]?.click();
+      await pause();
+      if (session()?.submitted || session()?.selectedIndex !== 1) {
+        errors.push("Space on an unsubmitted Quiz option did not remain a selection-only action.");
+      }
+
+      const firstCorrectIndex = currentMainCorrectIndex();
+      const firstWrongIndex = firstCorrectIndex === 0 ? 1 : 0;
+      await selectMainIndex(firstWrongIndex);
+      const beforeHeldMainEnter = JSON.stringify(session());
+      const heldMainEnterAccepted = await press(document.activeElement, "Enter", "Enter", true);
+      if (heldMainEnterAccepted !== false || JSON.stringify(session()) !== beforeHeldMainEnter) {
+        errors.push("Held Enter changed or submitted an unsubmitted Quiz answer.");
+      }
+      const quizEnterAccepted = await press(document.activeElement, "Enter", "Enter");
+      let activeSession = session();
+      let retry = queue();
+      if (quizEnterAccepted !== false || !activeSession?.submitted || activeSession.currentIndex !== 0
+        || activeSession.selectedIndex !== firstWrongIndex || activeSession.score !== 0
+        || retry?.items?.length !== 1 || retry.items[0].remaining !== 2
+        || document.activeElement !== document.querySelector("#action-button")) {
+        errors.push("Quiz Enter did not check exactly once, preserve the question, and focus Next.");
+      }
+
+      const beforeHeldMainNext = JSON.stringify(activeSession);
+      const heldMainSpaceAccepted = await press(document.querySelector("#action-button"), " ", "Space", true);
+      if (heldMainSpaceAccepted !== false || JSON.stringify(session()) !== beforeHeldMainNext) {
+        errors.push("Held Space advanced a submitted Quiz answer.");
+      }
+      await press(document.querySelector("#action-button"), " ", "Space");
+      if (session()?.currentIndex !== 1 || session()?.submitted) {
+        errors.push("Space did not advance a submitted Quiz exactly one question.");
+      }
+
+      // Shortcuts must not take over ordinary form controls or secondary
+      // buttons while a Quiz question is waiting for an answer.
+      const guardedSession = JSON.stringify(session());
+      const numberInput = document.querySelector("#question-number-input");
+      const checkbox = document.querySelector("#difficult-checkbox");
+      const previous = document.querySelector("#previous-button");
+      if (await press(numberInput, "ArrowRight", "ArrowRight") !== true
+        || await press(checkbox, "Enter", "Enter") !== true
+        || await press(previous, "ArrowRight", "ArrowRight") !== true
+        || JSON.stringify(session()) !== guardedSession) {
+        errors.push("Quiz shortcuts hijacked an input, checkbox, or secondary button.");
+      }
+
+      let correctIndex = currentMainCorrectIndex();
+      await selectMainIndex(correctIndex);
+      await press(document.activeElement, "Enter", "Enter");
+      if (!session()?.submitted || session()?.currentIndex !== 1 || session()?.score !== 1) {
+        errors.push("Second Quiz answer was not checked by Enter.");
+      }
+      const beforeMainEnterNext = session()?.currentIndex;
+      await press(document.querySelector("#action-button"), "Enter", "Enter");
+      if (session()?.currentIndex !== beforeMainEnterNext + 1 || session()?.submitted) {
+        errors.push("Enter did not advance a submitted Quiz exactly once.");
+      }
+
+      correctIndex = currentMainCorrectIndex();
+      await selectMainIndex(correctIndex);
+      await press(document.activeElement, "Enter", "Enter");
+      const beforeMainRightNext = session()?.currentIndex;
+      await press(document.querySelector("#action-button"), "ArrowRight", "ArrowRight");
+      if (session()?.currentIndex !== beforeMainRightNext + 1 || session()?.submitted) {
+        errors.push("Right Arrow did not advance a submitted Quiz exactly once.");
+      }
+
+      // Open the real finite item in dedicated Queue practice. Popup arrow
+      // navigation remains a roving radio group; Enter checks, while Space,
+      // Enter, and Right Arrow are reserved for Continue after submission.
+      document.querySelector("#global-retry-queue-button")?.click();
+      await pause();
+      retry = queue();
+      if (!document.querySelector("#retry-dialog")?.open
+        || retry?.activeAttempt?.kind !== "queue" || retry.activeAttempt.context !== "dedicated") {
+        errors.push("Keyboard test could not open a dedicated finite Queue review.");
+      } else {
+        let reviewButtons = retryButtons();
+        reviewButtons[0]?.focus({ preventScroll: true });
+        await press(reviewButtons[0], "End", "End");
+        assertRetryRadio(3, "Queue End");
+        await press(document.activeElement, "ArrowRight", "ArrowRight");
+        assertRetryRadio(0, "Queue forward wrap");
+        await press(document.activeElement, "ArrowLeft", "ArrowLeft");
+        assertRetryRadio(3, "Queue backward wrap");
+
+        const beforeModifiedRetryArrow = JSON.stringify(queue()?.activeAttempt);
+        const modifiedRetryTarget = document.activeElement;
+        for (const [label, key, modifiers] of [
+          ["Ctrl", "ArrowRight", { ctrlKey: true }],
+          ["Alt", "ArrowDown", { altKey: true }],
+          ["Meta", "ArrowLeft", { metaKey: true }],
+          ["Shift", "ArrowUp", { shiftKey: true }],
+          ["composition", "ArrowRight", { isComposing: true }]
+        ]) {
+          if (await press(modifiedRetryTarget, key, key, false, modifiers) !== true
+            || JSON.stringify(queue()?.activeAttempt) !== beforeModifiedRetryArrow
+            || document.activeElement !== modifiedRetryTarget) {
+            errors.push(label + " + arrow was hijacked by review option navigation.");
+          }
+        }
+
+        const queueBeforeSecondary = JSON.stringify(queue()?.activeAttempt);
+        if (await press(document.querySelector("#retry-later-button"), "ArrowRight", "ArrowRight") !== true
+          || JSON.stringify(queue()?.activeAttempt) !== queueBeforeSecondary
+          || !document.querySelector("#retry-dialog")?.open) {
+          errors.push("Review shortcuts hijacked the Not now/End practice button.");
+        }
+
+        reviewButtons = retryButtons();
+        reviewButtons[1]?.focus({ preventScroll: true });
+        await press(reviewButtons[1], " ", "Space");
+        reviewButtons[1]?.click();
+        await pause();
+        if (queue()?.activeAttempt?.submitted || queue()?.activeAttempt?.selectedIndex !== 1) {
+          errors.push("Space on an unsubmitted review option did not remain selection-only.");
+        }
+
+        await selectRetryIndex(retryCorrectIndex());
+        const beforeHeldReviewEnter = JSON.stringify(queue()?.activeAttempt);
+        const heldReviewEnterAccepted = await press(document.activeElement, "Enter", "Enter", true);
+        if (heldReviewEnterAccepted !== false
+          || JSON.stringify(queue()?.activeAttempt) !== beforeHeldReviewEnter) {
+          errors.push("Held Enter changed or submitted an unsubmitted Queue review.");
+        }
+        const queueEnterAccepted = await press(document.activeElement, "Enter", "Enter");
+        retry = queue();
+        if (queueEnterAccepted !== false || !retry?.activeAttempt?.submitted
+          || retry.activeAttempt.outcome !== "correct" || retry.items[0]?.remaining !== 2
+          || document.activeElement !== document.querySelector("#retry-action-button")) {
+          errors.push("Queue Enter did not check exactly once and focus Continue.");
+        }
+
+        const beforeHeldQueueContinue = JSON.stringify(retry);
+        const heldQueueSpaceAccepted = await press(document.querySelector("#retry-action-button"), " ", "Space", true);
+        if (heldQueueSpaceAccepted !== false || JSON.stringify(queue()) !== beforeHeldQueueContinue) {
+          errors.push("Held Space applied a Queue review outcome.");
+        }
+        await press(document.querySelector("#retry-action-button"), " ", "Space");
+        retry = queue();
+        if (!document.querySelector("#retry-dialog")?.open || retry?.items?.[0]?.remaining !== 1
+          || retry?.activeAttempt?.submitted !== false || retry.activeAttempt.kind !== "queue") {
+          errors.push("Space did not continue a submitted Queue review exactly once.");
+        }
+
+        await selectRetryIndex(retryCorrectIndex());
+        await press(document.activeElement, "Enter", "Enter");
+        const beforeQueueEnterContinue = (queue()?.items || []).reduce(
+          (total, item) => total + item.remaining,
+          0
+        );
+        await press(document.querySelector("#retry-action-button"), "Enter", "Enter");
+        retry = queue();
+        const afterQueueEnterContinue = (retry?.items || []).reduce(
+          (total, item) => total + item.remaining,
+          0
+        );
+        if (afterQueueEnterContinue !== beforeQueueEnterContinue - 1
+          || (afterQueueEnterContinue > 0 && (
+            !document.querySelector("#retry-dialog")?.open
+            || retry?.activeAttempt?.kind !== "queue"
+            || retry.activeAttempt.submitted
+          ))) {
+          errors.push("Enter did not continue the next Queue review exactly once.");
+        }
+
+        // Correctly clear every remaining finite item so later cadence testing
+        // cannot confuse a Queue popup with permanent Important practice.
+        for (let guard = 0; guard < 12 && document.querySelector("#retry-dialog")?.open; guard += 1) {
+          retry = queue();
+          if (retry?.activeAttempt?.kind !== "queue" || retry.activeAttempt.submitted) break;
+          await selectRetryIndex(retryCorrectIndex());
+          await press(document.activeElement, "Enter", "Enter");
+          await press(document.querySelector("#retry-action-button"), "Enter", "Enter");
+        }
+        retry = queue();
+        if (retry?.items?.length !== 0 || retry?.activeAttempt !== null
+          || document.querySelector("#retry-dialog")?.open) {
+          errors.push("Keyboard Queue cleanup did not finish every seeded finite review.");
+        }
+      }
+
+      // Continue the live Quiz until its naturally scheduled permanent
+      // Important popup appears; this proves the same popup keyboard behavior
+      // without fabricating private in-memory state.
+      let importantOpened = false;
+      for (let guard = 0; guard < 25 && !importantOpened; guard += 1) {
+        if (session()?.submitted) {
+          document.querySelector("#action-button")?.click();
+          await pause();
+          if (document.querySelector("#retry-dialog")?.open) {
+            const activeKind = queue()?.activeAttempt?.kind;
+            if (activeKind === "important") {
+              importantOpened = true;
+            } else {
+              document.querySelector("#retry-later-button")?.click();
+              await pause();
+            }
+          }
+          continue;
+        }
+        const question = currentQuestion();
+        const mainCorrect = currentMainCorrectIndex();
+        if (!question || mainCorrect < 0) break;
+        document.querySelector('[data-option-index="' + mainCorrect + '"]')?.click();
+        document.querySelector("#action-button")?.click();
+        await pause();
+        document.querySelector("#action-button")?.click();
+        await pause();
+        if (document.querySelector("#retry-dialog")?.open) {
+          const activeKind = queue()?.activeAttempt?.kind;
+          if (activeKind === "important") {
+            importantOpened = true;
+          } else {
+            document.querySelector("#retry-later-button")?.click();
+            await pause();
+          }
+        }
+      }
+
+      retry = queue();
+      if (!importantOpened || retry?.activeAttempt?.kind !== "important") {
+        errors.push("Keyboard test did not reach the permanent Important popup.");
+      } else {
+        const importantMainIndex = session()?.currentIndex;
+        const importantFiniteItems = JSON.stringify(retry.items || []);
+        await selectRetryIndex(retryCorrectIndex());
+        const importantEnterAccepted = await press(document.activeElement, "Enter", "Enter");
+        retry = queue();
+        if (importantEnterAccepted !== false || !retry?.activeAttempt?.submitted
+          || retry.activeAttempt.outcome !== "correct"
+          || JSON.stringify(retry.items || []) !== importantFiniteItems) {
+          errors.push("Important Enter did not check once while leaving finite Queue totals unchanged.");
+        }
+
+        const beforeHeldImportantContinue = JSON.stringify(retry);
+        const heldImportantRightAccepted = await press(
+          document.querySelector("#retry-action-button"), "ArrowRight", "ArrowRight", true
+        );
+        if (heldImportantRightAccepted !== false || JSON.stringify(queue()) !== beforeHeldImportantContinue) {
+          errors.push("Held Right Arrow continued a submitted Important review.");
+        }
+        await press(document.querySelector("#retry-action-button"), "ArrowRight", "ArrowRight");
+        retry = queue();
+        const importantSpacing = retry?.nextImportantReviewStep - retry?.practiceStep;
+        if (document.querySelector("#retry-dialog")?.open || retry?.activeAttempt !== null
+          || session()?.currentIndex !== importantMainIndex + 1
+          || !Number.isInteger(importantSpacing) || importantSpacing < 10 || importantSpacing > 20
+          || JSON.stringify(retry.items || []) !== importantFiniteItems) {
+          errors.push("Right Arrow did not continue Important practice exactly once and resume the Quiz.");
+        }
+      }
+
+      return {
+        errors,
+        mainKeys: ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Home", "End", "Enter", "Space"],
+        popupKeys: ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Home", "End", "Enter", "Space"],
+        permanentImportantReached: importantOpened
+      };
+    })()`);
+
+    // Synthetic events give precise state assertions above; this short CDP
+    // probe additionally exercises Chrome's real native button-key lifecycle
+    // so Enter/Space cannot both run the custom handler and emit a second click.
+    await client.evaluate(`(() => {
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      return true;
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reset for native keyboard-event testing."));
+        }
+      }, 50);
+    })`);
+    const nativeKeyboardSetup = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const categoryId = "job-related-finance-taxation";
+      const questions = new Map(
+        window.PPSC_QUIZ_DATA.questions.map((question) => [String(question.id), question])
+      );
+      const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+      const displayOptions = (question) => question.categoryId === "urdu" && Array.isArray(question.optionsUrdu)
+        ? question.optionsUrdu.map(String)
+        : question.options.map(optionText);
+      document.querySelector('#category-grid .category-card[data-category="' + categoryId + '"]')?.click();
+      document.querySelector("#quiz-mode-button")?.click();
+      await pause();
+      const start = document.querySelector("#question-range-start-input");
+      const end = document.querySelector("#question-range-end-input");
+      if (!start || !end) return { ready: false };
+      start.value = "1";
+      end.value = "6";
+      document.querySelector("#question-range-form")?.requestSubmit();
+      await pause();
+      const question = questions.get(String(document.querySelector("#question-text")?.dataset.questionId || ""));
+      const rendered = [...document.querySelectorAll("#options-container .option-text")]
+        .map((element) => element.textContent);
+      const correctIndex = question
+        ? rendered.indexOf(displayOptions(question)[question.correctOptionIndex])
+        : -1;
+      const button = document.querySelector('[data-option-index="' + correctIndex + '"]');
+      button?.click();
+      button?.focus({ preventScroll: true });
+      return { ready: Boolean(button), firstQuestionId: String(question?.id || "") };
+    })()`);
+    const sendNativeKey = async (key, code, virtualKeyCode) => {
+      await client.send("Input.dispatchKeyEvent", {
+        type: "keyDown",
+        key,
+        code,
+        windowsVirtualKeyCode: virtualKeyCode,
+        nativeVirtualKeyCode: virtualKeyCode
+      });
+      await client.send("Input.dispatchKeyEvent", {
+        type: "keyUp",
+        key,
+        code,
+        windowsVirtualKeyCode: virtualKeyCode,
+        nativeVirtualKeyCode: virtualKeyCode
+      });
+      await delay(100);
+    };
+    const nativeKeyboardErrors = [];
+    if (!nativeKeyboardSetup.ready) {
+      nativeKeyboardErrors.push("Native keyboard fixture could not focus a Quiz option.");
+    } else {
+      await sendNativeKey("Enter", "Enter", 13);
+      const afterNativeEnter = await client.evaluate(`(() => {
+        const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+        return {
+          currentIndex: snapshot?.currentIndex ?? null,
+          submitted: snapshot?.submitted ?? null,
+          focusedId: document.activeElement?.id || "",
+          questionId: document.querySelector("#question-text")?.dataset.questionId || ""
+        };
+      })()`);
+      if (!afterNativeEnter.submitted || afterNativeEnter.currentIndex !== 0
+        || afterNativeEnter.focusedId !== "action-button"
+        || afterNativeEnter.questionId !== nativeKeyboardSetup.firstQuestionId) {
+        nativeKeyboardErrors.push("A real Enter key did not Check exactly once and focus Next.");
+      }
+
+      await sendNativeKey(" ", "Space", 32);
+      const afterNativeSpace = await client.evaluate(`(() => {
+        const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+        return {
+          currentIndex: snapshot?.currentIndex ?? null,
+          submitted: snapshot?.submitted ?? null,
+          dialogOpen: Boolean(document.querySelector("#retry-dialog")?.open)
+        };
+      })()`);
+      if (afterNativeSpace.currentIndex !== 1 || afterNativeSpace.submitted || afterNativeSpace.dialogOpen) {
+        nativeKeyboardErrors.push("A real Space key did not advance exactly one submitted Quiz question.");
+      }
+
+      const nativeSecondReady = await client.evaluate(`(() => {
+        const data = window.PPSC_QUIZ_DATA;
+        const question = data.questions.find(
+          (item) => String(item.id) === String(document.querySelector("#question-text")?.dataset.questionId || "")
+        );
+        const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
+        const sourceOptions = question?.categoryId === "urdu" && Array.isArray(question.optionsUrdu)
+          ? question.optionsUrdu.map(String)
+          : question?.options.map(optionText);
+        const rendered = [...document.querySelectorAll("#options-container .option-text")]
+          .map((element) => element.textContent);
+        const correctIndex = question && sourceOptions
+          ? rendered.indexOf(sourceOptions[question.correctOptionIndex])
+          : -1;
+        const button = document.querySelector('[data-option-index="' + correctIndex + '"]');
+        button?.click();
+        button?.focus({ preventScroll: true });
+        return Boolean(button);
+      })()`);
+      if (!nativeSecondReady) {
+        nativeKeyboardErrors.push("Native Right Arrow fixture could not select its second Quiz answer.");
+      } else {
+        await sendNativeKey("Enter", "Enter", 13);
+        const beforeNativeRight = await client.evaluate(`(() => {
+          const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+          return { currentIndex: snapshot?.currentIndex ?? null, submitted: snapshot?.submitted ?? null };
+        })()`);
+        await sendNativeKey("ArrowRight", "ArrowRight", 39);
+        const afterNativeRight = await client.evaluate(`(() => {
+          const snapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+          return {
+            currentIndex: snapshot?.currentIndex ?? null,
+            submitted: snapshot?.submitted ?? null,
+            dialogOpen: Boolean(document.querySelector("#retry-dialog")?.open)
+          };
+        })()`);
+        if (!beforeNativeRight.submitted || afterNativeRight.currentIndex !== beforeNativeRight.currentIndex + 1
+          || afterNativeRight.submitted || afterNativeRight.dialogOpen) {
+          nativeKeyboardErrors.push("A real Right Arrow key did not advance exactly one submitted Quiz question.");
+        }
+      }
+    }
+    const nativeKeyboardResult = {
+      errors: nativeKeyboardErrors,
+      enterCheck: !nativeKeyboardErrors.some((message) => message.includes("real Enter")),
+      spaceNext: !nativeKeyboardErrors.some((message) => message.includes("real Space")),
+      rightArrowNext: !nativeKeyboardErrors.some((message) => message.includes("real Right Arrow"))
+    };
+
     const { resumeExpected, legacyV6Snapshot, ...normalSummary } = normalResult;
     const result = {
       ...normalSummary,
@@ -7829,6 +8414,8 @@ async function main() {
         .concat(legacyWrongAttemptResult.errors)
         .concat(confirmationQueueResult.errors)
         .concat(permanentImportantResult.errors)
+        .concat(keyboardControlResult.errors)
+        .concat(nativeKeyboardResult.errors)
         .concat(paperSetupResult.errors)
         .concat(paperResumeResult.errors),
       resume: {
@@ -7922,6 +8509,10 @@ async function main() {
         positionDependentCanonical: !retryQueueFeatureResult.errors.some((message) => message.includes("Position-dependent")),
         corruptQueueRecovered: retryCorruptRecoveryResult.errors.length === 0,
         screenshots: retryQueueFeatureResult.screenshots
+      },
+      keyboardControls: {
+        ...keyboardControlResult,
+        nativeEvents: nativeKeyboardResult
       },
       paper: paperResumeResult
     };

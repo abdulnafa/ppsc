@@ -1724,6 +1724,10 @@
     var urduQuestion = isUrduCategoryQuestion(question);
     elements.retryOptionsList.textContent = "";
     elements.retryOptionsList.setAttribute("role", "radiogroup");
+    elements.retryOptionsList.setAttribute(
+      "aria-keyshortcuts",
+      "ArrowUp ArrowDown ArrowLeft ArrowRight Home End"
+    );
     elements.retryOptionsList.setAttribute("aria-label", urduQuestion ? "جواب کے اختیارات" : "Review answer options");
     elements.retryOptionsList.classList.toggle("is-urdu", urduQuestion);
     if (urduQuestion) {
@@ -2028,6 +2032,10 @@
         ? (attempt.submitted ? "جاری رکھیں" : "جواب چیک کریں")
         : (attempt.submitted ? "Continue" : "Check Answer");
       elements.retryActionButton.dataset.action = attempt.submitted ? "continue" : "check";
+      elements.retryActionButton.setAttribute(
+        "aria-keyshortcuts",
+        attempt.submitted ? "Enter Space ArrowRight" : "Enter"
+      );
       elements.retryActionButton.disabled = false;
       elements.retryActionButton.lang = urduQuestion ? "ur" : "en";
       elements.retryActionButton.dir = urduQuestion ? "rtl" : "ltr";
@@ -2309,6 +2317,7 @@
     if (elements.retryActionButton) {
       elements.retryActionButton.textContent = isUrduCategoryQuestion(question) ? "جاری رکھیں" : "Continue";
       elements.retryActionButton.dataset.action = "continue";
+      elements.retryActionButton.setAttribute("aria-keyshortcuts", "Enter Space ArrowRight");
       elements.retryActionButton.focus({ preventScroll: true });
     }
   }
@@ -2470,7 +2479,15 @@
   }
 
   function onRetryOptionKeydown(event) {
-    if (!elements.retryOptionsList) return;
+    if (
+      !elements.retryOptionsList
+      || event.defaultPrevented
+      || event.isComposing
+      || event.ctrlKey
+      || event.altKey
+      || event.metaKey
+      || event.shiftKey
+    ) return;
     var keys = ["ArrowDown", "ArrowRight", "ArrowUp", "ArrowLeft", "Home", "End"];
     if (!keys.includes(event.key)) return;
     var buttons = Array.from(elements.retryOptionsList.querySelectorAll("[data-review-option-index]"));
@@ -2488,6 +2505,53 @@
     event.preventDefault();
     selectRetryOption(Number(buttons[nextIndex].dataset.reviewOptionIndex));
     buttons[nextIndex].focus({ preventScroll: true });
+  }
+
+  function handleRetryKeyboardShortcut(event) {
+    var attempt = retryQueueState.activeAttempt;
+    var dialogIsOpen = Boolean(
+      elements.retryDialog
+      && (elements.retryDialog.open || elements.retryDialog.hasAttribute("open"))
+    );
+    if (
+      !attempt
+      || !dialogIsOpen
+      || event.defaultPrevented
+      || event.isComposing
+      || event.ctrlKey
+      || event.altKey
+      || event.metaKey
+      || event.shiftKey
+    ) return;
+
+    var advanceKey = event.key === "Enter"
+      || event.key === "ArrowRight"
+      || event.key === " "
+      || event.key === "Space"
+      || event.key === "Spacebar"
+      || event.code === "Space";
+    if (attempt.submitted ? !advanceKey : event.key !== "Enter") return;
+
+    var target = event.target && typeof event.target.closest === "function"
+      ? event.target
+      : null;
+    var interactiveControl = target
+      ? target.closest(
+          "input, textarea, select, button, a[href], [contenteditable]:not([contenteditable='false'])"
+        )
+      : null;
+    var retryOption = target ? target.closest("[data-review-option-index]") : null;
+    if (
+      interactiveControl
+      && interactiveControl !== elements.retryActionButton
+      && !retryOption
+    ) return;
+
+    // Suppress the button's native Enter/Space click before the held-key guard,
+    // otherwise one key press can both submit and immediately continue.
+    event.preventDefault();
+    if (event.repeat) return;
+    handleRetryAction();
   }
 
   function handleRetryDialogCancel(event) {
@@ -4921,7 +4985,6 @@
         }
       }
       if (elements.actionButton) {
-        elements.actionButton.removeAttribute("aria-keyshortcuts");
         var isLast = state.currentIndex === state.questions.length - 1;
         var nextUnansweredIndex = isLast && state.submitted
           ? firstUnansweredQuizQuestionIndex()
@@ -4938,6 +5001,10 @@
             ? (nextUnansweredIndex >= 0 ? "next-unanswered" : "results")
             : "next")
           : "check";
+        elements.actionButton.setAttribute(
+          "aria-keyshortcuts",
+          state.submitted ? "Enter Space ArrowRight" : "Enter"
+        );
       }
     }
 
@@ -4966,6 +5033,7 @@
       button.dataset.optionIndex = String(index);
       button.setAttribute("role", "radio");
       button.setAttribute("aria-checked", "false");
+      button.tabIndex = index === 0 ? 0 : -1;
 
       var label = document.createElement("span");
       label.className = "option-label";
@@ -4995,6 +5063,7 @@
       var isSelected = Number(button.dataset.optionIndex) === index;
       button.classList.toggle("is-selected", isSelected);
       button.setAttribute("aria-checked", isSelected ? "true" : "false");
+      button.tabIndex = isSelected ? 0 : -1;
     });
   }
 
@@ -5152,6 +5221,124 @@
     handleAction();
   }
 
+  function quizOptionButtons() {
+    return elements.optionsList
+      ? Array.from(elements.optionsList.querySelectorAll("[data-option-index]"))
+      : [];
+  }
+
+  function moveQuizOptionSelection(event) {
+    var buttons = quizOptionButtons();
+    if (
+      state.mode !== "quiz"
+      || state.submitted
+      || buttons.length === 0
+      || buttons.every(function (button) { return button.disabled; })
+    ) return false;
+
+    var currentIndex = buttons.indexOf(document.activeElement);
+    if (currentIndex < 0 && state.selectedIndex !== null) {
+      currentIndex = buttons.findIndex(function (button) {
+        return Number(button.dataset.optionIndex) === state.selectedIndex;
+      });
+    }
+
+    var nextIndex;
+    if (event.key === "Home") nextIndex = 0;
+    else if (event.key === "End") nextIndex = buttons.length - 1;
+    else if (currentIndex < 0) {
+      nextIndex = event.key === "ArrowUp" || event.key === "ArrowLeft"
+        ? buttons.length - 1
+        : 0;
+    } else if (event.key === "ArrowDown" || event.key === "ArrowRight") {
+      nextIndex = (currentIndex + 1) % buttons.length;
+    } else {
+      nextIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+    }
+
+    event.preventDefault();
+    selectOption(Number(buttons[nextIndex].dataset.optionIndex));
+    buttons[nextIndex].focus({ preventScroll: true });
+    return true;
+  }
+
+  function onOptionKeydown(event) {
+    if (
+      state.mode !== "quiz"
+      || state.submitted
+      || event.defaultPrevented
+      || event.isComposing
+      || event.ctrlKey
+      || event.altKey
+      || event.metaKey
+      || event.shiftKey
+    ) return;
+    var navigationKeys = ["ArrowDown", "ArrowRight", "ArrowUp", "ArrowLeft", "Home", "End"];
+    if (navigationKeys.includes(event.key)) {
+      moveQuizOptionSelection(event);
+      return;
+    }
+    if (
+      event.key !== "Enter"
+      || event.isComposing
+      || event.ctrlKey
+      || event.altKey
+      || event.metaKey
+      || event.shiftKey
+    ) return;
+    event.preventDefault();
+    if (event.repeat) return;
+    handleAction();
+  }
+
+  function handleQuizKeyboardShortcut(event) {
+    if (
+      event.defaultPrevented
+      || event.isComposing
+      || event.ctrlKey
+      || event.altKey
+      || event.metaKey
+      || event.shiftKey
+      || state.mode !== "quiz"
+      || !currentQuestion()
+      || !elements.quizScreen
+      || elements.quizScreen.hidden
+      || document.querySelector("dialog[open]")
+    ) return;
+
+    var target = event.target && typeof event.target.closest === "function"
+      ? event.target
+      : null;
+    var interactiveControl = target
+      ? target.closest(
+          "input, textarea, select, button, a[href], [contenteditable]:not([contenteditable='false'])"
+        )
+      : null;
+
+    if (!state.submitted) {
+      var navigationKeys = ["ArrowDown", "ArrowRight", "ArrowUp", "ArrowLeft", "Home", "End"];
+      if (navigationKeys.includes(event.key)) {
+        if (interactiveControl && interactiveControl !== elements.actionButton) return;
+        moveQuizOptionSelection(event);
+        return;
+      }
+      if (event.key !== "Enter") return;
+    } else {
+      var advanceKey = event.key === "Enter"
+        || event.key === "ArrowRight"
+        || event.key === " "
+        || event.key === "Space"
+        || event.key === "Spacebar"
+        || event.code === "Space";
+      if (!advanceKey) return;
+    }
+
+    if (interactiveControl && interactiveControl !== elements.actionButton) return;
+    event.preventDefault();
+    if (event.repeat) return;
+    handleAction();
+  }
+
   function handlePrevious() {
     if (!currentQuestion() || state.currentIndex === 0) return;
     storeCurrentResponse();
@@ -5221,6 +5408,7 @@
       elements.actionButton.dataset.action = isLast
         ? (nextUnansweredIndex >= 0 ? "next-unanswered" : "results")
         : "next";
+      elements.actionButton.setAttribute("aria-keyshortcuts", "Enter Space ArrowRight");
       elements.actionButton.focus({ preventScroll: true });
     }
     saveActiveSession();
@@ -5922,14 +6110,20 @@
       elements.questionRangeBackButton.addEventListener("click", closeQuestionRangeOptions);
     }
     if (elements.modeBackButton) elements.modeBackButton.addEventListener("click", returnToCategories);
-    if (elements.optionsList) elements.optionsList.addEventListener("click", onOptionClick);
+    if (elements.optionsList) {
+      elements.optionsList.addEventListener("click", onOptionClick);
+      elements.optionsList.addEventListener("keydown", onOptionKeydown);
+    }
     if (elements.retryOptionsList) {
       elements.retryOptionsList.addEventListener("click", onRetryOptionClick);
       elements.retryOptionsList.addEventListener("keydown", onRetryOptionKeydown);
     }
     if (elements.retryLaterButton) elements.retryLaterButton.addEventListener("click", postponeRetryAttempt);
     if (elements.retryActionButton) elements.retryActionButton.addEventListener("click", handleRetryAction);
-    if (elements.retryDialog) elements.retryDialog.addEventListener("cancel", handleRetryDialogCancel);
+    if (elements.retryDialog) {
+      elements.retryDialog.addEventListener("keydown", handleRetryKeyboardShortcut);
+      elements.retryDialog.addEventListener("cancel", handleRetryDialogCancel);
+    }
     if (elements.previousButton) elements.previousButton.addEventListener("click", handlePrevious);
     if (elements.questionNumberInput) {
       elements.questionNumberInput.addEventListener("input", function () {
@@ -5969,6 +6163,7 @@
       elements.difficultCheckbox.addEventListener("change", handleDifficultCheckboxChange);
     }
     document.addEventListener("keydown", handleLearnAdvanceKeydown);
+    document.addEventListener("keydown", handleQuizKeyboardShortcut);
     document.addEventListener("keydown", function (event) {
       if (event.key !== "Escape" || !questionRangePanelIsOpen()) return;
       event.preventDefault();
