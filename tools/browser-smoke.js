@@ -7815,6 +7815,11 @@ async function main() {
       const errors = [];
       const sessionKey = "ppsc-prep:active-session:v1";
       const retryKey = "ppsc-prep:retry-queue:v1";
+      const questions = window.PPSC_QUIZ_DATA.questions;
+      const categoryEntries = window.PPSC_QUIZ_DATA.categories.map((category) => ({
+        id: String(category.id),
+        questions: questions.filter((question) => String(question.categoryId) === String(category.id))
+      })).filter((entry) => entry.questions.length > 0);
       document.querySelector('#category-grid .category-card[data-category="job-related-finance-taxation"]')?.click();
       document.querySelector("#learn-mode-button")?.click();
       const start = document.querySelector("#question-range-start-input");
@@ -7828,6 +7833,19 @@ async function main() {
       if (!session || session.mode !== "learn" || session.questionIds?.length !== 20) {
         return { errors: ["Sequential fixture could not start a 20-question Learn session."] };
       }
+      const legacyIndex = 1;
+      const legacyQuestion = questions[legacyIndex];
+      const legacyCategoryIndex = categoryEntries.findIndex((entry) =>
+        entry.id === String(legacyQuestion?.categoryId || "")
+      );
+      const legacyQuestionIndex = legacyCategoryIndex >= 0
+        ? categoryEntries[legacyCategoryIndex].questions.findIndex((question) =>
+          String(question.id) === String(legacyQuestion?.id || "")
+        )
+        : -1;
+      const migratedTurn = legacyQuestionIndex * categoryEntries.length + legacyCategoryIndex;
+      // Deliberately omit sequentialOrderVersion/sequentialTurn. This is a
+      // real v1 fixed-bank cursor with an in-flight attempt that v2 must keep.
       const queue = {
         version: 1,
         bankSignature: session.bankSignature,
@@ -7837,7 +7855,91 @@ async function main() {
         nextQuizReviewStep: null,
         nextImportantReviewStep: 1000000,
         nextSequentialReviewStep: 15,
-        sequentialIndex: 0,
+        sequentialIndex: legacyIndex,
+        nextSequence: 1,
+        dedicatedDeck: [],
+        dedicatedLastQuestionId: null,
+        dedicatedRepeatGap: 5,
+        dedicatedRecentQuestionIds: [],
+        importantDeck: [],
+        importantLastQuestionId: null,
+        items: [],
+        activeAttempt: {
+          questionId: String(legacyQuestion?.id || ""),
+          optionOrder: [0, 1, 2, 3],
+          selectedIndex: null,
+          submitted: false,
+          outcome: null,
+          wrongIncrement: null,
+          resumeAction: "next:0",
+          context: "embedded",
+          kind: "sequential"
+        }
+      };
+      localStorage.setItem(retryKey, JSON.stringify(queue));
+      return {
+        errors,
+        bankSignature: session.bankSignature,
+        categoryCount: categoryEntries.length,
+        legacyQuestionId: String(legacyQuestion?.id || ""),
+        legacyIndex,
+        migratedTurn
+      };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for the Sequential order migration test."));
+        }
+      }, 50);
+    })`);
+
+    const sequentialLegacyMigration = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const expected = ${JSON.stringify(sequentialReviewSeed)};
+      const sessionKey = "ppsc-prep:active-session:v1";
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const questions = window.PPSC_QUIZ_DATA.questions;
+      const firstCategoryId = String(window.PPSC_QUIZ_DATA.categories.find((category) =>
+        questions.some((question) => String(question.categoryId) === String(category.id))
+      )?.id || "");
+      const firstRoundRobinFlatIndex = questions.findIndex((question) =>
+        String(question.categoryId) === firstCategoryId
+      );
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      let queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!document.querySelector("#retry-dialog")?.open
+        || queue?.sequentialOrderVersion !== 2
+        || queue?.sequentialTurn !== expected.migratedTurn
+        || queue?.sequentialIndex !== expected.legacyIndex
+        || queue?.activeAttempt?.kind !== "sequential"
+        || queue.activeAttempt.questionId !== expected.legacyQuestionId) {
+        errors.push("Legacy fixed-bank Sequential cursor/active attempt did not migrate to the matching round-robin turn.");
+      }
+      document.querySelector("#retry-later-button")?.click();
+      await pause();
+      const session = JSON.parse(localStorage.getItem(sessionKey) || "null");
+      queue = {
+        version: 1,
+        bankSignature: expected.bankSignature,
+        countBaselineVersion: 1,
+        embeddedCadenceVersion: 2,
+        practiceStep: 0,
+        nextQuizReviewStep: null,
+        nextImportantReviewStep: 1000000,
+        nextSequentialReviewStep: 15,
+        sequentialOrderVersion: 2,
+        sequentialTurn: 0,
+        sequentialIndex: firstRoundRobinFlatIndex,
         nextSequence: 1,
         dedicatedDeck: [],
         dedicatedLastQuestionId: null,
@@ -7848,8 +7950,11 @@ async function main() {
         items: [],
         activeAttempt: null
       };
+      if (!session || session.currentIndex !== 0) {
+        errors.push("Legacy Sequential migration did not preserve the underlying Learn position.");
+      }
       localStorage.setItem(retryKey, JSON.stringify(queue));
-      return { errors, bankSignature: session.bankSignature };
+      return { errors };
     })()`);
 
     await client.send("Page.reload", { ignoreCache: true });
@@ -7872,6 +7977,10 @@ async function main() {
       const sessionKey = "ppsc-prep:active-session:v1";
       const retryKey = "ppsc-prep:retry-queue:v1";
       const questions = window.PPSC_QUIZ_DATA.questions;
+      const categoryEntries = window.PPSC_QUIZ_DATA.categories.map((category) => ({
+        id: String(category.id),
+        questions: questions.filter((question) => String(question.categoryId) === String(category.id))
+      })).filter((entry) => entry.questions.length > 0);
       const readQueue = () => JSON.parse(localStorage.getItem(retryKey) || "null");
       const readSession = () => JSON.parse(localStorage.getItem(sessionKey) || "null");
       document.querySelector("#continue-session-button")?.click();
@@ -7899,18 +8008,23 @@ async function main() {
       let queue = readQueue();
       let session = readSession();
       let attempt = queue?.activeAttempt;
-      const first = questions[0];
+      const first = categoryEntries[0]?.questions[0];
+      const firstFlatIndex = questions.findIndex((question) =>
+        String(question.id) === String(first?.id || "")
+      );
       if (!document.querySelector("#retry-dialog")?.open
         || attempt?.kind !== "sequential"
         || attempt?.context !== "embedded"
         || attempt?.questionId !== String(first?.id || "")
-        || queue?.sequentialIndex !== 0
+        || queue?.sequentialOrderVersion !== 2
+        || queue?.sequentialTurn !== 0
+        || queue?.sequentialIndex !== firstFlatIndex
         || queue?.practiceStep !== 15
         || queue?.nextSequentialReviewStep !== 30
         || session?.currentIndex !== 14
         || queue?.items?.length !== 0
         || document.querySelector("#retry-dialog-title")?.textContent !== "Global Sequential Practice") {
-        errors.push("The 15th main completion did not open the first fixed-order Sequential MCQ without moving the main session.");
+        errors.push("The 15th main completion did not open category 1 question 1 in round-robin order without moving the main session.");
       }
       const firstCorrectIndex = attempt && first
         ? attempt.optionOrder.indexOf(first.correctOptionIndex)
@@ -7921,7 +8035,8 @@ async function main() {
       queue = readQueue();
       session = readSession();
       if (!queue?.activeAttempt?.submitted || queue.activeAttempt.outcome !== "correct"
-        || queue.sequentialIndex !== 0 || queue.items.length !== 0
+        || queue.sequentialTurn !== 0 || queue.sequentialIndex !== firstFlatIndex
+        || queue.items.length !== 0
         || queue.practiceStep !== 15 || session?.currentIndex !== 14) {
         errors.push("Correct Sequential Check changed cursor, Queue, cadence, or main position before Continue.");
       }
@@ -7930,13 +8045,17 @@ async function main() {
       queue = readQueue();
       session = readSession();
       attempt = queue?.activeAttempt;
-      const second = questions[1];
+      const second = categoryEntries[1]?.questions[0];
+      const secondFlatIndex = questions.findIndex((question) =>
+        String(question.id) === String(second?.id || "")
+      );
       if (!document.querySelector("#retry-dialog")?.open
         || attempt?.kind !== "sequential" || attempt?.submitted
         || attempt?.questionId !== String(second?.id || "")
-        || queue?.sequentialIndex !== 1 || queue?.items?.length !== 0
+        || queue?.sequentialTurn !== 1 || queue?.sequentialIndex !== secondFlatIndex
+        || queue?.items?.length !== 0
         || queue?.practiceStep !== 15 || session?.currentIndex !== 14) {
-        errors.push("Correct Sequential Continue did not keep the popup open on the next fixed-order MCQ.");
+        errors.push("Correct Sequential Continue did not move from category 1 question 1 to category 2 question 1.");
       }
       const secondCorrectIndex = attempt && second
         ? attempt.optionOrder.indexOf(second.correctOptionIndex)
@@ -7946,13 +8065,16 @@ async function main() {
       document.querySelector("#retry-action-button")?.click();
       await pause();
       queue = readQueue();
-      if (queue?.items?.length !== 0 || queue?.sequentialIndex !== 1
+      if (queue?.items?.length !== 0 || queue?.sequentialTurn !== 1
+        || queue?.sequentialIndex !== secondFlatIndex
         || !queue?.activeAttempt?.submitted || queue.activeAttempt.outcome !== "wrong") {
         errors.push("Wrong Sequential Check applied Queue work or cursor movement before Continue.");
       }
       return {
         errors,
         secondId: String(second?.id || ""),
+        secondFlatIndex,
+        categoryCount: categoryEntries.length,
         mainIndex: session?.currentIndex,
         practiceStep: queue?.practiceStep
       };
@@ -7979,6 +8101,10 @@ async function main() {
       const retryKey = "ppsc-prep:retry-queue:v1";
       const expected = ${JSON.stringify(sequentialReviewFlow)};
       const questions = window.PPSC_QUIZ_DATA.questions;
+      const categoryEntries = window.PPSC_QUIZ_DATA.categories.map((category) => ({
+        id: String(category.id),
+        questions: questions.filter((question) => String(question.categoryId) === String(category.id))
+      })).filter((entry) => entry.questions.length > 0);
       const readQueue = () => JSON.parse(localStorage.getItem(retryKey) || "null");
       document.querySelector("#continue-session-button")?.click();
       await pause();
@@ -7987,7 +8113,8 @@ async function main() {
         || queue?.activeAttempt?.kind !== "sequential"
         || !queue.activeAttempt.submitted || queue.activeAttempt.outcome !== "wrong"
         || queue.activeAttempt.questionId !== expected.secondId
-        || queue.items.length !== 0 || queue.sequentialIndex !== 1) {
+        || queue.items.length !== 0 || queue.sequentialTurn !== 1
+        || queue.sequentialIndex !== expected.secondFlatIndex) {
         errors.push("Submitted wrong Sequential attempt did not restore atomically after reload.");
       }
       document.querySelector("#retry-action-button")?.click();
@@ -7997,21 +8124,37 @@ async function main() {
       const item = queue?.items?.find((entry) => entry.questionId === expected.secondId);
       const wrongSpacing = item ? item.dueStep - queue.practiceStep : null;
       const queueSpacing = queue?.nextQuizReviewStep - queue?.practiceStep;
+      const third = categoryEntries[2]?.questions[0];
+      const thirdFlatIndex = questions.findIndex((question) =>
+        String(question.id) === String(third?.id || "")
+      );
       if (document.querySelector("#retry-dialog")?.open || queue?.activeAttempt !== null
-        || queue?.sequentialIndex !== 2 || queue?.practiceStep !== expected.practiceStep
+        || queue?.sequentialTurn !== 2 || queue?.sequentialIndex !== thirdFlatIndex
+        || queue?.practiceStep !== expected.practiceStep
         || session?.currentIndex !== expected.mainIndex + 1
         || !item || item.remaining !== 2 || item.wrongRetryDueStep !== item.dueStep
         || !Number.isInteger(wrongSpacing) || wrongSpacing < 10 || wrongSpacing > 15
         || !Number.isInteger(queueSpacing) || queueSpacing < 5 || queueSpacing > 6) {
         errors.push("Wrong Sequential Continue did not add exactly 2 Queue reviews and resume the exact next main question.");
       }
-      queue.sequentialIndex = questions.length - 1;
+      const lastCategoryFirst = categoryEntries[categoryEntries.length - 1]?.questions[0];
+      queue.sequentialTurn = categoryEntries.length - 1;
+      queue.sequentialIndex = questions.findIndex((question) =>
+        String(question.id) === String(lastCategoryFirst?.id || "")
+      );
       queue.nextSequentialReviewStep = queue.practiceStep + 1;
       queue.nextImportantReviewStep = queue.practiceStep + 1000;
       queue.nextQuizReviewStep = queue.practiceStep + 1000;
       queue.activeAttempt = null;
       localStorage.setItem(retryKey, JSON.stringify(queue));
-      return { errors, wrongSpacing, queueSpacing, totalQuestions: questions.length };
+      return {
+        errors,
+        wrongSpacing,
+        queueSpacing,
+        totalQuestions: questions.length,
+        categoryCount: categoryEntries.length,
+        lastCategoryFirstId: String(lastCategoryFirst?.id || "")
+      };
     })()`);
 
     await client.send("Page.reload", { ignoreCache: true });
@@ -8023,35 +8166,44 @@ async function main() {
           resolve(true);
         } else if (Date.now() >= deadline) {
           clearInterval(timer);
-          reject(new Error("Website did not reload for Sequential wraparound testing."));
+          reject(new Error("Website did not reload for the first complete Sequential category round."));
         }
       }, 50);
     })`);
 
-    const sequentialReviewWrap = await client.evaluate(`(async () => {
+    const sequentialReviewRound = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
       const errors = [];
+      const expected = ${JSON.stringify(sequentialReviewResume)};
       const retryKey = "ppsc-prep:retry-queue:v1";
       const questions = window.PPSC_QUIZ_DATA.questions;
+      const categoryEntries = window.PPSC_QUIZ_DATA.categories.map((category) => ({
+        id: String(category.id),
+        questions: questions.filter((question) => String(question.categoryId) === String(category.id))
+      })).filter((entry) => entry.questions.length > 0);
       const readQueue = () => JSON.parse(localStorage.getItem(retryKey) || "null");
       document.querySelector("#continue-session-button")?.click();
       await pause();
       document.querySelector("#action-button")?.click();
       await pause();
-      if (document.querySelector("#retry-dialog")?.open) errors.push("Sequential wrap popup opened on Learn reveal instead of completion.");
+      if (document.querySelector("#retry-dialog")?.open) errors.push("Sequential category-round popup opened on Learn reveal instead of completion.");
       document.querySelector("#action-button")?.click();
       await pause();
       let queue = readQueue();
       let attempt = queue?.activeAttempt;
-      const last = questions[questions.length - 1];
+      const lastCategoryFirst = categoryEntries[categoryEntries.length - 1]?.questions[0];
+      const lastCategoryFlatIndex = questions.findIndex((question) =>
+        String(question.id) === String(lastCategoryFirst?.id || "")
+      );
       if (!document.querySelector("#retry-dialog")?.open
         || attempt?.kind !== "sequential"
-        || attempt?.questionId !== String(last?.id || "")
-        || queue?.sequentialIndex !== questions.length - 1) {
-        errors.push("Sequential cursor did not open the final MCQ in bank order.");
+        || attempt?.questionId !== expected.lastCategoryFirstId
+        || queue?.sequentialTurn !== categoryEntries.length - 1
+        || queue?.sequentialIndex !== lastCategoryFlatIndex) {
+        errors.push("Sequential round did not present question 1 from the final category.");
       }
-      const correctIndex = attempt && last
-        ? attempt.optionOrder.indexOf(last.correctOptionIndex)
+      const correctIndex = attempt && lastCategoryFirst
+        ? attempt.optionOrder.indexOf(lastCategoryFirst.correctOptionIndex)
         : -1;
       document.querySelector('[data-review-option-index="' + correctIndex + '"]')?.click();
       document.querySelector("#retry-action-button")?.click();
@@ -8060,19 +8212,127 @@ async function main() {
       await pause();
       queue = readQueue();
       attempt = queue?.activeAttempt;
+      const firstCategorySecond = categoryEntries[0]?.questions[1];
+      const firstCategorySecondFlatIndex = questions.findIndex((question) =>
+        String(question.id) === String(firstCategorySecond?.id || "")
+      );
       if (!document.querySelector("#retry-dialog")?.open
-        || queue?.sequentialIndex !== 0
-        || attempt?.questionId !== String(questions[0]?.id || "")) {
-        errors.push("Sequential cursor did not wrap from the final MCQ back to MCQ 1.");
+        || queue?.sequentialTurn !== categoryEntries.length
+        || queue?.sequentialIndex !== firstCategorySecondFlatIndex
+        || attempt?.questionId !== String(firstCategorySecond?.id || "")) {
+        errors.push("After one category round, Sequential did not continue with category 1 question 2.");
       }
       document.querySelector("#retry-later-button")?.click();
       await pause();
       queue = readQueue();
       const session = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
       if (document.querySelector("#retry-dialog")?.open || queue?.activeAttempt !== null
-        || queue?.sequentialIndex !== 0 || session?.currentIndex !== 16) {
+        || queue?.sequentialTurn !== categoryEntries.length
+        || queue?.sequentialIndex !== firstCategorySecondFlatIndex
+        || session?.currentIndex !== 16) {
         errors.push("Pause & return did not keep the current Sequential cursor and resume the main session.");
       }
+      const smallest = categoryEntries.reduce((best, entry, index) => (
+        !best || entry.questions.length < best.entry.questions.length
+          ? { entry, index }
+          : best
+      ), null);
+      const smallWrapTurn = smallest.entry.questions.length * categoryEntries.length + smallest.index;
+      const smallFirst = smallest.entry.questions[0];
+      queue.sequentialTurn = smallWrapTurn;
+      queue.sequentialIndex = questions.findIndex((question) =>
+        String(question.id) === String(smallFirst?.id || "")
+      );
+      queue.nextSequentialReviewStep = queue.practiceStep + 1;
+      queue.nextImportantReviewStep = queue.practiceStep + 1000;
+      queue.nextQuizReviewStep = queue.practiceStep + 1000;
+      queue.activeAttempt = null;
+      localStorage.setItem(retryKey, JSON.stringify(queue));
+      return {
+        errors,
+        totalQuestions: questions.length,
+        categoryCount: categoryEntries.length,
+        firstCategorySecondId: String(firstCategorySecond?.id || ""),
+        smallCategoryId: smallest.entry.id,
+        smallCategoryCount: smallest.entry.questions.length,
+        smallWrapTurn,
+        smallFirstId: String(smallFirst?.id || ""),
+        smallFirstFlatIndex: queue.sequentialIndex,
+        mainIndex: session?.currentIndex
+      };
+    })()`);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for Sequential per-category wrap testing."));
+        }
+      }, 50);
+    })`);
+
+    const sequentialReviewSmallWrap = await client.evaluate(`(async () => {
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const errors = [];
+      const expected = ${JSON.stringify(sequentialReviewRound)};
+      const retryKey = "ppsc-prep:retry-queue:v1";
+      const sessionKey = "ppsc-prep:active-session:v1";
+      const questions = window.PPSC_QUIZ_DATA.questions;
+      const categoryEntries = window.PPSC_QUIZ_DATA.categories.map((category) => ({
+        id: String(category.id),
+        questions: questions.filter((question) => String(question.categoryId) === String(category.id))
+      })).filter((entry) => entry.questions.length > 0);
+      const readQueue = () => JSON.parse(localStorage.getItem(retryKey) || "null");
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      document.querySelector("#action-button")?.click();
+      await pause();
+      if (document.querySelector("#retry-dialog")?.open) errors.push("Small-category wrap opened on Learn reveal instead of completion.");
+      document.querySelector("#action-button")?.click();
+      await pause();
+      let queue = readQueue();
+      let attempt = queue?.activeAttempt;
+      const smallFirst = questions.find((question) => String(question.id) === expected.smallFirstId);
+      if (!document.querySelector("#retry-dialog")?.open
+        || attempt?.kind !== "sequential"
+        || attempt?.questionId !== expected.smallFirstId
+        || queue?.sequentialTurn !== expected.smallWrapTurn
+        || queue?.sequentialIndex !== expected.smallFirstFlatIndex) {
+        errors.push("An exhausted small category did not independently wrap to its first MCQ.");
+      }
+      const correctIndex = attempt && smallFirst
+        ? attempt.optionOrder.indexOf(smallFirst.correctOptionIndex)
+        : -1;
+      document.querySelector('[data-review-option-index="' + correctIndex + '"]')?.click();
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      document.querySelector("#retry-action-button")?.click();
+      await pause();
+      queue = readQueue();
+      attempt = queue?.activeAttempt;
+      const nextTurn = expected.smallWrapTurn + 1;
+      const nextCategoryIndex = nextTurn % categoryEntries.length;
+      const nextRound = Math.floor(nextTurn / categoryEntries.length);
+      const nextEntry = categoryEntries[nextCategoryIndex];
+      const nextQuestion = nextEntry.questions[nextRound % nextEntry.questions.length];
+      const nextFlatIndex = questions.findIndex((question) =>
+        String(question.id) === String(nextQuestion?.id || "")
+      );
+      if (!document.querySelector("#retry-dialog")?.open
+        || queue?.sequentialTurn !== nextTurn
+        || queue?.sequentialIndex !== nextFlatIndex
+        || attempt?.questionId !== String(nextQuestion?.id || "")) {
+        errors.push("Sequential did not continue indefinitely after a category-specific wrap.");
+      }
+      document.querySelector("#retry-later-button")?.click();
+      await pause();
+      queue = readQueue();
+      const session = JSON.parse(localStorage.getItem(sessionKey) || "null");
       const currentMainId = String(session?.questionIds?.[session.currentIndex] || "");
       const important = questions.find((question) =>
         String(question.id) !== currentMainId
@@ -8099,11 +8359,13 @@ async function main() {
       if (!important) errors.push("Sequential collision fixture could not find an Important MCQ.");
       return {
         errors,
-        wrappedTo: queue?.sequentialIndex,
-        totalQuestions: questions.length,
         importantId: String(important?.id || ""),
         collisionStep,
-        mainIndex: session?.currentIndex
+        mainIndex: session?.currentIndex,
+        mainQuestionCount: session?.questionIds?.length || 0,
+        sequentialQuestionId: String(nextQuestion?.id || ""),
+        sequentialTurn: nextTurn,
+        sequentialIndex: nextFlatIndex
       };
     })()`);
 
@@ -8124,7 +8386,7 @@ async function main() {
     const sequentialReviewCollision = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
       const errors = [];
-      const expected = ${JSON.stringify(sequentialReviewWrap)};
+      const expected = ${JSON.stringify(sequentialReviewSmallWrap)};
       const retryKey = "ppsc-prep:retry-queue:v1";
       const sessionKey = "ppsc-prep:active-session:v1";
       const questions = new Map(window.PPSC_QUIZ_DATA.questions.map((question) => [String(question.id), question]));
@@ -8197,7 +8459,9 @@ async function main() {
       attempt = queue?.activeAttempt;
       if (!document.querySelector("#retry-dialog")?.open
         || attempt?.kind !== "sequential"
-        || attempt?.questionId !== String(window.PPSC_QUIZ_DATA.questions[0]?.id || "")
+        || attempt?.questionId !== expected.sequentialQuestionId
+        || queue?.sequentialTurn !== expected.sequentialTurn
+        || queue?.sequentialIndex !== expected.sequentialIndex
         || queue?.practiceStep !== expected.collisionStep + 2
         || queue?.nextSequentialReviewStep !== expected.collisionStep + 15
         || readSession()?.currentIndex !== expected.mainIndex + 2) {
@@ -8206,9 +8470,15 @@ async function main() {
       document.querySelector("#retry-later-button")?.click();
       await pause();
       queue = readQueue();
+      const finalSession = readSession();
+      const reachedResults = expected.mainIndex + 3 >= expected.mainQuestionCount;
+      const resumedExactly = reachedResults
+        ? document.querySelector("#results-screen")?.hidden === false
+        : finalSession?.currentIndex === expected.mainIndex + 3;
       if (document.querySelector("#retry-dialog")?.open || queue?.activeAttempt !== null
-        || queue?.sequentialIndex !== 0
-        || readSession()?.currentIndex !== expected.mainIndex + 3) {
+        || queue?.sequentialTurn !== expected.sequentialTurn
+        || queue?.sequentialIndex !== expected.sequentialIndex
+        || !resumedExactly) {
         errors.push("Pausing the collision-delayed Sequential popup did not resume the exact main position.");
       }
       return {
@@ -8221,15 +8491,21 @@ async function main() {
     const sequentialReviewResult = {
       errors: []
         .concat(sequentialReviewSeed.errors)
+        .concat(sequentialLegacyMigration.errors)
         .concat(sequentialReviewFlow.errors)
         .concat(sequentialReviewResume.errors)
-        .concat(sequentialReviewWrap.errors)
+        .concat(sequentialReviewRound.errors)
+        .concat(sequentialReviewSmallWrap.errors)
         .concat(sequentialReviewCollision.errors),
       spacing: 15,
       wrongSpacing: sequentialReviewResume.wrongSpacing,
       queueSpacing: sequentialReviewResume.queueSpacing,
-      totalQuestions: sequentialReviewWrap.totalQuestions,
-      wrappedTo: sequentialReviewWrap.wrappedTo,
+      totalQuestions: sequentialReviewRound.totalQuestions,
+      categoryCount: sequentialReviewRound.categoryCount,
+      firstFullRoundTurn: sequentialReviewRound.categoryCount,
+      smallCategory: sequentialReviewRound.smallCategoryId,
+      smallCategoryCount: sequentialReviewRound.smallCategoryCount,
+      smallCategoryWrapTurn: sequentialReviewRound.smallWrapTurn,
       collisionPriority: sequentialReviewCollision.priorityOrder,
       collisionNextStep: sequentialReviewCollision.nextSequentialStep
     };

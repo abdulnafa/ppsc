@@ -1350,7 +1350,8 @@ function validateRetryQueueContract() {
     ["DEDICATED_RETRY_MAX_GAP", "10"],
     ["IMPORTANT_REVIEW_MIN_SPACING", "10"],
     ["IMPORTANT_REVIEW_MAX_SPACING", "20"],
-    ["SEQUENTIAL_REVIEW_SPACING", "15"]
+    ["SEQUENTIAL_REVIEW_SPACING", "15"],
+    ["SEQUENTIAL_ORDER_VERSION", "2"]
   ];
   for (const [name, value] of requiredConstants) {
     const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -1398,6 +1399,40 @@ function validateRetryQueueContract() {
       error(`app.js: missing Learn/global Review Queue contract snippet ${requiredSnippet}`);
     }
   }
+  if (
+    !/var\s+sequentialCategoryEntries\s*=\s*categories\.map\([\s\S]*?allQuestions\.filter\([\s\S]*?entry\.questions\.length\s*>\s*0/.test(app)
+    || !/sequentialQuestionTurns\.set\([\s\S]*?questionIndex\s*\*\s*sequentialCategoryEntries\.length\s*\+\s*categoryIndex/.test(app)
+    || !/var\s+allQuestionIndexes\s*=\s*new\s+Map\(allQuestions\.map/.test(app)
+  ) {
+    error("app.js: Sequential v2 must build non-empty category lanes plus question-to-turn and flat-index maps");
+  }
+
+  const sequentialPositionDetails = appSection(
+    "function sequentialPositionDetails(turn) {",
+    "function sequentialQuestionAt(turn) {"
+  );
+  if (
+    sequentialPositionDetails === null
+    || !/categoryIndex\s*=\s*turn\s*%\s*sequentialCategoryEntries\.length/.test(sequentialPositionDetails)
+    || !/categoryRound\s*=\s*Math\.floor\(turn\s*\/\s*sequentialCategoryEntries\.length\)/.test(sequentialPositionDetails)
+    || !/questionIndex\s*=\s*categoryRound\s*%\s*entry\.questions\.length/.test(sequentialPositionDetails)
+    || !/question\s*:\s*entry\.questions\[questionIndex\]/.test(sequentialPositionDetails)
+  ) {
+    error("app.js: Sequential v2 resolver must rotate categories by turn and wrap each category independently");
+  }
+
+  const sequentialQuestionAt = appSection(
+    "function sequentialQuestionAt(turn) {",
+    "function sequentialTurnForQuestion(question) {"
+  );
+  if (
+    sequentialQuestionAt === null
+    || !/sequentialPositionDetails\(turn\)/.test(sequentialQuestionAt)
+    || !/details\s*\?\s*details\.question\s*:\s*null/.test(sequentialQuestionAt)
+  ) {
+    error("app.js: Sequential question lookup must use the category-rotation position resolver");
+  }
+
   const emptyRetryState = appSection(
     "function createEmptyRetryQueueState() {",
     "function isSafeWholeNumber(value, minimum) {"
@@ -1405,9 +1440,11 @@ function validateRetryQueueContract() {
   if (
     emptyRetryState === null
     || !/nextSequentialReviewStep\s*:\s*allQuestions\.length\s*>\s*0\s*\?\s*SEQUENTIAL_REVIEW_SPACING\s*:\s*null/.test(emptyRetryState)
+    || !/sequentialOrderVersion\s*:\s*SEQUENTIAL_ORDER_VERSION/.test(emptyRetryState)
+    || !/sequentialTurn\s*:\s*0/.test(emptyRetryState)
     || !/sequentialIndex\s*:\s*0/.test(emptyRetryState)
   ) {
-    error("app.js: fresh Review Queue state must persist a 15-question Sequential gate and a zero-based cursor");
+    error("app.js: fresh Review Queue state must persist the v2 category-rotation turn, flat mirror, and 15-question gate");
   }
 
   const scheduleSequentialReview = appSection(
@@ -1431,9 +1468,11 @@ function validateRetryQueueContract() {
     || !/var\s+sequentialMigrationApplied\s*=\s*Boolean\(normalized\)/.test(loadRetryState)
     || !/typeof\s+savedValue\.nextSequentialReviewStep\s*===\s*["']undefined["']/.test(loadRetryState)
     || !/typeof\s+savedValue\.sequentialIndex\s*===\s*["']undefined["']/.test(loadRetryState)
+    || !/typeof\s+savedValue\.sequentialTurn\s*===\s*["']undefined["']/.test(loadRetryState)
+    || !/savedValue\.sequentialOrderVersion\s*!==\s*SEQUENTIAL_ORDER_VERSION/.test(loadRetryState)
     || !/embeddedCadenceApplied[\s\S]*?\|\|\s*sequentialMigrationApplied[\s\S]*?saveRetryQueue\(/.test(loadRetryState)
   ) {
-    error("app.js: legacy Sequential cursor and cadence migration must be persisted for cloud/offline sync");
+    error("app.js: legacy Sequential order/turn/cursor migration must be persisted for cloud/offline sync");
   }
 
   const normalizedRetryState = appSection(
@@ -1445,9 +1484,14 @@ function validateRetryQueueContract() {
   } else {
     for (const requiredSnippet of [
       "savedValue.nextSequentialReviewStep",
+      "savedValue.sequentialOrderVersion",
+      "savedValue.sequentialTurn",
       "savedValue.sequentialIndex",
-      "allQuestions[sequentialIndex]",
+      "sequentialTurnForQuestion(legacySequentialQuestion)",
+      "sequentialQuestionAt(sequentialTurn)",
       "nextSequentialReviewStep: nextSequentialReviewStep",
+      "sequentialOrderVersion: SEQUENTIAL_ORDER_VERSION",
+      "sequentialTurn: sequentialTurn",
       "sequentialIndex: sequentialIndex",
       "kind: attemptKind"
     ]) {
@@ -1462,7 +1506,16 @@ function validateRetryQueueContract() {
       error("app.js: saved active-attempt kinds must normalize queue, important, and sequential only");
     }
     if (!/attemptKind\s*===\s*["']sequential["']/.test(normalizedRetryState)) {
-      error("app.js: saved Sequential attempts must be validated against the persisted fixed-order cursor");
+      error("app.js: saved Sequential attempts must be validated against the persisted category-rotation turn");
+    }
+    if (![
+      "savedSequentialOrderVersion < SEQUENTIAL_ORDER_VERSION",
+      "questionsById.has(String(savedSequentialAttempt.questionId || \"\"))",
+      "legacySequentialQuestion = questionsById.get(String(savedSequentialAttempt.questionId))",
+      "sequentialTurn = sequentialTurnForQuestion(legacySequentialQuestion)"
+    ].every((snippet) => normalizedRetryState.includes(snippet))
+      || !/legacySequentialQuestion\s*=\s*sequentialIndex\s*<\s*allQuestions\.length\s*\?\s*allQuestions\[sequentialIndex\]\s*:\s*null/.test(normalizedRetryState)) {
+      error("app.js: v1 flat-order migration must preserve the exact next or active Sequential MCQ in v2 rotation");
     }
   }
 
@@ -1484,11 +1537,12 @@ function validateRetryQueueContract() {
   );
   if (
     setSequentialAttempt === null
-    || !/var\s+index\s*=\s*retryQueueState\.sequentialIndex\s*;/.test(setSequentialAttempt)
-    || !/var\s+canonicalQuestion\s*=\s*allQuestions\[index\]\s*;/.test(setSequentialAttempt)
+    || !/canonicalQuestion\s*=\s*sequentialQuestionAt\(retryQueueState\.sequentialTurn\)/.test(setSequentialAttempt)
+    || !/flatIndex\s*=\s*sequentialFlatIndexForQuestion\(canonicalQuestion\)/.test(setSequentialAttempt)
+    || !/retryQueueState\.sequentialIndex\s*=\s*flatIndex/.test(setSequentialAttempt)
     || !/kind\s*:\s*["']sequential["']/.test(setSequentialAttempt)
   ) {
-    error("app.js: Sequential practice must select the persisted cursor directly from fixed allQuestions order");
+    error("app.js: Sequential practice must resolve the persisted rotation turn and maintain its flat-bank mirror");
   }
 
   const advanceSequentialIndex = appSection(
@@ -1497,9 +1551,11 @@ function validateRetryQueueContract() {
   );
   if (
     advanceSequentialIndex === null
-    || !/\(retryQueueState\.sequentialIndex\s*\+\s*1\)\s*%\s*allQuestions\.length/.test(advanceSequentialIndex)
+    || !/retryQueueState\.sequentialTurn\s*>=\s*Number\.MAX_SAFE_INTEGER\s*\?\s*0\s*:\s*retryQueueState\.sequentialTurn\s*\+\s*1/.test(advanceSequentialIndex)
+    || !/sequentialQuestionAt\(retryQueueState\.sequentialTurn\)/.test(advanceSequentialIndex)
+    || !/retryQueueState\.sequentialIndex\s*=\s*flatIndex\s*===\s*null\s*\?\s*0\s*:\s*flatIndex/.test(advanceSequentialIndex)
   ) {
-    error("app.js: Sequential cursor must advance by one and wrap through the fixed allQuestions order");
+    error("app.js: Sequential turn must advance indefinitely (safe-integer guard only) and refresh its flat-bank mirror");
   }
 
   const beginSequentialAttempt = appSection(

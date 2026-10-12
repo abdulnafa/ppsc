@@ -328,7 +328,8 @@
       || (queue.activeAttempt && queue.activeAttempt.kind === "important")
     ));
     var sequentialPractice = Boolean(queue && (
-      (Number.isSafeInteger(queue.sequentialIndex) && queue.sequentialIndex > 0)
+      (Number.isSafeInteger(queue.sequentialTurn) && queue.sequentialTurn > 0)
+      || (Number.isSafeInteger(queue.sequentialIndex) && queue.sequentialIndex > 0)
       || (Number.isSafeInteger(queue.practiceStep) && queue.practiceStep > 0)
       || (queue.activeAttempt && queue.activeAttempt.kind === "sequential")
     ));
@@ -351,9 +352,11 @@
       retryReviews: retryReviews,
       importantPractice: importantPractice,
       sequentialPractice: sequentialPractice,
-      sequentialPosition: queue && Number.isSafeInteger(queue.sequentialIndex)
-        ? queue.sequentialIndex + 1
-        : 0,
+      sequentialPosition: queue && Number.isSafeInteger(queue.sequentialTurn)
+        ? queue.sequentialTurn + 1
+        : (queue && Number.isSafeInteger(queue.sequentialIndex)
+          ? queue.sequentialIndex + 1
+          : 0),
       difficultCount: difficultIds.length,
       totalBytes: totalBytes
     };
@@ -371,7 +374,7 @@
     if (summary.retryCount) parts.push(summary.retryCount + " queued · " + summary.retryReviews + " reviews left");
     if (summary.importantPractice) parts.push("global Important practice saved");
     if (summary.sequentialPractice && summary.sequentialPosition) {
-      parts.push("all-MCQ sequence at " + summary.sequentialPosition);
+      parts.push("all-MCQ category rotation at step " + summary.sequentialPosition);
     }
     if (summary.difficultCount) parts.push(summary.difficultCount + " difficult questions");
     return parts.length ? parts.join("; ") : "No active session, review queue or difficult marks.";

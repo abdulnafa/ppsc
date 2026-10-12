@@ -135,6 +135,10 @@ const SEQUENTIAL_ATTEMPT_QUEUE_RAW = JSON.stringify({
   nextQuizReviewStep: 35,
   nextImportantReviewStep: 44,
   nextSequentialReviewStep: 45,
+  sequentialOrderVersion: 2,
+  // Round-robin turn 11 is General Knowledge question 2: the first category
+  // after one complete pass. sequentialIndex=5 is its flat-bank mirror.
+  sequentialTurn: 11,
   sequentialIndex: 5,
   nextSequence: 1,
   dedicatedDeck: [],
@@ -741,7 +745,7 @@ async function testSequentialPracticeRoundTrip() {
   assert.equal(choice.decision, "device-upload");
   assert.equal(choice.localSummary.hasProgress, true);
   assert.equal(choice.localSummary.sequentialPractice, true);
-  assert.equal(choice.localSummary.sequentialPosition, 6);
+  assert.equal(choice.localSummary.sequentialPosition, 12);
 
   await source.window.PPSC_CLOUD.chooseLocal();
   await waitFor(source, (candidate) => candidate.phase === "synced", "sequential practice upload");
@@ -752,6 +756,8 @@ async function testSequentialPracticeRoundTrip() {
   );
   const uploadedQueue = JSON.parse(rawCloudValue(store, "retry-queue"));
   assert.equal(uploadedQueue.nextSequentialReviewStep, 45);
+  assert.equal(uploadedQueue.sequentialOrderVersion, 2);
+  assert.equal(uploadedQueue.sequentialTurn, 11);
   assert.equal(uploadedQueue.sequentialIndex, 5);
   assert.equal(uploadedQueue.activeAttempt.kind, "sequential");
   assert.equal(uploadedQueue.activeAttempt.submitted, true);
@@ -763,7 +769,7 @@ async function testSequentialPracticeRoundTrip() {
     "sequential practice restore"
   );
   assert.equal(restoredStatus.localSummary.sequentialPractice, true);
-  assert.equal(restoredStatus.localSummary.sequentialPosition, 6);
+  assert.equal(restoredStatus.localSummary.sequentialPosition, 12);
   assert.equal(
     restored.localStorage.getItem(RETRY_QUEUE_KEY),
     SEQUENTIAL_ATTEMPT_QUEUE_RAW,
@@ -771,6 +777,8 @@ async function testSequentialPracticeRoundTrip() {
   );
   const restoredQueue = JSON.parse(restored.localStorage.getItem(RETRY_QUEUE_KEY));
   assert.equal(restoredQueue.nextSequentialReviewStep, 45);
+  assert.equal(restoredQueue.sequentialOrderVersion, 2);
+  assert.equal(restoredQueue.sequentialTurn, 11);
   assert.equal(restoredQueue.sequentialIndex, 5);
   assert.equal(restoredQueue.activeAttempt.kind, "sequential");
   assert.equal(restoredQueue.activeAttempt.submitted, true);
@@ -1040,7 +1048,7 @@ async function main() {
       "legacy retry remaining=2 survives upload and restore",
       "dedicated retry attempt, per-item wrong cooldown, cadence, repeat-spacing history, and priority-tie deck fields round-trip byte-for-byte",
       "permanent Important cadence, count-baseline marker, shuffled deck, and active attempt round-trip byte-for-byte",
-      "global sequential cadence, cursor, and submitted active attempt round-trip byte-for-byte",
+      "global category-rotation cadence, unbounded turn, flat cursor mirror, and submitted active attempt round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",
       "large progress round-trips through integrity-checked chunks",
       "offline local changes upload when the connection returns",
