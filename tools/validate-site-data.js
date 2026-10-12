@@ -1326,6 +1326,13 @@ function validateThemeContract() {
 function validateRetryQueueContract() {
   const app = fs.readFileSync(appPath, "utf8");
   const styles = fs.readFileSync(stylesPath, "utf8");
+  function appSection(startMarker, endMarker) {
+    const startIndex = app.indexOf(startMarker);
+    if (startIndex < 0) return null;
+    const endIndex = app.indexOf(endMarker, startIndex + startMarker.length);
+    if (endIndex < 0) return null;
+    return app.slice(startIndex + startMarker.length, endIndex);
+  }
   const requiredConstants = [
     ["RETRY_QUEUE_STORAGE_KEY", '"ppsc-prep:retry-queue:v1"'],
     ["RETRY_QUEUE_STORAGE_VERSION", "1"],
@@ -1342,7 +1349,8 @@ function validateRetryQueueContract() {
     ["DEDICATED_RETRY_DEFAULT_GAP", "5"],
     ["DEDICATED_RETRY_MAX_GAP", "10"],
     ["IMPORTANT_REVIEW_MIN_SPACING", "10"],
-    ["IMPORTANT_REVIEW_MAX_SPACING", "20"]
+    ["IMPORTANT_REVIEW_MAX_SPACING", "20"],
+    ["SEQUENTIAL_REVIEW_SPACING", "15"]
   ];
   for (const [name, value] of requiredConstants) {
     const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -1390,8 +1398,141 @@ function validateRetryQueueContract() {
       error(`app.js: missing Learn/global Review Queue contract snippet ${requiredSnippet}`);
     }
   }
-  if (!/if \(beginDueImportantAttempt\(resumeAction, completedQuestionId\)\) return;\s*if \(beginDueRetryAttempt\(resumeAction, completedQuestionId\)\) return;/.test(app)) {
-    error("app.js: Permanent Important must keep its existing priority before finite Queue when both embedded cadences are due");
+  const emptyRetryState = appSection(
+    "function createEmptyRetryQueueState() {",
+    "function isSafeWholeNumber(value, minimum) {"
+  );
+  if (
+    emptyRetryState === null
+    || !/nextSequentialReviewStep\s*:\s*allQuestions\.length\s*>\s*0\s*\?\s*SEQUENTIAL_REVIEW_SPACING\s*:\s*null/.test(emptyRetryState)
+    || !/sequentialIndex\s*:\s*0/.test(emptyRetryState)
+  ) {
+    error("app.js: fresh Review Queue state must persist a 15-question Sequential gate and a zero-based cursor");
+  }
+
+  const scheduleSequentialReview = appSection(
+    "function scheduleNextSequentialReview() {",
+    "function normalizeRetryQueue(savedValue) {"
+  );
+  if (
+    scheduleSequentialReview === null
+    || !/nextSequentialReviewStep\s*=\s*retryQueueState\.practiceStep\s*\+\s*SEQUENTIAL_REVIEW_SPACING/.test(scheduleSequentialReview)
+    || !/function\s+consumeSequentialReviewGate\(\)[\s\S]*?do\s*\{[\s\S]*?nextStep\s*\+=\s*SEQUENTIAL_REVIEW_SPACING\s*;[\s\S]*?\}\s*while\s*\(nextStep\s*<=\s*retryQueueState\.practiceStep\)/.test(scheduleSequentialReview)
+  ) {
+    error("app.js: Sequential cadence must advance from its persisted 15-question boundary without collision drift");
+  }
+
+  const loadRetryState = appSection(
+    "function loadRetryQueue() {",
+    "function retryQueueItem(questionId) {"
+  );
+  if (
+    loadRetryState === null
+    || !/var\s+sequentialMigrationApplied\s*=\s*Boolean\(normalized\)/.test(loadRetryState)
+    || !/typeof\s+savedValue\.nextSequentialReviewStep\s*===\s*["']undefined["']/.test(loadRetryState)
+    || !/typeof\s+savedValue\.sequentialIndex\s*===\s*["']undefined["']/.test(loadRetryState)
+    || !/embeddedCadenceApplied[\s\S]*?\|\|\s*sequentialMigrationApplied[\s\S]*?saveRetryQueue\(/.test(loadRetryState)
+  ) {
+    error("app.js: legacy Sequential cursor and cadence migration must be persisted for cloud/offline sync");
+  }
+
+  const normalizedRetryState = appSection(
+    "function normalizeRetryQueue(savedValue) {",
+    "function loadRetryQueue() {"
+  );
+  if (normalizedRetryState === null) {
+    error("app.js: missing Review Queue normalization for persisted Sequential practice");
+  } else {
+    for (const requiredSnippet of [
+      "savedValue.nextSequentialReviewStep",
+      "savedValue.sequentialIndex",
+      "allQuestions[sequentialIndex]",
+      "nextSequentialReviewStep: nextSequentialReviewStep",
+      "sequentialIndex: sequentialIndex",
+      "kind: attemptKind"
+    ]) {
+      if (!normalizedRetryState.includes(requiredSnippet)) {
+        error(`app.js: Sequential saved-state normalization is missing ${requiredSnippet}`);
+      }
+    }
+    if (!/savedValue\.practiceStep\s*\+\s*SEQUENTIAL_REVIEW_SPACING/.test(normalizedRetryState)) {
+      error("app.js: legacy saved state must start its Sequential cadence 15 completed main questions after migration");
+    }
+    if (!/\[\s*["']queue["']\s*,\s*["']important["']\s*,\s*["']sequential["']\s*\]\.includes\(attemptKind\)/.test(normalizedRetryState)) {
+      error("app.js: saved active-attempt kinds must normalize queue, important, and sequential only");
+    }
+    if (!/attemptKind\s*===\s*["']sequential["']/.test(normalizedRetryState)) {
+      error("app.js: saved Sequential attempts must be validated against the persisted fixed-order cursor");
+    }
+  }
+
+  const wrongQueueHelper = appSection(
+    "function addWrongQuestionToRetryQueue(question) {",
+    "function recordMainPractice(question, wrongAnswer) {"
+  );
+  if (
+    wrongQueueHelper === null
+    || !/item\.remaining\s*\+=\s*RETRY_QUEUE_INCREMENT/.test(wrongQueueHelper)
+    || !/remaining\s*:\s*RETRY_QUEUE_INCREMENT/.test(wrongQueueHelper)
+  ) {
+    error("app.js: the shared wrong-answer helper must add RETRY_QUEUE_INCREMENT to old and new Queue items");
+  }
+
+  const setSequentialAttempt = appSection(
+    "function setSequentialAttempt(resumeAction) {",
+    "function advanceSequentialIndex() {"
+  );
+  if (
+    setSequentialAttempt === null
+    || !/var\s+index\s*=\s*retryQueueState\.sequentialIndex\s*;/.test(setSequentialAttempt)
+    || !/var\s+canonicalQuestion\s*=\s*allQuestions\[index\]\s*;/.test(setSequentialAttempt)
+    || !/kind\s*:\s*["']sequential["']/.test(setSequentialAttempt)
+  ) {
+    error("app.js: Sequential practice must select the persisted cursor directly from fixed allQuestions order");
+  }
+
+  const advanceSequentialIndex = appSection(
+    "function advanceSequentialIndex() {",
+    "function beginDueSequentialAttempt(resumeAction) {"
+  );
+  if (
+    advanceSequentialIndex === null
+    || !/\(retryQueueState\.sequentialIndex\s*\+\s*1\)\s*%\s*allQuestions\.length/.test(advanceSequentialIndex)
+  ) {
+    error("app.js: Sequential cursor must advance by one and wrap through the fixed allQuestions order");
+  }
+
+  const beginSequentialAttempt = appSection(
+    "function beginDueSequentialAttempt(resumeAction) {",
+    "function restoreActiveRetryAttempt() {"
+  );
+  if (
+    beginSequentialAttempt === null
+    || !/consumeSequentialReviewGate\(\)/.test(beginSequentialAttempt)
+  ) {
+    error("app.js: a delayed Sequential popup must consume its saved boundary without cadence drift");
+  }
+
+  const completeRetryAttempt = appSection(
+    "function completeRetryAttempt() {",
+    "function postponeRetryAttempt() {"
+  );
+  if (
+    completeRetryAttempt === null
+    || !/if\s*\(\s*isSequentialPracticeAttempt\(attempt\)\s*\)[\s\S]*?attempt\.outcome\s*===\s*["']correct["'][\s\S]*?setSequentialAttempt\(resumeAction\)[\s\S]*?addWrongQuestionToRetryQueue\(sequentialQuestion\)/.test(completeRetryAttempt)
+  ) {
+    error("app.js: Sequential correct answers must continue in order and wrong answers must use the shared +2 Queue helper");
+  }
+
+  const handleAction = appSection(
+    "function handleAction() {",
+    "function handleLearnAdvanceKeydown(event) {"
+  );
+  if (
+    handleAction === null
+    || !/if\s*\(\s*beginDueImportantAttempt\([^)]*\)\s*\)\s*return\s*;\s*if\s*\(\s*beginDueRetryAttempt\([^)]*\)\s*\)\s*return\s*;\s*if\s*\(\s*beginDueSequentialAttempt\([^)]*\)\s*\)\s*return\s*;/.test(handleAction)
+  ) {
+    error("app.js: embedded popup priority must remain Permanent Important, finite Queue, then Sequential");
   }
   if (!/function startQuiz\([\s\S]*?releaseActiveRetryAttempt\(\);\s*if \(retryQueueState\.items\.length > 0 && retryQueueState\.nextQuizReviewStep === null\) \{\s*scheduleNextQuizReview\(\);/.test(app)) {
     error("app.js: starting another Learn or Quiz session must preserve an existing regular Queue gate");

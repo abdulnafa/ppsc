@@ -31,6 +31,7 @@
   var DEDICATED_RETRY_MAX_GAP = 10;
   var IMPORTANT_REVIEW_MIN_SPACING = 10;
   var IMPORTANT_REVIEW_MAX_SPACING = 20;
+  var SEQUENTIAL_REVIEW_SPACING = 15;
   var BASIC_COMPUTER_CATEGORY_ID = "basic-computer-studies";
   var COMPUTER_SOURCE_SCOPES = ["all", "initial-original", "initial-related", "other"];
   var data = window.PPSC_QUIZ_DATA || {};
@@ -983,6 +984,8 @@
       practiceStep: 0,
       nextQuizReviewStep: null,
       nextImportantReviewStep: importantQuestionIds.length > 0 ? randomImportantSpacing() : null,
+      nextSequentialReviewStep: allQuestions.length > 0 ? SEQUENTIAL_REVIEW_SPACING : null,
+      sequentialIndex: 0,
       nextSequence: 1,
       dedicatedDeck: [],
       dedicatedLastQuestionId: null,
@@ -1045,6 +1048,29 @@
     }
     retryQueueState.nextQuizReviewStep = retryQueueState.practiceStep + randomRetrySpacing();
     return retryQueueState.nextQuizReviewStep;
+  }
+
+  function scheduleNextSequentialReview() {
+    if (allQuestions.length === 0) {
+      retryQueueState.nextSequentialReviewStep = null;
+      return null;
+    }
+    retryQueueState.nextSequentialReviewStep = retryQueueState.practiceStep + SEQUENTIAL_REVIEW_SPACING;
+    return retryQueueState.nextSequentialReviewStep;
+  }
+
+  function consumeSequentialReviewGate() {
+    if (allQuestions.length === 0) {
+      retryQueueState.nextSequentialReviewStep = null;
+      return null;
+    }
+    var nextStep = retryQueueState.nextSequentialReviewStep;
+    if (!isSafeWholeNumber(nextStep, 0)) nextStep = retryQueueState.practiceStep;
+    do {
+      nextStep += SEQUENTIAL_REVIEW_SPACING;
+    } while (nextStep <= retryQueueState.practiceStep);
+    retryQueueState.nextSequentialReviewStep = nextStep;
+    return nextStep;
   }
 
   function normalizeRetryQueue(savedValue) {
@@ -1142,6 +1168,28 @@
     }
     if (importantQuestionIds.length === 0) nextImportantReviewStep = null;
 
+    var nextSequentialReviewStep = savedValue.nextSequentialReviewStep;
+    if (typeof nextSequentialReviewStep === "undefined") {
+      // Start this new all-MCQ lane from the upgrade point. Earlier activity
+      // must not open a retroactive Sequential popup as soon as the app loads.
+      nextSequentialReviewStep = allQuestions.length > 0
+        ? savedValue.practiceStep + SEQUENTIAL_REVIEW_SPACING
+        : null;
+    } else if (
+      nextSequentialReviewStep !== null
+      && !isSafeWholeNumber(nextSequentialReviewStep, 0)
+    ) return null;
+    if (allQuestions.length === 0) nextSequentialReviewStep = null;
+
+    var sequentialIndex = typeof savedValue.sequentialIndex === "undefined"
+      ? 0
+      : savedValue.sequentialIndex;
+    if (
+      !isSafeWholeNumber(sequentialIndex, 0)
+      || (allQuestions.length > 0 && sequentialIndex >= allQuestions.length)
+      || (allQuestions.length === 0 && sequentialIndex !== 0)
+    ) return null;
+
     var dedicatedDeck = [];
     if (Array.isArray(savedValue.dedicatedDeck)) {
       var dedicatedDeckIds = new Set();
@@ -1202,9 +1250,13 @@
       var attemptKind = typeof attempt.kind === "undefined" ? "queue" : String(attempt.kind);
       if (
         !canonicalQuestion
-        || !["queue", "important"].includes(attemptKind)
+        || !["queue", "important", "sequential"].includes(attemptKind)
         || (attemptKind === "queue" && !questionIds.has(attemptQuestionId))
         || (attemptKind === "important" && !importantQuestionIdSet.has(attemptQuestionId))
+        || (attemptKind === "sequential" && (
+          !allQuestions[sequentialIndex]
+          || String(allQuestions[sequentialIndex].id) !== attemptQuestionId
+        ))
         || !["embedded", "dedicated"].includes(attemptContext)
         || !isIndexPermutation(attempt.optionOrder)
         || (hasPositionDependentOptionWording(canonicalQuestion) && !isCanonicalOptionOrder(attempt.optionOrder))
@@ -1215,7 +1267,7 @@
       if (
         (attemptContext === "dedicated" && attempt.resumeAction !== "queue")
         || (attemptContext === "embedded" && attempt.resumeAction === "queue")
-        || (attemptKind === "important" && attemptContext !== "embedded")
+        || (["important", "sequential"].includes(attemptKind) && attemptContext !== "embedded")
       ) return null;
 
       var reviewQuestion = quizQuestionWithOrder(canonicalQuestion, attempt.optionOrder);
@@ -1228,7 +1280,7 @@
       ) return null;
 
       var wrongIncrement = null;
-      if (attemptKind === "important") {
+      if (attemptKind === "important" || attemptKind === "sequential") {
         if (typeof attempt.wrongIncrement !== "undefined" && attempt.wrongIncrement !== null) return null;
       } else if (attempt.submitted && expectedOutcome === "wrong") {
         if (typeof attempt.wrongIncrement === "undefined") {
@@ -1292,6 +1344,8 @@
       practiceStep: savedValue.practiceStep,
       nextQuizReviewStep: nextQuizReviewStep,
       nextImportantReviewStep: nextImportantReviewStep,
+      nextSequentialReviewStep: nextSequentialReviewStep,
+      sequentialIndex: sequentialIndex,
       nextSequence: savedValue.nextSequence,
       dedicatedDeck: dedicatedDeck,
       dedicatedLastQuestionId: dedicatedLastQuestionId,
@@ -1479,20 +1533,31 @@
         savedValue.dedicatedRepeatGap !== normalized.dedicatedRepeatGap
         || JSON.stringify(savedValue.dedicatedRecentQuestionIds) !== JSON.stringify(normalized.dedicatedRecentQuestionIds)
       );
+      var sequentialMigrationApplied = Boolean(normalized) && (
+        typeof savedValue.nextSequentialReviewStep === "undefined"
+        || typeof savedValue.sequentialIndex === "undefined"
+      );
       if (!normalized) {
         window.localStorage.removeItem(RETRY_QUEUE_STORAGE_KEY);
         notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "remove");
         retryQueueState = createEmptyRetryQueueState();
       } else {
         retryQueueState = normalized;
-        if (countBaselineApplied || dedicatedSpacingApplied || embeddedCadenceApplied) {
+        if (
+          countBaselineApplied
+          || dedicatedSpacingApplied
+          || embeddedCadenceApplied
+          || sequentialMigrationApplied
+        ) {
           saveRetryQueue(countBaselineApplied && retryQueueState.items.length > 0
             ? "Existing Review Queue counts were set to five once. Wrong answers now add two."
             : (embeddedCadenceApplied && retryQueueState.items.length > 0
               ? "Regular Queue timing was restored. A wrong MCQ alone now waits ten to fifteen questions; saved Queue counts were kept unchanged."
               : (dedicatedSpacingApplied
-              ? "Review Queue spacing is ready. Saved question counts were kept unchanged."
-              : "")));
+                ? "Review Queue spacing is ready. Saved question counts were kept unchanged."
+                : (sequentialMigrationApplied
+                  ? "All-MCQs sequential practice is ready. Your existing progress was kept unchanged."
+                  : ""))));
           return;
         }
       }
@@ -1521,6 +1586,29 @@
     return sequence;
   }
 
+  function addWrongQuestionToRetryQueue(question) {
+    if (!question || !knownQuestionIds.has(String(question.id))) return null;
+    var questionId = String(question.id);
+    var nextDueStep = retryQueueState.practiceStep + randomWrongRetrySpacing();
+    var item = retryQueueItem(questionId);
+    if (item) {
+      item.remaining += RETRY_QUEUE_INCREMENT;
+      item.dueStep = nextDueStep;
+      item.wrongRetryDueStep = nextDueStep;
+    } else {
+      item = {
+        questionId: questionId,
+        remaining: RETRY_QUEUE_INCREMENT,
+        dueStep: nextDueStep,
+        wrongRetryDueStep: nextDueStep,
+        sequence: nextRetrySequence()
+      };
+      retryQueueState.items.push(item);
+    }
+    if (retryQueueState.nextQuizReviewStep === null) scheduleNextQuizReview();
+    return item;
+  }
+
   function recordMainPractice(question, wrongAnswer) {
     if (
       !question
@@ -1535,30 +1623,16 @@
     if (retryQueueState.nextImportantReviewStep === null && importantQuestionIds.length > 0) {
       scheduleNextImportantReview();
     }
+    if (retryQueueState.nextSequentialReviewStep === null && allQuestions.length > 0) {
+      scheduleNextSequentialReview();
+    }
     var questionId = String(question.id);
     var item = retryQueueItem(questionId);
     var queueChanged = false;
     var quizAnswer = state.mode === "quiz";
     if (quizAnswer && wrongAnswer) {
-      var nextDueStep = retryQueueState.practiceStep + randomWrongRetrySpacing();
-      if (item) {
-        item.remaining += RETRY_QUEUE_INCREMENT;
-        item.dueStep = nextDueStep;
-        item.wrongRetryDueStep = nextDueStep;
-      } else {
-        item = {
-          questionId: questionId,
-          remaining: RETRY_QUEUE_INCREMENT,
-          dueStep: nextDueStep,
-          wrongRetryDueStep: nextDueStep,
-          sequence: nextRetrySequence()
-        };
-        retryQueueState.items.push(item);
-      }
+      item = addWrongQuestionToRetryQueue(question);
       queueChanged = true;
-      if (retryQueueState.nextQuizReviewStep === null) {
-        scheduleNextQuizReview();
-      }
     } else if (quizAnswer && !item) {
       var confirmationDueStep = retryQueueState.practiceStep + randomRetrySpacing();
       item = {
@@ -1698,6 +1772,17 @@
     );
   }
 
+  function isSequentialReviewDue() {
+    return Boolean(
+      (!window.PPSC_APP_FEATURES || window.PPSC_APP_FEATURES.sequentialReview !== false)
+      &&
+      activeRetryCategoryId()
+      && retryQueueState.nextSequentialReviewStep !== null
+      && retryQueueState.practiceStep >= retryQueueState.nextSequentialReviewStep
+      && allQuestions.length > 0
+    );
+  }
+
   function retryQuestionForAttempt(attempt) {
     if (!attempt) return null;
     var canonicalQuestion = questionsById.get(String(attempt.questionId));
@@ -1706,6 +1791,10 @@
 
   function isImportantPracticeAttempt(attempt) {
     return Boolean(attempt && attempt.kind === "important");
+  }
+
+  function isSequentialPracticeAttempt(attempt) {
+    return Boolean(attempt && attempt.kind === "sequential");
   }
 
   function resetRetryFeedback() {
@@ -1822,7 +1911,12 @@
   function updateRetryDialogQueueMeta(attempt, urduQuestion) {
     if (!elements.retryDialogQueueMeta) return;
     var totals = projectedRetryQueueTotals(attempt);
-    if (isImportantPracticeAttempt(attempt)) {
+    if (isSequentialPracticeAttempt(attempt)) {
+      var sequentialPosition = retryQueueState.sequentialIndex + 1;
+      elements.retryDialogQueueMeta.textContent = urduQuestion
+        ? "تمام سوالات · " + sequentialPosition + " / " + allQuestions.length
+        : "All MCQs · " + sequentialPosition + " / " + allQuestions.length;
+    } else if (isImportantPracticeAttempt(attempt)) {
       elements.retryDialogQueueMeta.textContent = urduQuestion
         ? "مستقل اہم مشق — قطار کی گنتی تبدیل نہیں ہوگی"
         : "Permanent Important practice · Review Queue totals stay unchanged";
@@ -1844,6 +1938,23 @@
 
   function updateRetryAttemptProgress(item, attempt, urduQuestion) {
     if (!elements.retryDialogProgress) return;
+    if (isSequentialPracticeAttempt(attempt)) {
+      var position = retryQueueState.sequentialIndex + 1;
+      elements.retryDialogProgress.textContent = urduQuestion
+        ? (attempt.submitted
+          ? (attempt.outcome === "correct"
+            ? "درست — اگلا مسلسل سوال تیار ہے"
+            : "غلط — جاری رکھنے پر 2 دہرائیاں قطار میں شامل ہوں گی")
+          : "مسلسل سوال " + position + " از " + allQuestions.length)
+        : (attempt.submitted
+          ? (attempt.outcome === "correct"
+            ? "Correct · continue to the next sequential MCQ"
+            : "Incorrect · continuing will add 2 Queue reviews")
+          : "Sequential MCQ " + position + " of " + allQuestions.length);
+      elements.retryDialogProgress.lang = urduQuestion ? "ur" : "en";
+      elements.retryDialogProgress.dir = urduQuestion ? "rtl" : "ltr";
+      return;
+    }
     if (isImportantPracticeAttempt(attempt)) {
       elements.retryDialogProgress.textContent = urduQuestion
         ? "یہ اہم سوال مستقل مشق میں رہے گا"
@@ -1894,6 +2005,7 @@
     var correctOption = displayOption(question, question.correctOptionIndex);
     var urduQuestion = isUrduCategoryQuestion(question);
     var importantPractice = isImportantPracticeAttempt(attempt);
+    var sequentialPractice = isSequentialPracticeAttempt(attempt);
     elements.retryFeedback.classList.remove("is-warning", "is-correct", "is-incorrect");
     elements.retryFeedback.classList.add(correct ? "is-correct" : "is-incorrect");
     elements.retryFeedback.classList.toggle("is-urdu", urduQuestion);
@@ -1906,7 +2018,17 @@
         : (correct ? "Correct!" : "Incorrect");
     }
     if (elements.retryFeedbackText) {
-      elements.retryFeedbackText.textContent = importantPractice
+      elements.retryFeedbackText.textContent = sequentialPractice
+        ? (urduQuestion
+          ? (correct
+            ? "بہت خوب۔ جاری رکھنے پر تمام سوالات کی ترتیب میں اگلا سوال آئے گا۔"
+            : "درست جواب " + correctOption.label + "۔ " + correctOption.text
+              + " ہے۔ جاری رکھنے پر اس سوال کی 2 دہرائیاں قطار میں شامل ہوں گی اور آپ اپنے سیشن پر واپس جائیں گے۔")
+          : (correct
+            ? "Well done. Continue to the next MCQ in the fixed all-category sequence."
+            : "The correct answer is " + correctOption.label + ". " + correctOption.text
+              + ". Continuing adds 2 Queue reviews and returns to your session."))
+        : importantPractice
         ? (urduQuestion
           ? (correct
             ? "بہت خوب۔ یہ اہم سوال مستقل مشق میں رہے گا اور قطار کی گنتی تبدیل نہیں ہوگی۔"
@@ -1933,9 +2055,10 @@
     var item = attempt ? retryQueueItem(attempt.questionId) : null;
     var question = retryQuestionForAttempt(attempt);
     var importantPractice = isImportantPracticeAttempt(attempt);
+    var sequentialPractice = isSequentialPracticeAttempt(attempt);
     if (
       !attempt
-      || (!importantPractice && !item)
+      || (!importantPractice && !sequentialPractice && !item)
       || !question
       || !elements.retryDialog
       || !activeRetryAttemptMatchesSession()
@@ -1951,10 +2074,15 @@
     elements.retryDialog.classList.toggle("is-urdu", urduQuestion);
     elements.retryDialog.classList.toggle("is-dedicated", dedicatedPractice);
     elements.retryDialog.classList.toggle("is-important-practice", importantPractice);
+    elements.retryDialog.classList.toggle("is-sequential-practice", sequentialPractice);
     if (elements.retryDialogTitle) {
       elements.retryDialogTitle.textContent = urduQuestion
-        ? (importantPractice ? "اہم سوال کی مستقل مشق" : "فوری دہرائی")
-        : (importantPractice ? "Global Important Practice" : (dedicatedPractice ? "Review Queue Practice" : "Quick review"));
+        ? (sequentialPractice
+          ? "تمام سوالات کی مسلسل مشق"
+          : (importantPractice ? "اہم سوال کی مستقل مشق" : "فوری دہرائی"))
+        : (sequentialPractice
+          ? "Global Sequential Practice"
+          : (importantPractice ? "Global Important Practice" : (dedicatedPractice ? "Review Queue Practice" : "Quick review")));
       elements.retryDialogTitle.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogTitle.dir = urduQuestion ? "rtl" : "ltr";
     }
@@ -1963,8 +2091,12 @@
 
     if (elements.retryQuestionKind) {
       elements.retryQuestionKind.textContent = urduQuestion
-        ? (importantPractice ? "تمام زمروں کا اہم سوال" : "دہرائی کا سوال")
-        : (importantPractice ? "PERMANENT IMPORTANT" : (dedicatedPractice ? "PRIORITY QUEUE PRACTICE" : "REVIEW QUEUE"))
+        ? (sequentialPractice
+          ? "تمام زمروں کا مسلسل سوال"
+          : (importantPractice ? "تمام زمروں کا اہم سوال" : "دہرائی کا سوال"))
+        : (sequentialPractice
+          ? "ALL MCQS · FIXED QUESTION ORDER"
+          : (importantPractice ? "PERMANENT IMPORTANT" : (dedicatedPractice ? "PRIORITY QUEUE PRACTICE" : "REVIEW QUEUE")))
           + (categorySelectionLabel ? " \u00b7 " + categorySelectionLabel.toUpperCase() : "");
       elements.retryQuestionKind.classList.toggle("is-important", isImportantQuestion(question));
       elements.retryQuestionKind.lang = urduQuestion ? "ur" : "en";
@@ -1998,12 +2130,24 @@
 
     if (elements.retryDialogHelp) {
       elements.retryDialogHelp.textContent = urduQuestion
-        ? (importantPractice
+        ? (sequentialPractice
+          ? (attempt.submitted
+            ? (attempt.outcome === "correct"
+              ? "جاری رکھنے پر اگلا مسلسل سوال آئے گا۔ آپ کا اصل اسکور اور سوال نمبر تبدیل نہیں ہوں گے۔"
+              : "جاری رکھنے پر 2 دہرائیاں شامل ہوں گی اور آپ اسی جگہ اپنے سیشن پر واپس جائیں گے۔")
+            : "درست جواب سے اگلا مسلسل سوال آئے گا؛ غلط جواب سے 2 دہرائیاں شامل ہوں گی۔ آپ مشق روک کر اسی سوال کو اگلی باری کے لیے محفوظ بھی رکھ سکتے ہیں۔")
+          : (importantPractice
           ? "درست یا غلط، یہ اہم سوال مستقل مشق میں رہے گا اور عام قطار کی گنتی نہیں بدلے گا۔"
           : (attempt.submitted
           ? "اپنے سیشن پر واپس جانے کے لیے جاری رکھیں۔"
-          : "یہ دہرائی آپ کے اصل اسکور کو تبدیل نہیں کرے گی۔"))
-        : (importantPractice
+          : "یہ دہرائی آپ کے اصل اسکور کو تبدیل نہیں کرے گی۔")))
+        : (sequentialPractice
+          ? (attempt.submitted
+            ? (attempt.outcome === "correct"
+              ? "Continue for the next fixed-order MCQ. Your main score and question number stay unchanged."
+              : "Continue to add 2 Queue reviews and return to the exact place in your session.")
+            : "Correct keeps this fixed-order practice open; wrong adds 2 Queue reviews. Pause & return keeps this MCQ for the next checkpoint.")
+          : (importantPractice
           ? "Correct or wrong, this Important MCQ stays in global practice and never changes finite Queue totals."
           : (dedicatedPractice
           ? (attempt.submitted
@@ -2013,7 +2157,7 @@
               + normalizedDedicatedRepeatGap(retryQueueState.dedicatedRepeatGap) + " other Queue questions.")
           : (attempt.submitted
             ? "Continue to return to your session."
-            : "This review does not change your Learn or Quiz progress.")));
+            : "This review does not change your Learn or Quiz progress."))));
       elements.retryDialogHelp.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogHelp.dir = urduQuestion ? "rtl" : "ltr";
     }
@@ -2022,15 +2166,21 @@
       setHidden(elements.retryLaterButton, retryCannotBePostponed);
       elements.retryLaterButton.disabled = retryCannotBePostponed;
       elements.retryLaterButton.textContent = urduQuestion
-        ? (dedicatedPractice ? "مشق ختم کریں" : "ابھی نہیں")
-        : (dedicatedPractice ? "End practice" : "Not now");
+        ? (sequentialPractice ? "مشق روک کر واپس جائیں" : (dedicatedPractice ? "مشق ختم کریں" : "ابھی نہیں"))
+        : (sequentialPractice ? "Pause & return" : (dedicatedPractice ? "End practice" : "Not now"));
       elements.retryLaterButton.lang = urduQuestion ? "ur" : "en";
       elements.retryLaterButton.dir = urduQuestion ? "rtl" : "ltr";
     }
     if (elements.retryActionButton) {
       elements.retryActionButton.textContent = urduQuestion
-        ? (attempt.submitted ? "جاری رکھیں" : "جواب چیک کریں")
-        : (attempt.submitted ? "Continue" : "Check Answer");
+        ? (attempt.submitted
+          ? (sequentialPractice && attempt.outcome === "correct" ? "اگلا سوال" : "جاری رکھیں")
+          : "جواب چیک کریں")
+        : (attempt.submitted
+          ? (sequentialPractice
+            ? (attempt.outcome === "correct" ? "Next MCQ" : "Add to Queue & Return")
+            : "Continue")
+          : "Check Answer");
       elements.retryActionButton.dataset.action = attempt.submitted ? "continue" : "check";
       elements.retryActionButton.setAttribute(
         "aria-keyshortcuts",
@@ -2264,6 +2414,50 @@
     return renderRetryAttempt() && openRetryDialog();
   }
 
+  function setSequentialAttempt(resumeAction) {
+    if (allQuestions.length === 0 || !isRetryResumeAction(resumeAction)) return false;
+    var index = retryQueueState.sequentialIndex;
+    var canonicalQuestion = allQuestions[index];
+    if (!canonicalQuestion) return false;
+    var reviewQuestion = shuffledReviewQuestion(canonicalQuestion);
+    if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
+    retryQueueState.activeAttempt = {
+      questionId: String(canonicalQuestion.id),
+      optionOrder: reviewQuestion._sessionOptionOrder.slice(),
+      selectedIndex: null,
+      submitted: false,
+      outcome: null,
+      wrongIncrement: null,
+      resumeAction: resumeAction,
+      context: "embedded",
+      kind: "sequential"
+    };
+    return true;
+  }
+
+  function advanceSequentialIndex() {
+    retryQueueState.sequentialIndex = allQuestions.length > 0
+      ? (retryQueueState.sequentialIndex + 1) % allQuestions.length
+      : 0;
+    return retryQueueState.sequentialIndex;
+  }
+
+  function beginDueSequentialAttempt(resumeAction) {
+    if (!elements.retryDialog || !activeRetryCategoryId()) return false;
+    if (retryQueueState.activeAttempt) {
+      if (activeRetryAttemptMatchesSession()) {
+        return renderRetryAttempt() && openRetryDialog();
+      }
+      releaseActiveRetryAttempt();
+    }
+    if (!isSequentialReviewDue() || !setSequentialAttempt(resumeAction)) return false;
+    // Advance from the saved cadence boundary (rather than the possibly later
+    // opening step) so an Important/Queue collision cannot cause cadence drift.
+    consumeSequentialReviewGate();
+    saveRetryQueue();
+    return renderRetryAttempt() && openRetryDialog();
+  }
+
   function restoreActiveRetryAttempt() {
     if (!retryQueueState.activeAttempt) return false;
     if (
@@ -2297,14 +2491,17 @@
     var item = attempt ? retryQueueItem(attempt.questionId) : null;
     var question = retryQuestionForAttempt(attempt);
     var importantPractice = isImportantPracticeAttempt(attempt);
-    if (!attempt || (!importantPractice && !item) || !question || attempt.submitted) return;
+    var sequentialPractice = isSequentialPracticeAttempt(attempt);
+    if (!attempt || (!importantPractice && !sequentialPractice && !item) || !question || attempt.submitted) return;
     if (attempt.selectedIndex === null) {
       showRetrySelectionPrompt(question);
       return;
     }
     attempt.submitted = true;
     attempt.outcome = attempt.selectedIndex === question.correctOptionIndex ? "correct" : "wrong";
-    attempt.wrongIncrement = !importantPractice && attempt.outcome === "wrong" ? RETRY_QUEUE_INCREMENT : null;
+    attempt.wrongIncrement = !importantPractice && !sequentialPractice && attempt.outcome === "wrong"
+      ? RETRY_QUEUE_INCREMENT
+      : null;
     saveRetryQueue();
     markRetrySubmittedOptions(question, attempt.selectedIndex);
     showRetryFeedback(question, attempt);
@@ -2315,7 +2512,11 @@
       elements.retryLaterButton.disabled = true;
     }
     if (elements.retryActionButton) {
-      elements.retryActionButton.textContent = isUrduCategoryQuestion(question) ? "جاری رکھیں" : "Continue";
+      elements.retryActionButton.textContent = isUrduCategoryQuestion(question)
+        ? (sequentialPractice && attempt.outcome === "correct" ? "اگلا سوال" : "جاری رکھیں")
+        : (sequentialPractice
+          ? (attempt.outcome === "correct" ? "Next MCQ" : "Add to Queue & Return")
+          : "Continue");
       elements.retryActionButton.dataset.action = "continue";
       elements.retryActionButton.setAttribute("aria-keyshortcuts", "Enter Space ArrowRight");
       elements.retryActionButton.focus({ preventScroll: true });
@@ -2366,6 +2567,33 @@
     var item = attempt ? retryQueueItem(attempt.questionId) : null;
     if (!attempt || !attempt.submitted) return;
     var resumeAction = attempt.resumeAction;
+    if (isSequentialPracticeAttempt(attempt)) {
+      var sequentialQuestion = questionsById.get(String(attempt.questionId));
+      advanceSequentialIndex();
+      if (attempt.outcome === "correct") {
+        retryQueueState.activeAttempt = null;
+        if (setSequentialAttempt(resumeAction)) {
+          saveRetryQueue("Correct. The next fixed-order MCQ is ready.");
+          renderRetryAttempt();
+          openRetryDialog();
+          return;
+        }
+      } else if (sequentialQuestion) {
+        var queuedItem = addWrongQuestionToRetryQueue(sequentialQuestion);
+        retryQueueState.activeAttempt = null;
+        saveRetryQueue(queuedItem
+          ? "Incorrect Sequential MCQ saved with 2 additional Review Queue repetitions."
+          : "Sequential MCQ progress saved.");
+        closeRetryDialog();
+        performRetryResumeAction(resumeAction);
+        return;
+      }
+      retryQueueState.activeAttempt = null;
+      saveRetryQueue("Sequential MCQ progress saved.");
+      closeRetryDialog();
+      performRetryResumeAction(resumeAction);
+      return;
+    }
     if (isImportantPracticeAttempt(attempt)) {
       retryQueueState.activeAttempt = null;
       scheduleNextImportantReview();
@@ -2442,6 +2670,14 @@
       saveRetryQueue("Important practice postponed. It remains in the permanent global rotation.");
       closeRetryDialog();
       performRetryResumeAction(importantResumeAction);
+      return;
+    }
+    if (isSequentialPracticeAttempt(attempt)) {
+      var sequentialResumeAction = attempt.resumeAction;
+      retryQueueState.activeAttempt = null;
+      saveRetryQueue("Sequential practice paused. The same global MCQ will return at the next 15-question checkpoint.");
+      closeRetryDialog();
+      performRetryResumeAction(sequentialResumeAction);
       return;
     }
     if (!item) return;
@@ -2565,6 +2801,19 @@
   function releaseActiveRetryAttempt() {
     if (!retryQueueState.activeAttempt) return;
     var attempt = retryQueueState.activeAttempt;
+    if (isSequentialPracticeAttempt(attempt)) {
+      if (attempt.submitted) {
+        if (attempt.outcome === "wrong") {
+          addWrongQuestionToRetryQueue(questionsById.get(String(attempt.questionId)));
+        }
+        advanceSequentialIndex();
+      }
+      retryQueueState.activeAttempt = null;
+      saveRetryQueue();
+      closeRetryDialog();
+      resetDedicatedRetryPractice();
+      return;
+    }
     if (isImportantPracticeAttempt(attempt)) {
       if (!attempt.submitted && !retryQueueState.importantDeck.includes(attempt.questionId)) {
         retryQueueState.importantDeck.push(attempt.questionId);
@@ -5179,6 +5428,7 @@
 
     if (beginDueImportantAttempt(resumeAction, completedQuestionId)) return;
     if (beginDueRetryAttempt(resumeAction, completedQuestionId)) return;
+    if (beginDueSequentialAttempt(resumeAction)) return;
     performRetryResumeAction(resumeAction);
   }
 

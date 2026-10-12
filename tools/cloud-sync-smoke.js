@@ -126,6 +126,34 @@ const IMPORTANT_ATTEMPT_QUEUE_RAW = JSON.stringify({
     kind: "important"
   }
 });
+const SEQUENTIAL_ATTEMPT_QUEUE_RAW = JSON.stringify({
+  version: 1,
+  bankSignature: BANK_SIGNATURE,
+  countBaselineVersion: 1,
+  embeddedCadenceVersion: 2,
+  practiceStep: 30,
+  nextQuizReviewStep: 35,
+  nextImportantReviewStep: 44,
+  nextSequentialReviewStep: 45,
+  sequentialIndex: 5,
+  nextSequence: 1,
+  dedicatedDeck: [],
+  dedicatedLastQuestionId: null,
+  importantDeck: [],
+  importantLastQuestionId: null,
+  items: [],
+  activeAttempt: {
+    questionId: SECOND_QUESTION_ID,
+    optionOrder: [1, 3, 0, 2],
+    selectedIndex: 0,
+    submitted: true,
+    outcome: "correct",
+    wrongIncrement: null,
+    resumeAction: "next:6",
+    context: "embedded",
+    kind: "sequential"
+  }
+});
 const SAMPLE_DIFFICULT_RAW = JSON.stringify({
   version: 1,
   questionIds: [SAMPLE_QUESTION_ID]
@@ -699,6 +727,55 @@ async function testImportantPracticeRoundTrip() {
   );
 }
 
+async function testSequentialPracticeRoundTrip() {
+  const store = new Map();
+  const source = createBrowser({
+    store,
+    local: { [RETRY_QUEUE_KEY]: SEQUENTIAL_ATTEMPT_QUEUE_RAW }
+  });
+  const choice = await waitFor(
+    source,
+    (candidate) => candidate.phase === "migration-choice",
+    "sequential practice upload choice"
+  );
+  assert.equal(choice.decision, "device-upload");
+  assert.equal(choice.localSummary.hasProgress, true);
+  assert.equal(choice.localSummary.sequentialPractice, true);
+  assert.equal(choice.localSummary.sequentialPosition, 6);
+
+  await source.window.PPSC_CLOUD.chooseLocal();
+  await waitFor(source, (candidate) => candidate.phase === "synced", "sequential practice upload");
+  assert.equal(
+    rawCloudValue(store, "retry-queue"),
+    SEQUENTIAL_ATTEMPT_QUEUE_RAW,
+    "sequential cadence, cursor, and submitted active attempt must upload byte-for-byte"
+  );
+  const uploadedQueue = JSON.parse(rawCloudValue(store, "retry-queue"));
+  assert.equal(uploadedQueue.nextSequentialReviewStep, 45);
+  assert.equal(uploadedQueue.sequentialIndex, 5);
+  assert.equal(uploadedQueue.activeAttempt.kind, "sequential");
+  assert.equal(uploadedQueue.activeAttempt.submitted, true);
+
+  const restored = createBrowser({ store: cloneStore(store), local: {} });
+  const restoredStatus = await waitFor(
+    restored,
+    (candidate) => candidate.ready,
+    "sequential practice restore"
+  );
+  assert.equal(restoredStatus.localSummary.sequentialPractice, true);
+  assert.equal(restoredStatus.localSummary.sequentialPosition, 6);
+  assert.equal(
+    restored.localStorage.getItem(RETRY_QUEUE_KEY),
+    SEQUENTIAL_ATTEMPT_QUEUE_RAW,
+    "sequential cadence, cursor, and submitted active attempt must restore byte-for-byte on another device"
+  );
+  const restoredQueue = JSON.parse(restored.localStorage.getItem(RETRY_QUEUE_KEY));
+  assert.equal(restoredQueue.nextSequentialReviewStep, 45);
+  assert.equal(restoredQueue.sequentialIndex, 5);
+  assert.equal(restoredQueue.activeAttempt.kind, "sequential");
+  assert.equal(restoredQueue.activeAttempt.submitted, true);
+}
+
 async function testConflictWaitsForChoice(seedStore) {
   const cloudQueue = rawCloudValue(seedStore, "retry-queue");
   const localQueue = JSON.stringify({
@@ -940,6 +1017,7 @@ async function main() {
   await testRestoredLegacyQueueUploadsAppBaselineAndRestoresExactly(seedStore);
   await testDedicatedAttemptQueueRoundTrip();
   await testImportantPracticeRoundTrip();
+  await testSequentialPracticeRoundTrip();
   await testConflictWaitsForChoice(cloneStore(seedStore));
   await testAllowedEmailIsEnforcedBeforeFirestore();
   await testStaleRevisionCannotOverwriteCloud(cloneStore(seedStore));
@@ -962,6 +1040,7 @@ async function main() {
       "legacy retry remaining=2 survives upload and restore",
       "dedicated retry attempt, per-item wrong cooldown, cadence, repeat-spacing history, and priority-tie deck fields round-trip byte-for-byte",
       "permanent Important cadence, count-baseline marker, shuffled deck, and active attempt round-trip byte-for-byte",
+      "global sequential cadence, cursor, and submitted active attempt round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",
       "large progress round-trips through integrity-checked chunks",
       "offline local changes upload when the connection returns",
