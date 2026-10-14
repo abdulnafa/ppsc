@@ -70,6 +70,15 @@
     return String(question.id);
   });
   var importantQuestionIdSet = new Set(importantQuestionIds);
+  var importantQuestionIdsByCategory = new Map();
+  importantQuestionIds.forEach(function (questionId) {
+    var question = questionsById.get(questionId);
+    var categoryId = question ? String(question.categoryId || "") : "";
+    if (!importantQuestionIdsByCategory.has(categoryId)) {
+      importantQuestionIdsByCategory.set(categoryId, []);
+    }
+    importantQuestionIdsByCategory.get(categoryId).push(questionId);
+  });
   var questionBankSignature = buildQuestionBankSignature();
   var difficultQuestionIds = new Set();
   var activeSessionSnapshot = null;
@@ -1034,7 +1043,7 @@
       practiceStep: 0,
       nextQuizReviewStep: null,
       nextImportantReviewStep: importantQuestionIds.length > 0 ? randomImportantSpacing() : null,
-      nextSequentialReviewStep: allQuestions.length > 0 ? SEQUENTIAL_REVIEW_SPACING : null,
+      nextSequentialReviewStep: null,
       sequentialOrderVersion: SEQUENTIAL_ORDER_VERSION,
       sequentialTurn: 0,
       sequentialIndex: 0,
@@ -1048,6 +1057,7 @@
       dedicatedRecentQuestionIds: [],
       importantDeck: [],
       importantLastQuestionId: null,
+      importantLastQuestionIdsByCategory: {},
       items: [],
       activeAttempt: null
     };
@@ -1337,18 +1347,14 @@
     }
     if (importantQuestionIds.length === 0) nextImportantReviewStep = null;
 
-    var nextSequentialReviewStep = savedValue.nextSequentialReviewStep;
-    if (typeof nextSequentialReviewStep === "undefined") {
-      // Start this new all-MCQ lane from the upgrade point. Earlier activity
-      // must not open a retroactive Sequential popup as soon as the app loads.
-      nextSequentialReviewStep = allQuestions.length > 0
-        ? savedValue.practiceStep + SEQUENTIAL_REVIEW_SPACING
-        : null;
-    } else if (
-      nextSequentialReviewStep !== null
-      && !isSafeWholeNumber(nextSequentialReviewStep, 0)
+    // Retire the old Sequential popup without discarding Queue or Important
+    // progress. Keep its legacy cursor fields readable for saved-state checks.
+    var nextSequentialReviewStep = null;
+    if (
+      typeof savedValue.nextSequentialReviewStep !== "undefined"
+      && savedValue.nextSequentialReviewStep !== null
+      && !isSafeWholeNumber(savedValue.nextSequentialReviewStep, 0)
     ) return null;
-    if (allQuestions.length === 0) nextSequentialReviewStep = null;
 
     var savedSequentialOrderVersion = typeof savedValue.sequentialOrderVersion === "undefined"
       ? 1
@@ -1482,9 +1488,34 @@
       importantLastQuestionId = String(importantLastQuestionId || "");
       if (!importantQuestionIdSet.has(importantLastQuestionId)) importantLastQuestionId = null;
     }
+    var importantLastQuestionIdsByCategory = {};
+    if (
+      savedValue.importantLastQuestionIdsByCategory
+      && typeof savedValue.importantLastQuestionIdsByCategory === "object"
+      && !Array.isArray(savedValue.importantLastQuestionIdsByCategory)
+    ) {
+      categories.forEach(function (category) {
+        var categoryId = String(category.id || "");
+        var questionId = String(savedValue.importantLastQuestionIdsByCategory[categoryId] || "");
+        if (importantQuestionIdSet.has(questionId) && retryQuestionMatchesCategory(questionId, categoryId)) {
+          importantLastQuestionIdsByCategory[categoryId] = questionId;
+        }
+      });
+    }
+    if (importantLastQuestionId) {
+      var lastImportantQuestion = questionsById.get(importantLastQuestionId);
+      var lastImportantCategoryId = lastImportantQuestion ? String(lastImportantQuestion.categoryId || "") : "";
+      if (lastImportantCategoryId && !importantLastQuestionIdsByCategory[lastImportantCategoryId]) {
+        importantLastQuestionIdsByCategory[lastImportantCategoryId] = importantLastQuestionId;
+      }
+    }
 
     var activeAttempt = null;
-    if (savedValue.activeAttempt !== null) {
+    var retiredSequentialAttempt = savedValue.activeAttempt
+      && typeof savedValue.activeAttempt === "object"
+      && !Array.isArray(savedValue.activeAttempt)
+      && savedValue.activeAttempt.kind === "sequential";
+    if (savedValue.activeAttempt !== null && !retiredSequentialAttempt) {
       var attempt = savedValue.activeAttempt;
       if (!attempt || typeof attempt !== "object" || Array.isArray(attempt)) return null;
       var attemptQuestionId = String(attempt.questionId || "");
@@ -1554,6 +1585,7 @@
           return questionId !== attemptQuestionId;
         });
         importantLastQuestionId = attemptQuestionId;
+        importantLastQuestionIdsByCategory[String(canonicalQuestion.categoryId)] = attemptQuestionId;
       } else if (attemptContext === "dedicated") {
         dedicatedDeck = dedicatedDeck.filter(function (questionId) {
           return questionId !== attemptQuestionId;
@@ -1600,6 +1632,7 @@
       dedicatedRecentQuestionIds: dedicatedRecentQuestionIds,
       importantDeck: importantDeck,
       importantLastQuestionId: importantLastQuestionId,
+      importantLastQuestionIdsByCategory: importantLastQuestionIdsByCategory,
       items: items,
       activeAttempt: activeAttempt
     };
@@ -1640,8 +1673,8 @@
     if (attempt.context === "dedicated") return retryQueuePractice.active;
     var categoryId = activeRetryCategoryId();
     return Boolean(categoryId && (
-      attempt.kind !== "queue"
-      || retryQuestionMatchesCategory(attempt.questionId, categoryId)
+      attempt.kind !== "sequential"
+      && retryQuestionMatchesCategory(attempt.questionId, categoryId)
     ));
   }
 
@@ -1747,6 +1780,10 @@
   function saveRetryQueue(announcement) {
     retryQueueState.version = RETRY_QUEUE_STORAGE_VERSION;
     retryQueueState.bankSignature = questionBankSignature;
+    retryQueueState.nextSequentialReviewStep = null;
+    if (isSequentialPracticeAttempt(retryQueueState.activeAttempt)) {
+      retryQueueState.activeAttempt = null;
+    }
     retryQueueState.sequentialOrderVersion = SEQUENTIAL_ORDER_VERSION;
     var savedSequentialQuestion = sequentialQuestionAt(retryQueueState.sequentialTurn);
     retryQueueState.sequentialQuestionId = savedSequentialQuestion
@@ -1799,6 +1836,8 @@
       );
       var sequentialMigrationApplied = Boolean(normalized) && (
         typeof savedValue.nextSequentialReviewStep === "undefined"
+        || savedValue.nextSequentialReviewStep !== null
+        || Boolean(savedValue.activeAttempt && savedValue.activeAttempt.kind === "sequential")
         || typeof savedValue.sequentialIndex === "undefined"
         || typeof savedValue.sequentialTurn === "undefined"
         || typeof savedValue.sequentialQuestionId === "undefined"
@@ -1829,9 +1868,9 @@
               : (dedicatedSpacingApplied
                 ? "Review Queue spacing is ready. Saved question counts were kept unchanged."
                 : (additiveBankMigrationApplied
-                  ? "New MCQs are ready. Your Queue, timing and exact Sequential question were kept unchanged."
+                  ? "New MCQs are ready. Your Queue and Important progress were kept unchanged."
                   : (sequentialMigrationApplied
-                  ? "All-MCQs category rotation is ready. Your existing next question and progress were kept unchanged."
+                  ? "Sequential popups are off. Your Queue and Important progress were kept unchanged."
                   : "")))));
           return;
         }
@@ -1897,9 +1936,6 @@
     retryQueueState.practiceStep += 1;
     if (retryQueueState.nextImportantReviewStep === null && importantQuestionIds.length > 0) {
       scheduleNextImportantReview();
-    }
-    if (retryQueueState.nextSequentialReviewStep === null && allQuestions.length > 0) {
-      scheduleNextSequentialReview();
     }
     var questionId = String(question.id);
     var item = retryQueueItem(questionId);
@@ -2008,56 +2044,56 @@
     )[0] || null;
   }
 
-  function refillImportantReviewDeck() {
-    var shuffledIds = fisherYates(importantQuestionIds);
-    var previousQuestionId = retryQueueState.importantLastQuestionId;
+  function refillImportantReviewDeck(categoryId) {
+    var shuffledIds = fisherYates(importantQuestionIdsByCategory.get(categoryId) || []);
+    var previousQuestionId = retryQueueState.importantLastQuestionIdsByCategory[categoryId] || null;
     if (shuffledIds.length > 1 && shuffledIds[0] === previousQuestionId) {
       shuffledIds.push(shuffledIds.shift());
     }
-    retryQueueState.importantDeck = shuffledIds;
+    // Other categories' saved deck positions stay available for their sessions.
+    retryQueueState.importantDeck.push.apply(retryQueueState.importantDeck, shuffledIds);
   }
 
-  function nextImportantReviewQuestionId(excludedQuestionId) {
+  function nextImportantReviewQuestionId(excludedQuestionId, categoryId) {
     retryQueueState.importantDeck = retryQueueState.importantDeck.filter(function (questionId, index, deck) {
       return importantQuestionIdSet.has(questionId) && deck.indexOf(questionId) === index;
     });
-    if (retryQueueState.importantDeck.length === 0) refillImportantReviewDeck();
-    if (retryQueueState.importantDeck.length === 0) return null;
+    var categoryIds = importantQuestionIdsByCategory.get(categoryId) || [];
+    if (categoryIds.length === 0) return null;
+    if (!retryQueueState.importantDeck.some(function (questionId) {
+      return retryQuestionMatchesCategory(questionId, categoryId);
+    })) refillImportantReviewDeck(categoryId);
 
     var avoidIds = [
       String(excludedQuestionId || ""),
-      String(retryQueueState.importantLastQuestionId || "")
+      String(retryQueueState.importantLastQuestionIdsByCategory[categoryId] || "")
     ].filter(Boolean);
-    if (retryQueueState.importantDeck.length > 1 && avoidIds.includes(retryQueueState.importantDeck[0])) {
-      var alternativeIndex = retryQueueState.importantDeck.findIndex(function (questionId) {
-        return !avoidIds.includes(questionId);
-      });
-      if (alternativeIndex > 0) {
-        var alternativeQuestionId = retryQueueState.importantDeck.splice(alternativeIndex, 1)[0];
-        retryQueueState.importantDeck.unshift(alternativeQuestionId);
-      }
+    var categoryIndexes = [];
+    retryQueueState.importantDeck.forEach(function (questionId, index) {
+      if (retryQuestionMatchesCategory(questionId, categoryId)) categoryIndexes.push(index);
+    });
+    if (categoryIndexes.length === 0) return null;
+    var selectedIndex = categoryIndexes.find(function (index) {
+      return !avoidIds.includes(retryQueueState.importantDeck[index]);
+    });
+    if (typeof selectedIndex === "undefined") {
+      selectedIndex = categoryIndexes[0];
     }
-    return retryQueueState.importantDeck.shift() || null;
+    return retryQueueState.importantDeck.splice(selectedIndex, 1)[0] || null;
   }
 
   function isImportantReviewDue() {
+    var categoryId = activeRetryCategoryId();
     return Boolean(
-      activeRetryCategoryId()
+      categoryId
       && retryQueueState.nextImportantReviewStep !== null
       && retryQueueState.practiceStep >= retryQueueState.nextImportantReviewStep
-      && importantQuestionIds.length > 0
+      && (importantQuestionIdsByCategory.get(categoryId) || []).length > 0
     );
   }
 
   function isSequentialReviewDue() {
-    return Boolean(
-      (!window.PPSC_APP_FEATURES || window.PPSC_APP_FEATURES.sequentialReview !== false)
-      &&
-      activeRetryCategoryId()
-      && retryQueueState.nextSequentialReviewStep !== null
-      && retryQueueState.practiceStep >= retryQueueState.nextSequentialReviewStep
-      && allQuestions.length > 0
-    );
+    return false;
   }
 
   function retryQuestionForAttempt(attempt) {
@@ -2242,7 +2278,7 @@
     if (isImportantPracticeAttempt(attempt)) {
       elements.retryDialogProgress.textContent = urduQuestion
         ? "یہ اہم سوال مستقل مشق میں رہے گا"
-        : "This Important MCQ stays in the permanent global rotation";
+        : "This Important MCQ stays in this category's permanent rotation";
       elements.retryDialogProgress.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogProgress.dir = urduQuestion ? "rtl" : "ltr";
       return;
@@ -2366,7 +2402,7 @@
           : (importantPractice ? "اہم سوال کی مستقل مشق" : "فوری دہرائی"))
         : (sequentialPractice
           ? "Global Sequential Practice"
-          : (importantPractice ? "Global Important Practice" : (dedicatedPractice ? "Review Queue Practice" : "Quick review")));
+          : (importantPractice ? "Category Important Practice" : (dedicatedPractice ? "Review Queue Practice" : "Quick review")));
       elements.retryDialogTitle.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogTitle.dir = urduQuestion ? "rtl" : "ltr";
     }
@@ -2377,7 +2413,7 @@
       elements.retryQuestionKind.textContent = urduQuestion
         ? (sequentialPractice
           ? "زمروں کی باری وار مشق"
-          : (importantPractice ? "تمام زمروں کا اہم سوال" : "دہرائی کا سوال"))
+          : (importantPractice ? "اسی زمرے کا اہم سوال" : "دہرائی کا سوال"))
         : (sequentialPractice
           ? "ALL MCQS · CATEGORY-BY-CATEGORY ROTATION"
           : (importantPractice ? "PERMANENT IMPORTANT" : (dedicatedPractice ? "PRIORITY QUEUE PRACTICE" : "REVIEW QUEUE")))
@@ -2639,12 +2675,13 @@
       releaseActiveRetryAttempt();
     }
     if (!isImportantReviewDue()) return false;
-    var questionId = nextImportantReviewQuestionId(excludedQuestionId);
+    var questionId = nextImportantReviewQuestionId(excludedQuestionId, activeRetryCategoryId());
     var canonicalQuestion = questionId ? questionsById.get(questionId) : null;
     if (!canonicalQuestion || !isImportantQuestion(canonicalQuestion)) return false;
     var reviewQuestion = shuffledReviewQuestion(canonicalQuestion);
     if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
     retryQueueState.importantLastQuestionId = questionId;
+    retryQueueState.importantLastQuestionIdsByCategory[String(canonicalQuestion.categoryId)] = questionId;
     retryQueueState.activeAttempt = {
       questionId: questionId,
       optionOrder: reviewQuestion._sessionOptionOrder.slice(),
@@ -2897,7 +2934,7 @@
     if (isImportantPracticeAttempt(attempt)) {
       retryQueueState.activeAttempt = null;
       scheduleNextImportantReview();
-      saveRetryQueue("Important practice saved. This MCQ remains in the permanent global rotation.");
+      saveRetryQueue("Important practice saved. This MCQ remains in its category's permanent rotation.");
       closeRetryDialog();
       performRetryResumeAction(resumeAction);
       return;
@@ -2967,7 +3004,7 @@
       var importantResumeAction = attempt.resumeAction;
       retryQueueState.activeAttempt = null;
       scheduleNextImportantReview();
-      saveRetryQueue("Important practice postponed. It remains in the permanent global rotation.");
+      saveRetryQueue("Important practice postponed. It remains in its category's permanent rotation.");
       closeRetryDialog();
       performRetryResumeAction(importantResumeAction);
       return;
@@ -5728,7 +5765,6 @@
 
     if (beginDueImportantAttempt(resumeAction, completedQuestionId)) return;
     if (beginDueRetryAttempt(resumeAction, completedQuestionId)) return;
-    if (beginDueSequentialAttempt(resumeAction)) return;
     performRetryResumeAction(resumeAction);
   }
 

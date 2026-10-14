@@ -1379,7 +1379,6 @@ function validateRetryQueueContract(data) {
     ["DEDICATED_RETRY_MAX_GAP", "10"],
     ["IMPORTANT_REVIEW_MIN_SPACING", "10"],
     ["IMPORTANT_REVIEW_MAX_SPACING", "20"],
-    ["SEQUENTIAL_REVIEW_SPACING", "15"],
     ["SEQUENTIAL_ORDER_VERSION", "2"],
     ["APPROVED_ADDITIVE_BANK_SIGNATURE", '"v1:11412:57e37c68"'],
     ["APPROVED_ADDITIVE_BANK_QUESTION_COUNT", "11412"]
@@ -1455,66 +1454,19 @@ function validateRetryQueueContract(data) {
       error(`app.js: missing Learn/global Review Queue contract snippet ${requiredSnippet}`);
     }
   }
-  if (
-    !/var\s+sequentialCategoryEntries\s*=\s*sequentialEntriesForQuestions\(allQuestions\)/.test(app)
-    || !/function\s+sequentialEntriesForQuestions\(questions\)[\s\S]*?categories\.map\([\s\S]*?questions\.filter\([\s\S]*?entry\.questions\.length\s*>\s*0/.test(app)
-    || !/sequentialQuestionTurns\.set\([\s\S]*?questionIndex\s*\*\s*sequentialCategoryEntries\.length\s*\+\s*categoryIndex/.test(app)
-    || !/var\s+allQuestionIndexes\s*=\s*new\s+Map\(allQuestions\.map/.test(app)
-  ) {
-    error("app.js: Sequential v2 must build non-empty category lanes plus question-to-turn and flat-index maps");
-  }
-
-  const sequentialPositionDetails = appSection(
-    "function sequentialPositionDetailsForEntries(turn, entries) {",
-    "function sequentialPositionDetails(turn) {"
-  );
-  if (
-    sequentialPositionDetails === null
-    || !/categoryIndex\s*=\s*turn\s*%\s*entries\.length/.test(sequentialPositionDetails)
-    || !/categoryRound\s*=\s*Math\.floor\(turn\s*\/\s*entries\.length\)/.test(sequentialPositionDetails)
-    || !/questionIndex\s*=\s*categoryRound\s*%\s*entry\.questions\.length/.test(sequentialPositionDetails)
-    || !/question\s*:\s*entry\.questions\[questionIndex\]/.test(sequentialPositionDetails)
-  ) {
-    error("app.js: Sequential v2 resolver must rotate categories by turn and wrap each category independently");
-  }
-
-  const sequentialQuestionAt = appSection(
-    "function sequentialQuestionAt(turn) {",
-    "function sequentialTurnForQuestion(question) {"
-  );
-  if (
-    sequentialQuestionAt === null
-    || !/sequentialPositionDetails\(turn\)/.test(sequentialQuestionAt)
-    || !/details\s*\?\s*details\.question\s*:\s*null/.test(sequentialQuestionAt)
-  ) {
-    error("app.js: Sequential question lookup must use the category-rotation position resolver");
-  }
-
   const emptyRetryState = appSection(
     "function createEmptyRetryQueueState() {",
     "function isSafeWholeNumber(value, minimum) {"
   );
   if (
     emptyRetryState === null
-    || !/nextSequentialReviewStep\s*:\s*allQuestions\.length\s*>\s*0\s*\?\s*SEQUENTIAL_REVIEW_SPACING\s*:\s*null/.test(emptyRetryState)
+    || !/nextSequentialReviewStep\s*:\s*null/.test(emptyRetryState)
     || !/sequentialOrderVersion\s*:\s*SEQUENTIAL_ORDER_VERSION/.test(emptyRetryState)
     || !/sequentialTurn\s*:\s*0/.test(emptyRetryState)
     || !/sequentialIndex\s*:\s*0/.test(emptyRetryState)
     || !/sequentialQuestionId\s*:\s*allQuestions\.length\s*>\s*0/.test(emptyRetryState)
   ) {
-    error("app.js: fresh Review Queue state must persist the v2 category-rotation turn, flat mirror, and 15-question gate");
-  }
-
-  const scheduleSequentialReview = appSection(
-    "function scheduleNextSequentialReview() {",
-    "function normalizeRetryQueue(savedValue) {"
-  );
-  if (
-    scheduleSequentialReview === null
-    || !/nextSequentialReviewStep\s*=\s*retryQueueState\.practiceStep\s*\+\s*SEQUENTIAL_REVIEW_SPACING/.test(scheduleSequentialReview)
-    || !/function\s+consumeSequentialReviewGate\(\)[\s\S]*?do\s*\{[\s\S]*?nextStep\s*\+=\s*SEQUENTIAL_REVIEW_SPACING\s*;[\s\S]*?\}\s*while\s*\(nextStep\s*<=\s*retryQueueState\.practiceStep\)/.test(scheduleSequentialReview)
-  ) {
-    error("app.js: Sequential cadence must advance from its persisted 15-question boundary without collision drift");
+    error("app.js: fresh Review Queue state must disable Sequential while retaining v1 cursor fields");
   }
 
   const loadRetryState = appSection(
@@ -1523,16 +1475,12 @@ function validateRetryQueueContract(data) {
   );
   if (
     loadRetryState === null
-    || !/var\s+sequentialMigrationApplied\s*=\s*Boolean\(normalized\)/.test(loadRetryState)
-    || !/typeof\s+savedValue\.nextSequentialReviewStep\s*===\s*["']undefined["']/.test(loadRetryState)
-    || !/typeof\s+savedValue\.sequentialIndex\s*===\s*["']undefined["']/.test(loadRetryState)
-    || !/typeof\s+savedValue\.sequentialTurn\s*===\s*["']undefined["']/.test(loadRetryState)
-    || !/typeof\s+savedValue\.sequentialQuestionId\s*===\s*["']undefined["']/.test(loadRetryState)
-    || !/savedValue\.sequentialOrderVersion\s*!==\s*SEQUENTIAL_ORDER_VERSION/.test(loadRetryState)
     || !/additiveBankMigrationApplied[\s\S]*?savedValue\.bankSignature\s*!==\s*questionBankSignature/.test(loadRetryState)
-    || !/embeddedCadenceApplied[\s\S]*?\|\|\s*sequentialMigrationApplied[\s\S]*?\|\|\s*additiveBankMigrationApplied[\s\S]*?saveRetryQueue\(/.test(loadRetryState)
+    || !/savedValue\.nextSequentialReviewStep\s*!==\s*null/.test(loadRetryState)
+    || !/savedValue\.activeAttempt\s*&&\s*savedValue\.activeAttempt\.kind\s*===\s*["']sequential["']/.test(loadRetryState)
+    || !/saveRetryQueue\(/.test(loadRetryState)
   ) {
-    error("app.js: legacy Sequential order/turn/cursor migration must be persisted for cloud/offline sync");
+    error("app.js: retired Sequential state and additive Queue migration must be saved for cloud/offline sync");
   }
 
   const normalizedRetryState = appSection(
@@ -1540,7 +1488,7 @@ function validateRetryQueueContract(data) {
     "function loadRetryQueue() {"
   );
   if (normalizedRetryState === null) {
-    error("app.js: missing Review Queue normalization for persisted Sequential practice");
+    error("app.js: missing Review Queue normalization for retired Sequential state");
   } else {
     for (const requiredSnippet of [
       "savedValue.nextSequentialReviewStep",
@@ -1548,44 +1496,54 @@ function validateRetryQueueContract(data) {
       "savedValue.sequentialTurn",
       "savedValue.sequentialIndex",
       "savedValue.sequentialQuestionId",
-      "sequentialTurnForQuestion(legacySequentialQuestion)",
+      "var nextSequentialReviewStep = null",
       "nextSequentialReviewStep: nextSequentialReviewStep",
       "sequentialOrderVersion: SEQUENTIAL_ORDER_VERSION",
       "sequentialTurn: sequentialTurn",
       "sequentialIndex: sequentialIndex",
       "sequentialQuestionId: sequentialQuestionId",
-      "kind: attemptKind"
+      "approvedAdditiveBankQuestionCount(savedValue.bankSignature)"
     ]) {
       if (!normalizedRetryState.includes(requiredSnippet)) {
-        error(`app.js: Sequential saved-state normalization is missing ${requiredSnippet}`);
+        error(`app.js: retired Sequential state must preserve Queue/cursor compatibility and is missing ${requiredSnippet}`);
       }
     }
-    if (!/savedValue\.practiceStep\s*\+\s*SEQUENTIAL_REVIEW_SPACING/.test(normalizedRetryState)) {
-      error("app.js: legacy saved state must start its Sequential cadence 15 completed main questions after migration");
-    }
     if (!/\[\s*["']queue["']\s*,\s*["']important["']\s*,\s*["']sequential["']\s*\]\.includes\(attemptKind\)/.test(normalizedRetryState)) {
-      error("app.js: saved active-attempt kinds must normalize queue, important, and sequential only");
+      error("app.js: legacy Sequential attempts must still be recognized for safe retirement");
     }
-    if (!/attemptKind\s*===\s*["']sequential["']/.test(normalizedRetryState)) {
-      error("app.js: saved Sequential attempts must be validated against the persisted category-rotation turn");
+    if (!/savedValue\.activeAttempt\.kind\s*===\s*["']sequential["']/.test(normalizedRetryState)
+      || !/savedValue\.activeAttempt\s*!==\s*null\s*&&\s*!retiredSequentialAttempt/.test(normalizedRetryState)) {
+      error("app.js: saved Sequential attempts must be identified and retired without changing finite Queue counts");
     }
-    if (![
-      "approvedAdditiveBankQuestionCount(savedValue.bankSignature)",
-      "approvedAdditiveSequentialQuestion(",
-      "approvedQuestionCount",
-      "sequentialQuestionId !== attemptQuestionId"
-    ].every((snippet) => normalizedRetryState.includes(snippet))) {
-      error("app.js: approved additive Queue migration must preserve the exact Sequential question/attempt by ID");
-    }
-    if (![
-      "savedSequentialOrderVersion < SEQUENTIAL_ORDER_VERSION",
-      "questionsById.has(String(savedSequentialAttempt.questionId || \"\"))",
-      "legacySequentialQuestion = questionsById.get(String(savedSequentialAttempt.questionId))",
-      "sequentialTurn = sequentialTurnForQuestion(legacySequentialQuestion)"
-    ].every((snippet) => normalizedRetryState.includes(snippet))
-      || !/legacySequentialQuestion\s*=\s*sequentialIndex\s*<\s*allQuestions\.length\s*\?\s*allQuestions\[sequentialIndex\]\s*:\s*null/.test(normalizedRetryState)) {
-      error("app.js: v1 flat-order migration must preserve the exact next or active Sequential MCQ in v2 rotation");
-    }
+  }
+
+  const saveRetryState = appSection(
+    "function saveRetryQueue(announcement) {",
+    "function loadRetryQueue() {"
+  );
+  if (
+    saveRetryState === null
+    || !/retryQueueState\.nextSequentialReviewStep\s*=\s*null/.test(saveRetryState)
+    || !/isSequentialPracticeAttempt\(retryQueueState\.activeAttempt\)[\s\S]*?retryQueueState\.activeAttempt\s*=\s*null/.test(saveRetryState)
+  ) {
+    error("app.js: every Queue save must keep the retired Sequential gate and attempt disabled");
+  }
+
+  const importantSelector = appSection(
+    "function nextImportantReviewQuestionId(excludedQuestionId, categoryId) {",
+    "function isImportantReviewDue() {"
+  );
+  const activeAttemptMatcher = appSection(
+    "function activeRetryAttemptMatchesSession() {",
+    "function updateRetryQueueUI(announcement) {"
+  );
+  if (
+    importantSelector === null
+    || !/retryQuestionMatchesCategory\(questionId, categoryId\)/.test(importantSelector)
+    || activeAttemptMatcher === null
+    || !/retryQuestionMatchesCategory\(attempt\.questionId, categoryId\)/.test(activeAttemptMatcher)
+  ) {
+    error("app.js: Important and Queue popups must both match the active Learn/Quiz category");
   }
 
   const wrongQueueHelper = appSection(
@@ -1598,35 +1556,6 @@ function validateRetryQueueContract(data) {
     || !/remaining\s*:\s*RETRY_QUEUE_INCREMENT/.test(wrongQueueHelper)
   ) {
     error("app.js: the shared wrong-answer helper must add RETRY_QUEUE_INCREMENT to old and new Queue items");
-  }
-
-  const setSequentialAttempt = appSection(
-    "function setSequentialAttempt(resumeAction) {",
-    "function advanceSequentialIndex() {"
-  );
-  if (
-    setSequentialAttempt === null
-    || !/canonicalQuestion\s*=\s*sequentialQuestionAt\(retryQueueState\.sequentialTurn\)/.test(setSequentialAttempt)
-    || !/flatIndex\s*=\s*sequentialFlatIndexForQuestion\(canonicalQuestion\)/.test(setSequentialAttempt)
-    || !/retryQueueState\.sequentialIndex\s*=\s*flatIndex/.test(setSequentialAttempt)
-    || !/retryQueueState\.sequentialQuestionId\s*=\s*String\(canonicalQuestion\.id\)/.test(setSequentialAttempt)
-    || !/kind\s*:\s*["']sequential["']/.test(setSequentialAttempt)
-  ) {
-    error("app.js: Sequential practice must resolve the persisted rotation turn and maintain its flat-bank mirror");
-  }
-
-  const advanceSequentialIndex = appSection(
-    "function advanceSequentialIndex() {",
-    "function beginDueSequentialAttempt(resumeAction) {"
-  );
-  if (
-    advanceSequentialIndex === null
-    || !/retryQueueState\.sequentialTurn\s*>=\s*Number\.MAX_SAFE_INTEGER\s*\?\s*0\s*:\s*retryQueueState\.sequentialTurn\s*\+\s*1/.test(advanceSequentialIndex)
-    || !/sequentialQuestionAt\(retryQueueState\.sequentialTurn\)/.test(advanceSequentialIndex)
-    || !/retryQueueState\.sequentialIndex\s*=\s*flatIndex\s*===\s*null\s*\?\s*0\s*:\s*flatIndex/.test(advanceSequentialIndex)
-    || !/retryQueueState\.sequentialQuestionId\s*=\s*canonicalQuestion/.test(advanceSequentialIndex)
-  ) {
-    error("app.js: Sequential turn must advance indefinitely (safe-integer guard only) and refresh its flat-bank mirror");
   }
 
   const normalizeSession = appSection(
@@ -1654,37 +1583,16 @@ function validateRetryQueueContract(data) {
     error("app.js: additive migration must accept only the approved signature behind an exact stable-prefix check");
   }
 
-  const beginSequentialAttempt = appSection(
-    "function beginDueSequentialAttempt(resumeAction) {",
-    "function restoreActiveRetryAttempt() {"
-  );
-  if (
-    beginSequentialAttempt === null
-    || !/consumeSequentialReviewGate\(\)/.test(beginSequentialAttempt)
-  ) {
-    error("app.js: a delayed Sequential popup must consume its saved boundary without cadence drift");
-  }
-
-  const completeRetryAttempt = appSection(
-    "function completeRetryAttempt() {",
-    "function postponeRetryAttempt() {"
-  );
-  if (
-    completeRetryAttempt === null
-    || !/if\s*\(\s*isSequentialPracticeAttempt\(attempt\)\s*\)[\s\S]*?attempt\.outcome\s*===\s*["']correct["'][\s\S]*?setSequentialAttempt\(resumeAction\)[\s\S]*?addWrongQuestionToRetryQueue\(sequentialQuestion\)/.test(completeRetryAttempt)
-  ) {
-    error("app.js: Sequential correct answers must continue in order and wrong answers must use the shared +2 Queue helper");
-  }
-
   const handleAction = appSection(
     "function handleAction() {",
     "function handleLearnAdvanceKeydown(event) {"
   );
   if (
     handleAction === null
-    || !/if\s*\(\s*beginDueImportantAttempt\([^)]*\)\s*\)\s*return\s*;\s*if\s*\(\s*beginDueRetryAttempt\([^)]*\)\s*\)\s*return\s*;\s*if\s*\(\s*beginDueSequentialAttempt\([^)]*\)\s*\)\s*return\s*;/.test(handleAction)
+    || !/if\s*\(\s*beginDueImportantAttempt\([^)]*\)\s*\)\s*return\s*;\s*if\s*\(\s*beginDueRetryAttempt\([^)]*\)\s*\)\s*return\s*;/.test(handleAction)
+    || /\bbeginDueSequentialAttempt\s*\(/.test(handleAction)
   ) {
-    error("app.js: embedded popup priority must remain Permanent Important, finite Queue, then Sequential");
+    error("app.js: embedded popups must use Important then finite Queue, with no Sequential popup");
   }
   if (!/function startQuiz\([\s\S]*?releaseActiveRetryAttempt\(\);\s*if \(retryQueueState\.items\.length > 0 && retryQueueState\.nextQuizReviewStep === null\) \{\s*scheduleNextQuizReview\(\);/.test(app)) {
     error("app.js: starting another Learn or Quiz session must preserve an existing regular Queue gate");

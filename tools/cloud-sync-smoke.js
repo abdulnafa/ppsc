@@ -126,7 +126,7 @@ const IMPORTANT_ATTEMPT_QUEUE_RAW = JSON.stringify({
     kind: "important"
   }
 });
-const SEQUENTIAL_ATTEMPT_QUEUE_RAW = JSON.stringify({
+const RETIRED_SEQUENTIAL_QUEUE_RAW = JSON.stringify({
   version: 1,
   bankSignature: BANK_SIGNATURE,
   countBaselineVersion: 1,
@@ -134,30 +134,20 @@ const SEQUENTIAL_ATTEMPT_QUEUE_RAW = JSON.stringify({
   practiceStep: 30,
   nextQuizReviewStep: 35,
   nextImportantReviewStep: 44,
-  nextSequentialReviewStep: 45,
+  nextSequentialReviewStep: null,
   sequentialOrderVersion: 2,
-  // Round-robin turn 11 is General Knowledge question 2: the first category
-  // after one complete pass. sequentialIndex=5 is its flat-bank mirror.
+  // Keep old cursor fields readable for v1 compatibility, but they must not
+  // turn the retired Sequential popup back on after cloud restoration.
   sequentialTurn: 11,
   sequentialIndex: 5,
   sequentialQuestionId: SECOND_QUESTION_ID,
-  nextSequence: 1,
+  nextSequence: 2,
   dedicatedDeck: [],
   dedicatedLastQuestionId: null,
   importantDeck: [],
   importantLastQuestionId: null,
-  items: [],
-  activeAttempt: {
-    questionId: SECOND_QUESTION_ID,
-    optionOrder: [1, 3, 0, 2],
-    selectedIndex: 0,
-    submitted: true,
-    outcome: "correct",
-    wrongIncrement: null,
-    resumeAction: "next:6",
-    context: "embedded",
-    kind: "sequential"
-  }
+  items: [{ questionId: SAMPLE_QUESTION_ID, remaining: 5, dueStep: 35, sequence: 1 }],
+  activeAttempt: null
 });
 const SAMPLE_DIFFICULT_RAW = JSON.stringify({
   version: 1,
@@ -732,59 +722,59 @@ async function testImportantPracticeRoundTrip() {
   );
 }
 
-async function testSequentialPracticeRoundTrip() {
+async function testRetiredSequentialStateRoundTrip() {
   const store = new Map();
   const source = createBrowser({
     store,
-    local: { [RETRY_QUEUE_KEY]: SEQUENTIAL_ATTEMPT_QUEUE_RAW }
+    local: { [RETRY_QUEUE_KEY]: RETIRED_SEQUENTIAL_QUEUE_RAW }
   });
   const choice = await waitFor(
     source,
     (candidate) => candidate.phase === "migration-choice",
-    "sequential practice upload choice"
+    "retired Sequential state upload choice"
   );
   assert.equal(choice.decision, "device-upload");
   assert.equal(choice.localSummary.hasProgress, true);
-  assert.equal(choice.localSummary.sequentialPractice, true);
-  assert.equal(choice.localSummary.sequentialPosition, 12);
+  assert.equal(Object.hasOwn(choice.localSummary, "sequentialPractice"), false);
+  assert.equal(choice.localSummary.retryCount, 1);
 
   await source.window.PPSC_CLOUD.chooseLocal();
-  await waitFor(source, (candidate) => candidate.phase === "synced", "sequential practice upload");
+  await waitFor(source, (candidate) => candidate.phase === "synced", "retired Sequential state upload");
   assert.equal(
     rawCloudValue(store, "retry-queue"),
-    SEQUENTIAL_ATTEMPT_QUEUE_RAW,
-    "sequential cadence, cursor, and submitted active attempt must upload byte-for-byte"
+    RETIRED_SEQUENTIAL_QUEUE_RAW,
+    "retired Sequential state and finite Queue reviews must upload byte-for-byte"
   );
   const uploadedQueue = JSON.parse(rawCloudValue(store, "retry-queue"));
-  assert.equal(uploadedQueue.nextSequentialReviewStep, 45);
+  assert.equal(uploadedQueue.nextSequentialReviewStep, null);
   assert.equal(uploadedQueue.sequentialOrderVersion, 2);
   assert.equal(uploadedQueue.sequentialTurn, 11);
   assert.equal(uploadedQueue.sequentialIndex, 5);
   assert.equal(uploadedQueue.sequentialQuestionId, SECOND_QUESTION_ID);
-  assert.equal(uploadedQueue.activeAttempt.kind, "sequential");
-  assert.equal(uploadedQueue.activeAttempt.submitted, true);
+  assert.equal(uploadedQueue.activeAttempt, null);
+  assert.equal(uploadedQueue.items[0].remaining, 5);
 
   const restored = createBrowser({ store: cloneStore(store), local: {} });
   const restoredStatus = await waitFor(
     restored,
     (candidate) => candidate.ready,
-    "sequential practice restore"
+    "retired Sequential state restore"
   );
-  assert.equal(restoredStatus.localSummary.sequentialPractice, true);
-  assert.equal(restoredStatus.localSummary.sequentialPosition, 12);
+  assert.equal(Object.hasOwn(restoredStatus.localSummary, "sequentialPractice"), false);
+  assert.equal(restoredStatus.localSummary.retryCount, 1);
   assert.equal(
     restored.localStorage.getItem(RETRY_QUEUE_KEY),
-    SEQUENTIAL_ATTEMPT_QUEUE_RAW,
-    "sequential cadence, cursor, and submitted active attempt must restore byte-for-byte on another device"
+    RETIRED_SEQUENTIAL_QUEUE_RAW,
+    "retired Sequential state and finite Queue reviews must restore byte-for-byte on another device"
   );
   const restoredQueue = JSON.parse(restored.localStorage.getItem(RETRY_QUEUE_KEY));
-  assert.equal(restoredQueue.nextSequentialReviewStep, 45);
+  assert.equal(restoredQueue.nextSequentialReviewStep, null);
   assert.equal(restoredQueue.sequentialOrderVersion, 2);
   assert.equal(restoredQueue.sequentialTurn, 11);
   assert.equal(restoredQueue.sequentialIndex, 5);
   assert.equal(restoredQueue.sequentialQuestionId, SECOND_QUESTION_ID);
-  assert.equal(restoredQueue.activeAttempt.kind, "sequential");
-  assert.equal(restoredQueue.activeAttempt.submitted, true);
+  assert.equal(restoredQueue.activeAttempt, null);
+  assert.equal(restoredQueue.items[0].remaining, 5);
 }
 
 async function testConflictWaitsForChoice(seedStore) {
@@ -1028,7 +1018,7 @@ async function main() {
   await testRestoredLegacyQueueUploadsAppBaselineAndRestoresExactly(seedStore);
   await testDedicatedAttemptQueueRoundTrip();
   await testImportantPracticeRoundTrip();
-  await testSequentialPracticeRoundTrip();
+  await testRetiredSequentialStateRoundTrip();
   await testConflictWaitsForChoice(cloneStore(seedStore));
   await testAllowedEmailIsEnforcedBeforeFirestore();
   await testStaleRevisionCannotOverwriteCloud(cloneStore(seedStore));
@@ -1051,7 +1041,7 @@ async function main() {
       "legacy retry remaining=2 survives upload and restore",
       "dedicated retry attempt, per-item wrong cooldown, cadence, repeat-spacing history, and priority-tie deck fields round-trip byte-for-byte",
       "permanent Important cadence, count-baseline marker, shuffled deck, and active attempt round-trip byte-for-byte",
-      "global category-rotation cadence, unbounded turn, flat cursor mirror, and submitted active attempt round-trip byte-for-byte",
+      "retired Sequential gate stays off while legacy cursor fields and finite Queue reviews round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",
       "large progress round-trips through integrity-checked chunks",
       "offline local changes upload when the connection returns",
