@@ -1028,8 +1028,7 @@ function validateAdv2e102Bank(questions) {
 function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
-    "category-screen", "paper-builder-card", "global-retry-queue-button", "global-retry-queue-count",
-    "retry-queue-card", "retry-queue-card-meta", "retry-repeat-gap-select", "retry-repeat-gap-status",
+    "category-screen", "paper-builder-card",
     "paper-setup-screen", "paper-setup-back-button",
     "quick-notes-screen", "quick-notes-back-button", "quick-notes-category",
     "quick-notes-title", "quick-notes-count", "quick-notes-language-note",
@@ -1047,13 +1046,15 @@ function validateHtml() {
     "detailed-learning-list", "detailed-learning-empty",
     "paper-category-options", "paper-select-all-button", "paper-clear-all-button",
     "paper-selection-summary", "paper-setup-status", "paper-start-button",
-    "mode-screen", "quiz-screen", "results-screen", "category-grid",
+    "mode-screen", "quiz-screen", "queue-screen", "results-screen", "category-grid",
     "continue-session-card", "continue-session-button", "continue-session-title", "continue-session-meta",
     "mode-category", "computer-source-panel", "computer-source-title", "computer-source-description",
     "computer-source-all", "computer-source-initial-original", "computer-source-initial-related",
     "computer-source-other", "computer-source-count-all", "computer-source-count-initial-original",
     "computer-source-count-initial-related", "computer-source-count-other",
     "study-scope-panel", "standard-mode-options", "learn-mode-button", "quiz-mode-button",
+    "queue-mode-button", "queue-mode-meta", "queue-back-button",
+    "queue-practice-title", "queue-practice-category", "queue-practice-status", "queue-practice-slot",
     "study-notes-mode-button", "question-range-options", "question-range-title",
     "question-range-context", "question-range-form", "question-range-start-input",
     "question-range-end-input", "question-range-help", "question-range-summary",
@@ -1083,74 +1084,38 @@ function validateHtml() {
     const matches = html.match(new RegExp(`\\bid=["']${id}["']`, "g")) || [];
     if (matches.length !== 1) error(`index.html: expected one #${id}, found ${matches.length}`);
   }
-  const globalRetryQueueButton = html.match(/<button\b[^>]*\bid=["']global-retry-queue-button["'][^>]*>/i)?.[0] || "";
-  if (!/\btype=["']button["']/i.test(globalRetryQueueButton)
-    || !/\baria-controls=["']retry-dialog["']/i.test(globalRetryQueueButton)
-    || !/\baria-haspopup=["']dialog["']/i.test(globalRetryQueueButton)
-    || !/\bdata-count=["']0["']/i.test(globalRetryQueueButton)
-    || !/\bdata-remaining=["']0["']/i.test(globalRetryQueueButton)
-    || !/\bdisabled(?:\s|=|>)/i.test(globalRetryQueueButton)) {
-    error("index.html: #global-retry-queue-button must be an initially disabled button linked accessibly to the retry dialog");
-  }
-  const globalRetryQueueCount = html.match(/<[^>]+\bid=["']global-retry-queue-count["'][^>]*>\s*0\s*<\/[^>]+>/i)?.[0] || "";
-  if (!globalRetryQueueCount) {
-    error("index.html: #global-retry-queue-count must begin at zero");
-  }
   const headerStartIndex = html.search(/<header\b[^>]*\bclass=["'][^"']*\bsite-header\b[^"']*["'][^>]*>/i);
   const headerEndIndex = headerStartIndex < 0 ? -1 : html.indexOf("</header>", headerStartIndex);
-  const globalRetryQueueIndex = html.search(/\bid=["']global-retry-queue-button["']/i);
-  const cloudAccountIndex = html.search(/\bid=["']cloud-account-controls["']/i);
   const retryQueueAnnouncerIndex = html.search(/\bid=["']retry-queue-announcer["']/i);
   const quizScreenIndex = html.search(/\bid=["']quiz-screen["']/i);
-  if (headerStartIndex < 0 || headerEndIndex < 0
-    || globalRetryQueueIndex <= headerStartIndex || globalRetryQueueIndex >= headerEndIndex
-    || cloudAccountIndex <= globalRetryQueueIndex || cloudAccountIndex >= headerEndIndex) {
-    error("index.html: the global Review Queue button must appear in the site header before cloud account controls");
-  }
+  if (headerStartIndex < 0 || headerEndIndex < 0) error("index.html: site header is missing");
   if (retryQueueAnnouncerIndex <= headerEndIndex || quizScreenIndex <= retryQueueAnnouncerIndex) {
     error("index.html: #retry-queue-announcer must stay globally available after the header and before the Quiz screen");
   }
-  const retryQueueCard = html.match(/<button\b[^>]*\bid=["']retry-queue-card["'][^>]*>/i)?.[0] || "";
-  if (!/\btype=["']button["']/i.test(retryQueueCard)
-    || !/\baria-controls=["']retry-dialog["']/i.test(retryQueueCard)
-    || !/\baria-describedby=["']retry-queue-card-meta["']/i.test(retryQueueCard)
-    || !/\baria-haspopup=["']dialog["']/i.test(retryQueueCard)
-    || !/\bdisabled(?:\s|=|>)/i.test(retryQueueCard)) {
-    error("index.html: #retry-queue-card must be an initially disabled button linked accessibly to the retry dialog and queue metadata");
+  for (const removedId of [
+    "global-retry-queue-button", "global-retry-queue-count", "retry-queue-card",
+    "retry-queue-card-meta", "retry-repeat-gap-select", "retry-repeat-gap-status"
+  ]) {
+    if (new RegExp(`\\bid=["']${removedId}["']`, "i").test(html)) {
+      error(`index.html: removed all-subject Queue control #${removedId} must not be present`);
+    }
   }
-  const retryQueueCardMeta = html.match(/<[^>]+\bid=["']retry-queue-card-meta["'][^>]*>/i)?.[0] || "";
-  if (!/\bdata-count=["']0["']/i.test(retryQueueCardMeta)
-    || !/\bdata-remaining=["']0["']/i.test(retryQueueCardMeta)) {
-    error("index.html: #retry-queue-card-meta must begin with zero queued questions and zero remaining reviews");
+  const queueModeButton = html.match(/<button\b[^>]*\bid=["']queue-mode-button["'][^>]*>/i)?.[0] || "";
+  if (!/\btype=["']button["']/i.test(queueModeButton)
+    || !/\baria-controls=["']queue-screen["']/i.test(queueModeButton)
+    || /\baria-haspopup=["']dialog["']/i.test(queueModeButton)) {
+    error("index.html: #queue-mode-button must open the category's full-screen Queue practice");
   }
-  const paperBuilderIndex = html.search(/\bid=["']paper-builder-card["']/i);
-  const retryQueueCardIndex = html.search(/\bid=["']retry-queue-card["']/i);
-  const categoryGridIndex = html.search(/\bid=["']category-grid["']/i);
-  if (paperBuilderIndex < 0 || retryQueueCardIndex <= paperBuilderIndex || categoryGridIndex <= retryQueueCardIndex) {
-    error("index.html: #retry-queue-card must appear after #paper-builder-card and before #category-grid");
+  const queueScreen = html.match(/<section\b[^>]*\bid=["']queue-screen["'][^>]*>/i)?.[0] || "";
+  if (!/\bhidden(?:\s|=|>)/i.test(queueScreen)
+    || !/\baria-labelledby=["']queue-practice-title["']/i.test(queueScreen)) {
+    error("index.html: #queue-screen must begin hidden and be labelled by its title");
   }
-  const retryRepeatGapSelect = html.match(/<select\b[^>]*\bid=["']retry-repeat-gap-select["'][^>]*>[\s\S]*?<\/select>/i)?.[0] || "";
-  if (!/\baria-describedby=["']retry-repeat-gap-status["']/i.test(retryRepeatGapSelect)
-    || !/\bdata-retry-repeat-gap(?:\s|=|>)/i.test(retryRepeatGapSelect)) {
-    error("index.html: #retry-repeat-gap-select must be a native, described Queue gap control");
-  }
-  const retryRepeatGapOptions = retryRepeatGapSelect.match(/<option\b[^>]*>/gi) || [];
-  const retryRepeatGapValues = retryRepeatGapOptions.map((option) => {
-    return option.match(/\bvalue=["'](\d+)["']/i)?.[1] || "";
-  });
-  const selectedRetryRepeatGaps = retryRepeatGapOptions.filter((option) => {
-    return /\bselected(?:\s|=|>)/i.test(option);
-  }).map((option) => option.match(/\bvalue=["'](\d+)["']/i)?.[1] || "");
-  if (retryRepeatGapValues.join(",") !== "3,5,10" || selectedRetryRepeatGaps.join(",") !== "5") {
-    error("index.html: Queue repeat gap options must be 3, 5 (default), and 10");
-  }
-  if (!/<label\b[^>]*\bfor=["']retry-repeat-gap-select["'][^>]*>/i.test(html)) {
-    error("index.html: #retry-repeat-gap-select must have an associated label");
-  }
-  const retryRepeatGapStatus = html.match(/<[^>]+\bid=["']retry-repeat-gap-status["'][^>]*>/i)?.[0] || "";
-  if (!/\bdata-retry-repeat-gap-status(?:\s|=|>)/i.test(retryRepeatGapStatus)
-    || !/\bdata-gap=["']5["']/i.test(retryRepeatGapStatus)) {
-    error("index.html: #retry-repeat-gap-status must expose the default five-question gap");
+  const queueScreenStart = html.search(/<section\b[^>]*\bid=["']queue-screen["']/i);
+  const queuePracticeSlotIndex = html.search(/\bid=["']queue-practice-slot["']/i);
+  const queueScreenEnd = queueScreenStart < 0 ? -1 : html.indexOf("</section>", queueScreenStart);
+  if (queueScreenStart < 0 || queuePracticeSlotIndex < queueScreenStart || queuePracticeSlotIndex >= queueScreenEnd) {
+    error("index.html: #queue-practice-slot must be inside #queue-screen");
   }
   const computerSourcePanel = html.match(/<section\b[^>]*\bid=["']computer-source-panel["'][^>]*>/i)?.[0] || "";
   if (!/\bhidden(?:\s|=|>)/i.test(computerSourcePanel)
@@ -1240,9 +1205,12 @@ function validateHtml() {
   const standardModesHtml = standardModesStart >= 0 && difficultModesStart > standardModesStart
     ? html.slice(standardModesStart, difficultModesStart)
     : "";
+  if (!/\bid=["']queue-mode-button["']/i.test(standardModesHtml)) {
+    error("index.html: category Queue option must appear with the standard study modes");
+  }
   const standardModeButtons = standardModesHtml.match(/<button\b[^>]*\bclass=["'][^"']*\bmode-option\b[^"']*["']/gi) || [];
-  if (standardModeButtons.length !== 5) {
-    error(`index.html: expected five standard preparation mode buttons, found ${standardModeButtons.length}`);
+  if (standardModeButtons.length !== 6) {
+    error(`index.html: expected six standard preparation mode buttons, found ${standardModeButtons.length}`);
   }
   const questionNumberInput = html.match(/<input\b[^>]*\bid=["']question-number-input["'][^>]*>/i)?.[0] || "";
   for (const [attribute, expectedValue] of [["type", "number"], ["min", "1"], ["step", "1"], ["inputmode", "numeric"]]) {
@@ -1416,7 +1384,6 @@ function validateRetryQueueContract(data) {
   }
   for (const requiredSnippet of [
     'return (state.mode === "quiz" || state.mode === "learn")',
-    'elements.globalRetryQueueButton.addEventListener("click", startDedicatedRetryPractice)',
     'learnReviewCountedQuestionIds',
     'if (state.mode === "learn") recordLearnReviewProgress(currentQuestion())',
     'five or six new Learn or Quiz questions',
@@ -1427,16 +1394,14 @@ function validateRetryQueueContract(data) {
     'isSafeWholeNumber(item.wrongRetryDueStep, 0)',
     'if (regularQueueDue) scheduleNextQuizReview();',
     'remaining: 1',
-    'function prioritizedRetryItems(items, excludedQuestionId, allowExcludedFallback)',
     'var DEDICATED_RETRY_GAP_OPTIONS = [3, 5, 10];',
-    'function dedicatedRetryCandidates()',
-    'function rememberDedicatedRetryQuestion(questionId)',
     'dedicatedRepeatGap: DEDICATED_RETRY_DEFAULT_GAP',
     'dedicatedRecentQuestionIds: []',
     'var dedicatedSpacingApplied = Boolean(normalized)',
     'retryQueueState.dedicatedDeck = [];',
-    'setDedicatedRepeatGap(elements.retryRepeatGapSelect.value)',
-    'return Math.max(highest, item.remaining);',
+    'function nextRetrySequence()',
+    'item.sequence = nextRetrySequence();',
+    'retryQueuePractice.categoryId',
     'remaining: applyCountBaseline ? RETRY_QUEUE_COUNT_BASELINE : entry.remaining',
     'countBaselineVersion: Math.max(',
     'embeddedCadenceVersion: EMBEDDED_RETRY_CADENCE_VERSION',
@@ -1445,13 +1410,12 @@ function validateRetryQueueContract(data) {
     'retryQueueState.practiceStep + randomWrongRetrySpacing()',
     'embeddedCadenceVersion: Math.max(',
     'retryQueueState.embeddedCadenceVersion = Math.max(',
-    'PRIORITY QUEUE PRACTICE',
     'kind: "important"',
     'scheduleNextImportantReview()',
     'importantQuestionIds'
   ]) {
     if (!app.includes(requiredSnippet)) {
-      error(`app.js: missing Learn/global Review Queue contract snippet ${requiredSnippet}`);
+      error(`app.js: missing category Queue/Important contract snippet ${requiredSnippet}`);
     }
   }
   const emptyRetryState = appSection(
@@ -1597,16 +1561,8 @@ function validateRetryQueueContract(data) {
   if (!/function startQuiz\([\s\S]*?releaseActiveRetryAttempt\(\);\s*if \(retryQueueState\.items\.length > 0 && retryQueueState\.nextQuizReviewStep === null\) \{\s*scheduleNextQuizReview\(\);/.test(app)) {
     error("app.js: starting another Learn or Quiz session must preserve an existing regular Queue gate");
   }
-  for (const requiredStyle of [
-    ".retry-queue-panel",
-    ".retry-repeat-gap-control",
-    ".retry-repeat-gap-select",
-    "html[data-theme='dark'] .retry-repeat-gap-control",
-    "html[data-theme='dark'] .retry-repeat-gap-select"
-  ]) {
-    if (!styles.includes(requiredStyle)) {
-      error(`styles.css: missing dedicated Queue gap control style ${requiredStyle}`);
-    }
+  if (!styles.includes(".queue-screen") && !styles.includes("#queue-screen")) {
+    error("styles.css: category Queue screen needs its own full-screen layout");
   }
 }
 

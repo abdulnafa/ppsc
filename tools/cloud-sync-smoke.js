@@ -79,6 +79,7 @@ const DEDICATED_ATTEMPT_QUEUE_RAW = JSON.stringify({
   dedicatedLastQuestionId: SAMPLE_QUESTION_ID,
   dedicatedRepeatGap: 10,
   dedicatedRecentQuestionIds: [SECOND_QUESTION_ID, SAMPLE_QUESTION_ID],
+  queueCyclePendingByCategory: { "general-knowledge": [SECOND_QUESTION_ID] },
   items: [
     {
       questionId: SAMPLE_QUESTION_ID,
@@ -640,6 +641,7 @@ async function testDedicatedAttemptQueueRoundTrip() {
   );
   assert.equal(sourceQueue.dedicatedRepeatGap, 10);
   assert.deepEqual(sourceQueue.dedicatedRecentQuestionIds, [SECOND_QUESTION_ID, SAMPLE_QUESTION_ID]);
+  assert.deepEqual(sourceQueue.queueCyclePendingByCategory["general-knowledge"], [SECOND_QUESTION_ID]);
   assert.equal(sourceQueue.items[0].wrongRetryDueStep, sourceQueue.items[0].dueStep);
   assert.ok(
     sourceQueue.items[0].wrongRetryDueStep - sourceQueue.practiceStep >= 10
@@ -668,6 +670,7 @@ async function testDedicatedAttemptQueueRoundTrip() {
   assert.equal(uploadedQueue.embeddedCadenceVersion, 2);
   assert.equal(uploadedQueue.dedicatedRepeatGap, 10);
   assert.deepEqual(uploadedQueue.dedicatedRecentQuestionIds, [SECOND_QUESTION_ID, SAMPLE_QUESTION_ID]);
+  assert.deepEqual(uploadedQueue.queueCyclePendingByCategory["general-knowledge"], [SECOND_QUESTION_ID]);
   assert.equal(uploadedQueue.items[0].wrongRetryDueStep, 23);
 
   const restored = createBrowser({ store: cloneStore(store), local: {} });
@@ -681,6 +684,7 @@ async function testDedicatedAttemptQueueRoundTrip() {
   assert.equal(restoredQueue.embeddedCadenceVersion, 2);
   assert.equal(restoredQueue.dedicatedRepeatGap, 10);
   assert.deepEqual(restoredQueue.dedicatedRecentQuestionIds, [SECOND_QUESTION_ID, SAMPLE_QUESTION_ID]);
+  assert.deepEqual(restoredQueue.queueCyclePendingByCategory["general-knowledge"], [SECOND_QUESTION_ID]);
   assert.equal(restoredQueue.items[0].wrongRetryDueStep, 23);
 }
 
@@ -1039,7 +1043,7 @@ async function main() {
       "different local/cloud progress waits for owner choice",
       "unapproved Google account is rejected before Firestore",
       "legacy retry remaining=2 survives upload and restore",
-      "dedicated retry attempt, per-item wrong cooldown, cadence, repeat-spacing history, and priority-tie deck fields round-trip byte-for-byte",
+      "dedicated retry attempt, per-category FIFO cycle, wrong cooldown, cadence, and legacy spacing fields round-trip byte-for-byte",
       "permanent Important cadence, count-baseline marker, shuffled deck, and active attempt round-trip byte-for-byte",
       "retired Sequential gate stays off while legacy cursor fields and finite Queue reviews round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",

@@ -106,11 +106,6 @@
         <span class="theme-toggle-icon" data-theme-toggle-icon aria-hidden="true">&#9789;</span>
         <span class="theme-toggle-label" data-theme-toggle-label>Dark mode</span>
       </button>
-      <button id="global-retry-queue-button" class="global-retry-queue-button is-empty" type="button" aria-controls="retry-dialog" aria-haspopup="dialog" aria-label="Review Queue is empty" title="Review Queue is empty" data-count="0" data-remaining="0" disabled>
-        <span class="global-retry-queue-icon" aria-hidden="true">&#8635;</span>
-        <span class="global-retry-queue-label">Queue</span>
-        <strong id="global-retry-queue-count" aria-hidden="true">0</strong>
-      </button>
       <div id="cloud-account-controls" class="cloud-account-controls" hidden>
         <div id="cloud-sync-status" class="cloud-sync-status" data-sync-state="checking" role="status" aria-live="polite">
           <span class="cloud-sync-dot" aria-hidden="true"></span>
@@ -179,31 +174,6 @@
           <span class="paper-card-badge" aria-hidden="true">FULL PAPER</span>
           <span class="card-arrow" aria-hidden="true">&rarr;</span>
         </button>
-
-        <div class="retry-queue-panel">
-          <button id="retry-queue-card" class="category-card retry-queue-card is-empty" type="button" aria-label="Review Queue" aria-controls="retry-dialog" aria-describedby="retry-queue-card-meta" aria-haspopup="dialog" disabled>
-            <span class="category-icon retry-queue-card-icon" aria-hidden="true">&#8635;</span>
-            <span class="category-copy">
-              <strong>Review Queue</strong>
-              <small id="retry-queue-card-meta" data-count="0" data-remaining="0">No reviews waiting. New Quiz answers will add confirmation practice here.</small>
-            </span>
-            <span class="retry-queue-card-badge" aria-hidden="true">ALL SUBJECTS</span>
-            <span class="card-arrow" aria-hidden="true">&rarr;</span>
-          </button>
-
-          <div class="retry-repeat-gap-control">
-            <label for="retry-repeat-gap-select">
-              <strong>Repeat the same MCQ after</strong>
-              <small>Choose the memory gap for dedicated Queue practice.</small>
-            </label>
-            <select id="retry-repeat-gap-select" class="retry-repeat-gap-select" aria-describedby="retry-repeat-gap-status" data-retry-repeat-gap>
-              <option value="3">3 other MCQs</option>
-              <option value="5" selected>5 other MCQs (recommended)</option>
-              <option value="10">10 other MCQs</option>
-            </select>
-            <small id="retry-repeat-gap-status" class="retry-repeat-gap-status" data-retry-repeat-gap-status data-gap="5">Same MCQ returns after up to 5 other Queue questions; small queues use the widest possible gap.</small>
-          </div>
-        </div>
       </div>
 
       <div id="category-grid" class="category-grid">
@@ -552,6 +522,15 @@
             <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
           </button>
 
+          <button id="queue-mode-button" class="mode-option mode-option-queue" type="button" aria-controls="queue-screen" aria-describedby="queue-mode-meta" disabled>
+            <span class="mode-option-icon" aria-hidden="true">&#8635;</span>
+            <span class="mode-option-copy">
+              <strong>Queue Practice</strong>
+              <small id="queue-mode-meta">No queued MCQs in this category yet.</small>
+            </span>
+            <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+
           <button id="difficult-mode-button" class="mode-option mode-option-difficult" type="button" aria-controls="difficult-mode-options" aria-expanded="false">
             <span class="mode-option-icon" aria-hidden="true">D</span>
             <span class="mode-option-copy">
@@ -716,6 +695,20 @@
           <span id="difficult-mark-status" class="difficult-mark-status" aria-live="polite"></span>
         </div>
       </article>
+    </section>
+
+    <section id="queue-screen" class="screen queue-screen" aria-labelledby="queue-practice-title" hidden>
+      <div class="quiz-topbar queue-topbar">
+        <button id="queue-back-button" class="text-button" type="button"><span aria-hidden="true">&larr;</span> Study modes</button>
+        <span id="queue-practice-category" class="quiz-category">Selected category</span>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="queue-practice-heading">
+        <span class="eyebrow">CATEGORY REVIEW</span>
+        <h1 id="queue-practice-title" tabindex="-1">Queue practice</h1>
+        <p id="queue-practice-status" role="status" aria-live="polite">Work through this category's saved reviews, one MCQ at a time.</p>
+      </div>
+      <div id="queue-practice-slot" class="queue-practice-slot"></div>
     </section>
 
     <dialog id="retry-dialog" class="retry-dialog" aria-modal="true" aria-labelledby="retry-dialog-title retry-question-text" aria-describedby="retry-dialog-progress retry-dialog-help">
