@@ -1,0 +1,1638 @@
+[
+  {
+    "sourceRecordId": "WGI-Q0421",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 421,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "6BF326E47CC816C837E5C2EB99A4CAB899FAF75E869E7415973D68360440165D",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The printed 8/72 preset font-size limits are already covered by ADV2E102-U0018-Q053-SRC/SIM; the rewritten 1/1638 typed-size limits also already exist in IBES-Q0924-SIM and IBES-Q0925-SRC.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0018-Q053-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0422",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 422,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "2E652D7365FA6A877EDD2245C7DC927727048E4108DA5DF81C338E7B00006097",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0422-SRC",
+      "pairId": "WGI-Q0422",
+      "kind": "source",
+      "categoryId": "basic-computer-studies",
+      "question": "In Microsoft Word for Windows, what is the usual minimum and maximum document zoom?",
+      "questionUrdu": "ونڈوز کے مائیکروسافٹ ورڈ میں دستاویز کا عام کم سے کم اور زیادہ سے زیادہ زوم کتنا ہوتا ہے؟",
+      "options": [
+        "10% to 500%",
+        "1% to 100%",
+        "25% to 200%",
+        "50% to 400%"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ورڈ میں دستاویز کو عام طور پر 10% سے 500% تک زوم کیا جا سکتا ہے؛ یہ فونٹ سائز نہیں بلکہ صفحے کی دکھائی دینے والی جسامت ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.18, item 422",
+        "referenceUrl": "https://bharatskills.gov.in/pdf/E_Books/CTS/106/English/TT/SSA%20-%20TT%20%282022%29.pdf",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0422"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://bharatskills.gov.in/pdf/E_Books/CTS/106/English/TT/SSA%20-%20TT%20%282022%29.pdf",
+          "label": "Bharat Skills Word training manual",
+          "publisher": "Bharat Skills, Government of India",
+          "authorityId": "bharat-skills",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The government Word training manual specifies a 10% to 500% zoom range."
+        },
+        {
+          "url": "https://moodledev.nvit.ca/pluginfile.php/284039/mod_folder/content/0/Beginner-Word.pdf?forcedownload=1",
+          "label": "NVIT: Microsoft Word for Beginners, p. 2",
+          "publisher": "Nicola Valley Institute of Technology",
+          "authorityId": "nvit",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The college Word tutorial states that document zoom can be set between 10% and 500%."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0422-SIM",
+      "pairId": "WGI-Q0422",
+      "kind": "similar",
+      "categoryId": "basic-computer-studies",
+      "question": "From which Microsoft Word ribbon tab can you open the Zoom dialog?",
+      "questionUrdu": "مائیکروسافٹ ورڈ کے کس ربن ٹیب سے Zoom ڈائیلاگ کھولا جا سکتا ہے؟",
+      "options": [
+        "View tab",
+        "Home tab",
+        "Insert tab",
+        "Review tab"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ورڈ کے View ٹیب کے Zoom گروپ میں Zoom منتخب کرنے سے زوم کی ترتیبات والا ڈائیلاگ کھلتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 422",
+        "referenceUrl": "https://support.microsoft.com/en-au/excel/zoom-in-or-out-of-a-document-presentation-or-worksheet",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0422"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://support.microsoft.com/en-au/excel/zoom-in-or-out-of-a-document-presentation-or-worksheet",
+          "label": "Microsoft Support: Zoom in or out",
+          "publisher": "Microsoft",
+          "authorityId": "microsoft-support",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Microsoft places the Zoom command and dialog in Word's View tab, within its Zoom group."
+        },
+        {
+          "url": "https://moodledev.nvit.ca/pluginfile.php/284039/mod_folder/content/0/Beginner-Word.pdf?forcedownload=1",
+          "label": "NVIT: Microsoft Word for Beginners, p. 2",
+          "publisher": "Nicola Valley Institute of Technology",
+          "authorityId": "nvit",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Word training manual says the Zoom window can be opened from the View tab."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0423",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 423,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "4DBA863301C8946256436BA15F0E340C85CA5ACB285C0E7EAB9AED212346D7EF",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0015-Q050-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0424",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 424,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "40932FB614AC7B31FE153D85DD45CA9B059FA610CC6EDEDA7D10B02F4ACC363F",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0001-Q082-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0425",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 425,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "DAE113A51343E188269F91190EAB5C24203AE2604E140462CAC7DF616B5E4AF4",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The bank already asks the inverse of this exact fact: vitamin A deficiency causes night blindness.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q075-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0426",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 426,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "49FB3BD4132E2F0DA25513410E6A5C990878FC54B2B64BFC58DBF82FA7339F45",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q001-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0427",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 427,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "AD574D64ED25918E4D729F974EC19D65FAD16198737AECE7FBF4356B5365981F",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q016-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0428",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 428,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "C8DC6D40CF901EB28BA0B6B9011C63FE936B40887D882D8ADEB5247697D59952",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The bank already asks the exact 1 May 1960 U-2 shootdown date, so this source item and its related practice pair are not re-added.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q005-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0429",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 429,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "EFD8463F174FF48088A030923D0F62CA542C91A1E8D8EDE512B876D4B576C00C",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0430",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 430,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "FEED30A858FB143D85DFDCAEEE6335B2EADF6DA6566FA9AC2CD83365624B372A",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0430-SRC",
+      "pairId": "WGI-Q0430",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "On what date did Sardar Saleem Haider Khan take oath as Governor of Punjab?",
+      "questionUrdu": "سردار سلیم حیدر خان نے گورنر پنجاب کی حیثیت سے کس تاریخ کو حلف اٹھایا؟",
+      "options": [
+        "10 May 2024",
+        "10 May 2023",
+        "1 May 2024",
+        "10 June 2024"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "سردار سلیم حیدر خان نے 10 مئی 2024 کو گورنر پنجاب کا حلف اٹھایا؛ تقریب گورنر ہاؤس لاہور میں ہوئی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.18, item 430",
+        "referenceUrl": "https://governorhouse.punjab.gov.pk/the-governor",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0430"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://governorhouse.punjab.gov.pk/the-governor",
+          "label": "Punjab Governor House: The Governor",
+          "publisher": "Governor House Punjab",
+          "authorityId": "governor-house-punjab",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Punjab Governor House gives May 10, 2024 as Saleem Haider Khan’s oath date."
+        },
+        {
+          "url": "https://www.radio.gov.pk/10-05-2024/sardar-saleem-haider-sworn-in-as-punjab-governor",
+          "label": "Radio Pakistan: Saleem Haider sworn in",
+          "publisher": "Radio Pakistan",
+          "authorityId": "radio-pakistan",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Radio Pakistan reported his Punjab governor oath on May 10, 2024."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0430-SIM",
+      "pairId": "WGI-Q0430",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "Which Punjab district does Sardar Saleem Haider Khan hail from?",
+      "questionUrdu": "سردار سلیم حیدر خان کا تعلق پنجاب کے کس ضلع سے ہے؟",
+      "options": [
+        "Attock",
+        "Lahore",
+        "Multan",
+        "Sahiwal"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "سردار سلیم حیدر خان کا تعلق ضلع اٹک سے ہے؛ گورنر ہاؤس کی سوانح اور اے پی پی کی رپورٹ دونوں یہی بتاتی ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 430",
+        "referenceUrl": "https://governorhouse.punjab.gov.pk/the-governor",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0430"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://governorhouse.punjab.gov.pk/the-governor",
+          "label": "Punjab Governor House: The Governor",
+          "publisher": "Governor House Punjab",
+          "authorityId": "governor-house-punjab",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Punjab Governor House states that Saleem Haider Khan belongs to Attock district."
+        },
+        {
+          "url": "https://www.app.com.pk/domestic/the-business-community-is-the-backbone-of-the-national-economy-says-malik-sher-khan/",
+          "label": "APP: Saleem Haider hails from Attock",
+          "publisher": "Associated Press of Pakistan",
+          "authorityId": "app-pakistan",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "APP explicitly reports that Governor Saleem Haider Khan hails from Attock district."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0431",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 431,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "1728C7F035631984083820394CF5113626C5F1986406406E7D6CC0B9D9F7DE6E",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0432",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 432,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "47103BA5CA9CD8B0146B94EBAE9C070B273A8553C87EDD233543B0C8AFC0494A",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0432-SRC",
+      "pairId": "WGI-Q0432",
+      "kind": "source",
+      "categoryId": "pakistan-studies",
+      "question": "In which month and year did Farooq Leghari become President of Pakistan?",
+      "questionUrdu": "فاروق لغاری کس مہینے اور سال میں پاکستان کے صدر بنے؟",
+      "options": [
+        "November 1993",
+        "November 1992",
+        "December 1997",
+        "January 1998"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "فاروق لغاری کی صدارتی مدت 14 نومبر 1993 سے شروع ہوئی، اس لیے درست مہینہ اور سال نومبر 1993 ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.18, item 432",
+        "referenceUrl": "https://www.president.gov.pk/former-presidents",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0432"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.president.gov.pk/former-presidents",
+          "label": "President of Pakistan: Former presidents",
+          "publisher": "President of Pakistan",
+          "authorityId": "president-pakistan",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Presidency lists Farooq Leghari’s term as beginning on November 14, 1993."
+        },
+        {
+          "url": "https://na.gov.pk/en/president_list.php",
+          "label": "National Assembly: Presidents list",
+          "publisher": "National Assembly of Pakistan",
+          "authorityId": "national-assembly-pakistan",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The National Assembly lists Farooq Leghari as president from November 14, 1993."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0432-SIM",
+      "pairId": "WGI-Q0432",
+      "kind": "similar",
+      "categoryId": "pakistan-studies",
+      "question": "Who became Acting President of Pakistan immediately after Farooq Leghari left office in 1997?",
+      "questionUrdu": "1997 میں فاروق لغاری کے عہدہ چھوڑنے کے فوراً بعد پاکستان کے قائم مقام صدر کون بنے؟",
+      "options": [
+        "Wasim Sajjad",
+        "Muhammad Rafiq Tarar",
+        "Ghulam Ishaq Khan",
+        "Benazir Bhutto"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "فاروق لغاری کے بعد وسیم سجاد نے 2 دسمبر 1997 سے یکم جنوری 1998 تک قائم مقام صدر کی ذمہ داری سنبھالی؛ پھر رفیق تارڑ صدر بنے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 432",
+        "referenceUrl": "https://na.gov.pk/en/president_list.php",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0432"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://na.gov.pk/en/president_list.php",
+          "label": "National Assembly of Pakistan: Presidents list",
+          "publisher": "National Assembly of Pakistan",
+          "authorityId": "national-assembly-pakistan",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official list places Wasim Sajjad (Acting) immediately after Farooq Leghari, from 2 December 1997 to 1 January 1998."
+        },
+        {
+          "url": "https://documents1.worldbank.org/curated/en/490001468327371173/pdf/34942.pdf",
+          "label": "World Bank: Pakistan Presidents and Prime Ministers, Annex Table 4",
+          "publisher": "World Bank",
+          "authorityId": "world-bank",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Annex Table 4 lists Wassim Sajjad (Acting President) directly after Farooq Leghari, beginning 2 December 1997."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0433",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 433,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "134641B1A2311ECB40557C410A1EFD508F4C36AD6DFF4850D2990CC503370FBC",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q018-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0434",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 434,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "D1AE5AC15B6018EAA47762D1FE1883F05D290C9E69F1114A6F4B49A4103934E9",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0434-SRC",
+      "pairId": "WGI-Q0434",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "In which Turkish city is the mausoleum of Jalal ad-Din Rumi?",
+      "questionUrdu": "جلال الدین رومی کا مقبرہ ترکی کے کس شہر میں ہے؟",
+      "options": [
+        "Konya",
+        "Istanbul",
+        "Ankara",
+        "Bursa"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "مولانا رومی کا مقبرہ ترکی کے شہر قونیہ میں ہے؛ آج یہ مولانا میوزیم کے احاطے کا حصہ ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.18, item 434",
+        "referenceUrl": "https://whc.unesco.org/uploads/nominations/1345.pdf",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0434"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://whc.unesco.org/uploads/nominations/1345.pdf",
+          "label": "UNESCO nomination: Rumi mausoleum and Masnavi",
+          "publisher": "UNESCO World Heritage Centre",
+          "authorityId": "unesco-whc",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UNESCO nomination locates Rumi’s green-domed mausoleum in Konya."
+        },
+        {
+          "url": "https://goturkiye.com/branding/press-releases/rumi-commemorated-on-his-747th-death-anniversary-at-seb-i-arus-ceremonies-in-konya",
+          "label": "GoTürkiye: Rumi in Konya and Masnavi",
+          "publisher": "Türkiye Tourism Promotion and Development Agency",
+          "authorityId": "go-turkiye",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Türkiye’s tourism agency places Rumi’s tomb and mausoleum in Konya."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0434-SIM",
+      "pairId": "WGI-Q0434",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "What is the whirling ritual associated with Rumi’s Mevlevi tradition called?",
+      "questionUrdu": "رومی کی مولویہ روایت سے وابستہ گھومنے والی روحانی رسم کو کیا کہتے ہیں؟",
+      "options": [
+        "Sema",
+        "Hajj",
+        "Nowruz",
+        "Ashura"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "مولویہ صوفی سلسلے میں درویشوں کی گھومنے والی روحانی رسم کو سماع (Sema) کہتے ہیں؛ یہ رومی سے وابستہ روایت ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 434",
+        "referenceUrl": "https://ich.unesco.org/en/RL/mevlevi-sema-ceremony-00100?RL=00100",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0434"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://ich.unesco.org/en/RL/mevlevi-sema-ceremony-00100?RL=00100",
+          "label": "UNESCO Intangible Heritage: Mevlevi Sema ceremony",
+          "publisher": "UNESCO Intangible Cultural Heritage",
+          "authorityId": "unesco-ich",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNESCO calls the Mevlevi whirling ritual the Sema ceremony and places the order’s origin in Konya."
+        },
+        {
+          "url": "https://goturkiye.com/blog/mevlevi-ceremonies",
+          "label": "GoTürkiye: The Spiritual Rhythm of Mevlevi Sema Ceremonies",
+          "publisher": "Türkiye Tourism Promotion and Development Agency",
+          "authorityId": "go-turkiye",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The tourism agency explains that Rumi’s Mevlevi followers formalized the whirling Sema ceremony."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0435",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 435,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "D37EFCD694810FA8404263762074485029EA5E6C2E326FD9255C0405CFAD20D2",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0436",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 436,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "38C02EC21BF17FA02D7A224226FFD26F71F30AA194AB33E91C8F92316E1EFCE5",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0437",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 437,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "9B285AC5E8FCE122E94736AE6769AF656C3F1C9541A7A687F63C9330957CEB2C",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0002-Q006-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0438",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 438,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "A9ED65D4D6789F9B94D569872AACDD2EA9C8F16117A6D861E5983E64FE5661D7",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0438-SRC",
+      "pairId": "WGI-Q0438",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Whom does Leonardo da Vinci’s Mona Lisa portray?",
+      "questionUrdu": "لیونارڈو ڈا ونچی کی مونا لیزا کس خاتون کا پورٹریٹ ہے؟",
+      "options": [
+        "Lisa Gherardini",
+        "Caterina Sforza",
+        "Isabella d’Este",
+        "Lucrezia Borgia"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "لوور میوزیم کے مطابق مونا لیزا میں لیزا گیراردینی کی تصویر ہے، جو فلورنس کے تاجر فرانچسکو دل جیوکوندو کی اہلیہ تھیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.19, item 438",
+        "referenceUrl": "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0438"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana",
+          "label": "Louvre: Mona Lisa in the Salle des États",
+          "publisher": "Musée du Louvre",
+          "authorityId": "louvre",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Louvre identifies the Mona Lisa sitter as Lisa Gherardini."
+        },
+        {
+          "url": "https://smarthistory.org/leonardo-mona-lisa/",
+          "label": "Smarthistory: Leonardo, Mona Lisa",
+          "publisher": "Smarthistory",
+          "authorityId": "smarthistory",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The art-historian-authored Smarthistory essay identifies the portrait as Lisa Gherardini."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0438-SIM",
+      "pairId": "WGI-Q0438",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "In which city is Leonardo da Vinci’s Mona Lisa displayed at the Louvre?",
+      "questionUrdu": "لوور میوزیم میں رکھی لیونارڈو ڈا ونچی کی مونا لیزا کس شہر میں دیکھی جا سکتی ہے؟",
+      "options": [
+        "Paris",
+        "Rome",
+        "Florence",
+        "Venice"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "مونا لیزا فرانس کے شہر پیرس میں واقع لوور میوزیم کے Salle des États کمرے میں نمائش پر ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 438",
+        "referenceUrl": "https://presse.louvre.fr/wp-content/uploads/2019/06/e9eea40d4bb6a40152e38ffbf669b3da.pdf",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0438"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://presse.louvre.fr/wp-content/uploads/2019/06/e9eea40d4bb6a40152e38ffbf669b3da.pdf",
+          "label": "Louvre press release: Mona Lisa at Musée du Louvre, Paris",
+          "publisher": "Louvre Press Office",
+          "authorityId": "louvre-press",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Louvre press release explicitly locates the Mona Lisa at Musée du Louvre in Paris."
+        },
+        {
+          "url": "https://smarthistory.org/leonardo-mona-lisa/",
+          "label": "Smarthistory: Leonardo, Mona Lisa",
+          "publisher": "Smarthistory",
+          "authorityId": "smarthistory",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Smarthistory locates the painting at the Musée du Louvre in Paris."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0439",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 439,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "D564E9777934FE259ACB677730F17C9622DBDFE3E0751AE2E9A304AA4123CDF8",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0440",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 440,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "BFAA5F2DF994663F6FB0EC02F70863998F7FE6B8A901B131D930F1A664561CBC",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q014-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0441",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 441,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "E0CE278EB16A95FBEFB2951B563658D50CA315240D1820E3E24E3AD5529A08AE",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0442",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 442,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "04730A23E92CD95A2C6B5DD148C5694FDF920AD09E34118B38E6981501232CAD",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q021-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0443",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 443,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "E40BAF75EB3149028DB542F03EF82B0FBEF20F5DFDB930EBCAC9A1C5AA47FD81",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0018-Q012-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0444",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 444,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "743AD5E20EF201BD7500A72CD91A273100CDB5AF8F9DD02B71C0293DF38291E2",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0001-Q003-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0445",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 445,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "1596776D94A94A51BFDF9BB32482574D5B09A0B3E29AF47CF64CBD2D01BB70DB",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The bank already identifies Genoa as a city in Italy and Columbus as a Genoa-born explorer; the distinct monarch-sponsorship practice fact was moved to WGI-Q0446-SIM.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0012-Q008-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0446",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 446,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "89851659268A729E768EBD1C9B2A1A9AFE3F1D716951B9E1321B2D4898CF1242",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0446-SRC",
+      "pairId": "WGI-Q0446",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Christopher Columbus was born in which historic republic?",
+      "questionUrdu": "کرسٹوفر کولمبس کس تاریخی جمہوریہ میں پیدا ہوئے تھے؟",
+      "options": [
+        "Republic of Genoa",
+        "Republic of Venice",
+        "Republic of Florence",
+        "Republic of Pisa"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کولمبس جینوا میں پیدا ہوئے تھے، جو ان کی پیدائش کے زمانے میں جمہوریہ جینوا کا حصہ تھا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.19, item 446",
+        "referenceUrl": "https://www.whitehouse.gov/columbus/",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0446"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.whitehouse.gov/columbus/",
+          "label": "US White House historical Columbus timeline",
+          "publisher": "US White House",
+          "authorityId": "us-white-house",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The White House timeline explicitly places Columbus’s birth in the Republic of Genoa in 1451."
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/656392",
+          "label": "Metropolitan Museum: Landing of Columbus catalog entry",
+          "publisher": "Metropolitan Museum of Art",
+          "authorityId": "metropolitan-museum",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Metropolitan Museum’s catalog identifies Columbus with the Republic of Genoa at birth."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0446-SIM",
+      "pairId": "WGI-Q0446",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Which Spanish monarchs sponsored Columbus’s 1492 Atlantic voyage?",
+      "questionUrdu": "1492 کے بحرِ اوقیانوس کے سفر میں کولمبس کی سرپرستی اسپین کے کن بادشاہ اور ملکہ نے کی؟",
+      "options": [
+        "Ferdinand and Isabella",
+        "Charles and Catherine",
+        "Philip and Mary",
+        "John and Eleanor"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "اسپین کے فرڈینینڈ اور ازابیلا نے کولمبس کے 1492 کے بحری منصوبے کی سرپرستی کی تھی۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 446",
+        "referenceUrl": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0446"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+          "label": "Library of Congress: Christopher Columbus: Man and Myth",
+          "publisher": "Library of Congress",
+          "authorityId": "library-of-congress",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Library of Congress identifies Queen Isabel and King Fernando as Columbus’s royal patrons."
+        },
+        {
+          "url": "https://trumpwhitehouse.archives.gov/presidential-actions/president-donald-j-trump-proclaims-october-9-2017-columbus-day/",
+          "label": "US White House historical proclamation on Columbus",
+          "publisher": "US White House Archive",
+          "authorityId": "us-white-house-archive",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The White House historical proclamation names Isabella I and Ferdinand II as sponsors of his voyage."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0447",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 447,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "B3873E8E1CE7322A9712F5549243A746B2E4B68FB560B978FA260C80467CDF1F",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0447-SRC",
+      "pairId": "WGI-Q0447",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Who was granted the title “Admiral of the Ocean Sea”?",
+      "questionUrdu": "“بحرِ اوقیانوس کے ایڈمرل” کا خطاب کس مہم جو کو دیا گیا تھا؟",
+      "options": [
+        "Christopher Columbus",
+        "Vasco da Gama",
+        "Ferdinand Magellan",
+        "Amerigo Vespucci"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "1492 کے سفر کے بعد کرسٹوفر کولمبس کو “Admiral of the Ocean Sea” کا خطاب ملا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.19, item 447",
+        "referenceUrl": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0447"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+          "label": "Library of Congress: Christopher Columbus: Man and Myth",
+          "publisher": "Library of Congress",
+          "authorityId": "library-of-congress",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Library of Congress says Columbus secured the title Admiral of the Ocean Sea."
+        },
+        {
+          "url": "https://www.history.com/this-day-in-history/August-1/columbus-lands-in-south-america",
+          "label": "HISTORY: Columbus voyages and title",
+          "publisher": "HISTORY",
+          "authorityId": "history",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "HISTORY identifies Columbus as the recipient of the title admiral of the ocean sea."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0447-SIM",
+      "pairId": "WGI-Q0447",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "After his first Atlantic voyage, how many more expeditions to the Caribbean did Columbus lead?",
+      "questionUrdu": "بحرِ اوقیانوس کے پہلے سفر کے بعد کولمبس نے کیریبین کے لیے مزید کتنی مہمات کی قیادت کی؟",
+      "options": [
+        "Three",
+        "One",
+        "Two",
+        "Five"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کولمبس نے اپنے پہلے سفر کے بعد مزید تین مہمات کی قیادت کی؛ یوں ان کے بڑے بحرِ اوقیانوس کے سفر کل چار تھے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 447",
+        "referenceUrl": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0447"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+          "label": "Library of Congress: Christopher Columbus: Man and Myth",
+          "publisher": "Library of Congress",
+          "authorityId": "library-of-congress",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Library of Congress says Columbus led three more Caribbean expeditions after 1492."
+        },
+        {
+          "url": "https://www.history.com/this-day-in-history/August-1/columbus-lands-in-south-america",
+          "label": "HISTORY: Columbus voyages and title",
+          "publisher": "HISTORY",
+          "authorityId": "history",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "HISTORY states Columbus led four expeditions in total, including the first."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0448",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 448,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "41A26094A723662EAA666E3CDAC9B0A605FDB362B3ECCF2B9C9E2311732E4AA4",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0448-SRC",
+      "pairId": "WGI-Q0448",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "On what date did a lookout on Columbus’s fleet first sight land in the Caribbean?",
+      "questionUrdu": "کولمبس کے بحری بیڑے کے نگراں نے کیریبین میں پہلی بار زمین کس تاریخ کو دیکھی؟",
+      "options": [
+        "12 October 1492",
+        "3 August 1492",
+        "12 October 1493",
+        "1 May 1492"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "12 اکتوبر 1492 کی صبح پنٹا پر موجود ایک ملاح نے زمین دیکھی؛ اس واقعے کو خود کولمبس کے پہلے اترنے سے الگ سمجھنا چاہیے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.19, item 448",
+        "referenceUrl": "https://www.loc.gov/item/today-in-history/October-12",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0448"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.loc.gov/item/today-in-history/October-12",
+          "label": "Library of Congress: Today in History, October 12",
+          "publisher": "Library of Congress",
+          "authorityId": "library-of-congress",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Library of Congress dates the lookout’s sighting of land to October 12, 1492."
+        },
+        {
+          "url": "https://contentdm.lib.byu.edu/digital/api/collection/rsc/id/18664/download",
+          "label": "BYU: First Voyage to the Americas, p. 45",
+          "publisher": "Brigham Young University",
+          "authorityId": "byu",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The BYU historical account dates the fleet’s confirmed land sighting to October 12, 1492."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Reworded from “Columbus reached the Americas” to the documented first land sighting; avoids a disputed landing-day interpretation."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0448-SIM",
+      "pairId": "WGI-Q0448",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "From which ship in Columbus’s fleet was land first sighted on 12 October 1492?",
+      "questionUrdu": "12 اکتوبر 1492 کو کولمبس کے بیڑے کے کس جہاز سے پہلی بار زمین دیکھی گئی؟",
+      "options": [
+        "Pinta",
+        "Niña",
+        "Santa María",
+        "Victoria"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "پہلی تصدیق شدہ آوازِ “زمین!” پنٹا جہاز کے ملاح روڈریگو دے تریانا نے بلند کی تھی۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 448",
+        "referenceUrl": "https://www.loc.gov/item/today-in-history/October-12",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0448"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.loc.gov/item/today-in-history/October-12",
+          "label": "Library of Congress: Today in History, October 12",
+          "publisher": "Library of Congress",
+          "authorityId": "library-of-congress",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Library of Congress says the first land sighting was by a sailor on the Pinta."
+        },
+        {
+          "url": "https://contentdm.lib.byu.edu/digital/api/collection/rsc/id/18664/download",
+          "label": "BYU: First Voyage to the Americas, p. 45",
+          "publisher": "Brigham Young University",
+          "authorityId": "byu",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The BYU historical account identifies Rodrigo de Triana as the lookout aboard the Pinta."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0449",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 449,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "D81F761C57F78D4FCE75741A5B0B10EBD32C787B6AD8EFDC66BA3603FA104651",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0449-SRC",
+      "pairId": "WGI-Q0449",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "What were the three ships of Columbus’s first transatlantic voyage?",
+      "questionUrdu": "کولمبس کے پہلے بحرِ اوقیانوس کے سفر میں تین جہازوں کے نام کیا تھے؟",
+      "options": [
+        "Niña, Pinta and Santa María",
+        "Mayflower, Pinta and Santa María",
+        "Niña, Victoria and Trinidad",
+        "Santa María, Beagle and Pinta"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کولمبس کے 1492 کے پہلے سفر میں تین جہاز نیینا، پنٹا اور سانتا ماریا تھے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.19, item 449",
+        "referenceUrl": "https://www.rmg.co.uk/collections/objects/rmgc-object-12245",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0449"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-12245",
+          "label": "Royal Museums Greenwich: The Santa Maria at Anchor",
+          "publisher": "Royal Museums Greenwich",
+          "authorityId": "royal-museums-greenwich",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Royal Museums Greenwich names Santa Maria, Niña and Pinta as the three first-voyage ships."
+        },
+        {
+          "url": "https://home.nps.gov/articles/000/avenue-of-latino-leaders-national-mall-and-memorial-parks-washington-dc.htm",
+          "label": "National Park Service: Columbus Memorial Fountain",
+          "publisher": "US National Park Service",
+          "authorityId": "us-national-park-service",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The National Park Service names Niña, Pinta and Santa Maria as the three ships that carried Columbus to the New World."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0449-SIM",
+      "pairId": "WGI-Q0449",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Which ship served as Columbus’s flagship on his first Atlantic voyage?",
+      "questionUrdu": "کولمبس کے پہلے بحرِ اوقیانوس کے سفر میں ان کا مرکزی جہاز کون سا تھا؟",
+      "options": [
+        "Santa María",
+        "Pinta",
+        "Niña",
+        "Victoria"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "سانتا ماریا کولمبس کا مرکزی یا flagship جہاز تھا، جبکہ پنٹا اور نیینا دوسرے دو جہاز تھے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 449",
+        "referenceUrl": "https://www.rmg.co.uk/collections/objects/rmgc-object-12245",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0449"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-12245",
+          "label": "Royal Museums Greenwich: The Santa Maria at Anchor",
+          "publisher": "Royal Museums Greenwich",
+          "authorityId": "royal-museums-greenwich",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Royal Museums Greenwich calls Santa Maria Columbus’s flagship."
+        },
+        {
+          "url": "https://www.worldhistory.org/Christopher_Columbus/",
+          "label": "World History Encyclopedia: Christopher Columbus",
+          "publisher": "World History Encyclopedia",
+          "authorityId": "world-history-encyclopedia",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The historical timeline identifies Santa Maria as Columbus’s flagship for the 1492 voyage."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0450",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 450,
+    "sourcePdfPage": 19,
+    "rawTextSha256": "345CF79EE3EA416BBAD30B2B123CE9361EFF1BA36B06D7C408B1A3C20A7CA5C6",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0450-SRC",
+      "pairId": "WGI-Q0450",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What Indigenous name did Columbus record for the island he renamed San Salvador?",
+      "questionUrdu": "کولمبس نے جس جزیرے کا نام سان سلواڈور رکھا، اس کا مقامی نام کیا درج کیا؟",
+      "options": [
+        "Guanahani",
+        "Hispaniola",
+        "Cuba",
+        "Jamaica"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کولمبس کے بیان میں جزیرے کا مقامی نام گواناہانی درج ہے، جبکہ اس نے اسے سان سلواڈور کا نام دیا؛ موجودہ جغرافیائی شناخت پر تاریخی بحث الگ معاملہ ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.19, item 450",
+        "referenceUrl": "https://www.loc.gov/item/today-in-history/October-12",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0450"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.loc.gov/item/today-in-history/October-12",
+          "label": "Library of Congress: Today in History, October 12",
+          "publisher": "Library of Congress",
+          "authorityId": "library-of-congress",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Library of Congress identifies Guanahaní as the Native name of the island Columbus named San Salvador."
+        },
+        {
+          "url": "https://repository.si.edu/bitstream/handle/10088/23798/1964%20SMC%20vol%20148%20pt%201%20wolper%201-41%20.pdf",
+          "label": "Smithsonian research: Columbus landfall and Guanahani",
+          "publisher": "Smithsonian Institution",
+          "authorityId": "smithsonian-institution",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Smithsonian historical study reproduces Columbus’s statement that the island he named San Salvador was called Guanahani by Indigenous people."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Question asks the documented historical names, not a disputed identification of the modern landfall island."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0450-SIM",
+      "pairId": "WGI-Q0450",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "San Salvador Island belongs to which country?",
+      "questionUrdu": "سان سلواڈور کس ملک کا جزیرہ ہے؟",
+      "options": [
+        "The Bahamas",
+        "Cuba",
+        "Jamaica",
+        "Haiti"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "موجودہ سان سلواڈور جزیرہ بہاماس کا حصہ ہے؛ بہاماس کی سرکاری سیاحت ویب سائٹ اسے اپنے جزائر میں شمار کرتی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 450",
+        "referenceUrl": "https://www.bahamas.com/islands/san-salvador",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0450"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bahamas.com/islands/san-salvador",
+          "label": "Bahamas Ministry of Tourism: San Salvador",
+          "publisher": "Bahamas Ministry of Tourism",
+          "authorityId": "bahamas-tourism",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Bahamas tourism authority lists San Salvador as a Bahamian island."
+        },
+        {
+          "url": "https://www.loc.gov/item/today-in-history/October-12",
+          "label": "Library of Congress: Today in History, October 12",
+          "publisher": "Library of Congress",
+          "authorityId": "library-of-congress",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Library of Congress describes San Salvador as a Bahamian island."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  }
+]

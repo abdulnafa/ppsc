@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "questionBank": {
     "dataVersion": 5,
-    "questionCount": 11412,
-    "payloadSha256": "945b80322a57331cb9797f5a58cf3172a3776da4997aa5b3e183ee14c48f1d7f"
+    "questionCount": 11892,
+    "payloadSha256": "01fccd60f3aaf2d4ce5af34d988cc9f67f509d907754d64dcbb2817c2ebe985c"
   },
   "summary": {
-    "decisionSourceCount": 63,
-    "verifiedSkipCount": 1476,
-    "targetCount": 1071
+    "decisionSourceCount": 75,
+    "verifiedSkipCount": 1649,
+    "targetCount": 1197
   },
   "decisionSources": [
     {
@@ -388,6 +388,78 @@
       "file": "ibes-dedup-decisions-p936-1296.json",
       "recordCount": 361,
       "recordsSha256": "9c6c6a92e7d64e96952d6afef5b70075e7a52f8a4355e9301b39b1b525c02c8c"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0001-0040.json",
+      "recordCount": 40,
+      "recordsSha256": "d04d2b3fcd29e20e3f789a772c2ca8808c5d97e4d5a8c64ea5d405b3fc4b5bd0"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0041-0080.json",
+      "recordCount": 40,
+      "recordsSha256": "b60d08eaae49fd39021da9924cf3b785f6886ca5f38accb6469daea8eaa31ac6"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0081-0120.json",
+      "recordCount": 40,
+      "recordsSha256": "52970f5ac7dc2141b9356b4a4264977fecbe4c38866aaa5e114f47b2f444d258"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0121-0160.json",
+      "recordCount": 40,
+      "recordsSha256": "2dfbcfe7db7dc4800682df68192ca12a0ed7517656f917f228327bd0063a39b7"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0161-0200.json",
+      "recordCount": 40,
+      "recordsSha256": "9a430304166692a5173918555b7c983acabb083fc924b4cebcfccf5136e7d296"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0201-0240.json",
+      "recordCount": 40,
+      "recordsSha256": "5d20a71973930a58e0464961582b7c03d677999bae0a003de4276d8d13d6c0ad"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0241-0280.json",
+      "recordCount": 40,
+      "recordsSha256": "c8eb19de9cf9c09b83366a9ef68d4c3bba7603d23daf34cecfb82701fe02fd70"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0281-0320.json",
+      "recordCount": 40,
+      "recordsSha256": "4f4290aeaca9d0cfe73e1e34652f085ec5d6c0a07a8ec8369de54fafa49a9ece"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0321-0350.json",
+      "recordCount": 30,
+      "recordsSha256": "f3704e419d65a4d880f1c4c9bcdb1bac87d2931965bef2f05739920c28428e3b"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0351-0385.json",
+      "recordCount": 35,
+      "recordsSha256": "68b86929fbd82db75ff493f28a0dedd5fc8e4723c7db886bbe4f7c7174569d84"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0386-0420.json",
+      "recordCount": 35,
+      "recordsSha256": "240673bd7b45845a08999a6349bec20d4a396a0212df45dc4306e11759fdec2c"
+    },
+    {
+      "corpus": "WGI",
+      "file": "wgi-reviewed-q0421-0450.json",
+      "recordCount": 30,
+      "recordsSha256": "49413dab26419c76a0eec523e160ea378d9b33566cd597a3033f7672d2c5bc32"
     }
   ],
   "verifiedSkips": [
@@ -9246,6 +9318,1044 @@
       "sourceIdentity": "Q1293",
       "targetId": "IBES-Q1287-SRC",
       "sourceFile": "ibes-dedup-decisions-p936-1296.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0003",
+      "targetId": "P237-Q001-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0004",
+      "targetId": "ADV2E102-U0002-Q055-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0007",
+      "targetId": "ADV2E102-U0001-Q004-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0009",
+      "targetId": "ADV2E102-U0044-Q004-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0010",
+      "targetId": "ADV2E102-U0010-Q007-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0015",
+      "targetId": "ADV2E102-U0141-Q091-SIM",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0019",
+      "targetId": "ADV2E102-U0021-Q041-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0022",
+      "targetId": "ADV2E102-U0008-Q018-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0024",
+      "targetId": "ADV2E102-U0033-Q038-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0025",
+      "targetId": "ADV2E102-U0002-Q049-SIM",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0026",
+      "targetId": "ADV2E102-U0160-Q037-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0027",
+      "targetId": "ADV2E102-U0121-Q002-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0028",
+      "targetId": "P235-Q001-SIM",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0029",
+      "targetId": "ADV2E102-U0005-Q022-SIM",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0031",
+      "targetId": "ADV2E102-U0016-Q065-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0035",
+      "targetId": "ADV2E102-U0044-Q013-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0038",
+      "targetId": "ADV2E102-U0008-Q016-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0039",
+      "targetId": "ADV2E102-U0043-Q020-SRC",
+      "sourceFile": "wgi-reviewed-q0001-0040.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0042",
+      "targetId": "ADV2E102-U0008-Q008-SRC",
+      "sourceFile": "wgi-reviewed-q0041-0080.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0049",
+      "targetId": "ADV2E102-U0043-Q014-SRC",
+      "sourceFile": "wgi-reviewed-q0041-0080.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0052",
+      "targetId": "ADV2E102-U0008-Q007-SRC",
+      "sourceFile": "wgi-reviewed-q0041-0080.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0056",
+      "targetId": "ADV2E102-U0040-Q011-SRC",
+      "sourceFile": "wgi-reviewed-q0041-0080.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0057",
+      "targetId": "ADV2E102-U0007-Q029-SRC",
+      "sourceFile": "wgi-reviewed-q0041-0080.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0066",
+      "targetId": "ADV2E102-U0032-Q072-SRC",
+      "sourceFile": "wgi-reviewed-q0041-0080.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0068",
+      "targetId": "ADV2E102-U0026-Q020-SRC",
+      "sourceFile": "wgi-reviewed-q0041-0080.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0070",
+      "targetId": "ADV2E102-U0013-Q041-SRC",
+      "sourceFile": "wgi-reviewed-q0041-0080.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0081",
+      "targetId": "ADV2E102-U0037-Q004-SRC",
+      "sourceFile": "wgi-reviewed-q0081-0120.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0084",
+      "targetId": "ADV2E102-U0081-Q010-SRC",
+      "sourceFile": "wgi-reviewed-q0081-0120.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0087",
+      "targetId": "P235-Q001-SRC",
+      "sourceFile": "wgi-reviewed-q0081-0120.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0104",
+      "targetId": "ADV2E102-U0040-Q011-SRC",
+      "sourceFile": "wgi-reviewed-q0081-0120.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0110",
+      "targetId": "WGI-Q0018-SRC",
+      "sourceFile": "wgi-reviewed-q0081-0120.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0114",
+      "targetId": "ADV2E102-U0004-Q013-SRC",
+      "sourceFile": "wgi-reviewed-q0081-0120.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0117",
+      "targetId": "WGI-Q0034-SRC",
+      "sourceFile": "wgi-reviewed-q0081-0120.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0125",
+      "targetId": "ADV2E102-U0051-Q023-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0133",
+      "targetId": "ADV2E102-U0022-Q053-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0136",
+      "targetId": "WGI-Q0001-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0139",
+      "targetId": "ADV2E102-U0160-Q014-SIM",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0142",
+      "targetId": "WGI-Q0095-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0143",
+      "targetId": "WGI-Q0097-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0144",
+      "targetId": "WGI-Q0098-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0145",
+      "targetId": "WGI-Q0101-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0150",
+      "targetId": "ADV2E102-U0071-Q032-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0153",
+      "targetId": "ADV2E102-U0091-Q010-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0154",
+      "targetId": "ADV2E102-U0160-Q046-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0155",
+      "targetId": "ADV2E102-U0159-Q012-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0156",
+      "targetId": "ADV2E102-U0160-Q027-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0157",
+      "targetId": "ADV2E102-U0021-Q015-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0159",
+      "targetId": "ADV2E102-U0017-Q002-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0160",
+      "targetId": "ADV2E102-U0160-Q010-SRC",
+      "sourceFile": "wgi-reviewed-q0121-0160.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0161",
+      "targetId": "ADV2E102-U0160-Q005-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0162",
+      "targetId": "ADV2E102-U0160-Q088-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0165",
+      "targetId": "ADV2E102-U0160-Q088-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0166",
+      "targetId": "ADV2E102-U0160-Q061-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0169",
+      "targetId": "IBES-Q1189-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0170",
+      "targetId": "ADV2E102-U0160-Q062-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0171",
+      "targetId": "P236-Q041-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0172",
+      "targetId": "ADV2E102-U0160-Q081-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0174",
+      "targetId": "ADV2E102-U0160-Q037-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0175",
+      "targetId": "ADV2E102-U0160-Q036-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0176",
+      "targetId": "ADV2E102-U0160-Q036-SIM",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0178",
+      "targetId": "ADV2E102-U0016-Q012-SIM",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0179",
+      "targetId": "ADV2E102-U0016-Q012-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0181",
+      "targetId": "ADV2E102-U0160-Q070-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0182",
+      "targetId": "ADV2E102-U0160-Q024-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0183",
+      "targetId": "ADV2E102-U0160-Q034-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0184",
+      "targetId": "ADV2E102-U0160-Q021-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0185",
+      "targetId": "ADV2E102-U0160-Q076-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0186",
+      "targetId": "ADV2E102-U0160-Q073-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0188",
+      "targetId": "ADV2E102-U0160-Q042-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0189",
+      "targetId": "ADV2E102-U0160-Q082-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0190",
+      "targetId": "ADV2E102-U0061-Q017-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0191",
+      "targetId": "ADV2E102-U0160-Q032-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0192",
+      "targetId": "ADV2E102-U0160-Q045-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0195",
+      "targetId": "ADV2E102-U0160-Q050-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0196",
+      "targetId": "ADV2E102-U0160-Q002-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0197",
+      "targetId": "ADV2E102-U0160-Q075-SRC",
+      "sourceFile": "wgi-reviewed-q0161-0200.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0202",
+      "targetId": "ADV2E102-U0160-Q058-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0203",
+      "targetId": "ADV2E102-U0160-Q064-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0204",
+      "targetId": "ADV2E102-U0160-Q059-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0206",
+      "targetId": "ADV2E102-U0160-Q055-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0207",
+      "targetId": "P236-Q040-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0208",
+      "targetId": "ADV2E102-U0160-Q096-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0210",
+      "targetId": "ADV2E102-U0141-Q086-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0213",
+      "targetId": "ADV2E102-U0160-Q077-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0219",
+      "targetId": "ADV2E102-U0006-Q038-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0220",
+      "targetId": "ADV2E102-U0168-Q008-SIM",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0224",
+      "targetId": "ADV2E102-U0160-Q057-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0225",
+      "targetId": "ADV2E102-U0002-Q070-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0230",
+      "targetId": "ADV2E102-U0151-Q033-SIM",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0235",
+      "targetId": "ADV2E102-U0042-Q036-SIM",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0236",
+      "targetId": "ADV2E102-U0160-Q051-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0237",
+      "targetId": "IBES-Q0594-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0238",
+      "targetId": "ADV2E102-U0160-Q003-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0239",
+      "targetId": "ADV2E102-U0160-Q053-SRC",
+      "sourceFile": "wgi-reviewed-q0201-0240.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0243",
+      "targetId": "ADV2E102-U0160-Q013-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0244",
+      "targetId": "ADV2E102-U0160-Q025-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0246",
+      "targetId": "ADV2E102-U0001-Q044-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0248",
+      "targetId": "ADV2E102-U0160-Q079-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0249",
+      "targetId": "ADV2E102-U0160-Q071-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0250",
+      "targetId": "ADV2E102-U0160-Q080-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0252",
+      "targetId": "ADV2E102-U0160-Q016-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0253",
+      "targetId": "ADV2E102-U0034-Q053-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0254",
+      "targetId": "ADV2E102-U0160-Q022-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0256",
+      "targetId": "ADV2E102-U0160-Q006-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0257",
+      "targetId": "ADV2E102-U0160-Q098-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0258",
+      "targetId": "ADV2E102-U0160-Q049-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0259",
+      "targetId": "ADV2E102-U0160-Q007-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0262",
+      "targetId": "WGI-Q0261-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0263",
+      "targetId": "ADV2E102-U0034-Q007-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0264",
+      "targetId": "ADV2E102-U0160-Q084-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0266",
+      "targetId": "P234-Q006-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0268",
+      "targetId": "ADV2E102-U0160-Q060-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0269",
+      "targetId": "ADV2E102-U0160-Q001-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0270",
+      "targetId": "P235-Q010-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0271",
+      "targetId": "ADV2E102-U0160-Q012-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0272",
+      "targetId": "ADV2E102-U0160-Q004-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0273",
+      "targetId": "ADV2E102-U0011-Q024-SIM",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0274",
+      "targetId": "ADV2E102-U0121-Q033-SIM",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0276",
+      "targetId": "ADV2E102-U0011-Q024-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0277",
+      "targetId": "ADV2E102-U0017-Q018-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0278",
+      "targetId": "ADV2E102-U0160-Q035-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0279",
+      "targetId": "ADV2E102-U0160-Q015-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0280",
+      "targetId": "ADV2E102-U0160-Q052-SRC",
+      "sourceFile": "wgi-reviewed-q0241-0280.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0282",
+      "targetId": "ADV2E102-U0160-Q100-SRC",
+      "sourceFile": "wgi-reviewed-q0281-0320.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0287",
+      "targetId": "ADV2E102-U0160-Q072-SRC",
+      "sourceFile": "wgi-reviewed-q0281-0320.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0310",
+      "targetId": "ADV2E102-U0141-Q086-SRC",
+      "sourceFile": "wgi-reviewed-q0281-0320.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0317",
+      "targetId": "ADV2E102-U0001-Q013-SIM",
+      "sourceFile": "wgi-reviewed-q0281-0320.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0319",
+      "targetId": "ADV2E102-U0131-Q010-SIM",
+      "sourceFile": "wgi-reviewed-q0281-0320.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0320",
+      "targetId": "ADV2E102-U0019-Q022-SIM",
+      "sourceFile": "wgi-reviewed-q0281-0320.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0321",
+      "targetId": "ADV2E102-U0011-Q048-SRC",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0328",
+      "targetId": "IBES-Q0049-SRC",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0329",
+      "targetId": "ADV2E102-U0035-Q010-SRC",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0330",
+      "targetId": "ADV2E102-U0017-Q016-SRC",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0332",
+      "targetId": "IBES-Q0833-SIM",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0334",
+      "targetId": "IBES-Q0860-SIM",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0336",
+      "targetId": "ADV2E102-U0004-Q033-SRC",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0337",
+      "targetId": "ADV2E102-U0032-Q031-SRC",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0341",
+      "targetId": "IBES-Q0632-SRC",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0343",
+      "targetId": "WGI-Q0295-SRC",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0344",
+      "targetId": "WGI-Q0296-SRC",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0345",
+      "targetId": "ADV2E102-U0091-Q036-SRC",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0346",
+      "targetId": "ADV2E102-U0005-Q003-SRC",
+      "sourceFile": "wgi-reviewed-q0321-0350.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0351",
+      "targetId": "ADV2E102-U0002-Q068-SIM",
+      "sourceFile": "wgi-reviewed-q0351-0385.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0365",
+      "targetId": "ADV2E102-U0014-Q045-SRC",
+      "sourceFile": "wgi-reviewed-q0351-0385.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0366",
+      "targetId": "IBES-Q0648-SRC",
+      "sourceFile": "wgi-reviewed-q0351-0385.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0389",
+      "targetId": "WGI-Q0315-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0398",
+      "targetId": "ADV2E102-U0011-Q054-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0402",
+      "targetId": "ADV2E102-U0081-Q040-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0404",
+      "targetId": "ADV2E102-U0061-Q059-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0405",
+      "targetId": "ADV2E102-U0012-Q040-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0409",
+      "targetId": "ADV2E102-U0061-Q004-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0411",
+      "targetId": "ADV2E102-U0023-Q017-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0412",
+      "targetId": "ADV2E102-U0160-Q022-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0413",
+      "targetId": "WGI-Q0255-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0414",
+      "targetId": "ADV2E102-U0009-Q040-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0416",
+      "targetId": "ADV2E102-U0061-Q049-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0417",
+      "targetId": "ADV2E102-U0061-Q035-SRC",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0419",
+      "targetId": "ADV2E102-U0018-Q007-SIM",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0420",
+      "targetId": "ADV2E102-U0041-Q053-SIM",
+      "sourceFile": "wgi-reviewed-q0386-0420.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0421",
+      "targetId": "ADV2E102-U0018-Q053-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0423",
+      "targetId": "ADV2E102-U0015-Q050-SIM",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0424",
+      "targetId": "ADV2E102-U0001-Q082-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0425",
+      "targetId": "ADV2E102-U0061-Q075-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0426",
+      "targetId": "ADV2E102-U0061-Q001-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0427",
+      "targetId": "ADV2E102-U0061-Q016-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0428",
+      "targetId": "ADV2E102-U0061-Q005-SIM",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0433",
+      "targetId": "ADV2E102-U0061-Q018-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0437",
+      "targetId": "ADV2E102-U0002-Q006-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0440",
+      "targetId": "ADV2E102-U0061-Q014-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0442",
+      "targetId": "ADV2E102-U0061-Q021-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0443",
+      "targetId": "ADV2E102-U0018-Q012-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0444",
+      "targetId": "ADV2E102-U0001-Q003-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
+    },
+    {
+      "corpus": "WGI",
+      "sourceIdentity": "WGI-Q0445",
+      "targetId": "ADV2E102-U0012-Q008-SRC",
+      "sourceFile": "wgi-reviewed-q0421-0450.json"
     }
   ]
 }

@@ -1,0 +1,3316 @@
+[
+  {
+    "sourceRecordId": "WGI-Q0001",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 1,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "16945FB7B090AC14396C529225C57B21035B369616211D578C95539AC140EC95",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The lake superlative is verified with independent United States environmental and oceanographic authorities, and no equivalent bank item was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0001-SRC",
+      "pairId": "WGI-Q0001",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which individual freshwater lake is conventionally recognized as the world's largest by surface area?",
+      "questionUrdu": "سطحی رقبے کے لحاظ سے دنیا کی سب سے بڑی انفرادی میٹھے پانی کی جھیل کون سی تسلیم کی جاتی ہے؟",
+      "options": [
+        "Lake Victoria",
+        "Lake Superior",
+        "Lake Baikal",
+        "Lake Tanganyika"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "سطحی رقبے کے لحاظ سے جھیل سپیریئر دنیا کی سب سے بڑی انفرادی میٹھے پانی کی جھیل ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.1, item 1",
+        "referenceUrl": "https://www.epa.gov/greatlakes/physical-features-great-lakes",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0001"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source claim is retained with the precise qualifier by surface area; the answer and supporting border fact were independently checked.",
+      "references": [
+        {
+          "url": "https://www.epa.gov/greatlakes/physical-features-great-lakes",
+          "label": "Physical Features of the Great Lakes",
+          "publisher": "United States Environmental Protection Agency",
+          "authorityId": "us-epa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "EPA identifies Lake Superior as the largest Great Lake by surface area."
+        },
+        {
+          "url": "https://repository.library.noaa.gov/view/noaa/37764/noaa_37764_DS1.pdf",
+          "label": "Lake Superior fact sheet",
+          "publisher": "National Oceanic and Atmospheric Administration",
+          "authorityId": "noaa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NOAA describes Lake Superior as the world's largest freshwater lake by surface area."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0001-SIM",
+      "pairId": "WGI-Q0001",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Lake Superior is shared by which two countries?",
+      "questionUrdu": "جھیل سپیریئر کن دو ممالک کے درمیان مشترک ہے؟",
+      "options": [
+        "United States and Mexico",
+        "Canada and Greenland",
+        "United States and Canada",
+        "Canada and Iceland"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "جھیل سپیریئر امریکہ اور کینیڈا کی بین الاقوامی سرحد پر واقع ہے اور دونوں ممالک میں پھیلی ہوئی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 1",
+        "referenceUrl": "https://www.epa.gov/greatlakes/physical-features-great-lakes",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0001"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source claim is retained with the precise qualifier by surface area; the answer and supporting border fact were independently checked.",
+      "references": [
+        {
+          "url": "https://www.epa.gov/greatlakes/physical-features-great-lakes",
+          "label": "Physical Features of the Great Lakes",
+          "publisher": "United States Environmental Protection Agency",
+          "authorityId": "us-epa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "EPA maps and describes Lake Superior within the binational Great Lakes system."
+        },
+        {
+          "url": "https://repository.library.noaa.gov/view/noaa/37764/noaa_37764_DS1.pdf",
+          "label": "Lake Superior fact sheet",
+          "publisher": "National Oceanic and Atmospheric Administration",
+          "authorityId": "noaa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NOAA states that Lake Superior is bordered by the United States and Canada."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0002",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 2,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "39152B8B1276B7E6E5BD47521D5BD112B2B807BF38DACC30898A4BE866A59D48",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The core Nauru answer is verified, but the printed note incorrectly treats Yaren as an official capital and misspells it as Yeren, so the record is corrected.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0002-SRC",
+      "pairId": "WGI-Q0002",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "As of 2026, which Pacific island state, widely known as Nauru, is described as the world's smallest independent republic?",
+      "questionUrdu": "2026 تک بحرالکاہل کی کون سی جزیرہ ریاست، جو عام طور پر ناؤرو کہلاتی ہے، دنیا کی سب سے چھوٹی آزاد جمہوریہ بیان کی جاتی ہے؟",
+      "options": [
+        "Tuvalu",
+        "Republic of Naoero (Nauru)",
+        "Kiribati",
+        "Palau"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "ریپبلک آف ناؤرو، جسے ناؤرو کے نام سے بھی جانا جاتا ہے، رقبے کے لحاظ سے دنیا کی سب سے چھوٹی آزاد جمہوریہ ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.1, item 2",
+        "referenceUrl": "https://www.mfat.govt.nz/en/countries-and-regions/australia-and-pacific/nauru",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0002"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "Corrected the printed Yeren claim: the district is Yaren, and the state has no official capital. The modern official name Naoero is acknowledged while retaining Nauru for recognition.",
+      "references": [
+        {
+          "url": "https://www.mfat.govt.nz/en/countries-and-regions/australia-and-pacific/nauru",
+          "label": "Nauru country information",
+          "publisher": "New Zealand Ministry of Foreign Affairs and Trade",
+          "authorityId": "nz-mfat",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "New Zealand MFAT describes Nauru as the world's smallest independent republic."
+        },
+        {
+          "url": "https://www.cia.gov/the-world-factbook/countries/nauru/",
+          "label": "Nauru country profile",
+          "publisher": "Central Intelligence Agency World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The World Factbook identifies Nauru's status and exceptionally small land area."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0002-SIM",
+      "pairId": "WGI-Q0002",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "As of 2026, which district houses the government offices of Naoero (Nauru), a country with no official capital?",
+      "questionUrdu": "2026 تک ناؤرو کی سرکاری عمارات کس ضلع میں ہیں، جبکہ اس ملک کا کوئی سرکاری دارالحکومت نہیں؟",
+      "options": [
+        "Aiwo",
+        "Anibare",
+        "Boe",
+        "Yaren"
+      ],
+      "correctOptionIndex": 3,
+      "explanationUrdu": "ناؤرو کا کوئی باضابطہ دارالحکومت نہیں؛ حکومتی دفاتر یارن ضلع میں واقع ہیں، اس لیے اسے عملاً انتظامی مرکز سمجھا جاتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 2",
+        "referenceUrl": "https://www.cia.gov/the-world-factbook/countries/nauru/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0002"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "Corrected the printed Yeren claim: the district is Yaren, and the state has no official capital. The modern official name Naoero is acknowledged while retaining Nauru for recognition.",
+      "references": [
+        {
+          "url": "https://www.cia.gov/the-world-factbook/countries/nauru/",
+          "label": "Nauru country profile",
+          "publisher": "Central Intelligence Agency World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The World Factbook records no official capital and locates government offices in Yaren District."
+        },
+        {
+          "url": "https://www.dfat.gov.au/sites/default/files/our-indo-pacific-community-3-4-country-fact-files.pdf",
+          "label": "Indo-Pacific country fact files",
+          "publisher": "Australian Department of Foreign Affairs and Trade",
+          "authorityId": "australia-dfat",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Australian government country facts identify Yaren as Nauru's government centre."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0003",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 3,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "C7740C864C34E5AC31EF6B8BAD1104592B34699CAF0FE2A126488EE854A5B939",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The ICJ headquarters question and Hague answer are semantically identical to the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "P237-Q001-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0004",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 4,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "C5C4C2B89F57CCFF7C53418BE56E1D57CFFB30B2476DF83CAE6A05384DF272BC",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The Andes longest continental mountain-range fact is already tested by the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0002-Q055-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0005",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 5,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "67171395BE28025949DEE56F95EB0EB1D36D41DB131B45CCA9E42F3B8C789682",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Japan's traditional Rising Sun designation and the meaning of its native name are verified by two independent Japanese official information services.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0005-SRC",
+      "pairId": "WGI-Q0005",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which country is traditionally known as the Land of the Rising Sun?",
+      "questionUrdu": "کس ملک کو روایتی طور پر طلوع ہوتے سورج کی سرزمین کہا جاتا ہے؟",
+      "options": [
+        "Japan",
+        "Thailand",
+        "South Korea",
+        "China"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "جاپان کو طلوع ہوتے سورج کی سرزمین کہا جاتا ہے کیونکہ اس کے مقامی نام کا مفہوم سورج کے منبع سے جڑا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.1, item 5",
+        "referenceUrl": "https://web-japan.org/kidsweb/faq/society01.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0005"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The familiar country epithet is retained, and the related item tests the linguistic reason behind it rather than repeating the same prompt.",
+      "references": [
+        {
+          "url": "https://web-japan.org/kidsweb/faq/society01.html",
+          "label": "What does Japan mean?",
+          "publisher": "Web Japan, Ministry of Foreign Affairs of Japan",
+          "authorityId": "web-japan",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Web Japan explains that Nihon or Nippon means the origin of the sun and underlies the epithet."
+        },
+        {
+          "url": "https://www.gov-online.go.jp/eng/publicity/book/hlj/html/202010/202010_03_en.html",
+          "label": "Land of the Rising Sun",
+          "publisher": "Public Relations Office, Government of Japan",
+          "authorityId": "japan-gov-online",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Japanese government publication directly uses Land of the Rising Sun for Japan."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0005-SIM",
+      "pairId": "WGI-Q0005",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "What is the literal sense of the Japanese names Nihon and Nippon?",
+      "questionUrdu": "جاپانی ناموں نیہون اور نِپّون کا لفظی مفہوم کیا ہے؟",
+      "options": [
+        "Islands of mountains",
+        "Origin of the sun",
+        "Kingdom of flowers",
+        "Eastern ocean"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "نیہون اور نِپّون کے حروف کا مفہوم سورج کی اصل یا منبع ہے، اسی سے جاپان کا مشہور لقب نکلا۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 5",
+        "referenceUrl": "https://web-japan.org/kidsweb/faq/society01.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0005"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The familiar country epithet is retained, and the related item tests the linguistic reason behind it rather than repeating the same prompt.",
+      "references": [
+        {
+          "url": "https://web-japan.org/kidsweb/faq/society01.html",
+          "label": "What does Japan mean?",
+          "publisher": "Web Japan, Ministry of Foreign Affairs of Japan",
+          "authorityId": "web-japan",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Web Japan gives the literal sense of Nihon and Nippon as origin of the sun."
+        },
+        {
+          "url": "https://www.gov-online.go.jp/eng/publicity/book/hlj/html/202010/202010_03_en.html",
+          "label": "Land of the Rising Sun",
+          "publisher": "Public Relations Office, Government of Japan",
+          "authorityId": "japan-gov-online",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The government feature connects Japan's name with the place where the sun rises."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0006",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 6,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "26B69CCE08C2495D546C8AF97C001AED8AB143AA6871AC6A3AA9CA36F17C3603",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "UNESCO and Australia's reef-management authority independently confirm the Great Barrier Reef as the world's largest coral reef system.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0006-SRC",
+      "pairId": "WGI-Q0006",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which is the world's largest coral reef system?",
+      "questionUrdu": "دنیا کا سب سے بڑا مرجانی چٹانوں کا نظام کون سا ہے؟",
+      "options": [
+        "Belize Barrier Reef",
+        "Red Sea Coral Reef",
+        "New Caledonia Barrier Reef",
+        "Great Barrier Reef"
+      ],
+      "correctOptionIndex": 3,
+      "explanationUrdu": "آسٹریلیا کا گریٹ بیریئر ریف دنیا کا سب سے بڑا مرجانی چٹانوں کا نظام ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.1, item 6",
+        "referenceUrl": "https://whc.unesco.org/en/list/154",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0006"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source answer is retained with reef system wording, while the related item tests its Australian state rather than duplicating the country-location item in the bank.",
+      "references": [
+        {
+          "url": "https://whc.unesco.org/en/list/154",
+          "label": "Great Barrier Reef",
+          "publisher": "UNESCO World Heritage Centre",
+          "authorityId": "unesco-whc",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNESCO describes the Great Barrier Reef as the world's most extensive coral reef ecosystem."
+        },
+        {
+          "url": "https://www.gbrmpa.gov.au/learn/biodiversity",
+          "label": "Great Barrier Reef biodiversity",
+          "publisher": "Great Barrier Reef Marine Park Authority",
+          "authorityId": "gbrmpa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Australia's reef authority identifies it as the world's largest coral reef ecosystem."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0006-SIM",
+      "pairId": "WGI-Q0006",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Along the coast of which Australian state does the Great Barrier Reef extend?",
+      "questionUrdu": "گریٹ بیریئر ریف آسٹریلیا کی کس ریاست کے ساحل کے ساتھ پھیلا ہوا ہے؟",
+      "options": [
+        "Victoria",
+        "Queensland",
+        "Tasmania",
+        "Western Australia"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "گریٹ بیریئر ریف شمال مشرقی آسٹریلیا میں ریاست کوئنزلینڈ کے ساحل کے ساتھ واقع ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 6",
+        "referenceUrl": "https://whc.unesco.org/en/list/154",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0006"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source answer is retained with reef system wording, while the related item tests its Australian state rather than duplicating the country-location item in the bank.",
+      "references": [
+        {
+          "url": "https://whc.unesco.org/en/list/154",
+          "label": "Great Barrier Reef",
+          "publisher": "UNESCO World Heritage Centre",
+          "authorityId": "unesco-whc",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNESCO locates the property off the north-east coast of Australia in Queensland."
+        },
+        {
+          "url": "https://www.gbrmpa.gov.au/learn/fascinating-facts-about-great-barrier-reef",
+          "label": "Great Barrier Reef facts",
+          "publisher": "Great Barrier Reef Marine Park Authority",
+          "authorityId": "gbrmpa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The reef authority locates the Great Barrier Reef along the Queensland coast."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0007",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 7,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "F433E3E8E59BD5B2426ECECA077EF5D10A1E1CAE55E3D5B4483C856FC9D8207E",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The Astana capital question and answer already appear in the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0001-Q004-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0008",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 8,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "5354E95D4167026C3690CD68D0C7B63C66CC9EE1A8A19D9ABDBF69934BE2BA3D",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The continental separation and ocean connection of the Bering Strait are confirmed by NOAA and an Arctic Council assessment on a separate host.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0008-SRC",
+      "pairId": "WGI-Q0008",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which strait separates Asia from North America?",
+      "questionUrdu": "ایشیا کو شمالی امریکہ سے کون سی آبنائے جدا کرتی ہے؟",
+      "options": [
+        "Davis Strait",
+        "Bering Strait",
+        "Strait of Gibraltar",
+        "Torres Strait"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "آبنائے بیرنگ روسی ایشیا اور الاسکا، شمالی امریکہ کے درمیان واقع ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.1, item 8",
+        "referenceUrl": "https://www.fisheries.noaa.gov/feature-story/strait-connecting-pacific-and-arctic-oceans-larger-previously-measured",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0008"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source asks which strait separates the continents; the related item separately tests the two ocean basins that the strait connects.",
+      "references": [
+        {
+          "url": "https://www.fisheries.noaa.gov/feature-story/strait-connecting-pacific-and-arctic-oceans-larger-previously-measured",
+          "label": "Bering Strait feature",
+          "publisher": "NOAA Fisheries",
+          "authorityId": "noaa-fisheries",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NOAA locates the Bering Strait between Alaska and Russia, separating the two continents."
+        },
+        {
+          "url": "https://www.pmel.noaa.gov/arctic-zone/detect/documents/AMSA_2009_Report_2nd_print.pdf",
+          "label": "Arctic Marine Shipping Assessment",
+          "publisher": "Arctic Council",
+          "authorityId": "arctic-council",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Arctic Council assessment identifies the Bering Strait between North America and Asia."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0008-SIM",
+      "pairId": "WGI-Q0008",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "The Bering Strait connects which two oceans?",
+      "questionUrdu": "آبنائے بیرنگ کن دو سمندروں کو ملاتی ہے؟",
+      "options": [
+        "Atlantic and Indian",
+        "Indian and Pacific",
+        "Pacific and Arctic",
+        "Arctic and Atlantic"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "آبنائے بیرنگ بحرالکاہل کے شمالی حصے کو بحر منجمد شمالی سے ملاتی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 8",
+        "referenceUrl": "https://www.fisheries.noaa.gov/feature-story/strait-connecting-pacific-and-arctic-oceans-larger-previously-measured",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0008"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source asks which strait separates the continents; the related item separately tests the two ocean basins that the strait connects.",
+      "references": [
+        {
+          "url": "https://www.fisheries.noaa.gov/feature-story/strait-connecting-pacific-and-arctic-oceans-larger-previously-measured",
+          "label": "Bering Strait feature",
+          "publisher": "NOAA Fisheries",
+          "authorityId": "noaa-fisheries",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NOAA explicitly calls it the strait connecting the Pacific and Arctic oceans."
+        },
+        {
+          "url": "https://www.pmel.noaa.gov/arctic-zone/detect/documents/AMSA_2009_Report_2nd_print.pdf",
+          "label": "Arctic Marine Shipping Assessment",
+          "publisher": "Arctic Council",
+          "authorityId": "arctic-council",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Arctic Council assessment places the strait at the Pacific-Arctic gateway."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0009",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 9,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "EB10E4495F4EAE44D6D2E9E5F4D210508E52935925D61C3C1AF08134DC6F4C8F",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The Vienna headquarters fact for the IAEA is already tested by the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0044-Q004-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0010",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 10,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "5EEF489429B9DDF730E0DF48C489D789AD9E1056521AB7D10199C340E9761B1A",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The largest Muslim-population fact is already represented by the canonical bank item with an explicit evidence year.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0010-Q007-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0011",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 11,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "854BE9E0A17917EBD9496DB69D0788BB38021689FCCF4CCCE0423192FEAF3957",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Two independent Swiss federal information services verify the Swiss franc as Switzerland's legal currency, and the bank has no equivalent item.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0011-SRC",
+      "pairId": "WGI-Q0011",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the currency of Switzerland?",
+      "questionUrdu": "سوئٹزرلینڈ کی کرنسی کیا ہے؟",
+      "options": [
+        "Swiss franc",
+        "Euro",
+        "Swiss mark",
+        "Krone"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "سوئٹزرلینڈ کی قانونی کرنسی سوئس فرانک ہے، جس کا بین الاقوامی کوڈ CHF ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.1, item 11",
+        "referenceUrl": "https://www.efv.admin.ch/en/legal-basis-legal-tender-currency",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0011"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source answer is retained; the related item tests the neighboring currency union with Liechtenstein rather than adding an unverified capital label.",
+      "references": [
+        {
+          "url": "https://www.efv.admin.ch/en/legal-basis-legal-tender-currency",
+          "label": "Legal tender and currency",
+          "publisher": "Swiss Federal Finance Administration",
+          "authorityId": "swiss-ffa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Swiss finance authority identifies the Swiss franc as Switzerland's currency and legal tender."
+        },
+        {
+          "url": "https://www.aboutswitzerland.eda.admin.ch/en/swiss-economy-overview",
+          "label": "Swiss economy overview",
+          "publisher": "Federal Department of Foreign Affairs of Switzerland",
+          "authorityId": "swiss-fdfa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The federal country information service lists the Swiss franc as the national currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0011-SIM",
+      "pairId": "WGI-Q0011",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which neighboring principality also uses the Swiss franc as its official currency?",
+      "questionUrdu": "کون سی ہمسایہ ریاست بھی سوئس فرانک کو اپنی سرکاری کرنسی کے طور پر استعمال کرتی ہے؟",
+      "options": [
+        "Andorra",
+        "Monaco",
+        "Liechtenstein",
+        "San Marino"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "لیختن شٹائن سوئٹزرلینڈ کے ساتھ کرنسی اتحاد کے باعث سوئس فرانک استعمال کرتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 11",
+        "referenceUrl": "https://www.llv.li/en/national-administration/office-for-foreign-affairs/topics/bilateral-relations",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0011"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source answer is retained; the related item tests the neighboring currency union with Liechtenstein rather than adding an unverified capital label.",
+      "references": [
+        {
+          "url": "https://www.llv.li/en/national-administration/office-for-foreign-affairs/topics/bilateral-relations",
+          "label": "Liechtenstein-Switzerland bilateral relations",
+          "publisher": "Government of Liechtenstein",
+          "authorityId": "liechtenstein-gov",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Liechtenstein's government describes the monetary union under which it uses the Swiss franc."
+        },
+        {
+          "url": "https://www.cia.gov/the-world-factbook/countries/liechtenstein/",
+          "label": "Liechtenstein country profile",
+          "publisher": "Central Intelligence Agency World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The World Factbook lists the Swiss franc as Liechtenstein's currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0012",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 12,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "EE98733BD38F576108A176643A1E3327C1AF0E83201EC10EDEDCDC48D60E681C",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Peru's official tourism service and UNESCO verify Lake Titicaca's high navigability distinction, while UNESCO and Ramsar verify its binational location.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0012-SRC",
+      "pairId": "WGI-Q0012",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which lake is widely recognized as the world's highest commercially navigable lake?",
+      "questionUrdu": "کس جھیل کو دنیا کی سب سے بلند تجارتی طور پر قابلِ جہاز رانی جھیل تسلیم کیا جاتا ہے؟",
+      "options": [
+        "Lake Victoria",
+        "Lake Titicaca",
+        "Lake Tahoe",
+        "Lake Tana"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "اینڈیز میں واقع جھیل ٹیٹی کاکا کو دنیا کی سب سے بلند تجارتی طور پر قابلِ جہاز رانی جھیل کہا جاتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.1, item 12",
+        "referenceUrl": "https://www.peru.travel/stories/explore-lake-titicaca-the-highest-navigable-lake-in-the-world-and-the-species-that-inhabit-it",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0012"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The common superlative is worded as highest commercially navigable lake to avoid implying that no higher lake can carry any small craft.",
+      "references": [
+        {
+          "url": "https://www.peru.travel/stories/explore-lake-titicaca-the-highest-navigable-lake-in-the-world-and-the-species-that-inhabit-it",
+          "label": "Explore Lake Titicaca",
+          "publisher": "PROMPERU official tourism portal",
+          "authorityId": "promperu",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Peru's official tourism portal calls Titicaca the highest navigable lake in the world."
+        },
+        {
+          "url": "https://www.unesco.org/es/articles/proteccion-del-patrimonio-cultural-subacuatico-en-el-lago-titicaca",
+          "label": "Lake Titicaca underwater heritage",
+          "publisher": "UNESCO",
+          "authorityId": "unesco",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNESCO describes Titicaca as the world's highest navigable lake."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0012-SIM",
+      "pairId": "WGI-Q0012",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Lake Titicaca lies on the border of which two countries?",
+      "questionUrdu": "جھیل ٹیٹی کاکا کن دو ممالک کی سرحد پر واقع ہے؟",
+      "options": [
+        "Peru and Bolivia",
+        "Chile and Argentina",
+        "Ecuador and Peru",
+        "Bolivia and Brazil"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "جھیل ٹیٹی کاکا اینڈیز میں پیرو اور بولیویا کے درمیان سرحد پر واقع ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 12",
+        "referenceUrl": "https://www.unesco.org/es/articles/proteccion-del-patrimonio-cultural-subacuatico-en-el-lago-titicaca",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0012"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The common superlative is worded as highest commercially navigable lake to avoid implying that no higher lake can carry any small craft.",
+      "references": [
+        {
+          "url": "https://www.unesco.org/es/articles/proteccion-del-patrimonio-cultural-subacuatico-en-el-lago-titicaca",
+          "label": "Lake Titicaca underwater heritage",
+          "publisher": "UNESCO",
+          "authorityId": "unesco",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNESCO places Lake Titicaca between Peru and Bolivia."
+        },
+        {
+          "url": "https://www.ramsar.org/es/node/9042",
+          "label": "Bolivia Ramsar country profile",
+          "publisher": "Convention on Wetlands",
+          "authorityId": "ramsar",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Ramsar profile identifies the Lake Titicaca wetland in the shared Peru-Bolivia system."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0013",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 13,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "BA17996AAF92DD4045833081DE93693E68679F597879740F3E1AE181CFC88B04",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The Peru fact-list entry is converted into two distinct questions after official Peruvian authorities independently confirm the sol and Lima facts.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0013-SRC",
+      "pairId": "WGI-Q0013",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the official monetary unit of Peru?",
+      "questionUrdu": "پیرو کی سرکاری مالی اکائی کیا ہے؟",
+      "options": [
+        "Boliviano",
+        "Guarani",
+        "Sol",
+        "Peso"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "پیرو کی سرکاری کرنسی سول ہے، جسے ملک کے مالیاتی ادارے قانونی مالی اکائی کے طور پر درج کرتے ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.1, item 13",
+        "referenceUrl": "https://www.sbs.gob.pe/Portals/0/jer/Evento_ASSAL_IAIS/ASSAL_2022_Informacion_General.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0013"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The non-question source line is safely rewritten as an MCQ. Its stated currency and capital are both retained after official verification.",
+      "references": [
+        {
+          "url": "https://www.sbs.gob.pe/Portals/0/jer/Evento_ASSAL_IAIS/ASSAL_2022_Informacion_General.pdf",
+          "label": "Peru general information",
+          "publisher": "Superintendency of Banking, Insurance and Private Pension Funds of Peru",
+          "authorityId": "peru-sbs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Peruvian financial supervisor lists the country's currency as the sol."
+        },
+        {
+          "url": "https://repositorio.promperu.gob.pe/bitstreams/e8d9207c-7c0c-49e7-8901-e2d706c44d32/download",
+          "label": "Official Peru travel information",
+          "publisher": "PROMPERU",
+          "authorityId": "promperu",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "PROMPERU's official information identifies the sol as Peru's currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0013-SIM",
+      "pairId": "WGI-Q0013",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which city is the capital of Peru?",
+      "questionUrdu": "پیرو کا دارالحکومت کون سا شہر ہے؟",
+      "options": [
+        "Cusco",
+        "Lima",
+        "Arequipa",
+        "Trujillo"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "لیما پیرو کا دارالحکومت اور ملک کا اہم انتظامی و سیاسی مرکز ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 13",
+        "referenceUrl": "https://www.sbs.gob.pe/Portals/0/jer/Evento_ASSAL_IAIS/ASSAL_2022_Informacion_General.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0013"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The non-question source line is safely rewritten as an MCQ. Its stated currency and capital are both retained after official verification.",
+      "references": [
+        {
+          "url": "https://www.sbs.gob.pe/Portals/0/jer/Evento_ASSAL_IAIS/ASSAL_2022_Informacion_General.pdf",
+          "label": "Peru general information",
+          "publisher": "Superintendency of Banking, Insurance and Private Pension Funds of Peru",
+          "authorityId": "peru-sbs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Peruvian financial supervisor's country information identifies Lima as the capital."
+        },
+        {
+          "url": "https://doc.contraloria.gob.pe/limadeclaration2017/eng/about_lima.html",
+          "label": "About Lima",
+          "publisher": "Office of the Comptroller General of Peru",
+          "authorityId": "peru-comptroller",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Peru's Comptroller General describes Lima as the capital city of Peru."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0014",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 14,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "BB2ABA255ACC43BCCA4A9E22465F136CFD92DF463EB7E281436F4C3D19C90682",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Bolivia's constitutional-capital and seat-of-government distinction is confirmed by the constitutional text and a separate United Nations state report.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0014-SRC",
+      "pairId": "WGI-Q0014",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the constitutional capital of Bolivia?",
+      "questionUrdu": "بولیویا کا آئینی دارالحکومت کون سا ہے؟",
+      "options": [
+        "La Paz",
+        "Santa Cruz",
+        "Sucre",
+        "Cochabamba"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "بولیویا کے آئین کے مطابق سوکرے ملک کا دارالحکومت ہے، اگرچہ حکومت کی نشست لا پاز میں ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.1, item 14",
+        "referenceUrl": "https://www.constituteproject.org/constitution/Bolivia_2009",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0014"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The fact-list entry is split into two questions so that Sucre's constitutional status is not confused with the national government's seat in La Paz.",
+      "references": [
+        {
+          "url": "https://www.constituteproject.org/constitution/Bolivia_2009",
+          "label": "Bolivia Constitution",
+          "publisher": "Comparative Constitutions Project",
+          "authorityId": "constitute-project",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The translated Bolivian Constitution states that Sucre is the capital of Bolivia."
+        },
+        {
+          "url": "https://digitallibrary.un.org/record/605281/files/CMW_C_BOL_1-EN.pdf",
+          "label": "Initial report of Bolivia",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Bolivia's United Nations report identifies Sucre as the constitutional capital."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0014-SIM",
+      "pairId": "WGI-Q0014",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which city serves as Bolivia's seat of government?",
+      "questionUrdu": "بولیویا کی حکومت کی نشست کس شہر میں ہے؟",
+      "options": [
+        "Sucre",
+        "La Paz",
+        "Tarija",
+        "Potosi"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "لا پاز بولیویا کی حکومت اور انتظامیہ کی نشست ہے، جبکہ آئینی دارالحکومت سوکرے ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 14",
+        "referenceUrl": "https://www.constituteproject.org/constitution/Bolivia_2009",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0014"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The fact-list entry is split into two questions so that Sucre's constitutional status is not confused with the national government's seat in La Paz.",
+      "references": [
+        {
+          "url": "https://www.constituteproject.org/constitution/Bolivia_2009",
+          "label": "Bolivia Constitution",
+          "publisher": "Comparative Constitutions Project",
+          "authorityId": "constitute-project",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The constitutional framework establishes Sucre, contextualizing the separate government seat in La Paz."
+        },
+        {
+          "url": "https://digitallibrary.un.org/record/605281/files/CMW_C_BOL_1-EN.pdf",
+          "label": "Initial report of Bolivia",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The United Nations state report explicitly identifies La Paz as the seat of government."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0015",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 15,
+    "sourcePdfPage": 1,
+    "rawTextSha256": "741E293A941C61BB4A1883E0560ECB3CCB0E3F69817ADD03FEEA122EB7E509EA",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The question asking which river flows through Baghdad exactly duplicates the audited canonical bank question.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0141-Q091-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0016",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 16,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "0312036ED0E8F623B7DBB23B2E224189D5B11C83251CC51A29E97EBFC75BAF2E",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "INTERPOL and a United Nations agreement verify its Lyon headquarters, while INTERPOL history and Britannica verify the distinct foundation-date question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0016-SRC",
+      "pairId": "WGI-Q0016",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "In which city is INTERPOL's General Secretariat headquartered?",
+      "questionUrdu": "انٹرپول کا جنرل سیکریٹریٹ کس شہر میں واقع ہے؟",
+      "options": [
+        "The Hague",
+        "Geneva",
+        "Lyon",
+        "Brussels"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "بین الاقوامی فوجداری پولیس تنظیم انٹرپول کا جنرل سیکریٹریٹ لیون، فرانس میں واقع ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.2, item 16",
+        "referenceUrl": "https://www.interpol.int/Who-we-are/General-Secretariat",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0016"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The headquarters answer is retained. The related question uses the organization's founding date as a separate examinable fact.",
+      "references": [
+        {
+          "url": "https://www.interpol.int/Who-we-are/General-Secretariat",
+          "label": "INTERPOL General Secretariat",
+          "publisher": "INTERPOL",
+          "authorityId": "interpol",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "INTERPOL identifies Lyon, France, as the location of its General Secretariat headquarters."
+        },
+        {
+          "url": "https://digitallibrary.un.org/record/217066/files/A_51_141-EN.pdf",
+          "label": "United Nations-INTERPOL cooperation agreement",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The United Nations agreement records INTERPOL's headquarters in Lyon, France."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0016-SIM",
+      "pairId": "WGI-Q0016",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "On what date was the organization that became INTERPOL founded?",
+      "questionUrdu": "وہ تنظیم جو بعد میں انٹرپول بنی، کس تاریخ کو قائم ہوئی؟",
+      "options": [
+        "7 September 1923",
+        "24 October 1945",
+        "10 January 1920",
+        "1 January 1950"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "انٹرپول کی ابتدا 7 September 1923 کو بین الاقوامی فوجداری پولیس کمیشن کے قیام سے ہوئی۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 16",
+        "referenceUrl": "https://www.interpol.int/Who-we-are/Our-history/How-our-history-started",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0016"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The headquarters answer is retained. The related question uses the organization's founding date as a separate examinable fact.",
+      "references": [
+        {
+          "url": "https://www.interpol.int/Who-we-are/Our-history/How-our-history-started",
+          "label": "How INTERPOL's history started",
+          "publisher": "INTERPOL",
+          "authorityId": "interpol",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "INTERPOL's history gives 7 September 1923 as the organization's founding date."
+        },
+        {
+          "url": "https://www.britannica.com/topic/Interpol",
+          "label": "INTERPOL",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Britannica confirms that the international police organization was founded in 1923."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0017",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 17,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "71FED11E60A61509998C67B5D33D3DC9C794574300F717261028D0AB201F8459",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Botswana's government and Encyclopaedia Britannica independently support the Kalahari coverage and cross-border extent used in the two questions.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0017-SRC",
+      "pairId": "WGI-Q0017",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which desert covers most of Botswana?",
+      "questionUrdu": "بوٹسوانا کے زیادہ تر حصے پر کون سا صحرا پھیلا ہوا ہے؟",
+      "options": [
+        "Namib Desert",
+        "Kalahari Desert",
+        "Sahara Desert",
+        "Danakil Desert"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "کالاہاری کا وسیع نیم خشک علاقہ بوٹسوانا کے بیشتر زمینی رقبے پر پھیلا ہوا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.2, item 17",
+        "referenceUrl": "https://gov.bw/about-our-country",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0017"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source desert answer is retained; the related item tests the principal countries across which the broader Kalahari region extends.",
+      "references": [
+        {
+          "url": "https://gov.bw/about-our-country",
+          "label": "About Botswana",
+          "publisher": "Government of Botswana",
+          "authorityId": "botswana-gov",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Botswana's government states that the Kalahari occupies much of the country."
+        },
+        {
+          "url": "https://www.britannica.com/place/Kalahari-Desert",
+          "label": "Kalahari Desert",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Britannica describes the Kalahari as covering virtually all of Botswana."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0017-SIM",
+      "pairId": "WGI-Q0017",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "The Kalahari Desert extends mainly across which three countries?",
+      "questionUrdu": "صحرائے کالاہاری بنیادی طور پر کن تین ممالک میں پھیلا ہوا ہے؟",
+      "options": [
+        "Botswana, Namibia and South Africa",
+        "Kenya, Tanzania and Uganda",
+        "Egypt, Libya and Sudan",
+        "Mali, Niger and Chad"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کالاہاری کا بنیادی پھیلاؤ بوٹسوانا، نمیبیا اور جنوبی افریقہ میں ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 17",
+        "referenceUrl": "https://gov.bw/about-our-country",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0017"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source desert answer is retained; the related item tests the principal countries across which the broader Kalahari region extends.",
+      "references": [
+        {
+          "url": "https://gov.bw/about-our-country",
+          "label": "About Botswana",
+          "publisher": "Government of Botswana",
+          "authorityId": "botswana-gov",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Botswana's country profile places its Kalahari landscape beside Namibia and South Africa."
+        },
+        {
+          "url": "https://www.britannica.com/place/Kalahari-Desert",
+          "label": "Kalahari Desert",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Britannica identifies Botswana, Namibia and South Africa as the main Kalahari countries."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0018",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 18,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "53275C261F250F5E8E141171F2DA33AFE0A08FBD293F99AB80AAC22D07E8BDA3",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The printed line wrongly places Botswana in South America; Botswana's government and United Nations data confirm Southern Africa, so a corrected question is retained.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0018-SRC",
+      "pairId": "WGI-Q0018",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "In which region of Africa is Botswana located?",
+      "questionUrdu": "بوٹسوانا افریقہ کے کس خطے میں واقع ہے؟",
+      "options": [
+        "Northern Africa",
+        "Western Africa",
+        "Southern Africa",
+        "Central Africa"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "بوٹسوانا ایک خشکی سے گھرا ملک ہے جو جنوبی افریقہ کے خطے میں واقع ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.2, item 18",
+        "referenceUrl": "https://gov.bw/about-our-country",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0018"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "Corrected a material source error: Botswana is in Southern Africa, not South America. The printed Gaborone capital detail was separately verified for the related question.",
+      "references": [
+        {
+          "url": "https://gov.bw/about-our-country",
+          "label": "About Botswana",
+          "publisher": "Government of Botswana",
+          "authorityId": "botswana-gov",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Botswana's government identifies the republic as a landlocked country in Southern Africa."
+        },
+        {
+          "url": "https://data.un.org/legacy/en/iso/bw.html",
+          "label": "Botswana country profile",
+          "publisher": "United Nations Data",
+          "authorityId": "un-data",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "United Nations country data places Botswana in the Southern Africa region."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0018-SIM",
+      "pairId": "WGI-Q0018",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "What is the capital city of Botswana?",
+      "questionUrdu": "بوٹسوانا کا دارالحکومت کون سا شہر ہے؟",
+      "options": [
+        "Gaborone",
+        "Francistown",
+        "Maun",
+        "Lobatse"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "گابورون بوٹسوانا کا دارالحکومت اور ملک کا مرکزی انتظامی شہر ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 18",
+        "referenceUrl": "https://gov.bw/about-our-country",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0018"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "Corrected a material source error: Botswana is in Southern Africa, not South America. The printed Gaborone capital detail was separately verified for the related question.",
+      "references": [
+        {
+          "url": "https://gov.bw/about-our-country",
+          "label": "About Botswana",
+          "publisher": "Government of Botswana",
+          "authorityId": "botswana-gov",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Government of Botswana lists Gaborone as the national capital."
+        },
+        {
+          "url": "https://data.un.org/legacy/en/iso/bw.html",
+          "label": "Botswana country profile",
+          "publisher": "United Nations Data",
+          "authorityId": "un-data",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "United Nations country data identifies Gaborone as Botswana's capital city."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0019",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 19,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "9EDBB56596AA9BAD755CEAD84D11FF18540C3D437C56C0807DDEF888B9F12007",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The Arabian Peninsula largest-by-area question is semantically identical to the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0021-Q041-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0020",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 20,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "68F5ABE3D5F195F1371F8EEC45F30D91737569880B5029465AB98DAD54DA7EFC",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Brazil's constitutional text and a separate federal government page confirm Portuguese as the official language; the colonial relationship is independently corroborated.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0020-SRC",
+      "pairId": "WGI-Q0020",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the official language of Brazil?",
+      "questionUrdu": "برازیل کی سرکاری زبان کون سی ہے؟",
+      "options": [
+        "Spanish",
+        "Portuguese",
+        "French",
+        "English"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "برازیل کے آئین کے مطابق پرتگالی ملک کی سرکاری زبان ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.2, item 20",
+        "referenceUrl": "https://www2.senado.leg.br/bdsf/bitstream/handle/id/243334/Constitution_2013.pdf?sequence=1",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0020"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source language answer is retained. The related question tests the historical reason Portuguese became Brazil's official language.",
+      "references": [
+        {
+          "url": "https://www2.senado.leg.br/bdsf/bitstream/handle/id/243334/Constitution_2013.pdf?sequence=1",
+          "label": "Constitution of Brazil",
+          "publisher": "Federal Senate of Brazil",
+          "authorityId": "brazil-senate",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Brazil's Constitution declares Portuguese to be the official language of the Federative Republic."
+        },
+        {
+          "url": "https://www.gov.br/anvisa/pt-br/icmra2024/about-brasilia",
+          "label": "About Brasilia and Brazil",
+          "publisher": "Brazilian Health Regulatory Agency",
+          "authorityId": "anvisa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Brazilian federal agency's country information lists Portuguese as the official language."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0020-SIM",
+      "pairId": "WGI-Q0020",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which European country colonized Brazil and gave it the Portuguese language?",
+      "questionUrdu": "کس یورپی ملک نے برازیل کو نوآبادی بنایا اور وہاں پرتگالی زبان متعارف کرائی؟",
+      "options": [
+        "Spain",
+        "France",
+        "Portugal",
+        "Netherlands"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "برازیل پرتگال کی نوآبادی رہا، اسی تاریخی تعلق کے باعث وہاں پرتگالی زبان غالب اور سرکاری بنی۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 20",
+        "referenceUrl": "https://www.loc.gov/exhibits/1492/eurocla.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0020"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source language answer is retained. The related question tests the historical reason Portuguese became Brazil's official language.",
+      "references": [
+        {
+          "url": "https://www.loc.gov/exhibits/1492/eurocla.html",
+          "label": "European claims in the Americas",
+          "publisher": "Library of Congress",
+          "authorityId": "library-of-congress",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Library of Congress documents Portugal's claim and colonization of Brazil."
+        },
+        {
+          "url": "https://www.britannica.com/place/Brazil",
+          "label": "Brazil",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Britannica's history of Brazil confirms its colonization by Portugal."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0021",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 21,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "759A7731104568C3C90A59A2504CD14498A1FDE9ECB7016E72441C0D74017060",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The fact-list entry is reliable after correcting its mojibake spelling; separate Brazilian government authorities verify Brasilia and the real.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0021-SRC",
+      "pairId": "WGI-Q0021",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which city is the capital of Brazil?",
+      "questionUrdu": "برازیل کا دارالحکومت کون سا شہر ہے؟",
+      "options": [
+        "Rio de Janeiro",
+        "Sao Paulo",
+        "Salvador",
+        "Brasilia"
+      ],
+      "correctOptionIndex": 3,
+      "explanationUrdu": "برازیلیا برازیل کا وفاقی دارالحکومت ہے؛ اسے ملک کے اندرونی حصے میں منصوبہ بندی کے تحت تعمیر کیا گیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.2, item 21",
+        "referenceUrl": "https://g20.gov.br/en/about-the-g20/host-cities/brasilia-df",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0021"
+      ],
+      "verificationStatus": "verified",
+    "sourceNotes": "Corrected the malformed source spelling to Brasilia. The capital and currency facts were both retained after official verification on separate government hosts.",
+      "references": [
+        {
+          "url": "https://g20.gov.br/en/about-the-g20/host-cities/brasilia-df",
+          "label": "Brasilia federal capital",
+          "publisher": "G20 Brazil Presidency",
+          "authorityId": "g20-brazil",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Brazil's G20 presidency identifies Brasilia as the country's federal capital."
+        },
+        {
+          "url": "https://www.gov.br/anvisa/pt-br/icmra2024/about-brasilia",
+          "label": "About Brasilia and Brazil",
+          "publisher": "Brazilian Health Regulatory Agency",
+          "authorityId": "anvisa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Brazilian federal agency identifies Brasilia as Brazil's capital city."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0021-SIM",
+      "pairId": "WGI-Q0021",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "What is the official currency of Brazil?",
+      "questionUrdu": "برازیل کی سرکاری کرنسی کیا ہے؟",
+      "options": [
+        "Brazilian real",
+        "Brazilian peso",
+        "Escudo",
+        "Sol"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "برازیل کی سرکاری کرنسی برازیلین ریئل ہے، جس کا بین الاقوامی کرنسی کوڈ BRL ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 21",
+        "referenceUrl": "https://www.bcb.gov.br/en/banknotesandcoins",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0021"
+      ],
+      "verificationStatus": "verified",
+    "sourceNotes": "Corrected the malformed source spelling to Brasilia. The capital and currency facts were both retained after official verification on separate government hosts.",
+      "references": [
+        {
+          "url": "https://www.bcb.gov.br/en/banknotesandcoins",
+          "label": "Brazilian banknotes and coins",
+          "publisher": "Central Bank of Brazil",
+          "authorityId": "central-bank-brazil",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Central Bank identifies the real as Brazil's monetary unit through its official notes and coins."
+        },
+        {
+          "url": "https://www.gov.br/anvisa/pt-br/icmra2024/about-brasilia",
+          "label": "About Brasilia and Brazil",
+          "publisher": "Brazilian Health Regulatory Agency",
+          "authorityId": "anvisa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Brazilian federal agency's country facts list the Brazilian real as the currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0022",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 22,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "792ECB45AF3DED6C180211AD5E814557B16DC8E09B6E5C015763C7411F48B2F1",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Finland's Land of a Thousand Lakes epithet is already tested by the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0008-Q018-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0023",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 23,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "6C02F6FE9A826E3DB705779D6381150FCD0CC9DA82E50238C075B952253D4C6D",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The printed Northern Europe wording contains a spelling defect, but European Union and Finnish official sources verify the Helsinki and euro facts retained here.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0023-SRC",
+      "pairId": "WGI-Q0023",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which city is the capital of Finland?",
+      "questionUrdu": "فن لینڈ کا دارالحکومت کون سا شہر ہے؟",
+      "options": [
+        "Turku",
+        "Tampere",
+        "Helsinki",
+        "Oulu"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "ہیلسنکی فن لینڈ کا دارالحکومت اور ملک کا سب سے بڑا شہری مرکز ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.2, item 23",
+        "referenceUrl": "https://european-union.europa.eu/principles-countries-history/eu-countries/finland_en",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0023"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "Corrected the source typo Northen to Northern. The list entry was then divided into distinct capital and currency questions using official evidence.",
+      "references": [
+        {
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries/finland_en",
+          "label": "Finland country profile",
+          "publisher": "European Union",
+          "authorityId": "european-union",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The European Union country profile lists Helsinki as Finland's capital."
+        },
+        {
+          "url": "https://finland.fi/facts-stats-and-info/finland-in-facts/",
+          "label": "Finland in facts",
+          "publisher": "Finland Promotion Board",
+          "authorityId": "finland-fi",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Finland's official country portal identifies Helsinki as the capital."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0023-SIM",
+      "pairId": "WGI-Q0023",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which currency is used in Finland?",
+      "questionUrdu": "فن لینڈ میں کون سی کرنسی استعمال ہوتی ہے؟",
+      "options": [
+        "Krona",
+        "Euro",
+        "Markka",
+        "Krone"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "فن لینڈ یوروزون کا رکن ہے اور اس کی موجودہ سرکاری کرنسی یورو ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 23",
+        "referenceUrl": "https://european-union.europa.eu/principles-countries-history/eu-countries/finland_en",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0023"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "Corrected the source typo Northen to Northern. The list entry was then divided into distinct capital and currency questions using official evidence.",
+      "references": [
+        {
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries/finland_en",
+          "label": "Finland country profile",
+          "publisher": "European Union",
+          "authorityId": "european-union",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The European Union profile lists the euro as Finland's currency."
+        },
+        {
+          "url": "https://finland.fi/facts-stats-and-info/finland-in-facts/",
+          "label": "Finland in facts",
+          "publisher": "Finland Promotion Board",
+          "authorityId": "finland-fi",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Finland's official country facts identify the euro as the currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0024",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 24,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "E0D7F62B4C29F142B486C1809E28469832B8DD58522E0A732C207C9631EE34EA",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The Lake Baikal deepest-lake superlative is already covered by the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0033-Q038-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0025",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 25,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "8814F72B0D66F475CF8578F234048A6B538A73C1D5B5AE0964EA90B1053B6BD3",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The Suez Canal connection between the Mediterranean and Red seas duplicates the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0002-Q049-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0026",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 26,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "834B4C269A40FDCBD1E067AB1F86F9A6E17E75F05D7A5D798EE6F27A504AC14A",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The ASEAN Secretariat headquarters in Jakarta is already tested by the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q037-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0027",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 27,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "5D0D37FD7194B955547368456A6C6ACF17A9AAF3FA8F263F007A78E33C0E60A1",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The Canada longest-coastline question exactly duplicates the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0121-Q002-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0028",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 28,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "08C9661C00C6A0ACFA7E1E273200D3982753A9BB87F2A0469A5AD62772790637",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The South Korean won currency fact is semantically identical to the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "P235-Q001-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0029",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 29,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "2AE1863A92F55358D7A25115CDB57E34EB4926CC3BDA4B38C5F8A3380678E67E",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The Khunjerab Pass connection between Pakistan and China duplicates the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0005-Q022-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0030",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 30,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "B346F04FA05456C198F6C8AE77501FA0F487ABE1ECB0D583A3E46CA018922FCA",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "National Geographic and Guinness independently identify the Gulf of Mexico as the world's largest gulf; its three bordering countries are separately corroborated.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0030-SRC",
+      "pairId": "WGI-Q0030",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which body of water is recognized as the world's largest gulf?",
+      "questionUrdu": "کس آبی ذخیرے کو دنیا کی سب سے بڑی خلیج تسلیم کیا جاتا ہے؟",
+      "options": [
+        "Persian Gulf",
+        "Gulf of Aden",
+        "Gulf of Mexico",
+        "Gulf of California"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "خلیج میکسیکو سطحی وسعت کے لحاظ سے دنیا کی سب سے بڑی خلیج سمجھی جاتی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.2, item 30",
+        "referenceUrl": "https://education.nationalgeographic.org/resource/gulf/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0030"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The conventional international name Gulf of Mexico is retained. Some United States federal materials now use Gulf of America, but that naming change does not alter the geographic answer.",
+      "references": [
+        {
+          "url": "https://education.nationalgeographic.org/resource/gulf/",
+          "label": "Gulf",
+          "publisher": "National Geographic Society",
+          "authorityId": "national-geographic",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "National Geographic identifies the Gulf of Mexico as the world's largest gulf."
+        },
+        {
+          "url": "https://www.guinnessworldrecords.com/world-records/66651-largest-gulf",
+          "label": "Largest gulf",
+          "publisher": "Guinness World Records",
+          "authorityId": "guinness-world-records",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Guinness World Records lists the Gulf of Mexico as the largest gulf."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0030-SIM",
+      "pairId": "WGI-Q0030",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which three countries border the Gulf of Mexico?",
+      "questionUrdu": "خلیج میکسیکو کے ساتھ کن تین ممالک کی سرحدیں ملتی ہیں؟",
+      "options": [
+        "United States, Mexico and Cuba",
+        "Mexico, Belize and Guatemala",
+        "United States, Canada and Cuba",
+        "Cuba, Jamaica and Haiti"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "خلیج میکسیکو کے ساحل امریکہ، میکسیکو اور جزیرہ ملک کیوبا سے ملتے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 30",
+        "referenceUrl": "https://education.nationalgeographic.org/resource/gulf/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0030"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The conventional international name Gulf of Mexico is retained. Some United States federal materials now use Gulf of America, but that naming change does not alter the geographic answer.",
+      "references": [
+        {
+          "url": "https://education.nationalgeographic.org/resource/gulf/",
+          "label": "Gulf",
+          "publisher": "National Geographic Society",
+          "authorityId": "national-geographic",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "National Geographic states that the gulf is bordered by the United States, Mexico and Cuba."
+        },
+        {
+          "url": "https://www.britannica.com/place/Gulf-of-Mexico",
+          "label": "Gulf of Mexico",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Britannica locates the gulf between the United States, Mexico and Cuba."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0031",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 31,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "CE097B8EE4C97A40B2CFA846815943718354345EEFBB3FA8342B6706AE797EAC",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The Caspian Sea largest inland saltwater-body fact is already represented by the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0016-Q065-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0032",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 32,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "E2D4367C087F70809FC2FDD421E1F31C0E290AF2D58501B2A984EF9ADFB8CE86",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The ILO and United Nations independently confirm its Geneva headquarters, while separate ILO and UN publications confirm its unique tripartite structure.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0032-SRC",
+      "pairId": "WGI-Q0032",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Where is the headquarters of the International Labour Organization located?",
+      "questionUrdu": "بین الاقوامی ادارہ محنت کا صدر دفتر کہاں واقع ہے؟",
+      "options": [
+        "Vienna, Austria",
+        "Paris, France",
+        "Geneva, Switzerland",
+        "Rome, Italy"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "بین الاقوامی ادارہ محنت کا صدر دفتر جنیوا، سوئٹزرلینڈ میں واقع ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.2, item 32",
+        "referenceUrl": "https://www.ilo.org/contact",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0032"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The headquarters answer is retained. The related item avoids already-banked founding and tripartite facts and instead tests the name of the ILO's permanent secretariat.",
+      "references": [
+        {
+          "url": "https://www.ilo.org/contact",
+          "label": "ILO contact and headquarters",
+          "publisher": "International Labour Organization",
+          "authorityId": "ilo",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The ILO's official contact page gives its headquarters address in Geneva, Switzerland."
+        },
+        {
+          "url": "https://www.un.org/en/about-us/un-system",
+          "label": "United Nations system",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The United Nations system directory lists ILO headquarters in Geneva, Switzerland."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0032-SIM",
+      "pairId": "WGI-Q0032",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+        "question": "What is the permanent secretariat of the International Labour Organization called?",
+        "questionUrdu": "بین الاقوامی ادارہ محنت کے مستقل سیکریٹریٹ کو کیا کہا جاتا ہے؟",
+      "options": [
+          "International Labour Office",
+          "International Labour Conference",
+          "Governing Body Secretariat",
+          "United Nations Labour Council"
+      ],
+      "correctOptionIndex": 0,
+        "explanationUrdu": "انٹرنیشنل لیبر آفس بین الاقوامی ادارہ محنت کا مستقل سیکریٹریٹ اور اس کی سرگرمیوں کا عملی مرکز ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 32",
+          "referenceUrl": "https://www.ilo.org/about-ilo/organizational-structure-international-labour-office",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0032"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The headquarters answer is retained. The related item avoids already-banked founding and tripartite facts and instead tests the name of the ILO's permanent secretariat.",
+      "references": [
+        {
+            "url": "https://www.ilo.org/about-ilo/organizational-structure-international-labour-office",
+            "label": "Organizational structure of the International Labour Office",
+          "publisher": "International Labour Organization",
+          "authorityId": "ilo",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+            "claimSummary": "The ILO identifies the International Labour Office as its permanent secretariat."
+        },
+        {
+            "url": "https://digitallibrary.un.org/record/562747/files/ngls20052_en.pdf",
+            "label": "UN System Engagement",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+            "claimSummary": "The United Nations publication calls the International Labour Office the permanent secretariat of the ILO."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0033",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 33,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "8F4FB9FB09636D0D8073490A0211E986087506190B152076D61FED1C25E3E023",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Official Bhutanese tourism and foreign-affairs sources confirm the Land of the Thunder Dragon epithet, and monetary authorities verify the ngultrum.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0033-SRC",
+      "pairId": "WGI-Q0033",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which country is traditionally called Druk Yul, the Land of the Thunder Dragon?",
+      "questionUrdu": "کس ملک کو روایتی طور پر درک یول یعنی گرجتے اژدہے کی سرزمین کہا جاتا ہے؟",
+      "options": [
+        "Nepal",
+        "Mongolia",
+        "Bhutan",
+        "Laos"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "بھوٹان کا مقامی نام درک یول ہے، جس کا مفہوم گرجتے اژدہے کی سرزمین ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.2, item 33",
+        "referenceUrl": "https://bhutan.travel/faqs",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0033"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source epithet is retained in its standard form. The related item tests Bhutan's national language rather than its capital or currency, which already appear elsewhere in the bank.",
+      "references": [
+        {
+          "url": "https://bhutan.travel/faqs",
+          "label": "Bhutan travel facts",
+          "publisher": "Department of Tourism, Bhutan",
+          "authorityId": "bhutan-tourism",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Bhutan's official tourism portal explains Druk Yul as Land of the Thunder Dragon."
+        },
+        {
+          "url": "https://www.mfa.gov.bt/wp-content/uploads/2021/12/Window-on-Bhutan-2021.pdf",
+          "label": "Window on Bhutan",
+          "publisher": "Ministry of Foreign Affairs of Bhutan",
+          "authorityId": "bhutan-mfa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Bhutan's foreign ministry publication uses the Land of the Thunder Dragon name for Bhutan."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0033-SIM",
+      "pairId": "WGI-Q0033",
+      "kind": "similar",
+      "categoryId": "geography",
+        "question": "What is the national language of Bhutan?",
+        "questionUrdu": "بھوٹان کی قومی زبان کون سی ہے؟",
+      "options": [
+          "Dzongkha",
+          "Nepali",
+          "Tibetan",
+          "Hindi"
+      ],
+      "correctOptionIndex": 0,
+        "explanationUrdu": "زونگکھا بھوٹان کی قومی زبان ہے، جبکہ انگریزی بھی تعلیم میں وسیع طور پر استعمال ہوتی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 33",
+          "referenceUrl": "https://bhutan.travel/faqs",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0033"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source epithet is retained in its standard form. The related item tests Bhutan's national language rather than its capital or currency, which already appear elsewhere in the bank.",
+      "references": [
+        {
+            "url": "https://bhutan.travel/faqs",
+            "label": "Bhutan travel facts",
+            "publisher": "Department of Tourism, Bhutan",
+            "authorityId": "bhutan-tourism",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+            "claimSummary": "Bhutan's official tourism portal identifies Dzongkha as the national language."
+        },
+        {
+            "url": "https://ungegn.un.org/dashboard/countries/details?id=64",
+            "label": "Bhutan country details",
+            "publisher": "United Nations Group of Experts on Geographical Names",
+            "authorityId": "un-gegn",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+            "claimSummary": "The United Nations geographical-names dashboard lists Dzongkha as Bhutan's first official language."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0034",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 34,
+    "sourcePdfPage": 2,
+    "rawTextSha256": "240CCAFDD4C6963B1A19A70FFF90091CF116C2059907C1DF6FF84D498D79747A",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Two Chinese government information services confirm the Yangtze as Asia's longest river, and separate environmental and reference authorities confirm its outlet.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0034-SRC",
+      "pairId": "WGI-Q0034",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which is the longest river in Asia?",
+      "questionUrdu": "ایشیا کا سب سے طویل دریا کون سا ہے؟",
+      "options": [
+        "Yellow River",
+        "Mekong River",
+        "Yangtze River",
+        "Lena River"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "دریائے یانگسی چین سے گزرتا ہے اور ایشیا کا سب سے طویل دریا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.2, item 34",
+        "referenceUrl": "https://english.scio.gov.cn/chinafacts/2017-04/17/content_40635225.htm",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0034"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source superlative is retained without the unnecessary rounded length claim. The related item tests the river's receiving sea.",
+      "references": [
+        {
+          "url": "https://english.scio.gov.cn/chinafacts/2017-04/17/content_40635225.htm",
+          "label": "China's rivers",
+          "publisher": "State Council Information Office of China",
+          "authorityId": "china-scio",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "China's State Council information service identifies the Yangtze as Asia's longest river."
+        },
+        {
+          "url": "https://tz.mofcom.gov.cn/AboutChina/art/2020/art_176f90afd2ea4d0492e640b38a66d95c.html",
+          "label": "China geography overview",
+          "publisher": "Ministry of Commerce of China",
+          "authorityId": "china-mofcom",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "China's commerce ministry country profile confirms that the Yangtze is the longest river in Asia."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0034-SIM",
+      "pairId": "WGI-Q0034",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Into which sea does the Yangtze River empty?",
+      "questionUrdu": "دریائے یانگسی کس سمندر میں گرتا ہے؟",
+      "options": [
+        "Yellow Sea",
+        "South China Sea",
+        "East China Sea",
+        "Sea of Japan"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "دریائے یانگسی مشرقی چین میں بہتے ہوئے بحیرہ مشرقی چین میں جا گرتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 34",
+        "referenceUrl": "https://english.mee.gov.cn/News_service/media_news/202011/t20201118_808427.shtml",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0034"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source superlative is retained without the unnecessary rounded length claim. The related item tests the river's receiving sea.",
+      "references": [
+        {
+          "url": "https://english.mee.gov.cn/News_service/media_news/202011/t20201118_808427.shtml",
+          "label": "Yangtze River protection",
+          "publisher": "Ministry of Ecology and Environment of China",
+          "authorityId": "china-mee",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "China's environment ministry states that the Yangtze flows into the East China Sea."
+        },
+        {
+          "url": "https://www.britannica.com/place/Yangtze-River",
+          "label": "Yangtze River",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Britannica traces the Yangtze eastward to its mouth in the East China Sea."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0035",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 35,
+    "sourcePdfPage": 3,
+    "rawTextSha256": "86936A0FFC0555B2871CA0C68D6BE1F973FBCDEECA624080978E413418E54282",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The United States-Canada longest international-border fact is already tested by the audited canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0044-Q013-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0036",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 36,
+    "sourcePdfPage": 3,
+    "rawTextSha256": "ADAA2FF5ECBFD84EDA4C83F38DF2450C23A877CB0E1F1365C995CF9DA4A47E92",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "China's immigration authority and the ISO currency-list maintainer verify renminbi as China's currency, while independent sources verify yuan as its basic unit.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0036-SRC",
+      "pairId": "WGI-Q0036",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the official currency of China?",
+      "questionUrdu": "چین کی سرکاری کرنسی کیا ہے؟",
+      "options": [
+        "Renminbi",
+        "Yen",
+        "Won",
+        "Baht"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "چین کی سرکاری کرنسی رینمنبی ہے؛ یوان اس کرنسی کی بنیادی اکائی کا نام ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.3, item 36",
+        "referenceUrl": "https://en.nia.gov.cn/n147428/n147498/n147770/n147895/c158987/content.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0036"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The answer is normalized as renminbi, with yuan treated accurately as its basic unit rather than as an unrelated second currency.",
+      "references": [
+        {
+          "url": "https://en.nia.gov.cn/n147428/n147498/n147770/n147895/c158987/content.html",
+          "label": "Currency information for China",
+          "publisher": "National Immigration Administration of China",
+          "authorityId": "china-nia",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "China's immigration authority states that the legal currency is the renminbi."
+        },
+        {
+          "url": "https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml",
+          "label": "ISO currency list",
+          "publisher": "SIX Financial Information",
+          "authorityId": "six-iso-4217",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official ISO currency list records China's currency as Yuan Renminbi with code CNY."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0036-SIM",
+      "pairId": "WGI-Q0036",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "What is the basic unit of China's renminbi?",
+      "questionUrdu": "چین کی رینمنبی کرنسی کی بنیادی اکائی کیا ہے؟",
+      "options": [
+        "Jiao",
+        "Fen",
+        "Yuan",
+        "Sen"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "یوان رینمنبی کی بنیادی اکائی ہے؛ ایک یوان کو مزید جیاؤ اور فین میں تقسیم کیا جاتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 36",
+        "referenceUrl": "https://en.nia.gov.cn/n147428/n147498/n147770/n147895/c158987/content.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0036"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The answer is normalized as renminbi, with yuan treated accurately as its basic unit rather than as an unrelated second currency.",
+      "references": [
+        {
+          "url": "https://en.nia.gov.cn/n147428/n147498/n147770/n147895/c158987/content.html",
+          "label": "Currency information for China",
+          "publisher": "National Immigration Administration of China",
+          "authorityId": "china-nia",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "China's immigration authority identifies the yuan as the basic unit of the renminbi."
+        },
+        {
+          "url": "https://www.britannica.com/money/yuan",
+          "label": "Yuan",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Britannica defines the yuan as the unit of China's renminbi currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0037",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 37,
+    "sourcePdfPage": 3,
+    "rawTextSha256": "CC3E92C9CCEFE4E9EA9DBFB696CD2A4FDA2572D902D1BC6A476F3FE851539127",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The informal Pearl epithet is not used as the tested fact, and the printed capital note oversimplifies state functions; official sources support the corrected capital and currency items.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0037-SRC",
+      "pairId": "WGI-Q0037",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the legislative and administrative capital of Sri Lanka?",
+      "questionUrdu": "سری لنکا کا قانون ساز اور انتظامی دارالحکومت کون سا ہے؟",
+      "options": [
+        "Colombo",
+        "Sri Jayewardenepura Kotte",
+        "Kandy",
+        "Galle"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "سری جے وردنے پورا کوٹے سری لنکا کا قانون ساز اور انتظامی دارالحکومت ہے، جہاں پارلیمان واقع ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.3, item 37",
+        "referenceUrl": "https://www.mfa.gov.lk/national-profile-and-geography",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0037"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "Replaced the weak informal nickname with verifiable country facts. The legislative and administrative capital is Sri Jayewardenepura Kotte; Colombo remains the commercial centre, so the source parenthesis was corrected.",
+      "references": [
+        {
+          "url": "https://www.mfa.gov.lk/national-profile-and-geography",
+          "label": "Sri Lanka national profile",
+          "publisher": "Ministry of Foreign Affairs of Sri Lanka",
+          "authorityId": "sri-lanka-mfa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Sri Lanka's foreign ministry identifies Sri Jayewardenepura Kotte as the administrative capital."
+        },
+        {
+          "url": "https://www.parliament.lk/files/pdf/parliament-booklet-v2019.pdf",
+          "label": "Parliament of Sri Lanka booklet",
+          "publisher": "Parliament of Sri Lanka",
+          "authorityId": "sri-lanka-parliament",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The parliamentary booklet locates the legislature at Sri Jayewardenepura Kotte and identifies its capital role."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0037-SIM",
+      "pairId": "WGI-Q0037",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "What is the official currency of Sri Lanka?",
+      "questionUrdu": "سری لنکا کی سرکاری کرنسی کیا ہے؟",
+      "options": [
+        "Sri Lankan rupee",
+        "Indian rupee",
+        "Taka",
+        "Rufiyaa"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "سری لنکا کی قانونی کرنسی سری لنکن روپیہ ہے، جسے ملک کا مرکزی بینک جاری کرتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 37",
+        "referenceUrl": "https://www.cbsl.gov.lk/en/node/14876",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0037"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "Replaced the weak informal nickname with verifiable country facts. The legislative and administrative capital is Sri Jayewardenepura Kotte; Colombo remains the commercial centre, so the source parenthesis was corrected.",
+      "references": [
+        {
+          "url": "https://www.cbsl.gov.lk/en/node/14876",
+          "label": "Legal tender in Sri Lanka",
+          "publisher": "Central Bank of Sri Lanka",
+          "authorityId": "central-bank-sri-lanka",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Sri Lanka's central bank confirms the Sri Lankan rupee as the country's legal tender."
+        },
+        {
+          "url": "https://data.un.org/legacy/en/iso/lk.html",
+          "label": "Sri Lanka country profile",
+          "publisher": "United Nations Data",
+          "authorityId": "un-data",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "United Nations country data lists the Sri Lankan rupee as the national currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0038",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 38,
+    "sourcePdfPage": 3,
+    "rawTextSha256": "07CFB9A28DACD6C52B008073D6A28BED2CCB7EFE4B1CF5DAF75E8A8EEAE6E086",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Manual semantic audit found that the OIC General Secretariat headquarters in Jeddah is already tested by this canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0008-Q016-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0039",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 39,
+    "sourcePdfPage": 3,
+    "rawTextSha256": "4E3FD5708BC073555BEC1CE036432F7F8E20C3ACDCAD754814F159917894C05E",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Manual semantic audit found that the OIC's 2011 name-change decision is already tested by this canonical bank item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0043-Q020-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0040",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 40,
+    "sourcePdfPage": 3,
+    "rawTextSha256": "5AE20332AB889965AB1EB614CB09B9A70D85B565109508DA044E315374777191",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The United Nations and National Geographic independently identify the Bay of Bengal as the world's largest bay, and separate authorities verify its oceanic setting.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0040-SRC",
+      "pairId": "WGI-Q0040",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which is the largest bay in the world?",
+      "questionUrdu": "دنیا کی سب سے بڑی خلیج کون سی ہے؟",
+      "options": [
+        "Hudson Bay",
+        "Bay of Biscay",
+        "Bay of Bengal",
+        "Baffin Bay"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "خلیج بنگال رقبے کے لحاظ سے دنیا کی سب سے بڑی خلیج ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.3, item 40",
+        "referenceUrl": "https://www.un.org/depts/los/global_reporting/WOA_RPROC/WOACompilation.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0040"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source superlative is retained. The related question tests the Bay of Bengal's position within the Indian Ocean without repeating the size comparison.",
+      "references": [
+        {
+          "url": "https://www.un.org/depts/los/global_reporting/WOA_RPROC/WOACompilation.pdf",
+          "label": "World Ocean Assessment regional process",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The United Nations ocean assessment identifies the Bay of Bengal as the largest bay."
+        },
+        {
+          "url": "https://education.nationalgeographic.org/resource/bay/",
+          "label": "Bay",
+          "publisher": "National Geographic Society",
+          "authorityId": "national-geographic",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "National Geographic states that the Bay of Bengal is the largest bay in the world."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0040-SIM",
+      "pairId": "WGI-Q0040",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "The Bay of Bengal forms the northeastern part of which ocean?",
+      "questionUrdu": "خلیج بنگال کس سمندر کے شمال مشرقی حصے پر مشتمل ہے؟",
+      "options": [
+        "Atlantic Ocean",
+        "Pacific Ocean",
+        "Indian Ocean",
+        "Arctic Ocean"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "خلیج بنگال بحر ہند کے شمال مشرقی حصے میں واقع ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related verified PPSC practice for WGI item 40",
+        "referenceUrl": "https://agrovoc.fao.org/browse/agrovoc/en/page/c_849",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0040"
+      ],
+      "verificationStatus": "verified",
+      "sourceNotes": "The source superlative is retained. The related question tests the Bay of Bengal's position within the Indian Ocean without repeating the size comparison.",
+      "references": [
+        {
+          "url": "https://agrovoc.fao.org/browse/agrovoc/en/page/c_849",
+          "label": "Bay of Bengal concept",
+          "publisher": "Food and Agriculture Organization of the United Nations",
+          "authorityId": "fao",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FAO AGROVOC defines the Bay of Bengal as the northeastern part of the Indian Ocean."
+        },
+        {
+          "url": "https://education.nationalgeographic.org/resource/asia/",
+          "label": "Asia physical geography",
+          "publisher": "National Geographic Society",
+          "authorityId": "national-geographic",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "National Geographic places the Bay of Bengal on the Indian Ocean."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  }
+]

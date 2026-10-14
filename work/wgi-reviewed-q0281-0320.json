@@ -1,0 +1,4212 @@
+[
+  {
+    "sourceRecordId": "WGI-Q0281",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 281,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "A6C703BFAE2D679ED20D0657E8C3CC18705D96DB5F3604681ED07231C4CCEB00",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent scientific authorities confirm that earthquakes, landslides, and volcanic activity can generate tsunamis; the item is retained with a distinct related fact.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0281-SRC",
+      "pairId": "WGI-Q0281",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which set lists three geological events that can generate tsunamis?",
+      "questionUrdu": "کون سا مجموعہ ان تین ارضیاتی واقعات کو بیان کرتا ہے جو سونامی پیدا کر سکتے ہیں؟",
+      "options": [
+        "Earthquakes, landslides, and volcanic eruptions",
+        "Droughts, heat waves, and tornadoes",
+        "Fog, frost, and hailstorms",
+        "Monsoons, blizzards, and dust storms"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Earthquakes, landslides, and volcanic eruptions ہے۔ سمندر کے اندر اچانک پانی کی بڑی مقدار ہٹنے سے سونامی بنتا ہے، اور یہ تینوں ارضیاتی واقعات ایسا کر سکتے ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 281",
+        "referenceUrl": "https://www.noaa.gov/explainers/science-behind-tsunamis",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0281"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.noaa.gov/explainers/science-behind-tsunamis",
+          "label": "The science behind tsunamis",
+          "publisher": "National Oceanic and Atmospheric Administration",
+          "authorityId": "noaa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that earthquakes most commonly generate tsunamis and that landslides and volcanic activity can also do so."
+        },
+        {
+          "url": "https://www.usgs.gov/faqs/what-are-tsunamis?page=1&qt-news_science_products=0",
+          "label": "What are tsunamis?",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "us-geological-survey",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Lists large earthquakes, volcanic eruptions, and submarine or coastal landslides among tsunami-generating events."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The broad prose answer was converted into a single-best-answer set question without changing the verified scientific claim."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0281-SIM",
+      "pairId": "WGI-Q0281",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "What is the most common natural cause of a tsunami?",
+      "questionUrdu": "سونامی کی سب سے عام قدرتی وجہ کیا ہے؟",
+      "options": [
+        "A large earthquake beneath or near the ocean",
+        "A prolonged drought over land",
+        "A seasonal heat wave",
+        "A solar eclipse"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب سمندر کے نیچے یا قریب آنے والا بڑا زلزلہ ہے۔ سمندری فرش کی اچانک حرکت پانی کو ہٹا کر سونامی کی لہریں پیدا کر سکتی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 281",
+        "referenceUrl": "https://www.noaa.gov/explainers/science-behind-tsunamis",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0281"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.noaa.gov/explainers/science-behind-tsunamis",
+          "label": "The science behind tsunamis",
+          "publisher": "National Oceanic and Atmospheric Administration",
+          "authorityId": "noaa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Identifies large earthquakes below or near the ocean as the most common cause of tsunamis."
+        },
+        {
+          "url": "https://www.usgs.gov/faqs/what-are-tsunamis?page=1&qt-news_science_products=0",
+          "label": "What are tsunamis?",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "us-geological-survey",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently describes large near-ocean or under-ocean earthquakes as the principal tsunami source."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This related item tests the most common generator rather than repeating the source item’s three-event set."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0282",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 282,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "1AEE5A35A904AE2B8E758421805130E9EC931E41D27DFF96977D7E8A4D4F8B5D",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank question already tests the same book authorship fact with the same answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q100-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0283",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 283,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "618908780B518EF2DC4B0A635BBFA65873AD3BD26E83B846AEB1BC2D42DCB874",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "reject",
+    "reason": "The stem asks for a province but the printed answer gives a city and merges explanatory text, so the audited malformed line is rejected rather than guessed.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0284",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 284,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "9850E2F07E536BF2C8837E06B92D81FEF4F7ECAB0C63BE246B317D17EA460070",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent Pakistani government sources confirm the mosque’s Peshawar location and its association with the Mughal governor Mahabat Khan.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0284-SRC",
+      "pairId": "WGI-Q0284",
+      "kind": "source",
+      "categoryId": "pakistan-studies",
+      "question": "In which Pakistani city is the Mahabat Khan Mosque located?",
+      "questionUrdu": "مہابت خان مسجد پاکستان کے کس شہر میں واقع ہے؟",
+      "options": [
+        "Peshawar",
+        "Lahore",
+        "Multan",
+        "Thatta"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Peshawar ہے۔ سترھویں صدی کی یہ مغلیہ مسجد پشاور کے قدیم شہر میں واقع ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 284",
+        "referenceUrl": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Provincial-Census-Report-2023-KP.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0284"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Provincial-Census-Report-2023-KP.pdf",
+          "label": "Provincial Census Report 2023: Khyber Pakhtunkhwa",
+          "publisher": "Pakistan Bureau of Statistics",
+          "authorityId": "pakistan-bureau-statistics",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Locates the seventeenth-century Mahabat Khan Mosque in the old city of Peshawar."
+        },
+        {
+          "url": "https://tourism.gov.pk/publications/Peshawar%20Booklet.pdf",
+          "label": "Peshawar travel guide",
+          "publisher": "Pakistan Tourism Development Corporation",
+          "authorityId": "pakistan-tourism-development-corporation",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official Peshawar guide describes the Mahabat Khan Mosque as a Mughal landmark in old Peshawar."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The location was confirmed through two independent federal government publications."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0284-SIM",
+      "pairId": "WGI-Q0284",
+      "kind": "similar",
+      "categoryId": "pakistan-studies",
+      "question": "The Mahabat Khan Mosque was named after a regional governor who served under which two Mughal emperors?",
+      "questionUrdu": "مہابت خان مسجد جس علاقائی گورنر کے نام پر ہے، اس نے کن دو مغل بادشاہوں کے دور میں خدمت کی؟",
+      "options": [
+        "Shah Jahan and Aurangzeb",
+        "Babur and Humayun",
+        "Akbar and Jahangir",
+        "Bahadur Shah I and Farrukhsiyar"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Shah Jahan and Aurangzeb ہے۔ مسجد ایک علاقائی گورنر مہابت خان کے نام پر ہے جس نے ان دونوں مغل بادشاہوں کے ادوار میں خدمت کی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 284",
+        "referenceUrl": "https://tourism.gov.pk/publications/Peshawar%20Booklet.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0284"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://tourism.gov.pk/publications/Peshawar%20Booklet.pdf",
+          "label": "Peshawar travel guide",
+          "publisher": "Pakistan Tourism Development Corporation",
+          "authorityId": "pakistan-tourism-development-corporation",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "States that the mosque was named after a governor who served Shah Jahan and Aurangzeb."
+        },
+        {
+          "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Provincial-Census-Report-2023-KP.pdf",
+          "label": "Provincial Census Report 2023: Khyber Pakhtunkhwa",
+          "publisher": "Pakistan Bureau of Statistics",
+          "authorityId": "pakistan-bureau-statistics",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Names Mahabat Khan and confirms that he governed Peshawar in the periods of Shah Jahan and Aurangzeb."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the mosque’s Mughal historical association rather than repeating its city."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0285",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 285,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "C9E584EF4B5447D0255A155AE181FECED6A831CFA802363A88DDDFDA1CDDE0DD",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent metrology and university references confirm that a refractometer measures refractive index and can report Brix concentration.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0285-SRC",
+      "pairId": "WGI-Q0285",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which property of a liquid is directly measured by a refractometer?",
+      "questionUrdu": "ریفریکٹومیٹر کسی مائع کی کون سی خاصیت براہِ راست ناپتا ہے؟",
+      "options": [
+        "Refractive index",
+        "Electrical resistance",
+        "Boiling point",
+        "Surface tension"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Refractive index ہے۔ ریفریکٹومیٹر روشنی کے مڑنے کی پیمائش سے مائع کا ضریبِ انعطاف معلوم کرتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 285",
+        "referenceUrl": "https://www.nist.gov/laboratories/tools-instruments/ar200-refractometer-meter",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0285"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nist.gov/laboratories/tools-instruments/ar200-refractometer-meter",
+          "label": "AR200 refractometer meter",
+          "publisher": "National Institute of Standards and Technology",
+          "authorityId": "nist",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Describes the instrument as measuring the refractive index of liquid samples."
+        },
+        {
+          "url": "https://encyclopedia.che.engin.umich.edu/refractometers/",
+          "label": "Refractometers",
+          "publisher": "University of Michigan Chemical Engineering",
+          "authorityId": "university-michigan-chemical-engineering",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that refractometers determine refractive index from the refraction of light."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The instrument-use statement was expressed as a precise four-option measurement question."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0285-SIM",
+      "pairId": "WGI-Q0285",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "On many food-industry refractometers, a Brix reading estimates the concentration of what?",
+      "questionUrdu": "غذائی صنعت کے بہت سے ریفریکٹومیٹرز میں Brix ریڈنگ کس چیز کے ارتکاز کا اندازہ دیتی ہے؟",
+      "options": [
+        "Dissolved sugar or soluble solids",
+        "Dissolved oxygen only",
+        "Suspended clay particles",
+        "Radioactive isotopes"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Dissolved sugar or soluble solids ہے۔ Brix اسکیل عموماً محلول میں شکر یا کل حل پذیر ٹھوس مادوں کے ارتکاز کا اندازہ دیتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 285",
+        "referenceUrl": "https://www.nist.gov/laboratories/tools-instruments/ar200-refractometer-meter",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0285"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nist.gov/laboratories/tools-instruments/ar200-refractometer-meter",
+          "label": "AR200 refractometer meter",
+          "publisher": "National Institute of Standards and Technology",
+          "authorityId": "nist",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Lists Brix among the measurement modes of a laboratory refractometer."
+        },
+        {
+          "url": "https://encyclopedia.che.engin.umich.edu/refractometers/",
+          "label": "Refractometers",
+          "publisher": "University of Michigan Chemical Engineering",
+          "authorityId": "university-michigan-chemical-engineering",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains use of Brix refractometers to estimate sugar or soluble-solids concentration."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests a common refractometer scale rather than repeating the measured physical property."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0286",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 286,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "C9BEEF456B0E3CCF2A89371E687EE87F5B7C53E47235C08BF127EE356C48CB26",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Official California and county material confirms the location, but the PDF’s description of Mariposa as a city was corrected to an unincorporated community and county seat.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0286-SRC",
+      "pairId": "WGI-Q0286",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Mariposa, an unincorporated community and county seat, is in which U.S. state?",
+      "questionUrdu": "Mariposa، جو ایک غیر بلدیاتی آبادی اور کاؤنٹی صدر مقام ہے، امریکہ کی کس ریاست میں واقع ہے؟",
+      "options": [
+        "California",
+        "Nevada",
+        "Arizona",
+        "Oregon"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب California ہے۔ Mariposa ریاست کیلیفورنیا میں واقع ایک غیر بلدیاتی آبادی اور Mariposa County کا صدر مقام ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 286",
+        "referenceUrl": "https://www.mariposacounty.gov/DocumentView.aspx?DID=2918",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0286"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mariposacounty.gov/DocumentView.aspx?DID=2918",
+          "label": "Mariposa County General Plan",
+          "publisher": "County of Mariposa",
+          "authorityId": "mariposa-county-government",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The county general plan identifies the town of Mariposa as the county seat in California."
+        },
+        {
+          "url": "https://ohp.parks.ca.gov/ListedResources/Detail/670",
+          "label": "Mariposa County Courthouse",
+          "publisher": "California State Parks Office of Historic Preservation",
+          "authorityId": "california-state-parks",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "California’s official historic register locates the Mariposa County courthouse in Mariposa, California."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF calls Mariposa a city; official local material supports describing it more accurately as an unincorporated community and county seat in California."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0286-SIM",
+      "pairId": "WGI-Q0286",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Mariposa serves as the administrative seat of which California county?",
+      "questionUrdu": "Mariposa کیلیفورنیا کی کس کاؤنٹی کا انتظامی صدر مقام ہے؟",
+      "options": [
+        "Mariposa County",
+        "Mono County",
+        "Tuolumne County",
+        "Merced County"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Mariposa County ہے۔ Mariposa اسی نام کی کیلیفورنیا کاؤنٹی کا صدر مقام ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 286",
+        "referenceUrl": "https://www.mariposacounty.gov/DocumentView.aspx?DID=2918",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0286"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mariposacounty.gov/DocumentView.aspx?DID=2918",
+          "label": "Mariposa County General Plan",
+          "publisher": "County of Mariposa",
+          "authorityId": "mariposa-county-government",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Identifies Mariposa as the county seat of Mariposa County."
+        },
+        {
+          "url": "https://ohp.parks.ca.gov/ListedResources/Detail/670",
+          "label": "Mariposa County Courthouse",
+          "publisher": "California State Parks Office of Historic Preservation",
+          "authorityId": "california-state-parks",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The state historic-register entry documents the county courthouse and county-government role at Mariposa."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related question tests Mariposa’s county-seat role, a distinct fact from the state-location source item."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0287",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 287,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "4F1ECCCE41CC941668BCE4D7D20AA472B24D3838F9748FC0A73F8AA02F9AA774",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank question already tests Mariupol’s internationally recognized country with the same answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q072-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0288",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 288,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "FF253CC901CC9C415409CBDF490BC7B437FAA81866D0117E41FADF72FCA3CB05",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent museum and cultural-institute sources confirm Kafka’s German-language literary identity and his Prague birthplace.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0288-SRC",
+      "pairId": "WGI-Q0288",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Franz Kafka is chiefly remembered as what kind of twentieth-century writer?",
+      "questionUrdu": "Franz Kafka کو بیسویں صدی کے کس نوع کے ادیب کے طور پر بنیادی طور پر یاد کیا جاتا ہے؟",
+      "options": [
+        "A German-language novelist and short-story writer",
+        "A French-language lyric poet",
+        "An English-language dramatist",
+        "An Italian-language historian"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب German-language novelist and short-story writer ہے۔ Kafka نے جرمن زبان میں ناول اور افسانے لکھے اور جدید ادب پر گہرا اثر ڈالا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 288",
+        "referenceUrl": "https://kafkamuseum.cz/en/biography",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0288"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://kafkamuseum.cz/en/biography",
+          "label": "Franz Kafka biography",
+          "publisher": "Franz Kafka Museum",
+          "authorityId": "franz-kafka-museum",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Presents Kafka as a central German-language prose writer of the twentieth century."
+        },
+        {
+          "url": "https://www.goethe.de/resources/files/pdf348/en_gi_jahrbuch_2324_gb_web-v1.pdf",
+          "label": "Goethe-Institut yearbook 2023/24",
+          "publisher": "Goethe-Institut",
+          "authorityId": "goethe-institut",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Identifies Franz Kafka as one of the most important German-language writers."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The source description was retained as a precise literary-classification question."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0288-SIM",
+      "pairId": "WGI-Q0288",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "In which city was Franz Kafka born?",
+      "questionUrdu": "Franz Kafka کس شہر میں پیدا ہوئے تھے؟",
+      "options": [
+        "Prague",
+        "Vienna",
+        "Berlin",
+        "Zurich"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Prague ہے۔ Franz Kafka 3 July 1883 کو پراگ میں پیدا ہوئے تھے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 288",
+        "referenceUrl": "https://kafkamuseum.cz/en/timeline",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0288"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://kafkamuseum.cz/en/timeline",
+          "label": "Franz Kafka timeline",
+          "publisher": "Franz Kafka Museum",
+          "authorityId": "franz-kafka-museum",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Records Kafka’s birth in Prague on 3 July 1883."
+        },
+        {
+          "url": "https://www.jmberlin.de/sites/default/files/media/documents/241118_JMB_Kafka_Booklet_DIGITAL.pdf",
+          "label": "Kafka exhibition booklet",
+          "publisher": "Jewish Museum Berlin",
+          "authorityId": "jewish-museum-berlin",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently states that Franz Kafka was born in Prague in 1883."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests Kafka’s birthplace rather than restating his literary classification."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0289",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 289,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "5784A13A74AC6AB3E68FFEDE4490A3BA987CE8AF5784BD9DE4A95F38F1D51AB2",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "NOAA and the National Park Service independently confirm that brackish water is characteristic of estuaries where fresh and salt water mix.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0289-SRC",
+      "pairId": "WGI-Q0289",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "In which coastal environment is brackish water most typically found?",
+      "questionUrdu": "ساحلی علاقے کے کس ماحول میں عموماً کھارا میٹھا ملا جلا پانی پایا جاتا ہے؟",
+      "options": [
+        "Estuary",
+        "Glacier",
+        "Sand dune",
+        "Mountain spring"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Estuary ہے۔ دریا کا میٹھا پانی جب سمندر کے نمکین پانی سے ملتا ہے تو مصب میں brackish water بنتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 289",
+        "referenceUrl": "https://oceanservice.noaa.gov/education/tutorial_estuaries/est01_whatis.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0289"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://oceanservice.noaa.gov/education/tutorial_estuaries/est01_whatis.html",
+          "label": "What is an estuary?",
+          "publisher": "NOAA National Ocean Service",
+          "authorityId": "noaa-national-ocean-service",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Defines estuaries as coastal waters where river freshwater mixes with salty ocean water."
+        },
+        {
+          "url": "https://home.nps.gov/guis/learn/nature/estuaries.htm",
+          "label": "Estuaries",
+          "publisher": "U.S. National Park Service",
+          "authorityId": "us-national-park-service",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that freshwater and saltwater mix in estuaries to create brackish water."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The habitat answer was verified and expressed with a clear coastal-environment stem."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0289-SIM",
+      "pairId": "WGI-Q0289",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Brackish water has a salinity that is generally between which two water types?",
+      "questionUrdu": "Brackish water کی نمکیات عموماً کن دو اقسام کے پانی کے درمیان ہوتی ہے؟",
+      "options": [
+        "Fresh water and seawater",
+        "Rainwater and distilled water",
+        "Groundwater and ice",
+        "Steam and mineral water"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Fresh water and seawater ہے۔ Brackish water میٹھے اور سمندری پانی کے اختلاط سے بنتا ہے، اس لیے اس کی نمکیات دونوں کے درمیان ہوتی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 289",
+        "referenceUrl": "https://home.nps.gov/guis/learn/nature/estuaries.htm",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0289"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://home.nps.gov/guis/learn/nature/estuaries.htm",
+          "label": "Estuaries",
+          "publisher": "U.S. National Park Service",
+          "authorityId": "us-national-park-service",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Describes brackish water as a mixture of fresh water and salt water."
+        },
+        {
+          "url": "https://oceanservice.noaa.gov/education/tutorial_estuaries/est01_whatis.html",
+          "label": "What is an estuary?",
+          "publisher": "NOAA National Ocean Service",
+          "authorityId": "noaa-national-ocean-service",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Confirms that the mixing of freshwater and seawater produces brackish conditions."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the composition of brackish water rather than repeating its usual habitat."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0290",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 290,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "B0D9E1CBB2AB96F6B3A6C2CDF0631E54688C76DE8B7423CC414D810D3E1D6DA1",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "SUPARCO and China’s space authority independently confirm PRSC-EO1’s launch date, site, and launch vehicle.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0290-SRC",
+      "pairId": "WGI-Q0290",
+      "kind": "source",
+      "categoryId": "pakistan-studies",
+      "question": "On what date in 2025 was Pakistan's PRSC-EO1 electro-optical satellite launched?",
+      "questionUrdu": "2025 میں پاکستان کا PRSC-EO1 برقی بصری سیٹلائٹ کس تاریخ کو لانچ کیا گیا؟",
+      "options": [
+        "17 January 2025",
+        "28 February 2025",
+        "14 August 2025",
+        "21 December 2025"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 17 January 2025 ہے۔ پاکستان کا PRSC-EO1 سیٹلائٹ 17 January 2025 کو چین کے Jiuquan Satellite Launch Center سے روانہ کیا گیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 290",
+        "referenceUrl": "https://suparco.gov.pk/major-programmes-satellite-programs/eo-1.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0290"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://suparco.gov.pk/major-programmes-satellite-programs/eo-1.html",
+          "label": "PRSC-EO1 satellite",
+          "publisher": "Pakistan Space and Upper Atmosphere Research Commission",
+          "authorityId": "suparco",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Records PRSC-EO1 as launched on 17 January 2025."
+        },
+        {
+          "url": "https://www.cnsa.gov.cn/n6758823/n6758838/c10645240/content.html",
+          "label": "Long March-2D launches Pakistan EO-1 satellite",
+          "publisher": "China National Space Administration",
+          "authorityId": "china-national-space-administration",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently reports the Pakistani EO-1 launch on 17 January 2025."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2025-01-17",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The satellite name and exact launch date were preserved from the verified event record."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0290-SIM",
+      "pairId": "WGI-Q0290",
+      "kind": "similar",
+      "categoryId": "pakistan-studies",
+      "question": "From which launch centre was PRSC-EO1 sent into orbit in 2025?",
+      "questionUrdu": "2025 میں PRSC-EO1 کو کس لانچ سینٹر سے مدار میں بھیجا گیا؟",
+      "options": [
+        "Jiuquan Satellite Launch Center",
+        "Kennedy Space Center",
+        "Baikonur Cosmodrome",
+        "Satish Dhawan Space Centre"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Jiuquan Satellite Launch Center ہے۔ PRSC-EO1 کو چین کے Jiuquan مرکز سے Long March-2D راکٹ کے ذریعے لانچ کیا گیا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 290",
+        "referenceUrl": "https://www.cnsa.gov.cn/n6758823/n6758838/c10645240/content.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0290"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.cnsa.gov.cn/n6758823/n6758838/c10645240/content.html",
+          "label": "Long March-2D launches Pakistan EO-1 satellite",
+          "publisher": "China National Space Administration",
+          "authorityId": "china-national-space-administration",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Reports that the satellite launched from the Jiuquan Satellite Launch Center."
+        },
+        {
+          "url": "https://suparco.gov.pk/major-programmes-satellite-programs/eo-1.html",
+          "label": "PRSC-EO1 satellite",
+          "publisher": "Pakistan Space and Upper Atmosphere Research Commission",
+          "authorityId": "suparco",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Confirms Jiuquan as the PRSC-EO1 launch site in 2025."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2025-01-17",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the launch site instead of repeating the source item’s date."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0291",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 291,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "29832FC59B30A7B18DAC4715F4E6520682649E7B224BE6848F8FA3A6D6FADD7F",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The State Bank of Pakistan and an independent national broadcaster confirm the current policy rate and the latest MPC decision date, with an explicit verification date.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0291-SRC",
+      "pairId": "WGI-Q0291",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "As of 12 October 2026, what is the State Bank of Pakistan policy rate?",
+      "questionUrdu": "12 October 2026 تک State Bank of Pakistan کی پالیسی شرح کیا ہے؟",
+      "options": [
+        "11.5%",
+        "9.5%",
+        "10.5%",
+        "12.5%"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 11.5% ہے۔ 14 September 2026 کے MPC فیصلے میں پالیسی شرح 11.5% پر برقرار رکھی گئی تھی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 291",
+        "referenceUrl": "https://www.sbp.org.pk/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0291"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.sbp.org.pk/",
+          "label": "State Bank of Pakistan policy-rate dashboard",
+          "publisher": "State Bank of Pakistan",
+          "authorityId": "state-bank-pakistan",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Displays an 11.50% policy rate and records the 14 September 2026 MPC decision."
+        },
+        {
+          "url": "https://radio.gov.pk/14-09-2026/sbp-keeps-policy-rate-unchanged-at-115",
+          "label": "SBP keeps policy rate unchanged at 11.5%",
+          "publisher": "Radio Pakistan",
+          "authorityId": "radio-pakistan",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Independently reports the 14 September 2026 decision to retain the policy rate at 11.5%."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2026-10-27"
+      },
+      "sourceNotes": "The volatile monetary-policy figure is explicitly scoped to the verification date and must be rechecked after the next MPC decision."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0291-SIM",
+      "pairId": "WGI-Q0291",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "As of 12 October 2026, on what date did the latest SBP MPC meeting keep the policy rate at 11.5%?",
+      "questionUrdu": "12 October 2026 تک SBP MPC کے تازہ ترین اجلاس نے 11.5% پالیسی شرح کس تاریخ کو برقرار رکھی؟",
+      "options": [
+        "14 September 2026",
+        "27 July 2026",
+        "28 April 2026",
+        "16 December 2025"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 14 September 2026 ہے۔ اسی اجلاس میں SBP کی پالیسی شرح 11.5% پر برقرار رکھی گئی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 291",
+        "referenceUrl": "https://radio.gov.pk/14-09-2026/sbp-keeps-policy-rate-unchanged-at-115",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0291"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://radio.gov.pk/14-09-2026/sbp-keeps-policy-rate-unchanged-at-115",
+          "label": "SBP keeps policy rate unchanged at 11.5%",
+          "publisher": "Radio Pakistan",
+          "authorityId": "radio-pakistan",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Dates the rate-hold decision to 14 September 2026."
+        },
+        {
+          "url": "https://www.sbp.org.pk/",
+          "label": "State Bank of Pakistan policy-rate dashboard",
+          "publisher": "State Bank of Pakistan",
+          "authorityId": "state-bank-pakistan",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Confirms that the MPC meeting held on 14 September 2026 kept the rate at 11.5%."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2026-10-27"
+      },
+      "sourceNotes": "The related item tests the date of the latest decision, not the rate value alone."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0292",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 292,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "877AD2C7A294524D7D6229F704737072C608FA9E65B99D5D90DCFA9255CF5343",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "India’s project developer and parliamentary record independently confirm that Dulhasti Stage-II is on the Chenab River and has 260 MW planned capacity.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0292-SRC",
+      "pairId": "WGI-Q0292",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "India's Dulhasti Stage-II hydroelectric project is planned on which river?",
+      "questionUrdu": "بھارت کا Dulhasti Stage-II پن بجلی منصوبہ کس دریا پر بنانے کا منصوبہ ہے؟",
+      "options": [
+        "Chenab River",
+        "Jhelum River",
+        "Ravi River",
+        "Sutlej River"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Chenab River ہے۔ Dulhasti Stage-II جموں و کشمیر میں دریائے چناب پر تجویز کردہ پن بجلی منصوبہ ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 292",
+        "referenceUrl": "https://www.nhpcindia.com/welcome/project_detail/16/1/2",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0292"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nhpcindia.com/welcome/project_detail/16/1/2",
+          "label": "Dulhasti Stage-II Hydroelectric Project",
+          "publisher": "NHPC Limited",
+          "authorityId": "nhpc-india",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Identifies the Dulhasti Stage-II project as a hydroelectric scheme on the Chenab River."
+        },
+        {
+          "url": "https://sansad.in/getFile/annex/269/AS8_GROkTc.pdf?source=pqars",
+          "label": "Parliamentary answer on hydroelectric projects",
+          "publisher": "Parliament of India",
+          "authorityId": "parliament-india",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The parliamentary project table lists Dulhasti Stage-II on the Chenab River."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The river association was verified directly in the developer and parliamentary project records."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0292-SIM",
+      "pairId": "WGI-Q0292",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "What is the planned installed capacity of the Dulhasti Stage-II hydroelectric project?",
+      "questionUrdu": "Dulhasti Stage-II پن بجلی منصوبے کی مجوزہ نصب شدہ صلاحیت کتنی ہے؟",
+      "options": [
+        "260 MW",
+        "120 MW",
+        "450 MW",
+        "780 MW"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 260 MW ہے۔ سرکاری منصوبہ جاتی ریکارڈ کے مطابق Dulhasti Stage-II کی مجوزہ نصب شدہ صلاحیت 260 MW ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 292",
+        "referenceUrl": "https://www.nhpcindia.com/welcome/project_detail/16/1/2",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0292"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nhpcindia.com/welcome/project_detail/16/1/2",
+          "label": "Dulhasti Stage-II Hydroelectric Project",
+          "publisher": "NHPC Limited",
+          "authorityId": "nhpc-india",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "States a planned installed capacity of 260 MW for Dulhasti Stage-II."
+        },
+        {
+          "url": "https://sansad.in/getFile/annex/269/AS8_GROkTc.pdf?source=pqars",
+          "label": "Parliamentary answer on hydroelectric projects",
+          "publisher": "Parliament of India",
+          "authorityId": "parliament-india",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently lists the Dulhasti Stage-II project capacity as 260 MW."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests project capacity rather than repeating the river-location fact."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0293",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 293,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "8FD344008E2334934094AAB5D3E25550DB1BCFDAA2A4086EB775D8D700D456E6",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Official UNFCCC and Brazilian government records confirm Belém as the venue and correct the PDF’s date range to 10–21 November 2025.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0293-SRC",
+      "pairId": "WGI-Q0293",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Where and on which official dates was COP30 held in 2025?",
+      "questionUrdu": "2025 میں COP30 کہاں اور کن سرکاری تاریخوں پر منعقد ہوئی؟",
+      "options": [
+        "Belém, Brazil — 10–21 November 2025",
+        "Rio de Janeiro, Brazil — 6–22 November 2025",
+        "Dubai, UAE — 10–21 November 2025",
+        "Antalya, Türkiye — 9–20 November 2025"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Belém, Brazil — 10–21 November 2025 ہے۔ COP30 کا سرکاری اجلاس بیلیم، برازیل میں 10 سے 21 نومبر 2025 تک ہوا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 293",
+        "referenceUrl": "https://unfccc.int/cop30",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0293"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://unfccc.int/cop30",
+          "label": "UN Climate Change Conference COP30",
+          "publisher": "United Nations Framework Convention on Climate Change",
+          "authorityId": "unfccc",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Officially identifies Belém, Brazil and 10–21 November 2025 as the COP30 venue and conference dates."
+        },
+        {
+          "url": "https://www.gov.br/mma/pt-br/assuntos/cop30/cop30/",
+          "label": "COP30 in Belém",
+          "publisher": "Ministry of the Environment and Climate Change of Brazil",
+          "authorityId": "brazil-environment-ministry",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Brazil’s official host information confirms Belém and the 10–21 November 2025 conference period."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2025-11-10",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF prints 6–22 November 2025; the official UNFCCC and host-government conference dates are 10–21 November 2025, so the answer was corrected."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0293-SIM",
+      "pairId": "WGI-Q0293",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "Which 2025 UN climate conference was hosted in Belém at the gateway to the Amazon?",
+      "questionUrdu": "2025 میں Amazon کے دروازے سمجھے جانے والے شہر Belém میں اقوام متحدہ کی کون سی موسمیاتی کانفرنس منعقد ہوئی؟",
+      "options": [
+        "COP30",
+        "COP28",
+        "COP29",
+        "COP31"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب COP30 ہے۔ 2025 کی اقوام متحدہ موسمیاتی کانفرنس COP30 بیلیم، برازیل میں منعقد ہوئی، جو Amazon خطے کا اہم دروازہ ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 293",
+        "referenceUrl": "https://www.gov.br/mma/pt-br/assuntos/cop30/cop30/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0293"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.gov.br/mma/pt-br/assuntos/cop30/cop30/",
+          "label": "COP30 in Belém",
+          "publisher": "Ministry of the Environment and Climate Change of Brazil",
+          "authorityId": "brazil-environment-ministry",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Identifies COP30 as the 2025 climate conference hosted in Belém in the Amazon region."
+        },
+        {
+          "url": "https://unfccc.int/cop30",
+          "label": "UN Climate Change Conference COP30",
+          "publisher": "United Nations Framework Convention on Climate Change",
+          "authorityId": "unfccc",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently identifies the 2025 Belém UN climate conference as COP30."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2025-11-10",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the conference identity and Amazon setting rather than repeating the corrected date range."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0294",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 294,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "3E4B3037051504C1FE02D8B49CA9351B40BD56DEF29DF548332926A131AD58AA",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "UNFCCC and the Turkish host government independently confirm the scheduled COP31 location and dates, explicitly scoped before the conference.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0294-SRC",
+      "pairId": "WGI-Q0294",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "As of 12 October 2026, where and when is COP31 scheduled to take place?",
+      "questionUrdu": "12 October 2026 تک COP31 کہاں اور کب منعقد ہونا طے ہے؟",
+      "options": [
+        "Antalya, Türkiye — 9–20 November 2026",
+        "Belém, Brazil — 10–21 November 2026",
+        "Baku, Azerbaijan — 11–22 November 2026",
+        "Dubai, UAE — 30 November–12 December 2026"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Antalya, Türkiye — 9–20 November 2026 ہے۔ 12 October 2026 تک سرکاری شیڈول کے مطابق COP31 انطالیہ میں ان تاریخوں پر ہونا طے تھا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 294",
+        "referenceUrl": "https://unfccc.int/cop31",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0294"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://unfccc.int/cop31",
+          "label": "UN Climate Change Conference COP31",
+          "publisher": "United Nations Framework Convention on Climate Change",
+          "authorityId": "unfccc",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Lists Antalya, Türkiye and 9–20 November 2026 as the COP31 venue and dates."
+        },
+        {
+          "url": "https://www.iletisim.gov.tr/turkce/Duyurular/detay/birlesmis-milletler-iklim-degisikligi-konferansi-cop31-basin-akreditasyonu-duyurusu",
+          "label": "COP31 press accreditation announcement",
+          "publisher": "Directorate of Communications of Türkiye",
+          "authorityId": "turkiye-communications-directorate",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "The host-government notice independently confirms Antalya and the 9–20 November 2026 period."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2026-11-21"
+      },
+      "sourceNotes": "Because the conference was still upcoming on the verification date, the official schedule is explicitly time-scoped and set for post-event review."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0294-SIM",
+      "pairId": "WGI-Q0294",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "As of 12 October 2026, what does COP31 officially denote in the UN climate process?",
+      "questionUrdu": "12 October 2026 تک اقوام متحدہ کے موسمیاتی عمل میں COP31 سرکاری طور پر کس اجلاس کو ظاہر کرتا ہے؟",
+      "options": [
+        "The 31st Conference of the Parties to the UNFCCC",
+        "The 31st meeting of the UN General Assembly",
+        "The 31st session of the Security Council",
+        "The 31st World Meteorological Congress"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب The 31st Conference of the Parties to the UNFCCC ہے۔ COP31 اقوام متحدہ کے موسمیاتی فریم ورک کنونشن کے فریقوں کی 31ویں کانفرنس ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 294",
+        "referenceUrl": "https://unfccc.int/cop31",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0294"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://unfccc.int/cop31",
+          "label": "UN Climate Change Conference COP31",
+          "publisher": "United Nations Framework Convention on Climate Change",
+          "authorityId": "unfccc",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Defines COP31 as the 31st meeting of the Conference of the Parties to the UNFCCC."
+        },
+        {
+          "url": "https://www.iletisim.gov.tr/turkce/Duyurular/detay/birlesmis-milletler-iklim-degisikligi-konferansi-cop31-basin-akreditasyonu-duyurusu",
+          "label": "COP31 press accreditation announcement",
+          "publisher": "Directorate of Communications of Türkiye",
+          "authorityId": "turkiye-communications-directorate",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "The host notice identifies COP31 as the 31st Conference of the Parties under the UN climate convention."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2026-11-21"
+      },
+      "sourceNotes": "The related question tests the institutional meaning of COP31 rather than its venue and dates."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0295",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 295,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "BADE77C32E7805D71C5D766C14497BDD99445591CAC83D3805CE4498E9AD4D9E",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The SCO Secretariat and China’s foreign ministry independently confirm Tianjin and the 31 August–1 September 2025 summit dates.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0295-SRC",
+      "pairId": "WGI-Q0295",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Which Chinese city hosted the SCO Heads of State Summit in 2025?",
+      "questionUrdu": "2025 میں SCO سربراہانِ مملکت اجلاس کی میزبانی چین کے کس شہر نے کی؟",
+      "options": [
+        "Tianjin",
+        "Shanghai",
+        "Beijing",
+        "Qingdao"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Tianjin ہے۔ 2025 کا SCO سربراہ اجلاس 31 August سے 1 September تک تیانجن، چین میں ہوا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 295",
+        "referenceUrl": "https://eng.sectsco.org/20250909/1979719.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0295"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://eng.sectsco.org/20250909/1979719.html",
+          "label": "Briefing on the outcomes of the Tianjin summit",
+          "publisher": "Shanghai Cooperation Organisation Secretariat",
+          "authorityId": "sco-secretariat",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Reports that the SCO summit meetings were held in Tianjin in 2025."
+        },
+        {
+          "url": "https://www.mfa.gov.cn/mfa_eng/xw/wsrc/202508/t20250822_11694111.html",
+          "label": "Announcement of SCO Summit 2025",
+          "publisher": "Ministry of Foreign Affairs of China",
+          "authorityId": "china-foreign-ministry",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "China’s official announcement names Tianjin as the venue for the 2025 SCO summit."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2025-08-31",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The combined source statement was separated so this item tests the summit’s host city."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0295-SIM",
+      "pairId": "WGI-Q0295",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "On which dates did the 2025 SCO summit meetings in Tianjin take place?",
+      "questionUrdu": "2025 میں تیانجن کے SCO سربراہی اجلاس کن تاریخوں پر منعقد ہوئے؟",
+      "options": [
+        "31 August–1 September 2025",
+        "15–16 June 2025",
+        "9–10 May 2025",
+        "20–21 October 2025"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 31 August–1 September 2025 ہے۔ SCO کے تیانجن سربراہی اجلاس انہی دو تاریخوں پر منعقد ہوئے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 295",
+        "referenceUrl": "https://www.mfa.gov.cn/mfa_eng/xw/wsrc/202508/t20250822_11694111.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0295"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mfa.gov.cn/mfa_eng/xw/wsrc/202508/t20250822_11694111.html",
+          "label": "Announcement of SCO Summit 2025",
+          "publisher": "Ministry of Foreign Affairs of China",
+          "authorityId": "china-foreign-ministry",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Announces 31 August to 1 September as the 2025 Tianjin summit dates."
+        },
+        {
+          "url": "https://eng.sectsco.org/20250909/1979719.html",
+          "label": "Briefing on the outcomes of the Tianjin summit",
+          "publisher": "Shanghai Cooperation Organisation Secretariat",
+          "authorityId": "sco-secretariat",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently records the Tianjin summit meetings on 31 August–1 September 2025."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2025-08-31",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the summit dates rather than repeating the host-city answer."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0296",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 296,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "9F6E685570453B71423E520F9751871DF3D14747ADDE8E7002572CFAC054D396",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Post-event SCO and Pakistan foreign-ministry records confirm the Bishkek summit and Pakistan’s subsequent 2026–2027 chairmanship.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0296-SRC",
+      "pairId": "WGI-Q0296",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Where and on which dates was the 2026 SCO Council of Heads of State Summit held?",
+      "questionUrdu": "2026 کا SCO Council of Heads of State Summit کہاں اور کن تاریخوں پر منعقد ہوا؟",
+      "options": [
+        "Bishkek, Kyrgyzstan — 31 August–1 September 2026",
+        "Astana, Kazakhstan — 3–4 July 2026",
+        "Tianjin, China — 31 August–1 September 2026",
+        "Islamabad, Pakistan — 15–16 October 2026"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Bishkek, Kyrgyzstan — 31 August–1 September 2026 ہے۔ SCO سربراہی سرگرمیاں بشکیک میں ان تاریخوں پر ہوئیں اور مرکزی اجلاس 1 September کو منعقد ہوا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 296",
+        "referenceUrl": "https://eng.sectsco.org/20260901/2493609.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0296"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://eng.sectsco.org/20260901/2493609.html",
+          "label": "26th SCO Council of Heads of State meeting",
+          "publisher": "Shanghai Cooperation Organisation Secretariat",
+          "authorityId": "sco-secretariat",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Records the main 1 September 2026 heads-of-state meeting at Yrys-Ordo Congress Hall in Bishkek."
+        },
+        {
+          "url": "https://mofa.gov.pk/press-releases/transcript-of-the-press-briefing-by-the-spokesperson-on-thursday-27th-august-2026",
+          "label": "Pakistan foreign-ministry briefing on the Bishkek summit",
+          "publisher": "Ministry of Foreign Affairs of Pakistan",
+          "authorityId": "pakistan-foreign-ministry",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Identifies Bishkek and 31 August–1 September 2026 as the summit venue and period."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2026-08-31",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The pre-event schedule was checked against the SCO’s post-event record before retaining the venue and date range."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0296-SIM",
+      "pairId": "WGI-Q0296",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "Which country assumed the SCO Council of Heads of State chairmanship for 2026–2027 after the Bishkek summit?",
+      "questionUrdu": "بشکیک اجلاس کے بعد 2026–2027 کے لیے SCO Council of Heads of State کی صدارت کس ملک نے سنبھالی؟",
+      "options": [
+        "Pakistan",
+        "Kyrgyzstan",
+        "China",
+        "Kazakhstan"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Pakistan ہے۔ Bishkek summit کے اختتام پر 2026–2027 کی SCO سربراہانِ مملکت کونسل کی صدارت پاکستان کو منتقل ہوئی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 296",
+        "referenceUrl": "https://eng.sectsco.org/20260901/2493609.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0296"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://eng.sectsco.org/20260901/2493609.html",
+          "label": "26th SCO Council of Heads of State meeting",
+          "publisher": "Shanghai Cooperation Organisation Secretariat",
+          "authorityId": "sco-secretariat",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "States that the SCO chairmanship for 2026–2027 passed to Pakistan."
+        },
+        {
+          "url": "https://mofa.gov.pk/press-releases/curtain-raiser-prime-minister-muhammad-shehbaz-sharifs-official-visit-to-the-kyrgyz-republic-31-august-2-september-2026",
+          "label": "Prime Minister’s visit to Kyrgyzstan",
+          "publisher": "Ministry of Foreign Affairs of Pakistan",
+          "authorityId": "pakistan-foreign-ministry",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Confirms that Pakistan would assume the SCO Council of Heads of State chairmanship for 2026–2027."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2026-09-01",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the chairmanship transition produced by the summit rather than repeating its venue."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0297",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 297,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "517CE05FA52B425EB9DA6DC989F257B4DCC987E0A77B5BA549E0BFA32E658772",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "United Nations country data and Kyrgyzstan’s investment agency independently confirm the capital and national currency, with an explicit 2026 scope.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0297-SRC",
+      "pairId": "WGI-Q0297",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "As of 2026, what is the capital of Kyrgyzstan?",
+      "questionUrdu": "2026 تک Kyrgyzstan کا دارالحکومت کیا ہے؟",
+      "options": [
+        "Bishkek",
+        "Osh",
+        "Almaty",
+        "Tashkent"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Bishkek ہے۔ 2026 تک بشکیک Kyrgyzstan کا دارالحکومت اور سب سے بڑا شہر ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 297",
+        "referenceUrl": "https://data.un.org/legacy/en/iso/kg.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0297"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://data.un.org/legacy/en/iso/kg.html",
+          "label": "Kyrgyzstan country profile",
+          "publisher": "United Nations Data",
+          "authorityId": "un-data",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Lists Bishkek as the capital city of Kyrgyzstan."
+        },
+        {
+          "url": "https://invest.gov.kg/en/invest-compass/start/country",
+          "label": "Country profile of Kyrgyzstan",
+          "publisher": "National Investments Agency under the President of the Kyrgyz Republic",
+          "authorityId": "kyrgyz-investment-agency",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "The Kyrgyz government investment portal identifies Bishkek as the capital."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The compound PDF line was separated so the source MCQ tests only the capital."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0297-SIM",
+      "pairId": "WGI-Q0297",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "As of 2026, what is the national currency of Kyrgyzstan?",
+      "questionUrdu": "2026 تک Kyrgyzstan کی قومی کرنسی کیا ہے؟",
+      "options": [
+        "Som",
+        "Tenge",
+        "Manat",
+        "Somoni"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Som ہے۔ 2026 تک Kyrgyzstan کی قومی کرنسی Kyrgyz som ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 297",
+        "referenceUrl": "https://invest.gov.kg/en/invest-compass/start/country",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0297"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://invest.gov.kg/en/invest-compass/start/country",
+          "label": "Country profile of Kyrgyzstan",
+          "publisher": "National Investments Agency under the President of the Kyrgyz Republic",
+          "authorityId": "kyrgyz-investment-agency",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Lists the Kyrgyz som as the country’s national currency."
+        },
+        {
+          "url": "https://data.un.org/legacy/en/iso/kg.html",
+          "label": "Kyrgyzstan country profile",
+          "publisher": "United Nations Data",
+          "authorityId": "un-data",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Independently lists Som as Kyrgyzstan’s currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The related item tests the currency, the second distinct fact in the compound source line."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0298",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 298,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "C5F42EA048A4240093F22A36590670C8A6BDE9666CFCCD90C487F37A31738847",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent seismology authorities support the approximate P-to-S wave speed relationship and the distinct liquid-propagation property.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0298-SRC",
+      "pairId": "WGI-Q0298",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Approximately how fast do P-waves travel compared with S-waves in the same Earth material?",
+      "questionUrdu": "زمین کے ایک ہی مادے میں P-waves تقریباً S-waves کے مقابلے میں کتنی تیزی سے سفر کرتی ہیں؟",
+      "options": [
+        "About 1.7 times as fast",
+        "About half as fast",
+        "At exactly the same speed",
+        "About 10 times as fast"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب About 1.7 times as fast ہے۔ S-wave کی رفتار عموماً P-wave کی رفتار کا تقریباً 60% ہوتی ہے، اس لیے P-wave لگ بھگ 1.7 گنا تیز ہوتی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 298",
+        "referenceUrl": "https://www.iris.edu/hq/cd_fall_2009/files/3_component_seismograph.htm",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0298"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.iris.edu/hq/cd_fall_2009/files/3_component_seismograph.htm",
+          "label": "Three-component seismograph",
+          "publisher": "Incorporated Research Institutions for Seismology",
+          "authorityId": "iris-seismology",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "States that P-waves travel approximately 1.7 times faster than S-waves."
+        },
+        {
+          "url": "https://earthquake.usgs.gov/earthquakes/events/1906calif/18april/earthwaves.php",
+          "label": "Earthquake waves",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "us-geological-survey",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that S-wave speed is about 60 percent of P-wave speed, equivalent to roughly a 1.7 ratio."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The approximation was retained and explicitly limited to comparison within the same Earth material."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0298-SIM",
+      "pairId": "WGI-Q0298",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which seismic body wave cannot travel through liquids?",
+      "questionUrdu": "کون سی زلزلی جسمانی لہر مائعات میں سفر نہیں کر سکتی؟",
+      "options": [
+        "S-wave",
+        "P-wave",
+        "Sound wave",
+        "Tidal wave"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب S-wave ہے۔ S-waves قینچی حرکت والی لہریں ہیں اور مائعات میں ان کے لیے درکار shear rigidity موجود نہیں ہوتی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 298",
+        "referenceUrl": "https://www.mtu.edu/geo/community/seismology/learn/seismology-study/body-wave/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0298"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mtu.edu/geo/community/seismology/learn/seismology-study/body-wave/",
+          "label": "Body waves",
+          "publisher": "Michigan Technological University",
+          "authorityId": "michigan-technological-university",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that S-waves do not travel through liquids."
+        },
+        {
+          "url": "https://earthquake.usgs.gov/earthquakes/events/1906calif/18april/earthwaves.php",
+          "label": "Earthquake waves",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "us-geological-survey",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently states that S-waves cannot propagate through liquid material."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests a distinct propagation property of S-waves rather than the speed ratio."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0299",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 299,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "D763039C2B68D28FA988245F2D80275F538C74E0E4458505D21A3BCF6458FA1A",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "reject",
+    "reason": "The stem asks for a non-carbon source while the printed answer names a metabolic process, so the audited mismatch is rejected rather than reconstructed.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0300",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 300,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "928704E0D5818D204B89DC826D530DF2216898F5B054C5246224B35F25AA4C97",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent nuclear-science sources confirm that free-neutron beta decay emits an electron and an electron antineutrino and proceeds via the weak interaction.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0300-SRC",
+      "pairId": "WGI-Q0300",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "In beta-minus decay of a free neutron, which particle is emitted together with an electron?",
+      "questionUrdu": "آزاد نیوٹران کے beta-minus decay میں electron کے ساتھ کون سا ذرہ خارج ہوتا ہے؟",
+      "options": [
+        "Electron antineutrino",
+        "Electron neutrino",
+        "Positron",
+        "Alpha particle"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Electron antineutrino ہے۔ beta-minus decay میں نیوٹران پروٹون میں بدلتا ہے اور electron کے ساتھ electron antineutrino خارج کرتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 300",
+        "referenceUrl": "https://www.energy.gov/science/doe-explainsbeta-decay",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0300"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.energy.gov/science/doe-explainsbeta-decay",
+          "label": "DOE explains beta decay",
+          "publisher": "U.S. Department of Energy",
+          "authorityId": "us-department-energy",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Describes neutron beta decay into a proton, an electron, and an antineutrino."
+        },
+        {
+          "url": "https://stem-tools.jlab.org/glossary/betadecay",
+          "label": "Beta decay glossary",
+          "publisher": "Thomas Jefferson National Accelerator Facility",
+          "authorityId": "jefferson-lab",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently gives the neutron decay products as proton, electron, and antineutrino."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The decay mode was specified as beta-minus to make the emitted antiparticle unambiguous."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0300-SIM",
+      "pairId": "WGI-Q0300",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which fundamental interaction is responsible for ordinary neutron beta decay?",
+      "questionUrdu": "عام نیوٹران beta decay کے لیے کون سا بنیادی تعامل ذمہ دار ہے؟",
+      "options": [
+        "Weak nuclear interaction",
+        "Strong nuclear interaction",
+        "Electromagnetic interaction",
+        "Gravitational interaction"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Weak nuclear interaction ہے۔ بیٹا زوال کمزور بنیادی تعامل کے ذریعے ہوتا ہے جو نیوٹران کو پروٹون میں تبدیل کرتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 300",
+        "referenceUrl": "https://www.energy.gov/science/doe-explainsbeta-decay",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0300"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.energy.gov/science/doe-explainsbeta-decay",
+          "label": "DOE explains beta decay",
+          "publisher": "U.S. Department of Energy",
+          "authorityId": "us-department-energy",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains beta decay as a process governed by the weak force."
+        },
+        {
+          "url": "https://hst-archive.web.cern.ch/archiv/hst2000/teaching/resource/lessons/basic/notelist.htm",
+          "label": "Particle interactions and beta decay",
+          "publisher": "CERN",
+          "authorityId": "cern",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Describes neutron beta decay as an example of the weak interaction."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the governing fundamental force rather than repeating the emitted-particle answer."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0301",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 301,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "2AAFFC47B17C8DD4844484CC45A27BD5F38CB210263D87269B71533C92ED14F5",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent biomedical and open-textbook sources confirm glucose as the usual starting fuel for cellular respiration and ATP as its principal usable energy product.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0301-SRC",
+      "pairId": "WGI-Q0301",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which molecule is the usual starting fuel whose oxidation is described in cellular respiration?",
+      "questionUrdu": "کون سا سالمہ عموماً ابتدائی ایندھن ہوتا ہے جس کی تکسید cellular respiration میں بیان کی جاتی ہے؟",
+      "options": [
+        "Glucose",
+        "DNA",
+        "Cholesterol",
+        "Cellulose"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Glucose ہے۔ خلوی تنفس میں خلیہ عموماً گلوکوز کو آکسیڈائز کر کے اس کی کیمیائی توانائی ATP میں منتقل کرتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 301",
+        "referenceUrl": "https://www.nigms.nih.gov/biobeat/2022/11/science-snippet-atps-amazing-power",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0301"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nigms.nih.gov/biobeat/2022/11/science-snippet-atps-amazing-power",
+          "label": "ATP's amazing power",
+          "publisher": "National Institute of General Medical Sciences",
+          "authorityId": "nigms",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that cellular respiration breaks down glucose with oxygen to release energy captured in ATP."
+        },
+        {
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-2-carbohydrate-metabolism",
+          "label": "Carbohydrate metabolism",
+          "publisher": "OpenStax, Rice University",
+          "authorityId": "openstax-rice-university",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Describes cellular respiration as the oxidation of glucose to produce cellular energy."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The absolute wording was clarified to the usual textbook starting fuel of cellular respiration."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0301-SIM",
+      "pairId": "WGI-Q0301",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which molecule directly supplies usable energy for most cellular work?",
+      "questionUrdu": "کون سا سالمہ زیادہ تر خلوی کاموں کے لیے براہِ راست قابلِ استعمال توانائی فراہم کرتا ہے؟",
+      "options": [
+        "ATP",
+        "Glucose",
+        "Carbon dioxide",
+        "Oxygen"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب ATP ہے۔ ATP خلیے کی قابلِ استعمال توانائی کی بنیادی کرنسی ہے، جبکہ گلوکوز کی توانائی خلوی تنفس کے ذریعے ATP میں منتقل ہوتی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 301",
+        "referenceUrl": "https://www.nigms.nih.gov/biobeat/2022/11/science-snippet-atps-amazing-power",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0301"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nigms.nih.gov/biobeat/2022/11/science-snippet-atps-amazing-power",
+          "label": "ATP's amazing power",
+          "publisher": "National Institute of General Medical Sciences",
+          "authorityId": "nigms",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Identifies ATP as the molecule that powers cellular processes."
+        },
+        {
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-2-carbohydrate-metabolism",
+          "label": "Carbohydrate metabolism",
+          "publisher": "OpenStax, Rice University",
+          "authorityId": "openstax-rice-university",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that energy released from glucose is captured in ATP for cellular use."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item distinguishes the cell’s direct energy currency from the fuel molecule in the source item."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0302",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 302,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "17DADE405D53F7E8718570E9D09408C0A5C653858FB597B45AAF71CCED72BCB6",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "NASA and astronomy references independently define stellar luminosity as total radiated power and support watts as its SI unit.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0302-SRC",
+      "pairId": "WGI-Q0302",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the total power radiated by a star called?",
+      "questionUrdu": "کسی ستارے سے خارج ہونے والی کل تابکاری طاقت کو کیا کہتے ہیں؟",
+      "options": [
+        "Luminosity",
+        "Apparent magnitude",
+        "Redshift",
+        "Parallax"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Luminosity ہے۔ luminosity کسی ستارے کی فی اکائی وقت خارج ہونے والی کل توانائی یا طاقت کو ظاہر کرتی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 302",
+        "referenceUrl": "https://science.nasa.gov/universe/glossary/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0302"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://science.nasa.gov/universe/glossary/",
+          "label": "Universe glossary: luminosity",
+          "publisher": "NASA Science",
+          "authorityId": "nasa-science",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Defines luminosity as the total amount of energy an astronomical object radiates per unit time."
+        },
+        {
+          "url": "https://openstax.org/books/astronomy-2e/pages/17-1-the-brightness-of-stars",
+          "label": "The brightness of stars",
+          "publisher": "OpenStax, Rice University",
+          "authorityId": "openstax-rice-university",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Defines a star’s luminosity as its total emitted energy per second."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The source statement was tightened to distinguish intrinsic luminosity from apparent brightness."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0302-SIM",
+      "pairId": "WGI-Q0302",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "In the International System of Units, stellar luminosity can be expressed in which unit?",
+      "questionUrdu": "بین الاقوامی نظامِ اکائیات میں stellar luminosity کو کس اکائی میں ظاہر کیا جا سکتا ہے؟",
+      "options": [
+        "Watt",
+        "Pascal",
+        "Tesla",
+        "Kelvin"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Watt ہے۔ luminosity طاقت ہے، یعنی فی سیکنڈ خارج ہونے والی توانائی، اس لیے اس کی SI اکائی watt ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 302",
+        "referenceUrl": "https://sci.esa.int/c/portal/doc.cfm?fobjectid=35462",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0302"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://sci.esa.int/c/portal/doc.cfm?fobjectid=35462",
+          "label": "Stellar luminosity",
+          "publisher": "European Space Agency",
+          "authorityId": "european-space-agency",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Describes stellar luminosity as power and gives watts as its unit."
+        },
+        {
+          "url": "https://science.nasa.gov/universe/glossary/",
+          "label": "Universe glossary: luminosity",
+          "publisher": "NASA Science",
+          "authorityId": "nasa-science",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Defines luminosity as energy per unit time, the physical quantity measured in watts."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related question tests the measurement unit of luminosity rather than repeating its definition."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0303",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 303,
+    "sourcePdfPage": 13,
+    "rawTextSha256": "C2D575D5388F9DFDA0C685BF2F93873FE538B86F7A9C345772669F07233A3067",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The Nobel Foundation and NIH independently confirm the 2018 medicine prize discovery and its two laureates.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0303-SRC",
+      "pairId": "WGI-Q0303",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "For what discovery was the 2018 Nobel Prize in Physiology or Medicine awarded?",
+      "questionUrdu": "2018 کا Nobel Prize in Physiology or Medicine کس دریافت پر دیا گیا؟",
+      "options": [
+        "Cancer therapy by inhibition of negative immune regulation",
+        "The structure of DNA",
+        "The discovery of penicillin",
+        "The mechanism of autophagy"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب cancer therapy by inhibition of negative immune regulation ہے۔ 2018 کا انعام مدافعتی نظام کے منفی ضابطوں کو روک کر سرطان کے علاج کی دریافت پر دیا گیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.13, item 303",
+        "referenceUrl": "https://www.nobelprize.org/prizes/medicine/2018/summary/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0303"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nobelprize.org/prizes/medicine/2018/summary/",
+          "label": "Nobel Prize in Physiology or Medicine 2018",
+          "publisher": "Nobel Prize Outreach",
+          "authorityId": "nobel-prize",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Gives the official citation for cancer therapy through inhibition of negative immune regulation."
+        },
+        {
+          "url": "https://www.nih.gov/news-events/news-releases/nih-grantees-win-2018-nobel-prize-physiology-or-medicine",
+          "label": "NIH grantees win 2018 Nobel Prize",
+          "publisher": "U.S. National Institutes of Health",
+          "authorityId": "us-national-institutes-health",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently explains that the prize recognized immune-checkpoint approaches to cancer therapy."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2018",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The official Nobel citation was preserved as the single correct answer."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0303-SIM",
+      "pairId": "WGI-Q0303",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Who jointly received the 2018 Nobel Prize in Physiology or Medicine?",
+      "questionUrdu": "2018 کا Nobel Prize in Physiology or Medicine مشترکہ طور پر کن افراد کو ملا؟",
+      "options": [
+        "James P. Allison and Tasuku Honjo",
+        "Harvey Alter and Michael Houghton",
+        "David Julius and Ardem Patapoutian",
+        "Katalin Karikó and Drew Weissman"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب James P. Allison and Tasuku Honjo ہے۔ دونوں سائنس دانوں نے مختلف immune checkpoints پر تحقیق سے سرطان کے نئے علاج کی بنیاد رکھی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 303",
+        "referenceUrl": "https://www.nobelprize.org/prizes/medicine/2018/summary/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0303"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nobelprize.org/prizes/medicine/2018/summary/",
+          "label": "Nobel Prize in Physiology or Medicine 2018",
+          "publisher": "Nobel Prize Outreach",
+          "authorityId": "nobel-prize",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Names James P. Allison and Tasuku Honjo as the 2018 medicine laureates."
+        },
+        {
+          "url": "https://www.nih.gov/news-events/news-releases/nih-grantees-win-2018-nobel-prize-physiology-or-medicine",
+          "label": "NIH grantees win 2018 Nobel Prize",
+          "publisher": "U.S. National Institutes of Health",
+          "authorityId": "us-national-institutes-health",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently identifies Allison and Honjo as the joint recipients."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2018",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the laureates rather than repeating the prize citation."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0304",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 304,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "DCBB93D72787E2BD65F1E4BC642E889A8EB28760A67D4A7C53937AB75AD6F74C",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The Nobel Foundation and Eötvös Loránd University independently confirm the 2025 literature laureate and his Hungarian identity.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0304-SRC",
+      "pairId": "WGI-Q0304",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Who received the 2025 Nobel Prize in Literature?",
+      "questionUrdu": "2025 کا Nobel Prize in Literature کس نے حاصل کیا؟",
+      "options": [
+        "László Krasznahorkai",
+        "Han Kang",
+        "Jon Fosse",
+        "Annie Ernaux"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب László Krasznahorkai ہے۔ ہنگری کے ناول نگار László Krasznahorkai کو 2025 کا ادب کا نوبیل انعام دیا گیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 304",
+        "referenceUrl": "https://www.nobelprize.org/prizes/literature/2025/summary/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0304"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nobelprize.org/prizes/literature/2025/summary/",
+          "label": "Nobel Prize in Literature 2025",
+          "publisher": "Nobel Prize Outreach",
+          "authorityId": "nobel-prize",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Officially names László Krasznahorkai as the 2025 literature laureate."
+        },
+        {
+          "url": "https://elte.hu/en/elte-celebrates-nobel-laureate-alumni-laszlo-krasznahorkai",
+          "label": "ELTE celebrates Nobel laureate alumnus László Krasznahorkai",
+          "publisher": "Eötvös Loránd University",
+          "authorityId": "eotvos-lorand-university",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently identifies Krasznahorkai as the 2025 Nobel laureate in literature."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2025",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The award year and laureate name were checked against the official prize record."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0304-SIM",
+      "pairId": "WGI-Q0304",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "The 2025 Nobel literature laureate László Krasznahorkai is a writer from which country?",
+      "questionUrdu": "2025 کے Nobel literature laureate László Krasznahorkai کس ملک کے ادیب ہیں؟",
+      "options": [
+        "Hungary",
+        "Poland",
+        "Austria",
+        "Romania"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Hungary ہے۔ László Krasznahorkai ہنگری کے ناول نگار اور مصنف ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 304",
+        "referenceUrl": "https://elte.hu/en/elte-celebrates-nobel-laureate-alumni-laszlo-krasznahorkai",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0304"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://elte.hu/en/elte-celebrates-nobel-laureate-alumni-laszlo-krasznahorkai",
+          "label": "ELTE celebrates Nobel laureate alumnus László Krasznahorkai",
+          "publisher": "Eötvös Loránd University",
+          "authorityId": "eotvos-lorand-university",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Identifies Krasznahorkai as a Hungarian writer and university alumnus."
+        },
+        {
+          "url": "https://www.nobelprize.org/prizes/literature/2025/summary/",
+          "label": "Nobel Prize in Literature 2025",
+          "publisher": "Nobel Prize Outreach",
+          "authorityId": "nobel-prize",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official Nobel material describes Krasznahorkai as the Hungarian author awarded in 2025."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2025",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the laureate’s nationality rather than repeating his name as the answer."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0305",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 305,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "AB4BC1051115D9552F3F49CF057BF683B8DF2A134BB6045A495A1CD6DB50B670",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "ICC and Pakistan Cricket Board sources independently confirm Javed Miandad’s six consecutive World Cup appearances and Tendulkar’s later matching feat.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0305-SRC",
+      "pairId": "WGI-Q0305",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Which Pakistani cricketer appeared in six consecutive men's Cricket World Cups from 1975 through 1996?",
+      "questionUrdu": "کس پاکستانی کرکٹر نے 1975 سے 1996 تک مسلسل چھ مردوں کے Cricket World Cups میں شرکت کی؟",
+      "options": [
+        "Javed Miandad",
+        "Imran Khan",
+        "Wasim Akram",
+        "Inzamam-ul-Haq"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Javed Miandad ہے۔ انہوں نے 1975 سے 1996 تک چھ مسلسل مردوں کے کرکٹ عالمی کپ کھیلے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 305",
+        "referenceUrl": "https://www.icc-cricket.com/hall-of-fame/hall-of-famers/hall-of-famer-javed-miandad",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0305"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.icc-cricket.com/hall-of-fame/hall-of-famers/hall-of-famer-javed-miandad",
+          "label": "ICC Hall of Famer Javed Miandad",
+          "publisher": "International Cricket Council",
+          "authorityId": "international-cricket-council",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Records Miandad’s appearances in six World Cups from 1975 to 1996."
+        },
+        {
+          "url": "https://www.pcb.com.pk/press-release-detail/afridi-miandad-sammy-and-shoaib-confirmed-pjl-mentors.html",
+          "label": "Javed Miandad profile",
+          "publisher": "Pakistan Cricket Board",
+          "authorityId": "pakistan-cricket-board",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently states that Javed Miandad played in six World Cups between 1975 and 1996."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "1996",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The question includes the first and sixth tournament years to define the historical sequence precisely."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0305-SIM",
+      "pairId": "WGI-Q0305",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Which Indian batter matched Javed Miandad's six men's World Cup appearances in 2011?",
+      "questionUrdu": "کس بھارتی بلے باز نے 2011 میں Javed Miandad کی چھ مردوں کے World Cup شرکتوں کی برابری کی؟",
+      "options": [
+        "Sachin Tendulkar",
+        "Rahul Dravid",
+        "Sourav Ganguly",
+        "Virat Kohli"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Sachin Tendulkar ہے۔ 2011 کا عالمی کپ Tendulkar کا چھٹا تھا، جس سے انہوں نے Miandad کی چھ شرکتوں کی برابری کی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 305",
+        "referenceUrl": "https://www.icc-cricket.com/hall-of-fame/hall-of-famers/hall-of-famer-javed-miandad",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0305"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.icc-cricket.com/hall-of-fame/hall-of-famers/hall-of-famer-javed-miandad",
+          "label": "ICC Hall of Famer Javed Miandad",
+          "publisher": "International Cricket Council",
+          "authorityId": "international-cricket-council",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Notes that Sachin Tendulkar later matched Miandad’s six World Cup appearances."
+        },
+        {
+          "url": "https://www.pcb.com.pk/press-release-detail/miandad-urges-players-to-improve-fielding.html",
+          "label": "Miandad on the World Cup",
+          "publisher": "Pakistan Cricket Board",
+          "authorityId": "pakistan-cricket-board",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "States that Tendulkar equalled Miandad’s record of playing six World Cups."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2011",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the player who matched the six-appearance feat rather than repeating Miandad’s identity."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0306",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 306,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "56E345C1C93E2B1059F266C6BDA4CEB048FA2C5961B43FF6E4B4D953C8B4D142",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "IMF and Pakistan Finance Division records independently confirm the 2024 arrangement as a roughly US$7 billion, 37-month Extended Fund Facility.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0306-SRC",
+      "pairId": "WGI-Q0306",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Which IMF facility provided Pakistan with an approximately US$7 billion arrangement approved in 2024?",
+      "questionUrdu": "2024 میں منظور ہونے والے تقریباً US$7 billion کے انتظام کے تحت IMF نے پاکستان کو کون سی سہولت دی؟",
+      "options": [
+        "Extended Fund Facility",
+        "Rapid Financing Instrument",
+        "Flexible Credit Line",
+        "Poverty Reduction and Growth Trust"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Extended Fund Facility ہے۔ IMF Executive Board نے 2024 میں پاکستان کے لیے تقریباً US$7 billion کا EFF انتظام منظور کیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 306",
+        "referenceUrl": "https://www.imf.org/en/news/articles/2024/09/27/pr-24343-pakistan-imf-concludes-2024-aiv-consultation-pakistan-approves-37-mo-extended-arr",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0306"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2024/09/27/pr-24343-pakistan-imf-concludes-2024-aiv-consultation-pakistan-approves-37-mo-extended-arr",
+          "label": "IMF approves 37-month Extended Arrangement for Pakistan",
+          "publisher": "International Monetary Fund",
+          "authorityId": "international-monetary-fund",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Reports approval of a 37-month EFF arrangement for Pakistan worth around US$7 billion."
+        },
+        {
+          "url": "https://www.finance.gov.pk/mefp/extended_Fund_Facility_October_2024.pdf",
+          "label": "Pakistan Extended Fund Facility documents",
+          "publisher": "Finance Division, Government of Pakistan",
+          "authorityId": "pakistan-finance-division",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Pakistan’s official publication reproduces the approval of the roughly US$7 billion Extended Fund Facility arrangement."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2024-09-25",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The vague word recent was removed and the question was anchored to the 2024 approval event."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0306-SIM",
+      "pairId": "WGI-Q0306",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "What was the approved duration of Pakistan's 2024 IMF Extended Fund Facility arrangement?",
+      "questionUrdu": "پاکستان کے 2024 IMF Extended Fund Facility انتظام کی منظور شدہ مدت کتنی تھی؟",
+      "options": [
+        "37 months",
+        "24 months",
+        "48 months",
+        "60 months"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 37 months ہے۔ 25 September 2024 کو منظور ہونے والا EFF انتظام 37 ماہ کے لیے تھا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 306",
+        "referenceUrl": "https://www.imf.org/en/news/articles/2024/09/27/pr-24343-pakistan-imf-concludes-2024-aiv-consultation-pakistan-approves-37-mo-extended-arr",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0306"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2024/09/27/pr-24343-pakistan-imf-concludes-2024-aiv-consultation-pakistan-approves-37-mo-extended-arr",
+          "label": "IMF approves 37-month Extended Arrangement for Pakistan",
+          "publisher": "International Monetary Fund",
+          "authorityId": "international-monetary-fund",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "States that the approved EFF arrangement had a 37-month duration."
+        },
+        {
+          "url": "https://www.finance.gov.pk/mefp/extended_Fund_Facility_October_2024.pdf",
+          "label": "Pakistan Extended Fund Facility documents",
+          "publisher": "Finance Division, Government of Pakistan",
+          "authorityId": "pakistan-finance-division",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently records the 2024 Pakistan EFF arrangement as lasting 37 months."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2024-09-25",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the arrangement’s duration rather than repeating the facility type."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0307",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 307,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "2408D0071344B5271CBD1C1252CE865B08B94E3940902723677D8E8569F9DF60",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "USGS and USDA soil-science sources independently define infiltration as water entering soil and distinguish excess surface runoff.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0307-SRC",
+      "pairId": "WGI-Q0307",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "In hydrology, what is infiltration?",
+      "questionUrdu": "علمِ آب میں infiltration سے کیا مراد ہے؟",
+      "options": [
+        "The entry of water into soil at the land surface",
+        "The evaporation of water from leaves",
+        "The freezing of groundwater",
+        "The flow of a river into the sea"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب زمین کی سطح سے پانی کا مٹی میں داخل ہونا ہے۔ بارش یا آبپاشی کا پانی جب سطح عبور کر کے مٹی کے مساموں میں جاتا ہے تو اسے infiltration کہتے ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 307",
+        "referenceUrl": "https://pubs.usgs.gov/wsp/1544f/report.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0307"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://pubs.usgs.gov/wsp/1544f/report.pdf",
+          "label": "A field method for measurement of infiltration",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "us-geological-survey",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Defines infiltration as the downward entry of water into soil or sediment."
+        },
+        {
+          "url": "https://www.nrcs.usda.gov/sites/default/files/2022-10/Soil%20Infiltration.pdf",
+          "label": "Soil infiltration",
+          "publisher": "USDA Natural Resources Conservation Service",
+          "authorityId": "usda-natural-resources-conservation-service",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Defines soil infiltration as water moving into and through the soil profile from the surface."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The definition was kept precise by specifying entry through the land surface into soil."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0307-SIM",
+      "pairId": "WGI-Q0307",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "When rainfall intensity exceeds a soil's infiltration capacity, the excess water most commonly becomes what?",
+      "questionUrdu": "جب بارش کی شدت مٹی کی infiltration capacity سے بڑھ جائے تو اضافی پانی عموماً کیا بن جاتا ہے؟",
+      "options": [
+        "Surface runoff",
+        "Ground frost",
+        "Water vapour",
+        "Confined groundwater"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Surface runoff ہے۔ مٹی جتنی تیزی سے پانی جذب کر سکتی ہے اس سے زیادہ بارش ہو تو اضافی پانی زمین کی سطح پر بہنے لگتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 307",
+        "referenceUrl": "https://www.nrcs.usda.gov/sites/default/files/2022-10/Soil%20Infiltration.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0307"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nrcs.usda.gov/sites/default/files/2022-10/Soil%20Infiltration.pdf",
+          "label": "Soil infiltration",
+          "publisher": "USDA Natural Resources Conservation Service",
+          "authorityId": "usda-natural-resources-conservation-service",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that inadequate infiltration produces ponding and surface runoff."
+        },
+        {
+          "url": "https://pubs.usgs.gov/fs//2009/3042/",
+          "label": "Agricultural chemicals in the environment",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "us-geological-survey",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "States that water flows over the land when soil infiltration capacity is exceeded."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the consequence of limited infiltration capacity rather than repeating the definition."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0308",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 308,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "BA2D9B0265E3C3D66BD8B085488DBF75846AD6D215B48E041FAB69D058B6E480",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "USGS and USDA references independently distinguish percolation as movement through soil toward the water table and link deep percolation to recharge.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0308-SRC",
+      "pairId": "WGI-Q0308",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "In hydrology, what does percolation describe?",
+      "questionUrdu": "علمِ آب میں percolation کس عمل کو بیان کرتی ہے؟",
+      "options": [
+        "Water moving through soil or sediment toward the water table",
+        "Water entering only the soil surface",
+        "Water changing directly from ice to vapour",
+        "Water flowing only in an open river channel"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب مٹی یا رسوب کے اندر پانی کا water table کی طرف حرکت کرنا ہے۔ infiltration سطح میں داخلہ ہے، جبکہ percolation اندرونی تہوں میں آگے حرکت کو کہتے ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 308",
+        "referenceUrl": "https://pubs.usgs.gov/pp/pp1703/h/pp1703h.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0308"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://pubs.usgs.gov/pp/pp1703/h/pp1703h.pdf",
+          "label": "USGS hydrogeologic study glossary",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "us-geological-survey",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Defines percolation as infiltrated water moving downward or laterally toward the water table."
+        },
+        {
+          "url": "https://www.wcc.nrcs.usda.gov/ftpref/wntsc/waterMgt/irrigation/NEH15/ch1.pdf",
+          "label": "Water intake in soils",
+          "publisher": "USDA Natural Resources Conservation Service",
+          "authorityId": "usda-natural-resources-conservation-service",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Calls the movement of water through the soil profile percolation."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The definition explicitly separates percolation through soil from infiltration at the surface."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0308-SIM",
+      "pairId": "WGI-Q0308",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Deep percolation that reaches an aquifer contributes most directly to which process?",
+      "questionUrdu": "گہری percolation جب aquifer تک پہنچے تو وہ براہِ راست کس عمل میں حصہ ڈالتی ہے؟",
+      "options": [
+        "Groundwater recharge",
+        "Cloud condensation",
+        "Surface evaporation",
+        "Glacial ablation"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Groundwater recharge ہے۔ مٹی اور غیر سیر شدہ تہوں سے نیچے جانے والا پانی aquifer تک پہنچ کر زیرِ زمین پانی کو دوبارہ بھرتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 308",
+        "referenceUrl": "https://pubs.usgs.gov/pp/pp1703/h/pp1703h.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0308"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://pubs.usgs.gov/pp/pp1703/h/pp1703h.pdf",
+          "label": "USGS hydrogeologic study glossary",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "us-geological-survey",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Links percolating water moving to the water table with groundwater recharge."
+        },
+        {
+          "url": "https://www.nrcs.usda.gov/sites/default/files/2022-10/Soil%20Infiltration.pdf",
+          "label": "Soil infiltration",
+          "publisher": "USDA Natural Resources Conservation Service",
+          "authorityId": "usda-natural-resources-conservation-service",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that water infiltrating through porous soils recharges groundwater aquifers."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the hydrologic result of deep percolation rather than restating its movement."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0309",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 309,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "91384426674614E7D38CE48FDD86D32ED43172193CEB83984C54A24549665944",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "reject",
+    "reason": "The description 'U.S. intellectual' is non-unique and the parenthetical title is informal, so the audited vague line is rejected rather than converted by guesswork.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0310",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 310,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "EBF7C975FEF67E9335C585E617B2A7F60F3E64F543072CBC3325114DACAAAB4A",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank question already tests Pelé's national team and country with the same answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0141-Q086-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0311",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 311,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "A3122D65BFFBC50A84AEDF55A98BEE10FE4D9DEBE76ED4ADF7B8110DFBB64E08",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The vague printed stem is tightened to identify the internationally known boxer; Team GB and BBC Sport independently verify Amir Khan's boxing career.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0311-SRC",
+      "pairId": "WGI-Q0311",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Amir Khan is best known internationally for which sport?",
+      "questionUrdu": "عامر خان بین الاقوامی طور پر کس کھیل کے لیے مشہور ہیں؟",
+      "options": [
+        "Boxing",
+        "Cricket",
+        "Wrestling",
+        "Swimming"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Boxing ہے۔ عامر خان اولمپک تمغہ جیتنے والے پاکستانی نژاد برطانوی باکسر ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 311",
+        "referenceUrl": "https://www.teamgb.com/athlete/amir-khan/26wXEuVMLiMxVVvpANwqIk",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0311"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.teamgb.com/athlete/amir-khan/26wXEuVMLiMxVVvpANwqIk",
+          "label": "Amir Khan athlete profile",
+          "publisher": "Team GB",
+          "authorityId": "team-gb",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Team GB identifies Amir Khan as a boxer and records his Olympic silver medal."
+        },
+        {
+          "url": "https://www.bbc.co.uk/sport/boxing/36207934",
+          "label": "Amir Khan Olympic boxing profile",
+          "publisher": "BBC Sport",
+          "authorityId": "bbc-sport",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "BBC Sport reports Khan's boxing career and his 2004 Olympic silver medal."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The imprecise printed wording was rewritten as a unique sport-identification question."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0311-SIM",
+      "pairId": "WGI-Q0311",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "At the 2004 Athens Olympics, what medal did boxer Amir Khan win in the men's lightweight division?",
+      "questionUrdu": "2004 کے ایتھنز اولمپکس میں باکسر عامر خان نے مردوں کے لائٹ ویٹ مقابلے میں کون سا تمغہ جیتا؟",
+      "options": [
+        "Silver",
+        "Gold",
+        "Bronze",
+        "No medal"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Silver ہے۔ عامر خان نے ایتھنز 2004 میں لائٹ ویٹ باکسنگ کا چاندی کا تمغہ حاصل کیا تھا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 311",
+        "referenceUrl": "https://www.teamgb.com/athlete/amir-khan/26wXEuVMLiMxVVvpANwqIk",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0311"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.teamgb.com/athlete/amir-khan/26wXEuVMLiMxVVvpANwqIk",
+          "label": "Amir Khan athlete profile",
+          "publisher": "Team GB",
+          "authorityId": "team-gb",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The profile records Khan's silver medal in lightweight boxing at Athens 2004."
+        },
+        {
+          "url": "https://www.bbc.co.uk/sport/boxing/36207934",
+          "label": "Amir Khan Olympic boxing profile",
+          "publisher": "BBC Sport",
+          "authorityId": "bbc-sport",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "BBC Sport independently confirms Khan won Olympic silver in 2004 boxing."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2004",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the verified Olympic result rather than repeating the sport label."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0312",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 312,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "E9842CC39809FC24845BD3412985668E1ECDF3C635384EAE6DD06774B3FCC676",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The printed July key is retained with an explicit traditional-calendar qualification because official tourism material describes the festival as usually occurring in late June or early July.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0312-SRC",
+      "pairId": "WGI-Q0312",
+      "kind": "source",
+      "categoryId": "pakistan-studies",
+      "question": "Traditionally, Shandur Polo Festival is associated with which month?",
+      "questionUrdu": "روایتی طور پر شندور پولو فیسٹیول کس ماہ سے منسوب کیا جاتا ہے؟",
+      "options": [
+        "July",
+        "January",
+        "March",
+        "November"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب July ہے۔ سرکاری سیاحتی معلومات میں یہ سالانہ میلہ عموماً جون کے آخر یا جولائی کے شروع میں بتایا جاتا ہے، اس لیے روایتی GK جواب July ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 312",
+        "referenceUrl": "https://www.visitgilgitbaltistan.gov.pk/pages/latest-events/32",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0312"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.visitgilgitbaltistan.gov.pk/pages/latest-events/32",
+          "label": "Shandur Polo Festival 2026",
+          "publisher": "Tourism, Sports, Culture, Archaeology & Museums Department, Gilgit-Baltistan",
+          "authorityId": "gilgit-baltistan-tourism-department",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Gilgit-Baltistan tourism department identifies the annual Shandur Polo Festival at Shandur Pass and documents its official event schedule."
+        },
+        {
+          "url": "https://www.radio.gov.pk/12-06-2026/shandur-polo-festival-begins-at-worlds-highest-polo-ground",
+          "label": "Shandur Polo Festival dates",
+          "publisher": "Radio Pakistan",
+          "authorityId": "radio-pakistan",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Radio Pakistan reports the festival's early-summer schedule at the world's highest polo ground."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed answer says July; the question now makes clear that this is the traditional association, not an invariant date every year."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0312-SIM",
+      "pairId": "WGI-Q0312",
+      "kind": "similar",
+      "categoryId": "pakistan-studies",
+      "question": "Shandur Polo Festival takes place at which high-altitude pass?",
+      "questionUrdu": "شندور پولو فیسٹیول کس بلند پہاڑی درے میں منعقد ہوتا ہے؟",
+      "options": [
+        "Shandur Pass",
+        "Khyber Pass",
+        "Lowari Pass",
+        "Bolan Pass"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Shandur Pass ہے۔ یہ مشہور پولو فیسٹیول شندور پاس کے بلند میدان میں منعقد ہوتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 312",
+        "referenceUrl": "https://www.visitgilgitbaltistan.gov.pk/pages/latest-events/32",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0312"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.visitgilgitbaltistan.gov.pk/pages/latest-events/32",
+          "label": "Shandur Polo Festival 2026",
+          "publisher": "Tourism, Sports, Culture, Archaeology & Museums Department, Gilgit-Baltistan",
+          "authorityId": "gilgit-baltistan-tourism-department",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Gilgit-Baltistan tourism department identifies Shandur Pass as the festival venue and describes the annual polo event."
+        },
+        {
+          "url": "https://www.radio.gov.pk/12-06-2026/shandur-polo-festival-begins-at-worlds-highest-polo-ground",
+          "label": "Shandur Polo Festival dates",
+          "publisher": "Radio Pakistan",
+          "authorityId": "radio-pakistan",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Radio Pakistan identifies the world's highest polo ground at Shandur as the event venue."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the location, which is distinct from the month association."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0313",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 313,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "A45E1E6FC705F0504DF87F5D30EE3E010B89BC027B277002EC93DAA77610C39F",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "W3C and MDN independently expand XML as Extensible Markup Language; the wording is made precise by saying in computing.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0313-SRC",
+      "pairId": "WGI-Q0313",
+      "kind": "source",
+      "categoryId": "basic-computer-studies",
+      "question": "In computing, what does XML stand for?",
+      "questionUrdu": "کمپیوٹنگ میں XML کا مکمل نام کیا ہے؟",
+      "options": [
+        "Extensible Markup Language",
+        "Extensible Linking Language",
+        "Extra Machine Logic",
+        "Executable Markup Language"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Extensible Markup Language ہے۔ XML ایک قابلِ توسیع markup زبان ہے جو ساختی معلومات بیان کرنے کے لیے استعمال ہوتی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 313",
+        "referenceUrl": "https://www.w3.org/TR/xml/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0313"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.w3.org/TR/xml/",
+          "label": "Extensible Markup Language (XML) specification",
+          "publisher": "World Wide Web Consortium",
+          "authorityId": "world-wide-web-consortium",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The W3C specification names XML as Extensible Markup Language."
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/XML/Guides/XML_introduction",
+          "label": "XML introduction",
+          "publisher": "MDN Web Docs",
+          "authorityId": "mdn-web-docs",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "MDN expands the XML acronym and describes its markup purpose."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The original abbreviation question is retained with a clear computing context and four distinct options."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0313-SIM",
+      "pairId": "WGI-Q0313",
+      "kind": "similar",
+      "categoryId": "basic-computer-studies",
+      "question": "Which organization publishes the XML 1.0 Recommendation?",
+      "questionUrdu": "XML 1.0 کی سفارش کون سا ادارہ شائع کرتا ہے؟",
+      "options": [
+        "World Wide Web Consortium (W3C)",
+        "International Organization for Standardization (ISO)",
+        "Institute of Electrical and Electronics Engineers (IEEE)",
+        "Internet Engineering Task Force (IETF)"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب World Wide Web Consortium (W3C) ہے۔ XML 1.0 Recommendation W3C کی شائع کردہ تکنیکی سفارش ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 313",
+        "referenceUrl": "https://www.w3.org/TR/xml/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0313"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.w3.org/TR/xml/",
+          "label": "Extensible Markup Language (XML) specification",
+          "publisher": "World Wide Web Consortium",
+          "authorityId": "world-wide-web-consortium",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The W3C page identifies its XML 1.0 Recommendation and publishing organization."
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/XML/Guides/XML_introduction",
+          "label": "XML introduction",
+          "publisher": "MDN Web Docs",
+          "authorityId": "mdn-web-docs",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "MDN describes XML standards and points readers to the W3C specification."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item checks the standards body rather than repeating the acronym expansion."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0314",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 314,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "6B2BA8EAAB0BEB95AEDA779F4F23D51E2BA8D9A5143ABE137C973550F348419D",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "reject",
+    "reason": "The stem asks for a language used in AI without naming a task, era, or standard; many languages qualify, so the printed Python key is not uniquely defensible.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0315",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 315,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "0CB2E9B984E6A76949C66F4E4616219DC6414941E9F289B2A3DAEBF0166ADA29",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "OpenStax and an Ohio State ecology teaching source support climax community as the stable endpoint of ecological succession; the stem is narrowed from ecosystem to community succession.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0315-SRC",
+      "pairId": "WGI-Q0315",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "In ecological succession, what is the final stable stage of a community called?",
+      "questionUrdu": "ماحولیاتی جانشینی میں کسی برادری کا آخری مستحکم مرحلہ کیا کہلاتا ہے؟",
+      "options": [
+        "Climax community",
+        "Pioneer community",
+        "Food chain",
+        "Ecological niche"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Climax community ہے۔ جانشینی کے بعد نسبتاً مستحکم آخری برادری کو climax community کہا جاتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 315",
+        "referenceUrl": "https://openstax.org/books/concepts-biology/pages/19-4-community-ecology",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0315"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/concepts-biology/pages/19-4-community-ecology",
+          "label": "Community ecology",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax describes the equilibrium endpoint of succession as a climax community."
+        },
+        {
+          "url": "https://cpb-us-w2.wpmucdn.com/u.osu.edu/dist/0/5437/files/2021/07/Community-Ecology.pdf",
+          "label": "Community Ecology lecture notes",
+          "publisher": "The Ohio State University",
+          "authorityId": "ohio-state-university",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The university ecology notes define climax community as the relatively stable late-successional stage."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The broad printed wording was clarified to ecological succession and a community, the terminology used by the references."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0315-SIM",
+      "pairId": "WGI-Q0315",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "In primary succession on bare rock, what are the first colonizing organisms commonly called?",
+      "questionUrdu": "ننگی چٹان پر ابتدائی جانشینی میں پہلے آباد ہونے والے جاندار عموماً کیا کہلاتے ہیں؟",
+      "options": [
+        "Pioneer species",
+        "Climax community",
+        "Consumers",
+        "Decomposers"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Pioneer species ہے۔ یہ جاندار نئے یا بے جان سطحی ماحول میں سب سے پہلے آباد ہو کر جانشینی شروع کرتے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 315",
+        "referenceUrl": "https://openstax.org/books/concepts-biology/pages/19-4-community-ecology",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0315"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/concepts-biology/pages/19-4-community-ecology",
+          "label": "Community ecology",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax explains pioneer species and their role at the beginning of succession."
+        },
+        {
+          "url": "https://cpb-us-w2.wpmucdn.com/u.osu.edu/dist/0/5437/files/2021/07/Community-Ecology.pdf",
+          "label": "Community Ecology lecture notes",
+          "publisher": "The Ohio State University",
+          "authorityId": "ohio-state-university",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The university notes distinguish pioneer colonizers from the later climax community."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the first stage of succession, not the final climax stage."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0316",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 316,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "BECEE5188A6325637F8E4C9F4BFD736FD464150CD2C5BF552055E76EAB6C9355",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "reject",
+    "reason": "The audited treaty text shows Article 20 concerns signature, ratification, acceptance, approval and accession; it does not support the printed claim about Pakistan approving the climate agreement.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0317",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 317,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "BC4A74C99CB73874975CBAF1E36E2E46D0984766988759788ED10DDCDC782471",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The adoption date 12 December 2015 at COP21 is already covered by the current bank's Paris Agreement date item, so adding this source line would repeat the same fact.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0001-Q013-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0318",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 318,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "27606D9CFB97B7997A6819F7F41D5EAD404ADDF82F922FAC3DD9035B18B2EE98",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The UN Treaty Collection and UN climate sources independently verify the 22 April 2016 opening for signature at UN Headquarters in New York.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0318-SRC",
+      "pairId": "WGI-Q0318",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "On what date in 2016 did the Paris Agreement open for signature at UN Headquarters in New York?",
+      "questionUrdu": "2016 میں پیرس معاہدہ نیویارک میں اقوام متحدہ کے صدر دفتر پر دستخط کے لیے کس تاریخ کو کھولا گیا؟",
+      "options": [
+        "22 April 2016",
+        "12 December 2015",
+        "4 November 2016",
+        "1 January 2017"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 22 April 2016 ہے۔ اسی دن پیرس معاہدہ اقوام متحدہ کے صدر دفتر نیویارک میں دستخط کے لیے کھولا گیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 318",
+        "referenceUrl": "https://treaties.un.org/pages/viewdetails.aspx?chapter=27&clang=_en&mtdsg_no=xxvii-7-d&src=treaty",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0318"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://treaties.un.org/pages/viewdetails.aspx?chapter=27&clang=_en&mtdsg_no=xxvii-7-d&src=treaty",
+          "label": "Paris Agreement treaty record",
+          "publisher": "United Nations Treaty Collection",
+          "authorityId": "united-nations-treaty-collection",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The treaty record states that the agreement opened for signature at UN Headquarters on 22 April 2016."
+        },
+        {
+          "url": "https://www.un.org/sustainabledevelopment/parisagreement22april/",
+          "label": "Paris Agreement signing ceremony",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN describes the 22 April 2016 signing ceremony at UN Headquarters in New York."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2016-04-22",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed line is rewritten as a date question while preserving its verified date and New York location."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0318-SIM",
+      "pairId": "WGI-Q0318",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "In which city was the opening signature ceremony for the Paris Agreement held in 2016?",
+      "questionUrdu": "2016 میں پیرس معاہدے کی افتتاحی دستخطی تقریب کس شہر میں ہوئی؟",
+      "options": [
+        "New York City",
+        "Paris",
+        "Geneva",
+        "Nairobi"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب New York City ہے۔ افتتاحی دستخطی تقریب اقوام متحدہ کے صدر دفتر، نیویارک میں منعقد ہوئی تھی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 318",
+        "referenceUrl": "https://unfccc.int/news/closing-paris-agreement-signing-press-release",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0318"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://unfccc.int/news/closing-paris-agreement-signing-press-release",
+          "label": "Closing Paris Agreement signing press release",
+          "publisher": "UN Framework Convention on Climate Change",
+          "authorityId": "un-framework-convention-on-climate-change",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNFCCC identifies New York as the venue of the opening Paris Agreement signing ceremony."
+        },
+        {
+          "url": "https://treaties.un.org/pages/viewdetails.aspx?chapter=27&clang=_en&mtdsg_no=xxvii-7-d&src=treaty",
+          "label": "Paris Agreement treaty record",
+          "publisher": "United Nations Treaty Collection",
+          "authorityId": "united-nations-treaty-collection",
+          "role": "answer-secondary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The treaty record names United Nations Headquarters in New York as the signature venue."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2016-04-22",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the verified venue city rather than repeating the date."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0319",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 319,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "952D3FF2330484DA0FE89CA33BAF3297961DD4D8652E4A687EBAEAF4ED86E872",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The Paris Agreement entry-into-force date 4 November 2016 is already present in the current bank, so this source line is a direct duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0131-Q010-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0320",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 320,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "BC1D9A22540B6CBBC9A14D3FC641A890741DB6D6B757EC5913D0D8E6BDAE827E",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "Earth Day on 22 April is already present in the current bank's Earth Day date item, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0019-Q022-SIM"
+  }
+]

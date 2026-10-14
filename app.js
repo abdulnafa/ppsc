@@ -33,6 +33,8 @@
   var IMPORTANT_REVIEW_MAX_SPACING = 20;
   var SEQUENTIAL_REVIEW_SPACING = 15;
   var SEQUENTIAL_ORDER_VERSION = 2;
+  var APPROVED_ADDITIVE_BANK_SIGNATURE = "v1:11412:57e37c68";
+  var APPROVED_ADDITIVE_BANK_QUESTION_COUNT = 11412;
   var BASIC_COMPUTER_CATEGORY_ID = "basic-computer-studies";
   var COMPUTER_SOURCE_SCOPES = ["all", "initial-original", "initial-related", "other"];
   var data = window.PPSC_QUIZ_DATA || {};
@@ -54,17 +56,7 @@
   var allQuestionIndexes = new Map(allQuestions.map(function (question, index) {
     return [String(question.id), index];
   }));
-  var sequentialCategoryEntries = categories.map(function (category) {
-    var categoryId = String(category.id || "");
-    return {
-      category: category,
-      questions: allQuestions.filter(function (question) {
-        return String(question.categoryId || "") === categoryId;
-      })
-    };
-  }).filter(function (entry) {
-    return entry.questions.length > 0;
-  });
+  var sequentialCategoryEntries = sequentialEntriesForQuestions(allQuestions);
   var sequentialQuestionTurns = new Map();
   sequentialCategoryEntries.forEach(function (entry, categoryIndex) {
     entry.questions.forEach(function (question, questionIndex) {
@@ -334,9 +326,17 @@
     return hash;
   }
 
-  function buildQuestionBankSignature() {
+  function buildQuestionBankSignature(questionCount) {
+    var signatureQuestionCount = typeof questionCount === "undefined"
+      ? allQuestions.length
+      : questionCount;
+    if (
+      !Number.isSafeInteger(signatureQuestionCount)
+      || signatureQuestionCount < 0
+      || signatureQuestionCount > allQuestions.length
+    ) return "";
     var hash = 2166136261;
-    allQuestions.forEach(function (question) {
+    allQuestions.slice(0, signatureQuestionCount).forEach(function (question) {
       hash = hashText(hash, JSON.stringify([
         question.id,
         question.categoryId,
@@ -348,7 +348,21 @@
       ]));
       hash = hashText(hash, "\n");
     });
-    return "v1:" + allQuestions.length + ":" + (hash >>> 0).toString(16);
+    return "v1:" + signatureQuestionCount + ":" + (hash >>> 0).toString(16);
+  }
+
+  function approvedAdditiveBankQuestionCount(savedSignature) {
+    if (
+      savedSignature !== APPROVED_ADDITIVE_BANK_SIGNATURE
+      || allQuestions.length <= APPROVED_ADDITIVE_BANK_QUESTION_COUNT
+      || buildQuestionBankSignature(APPROVED_ADDITIVE_BANK_QUESTION_COUNT)
+        !== APPROVED_ADDITIVE_BANK_SIGNATURE
+    ) return null;
+    return APPROVED_ADDITIVE_BANK_QUESTION_COUNT;
+  }
+
+  function isApprovedAdditiveBankMigration(savedSignature) {
+    return approvedAdditiveBankQuestionCount(savedSignature) !== null;
   }
 
   function isIndexPermutation(value) {
@@ -534,7 +548,9 @@
     var legacySession = savedValue.version === LEGACY_SESSION_STORAGE_VERSION;
     var rangeSession = savedValue.version === RANGE_SESSION_STORAGE_VERSION;
     if (!legacySession && !rangeSession && savedValue.version !== SESSION_STORAGE_VERSION) return null;
-    if (savedValue.bankSignature !== questionBankSignature) return null;
+    var additiveBankMigration = savedValue.bankSignature !== questionBankSignature
+      && isApprovedAdditiveBankMigration(savedValue.bankSignature);
+    if (savedValue.bankSignature !== questionBankSignature && !additiveBankMigration) return null;
     if (savedValue.sessionKind !== "category" && savedValue.sessionKind !== "paper") return null;
     if (savedValue.mode !== "learn" && savedValue.mode !== "quiz") return null;
     var paperSession = savedValue.sessionKind === "paper";
@@ -670,7 +686,7 @@
         if (orderKey(rangeQuestionIds, function (questionId) { return questionId; })
           !== orderKey(expectedRangeIds, function (questionId) { return questionId; })) return null;
 
-        if (savedValue.scope === "all") {
+        if (savedValue.scope === "all" && !additiveBankMigration) {
           if (rangePoolSize !== selectedQuestionIds.length) return null;
           if (orderKey(rangePoolQuestionIds, function (questionId) { return questionId; })
             !== orderKey(selectedQuestionIds, function (questionId) { return questionId; })) return null;
@@ -814,12 +830,22 @@
         activeSessionSnapshot = null;
         return null;
       }
-      var normalized = normalizeStoredSession(JSON.parse(rawValue));
+      var savedValue = JSON.parse(rawValue);
+      var normalized = normalizeStoredSession(savedValue);
       if (!normalized) {
         removeStoredActiveSession();
         return null;
       }
       activeSessionSnapshot = normalized.snapshot;
+      if (savedValue.bankSignature !== questionBankSignature) {
+        try {
+          window.localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(activeSessionSnapshot));
+          notifyLocalStateChanged(SESSION_STORAGE_KEY, "set");
+        } catch (migrationWriteError) {
+          // The validated frozen session remains usable in memory. A later
+          // successful save will write the current signature and notify sync.
+        }
+      }
       return normalized;
     } catch (error) {
       removeStoredActiveSession();
@@ -1012,6 +1038,9 @@
       sequentialOrderVersion: SEQUENTIAL_ORDER_VERSION,
       sequentialTurn: 0,
       sequentialIndex: 0,
+      sequentialQuestionId: allQuestions.length > 0
+        ? String((sequentialQuestionAt(0) || {}).id || "")
+        : null,
       nextSequence: 1,
       dedicatedDeck: [],
       dedicatedLastQuestionId: null,
@@ -1028,25 +1057,44 @@
     return Number.isSafeInteger(value) && value >= minimum;
   }
 
-  function sequentialPositionDetails(turn) {
+  function sequentialEntriesForQuestions(questions) {
+    return categories.map(function (category) {
+      var categoryId = String(category.id || "");
+      return {
+        category: category,
+        questions: questions.filter(function (question) {
+          return String(question.categoryId || "") === categoryId;
+        })
+      };
+    }).filter(function (entry) {
+      return entry.questions.length > 0;
+    });
+  }
+
+  function sequentialPositionDetailsForEntries(turn, entries) {
     if (
       !isSafeWholeNumber(turn, 0)
-      || sequentialCategoryEntries.length === 0
+      || !Array.isArray(entries)
+      || entries.length === 0
     ) return null;
-    var categoryIndex = turn % sequentialCategoryEntries.length;
-    var categoryRound = Math.floor(turn / sequentialCategoryEntries.length);
-    var entry = sequentialCategoryEntries[categoryIndex];
+    var categoryIndex = turn % entries.length;
+    var categoryRound = Math.floor(turn / entries.length);
+    var entry = entries[categoryIndex];
     if (!entry || entry.questions.length === 0) return null;
     var questionIndex = categoryRound % entry.questions.length;
     return {
       category: entry.category,
       categoryIndex: categoryIndex,
-      categoryCount: sequentialCategoryEntries.length,
+      categoryCount: entries.length,
       categoryRound: categoryRound,
       question: entry.questions[questionIndex],
       questionIndex: questionIndex,
       questionCount: entry.questions.length
     };
+  }
+
+  function sequentialPositionDetails(turn) {
+    return sequentialPositionDetailsForEntries(turn, sequentialCategoryEntries);
   }
 
   function sequentialQuestionAt(turn) {
@@ -1064,6 +1112,59 @@
     if (!question) return null;
     var index = allQuestionIndexes.get(String(question.id || ""));
     return isSafeWholeNumber(index, 0) ? index : null;
+  }
+
+  function approvedAdditiveSequentialQuestion(savedValue, approvedQuestionCount) {
+    var approvedQuestions = allQuestions.slice(0, approvedQuestionCount);
+    var approvedQuestionIds = new Set(approvedQuestions.map(function (question) {
+      return String(question.id);
+    }));
+    if (
+      typeof savedValue.sequentialQuestionId !== "undefined"
+      && (
+        typeof savedValue.sequentialQuestionId !== "string"
+        || !savedValue.sequentialQuestionId
+      )
+    ) return null;
+    var savedSequentialQuestionId = typeof savedValue.sequentialQuestionId === "undefined"
+      ? null
+      : savedValue.sequentialQuestionId;
+    if (savedSequentialQuestionId && !approvedQuestionIds.has(savedSequentialQuestionId)) return null;
+
+    var savedSequentialAttempt = savedValue.activeAttempt;
+    var attemptQuestionId = savedSequentialAttempt
+      && typeof savedSequentialAttempt === "object"
+      && !Array.isArray(savedSequentialAttempt)
+      && String(savedSequentialAttempt.kind || "") === "sequential"
+      ? String(savedSequentialAttempt.questionId || "")
+      : "";
+    if (attemptQuestionId && !approvedQuestionIds.has(attemptQuestionId)) return null;
+    if (
+      attemptQuestionId
+      && savedSequentialQuestionId
+      && attemptQuestionId !== savedSequentialQuestionId
+    ) return null;
+    if (attemptQuestionId) return questionsById.get(attemptQuestionId) || null;
+    if (savedSequentialQuestionId) return questionsById.get(savedSequentialQuestionId) || null;
+
+    var savedSequentialOrderVersion = typeof savedValue.sequentialOrderVersion === "undefined"
+      ? 1
+      : savedValue.sequentialOrderVersion;
+    var savedSequentialIndex = typeof savedValue.sequentialIndex === "undefined"
+      ? 0
+      : savedValue.sequentialIndex;
+    if (savedSequentialOrderVersion < SEQUENTIAL_ORDER_VERSION) {
+      return isSafeWholeNumber(savedSequentialIndex, 0)
+        && savedSequentialIndex < approvedQuestions.length
+        ? approvedQuestions[savedSequentialIndex]
+        : null;
+    }
+    if (!isSafeWholeNumber(savedValue.sequentialTurn, 0)) return null;
+    var approvedDetails = sequentialPositionDetailsForEntries(
+      savedValue.sequentialTurn,
+      sequentialEntriesForQuestions(approvedQuestions)
+    );
+    return approvedDetails ? approvedDetails.question : null;
   }
 
   function normalizedDedicatedRepeatGap(value) {
@@ -1140,7 +1241,11 @@
   function normalizeRetryQueue(savedValue) {
     if (!savedValue || typeof savedValue !== "object" || Array.isArray(savedValue)) return null;
     if (savedValue.version !== RETRY_QUEUE_STORAGE_VERSION) return null;
-    if (savedValue.bankSignature !== questionBankSignature) return null;
+    var approvedQuestionCount = savedValue.bankSignature === questionBankSignature
+      ? null
+      : approvedAdditiveBankQuestionCount(savedValue.bankSignature);
+    var additiveBankMigration = approvedQuestionCount !== null;
+    if (savedValue.bankSignature !== questionBankSignature && !additiveBankMigration) return null;
     if (!isSafeWholeNumber(savedValue.practiceStep, 0)) return null;
     if (!isSafeWholeNumber(savedValue.nextSequence, 1)) return null;
     if (!Array.isArray(savedValue.items)) return null;
@@ -1258,9 +1363,34 @@
       : savedValue.sequentialIndex;
     if (!isSafeWholeNumber(sequentialIndex, 0)) return null;
     var sequentialTurn;
+    var sequentialQuestionId = null;
     if (allQuestions.length === 0) {
-      if (sequentialIndex !== 0) return null;
+      if (
+        sequentialIndex !== 0
+        || (typeof savedValue.sequentialQuestionId !== "undefined"
+          && savedValue.sequentialQuestionId !== null)
+      ) return null;
       sequentialTurn = 0;
+    } else if (additiveBankMigration) {
+      // Resolve the next old-bank question before using any current-bank
+      // cursor. This keeps an in-flight Sequential answer exact even if new
+      // categories alter the round-robin width. New MCQs are never inferred
+      // into an old attempt, deck or finite Queue.
+      var migratedSequentialQuestion = approvedAdditiveSequentialQuestion(
+        savedValue,
+        approvedQuestionCount
+      );
+      if (!migratedSequentialQuestion) return null;
+      var savedTurnQuestion = isSafeWholeNumber(savedValue.sequentialTurn, 0)
+        ? sequentialQuestionAt(savedValue.sequentialTurn)
+        : null;
+      sequentialTurn = savedTurnQuestion
+        && String(savedTurnQuestion.id) === String(migratedSequentialQuestion.id)
+        ? savedValue.sequentialTurn
+        : sequentialTurnForQuestion(migratedSequentialQuestion);
+      sequentialIndex = sequentialFlatIndexForQuestion(migratedSequentialQuestion);
+      if (sequentialTurn === null || sequentialIndex === null) return null;
+      sequentialQuestionId = String(migratedSequentialQuestion.id);
     } else if (
       savedSequentialOrderVersion < SEQUENTIAL_ORDER_VERSION
       || typeof savedValue.sequentialTurn === "undefined"
@@ -1286,13 +1416,23 @@
       sequentialTurn = sequentialTurnForQuestion(legacySequentialQuestion);
       sequentialIndex = sequentialFlatIndexForQuestion(legacySequentialQuestion);
       if (sequentialTurn === null || sequentialIndex === null) return null;
+      sequentialQuestionId = String(legacySequentialQuestion.id);
     } else {
       sequentialTurn = savedValue.sequentialTurn;
       if (!isSafeWholeNumber(sequentialTurn, 0)) return null;
       var currentSequentialQuestion = sequentialQuestionAt(sequentialTurn);
       sequentialIndex = sequentialFlatIndexForQuestion(currentSequentialQuestion);
       if (!currentSequentialQuestion || sequentialIndex === null) return null;
+      sequentialQuestionId = String(currentSequentialQuestion.id);
     }
+    if (
+      !additiveBankMigration
+      && typeof savedValue.sequentialQuestionId !== "undefined"
+      && (
+        typeof savedValue.sequentialQuestionId !== "string"
+        || savedValue.sequentialQuestionId !== sequentialQuestionId
+      )
+    ) return null;
 
     var dedicatedDeck = [];
     if (Array.isArray(savedValue.dedicatedDeck)) {
@@ -1358,8 +1498,8 @@
         || (attemptKind === "queue" && !questionIds.has(attemptQuestionId))
         || (attemptKind === "important" && !importantQuestionIdSet.has(attemptQuestionId))
         || (attemptKind === "sequential" && (
-          !sequentialQuestionAt(sequentialTurn)
-          || String(sequentialQuestionAt(sequentialTurn).id) !== attemptQuestionId
+          !sequentialQuestionId
+          || sequentialQuestionId !== attemptQuestionId
         ))
         || !["embedded", "dedicated"].includes(attemptContext)
         || !isIndexPermutation(attempt.optionOrder)
@@ -1452,6 +1592,7 @@
       sequentialOrderVersion: SEQUENTIAL_ORDER_VERSION,
       sequentialTurn: sequentialTurn,
       sequentialIndex: sequentialIndex,
+      sequentialQuestionId: sequentialQuestionId,
       nextSequence: savedValue.nextSequence,
       dedicatedDeck: dedicatedDeck,
       dedicatedLastQuestionId: dedicatedLastQuestionId,
@@ -1595,6 +1736,10 @@
     retryQueueState.version = RETRY_QUEUE_STORAGE_VERSION;
     retryQueueState.bankSignature = questionBankSignature;
     retryQueueState.sequentialOrderVersion = SEQUENTIAL_ORDER_VERSION;
+    var savedSequentialQuestion = sequentialQuestionAt(retryQueueState.sequentialTurn);
+    retryQueueState.sequentialQuestionId = savedSequentialQuestion
+      ? String(savedSequentialQuestion.id)
+      : null;
     retryQueueState.countBaselineVersion = Math.max(
       isSafeWholeNumber(retryQueueState.countBaselineVersion, 0)
         ? retryQueueState.countBaselineVersion
@@ -1644,10 +1789,14 @@
         typeof savedValue.nextSequentialReviewStep === "undefined"
         || typeof savedValue.sequentialIndex === "undefined"
         || typeof savedValue.sequentialTurn === "undefined"
+        || typeof savedValue.sequentialQuestionId === "undefined"
         || savedValue.sequentialOrderVersion !== SEQUENTIAL_ORDER_VERSION
         || savedValue.sequentialTurn !== normalized.sequentialTurn
         || savedValue.sequentialIndex !== normalized.sequentialIndex
+        || savedValue.sequentialQuestionId !== normalized.sequentialQuestionId
       );
+      var additiveBankMigrationApplied = Boolean(normalized)
+        && savedValue.bankSignature !== questionBankSignature;
       if (!normalized) {
         window.localStorage.removeItem(RETRY_QUEUE_STORAGE_KEY);
         notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "remove");
@@ -1659,6 +1808,7 @@
           || dedicatedSpacingApplied
           || embeddedCadenceApplied
           || sequentialMigrationApplied
+          || additiveBankMigrationApplied
         ) {
           saveRetryQueue(countBaselineApplied && retryQueueState.items.length > 0
             ? "Existing Review Queue counts were set to five once. Wrong answers now add two."
@@ -1666,9 +1816,11 @@
               ? "Regular Queue timing was restored. A wrong MCQ alone now waits ten to fifteen questions; saved Queue counts were kept unchanged."
               : (dedicatedSpacingApplied
                 ? "Review Queue spacing is ready. Saved question counts were kept unchanged."
-                : (sequentialMigrationApplied
+                : (additiveBankMigrationApplied
+                  ? "New MCQs are ready. Your Queue, timing and exact Sequential question were kept unchanged."
+                  : (sequentialMigrationApplied
                   ? "All-MCQs category rotation is ready. Your existing next question and progress were kept unchanged."
-                  : ""))));
+                  : "")))));
           return;
         }
       }
@@ -2539,6 +2691,7 @@
     var flatIndex = sequentialFlatIndexForQuestion(canonicalQuestion);
     if (flatIndex === null) return false;
     retryQueueState.sequentialIndex = flatIndex;
+    retryQueueState.sequentialQuestionId = String(canonicalQuestion.id);
     var reviewQuestion = shuffledReviewQuestion(canonicalQuestion);
     if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
     retryQueueState.activeAttempt = {
@@ -2562,6 +2715,9 @@
     var canonicalQuestion = sequentialQuestionAt(retryQueueState.sequentialTurn);
     var flatIndex = sequentialFlatIndexForQuestion(canonicalQuestion);
     retryQueueState.sequentialIndex = flatIndex === null ? 0 : flatIndex;
+    retryQueueState.sequentialQuestionId = canonicalQuestion
+      ? String(canonicalQuestion.id)
+      : null;
     return retryQueueState.sequentialTurn;
   }
 

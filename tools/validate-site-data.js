@@ -28,15 +28,17 @@ const errors = [];
 const warnings = [];
 const repeatDecisionFilePatterns = [
   { corpus: "IBES", pattern: /^ibes-dedup-decisions-p\d{3}-\d{3,4}\.json$/i },
-  { corpus: "ADV2E102", pattern: /^adv2e102-dedup-decisions-pdf\d{4}-\d{4}\.json$/i }
+  { corpus: "ADV2E102", pattern: /^adv2e102-dedup-decisions-pdf\d{4}-\d{4}\.json$/i },
+  { corpus: "WGI", pattern: /^wgi-reviewed-q\d{4}-\d{4}\.json$/i }
 ];
 const repeatSourceIdentityPatterns = {
   IBES: /^Q\d{4}$/,
-  ADV2E102: /^ADV2E102-U\d{4}-Q\d{3}$/
+  ADV2E102: /^ADV2E102-U\d{4}-Q\d{3}$/,
+  WGI: /^WGI-Q\d{4}$/
 };
 const verifyWorkRepeatEvidence = process.argv.includes("--verify-work-repeat-evidence");
-const productionItemIdPattern = /^(?:(?:P23[4-9]-Q\d{3}|IBES-Q\d{4})-(?:SRC|SIM)|ADV2E102-U\d{4}-Q\d{3}-(?:SRC|SIM))$/;
-const canonicalPairIdPattern = /^(?:IBES-Q\d{4}|ADV2E102-U\d{4}-Q\d{3})$/;
+const productionItemIdPattern = /^(?:(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|WGI-Q\d{4})-(?:SRC|SIM)|ADV2E102-U\d{4}-Q\d{3}-(?:SRC|SIM))$/;
+const canonicalPairIdPattern = /^(?:IBES-Q\d{4}|WGI-Q\d{4}|ADV2E102-U\d{4}-Q\d{3})$/;
 
 function error(message) {
   errors.push(message);
@@ -118,6 +120,21 @@ function loadVerifiedSkipCounts() {
   const verifiedSkips = [];
   const skipCountsByTargetId = new Map();
   const seenDecisions = new Set();
+  const wgiDecisionsByNumber = new Map();
+  for (const reviewName of fs.readdirSync(workDirectory).filter((name) => /^wgi-reviewed-q\d{4}-\d{4}\.json$/i.test(name))) {
+    try {
+      const reviewRecords = JSON.parse(fs.readFileSync(path.join(workDirectory, reviewName), "utf8"));
+      if (Array.isArray(reviewRecords)) {
+        for (const reviewRecord of reviewRecords) {
+          if (Number.isInteger(Number(reviewRecord.sourceQuestionNumber))) {
+            wgiDecisionsByNumber.set(Number(reviewRecord.sourceQuestionNumber), reviewRecord);
+          }
+        }
+      }
+    } catch {
+      // The normal decision-file loop below reports malformed files.
+    }
+  }
   let verifiedSkipCount = 0;
 
   for (const { corpus, pattern } of repeatDecisionFilePatterns) {
@@ -151,6 +168,10 @@ function loadVerifiedSkipCounts() {
           error(`${name}: decision has no stable source identity`);
           continue;
         }
+        if (!repeatSourceIdentityPatterns[corpus].test(sourceIdentity)) {
+          error(`${evidenceId}: source identity has an invalid format`);
+          continue;
+        }
         if (seenDecisions.has(evidenceId)) {
           error(`${evidenceId}: duplicate decision evidence`);
           continue;
@@ -161,6 +182,11 @@ function loadVerifiedSkipCounts() {
         if (!targetId) {
           error(`${evidenceId}: verified skip does not resolve to a production question ID`);
           continue;
+        }
+        const targetWgiMatch = targetId.match(/^WGI-Q(\d{4})-(?:SRC|SIM)$/);
+        if (corpus === "WGI" && targetWgiMatch) {
+          const targetDecision = wgiDecisionsByNumber.get(Number(targetWgiMatch[1]));
+          if (targetDecision && targetDecision.action !== "keep") continue;
         }
         verifiedSkips.push({ corpus, sourceIdentity, targetId, sourceFile: name });
         verifiedSkipCount += 1;
@@ -389,24 +415,24 @@ function validateGkStudyNotes(bundle, questionData, questions) {
   const eligibleQuestionIds = eligiblePairs.flatMap(([, pair]) => pair.map((question) => question.id));
   const excludedQuestionIds = excludedPairs.flatMap(([, pair]) => pair.map((question) => question.id));
 
-  if (gkQuestions.length !== 1452 || gkPairs.size !== 726) {
-    error(`GK Study Notes source scope is ${gkQuestions.length} questions/${gkPairs.size} pairs; expected 1452/726`);
+  if (gkQuestions.length !== gkPairs.size * 2) {
+    error(`GK Study Notes source scope is not paired: ${gkQuestions.length} questions/${gkPairs.size} pairs`);
   }
-  if (eligiblePairIds.length !== 708 || eligibleQuestionIds.length !== 1416) {
-    error(`GK Study Notes eligible scope is ${eligiblePairIds.length} pairs/${eligibleQuestionIds.length} questions; expected 708/1416`);
+  if (eligiblePairIds.length + excludedPairIds.length !== gkPairs.size) {
+    error("GK Study Notes eligible and excluded scopes do not cover every GK pair");
   }
   if (excludedPairIds.length !== 18 || excludedQuestionIds.length !== 36) {
     error(`GK Study Notes legacy exclusion is ${excludedPairIds.length} pairs/${excludedQuestionIds.length} questions; expected 18/36`);
   }
   for (const [field, actual, expected] of [
-    ["includedPairCount", notesData.includedPairCount, 708],
-    ["includedQuestionCount", notesData.includedQuestionCount, 1416],
+    ["includedPairCount", notesData.includedPairCount, eligiblePairIds.length],
+    ["includedQuestionCount", notesData.includedQuestionCount, eligibleQuestionIds.length],
     ["excludedPairCount", notesData.excludedPairCount, 18],
     ["excludedQuestionCount", notesData.excludedQuestionCount, 36]
   ]) {
     if (actual !== expected) error(`GK Study Notes ${field} is ${actual}; expected ${expected}`);
   }
-  if (notes.length !== 708) error(`GK Study Notes contains ${notes.length} notes; expected 708`);
+  if (notes.length !== eligiblePairIds.length) error(`GK Study Notes contains ${notes.length} notes; expected ${eligiblePairIds.length}`);
 
   const documentedPairIds = exclusions.flatMap((entry) => Array.isArray(entry && entry.pairIds) ? entry.pairIds : []);
   const documentedQuestionIds = exclusions.flatMap((entry) => Array.isArray(entry && entry.questionIds) ? entry.questionIds : []);
@@ -423,10 +449,10 @@ function validateGkStudyNotes(bundle, questionData, questions) {
     if (exclusion.questionCount !== questionIds.length) error(`${location}: questionCount does not match questionIds`);
   }
   if (!jsonEqual(documentedPairIds, excludedPairIds)) {
-    error("GK Study Notes exclusions do not list the exact 18 legacy pair IDs in bank order");
+    error(`GK Study Notes exclusions do not list the exact ${excludedPairIds.length} legacy pair IDs in bank order`);
   }
   if (!jsonEqual(documentedQuestionIds, excludedQuestionIds)) {
-    error("GK Study Notes exclusions do not list the exact 36 legacy question IDs in bank order");
+    error(`GK Study Notes exclusions do not list the exact ${excludedQuestionIds.length} legacy question IDs in bank order`);
   }
   if (new Set(documentedPairIds).size !== documentedPairIds.length
     || new Set(documentedQuestionIds).size !== documentedQuestionIds.length) {
@@ -558,7 +584,7 @@ function validateGkStudyNotes(bundle, questionData, questions) {
     error("GK Study Notes must represent each eligible GK pair exactly once in bank order");
   }
   if (!jsonEqual(representedQuestionIds, eligibleQuestionIds)) {
-    error("GK Study Notes must represent the exact 1,416 eligible GK question IDs in source/similar order");
+    error(`GK Study Notes must represent the exact ${eligibleQuestionIds.length} eligible GK question IDs in source/similar order`);
   }
   if (new Set(representedQuestionIds).size !== representedQuestionIds.length) {
     error("GK Study Notes repeat a related question ID");
@@ -921,10 +947,10 @@ function validateComputerSourceScopes(questions) {
     other: computerQuestions.filter((question) => !String(question.id || "").startsWith("IBES-"))
   };
   const expected = {
-    all: { total: 2554, important: 458 },
-    "initial-original": { total: 1088, important: 397 },
-    "initial-related": { total: 1088, important: 19 },
-    other: { total: 378, important: 42 }
+    all: { total: 2564, important: 463 },
+    "initial-original": { total: 1088, important: 399 },
+    "initial-related": { total: 1088, important: 20 },
+    other: { total: 388, important: 44 }
   };
   const isImportant = (question) => question.isImportant === true || Number(question.repeatCount) >= 2;
 
@@ -944,12 +970,12 @@ function validateComputerSourceScopes(questions) {
   if (scopes["initial-related"].some((question) => !/^IBES-Q\d{4}-SIM$/.test(String(question.id || "")))) {
     error("Basic Computer initial-related scope must contain only IBES generated related-practice MCQs");
   }
-  if (scopes.other.some((question) => !/^(?:P23[4-9]-Q\d{3}|ADV2E102-U\d{4}-Q\d{3})-(?:SRC|SIM)$/.test(String(question.id || "")))) {
-    error("Basic Computer other scope must contain only PPSC 110 Edition or ADV2E102 MCQs");
+  if (scopes.other.some((question) => !/^(?:P23[4-9]-Q\d{3}|ADV2E102-U\d{4}-Q\d{3}|WGI-Q\d{4})-(?:SRC|SIM)$/.test(String(question.id || "")))) {
+    error("Basic Computer other scope must contain only PPSC 110 Edition, ADV2E102, or WGI MCQs");
   }
-  if (scopes.other.filter((question) => question.kind === "source").length !== 189
-    || scopes.other.filter((question) => question.kind === "similar").length !== 189) {
-    error("Basic Computer other scope must contain exactly 189 source and 189 related-practice MCQs");
+  if (scopes.other.filter((question) => question.kind === "source").length !== 194
+        || scopes.other.filter((question) => question.kind === "similar").length !== 194) {
+    error("Basic Computer other scope must contain exactly 194 source and 194 related-practice MCQs");
   }
   const scopedIds = scopes["initial-original"].concat(scopes["initial-related"], scopes.other)
     .map((question) => String(question.id));
@@ -1323,9 +1349,12 @@ function validateThemeContract() {
   }
 }
 
-function validateRetryQueueContract() {
+function validateRetryQueueContract(data) {
   const app = fs.readFileSync(appPath, "utf8");
   const styles = fs.readFileSync(stylesPath, "utf8");
+  const questions = Array.isArray(data && data.questions) ? data.questions : [];
+  const approvedAdditiveQuestionCount = 11412;
+  const approvedAdditiveSignature = "v1:11412:57e37c68";
   function appSection(startMarker, endMarker) {
     const startIndex = app.indexOf(startMarker);
     if (startIndex < 0) return null;
@@ -1351,13 +1380,40 @@ function validateRetryQueueContract() {
     ["IMPORTANT_REVIEW_MIN_SPACING", "10"],
     ["IMPORTANT_REVIEW_MAX_SPACING", "20"],
     ["SEQUENTIAL_REVIEW_SPACING", "15"],
-    ["SEQUENTIAL_ORDER_VERSION", "2"]
+    ["SEQUENTIAL_ORDER_VERSION", "2"],
+    ["APPROVED_ADDITIVE_BANK_SIGNATURE", '"v1:11412:57e37c68"'],
+    ["APPROVED_ADDITIVE_BANK_QUESTION_COUNT", "11412"]
   ];
   for (const [name, value] of requiredConstants) {
     const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     if (!new RegExp(`\\bvar\\s+${name}\\s*=\\s*${escapedValue}\\s*;`).test(app)) {
       error(`app.js: ${name} must remain ${value} for the documented spaced-retry contract`);
     }
+  }
+  let approvedPrefixHash = 2166136261;
+  questions.slice(0, approvedAdditiveQuestionCount).forEach((question) => {
+    const signatureText = JSON.stringify([
+      question.id,
+      question.categoryId,
+      question.question,
+      question.questionUrdu,
+      question.correctOptionIndex,
+      question.options,
+      question.optionsUrdu
+    ]) + "\n";
+    for (let index = 0; index < signatureText.length; index += 1) {
+      approvedPrefixHash ^= signatureText.charCodeAt(index);
+      approvedPrefixHash = Math.imul(approvedPrefixHash, 16777619);
+    }
+  });
+  const actualApprovedPrefixSignature = "v1:" + approvedAdditiveQuestionCount + ":"
+    + (approvedPrefixHash >>> 0).toString(16);
+  if (
+    questions.length < approvedAdditiveQuestionCount
+    || actualApprovedPrefixSignature !== approvedAdditiveSignature
+  ) {
+    error("question bank: approved additive migration prefix is " + actualApprovedPrefixSignature
+      + "; expected " + approvedAdditiveSignature);
   }
   for (const requiredSnippet of [
     'return (state.mode === "quiz" || state.mode === "learn")',
@@ -1400,7 +1456,8 @@ function validateRetryQueueContract() {
     }
   }
   if (
-    !/var\s+sequentialCategoryEntries\s*=\s*categories\.map\([\s\S]*?allQuestions\.filter\([\s\S]*?entry\.questions\.length\s*>\s*0/.test(app)
+    !/var\s+sequentialCategoryEntries\s*=\s*sequentialEntriesForQuestions\(allQuestions\)/.test(app)
+    || !/function\s+sequentialEntriesForQuestions\(questions\)[\s\S]*?categories\.map\([\s\S]*?questions\.filter\([\s\S]*?entry\.questions\.length\s*>\s*0/.test(app)
     || !/sequentialQuestionTurns\.set\([\s\S]*?questionIndex\s*\*\s*sequentialCategoryEntries\.length\s*\+\s*categoryIndex/.test(app)
     || !/var\s+allQuestionIndexes\s*=\s*new\s+Map\(allQuestions\.map/.test(app)
   ) {
@@ -1408,13 +1465,13 @@ function validateRetryQueueContract() {
   }
 
   const sequentialPositionDetails = appSection(
-    "function sequentialPositionDetails(turn) {",
-    "function sequentialQuestionAt(turn) {"
+    "function sequentialPositionDetailsForEntries(turn, entries) {",
+    "function sequentialPositionDetails(turn) {"
   );
   if (
     sequentialPositionDetails === null
-    || !/categoryIndex\s*=\s*turn\s*%\s*sequentialCategoryEntries\.length/.test(sequentialPositionDetails)
-    || !/categoryRound\s*=\s*Math\.floor\(turn\s*\/\s*sequentialCategoryEntries\.length\)/.test(sequentialPositionDetails)
+    || !/categoryIndex\s*=\s*turn\s*%\s*entries\.length/.test(sequentialPositionDetails)
+    || !/categoryRound\s*=\s*Math\.floor\(turn\s*\/\s*entries\.length\)/.test(sequentialPositionDetails)
     || !/questionIndex\s*=\s*categoryRound\s*%\s*entry\.questions\.length/.test(sequentialPositionDetails)
     || !/question\s*:\s*entry\.questions\[questionIndex\]/.test(sequentialPositionDetails)
   ) {
@@ -1443,6 +1500,7 @@ function validateRetryQueueContract() {
     || !/sequentialOrderVersion\s*:\s*SEQUENTIAL_ORDER_VERSION/.test(emptyRetryState)
     || !/sequentialTurn\s*:\s*0/.test(emptyRetryState)
     || !/sequentialIndex\s*:\s*0/.test(emptyRetryState)
+    || !/sequentialQuestionId\s*:\s*allQuestions\.length\s*>\s*0/.test(emptyRetryState)
   ) {
     error("app.js: fresh Review Queue state must persist the v2 category-rotation turn, flat mirror, and 15-question gate");
   }
@@ -1469,8 +1527,10 @@ function validateRetryQueueContract() {
     || !/typeof\s+savedValue\.nextSequentialReviewStep\s*===\s*["']undefined["']/.test(loadRetryState)
     || !/typeof\s+savedValue\.sequentialIndex\s*===\s*["']undefined["']/.test(loadRetryState)
     || !/typeof\s+savedValue\.sequentialTurn\s*===\s*["']undefined["']/.test(loadRetryState)
+    || !/typeof\s+savedValue\.sequentialQuestionId\s*===\s*["']undefined["']/.test(loadRetryState)
     || !/savedValue\.sequentialOrderVersion\s*!==\s*SEQUENTIAL_ORDER_VERSION/.test(loadRetryState)
-    || !/embeddedCadenceApplied[\s\S]*?\|\|\s*sequentialMigrationApplied[\s\S]*?saveRetryQueue\(/.test(loadRetryState)
+    || !/additiveBankMigrationApplied[\s\S]*?savedValue\.bankSignature\s*!==\s*questionBankSignature/.test(loadRetryState)
+    || !/embeddedCadenceApplied[\s\S]*?\|\|\s*sequentialMigrationApplied[\s\S]*?\|\|\s*additiveBankMigrationApplied[\s\S]*?saveRetryQueue\(/.test(loadRetryState)
   ) {
     error("app.js: legacy Sequential order/turn/cursor migration must be persisted for cloud/offline sync");
   }
@@ -1487,12 +1547,13 @@ function validateRetryQueueContract() {
       "savedValue.sequentialOrderVersion",
       "savedValue.sequentialTurn",
       "savedValue.sequentialIndex",
+      "savedValue.sequentialQuestionId",
       "sequentialTurnForQuestion(legacySequentialQuestion)",
-      "sequentialQuestionAt(sequentialTurn)",
       "nextSequentialReviewStep: nextSequentialReviewStep",
       "sequentialOrderVersion: SEQUENTIAL_ORDER_VERSION",
       "sequentialTurn: sequentialTurn",
       "sequentialIndex: sequentialIndex",
+      "sequentialQuestionId: sequentialQuestionId",
       "kind: attemptKind"
     ]) {
       if (!normalizedRetryState.includes(requiredSnippet)) {
@@ -1507,6 +1568,14 @@ function validateRetryQueueContract() {
     }
     if (!/attemptKind\s*===\s*["']sequential["']/.test(normalizedRetryState)) {
       error("app.js: saved Sequential attempts must be validated against the persisted category-rotation turn");
+    }
+    if (![
+      "approvedAdditiveBankQuestionCount(savedValue.bankSignature)",
+      "approvedAdditiveSequentialQuestion(",
+      "approvedQuestionCount",
+      "sequentialQuestionId !== attemptQuestionId"
+    ].every((snippet) => normalizedRetryState.includes(snippet))) {
+      error("app.js: approved additive Queue migration must preserve the exact Sequential question/attempt by ID");
     }
     if (![
       "savedSequentialOrderVersion < SEQUENTIAL_ORDER_VERSION",
@@ -1540,6 +1609,7 @@ function validateRetryQueueContract() {
     || !/canonicalQuestion\s*=\s*sequentialQuestionAt\(retryQueueState\.sequentialTurn\)/.test(setSequentialAttempt)
     || !/flatIndex\s*=\s*sequentialFlatIndexForQuestion\(canonicalQuestion\)/.test(setSequentialAttempt)
     || !/retryQueueState\.sequentialIndex\s*=\s*flatIndex/.test(setSequentialAttempt)
+    || !/retryQueueState\.sequentialQuestionId\s*=\s*String\(canonicalQuestion\.id\)/.test(setSequentialAttempt)
     || !/kind\s*:\s*["']sequential["']/.test(setSequentialAttempt)
   ) {
     error("app.js: Sequential practice must resolve the persisted rotation turn and maintain its flat-bank mirror");
@@ -1554,8 +1624,34 @@ function validateRetryQueueContract() {
     || !/retryQueueState\.sequentialTurn\s*>=\s*Number\.MAX_SAFE_INTEGER\s*\?\s*0\s*:\s*retryQueueState\.sequentialTurn\s*\+\s*1/.test(advanceSequentialIndex)
     || !/sequentialQuestionAt\(retryQueueState\.sequentialTurn\)/.test(advanceSequentialIndex)
     || !/retryQueueState\.sequentialIndex\s*=\s*flatIndex\s*===\s*null\s*\?\s*0\s*:\s*flatIndex/.test(advanceSequentialIndex)
+    || !/retryQueueState\.sequentialQuestionId\s*=\s*canonicalQuestion/.test(advanceSequentialIndex)
   ) {
     error("app.js: Sequential turn must advance indefinitely (safe-integer guard only) and refresh its flat-bank mirror");
+  }
+
+  const normalizeSession = appSection(
+    "function normalizeStoredSession(savedValue) {",
+    "function loadActiveSession() {"
+  );
+  const loadSession = appSection(
+    "function loadActiveSession() {",
+    "function storeCurrentResponse() {"
+  );
+  if (
+    normalizeSession === null
+    || !/isApprovedAdditiveBankMigration\(savedValue\.bankSignature\)/.test(normalizeSession)
+    || !/savedValue\.bankSignature\s*!==\s*questionBankSignature\s*&&\s*!additiveBankMigration/.test(normalizeSession)
+    || !/savedValue\.scope\s*===\s*["']all["']\s*&&\s*!additiveBankMigration/.test(normalizeSession)
+    || loadSession === null
+    || !/setItem\(SESSION_STORAGE_KEY,\s*JSON\.stringify\(activeSessionSnapshot\)\)/.test(loadSession)
+    || !/notifyLocalStateChanged\(SESSION_STORAGE_KEY,\s*["']set["']\)/.test(loadSession)
+  ) {
+    error("app.js: approved additive session migration must freeze its saved range, rewrite the current signature and notify cloud sync");
+  }
+  if (
+    !/function\s+approvedAdditiveBankQuestionCount\(savedSignature\)[\s\S]*?savedSignature\s*!==\s*APPROVED_ADDITIVE_BANK_SIGNATURE[\s\S]*?allQuestions\.length\s*<=\s*APPROVED_ADDITIVE_BANK_QUESTION_COUNT[\s\S]*?buildQuestionBankSignature\(APPROVED_ADDITIVE_BANK_QUESTION_COUNT\)/.test(app)
+  ) {
+    error("app.js: additive migration must accept only the approved signature behind an exact stable-prefix check");
   }
 
   const beginSequentialAttempt = appSection(
@@ -2071,7 +2167,7 @@ validateAdv2e102Bank(result.questions);
 validateHtml();
 validateFonts();
 validateThemeContract();
-validateRetryQueueContract();
+validateRetryQueueContract(data);
 validateLearnRevealContract();
 validateKeyboardControlContract();
 validateComputerSourceAppContract();

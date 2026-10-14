@@ -1,0 +1,2271 @@
+[
+  {
+    "sourceRecordId": "WGI-Q0321",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 321,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "66FE3B9E85C87BE3EFDD3CC6CC2C9A683B9B8B559B5EC376F9D02250074BEECC",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The approved question bank already tests the Pacific Ocean as Earth's largest ocean basin, so the audited canonical item is retained.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0011-Q048-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0322",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 322,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "9190774FBEC9DB3FE7E87D03D5779F709F57A802EDADD031B0EF27639780CCB9",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Chemistry references confirm that elemental noble gases ordinarily exist as single atoms while also disproving the PDF's absolute no-bonding claim through xenon compounds.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0322-SRC",
+      "pairId": "WGI-Q0322",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Under ordinary conditions, in what form do elemental noble gases generally exist?",
+      "questionUrdu": "عام حالات میں عنصری نوبل گیسیں عموماً کس شکل میں پائی جاتی ہیں؟",
+      "options": [
+        "As monatomic gases",
+        "As diatomic molecules",
+        "As ionic crystal lattices",
+        "As polyatomic networks"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "عام حالات میں نوبل گیسوں کے ذرات الگ الگ ایٹموں کی صورت میں ہوتے ہیں، اس لیے انہیں یک ایٹمی گیسیں کہا جاتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 322",
+        "referenceUrl": "https://openstax.org/books/chemistry/pages/18-4-structure-and-general-properties-of-the-nonmetals",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0322"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/chemistry/pages/18-4-structure-and-general-properties-of-the-nonmetals",
+          "label": "Structure and general properties of the nonmetals",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The chemistry text states directly that all noble gases are monatomic under ordinary conditions."
+        },
+        {
+          "url": "https://edu.rsc.org/download?ac=14612",
+          "label": "The noble gases",
+          "publisher": "Royal Society of Chemistry Education",
+          "authorityId": "royal-society-of-chemistry",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Royal Society of Chemistry teaching resource independently describes group 18 elements as monatomic gases."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF's blanket answer 'no chemical bonding' is scientifically false because noble-gas compounds exist; the item is corrected to their ordinary monatomic form."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0322-SIM",
+      "pairId": "WGI-Q0322",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which noble gas was used to make the first recognized stable noble-gas compound in 1962?",
+      "questionUrdu": "1962 میں پہلی تسلیم شدہ مستحکم نوبل گیس مرکب بنانے کے لیے کون سی نوبل گیس استعمال ہوئی؟",
+      "options": [
+        "Xenon",
+        "Helium",
+        "Neon",
+        "Argon"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "1962 میں نیل بارٹلیٹ نے زینون کو پلاٹینم ہیکسا فلورائیڈ کے ساتھ ملا کر پہلا مستحکم نوبل گیس مرکب تیار کیا۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: first noble-gas compound",
+        "referenceUrl": "https://periodic-table.rsc.org/element/54/xenon",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0322"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://periodic-table.rsc.org/element/54/xenon",
+          "label": "Xenon element history",
+          "publisher": "Royal Society of Chemistry",
+          "authorityId": "royal-society-of-chemistry",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Royal Society of Chemistry records that Neil Bartlett made a xenon derivative in 1962."
+        },
+        {
+          "url": "https://openstax.org/books/chemistry-2e/pages/18-12-occurrence-preparation-and-properties-of-the-noble-gases",
+          "label": "Occurrence and properties of noble gases",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax explains that Bartlett disproved noble-gas nonreactivity with xenon chemistry in 1962."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "1962",
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0341",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 341,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "727DDAEA6D23AE2F58142450AB2418417FB34667E72517A7ED8FE8443F8971EE",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The approved computer bank already tests Mark Zuckerberg as Facebook's founder, so the audited canonical question is retained.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "IBES-Q0632-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0342",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 342,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "955B48BCF6D49DF49F25DB4FBCB79EB3A09E65A9B6D1FC6AFAF913DE55F7A58E",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The SCO Secretariat and Kazakhstan's government independently confirm that the 24th heads-of-state summit met in Astana and adopted the Astana Declaration in 2024.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0342-SRC",
+      "pairId": "WGI-Q0342",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "In which city was the 24th SCO Heads of State summit held on 4 July 2024?",
+      "questionUrdu": "4 جولائی 2024 کو شنگھائی تعاون تنظیم کے سربراہانِ مملکت کا 24 واں اجلاس کس شہر میں منعقد ہوا؟",
+      "options": [
+        "Astana",
+        "Tashkent",
+        "Bishkek",
+        "Dushanbe"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "شنگھائی تعاون تنظیم کے سربراہانِ مملکت کا 24 واں اجلاس 4 جولائی 2024 کو آستانہ، قازقستان میں منعقد ہوا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.15, item 342",
+        "referenceUrl": "https://eng.sectsco.org/20240704/1445827.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0342"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://eng.sectsco.org/20240704/1445827.html",
+          "label": "SCO Heads of State Council Meeting",
+          "publisher": "Shanghai Cooperation Organisation Secretariat",
+          "authorityId": "sco-secretariat",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The SCO Secretariat states that the 24th Heads of State Council meeting took place in Astana on 4 July 2024."
+        },
+        {
+          "url": "https://www.gov.kz/memleket/entities/mfa-sofia/press/news/details/805294?lang=en",
+          "label": "Kazakhstan's chairmanship lauded at the 24th SCO summit",
+          "publisher": "Government of Kazakhstan",
+          "authorityId": "kazakhstan-government",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Kazakhstan's government independently records the 24th SCO summit in Astana on 4 July 2024."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2024-07-04",
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0342-SIM",
+      "pairId": "WGI-Q0342",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "Which declaration was adopted at the 24th SCO summit in 2024?",
+      "questionUrdu": "2024 میں شنگھائی تعاون تنظیم کے 24 ویں سربراہی اجلاس میں کون سا اعلامیہ منظور کیا گیا؟",
+      "options": [
+        "Astana Declaration",
+        "Samarkand Declaration",
+        "Tashkent Declaration",
+        "Bishkek Declaration"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "2024 کے 24 ویں شنگھائی تعاون تنظیم سربراہی اجلاس میں آستانہ اعلامیہ منظور کیا گیا۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: declaration adopted at the 24th SCO summit",
+        "referenceUrl": "https://eng.sectsco.org/20240709/1438929.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0342"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://eng.sectsco.org/20240709/1438929.html",
+          "label": "Astana Declaration of the SCO Council of Heads of State",
+          "publisher": "Shanghai Cooperation Organisation Secretariat",
+          "authorityId": "sco-secretariat",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The SCO publishes the Astana Declaration as the declaration following its 2024 Heads of State meeting."
+        },
+        {
+          "url": "https://www.gov.kz/memleket/entities/mfa-sofia/press/news/details/805294?lang=en",
+          "label": "Kazakhstan's chairmanship lauded at the 24th SCO summit",
+          "publisher": "Government of Kazakhstan",
+          "authorityId": "kazakhstan-government",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Kazakhstan's official report independently says the 24th summit adopted the Astana Declaration in 2024."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2024",
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0343",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 343,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "FE9F51858688C0A6D0FEC9011684710B0363B7816AE11BD98B2C2E42DC5E0C49",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "An earlier retained WGI item already tests Tianjin as the venue of the 2025 SCO summit, so the audited earlier item is canonical.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "WGI-Q0295-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0344",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 344,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "E66F4FCF61CB76542DF12C77A39E4DDF3D02E97B6C2ACFFD75C68D750E0BFBD7",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "An earlier retained WGI item already covers the audited 2026 SCO summit venue claim, so the earlier canonical item is retained.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "WGI-Q0296-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0345",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 345,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "89C451D50F0381899810C696C86CA9B5698922EF5C376BFCD1FF73D0C497817E",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The approved bank already asks who serves as United Nations Secretary-General and separately records his ordinal number, so no semantic duplicate is added.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0091-Q036-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0346",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 346,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "F360001D816535C9B71D2BE1E4C19837C3BD8622A510A77EB0E574029A7D7549",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "A current-bank question already tests Portugal as António Guterres's country and notes his premiership there, so the semantic duplicate is skipped.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0005-Q003-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0347",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 347,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "57EB7449752FFF618A13467B98F4DBAC70A122EA0B995B4213A887226961EDE9",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Official Pakistani event and government material confirm that PIMEC 2025 showcased maritime and defence innovation at Karachi Expo Centre from 3 to 6 November.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0347-SRC",
+      "pairId": "WGI-Q0347",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Which combination best describes what PIMEC 2025 showcased?",
+      "questionUrdu": "پی آئی ایم ای سی 2025 میں بنیادی طور پر کس امتزاج کی نمائش کی گئی؟",
+      "options": [
+        "Maritime and defence innovations",
+        "Agricultural machinery and textiles",
+        "Pharmaceuticals and hospital equipment",
+        "Mining and mountain tourism"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "پی آئی ایم ای سی 2025 نے پاکستان کی بحری صلاحیت، دفاعی ٹیکنالوجی اور میری ٹائم جدت کو نمایاں کیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.15, item 347",
+        "referenceUrl": "https://pimec.gov.pk/wp-content/uploads/2024/12/PIMEC-PSR.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0347"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://pimec.gov.pk/wp-content/uploads/2024/12/PIMEC-PSR.pdf",
+          "label": "PIMEC Sea the Future prospectus",
+          "publisher": "Pakistan International Maritime Expo and Conference",
+          "authorityId": "pimec",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official PIMEC prospectus presents the exhibition as a showcase of maritime technology, industry, and defence capabilities."
+        },
+        {
+          "url": "https://cm.sindh.gov.pk/news/pimec-vital-platform-to-unlock-pakistans-maritime-potential-advance-its-long-term-blue-economy-vision-murad-shah",
+          "label": "PIMEC platform for maritime potential and innovation",
+          "publisher": "Chief Minister's Secretariat, Government of Sindh",
+          "authorityId": "sindh-government",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Sindh government independently describes PIMEC 2025 as showcasing maritime and defence capabilities and fostering innovation."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2025",
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0347-SIM",
+      "pairId": "WGI-Q0347",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "At which venue was PIMEC 2025 held from 3 to 6 November 2025?",
+      "questionUrdu": "پی آئی ایم ای سی 2025 کا انعقاد 3 سے 6 نومبر 2025 تک کس مقام پر ہوا؟",
+      "options": [
+        "Karachi Expo Centre",
+        "Lahore Expo Centre",
+        "Pakistan-China Friendship Centre",
+        "Gwadar Port Terminal"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "پی آئی ایم ای سی 2025 کا انعقاد 3 سے 6 نومبر 2025 تک کراچی ایکسپو سینٹر میں ہوا۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: PIMEC 2025 venue",
+        "referenceUrl": "https://cm.sindh.gov.pk/news/pimec-a-strategic-platform-to-advance-pakistans-blue-economy-promote-maritime-innovation-attract-investment",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0347"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://cm.sindh.gov.pk/news/pimec-a-strategic-platform-to-advance-pakistans-blue-economy-promote-maritime-innovation-attract-investment",
+          "label": "PIMEC 2025 schedule and venue",
+          "publisher": "Chief Minister's Secretariat, Government of Sindh",
+          "authorityId": "sindh-government",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Sindh government gives Karachi Expo Centre as the venue for PIMEC from 3 to 6 November 2025."
+        },
+        {
+          "url": "https://www.pcs.gov.pk/news-detail/ahsan-iqbal-inaugurates-pimec-2025-calls-pakistan-natural-maritime-bridge-between-east-and-west",
+          "label": "Ahsan Iqbal inaugurates PIMEC 2025",
+          "publisher": "Planning Commission of Pakistan",
+          "authorityId": "pakistan-planning-commission",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Pakistan's Planning Commission independently records that PIMEC opened at Karachi Expo Centre and ran through 6 November 2025."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2025-11-03",
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0348",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 348,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "1F776BBC639FE4C65FFEE8A4928FACD18946AAE830C1F3BCC5ABB3B2B5CDABBC",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "OpenStax and NCBI cell-biology references independently identify pyruvate as glycolysis's end product and a net gain of two ATP per glucose.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0348-SRC",
+      "pairId": "WGI-Q0348",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the principal end product of glycolysis?",
+      "questionUrdu": "گلائیکولائسز کا بنیادی آخری حاصل کیا ہے؟",
+      "options": [
+        "Pyruvate",
+        "Acetyl-CoA",
+        "Citrate",
+        "Lactose"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "گلائیکولائسز میں گلوکوز ٹوٹ کر پائروویٹ کے دو سالمات بناتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.15, item 348",
+        "referenceUrl": "https://openstax.org/books/biology-2e/pages/7-2-glycolysis",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0348"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/7-2-glycolysis",
+          "label": "Glycolysis",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax states that glycolysis begins with glucose and ends with two pyruvate molecules."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK26882/",
+          "label": "How cells obtain energy from food",
+          "publisher": "National Center for Biotechnology Information",
+          "authorityId": "ncbi-bookshelf",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The NCBI textbook independently explains that glycolysis converts glucose into two molecules of pyruvate."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0348-SIM",
+      "pairId": "WGI-Q0348",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "What is the net ATP gain when one glucose molecule completes glycolysis?",
+      "questionUrdu": "جب گلوکوز کا ایک سالمہ گلائیکولائسز مکمل کرتا ہے تو اے ٹی پی کا خالص فائدہ کتنا ہوتا ہے؟",
+      "options": [
+        "2 ATP",
+        "4 ATP",
+        "6 ATP",
+        "8 ATP"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "گلائیکولائسز میں چار اے ٹی پی بنتے ہیں لیکن دو استعمال بھی ہوتے ہیں، اس لیے خالص فائدہ 2 اے ٹی پی ہوتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: net ATP yield of glycolysis",
+        "referenceUrl": "https://openstax.org/books/biology/pages/7-2-glycolysis",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0348"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/biology/pages/7-2-glycolysis",
+          "label": "Glycolysis outcomes",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax calculates a net gain of two ATP molecules from glycolysis of one glucose molecule."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK9903/",
+          "label": "Metabolic energy",
+          "publisher": "National Center for Biotechnology Information",
+          "authorityId": "ncbi-bookshelf",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The NCBI cell-biology text independently gives glycolysis a net gain of two ATP per glucose."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0349",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 349,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "800998778D64DF3B87737412EA4930EAA38B1945DEAD1415EBE462247C5B4582",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Clinical anatomy references independently locate the parotid glands in front of the ears and identify Stensen's duct as their main excretory duct.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0349-SRC",
+      "pairId": "WGI-Q0349",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which major salivary gland is located just in front of each ear?",
+      "questionUrdu": "ہر کان کے عین سامنے کون سا بڑا لعابی غدود واقع ہوتا ہے؟",
+      "options": [
+        "Parotid gland",
+        "Sublingual gland",
+        "Submandibular gland",
+        "Lacrimal gland"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "پیروٹڈ غدود سب سے بڑا لعابی غدود ہے اور ہر کان کے سامنے اور قدرے نیچے واقع ہوتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.15, item 349",
+        "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK534225/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0349"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK534225/",
+          "label": "Anatomy of the parotid gland",
+          "publisher": "National Center for Biotechnology Information",
+          "authorityId": "ncbi-bookshelf",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The clinical anatomy reference locates the parotid gland anterior and inferior to the lower half of the ear."
+        },
+        {
+          "url": "https://my.clevelandclinic.org/health/body/23232-parotid-gland",
+          "label": "Parotid gland anatomy and location",
+          "publisher": "Cleveland Clinic",
+          "authorityId": "cleveland-clinic",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Cleveland Clinic independently locates each parotid gland just below and in front of an ear."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0349-SIM",
+      "pairId": "WGI-Q0349",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "What is the main excretory duct of the parotid gland called?",
+      "questionUrdu": "پیروٹڈ غدود کی مرکزی اخراجی نالی کو کیا کہا جاتا ہے؟",
+      "options": [
+        "Stensen's duct",
+        "Wharton's duct",
+        "Wirsung's duct",
+        "Thoracic duct"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "پیروٹڈ غدود کا لعاب اسٹینسن ڈکٹ کے ذریعے منہ میں پہنچتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: parotid excretory duct",
+        "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK237/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0349"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK237/",
+          "label": "The salivary glands",
+          "publisher": "National Center for Biotechnology Information",
+          "authorityId": "ncbi-bookshelf",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The clinical text states that parotid secretions reach the oral cavity through Stensen's duct."
+        },
+        {
+          "url": "https://my.clevelandclinic.org/health/body/23232-parotid-gland",
+          "label": "Parotid gland anatomy and location",
+          "publisher": "Cleveland Clinic",
+          "authorityId": "cleveland-clinic",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Cleveland Clinic independently names Stensen's duct as the tube carrying saliva from the parotid gland."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0350",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 350,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "9D3AB913A902D01B12C9C0505C92A2E06A3F5AF89F0412DB4A83898EFFD9C166",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "NIST and IBM independently define generative AI as producing synthetic content from learned data patterns and describe the two-network structure of GANs.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0350-SRC",
+      "pairId": "WGI-Q0350",
+      "kind": "source",
+      "categoryId": "basic-computer-studies",
+      "question": "Which type of artificial intelligence creates new content from patterns learned in data?",
+      "questionUrdu": "مصنوعی ذہانت کی کون سی قسم ڈیٹا سے سیکھے گئے نمونوں کی بنیاد پر نیا مواد بناتی ہے؟",
+      "options": [
+        "Generative AI",
+        "Rule-based expert system",
+        "Database management system",
+        "Deterministic compiler"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "جنریٹو اے آئی تربیتی ڈیٹا کے نمونوں اور خصوصیات کو سیکھ کر متن، تصویر، آواز یا دوسری نئی مصنوعی مواد بناتی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 350",
+        "referenceUrl": "https://csrc.nist.gov/glossary/term/generative_artificial_intelligence",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0350"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://csrc.nist.gov/glossary/term/generative_artificial_intelligence",
+          "label": "Generative artificial intelligence glossary definition",
+          "publisher": "National Institute of Standards and Technology",
+          "authorityId": "nist",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NIST defines generative AI as models that emulate input-data characteristics to generate derived synthetic content."
+        },
+        {
+          "url": "https://www.ibm.com/think/insights/ai-generated-content",
+          "label": "AI-generated content",
+          "publisher": "IBM",
+          "authorityId": "ibm",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "IBM independently explains that generative AI learns from data and produces new text, image, audio, and video content."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0350-SIM",
+      "pairId": "WGI-Q0350",
+      "kind": "similar",
+      "categoryId": "basic-computer-studies",
+      "question": "Which two neural-network components compete during the training of a generative adversarial network?",
+      "questionUrdu": "جنریٹو ایڈورسریل نیٹ ورک کی تربیت کے دوران کون سے دو نیورل نیٹ ورک اجزا ایک دوسرے کا مقابلہ کرتے ہیں؟",
+      "options": [
+        "Generator and discriminator",
+        "Encoder and tokenizer",
+        "Compiler and interpreter",
+        "Router and switch"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "جی اے این میں جنریٹر مصنوعی نمونے بناتا ہے جبکہ ڈسکریمینیٹر حقیقی اور مصنوعی نمونوں میں فرق کرنے کی کوشش کرتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: components of a generative adversarial network",
+        "referenceUrl": "https://learn.microsoft.com/en-us/shows/neural-information-processing-systems-conference-nips-2016/generative-adversarial-networks",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0350"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://learn.microsoft.com/en-us/shows/neural-information-processing-systems-conference-nips-2016/generative-adversarial-networks",
+          "label": "Generative adversarial networks tutorial",
+          "publisher": "Microsoft Learn",
+          "authorityId": "microsoft",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Microsoft's tutorial describes GAN training as a game between a generator network and a discriminator network."
+        },
+        {
+          "url": "https://hai.stanford.edu/ai-definitions/what-are-gans",
+          "label": "What are generative adversarial networks?",
+          "publisher": "Stanford Institute for Human-Centered Artificial Intelligence",
+          "authorityId": "stanford-hai",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Stanford independently defines a GAN as two competing neural networks called the generator and discriminator."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0323",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 323,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "62CF9BFBB70A900A8543ACAABE3B1A25543D06EC4B12FDB8CFD28B65364AEF05",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Official geographic sources consistently count fourteen sovereign land neighbours for China; the PDF's added autonomous-region phrase is removed as misleading.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0323-SRC",
+      "pairId": "WGI-Q0323",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "How many sovereign countries share a land border with China?",
+      "questionUrdu": "چین کے ساتھ کتنے خودمختار ممالک کی زمینی سرحد ملتی ہے؟",
+      "options": [
+        "14",
+        "12",
+        "13",
+        "16"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "چین کی زمینی سرحد 14 خودمختار ممالک سے ملتی ہے، جو دنیا میں سب سے زیادہ مشترکہ زمینی ہمسایوں میں شمار ہوتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 323",
+        "referenceUrl": "https://us.china-embassy.gov.cn/eng/fyrth/202110/t20211028_10349056.htm",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0323"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://us.china-embassy.gov.cn/eng/fyrth/202110/t20211028_10349056.htm",
+          "label": "Foreign Ministry briefing on China's boundaries",
+          "publisher": "Embassy of the People's Republic of China in the United States",
+          "authorityId": "china-foreign-ministry",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Chinese foreign-ministry briefing states that China has land boundaries with fourteen countries."
+        },
+        {
+          "url": "https://english.www.gov.cn/news/top_news/2014/08/29/content_281474984319592.htm",
+          "label": "China and Mongolia border briefing",
+          "publisher": "Government of the People's Republic of China",
+          "authorityId": "china-government",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Chinese government portal describes the 4,710-km China–Mongolia boundary as China's longest land border with a neighbour."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF conflates sovereign neighbours with autonomous territories; the corrected question asks only the verified count of sovereign land-bordering countries."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0323-SIM",
+      "pairId": "WGI-Q0323",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which neighbouring country shares China's longest land boundary?",
+      "questionUrdu": "چین کی سب سے طویل زمینی سرحد کس ہمسایہ ملک کے ساتھ ہے؟",
+      "options": [
+        "Mongolia",
+        "Russia",
+        "India",
+        "Kazakhstan"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "چین اور منگولیا کی مشترکہ زمینی سرحد تقریباً 4,700 کلومیٹر ہے اور یہ چین کی کسی ایک ملک کے ساتھ سب سے طویل زمینی سرحد ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: China's longest land boundary",
+        "referenceUrl": "https://www.fmprc.gov.cn/eng/gjhdq_665435/2675_665437/2742_663488/2744_663492/202406/t20240607_11410992.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0323"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fmprc.gov.cn/eng/gjhdq_665435/2675_665437/2742_663488/2744_663492/202406/t20240607_11410992.html",
+          "label": "China–Mongolia longest land border briefing",
+          "publisher": "Ministry of Foreign Affairs of the People's Republic of China",
+          "authorityId": "china-foreign-ministry",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "China's foreign ministry identifies the China–Mongolia boundary as China's longest land border with a neighbour."
+        },
+        {
+          "url": "https://english.www.gov.cn/news/top_news/2014/08/29/content_281474984319592.htm",
+          "label": "China and Mongolia border briefing",
+          "publisher": "Government of the People's Republic of China",
+          "authorityId": "china-government",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Chinese government portal independently documents the exceptionally long land boundary shared with Mongolia."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0324",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 324,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "AE298B12EAF29A30F1018622C152F17DEBE5B532A30BFAC4A217609059110233",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "D-8 and Pakistani official reporting confirm Sohail Mahmood's assumption of office, with both items explicitly limited to the 2026 verification date.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0324-SRC",
+      "pairId": "WGI-Q0324",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "As of 2026, who is the Secretary-General of the D-8 Organization for Economic Cooperation?",
+      "questionUrdu": "2026 تک ڈی-8 تنظیم برائے اقتصادی تعاون کے سیکرٹری جنرل کون ہیں؟",
+      "options": [
+        "Sohail Mahmood",
+        "Isiaka Abdulqadir Imam",
+        "Hossein Mousavian",
+        "Nana Akufo-Addo"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "سہیل محمود نے 1 جنوری 2026 کو ڈی-8 کے سیکرٹری جنرل کا عہدہ سنبھالا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 324",
+        "referenceUrl": "https://developing8.org/news/ambassador-sohail-mahmood-assumes-the-office-of-the-secretary-general-of-the-d-8-organization-for-economic-cooperation/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0324"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://developing8.org/news/ambassador-sohail-mahmood-assumes-the-office-of-the-secretary-general-of-the-d-8-organization-for-economic-cooperation/",
+          "label": "Sohail Mahmood assumes office as D-8 Secretary-General",
+          "publisher": "D-8 Organization for Economic Cooperation",
+          "authorityId": "d8-organization",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "D-8 officially records Ambassador Sohail Mahmood assuming its Secretary-General office on 1 January 2026."
+        },
+        {
+          "url": "https://www.app.com.pk/national/ambassador-sohail-mahmood-assumes-charge-of-secretary-general-of-d-8/",
+          "label": "Sohail Mahmood assumes charge of D-8",
+          "publisher": "Associated Press of Pakistan",
+          "authorityId": "associated-press-of-pakistan",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Pakistan's state news agency independently confirms Sohail Mahmood took charge as D-8 Secretary-General in 2026."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0324-SIM",
+      "pairId": "WGI-Q0324",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "As of 2026, what is the nationality of D-8 Secretary-General Sohail Mahmood?",
+      "questionUrdu": "2026 تک ڈی-8 کے سیکرٹری جنرل سہیل محمود کس ملک کے شہری ہیں؟",
+      "options": [
+        "Pakistani",
+        "Turkish",
+        "Bangladeshi",
+        "Egyptian"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "سہیل محمود پاکستان کے سینئر سفارت کار اور سابق سیکرٹری خارجہ ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: nationality of the D-8 Secretary-General",
+        "referenceUrl": "https://developing8.org/news/ambassador-sohail-mahmood-assumes-the-office-of-the-secretary-general-of-the-d-8-organization-for-economic-cooperation/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0324"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://developing8.org/news/ambassador-sohail-mahmood-assumes-the-office-of-the-secretary-general-of-the-d-8-organization-for-economic-cooperation/",
+          "label": "Sohail Mahmood assumes office as D-8 Secretary-General",
+          "publisher": "D-8 Organization for Economic Cooperation",
+          "authorityId": "d8-organization",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "D-8 identifies Sohail Mahmood as a Pakistani ambassador serving as its Secretary-General in 2026."
+        },
+        {
+          "url": "https://mofa.gov.pk/press-releases/pakistan-hosts-the-informal-retreat-of-d-8-commissioners-on-5-6-february-in-lahore",
+          "label": "Pakistan hosts D-8 commissioners' retreat",
+          "publisher": "Ministry of Foreign Affairs, Pakistan",
+          "authorityId": "pakistan-mofa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Pakistan's foreign ministry identifies Ambassador Sohail Mahmood as Pakistan's former foreign secretary and current D-8 Secretary-General."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0325",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 325,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "F7CE7D5382BDF8F91475543D6ACB64BB85DF918BB1BFC6CB1D9A1E911206F2E3",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Two Turkish government sources confirm that the D-8 was formally established through the Istanbul Declaration on 15 June 1997.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0325-SRC",
+      "pairId": "WGI-Q0325",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Through which declaration was the D-8 officially established on 15 June 1997?",
+      "questionUrdu": "15 جون 1997 کو ڈی-8 کو باضابطہ طور پر کس اعلامیے کے ذریعے قائم کیا گیا؟",
+      "options": [
+        "Istanbul Declaration",
+        "Ankara Declaration",
+        "Dhaka Declaration",
+        "Cairo Declaration"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ڈی-8 کا باضابطہ قیام 15 جون 1997 کو سربراہانِ مملکت و حکومت کے استنبول اعلامیے کے ذریعے ہوا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 325",
+        "referenceUrl": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0325"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+          "label": "Developing Eight Countries D-8",
+          "publisher": "Ministry of Foreign Affairs of Türkiye",
+          "authorityId": "turkiye-mfa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Türkiye's foreign ministry states that D-8 was established by the Istanbul Declaration on 15 June 1997."
+        },
+        {
+          "url": "https://www.tarimorman.gov.tr/ABDGM/Menu/71/Gelisen-Sekiz-Ulke-_d-8_",
+          "label": "Developing Eight Countries D-8",
+          "publisher": "Ministry of Agriculture and Forestry of Türkiye",
+          "authorityId": "turkiye-agriculture-ministry",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The ministry independently records the Istanbul Declaration and the D-8 founding date of 15 June 1997."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "1997-06-15",
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0325-SIM",
+      "pairId": "WGI-Q0325",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "What does the abbreviation D-8 stand for?",
+      "questionUrdu": "مخفف ڈی-8 کا مکمل نام کیا ہے؟",
+      "options": [
+        "Developing Eight Organization for Economic Cooperation",
+        "Democratic Eight Development Council",
+        "Development Eight Economic Union",
+        "Diplomatic Eight Cooperation Forum"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ڈی-8 کا مکمل نام ڈیولپنگ ایٹ آرگنائزیشن فار اکنامک کوآپریشن ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: full name of D-8",
+        "referenceUrl": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0325"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+          "label": "Developing Eight Countries D-8",
+          "publisher": "Ministry of Foreign Affairs of Türkiye",
+          "authorityId": "turkiye-mfa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Türkiye's foreign ministry gives the organization's full name as Developing Eight Organization for Economic Cooperation."
+        },
+        {
+          "url": "https://www.tarimorman.gov.tr/ABDGM/Menu/71/Gelisen-Sekiz-Ulke-_d-8_",
+          "label": "Developing Eight Countries D-8",
+          "publisher": "Ministry of Agriculture and Forestry of Türkiye",
+          "authorityId": "turkiye-agriculture-ministry",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The second ministry page independently expands D-8 as the Developing Eight economic-cooperation organization."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0326",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 326,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "112806272FC4AA93FD1BCA201579AA37360582B07EF5B242FCDD5E01209B1885",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Independent Turkish government pages identify Istanbul as D-8 headquarters and English as the organization's working language.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0326-SRC",
+      "pairId": "WGI-Q0326",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "In which city is the headquarters of the D-8 Organization for Economic Cooperation?",
+      "questionUrdu": "ڈی-8 تنظیم برائے اقتصادی تعاون کا صدر دفتر کس شہر میں ہے؟",
+      "options": [
+        "Istanbul",
+        "Ankara",
+        "Dhaka",
+        "Cairo"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ڈی-8 تنظیم کا سیکرٹریٹ اور صدر دفتر استنبول، ترکیہ میں واقع ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 326",
+        "referenceUrl": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0326"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+          "label": "Developing Eight Countries D-8",
+          "publisher": "Ministry of Foreign Affairs of Türkiye",
+          "authorityId": "turkiye-mfa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Türkiye's foreign ministry identifies Istanbul as the seat of the D-8 Secretariat."
+        },
+        {
+          "url": "https://www.tarimorman.gov.tr/ABDGM/Menu/71/Gelisen-Sekiz-Ulke-_d-8_",
+          "label": "Developing Eight Countries D-8",
+          "publisher": "Ministry of Agriculture and Forestry of Türkiye",
+          "authorityId": "turkiye-agriculture-ministry",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The agriculture ministry independently lists Istanbul as D-8 headquarters."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0326-SIM",
+      "pairId": "WGI-Q0326",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "What is the official working language of the D-8 Organization for Economic Cooperation?",
+      "questionUrdu": "ڈی-8 تنظیم برائے اقتصادی تعاون کی سرکاری کام کی زبان کون سی ہے؟",
+      "options": [
+        "English",
+        "Turkish",
+        "Arabic",
+        "French"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ڈی-8 کے رکن ممالک کی مختلف قومی زبانیں ہیں، مگر تنظیم کی سرکاری کام کی زبان انگریزی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: D-8 working language",
+        "referenceUrl": "https://www.tarimorman.gov.tr/ABDGM/Menu/71/Gelisen-Sekiz-Ulke-_d-8_",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0326"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.tarimorman.gov.tr/ABDGM/Menu/71/Gelisen-Sekiz-Ulke-_d-8_",
+          "label": "Developing Eight Countries D-8",
+          "publisher": "Ministry of Agriculture and Forestry of Türkiye",
+          "authorityId": "turkiye-agriculture-ministry",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The ministry's D-8 profile lists English as the organization's official working language."
+        },
+        {
+          "url": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+          "label": "Developing Eight Countries D-8",
+          "publisher": "Ministry of Foreign Affairs of Türkiye",
+          "authorityId": "turkiye-mfa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Türkiye's foreign ministry independently identifies English as the D-8 working language."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0327",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 327,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "44DBAF55855893907B3EAD4AFF4C34452CDD9F2F11F30275804B4C1C2E6416C7",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Pakistan government and judicial sources identify Justice Ayesha A. Malik as Pakistan's first woman Supreme Court judge and document her Lahore High Court service.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0327-SRC",
+      "pairId": "WGI-Q0327",
+      "kind": "source",
+      "categoryId": "pakistan-studies",
+      "question": "Who became Pakistan's first woman judge of the Supreme Court?",
+      "questionUrdu": "پاکستان کی سپریم کورٹ کی پہلی خاتون جج کون بنیں؟",
+      "options": [
+        "Justice Ayesha A. Malik",
+        "Justice Tahira Safdar",
+        "Justice Musarrat Hilali",
+        "Justice Majida Rizvi"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "جسٹس عائشہ اے ملک پاکستان کی سپریم کورٹ میں مقرر ہونے والی پہلی خاتون جج بنیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.14, item 327",
+        "referenceUrl": "https://pid.gov.pk/site/press_detail/18964",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0327"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://pid.gov.pk/site/press_detail/18964",
+          "label": "Appointment of Justice Ayesha Malik",
+          "publisher": "Press Information Department, Government of Pakistan",
+          "authorityId": "pakistan-pid",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Pakistan's Press Information Department identifies Justice Ayesha Malik as the first woman elevated to the Supreme Court."
+        },
+        {
+          "url": "https://www.judiciary.uk/guidance-and-resources/international-womens-day-2022-in-conversation-with-mrs-justice-ayesha-a-malik/",
+          "label": "In conversation with Justice Ayesha A. Malik",
+          "publisher": "Courts and Tribunals Judiciary of England and Wales",
+          "authorityId": "uk-judiciary",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The judicial interview independently describes Ayesha Malik as Pakistan's first woman Supreme Court justice."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0327-SIM",
+      "pairId": "WGI-Q0327",
+      "kind": "similar",
+      "categoryId": "pakistan-studies",
+      "question": "At which court did Justice Ayesha A. Malik serve immediately before her elevation to Pakistan's Supreme Court?",
+      "questionUrdu": "پاکستان کی سپریم کورٹ میں ترقی سے فوراً پہلے جسٹس عائشہ اے ملک کس عدالت میں خدمات انجام دے رہی تھیں؟",
+      "options": [
+        "Lahore High Court",
+        "Sindh High Court",
+        "Islamabad High Court",
+        "Peshawar High Court"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "سپریم کورٹ میں تقرری سے پہلے جسٹس عائشہ اے ملک لاہور ہائی کورٹ کی جج تھیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: Justice Ayesha Malik's prior court",
+        "referenceUrl": "https://library.lhc.gov.pk/pdf/Compendium/jAyeshaMalik.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0327"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://library.lhc.gov.pk/pdf/Compendium/jAyeshaMalik.pdf",
+          "label": "Profile of Justice Ayesha A. Malik",
+          "publisher": "Lahore High Court Research Centre",
+          "authorityId": "lahore-high-court",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Lahore High Court profile records Justice Ayesha Malik's service there before her Supreme Court elevation."
+        },
+        {
+          "url": "https://www.judiciary.uk/guidance-and-resources/international-womens-day-2022-in-conversation-with-mrs-justice-ayesha-a-malik/",
+          "label": "In conversation with Justice Ayesha A. Malik",
+          "publisher": "Courts and Tribunals Judiciary of England and Wales",
+          "authorityId": "uk-judiciary",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The judicial biography independently records her prior appointment as a judge of the Lahore High Court."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0328",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 328,
+    "sourcePdfPage": 14,
+    "rawTextSha256": "E3A68B3CC1E30A02569BC0E602741AEB82FB2F9C3E10226FFC332501D67D6639",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The approved computer-studies bank already asks which generation introduced microprocessors, so the audited canonical item is retained.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "IBES-Q0049-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0329",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 329,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "96AEA455BBE88BB07E6D4577092A9CEE4FC5EF3D8F0D40A3CE78DC12521EDED4",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "A current-bank question already tests the same combined sources of air pollution, so no duplicate question is added.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0035-Q010-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0330",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 330,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "7F9C24F954EFEA06577599AB8984BF709ECCEE2BB227E2A1F5454C3605E6E545",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The bank already contains the audited canonical question for this fact, so the exact subject knowledge is not repeated.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0017-Q016-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0331",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 331,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "072DA20DB4383DCF020668C7AA6D03C77CCE98034C5DD9246CF1DE4ED38C47FC",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The extracted line bundles three separate United Nations observances into one non-single-answer prompt, so it cannot be reconstructed as a faithful MCQ.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0332",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 332,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "65020E5440FAD677A3A2E2E5567C024E387593286AE8296001BD8404B63F4FA4",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The approved computer bank already tests Excel's keyboard shortcut for inserting the current date, so the audited canonical item is retained.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "IBES-Q0833-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0333",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 333,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "D6DF64D64577323079623B086B200B2791F82D0A9118AEED41E63DB85FE162EB",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "New York City and independent contemporary reporting confirm Zohran Mamdani's 2026 inauguration as the city's first Muslim mayor and his use of the Quran.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0333-SRC",
+      "pairId": "WGI-Q0333",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Who became New York City's first Muslim mayor on 1 January 2026?",
+      "questionUrdu": "1 جنوری 2026 کو نیویارک سٹی کے پہلے مسلمان میئر کون بنے؟",
+      "options": [
+        "Zohran Mamdani",
+        "Eric Adams",
+        "Bill de Blasio",
+        "Andrew Cuomo"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "زہران ممدانی نے 1 جنوری 2026 کو عہدہ سنبھالا اور نیویارک سٹی کے پہلے مسلمان میئر بنے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.15, item 333",
+        "referenceUrl": "https://www.nyc.gov/mayors-office?nl=nytoday",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0333"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nyc.gov/mayors-office?nl=nytoday",
+          "label": "Official site of Mayor Zohran Mamdani",
+          "publisher": "City of New York Mayor's Office",
+          "authorityId": "nyc-mayors-office",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official mayoral site records Zohran Mamdani's swearing-in as New York City mayor on 1 January 2026."
+        },
+        {
+          "url": "https://apnews.com/article/3ba51d0ff1f3ff7c06534f6c1e3ea0a3",
+          "label": "Zohran Mamdani inaugurated as NYC mayor",
+          "publisher": "Associated Press",
+          "authorityId": "associated-press",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Associated Press identifies Mamdani as New York City's first Muslim mayor and dates his oath to 1 January 2026."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2026-01-01",
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0333-SIM",
+      "pairId": "WGI-Q0333",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "Which religious text did Zohran Mamdani use for his mayoral oath on 1 January 2026?",
+      "questionUrdu": "1 جنوری 2026 کو زہران ممدانی نے میئر کے عہدے کا حلف کس مذہبی کتاب پر اٹھایا؟",
+      "options": [
+        "Quran",
+        "Bible",
+        "Torah",
+        "Bhagavad Gita"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "زہران ممدانی نے اپنے میئر کے حلف کے دوران قرآن مجید استعمال کیا، جو نیویارک سٹی کی میئرل تاریخ میں پہلی بار ہوا۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: religious text used for Mamdani's oath",
+        "referenceUrl": "https://www.nypl.org/press/schomburg-quran-selected-mayor-elect-zohran-mamdanis-swearing",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0333"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nypl.org/press/schomburg-quran-selected-mayor-elect-zohran-mamdanis-swearing",
+          "label": "Schomburg Quran selected for Mamdani's swearing-in",
+          "publisher": "The New York Public Library",
+          "authorityId": "new-york-public-library",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The New York Public Library records that Mamdani used a Schomburg Center Quran for his midnight swearing-in on New Year's Eve."
+        },
+        {
+          "url": "https://www.thenationalnews.com/news/us/2026/01/01/mamdani-sworn-in-quran/",
+          "label": "Mamdani sworn in on Quran",
+          "publisher": "The National",
+          "authorityId": "the-national",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The National independently reports that Mamdani took the New York mayoral oath on the Quran on 1 January 2026."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2026-01-01",
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0334",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 334,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "ED4037B37E1F41AA57448D63ABEDA7FF229BDEC7EF3061F4ED76F388192AFFF7",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The current bank already tests Microsoft's original Multi-Tool Word name, so this newly detected semantic duplicate is not retained.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "IBES-Q0860-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0335",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 335,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "7DC6FBEBCAAC777187CB3D00B2FE8F98896CC5E11FB9A2F72B7CF72022CA3941",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "NOAA and the UK Met Office independently explain that pressure-gradient forces drive air from higher toward lower pressure.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0335-SRC",
+      "pairId": "WGI-Q0335",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Air initially tends to move from which pressure region toward which other region?",
+      "questionUrdu": "ہوا ابتدائی طور پر کس دباؤ والے خطے سے کس دوسرے خطے کی طرف حرکت کرتی ہے؟",
+      "options": [
+        "High pressure to low pressure",
+        "Low pressure to high pressure",
+        "Equal pressure to high pressure",
+        "Low pressure to equal pressure"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "دباؤ کا فرق ہوا پر قوت لگاتا ہے، اس لیے ہوا زیادہ دباؤ والے علاقے سے کم دباؤ والے علاقے کی طرف چلتی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.15, item 335",
+        "referenceUrl": "https://www.noaa.gov/jetstream/synoptic/origin-of-wind",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0335"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.noaa.gov/jetstream/synoptic/origin-of-wind",
+          "label": "Origin of wind",
+          "publisher": "National Oceanic and Atmospheric Administration",
+          "authorityId": "noaa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NOAA explains that the pressure-gradient force accelerates air from higher toward lower pressure."
+        },
+        {
+          "url": "https://weather.metoffice.gov.uk/learn-about/weather/how-weather-works/high-and-low-pressure",
+          "label": "High and low pressure",
+          "publisher": "UK Met Office",
+          "authorityId": "uk-met-office",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Met Office independently describes air flowing outward from high pressure toward lower-pressure areas."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0335-SIM",
+      "pairId": "WGI-Q0335",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "What force begins the horizontal movement of air when atmospheric pressure differs across a distance?",
+      "questionUrdu": "جب فاصلے کے ساتھ فضائی دباؤ مختلف ہو تو ہوا کی افقی حرکت شروع کرنے والی قوت کون سی ہے؟",
+      "options": [
+        "Pressure-gradient force",
+        "Buoyant force",
+        "Centripetal force",
+        "Electrostatic force"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "افقی دباؤ کے فرق سے پریشر گریڈینٹ فورس پیدا ہوتی ہے، جو ہوا کو زیادہ دباؤ سے کم دباؤ کی طرف تیز کرتی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: force initiating wind",
+        "referenceUrl": "https://www.noaa.gov/jetstream/synoptic/origin-of-wind",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0335"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.noaa.gov/jetstream/synoptic/origin-of-wind",
+          "label": "Origin of wind",
+          "publisher": "National Oceanic and Atmospheric Administration",
+          "authorityId": "noaa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NOAA names the pressure-gradient force as the initiating force behind horizontal air movement."
+        },
+        {
+          "url": "https://weather.metoffice.gov.uk/learn-about/weather/how-weather-works/high-and-low-pressure/wind-flow",
+          "label": "Wind flow around pressure systems",
+          "publisher": "UK Met Office",
+          "authorityId": "uk-met-office",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Met Office connects differences in atmospheric pressure with the force and flow that produce winds."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0336",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 336,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "51A96E18B8AEB5BE66A90CA487330C87128DAE45AFB29C318BCB4F6B577B7164",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The approved bank already asks for the principal propane-and-butane composition of LPG, so the audited canonical item is retained.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0004-Q033-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0337",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 337,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "C888C0D3C98D286C94F4B1F4D3913F88B77DA07A4C333D4722DE6C2D5CA389DD",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The approved geography bank already identifies China as the location of Three Gorges Dam, so the audited canonical item is retained.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0032-Q031-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0338",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 338,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "339E25033497EBEABCC813B1C3E0232C19E567105009218301F70E0441F39ABB",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "The phrase 'related to metabolism' is too broad to yield one defensible disease because many disorders meet that description; faithful single-answer reconstruction is impossible.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0339",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 339,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "E4222065841556F69FBA7C32F98DC15B28245B704AE0F3A2BE781733FB40484A",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Pakistan's official parliamentary records and gazette establish the Federal Constitutional Court and document presidential assent to the amendment in 2025.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0339-SRC",
+      "pairId": "WGI-Q0339",
+      "kind": "source",
+      "categoryId": "pakistan-studies",
+      "question": "Which new court did Pakistan's 27th Constitutional Amendment establish in 2025?",
+      "questionUrdu": "2025 میں پاکستان کی 27 ویں آئینی ترمیم نے کون سی نئی عدالت قائم کی؟",
+      "options": [
+        "Federal Constitutional Court",
+        "Federal Shariat Appellate Court",
+        "National Accountability Court",
+        "Inter-Provincial Tribunal"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "27 ویں آئینی ترمیم 2025 کے ذریعے وفاقی آئینی عدالت قائم کی گئی، جسے مخصوص آئینی دائرۂ اختیار دیا گیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.15, item 339",
+        "referenceUrl": "https://www.na.gov.pk/uploads/documents/691ec19a6a212_270.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0339"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.na.gov.pk/uploads/documents/691ec19a6a212_270.pdf",
+          "label": "Constitution Twenty-Seventh Amendment Act, 2025",
+          "publisher": "National Assembly of Pakistan",
+          "authorityId": "pakistan-national-assembly",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official amendment act inserts constitutional provisions establishing the Federal Constitutional Court in 2025."
+        },
+        {
+          "url": "https://senate.gov.pk/uploads/documents/1762598611_995.pdf",
+          "label": "Constitution Twenty-Seventh Amendment Bill, 2025",
+          "publisher": "Senate of Pakistan",
+          "authorityId": "pakistan-senate",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Senate's official bill independently sets out the 2025 proposal to establish a Federal Constitutional Court."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2025",
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0339-SIM",
+      "pairId": "WGI-Q0339",
+      "kind": "similar",
+      "categoryId": "pakistan-studies",
+      "question": "On which date in 2025 did Pakistan's President assent to the 27th Constitutional Amendment?",
+      "questionUrdu": "2025 میں پاکستان کے صدر نے 27 ویں آئینی ترمیم کی منظوری کس تاریخ کو دی؟",
+      "options": [
+        "13 November 2025",
+        "10 November 2025",
+        "12 November 2025",
+        "18 November 2025"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "صدرِ پاکستان نے 13 نومبر 2025 کو 27 ویں آئینی ترمیم کی منظوری دی اور یہ ایکٹ کی صورت میں نافذ ہوئی۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: assent date of the 27th Amendment",
+        "referenceUrl": "https://www.na.gov.pk/uploads/documents/691ec19a6a212_270.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0339"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.na.gov.pk/uploads/documents/691ec19a6a212_270.pdf",
+          "label": "Constitution Twenty-Seventh Amendment Act, 2025",
+          "publisher": "National Assembly of Pakistan",
+          "authorityId": "pakistan-national-assembly",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official gazette records presidential assent on 13 November 2025."
+        },
+        {
+          "url": "https://www.senate.gov.pk/en/gbna.php",
+          "label": "Government bills and National Assembly transmissions",
+          "publisher": "Senate of Pakistan",
+          "authorityId": "pakistan-senate",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Senate legislative record independently gives the amendment's 13 November 2025 assent date."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2025-11-13",
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0340",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 340,
+    "sourcePdfPage": 15,
+    "rawTextSha256": "7EF6C9C03A3CBD7E1B2EC637F25995FE3B06213E259CE762D05D84276040C8A7",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "reason": "Israeli military and diplomatic releases independently identify Iran as the target of Operation Rising Lion beginning on 13 June 2025.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0340-SRC",
+      "pairId": "WGI-Q0340",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Against which country did Israel launch Operation Rising Lion on 13 June 2025?",
+      "questionUrdu": "13 جون 2025 کو اسرائیل نے آپریشن رائزنگ لائن کس ملک کے خلاف شروع کیا؟",
+      "options": [
+        "Iran",
+        "Syria",
+        "Lebanon",
+        "Yemen"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "اسرائیل نے 13 جون 2025 کو ایران کے خلاف آپریشن رائزنگ لائن شروع کیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.15, item 340",
+        "referenceUrl": "https://www.idf.il/en/mini-sites/israel-at-war/briefings-by-idf-spokesperson-bg-effie-defrin/june-25-press-briefings/press-briefing-by-idf-spokesperson-bg-effie-defrin-june-13-2025/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0340"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.idf.il/en/mini-sites/israel-at-war/briefings-by-idf-spokesperson-bg-effie-defrin/june-25-press-briefings/press-briefing-by-idf-spokesperson-bg-effie-defrin-june-13-2025/",
+          "label": "IDF spokesperson briefing of 13 June 2025",
+          "publisher": "Israel Defense Forces",
+          "authorityId": "israel-defense-forces",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The IDF briefing identifies Iran as the target of Operation Rising Lion launched on 13 June 2025."
+        },
+        {
+          "url": "https://embassies.gov.il/ungeneva/en/news/statement-ambassador-daniel-meron-plenary-conference-disarmament17-june-2025",
+          "label": "Statement on Operation Rising Lion",
+          "publisher": "Permanent Mission of Israel to the United Nations in Geneva",
+          "authorityId": "israel-un-mission",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Israel's UN mission independently describes Operation Rising Lion as action launched against targets in Iran in June 2025."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2025-06-13",
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0340-SIM",
+      "pairId": "WGI-Q0340",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "Which two broad target categories did Israel say Operation Rising Lion struck in Iran in 2025?",
+      "questionUrdu": "2025 میں اسرائیل کے مطابق آپریشن رائزنگ لائن نے ایران میں کن دو وسیع اقسام کے اہداف کو نشانہ بنایا؟",
+      "options": [
+        "Nuclear-program and military targets",
+        "Agricultural and tourism sites",
+        "Currency exchanges and ports",
+        "Universities and sports venues"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "اسرائیلی بیانات کے مطابق اس کارروائی میں ایران کے جوہری پروگرام اور فوجی اہداف کو نشانہ بنایا گیا۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: stated targets of Operation Rising Lion",
+        "referenceUrl": "https://www.idf.il/en/mini-sites/israel-at-war/briefings-by-idf-spokesperson-bg-effie-defrin/june-25-press-briefings/press-briefing-by-idf-spokesperson-bg-effie-defrin-june-13-2025/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0340"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.idf.il/en/mini-sites/israel-at-war/briefings-by-idf-spokesperson-bg-effie-defrin/june-25-press-briefings/press-briefing-by-idf-spokesperson-bg-effie-defrin-june-13-2025/",
+          "label": "IDF spokesperson briefing of 13 June 2025",
+          "publisher": "Israel Defense Forces",
+          "authorityId": "israel-defense-forces",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The IDF says the 2025 operation struck Iranian nuclear-program and military targets."
+        },
+        {
+          "url": "https://embassies.gov.il/ungeneva/en/news/statement-ambassador-daniel-meron-plenary-conference-disarmament17-june-2025",
+          "label": "Statement on Operation Rising Lion",
+          "publisher": "Permanent Mission of Israel to the United Nations in Geneva",
+          "authorityId": "israel-un-mission",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The diplomatic statement independently characterizes the operation's 2025 targets as nuclear and military facilities in Iran."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2025",
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  }
+]

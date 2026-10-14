@@ -1,0 +1,1813 @@
+[
+  {
+    "sourceRecordId": "WGI-Q0161",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 161,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "F4742DD158B7DBADB6DB10AB3BD145C0602F14C7C2E35B44EE72A63ACD0697E3",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q005-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0162",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 162,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "0994F14FCDC7A1A34485C9ADF89F1E931B8A3732CE03024BA946864002280834",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q088-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0163",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 163,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "DA22A6D0C44226342AEF5BC97001BB1E33A9D243930A8B6ECEA19363687FBC9E",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent authoritative sources confirm the source fact; it remains distinct from the current bank and is retained with one related practice item.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0163-SRC",
+      "pairId": "WGI-Q0163",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which term describes an organism that eats mostly meat or animal flesh?",
+      "questionUrdu": "زیادہ تر گوشت یا جانوروں کا جسم کھانے والے جاندار کو کیا کہتے ہیں؟",
+      "options": [
+        "Omnivore",
+        "Herbivore",
+        "Carnivore",
+        "Detritivore"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "درست جواب Carnivore ہے۔ یہ ایسا جاندار ہے جو زیادہ تر گوشت یا دوسرے جانوروں کا جسم کھاتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.9, item 163",
+        "referenceUrl": "https://education.nationalgeographic.org/resource/carnivore/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0163"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://education.nationalgeographic.org/resource/carnivore/",
+          "label": "Carnivore",
+          "publisher": "National Geographic Society",
+          "authorityId": "national-geographic-society",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Defines a carnivore as an organism that eats mostly meat or animal flesh."
+        },
+        {
+          "url": "https://openstax.org/books/biology-ap-courses/pages/25-1-digestive-systems",
+          "label": "Digestive systems: herbivores, omnivores, and carnivores",
+          "publisher": "OpenStax, Rice University",
+          "authorityId": "openstax-rice-university",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that carnivores eat other animals and that the word means meat eater."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The prose definition was converted into a four-option MCQ without changing its verified biological meaning."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0163-SIM",
+      "pairId": "WGI-Q0163",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "What term describes a carnivore that depends on meat for essential nutrients and survival?",
+      "questionUrdu": "اس گوشت خور جاندار کو کیا کہتے ہیں جو ضروری غذائی اجزا اور بقا کے لیے گوشت پر منحصر ہو؟",
+      "options": [
+        "Obligate carnivore",
+        "Primary producer",
+        "Facultative herbivore",
+        "Detritivore"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Obligate carnivore ہے۔ ایسے جاندار کو وہ ضروری غذائی اجزا حیوانی غذا سے ملتے ہیں جن کے بغیر وہ صحت مند طور پر زندہ نہیں رہ سکتا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 163",
+        "referenceUrl": "https://education.nationalgeographic.org/resource/carnivore/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0163"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://education.nationalgeographic.org/resource/carnivore/",
+          "label": "Carnivore",
+          "publisher": "National Geographic Society",
+          "authorityId": "national-geographic-society",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that obligate carnivores depend on meat for survival."
+        },
+        {
+          "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feeding-your-cat",
+          "label": "Feeding your cat",
+          "publisher": "Cornell University College of Veterinary Medicine",
+          "authorityId": "cornell-veterinary-medicine",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently defines cats as obligate carnivores reliant on nutrients found only in animal products."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item tests the distinct obligate-carnivore concept rather than repeating the general carnivore definition."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0164",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 164,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "DA717C76572A44C1F87860D3A8D2E7FE42B20C4512184FA5C61663345763AF0B",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent authoritative sources confirm the source fact; it remains distinct from the current bank and is retained with one related practice item.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0164-SRC",
+      "pairId": "WGI-Q0164",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which term describes an animal whose primary food source is plant material?",
+      "questionUrdu": "اس جانور کو کیا کہتے ہیں جس کی بنیادی خوراک پودوں سے حاصل ہوتی ہے؟",
+      "options": [
+        "Carnivore",
+        "Detritivore",
+        "Herbivore",
+        "Omnivore"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "درست جواب Herbivore ہے۔ سبزی خور جانوروں کی بنیادی خوراک پودوں پر مشتمل ہوتی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.9, item 164",
+        "referenceUrl": "https://openstax.org/books/biology-ap-courses/pages/25-1-digestive-systems",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0164"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/biology-ap-courses/pages/25-1-digestive-systems",
+          "label": "Digestive systems: herbivores, omnivores, and carnivores",
+          "publisher": "OpenStax, Rice University",
+          "authorityId": "openstax-rice-university",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "States that herbivores are animals whose primary food source is plant-based."
+        },
+        {
+          "url": "https://education.nationalgeographic.org/resource/diet/",
+          "label": "Diet",
+          "publisher": "National Geographic Society",
+          "authorityId": "national-geographic-society",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Defines herbivores as organisms that consume plants and other producers."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The absolute wording in the PDF was qualified to the scientifically safer primary-food-source definition."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0164-SIM",
+      "pairId": "WGI-Q0164",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "In a grazing food chain, herbivores are normally classified as what?",
+      "questionUrdu": "چرنے والی غذائی زنجیر میں سبزی خور جانور عموماً کس درجہ میں شمار ہوتے ہیں؟",
+      "options": [
+        "Secondary consumers",
+        "Decomposers",
+        "Primary consumers",
+        "Producers"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "درست جواب Primary consumers ہے۔ سبزی خور براہ راست پودوں یا دوسرے بنیادی پیدا کنندگان کو کھاتے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 164",
+        "referenceUrl": "https://openstax.org/books/biology/pages/46-1-ecology-of-ecosystems",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0164"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/biology/pages/46-1-ecology-of-ecosystems",
+          "label": "Ecology of ecosystems",
+          "publisher": "OpenStax, Rice University",
+          "authorityId": "openstax-rice-university",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Explains that herbivores consume primary producers and are primary consumers."
+        },
+        {
+          "url": "https://education.nationalgeographic.org/resource/diet/",
+          "label": "Diet",
+          "publisher": "National Geographic Society",
+          "authorityId": "national-geographic-society",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently states that herbivores are often called primary consumers."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related question tests the ecological role of herbivores instead of repeating the definition."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0165",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 165,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "A03C9E57B534ED939A1457A23D5D9A4114E705E07CF6670C0FEE7CA477DB8B73",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "A manual semantic audit found that the cited current-bank question already tests the same underlying fact and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q088-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0166",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 166,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "95AEFD1AACC723440771A0E6FABA8D96653FB6543BB722A17C49F2CD15449D54",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "A manual semantic audit found that the cited current-bank question already tests the same underlying fact and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q061-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0167",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 167,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "EDBF0CC46DE42DBA0330BCFB6C7897384CF75E9D1F1DBA0DDA27C6BD5CF8EB15",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "reject",
+    "reason": "The printed line incorrectly treats Nippon as a stock exchange; Nikkei is an index and the Tokyo Stock Exchange is the exchange, so the malformed pairing is rejected.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0168",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 168,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "A3AB47C32FFED848AE1151CF0DB4C6D87EA95827BB5035BF9F115A5D2ED51283",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent authoritative sources confirm the source fact; it remains distinct from the current bank and is retained with one related practice item.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0168-SRC",
+      "pairId": "WGI-Q0168",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "At which conference was the United Nations Charter completed and signed in 1945?",
+      "questionUrdu": "اقوام متحدہ کا منشور 1945 میں کس کانفرنس میں مکمل ہوا اور اس پر دستخط کیے گئے؟",
+      "options": [
+        "Dumbarton Oaks Conference",
+        "Yalta Conference",
+        "United Nations Conference on International Organization",
+        "Bretton Woods Conference"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "درست جواب United Nations Conference on International Organization ہے، جسے San Francisco Conference بھی کہا جاتا ہے؛ منشور پر 26 June 1945 کو دستخط ہوئے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.9, item 168",
+        "referenceUrl": "https://www.un.org/en/about-us/un-charter",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0168"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.un.org/en/about-us/un-charter",
+          "label": "United Nations Charter",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "States that the Charter was signed in San Francisco at the conclusion of the United Nations Conference on International Organization."
+        },
+        {
+          "url": "https://www.archives.gov/milestone-documents/united-nations-charter",
+          "label": "United Nations Charter (1945)",
+          "publisher": "U.S. National Archives and Records Administration",
+          "authorityId": "us-national-archives",
+          "role": "answer-secondary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Confirms that representatives at the San Francisco founding conference drafted and signed the Charter on 26 June 1945."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "1945-06-26",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The answer uses the conference's official name and notes its commonly used San Francisco Conference name."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0168-SIM",
+      "pairId": "WGI-Q0168",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Which country signed the United Nations Charter later on 15 October 1945 and became one of the original 51 members?",
+      "questionUrdu": "کون سے ملک نے 15 October 1945 کو بعد میں اقوام متحدہ کے منشور پر دستخط کیے اور 51 اصل ارکان میں شامل ہوا؟",
+      "options": [
+        "Poland",
+        "Czechoslovakia",
+        "Denmark",
+        "Argentina"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Poland ہے۔ پولینڈ نے 15 October 1945 کو بعد میں منشور پر دستخط کیے اور اقوام متحدہ کے 51 اصل ارکان میں شامل ہوا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 168",
+        "referenceUrl": "https://research.un.org/en/unmembers/founders",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0168"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://research.un.org/en/unmembers/founders",
+          "label": "UN Founding Member States",
+          "publisher": "United Nations Dag Hammarskjöld Library",
+          "authorityId": "un-dag-hammarskjold-library",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN research guide records Poland signing on 15 October 1945 and the 51 founding members."
+        },
+        {
+          "url": "https://www.un.org/en/about-us/history-of-the-un/preparatory-years",
+          "label": "Preparatory Years: UN Charter History",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN history page explains that Poland signed later and became one of the original 51 Member States."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "1945-10-15",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The earlier signatory-count practice item duplicated an existing 50-country question; this replacement tests Poland's later signature and distinct 51-member consequence."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0169",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 169,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "2589F3F6134CF261DB637D0528F2F22B18153169B05ECE67E01D7B2E9321BF9D",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "IBES-Q1189-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0170",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 170,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "1662B615642E804DC6790D50A7B772F53E241E1949C8FF02328C44B27EC0B7E6",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "A manual semantic audit found that the cited current-bank question already tests the same underlying fact and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q062-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0171",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 171,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "23A197AEDD98F66BDD6241B225DB55007A3F2B7E585D375946CAE1BE2AB34984",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "A manual semantic audit found that the cited current-bank question already tests the same underlying fact and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "P236-Q041-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0172",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 172,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "3CA502E57AC49E93E16E9D97F7B67257E019B03E22362B3A50F6A6986928D0B0",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q081-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0173",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 173,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "AA5124D3B435EB5BFB4052B770F13814EE440A685E24405AD89B623A4B0841DB",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "reject",
+    "reason": "The printed Kashmir percentage is not safely verifiable because territory, control, and denominator definitions vary across sources; the ambiguous claim is rejected rather than guessed.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0174",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 174,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "67A430F09E263CE305DDA2E0BD66E79779F74F58655EA1BDE0F0C5153516391A",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q037-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0175",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 175,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "6DEB09A7F4F59215BED51186B2A3C4D910861B8045E346F2505B0041D4A59A4B",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q036-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0176",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 176,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "F4F0BE9B8E22BDA00AC3A7B53C929493D250E740E2A7641ED410178900946861",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "A manual semantic audit found that the cited current-bank question already tests the same underlying fact and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q036-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0177",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 177,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "7EBC9BF668293C147C804EADA6308C482734D39EE8B77BB8B0FA337C72BF55BE",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent authoritative sources confirm the source fact; it remains distinct from the current bank and is retained with one related practice item.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0177-SRC",
+      "pairId": "WGI-Q0177",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "As of 2026, how many member states does the Economic Cooperation Organization have?",
+      "questionUrdu": "2026 تک Economic Cooperation Organization کے رکن ممالک کی تعداد کتنی ہے؟",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "درست جواب 10 ہے۔ ECO میں 3 بانی ممالک اور 7 بعد میں شامل ہونے والے ممالک ملا کر کل 10 ارکان ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.9, item 177",
+        "referenceUrl": "https://www.mfa.gov.tr/turkiye-and-the-economic-cooperation-organization-_eco_.en.mfa",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0177"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mfa.gov.tr/turkiye-and-the-economic-cooperation-organization-_eco_.en.mfa",
+          "label": "Economic Cooperation Organization (ECO)",
+          "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+          "authorityId": "turkiye-mfa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Lists the three founding members and seven additional member states, totaling ten ECO members."
+        },
+        {
+          "url": "https://www.finance.gov.pk/survey/chapters_17/Annex_II_ECO.pdf",
+          "label": "Economic Cooperation Organization annex",
+          "publisher": "Government of Pakistan, Finance Division",
+          "authorityId": "pakistan-finance-division",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Describes ECO as a ten-member regional organization and identifies its member states."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "Membership is time-sensitive, so the stem states the 2026 verification scope explicitly."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0177-SIM",
+      "pairId": "WGI-Q0177",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "As of 2026, in which city is the Economic Cooperation Organization headquartered?",
+      "questionUrdu": "2026 تک Economic Cooperation Organization کا صدر دفتر کس شہر میں ہے؟",
+      "options": [
+        "Ankara",
+        "Islamabad",
+        "Tehran",
+        "Tashkent"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "درست جواب Tehran ہے۔ ECO کا مرکزی دفتر ایران کے دارالحکومت تہران میں واقع ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 177",
+        "referenceUrl": "https://www.mfa.gov.tr/turkiye-and-the-economic-cooperation-organization-_eco_.en.mfa",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0177"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mfa.gov.tr/turkiye-and-the-economic-cooperation-organization-_eco_.en.mfa",
+          "label": "Economic Cooperation Organization (ECO)",
+          "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+          "authorityId": "turkiye-mfa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Identifies Tehran in the Islamic Republic of Iran as ECO headquarters."
+        },
+        {
+          "url": "https://www.finance.gov.pk/survey/chapters_17/Annex_II_ECO.pdf",
+          "label": "Economic Cooperation Organization annex",
+          "publisher": "Government of Pakistan, Finance Division",
+          "authorityId": "pakistan-finance-division",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Independently states that ECO headquarters is located in Tehran."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The related item tests the organization's headquarters, a distinct institutional fact checked as of 2026."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0178",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 178,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "C323DF7421EA7F19237A04CCD4189ABAD39A15889565026EEC7559380A780E6F",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "A manual semantic audit found that the cited current-bank question already tests the same underlying fact and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0016-Q012-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0179",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 179,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "73ADF4A82586D98C6AD9E9EFA8341C3A5FE2FF745968C6E1F723C14397A68F82",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "A manual semantic audit found that the cited current-bank question already tests the same underlying fact and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0016-Q012-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0180",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 180,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "B2506DDD8AE9B19A33FCDBAF0846DA18D88318ABECF8EFEB1C7FCDA08217806D",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent authoritative sources confirm the source fact; it remains distinct from the current bank and is retained with one related practice item.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0180-SRC",
+      "pairId": "WGI-Q0180",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "In which year did Regional Cooperation for Development cease active operations?",
+      "questionUrdu": "Regional Cooperation for Development نے فعال سرگرمیاں کس سال بند کیں؟",
+      "options": [
+        "1977",
+        "1978",
+        "1979",
+        "1985"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "درست جواب 1979 ہے۔ RCD 1964 سے 1979 تک فعال رہی، پھر اس کی سرگرمیاں رک گئیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.9, item 180",
+        "referenceUrl": "https://mfa.gov.az/en/category/international-organisations/economic-cooperation-organisation-eco",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0180"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://mfa.gov.az/en/category/international-organisations/economic-cooperation-organisation-eco",
+          "label": "Economic Cooperation Organisation (ECO)",
+          "publisher": "Ministry of Foreign Affairs of Azerbaijan",
+          "authorityId": "azerbaijan-mfa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "States that Regional Cooperation for Development was functional from 1964 to 1979."
+        },
+        {
+          "url": "https://www.mfa.gov.tr/data/Kutuphane/yayinlar/EkonomikSorunlarDergisi/Sayi33/omer_faruk_baykal.pdf",
+          "label": "Economic Cooperation Organization study",
+          "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+          "authorityId": "turkiye-mfa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently describes RCD as operating between 1964 and 1979."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The historical stopping year is corroborated by two foreign-ministry sources and does not depend on a current officeholder."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0180-SIM",
+      "pairId": "WGI-Q0180",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "As of 2026, which treaty serves as the basic charter of the Economic Cooperation Organization?",
+      "questionUrdu": "2026 تک کون سا معاہدہ Economic Cooperation Organization کے بنیادی منشور کی حیثیت رکھتا ہے؟",
+      "options": [
+        "Treaty of Ankara",
+        "Treaty of Izmir",
+        "Treaty of Tehran",
+        "Treaty of Istanbul"
+      ],
+      "correctOptionIndex": 1,
+      "explanationUrdu": "درست جواب Treaty of Izmir ہے۔ یہی معاہدہ ECO کے بنیادی قانونی منشور کی حیثیت رکھتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 180",
+        "referenceUrl": "https://mfa.gov.az/en/category/international-organisations/economic-cooperation-organisation-eco",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0180"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://mfa.gov.az/en/category/international-organisations/economic-cooperation-organisation-eco",
+          "label": "Economic Cooperation Organisation (ECO)",
+          "publisher": "Ministry of Foreign Affairs of Azerbaijan",
+          "authorityId": "azerbaijan-mfa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Identifies the Treaty of Izmir as ECO's basic charter."
+        },
+        {
+          "url": "https://www.mfa.gov.tr/data/Kutuphane/yayinlar/EkonomikSorunlarDergisi/Sayi33/omer_faruk_baykal.pdf",
+          "label": "Economic Cooperation Organization study",
+          "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+          "authorityId": "turkiye-mfa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Independently explains that the Treaty of Izmir forms ECO's legal foundation."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The related item tests the organization's legal instrument rather than repeating the RCD cessation year."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0181",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 181,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "77DE06825817CF001D02AE8BF3A4FD1FEBC9D6E155CE6C8ACDA1133C08A35FCA",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q070-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0182",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 182,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "973034B1361EC857399742A5D288105CF59030FE43E01142D90A2F35C8FBA26C",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q024-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0183",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 183,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "43FBCA2730F727CA782C83849BAC272FC43E3F537EEFD621519C5A2FD15B1E8E",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q034-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0184",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 184,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "F615507395C9BE2C39665EF3066F88EC629403E3690E9D5B5D1DB077688E05AA",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q021-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0185",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 185,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "EEE29DBBCE5815F4AC09BF0C8012D2A66C7CFA61F58F895A55D8BBFF202827F6",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q076-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0186",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 186,
+    "sourcePdfPage": 9,
+    "rawTextSha256": "DD0472D51C5417F9DF4655AF91E8B7E4D0BDB44DCBC254D02F310FB0315EB4D5",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q073-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0187",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 187,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "54882C4B9F23E74C9D384C12A0F1ADA4D7D77E040AD2A1F4E266BE0751FA2A20",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "reject",
+    "reason": "The wording asks for a non-unique project type and supplies a broad answer while mixing project name, capacity, fuel, and location, so it is rejected as malformed.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0188",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 188,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "9E7B3EEC69336D96A93AAB45ADF95FE8AF6A1DF3AC304642D47BEFEBDB59CC98",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q042-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0189",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 189,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "0B1CDFFE876FEA0DD6364AF66084B613AF4972C05D273842635B727D738D5DFD",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q082-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0190",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 190,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "2F201D889232B0E87F379A69C22D27B02B17C4FD2081D01B2B4B653BFFB3B12F",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q017-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0191",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 191,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "5326B85895EA03151ECD9630DE029DFF0F98B3B704EAB8C2243395F700295F4E",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q032-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0192",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 192,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "FEB21900467B2900609D093F86A5B316E287D2A0D15012B48E06647202572D08",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q045-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0193",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 193,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "F06DEB0A18D7B553BAE4F9284952480262F34387D8A69F835BE8B15731CD8030",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent authoritative sources confirm the source fact; it remains distinct from the current bank and is retained with one related practice item.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0193-SRC",
+      "pairId": "WGI-Q0193",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "On what date in 2014 did Pakistan's European Union GSP+ preferences become operational?",
+      "questionUrdu": "پاکستان کے لیے European Union کی GSP+ ترجیحات 2014 میں کس تاریخ کو فعال ہوئیں؟",
+      "options": [
+        "1 January 2014",
+        "1 July 2013",
+        "1 January 2015",
+        "31 December 2014"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 1 January 2014 ہے۔ اسی تاریخ سے پاکستان کے لیے EU کی GSP+ تجارتی ترجیحات نافذ ہوئیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 193",
+        "referenceUrl": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pakistan_en",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0193"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pakistan_en",
+          "label": "EU trade relations with Pakistan",
+          "publisher": "European Commission Directorate-General for Trade",
+          "authorityId": "eu-commission-trade",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "States that Pakistan has benefited from the GSP+ tariff preferences from 1 January 2014."
+        },
+        {
+          "url": "https://www.commerce.gov.pk/wp-content/uploads/2022/03/GSP-Booklet-17-03-22.pdf",
+          "label": "Pakistan-EU GSP+ booklet",
+          "publisher": "Ministry of Commerce, Government of Pakistan",
+          "authorityId": "pakistan-commerce-ministry",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Independently says that the present GSP+ scheme became operational on 1 January 2014."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": "2014-01-01",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The stem uses operational date to distinguish commencement of preferences from the earlier institutional approval process."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0193-SIM",
+      "pairId": "WGI-Q0193",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "As of 2026, how many core international conventions must Pakistan effectively implement to maintain GSP+?",
+      "questionUrdu": "2026 تک GSP+ برقرار رکھنے کے لیے پاکستان کو کتنے بنیادی بین الاقوامی معاہدوں پر مؤثر عمل کرنا ہوتا ہے؟",
+      "options": [
+        "21",
+        "24",
+        "27",
+        "30"
+      ],
+      "correctOptionIndex": 2,
+      "explanationUrdu": "درست جواب 27 ہے۔ یہ معاہدے انسانی اور مزدور حقوق، ماحول اور اچھی حکمرانی سے متعلق ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 193",
+        "referenceUrl": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pakistan_en",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0193"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pakistan_en",
+          "label": "EU trade relations with Pakistan",
+          "publisher": "European Commission Directorate-General for Trade",
+          "authorityId": "eu-commission-trade",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Specifies 27 core international conventions that Pakistan must effectively implement to maintain GSP+."
+        },
+        {
+          "url": "https://www.commerce.gov.pk/wp-content/uploads/pdf/Simple_Guide_GSP.pdf",
+          "label": "Simple guide to the EU Generalised Scheme of Preferences",
+          "publisher": "Ministry of Commerce, Government of Pakistan",
+          "authorityId": "pakistan-commerce-ministry",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Independently states that GSP+ qualification requires ratification of 27 core international conventions."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The related item tests a distinct compliance requirement and is explicitly scoped to the 2026 arrangement."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0194",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 194,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "E8E27E7D21B91AD0C785CE0938A960BD55B4235ACA981BBA25BAB8EC455378F3",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent authoritative sources confirm the source fact; it remains distinct from the current bank and is retained with one related practice item.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0194-SRC",
+      "pairId": "WGI-Q0194",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "In the European Union trade arrangement called GSP+, what do the letters GSP stand for?",
+      "questionUrdu": "European Union کے GSP+ تجارتی انتظام میں GSP کے حروف کس مکمل نام کی نمائندگی کرتے ہیں؟",
+      "options": [
+        "Generalised Scheme of Preferences",
+        "Global System of Protection",
+        "General Subsidy Programme",
+        "Government Support Protocol"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Generalised Scheme of Preferences ہے۔ GSP+ اسی یورپی ترجیحی تجارتی اسکیم کا خصوصی ترغیبی انتظام ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 194",
+        "referenceUrl": "https://policy.trade.ec.europa.eu/development-and-sustainability/generalised-scheme-preferences_en",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0194"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://policy.trade.ec.europa.eu/development-and-sustainability/generalised-scheme-preferences_en",
+          "label": "Generalised Scheme of Preferences",
+          "publisher": "European Commission Directorate-General for Trade",
+          "authorityId": "eu-commission-trade",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "wording"
+          ],
+          "claimSummary": "Uses the official title Generalised Scheme of Preferences and identifies GSP+ as one of its arrangements."
+        },
+        {
+          "url": "https://www.commerce.gov.pk/about-us/gsp-plus/",
+          "label": "GSP Plus",
+          "publisher": "Ministry of Commerce, Government of Pakistan",
+          "authorityId": "pakistan-commerce-ministry",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "wording"
+          ],
+          "claimSummary": "Independently labels GSP as the Generalised Scheme of Preferences in its GSP+ resources."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF's informal expansion was normalized to the EU's official British spelling: Generalised Scheme of Preferences; the plus sign names the special arrangement."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0194-SIM",
+      "pairId": "WGI-Q0194",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "As of 2026, GSP+ is the European Union's special incentive arrangement for which two broad goals?",
+      "questionUrdu": "2026 تک GSP+، European Union کا کن دو وسیع مقاصد کے لیے خصوصی ترغیبی انتظام ہے؟",
+      "options": [
+        "Sustainable development and good governance",
+        "Defence integration and border control",
+        "Monetary union and common taxation",
+        "Tourism promotion and cultural exchange"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Sustainable development and good governance ہے۔ GSP+ انہی مقاصد سے متعلق بین الاقوامی ذمہ داریوں کے نفاذ کی ترغیب دیتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 194",
+        "referenceUrl": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pakistan_en",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0194"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/pakistan_en",
+          "label": "EU trade relations with Pakistan",
+          "publisher": "European Commission Directorate-General for Trade",
+          "authorityId": "eu-commission-trade",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Describes GSP+ as an arrangement aiming to support sustainable development and good governance."
+        },
+        {
+          "url": "https://www.commerce.gov.pk/wp-content/uploads/2021/12/Year-Book-2020-21.pdf",
+          "label": "Ministry of Commerce Year Book 2020-21",
+          "publisher": "Ministry of Commerce, Government of Pakistan",
+          "authorityId": "pakistan-commerce-ministry",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Calls GSP Plus the special incentive arrangement for good governance and sustainable development."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The related question tests the policy purpose of GSP+ rather than repeating its expanded name."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0195",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 195,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "3C57713F717E110FFC9B04CE8B319B5D0C0BDECEDB85A87E7C74C003B107CDD4",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q050-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0196",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 196,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "F6E56BC044258207BABF83DD3A42F870F172F6B8DE68DF4BCBD614DD7EE992DB",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "A manual semantic audit found that the cited current-bank question already tests the same underlying fact and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q002-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0197",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 197,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "A11CF1A9394381ADBD715864706ECE8492C5CFE7BAE3EF96618BC1F51D823708",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The audited current-bank match tests the same fact with the same answer, so this source line is skipped as a duplicate.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q075-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0198",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 198,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "CA0860E81967EADCE88CBAF20400F14EE1647BE739CB4581DE7D8A05C0576B89",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent authoritative sources confirm the source fact; it remains distinct from the current bank and is retained with one related practice item.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0198-SRC",
+      "pairId": "WGI-Q0198",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "As of 2026, what is the national currency of Libya?",
+      "questionUrdu": "2026 تک Libya کی قومی کرنسی کیا ہے؟",
+      "options": [
+        "Libyan Dinar",
+        "Algerian Dinar",
+        "Egyptian Pound",
+        "Moroccan Dirham"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Libyan Dinar ہے، جس کا بین الاقوامی کرنسی کوڈ LYD ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 198",
+        "referenceUrl": "https://data.un.org/legacy/en/iso/ly.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0198"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://data.un.org/legacy/en/iso/ly.html",
+          "label": "Libya country profile",
+          "publisher": "United Nations Statistics Division",
+          "authorityId": "un-statistics-division",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Lists Libya's national currency as the Libyan Dinar with code LYD."
+        },
+        {
+          "url": "https://www.embassyoflibyadc.org/5-1",
+          "label": "Libya quick facts",
+          "publisher": "Embassy of the State of Libya in Washington, D.C.",
+          "authorityId": "libya-embassy-washington",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Independently identifies Libya's currency as the Libyan Dinar."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The PDF fact list was converted to a single-answer currency MCQ; the capital fact was not duplicated."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0198-SIM",
+      "pairId": "WGI-Q0198",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "As of 2026, what is the official language of Libya?",
+      "questionUrdu": "2026 تک Libya کی سرکاری زبان کیا ہے؟",
+      "options": [
+        "Arabic",
+        "French",
+        "Italian",
+        "English"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Arabic ہے۔ جدید معیاری عربی Libya کی سرکاری زبان ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 198",
+        "referenceUrl": "https://www.embassyoflibyadc.org/5-1",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0198"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.embassyoflibyadc.org/5-1",
+          "label": "Libya quick facts",
+          "publisher": "Embassy of the State of Libya in Washington, D.C.",
+          "authorityId": "libya-embassy-washington",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "States that Arabic is Libya's official language."
+        },
+        {
+          "url": "https://www.embassyoflibya.ca/pages/about-libya-en",
+          "label": "About Libya",
+          "publisher": "Embassy of Libya in Canada",
+          "authorityId": "libya-embassy-canada",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Independently identifies Modern Standard Arabic as Libya's official language."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The related question adds a verified national-language fact without repeating the currency question."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0199",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 199,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "B8EC0E915A5D18C19A9F67110651782313B5DB9E5596B0487B15E537E0770BAA",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent authoritative sources confirm the source fact; it remains distinct from the current bank and is retained with one related practice item.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0199-SRC",
+      "pairId": "WGI-Q0199",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "As of 2026, what is the capital city of Algeria?",
+      "questionUrdu": "2026 تک Algeria کا دارالحکومت کون سا شہر ہے؟",
+      "options": [
+        "Algiers",
+        "Oran",
+        "Tunis",
+        "Rabat"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Algiers ہے۔ الجزائر کا دارالحکومت Algiers ہے، جسے عربی میں الجزائر کہا جاتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 199",
+        "referenceUrl": "https://www.mfa.gov.dz/discover-algeria/about-algeria",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0199"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mfa.gov.dz/discover-algeria/about-algeria",
+          "label": "About Algeria",
+          "publisher": "Ministry of Foreign Affairs of Algeria",
+          "authorityId": "algeria-mfa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Lists Algiers as the capital city of Algeria."
+        },
+        {
+          "url": "https://data.un.org/en/iso/DZ.html",
+          "label": "Algeria country profile",
+          "publisher": "United Nations Statistics Division",
+          "authorityId": "un-statistics-division",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Independently identifies Algiers as Algeria's capital city."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The PDF fact list was rewritten as a focused capital-city MCQ and checked against Algerian and UN sources."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0199-SIM",
+      "pairId": "WGI-Q0199",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "As of 2026, what is the national currency of Algeria?",
+      "questionUrdu": "2026 تک Algeria کی قومی کرنسی کیا ہے؟",
+      "options": [
+        "Algerian Dinar",
+        "Moroccan Dirham",
+        "Tunisian Dinar",
+        "Egyptian Pound"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Algerian Dinar ہے، جس کا بین الاقوامی کرنسی کوڈ DZD ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 199",
+        "referenceUrl": "https://data.un.org/en/iso/DZ.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0199"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://data.un.org/en/iso/DZ.html",
+          "label": "Algeria country profile",
+          "publisher": "United Nations Statistics Division",
+          "authorityId": "un-statistics-division",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Lists the Algerian Dinar, code DZD, as Algeria's national currency."
+        },
+        {
+          "url": "https://www.mfa.gov.dz/discover-algeria/about-algeria",
+          "label": "About Algeria",
+          "publisher": "Ministry of Foreign Affairs of Algeria",
+          "authorityId": "algeria-mfa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Independently states that Algeria's currency is the Algerian dinar."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The related item tests the verified currency fact rather than repeating the capital-city stem."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0200",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 200,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "62647A3F8412AE92084A2FC0333DAE6EB6178F38A0CF63FACF38AF63D64F0093",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two independent authoritative sources confirm the source fact; it remains distinct from the current bank and is retained with one related practice item.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0200-SRC",
+      "pairId": "WGI-Q0200",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "As of 2026, what is the capital city of Tunisia?",
+      "questionUrdu": "2026 تک Tunisia کا دارالحکومت کون سا شہر ہے؟",
+      "options": [
+        "Tunis",
+        "Sfax",
+        "Algiers",
+        "Tripoli"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Tunis ہے۔ Tunis ملک کے شمال مشرق میں خلیج Tunis کے کنارے واقع ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 200",
+        "referenceUrl": "https://www.tunisie.gov.tn/154-discover-tunisia.htm",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0200"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.tunisie.gov.tn/154-discover-tunisia.htm",
+          "label": "Discover Tunisia",
+          "publisher": "Government of Tunisia",
+          "authorityId": "government-of-tunisia",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "States that Tunisia's capital is Tunis and locates it in the northeast of the country."
+        },
+        {
+          "url": "https://data.un.org/legacy/en/iso/tn.html",
+          "label": "Tunisia country profile",
+          "publisher": "United Nations Statistics Division",
+          "authorityId": "un-statistics-division",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Independently lists Tunis as the capital city of Tunisia."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The PDF fact list was rewritten as a focused capital-city MCQ and checked against Tunisian and UN sources."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0200-SIM",
+      "pairId": "WGI-Q0200",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "As of 2026, what is the national currency of Tunisia?",
+      "questionUrdu": "2026 تک Tunisia کی قومی کرنسی کیا ہے؟",
+      "options": [
+        "Tunisian Dinar",
+        "Algerian Dinar",
+        "Moroccan Dirham",
+        "Libyan Dinar"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Tunisian Dinar ہے، جس کا بین الاقوامی کرنسی کوڈ TND ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 200",
+        "referenceUrl": "https://data.un.org/legacy/en/iso/tn.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0200"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://data.un.org/legacy/en/iso/tn.html",
+          "label": "Tunisia country profile",
+          "publisher": "United Nations Statistics Division",
+          "authorityId": "un-statistics-division",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Lists the Tunisian Dinar, code TND, as Tunisia's national currency."
+        },
+        {
+          "url": "https://musee.bct.gov.tn/en/collections",
+          "label": "Contemporary currency of Tunisia",
+          "publisher": "Central Bank of Tunisia Monetary Museum",
+          "authorityId": "central-bank-of-tunisia",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer",
+            "temporal-scope"
+          ],
+          "claimSummary": "Independently explains that Tunisia's monetary unit is the dinar."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026-09-17",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The related item tests Tunisia's verified currency fact rather than repeating the capital question."
+    }
+  }
+]

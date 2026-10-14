@@ -1,0 +1,2830 @@
+[
+  {
+    "sourceRecordId": "WGI-Q0386",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 386,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "1E36D3002D9D86E3BDDF691B9E2E58B870A7002991493E9E8C125073370A7BB2",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0387",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 387,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "202A2B71CEB07DFCF0F32072CB969FEB00764AABAFE53B2D7D7602380646F7EC",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0387-SRC",
+      "pairId": "WGI-Q0387",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which of these foods is a good plant-based source of protein?",
+      "questionUrdu": "درج ذیل میں سے کون سی غذا نباتاتی پروٹین کا اچھا ذریعہ ہے؟",
+      "options": [
+        "Pulses",
+        "Table salt",
+        "Refined sugar",
+        "Carbonated water"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "دالیں، مثلاً مسور اور چنا، پروٹین سے بھرپور نباتاتی غذا ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 387",
+        "referenceUrl": "https://www.fao.org/fileadmin/user_upload/pulses-2016/docs/factsheets/Nutrition_EN_PRINT.pdf",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0387"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fao.org/fileadmin/user_upload/pulses-2016/docs/factsheets/Nutrition_EN_PRINT.pdf",
+          "label": "FAO pulses nutrition fact sheet",
+          "publisher": "FAO",
+          "authorityId": "fao",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FAO identifies pulses as protein-rich foods and lists lentils among pulses."
+        },
+        {
+          "url": "https://www.ars.usda.gov/research/publications/publication/?seqNo115=397638",
+          "label": "USDA ARS pulse crop nutrition",
+          "publisher": "USDA Agricultural Research Service",
+          "authorityId": "usda-ars",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USDA identifies lentils among pulses and classifies pulses within the protein foods group."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0387-SIM",
+      "pairId": "WGI-Q0387",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which of these is a pulse?",
+      "questionUrdu": "درج ذیل میں سے کون سی غذا دالوں کی قسم ہے؟",
+      "options": [
+        "Lentils",
+        "Table salt",
+        "Refined sugar",
+        "Butter"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "مسور کی دال، دالوں یعنی pulses میں شامل ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 387",
+        "referenceUrl": "https://www.fao.org/fileadmin/user_upload/pulses-2016/docs/factsheets/Nutrition_EN_PRINT.pdf",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0387"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fao.org/fileadmin/user_upload/pulses-2016/docs/factsheets/Nutrition_EN_PRINT.pdf",
+          "label": "FAO pulses nutrition fact sheet",
+          "publisher": "FAO",
+          "authorityId": "fao",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FAO identifies pulses as protein-rich foods and lists lentils among pulses."
+        },
+        {
+          "url": "https://www.ars.usda.gov/research/publications/publication/?seqNo115=397638",
+          "label": "USDA ARS pulse crop nutrition",
+          "publisher": "USDA Agricultural Research Service",
+          "authorityId": "usda-ars",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USDA identifies lentils among pulses and classifies pulses within the protein foods group."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0388",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 388,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "259C53871680FACAFDBD0760D63A07D48369DBD4D7E2D21504704D864B93A777",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0388-SRC",
+      "pairId": "WGI-Q0388",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the main function of a plant's thick waxy cuticle?",
+      "questionUrdu": "پودے کی موٹی مومی بیرونی تہہ کا بنیادی کام کیا ہے؟",
+      "options": [
+        "Prevent water loss",
+        "Produce seeds",
+        "Absorb sound",
+        "Digest proteins"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "مومی cuticle پتوں سے پانی کے بخارات بن کر ضائع ہونے کی رفتار کم کرتی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 388",
+        "referenceUrl": "https://openstax.org/books/biology-2e/pages/25-1-early-plant-life",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0388"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/25-1-early-plant-life",
+          "label": "OpenStax land-plant adaptations",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax states that the waxy cuticle prevents desiccation while stomata regulate gas exchange."
+        },
+        {
+          "url": "https://ucanr.edu/sites/btfnp/generaltopics/Tree_Growth_Structure/Photosynthesis_Respiration/",
+          "label": "UC ANR photosynthesis and respiration",
+          "publisher": "University of California ANR",
+          "authorityId": "ucanr",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UC ANR explains that cuticle limits evaporation and stomata admit and release gases."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0388-SIM",
+      "pairId": "WGI-Q0388",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which plant structure controls gas exchange through pores?",
+      "questionUrdu": "پتوں کے کن مساموں سے گیسوں کا تبادلہ ہوتا ہے؟",
+      "options": [
+        "Stomata",
+        "Xylem",
+        "Root cap",
+        "Phloem"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "سٹومیٹا پتوں کے مسام ہیں جو کاربن ڈائی آکسائیڈ اور آکسیجن کے تبادلے کو کنٹرول کرتے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 388",
+        "referenceUrl": "https://openstax.org/books/biology-2e/pages/25-1-early-plant-life",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0388"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/25-1-early-plant-life",
+          "label": "OpenStax land-plant adaptations",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax states that the waxy cuticle prevents desiccation while stomata regulate gas exchange."
+        },
+        {
+          "url": "https://ucanr.edu/sites/btfnp/generaltopics/Tree_Growth_Structure/Photosynthesis_Respiration/",
+          "label": "UC ANR photosynthesis and respiration",
+          "publisher": "University of California ANR",
+          "authorityId": "ucanr",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UC ANR explains that cuticle limits evaporation and stomata admit and release gases."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0389",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 389,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "0CE31309DAAC472CFD3671AD216E256F6500879DF6E8920DB9576FE426DBFCDC",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "WGI-Q0315-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0390",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 390,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "96C4A13EDB8F6905026AE9089CBF0AB1EF016D94F00C7AE3CA04F3D0F7B7B414",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0390-SRC",
+      "pairId": "WGI-Q0390",
+      "kind": "source",
+      "categoryId": "basic-computer-studies",
+      "question": "A three-dimensional printer uses which manufacturing technique?",
+      "questionUrdu": "تین جہتی پرنٹر کس پیداواری طریقے کو استعمال کرتا ہے؟",
+      "options": [
+        "Additive manufacturing",
+        "Subtractive manufacturing",
+        "Casting only",
+        "Forging only"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "3D پرنٹنگ میں مادہ تہہ بہ تہہ شامل کیا جاتا ہے، اس لیے اسے additive manufacturing کہتے ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 390",
+        "referenceUrl": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0390"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing",
+          "label": "NIST additive manufacturing explainer",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NIST describes 3D printing as additive manufacturing from digital designs built layer by layer."
+        },
+        {
+          "url": "https://www.fda.gov/medical-devices/products-and-medical-procedures/3d-printing-medical-devices",
+          "label": "FDA 3D-printing overview",
+          "publisher": "US Food and Drug Administration",
+          "authorityId": "fda",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FDA says 3D printing builds successive layers from a digital 3D file such as CAD."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0390-SIM",
+      "pairId": "WGI-Q0390",
+      "kind": "similar",
+      "categoryId": "basic-computer-studies",
+      "question": "What supplies the design that a 3D printer builds layer by layer?",
+      "questionUrdu": "3D پرنٹر تہہ بہ تہہ چیز بنانے کے لیے ڈیزائن کہاں سے لیتا ہے؟",
+      "options": [
+        "A digital 3D model",
+        "A paper book",
+        "A sound recording",
+        "A paintbrush"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "3D پرنٹر کو کمپیوٹر کا تیار کردہ تین جہتی ڈیجیٹل ماڈل فراہم کیا جاتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 390",
+        "referenceUrl": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0390"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing",
+          "label": "NIST additive manufacturing explainer",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NIST describes 3D printing as additive manufacturing from digital designs built layer by layer."
+        },
+        {
+          "url": "https://www.fda.gov/medical-devices/products-and-medical-procedures/3d-printing-medical-devices",
+          "label": "FDA 3D-printing overview",
+          "publisher": "US Food and Drug Administration",
+          "authorityId": "fda",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FDA says 3D printing builds successive layers from a digital 3D file such as CAD."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0391",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 391,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "A91DAAF6424575D671EE51419443A29AA81F7861350BB8AE10EC930D87997F79",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0392",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 392,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "0CFA99F49F33466C4934C7BFFCC75378F44FC2038DCD8126E02CF9046F9BC79F",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0392-SRC",
+      "pairId": "WGI-Q0392",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the direct energy currency of cellular activity?",
+      "questionUrdu": "خلیے کے کاموں میں براہِ راست استعمال ہونے والی توانائی کی اکائی کیا ہے؟",
+      "options": [
+        "ATP",
+        "DNA",
+        "RNA",
+        "Bile"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ATP خلیے میں توانائی منتقل کرنے والا بنیادی سالمہ ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 392",
+        "referenceUrl": "https://openstax.org/books/biology-2e/pages/6-4-atp-adenosine-triphosphate",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0392"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/6-4-atp-adenosine-triphosphate",
+          "label": "OpenStax ATP section",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax calls ATP the cellular energy currency and expands it as adenosine triphosphate."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK26838/",
+          "label": "Molecular Biology of the Cell: energy use",
+          "publisher": "Molecular Biology of the Cell",
+          "authorityId": "mboc",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Molecular Biology of the Cell identifies ATP as adenosine triphosphate and a versatile cellular energy carrier."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0392-SIM",
+      "pairId": "WGI-Q0392",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "What does ATP stand for?",
+      "questionUrdu": "ATP کا مکمل نام کیا ہے؟",
+      "options": [
+        "Adenosine triphosphate",
+        "Adenosine diphosphate",
+        "Deoxyribonucleic acid",
+        "Ribonucleic acid"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ATP کی مکمل صورت adenosine triphosphate ہے؛ اس میں تین فاسفیٹ گروپ ہوتے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 392",
+        "referenceUrl": "https://openstax.org/books/biology-2e/pages/6-4-atp-adenosine-triphosphate",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0392"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/6-4-atp-adenosine-triphosphate",
+          "label": "OpenStax ATP section",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax calls ATP the cellular energy currency and expands it as adenosine triphosphate."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK26838/",
+          "label": "Molecular Biology of the Cell: energy use",
+          "publisher": "Molecular Biology of the Cell",
+          "authorityId": "mboc",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Molecular Biology of the Cell identifies ATP as adenosine triphosphate and a versatile cellular energy carrier."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0393",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 393,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "50F6C19997A1541E1F5BBFD91A32A8B14D3A002D81AC8922AEE06D5D5D78537F",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0393-SRC",
+      "pairId": "WGI-Q0393",
+      "kind": "source",
+      "categoryId": "basic-mathematics",
+      "question": "A product priced at 800000 increases by 8 percent. What is its new price?",
+      "questionUrdu": "کسی چیز کی قیمت 800000 ہو اور اس میں 8 فیصد اضافہ ہو تو نئی قیمت کیا ہوگی؟",
+      "options": [
+        "864000",
+        "808000",
+        "840000",
+        "880000"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "800000 کا 8 فیصد 64000 ہے؛ اس لیے نئی قیمت 800000 + 64000 = 864000 ہوگی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 393",
+        "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0393"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+          "label": "OpenStax percent applications",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax explains percent increase as a percentage of the original amount; direct arithmetic gives 64000 and then 864000."
+        },
+        {
+          "url": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7%3Aproblem-solving-and-data-analysis-easier/x0fcc98a58ba3bea7%3Apercentages-easier/a/v2-sat-lesson-percentages",
+          "label": "Khan Academy percentages lesson",
+          "publisher": "Khan Academy",
+          "authorityId": "khan-academy",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Khan Academy's percent-change method applied to 800000 at 8 percent yields 64000 increase and 864000 final price."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0393-SIM",
+      "pairId": "WGI-Q0393",
+      "kind": "similar",
+      "categoryId": "basic-mathematics",
+      "question": "What is 8 percent of 800000?",
+      "questionUrdu": "800000 کا 8 فیصد کتنے بنتے ہیں؟",
+      "options": [
+        "64000",
+        "8000",
+        "72000",
+        "80000"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "8 فیصد کو 0.08 لکھ کر 800000 سے ضرب دیں؛ حاصل 64000 ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 393",
+        "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0393"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+          "label": "OpenStax percent applications",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax explains percent increase as a percentage of the original amount; direct arithmetic gives 64000 and then 864000."
+        },
+        {
+          "url": "https://www.khanacademy.org/test-prep/v2-sat-math/x0fcc98a58ba3bea7%3Aproblem-solving-and-data-analysis-easier/x0fcc98a58ba3bea7%3Apercentages-easier/a/v2-sat-lesson-percentages",
+          "label": "Khan Academy percentages lesson",
+          "publisher": "Khan Academy",
+          "authorityId": "khan-academy",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Khan Academy's percent-change method applied to 800000 at 8 percent yields 64000 increase and 864000 final price."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0394",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 394,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "F95EE0A6A304E73700A5AA36E0638CE2DF467F9284A5D94C607955DE5241EDE1",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0394-SRC",
+      "pairId": "WGI-Q0394",
+      "kind": "source",
+      "categoryId": "basic-mathematics",
+      "question": "If 5 men complete a job in 6 days, how many days will 6 men need at the same rate?",
+      "questionUrdu": "اگر 5 آدمی کام 6 دن میں کریں تو اسی رفتار سے 6 آدمی اسے کتنے دن میں کریں گے؟",
+      "options": [
+        "5 days",
+        "4 days",
+        "6 days",
+        "8 days"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کل کام 5 × 6 = 30 آدمی-دن ہے؛ 6 آدمی اسے 30 ÷ 6 = 5 دن میں کریں گے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 394",
+        "referenceUrl": "https://math.libretexts.org/Courses/Northeast_Wisconsin_Technical_College/College_Technical_Math_1A_%28NWTC%29/05%3A_Proportions_and_Variation/5.02%3A_Applications_of_Proportionality",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0394"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://math.libretexts.org/Courses/Northeast_Wisconsin_Technical_College/College_Technical_Math_1A_%28NWTC%29/05%3A_Proportions_and_Variation/5.02%3A_Applications_of_Proportionality",
+          "label": "NWTC inverse-proportion lesson",
+          "publisher": "Northeast Wisconsin Technical College",
+          "authorityId": "nwtc",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NWTC teaches worker-time inverse proportion using total worker-hours; the analogous job requires 30 man-days."
+        },
+        {
+          "url": "https://es.khanacademy.org/math/aritmetica-pe-pre-u/xce51e392da300f11%3Arazones-y-proporciones/xce51e392da300f11%3Aregla-de-tres-simple-y-compuesta/a/6132-articulo-regla-de-tres-simple-y-compuesta",
+          "label": "Khan Academy compound proportion",
+          "publisher": "Khan Academy",
+          "authorityId": "khan-academy",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Khan Academy explains inverse work-rate proportions; 5×6 man-days divided among 6 men is 5 days."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0394-SIM",
+      "pairId": "WGI-Q0394",
+      "kind": "similar",
+      "categoryId": "basic-mathematics",
+      "question": "How many man-days are represented by 5 men working for 6 days?",
+      "questionUrdu": "5 آدمی اگر 6 دن کام کریں تو کل کتنے آدمی-دن بنتے ہیں؟",
+      "options": [
+        "30",
+        "11",
+        "36",
+        "60"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "آدمیوں کی تعداد کو دنوں سے ضرب دیں: 5 × 6 = 30 آدمی-دن۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 394",
+        "referenceUrl": "https://math.libretexts.org/Courses/Northeast_Wisconsin_Technical_College/College_Technical_Math_1A_%28NWTC%29/05%3A_Proportions_and_Variation/5.02%3A_Applications_of_Proportionality",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0394"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://math.libretexts.org/Courses/Northeast_Wisconsin_Technical_College/College_Technical_Math_1A_%28NWTC%29/05%3A_Proportions_and_Variation/5.02%3A_Applications_of_Proportionality",
+          "label": "NWTC inverse-proportion lesson",
+          "publisher": "Northeast Wisconsin Technical College",
+          "authorityId": "nwtc",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NWTC teaches worker-time inverse proportion using total worker-hours; the analogous job requires 30 man-days."
+        },
+        {
+          "url": "https://es.khanacademy.org/math/aritmetica-pe-pre-u/xce51e392da300f11%3Arazones-y-proporciones/xce51e392da300f11%3Aregla-de-tres-simple-y-compuesta/a/6132-articulo-regla-de-tres-simple-y-compuesta",
+          "label": "Khan Academy compound proportion",
+          "publisher": "Khan Academy",
+          "authorityId": "khan-academy",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Khan Academy explains inverse work-rate proportions; 5×6 man-days divided among 6 men is 5 days."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0395",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 395,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "4F1EC4DC9E66269FB7157C703006210B713F41855C4985F38209DAD3B85FA58A",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0395-SRC",
+      "pairId": "WGI-Q0395",
+      "kind": "source",
+      "categoryId": "basic-mathematics",
+      "question": "What is 16 minus 9?",
+      "questionUrdu": "16 میں سے 9 نکالنے پر کیا باقی رہتا ہے؟",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "16 − 9 = 7؛ اس سوال میں صرف تفریق درکار ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 395",
+        "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0395"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra",
+          "label": "OpenStax arithmetic operations",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax defines subtraction as a difference and addition as a sum; 16−9=7 and 9+7=16."
+        },
+        {
+          "url": "https://www.khanacademy.org/math/arithmetic-home/arith-review-negative-numbers/arith-review-order-of-operations/a/order-of-operations-review",
+          "label": "Khan Academy order of operations",
+          "publisher": "Khan Academy",
+          "authorityId": "khan-academy",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Khan Academy explains addition and subtraction at the same order level; direct calculation confirms 16−9=7 and 9+7=16."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0395-SIM",
+      "pairId": "WGI-Q0395",
+      "kind": "similar",
+      "categoryId": "basic-mathematics",
+      "question": "Which operation gives 16 when 9 is combined with 7?",
+      "questionUrdu": "9 اور 7 کو ملا کر 16 بنانے کے لیے کون سا عمل استعمال ہوگا؟",
+      "options": [
+        "Addition",
+        "Subtraction",
+        "Division",
+        "Multiplication"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "9 + 7 = 16، اس لیے استعمال ہونے والا عمل جمع ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 395",
+        "referenceUrl": "https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0395"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra",
+          "label": "OpenStax arithmetic operations",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax defines subtraction as a difference and addition as a sum; 16−9=7 and 9+7=16."
+        },
+        {
+          "url": "https://www.khanacademy.org/math/arithmetic-home/arith-review-negative-numbers/arith-review-order-of-operations/a/order-of-operations-review",
+          "label": "Khan Academy order of operations",
+          "publisher": "Khan Academy",
+          "authorityId": "khan-academy",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Khan Academy explains addition and subtraction at the same order level; direct calculation confirms 16−9=7 and 9+7=16."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0396",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 396,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "EB201FDBB997DA2C8C0CF1CB8DADBC6317C06D6DE93ECC8C8A00B08C6DE8130E",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0396-SRC",
+      "pairId": "WGI-Q0396",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the attraction between two objects having mass called?",
+      "questionUrdu": "کمیت رکھنے والی دو چیزوں کے درمیان کشش کو کیا کہتے ہیں؟",
+      "options": [
+        "Gravity",
+        "Friction",
+        "Buoyancy",
+        "Elasticity"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کششِ ثقل کمیت رکھنے والی چیزوں کو ایک دوسرے کی طرف کھینچتی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 396",
+        "referenceUrl": "https://openstax.org/books/university-physics-volume-1/pages/13-1-newtons-law-of-universal-gravitation",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0396"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/13-1-newtons-law-of-universal-gravitation",
+          "label": "OpenStax universal gravitation",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax gives Newton's attractive force between masses as proportional to inverse distance squared."
+        },
+        {
+          "url": "https://spaceplace.nasa.gov/what-is-gravity/en/",
+          "label": "NASA gravity explainer",
+          "publisher": "NASA",
+          "authorityId": "nasa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NASA explains gravity as attraction between masses and says its strength weakens with distance."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0396-SIM",
+      "pairId": "WGI-Q0396",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "If the distance between two masses doubles, what happens to their gravitational force?",
+      "questionUrdu": "اگر دو کمیتوں کے درمیان فاصلہ دگنا ہو جائے تو کششِ ثقل کتنی رہ جاتی ہے؟",
+      "options": [
+        "It becomes one-quarter",
+        "It doubles",
+        "It remains unchanged",
+        "It becomes four times"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کششِ ثقل فاصلے کے مربع کے الٹ تناسب سے بدلتی ہے؛ فاصلہ دگنا ہونے پر قوت ایک چوتھائی رہتی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 396",
+        "referenceUrl": "https://openstax.org/books/university-physics-volume-1/pages/13-1-newtons-law-of-universal-gravitation",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0396"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/13-1-newtons-law-of-universal-gravitation",
+          "label": "OpenStax universal gravitation",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax inverse-square law means twice the separation produces one-quarter the gravitational force."
+        },
+        {
+          "url": "https://science.nasa.gov/universe/overview/forces/",
+          "label": "NASA forces overview",
+          "publisher": "NASA",
+          "authorityId": "nasa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NASA states that doubling separation reduces gravitational force to one-quarter."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0397",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 397,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "4AA7FD9C45A91230E63A76104708FB25F319DDAE8C63BE6324284CB12215180A",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0397-SRC",
+      "pairId": "WGI-Q0397",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the quantity of matter in an object called?",
+      "questionUrdu": "کسی جسم میں مادے کی مقدار کو کیا کہتے ہیں؟",
+      "options": [
+        "Mass",
+        "Weight",
+        "Volume",
+        "Density"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کمیت جسم میں مادے کی مقدار ہے اور جگہ بدلنے سے اس کی قدر نہیں بدلتی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 397",
+        "referenceUrl": "https://spaceplace.nasa.gov/planets-weight/en/",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0397"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://spaceplace.nasa.gov/planets-weight/en/",
+          "label": "NASA mass versus weight",
+          "publisher": "NASA",
+          "authorityId": "nasa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NASA defines mass as how much matter an object contains and says it stays constant across locations."
+        },
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/5-4-mass-and-weight",
+          "label": "OpenStax mass and weight",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax defines mass as quantity of matter and distinguishes it from location-dependent weight."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0397-SIM",
+      "pairId": "WGI-Q0397",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "How many grams are in one kilogram?",
+      "questionUrdu": "ایک کلوگرام میں کتنے گرام ہوتے ہیں؟",
+      "options": [
+        "1000 grams",
+        "100 grams",
+        "10 grams",
+        "10000 grams"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کلو (kilo) کا مطلب ایک ہزار ہے؛ اس لیے 1 کلوگرام میں 1000 گرام ہوتے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 397",
+        "referenceUrl": "https://www.nist.gov/pml/owm/si-units-mass",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0397"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nist.gov/pml/owm/si-units-mass",
+          "label": "NIST SI mass conversions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NIST lists one kilogram as exactly 1000 grams in its mass conversion table."
+        },
+        {
+          "url": "https://www.ams.usda.gov/sites/default/files/media/Pickles_Inspection_Aid_74%5B1%5D.pdf",
+          "label": "USDA mass-unit conversion table",
+          "publisher": "US Department of Agriculture",
+          "authorityId": "usda-ams",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USDA's inspection-aid conversion table explicitly states one kilogram equals 1000 grams."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0398",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 398,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "111B7EFF061BE6EDA7BB2673C591177307435139BB8BD6AC78C27E6C2609A12A",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0011-Q054-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0399",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 399,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "BA2F80F5F4E57F79923ED1DED0EE5149F1DE76243E0C1B3C79D7B675B5783563",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0399-SRC",
+      "pairId": "WGI-Q0399",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which electricity-generation method does not require a turbine?",
+      "questionUrdu": "بجلی بنانے کے کس طریقے میں ٹربائن کی ضرورت نہیں ہوتی؟",
+      "options": [
+        "Solar cells",
+        "Coal steam plant",
+        "Hydroelectric dam",
+        "Gas turbine"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "شمسی فوٹو وولٹائک سیل روشنی کو براہِ راست بجلی میں بدلتے ہیں، اس لیے ٹربائن نہیں چاہیے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 399",
+        "referenceUrl": "https://www.energy.gov/cmei/systems/solar-photovoltaic-cell-basics",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0399"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.energy.gov/cmei/systems/solar-photovoltaic-cell-basics",
+          "label": "US DOE photovoltaic-cell basics",
+          "publisher": "US Department of Energy",
+          "authorityId": "us-doe",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "DOE says photovoltaic cells directly convert sunlight into electric current without a mechanical turbine."
+        },
+        {
+          "url": "https://docs.nrel.gov/docs/fy01osti/26222.pdf",
+          "label": "NREL Renewable Energy reference on photovoltaics",
+          "publisher": "National Renewable Energy Laboratory",
+          "authorityId": "nrel",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NREL states PV modules convert sunlight directly into DC electricity and have no moving parts."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0399-SIM",
+      "pairId": "WGI-Q0399",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which device converts solar-panel DC output into AC electricity?",
+      "questionUrdu": "شمسی پینل کی براہِ راست رو کو متبادل رو میں کون سا آلہ بدلتا ہے؟",
+      "options": [
+        "Inverter",
+        "Turbine",
+        "Boiler",
+        "Battery"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "اِنورٹر شمسی پینل کی DC بجلی کو گھریلو استعمال کی AC بجلی میں بدلتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 399",
+        "referenceUrl": "https://www.energy.gov/cmei/systems/solar-power-electronic-devices",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0399"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.energy.gov/cmei/systems/solar-power-electronic-devices",
+          "label": "US DOE solar power electronics",
+          "publisher": "US Department of Energy",
+          "authorityId": "us-doe",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "DOE states that an inverter converts DC electricity from solar PV panels into AC electricity."
+        },
+        {
+          "url": "https://atb.nrel.gov/electricity/2022/utility-scale_pv",
+          "label": "NREL ATB utility-scale PV DC–AC conversion",
+          "publisher": "National Renewable Energy Laboratory",
+          "authorityId": "nrel",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NREL states PV modules produce DC electricity and inverters convert it to AC."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0400",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 400,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "FD8DD9D2BF27C53CEB0A1E3DE5765615EC15B7CE622DA59277B0DDBCF9F78084",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0400-SRC",
+      "pairId": "WGI-Q0400",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which hormone lowers blood glucose after a meal?",
+      "questionUrdu": "کھانے کے بعد خون میں بڑھنے والی شکر کو کون سا ہارمون کم کرتا ہے؟",
+      "options": [
+        "Insulin",
+        "Adrenaline",
+        "Thyroxine",
+        "Melatonin"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "لبلبے کا انسولین ہارمون خلیوں میں گلوکوز کا استعمال بڑھا کر خون کی شکر کم کرتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 400",
+        "referenceUrl": "https://openstax.org/books/biology-2e/pages/37-3-regulation-of-body-processes",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0400"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/37-3-regulation-of-body-processes",
+          "label": "OpenStax blood-glucose regulation",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax states that insulin from pancreatic beta cells lowers blood glucose."
+        },
+        {
+          "url": "https://www.niddk.nih.gov/news/archive/2023/how-eating-fasting-regulate-insulin",
+          "label": "NIDDK insulin regulation",
+          "publisher": "NIDDK",
+          "authorityId": "niddk",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NIDDK explains that pancreatic beta cells release insulin after eating to regulate blood glucose."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0400-SIM",
+      "pairId": "WGI-Q0400",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which pancreatic structures contain the insulin-secreting beta cells?",
+      "questionUrdu": "لبلبے کی کون سی ساختوں میں انسولین خارج کرنے والے بیٹا خلیے پائے جاتے ہیں؟",
+      "options": [
+        "Islets of Langerhans",
+        "Pancreatic ducts",
+        "Bile ducts",
+        "Alveoli"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "لبلبے کے جزیرے، جنہیں جزائرِ لانگرہانس کہتے ہیں، ہارمون بنانے والے خلیوں کے جھرمٹ ہیں؛ انہی میں بیٹا خلیے انسولین بناتے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 400",
+        "referenceUrl": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments/pancreatic-islet-transplantation",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0400"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments/pancreatic-islet-transplantation",
+          "label": "NIDDK pancreatic islets",
+          "publisher": "NIDDK",
+          "authorityId": "niddk",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NIDDK identifies the pancreatic islets, or islets of Langerhans, as groups of pancreatic cells containing insulin-producing beta cells."
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/37-5-endocrine-glands",
+          "label": "OpenStax pancreatic endocrine glands",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OpenStax describes pancreatic islets, also named islets of Langerhans, as endocrine-cell clusters containing insulin-producing beta cells."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0401",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 401,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "4B4F49A4DD977889E0684A246DC3AE5CE8AA829D1412F49B08C105A3089183E9",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0401-SRC",
+      "pairId": "WGI-Q0401",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which mountain is locally called Dumani, meaning Mother of Mist?",
+      "questionUrdu": "مقامی نام دُمانی، یعنی دھند کی ماں، کس پہاڑ کے لیے استعمال ہوتا ہے؟",
+      "options": [
+        "Rakaposhi",
+        "K2",
+        "Nanga Parbat",
+        "Broad Peak"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "گلگت بلتستان کے سرکاری سیاحتی ادارے اور جامعہ کی کتاب کے مطابق دُمانی راکاپوشی کا مقامی نام ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 401",
+        "referenceUrl": "https://visitgilgitbaltistan.gov.pk/tour/id/84",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0401"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://visitgilgitbaltistan.gov.pk/tour/id/84",
+          "label": "Gilgit-Baltistan Rakaposhi profile",
+          "publisher": "Gilgit-Baltistan Tourism Department",
+          "authorityId": "gb-tourism",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "GB Tourism identifies Rakaposhi as Dumani, Mother of Mist, and places it in Nagar district."
+        },
+        {
+          "url": "https://online.aiou.edu.pk/LIVE_SITE/SoftBooks/6491.pdf",
+          "label": "AIOU physical features of Pakistan",
+          "publisher": "Allama Iqbal Open University",
+          "authorityId": "aiou",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "AIOU's physical-geography text identifies Rakaposhi in Nagar district and Dumani as Mother of the Mist."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0401-SIM",
+      "pairId": "WGI-Q0401",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "In which Gilgit-Baltistan district is Rakaposhi located?",
+      "questionUrdu": "راکاپوشی گلگت بلتستان کے کس ضلع میں واقع ہے؟",
+      "options": [
+        "Nagar",
+        "Skardu",
+        "Diamer",
+        "Astore"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "راکاپوشی ضلع نگر میں واقع ہے؛ اسے دُمانی بھی کہتے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 401",
+        "referenceUrl": "https://visitgilgitbaltistan.gov.pk/tour/id/84",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0401"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://visitgilgitbaltistan.gov.pk/tour/id/84",
+          "label": "Gilgit-Baltistan Rakaposhi profile",
+          "publisher": "Gilgit-Baltistan Tourism Department",
+          "authorityId": "gb-tourism",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "GB Tourism identifies Rakaposhi as Dumani, Mother of Mist, and places it in Nagar district."
+        },
+        {
+          "url": "https://online.aiou.edu.pk/LIVE_SITE/SoftBooks/6491.pdf",
+          "label": "AIOU physical features of Pakistan",
+          "publisher": "Allama Iqbal Open University",
+          "authorityId": "aiou",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "AIOU's physical-geography text identifies Rakaposhi in Nagar district and Dumani as Mother of the Mist."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0402",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 402,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "858EF8D4680166953BDDD355F5766388838DECFB8CAD2EF6D7DA9A55C75A4C0D",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0081-Q040-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0403",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 403,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "1C178398384F625AF3882C1D452FEB95465348BF5A989D0E7D170F4CBE2EC579",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0403-SRC",
+      "pairId": "WGI-Q0403",
+      "kind": "source",
+      "categoryId": "pakistan-studies",
+      "question": "Who built the Wazir Khan Mosque?",
+      "questionUrdu": "وزیر خان مسجد کس نے بنوائی تھی؟",
+      "options": [
+        "Hakim Ilm-ud-Din Ansari",
+        "Shah Jahan",
+        "Akbar",
+        "Aurangzeb"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "لاہور کی وزیر خان مسجد حاکم علم الدین انصاری، المعروف وزیر خان، نے بنوائی تھی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 403",
+        "referenceUrl": "https://auqaf.punjab.gov.pk/node/109",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0403"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://auqaf.punjab.gov.pk/node/109",
+          "label": "Wazir Khan Mosque, Lahore",
+          "publisher": "Punjab Auqaf and Religious Affairs Department",
+          "authorityId": "punjab-auqaf",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Punjab Auqaf says Ilam-ud-din Ansari, known as Wazir Khan, commissioned the mosque in 1634."
+        },
+        {
+          "url": "https://the.akdn/en/where-we-work/south-asia/pakistan/walled-city-of-lahore-conservation-pakistan",
+          "label": "AKDN Wazir Khan Mosque conservation",
+          "publisher": "Aga Khan Development Network",
+          "authorityId": "akdn",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "AKDN says Hakim Ilm-ud-Din built the mosque in 1634–35 during Shah Jahan's reign."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0403-SIM",
+      "pairId": "WGI-Q0403",
+      "kind": "similar",
+      "categoryId": "pakistan-studies",
+      "question": "In which century was the Wazir Khan Mosque built?",
+      "questionUrdu": "لاہور کی وزیر خان مسجد کس صدی میں تعمیر ہوئی؟",
+      "options": [
+        "17th century",
+        "16th century",
+        "18th century",
+        "19th century"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "مسجد کی تعمیر 1634ء میں شروع ہوئی، لہٰذا یہ سترہویں صدی کی عمارت ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 403",
+        "referenceUrl": "https://auqaf.punjab.gov.pk/node/109",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0403"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://auqaf.punjab.gov.pk/node/109",
+          "label": "Wazir Khan Mosque, Lahore",
+          "publisher": "Punjab Auqaf and Religious Affairs Department",
+          "authorityId": "punjab-auqaf",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Punjab Auqaf dates construction to 1634–1641, which is the 17th century."
+        },
+        {
+          "url": "https://the.akdn/en/where-we-work/south-asia/pakistan/walled-city-of-lahore-conservation-pakistan",
+          "label": "AKDN Wazir Khan Mosque conservation",
+          "publisher": "Aga Khan Development Network",
+          "authorityId": "akdn",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "AKDN dates the mosque to 1634–35, placing it in the 17th century."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0404",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 404,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "3B41F77CE147A17F21873ADEB82C1C0FB4B7B8ABE66AFC803F3DF8B01216A1B3",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q059-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0405",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 405,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "501AF8CFBE2C2DABDA9A1961D49AFB2A5B3E449F0ED376C2DF1268458E045CF3",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0012-Q040-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0406",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 406,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "4A32E42F3510840B54E2DFF79867ADEF51289E2E1476803AD59CCF6B20891F51",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0406-SRC",
+      "pairId": "WGI-Q0406",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Which country won the 2022 FIFA World Cup?",
+      "questionUrdu": "2022 کے مردوں کے فیفا عالمی کپ کی فاتح ٹیم کون سی تھی؟",
+      "options": [
+        "Argentina",
+        "France",
+        "Brazil",
+        "Germany"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "2022 کے فائنل میں ارجنٹینا نے فرانس کو پنالٹی شوٹ آؤٹ میں شکست دی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 406",
+        "referenceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/world-cup-champions-1982-2026-italy-argentina-germany-brazil-france-spain",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0406"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/world-cup-champions-1982-2026-italy-argentina-germany-brazil-france-spain",
+          "label": "FIFA World Cup champions 1982–2026",
+          "publisher": "FIFA",
+          "authorityId": "fifa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FIFA lists Argentina as 2022 champions and France as runners-up."
+        },
+        {
+          "url": "https://www.fff.fr/selection/matchs/3181-argentine-france.html",
+          "label": "France FA 2022 final match",
+          "publisher": "French Football Federation",
+          "authorityId": "fff",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The French federation records France losing the 2022 final to Argentina on penalties."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0406-SIM",
+      "pairId": "WGI-Q0406",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "Which country was runner-up in the 2022 FIFA World Cup?",
+      "questionUrdu": "2022 کے مردوں کے فیفا عالمی کپ میں رنر اَپ کون تھا؟",
+      "options": [
+        "France",
+        "Croatia",
+        "Morocco",
+        "Brazil"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "فرانس فائنل میں ارجنٹینا سے پنالٹی شوٹ آؤٹ میں ہارا، اس لیے رنر اَپ تھا۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 406",
+        "referenceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/world-cup-champions-1982-2026-italy-argentina-germany-brazil-france-spain",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0406"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/world-cup-champions-1982-2026-italy-argentina-germany-brazil-france-spain",
+          "label": "FIFA World Cup champions 1982–2026",
+          "publisher": "FIFA",
+          "authorityId": "fifa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FIFA lists Argentina as 2022 champions and France as runners-up."
+        },
+        {
+          "url": "https://www.fff.fr/selection/matchs/3181-argentine-france.html",
+          "label": "France FA 2022 final match",
+          "publisher": "French Football Federation",
+          "authorityId": "fff",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The French federation records France losing the 2022 final to Argentina on penalties."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0407",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 407,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "F8A17242EF01270F1979D177CB4F3F63E9467B1262CC26521A5AF482856A8A17",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0407-SRC",
+      "pairId": "WGI-Q0407",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Which countries hosted the 2026 FIFA World Cup?",
+      "questionUrdu": "2026 کے مردوں کے فیفا عالمی کپ کی میزبانی کن ممالک نے کی؟",
+      "options": [
+        "Canada, Mexico and the United States",
+        "Spain and Portugal",
+        "Brazil and Argentina",
+        "France and Germany"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "2026 کے عالمی کپ کی مشترکہ میزبانی کینیڈا، میکسیکو اور امریکا نے کی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 407",
+        "referenceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-2026-hosts-cities-dates-usa-mexico-canada",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0407"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-2026-hosts-cities-dates-usa-mexico-canada",
+          "label": "FIFA 2026 hosts and cities",
+          "publisher": "FIFA",
+          "authorityId": "fifa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FIFA names Canada, Mexico and the United States as the three 2026 host countries."
+        },
+        {
+          "url": "https://www.canada.ca/en/canadian-heritage/campaigns/soccer-2026.html",
+          "label": "Canada 2026 World Cup hosting",
+          "publisher": "Government of Canada",
+          "authorityId": "canada-gov",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Canada's government confirms co-hosting the 2026 tournament with Mexico and the United States."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0407-SIM",
+      "pairId": "WGI-Q0407",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "Which city hosted the opening match of the 2026 FIFA World Cup?",
+      "questionUrdu": "2026 کے فیفا عالمی کپ کا افتتاحی میچ کس شہر میں کھیلا گیا؟",
+      "options": [
+        "Mexico City",
+        "Toronto",
+        "Los Angeles",
+        "Vancouver"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "فیفا کے شیڈول کے مطابق افتتاحی میچ میکسیکو سٹی میں ہوا۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 407",
+        "referenceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-26-match-schedule-revealed",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0407"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-26-match-schedule-revealed",
+          "label": "FIFA 2026 opening-match schedule",
+          "publisher": "FIFA",
+          "authorityId": "fifa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FIFA's match schedule locates the opening match at Mexico City Stadium."
+        },
+        {
+          "url": "https://www.ussoccer.com/stories/2026/06/usmnt/ready-to-show-the-world-cup-los-angeles",
+          "label": "US Soccer 2026 opener report",
+          "publisher": "US Soccer Federation",
+          "authorityId": "us-soccer",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "US Soccer reports Mexico City hosted the 2026 tournament opener."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0408",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 408,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "5E363C0B530C83283446ED802EC26AA640DC46EFF76E92B25EE6B5477DA1B638",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0408-SRC",
+      "pairId": "WGI-Q0408",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Which country won the 2026 FIFA World Cup?",
+      "questionUrdu": "2026 کے مردوں کے فیفا عالمی کپ کی فاتح ٹیم کون سی تھی؟",
+      "options": [
+        "Spain",
+        "Argentina",
+        "France",
+        "Brazil"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "فیفا اور ہسپانوی فٹ بال فیڈریشن کے مطابق اسپین نے فائنل میں ارجنٹینا کو 1-0 سے ہرایا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 408",
+        "referenceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-argentina-final-report-highlights",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0408"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-argentina-final-report-highlights",
+          "label": "FIFA 2026 final report",
+          "publisher": "FIFA",
+          "authorityId": "fifa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FIFA reports Spain defeated Argentina 1–0 in the 2026 men's World Cup final."
+        },
+        {
+          "url": "https://rfef.es/en/noticias/The-World-Champions-Are-Home",
+          "label": "Spain federation 2026 final report",
+          "publisher": "Royal Spanish Football Federation",
+          "authorityId": "rfef",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Spain's federation confirms its 1–0 final victory over Argentina in 2026."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0408-SIM",
+      "pairId": "WGI-Q0408",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "Which country was runner-up in the 2026 FIFA World Cup?",
+      "questionUrdu": "2026 کے مردوں کے فیفا عالمی کپ میں رنر اَپ کون تھا؟",
+      "options": [
+        "Argentina",
+        "Portugal",
+        "Germany",
+        "France"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "2026 کے فائنل میں اسپین نے ارجنٹینا کو ہرایا؛ رنر اَپ ارجنٹینا تھا۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 408",
+        "referenceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-argentina-final-report-highlights",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0408"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-argentina-final-report-highlights",
+          "label": "FIFA 2026 final report",
+          "publisher": "FIFA",
+          "authorityId": "fifa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FIFA reports Spain defeated Argentina 1–0 in the 2026 men's World Cup final."
+        },
+        {
+          "url": "https://rfef.es/en/noticias/The-World-Champions-Are-Home",
+          "label": "Spain federation 2026 final report",
+          "publisher": "Royal Spanish Football Federation",
+          "authorityId": "rfef",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Spain's federation confirms its 1–0 final victory over Argentina in 2026."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0409",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 409,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "7703B7C448B0A2560EBEB6597795A7DFFCB3B8BD5CBF3DFB22972304DDACEC30",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q004-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0410",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 410,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "7435130BCE0F7193D9ED95348EB7CAA19244E718A1059506AC2F59D7A6E7474B",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0410-SRC",
+      "pairId": "WGI-Q0410",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Which country won the 2023 FIFA Women's World Cup?",
+      "questionUrdu": "2023 کے خواتین فیفا عالمی کپ کی فاتح ٹیم کون سی تھی؟",
+      "options": [
+        "Spain",
+        "England",
+        "Australia",
+        "Sweden"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "2023 کے خواتین عالمی کپ کے فائنل میں اسپین نے انگلینڈ کو 1-0 سے ہرایا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 410",
+        "referenceUrl": "https://www.fifa.com/de/tournaments/womens/womensworldcup/australia-new-zealand2023/articles/frauen-wm-2023-finale-spanien-weltmeister-england",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0410"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fifa.com/de/tournaments/womens/womensworldcup/australia-new-zealand2023/articles/frauen-wm-2023-finale-spanien-weltmeister-england",
+          "label": "FIFA 2023 women's final report",
+          "publisher": "FIFA",
+          "authorityId": "fifa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FIFA reports Spain beat England 1–0 in the 2023 Women's World Cup final."
+        },
+        {
+          "url": "https://rfef.es/en/noticias/match-report-spain-wins-the-womens-world-cup",
+          "label": "Spain federation 2023 women's final",
+          "publisher": "Royal Spanish Football Federation",
+          "authorityId": "rfef",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Spanish federation confirms its 2023 women's final victory over England."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0410-SIM",
+      "pairId": "WGI-Q0410",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "Which country was runner-up in the 2023 FIFA Women's World Cup?",
+      "questionUrdu": "2023 کے خواتین فیفا عالمی کپ میں رنر اَپ کون تھا؟",
+      "options": [
+        "England",
+        "Germany",
+        "Japan",
+        "Sweden"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "اسپین سے فائنل ہارنے کی وجہ سے انگلینڈ رنر اَپ تھا۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 410",
+        "referenceUrl": "https://www.fifa.com/de/tournaments/womens/womensworldcup/australia-new-zealand2023/articles/frauen-wm-2023-finale-spanien-weltmeister-england",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0410"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fifa.com/de/tournaments/womens/womensworldcup/australia-new-zealand2023/articles/frauen-wm-2023-finale-spanien-weltmeister-england",
+          "label": "FIFA 2023 women's final report",
+          "publisher": "FIFA",
+          "authorityId": "fifa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FIFA reports Spain beat England 1–0 in the 2023 Women's World Cup final."
+        },
+        {
+          "url": "https://rfef.es/en/noticias/match-report-spain-wins-the-womens-world-cup",
+          "label": "Spain federation 2023 women's final",
+          "publisher": "Royal Spanish Football Federation",
+          "authorityId": "rfef",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Spanish federation confirms its 2023 women's final victory over England."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0411",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 411,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "25A13F29DB5E9CBE9A2FE39E1C22D6534C5C9D29C2BA965D2FE2A2CCA2D1F364",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0023-Q017-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0412",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 412,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "B35141F1B5CA22E34691D8F7F4E36E756E8E114BA36DF38D17D9FEE5CB41E664",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q022-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0413",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 413,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "AF0C2A0A65D6B3BCFE94F252702BA6B77093DB28D8966D7B807F4B681E306ED2",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "WGI-Q0255-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0414",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 414,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "4434A7FD88C3AE2ED309988992C1B48AD0761FCF3A39A22808D1DD0F6A69D75A",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0009-Q040-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0415",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 415,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "E196B22F91C632000CF438B1FF1847382BD9A5DA6B94E10CD95FB00E787C37DE",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0415-SRC",
+      "pairId": "WGI-Q0415",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "Which country hosted the 2026 Winter Olympics in Milano-Cortina?",
+      "questionUrdu": "2026 کے سرمائی اولمپکس کس ملک میں ہوئے؟",
+      "options": [
+        "Italy",
+        "Switzerland",
+        "Canada",
+        "Austria"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "Milano Cortina 2026 کے سرمائی اولمپکس اٹلی میں منعقد ہوئے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.18, item 415",
+        "referenceUrl": "https://newsroom.olympics.com/record/908",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0415"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://newsroom.olympics.com/record/908",
+          "label": "IOC awards Milano-Cortina 2026",
+          "publisher": "International Olympic Committee",
+          "authorityId": "ioc",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "IOC awarded the 2026 Winter Olympics to Milan-Cortina in Italy."
+        },
+        {
+          "url": "https://www.esteri.it/en/sala_stampa/archivionotizie/comunicati/2026/02/tajani-litalia-investe-nella-diplomazia-sportiva-con-milano-cortina-costruiamo-la-pace/",
+          "label": "Italy MFA Milano-Cortina 2026",
+          "publisher": "Italian Ministry of Foreign Affairs",
+          "authorityId": "italy-mfa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Italy's foreign ministry describes the 2026 Winter Olympics as hosted in Italy, centred on Milan and Cortina."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0415-SIM",
+      "pairId": "WGI-Q0415",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "On which date did the 2026 Winter Olympics open?",
+      "questionUrdu": "2026 کے سرمائی اولمپکس کا افتتاح کس تاریخ کو ہوا؟",
+      "options": [
+        "6 February 2026",
+        "22 February 2026",
+        "6 January 2026",
+        "22 January 2026"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "Milano Cortina سرمائی اولمپکس 6 فروری 2026 کو شروع ہوئے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 415",
+        "referenceUrl": "https://support.olympics.com/hc/en-gb/articles/43002165477267-Where-and-when-will-the-2026-Olympic-Winter-Games-take-place",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0415"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://support.olympics.com/hc/en-gb/articles/43002165477267-Where-and-when-will-the-2026-Olympic-Winter-Games-take-place",
+          "label": "Olympics 2026 dates",
+          "publisher": "International Olympic Committee",
+          "authorityId": "ioc",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "IOC support specifies the Games ran from 6 to 22 February 2026."
+        },
+        {
+          "url": "https://www.coni.it/it/news/la-fondazione-festeggia-il-primo-anniversario-dall%E2%80%99assegnazione-delle-olimpiadi-invernali-2026.html",
+          "label": "CONI confirms Milano Cortina opening date",
+          "publisher": "Italian National Olympic Committee",
+          "authorityId": "coni",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "CONI names 6 February 2026 as Milano Cortina Winter Games' opening date."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0416",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 416,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "D4363D404ED557473EE45945C05B89E6F6D7E67E66B869D2F82294C56C6C75C8",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q049-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0417",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 417,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "E3F7A77F73D18E4FD47F0FF07A52BD776FAD10CC3E2733FEF7C1690AA2466F4F",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0061-Q035-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0418",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 418,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "ADB279D20FD1F15A67ABE4BA03A4E49FE216DEF193FC2F270A0E2DD0EE266175",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Two independent references confirm the retained fact and the related practice item, and no exact bank duplicate was found.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0418-SRC",
+      "pairId": "WGI-Q0418",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "On what date was the Organization of Islamic Cooperation established?",
+      "questionUrdu": "اسلامی تعاون تنظیم کا قیام کس تاریخ کو ہوا؟",
+      "options": [
+        "25 September 1969",
+        "1 January 1950",
+        "8 December 1985",
+        "10 December 1948"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "اسلامی تعاون تنظیم 25 ستمبر 1969 کو رباط کے تاریخی سربراہی اجلاس کے فیصلے سے قائم ہوئی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.18, item 418",
+        "referenceUrl": "https://www.oic-oci.org/en/page/1",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0418"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.oic-oci.org/en/page/1",
+          "label": "OIC official history",
+          "publisher": "Organisation of Islamic Cooperation",
+          "authorityId": "oic",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OIC dates its founding decision at Rabat to 25 September 1969."
+        },
+        {
+          "url": "https://www.mfa.gov.tr/OIC.en.mfa",
+          "label": "Organisation of Islamic Cooperation profile",
+          "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+          "authorityId": "turkiye-mfa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Türkiye's Foreign Ministry lists the OIC establishment date as 25 September 1969."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0418-SIM",
+      "pairId": "WGI-Q0418",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Where is the headquarters of the Organization of Islamic Cooperation?",
+      "questionUrdu": "اسلامی تعاون تنظیم کا مرکزی دفتر کس شہر میں ہے؟",
+      "options": [
+        "Jeddah",
+        "Cairo",
+        "Islamabad",
+        "Rabat"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "تنظیم کا جنرل سیکرٹریٹ سعودی عرب کے شہر جدہ میں واقع ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 418",
+        "referenceUrl": "https://www.oic-oci.org/en/contact",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0418"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.oic-oci.org/en/contact",
+          "label": "OIC headquarters contact",
+          "publisher": "Organisation of Islamic Cooperation",
+          "authorityId": "oic",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "OIC lists its General Secretariat headquarters in Jeddah, Saudi Arabia."
+        },
+        {
+          "url": "https://www.mfa.gov.tr/OIC.en.mfa",
+          "label": "Organisation of Islamic Cooperation profile",
+          "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+          "authorityId": "turkiye-mfa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Türkiye's Foreign Ministry lists Jeddah, Saudi Arabia as OIC headquarters."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0419",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 419,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "6D5FFAD6ADB462CCC40EB177D7E1ECF93816ACFBB508C96271F39F0E92EDFDAF",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0018-Q007-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0420",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 420,
+    "sourcePdfPage": 18,
+    "rawTextSha256": "0AC6BB19CC945AF7D47E04647A1BB64450D3DCF0B1FBCEED4AFA06887D1F6229",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The laughing-gas formula N2O already appears as the canonical bank question ADV2E102-U0041-Q053-SIM, so this source item is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0041-Q053-SIM"
+  }
+]

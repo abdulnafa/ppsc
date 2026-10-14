@@ -3,13 +3,13 @@
 
   window.PPSC_GK_STUDY_NOTES_DATA = {
   "schemaVersion": 1,
-  "generatedOn": "2026-09-02",
+  "generatedOn": "2026-10-12",
   "sourceBankVersion": 5,
-  "sourceBankGeneratedOn": "2026-08-30",
-  "sourceBankQuestionCount": 11412,
-  "sourceBankSignature": "sha256:b955c5c7f2ac6e95b562595c7331d2642bdda98ad8f50e00944ab51689b1428e",
-  "includedPairCount": 708,
-  "includedQuestionCount": 1416,
+  "sourceBankGeneratedOn": "2026-10-14",
+  "sourceBankQuestionCount": 11892,
+  "sourceBankSignature": "sha256:b41b6bc86538ac7a3bcf01eb9a1a52a4131d35545ab97f341a6a4b245e96cdac",
+  "includedPairCount": 776,
+  "includedQuestionCount": 1552,
   "excludedPairCount": 18,
   "excludedQuestionCount": 36,
   "exclusions": [
@@ -84,7 +84,7 @@
       "labelUrdu": "تاریخیں اور زمانی سلسلے",
       "description": "Years, dates, milestones and chronological links.",
       "descriptionUrdu": "سال، تاریخیں، سنگِ میل اور واقعات کا زمانی ربط۔",
-      "noteCount": 391
+      "noteCount": 439
     },
     {
       "id": "people-offices",
@@ -92,7 +92,7 @@
       "labelUrdu": "شخصیات، رہنما اور عہدے",
       "description": "People, leaders, office-holders, writers and notable figures.",
       "descriptionUrdu": "اہم شخصیات، رہنما، عہدے دار، مصنف اور معروف افراد۔",
-      "noteCount": 230
+      "noteCount": 241
     },
     {
       "id": "organizations-agencies",
@@ -100,7 +100,7 @@
       "labelUrdu": "ادارے اور ایجنسیاں",
       "description": "Organizations, agencies, abbreviations, headquarters and roles.",
       "descriptionUrdu": "ادارے، ایجنسیاں، مخففات، صدر دفاتر اور ان کے فرائض۔",
-      "noteCount": 191
+      "noteCount": 219
     },
     {
       "id": "countries-places",
@@ -108,7 +108,7 @@
       "labelUrdu": "ممالک اور مقامات",
       "description": "Countries, capitals, currencies, cities and physical places.",
       "descriptionUrdu": "ممالک، دارالحکومت، کرنسیاں، شہر اور جغرافیائی مقامات۔",
-      "noteCount": 267
+      "noteCount": 315
     },
     {
       "id": "events-history",
@@ -116,7 +116,7 @@
       "labelUrdu": "واقعات اور تاریخ",
       "description": "Wars, treaties, conferences, movements and historical events.",
       "descriptionUrdu": "جنگیں، معاہدے، کانفرنسیں، تحریکیں اور تاریخی واقعات۔",
-      "noteCount": 132
+      "noteCount": 140
     },
     {
       "id": "sports-records",
@@ -124,7 +124,7 @@
       "labelUrdu": "کھیل اور مقابلے",
       "description": "Sports, tournaments, players, rules, medals and records.",
       "descriptionUrdu": "کھیل، ٹورنامنٹ، کھلاڑی، قواعد، تمغے اور ریکارڈ۔",
-      "noteCount": 82
+      "noteCount": 86
     },
     {
       "id": "books-awards-culture",
@@ -132,7 +132,7 @@
       "labelUrdu": "کتابیں، اعزازات اور ثقافت",
       "description": "Books, authors, awards, arts, languages and cultural facts.",
       "descriptionUrdu": "کتابیں، مصنف، اعزازات، فنون، زبانیں اور ثقافتی حقائق۔",
-      "noteCount": 80
+      "noteCount": 85
     },
     {
       "id": "records-firsts",
@@ -140,7 +140,7 @@
       "labelUrdu": "اولین، سب سے بڑے اور ریکارڈ",
       "description": "Firsts, largest, longest, highest and other record facts.",
       "descriptionUrdu": "اولین، سب سے بڑے، طویل، بلند اور دوسرے ریکارڈ حقائق۔",
-      "noteCount": 127
+      "noteCount": 138
     },
     {
       "id": "general-world-facts",
@@ -421,7 +421,7 @@
       "title": "21 February ↔ UNESCO",
       "subtitleUrdu": "یہ دن لسانی تنوع، مادری زبانوں کے تحفظ اور کثیر لسانی تعلیم کی اہمیت اجاگر کرتا ہے۔",
       "important": true,
-      "repeatCount": 2,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: 21 February ↔ UNESCO",
       "searchTerms": [
         "ADV2E102-U0001-Q003",
@@ -2454,7 +2454,7 @@
       "title": "Leonardo Da Vinci ↔ The Louvre",
       "subtitleUrdu": "Leonardo da Vinci نے Renaissance دور میں Mona Lisa تخلیق کی۔",
       "important": true,
-      "repeatCount": 3,
+      "repeatCount": 4,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Leonardo Da Vinci ↔ The Louvre",
       "searchTerms": [
         "ADV2E102-U0002-Q006",
@@ -5384,8 +5384,8 @@
       ],
       "title": "Geneva ↔ 1950",
       "subtitleUrdu": "UNHCR کا headquarters جنیوا، سوئٹزرلینڈ میں ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Geneva ↔ 1950",
       "searchTerms": [
         "ADV2E102-U0004-Q013",
@@ -5768,7 +5768,7 @@
       "title": "Portugal ↔ Prime Minister",
       "subtitleUrdu": "António Guterres پرتگالی شہری اور سیاست دان ہیں۔",
       "important": true,
-      "repeatCount": 2,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Portugal ↔ Prime Minister",
       "searchTerms": [
         "ADV2E102-U0005-Q003",
@@ -9589,8 +9589,8 @@
       ],
       "title": "Montreal ↔ Canada",
       "subtitleUrdu": "ICAO کا صدر دفتر مونٹریال، کیوبیک، کینیڈا میں ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Montreal ↔ Canada",
       "searchTerms": [
         "ADV2E102-U0008-Q007",
@@ -9716,8 +9716,8 @@
       ],
       "title": "Geneva ↔ Centre William Rappard",
       "subtitleUrdu": "WTO کا صدر دفتر جنیوا، سوئٹزرلینڈ میں Centre William Rappard میں واقع ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Geneva ↔ Centre William Rappard",
       "searchTerms": [
         "ADV2E102-U0008-Q008",
@@ -13663,7 +13663,7 @@
       "title": "China ↔ 2008",
       "subtitleUrdu": "2022 کے سرمائی اولمپکس بیجنگ، چین میں ہوئے۔",
       "important": true,
-      "repeatCount": 4,
+      "repeatCount": 5,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: China ↔ 2008",
       "searchTerms": [
         "ADV2E102-U0009-Q040",
@@ -14555,7 +14555,7 @@
       "title": "Indonesia ↔ Southeast Asia",
       "subtitleUrdu": "2020 estimates میں Indonesia سب سے بڑی مسلم آبادی والا ملک تھا۔",
       "important": true,
-      "repeatCount": 3,
+      "repeatCount": 4,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Indonesia ↔ Southeast Asia",
       "searchTerms": [
         "ADV2E102-U0010-Q007",
@@ -27171,8 +27171,8 @@
       ],
       "title": "1964 ↔ Regional Cooperation for Development",
       "subtitleUrdu": "ECO اور Türkiye کی وزارت خارجہ کی سرکاری تاریخ کے مطابق Regional Cooperation for Development اسی سال قائم ہوئی تھی۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: 1964 ↔ Regional Cooperation for Development",
       "searchTerms": [
         "ADV2E102-U0016-Q012",
@@ -28720,7 +28720,7 @@
       "title": "Semiconductors, computers and high technology ↔ California",
       "subtitleUrdu": "Silicon Valley کی ترقی semiconductor، electronics اور computer کمپنیوں کے بڑے مرکز کے طور پر ہوئی۔",
       "important": true,
-      "repeatCount": 2,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Semiconductors, computers and high technology ↔ California",
       "searchTerms": [
         "ADV2E102-U0017-Q002",
@@ -29367,7 +29367,7 @@
       "title": "Charles Dickens ↔ A Tale of Two Cities",
       "subtitleUrdu": "یونیورسٹی کے ادبی ذخائر A Tale of Two Cities کو Charles Dickens کی تصنیف کے طور پر درج کرتے ہیں۔",
       "important": true,
-      "repeatCount": 3,
+      "repeatCount": 4,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Charles Dickens ↔ A Tale of Two Cities",
       "searchTerms": [
         "ADV2E102-U0017-Q016",
@@ -29637,7 +29637,7 @@
       "title": "Stephen Hawking ↔ A Brief History of Time",
       "subtitleUrdu": "ان کی سرکاری سوانح اور Encyclopaedia Britannica دونوں اس معروف سائنسی کتاب کو انہی کی تصنیف قرار دیتے ہیں۔",
       "important": true,
-      "repeatCount": 3,
+      "repeatCount": 4,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Stephen Hawking ↔ A Brief History of Time",
       "searchTerms": [
         "ADV2E102-U0017-Q018",
@@ -31320,7 +31320,7 @@
       "title": "10 December ↔ Universal Declaration of Human Rights",
       "subtitleUrdu": "اقوامِ متحدہ اور Council of Europe دونوں عالمی یومِ انسانی حقوق کی سالانہ تاریخ 10 December بتاتے ہیں۔",
       "important": true,
-      "repeatCount": 2,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: 10 December ↔ Universal Declaration of Human Rights",
       "searchTerms": [
         "ADV2E102-U0018-Q012",
@@ -34028,8 +34028,8 @@
       ],
       "title": "Earth Day ↔ 22 April",
       "subtitleUrdu": "Earth Day ہر سال 22 April کو ماحول کے بارے میں شعور کے لیے منایا جاتا ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Earth Day ↔ 22 April",
       "searchTerms": [
         "ADV2E102-U0019-Q022",
@@ -35816,7 +35816,7 @@
       "title": "Arthur Conan Doyle ↔ Dr Watson",
       "subtitleUrdu": "سر آرتھر کونن ڈوئل نے شرلاک ہومز کی کہانیاں لکھیں اور اس کردار کو تخلیق کیا۔",
       "important": true,
-      "repeatCount": 4,
+      "repeatCount": 5,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Arthur Conan Doyle ↔ Dr Watson",
       "searchTerms": [
         "ADV2E102-U0021-Q015",
@@ -39498,7 +39498,7 @@
       "title": "Tokyo ↔ Buenos Aires",
       "subtitleUrdu": "IOC نے 2013 میں Tokyo کو 2020 اولمپک کھیلوں کا میزبان منتخب کیا؛ مقابلے وبا کے باعث 2021 میں ہوئے۔",
       "important": true,
-      "repeatCount": 2,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Tokyo ↔ Buenos Aires",
       "searchTerms": [
         "ADV2E102-U0023-Q017",
@@ -42679,8 +42679,8 @@
       ],
       "title": "London ↔ Marlborough House",
       "subtitleUrdu": "دولتِ مشترکہ سیکریٹریٹ کا صدر دفتر لندن میں واقع ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: London ↔ Marlborough House",
       "searchTerms": [
         "ADV2E102-U0026-Q020",
@@ -50817,7 +50817,7 @@
       "title": "Mesopotamia ↔ Land between rivers",
       "subtitleUrdu": "یہ قدیم تہذیبی خطہ دجلہ و فرات کے درمیان موجودہ عراق اور گردونواح میں پھیلا تھا۔",
       "important": true,
-      "repeatCount": 2,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Mesopotamia ↔ Land between rivers",
       "searchTerms": [
         "ADV2E102-U0034-Q053",
@@ -55135,8 +55135,8 @@
       ],
       "title": "New York ↔ United States",
       "subtitleUrdu": "یونیسیف کا عالمی صدر دفتر نیویارک شہر میں واقع ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: New York ↔ United States",
       "searchTerms": [
         "ADV2E102-U0040-Q011",
@@ -61601,7 +61601,7 @@
       "title": "Rome ↔ 1945",
       "subtitleUrdu": "FAO اقوام متحدہ کا تخصصی ادارہ ہے اور اس کا مرکزی دفتر روم، اٹلی میں قائم ہے۔",
       "important": true,
-      "repeatCount": 2,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Rome ↔ 1945",
       "searchTerms": [
         "ADV2E102-U0043-Q014",
@@ -62994,8 +62994,8 @@
       ],
       "title": "Vienna ↔ Vienna International Centre",
       "subtitleUrdu": "آئی اے ای اے کا صدر دفتر آسٹریا کے شہر ویانا میں ویانا انٹرنیشنل سینٹر کے اندر واقع ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Vienna ↔ Vienna International Centre",
       "searchTerms": [
         "ADV2E102-U0044-Q004",
@@ -65798,8 +65798,8 @@
       ],
       "title": "1960 ↔ 1 May",
       "subtitleUrdu": "سوویت فضائی حدود میں امریکی U-2 جاسوس طیارہ گرائے جانے سے سرد جنگ کا ایک بڑا سفارتی بحران پیدا ہوا۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: 1960 ↔ 1 May",
       "searchTerms": [
         "ADV2E102-U0061-Q005",
@@ -66561,8 +66561,8 @@
       ],
       "title": "Kuwait ↔ Kuwait News Agency",
       "subtitleUrdu": "KUNA کویت کی قومی خبر رساں ایجنسی ہے اور اس کا مرکزی دفتر Kuwait City میں قائم ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Kuwait ↔ Kuwait News Agency",
       "searchTerms": [
         "ADV2E102-U0061-Q016",
@@ -66689,7 +66689,7 @@
       "title": "Herodotus ↔ Cicero",
       "subtitleUrdu": "قدیم یونانی مؤرخ ہیروڈوٹس نے مختلف اقوام اور جنگوں کے منظم تاریخی بیانات مرتب کیے۔",
       "important": true,
-      "repeatCount": 3,
+      "repeatCount": 4,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Herodotus ↔ Cicero",
       "searchTerms": [
         "ADV2E102-U0061-Q017",
@@ -66816,8 +66816,8 @@
       ],
       "title": "Balkh ↔ 1207",
       "subtitleUrdu": "علمی اور یونیسکو ریکارڈ رومی کی پیدائش بلخ میں بتاتے ہیں، جو اس زمانے کا اہم علمی و ثقافتی مرکز تھا۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Balkh ↔ 1207",
       "searchTerms": [
         "ADV2E102-U0061-Q018",
@@ -67070,8 +67070,8 @@
       ],
       "title": "1944 ↔ International Monetary Fund",
       "subtitleUrdu": "جولائی 1944 کی Bretton Woods کانفرنس میں IBRD کے معاہداتی مضامین تیار ہوئے، جس سے عالمی بینک کا قیام عمل میں آیا۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: 1944 ↔ International Monetary Fund",
       "searchTerms": [
         "ADV2E102-U0061-Q021",
@@ -67830,8 +67830,8 @@
       ],
       "title": "Mountaineer ↔ High-altitude porter",
       "subtitleUrdu": "لٹل کریم پاکستان کے ممتاز کوہ پیما اور بلند پہاڑی مہمات میں مہارت رکھنے والے معاون تھے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Mountaineer ↔ High-altitude porter",
       "searchTerms": [
         "ADV2E102-U0061-Q049",
@@ -69357,8 +69357,8 @@
       ],
       "title": "Thrice ↔ 1917",
       "subtitleUrdu": "ICRC کو 1917، 1944 اور 1963 میں نوبیل امن انعام ملا، اس طرح ادارے نے یہ اعزاز تین مرتبہ حاصل کیا۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Thrice ↔ 1917",
       "searchTerms": [
         "ADV2E102-U0081-Q010",
@@ -70885,7 +70885,7 @@
       "title": "Italy ↔ Fascism",
       "subtitleUrdu": "Mussolini اٹلی کی Fascist تحریک کا قائد بنا اور 1922 سے 1943 تک ملک کا آمرانہ حکمران رہا۔",
       "important": true,
-      "repeatCount": 2,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Italy ↔ Fascism",
       "searchTerms": [
         "ADV2E102-U0091-Q010",
@@ -74822,7 +74822,7 @@
       "title": "Canada ↔ Atlantic, Arctic and Pacific",
       "subtitleUrdu": "کینیڈا کی ساحلی پٹی بحرِ اوقیانوس، بحرِ منجمد شمالی اور بحرالکاہل کے ساتھ پھیلی ہوئی ہے اور دنیا میں سب سے طویل مانی جاتی ہے۔",
       "important": true,
-      "repeatCount": 2,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Canada ↔ Atlantic, Arctic and Pacific",
       "searchTerms": [
         "ADV2E102-U0121-Q002",
@@ -76220,8 +76220,8 @@
       ],
       "title": "1757 ↔ 23 June 1757",
       "subtitleUrdu": "Battle of Plassey 23 June 1757 کو Bengal میں لڑی گئی۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: 1757 ↔ 23 June 1757",
       "searchTerms": [
         "ADV2E102-U0121-Q033",
@@ -78383,8 +78383,8 @@
       ],
       "title": "Brazil ↔ 1958",
       "subtitleUrdu": "Pele نے Brazil کی قومی ٹیم کے لیے کھیلتے ہوئے تین FIFA World Cups جیتے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Brazil ↔ 1958",
       "searchTerms": [
         "ADV2E102-U0141-Q086",
@@ -82476,7 +82476,7 @@
       "title": "Nelson Mandela ↔ Robben Island",
       "subtitleUrdu": "اس خود نوشت میں منڈیلا کی زندگی، apartheid مخالف جدوجہد اور طویل قید بیان ہوئی ہے۔",
       "important": true,
-      "repeatCount": 2,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Nelson Mandela ↔ Robben Island",
       "searchTerms": [
         "ADV2E102-U0159-Q012",
@@ -83506,8 +83506,8 @@
       ],
       "title": "United States ↔ Declaration of Independence",
       "subtitleUrdu": "Benjamin Franklin امریکی انقلاب کے اہم رہنما، سفارت کار اور بانی شخصیات میں شمار ہوتے ہیں۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: United States ↔ Declaration of Independence",
       "searchTerms": [
         "ADV2E102-U0160-Q002",
@@ -83635,8 +83635,8 @@
       ],
       "title": "A government benefit or financial contribution supporting an activity ↔ SCM Agreement",
       "subtitleUrdu": "subsidy کسی سرگرمی، پیداوار یا صارف کی لاگت کم کرنے کے لیے دی جا سکتی ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: A government benefit or financial contribution supporting an activity ↔ SCM Agreement",
       "searchTerms": [
         "ADV2E102-U0160-Q004",
@@ -83765,8 +83765,8 @@
       ],
       "title": "Barack Obama ↔ 2020",
       "subtitleUrdu": "یہ ان کی صدارتی یادداشتوں کی کتاب ہے جس میں ان کے ابتدائی سیاسی سفر اور صدارت کا بیان شامل ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Barack Obama ↔ 2020",
       "searchTerms": [
         "ADV2E102-U0160-Q005",
@@ -83894,8 +83894,8 @@
       ],
       "title": "Anwar el-Sadat ↔ Egypt",
       "subtitleUrdu": "یہ مصر کے سابق صدر Anwar Sadat کی خود نوشت اور سیاسی زندگی کا بیان ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Anwar el-Sadat ↔ Egypt",
       "searchTerms": [
         "ADV2E102-U0160-Q006",
@@ -84023,8 +84023,8 @@
       ],
       "title": "Big Board ↔ Buttonwood Agreement",
       "subtitleUrdu": "یہ تاریخی طور پر New York Stock Exchange کے لیے استعمال ہونے والا معروف غیر رسمی نام ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Big Board ↔ Buttonwood Agreement",
       "searchTerms": [
         "ADV2E102-U0160-Q010",
@@ -84152,8 +84152,8 @@
       ],
       "title": "Japan ↔ 1875",
       "subtitleUrdu": "یہ جاپان کا قومی decoration ہے جو نمایاں خدمات اور تعلقات کے اعتراف میں دیا جاتا ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Japan ↔ 1875",
       "searchTerms": [
         "ADV2E102-U0160-Q012",
@@ -84280,8 +84280,8 @@
       ],
       "title": "The value of the next-best alternative forgone ↔ Sunk cost",
       "subtitleUrdu": "انتخاب کرنے پر بہترین دستیاب متبادل چھوڑنا پڑتا ہے، یہی معاشی لاگت ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: The value of the next-best alternative forgone ↔ Sunk cost",
       "searchTerms": [
         "ADV2E102-U0160-Q013",
@@ -84410,8 +84410,8 @@
       ],
       "title": "Promoting international monetary cooperation ↔ Washington, D.C.",
       "subtitleUrdu": "IMF کے بنیادی مقاصد میں مالی تعاون اور ادائیگیوں کے نظام میں استحکام شامل ہیں۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Promoting international monetary cooperation ↔ Washington, D.C.",
       "searchTerms": [
         "ADV2E102-U0160-Q014",
@@ -84540,8 +84540,8 @@
       ],
       "title": "Poland ↔ United Kingdom and France",
       "subtitleUrdu": "جرمنی کے پولینڈ پر حملے کے بعد برطانیہ اور فرانس نے جنگ کا اعلان کیا اور یورپی جنگ پھیل گئی۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Poland ↔ United Kingdom and France",
       "searchTerms": [
         "ADV2E102-U0160-Q015",
@@ -84929,8 +84929,8 @@
       ],
       "title": "Napoleon Hill ↔ 1937",
       "subtitleUrdu": "یہ ذاتی کامیابی اور ذہنی رویے پر ان کی معروف کتاب ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Napoleon Hill ↔ 1937",
       "searchTerms": [
         "ADV2E102-U0160-Q021",
@@ -85188,8 +85188,8 @@
       ],
       "title": "George Orwell ↔ Winston Smith",
       "subtitleUrdu": "یہ نگرانی، آمرانہ اقتدار اور زبان کے سیاسی استعمال پر مبنی معروف dystopian novel ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: George Orwell ↔ Winston Smith",
       "searchTerms": [
         "ADV2E102-U0160-Q024",
@@ -85316,8 +85316,8 @@
       ],
       "title": "Exports exceed imports ↔ Current account",
       "subtitleUrdu": "مثبت تجارتی توازن اسی وقت بنتا ہے جب برآمدات کی قدر درآمدات سے بڑھ جائے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Exports exceed imports ↔ Current account",
       "searchTerms": [
         "ADV2E102-U0160-Q025",
@@ -85446,7 +85446,7 @@
       "title": "5 June ↔ 1973",
       "subtitleUrdu": "یہ عالمی دن ماحول کے تحفظ اور عوامی آگاہی کے لیے ہر سال اقوامِ متحدہ کی نگرانی میں منایا جاتا ہے۔",
       "important": true,
-      "repeatCount": 2,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: 5 June ↔ 1973",
       "searchTerms": [
         "ADV2E102-U0160-Q027",
@@ -85704,8 +85704,8 @@
       ],
       "title": "Hong Kong ↔ Hong Kong International Airport",
       "subtitleUrdu": "Cathay Pacific کا home base اور بنیادی aviation hub ہانگ کانگ میں ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Hong Kong ↔ Hong Kong International Airport",
       "searchTerms": [
         "ADV2E102-U0160-Q032",
@@ -85833,8 +85833,8 @@
       ],
       "title": "Stephen R. Covey ↔ Be Proactive",
       "subtitleUrdu": "یہ ذاتی قیادت، ترجیحات اور باہمی تعاون سے متعلق ان کی معروف کتاب ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Stephen R. Covey ↔ Be Proactive",
       "searchTerms": [
         "ADV2E102-U0160-Q034",
@@ -85963,8 +85963,8 @@
       ],
       "title": "1991 ↔ Mikhail Gorbachev",
       "subtitleUrdu": "دسمبر 1991 میں سوویت ریاست کا خاتمہ ہوا اور آزاد republics نے نئی حیثیت اختیار کی۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: 1991 ↔ Mikhail Gorbachev",
       "searchTerms": [
         "ADV2E102-U0160-Q035",
@@ -86093,8 +86093,8 @@
       ],
       "title": "1985 ↔ Iran, Pakistan and Turkey",
       "subtitleUrdu": "Iran، Pakistan اور Turkey نے RCD کی جگہ ECO کے نام سے علاقائی تعاون کا نیا ادارہ قائم کیا۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: 1985 ↔ Iran, Pakistan and Turkey",
       "searchTerms": [
         "ADV2E102-U0160-Q036",
@@ -86223,8 +86223,8 @@
       ],
       "title": "Jakarta ↔ Bangkok Declaration",
       "subtitleUrdu": "ASEAN Secretariat انڈونیشیا کے دارالحکومت جکارتہ میں قائم ہے۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 3,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Jakarta ↔ Bangkok Declaration",
       "searchTerms": [
         "ADV2E102-U0160-Q037",
@@ -86352,8 +86352,8 @@
       ],
       "title": "Javed Miandad ↔ Saad Shafqat",
       "subtitleUrdu": "یہ پاکستانی cricketer جاوید میانداد کی خود نوشت ہے جس میں Saad Shafqat شریک مصنف ہیں۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Javed Miandad ↔ Saad Shafqat",
       "searchTerms": [
         "ADV2E102-U0160-Q046",
@@ -86481,8 +86481,8 @@
       ],
       "title": "Al-Biruni ↔ Sanskrit",
       "subtitleUrdu": "انہوں نے ہندوستان کے مذاہب، علوم، معاشرت اور جغرافیے پر تفصیلی علمی مطالعہ لکھا۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Al-Biruni ↔ Sanskrit",
       "searchTerms": [
         "ADV2E102-U0160-Q050",
@@ -86611,8 +86611,8 @@
       ],
       "title": "Racial segregation and discrimination ↔ 1994",
       "subtitleUrdu": "apartheid قوانین نے نسل کی بنیاد پر رہائش، حقوق اور سیاسی طاقت الگ کی۔",
-      "important": false,
-      "repeatCount": 1,
+      "important": true,
+      "repeatCount": 2,
       "memoryHookUrdu": "یاد رکھنے کی جوڑی: Racial segregation and discrimination ↔ 1994",
       "searchTerms": [
         "ADV2E102-U0160-Q062",
@@ -90567,6 +90567,8657 @@
             "reverifyAfter": null
           },
           "sourceNotes": "Original, independently fact-checked PPSC-style practice question derived from the cited authorities; it is not copied from the source scan."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0016",
+      "pairId": "WGI-Q0016",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Lyon ↔ 7 September 1923",
+      "subtitleUrdu": "بین الاقوامی فوجداری پولیس تنظیم انٹرپول کا جنرل سیکریٹریٹ لیون، فرانس میں واقع ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Lyon ↔ 7 September 1923",
+      "searchTerms": [
+        "WGI-Q0016",
+        "In which city is INTERPOL's General Secretariat headquartered?",
+        "انٹرپول کا جنرل سیکریٹریٹ کس شہر میں واقع ہے؟",
+        "On what date was the organization that became INTERPOL founded?",
+        "وہ تنظیم جو بعد میں انٹرپول بنی، کس تاریخ کو قائم ہوئی؟",
+        "Lyon",
+        "7 September 1923",
+        "wgi",
+        "wgi-q0016",
+        "wgi",
+        "wgi-q0016"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0016-SRC",
+          "kind": "source",
+          "textUrdu": "بین الاقوامی فوجداری پولیس تنظیم انٹرپول کا جنرل سیکریٹریٹ لیون، فرانس میں واقع ہے۔",
+          "answer": "Lyon",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.2, item 16",
+            "referenceUrl": "https://www.interpol.int/Who-we-are/General-Secretariat",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.interpol.int/Who-we-are/General-Secretariat",
+              "label": "INTERPOL General Secretariat",
+              "publisher": "INTERPOL",
+              "authorityId": "interpol",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "INTERPOL identifies Lyon, France, as the location of its General Secretariat headquarters."
+            },
+            {
+              "url": "https://digitallibrary.un.org/record/217066/files/A_51_141-EN.pdf",
+              "label": "United Nations-INTERPOL cooperation agreement",
+              "publisher": "United Nations",
+              "authorityId": "united-nations",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The United Nations agreement records INTERPOL's headquarters in Lyon, France."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The headquarters answer is retained. The related question uses the organization's founding date as a separate examinable fact."
+        },
+        {
+          "questionId": "WGI-Q0016-SIM",
+          "kind": "similar",
+          "textUrdu": "انٹرپول کی ابتدا 7 September 1923 کو بین الاقوامی فوجداری پولیس کمیشن کے قیام سے ہوئی۔",
+          "answer": "7 September 1923",
+          "source": {
+            "type": "practice",
+            "label": "Related verified PPSC practice for WGI item 16",
+            "referenceUrl": "https://www.interpol.int/Who-we-are/Our-history/How-our-history-started",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.interpol.int/Who-we-are/Our-history/How-our-history-started",
+              "label": "How INTERPOL's history started",
+              "publisher": "INTERPOL",
+              "authorityId": "interpol",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "INTERPOL's history gives 7 September 1923 as the organization's founding date."
+            },
+            {
+              "url": "https://www.britannica.com/topic/Interpol",
+              "label": "INTERPOL",
+              "publisher": "Encyclopaedia Britannica",
+              "authorityId": "britannica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Britannica confirms that the international police organization was founded in 1923."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The headquarters answer is retained. The related question uses the organization's founding date as a separate examinable fact."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0032",
+      "pairId": "WGI-Q0032",
+      "topicIds": [
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Geneva, Switzerland ↔ International Labour Office",
+      "subtitleUrdu": "بین الاقوامی ادارہ محنت کا صدر دفتر جنیوا، سوئٹزرلینڈ میں واقع ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Geneva, Switzerland ↔ International Labour Office",
+      "searchTerms": [
+        "WGI-Q0032",
+        "Where is the headquarters of the International Labour Organization located?",
+        "بین الاقوامی ادارہ محنت کا صدر دفتر کہاں واقع ہے؟",
+        "What is the permanent secretariat of the International Labour Organization called?",
+        "بین الاقوامی ادارہ محنت کے مستقل سیکریٹریٹ کو کیا کہا جاتا ہے؟",
+        "Geneva, Switzerland",
+        "International Labour Office",
+        "wgi",
+        "wgi-q0032",
+        "wgi",
+        "wgi-q0032"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0032-SRC",
+          "kind": "source",
+          "textUrdu": "بین الاقوامی ادارہ محنت کا صدر دفتر جنیوا، سوئٹزرلینڈ میں واقع ہے۔",
+          "answer": "Geneva, Switzerland",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.2, item 32",
+            "referenceUrl": "https://www.ilo.org/contact",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.ilo.org/contact",
+              "label": "ILO contact and headquarters",
+              "publisher": "International Labour Organization",
+              "authorityId": "ilo",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ILO's official contact page gives its headquarters address in Geneva, Switzerland."
+            },
+            {
+              "url": "https://www.un.org/en/about-us/un-system",
+              "label": "United Nations system",
+              "publisher": "United Nations",
+              "authorityId": "united-nations",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The United Nations system directory lists ILO headquarters in Geneva, Switzerland."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The headquarters answer is retained. The related item avoids already-banked founding and tripartite facts and instead tests the name of the ILO's permanent secretariat."
+        },
+        {
+          "questionId": "WGI-Q0032-SIM",
+          "kind": "similar",
+          "textUrdu": "انٹرنیشنل لیبر آفس بین الاقوامی ادارہ محنت کا مستقل سیکریٹریٹ اور اس کی سرگرمیوں کا عملی مرکز ہے۔",
+          "answer": "International Labour Office",
+          "source": {
+            "type": "practice",
+            "label": "Related verified PPSC practice for WGI item 32",
+            "referenceUrl": "https://www.ilo.org/about-ilo/organizational-structure-international-labour-office",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.ilo.org/about-ilo/organizational-structure-international-labour-office",
+              "label": "Organizational structure of the International Labour Office",
+              "publisher": "International Labour Organization",
+              "authorityId": "ilo",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ILO identifies the International Labour Office as its permanent secretariat."
+            },
+            {
+              "url": "https://digitallibrary.un.org/record/562747/files/ngls20052_en.pdf",
+              "label": "UN System Engagement",
+              "publisher": "United Nations",
+              "authorityId": "united-nations",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The United Nations publication calls the International Labour Office the permanent secretariat of the ILO."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The headquarters answer is retained. The related item avoids already-banked founding and tripartite facts and instead tests the name of the ILO's permanent secretariat."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0041",
+      "pairId": "WGI-Q0041",
+      "topicIds": [
+        "dates-timelines",
+        "countries-places"
+      ],
+      "title": "France ↔ It includes overseas territories",
+      "subtitleUrdu": "فرانس کے سمندر پار علاقے دنیا کے مختلف حصوں میں واقع ہیں، اس لیے اس کے ٹائم زونز کی مجموعی تعداد سب سے زیادہ بنتی ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: France ↔ It includes overseas territories",
+      "searchTerms": [
+        "WGI-Q0041",
+        "As of 2026, which country has the greatest number of standard time zones when its overseas territories are included?",
+        "2026 تک، سمندر پار علاقوں سمیت کس ملک کے معیاری ٹائم زونز کی تعداد سب سے زیادہ ہے؟",
+        "As of 2026, why does France count more time zones than its European mainland alone would require?",
+        "2026 تک، فرانس کے ٹائم زونز اس کے صرف یورپی زمینی حصے کی ضرورت سے زیادہ کیوں شمار ہوتے ہیں؟",
+        "France",
+        "It includes overseas territories",
+        "wgi",
+        "wgi-q0041",
+        "wgi",
+        "wgi-q0041"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0041-SRC",
+          "kind": "source",
+          "textUrdu": "فرانس کے سمندر پار علاقے دنیا کے مختلف حصوں میں واقع ہیں، اس لیے اس کے ٹائم زونز کی مجموعی تعداد سب سے زیادہ بنتی ہے۔",
+          "answer": "France",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.3, item 41",
+            "referenceUrl": "https://www.guinnessworldrecords.com/world-records/584626-country-with-the-most-time-zones",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.guinnessworldrecords.com/world-records/584626-country-with-the-most-time-zones",
+              "label": "Country with the most time zones",
+              "publisher": "Guinness World Records",
+              "authorityId": "guinness-world-records",
+              "role": "answer-primary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "France has twelve standard time zones and sometimes thirteen."
+            },
+            {
+              "url": "https://www.timeanddate.com/time/country-with-the-most-time-zones.html",
+              "label": "Countries with the most time zones",
+              "publisher": "Time and Date AS",
+              "authorityId": "timeanddate",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "France ranks first because its overseas territories span many zones."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": null,
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0041-SIM",
+          "kind": "similar",
+          "textUrdu": "فرانس کے متعدد سمندر پار علاقے مختلف طول البلد پر واقع ہیں، اسی وجہ سے اس کے ٹائم زونز زیادہ ہیں۔",
+          "answer": "It includes overseas territories",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: France and overseas time zones",
+            "referenceUrl": "https://www.timeanddate.com/time/country-with-the-most-time-zones.html",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.timeanddate.com/time/country-with-the-most-time-zones.html",
+              "label": "Countries with the most time zones",
+              "publisher": "Time and Date AS",
+              "authorityId": "timeanddate",
+              "role": "answer-primary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The overseas territories explain France's unusually high total."
+            },
+            {
+              "url": "https://www.guinnessworldrecords.com/world-records/584626-country-with-the-most-time-zones",
+              "label": "Country with the most time zones",
+              "publisher": "Guinness World Records",
+              "authorityId": "guinness-world-records",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "French dependencies extend the country's time-zone coverage worldwide."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": null,
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0045",
+      "pairId": "WGI-Q0045",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "Russian ruble ↔ RUB",
+      "subtitleUrdu": "روس کی سرکاری مالی اکائی روسی روبل ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Russian ruble ↔ RUB",
+      "searchTerms": [
+        "WGI-Q0045",
+        "What is the currency of Russia?",
+        "روس کی کرنسی کیا ہے؟",
+        "What is the three-letter currency code for the Russian ruble?",
+        "روسی روبل کا تین حرفی کرنسی کوڈ کیا ہے؟",
+        "Russian ruble",
+        "RUB",
+        "wgi",
+        "wgi-q0045",
+        "wgi",
+        "wgi-q0045"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0045-SRC",
+          "kind": "source",
+          "textUrdu": "روس کی سرکاری مالی اکائی روسی روبل ہے۔",
+          "answer": "Russian ruble",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.3, item 45",
+            "referenceUrl": "https://cbr.ru/eng/cash_circulation/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://cbr.ru/eng/cash_circulation/",
+              "label": "Cash circulation",
+              "publisher": "Bank of Russia",
+              "authorityId": "bank-of-russia",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The central bank identifies the ruble as Russia's monetary unit."
+            },
+            {
+              "url": "https://data.un.org/en/iso/ru.html",
+              "label": "Russian Federation country profile",
+              "publisher": "United Nations Data",
+              "authorityId": "un-data",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UN country data lists the Russian ruble as the currency."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0045-SIM",
+          "kind": "similar",
+          "textUrdu": "روسی روبل کا موجودہ بین الاقوامی کرنسی کوڈ RUB ہے۔",
+          "answer": "RUB",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Russian ruble code",
+            "referenceUrl": "https://data.un.org/en/iso/ru.html",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://data.un.org/en/iso/ru.html",
+              "label": "Russian Federation country profile",
+              "publisher": "United Nations Data",
+              "authorityId": "un-data",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN profile gives RUB as the Russian ruble code."
+            },
+            {
+              "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-rub.en.html",
+              "label": "Russian rouble reference rate",
+              "publisher": "European Central Bank",
+              "authorityId": "ecb",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ECB labels the Russian rouble with currency code RUB."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0046",
+      "pairId": "WGI-Q0046",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "The Hague ↔ 1 July",
+      "subtitleUrdu": "روم اساسنامے کے آرٹیکل 3 کے مطابق بین الاقوامی فوجداری عدالت کا مقام نیدرلینڈز کے شہر دی ہیگ میں ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: The Hague ↔ 1 July",
+      "searchTerms": [
+        "WGI-Q0046",
+        "In which city is the seat of the International Criminal Court?",
+        "بین الاقوامی فوجداری عدالت کا مرکزی مقام کس شہر میں ہے؟",
+        "On which date did the Rome Statute of the International Criminal Court enter into force in 2002?",
+        "بین الاقوامی فوجداری عدالت کا روم اساسنامہ 2002 میں کس تاریخ کو نافذ ہوا؟",
+        "The Hague",
+        "1 July",
+        "wgi",
+        "wgi-q0046",
+        "wgi",
+        "wgi-q0046"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0046-SRC",
+          "kind": "source",
+          "textUrdu": "روم اساسنامے کے آرٹیکل 3 کے مطابق بین الاقوامی فوجداری عدالت کا مقام نیدرلینڈز کے شہر دی ہیگ میں ہے۔",
+          "answer": "The Hague",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.3, item 46",
+            "referenceUrl": "https://legal.un.org/icc/statute/99_corr/1.htm",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://legal.un.org/icc/statute/99_corr/1.htm",
+              "label": "Rome Statute Part 1",
+              "publisher": "United Nations Office of Legal Affairs",
+              "authorityId": "un-legal",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Article 3 establishes the Court's seat at The Hague."
+            },
+            {
+              "url": "https://www.icc-cpi.int/sites/default/files/UICCEng.pdf",
+              "label": "Understanding the International Criminal Court",
+              "publisher": "International Criminal Court",
+              "authorityId": "icc",
+              "role": "answer-secondary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ICC guide states that the Court's seat is in The Hague."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0046-SIM",
+          "kind": "similar",
+          "textUrdu": "اقوام متحدہ کے معاہداتی ریکارڈ اور عدالت کے ریکارڈ کے مطابق روم اساسنامہ 1 جولائی 2002 کو نافذ ہوا۔",
+          "answer": "1 July",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Rome Statute entry into force",
+            "referenceUrl": "https://treaties.un.org/pages/viewdetails.aspx?chapter=18&clang=_en&mtdsg_no=xviii-10&src=treaty",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://treaties.un.org/pages/viewdetails.aspx?chapter=18&clang=_en&mtdsg_no=xviii-10&src=treaty",
+              "label": "Rome Statute treaty status",
+              "publisher": "United Nations Treaty Collection",
+              "authorityId": "un-treaties",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The depositary record gives 1 July 2002 as entry into force."
+            },
+            {
+              "url": "https://www.icc-cpi.int/news/icc-has-moved-its-permanent-premises",
+              "label": "ICC permanent premises",
+              "publisher": "International Criminal Court",
+              "authorityId": "icc",
+              "role": "answer-secondary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ICC records its opening on 1 July 2002."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "2002-07-01",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0050",
+      "pairId": "WGI-Q0050",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "Thailand ↔ White elephant",
+      "subtitleUrdu": "سیام موجودہ تھائی لینڈ کا سابق نام تھا اور اس کے تاریخی پرچم پر سفید ہاتھی نمایاں تھا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Thailand ↔ White elephant",
+      "searchTerms": [
+        "WGI-Q0050",
+        "Which country was formerly named Siam and historically used a white-elephant flag?",
+        "سفید ہاتھی والے تاریخی پرچم کے ملک سیام کو اب کس نام سے جانا جاتا ہے؟",
+        "Which animal appeared on the historic national flag of Siam?",
+        "سیام کے تاریخی قومی پرچم پر کون سا جانور دکھایا گیا تھا؟",
+        "Thailand",
+        "White elephant",
+        "wgi",
+        "wgi-q0050",
+        "wgi",
+        "wgi-q0050"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0050-SRC",
+          "kind": "source",
+          "textUrdu": "سیام موجودہ تھائی لینڈ کا سابق نام تھا اور اس کے تاریخی پرچم پر سفید ہاتھی نمایاں تھا۔",
+          "answer": "Thailand",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.3, item 50",
+            "referenceUrl": "https://image.mfa.go.th/mfa/0/LkQFxO2KRZ/eBook_More_Alike_Than_We_Might_Think_FINAL.pdf",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://image.mfa.go.th/mfa/0/LkQFxO2KRZ/eBook_More_Alike_Than_We_Might_Think_FINAL.pdf",
+              "label": "Thailand cultural history",
+              "publisher": "Ministry of Foreign Affairs of Thailand",
+              "authorityId": "thailand-mfa",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "wording"
+              ],
+              "claimSummary": "The Thai official publication connects old Siam with a white-elephant flag."
+            },
+            {
+              "url": "https://www.loc.gov/item/today-in-history/june-24/",
+              "label": "Thailand and Siam history",
+              "publisher": "Library of Congress",
+              "authorityId": "library-of-congress",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "wording"
+              ],
+              "claimSummary": "The Library of Congress identifies Siam as present-day Thailand and notes the white elephant."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The imprecise nickname was converted into a documented historical flag-and-country question."
+        },
+        {
+          "questionId": "WGI-Q0050-SIM",
+          "kind": "similar",
+          "textUrdu": "سیام کے پرانے قومی پرچم پر سفید ہاتھی کی علامت استعمال ہوتی تھی۔",
+          "answer": "White elephant",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Siam's historic flag",
+            "referenceUrl": "https://image.mfa.go.th/mfa/0/LkQFxO2KRZ/eBook_More_Alike_Than_We_Might_Think_FINAL.pdf",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://image.mfa.go.th/mfa/0/LkQFxO2KRZ/eBook_More_Alike_Than_We_Might_Think_FINAL.pdf",
+              "label": "Thailand cultural history",
+              "publisher": "Ministry of Foreign Affairs of Thailand",
+              "authorityId": "thailand-mfa",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The official Thai history records the white elephant on Siam's flag."
+            },
+            {
+              "url": "https://www.loc.gov/item/today-in-history/june-24/",
+              "label": "Thailand and Siam history",
+              "publisher": "Library of Congress",
+              "authorityId": "library-of-congress",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Library of Congress describes the white elephant as Siam's emblem."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0053",
+      "pairId": "WGI-Q0053",
+      "topicIds": [
+        "dates-timelines"
+      ],
+      "title": "Chicago Convention ↔ 7 December",
+      "subtitleUrdu": "1944 کا Convention on International Civil Aviation عام طور پر شکاگو کنونشن کہلاتا ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Chicago Convention ↔ 7 December",
+      "searchTerms": [
+        "WGI-Q0053",
+        "What is the common name of the 1944 Convention on International Civil Aviation?",
+        "1944 کے بین الاقوامی شہری ہوا بازی کنونشن کا عام نام کیا ہے؟",
+        "On what date in 1944 was the Chicago Convention signed?",
+        "1944 میں شکاگو کنونشن کس تاریخ کو دستخط ہوا؟",
+        "Chicago Convention",
+        "7 December",
+        "wgi",
+        "wgi-q0053",
+        "wgi",
+        "wgi-q0053"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0053-SRC",
+          "kind": "source",
+          "textUrdu": "1944 کا Convention on International Civil Aviation عام طور پر شکاگو کنونشن کہلاتا ہے۔",
+          "answer": "Chicago Convention",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.4, item 53",
+            "referenceUrl": "https://www.icao.int/history-icao-and-chicago-convention",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.icao.int/history-icao-and-chicago-convention",
+              "label": "History of ICAO and the Chicago Convention",
+              "publisher": "International Civil Aviation Organization",
+              "authorityId": "icao",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "wording"
+              ],
+              "claimSummary": "ICAO identifies the 1944 civil aviation treaty as the Chicago Convention."
+            },
+            {
+              "url": "https://treaties.un.org/Pages/showDetails.aspx?objid=0800000280163d69",
+              "label": "Convention on International Civil Aviation",
+              "publisher": "United Nations Treaty Collection",
+              "authorityId": "un-treaties",
+              "role": "answer-secondary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "wording"
+              ],
+              "claimSummary": "The UN treaty record documents the convention concluded at Chicago in 1944."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1944",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The PDF line lacked a complete interrogative stem, so it was reconstructed without changing the documented fact."
+        },
+        {
+          "questionId": "WGI-Q0053-SIM",
+          "kind": "similar",
+          "textUrdu": "شکاگو کنونشن پر 7 دسمبر 1944 کو دستخط کیے گئے تھے۔",
+          "answer": "7 December",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Chicago Convention signing",
+            "referenceUrl": "https://treaties.un.org/Pages/showDetails.aspx?objid=0800000280163d69",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://treaties.un.org/Pages/showDetails.aspx?objid=0800000280163d69",
+              "label": "Convention on International Civil Aviation",
+              "publisher": "United Nations Treaty Collection",
+              "authorityId": "un-treaties",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN record gives 7 December 1944 as the convention date."
+            },
+            {
+              "url": "https://www.icao.int/history-icao-and-chicago-convention",
+              "label": "History of ICAO and the Chicago Convention",
+              "publisher": "International Civil Aviation Organization",
+              "authorityId": "icao",
+              "role": "answer-secondary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "ICAO records the signing in Chicago on 7 December 1944."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1944-12-07",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0054",
+      "pairId": "WGI-Q0054",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Brazil ↔ Vietnam",
+      "subtitleUrdu": "USDA اور FAO کے حالیہ مواد کے مطابق برازیل دنیا کا سب سے بڑا کافی پیدا کرنے والا ملک ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Brazil ↔ Vietnam",
+      "searchTerms": [
+        "WGI-Q0054",
+        "As of 2026, which country leads the world in coffee production?",
+        "2026 تک، کافی کی عالمی پیداوار میں کون سا ملک پہلے نمبر پر ہے؟",
+        "As of 2026, which country ranks second to Brazil in coffee production?",
+        "2026 تک، کافی کی پیداوار میں برازیل کے بعد دوسرا ملک کون سا ہے؟",
+        "Brazil",
+        "Vietnam",
+        "wgi",
+        "wgi-q0054",
+        "wgi",
+        "wgi-q0054"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0054-SRC",
+          "kind": "source",
+          "textUrdu": "USDA اور FAO کے حالیہ مواد کے مطابق برازیل دنیا کا سب سے بڑا کافی پیدا کرنے والا ملک ہے۔",
+          "answer": "Brazil",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.4, item 54",
+            "referenceUrl": "https://fas.usda.gov/data/production/commodity/0711100",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://fas.usda.gov/data/production/commodity/0711100",
+              "label": "Coffee production data",
+              "publisher": "US Department of Agriculture Foreign Agricultural Service",
+              "authorityId": "usda-fas",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "USDA production data rank Brazil first for coffee output."
+            },
+            {
+              "url": "https://www.fao.org/brussels/news/news-detail/celebrating-coffee-and-the-people-behind-every-cup/en",
+              "label": "Celebrating coffee",
+              "publisher": "Food and Agriculture Organization",
+              "authorityId": "fao",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "FAO identifies Brazil as the world's largest coffee producer."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": null,
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0054-SIM",
+          "kind": "similar",
+          "textUrdu": "حالیہ عالمی کافی اعداد و شمار میں برازیل کے بعد ویت نام دوسرے نمبر پر آتا ہے۔",
+          "answer": "Vietnam",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: second-largest coffee producer",
+            "referenceUrl": "https://fas.usda.gov/data/production/commodity/0711100",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://fas.usda.gov/data/production/commodity/0711100",
+              "label": "Coffee production data",
+              "publisher": "US Department of Agriculture Foreign Agricultural Service",
+              "authorityId": "usda-fas",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "USDA ranks Vietnam second behind Brazil in current coffee output."
+            },
+            {
+              "url": "https://data.ico.org/overview",
+              "label": "Coffee data overview",
+              "publisher": "International Coffee Organization",
+              "authorityId": "ico",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "ICO data place Vietnam immediately behind Brazil among producers."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": null,
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0055",
+      "pairId": "WGI-Q0055",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "Saudi riyal ↔ SAR",
+      "subtitleUrdu": "سعودی عرب کی سرکاری مالی اکائی سعودی ریال ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Saudi riyal ↔ SAR",
+      "searchTerms": [
+        "WGI-Q0055",
+        "What is the currency of Saudi Arabia?",
+        "سعودی عرب کی کرنسی کیا ہے؟",
+        "What is the three-letter currency code of the Saudi riyal?",
+        "سعودی ریال کا تین حرفی کرنسی کوڈ کیا ہے؟",
+        "Saudi riyal",
+        "SAR",
+        "wgi",
+        "wgi-q0055",
+        "wgi",
+        "wgi-q0055"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0055-SRC",
+          "kind": "source",
+          "textUrdu": "سعودی عرب کی سرکاری مالی اکائی سعودی ریال ہے۔",
+          "answer": "Saudi riyal",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.4, item 55",
+            "referenceUrl": "https://rulebook.sama.gov.sa/en/article-1-4",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://rulebook.sama.gov.sa/en/article-1-4",
+              "label": "Saudi monetary unit",
+              "publisher": "Saudi Central Bank",
+              "authorityId": "sama",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Saudi law defines the riyal as the country's monetary unit."
+            },
+            {
+              "url": "https://data.un.org/en/iso/sa.html",
+              "label": "Saudi Arabia country profile",
+              "publisher": "United Nations Data",
+              "authorityId": "un-data",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UN country data lists the Saudi riyal as the currency."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0055-SIM",
+          "kind": "similar",
+          "textUrdu": "سعودی ریال کا بین الاقوامی کرنسی کوڈ SAR ہے۔",
+          "answer": "SAR",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Saudi riyal code",
+            "referenceUrl": "https://www.sama.gov.sa/en-us/currency/pages/currencyconverter.aspx",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.sama.gov.sa/en-us/currency/pages/currencyconverter.aspx",
+              "label": "Currency converter",
+              "publisher": "Saudi Central Bank",
+              "authorityId": "sama",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The central bank labels the Saudi riyal with code SAR."
+            },
+            {
+              "url": "https://data.un.org/en/iso/sa.html",
+              "label": "Saudi Arabia country profile",
+              "publisher": "United Nations Data",
+              "authorityId": "un-data",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN profile gives SAR as Saudi Arabia's currency code."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0058",
+      "pairId": "WGI-Q0058",
+      "topicIds": [
+        "dates-timelines",
+        "countries-places",
+        "records-firsts"
+      ],
+      "title": "China ↔ India",
+      "subtitleUrdu": "دستیاب عالمی زرعی اعداد و شمار میں چین چائے کی پیداوار میں پہلے نمبر پر ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: China ↔ India",
+      "searchTerms": [
+        "WGI-Q0058",
+        "As of 2026, which country is the world's largest producer of tea?",
+        "2026 تک، دنیا میں چائے کا سب سے بڑا پیدا کنندہ ملک کون سا ہے؟",
+        "As of 2026, which country follows China among the leading tea producers?",
+        "2026 تک، چائے کے بڑے پیدا کنندگان میں چین کے بعد کون سا ملک آتا ہے؟",
+        "China",
+        "India",
+        "wgi",
+        "wgi-q0058",
+        "wgi",
+        "wgi-q0058"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0058-SRC",
+          "kind": "source",
+          "textUrdu": "دستیاب عالمی زرعی اعداد و شمار میں چین چائے کی پیداوار میں پہلے نمبر پر ہے۔",
+          "answer": "China",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.4, item 58",
+            "referenceUrl": "https://www.fao.org/newsroom/story/The-exquisite-flavour-of-carbon-neutrality/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.fao.org/newsroom/story/The-exquisite-flavour-of-carbon-neutrality/",
+              "label": "Tea production and carbon neutrality",
+              "publisher": "Food and Agriculture Organization",
+              "authorityId": "fao",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "FAO identifies China as the world's largest tea producer."
+            },
+            {
+              "url": "https://static.investindia.gov.in/s3fs-public/2023-03/EconomicReview-English-Vol1-2023-24_12.pdf",
+              "label": "Tea sector economic review",
+              "publisher": "Government of India investment agency",
+              "authorityId": "invest-india",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The government review shows China with the largest share of world tea output."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": null,
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0058-SIM",
+          "kind": "similar",
+          "textUrdu": "عالمی چائے کی پیداوار میں چین کے بعد بھارت نمایاں طور پر دوسرے نمبر پر آتا ہے۔",
+          "answer": "India",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: second-leading tea producer",
+            "referenceUrl": "https://static.investindia.gov.in/s3fs-public/2023-03/EconomicReview-English-Vol1-2023-24_12.pdf",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://static.investindia.gov.in/s3fs-public/2023-03/EconomicReview-English-Vol1-2023-24_12.pdf",
+              "label": "Tea sector economic review",
+              "publisher": "Government of India investment agency",
+              "authorityId": "invest-india",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The review ranks India immediately behind China in tea output."
+            },
+            {
+              "url": "https://unctad.org/en/PublicationsLibrary/INFOCOMM_cp11_Tea_en.pdf",
+              "label": "Tea commodity profile",
+              "publisher": "United Nations Conference on Trade and Development",
+              "authorityId": "unctad",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "UNCTAD's producer table places India after China among tea producers."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": null,
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0059",
+      "pairId": "WGI-Q0059",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Geneva ↔ International Telecommunication Union",
+      "subtitleUrdu": "بین الاقوامی ٹیلی کمیونیکیشن یونین کا صدر دفتر جنیوا، سوئٹزرلینڈ میں ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Geneva ↔ International Telecommunication Union",
+      "searchTerms": [
+        "WGI-Q0059",
+        "Where is the headquarters of the International Telecommunication Union?",
+        "بین الاقوامی ٹیلی کمیونیکیشن یونین کا صدر دفتر کہاں ہے؟",
+        "Which organization was founded in 1865 as the International Telegraph Union?",
+        "1865 میں انٹرنیشنل ٹیلی گراف یونین کے نام سے کون سی تنظیم قائم ہوئی؟",
+        "Geneva",
+        "International Telecommunication Union",
+        "wgi",
+        "wgi-q0059",
+        "wgi",
+        "wgi-q0059"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0059-SRC",
+          "kind": "source",
+          "textUrdu": "بین الاقوامی ٹیلی کمیونیکیشن یونین کا صدر دفتر جنیوا، سوئٹزرلینڈ میں ہے۔",
+          "answer": "Geneva",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.4, item 59",
+            "referenceUrl": "https://www.itu.int/en/about/Pages/default.aspx",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.itu.int/en/about/Pages/default.aspx",
+              "label": "About ITU",
+              "publisher": "International Telecommunication Union",
+              "authorityId": "itu",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "ITU gives Geneva as its headquarters location."
+            },
+            {
+              "url": "https://www.ungeneva.org/en/about/organizations",
+              "label": "International organizations in Geneva",
+              "publisher": "United Nations Office at Geneva",
+              "authorityId": "un-geneva",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UN Geneva lists ITU among the organizations headquartered in Geneva."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0059-SIM",
+          "kind": "similar",
+          "textUrdu": "ITU کی بنیاد 1865 میں انٹرنیشنل ٹیلی گراف یونین کے طور پر رکھی گئی تھی۔",
+          "answer": "International Telecommunication Union",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: ITU founding year",
+            "referenceUrl": "https://www.itu.int/160/our-history/1865-1890s/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.itu.int/160/our-history/1865-1890s/",
+              "label": "ITU history from 1865",
+              "publisher": "International Telecommunication Union",
+              "authorityId": "itu",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "ITU's history records its establishment in 1865."
+            },
+            {
+              "url": "https://www.ungeneva.org/en/about/organizations",
+              "label": "International organizations in Geneva",
+              "publisher": "United Nations Office at Geneva",
+              "authorityId": "un-geneva",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UN Geneva records ITU as founded in 1865."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1865",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0061",
+      "pairId": "WGI-Q0061",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places",
+        "sports-records"
+      ],
+      "title": "Lausanne ↔ International Olympic Committee",
+      "subtitleUrdu": "بین الاقوامی اولمپک کمیٹی کا صدر دفتر لوزان، سوئٹزرلینڈ میں واقع ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Lausanne ↔ International Olympic Committee",
+      "searchTerms": [
+        "WGI-Q0061",
+        "Where is the headquarters of the International Olympic Committee?",
+        "بین الاقوامی اولمپک کمیٹی کا صدر دفتر کہاں ہے؟",
+        "Which international sports body was founded in 1894?",
+        "1894 میں کھیلوں کی کون سی بین الاقوامی تنظیم قائم ہوئی؟",
+        "Lausanne",
+        "International Olympic Committee",
+        "wgi",
+        "wgi-q0061",
+        "wgi",
+        "wgi-q0061"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0061-SRC",
+          "kind": "source",
+          "textUrdu": "بین الاقوامی اولمپک کمیٹی کا صدر دفتر لوزان، سوئٹزرلینڈ میں واقع ہے۔",
+          "answer": "Lausanne",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.4, item 61",
+            "referenceUrl": "https://newsroom.olympics.com/record/909/media_id/1404",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://newsroom.olympics.com/record/909/media_id/1404",
+              "label": "IOC factsheet",
+              "publisher": "International Olympic Committee",
+              "authorityId": "ioc",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The IOC factsheet identifies Lausanne as its headquarters."
+            },
+            {
+              "url": "https://www.eda.admin.ch/countries/japan/en/home/news/news.html/content/countries/japan/en/meta/news/2019/11/lausanne",
+              "label": "Lausanne Olympic capital",
+              "publisher": "Swiss Federal Department of Foreign Affairs",
+              "authorityId": "swiss-fdfa",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Swiss government identifies Lausanne as the IOC headquarters."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0061-SIM",
+          "kind": "similar",
+          "textUrdu": "بین الاقوامی اولمپک کمیٹی کی بنیاد 1894 میں پیرس میں رکھی گئی تھی۔",
+          "answer": "International Olympic Committee",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: IOC founding year",
+            "referenceUrl": "https://newsroom.olympics.com/record/909/media_id/1404",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://newsroom.olympics.com/record/909/media_id/1404",
+              "label": "IOC factsheet",
+              "publisher": "International Olympic Committee",
+              "authorityId": "ioc",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "IOC records its foundation in 1894."
+            },
+            {
+              "url": "https://www.bundesreisezentrale.admin.ch/countries/taiwan/en/home/news/news.html/content/eda/en/meta/news/2014/5/9/52912",
+              "label": "IOC and Switzerland",
+              "publisher": "Swiss Federal Department of Foreign Affairs",
+              "authorityId": "swiss-fdfa",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Swiss government chronology records the IOC's 1894 founding."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1894",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0063",
+      "pairId": "WGI-Q0063",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "Afghani ↔ AFN",
+      "subtitleUrdu": "افغانستان کی سرکاری مالی اکائی افغانی ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Afghani ↔ AFN",
+      "searchTerms": [
+        "WGI-Q0063",
+        "What is the currency of Afghanistan?",
+        "افغانستان کی کرنسی کیا ہے؟",
+        "What is the three-letter currency code of the Afghani?",
+        "افغانی کا تین حرفی کرنسی کوڈ کیا ہے؟",
+        "Afghani",
+        "AFN",
+        "wgi",
+        "wgi-q0063",
+        "wgi",
+        "wgi-q0063"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0063-SRC",
+          "kind": "source",
+          "textUrdu": "افغانستان کی سرکاری مالی اکائی افغانی ہے۔",
+          "answer": "Afghani",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.4, item 63",
+            "referenceUrl": "https://dab.gov.af/index.php/node/7035",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://dab.gov.af/index.php/node/7035",
+              "label": "Da Afghanistan Bank notification",
+              "publisher": "Da Afghanistan Bank",
+              "authorityId": "dab",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The central bank states that Afghanistan's monetary unit is the Afghani."
+            },
+            {
+              "url": "https://remittanceprices.worldbank.org/currency/afn",
+              "label": "Afghanistani Afghani",
+              "publisher": "World Bank",
+              "authorityId": "world-bank",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The World Bank lists the Afghanistani Afghani as currency AFN."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0063-SIM",
+          "kind": "similar",
+          "textUrdu": "افغانستان کی کرنسی افغانی کا بین الاقوامی کوڈ AFN ہے۔",
+          "answer": "AFN",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Afghani currency code",
+            "referenceUrl": "https://remittanceprices.worldbank.org/currency/afn",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://remittanceprices.worldbank.org/currency/afn",
+              "label": "Afghanistani Afghani",
+              "publisher": "World Bank",
+              "authorityId": "world-bank",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The World Bank currency page gives AFN as the code."
+            },
+            {
+              "url": "https://dab.gov.af/index.php/da-afghanistan-bank-controls-globally-stable-currency",
+              "label": "Afghani currency stability",
+              "publisher": "Da Afghanistan Bank",
+              "authorityId": "dab",
+              "role": "answer-secondary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Afghanistan's central bank repeatedly identifies its currency as Afghani, AFN."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0064",
+      "pairId": "WGI-Q0064",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Geneva ↔ International Organization for Migration",
+      "subtitleUrdu": "بین الاقوامی ادارہ برائے ہجرت کا صدر دفتر جنیوا، سوئٹزرلینڈ میں ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Geneva ↔ International Organization for Migration",
+      "searchTerms": [
+        "WGI-Q0064",
+        "Where is the headquarters of the International Organization for Migration?",
+        "بین الاقوامی ادارہ برائے ہجرت کا صدر دفتر کہاں ہے؟",
+        "Which migration organization was established in 1951?",
+        "1951 میں ہجرت سے متعلق کون سی تنظیم قائم ہوئی؟",
+        "Geneva",
+        "International Organization for Migration",
+        "wgi",
+        "wgi-q0064",
+        "wgi",
+        "wgi-q0064"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0064-SRC",
+          "kind": "source",
+          "textUrdu": "بین الاقوامی ادارہ برائے ہجرت کا صدر دفتر جنیوا، سوئٹزرلینڈ میں ہے۔",
+          "answer": "Geneva",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.4, item 64",
+            "referenceUrl": "https://www.iom.int/sites/g/files/tmzbdl486/files/2019-01/MC2254_8.pdf",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.iom.int/sites/g/files/tmzbdl486/files/2019-01/MC2254_8.pdf",
+              "label": "IOM organizational background",
+              "publisher": "International Organization for Migration",
+              "authorityId": "iom",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "IOM's own organizational background states its headquarters is in Geneva."
+            },
+            {
+              "url": "https://www.un.org/about-us/un-system",
+              "label": "United Nations system",
+              "publisher": "United Nations",
+              "authorityId": "un",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN System directory lists IOM headquarters in Geneva."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0064-SIM",
+          "kind": "similar",
+          "textUrdu": "IOM دسمبر 1951 میں قائم ہوا اور اگلے سال اس نے عملی سرگرمیاں شروع کیں۔",
+          "answer": "International Organization for Migration",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: IOM establishment year",
+            "referenceUrl": "https://www.iom.int/sites/g/files/tmzbdl486/files/2019-01/MC2254_8.pdf",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.iom.int/sites/g/files/tmzbdl486/files/2019-01/MC2254_8.pdf",
+              "label": "IOM organizational background",
+              "publisher": "International Organization for Migration",
+              "authorityId": "iom",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "IOM records that the organization was established in December 1951."
+            },
+            {
+              "url": "https://www.ungeneva.org/en/about/organizations/iom",
+              "label": "International Organization for Migration",
+              "publisher": "United Nations Office at Geneva",
+              "authorityId": "un-geneva",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UN Geneva states that IOM was established in 1951."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1951",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0065",
+      "pairId": "WGI-Q0065",
+      "topicIds": [
+        "dates-timelines",
+        "countries-places",
+        "records-firsts"
+      ],
+      "title": "India ↔ China",
+      "subtitleUrdu": "تازہ سرکاری اعداد و شمار کے مطابق بھارت نے چین کو پیچھے چھوڑ کر چاول کی پیداوار میں پہلا مقام حاصل کیا ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: India ↔ China",
+      "searchTerms": [
+        "WGI-Q0065",
+        "As of 2026, which country is the world's largest producer of rice?",
+        "2026 تک، دنیا میں چاول کا سب سے بڑا پیدا کنندہ ملک کون سا ہے؟",
+        "As of 2026, which country ranks second to India in rice production?",
+        "2026 تک، چاول کی پیداوار میں بھارت کے بعد دوسرا ملک کون سا ہے؟",
+        "India",
+        "China",
+        "wgi",
+        "wgi-q0065",
+        "wgi",
+        "wgi-q0065"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0065-SRC",
+          "kind": "source",
+          "textUrdu": "تازہ سرکاری اعداد و شمار کے مطابق بھارت نے چین کو پیچھے چھوڑ کر چاول کی پیداوار میں پہلا مقام حاصل کیا ہے۔",
+          "answer": "India",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.4, item 65",
+            "referenceUrl": "https://apps.fas.usda.gov/PSDOnline/Circulars/2025/05/Grain.pdf",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://apps.fas.usda.gov/PSDOnline/Circulars/2025/05/Grain.pdf",
+              "label": "Grain: World Markets and Trade 2025/26",
+              "publisher": "US Department of Agriculture Foreign Agricultural Service",
+              "authorityId": "usda-fas",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "USDA's 2025/26 outlook ranks India as the top rice producer."
+            },
+            {
+              "url": "https://apeda.gov.in/Cereals",
+              "label": "Cereals production",
+              "publisher": "Agricultural and Processed Food Products Export Development Authority",
+              "authorityId": "apeda",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "India's APEDA cites FAO 2024 data placing India first in rice production."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": null,
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": "The printed answer China was corrected to India using current FAO-derived and USDA 2025/26 production data."
+        },
+        {
+          "questionId": "WGI-Q0065-SIM",
+          "kind": "similar",
+          "textUrdu": "موجودہ عالمی پیداوار کے جدول میں بھارت پہلے اور چین دوسرے نمبر پر ہے۔",
+          "answer": "China",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: second-largest rice producer",
+            "referenceUrl": "https://apps.fas.usda.gov/PSDOnline/Circulars/2025/05/Grain.pdf",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://apps.fas.usda.gov/PSDOnline/Circulars/2025/05/Grain.pdf",
+              "label": "Grain: World Markets and Trade 2025/26",
+              "publisher": "US Department of Agriculture Foreign Agricultural Service",
+              "authorityId": "usda-fas",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The USDA table places China second behind India."
+            },
+            {
+              "url": "https://apeda.gov.in/sites/default/files/2025-10/MIC_Monthly_dashboard_Rice_30102025.pdf",
+              "label": "Rice market dashboard",
+              "publisher": "Agricultural and Processed Food Products Export Development Authority",
+              "authorityId": "apeda",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The official market dashboard shows India first and China second."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": null,
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0067",
+      "pairId": "WGI-Q0067",
+      "topicIds": [
+        "dates-timelines",
+        "countries-places",
+        "records-firsts"
+      ],
+      "title": "Canada ↔ It was first raised",
+      "subtitleUrdu": "میپل کا پتہ طویل عرصے سے کینیڈا کی قومی شناخت کی نمایاں علامت ہے اور قومی پرچم پر بھی موجود ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Canada ↔ It was first raised",
+      "searchTerms": [
+        "WGI-Q0067",
+        "The maple leaf is a best-known national symbol of which country?",
+        "میپل کا پتہ کس ملک کی سب سے معروف قومی علامت ہے؟",
+        "What happened to Canada's maple-leaf flag in 1965?",
+        "1965 میں کینیڈا کے میپل پتے والے پرچم کے ساتھ کیا اہم واقعہ پیش آیا؟",
+        "Canada",
+        "It was first raised",
+        "wgi",
+        "wgi-q0067",
+        "wgi",
+        "wgi-q0067"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0067-SRC",
+          "kind": "source",
+          "textUrdu": "میپل کا پتہ طویل عرصے سے کینیڈا کی قومی شناخت کی نمایاں علامت ہے اور قومی پرچم پر بھی موجود ہے۔",
+          "answer": "Canada",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.4, item 67",
+            "referenceUrl": "https://www.canada.ca/en/canadian-heritage/services/official-symbols-canada.html",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.canada.ca/en/canadian-heritage/services/official-symbols-canada.html",
+              "label": "Official symbols of Canada",
+              "publisher": "Government of Canada",
+              "authorityId": "canada-government",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "wording"
+              ],
+              "claimSummary": "Canada's official symbols page identifies the maple leaf with the national flag."
+            },
+            {
+              "url": "https://www.britannica.com/topic/flag-of-Canada",
+              "label": "Flag of Canada",
+              "publisher": "Encyclopaedia Britannica",
+              "authorityId": "britannica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "wording"
+              ],
+              "claimSummary": "Britannica documents the maple leaf as Canada's established national emblem."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The informal Land of Maple Leaf nickname was replaced with the precise and officially documented national-symbol fact."
+        },
+        {
+          "questionId": "WGI-Q0067-SIM",
+          "kind": "similar",
+          "textUrdu": "کینیڈا کا موجودہ سرخ و سفید میپل پتے والا پرچم پہلی بار 1965 میں پارلیمنٹ ہل پر لہرایا گیا۔",
+          "answer": "It was first raised",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Canadian flag adoption",
+            "referenceUrl": "https://www.canada.ca/en/canadian-heritage/services/flag-canada-history.html",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.canada.ca/en/canadian-heritage/services/flag-canada-history.html",
+              "label": "History of Canada's national flag",
+              "publisher": "Government of Canada",
+              "authorityId": "canada-government",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The government history records the first raising in 1965."
+            },
+            {
+              "url": "https://www.britannica.com/topic/flag-of-Canada",
+              "label": "Flag of Canada",
+              "publisher": "Encyclopaedia Britannica",
+              "authorityId": "britannica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Britannica dates adoption of the maple-leaf flag to 1965."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1965",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0069",
+      "pairId": "WGI-Q0069",
+      "topicIds": [
+        "dates-timelines",
+        "countries-places"
+      ],
+      "title": "56 ↔ Gabon and Togo",
+      "subtitleUrdu": "2026 تک دولت مشترکہ 56 آزاد اور مساوی رکن ممالک کی رضاکارانہ تنظیم ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 56 ↔ Gabon and Togo",
+      "searchTerms": [
+        "WGI-Q0069",
+        "As of 2026, how many independent countries belong to the Commonwealth?",
+        "2026 تک، دولت مشترکہ میں کتنے آزاد ممالک شامل ہیں؟",
+        "As of 2026, which two countries are the newest members of the Commonwealth?",
+        "2026 تک، دولت مشترکہ کے دو نئے ترین رکن ممالک کون سے ہیں؟",
+        "56",
+        "Gabon and Togo",
+        "wgi",
+        "wgi-q0069",
+        "wgi",
+        "wgi-q0069"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0069-SRC",
+          "kind": "source",
+          "textUrdu": "2026 تک دولت مشترکہ 56 آزاد اور مساوی رکن ممالک کی رضاکارانہ تنظیم ہے۔",
+          "answer": "56",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.4, item 69",
+            "referenceUrl": "https://thecommonwealth.org/about/facts",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://thecommonwealth.org/about/facts",
+              "label": "Commonwealth facts",
+              "publisher": "Commonwealth Secretariat",
+              "authorityId": "commonwealth-secretariat",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The Commonwealth Secretariat reports 56 independent member countries."
+            },
+            {
+              "url": "https://www.gov.uk/world/organisations/uk-representation-in-the-commonwealth",
+              "label": "UK Representation in the Commonwealth",
+              "publisher": "Government of the United Kingdom",
+              "authorityId": "uk-government",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The UK government describes the Commonwealth as 56 independent countries."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": null,
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0069-SIM",
+          "kind": "similar",
+          "textUrdu": "گبون اور ٹوگو 2022 میں بالترتیب دولت مشترکہ کے 55ویں اور 56ویں رکن بنے۔",
+          "answer": "Gabon and Togo",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: newest Commonwealth members",
+            "referenceUrl": "https://thecommonwealth.org/news/gabon-and-togo-join-commonwealth",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://thecommonwealth.org/news/gabon-and-togo-join-commonwealth",
+              "label": "Gabon and Togo join the Commonwealth",
+              "publisher": "Commonwealth Secretariat",
+              "authorityId": "commonwealth-secretariat",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The Secretariat names Gabon and Togo as the 55th and 56th members."
+            },
+            {
+              "url": "https://researchbriefings.files.parliament.uk/documents/CBP-8282/CBP-8282.pdf",
+              "label": "UK trade with the Commonwealth",
+              "publisher": "House of Commons Library",
+              "authorityId": "uk-parliament-library",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The parliamentary briefing identifies Gabon and Togo as the most recent members."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": null,
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0072",
+      "pairId": "WGI-Q0072",
+      "topicIds": [
+        "dates-timelines",
+        "events-history"
+      ],
+      "title": "11 December ↔ To make laws with extraterritorial operation",
+      "subtitleUrdu": "برطانوی قانون کے سرکاری متن میں Statute of Westminster کے نفاذ کی تاریخ 11 دسمبر 1931 درج ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 11 December ↔ To make laws with extraterritorial operation",
+      "searchTerms": [
+        "WGI-Q0072",
+        "On what date in 1931 was the Statute of Westminster enacted?",
+        "1931 میں ویسٹ منسٹر کا قانون کس تاریخ کو نافذ کیا گیا؟",
+        "What power did section 3 of the Statute of Westminster 1931 expressly give Dominion parliaments?",
+        "ویسٹ منسٹر قانون 1931 کی دفعہ 3 نے ڈومینین پارلیمانوں کو واضح طور پر کون سا اختیار دیا؟",
+        "11 December",
+        "To make laws with extraterritorial operation",
+        "wgi",
+        "wgi-q0072",
+        "wgi",
+        "wgi-q0072"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0072-SRC",
+          "kind": "source",
+          "textUrdu": "برطانوی قانون کے سرکاری متن میں Statute of Westminster کے نفاذ کی تاریخ 11 دسمبر 1931 درج ہے۔",
+          "answer": "11 December",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.5, item 72",
+            "referenceUrl": "https://www.legislation.gov.uk/ukpga/Geo5/22-23/4/enacted",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.legislation.gov.uk/ukpga/Geo5/22-23/4/enacted",
+              "label": "Statute of Westminster 1931 as enacted",
+              "publisher": "UK Legislation",
+              "authorityId": "uk-legislation",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The enacted statute records royal assent on 11 December 1931."
+            },
+            {
+              "url": "https://justice.canada.ca/eng/rp-pr/csj-sjc/constitution/lawreg-loireg/p1t171.html",
+              "label": "Statute of Westminster, 1931",
+              "publisher": "Department of Justice Canada",
+              "authorityId": "justice-canada",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Canada's official constitutional-law compilation dates the statute to 11 December 1931."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1931-12-11",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The PDF's date was converted into a complete four-option question and checked against two constitutional-law authorities."
+        },
+        {
+          "questionId": "WGI-Q0072-SIM",
+          "kind": "similar",
+          "textUrdu": "دفعہ 3 نے ڈومینین پارلیمانوں کو اپنے علاقے سے باہر اثر رکھنے والے قوانین بنانے کا مکمل اختیار دیا۔",
+          "answer": "To make laws with extraterritorial operation",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: section 3 of the Statute of Westminster",
+            "referenceUrl": "https://www.legislation.gov.uk/ukpga/Geo5/22-23/4/enacted",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.legislation.gov.uk/ukpga/Geo5/22-23/4/enacted",
+              "label": "Statute of Westminster 1931 as enacted",
+              "publisher": "UK Legislation",
+              "authorityId": "uk-legislation",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Section 3 expressly grants full power to legislate with extraterritorial operation."
+            },
+            {
+              "url": "https://justice.canada.ca/eng/rp-pr/csj-sjc/constitution/lawreg-loireg/p1t171.html",
+              "label": "Statute of Westminster, 1931",
+              "publisher": "Department of Justice Canada",
+              "authorityId": "justice-canada",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Canada's official reproduction includes the same section 3 legislative power."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0073",
+      "pairId": "WGI-Q0073",
+      "topicIds": [
+        "dates-timelines"
+      ],
+      "title": "1949 ↔ It could remain in the Commonwealth after becoming a republic",
+      "subtitleUrdu": "لندن اعلامیہ 1949 میں جاری ہوا اور اس نے جمہوریہ بننے والے ممالک کے لیے دولتِ مشترکہ میں رہنے کی راہ ہموار کی۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 1949 ↔ It could remain in the Commonwealth after becoming a republic",
+      "searchTerms": [
+        "WGI-Q0073",
+        "In which year was the London Declaration that shaped the modern Commonwealth issued?",
+        "جدید دولتِ مشترکہ کی تشکیل کرنے والا لندن اعلامیہ کس سال جاری ہوا؟",
+        "What constitutional issue did the 1949 London Declaration resolve for India?",
+        "1949 کے لندن اعلامیے نے بھارت کے لیے کون سا آئینی مسئلہ حل کیا؟",
+        "1949",
+        "It could remain in the Commonwealth after becoming a republic",
+        "wgi",
+        "wgi-q0073",
+        "wgi",
+        "wgi-q0073"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0073-SRC",
+          "kind": "source",
+          "textUrdu": "لندن اعلامیہ 1949 میں جاری ہوا اور اس نے جمہوریہ بننے والے ممالک کے لیے دولتِ مشترکہ میں رہنے کی راہ ہموار کی۔",
+          "answer": "1949",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.5, item 73",
+            "referenceUrl": "https://thecommonwealth.org/london-declaration-1949",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://thecommonwealth.org/london-declaration-1949",
+              "label": "London Declaration, 1949",
+              "publisher": "Commonwealth Secretariat",
+              "authorityId": "commonwealth-secretariat",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "wording"
+              ],
+              "claimSummary": "The Commonwealth Secretariat identifies the London Declaration as a 1949 agreement foundational to the modern Commonwealth."
+            },
+            {
+              "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-9478/",
+              "label": "The Commonwealth",
+              "publisher": "House of Commons Library",
+              "authorityId": "uk-parliament-library",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "wording"
+              ],
+              "claimSummary": "The parliamentary briefing states that the modern Commonwealth was established by the 1949 London Declaration."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The PDF's exact 28 April date was not cleanly corroborated by two authorities; the verified 1949 year and significance were retained instead."
+        },
+        {
+          "questionId": "WGI-Q0073-SIM",
+          "kind": "similar",
+          "textUrdu": "اعلامیے نے یہ اصول تسلیم کیا کہ بھارت جمہوریہ بننے کے بعد بھی دولتِ مشترکہ کا رکن رہ سکتا ہے۔",
+          "answer": "It could remain in the Commonwealth after becoming a republic",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: constitutional effect of the London Declaration",
+            "referenceUrl": "https://thecommonwealth.org/london-declaration-1949",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://thecommonwealth.org/london-declaration-1949",
+              "label": "London Declaration, 1949",
+              "publisher": "Commonwealth Secretariat",
+              "authorityId": "commonwealth-secretariat",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The official history explains that India could become a republic while remaining in the Commonwealth."
+            },
+            {
+              "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-9478/",
+              "label": "The Commonwealth",
+              "publisher": "House of Commons Library",
+              "authorityId": "uk-parliament-library",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The briefing explains the declaration's accommodation of India as a republic within the Commonwealth."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0074",
+      "pairId": "WGI-Q0074",
+      "topicIds": [
+        "dates-timelines"
+      ],
+      "title": "6 February ↔ George VI",
+      "subtitleUrdu": "الزبتھ دوم اپنے والد جارج ششم کی وفات کے بعد 6 فروری 1952 کو تخت نشین ہوئیں۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 6 February ↔ George VI",
+      "searchTerms": [
+        "WGI-Q0074",
+        "On what date in 1952 did Elizabeth II accede to the throne?",
+        "1952 میں الزبتھ دوم کس تاریخ کو تخت نشین ہوئیں؟",
+        "Which monarch did Elizabeth II succeed in 1952?",
+        "الزبتھ دوم نے 1952 میں کس بادشاہ کی جانشینی کی؟",
+        "6 February",
+        "George VI",
+        "wgi",
+        "wgi-q0074",
+        "wgi",
+        "wgi-q0074"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0074-SRC",
+          "kind": "source",
+          "textUrdu": "الزبتھ دوم اپنے والد جارج ششم کی وفات کے بعد 6 فروری 1952 کو تخت نشین ہوئیں۔",
+          "answer": "6 February",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.5, item 74",
+            "referenceUrl": "https://www.royal.uk/queen-elizabeth-iis-life-and-reign",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.royal.uk/queen-elizabeth-iis-life-and-reign",
+              "label": "Queen Elizabeth II's life and reign",
+              "publisher": "The Royal Household",
+              "authorityId": "royal-household",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The Royal Household biography states that Elizabeth II acceded on 6 February 1952."
+            },
+            {
+              "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-11301/",
+              "label": "The accession and coronation of Queen Elizabeth II",
+              "publisher": "House of Commons Library",
+              "authorityId": "uk-parliament-library",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The parliamentary account dates her accession to 6 February 1952."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1952-02-06",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The long biographical statement was converted into a focused accession-date MCQ supported by two UK institutional sources."
+        },
+        {
+          "questionId": "WGI-Q0074-SIM",
+          "kind": "similar",
+          "textUrdu": "1952 میں جارج ششم کی وفات کے بعد ان کی بیٹی الزبتھ دوم تخت نشین ہوئیں۔",
+          "answer": "George VI",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Elizabeth II's predecessor",
+            "referenceUrl": "https://www.royal.uk/queen-elizabeth-iis-life-and-reign",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.royal.uk/queen-elizabeth-iis-life-and-reign",
+              "label": "Queen Elizabeth II's life and reign",
+              "publisher": "The Royal Household",
+              "authorityId": "royal-household",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The official biography identifies George VI as Elizabeth II's father and immediate predecessor."
+            },
+            {
+              "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-11301/",
+              "label": "The accession and coronation of Queen Elizabeth II",
+              "publisher": "House of Commons Library",
+              "authorityId": "uk-parliament-library",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The parliamentary chronology records her accession following the death of George VI."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1952",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0075",
+      "pairId": "WGI-Q0075",
+      "topicIds": [
+        "dates-timelines",
+        "people-offices"
+      ],
+      "title": "17 Bruton Street ↔ 21 April",
+      "subtitleUrdu": "الزبتھ دوم 21 اپریل 1926 کو مے فیئر، لندن کے 17 بروٹن اسٹریٹ میں پیدا ہوئیں۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 17 Bruton Street ↔ 21 April",
+      "searchTerms": [
+        "WGI-Q0075",
+        "At which London address was Elizabeth II born in 1926?",
+        "الزبتھ دوم 1926 میں لندن کے کس پتے پر پیدا ہوئیں؟",
+        "On what date in 1926 was Elizabeth II born?",
+        "الزبتھ دوم 1926 میں کس تاریخ کو پیدا ہوئیں؟",
+        "17 Bruton Street",
+        "21 April",
+        "wgi",
+        "wgi-q0075",
+        "wgi",
+        "wgi-q0075"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0075-SRC",
+          "kind": "source",
+          "textUrdu": "الزبتھ دوم 21 اپریل 1926 کو مے فیئر، لندن کے 17 بروٹن اسٹریٹ میں پیدا ہوئیں۔",
+          "answer": "17 Bruton Street",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.5, item 75",
+            "referenceUrl": "https://www.royal.uk/70-facts-mark-queens-platinum-jubilee?page=1",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.royal.uk/70-facts-mark-queens-platinum-jubilee?page=1",
+              "label": "70 facts about Queen Elizabeth II",
+              "publisher": "The Royal Household",
+              "authorityId": "royal-household",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The Royal Household records her birth at 17 Bruton Street, Mayfair, on 21 April 1926."
+            },
+            {
+              "url": "https://www.westminster.gov.uk/sites/default/files/green_plaque_full_list.pdf",
+              "label": "Westminster green plaques list",
+              "publisher": "Westminster City Council",
+              "authorityId": "westminster-council",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The council's plaque register associates Queen Elizabeth II's 1926 birth with 17 Bruton Street."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1926-04-21",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The address was standardized as 17 Bruton Street and verified against both royal and municipal records."
+        },
+        {
+          "questionId": "WGI-Q0075-SIM",
+          "kind": "similar",
+          "textUrdu": "الزبتھ دوم کی تاریخ پیدائش 21 اپریل 1926 تھی۔",
+          "answer": "21 April",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Elizabeth II's date of birth",
+            "referenceUrl": "https://www.royal.uk/70-facts-mark-queens-platinum-jubilee?page=1",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.royal.uk/70-facts-mark-queens-platinum-jubilee?page=1",
+              "label": "70 facts about Queen Elizabeth II",
+              "publisher": "The Royal Household",
+              "authorityId": "royal-household",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The official royal facts page gives the birth date as 21 April 1926."
+            },
+            {
+              "url": "https://www.westminster.gov.uk/sites/default/files/green_plaque_full_list.pdf",
+              "label": "Westminster green plaques list",
+              "publisher": "Westminster City Council",
+              "authorityId": "westminster-council",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The municipal record confirms her birth date and birthplace."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1926-04-21",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0076",
+      "pairId": "WGI-Q0076",
+      "topicIds": [
+        "dates-timelines",
+        "people-offices",
+        "records-firsts"
+      ],
+      "title": "70 years and 214 days ↔ Queen Victoria",
+      "subtitleUrdu": "الزبتھ دوم کا دورِ حکومت 6 فروری 1952 سے 8 ستمبر 2022 تک 70 سال اور 214 دن رہا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 70 years and 214 days ↔ Queen Victoria",
+      "searchTerms": [
+        "WGI-Q0076",
+        "How long did Elizabeth II reign from 1952 to 2022?",
+        "الزبتھ دوم نے 1952 سے 2022 تک کتنی مدت حکومت کی؟",
+        "Which British monarch held the longevity record that Elizabeth II surpassed?",
+        "الزبتھ دوم نے طویل ترین حکمرانی کا ریکارڈ کس برطانوی ملکہ سے حاصل کیا؟",
+        "70 years and 214 days",
+        "Queen Victoria",
+        "wgi",
+        "wgi-q0076",
+        "wgi",
+        "wgi-q0076"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0076-SRC",
+          "kind": "source",
+          "textUrdu": "الزبتھ دوم کا دورِ حکومت 6 فروری 1952 سے 8 ستمبر 2022 تک 70 سال اور 214 دن رہا۔",
+          "answer": "70 years and 214 days",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.5, item 76",
+            "referenceUrl": "https://www.guinnessworldrecords.com/world-records/longest-reigning-queen",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.guinnessworldrecords.com/world-records/longest-reigning-queen",
+              "label": "Longest-reigning queen",
+              "publisher": "Guinness World Records",
+              "authorityId": "guinness-world-records",
+              "role": "answer-primary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Guinness records Elizabeth II's reign as 70 years and 214 days."
+            },
+            {
+              "url": "https://www.britannica.com/biography/Elizabeth-II",
+              "label": "Elizabeth II",
+              "publisher": "Encyclopaedia Britannica",
+              "authorityId": "britannica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Britannica gives the 6 February 1952 to 8 September 2022 reign dates supporting the duration."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "2022-09-08",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The duration was retained after the exact reign dates and calculated record were cross-checked with two independent references."
+        },
+        {
+          "questionId": "WGI-Q0076-SIM",
+          "kind": "similar",
+          "textUrdu": "ملکہ وکٹوریہ نے 63 سال سے زیادہ حکومت کی؛ الزبتھ دوم نے 2015 میں یہ برطانوی ریکارڈ توڑا۔",
+          "answer": "Queen Victoria",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: previous British reign record",
+            "referenceUrl": "https://www.guinnessworldrecords.com/world-records/longest-reigning-queen",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.guinnessworldrecords.com/world-records/longest-reigning-queen",
+              "label": "Longest-reigning queen",
+              "publisher": "Guinness World Records",
+              "authorityId": "guinness-world-records",
+              "role": "answer-primary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Guinness identifies Queen Victoria as the previous longest-reigning British monarch."
+            },
+            {
+              "url": "https://www.britannica.com/biography/Elizabeth-II",
+              "label": "Elizabeth II",
+              "publisher": "Encyclopaedia Britannica",
+              "authorityId": "britannica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Britannica states that Elizabeth II surpassed Victoria's British reign record in 2015."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0077",
+      "pairId": "WGI-Q0077",
+      "topicIds": [
+        "dates-timelines",
+        "people-offices",
+        "records-firsts"
+      ],
+      "title": "Sultan Hassanal Bolkiah ↔ 5 October",
+      "subtitleUrdu": "برونائی کے سلطان حسن البولکیہ 5 اکتوبر 1967 سے حکمران ہیں اور 2026 تک زندہ بادشاہوں میں سب سے طویل حکمرانی رکھتے ہیں۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Sultan Hassanal Bolkiah ↔ 5 October",
+      "searchTerms": [
+        "WGI-Q0077",
+        "As of 2026, who is the world's longest-reigning living monarch?",
+        "2026 تک دنیا کا سب سے طویل عرصے سے حکمران زندہ بادشاہ کون ہے؟",
+        "On what date in 1967 did Sultan Hassanal Bolkiah ascend Brunei's throne?",
+        "1967 میں سلطان حسن البولکیہ کس تاریخ کو برونائی کے تخت پر بیٹھے؟",
+        "Sultan Hassanal Bolkiah",
+        "5 October",
+        "wgi",
+        "wgi-q0077",
+        "wgi",
+        "wgi-q0077"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0077-SRC",
+          "kind": "source",
+          "textUrdu": "برونائی کے سلطان حسن البولکیہ 5 اکتوبر 1967 سے حکمران ہیں اور 2026 تک زندہ بادشاہوں میں سب سے طویل حکمرانی رکھتے ہیں۔",
+          "answer": "Sultan Hassanal Bolkiah",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.5, item 77",
+            "referenceUrl": "https://www.reutersconnect.com/item/worlds-longest-ruling-living-monarch-the-sultan-of-brunei-celebrates-his-80th-birthday/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMjBFTUEzN1gzWQ",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.reutersconnect.com/item/worlds-longest-ruling-living-monarch-the-sultan-of-brunei-celebrates-his-80th-birthday/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMjBFTUEzN1gzWQ",
+              "label": "World's longest-ruling living monarch celebrates his 80th birthday",
+              "publisher": "Reuters",
+              "authorityId": "reuters",
+              "role": "answer-primary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Reuters identifies Sultan Hassanal Bolkiah as the world's longest-ruling living monarch in 2026."
+            },
+            {
+              "url": "https://bernama.com/en/news.php?id=2580975",
+              "label": "Sultan of Brunei marks 80th birthday",
+              "publisher": "Bernama",
+              "authorityId": "bernama",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Bernama independently identifies him as the world's longest-reigning living monarch."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": null,
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": "Because this ranking can change, the question is explicitly scoped to 2026 and assigned an annual re-verification date."
+        },
+        {
+          "questionId": "WGI-Q0077-SIM",
+          "kind": "similar",
+          "textUrdu": "سلطان حسن البولکیہ 5 اکتوبر 1967 کو برونائی کے تخت پر بیٹھے۔",
+          "answer": "5 October",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Hassanal Bolkiah's accession",
+            "referenceUrl": "https://www.mindef.gov.bn/his-majesty/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.mindef.gov.bn/his-majesty/",
+              "label": "His Majesty the Sultan and Yang Di-Pertuan of Brunei Darussalam",
+              "publisher": "Ministry of Defence Brunei Darussalam",
+              "authorityId": "brunei-mindef",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Brunei's Ministry of Defence gives his accession date as 5 October 1967."
+            },
+            {
+              "url": "https://www.fmprc.gov.cn/gjhdq_676201/gj_676203/yz_676205/1206_677004/1206x0_677006/",
+              "label": "Brunei country profile",
+              "publisher": "Ministry of Foreign Affairs of the People's Republic of China",
+              "authorityId": "china-mfa",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The Chinese foreign ministry profile also records his accession on 5 October 1967."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": "1967-10-05",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0078",
+      "pairId": "WGI-Q0078",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "Bandar Seri Begawan ↔ Brunei dollar",
+      "subtitleUrdu": "بندر سری بگاوان برونائی دارالسلام کا دارالحکومت اور سب سے اہم انتظامی مرکز ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Bandar Seri Begawan ↔ Brunei dollar",
+      "searchTerms": [
+        "WGI-Q0078",
+        "What is the capital of Brunei Darussalam?",
+        "برونائی دارالسلام کا دارالحکومت کیا ہے؟",
+        "What is the official currency of Brunei Darussalam?",
+        "برونائی دارالسلام کی سرکاری کرنسی کیا ہے؟",
+        "Bandar Seri Begawan",
+        "Brunei dollar",
+        "wgi",
+        "wgi-q0078",
+        "wgi",
+        "wgi-q0078"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0078-SRC",
+          "kind": "source",
+          "textUrdu": "بندر سری بگاوان برونائی دارالسلام کا دارالحکومت اور سب سے اہم انتظامی مرکز ہے۔",
+          "answer": "Bandar Seri Begawan",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.5, item 78",
+            "referenceUrl": "https://www.information.gov.bn/Pages/AboutBrunei.aspx",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.information.gov.bn/Pages/AboutBrunei.aspx",
+              "label": "About Brunei",
+              "publisher": "Information Department, Brunei Darussalam",
+              "authorityId": "brunei-information-department",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Brunei's official information portal names Bandar Seri Begawan as the capital."
+            },
+            {
+              "url": "https://www.cia.gov/the-world-factbook/countries/brunei/",
+              "label": "Brunei",
+              "publisher": "CIA World Factbook",
+              "authorityId": "cia-world-factbook",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The World Factbook independently lists Bandar Seri Begawan as Brunei's capital."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The compound PDF note was split so that the capital forms the source MCQ and the currency forms distinct related practice."
+        },
+        {
+          "questionId": "WGI-Q0078-SIM",
+          "kind": "similar",
+          "textUrdu": "برونائی دارالسلام کی سرکاری کرنسی برونائی ڈالر ہے، جس کا بین الاقوامی کوڈ BND ہے۔",
+          "answer": "Brunei dollar",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Brunei's currency",
+            "referenceUrl": "https://www.information.gov.bn/Pages/AboutBrunei.aspx",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.information.gov.bn/Pages/AboutBrunei.aspx",
+              "label": "About Brunei",
+              "publisher": "Information Department, Brunei Darussalam",
+              "authorityId": "brunei-information-department",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Brunei's official information portal identifies the Brunei dollar as the currency."
+            },
+            {
+              "url": "https://www.bdcb.gov.bn/currency/security-features",
+              "label": "Brunei currency security features",
+              "publisher": "Brunei Darussalam Central Bank",
+              "authorityId": "brunei-central-bank",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Brunei's central bank documents the country's Brunei-dollar notes and currency system."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0080",
+      "pairId": "WGI-Q0080",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "Nepalese rupee ↔ NPR",
+      "subtitleUrdu": "نیپال کی قومی کرنسی نیپالی روپیہ ہے، جسے نیپال راسٹرا بینک جاری کرتا ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Nepalese rupee ↔ NPR",
+      "searchTerms": [
+        "WGI-Q0080",
+        "What is the currency of Nepal?",
+        "نیپال کی کرنسی کیا ہے؟",
+        "What is the ISO currency code for the Nepalese rupee?",
+        "نیپالی روپے کا آئی ایس او کرنسی کوڈ کیا ہے؟",
+        "Nepalese rupee",
+        "NPR",
+        "wgi",
+        "wgi-q0080",
+        "wgi",
+        "wgi-q0080"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0080-SRC",
+          "kind": "source",
+          "textUrdu": "نیپال کی قومی کرنسی نیپالی روپیہ ہے، جسے نیپال راسٹرا بینک جاری کرتا ہے۔",
+          "answer": "Nepalese rupee",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.5, item 80",
+            "referenceUrl": "https://www.nrb.org.np/departments/cmd/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.nrb.org.np/departments/cmd/",
+              "label": "Currency Management Department",
+              "publisher": "Nepal Rastra Bank",
+              "authorityId": "nepal-rastra-bank",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Nepal's central bank states that it issues and manages Nepalese currency."
+            },
+            {
+              "url": "https://www.elibrary.imf.org/view/journals/002/2026/127/article-A003-en.xml",
+              "label": "Nepal: Statistical Issues",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The IMF country material identifies the Nepalese rupee as Nepal's currency."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The parenthetical capital note was excluded so the source question tests only the verified currency fact stated in the PDF."
+        },
+        {
+          "questionId": "WGI-Q0080-SIM",
+          "kind": "similar",
+          "textUrdu": "نیپالی روپے کا بین الاقوامی آئی ایس او کرنسی کوڈ NPR ہے۔",
+          "answer": "NPR",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Nepalese rupee code",
+            "referenceUrl": "https://www.nrb.org.np/departments/cmd/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.nrb.org.np/departments/cmd/",
+              "label": "Currency Management Department",
+              "publisher": "Nepal Rastra Bank",
+              "authorityId": "nepal-rastra-bank",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Nepal Rastra Bank uses NPR for the Nepalese rupee in its official currency materials."
+            },
+            {
+              "url": "https://www.elibrary.imf.org/view/journals/002/2026/127/article-A003-en.xml",
+              "label": "Nepal: Statistical Issues",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The IMF country material uses NPR as Nepal's currency code."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": null,
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0083",
+      "pairId": "WGI-Q0083",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Geneva ↔ 1863",
+      "subtitleUrdu": "ICRC کا صدر دفتر جنیوا، سوئٹزرلینڈ میں ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Geneva ↔ 1863",
+      "searchTerms": [
+        "WGI-Q0083",
+        "In which city is the International Committee of the Red Cross (ICRC) headquartered?",
+        "انٹرنیشنل کمیٹی آف دی ریڈ کراس (ICRC) کا صدر دفتر کس شہر میں ہے؟",
+        "In which year was the International Committee of the Red Cross founded?",
+        "انٹرنیشنل کمیٹی آف دی ریڈ کراس کس سال قائم ہوئی؟",
+        "Geneva",
+        "1863",
+        "wgi",
+        "wgi-q0083",
+        "wgi",
+        "wgi-q0083"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0083-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Geneva ہے۔ ICRC کا صدر دفتر جنیوا، سوئٹزرلینڈ میں ہے۔",
+          "answer": "Geneva",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.5, item 83",
+            "referenceUrl": "https://www.icrc.org/en/document/statutes-international-committee-red-cross-0",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.icrc.org/en/document/statutes-international-committee-red-cross-0",
+              "label": "Statutes of the ICRC",
+              "publisher": "International Committee of the Red Cross",
+              "authorityId": "icrc",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ICRC statutes identify its Geneva headquarters and its establishment in 1863."
+            },
+            {
+              "url": "https://www.britannica.com/topic/International-Committee-of-the-Red-Cross",
+              "label": "International Committee of the Red Cross",
+              "publisher": "Encyclopaedia Britannica",
+              "authorityId": "britannica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The encyclopedia independently identifies the ICRC's headquarters, origins and founder."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The printed headquarters answer is retained without change after two-source verification."
+        },
+        {
+          "questionId": "WGI-Q0083-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب 1863 ہے۔ ہنری ڈونان سمیت پانچ ارکان نے 1863 میں جنیوا میں اس ادارے کی بنیاد رکھی۔",
+          "answer": "1863",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 83",
+            "referenceUrl": "https://www.icrc.org/en/document/statutes-international-committee-red-cross-0",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.icrc.org/en/document/statutes-international-committee-red-cross-0",
+              "label": "Statutes of the ICRC",
+              "publisher": "International Committee of the Red Cross",
+              "authorityId": "icrc",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ICRC statutes identify its Geneva headquarters and its establishment in 1863."
+            },
+            {
+              "url": "https://www.britannica.com/topic/International-Committee-of-the-Red-Cross",
+              "label": "International Committee of the Red Cross",
+              "publisher": "Encyclopaedia Britannica",
+              "authorityId": "britannica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The encyclopedia independently identifies the ICRC's headquarters, origins and founder."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0085",
+      "pairId": "WGI-Q0085",
+      "topicIds": [
+        "dates-timelines",
+        "people-offices",
+        "organizations-agencies",
+        "books-awards-culture",
+        "records-firsts"
+      ],
+      "title": "Henry Dunant and Frédéric Passy ↔ International Committee of the Red Cross",
+      "subtitleUrdu": "دونوں کو 1901 میں پہلا نوبیل امن انعام مشترکہ طور پر ملا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Henry Dunant and Frédéric Passy ↔ International Committee of the Red Cross",
+      "searchTerms": [
+        "WGI-Q0085",
+        "Who shared the first Nobel Peace Prize in 1901?",
+        "1901 کا پہلا نوبیل امن انعام کن دو شخصیات نے مشترکہ طور پر حاصل کیا؟",
+        "Henry Dunant helped found which humanitarian organization?",
+        "ہنری ڈونان نے کس انسانی خدمت کے ادارے کے قیام میں بنیادی کردار ادا کیا؟",
+        "Henry Dunant and Frédéric Passy",
+        "International Committee of the Red Cross",
+        "wgi",
+        "wgi-q0085",
+        "wgi",
+        "wgi-q0085"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0085-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Henry Dunant and Frédéric Passy ہے۔ دونوں کو 1901 میں پہلا نوبیل امن انعام مشترکہ طور پر ملا۔",
+          "answer": "Henry Dunant and Frédéric Passy",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.5, item 85",
+            "referenceUrl": "https://www.nobelprize.org/prizes/peace/1901/summary/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.nobelprize.org/prizes/peace/1901/summary/",
+              "label": "Nobel Peace Prize 1901",
+              "publisher": "Nobel Prize Outreach",
+              "authorityId": "nobel-prize",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The official prize record identifies Henry Dunant and Frederic Passy as the 1901 co-laureates."
+            },
+            {
+              "url": "https://www.icrc.org/en/our-history",
+              "label": "Our history",
+              "publisher": "International Committee of the Red Cross",
+              "authorityId": "icrc",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ICRC history confirms Henry Dunant's role in its creation and the Red Cross movement."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1901",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The names have been restored from extraction mojibake to Henry Dunant and Frédéric Passy."
+        },
+        {
+          "questionId": "WGI-Q0085-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب International Committee of the Red Cross ہے۔ ڈونان کے تصور سے 1863 میں ICRC وجود میں آیا۔",
+          "answer": "International Committee of the Red Cross",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 85",
+            "referenceUrl": "https://www.nobelprize.org/prizes/peace/1901/summary/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.nobelprize.org/prizes/peace/1901/summary/",
+              "label": "Nobel Peace Prize 1901",
+              "publisher": "Nobel Prize Outreach",
+              "authorityId": "nobel-prize",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The official prize record identifies Henry Dunant and Frederic Passy as the 1901 co-laureates."
+            },
+            {
+              "url": "https://www.icrc.org/en/our-history",
+              "label": "Our history",
+              "publisher": "International Committee of the Red Cross",
+              "authorityId": "icrc",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ICRC history confirms Henry Dunant's role in its creation and the Red Cross movement."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0086",
+      "pairId": "WGI-Q0086",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "South Korea ↔ Korean Peninsula",
+      "subtitleUrdu": "یہ جنوبی کوریا کے لیے استعمال ہونے والا معروف ثقافتی لقب ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: South Korea ↔ Korean Peninsula",
+      "searchTerms": [
+        "WGI-Q0086",
+        "Which country is commonly called the 'Land of the Morning Calm'?",
+        "کس ملک کو عام طور پر 'Land of the Morning Calm' کہا جاتا ہے؟",
+        "South Korea occupies the southern part of which peninsula?",
+        "جنوبی کوریا کس جزیرہ نما کے جنوبی حصے میں واقع ہے؟",
+        "South Korea",
+        "Korean Peninsula",
+        "wgi",
+        "wgi-q0086",
+        "wgi",
+        "wgi-q0086"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0086-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب South Korea ہے۔ یہ جنوبی کوریا کے لیے استعمال ہونے والا معروف ثقافتی لقب ہے۔",
+          "answer": "South Korea",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.5, item 86",
+            "referenceUrl": "https://www.korea.net/NewsFocus/People/view?articleId=122595",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.korea.net/NewsFocus/People/view?articleId=122595",
+              "label": "Here comes the sun",
+              "publisher": "Korea.net",
+              "authorityId": "korea-net",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Republic of Korea's official portal uses Land of the Morning Calm as Korea's nickname."
+            },
+            {
+              "url": "https://www.britannica.com/place/South-Korea",
+              "label": "South Korea",
+              "publisher": "Encyclopaedia Britannica",
+              "authorityId": "britannica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The encyclopedia independently describes South Korea on the southern Korean Peninsula."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The colloquial epithet is retained as a recognition question, not treated as a formal state title."
+        },
+        {
+          "questionId": "WGI-Q0086-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Korean Peninsula ہے۔ جنوبی کوریا جزیرہ نما کوریا کے جنوبی حصے پر واقع ہے۔",
+          "answer": "Korean Peninsula",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 86",
+            "referenceUrl": "https://www.korea.net/NewsFocus/People/view?articleId=122595",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.korea.net/NewsFocus/People/view?articleId=122595",
+              "label": "Here comes the sun",
+              "publisher": "Korea.net",
+              "authorityId": "korea-net",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Republic of Korea's official portal uses Land of the Morning Calm as Korea's nickname."
+            },
+            {
+              "url": "https://www.britannica.com/place/South-Korea",
+              "label": "South Korea",
+              "publisher": "Encyclopaedia Britannica",
+              "authorityId": "britannica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The encyclopedia independently describes South Korea on the southern Korean Peninsula."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0093",
+      "pairId": "WGI-Q0093",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Nairobi ↔ 1972",
+      "subtitleUrdu": "UNEP کا عالمی صدر دفتر نیروبی، کینیا میں ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Nairobi ↔ 1972",
+      "searchTerms": [
+        "WGI-Q0093",
+        "Where is the global headquarters of the United Nations Environment Programme (UNEP)?",
+        "United Nations Environment Programme (UNEP) کا عالمی صدر دفتر کہاں ہے؟",
+        "In which year was the United Nations Environment Programme established?",
+        "United Nations Environment Programme کس سال قائم ہوا؟",
+        "Nairobi",
+        "1972",
+        "wgi",
+        "wgi-q0093",
+        "wgi",
+        "wgi-q0093"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0093-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Nairobi ہے۔ UNEP کا عالمی صدر دفتر نیروبی، کینیا میں ہے۔",
+          "answer": "Nairobi",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.6, item 93",
+            "referenceUrl": "https://www.unep.org/news-and-stories/story/how-nairobi-came-host-uneps-headquarters",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.unep.org/news-and-stories/story/how-nairobi-came-host-uneps-headquarters",
+              "label": "How Nairobi came to host UNEP headquarters",
+              "publisher": "United Nations Environment Programme",
+              "authorityId": "unep",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UNEP records its 1972 establishment and selection of Nairobi for its headquarters."
+            },
+            {
+              "url": "https://www.un.org/en/visit/nairobi/about-us",
+              "label": "About the UN Office at Nairobi",
+              "publisher": "United Nations",
+              "authorityId": "united-nations",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN confirms that Nairobi services the global headquarters of UNEP."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The printed headquarters is confirmed; the paired question adds the institution's founding year."
+        },
+        {
+          "questionId": "WGI-Q0093-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب 1972 ہے۔ UNEP کو 1972 میں قائم کیا گیا اور اس کا صدر دفتر نیروبی بنا۔",
+          "answer": "1972",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 93",
+            "referenceUrl": "https://www.unep.org/news-and-stories/story/how-nairobi-came-host-uneps-headquarters",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.unep.org/news-and-stories/story/how-nairobi-came-host-uneps-headquarters",
+              "label": "How Nairobi came to host UNEP headquarters",
+              "publisher": "United Nations Environment Programme",
+              "authorityId": "unep",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UNEP records its 1972 establishment and selection of Nairobi for its headquarters."
+            },
+            {
+              "url": "https://www.un.org/en/visit/nairobi/about-us",
+              "label": "About the UN Office at Nairobi",
+              "publisher": "United Nations",
+              "authorityId": "united-nations",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN confirms that Nairobi services the global headquarters of UNEP."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0095",
+      "pairId": "WGI-Q0095",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "Myanmar ↔ Yangon",
+      "subtitleUrdu": "میانمار کے منظرنامے میں بے شمار سنہری پگوڈا نمایاں ہیں۔",
+      "important": true,
+      "repeatCount": 2,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Myanmar ↔ Yangon",
+      "searchTerms": [
+        "WGI-Q0095",
+        "Which country is widely known as the 'Land of the Golden Pagodas'?",
+        "کس ملک کو وسیع طور پر 'Land of the Golden Pagodas' کہا جاتا ہے؟",
+        "The famous Shwedagon Pagoda is located in which Myanmar city?",
+        "مشہور Shwedagon Pagoda میانمار کے کس شہر میں واقع ہے؟",
+        "Myanmar",
+        "Yangon",
+        "wgi",
+        "wgi-q0095",
+        "wgi",
+        "wgi-q0095"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0095-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Myanmar ہے۔ میانمار کے منظرنامے میں بے شمار سنہری پگوڈا نمایاں ہیں۔",
+          "answer": "Myanmar",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.6, item 95",
+            "referenceUrl": "https://tourism.gov.mm/en/about-myanmar",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://tourism.gov.mm/en/about-myanmar",
+              "label": "About Myanmar",
+              "publisher": "Myanmar Ministry of Hotels and Tourism",
+              "authorityId": "myanmar-tourism-ministry",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The official tourism page emphasizes Myanmar's golden pagodas and cultural identity."
+            },
+            {
+              "url": "https://www.nationalgeographic.com/travel/article/four-ways-travelers-can-save-burma-myanmar",
+              "label": "Four ways travelers can help save Myanmar",
+              "publisher": "National Geographic",
+              "authorityId": "national-geographic",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "National Geographic describes Myanmar as the land of the golden pagodas."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The phrase is treated as a widely used cultural epithet, not as an official constitutional title."
+        },
+        {
+          "questionId": "WGI-Q0095-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Yangon ہے۔ شیوے ڈاگون پگوڈا یانگون کی سب سے معروف مذہبی یادگاروں میں ہے۔",
+          "answer": "Yangon",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 95",
+            "referenceUrl": "https://tourism.gov.mm/en/about-myanmar",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://tourism.gov.mm/en/about-myanmar",
+              "label": "About Myanmar",
+              "publisher": "Myanmar Ministry of Hotels and Tourism",
+              "authorityId": "myanmar-tourism-ministry",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The official tourism page emphasizes Myanmar's golden pagodas and cultural identity."
+            },
+            {
+              "url": "https://www.nationalgeographic.com/travel/article/four-ways-travelers-can-save-burma-myanmar",
+              "label": "Four ways travelers can help save Myanmar",
+              "publisher": "National Geographic",
+              "authorityId": "national-geographic",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "National Geographic describes Myanmar as the land of the golden pagodas."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0096",
+      "pairId": "WGI-Q0096",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Myanmar ↔ 18 June 1989",
+      "subtitleUrdu": "1989 میں Burma نے اقوام متحدہ کو سرکاری نام Myanmar ہونے کی اطلاع دی۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Myanmar ↔ 18 June 1989",
+      "searchTerms": [
+        "WGI-Q0096",
+        "In 1989, the country officially known in English as Burma changed its name to what?",
+        "1989 میں انگریزی میں سرکاری طور پر Burma کہلانے والے ملک نے اپنا نام بدل کر کیا رکھا؟",
+        "On what date in 1989 did Burma notify the United Nations of the name Myanmar?",
+        "1989 میں Burma نے کس تاریخ کو اقوام متحدہ کو Myanmar نام کی اطلاع دی؟",
+        "Myanmar",
+        "18 June 1989",
+        "wgi",
+        "wgi-q0096",
+        "wgi",
+        "wgi-q0096"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0096-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Myanmar ہے۔ 1989 میں Burma نے اقوام متحدہ کو سرکاری نام Myanmar ہونے کی اطلاع دی۔",
+          "answer": "Myanmar",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.6, item 96",
+            "referenceUrl": "https://www.un.org/zh/about-us/member-states/myanmar",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.un.org/zh/about-us/member-states/myanmar",
+              "label": "Myanmar member-state name history",
+              "publisher": "United Nations",
+              "authorityId": "united-nations",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN records notification on 18 June 1989 that Burma had changed its name to Myanmar."
+            },
+            {
+              "url": "https://www.britannica.com/place/Myanmar",
+              "label": "Myanmar",
+              "publisher": "Encyclopaedia Britannica",
+              "authorityId": "britannica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The encyclopedia independently explains the 1989 official English name change from Burma to Myanmar."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1989",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The question states the official-name change without implying that every government or speaker stopped using Burma."
+        },
+        {
+          "questionId": "WGI-Q0096-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب 18 June 1989 ہے۔ اقوام متحدہ کے ریکارڈ میں یہی اطلاع کی تاریخ درج ہے۔",
+          "answer": "18 June 1989",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 96",
+            "referenceUrl": "https://www.un.org/zh/about-us/member-states/myanmar",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.un.org/zh/about-us/member-states/myanmar",
+              "label": "Myanmar member-state name history",
+              "publisher": "United Nations",
+              "authorityId": "united-nations",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN records notification on 18 June 1989 that Burma had changed its name to Myanmar."
+            },
+            {
+              "url": "https://www.britannica.com/place/Myanmar",
+              "label": "Myanmar",
+              "publisher": "Encyclopaedia Britannica",
+              "authorityId": "britannica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The encyclopedia independently explains the 1989 official English name change from Burma to Myanmar."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1989-06-18",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0100",
+      "pairId": "WGI-Q0100",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "London ↔ 1948",
+      "subtitleUrdu": "IMO کا صدر دفتر لندن، برطانیہ میں ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: London ↔ 1948",
+      "searchTerms": [
+        "WGI-Q0100",
+        "In which city is the International Maritime Organization (IMO) headquartered?",
+        "International Maritime Organization (IMO) کا صدر دفتر کس شہر میں ہے؟",
+        "In which year was the convention establishing the International Maritime Organization adopted?",
+        "International Maritime Organization قائم کرنے والا کنونشن کس سال منظور ہوا؟",
+        "London",
+        "1948",
+        "wgi",
+        "wgi-q0100",
+        "wgi",
+        "wgi-q0100"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0100-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب London ہے۔ IMO کا صدر دفتر لندن، برطانیہ میں ہے۔",
+          "answer": "London",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.6, item 100",
+            "referenceUrl": "https://www.imo.org/en/mediacentre/pages/whatsnew-1214.aspx",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.imo.org/en/mediacentre/pages/whatsnew-1214.aspx",
+              "label": "IMO 70th anniversary and headquarters",
+              "publisher": "International Maritime Organization",
+              "authorityId": "imo",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "IMO confirms its London headquarters and adoption of its founding convention in March 1948."
+            },
+            {
+              "url": "https://legal.un.org/ola/lc_06-19-2019_London_IMO.aspx",
+              "label": "Visit to IMO headquarters in London",
+              "publisher": "United Nations Office of Legal Affairs",
+              "authorityId": "united-nations",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN independently confirms that IMO headquarters are in London."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The PDF's headquarters answer is confirmed; the related question uses the founding-convention year."
+        },
+        {
+          "questionId": "WGI-Q0100-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب 1948 ہے۔ IMO قائم کرنے والا کنونشن March 1948 میں منظور ہوا۔",
+          "answer": "1948",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 100",
+            "referenceUrl": "https://www.imo.org/en/mediacentre/pages/whatsnew-1214.aspx",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.imo.org/en/mediacentre/pages/whatsnew-1214.aspx",
+              "label": "IMO 70th anniversary and headquarters",
+              "publisher": "International Maritime Organization",
+              "authorityId": "imo",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "IMO confirms its London headquarters and adoption of its founding convention in March 1948."
+            },
+            {
+              "url": "https://legal.un.org/ola/lc_06-19-2019_London_IMO.aspx",
+              "label": "Visit to IMO headquarters in London",
+              "publisher": "United Nations Office of Legal Affairs",
+              "authorityId": "united-nations",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN independently confirms that IMO headquarters are in London."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0105",
+      "pairId": "WGI-Q0105",
+      "topicIds": [
+        "countries-places",
+        "books-awards-culture"
+      ],
+      "title": "New Zealand ↔ Maori",
+      "subtitleUrdu": "Aotearoa نیوزی لینڈ کا معروف Maori نام ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: New Zealand ↔ Maori",
+      "searchTerms": [
+        "WGI-Q0105",
+        "The Maori name Aotearoa, commonly rendered 'land of the long white cloud', refers to which country?",
+        "Maori نام Aotearoa، جس کا عام مفہوم 'land of the long white cloud' ہے، کس ملک کے لیے ہے؟",
+        "Aotearoa is a name from which Indigenous language?",
+        "Aotearoa کس مقامی زبان کا نام ہے؟",
+        "New Zealand",
+        "Maori",
+        "wgi",
+        "wgi-q0105",
+        "wgi",
+        "wgi-q0105"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0105-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب New Zealand ہے۔ Aotearoa نیوزی لینڈ کا معروف Maori نام ہے۔",
+          "answer": "New Zealand",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.6, item 105",
+            "referenceUrl": "https://www.newzealand.com/in/feature/manea-footprints-of-kupe/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.newzealand.com/in/feature/manea-footprints-of-kupe/",
+              "label": "Manea: Footprints of Kupe",
+              "publisher": "Tourism New Zealand",
+              "authorityId": "tourism-new-zealand",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Official tourism material uses Aotearoa for New Zealand and explains the long-white-cloud rendering."
+            },
+            {
+              "url": "https://nzhistory.govt.nz/culture/aotearoa-meaning",
+              "label": "The meaning of Aotearoa",
+              "publisher": "New Zealand Ministry for Culture and Heritage",
+              "authorityId": "nz-history",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "New Zealand's history portal explains Aotearoa as a Maori name for New Zealand and discusses its translation."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Corrected the PDF's truncated phrase 'Land of the White Cloud' to the widely used 'land of the long white cloud'; translations and origin accounts vary."
+        },
+        {
+          "questionId": "WGI-Q0105-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Maori ہے۔ Aotearoa نیوزی لینڈ کی Maori زبان سے تعلق رکھنے والا نام ہے۔",
+          "answer": "Maori",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 105",
+            "referenceUrl": "https://www.newzealand.com/in/feature/manea-footprints-of-kupe/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.newzealand.com/in/feature/manea-footprints-of-kupe/",
+              "label": "Manea: Footprints of Kupe",
+              "publisher": "Tourism New Zealand",
+              "authorityId": "tourism-new-zealand",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Official tourism material uses Aotearoa for New Zealand and explains the long-white-cloud rendering."
+            },
+            {
+              "url": "https://nzhistory.govt.nz/culture/aotearoa-meaning",
+              "label": "The meaning of Aotearoa",
+              "publisher": "New Zealand Ministry for Culture and Heritage",
+              "authorityId": "nz-history",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "New Zealand's history portal explains Aotearoa as a Maori name for New Zealand and discusses its translation."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0108",
+      "pairId": "WGI-Q0108",
+      "topicIds": [
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "New York City ↔ 170",
+      "subtitleUrdu": "کچھ اسامیاں منتقل ہونے کے باوجود UNDP کا عالمی صدر دفتر نیویارک ہی ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: New York City ↔ 170",
+      "searchTerms": [
+        "WGI-Q0108",
+        "Where is the global headquarters of the United Nations Development Programme (UNDP)?",
+        "United Nations Development Programme (UNDP) کا عالمی صدر دفتر کہاں ہے؟",
+        "UNDP works in approximately how many countries and territories?",
+        "UNDP تقریباً کتنے ممالک اور علاقوں میں کام کرتا ہے؟",
+        "New York City",
+        "170",
+        "wgi",
+        "wgi-q0108",
+        "wgi",
+        "wgi-q0108"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0108-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب New York City ہے۔ کچھ اسامیاں منتقل ہونے کے باوجود UNDP کا عالمی صدر دفتر نیویارک ہی ہے۔",
+          "answer": "New York City",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.6, item 108",
+            "referenceUrl": "https://www.undp.org/about-us/faqs",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.undp.org/about-us/faqs",
+              "label": "UNDP frequently asked questions",
+              "publisher": "United Nations Development Programme",
+              "authorityId": "undp",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UNDP states that its global headquarters are in New York and it works in about 170 countries and territories."
+            },
+            {
+              "url": "https://www.oecd.org/en/about/organisations/united-nations-development-programme.html",
+              "label": "United Nations Development Programme",
+              "publisher": "OECD",
+              "authorityId": "oecd",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The OECD organization profile independently describes UNDP's global development role and reach."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The headquarters remains New York despite a 2026 relocation of many posts to Bonn and Madrid."
+        },
+        {
+          "questionId": "WGI-Q0108-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب 170 ہے۔ UNDP تقریباً 170 ممالک اور علاقوں میں ترقیاتی کام کرتا ہے۔",
+          "answer": "170",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 108",
+            "referenceUrl": "https://www.undp.org/about-us/faqs",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.undp.org/about-us/faqs",
+              "label": "UNDP frequently asked questions",
+              "publisher": "United Nations Development Programme",
+              "authorityId": "undp",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UNDP states that its global headquarters are in New York and it works in about 170 countries and territories."
+            },
+            {
+              "url": "https://www.oecd.org/en/about/organisations/united-nations-development-programme.html",
+              "label": "United Nations Development Programme",
+              "publisher": "OECD",
+              "authorityId": "oecd",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The OECD organization profile independently describes UNDP's global development role and reach."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0112",
+      "pairId": "WGI-Q0112",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Geneva ↔ 1951",
+      "subtitleUrdu": "WMO کا صدر دفتر جنیوا، سوئٹزرلینڈ میں ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Geneva ↔ 1951",
+      "searchTerms": [
+        "WGI-Q0112",
+        "In which city is the World Meteorological Organization (WMO) headquartered?",
+        "World Meteorological Organization (WMO) کا صدر دفتر کس شہر میں ہے؟",
+        "In which year did WMO become a specialized agency of the United Nations?",
+        "WMO کس سال اقوام متحدہ کا specialized agency بنا؟",
+        "Geneva",
+        "1951",
+        "wgi",
+        "wgi-q0112",
+        "wgi",
+        "wgi-q0112"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0112-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Geneva ہے۔ WMO کا صدر دفتر جنیوا، سوئٹزرلینڈ میں ہے۔",
+          "answer": "Geneva",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.7, item 112",
+            "referenceUrl": "https://wmo.int/contact-us",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://wmo.int/contact-us",
+              "label": "WMO contact and headquarters",
+              "publisher": "World Meteorological Organization",
+              "authorityId": "wmo",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "WMO lists its headquarters at 7bis Avenue de la Paix in Geneva."
+            },
+            {
+              "url": "https://www.ungeneva.org/en/about/organizations/wmo",
+              "label": "World Meteorological Organization",
+              "publisher": "United Nations Office at Geneva",
+              "authorityId": "un-geneva",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UN Geneva independently lists WMO headquarters in Geneva and identifies it as a UN specialized agency."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The paired practice question adds the year WMO became a UN specialized agency."
+        },
+        {
+          "questionId": "WGI-Q0112-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب 1951 ہے۔ WMO نے 1951 میں اقوام متحدہ کے specialized agency کی حیثیت حاصل کی۔",
+          "answer": "1951",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 112",
+            "referenceUrl": "https://wmo.int/contact-us",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://wmo.int/contact-us",
+              "label": "WMO contact and headquarters",
+              "publisher": "World Meteorological Organization",
+              "authorityId": "wmo",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "WMO lists its headquarters at 7bis Avenue de la Paix in Geneva."
+            },
+            {
+              "url": "https://www.ungeneva.org/en/about/organizations/wmo",
+              "label": "World Meteorological Organization",
+              "publisher": "United Nations Office at Geneva",
+              "authorityId": "un-geneva",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UN Geneva independently lists WMO headquarters in Geneva and identifies it as a UN specialized agency."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0113",
+      "pairId": "WGI-Q0113",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "International Meteorological Organization ↔ Vienna",
+      "subtitleUrdu": "یہی IMO بعد میں WMO میں تبدیل ہوا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: International Meteorological Organization ↔ Vienna",
+      "searchTerms": [
+        "WGI-Q0113",
+        "Which nongovernmental predecessor organization gave rise to WMO?",
+        "کس غیر سرکاری پیش رو ادارے سے WMO وجود میں آیا؟",
+        "In which city did the 1873 International Meteorological Congress meet?",
+        "1873 کا International Meteorological Congress کس شہر میں منعقد ہوا؟",
+        "International Meteorological Organization",
+        "Vienna",
+        "wgi",
+        "wgi-q0113",
+        "wgi",
+        "wgi-q0113"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0113-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب International Meteorological Organization ہے۔ یہی IMO بعد میں WMO میں تبدیل ہوا۔",
+          "answer": "International Meteorological Organization",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.7, item 113",
+            "referenceUrl": "https://wmo.int/about-wmo/history-of-imo-and-wmo",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://wmo.int/about-wmo/history-of-imo-and-wmo",
+              "label": "History of IMO and WMO",
+              "publisher": "World Meteorological Organization",
+              "authorityId": "wmo",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "WMO traces its roots to the nongovernmental International Meteorological Organization and the 1873 Vienna congress."
+            },
+            {
+              "url": "https://digitallibrary.un.org/record/3894661/files/wmo_1036_en.pdf",
+              "label": "WMO historical review",
+              "publisher": "United Nations Digital Library",
+              "authorityId": "un-digital-library",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN-hosted historical review independently records the 1873 International Meteorological Congress and IMO origins."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The source wording is refined: the 1873 Vienna congress initiated the process; IMO formally came into being later in 1879."
+        },
+        {
+          "questionId": "WGI-Q0113-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Vienna ہے۔ 1873 کے ویانا اجلاس نے بین الاقوامی موسمی تعاون کے ادارہ جاتی عمل کی بنیاد رکھی۔",
+          "answer": "Vienna",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 113",
+            "referenceUrl": "https://wmo.int/about-wmo/history-of-imo-and-wmo",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://wmo.int/about-wmo/history-of-imo-and-wmo",
+              "label": "History of IMO and WMO",
+              "publisher": "World Meteorological Organization",
+              "authorityId": "wmo",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "WMO traces its roots to the nongovernmental International Meteorological Organization and the 1873 Vienna congress."
+            },
+            {
+              "url": "https://digitallibrary.un.org/record/3894661/files/wmo_1036_en.pdf",
+              "label": "WMO historical review",
+              "publisher": "United Nations Digital Library",
+              "authorityId": "un-digital-library",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN-hosted historical review independently records the 1873 International Meteorological Congress and IMO origins."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1873",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0115",
+      "pairId": "WGI-Q0115",
+      "topicIds": [
+        "dates-timelines",
+        "countries-places"
+      ],
+      "title": "Nazi Germany ↔ Reich Citizenship Law and German Blood and Honor Law",
+      "subtitleUrdu": "Nuremberg Laws نازی جرمنی میں 15 September 1935 کو منظور ہوئے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Nazi Germany ↔ Reich Citizenship Law and German Blood and Honor Law",
+      "searchTerms": [
+        "WGI-Q0115",
+        "The antisemitic Nuremberg Laws of 15 September 1935 were enacted in which country?",
+        "15 September 1935 کے یہود مخالف Nuremberg Laws کس ملک میں نافذ ہوئے؟",
+        "Which pair formed the core of the 1935 Nuremberg Laws?",
+        "1935 کے Nuremberg Laws کی بنیادی جوڑی کون سی تھی؟",
+        "Nazi Germany",
+        "Reich Citizenship Law and German Blood and Honor Law",
+        "wgi",
+        "wgi-q0115",
+        "wgi",
+        "wgi-q0115"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0115-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Nazi Germany ہے۔ Nuremberg Laws نازی جرمنی میں 15 September 1935 کو منظور ہوئے۔",
+          "answer": "Nazi Germany",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.7, item 115",
+            "referenceUrl": "https://encyclopedia.ushmm.org/content/en/article/nuremberg-laws",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://encyclopedia.ushmm.org/content/en/article/nuremberg-laws",
+              "label": "Nuremberg Race Laws",
+              "publisher": "United States Holocaust Memorial Museum",
+              "authorityId": "ushmm",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The museum documents the two antisemitic laws enacted in Nazi Germany on 15 September 1935."
+            },
+            {
+              "url": "https://museums.nuernberg.de/documentation-center/topics/national-socialism/racism-and-anti-semitism/the-nuremberg-laws",
+              "label": "The Nuremberg Laws",
+              "publisher": "Documentation Center Nazi Party Rally Grounds",
+              "authorityId": "nuremberg-documentation-center",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Nuremberg's documentation center independently explains the citizenship and blood-protection laws."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1935-09-15",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The wording accurately characterizes the laws as antisemitic and racist legislation of Nazi Germany."
+        },
+        {
+          "questionId": "WGI-Q0115-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Reich Citizenship Law and German Blood and Honor Law ہے۔ انہی دونوں قوانین نے نسلی امتیاز کو قانونی شکل دی۔",
+          "answer": "Reich Citizenship Law and German Blood and Honor Law",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 115",
+            "referenceUrl": "https://encyclopedia.ushmm.org/content/en/article/nuremberg-laws",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://encyclopedia.ushmm.org/content/en/article/nuremberg-laws",
+              "label": "Nuremberg Race Laws",
+              "publisher": "United States Holocaust Memorial Museum",
+              "authorityId": "ushmm",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The museum documents the two antisemitic laws enacted in Nazi Germany on 15 September 1935."
+            },
+            {
+              "url": "https://museums.nuernberg.de/documentation-center/topics/national-socialism/racism-and-anti-semitism/the-nuremberg-laws",
+              "label": "The Nuremberg Laws",
+              "publisher": "Documentation Center Nazi Party Rally Grounds",
+              "authorityId": "nuremberg-documentation-center",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Nuremberg's documentation center independently explains the citizenship and blood-protection laws."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1935",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Related practice fact independently checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0124",
+      "pairId": "WGI-Q0124",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "Malaysian ringgit ↔ MYR",
+      "subtitleUrdu": "ملائیشیا کی سرکاری مالی اکائی ملائیشین رنگٹ ہے، جسے مرکزی بینک جاری کرتا ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Malaysian ringgit ↔ MYR",
+      "searchTerms": [
+        "WGI-Q0124",
+        "What is the official currency of Malaysia?",
+        "ملائیشیا کی سرکاری کرنسی کیا ہے؟",
+        "What is the three-letter currency code for the Malaysian ringgit?",
+        "ملائیشین رنگٹ کا تین حرفی کرنسی کوڈ کیا ہے؟",
+        "Malaysian ringgit",
+        "MYR",
+        "wgi",
+        "wgi-q0124",
+        "wgi",
+        "wgi-q0124"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0124-SRC",
+          "kind": "source",
+          "textUrdu": "ملائیشیا کی سرکاری مالی اکائی ملائیشین رنگٹ ہے، جسے مرکزی بینک جاری کرتا ہے۔",
+          "answer": "Malaysian ringgit",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.7, item 124",
+            "referenceUrl": "https://amlcft.bnm.gov.my/web/guest/currency",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://amlcft.bnm.gov.my/web/guest/currency",
+              "label": "Currency of Malaysia",
+              "publisher": "Bank Negara Malaysia",
+              "authorityId": "bank-negara-malaysia",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Malaysia's central bank identifies the Malaysian ringgit as the national currency."
+            },
+            {
+              "url": "https://data.imf.org/api/document/download?key=61751229",
+              "label": "Currency code annex",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The IMF currency annex lists the Malaysian ringgit for Malaysia."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0124-SIM",
+          "kind": "similar",
+          "textUrdu": "ملائیشین رنگٹ کا بین الاقوامی تین حرفی کرنسی کوڈ MYR ہے۔",
+          "answer": "MYR",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: Malaysian ringgit code",
+            "referenceUrl": "https://data.imf.org/api/document/download?key=61751229",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://data.imf.org/api/document/download?key=61751229",
+              "label": "Currency code annex",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The IMF annex records MYR as the code for Malaysia's ringgit."
+            },
+            {
+              "url": "https://amlcft.bnm.gov.my/web/guest/currency",
+              "label": "Currency of Malaysia",
+              "publisher": "Bank Negara Malaysia",
+              "authorityId": "bank-negara-malaysia",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Bank Negara Malaysia uses MYR for the Malaysian ringgit in its currency information."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0126",
+      "pairId": "WGI-Q0126",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places",
+        "events-history"
+      ],
+      "title": "Rome ↔ IFAD",
+      "subtitleUrdu": "بین الاقوامی فنڈ برائے زرعی ترقی، یعنی IFAD، کا صدر دفتر روم، اٹلی میں ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Rome ↔ IFAD",
+      "searchTerms": [
+        "WGI-Q0126",
+        "In which city is the headquarters of the International Fund for Agricultural Development located?",
+        "بین الاقوامی فنڈ برائے زرعی ترقی کا صدر دفتر کس شہر میں واقع ہے؟",
+        "Which institution, established in 1977 after the 1974 World Food Conference, focuses on rural development?",
+        "1974 کی عالمی خوراک کانفرنس کے بعد 1977 میں قائم ہونے والا کون سا ادارہ دیہی ترقی پر توجہ دیتا ہے؟",
+        "Rome",
+        "IFAD",
+        "wgi",
+        "wgi-q0126",
+        "wgi",
+        "wgi-q0126"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0126-SRC",
+          "kind": "source",
+          "textUrdu": "بین الاقوامی فنڈ برائے زرعی ترقی، یعنی IFAD، کا صدر دفتر روم، اٹلی میں ہے۔",
+          "answer": "Rome",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.7, item 126",
+            "referenceUrl": "https://www.ifad.org/en/contact-us",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.ifad.org/en/contact-us",
+              "label": "Contact IFAD",
+              "publisher": "International Fund for Agricultural Development",
+              "authorityId": "ifad",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "IFAD's official contact page gives its headquarters address in Rome, Italy."
+            },
+            {
+              "url": "https://www.un.org/about-us/un-system",
+              "label": "United Nations system",
+              "publisher": "United Nations",
+              "authorityId": "united-nations",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The United Nations system directory places IFAD's headquarters in Rome."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0126-SIM",
+          "kind": "similar",
+          "textUrdu": "IFAD کو 1977 میں ایک بین الاقوامی مالیاتی ادارے کے طور پر قائم کیا گیا تاکہ دیہی غربت اور غذائی تحفظ پر کام کیا جا سکے۔",
+          "answer": "IFAD",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: establishment of IFAD",
+            "referenceUrl": "https://www.un.org/about-us/un-system",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.un.org/about-us/un-system",
+              "label": "United Nations system",
+              "publisher": "United Nations",
+              "authorityId": "united-nations",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The UN system account states that IFAD was established in 1977 following the World Food Conference."
+            },
+            {
+              "url": "https://knowledge-for-policy.ec.europa.eu/organisation/ifad-international-fund-agricultural-development_en",
+              "label": "International Fund for Agricultural Development",
+              "publisher": "European Commission",
+              "authorityId": "european-commission",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The European Commission profile identifies IFAD and its 1977 creation for rural development."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1977",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0128",
+      "pairId": "WGI-Q0128",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "UAE dirham ↔ AED",
+      "subtitleUrdu": "متحدہ عرب امارات کی سرکاری مالی اکائی اماراتی درہم ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: UAE dirham ↔ AED",
+      "searchTerms": [
+        "WGI-Q0128",
+        "What is the official currency of the United Arab Emirates?",
+        "متحدہ عرب امارات کی سرکاری کرنسی کیا ہے؟",
+        "What is the three-letter currency code for the UAE dirham?",
+        "اماراتی درہم کا تین حرفی کرنسی کوڈ کیا ہے؟",
+        "UAE dirham",
+        "AED",
+        "wgi",
+        "wgi-q0128",
+        "wgi",
+        "wgi-q0128"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0128-SRC",
+          "kind": "source",
+          "textUrdu": "متحدہ عرب امارات کی سرکاری مالی اکائی اماراتی درہم ہے۔",
+          "answer": "UAE dirham",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.7, item 128",
+            "referenceUrl": "https://rulebook.centralbank.ae/en/rulebook/article-52-currency-unit",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://rulebook.centralbank.ae/en/rulebook/article-52-currency-unit",
+              "label": "Article 52: Currency unit",
+              "publisher": "Central Bank of the United Arab Emirates",
+              "authorityId": "cbuae",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UAE law states that the currency unit of the state is the dirham."
+            },
+            {
+              "url": "https://data.imf.org/api/document/download?key=61751229",
+              "label": "Currency code annex",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The IMF annex lists the UAE dirham as the country's currency."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0128-SIM",
+          "kind": "similar",
+          "textUrdu": "اماراتی درہم کا بین الاقوامی تین حرفی کرنسی کوڈ AED ہے۔",
+          "answer": "AED",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: UAE dirham code",
+            "referenceUrl": "https://data.imf.org/api/document/download?key=61751229",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://data.imf.org/api/document/download?key=61751229",
+              "label": "Currency code annex",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The IMF annex records AED as the code for the UAE dirham."
+            },
+            {
+              "url": "https://rulebook.centralbank.ae/en/rulebook/article-52-currency-unit",
+              "label": "Article 52: Currency unit",
+              "publisher": "Central Bank of the United Arab Emirates",
+              "authorityId": "cbuae",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UAE central-bank rulebook uses the official dirham designation represented internationally as AED."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0129",
+      "pairId": "WGI-Q0129",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Abu Dhabi ↔ 26 January",
+      "subtitleUrdu": "بین الاقوامی قابل تجدید توانائی ایجنسی، یعنی IRENA، کا مستقل صدر دفتر ابوظبی میں ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Abu Dhabi ↔ 26 January",
+      "searchTerms": [
+        "WGI-Q0129",
+        "In which city is the headquarters of the International Renewable Energy Agency located?",
+        "بین الاقوامی قابل تجدید توانائی ایجنسی کا صدر دفتر کس شہر میں واقع ہے؟",
+        "On what date in 2009 was IRENA officially founded?",
+        "2009 میں IRENA باضابطہ طور پر کس تاریخ کو قائم ہوئی؟",
+        "Abu Dhabi",
+        "26 January",
+        "wgi",
+        "wgi-q0129",
+        "wgi",
+        "wgi-q0129"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0129-SRC",
+          "kind": "source",
+          "textUrdu": "بین الاقوامی قابل تجدید توانائی ایجنسی، یعنی IRENA، کا مستقل صدر دفتر ابوظبی میں ہے۔",
+          "answer": "Abu Dhabi",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.7, item 129",
+            "referenceUrl": "https://www.irena.org/news/pressreleases/2015/Jun/IRENA-Opens-Doors-on-New-Permanent-Headquarters-in-Masdar-City",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.irena.org/news/pressreleases/2015/Jun/IRENA-Opens-Doors-on-New-Permanent-Headquarters-in-Masdar-City",
+              "label": "IRENA opens permanent headquarters",
+              "publisher": "International Renewable Energy Agency",
+              "authorityId": "irena",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "IRENA announces its permanent headquarters in Masdar City, Abu Dhabi."
+            },
+            {
+              "url": "https://www.mofa.gov.ae/en/MediaHub/News/2019/2015/6/3/030615-headquarters",
+              "label": "IRENA headquarters in Abu Dhabi",
+              "publisher": "UAE Ministry of Foreign Affairs",
+              "authorityId": "uae-mofa",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UAE foreign ministry confirms IRENA's permanent Abu Dhabi headquarters."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0129-SIM",
+          "kind": "similar",
+          "textUrdu": "IRENA باضابطہ طور پر 26 جنوری 2009 کو بون میں منعقدہ بانی کانفرنس میں قائم ہوئی۔",
+          "answer": "26 January",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: founding of IRENA",
+            "referenceUrl": "https://www.irena.org/About/History/Creation-of-IRENA",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.irena.org/About/History/Creation-of-IRENA",
+              "label": "Creation of IRENA",
+              "publisher": "International Renewable Energy Agency",
+              "authorityId": "irena",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "IRENA's history records its founding conference on 26 January 2009."
+            },
+            {
+              "url": "https://www.auswaertiges-amt.de/en/newsroom/news/090619-irena100-218706",
+              "label": "IRENA founding and membership",
+              "publisher": "Federal Foreign Office of Germany",
+              "authorityId": "german-foreign-office",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Germany's foreign office confirms that IRENA was founded on 26 January 2009."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "2009-01-26",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0131",
+      "pairId": "WGI-Q0131",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Paris ↔ OECD",
+      "subtitleUrdu": "اقتصادی تعاون اور ترقی کی تنظیم، یعنی OECD، کا صدر دفتر پیرس، فرانس میں ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Paris ↔ OECD",
+      "searchTerms": [
+        "WGI-Q0131",
+        "In which city is the headquarters of the OECD located?",
+        "OECD کا صدر دفتر کس شہر میں واقع ہے؟",
+        "Which organization came into being in 1961 after replacing the OEEC?",
+        "1961 میں OEEC کی جگہ لینے کے بعد کون سی تنظیم وجود میں آئی؟",
+        "Paris",
+        "OECD",
+        "wgi",
+        "wgi-q0131",
+        "wgi",
+        "wgi-q0131"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0131-SRC",
+          "kind": "source",
+          "textUrdu": "اقتصادی تعاون اور ترقی کی تنظیم، یعنی OECD، کا صدر دفتر پیرس، فرانس میں ہے۔",
+          "answer": "Paris",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.8, item 131",
+            "referenceUrl": "https://www.oecd.org/en/about/locations.html",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.oecd.org/en/about/locations.html",
+              "label": "OECD locations",
+              "publisher": "Organisation for Economic Co-operation and Development",
+              "authorityId": "oecd",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The OECD's locations page identifies its headquarters in Paris."
+            },
+            {
+              "url": "https://www.diplomatie.gouv.fr/en/the-ministry-in-action/contributing-to-sustainable-balanced-globalization/summits-and-global-issues/france-s-action-in-the-oecd",
+              "label": "France's action in the OECD",
+              "publisher": "French Ministry for Europe and Foreign Affairs",
+              "authorityId": "france-diplomatie",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "France's foreign ministry identifies Paris as the seat of the OECD."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0131-SIM",
+          "kind": "similar",
+          "textUrdu": "OECD نے 1961 میں کام شروع کیا اور اس نے یورپی اقتصادی تعاون کی تنظیم، یعنی OEEC، کی جگہ لی۔",
+          "answer": "OECD",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: creation of the OECD",
+            "referenceUrl": "https://www.oecd.org/en/about/history/the-organisation-for-european-economic-co-operation-oeec.html",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.oecd.org/en/about/history/the-organisation-for-european-economic-co-operation-oeec.html",
+              "label": "From the OEEC to the OECD",
+              "publisher": "Organisation for Economic Co-operation and Development",
+              "authorityId": "oecd",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "OECD history records that the OECD superseded the OEEC and came into being in 1961."
+            },
+            {
+              "url": "https://www.diplomatie.gouv.fr/en/the-ministry-in-action/contributing-to-sustainable-balanced-globalization/summits-and-global-issues/france-s-action-in-the-oecd",
+              "label": "France's action in the OECD",
+              "publisher": "French Ministry for Europe and Foreign Affairs",
+              "authorityId": "france-diplomatie",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The French foreign ministry confirms the OECD's establishment in 1961."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1961",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0140",
+      "pairId": "WGI-Q0140",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "events-history"
+      ],
+      "title": "Great Depression ↔ Promoting monetary cooperation and exchange stability",
+      "subtitleUrdu": "عظیم کساد بازاری نے عالمی مالی تعاون کی کمزوری دکھائی، جس کے بعد بریٹن ووڈز نظام اور IMF کے قیام کی راہ ہموار ہوئی۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Great Depression ↔ Promoting monetary cooperation and exchange stability",
+      "searchTerms": [
+        "WGI-Q0140",
+        "Which 1930s economic crisis helped motivate the creation of the IMF?",
+        "1930 کی دہائی کے کس معاشی بحران نے IMF کے قیام کی تحریک پیدا کی؟",
+        "What core purpose did the Bretton Woods architects assign to the IMF?",
+        "بریٹن ووڈز کے منصوبہ سازوں نے IMF کو کون سا بنیادی مقصد دیا؟",
+        "Great Depression",
+        "Promoting monetary cooperation and exchange stability",
+        "wgi",
+        "wgi-q0140",
+        "wgi",
+        "wgi-q0140"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0140-SRC",
+          "kind": "source",
+          "textUrdu": "عظیم کساد بازاری نے عالمی مالی تعاون کی کمزوری دکھائی، جس کے بعد بریٹن ووڈز نظام اور IMF کے قیام کی راہ ہموار ہوئی۔",
+          "answer": "Great Depression",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.8, item 140",
+            "referenceUrl": "https://www.imf.org/external/about/timeline/index.htm",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.imf.org/external/about/timeline/index.htm",
+              "label": "IMF timeline",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The IMF timeline connects its creation to lessons from the Great Depression."
+            },
+            {
+              "url": "https://history.state.gov/milestones/1937-1945/bretton-woods",
+              "label": "Bretton Woods Conference",
+              "publisher": "U.S. Department of State, Office of the Historian",
+              "authorityId": "us-state-historian",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The State Department history explains that interwar depression and monetary disorder motivated Bretton Woods institutions."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0140-SIM",
+          "kind": "similar",
+          "textUrdu": "IMF کو بین الاقوامی مالی تعاون بڑھانے اور شرح مبادلہ کے استحکام میں مدد دینے کے لیے بنایا گیا تھا۔",
+          "answer": "Promoting monetary cooperation and exchange stability",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: purpose of the IMF",
+            "referenceUrl": "https://www.imf.org/external/about/timeline/index.htm",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.imf.org/external/about/timeline/index.htm",
+              "label": "IMF timeline",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The IMF's history states that monetary cooperation and exchange stability were central purposes."
+            },
+            {
+              "url": "https://history.state.gov/milestones/1937-1945/bretton-woods",
+              "label": "Bretton Woods Conference",
+              "publisher": "U.S. Department of State, Office of the Historian",
+              "authorityId": "us-state-historian",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The State Department describes the IMF's Bretton Woods role in monetary cooperation and stable exchange relations."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0141",
+      "pairId": "WGI-Q0141",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places",
+        "events-history"
+      ],
+      "title": "44 ↔ 191",
+      "subtitleUrdu": "جولائی 1944 میں 44 ممالک کے نمائندے بریٹن ووڈز کانفرنس میں شریک ہوئے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 44 ↔ 191",
+      "searchTerms": [
+        "WGI-Q0141",
+        "How many countries sent delegates to the Bretton Woods Conference in 1944?",
+        "1944 کی بریٹن ووڈز کانفرنس میں کتنے ممالک نے نمائندے بھیجے؟",
+        "As of 2026, how many member countries does the IMF have?",
+        "2026 تک IMF کے رکن ممالک کی تعداد کتنی ہے؟",
+        "44",
+        "191",
+        "wgi",
+        "wgi-q0141",
+        "wgi",
+        "wgi-q0141"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0141-SRC",
+          "kind": "source",
+          "textUrdu": "جولائی 1944 میں 44 ممالک کے نمائندے بریٹن ووڈز کانفرنس میں شریک ہوئے۔",
+          "answer": "44",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.8, item 141",
+            "referenceUrl": "https://www.imf.org/en/about",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.imf.org/en/about",
+              "label": "About the IMF",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The IMF states that representatives of 44 countries met at Bretton Woods in 1944."
+            },
+            {
+              "url": "https://history.state.gov/milestones/1937-1945/bretton-woods",
+              "label": "Bretton Woods Conference",
+              "publisher": "U.S. Department of State, Office of the Historian",
+              "authorityId": "us-state-historian",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The State Department history records delegates from 44 nations at the 1944 conference."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1944",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0141-SIM",
+          "kind": "similar",
+          "textUrdu": "2026 تک IMF کے 191 رکن ممالک ہیں؛ اس تعداد کو وقت کے ساتھ دوبارہ جانچنا ضروری ہے۔",
+          "answer": "191",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: IMF membership in 2026",
+            "referenceUrl": "https://www.imf.org/en/about",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.imf.org/en/about",
+              "label": "About the IMF",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "The IMF's official overview reports 191 member countries."
+            },
+            {
+              "url": "https://medienportal.regierung.li/ministerium/16664/ministry-of-general-government-affairs-and-finance/topics/16777/International-Monetary-Fund",
+              "label": "International Monetary Fund",
+              "publisher": "Government of Liechtenstein",
+              "authorityId": "liechtenstein-government",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Liechtenstein's government IMF page independently states that the Fund has 191 members."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": "2026",
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0168",
+      "pairId": "WGI-Q0168",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places",
+        "events-history"
+      ],
+      "title": "United Nations Conference on International Organization ↔ Poland",
+      "subtitleUrdu": "درست جواب United Nations Conference on International Organization ہے، جسے San Francisco Conference بھی کہا جاتا ہے؛ منشور پر 26 June 1945 کو دستخط ہوئے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: United Nations Conference on International Organization ↔ Poland",
+      "searchTerms": [
+        "WGI-Q0168",
+        "At which conference was the United Nations Charter completed and signed in 1945?",
+        "اقوام متحدہ کا منشور 1945 میں کس کانفرنس میں مکمل ہوا اور اس پر دستخط کیے گئے؟",
+        "Which country signed the United Nations Charter later on 15 October 1945 and became one of the original 51 members?",
+        "کون سے ملک نے 15 October 1945 کو بعد میں اقوام متحدہ کے منشور پر دستخط کیے اور 51 اصل ارکان میں شامل ہوا؟",
+        "United Nations Conference on International Organization",
+        "Poland",
+        "wgi",
+        "wgi-q0168",
+        "wgi",
+        "wgi-q0168"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0168-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب United Nations Conference on International Organization ہے، جسے San Francisco Conference بھی کہا جاتا ہے؛ منشور پر 26 June 1945 کو دستخط ہوئے۔",
+          "answer": "United Nations Conference on International Organization",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.9, item 168",
+            "referenceUrl": "https://www.un.org/en/about-us/un-charter",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.un.org/en/about-us/un-charter",
+              "label": "United Nations Charter",
+              "publisher": "United Nations",
+              "authorityId": "united-nations",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "States that the Charter was signed in San Francisco at the conclusion of the United Nations Conference on International Organization."
+            },
+            {
+              "url": "https://www.archives.gov/milestone-documents/united-nations-charter",
+              "label": "United Nations Charter (1945)",
+              "publisher": "U.S. National Archives and Records Administration",
+              "authorityId": "us-national-archives",
+              "role": "answer-secondary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Confirms that representatives at the San Francisco founding conference drafted and signed the Charter on 26 June 1945."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": "1945-06-26",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The answer uses the conference's official name and notes its commonly used San Francisco Conference name."
+        },
+        {
+          "questionId": "WGI-Q0168-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Poland ہے۔ پولینڈ نے 15 October 1945 کو بعد میں منشور پر دستخط کیے اور اقوام متحدہ کے 51 اصل ارکان میں شامل ہوا۔",
+          "answer": "Poland",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 168",
+            "referenceUrl": "https://research.un.org/en/unmembers/founders",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://research.un.org/en/unmembers/founders",
+              "label": "UN Founding Member States",
+              "publisher": "United Nations Dag Hammarskjöld Library",
+              "authorityId": "un-dag-hammarskjold-library",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN research guide records Poland signing on 15 October 1945 and the 51 founding members."
+            },
+            {
+              "url": "https://www.un.org/en/about-us/history-of-the-un/preparatory-years",
+              "label": "Preparatory Years: UN Charter History",
+              "publisher": "United Nations",
+              "authorityId": "united-nations",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UN history page explains that Poland signed later and became one of the original 51 Member States."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": "1945-10-15",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The earlier signatory-count practice item duplicated an existing 50-country question; this replacement tests Poland's later signature and distinct 51-member consequence."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0177",
+      "pairId": "WGI-Q0177",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "10 ↔ Tehran",
+      "subtitleUrdu": "ECO میں 3 بانی ممالک اور 7 بعد میں شامل ہونے والے ممالک ملا کر کل 10 ارکان ہیں۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 10 ↔ Tehran",
+      "searchTerms": [
+        "WGI-Q0177",
+        "As of 2026, how many member states does the Economic Cooperation Organization have?",
+        "2026 تک Economic Cooperation Organization کے رکن ممالک کی تعداد کتنی ہے؟",
+        "As of 2026, in which city is the Economic Cooperation Organization headquartered?",
+        "2026 تک Economic Cooperation Organization کا صدر دفتر کس شہر میں ہے؟",
+        "10",
+        "Tehran",
+        "wgi",
+        "wgi-q0177",
+        "wgi",
+        "wgi-q0177"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0177-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب 10 ہے۔ ECO میں 3 بانی ممالک اور 7 بعد میں شامل ہونے والے ممالک ملا کر کل 10 ارکان ہیں۔",
+          "answer": "10",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.9, item 177",
+            "referenceUrl": "https://www.mfa.gov.tr/turkiye-and-the-economic-cooperation-organization-_eco_.en.mfa",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.mfa.gov.tr/turkiye-and-the-economic-cooperation-organization-_eco_.en.mfa",
+              "label": "Economic Cooperation Organization (ECO)",
+              "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+              "authorityId": "turkiye-mfa",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Lists the three founding members and seven additional member states, totaling ten ECO members."
+            },
+            {
+              "url": "https://www.finance.gov.pk/survey/chapters_17/Annex_II_ECO.pdf",
+              "label": "Economic Cooperation Organization annex",
+              "publisher": "Government of Pakistan, Finance Division",
+              "authorityId": "pakistan-finance-division",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Describes ECO as a ten-member regional organization and identifies its member states."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": "Membership is time-sensitive, so the stem states the 2026 verification scope explicitly."
+        },
+        {
+          "questionId": "WGI-Q0177-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Tehran ہے۔ ECO کا مرکزی دفتر ایران کے دارالحکومت تہران میں واقع ہے۔",
+          "answer": "Tehran",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 177",
+            "referenceUrl": "https://www.mfa.gov.tr/turkiye-and-the-economic-cooperation-organization-_eco_.en.mfa",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.mfa.gov.tr/turkiye-and-the-economic-cooperation-organization-_eco_.en.mfa",
+              "label": "Economic Cooperation Organization (ECO)",
+              "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+              "authorityId": "turkiye-mfa",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Identifies Tehran in the Islamic Republic of Iran as ECO headquarters."
+            },
+            {
+              "url": "https://www.finance.gov.pk/survey/chapters_17/Annex_II_ECO.pdf",
+              "label": "Economic Cooperation Organization annex",
+              "publisher": "Government of Pakistan, Finance Division",
+              "authorityId": "pakistan-finance-division",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Independently states that ECO headquarters is located in Tehran."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": "The related item tests the organization's headquarters, a distinct institutional fact checked as of 2026."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0180",
+      "pairId": "WGI-Q0180",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "events-history"
+      ],
+      "title": "1979 ↔ Treaty of Izmir",
+      "subtitleUrdu": "RCD 1964 سے 1979 تک فعال رہی، پھر اس کی سرگرمیاں رک گئیں۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 1979 ↔ Treaty of Izmir",
+      "searchTerms": [
+        "WGI-Q0180",
+        "In which year did Regional Cooperation for Development cease active operations?",
+        "Regional Cooperation for Development نے فعال سرگرمیاں کس سال بند کیں؟",
+        "As of 2026, which treaty serves as the basic charter of the Economic Cooperation Organization?",
+        "2026 تک کون سا معاہدہ Economic Cooperation Organization کے بنیادی منشور کی حیثیت رکھتا ہے؟",
+        "1979",
+        "Treaty of Izmir",
+        "wgi",
+        "wgi-q0180",
+        "wgi",
+        "wgi-q0180"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0180-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب 1979 ہے۔ RCD 1964 سے 1979 تک فعال رہی، پھر اس کی سرگرمیاں رک گئیں۔",
+          "answer": "1979",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.9, item 180",
+            "referenceUrl": "https://mfa.gov.az/en/category/international-organisations/economic-cooperation-organisation-eco",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://mfa.gov.az/en/category/international-organisations/economic-cooperation-organisation-eco",
+              "label": "Economic Cooperation Organisation (ECO)",
+              "publisher": "Ministry of Foreign Affairs of Azerbaijan",
+              "authorityId": "azerbaijan-mfa",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "States that Regional Cooperation for Development was functional from 1964 to 1979."
+            },
+            {
+              "url": "https://www.mfa.gov.tr/data/Kutuphane/yayinlar/EkonomikSorunlarDergisi/Sayi33/omer_faruk_baykal.pdf",
+              "label": "Economic Cooperation Organization study",
+              "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+              "authorityId": "turkiye-mfa",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Independently describes RCD as operating between 1964 and 1979."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The historical stopping year is corroborated by two foreign-ministry sources and does not depend on a current officeholder."
+        },
+        {
+          "questionId": "WGI-Q0180-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Treaty of Izmir ہے۔ یہی معاہدہ ECO کے بنیادی قانونی منشور کی حیثیت رکھتا ہے۔",
+          "answer": "Treaty of Izmir",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 180",
+            "referenceUrl": "https://mfa.gov.az/en/category/international-organisations/economic-cooperation-organisation-eco",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://mfa.gov.az/en/category/international-organisations/economic-cooperation-organisation-eco",
+              "label": "Economic Cooperation Organisation (ECO)",
+              "publisher": "Ministry of Foreign Affairs of Azerbaijan",
+              "authorityId": "azerbaijan-mfa",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Identifies the Treaty of Izmir as ECO's basic charter."
+            },
+            {
+              "url": "https://www.mfa.gov.tr/data/Kutuphane/yayinlar/EkonomikSorunlarDergisi/Sayi33/omer_faruk_baykal.pdf",
+              "label": "Economic Cooperation Organization study",
+              "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+              "authorityId": "turkiye-mfa",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer",
+                "temporal-scope"
+              ],
+              "claimSummary": "Independently explains that the Treaty of Izmir forms ECO's legal foundation."
+            }
+          ],
+          "temporalScope": {
+            "type": "as-of",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": "2026-10-12",
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": "2027-10-12"
+          },
+          "sourceNotes": "The related item tests the organization's legal instrument rather than repeating the RCD cessation year."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0226",
+      "pairId": "WGI-Q0226",
+      "topicIds": [
+        "countries-places",
+        "records-firsts"
+      ],
+      "title": "Reduction in cross-border economic integration ↔ Raising barriers to international trade",
+      "subtitleUrdu": "اس سے مراد بین الاقوامی معاشی انضمام اور ملکوں کے باہمی انحصار میں کمی ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Reduction in cross-border economic integration ↔ Raising barriers to international trade",
+      "searchTerms": [
+        "WGI-Q0226",
+        "In economics, what does deglobalization mean?",
+        "معاشیات میں ڈی گلوبلائزیشن سے کیا مراد ہے؟",
+        "Which policy most directly promotes deglobalization?",
+        "کون سی پالیسی ڈی گلوبلائزیشن کو سب سے براہِ راست بڑھاتی ہے؟",
+        "Reduction in cross-border economic integration",
+        "Raising barriers to international trade",
+        "wgi",
+        "wgi-q0226",
+        "wgi",
+        "wgi-q0226"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0226-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Reduction in cross-border economic integration ہے۔ اس سے مراد بین الاقوامی معاشی انضمام اور ملکوں کے باہمی انحصار میں کمی ہے۔",
+          "answer": "Reduction in cross-border economic integration",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.11, item 226",
+            "referenceUrl": "https://www.worldbank.org/en/news/feature/2023/08/29/protectionism-is-failing-to-achieve-its-goals-and-threatens-the-future-of-critical-industries",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.worldbank.org/en/news/feature/2023/08/29/protectionism-is-failing-to-achieve-its-goals-and-threatens-the-future-of-critical-industries",
+              "label": "Deglobalization discussion",
+              "publisher": "World Bank",
+              "authorityId": "world-bank",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Reduction in cross-border economic integration to the question about in economics, what does deglobalization mean."
+            },
+            {
+              "url": "https://www.imf.org/en/publications/fandd/issues/2024/06/b2b-globalization-today-adam-jakubik-and-elizabeth-van-heuvelen",
+              "label": "Globalization today",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Reduction in cross-border economic integration to the question about in economics, what does deglobalization mean."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The PDF's 'global slowdown' is a different economic idea: deglobalization refers to reduced international economic integration."
+        },
+        {
+          "questionId": "WGI-Q0226-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Raising barriers to international trade ہے۔ بین الاقوامی تجارت میں رکاوٹیں بڑھانے سے ملکوں کے درمیان معاشی ربط کم ہوتا ہے۔",
+          "answer": "Raising barriers to international trade",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 226",
+            "referenceUrl": "https://www.worldbank.org/en/news/feature/2023/08/29/protectionism-is-failing-to-achieve-its-goals-and-threatens-the-future-of-critical-industries",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.worldbank.org/en/news/feature/2023/08/29/protectionism-is-failing-to-achieve-its-goals-and-threatens-the-future-of-critical-industries",
+              "label": "Deglobalization discussion",
+              "publisher": "World Bank",
+              "authorityId": "world-bank",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Raising barriers to international trade to the question about which policy most directly promotes deglobalization."
+            },
+            {
+              "url": "https://www.imf.org/en/publications/fandd/issues/2024/06/b2b-globalization-today-adam-jakubik-and-elizabeth-van-heuvelen",
+              "label": "Globalization today",
+              "publisher": "International Monetary Fund",
+              "authorityId": "imf",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Raising barriers to international trade to the question about which policy most directly promotes deglobalization."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "This distinct related fact was checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0227",
+      "pairId": "WGI-Q0227",
+      "topicIds": [
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "Indonesia ↔ Badan Intelijen Negara",
+      "subtitleUrdu": "BIN انڈونیشیا کی ریاستی خفیہ ایجنسی کا مختصر نام ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Indonesia ↔ Badan Intelijen Negara",
+      "searchTerms": [
+        "WGI-Q0227",
+        "BIN is the state intelligence agency of which country?",
+        "BIN کس ملک کی ریاستی خفیہ ایجنسی ہے؟",
+        "What is the Indonesian name expanded by the initials BIN?",
+        "انڈونیشیا کی خفیہ ایجنسی کے حروف BIN کا پورا نام کیا ہے؟",
+        "Indonesia",
+        "Badan Intelijen Negara",
+        "wgi",
+        "wgi-q0227",
+        "wgi",
+        "wgi-q0227"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0227-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Indonesia ہے۔ BIN انڈونیشیا کی ریاستی خفیہ ایجنسی کا مختصر نام ہے۔",
+          "answer": "Indonesia",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.11, item 227",
+            "referenceUrl": "https://csirt.bin.go.id/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://csirt.bin.go.id/",
+              "label": "BIN cyber agency site",
+              "publisher": "Badan Intelijen Negara",
+              "authorityId": "bin-indonesia",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Indonesia to the question about bin is the state intelligence agency of which country."
+            },
+            {
+              "url": "https://ppid.antaranews.com/assets/upload/file/regulasi/Annual-Report-Perum-LKBN-Antara-Tahun-2022.pdf",
+              "label": "Antara annual report",
+              "publisher": "Antara News Agency",
+              "authorityId": "antara",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Indonesia to the question about bin is the state intelligence agency of which country."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The source's country association is confirmed; the practice question tests the agency's full name."
+        },
+        {
+          "questionId": "WGI-Q0227-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Badan Intelijen Negara ہے۔ Badan Intelijen Negara ہی BIN کا سرکاری انڈونیشیائی نام ہے۔",
+          "answer": "Badan Intelijen Negara",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 227",
+            "referenceUrl": "https://csirt.bin.go.id/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://csirt.bin.go.id/",
+              "label": "BIN cyber agency site",
+              "publisher": "Badan Intelijen Negara",
+              "authorityId": "bin-indonesia",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Badan Intelijen Negara to the question about what is the indonesian name expanded by the initials bin."
+            },
+            {
+              "url": "https://ppid.antaranews.com/assets/upload/file/regulasi/Annual-Report-Perum-LKBN-Antara-Tahun-2022.pdf",
+              "label": "Antara annual report",
+              "publisher": "Antara News Agency",
+              "authorityId": "antara",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Badan Intelijen Negara to the question about what is the indonesian name expanded by the initials bin."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "This distinct related fact was checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0228",
+      "pairId": "WGI-Q0228",
+      "topicIds": [
+        "dates-timelines",
+        "people-offices",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "United Kingdom ↔ Paul Julius Reuter",
+      "subtitleUrdu": "پال جولیس روئٹر نے 1851 میں لندن، برطانیہ میں خبر رسانی کا دفتر قائم کیا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: United Kingdom ↔ Paul Julius Reuter",
+      "searchTerms": [
+        "WGI-Q0228",
+        "In which country was the Reuters news agency established in 1851?",
+        "Reuters خبر رساں ادارہ 1851 میں کس ملک میں قائم ہوا؟",
+        "Who founded the Reuters news service in London?",
+        "لندن میں Reuters خبر رساں ادارے کی بنیاد کس نے رکھی؟",
+        "United Kingdom",
+        "Paul Julius Reuter",
+        "wgi",
+        "wgi-q0228",
+        "wgi",
+        "wgi-q0228"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0228-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب United Kingdom ہے۔ پال جولیس روئٹر نے 1851 میں لندن، برطانیہ میں خبر رسانی کا دفتر قائم کیا۔",
+          "answer": "United Kingdom",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.11, item 228",
+            "referenceUrl": "https://www.thomsonreuters.com/en/about-us/company-history",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.thomsonreuters.com/en/about-us/company-history",
+              "label": "Company history",
+              "publisher": "Thomson Reuters",
+              "authorityId": "thomson-reuters",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer United Kingdom to the question about in which country was the reuters news agency established in 1851."
+            },
+            {
+              "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/paul-julius-reuter",
+              "label": "Paul Julius Reuter",
+              "publisher": "Encyclopedia.com",
+              "authorityId": "encyclopedia-com",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer United Kingdom to the question about in which country was the reuters news agency established in 1851."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The PDF's UK association is made historically precise as its London origin, rather than making a present corporate domicile claim."
+        },
+        {
+          "questionId": "WGI-Q0228-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Paul Julius Reuter ہے۔ پال جولیس روئٹر نے لندن میں اس خبر رساں ادارے کی بنیاد رکھی۔",
+          "answer": "Paul Julius Reuter",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 228",
+            "referenceUrl": "https://www.thomsonreuters.com/en/about-us/company-history",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.thomsonreuters.com/en/about-us/company-history",
+              "label": "Company history",
+              "publisher": "Thomson Reuters",
+              "authorityId": "thomson-reuters",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Paul Julius Reuter to the question about who founded the reuters news service in london."
+            },
+            {
+              "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/paul-julius-reuter",
+              "label": "Paul Julius Reuter",
+              "publisher": "Encyclopedia.com",
+              "authorityId": "encyclopedia-com",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Paul Julius Reuter to the question about who founded the reuters news service in london."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "This distinct related fact was checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0232",
+      "pairId": "WGI-Q0232",
+      "topicIds": [
+        "dates-timelines",
+        "sports-records"
+      ],
+      "title": "Faster, Higher, Stronger – Together ↔ 2021",
+      "subtitleUrdu": "IOC نے 2021 میں شعار کے آخر میں Together کا لفظ شامل کیا تھا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Faster, Higher, Stronger – Together ↔ 2021",
+      "searchTerms": [
+        "WGI-Q0232",
+        "What is the Olympic motto adopted after the 2021 addition?",
+        "2021 میں اضافے کے بعد اولمپکس کا شعار کیا ہے؟",
+        "In which year did the IOC add 'Together' to the Olympic motto?",
+        "IOC نے اولمپکس کے شعار میں Together کس سال شامل کیا؟",
+        "Faster, Higher, Stronger – Together",
+        "2021",
+        "wgi",
+        "wgi-q0232",
+        "wgi",
+        "wgi-q0232"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0232-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Faster, Higher, Stronger – Together ہے۔ IOC نے 2021 میں شعار کے آخر میں Together کا لفظ شامل کیا تھا۔",
+          "answer": "Faster, Higher, Stronger – Together",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.11, item 232",
+            "referenceUrl": "https://brand-centre.olympic.org/olympic_properties",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://brand-centre.olympic.org/olympic_properties",
+              "label": "Olympic motto",
+              "publisher": "International Olympic Committee",
+              "authorityId": "ioc",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Faster, Higher, Stronger – Together to the question about what is the olympic motto adopted after the 2021 addition."
+            },
+            {
+              "url": "https://www.bbc.co.uk/sport/extra/xawtd9l5mx/visual-guide-to-the-olympics",
+              "label": "Olympic visual guide",
+              "publisher": "BBC Sport",
+              "authorityId": "bbc",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer Faster, Higher, Stronger – Together to the question about what is the olympic motto adopted after the 2021 addition."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "2021-07-20",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The printed post-2021 English and Latin forms are confirmed."
+        },
+        {
+          "questionId": "WGI-Q0232-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب 2021 ہے۔ IOC اجلاس نے 20 جولائی 2021 کو اس تبدیلی کی منظوری دی۔",
+          "answer": "2021",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 232",
+            "referenceUrl": "https://brand-centre.olympic.org/olympic_properties",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://brand-centre.olympic.org/olympic_properties",
+              "label": "Olympic motto",
+              "publisher": "International Olympic Committee",
+              "authorityId": "ioc",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer 2021 to the question about in which year did the ioc add 'together' to the olympic motto."
+            },
+            {
+              "url": "https://www.bbc.co.uk/sport/extra/xawtd9l5mx/visual-guide-to-the-olympics",
+              "label": "Olympic visual guide",
+              "publisher": "BBC Sport",
+              "authorityId": "bbc",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "This authority supports the answer 2021 to the question about in which year did the ioc add 'together' to the olympic motto."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "This distinct related fact was checked against both cited authorities."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0261",
+      "pairId": "WGI-Q0261",
+      "topicIds": [
+        "dates-timelines",
+        "countries-places",
+        "events-history"
+      ],
+      "title": "14 May 1948 ↔ Tel Aviv",
+      "subtitleUrdu": "ڈیوڈ بن گوریون نے 14 مئی 1948 کو ریاست کے قیام کا اعلان کیا۔",
+      "important": true,
+      "repeatCount": 2,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 14 May 1948 ↔ Tel Aviv",
+      "searchTerms": [
+        "WGI-Q0261",
+        "On what date was the State of Israel declared in 1948?",
+        "1948 میں ریاست اسرائیل کے قیام کا اعلان کس تاریخ کو ہوا؟",
+        "In which city was Israel's declaration of independence read on 14 May 1948?",
+        "14 مئی 1948 کو اسرائیل کی آزادی کا اعلان کس شہر میں پڑھا گیا؟",
+        "14 May 1948",
+        "Tel Aviv",
+        "wgi",
+        "wgi-q0261",
+        "wgi",
+        "wgi-q0261"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0261-SRC",
+          "kind": "source",
+          "textUrdu": "ڈیوڈ بن گوریون نے 14 مئی 1948 کو ریاست کے قیام کا اعلان کیا۔",
+          "answer": "14 May 1948",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.12, item 261",
+            "referenceUrl": "https://m.knesset.gov.il/en/about/pages/independence.aspx",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://m.knesset.gov.il/en/about/pages/independence.aspx",
+              "label": "Knesset evidence",
+              "publisher": "Knesset",
+              "authorityId": "knesset",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Confirms 14 May 1948 as the answer to: On what date was the State of Israel declared in 1948?"
+            },
+            {
+              "url": "https://www.gov.il/BlobFolder/generalpage/facts-about-israel-2018/en/English_ABOUT_ISRAEL_PDF_Democracy.pdf",
+              "label": "Government of Israel evidence",
+              "publisher": "Government of Israel",
+              "authorityId": "israel-government",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Confirms 14 May 1948 as the answer to: On what date was the State of Israel declared in 1948?"
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1948",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0261-SIM",
+          "kind": "similar",
+          "textUrdu": "اعلان تل ابیب کے عجائب گھر میں پڑھا گیا تھا۔",
+          "answer": "Tel Aviv",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 261",
+            "referenceUrl": "https://m.knesset.gov.il/en/about/pages/independence.aspx",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://m.knesset.gov.il/en/about/pages/independence.aspx",
+              "label": "Knesset evidence",
+              "publisher": "Knesset",
+              "authorityId": "knesset",
+              "role": "answer-primary",
+              "sourceClass": "primary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Confirms Tel Aviv as the answer to: In which city was Israel's declaration of independence read on 14 May 1948?"
+            },
+            {
+              "url": "https://www.tel-aviv.gov.il/en/Pages/IndependenceTrailen.aspx/1000",
+              "label": "Tel Aviv-Yafo Municipality evidence",
+              "publisher": "Tel Aviv-Yafo Municipality",
+              "authorityId": "tel-aviv-municipality",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Confirms Tel Aviv as the answer to: In which city was Israel's declaration of independence read on 14 May 1948?"
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1948",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0288",
+      "pairId": "WGI-Q0288",
+      "topicIds": [
+        "dates-timelines",
+        "people-offices",
+        "countries-places",
+        "books-awards-culture"
+      ],
+      "title": "A German-language novelist and short-story writer ↔ Prague",
+      "subtitleUrdu": "Kafka نے جرمن زبان میں ناول اور افسانے لکھے اور جدید ادب پر گہرا اثر ڈالا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: A German-language novelist and short-story writer ↔ Prague",
+      "searchTerms": [
+        "WGI-Q0288",
+        "Franz Kafka is chiefly remembered as what kind of twentieth-century writer?",
+        "Franz Kafka کو بیسویں صدی کے کس نوع کے ادیب کے طور پر بنیادی طور پر یاد کیا جاتا ہے؟",
+        "In which city was Franz Kafka born?",
+        "Franz Kafka کس شہر میں پیدا ہوئے تھے؟",
+        "A German-language novelist and short-story writer",
+        "Prague",
+        "wgi",
+        "wgi-q0288",
+        "wgi",
+        "wgi-q0288"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0288-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب German-language novelist and short-story writer ہے۔ Kafka نے جرمن زبان میں ناول اور افسانے لکھے اور جدید ادب پر گہرا اثر ڈالا۔",
+          "answer": "A German-language novelist and short-story writer",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.13, item 288",
+            "referenceUrl": "https://kafkamuseum.cz/en/biography",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://kafkamuseum.cz/en/biography",
+              "label": "Franz Kafka biography",
+              "publisher": "Franz Kafka Museum",
+              "authorityId": "franz-kafka-museum",
+              "role": "answer-primary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Presents Kafka as a central German-language prose writer of the twentieth century."
+            },
+            {
+              "url": "https://www.goethe.de/resources/files/pdf348/en_gi_jahrbuch_2324_gb_web-v1.pdf",
+              "label": "Goethe-Institut yearbook 2023/24",
+              "publisher": "Goethe-Institut",
+              "authorityId": "goethe-institut",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Identifies Franz Kafka as one of the most important German-language writers."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The source description was retained as a precise literary-classification question."
+        },
+        {
+          "questionId": "WGI-Q0288-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Prague ہے۔ Franz Kafka 3 July 1883 کو پراگ میں پیدا ہوئے تھے۔",
+          "answer": "Prague",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 288",
+            "referenceUrl": "https://kafkamuseum.cz/en/timeline",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://kafkamuseum.cz/en/timeline",
+              "label": "Franz Kafka timeline",
+              "publisher": "Franz Kafka Museum",
+              "authorityId": "franz-kafka-museum",
+              "role": "answer-primary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Records Kafka’s birth in Prague on 3 July 1883."
+            },
+            {
+              "url": "https://www.jmberlin.de/sites/default/files/media/documents/241118_JMB_Kafka_Booklet_DIGITAL.pdf",
+              "label": "Kafka exhibition booklet",
+              "publisher": "Jewish Museum Berlin",
+              "authorityId": "jewish-museum-berlin",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Independently states that Franz Kafka was born in Prague in 1883."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The related item tests Kafka’s birthplace rather than restating his literary classification."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0303",
+      "pairId": "WGI-Q0303",
+      "topicIds": [
+        "dates-timelines",
+        "people-offices",
+        "books-awards-culture"
+      ],
+      "title": "Cancer therapy by inhibition of negative immune regulation ↔ James P. Allison and Tasuku Honjo",
+      "subtitleUrdu": "2018 کا انعام مدافعتی نظام کے منفی ضابطوں کو روک کر سرطان کے علاج کی دریافت پر دیا گیا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Cancer therapy by inhibition of negative immune regulation ↔ James P. Allison and Tasuku Honjo",
+      "searchTerms": [
+        "WGI-Q0303",
+        "For what discovery was the 2018 Nobel Prize in Physiology or Medicine awarded?",
+        "2018 کا Nobel Prize in Physiology or Medicine کس دریافت پر دیا گیا؟",
+        "Who jointly received the 2018 Nobel Prize in Physiology or Medicine?",
+        "2018 کا Nobel Prize in Physiology or Medicine مشترکہ طور پر کن افراد کو ملا؟",
+        "Cancer therapy by inhibition of negative immune regulation",
+        "James P. Allison and Tasuku Honjo",
+        "wgi",
+        "wgi-q0303",
+        "wgi",
+        "wgi-q0303"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0303-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب cancer therapy by inhibition of negative immune regulation ہے۔ 2018 کا انعام مدافعتی نظام کے منفی ضابطوں کو روک کر سرطان کے علاج کی دریافت پر دیا گیا۔",
+          "answer": "Cancer therapy by inhibition of negative immune regulation",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.13, item 303",
+            "referenceUrl": "https://www.nobelprize.org/prizes/medicine/2018/summary/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.nobelprize.org/prizes/medicine/2018/summary/",
+              "label": "Nobel Prize in Physiology or Medicine 2018",
+              "publisher": "Nobel Prize Outreach",
+              "authorityId": "nobel-prize",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Gives the official citation for cancer therapy through inhibition of negative immune regulation."
+            },
+            {
+              "url": "https://www.nih.gov/news-events/news-releases/nih-grantees-win-2018-nobel-prize-physiology-or-medicine",
+              "label": "NIH grantees win 2018 Nobel Prize",
+              "publisher": "U.S. National Institutes of Health",
+              "authorityId": "us-national-institutes-health",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Independently explains that the prize recognized immune-checkpoint approaches to cancer therapy."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": "2018",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The official Nobel citation was preserved as the single correct answer."
+        },
+        {
+          "questionId": "WGI-Q0303-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب James P. Allison and Tasuku Honjo ہے۔ دونوں سائنس دانوں نے مختلف immune checkpoints پر تحقیق سے سرطان کے نئے علاج کی بنیاد رکھی۔",
+          "answer": "James P. Allison and Tasuku Honjo",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 303",
+            "referenceUrl": "https://www.nobelprize.org/prizes/medicine/2018/summary/",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.nobelprize.org/prizes/medicine/2018/summary/",
+              "label": "Nobel Prize in Physiology or Medicine 2018",
+              "publisher": "Nobel Prize Outreach",
+              "authorityId": "nobel-prize",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Names James P. Allison and Tasuku Honjo as the 2018 medicine laureates."
+            },
+            {
+              "url": "https://www.nih.gov/news-events/news-releases/nih-grantees-win-2018-nobel-prize-physiology-or-medicine",
+              "label": "NIH grantees win 2018 Nobel Prize",
+              "publisher": "U.S. National Institutes of Health",
+              "authorityId": "us-national-institutes-health",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Independently identifies Allison and Honjo as the joint recipients."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": "2018",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The related item tests the laureates rather than repeating the prize citation."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0305",
+      "pairId": "WGI-Q0305",
+      "topicIds": [
+        "dates-timelines",
+        "sports-records"
+      ],
+      "title": "Javed Miandad ↔ Sachin Tendulkar",
+      "subtitleUrdu": "انہوں نے 1975 سے 1996 تک چھ مسلسل مردوں کے کرکٹ عالمی کپ کھیلے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Javed Miandad ↔ Sachin Tendulkar",
+      "searchTerms": [
+        "WGI-Q0305",
+        "Which Pakistani cricketer appeared in six consecutive men's Cricket World Cups from 1975 through 1996?",
+        "کس پاکستانی کرکٹر نے 1975 سے 1996 تک مسلسل چھ مردوں کے Cricket World Cups میں شرکت کی؟",
+        "Which Indian batter matched Javed Miandad's six men's World Cup appearances in 2011?",
+        "کس بھارتی بلے باز نے 2011 میں Javed Miandad کی چھ مردوں کے World Cup شرکتوں کی برابری کی؟",
+        "Javed Miandad",
+        "Sachin Tendulkar",
+        "wgi",
+        "wgi-q0305",
+        "wgi",
+        "wgi-q0305"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0305-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Javed Miandad ہے۔ انہوں نے 1975 سے 1996 تک چھ مسلسل مردوں کے کرکٹ عالمی کپ کھیلے۔",
+          "answer": "Javed Miandad",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.14, item 305",
+            "referenceUrl": "https://www.icc-cricket.com/hall-of-fame/hall-of-famers/hall-of-famer-javed-miandad",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.icc-cricket.com/hall-of-fame/hall-of-famers/hall-of-famer-javed-miandad",
+              "label": "ICC Hall of Famer Javed Miandad",
+              "publisher": "International Cricket Council",
+              "authorityId": "international-cricket-council",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Records Miandad’s appearances in six World Cups from 1975 to 1996."
+            },
+            {
+              "url": "https://www.pcb.com.pk/press-release-detail/afridi-miandad-sammy-and-shoaib-confirmed-pjl-mentors.html",
+              "label": "Javed Miandad profile",
+              "publisher": "Pakistan Cricket Board",
+              "authorityId": "pakistan-cricket-board",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Independently states that Javed Miandad played in six World Cups between 1975 and 1996."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": "1996",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The question includes the first and sixth tournament years to define the historical sequence precisely."
+        },
+        {
+          "questionId": "WGI-Q0305-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Sachin Tendulkar ہے۔ 2011 کا عالمی کپ Tendulkar کا چھٹا تھا، جس سے انہوں نے Miandad کی چھ شرکتوں کی برابری کی۔",
+          "answer": "Sachin Tendulkar",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 305",
+            "referenceUrl": "https://www.icc-cricket.com/hall-of-fame/hall-of-famers/hall-of-famer-javed-miandad",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.icc-cricket.com/hall-of-fame/hall-of-famers/hall-of-famer-javed-miandad",
+              "label": "ICC Hall of Famer Javed Miandad",
+              "publisher": "International Cricket Council",
+              "authorityId": "international-cricket-council",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Notes that Sachin Tendulkar later matched Miandad’s six World Cup appearances."
+            },
+            {
+              "url": "https://www.pcb.com.pk/press-release-detail/miandad-urges-players-to-improve-fielding.html",
+              "label": "Miandad on the World Cup",
+              "publisher": "Pakistan Cricket Board",
+              "authorityId": "pakistan-cricket-board",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "States that Tendulkar equalled Miandad’s record of playing six World Cups."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": "2011",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The related item tests the player who matched the six-appearance feat rather than repeating Miandad’s identity."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0311",
+      "pairId": "WGI-Q0311",
+      "topicIds": [
+        "dates-timelines",
+        "sports-records"
+      ],
+      "title": "Boxing ↔ Silver",
+      "subtitleUrdu": "عامر خان اولمپک تمغہ جیتنے والے پاکستانی نژاد برطانوی باکسر ہیں۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Boxing ↔ Silver",
+      "searchTerms": [
+        "WGI-Q0311",
+        "Amir Khan is best known internationally for which sport?",
+        "عامر خان بین الاقوامی طور پر کس کھیل کے لیے مشہور ہیں؟",
+        "At the 2004 Athens Olympics, what medal did boxer Amir Khan win in the men's lightweight division?",
+        "2004 کے ایتھنز اولمپکس میں باکسر عامر خان نے مردوں کے لائٹ ویٹ مقابلے میں کون سا تمغہ جیتا؟",
+        "Boxing",
+        "Silver",
+        "wgi",
+        "wgi-q0311",
+        "wgi",
+        "wgi-q0311"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0311-SRC",
+          "kind": "source",
+          "textUrdu": "درست جواب Boxing ہے۔ عامر خان اولمپک تمغہ جیتنے والے پاکستانی نژاد برطانوی باکسر ہیں۔",
+          "answer": "Boxing",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.14, item 311",
+            "referenceUrl": "https://www.teamgb.com/athlete/amir-khan/26wXEuVMLiMxVVvpANwqIk",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.teamgb.com/athlete/amir-khan/26wXEuVMLiMxVVvpANwqIk",
+              "label": "Amir Khan athlete profile",
+              "publisher": "Team GB",
+              "authorityId": "team-gb",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Team GB identifies Amir Khan as a boxer and records his Olympic silver medal."
+            },
+            {
+              "url": "https://www.bbc.co.uk/sport/boxing/36207934",
+              "label": "Amir Khan Olympic boxing profile",
+              "publisher": "BBC Sport",
+              "authorityId": "bbc-sport",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "BBC Sport reports Khan's boxing career and his 2004 Olympic silver medal."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The imprecise printed wording was rewritten as a unique sport-identification question."
+        },
+        {
+          "questionId": "WGI-Q0311-SIM",
+          "kind": "similar",
+          "textUrdu": "درست جواب Silver ہے۔ عامر خان نے ایتھنز 2004 میں لائٹ ویٹ باکسنگ کا چاندی کا تمغہ حاصل کیا تھا۔",
+          "answer": "Silver",
+          "source": {
+            "type": "practice",
+            "label": "Verified related WGI practice for item 311",
+            "referenceUrl": "https://www.teamgb.com/athlete/amir-khan/26wXEuVMLiMxVVvpANwqIk",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.teamgb.com/athlete/amir-khan/26wXEuVMLiMxVVvpANwqIk",
+              "label": "Amir Khan athlete profile",
+              "publisher": "Team GB",
+              "authorityId": "team-gb",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The profile records Khan's silver medal in lightweight boxing at Athens 2004."
+            },
+            {
+              "url": "https://www.bbc.co.uk/sport/boxing/36207934",
+              "label": "Amir Khan Olympic boxing profile",
+              "publisher": "BBC Sport",
+              "authorityId": "bbc-sport",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "BBC Sport independently confirms Khan won Olympic silver in 2004 boxing."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026-09-17",
+            "asOf": null,
+            "eventDate": "2004",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The related item tests the verified Olympic result rather than repeating the sport label."
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0325",
+      "pairId": "WGI-Q0325",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies"
+      ],
+      "title": "Istanbul Declaration ↔ Developing Eight Organization for Economic Cooperation",
+      "subtitleUrdu": "ڈی-8 کا باضابطہ قیام 15 جون 1997 کو سربراہانِ مملکت و حکومت کے استنبول اعلامیے کے ذریعے ہوا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Istanbul Declaration ↔ Developing Eight Organization for Economic Cooperation",
+      "searchTerms": [
+        "WGI-Q0325",
+        "Through which declaration was the D-8 officially established on 15 June 1997?",
+        "15 جون 1997 کو ڈی-8 کو باضابطہ طور پر کس اعلامیے کے ذریعے قائم کیا گیا؟",
+        "What does the abbreviation D-8 stand for?",
+        "مخفف ڈی-8 کا مکمل نام کیا ہے؟",
+        "Istanbul Declaration",
+        "Developing Eight Organization for Economic Cooperation",
+        "wgi",
+        "wgi-q0325",
+        "wgi",
+        "wgi-q0325"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0325-SRC",
+          "kind": "source",
+          "textUrdu": "ڈی-8 کا باضابطہ قیام 15 جون 1997 کو سربراہانِ مملکت و حکومت کے استنبول اعلامیے کے ذریعے ہوا۔",
+          "answer": "Istanbul Declaration",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.14, item 325",
+            "referenceUrl": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+              "label": "Developing Eight Countries D-8",
+              "publisher": "Ministry of Foreign Affairs of Türkiye",
+              "authorityId": "turkiye-mfa",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Türkiye's foreign ministry states that D-8 was established by the Istanbul Declaration on 15 June 1997."
+            },
+            {
+              "url": "https://www.tarimorman.gov.tr/ABDGM/Menu/71/Gelisen-Sekiz-Ulke-_d-8_",
+              "label": "Developing Eight Countries D-8",
+              "publisher": "Ministry of Agriculture and Forestry of Türkiye",
+              "authorityId": "turkiye-agriculture-ministry",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ministry independently records the Istanbul Declaration and the D-8 founding date of 15 June 1997."
+            }
+          ],
+          "temporalScope": {
+            "type": "event-date",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": "1997-06-15",
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0325-SIM",
+          "kind": "similar",
+          "textUrdu": "ڈی-8 کا مکمل نام ڈیولپنگ ایٹ آرگنائزیشن فار اکنامک کوآپریشن ہے۔",
+          "answer": "Developing Eight Organization for Economic Cooperation",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: full name of D-8",
+            "referenceUrl": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+              "label": "Developing Eight Countries D-8",
+              "publisher": "Ministry of Foreign Affairs of Türkiye",
+              "authorityId": "turkiye-mfa",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Türkiye's foreign ministry gives the organization's full name as Developing Eight Organization for Economic Cooperation."
+            },
+            {
+              "url": "https://www.tarimorman.gov.tr/ABDGM/Menu/71/Gelisen-Sekiz-Ulke-_d-8_",
+              "label": "Developing Eight Countries D-8",
+              "publisher": "Ministry of Agriculture and Forestry of Türkiye",
+              "authorityId": "turkiye-agriculture-ministry",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The second ministry page independently expands D-8 as the Developing Eight economic-cooperation organization."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0326",
+      "pairId": "WGI-Q0326",
+      "topicIds": [
+        "organizations-agencies",
+        "countries-places",
+        "books-awards-culture"
+      ],
+      "title": "Istanbul ↔ English",
+      "subtitleUrdu": "ڈی-8 تنظیم کا سیکرٹریٹ اور صدر دفتر استنبول، ترکیہ میں واقع ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Istanbul ↔ English",
+      "searchTerms": [
+        "WGI-Q0326",
+        "In which city is the headquarters of the D-8 Organization for Economic Cooperation?",
+        "ڈی-8 تنظیم برائے اقتصادی تعاون کا صدر دفتر کس شہر میں ہے؟",
+        "What is the official working language of the D-8 Organization for Economic Cooperation?",
+        "ڈی-8 تنظیم برائے اقتصادی تعاون کی سرکاری کام کی زبان کون سی ہے؟",
+        "Istanbul",
+        "English",
+        "wgi",
+        "wgi-q0326",
+        "wgi",
+        "wgi-q0326"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0326-SRC",
+          "kind": "source",
+          "textUrdu": "ڈی-8 تنظیم کا سیکرٹریٹ اور صدر دفتر استنبول، ترکیہ میں واقع ہے۔",
+          "answer": "Istanbul",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.14, item 326",
+            "referenceUrl": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+              "label": "Developing Eight Countries D-8",
+              "publisher": "Ministry of Foreign Affairs of Türkiye",
+              "authorityId": "turkiye-mfa",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Türkiye's foreign ministry identifies Istanbul as the seat of the D-8 Secretariat."
+            },
+            {
+              "url": "https://www.tarimorman.gov.tr/ABDGM/Menu/71/Gelisen-Sekiz-Ulke-_d-8_",
+              "label": "Developing Eight Countries D-8",
+              "publisher": "Ministry of Agriculture and Forestry of Türkiye",
+              "authorityId": "turkiye-agriculture-ministry",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The agriculture ministry independently lists Istanbul as D-8 headquarters."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0326-SIM",
+          "kind": "similar",
+          "textUrdu": "ڈی-8 کے رکن ممالک کی مختلف قومی زبانیں ہیں، مگر تنظیم کی سرکاری کام کی زبان انگریزی ہے۔",
+          "answer": "English",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: D-8 working language",
+            "referenceUrl": "https://www.tarimorman.gov.tr/ABDGM/Menu/71/Gelisen-Sekiz-Ulke-_d-8_",
+            "accessedOn": "2026-10-12"
+          },
+          "references": [
+            {
+              "url": "https://www.tarimorman.gov.tr/ABDGM/Menu/71/Gelisen-Sekiz-Ulke-_d-8_",
+              "label": "Developing Eight Countries D-8",
+              "publisher": "Ministry of Agriculture and Forestry of Türkiye",
+              "authorityId": "turkiye-agriculture-ministry",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ministry's D-8 profile lists English as the organization's official working language."
+            },
+            {
+              "url": "https://www.mfa.gov.tr/_d-8_.en.mfa",
+              "label": "Developing Eight Countries D-8",
+              "publisher": "Ministry of Foreign Affairs of Türkiye",
+              "authorityId": "turkiye-mfa",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-12",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Türkiye's foreign ministry independently identifies English as the D-8 working language."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0368",
+      "pairId": "WGI-Q0368",
+      "topicIds": [
+        "dates-timelines",
+        "people-offices"
+      ],
+      "title": "1996 ↔ Jack Smith",
+      "subtitleUrdu": "ہاٹ میل کی ویب پر مبنی ای میل سروس 1996 میں عوام کے لیے شروع ہوئی تھی؛ کمپنی کے ابتدائی قیام کے سال سے اسے الگ سمجھیں۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 1996 ↔ Jack Smith",
+      "searchTerms": [
+        "WGI-Q0368",
+        "In which year was Hotmail commercially launched?",
+        "ہاٹ میل کی ویب ای میل سروس تجارتی طور پر کس سال شروع ہوئی؟",
+        "Who co-founded Hotmail with Sabeer Bhatia?",
+        "صابر بھاٹیا کے ساتھ ہاٹ میل کی بنیاد کس نے رکھی؟",
+        "1996",
+        "Jack Smith",
+        "wgi",
+        "wgi-q0368",
+        "wgi",
+        "wgi-q0368"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0368-SRC",
+          "kind": "source",
+          "textUrdu": "ہاٹ میل کی ویب پر مبنی ای میل سروس 1996 میں عوام کے لیے شروع ہوئی تھی؛ کمپنی کے ابتدائی قیام کے سال سے اسے الگ سمجھیں۔",
+          "answer": "1996",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.16, item 368",
+            "referenceUrl": "https://news.microsoft.com/source/2007/05/06/microsoft-launches-windows-live-hotmail-worldwide/",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://news.microsoft.com/source/2007/05/06/microsoft-launches-windows-live-hotmail-worldwide/",
+              "label": "Microsoft: Hotmail history",
+              "publisher": "Microsoft",
+              "authorityId": "microsoft",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Microsoft describes Hotmail as pioneering web-based email in 1996."
+            },
+            {
+              "url": "https://www.oreilly.com/library/view/founders-at-work/9781590597149/Chapter02.html",
+              "label": "Founders at Work: Sabeer Bhatia interview",
+              "publisher": "Apress / O'Reilly",
+              "authorityId": "oreilly-apress",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The founder interview places Hotmail's launch in 1996 and names Jack Smith as Bhatia's co-founder."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "The PDF asks when Hotmail was founded and marks 1996. Sources distinguish earlier founding/startup work from the publicly launched webmail service in 1996. The stem was narrowed to commercial launch while retaining its 1996 answer."
+        },
+        {
+          "questionId": "WGI-Q0368-SIM",
+          "kind": "similar",
+          "textUrdu": "ہاٹ میل کے شریک بانی صابر بھاٹیا اور جیک اسمتھ تھے۔",
+          "answer": "Jack Smith",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: WGI item 368",
+            "referenceUrl": "https://www.oreilly.com/library/view/founders-at-work/9781590597149/Chapter02.html",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://www.oreilly.com/library/view/founders-at-work/9781590597149/Chapter02.html",
+              "label": "Founders at Work: Sabeer Bhatia interview",
+              "publisher": "Apress / O'Reilly",
+              "authorityId": "oreilly-apress",
+              "role": "answer-primary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The founder interview places Hotmail's launch in 1996 and names Jack Smith as Bhatia's co-founder."
+            },
+            {
+              "url": "https://arstechnica.com/information-technology/2017/12/how-hotmail-changed-microsoft-and-email-forever/",
+              "label": "Ars Technica: Hotmail history",
+              "publisher": "Ars Technica",
+              "authorityId": "ars-technica",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The historical account identifies Jack Smith and Sabeer Bhatia as Hotmail's founders."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0370",
+      "pairId": "WGI-Q0370",
+      "topicIds": [
+        "countries-places",
+        "events-history"
+      ],
+      "title": "Proxy war ↔ Arms and funding",
+      "subtitleUrdu": "پراکسی جنگ میں طاقتیں خود براہ راست لڑنے کے بجائے مقامی فریقوں کی حمایت کرتی ہیں۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Proxy war ↔ Arms and funding",
+      "searchTerms": [
+        "WGI-Q0370",
+        "What is a conflict fought by local forces backed by outside powers called?",
+        "بیرونی طاقتوں کی حمایت سے مقامی گروہوں کے ذریعے لڑی جانے والی جنگ کو کیا کہتے ہیں؟",
+        "Which aid can an outside state give to forces in a proxy war?",
+        "پراکسی جنگ میں بیرونی ریاست مقامی گروہ کو کون سی مدد دے سکتی ہے؟",
+        "Proxy war",
+        "Arms and funding",
+        "wgi",
+        "wgi-q0370",
+        "wgi",
+        "wgi-q0370"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0370-SRC",
+          "kind": "source",
+          "textUrdu": "پراکسی جنگ میں طاقتیں خود براہ راست لڑنے کے بجائے مقامی فریقوں کی حمایت کرتی ہیں۔",
+          "answer": "Proxy war",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.16, item 370",
+            "referenceUrl": "https://academic.oup.com/ia/article/102/5/1587/8785717",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://academic.oup.com/ia/article/102/5/1587/8785717",
+              "label": "International Affairs: Proxy warfare",
+              "publisher": "Oxford University Press",
+              "authorityId": "oxford-academic",
+              "role": "answer-primary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The research defines proxy warfare as an indirect conflict using another armed actor."
+            },
+            {
+              "url": "https://www.brookings.edu/articles/the-proxy-war-problem-in-syria/",
+              "label": "Brookings: The proxy-war problem",
+              "publisher": "Brookings Institution",
+              "authorityId": "brookings",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "External powers use and support local forces as proxies in an armed conflict."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0370-SIM",
+          "kind": "similar",
+          "textUrdu": "پراکسی فریقوں کی حمایت میں اسلحہ اور مالی وسائل فراہم کرنا عام طریقے ہیں۔",
+          "answer": "Arms and funding",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: WGI item 370",
+            "referenceUrl": "https://assets.cambridge.org/97811084/73361/excerpt/9781108473361_excerpt.pdf",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://assets.cambridge.org/97811084/73361/excerpt/9781108473361_excerpt.pdf",
+              "label": "Cambridge: The Struggle for Supremacy in the Middle East, excerpt",
+              "publisher": "Cambridge University Press",
+              "authorityId": "cambridge-university-press",
+              "role": "answer-primary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The scholarly book excerpt identifies weapons, funding and training as support provided to proxy forces."
+            },
+            {
+              "url": "https://international-review.icrc.org/articles/reports-and-documents-ihl-and-the-challenges-of-contemporary-armed-conflicts-927",
+              "label": "ICRC Review: Contemporary armed conflicts",
+              "publisher": "International Committee of the Red Cross",
+              "authorityId": "icrc",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The ICRC describes proxy warfare as involving political, material, financial or military support."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0375",
+      "pairId": "WGI-Q0375",
+      "topicIds": [
+        "people-offices",
+        "records-firsts"
+      ],
+      "title": "J. Robert Oppenheimer ↔ The Manhattan Project",
+      "subtitleUrdu": "جے رابرٹ اوپن ہائمر نے مین ہیٹن پراجیکٹ کی لاس الاموس تجربہ گاہ کی سائنسی قیادت کی، اسی نسبت سے یہ لقب ملا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: J. Robert Oppenheimer ↔ The Manhattan Project",
+      "searchTerms": [
+        "WGI-Q0375",
+        "Who is commonly called the father of the atomic bomb?",
+        "ایٹم بم کا بانی عموماً کس سائنس دان کو کہا جاتا ہے؟",
+        "Which wartime project developed the first atomic bomb?",
+        "دوسری جنگِ عظیم کے دوران پہلا ایٹم بم کس منصوبے میں تیار ہوا؟",
+        "J. Robert Oppenheimer",
+        "The Manhattan Project",
+        "wgi",
+        "wgi-q0375",
+        "wgi",
+        "wgi-q0375"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0375-SRC",
+          "kind": "source",
+          "textUrdu": "جے رابرٹ اوپن ہائمر نے مین ہیٹن پراجیکٹ کی لاس الاموس تجربہ گاہ کی سائنسی قیادت کی، اسی نسبت سے یہ لقب ملا۔",
+          "answer": "J. Robert Oppenheimer",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.16, item 375",
+            "referenceUrl": "https://www.nps.gov/people/manhattan-project-scientists-j-robert-oppenheimer.htm",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://www.nps.gov/people/manhattan-project-scientists-j-robert-oppenheimer.htm",
+              "label": "NPS: J. Robert Oppenheimer",
+              "publisher": "U.S. National Park Service",
+              "authorityId": "nps",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Oppenheimer directed Los Alamos and is commonly called the father of the atomic bomb."
+            },
+            {
+              "url": "https://www.energy.gov/lm/articles/keeping-change-one-digital-record-time",
+              "label": "DOE: Oppenheimer in Manhattan Project records",
+              "publisher": "U.S. Department of Energy",
+              "authorityId": "doe",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "DOE explicitly calls J. Robert Oppenheimer the father of the atomic bomb."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0375-SIM",
+          "kind": "similar",
+          "textUrdu": "مین ہیٹن پراجیکٹ امریکہ کی زیرِ قیادت جنگی تحقیق تھی جس میں پہلے ایٹم بم بنائے گئے۔",
+          "answer": "The Manhattan Project",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: WGI item 375",
+            "referenceUrl": "https://home.nps.gov/mapr/learn/manhattan-project.htm",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://home.nps.gov/mapr/learn/manhattan-project.htm",
+              "label": "NPS: Manhattan Project overview",
+              "publisher": "U.S. National Park Service",
+              "authorityId": "nps",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Manhattan Project was the World War II effort to produce the first atomic bombs."
+            },
+            {
+              "url": "https://www.energy.gov/management/articles/manhattan-project-making-atomic-bomb",
+              "label": "DOE: The Manhattan Project",
+              "publisher": "U.S. Department of Energy",
+              "authorityId": "doe",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Manhattan Project developed the first atomic bombs under scientific leaders including Oppenheimer."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0418",
+      "pairId": "WGI-Q0418",
+      "topicIds": [
+        "dates-timelines",
+        "organizations-agencies",
+        "countries-places"
+      ],
+      "title": "25 September 1969 ↔ Jeddah",
+      "subtitleUrdu": "اسلامی تعاون تنظیم 25 ستمبر 1969 کو رباط کے تاریخی سربراہی اجلاس کے فیصلے سے قائم ہوئی۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 25 September 1969 ↔ Jeddah",
+      "searchTerms": [
+        "WGI-Q0418",
+        "On what date was the Organization of Islamic Cooperation established?",
+        "اسلامی تعاون تنظیم کا قیام کس تاریخ کو ہوا؟",
+        "Where is the headquarters of the Organization of Islamic Cooperation?",
+        "اسلامی تعاون تنظیم کا مرکزی دفتر کس شہر میں ہے؟",
+        "25 September 1969",
+        "Jeddah",
+        "wgi",
+        "wgi-q0418",
+        "wgi",
+        "wgi-q0418"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0418-SRC",
+          "kind": "source",
+          "textUrdu": "اسلامی تعاون تنظیم 25 ستمبر 1969 کو رباط کے تاریخی سربراہی اجلاس کے فیصلے سے قائم ہوئی۔",
+          "answer": "25 September 1969",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.18, item 418",
+            "referenceUrl": "https://www.oic-oci.org/en/page/1",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://www.oic-oci.org/en/page/1",
+              "label": "OIC official history",
+              "publisher": "Organisation of Islamic Cooperation",
+              "authorityId": "oic",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "OIC dates its founding decision at Rabat to 25 September 1969."
+            },
+            {
+              "url": "https://www.mfa.gov.tr/OIC.en.mfa",
+              "label": "Organisation of Islamic Cooperation profile",
+              "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+              "authorityId": "turkiye-mfa",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Türkiye's Foreign Ministry lists the OIC establishment date as 25 September 1969."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0418-SIM",
+          "kind": "similar",
+          "textUrdu": "تنظیم کا جنرل سیکرٹریٹ سعودی عرب کے شہر جدہ میں واقع ہے۔",
+          "answer": "Jeddah",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: WGI item 418",
+            "referenceUrl": "https://www.oic-oci.org/en/contact",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://www.oic-oci.org/en/contact",
+              "label": "OIC headquarters contact",
+              "publisher": "Organisation of Islamic Cooperation",
+              "authorityId": "oic",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "OIC lists its General Secretariat headquarters in Jeddah, Saudi Arabia."
+            },
+            {
+              "url": "https://www.mfa.gov.tr/OIC.en.mfa",
+              "label": "Organisation of Islamic Cooperation profile",
+              "publisher": "Republic of Türkiye Ministry of Foreign Affairs",
+              "authorityId": "turkiye-mfa",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Türkiye's Foreign Ministry lists Jeddah, Saudi Arabia as OIC headquarters."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0434",
+      "pairId": "WGI-Q0434",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "Konya ↔ Sema",
+      "subtitleUrdu": "مولانا رومی کا مقبرہ ترکی کے شہر قونیہ میں ہے؛ آج یہ مولانا میوزیم کے احاطے کا حصہ ہے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Konya ↔ Sema",
+      "searchTerms": [
+        "WGI-Q0434",
+        "In which Turkish city is the mausoleum of Jalal ad-Din Rumi?",
+        "جلال الدین رومی کا مقبرہ ترکی کے کس شہر میں ہے؟",
+        "What is the whirling ritual associated with Rumi’s Mevlevi tradition called?",
+        "رومی کی مولویہ روایت سے وابستہ گھومنے والی روحانی رسم کو کیا کہتے ہیں؟",
+        "Konya",
+        "Sema",
+        "wgi",
+        "wgi-q0434",
+        "wgi",
+        "wgi-q0434"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0434-SRC",
+          "kind": "source",
+          "textUrdu": "مولانا رومی کا مقبرہ ترکی کے شہر قونیہ میں ہے؛ آج یہ مولانا میوزیم کے احاطے کا حصہ ہے۔",
+          "answer": "Konya",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.18, item 434",
+            "referenceUrl": "https://whc.unesco.org/uploads/nominations/1345.pdf",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://whc.unesco.org/uploads/nominations/1345.pdf",
+              "label": "UNESCO nomination: Rumi mausoleum and Masnavi",
+              "publisher": "UNESCO World Heritage Centre",
+              "authorityId": "unesco-whc",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The UNESCO nomination locates Rumi’s green-domed mausoleum in Konya."
+            },
+            {
+              "url": "https://goturkiye.com/branding/press-releases/rumi-commemorated-on-his-747th-death-anniversary-at-seb-i-arus-ceremonies-in-konya",
+              "label": "GoTürkiye: Rumi in Konya and Masnavi",
+              "publisher": "Türkiye Tourism Promotion and Development Agency",
+              "authorityId": "go-turkiye",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Türkiye’s tourism agency places Rumi’s tomb and mausoleum in Konya."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0434-SIM",
+          "kind": "similar",
+          "textUrdu": "مولویہ صوفی سلسلے میں درویشوں کی گھومنے والی روحانی رسم کو سماع (Sema) کہتے ہیں؛ یہ رومی سے وابستہ روایت ہے۔",
+          "answer": "Sema",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: WGI item 434",
+            "referenceUrl": "https://ich.unesco.org/en/RL/mevlevi-sema-ceremony-00100?RL=00100",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://ich.unesco.org/en/RL/mevlevi-sema-ceremony-00100?RL=00100",
+              "label": "UNESCO Intangible Heritage: Mevlevi Sema ceremony",
+              "publisher": "UNESCO Intangible Cultural Heritage",
+              "authorityId": "unesco-ich",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "UNESCO calls the Mevlevi whirling ritual the Sema ceremony and places the order’s origin in Konya."
+            },
+            {
+              "url": "https://goturkiye.com/blog/mevlevi-ceremonies",
+              "label": "GoTürkiye: The Spiritual Rhythm of Mevlevi Sema Ceremonies",
+              "publisher": "Türkiye Tourism Promotion and Development Agency",
+              "authorityId": "go-turkiye",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The tourism agency explains that Rumi’s Mevlevi followers formalized the whirling Sema ceremony."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0438",
+      "pairId": "WGI-Q0438",
+      "topicIds": [
+        "countries-places"
+      ],
+      "title": "Lisa Gherardini ↔ Paris",
+      "subtitleUrdu": "لوور میوزیم کے مطابق مونا لیزا میں لیزا گیراردینی کی تصویر ہے، جو فلورنس کے تاجر فرانچسکو دل جیوکوندو کی اہلیہ تھیں۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Lisa Gherardini ↔ Paris",
+      "searchTerms": [
+        "WGI-Q0438",
+        "Whom does Leonardo da Vinci’s Mona Lisa portray?",
+        "لیونارڈو ڈا ونچی کی مونا لیزا کس خاتون کا پورٹریٹ ہے؟",
+        "In which city is Leonardo da Vinci’s Mona Lisa displayed at the Louvre?",
+        "لوور میوزیم میں رکھی لیونارڈو ڈا ونچی کی مونا لیزا کس شہر میں دیکھی جا سکتی ہے؟",
+        "Lisa Gherardini",
+        "Paris",
+        "wgi",
+        "wgi-q0438",
+        "wgi",
+        "wgi-q0438"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0438-SRC",
+          "kind": "source",
+          "textUrdu": "لوور میوزیم کے مطابق مونا لیزا میں لیزا گیراردینی کی تصویر ہے، جو فلورنس کے تاجر فرانچسکو دل جیوکوندو کی اہلیہ تھیں۔",
+          "answer": "Lisa Gherardini",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.19, item 438",
+            "referenceUrl": "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana",
+              "label": "Louvre: Mona Lisa in the Salle des États",
+              "publisher": "Musée du Louvre",
+              "authorityId": "louvre",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Louvre identifies the Mona Lisa sitter as Lisa Gherardini."
+            },
+            {
+              "url": "https://smarthistory.org/leonardo-mona-lisa/",
+              "label": "Smarthistory: Leonardo, Mona Lisa",
+              "publisher": "Smarthistory",
+              "authorityId": "smarthistory",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The art-historian-authored Smarthistory essay identifies the portrait as Lisa Gherardini."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0438-SIM",
+          "kind": "similar",
+          "textUrdu": "مونا لیزا فرانس کے شہر پیرس میں واقع لوور میوزیم کے Salle des États کمرے میں نمائش پر ہے۔",
+          "answer": "Paris",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: WGI item 438",
+            "referenceUrl": "https://presse.louvre.fr/wp-content/uploads/2019/06/e9eea40d4bb6a40152e38ffbf669b3da.pdf",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://presse.louvre.fr/wp-content/uploads/2019/06/e9eea40d4bb6a40152e38ffbf669b3da.pdf",
+              "label": "Louvre press release: Mona Lisa at Musée du Louvre, Paris",
+              "publisher": "Louvre Press Office",
+              "authorityId": "louvre-press",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Louvre press release explicitly locates the Mona Lisa at Musée du Louvre in Paris."
+            },
+            {
+              "url": "https://smarthistory.org/leonardo-mona-lisa/",
+              "label": "Smarthistory: Leonardo, Mona Lisa",
+              "publisher": "Smarthistory",
+              "authorityId": "smarthistory",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Smarthistory locates the painting at the Musée du Louvre in Paris."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0446",
+      "pairId": "WGI-Q0446",
+      "topicIds": [
+        "dates-timelines",
+        "people-offices"
+      ],
+      "title": "Republic of Genoa ↔ Ferdinand and Isabella",
+      "subtitleUrdu": "کولمبس جینوا میں پیدا ہوئے تھے، جو ان کی پیدائش کے زمانے میں جمہوریہ جینوا کا حصہ تھا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Republic of Genoa ↔ Ferdinand and Isabella",
+      "searchTerms": [
+        "WGI-Q0446",
+        "Christopher Columbus was born in which historic republic?",
+        "کرسٹوفر کولمبس کس تاریخی جمہوریہ میں پیدا ہوئے تھے؟",
+        "Which Spanish monarchs sponsored Columbus’s 1492 Atlantic voyage?",
+        "1492 کے بحرِ اوقیانوس کے سفر میں کولمبس کی سرپرستی اسپین کے کن بادشاہ اور ملکہ نے کی؟",
+        "Republic of Genoa",
+        "Ferdinand and Isabella",
+        "wgi",
+        "wgi-q0446",
+        "wgi",
+        "wgi-q0446"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0446-SRC",
+          "kind": "source",
+          "textUrdu": "کولمبس جینوا میں پیدا ہوئے تھے، جو ان کی پیدائش کے زمانے میں جمہوریہ جینوا کا حصہ تھا۔",
+          "answer": "Republic of Genoa",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.19, item 446",
+            "referenceUrl": "https://www.whitehouse.gov/columbus/",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://www.whitehouse.gov/columbus/",
+              "label": "US White House historical Columbus timeline",
+              "publisher": "US White House",
+              "authorityId": "us-white-house",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The White House timeline explicitly places Columbus’s birth in the Republic of Genoa in 1451."
+            },
+            {
+              "url": "https://www.metmuseum.org/art/collection/search/656392",
+              "label": "Metropolitan Museum: Landing of Columbus catalog entry",
+              "publisher": "Metropolitan Museum of Art",
+              "authorityId": "metropolitan-museum",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Metropolitan Museum’s catalog identifies Columbus with the Republic of Genoa at birth."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0446-SIM",
+          "kind": "similar",
+          "textUrdu": "اسپین کے فرڈینینڈ اور ازابیلا نے کولمبس کے 1492 کے بحری منصوبے کی سرپرستی کی تھی۔",
+          "answer": "Ferdinand and Isabella",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: WGI item 446",
+            "referenceUrl": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+              "label": "Library of Congress: Christopher Columbus: Man and Myth",
+              "publisher": "Library of Congress",
+              "authorityId": "library-of-congress",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Library of Congress identifies Queen Isabel and King Fernando as Columbus’s royal patrons."
+            },
+            {
+              "url": "https://trumpwhitehouse.archives.gov/presidential-actions/president-donald-j-trump-proclaims-october-9-2017-columbus-day/",
+              "label": "US White House historical proclamation on Columbus",
+              "publisher": "US White House Archive",
+              "authorityId": "us-white-house-archive",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The White House historical proclamation names Isabella I and Ferdinand II as sponsors of his voyage."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0447",
+      "pairId": "WGI-Q0447",
+      "topicIds": [
+        "dates-timelines",
+        "people-offices",
+        "countries-places",
+        "records-firsts"
+      ],
+      "title": "Christopher Columbus ↔ Three",
+      "subtitleUrdu": "1492 کے سفر کے بعد کرسٹوفر کولمبس کو “Admiral of the Ocean Sea” کا خطاب ملا۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Christopher Columbus ↔ Three",
+      "searchTerms": [
+        "WGI-Q0447",
+        "Who was granted the title “Admiral of the Ocean Sea”?",
+        "“بحرِ اوقیانوس کے ایڈمرل” کا خطاب کس مہم جو کو دیا گیا تھا؟",
+        "After his first Atlantic voyage, how many more expeditions to the Caribbean did Columbus lead?",
+        "بحرِ اوقیانوس کے پہلے سفر کے بعد کولمبس نے کیریبین کے لیے مزید کتنی مہمات کی قیادت کی؟",
+        "Christopher Columbus",
+        "Three",
+        "wgi",
+        "wgi-q0447",
+        "wgi",
+        "wgi-q0447"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0447-SRC",
+          "kind": "source",
+          "textUrdu": "1492 کے سفر کے بعد کرسٹوفر کولمبس کو “Admiral of the Ocean Sea” کا خطاب ملا۔",
+          "answer": "Christopher Columbus",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.19, item 447",
+            "referenceUrl": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+              "label": "Library of Congress: Christopher Columbus: Man and Myth",
+              "publisher": "Library of Congress",
+              "authorityId": "library-of-congress",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Library of Congress says Columbus secured the title Admiral of the Ocean Sea."
+            },
+            {
+              "url": "https://www.history.com/this-day-in-history/August-1/columbus-lands-in-south-america",
+              "label": "HISTORY: Columbus voyages and title",
+              "publisher": "HISTORY",
+              "authorityId": "history",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "HISTORY identifies Columbus as the recipient of the title admiral of the ocean sea."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0447-SIM",
+          "kind": "similar",
+          "textUrdu": "کولمبس نے اپنے پہلے سفر کے بعد مزید تین مہمات کی قیادت کی؛ یوں ان کے بڑے بحرِ اوقیانوس کے سفر کل چار تھے۔",
+          "answer": "Three",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: WGI item 447",
+            "referenceUrl": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://wwws.loc.gov/exhibits/1492/columbus.html",
+              "label": "Library of Congress: Christopher Columbus: Man and Myth",
+              "publisher": "Library of Congress",
+              "authorityId": "library-of-congress",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Library of Congress says Columbus led three more Caribbean expeditions after 1492."
+            },
+            {
+              "url": "https://www.history.com/this-day-in-history/August-1/columbus-lands-in-south-america",
+              "label": "HISTORY: Columbus voyages and title",
+              "publisher": "HISTORY",
+              "authorityId": "history",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "HISTORY states Columbus led four expeditions in total, including the first."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0448",
+      "pairId": "WGI-Q0448",
+      "topicIds": [
+        "dates-timelines",
+        "records-firsts"
+      ],
+      "title": "12 October 1492 ↔ Pinta",
+      "subtitleUrdu": "12 اکتوبر 1492 کی صبح پنٹا پر موجود ایک ملاح نے زمین دیکھی؛ اس واقعے کو خود کولمبس کے پہلے اترنے سے الگ سمجھنا چاہیے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 12 October 1492 ↔ Pinta",
+      "searchTerms": [
+        "WGI-Q0448",
+        "On what date did a lookout on Columbus’s fleet first sight land in the Caribbean?",
+        "کولمبس کے بحری بیڑے کے نگراں نے کیریبین میں پہلی بار زمین کس تاریخ کو دیکھی؟",
+        "From which ship in Columbus’s fleet was land first sighted on 12 October 1492?",
+        "12 اکتوبر 1492 کو کولمبس کے بیڑے کے کس جہاز سے پہلی بار زمین دیکھی گئی؟",
+        "12 October 1492",
+        "Pinta",
+        "wgi",
+        "wgi-q0448",
+        "wgi",
+        "wgi-q0448"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0448-SRC",
+          "kind": "source",
+          "textUrdu": "12 اکتوبر 1492 کی صبح پنٹا پر موجود ایک ملاح نے زمین دیکھی؛ اس واقعے کو خود کولمبس کے پہلے اترنے سے الگ سمجھنا چاہیے۔",
+          "answer": "12 October 1492",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.19, item 448",
+            "referenceUrl": "https://www.loc.gov/item/today-in-history/October-12",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://www.loc.gov/item/today-in-history/October-12",
+              "label": "Library of Congress: Today in History, October 12",
+              "publisher": "Library of Congress",
+              "authorityId": "library-of-congress",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Library of Congress dates the lookout’s sighting of land to October 12, 1492."
+            },
+            {
+              "url": "https://contentdm.lib.byu.edu/digital/api/collection/rsc/id/18664/download",
+              "label": "BYU: First Voyage to the Americas, p. 45",
+              "publisher": "Brigham Young University",
+              "authorityId": "byu",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The BYU historical account dates the fleet’s confirmed land sighting to October 12, 1492."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": "Reworded from “Columbus reached the Americas” to the documented first land sighting; avoids a disputed landing-day interpretation."
+        },
+        {
+          "questionId": "WGI-Q0448-SIM",
+          "kind": "similar",
+          "textUrdu": "پہلی تصدیق شدہ آوازِ “زمین!” پنٹا جہاز کے ملاح روڈریگو دے تریانا نے بلند کی تھی۔",
+          "answer": "Pinta",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: WGI item 448",
+            "referenceUrl": "https://www.loc.gov/item/today-in-history/October-12",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://www.loc.gov/item/today-in-history/October-12",
+              "label": "Library of Congress: Today in History, October 12",
+              "publisher": "Library of Congress",
+              "authorityId": "library-of-congress",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The Library of Congress says the first land sighting was by a sailor on the Pinta."
+            },
+            {
+              "url": "https://contentdm.lib.byu.edu/digital/api/collection/rsc/id/18664/download",
+              "label": "BYU: First Voyage to the Americas, p. 45",
+              "publisher": "Brigham Young University",
+              "authorityId": "byu",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The BYU historical account identifies Rodrigo de Triana as the lookout aboard the Pinta."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        }
+      ]
+    },
+    {
+      "id": "GKNOTE-WGI-Q0449",
+      "pairId": "WGI-Q0449",
+      "topicIds": [
+        "dates-timelines",
+        "records-firsts"
+      ],
+      "title": "Niña, Pinta and Santa María ↔ Santa María",
+      "subtitleUrdu": "کولمبس کے 1492 کے پہلے سفر میں تین جہاز نیینا، پنٹا اور سانتا ماریا تھے۔",
+      "important": false,
+      "repeatCount": 1,
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: Niña, Pinta and Santa María ↔ Santa María",
+      "searchTerms": [
+        "WGI-Q0449",
+        "What were the three ships of Columbus’s first transatlantic voyage?",
+        "کولمبس کے پہلے بحرِ اوقیانوس کے سفر میں تین جہازوں کے نام کیا تھے؟",
+        "Which ship served as Columbus’s flagship on his first Atlantic voyage?",
+        "کولمبس کے پہلے بحرِ اوقیانوس کے سفر میں ان کا مرکزی جہاز کون سا تھا؟",
+        "Niña, Pinta and Santa María",
+        "Santa María",
+        "wgi",
+        "wgi-q0449",
+        "wgi",
+        "wgi-q0449"
+      ],
+      "facts": [
+        {
+          "questionId": "WGI-Q0449-SRC",
+          "kind": "source",
+          "textUrdu": "کولمبس کے 1492 کے پہلے سفر میں تین جہاز نیینا، پنٹا اور سانتا ماریا تھے۔",
+          "answer": "Niña, Pinta and Santa María",
+          "source": {
+            "type": "book",
+            "label": "Mastering One-Paper with WGI, PDF p.19, item 449",
+            "referenceUrl": "https://www.rmg.co.uk/collections/objects/rmgc-object-12245",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-12245",
+              "label": "Royal Museums Greenwich: The Santa Maria at Anchor",
+              "publisher": "Royal Museums Greenwich",
+              "authorityId": "royal-museums-greenwich",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Royal Museums Greenwich names Santa Maria, Niña and Pinta as the three first-voyage ships."
+            },
+            {
+              "url": "https://home.nps.gov/articles/000/avenue-of-latino-leaders-national-mall-and-memorial-parks-washington-dc.htm",
+              "label": "National Park Service: Columbus Memorial Fountain",
+              "publisher": "US National Park Service",
+              "authorityId": "us-national-park-service",
+              "role": "answer-secondary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The National Park Service names Niña, Pinta and Santa Maria as the three ships that carried Columbus to the New World."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
+        },
+        {
+          "questionId": "WGI-Q0449-SIM",
+          "kind": "similar",
+          "textUrdu": "سانتا ماریا کولمبس کا مرکزی یا flagship جہاز تھا، جبکہ پنٹا اور نیینا دوسرے دو جہاز تھے۔",
+          "answer": "Santa María",
+          "source": {
+            "type": "practice",
+            "label": "Related practice: WGI item 449",
+            "referenceUrl": "https://www.rmg.co.uk/collections/objects/rmgc-object-12245",
+            "accessedOn": "2026-10-14"
+          },
+          "references": [
+            {
+              "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-12245",
+              "label": "Royal Museums Greenwich: The Santa Maria at Anchor",
+              "publisher": "Royal Museums Greenwich",
+              "authorityId": "royal-museums-greenwich",
+              "role": "answer-primary",
+              "sourceClass": "official",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "Royal Museums Greenwich calls Santa Maria Columbus’s flagship."
+            },
+            {
+              "url": "https://www.worldhistory.org/Christopher_Columbus/",
+              "label": "World History Encyclopedia: Christopher Columbus",
+              "publisher": "World History Encyclopedia",
+              "authorityId": "world-history-encyclopedia",
+              "role": "answer-secondary",
+              "sourceClass": "authoritative-secondary",
+              "accessedOn": "2026-10-14",
+              "supports": [
+                "answer"
+              ],
+              "claimSummary": "The historical timeline identifies Santa Maria as Columbus’s flagship for the 1492 voyage."
+            }
+          ],
+          "temporalScope": {
+            "type": "static",
+            "sourcePaperDate": "2026",
+            "asOf": null,
+            "eventDate": null,
+            "version": null,
+            "reverifyAfter": null
+          },
+          "sourceNotes": ""
         }
       ]
     }

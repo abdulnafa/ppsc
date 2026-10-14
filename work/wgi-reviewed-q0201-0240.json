@@ -1,0 +1,3060 @@
+[
+  {
+    "sourceRecordId": "WGI-Q0201",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 201,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "F4E38468C8126D36A51B91F0AB556BCCAACF031B1D3ABA2CDCAA6E1B5E118E1D",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0201-SRC",
+      "pairId": "WGI-Q0201",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "How many electrons surround the divalent carbon atom in a simple carbene?",
+      "questionUrdu": "ایک سادہ کاربین میں دو ظرفیتی کاربن ایٹم کے گرد کتنے الیکٹران ہوتے ہیں؟",
+      "options": [
+        "6",
+        "4",
+        "8",
+        "10"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 6 ہے۔ دو بندوں کے 4 اور غیر بندشی 2 الیکٹران مل کر کاربن کے گرد 6 الیکٹران بنتے ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 201",
+        "referenceUrl": "https://iupac.qmul.ac.uk/class/ionra.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0201"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://iupac.qmul.ac.uk/class/ionra.html",
+          "label": "IUPAC carbene definition",
+          "publisher": "IUPAC",
+          "authorityId": "iupac",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer 6 to the question about how many electrons surround the divalent carbon atom in a simple carbene."
+        },
+        {
+          "url": "https://chem.libretexts.org/Courses/University_of_Connecticut/Organic_Chemistry_-_Textbook_for_Chem_2443/10%3A__Carbenes_and_Free-Radicals/10.01%3A_Diazomethane_Carbenes_and_Cyclopropane_Synthesis",
+          "label": "Carbene bonding",
+          "publisher": "Chemistry LibreTexts",
+          "authorityId": "chemistry-libretexts",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer 6 to the question about how many electrons surround the divalent carbon atom in a simple carbene."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The six-electron count means electrons around the carbene carbon, whereas neutral carbon itself supplies four valence electrons."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0201-SIM",
+      "pairId": "WGI-Q0201",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "How many nonbonding electrons does carbene carbon possess?",
+      "questionUrdu": "کاربین کے کاربن کے پاس کتنے غیر بندشی الیکٹران ہوتے ہیں؟",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 2 ہے۔ کاربین میں کاربن کے دو الیکٹران کسی بند میں حصہ نہیں لیتے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 201",
+        "referenceUrl": "https://iupac.qmul.ac.uk/class/ionra.html",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0201"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://iupac.qmul.ac.uk/class/ionra.html",
+          "label": "IUPAC carbene definition",
+          "publisher": "IUPAC",
+          "authorityId": "iupac",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer 2 to the question about how many nonbonding electrons does carbene carbon possess."
+        },
+        {
+          "url": "https://chem.libretexts.org/Courses/University_of_Connecticut/Organic_Chemistry_-_Textbook_for_Chem_2443/10%3A__Carbenes_and_Free-Radicals/10.01%3A_Diazomethane_Carbenes_and_Cyclopropane_Synthesis",
+          "label": "Carbene bonding",
+          "publisher": "Chemistry LibreTexts",
+          "authorityId": "chemistry-libretexts",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer 2 to the question about how many nonbonding electrons does carbene carbon possess."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0202",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 202,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "69EC8D3E416AEFBFF081737CE1BDE7C489084463FF4A1CE26146459350D51066",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0160-Q058-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q058-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0203",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 203,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "CC1352918DFD4DB023F4479312F1114E3830F97777B5FD93B6E4AB8884025E19",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0160-Q064-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q064-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0204",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 204,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "7728863F81B140FA749C0D5F7E80BF2650FB17E5404B87F107A87AF39D2F7AD0",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0160-Q059-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q059-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0205",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 205,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "643A6CE1D9A7CED7E8558C3D72969566200F04EB199E7A4A36B035481A3F6947",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The source profile conflates Yemen's official capital with the contested government's temporary seat.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0205-SRC",
+      "pairId": "WGI-Q0205",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is Yemen's official capital city?",
+      "questionUrdu": "یمن کا سرکاری دارالحکومت کون سا شہر ہے؟",
+      "options": [
+        "Sanaa",
+        "Aden",
+        "Taiz",
+        "Mukalla"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Sanaa ہے۔ صنعاء یمن کا سرکاری دارالحکومت ہے، اگرچہ حالیہ خانہ جنگی نے حکومتی نشست کو متاثر کیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 205",
+        "referenceUrl": "https://www.cia.gov/the-world-factbook/about/archives/2021/static/4d6f704ca6eee853aecde20ff97cf811/YM-summary.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0205"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.cia.gov/the-world-factbook/about/archives/2021/static/4d6f704ca6eee853aecde20ff97cf811/YM-summary.pdf",
+          "label": "Yemen country summary",
+          "publisher": "CIA World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Sanaa to the question about what is yemen's official capital city."
+        },
+        {
+          "url": "https://yemen.un.org/en/download/96861/169479",
+          "label": "UN Yemen analysis",
+          "publisher": "United Nations Yemen",
+          "authorityId": "un-yemen",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Sanaa to the question about what is yemen's official capital city."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF combines the official capital Sanaa with a temporary government seat in Aden; the questions distinguish their legal and historical roles."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0205-SIM",
+      "pairId": "WGI-Q0205",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which city did President Hadi declare Yemen's interim capital in 2015?",
+      "questionUrdu": "صدر ہادی نے 2015 میں یمن کے کس شہر کو عبوری دارالحکومت قرار دیا؟",
+      "options": [
+        "Aden",
+        "Sanaa",
+        "Taiz",
+        "Hudaydah"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Aden ہے۔ 2015 میں صدر ہادی نے عدن کو عبوری دارالحکومت قرار دیا تھا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 205",
+        "referenceUrl": "https://yemen.un.org/en/download/96861/169479",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0205"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://yemen.un.org/en/download/96861/169479",
+          "label": "UN Yemen analysis",
+          "publisher": "United Nations Yemen",
+          "authorityId": "un-yemen",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Aden to the question about which city did president hadi declare yemen's interim capital in 2015."
+        },
+        {
+          "url": "https://2021-2025.state.gov/reports/country-reports-on-terrorism-2019/yemen/",
+          "label": "Yemen 2019 report",
+          "publisher": "US Department of State",
+          "authorityId": "us-state",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Aden to the question about which city did president hadi declare yemen's interim capital in 2015."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2015",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0206",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 206,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "8BD04EBC4FBD625CFEFFC8EE3F910635E6285E8D399EF041E8942C6042F1589F",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0160-Q055-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q055-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0207",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 207,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "48A0ED201E7C4131CD92EBB6C3BFCA2D4EF7E00E9D31C32BFF8C43D15E8BECEF",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item P236-Q040-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "P236-Q040-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0208",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 208,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "902A44457E57C5ADA8A5F5DD26E76D6868C127CD8EFB15F2797AC696C6ABA2B3",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0160-Q096-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q096-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0209",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 209,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "77A7B11ABC7668C73317344ED50D5874CC0CA6DD7AB792997C1D37B4F2CF046B",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "reject",
+    "reason": "The printed answer combines air velocity and vibration velocity, so the instrument claim cannot form one unambiguous MCQ.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0210",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 210,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "F45BCA60B93E160E69CDCB4B07287957FC4B9C7CA82B3F997DA1C1DDF41982B1",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0141-Q086-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0141-Q086-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0211",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 211,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "4B74E2E3254DFD91F2A8BB9A83FB4FB594C5DEC8EE230A6500E817748093D9C2",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0211-SRC",
+      "pairId": "WGI-Q0211",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the SI base unit of length?",
+      "questionUrdu": "لمبائی کی SI بنیادی اکائی کیا ہے؟",
+      "options": [
+        "metre",
+        "kilogram",
+        "second",
+        "kelvin"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب metre ہے۔ SI میں لمبائی کی بنیادی اکائی میٹر (m) ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 211",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0211"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-base-units",
+          "label": "SI base units",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer metre to the question about what is the si base unit of length."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer metre to the question about what is the si base unit of length."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed unit and symbol are confirmed by BIPM and NIST. The practice question tests its modern defining constant."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0211-SIM",
+      "pairId": "WGI-Q0211",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which defining constant is associated with the SI definition of the metre?",
+      "questionUrdu": "میٹر کی SI تعریف کس مستقل سے وابستہ ہے؟",
+      "options": [
+        "speed of light in vacuum",
+        "Planck constant",
+        "elementary charge",
+        "Boltzmann constant"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب speed of light in vacuum ہے۔ جدید SI میں میٹر کی تعریف روشنی کی خلا میں رفتار کی مقررہ قدر سے وابستہ ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 211",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0211"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+          "label": "SI defining constants",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer speed of light in vacuum to the question about which defining constant is associated with the si definition of the metre."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer speed of light in vacuum to the question about which defining constant is associated with the si definition of the metre."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0212",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 212,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "80DCAB37BEBD8CFAC0CF8D52A1E937D45A8CB4DB0D7868D5E1328F23665AEE4F",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0212-SRC",
+      "pairId": "WGI-Q0212",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the SI base unit of mass?",
+      "questionUrdu": "کمیت کی SI بنیادی اکائی کیا ہے؟",
+      "options": [
+        "kilogram",
+        "metre",
+        "newton",
+        "gram"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب kilogram ہے۔ SI میں کمیت کی بنیادی اکائی کلوگرام (kg) ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 212",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0212"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-base-units",
+          "label": "SI base units",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer kilogram to the question about what is the si base unit of mass."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer kilogram to the question about what is the si base unit of mass."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed unit and symbol are confirmed by BIPM and NIST. The practice question tests its modern defining constant."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0212-SIM",
+      "pairId": "WGI-Q0212",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which defining constant is associated with the SI definition of the kilogram?",
+      "questionUrdu": "کلوگرام کی SI تعریف کس مستقل سے وابستہ ہے؟",
+      "options": [
+        "Planck constant",
+        "speed of light in vacuum",
+        "elementary charge",
+        "Boltzmann constant"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Planck constant ہے۔ جدید SI میں کلوگرام کی تعریف پلانک مستقل کی مقررہ قدر سے وابستہ ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 212",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0212"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+          "label": "SI defining constants",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Planck constant to the question about which defining constant is associated with the si definition of the kilogram."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Planck constant to the question about which defining constant is associated with the si definition of the kilogram."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0213",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 213,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "DECC677BE8936769DC4336929AD803EAD9D42DA76F4F7860EB9592CBCEE8EE01",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0160-Q077-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q077-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0214",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 214,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "39E97EDBB5190B12601E45FFAD263351F069AB50F22042CD8630CEAD086C0C85",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0214-SRC",
+      "pairId": "WGI-Q0214",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the SI base unit of time?",
+      "questionUrdu": "وقت کی SI بنیادی اکائی کیا ہے؟",
+      "options": [
+        "second",
+        "minute",
+        "hour",
+        "hertz"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب second ہے۔ SI میں وقت کی بنیادی اکائی سیکنڈ (s) ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 214",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0214"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-base-units",
+          "label": "SI base units",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer second to the question about what is the si base unit of time."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer second to the question about what is the si base unit of time."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed unit and symbol are confirmed by BIPM and NIST. The practice question tests its modern defining constant."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0214-SIM",
+      "pairId": "WGI-Q0214",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which defining constant is associated with the SI definition of the second?",
+      "questionUrdu": "سیکنڈ کی SI تعریف کس مستقل سے وابستہ ہے؟",
+      "options": [
+        "caesium-133 transition frequency",
+        "Planck constant",
+        "Avogadro constant",
+        "luminous efficacy"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب caesium-133 transition frequency ہے۔ جدید SI میں سیکنڈ کی تعریف سیزیم-133 کی انتقالی تعدد کی مقررہ قدر سے وابستہ ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 214",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0214"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+          "label": "SI defining constants",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer caesium-133 transition frequency to the question about which defining constant is associated with the si definition of the second."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer caesium-133 transition frequency to the question about which defining constant is associated with the si definition of the second."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0215",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 215,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "4DE8CE845303983386739B52CBA9EC8C9005E2461DB9D5DBCDC82523CF864C95",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0215-SRC",
+      "pairId": "WGI-Q0215",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the SI base unit for the rate of flow of electric charge?",
+      "questionUrdu": "برقی رو کی SI بنیادی اکائی کیا ہے؟",
+      "options": [
+        "ampere",
+        "volt",
+        "coulomb",
+        "ohm"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب ampere ہے۔ SI میں برقی رو کی بنیادی اکائی ایمپیئر (A) ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 215",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0215"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-base-units",
+          "label": "SI base units",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer ampere to the question about what is the si base unit of electric current."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer ampere to the question about what is the si base unit of electric current."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed unit and symbol are confirmed by BIPM and NIST. The practice question tests its modern defining constant."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0215-SIM",
+      "pairId": "WGI-Q0215",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which defining constant is associated with the SI definition of the ampere?",
+      "questionUrdu": "ایمپیئر کی SI تعریف کس مستقل سے وابستہ ہے؟",
+      "options": [
+        "elementary charge",
+        "Planck constant",
+        "Boltzmann constant",
+        "Avogadro constant"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب elementary charge ہے۔ جدید SI میں ایمپیئر کی تعریف بنیادی برقی بار کی مقررہ قدر سے وابستہ ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 215",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0215"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+          "label": "SI defining constants",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer elementary charge to the question about which defining constant is associated with the si definition of the ampere."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer elementary charge to the question about which defining constant is associated with the si definition of the ampere."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0216",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 216,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "1EF77285068AE899B89A50C220ED765C16D85CB5DCB7D9A58AE0223468460371",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0216-SRC",
+      "pairId": "WGI-Q0216",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the SI base unit of thermodynamic temperature?",
+      "questionUrdu": "حرارتی درجۂ حرارت کی SI بنیادی اکائی کیا ہے؟",
+      "options": [
+        "kelvin",
+        "degree Celsius",
+        "joule",
+        "watt"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب kelvin ہے۔ SI میں حرارتی درجۂ حرارت کی بنیادی اکائی کیلون (K) ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 216",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0216"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-base-units",
+          "label": "SI base units",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer kelvin to the question about what is the si base unit of thermodynamic temperature."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer kelvin to the question about what is the si base unit of thermodynamic temperature."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed unit and symbol are confirmed by BIPM and NIST. The practice question tests its modern defining constant."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0216-SIM",
+      "pairId": "WGI-Q0216",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which defining constant is associated with the SI definition of the kelvin?",
+      "questionUrdu": "کیلون کی SI تعریف کس مستقل سے وابستہ ہے؟",
+      "options": [
+        "Boltzmann constant",
+        "Planck constant",
+        "elementary charge",
+        "Avogadro constant"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Boltzmann constant ہے۔ جدید SI میں کیلون کی تعریف بولٹزمن مستقل کی مقررہ قدر سے وابستہ ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 216",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0216"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+          "label": "SI defining constants",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Boltzmann constant to the question about which defining constant is associated with the si definition of the kelvin."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Boltzmann constant to the question about which defining constant is associated with the si definition of the kelvin."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0217",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 217,
+    "sourcePdfPage": 10,
+    "rawTextSha256": "577FCD52801DFE2443086ECBCCBA40938EABB4B128643B6E57F1543D6E5F19AF",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0217-SRC",
+      "pairId": "WGI-Q0217",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the SI base unit of amount of substance?",
+      "questionUrdu": "مادے کی مقدار کی SI بنیادی اکائی کیا ہے؟",
+      "options": [
+        "mole",
+        "gram",
+        "kilogram",
+        "litre"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب mole ہے۔ SI میں مادے کی مقدار کی بنیادی اکائی مول (mol) ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.10, item 217",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0217"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-base-units",
+          "label": "SI base units",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer mole to the question about what is the si base unit of amount of substance."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer mole to the question about what is the si base unit of amount of substance."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed unit and symbol are confirmed by BIPM and NIST. The practice question tests its modern defining constant."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0217-SIM",
+      "pairId": "WGI-Q0217",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which defining constant is associated with the SI definition of the mole?",
+      "questionUrdu": "مول کی SI تعریف کس مستقل سے وابستہ ہے؟",
+      "options": [
+        "Avogadro constant",
+        "Planck constant",
+        "Boltzmann constant",
+        "elementary charge"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Avogadro constant ہے۔ جدید SI میں مول کی تعریف ایووگاڈرو مستقل کی مقررہ قدر سے وابستہ ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 217",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0217"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+          "label": "SI defining constants",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Avogadro constant to the question about which defining constant is associated with the si definition of the mole."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Avogadro constant to the question about which defining constant is associated with the si definition of the mole."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0218",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 218,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "947757B3EF320F077967695D1F34D45415266F8DF9BE379C6303AC44F0D2488F",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0218-SRC",
+      "pairId": "WGI-Q0218",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the SI base unit of luminous intensity?",
+      "questionUrdu": "نوری شدت کی SI بنیادی اکائی کیا ہے؟",
+      "options": [
+        "candela",
+        "lumen",
+        "lux",
+        "watt"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب candela ہے۔ SI میں نوری شدت کی بنیادی اکائی کینڈیلا (cd) ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 218",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-base-units",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0218"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-base-units",
+          "label": "SI base units",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer candela to the question about what is the si base unit of luminous intensity."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer candela to the question about what is the si base unit of luminous intensity."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed unit and symbol are confirmed by BIPM and NIST. The practice question tests its modern defining constant."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0218-SIM",
+      "pairId": "WGI-Q0218",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which defining constant is associated with the SI definition of the candela?",
+      "questionUrdu": "کینڈیلا کی SI تعریف کس مستقل سے وابستہ ہے؟",
+      "options": [
+        "luminous efficacy of specified radiation",
+        "Planck constant",
+        "Avogadro constant",
+        "elementary charge"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب luminous efficacy of specified radiation ہے۔ جدید SI میں کینڈیلا کی تعریف مخصوص شعاع کی نوری افادیت کی مقررہ قدر سے وابستہ ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 218",
+        "referenceUrl": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0218"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+          "label": "SI defining constants",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer luminous efficacy of specified radiation to the question about which defining constant is associated with the si definition of the candela."
+        },
+        {
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "label": "SI base unit definitions",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer luminous efficacy of specified radiation to the question about which defining constant is associated with the si definition of the candela."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0219",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 219,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "5CFCD76B7B58C1828338764EC0020A1E12F35F2C16C1966C343766307FF75726",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0006-Q038-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0006-Q038-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0220",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 220,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "E1B640EA55DA34E8CF0621C9010C2A3688A1C6EE3FC35C1317DE79A0C2D863DB",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0168-Q008-SIM tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0168-Q008-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0221",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 221,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "81C18B64D1ABE4570BE78A2CD839025F1CBD9D93DECA9F4D0CE50A8AFAD62FBE",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0221-SRC",
+      "pairId": "WGI-Q0221",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the SI derived unit of energy?",
+      "questionUrdu": "توانائی کی SI ماخوذ اکائی کیا ہے؟",
+      "options": [
+        "joule",
+        "watt",
+        "newton",
+        "pascal"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب joule ہے۔ توانائی اور کام کی SI ماخوذ اکائی جول (J) ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 221",
+        "referenceUrl": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0221"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf",
+          "label": "SI Brochure",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer joule to the question about what is the si derived unit of energy."
+        },
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "label": "SI derived units",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer joule to the question about what is the si derived unit of energy."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The source names the energy unit, while the practice question checks its force-distance relation."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0221-SIM",
+      "pairId": "WGI-Q0221",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "One joule is equivalent to which product of SI units?",
+      "questionUrdu": "ایک جول SI اکائیوں کے کس حاصل ضرب کے برابر ہے؟",
+      "options": [
+        "newton metre",
+        "newton per metre",
+        "watt metre",
+        "pascal per second"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب newton metre ہے۔ ایک جول، ایک نیوٹن قوت سے ایک میٹر حرکت کے کام کے برابر ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 221",
+        "referenceUrl": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0221"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf",
+          "label": "SI Brochure",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer newton metre to the question about one joule is equivalent to which product of si units."
+        },
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "label": "SI derived units",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer newton metre to the question about one joule is equivalent to which product of si units."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0222",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 222,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "9FCC181F0DB3A998DA2C3E5B39CFAE1D8F69E28719FF1F7EA46B89C180D830D5",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0222-SRC",
+      "pairId": "WGI-Q0222",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the SI derived unit of power?",
+      "questionUrdu": "طاقت کی SI ماخوذ اکائی کیا ہے؟",
+      "options": [
+        "watt",
+        "joule",
+        "newton",
+        "volt"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب watt ہے۔ توانائی کے استعمال کی شرح یعنی طاقت کی SI اکائی واٹ (W) ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 222",
+        "referenceUrl": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0222"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf",
+          "label": "SI Brochure",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer watt to the question about what is the si derived unit of power."
+        },
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "label": "SI derived units",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer watt to the question about what is the si derived unit of power."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The source names the power unit; the practice question checks its energy-per-time relation."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0222-SIM",
+      "pairId": "WGI-Q0222",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "One watt equals which rate of energy transfer?",
+      "questionUrdu": "ایک واٹ توانائی کی منتقلی کی کس شرح کے برابر ہے؟",
+      "options": [
+        "one joule per second",
+        "one joule per metre",
+        "one newton per second",
+        "one volt per metre"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب one joule per second ہے۔ ایک واٹ کا مطلب ہر سیکنڈ میں ایک جول توانائی کی منتقلی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 222",
+        "referenceUrl": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0222"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf",
+          "label": "SI Brochure",
+          "publisher": "BIPM",
+          "authorityId": "bipm",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer one joule per second to the question about one watt equals which rate of energy transfer."
+        },
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "label": "SI derived units",
+          "publisher": "NIST",
+          "authorityId": "nist",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer one joule per second to the question about one watt equals which rate of energy transfer."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0223",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 223,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "97E19A5148E1D7B0DF7A29FCA3F05F02706E067BE825D1E0460D3C86FCAC7D44",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0223-SRC",
+      "pairId": "WGI-Q0223",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the angular distance from the astronomical horizon to the zenith?",
+      "questionUrdu": "فلکیاتی افق سے عین سر کے اوپر سمت تک زاویائی فاصلہ کتنا ہے؟",
+      "options": [
+        "90°",
+        "45°",
+        "180°",
+        "360°"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 90° ہے۔ فلکیاتی افق اور عین سر کے اوپر سمت ایک دوسرے سے 90° کا زاویہ بناتے ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 223",
+        "referenceUrl": "https://aa.usno.navy.mil/faq/RST_defs",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0223"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://aa.usno.navy.mil/faq/RST_defs",
+          "label": "Horizon definitions",
+          "publisher": "US Naval Observatory",
+          "authorityId": "us-naval-observatory",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer 90° to the question about what is the angular distance from the astronomical horizon to the zenith."
+        },
+        {
+          "url": "https://www.gml.noaa.gov/grad/solcalc/glossary.html",
+          "label": "Solar position glossary",
+          "publisher": "NOAA",
+          "authorityId": "noaa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer 90° to the question about what is the angular distance from the astronomical horizon to the zenith."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed 90° is geometric; apparent horizon, terrain and refraction can affect observation."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0223-SIM",
+      "pairId": "WGI-Q0223",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "A star is 30° above the horizon. What is its zenith distance?",
+      "questionUrdu": "اگر ایک ستارہ افق سے 30° بلند ہو تو عین سر کے اوپر سمت سے اس کا زاویائی فاصلہ کتنا ہے؟",
+      "options": [
+        "60°",
+        "30°",
+        "90°",
+        "120°"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 60° ہے۔ فلکیاتی ارتفاع اور زینتھ فاصلہ مل کر 90° بنتے ہیں؛ 90° میں سے 30° منفی کرنے سے 60° آتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 223",
+        "referenceUrl": "https://aa.usno.navy.mil/faq/RST_defs",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0223"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://aa.usno.navy.mil/faq/RST_defs",
+          "label": "Horizon definitions",
+          "publisher": "US Naval Observatory",
+          "authorityId": "us-naval-observatory",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer 60° to the question about a star is 30° above the horizon. what is its zenith distance."
+        },
+        {
+          "url": "https://www.gml.noaa.gov/grad/solcalc/glossary.html",
+          "label": "Solar position glossary",
+          "publisher": "NOAA",
+          "authorityId": "noaa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer 60° to the question about a star is 30° above the horizon. what is its zenith distance."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0224",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 224,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "DB2382FD5282D1026C4B811ECDD139145A602F0B07B7F81A449ACCA10D771553",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The current bank already tests the June 2023 Pakistan IMF staff-level agreement amount with the same predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q057-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0225",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 225,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "CC41E39846DDE4E899D893F9E5A7A438EB4817EDCE5FFD5C68400C555B836E3C",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0002-Q070-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0002-Q070-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0226",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 226,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "A1DC14404C0E7559ABEA1811C7EFEC7475C279D1AAA0519242DAC871A6E38BA8",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The printed definition is wrong; World Bank and IMF distinguish deglobalization from slower global growth.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0226-SRC",
+      "pairId": "WGI-Q0226",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "In economics, what does deglobalization mean?",
+      "questionUrdu": "معاشیات میں ڈی گلوبلائزیشن سے کیا مراد ہے؟",
+      "options": [
+        "Reduction in cross-border economic integration",
+        "Faster global GDP growth",
+        "Formation of a single world currency",
+        "A rise in domestic population"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Reduction in cross-border economic integration ہے۔ اس سے مراد بین الاقوامی معاشی انضمام اور ملکوں کے باہمی انحصار میں کمی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 226",
+        "referenceUrl": "https://www.worldbank.org/en/news/feature/2023/08/29/protectionism-is-failing-to-achieve-its-goals-and-threatens-the-future-of-critical-industries",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0226"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.worldbank.org/en/news/feature/2023/08/29/protectionism-is-failing-to-achieve-its-goals-and-threatens-the-future-of-critical-industries",
+          "label": "Deglobalization discussion",
+          "publisher": "World Bank",
+          "authorityId": "world-bank",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Reduction in cross-border economic integration to the question about in economics, what does deglobalization mean."
+        },
+        {
+          "url": "https://www.imf.org/en/publications/fandd/issues/2024/06/b2b-globalization-today-adam-jakubik-and-elizabeth-van-heuvelen",
+          "label": "Globalization today",
+          "publisher": "International Monetary Fund",
+          "authorityId": "imf",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Reduction in cross-border economic integration to the question about in economics, what does deglobalization mean."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF's 'global slowdown' is a different economic idea: deglobalization refers to reduced international economic integration."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0226-SIM",
+      "pairId": "WGI-Q0226",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Which policy most directly promotes deglobalization?",
+      "questionUrdu": "کون سی پالیسی ڈی گلوبلائزیشن کو سب سے براہِ راست بڑھاتی ہے؟",
+      "options": [
+        "Raising barriers to international trade",
+        "Removing import tariffs",
+        "Expanding cross-border investment",
+        "Easing international shipping"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Raising barriers to international trade ہے۔ بین الاقوامی تجارت میں رکاوٹیں بڑھانے سے ملکوں کے درمیان معاشی ربط کم ہوتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 226",
+        "referenceUrl": "https://www.worldbank.org/en/news/feature/2023/08/29/protectionism-is-failing-to-achieve-its-goals-and-threatens-the-future-of-critical-industries",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0226"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.worldbank.org/en/news/feature/2023/08/29/protectionism-is-failing-to-achieve-its-goals-and-threatens-the-future-of-critical-industries",
+          "label": "Deglobalization discussion",
+          "publisher": "World Bank",
+          "authorityId": "world-bank",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Raising barriers to international trade to the question about which policy most directly promotes deglobalization."
+        },
+        {
+          "url": "https://www.imf.org/en/publications/fandd/issues/2024/06/b2b-globalization-today-adam-jakubik-and-elizabeth-van-heuvelen",
+          "label": "Globalization today",
+          "publisher": "International Monetary Fund",
+          "authorityId": "imf",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Raising barriers to international trade to the question about which policy most directly promotes deglobalization."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0227",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 227,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "1788B37CEF1215F5ED6272B60A78A1EF8206BA7D30A9D4AA3514818F9AFAE681",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0227-SRC",
+      "pairId": "WGI-Q0227",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "BIN is the state intelligence agency of which country?",
+      "questionUrdu": "BIN کس ملک کی ریاستی خفیہ ایجنسی ہے؟",
+      "options": [
+        "Indonesia",
+        "Malaysia",
+        "Philippines",
+        "Thailand"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Indonesia ہے۔ BIN انڈونیشیا کی ریاستی خفیہ ایجنسی کا مختصر نام ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 227",
+        "referenceUrl": "https://csirt.bin.go.id/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0227"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://csirt.bin.go.id/",
+          "label": "BIN cyber agency site",
+          "publisher": "Badan Intelijen Negara",
+          "authorityId": "bin-indonesia",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Indonesia to the question about bin is the state intelligence agency of which country."
+        },
+        {
+          "url": "https://ppid.antaranews.com/assets/upload/file/regulasi/Annual-Report-Perum-LKBN-Antara-Tahun-2022.pdf",
+          "label": "Antara annual report",
+          "publisher": "Antara News Agency",
+          "authorityId": "antara",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Indonesia to the question about bin is the state intelligence agency of which country."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The source's country association is confirmed; the practice question tests the agency's full name."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0227-SIM",
+      "pairId": "WGI-Q0227",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "What is the Indonesian name expanded by the initials BIN?",
+      "questionUrdu": "انڈونیشیا کی خفیہ ایجنسی کے حروف BIN کا پورا نام کیا ہے؟",
+      "options": [
+        "Badan Intelijen Negara",
+        "Badan Investigasi Nasional",
+        "Biro Informasi Negara",
+        "Badan Imigrasi Nasional"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Badan Intelijen Negara ہے۔ Badan Intelijen Negara ہی BIN کا سرکاری انڈونیشیائی نام ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 227",
+        "referenceUrl": "https://csirt.bin.go.id/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0227"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://csirt.bin.go.id/",
+          "label": "BIN cyber agency site",
+          "publisher": "Badan Intelijen Negara",
+          "authorityId": "bin-indonesia",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Badan Intelijen Negara to the question about what is the indonesian name expanded by the initials bin."
+        },
+        {
+          "url": "https://ppid.antaranews.com/assets/upload/file/regulasi/Annual-Report-Perum-LKBN-Antara-Tahun-2022.pdf",
+          "label": "Antara annual report",
+          "publisher": "Antara News Agency",
+          "authorityId": "antara",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Badan Intelijen Negara to the question about what is the indonesian name expanded by the initials bin."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0228",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 228,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "4040800AF7157D8D50B76E6D114BE74F48F5E99634314BDFCA716405BBC3E36B",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Reuters originated in London; 'news agency of the UK' is imprecise about its present global ownership.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0228-SRC",
+      "pairId": "WGI-Q0228",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "In which country was the Reuters news agency established in 1851?",
+      "questionUrdu": "Reuters خبر رساں ادارہ 1851 میں کس ملک میں قائم ہوا؟",
+      "options": [
+        "United Kingdom",
+        "France",
+        "Germany",
+        "United States"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب United Kingdom ہے۔ پال جولیس روئٹر نے 1851 میں لندن، برطانیہ میں خبر رسانی کا دفتر قائم کیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 228",
+        "referenceUrl": "https://www.thomsonreuters.com/en/about-us/company-history",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0228"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.thomsonreuters.com/en/about-us/company-history",
+          "label": "Company history",
+          "publisher": "Thomson Reuters",
+          "authorityId": "thomson-reuters",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer United Kingdom to the question about in which country was the reuters news agency established in 1851."
+        },
+        {
+          "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/paul-julius-reuter",
+          "label": "Paul Julius Reuter",
+          "publisher": "Encyclopedia.com",
+          "authorityId": "encyclopedia-com",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer United Kingdom to the question about in which country was the reuters news agency established in 1851."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF's UK association is made historically precise as its London origin, rather than making a present corporate domicile claim."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0228-SIM",
+      "pairId": "WGI-Q0228",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Who founded the Reuters news service in London?",
+      "questionUrdu": "لندن میں Reuters خبر رساں ادارے کی بنیاد کس نے رکھی؟",
+      "options": [
+        "Paul Julius Reuter",
+        "Charles Havas",
+        "Bernhard Wolff",
+        "Joseph Pulitzer"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Paul Julius Reuter ہے۔ پال جولیس روئٹر نے لندن میں اس خبر رساں ادارے کی بنیاد رکھی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 228",
+        "referenceUrl": "https://www.thomsonreuters.com/en/about-us/company-history",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0228"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.thomsonreuters.com/en/about-us/company-history",
+          "label": "Company history",
+          "publisher": "Thomson Reuters",
+          "authorityId": "thomson-reuters",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Paul Julius Reuter to the question about who founded the reuters news service in london."
+        },
+        {
+          "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/paul-julius-reuter",
+          "label": "Paul Julius Reuter",
+          "publisher": "Encyclopedia.com",
+          "authorityId": "encyclopedia-com",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Paul Julius Reuter to the question about who founded the reuters news service in london."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0229",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 229,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "21736487801F2CC3D425C86345B04D549D96940B1850CDE5D1E887BB0A3075F0",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0229-SRC",
+      "pairId": "WGI-Q0229",
+      "kind": "source",
+      "categoryId": "pakistan-studies",
+      "question": "Which ancient cultural region is especially known for Buddhist art in northwestern Pakistan?",
+      "questionUrdu": "شمال مغربی پاکستان کا کون سا قدیم ثقافتی خطہ بدھ مت کے فن کے لیے مشہور ہے؟",
+      "options": [
+        "Gandhara",
+        "Mesopotamia",
+        "Nubia",
+        "Minoan Crete"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Gandhara ہے۔ گندھارا میں بدھ مت سے وابستہ مجسمہ سازی اور خانقاہی آثار نمایاں تھے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 229",
+        "referenceUrl": "https://www.metmuseum.org/pt/essays/gandhara",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0229"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.metmuseum.org/pt/essays/gandhara",
+          "label": "Gandhara",
+          "publisher": "Metropolitan Museum of Art",
+          "authorityId": "met-museum",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Gandhara to the question about which ancient cultural region is especially known for buddhist art in northwestern pakistan."
+        },
+        {
+          "url": "https://www.unesco.emb-japan.go.jp/htm/gandhara.htm",
+          "label": "Gandhara Buddhist monuments",
+          "publisher": "UNESCO",
+          "authorityId": "unesco",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Gandhara to the question about which ancient cultural region is especially known for buddhist art in northwestern pakistan."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed association applies to the ancient Gandhara region and its Buddhist art tradition."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0229-SIM",
+      "pairId": "WGI-Q0229",
+      "kind": "similar",
+      "categoryId": "pakistan-studies",
+      "question": "Which artistic influence blended with Buddhism in classical Gandharan sculpture?",
+      "questionUrdu": "قدیم گندھارا کی بدھ مجسمہ سازی میں کس فنی روایت کا امتزاج ملتا ہے؟",
+      "options": [
+        "Hellenistic Greek art",
+        "Mayan art",
+        "Aztec art",
+        "Polynesian art"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Hellenistic Greek art ہے۔ گندھارا کے بدھ مجسموں میں ہیلینسٹک یونانی فن کے عناصر بھی ملتے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 229",
+        "referenceUrl": "https://www.metmuseum.org/pt/essays/gandhara",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0229"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.metmuseum.org/pt/essays/gandhara",
+          "label": "Gandhara",
+          "publisher": "Metropolitan Museum of Art",
+          "authorityId": "met-museum",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Hellenistic Greek art to the question about which artistic influence blended with buddhism in classical gandharan sculpture."
+        },
+        {
+          "url": "https://www.unesco.emb-japan.go.jp/htm/gandhara.htm",
+          "label": "Gandhara Buddhist monuments",
+          "publisher": "UNESCO",
+          "authorityId": "unesco",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Hellenistic Greek art to the question about which artistic influence blended with buddhism in classical gandharan sculpture."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0230",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 230,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "84AFBB009E74F892A712CAFBFBDF3C301B49400725825A69DA2A606B15DEA574",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0151-Q033-SIM tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0151-Q033-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0231",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 231,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "D500C6FABDE33FFEBB7D758CBBE1958DCBC4B2AA78F833C96898A925A2BAB376",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "reject",
+    "reason": "The singular Gandhara hub prompt gives two different areas, Peshawar Valley and Taxila, and cannot support a single answer.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0232",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 232,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "4F6B7FBB333B7A961B16D3593E85847D09935CDC6A452A19167EEAE8AB80B6D3",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0232-SRC",
+      "pairId": "WGI-Q0232",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "What is the Olympic motto adopted after the 2021 addition?",
+      "questionUrdu": "2021 میں اضافے کے بعد اولمپکس کا شعار کیا ہے؟",
+      "options": [
+        "Faster, Higher, Stronger – Together",
+        "Faster, Higher, Stronger – Alone",
+        "Peace, Unity, Victory",
+        "Excellence, Friendship, Respect"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Faster, Higher, Stronger – Together ہے۔ IOC نے 2021 میں شعار کے آخر میں Together کا لفظ شامل کیا تھا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 232",
+        "referenceUrl": "https://brand-centre.olympic.org/olympic_properties",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0232"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://brand-centre.olympic.org/olympic_properties",
+          "label": "Olympic motto",
+          "publisher": "International Olympic Committee",
+          "authorityId": "ioc",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Faster, Higher, Stronger – Together to the question about what is the olympic motto adopted after the 2021 addition."
+        },
+        {
+          "url": "https://www.bbc.co.uk/sport/extra/xawtd9l5mx/visual-guide-to-the-olympics",
+          "label": "Olympic visual guide",
+          "publisher": "BBC Sport",
+          "authorityId": "bbc",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Faster, Higher, Stronger – Together to the question about what is the olympic motto adopted after the 2021 addition."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2021-07-20",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed post-2021 English and Latin forms are confirmed."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0232-SIM",
+      "pairId": "WGI-Q0232",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "In which year did the IOC add 'Together' to the Olympic motto?",
+      "questionUrdu": "IOC نے اولمپکس کے شعار میں Together کس سال شامل کیا؟",
+      "options": [
+        "2021",
+        "1894",
+        "1996",
+        "2016"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 2021 ہے۔ IOC اجلاس نے 20 جولائی 2021 کو اس تبدیلی کی منظوری دی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 232",
+        "referenceUrl": "https://brand-centre.olympic.org/olympic_properties",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0232"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://brand-centre.olympic.org/olympic_properties",
+          "label": "Olympic motto",
+          "publisher": "International Olympic Committee",
+          "authorityId": "ioc",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer 2021 to the question about in which year did the ioc add 'together' to the olympic motto."
+        },
+        {
+          "url": "https://www.bbc.co.uk/sport/extra/xawtd9l5mx/visual-guide-to-the-olympics",
+          "label": "Olympic visual guide",
+          "publisher": "BBC Sport",
+          "authorityId": "bbc",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer 2021 to the question about in which year did the ioc add 'together' to the olympic motto."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0233",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 233,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "5C2C67009F46782237C97AD394C0CDDA54B3BFAC30A219DFDB754D0466E0FD5A",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Baghdad is right but it was not the immediate capital at the Abbasid takeover in 750.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0233-SRC",
+      "pairId": "WGI-Q0233",
+      "kind": "source",
+      "categoryId": "islamic-studies",
+      "question": "Which city became the Abbasid capital after the Umayyad capital Damascus?",
+      "questionUrdu": "اموی دارالحکومت دمشق کے بعد کون سا شہر عباسی دارالحکومت بنا؟",
+      "options": [
+        "Baghdad",
+        "Cairo",
+        "Jerusalem",
+        "Cordoba"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Baghdad ہے۔ عباسی خلیفہ المنصور نے 762 عیسوی میں بغداد کو نیا دارالحکومت بنایا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 233",
+        "referenceUrl": "https://www.metmuseum.org/ko/essays/the-art-of-the-abbasid-period-750-1258",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0233"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.metmuseum.org/ko/essays/the-art-of-the-abbasid-period-750-1258",
+          "label": "Abbasid period",
+          "publisher": "Metropolitan Museum of Art",
+          "authorityId": "met-museum",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Baghdad to the question about which city became the abbasid capital after the umayyad capital damascus."
+        },
+        {
+          "url": "https://www.iranicaonline.org/articles/baghdad/baghdad-iranian-connection-i-pr-mongol/",
+          "label": "Baghdad foundation",
+          "publisher": "Encyclopaedia Iranica",
+          "authorityId": "encyclopaedia-iranica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Baghdad to the question about which city became the abbasid capital after the umayyad capital damascus."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF compresses the chronology: Abbasid rule began in 750, while al-Mansur founded Baghdad in 762."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0233-SIM",
+      "pairId": "WGI-Q0233",
+      "kind": "similar",
+      "categoryId": "islamic-studies",
+      "question": "Which Abbasid caliph founded Baghdad as a new capital?",
+      "questionUrdu": "کس عباسی خلیفہ نے بغداد کو نئے دارالحکومت کے طور پر قائم کیا؟",
+      "options": [
+        "Al-Mansur",
+        "Harun al-Rashid",
+        "Al-Ma'mun",
+        "Al-Mu'tasim"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Al-Mansur ہے۔ خلیفہ المنصور نے 762 عیسوی میں بغداد کی بنیاد رکھی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 233",
+        "referenceUrl": "https://www.metmuseum.org/ko/essays/the-art-of-the-abbasid-period-750-1258",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0233"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.metmuseum.org/ko/essays/the-art-of-the-abbasid-period-750-1258",
+          "label": "Abbasid period",
+          "publisher": "Metropolitan Museum of Art",
+          "authorityId": "met-museum",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Al-Mansur to the question about which abbasid caliph founded baghdad as a new capital."
+        },
+        {
+          "url": "https://www.iranicaonline.org/articles/baghdad/baghdad-iranian-connection-i-pr-mongol/",
+          "label": "Baghdad foundation",
+          "publisher": "Encyclopaedia Iranica",
+          "authorityId": "encyclopaedia-iranica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Al-Mansur to the question about which abbasid caliph founded baghdad as a new capital."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0234",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 234,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "6A9F74BA391BDAEB31F11FFA5E5AB19A1E5970303476B0D4DF5892849F9879A8",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0234-SRC",
+      "pairId": "WGI-Q0234",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which river flows through the city of Damascus?",
+      "questionUrdu": "دمشق شہر سے کون سا دریا گزرتا ہے؟",
+      "options": [
+        "Barada",
+        "Orontes",
+        "Jordan",
+        "Litani"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Barada ہے۔ دریائے بردیٰ دمشق سے گزرتا ہے اور تاریخی طور پر شہر کو پانی فراہم کرتا رہا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 234",
+        "referenceUrl": "https://whc.unesco.org/document/138861",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0234"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://whc.unesco.org/document/138861",
+          "label": "Barada and old Damascus",
+          "publisher": "UNESCO World Heritage Centre",
+          "authorityId": "unesco",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Barada to the question about which river flows through the city of damascus."
+        },
+        {
+          "url": "https://fieldsupport.dliflc.edu/products/syrian/ap_co/Syrian.pdf",
+          "label": "Syrian cultural orientation",
+          "publisher": "US Defense Language Institute",
+          "authorityId": "us-dli",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Barada to the question about which river flows through the city of damascus."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The source's Barada association is confirmed; the practice question tests Damascus's political history."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0234-SIM",
+      "pairId": "WGI-Q0234",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Damascus was the capital of which early Islamic dynasty?",
+      "questionUrdu": "دمشق کس ابتدائی اسلامی خاندان کا دارالحکومت تھا؟",
+      "options": [
+        "Umayyad dynasty",
+        "Abbasid dynasty",
+        "Fatimid dynasty",
+        "Ottoman dynasty"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Umayyad dynasty ہے۔ دمشق 661 سے 750 عیسوی تک اموی خلافت کا دارالحکومت تھا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 234",
+        "referenceUrl": "https://whc.unesco.org/en/list/20",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0234"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://whc.unesco.org/en/list/20",
+          "label": "Ancient City of Damascus",
+          "publisher": "UNESCO World Heritage Centre",
+          "authorityId": "unesco",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Umayyad dynasty to the question about damascus was the capital of which early islamic dynasty."
+        },
+        {
+          "url": "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam",
+          "label": "Byzantium and Islam",
+          "publisher": "Metropolitan Museum of Art",
+          "authorityId": "met-museum",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Umayyad dynasty to the question about damascus was the capital of which early islamic dynasty."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0235",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 235,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "EC0B313E835B9AD74D0B1958445203DECC14EC6B98C8EC4F2E1AC7DF97A8541B",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0042-Q036-SIM tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0042-Q036-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0236",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 236,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "1B73DBFB10E546AF9E4D94FADCFDB6266B55C350EBAE153BD74D49EE9F6423D4",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0160-Q051-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q051-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0237",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 237,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "41622F866A924858DC9A38116CC1920165178C1BEE5B75E4D571429451EF99D6",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item IBES-Q0594-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "IBES-Q0594-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0238",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 238,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "E44128F17C022988E974C312673FD273EF027A3BE355B8B62E77ACF202F0F760",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0160-Q003-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q003-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0239",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 239,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "F8DF81976AE959D307F6106856600F558A3B3F3F446CAACB6F84C71F65FDB898",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The canonical bank item ADV2E102-U0160-Q053-SRC tests the same question predicate and answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0160-Q053-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0240",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 240,
+    "sourcePdfPage": 11,
+    "rawTextSha256": "16204D7F6B8D90D5B1E1A1D7CD5D95BB8BE8092CD85D521BD18526DC4AA73CD3",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Independent sources verify the printed answer and support the distinct related practice question.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0240-SRC",
+      "pairId": "WGI-Q0240",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which city is traditionally designated South Africa's judicial capital?",
+      "questionUrdu": "جنوبی افریقہ کا روایتی عدالتی دارالحکومت کس شہر کو کہا جاتا ہے؟",
+      "options": [
+        "Bloemfontein",
+        "Pretoria",
+        "Cape Town",
+        "Johannesburg"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Bloemfontein ہے۔ بلومفونٹین روایتی عدالتی دارالحکومت اور سپریم کورٹ آف اپیل کا شہر ہے؛ آئینی عدالت جوہانسبرگ میں ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.11, item 240",
+        "referenceUrl": "https://www.gov.za/south-africa-glance",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0240"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.gov.za/south-africa-glance",
+          "label": "South Africa at a glance",
+          "publisher": "South African Government",
+          "authorityId": "south-africa-government",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Bloemfontein to the question about which city is traditionally designated south africa's judicial capital."
+        },
+        {
+          "url": "https://commonwealthchamber.com/member-countries/south-africa/",
+          "label": "South Africa member country",
+          "publisher": "Commonwealth Chamber of Commerce",
+          "authorityId": "commonwealth-chamber",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Bloemfontein to the question about which city is traditionally designated south africa's judicial capital."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The conventional three-capital classification is confirmed; Bloemfontein is the judicial capital although the Constitutional Court is in Johannesburg."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0240-SIM",
+      "pairId": "WGI-Q0240",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which South African city serves as its legislative capital?",
+      "questionUrdu": "جنوبی افریقہ کا قانون ساز دارالحکومت کون سا شہر ہے؟",
+      "options": [
+        "Cape Town",
+        "Pretoria",
+        "Bloemfontein",
+        "Durban"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Cape Town ہے۔ کیپ ٹاؤن جنوبی افریقہ کا قانون ساز دارالحکومت ہے، جہاں پارلیمان واقع ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 240",
+        "referenceUrl": "https://www.gov.za/south-africa-glance",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0240"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.gov.za/south-africa-glance",
+          "label": "South Africa at a glance",
+          "publisher": "South African Government",
+          "authorityId": "south-africa-government",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Cape Town to the question about which south african city serves as its legislative capital."
+        },
+        {
+          "url": "https://commonwealthchamber.com/member-countries/south-africa/",
+          "label": "South Africa member country",
+          "publisher": "Commonwealth Chamber of Commerce",
+          "authorityId": "commonwealth-chamber",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "This authority supports the answer Cape Town to the question about which south african city serves as its legislative capital."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "This distinct related fact was checked against both cited authorities."
+    }
+  }
+]

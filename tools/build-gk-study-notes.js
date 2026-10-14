@@ -8,7 +8,7 @@ const vm = require("vm");
 const projectDirectory = path.resolve(__dirname, "..");
 const questionBankPath = path.join(projectDirectory, "data", "questions.js");
 const outputPath = path.join(projectDirectory, "data", "gk-study-notes.js");
-const generatedOn = "2026-09-02";
+const generatedOn = "2026-10-12";
 
 const topicDefinitions = [
   {
@@ -190,11 +190,11 @@ function createBundle(data) {
     (fullyReferenced ? eligiblePairs : excludedPairs).push(entry);
   }
 
-  if (gkQuestions.length !== 1452 || pairMap.size !== 726) {
-    fail(`Expected 1,452 GK questions/726 pairs; found ${gkQuestions.length}/${pairMap.size}`);
+  if (gkQuestions.length !== pairMap.size * 2) {
+    fail(`GK source scope is not paired: found ${gkQuestions.length} questions/${pairMap.size} pairs`);
   }
-  if (eligiblePairs.length !== 708 || excludedPairs.length !== 18) {
-    fail(`Expected 708 eligible/18 excluded GK pairs; found ${eligiblePairs.length}/${excludedPairs.length}`);
+  if (eligiblePairs.length + excludedPairs.length !== pairMap.size || excludedPairs.length !== 18) {
+    fail(`Expected only the 18 documented legacy GK pairs to lack structured evidence; found ${eligiblePairs.length} eligible/${excludedPairs.length} excluded`);
   }
 
   const notes = eligiblePairs.map(([pairId, pair]) => {
@@ -277,9 +277,14 @@ function createBundle(data) {
 
 function validateBundle(bundle, data) {
   if (bundle.schemaVersion !== 1) fail("Unexpected GK Study Notes schema version");
-  if (bundle.includedPairCount !== 708 || bundle.includedQuestionCount !== 1416) fail("Incorrect included GK Study Notes scope");
+  const gkQuestions = data.questions.filter((question) => question.categoryId === "general-knowledge");
+  const gkPairCount = new Set(gkQuestions.map((question) => question.pairId)).size;
+  const expectedIncludedPairCount = gkPairCount - 18;
+  if (gkQuestions.length !== gkPairCount * 2 || expectedIncludedPairCount < 0) fail("Invalid paired GK source scope");
+  if (bundle.includedPairCount !== expectedIncludedPairCount
+    || bundle.includedQuestionCount !== expectedIncludedPairCount * 2) fail("Incorrect included GK Study Notes scope");
   if (bundle.excludedPairCount !== 18 || bundle.excludedQuestionCount !== 36) fail("Incorrect excluded legacy scope");
-  if (!Array.isArray(bundle.notes) || bundle.notes.length !== 708) fail("Expected exactly 708 GK Study Notes");
+  if (!Array.isArray(bundle.notes) || bundle.notes.length !== expectedIncludedPairCount) fail(`Expected exactly ${expectedIncludedPairCount} GK Study Notes`);
   if (new Set(bundle.notes.map((note) => note.id)).size !== bundle.notes.length) fail("Duplicate GK Study Note IDs");
   if (new Set(bundle.notes.map((note) => note.pairId)).size !== bundle.notes.length) fail("Duplicate GK Study Note pair IDs");
   if (bundle.notes.some((note) => !Array.isArray(note.facts) || note.facts.length !== 2)) fail("Every GK Study Note must contain two facts");

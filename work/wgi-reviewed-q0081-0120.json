@@ -1,0 +1,4713 @@
+[
+  {
+    "sourceRecordId": "WGI-Q0081",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 81,
+    "sourcePdfPage": 5,
+    "rawTextSha256": "570EDDDA04991480375055B1E910A7FDE630F2F75DACA3FD6EFEB83A30677DCE",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The existing verified bank question already tests Venezuela as the country with the world's largest proved crude-oil reserves, with the same answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0037-Q004-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0082",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 82,
+    "sourcePdfPage": 5,
+    "rawTextSha256": "370431B33489942421B848E5F4C48D6A08C092CB69DC3E83DBE5ADEC4EBB215C",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The printed Venezuela profile is accurate; the retained source question isolates the still-unique currency fact.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0082-SRC",
+      "pairId": "WGI-Q0082",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the official currency of Venezuela?",
+      "questionUrdu": "وینزویلا کی سرکاری کرنسی کیا ہے؟",
+      "options": [
+        "Bolivar",
+        "Peso",
+        "Sol",
+        "Guarani"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Bolivar ہے۔ وینزویلا کی سرکاری کرنسی بولیوار ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.5, item 82",
+        "referenceUrl": "https://www.cia.gov/the-world-factbook/countries/venezuela/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0082"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.cia.gov/the-world-factbook/countries/venezuela/",
+          "label": "Venezuela country profile",
+          "publisher": "CIA World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The country profile identifies Venezuela's capital, currency and Caribbean location."
+        },
+        {
+          "url": "https://www.britannica.com/place/Venezuela",
+          "label": "Venezuela",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms Venezuela's capital, currency and geography."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF combines capital and currency. Caracas was already present in the bank, so only the verified bolivar fact is tested here."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0082-SIM",
+      "pairId": "WGI-Q0082",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Venezuela has a coastline on which sea?",
+      "questionUrdu": "وینزویلا کا ساحل کس سمندر کے ساتھ واقع ہے؟",
+      "options": [
+        "Caribbean Sea",
+        "Red Sea",
+        "Baltic Sea",
+        "Arabian Sea"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Caribbean Sea ہے۔ وینزویلا کا شمالی ساحل بحیرہ کیریبین کے ساتھ واقع ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 82",
+        "referenceUrl": "https://www.cia.gov/the-world-factbook/countries/venezuela/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0082"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.cia.gov/the-world-factbook/countries/venezuela/",
+          "label": "Venezuela country profile",
+          "publisher": "CIA World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The country profile identifies Venezuela's capital, currency and Caribbean location."
+        },
+        {
+          "url": "https://www.britannica.com/place/Venezuela",
+          "label": "Venezuela",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms Venezuela's capital, currency and geography."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0083",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 83,
+    "sourcePdfPage": 5,
+    "rawTextSha256": "A20B1A2A84DD9F6E3DF41B087BFAD44D49089E5C998302B0B0774B11BFF1995C",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Both independent authorities confirm that the ICRC is headquartered in Geneva, Switzerland.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0083-SRC",
+      "pairId": "WGI-Q0083",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "In which city is the International Committee of the Red Cross (ICRC) headquartered?",
+      "questionUrdu": "انٹرنیشنل کمیٹی آف دی ریڈ کراس (ICRC) کا صدر دفتر کس شہر میں ہے؟",
+      "options": [
+        "Geneva",
+        "Vienna",
+        "Brussels",
+        "The Hague"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Geneva ہے۔ ICRC کا صدر دفتر جنیوا، سوئٹزرلینڈ میں ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.5, item 83",
+        "referenceUrl": "https://www.icrc.org/en/document/statutes-international-committee-red-cross-0",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0083"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.icrc.org/en/document/statutes-international-committee-red-cross-0",
+          "label": "Statutes of the ICRC",
+          "publisher": "International Committee of the Red Cross",
+          "authorityId": "icrc",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The ICRC statutes identify its Geneva headquarters and its establishment in 1863."
+        },
+        {
+          "url": "https://www.britannica.com/topic/International-Committee-of-the-Red-Cross",
+          "label": "International Committee of the Red Cross",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently identifies the ICRC's headquarters, origins and founder."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed headquarters answer is retained without change after two-source verification."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0083-SIM",
+      "pairId": "WGI-Q0083",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "In which year was the International Committee of the Red Cross founded?",
+      "questionUrdu": "انٹرنیشنل کمیٹی آف دی ریڈ کراس کس سال قائم ہوئی؟",
+      "options": [
+        "1863",
+        "1919",
+        "1945",
+        "1950"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 1863 ہے۔ ہنری ڈونان سمیت پانچ ارکان نے 1863 میں جنیوا میں اس ادارے کی بنیاد رکھی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 83",
+        "referenceUrl": "https://www.icrc.org/en/document/statutes-international-committee-red-cross-0",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0083"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.icrc.org/en/document/statutes-international-committee-red-cross-0",
+          "label": "Statutes of the ICRC",
+          "publisher": "International Committee of the Red Cross",
+          "authorityId": "icrc",
+          "role": "answer-primary",
+          "sourceClass": "primary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The ICRC statutes identify its Geneva headquarters and its establishment in 1863."
+        },
+        {
+          "url": "https://www.britannica.com/topic/International-Committee-of-the-Red-Cross",
+          "label": "International Committee of the Red Cross",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently identifies the ICRC's headquarters, origins and founder."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0084",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 84,
+    "sourcePdfPage": 5,
+    "rawTextSha256": "576BE5A0A362AAAF03400543E4FB23D28619314F485B53A2501F7A55BE5EAC6B",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The existing verified bank question already asks how many times the ICRC received the Nobel Peace Prize; both sources give three awards.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0081-Q010-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0085",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 85,
+    "sourcePdfPage": 5,
+    "rawTextSha256": "4E1B5BC66AD481F5EA9A756EAC0669FB69399323A9FF72143117EDA46318AED5",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The official Nobel record and ICRC history agree on the two recipients of the first Peace Prize.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0085-SRC",
+      "pairId": "WGI-Q0085",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Who shared the first Nobel Peace Prize in 1901?",
+      "questionUrdu": "1901 کا پہلا نوبیل امن انعام کن دو شخصیات نے مشترکہ طور پر حاصل کیا؟",
+      "options": [
+        "Henry Dunant and Frédéric Passy",
+        "Alfred Nobel and Bertha von Suttner",
+        "Woodrow Wilson and Theodore Roosevelt",
+        "Albert Schweitzer and Nansen"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Henry Dunant and Frédéric Passy ہے۔ دونوں کو 1901 میں پہلا نوبیل امن انعام مشترکہ طور پر ملا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.5, item 85",
+        "referenceUrl": "https://www.nobelprize.org/prizes/peace/1901/summary/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0085"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nobelprize.org/prizes/peace/1901/summary/",
+          "label": "Nobel Peace Prize 1901",
+          "publisher": "Nobel Prize Outreach",
+          "authorityId": "nobel-prize",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official prize record identifies Henry Dunant and Frederic Passy as the 1901 co-laureates."
+        },
+        {
+          "url": "https://www.icrc.org/en/our-history",
+          "label": "Our history",
+          "publisher": "International Committee of the Red Cross",
+          "authorityId": "icrc",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The ICRC history confirms Henry Dunant's role in its creation and the Red Cross movement."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "1901",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The names have been restored from extraction mojibake to Henry Dunant and Frédéric Passy."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0085-SIM",
+      "pairId": "WGI-Q0085",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Henry Dunant helped found which humanitarian organization?",
+      "questionUrdu": "ہنری ڈونان نے کس انسانی خدمت کے ادارے کے قیام میں بنیادی کردار ادا کیا؟",
+      "options": [
+        "International Committee of the Red Cross",
+        "Amnesty International",
+        "Doctors Without Borders",
+        "Save the Children"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب International Committee of the Red Cross ہے۔ ڈونان کے تصور سے 1863 میں ICRC وجود میں آیا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 85",
+        "referenceUrl": "https://www.nobelprize.org/prizes/peace/1901/summary/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0085"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nobelprize.org/prizes/peace/1901/summary/",
+          "label": "Nobel Peace Prize 1901",
+          "publisher": "Nobel Prize Outreach",
+          "authorityId": "nobel-prize",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official prize record identifies Henry Dunant and Frederic Passy as the 1901 co-laureates."
+        },
+        {
+          "url": "https://www.icrc.org/en/our-history",
+          "label": "Our history",
+          "publisher": "International Committee of the Red Cross",
+          "authorityId": "icrc",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The ICRC history confirms Henry Dunant's role in its creation and the Red Cross movement."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0086",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 86,
+    "sourcePdfPage": 5,
+    "rawTextSha256": "5796D1C39585975CF39BE2CCA149B846991CE7F7445C304C3A396B89BFBCE4E5",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The nickname is used by the Republic of Korea's official portal and independently contextualized by Britannica.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0086-SRC",
+      "pairId": "WGI-Q0086",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Which country is commonly called the 'Land of the Morning Calm'?",
+      "questionUrdu": "کس ملک کو عام طور پر 'Land of the Morning Calm' کہا جاتا ہے؟",
+      "options": [
+        "South Korea",
+        "Japan",
+        "Thailand",
+        "Mongolia"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب South Korea ہے۔ یہ جنوبی کوریا کے لیے استعمال ہونے والا معروف ثقافتی لقب ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.5, item 86",
+        "referenceUrl": "https://www.korea.net/NewsFocus/People/view?articleId=122595",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0086"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.korea.net/NewsFocus/People/view?articleId=122595",
+          "label": "Here comes the sun",
+          "publisher": "Korea.net",
+          "authorityId": "korea-net",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Republic of Korea's official portal uses Land of the Morning Calm as Korea's nickname."
+        },
+        {
+          "url": "https://www.britannica.com/place/South-Korea",
+          "label": "South Korea",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently describes South Korea on the southern Korean Peninsula."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The colloquial epithet is retained as a recognition question, not treated as a formal state title."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0086-SIM",
+      "pairId": "WGI-Q0086",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "South Korea occupies the southern part of which peninsula?",
+      "questionUrdu": "جنوبی کوریا کس جزیرہ نما کے جنوبی حصے میں واقع ہے؟",
+      "options": [
+        "Korean Peninsula",
+        "Arabian Peninsula",
+        "Iberian Peninsula",
+        "Malay Peninsula"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Korean Peninsula ہے۔ جنوبی کوریا جزیرہ نما کوریا کے جنوبی حصے پر واقع ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 86",
+        "referenceUrl": "https://www.korea.net/NewsFocus/People/view?articleId=122595",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0086"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.korea.net/NewsFocus/People/view?articleId=122595",
+          "label": "Here comes the sun",
+          "publisher": "Korea.net",
+          "authorityId": "korea-net",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Republic of Korea's official portal uses Land of the Morning Calm as Korea's nickname."
+        },
+        {
+          "url": "https://www.britannica.com/place/South-Korea",
+          "label": "South Korea",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently describes South Korea on the southern Korean Peninsula."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0087",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 87,
+    "sourcePdfPage": 5,
+    "rawTextSha256": "F02B0B813F478340B87C3A11A85DC8443664ADE024BE13A0CDB18EB3F5795061",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The existing verified P235 pair already tests Seoul as South Korea's capital and the won as its currency, so this combined fact would add no new learning target.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "P235-Q001-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0088",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 88,
+    "sourcePdfPage": 5,
+    "rawTextSha256": "124501E910A25500EA2F4DF91C17DC5A06A3BDFFCABD1C537F08E55AA8592549",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The officeholder is correct, but official Korean sources number Lee Jae Myung as the 21st President rather than the printed 14th.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0088-SRC",
+      "pairId": "WGI-Q0088",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "As of 2026, who is the President of the Republic of Korea?",
+      "questionUrdu": "2026 تک جمہوریہ کوریا کے صدر کون ہیں؟",
+      "options": [
+        "Lee Jae Myung",
+        "Yoon Suk Yeol",
+        "Moon Jae-in",
+        "Han Duck-soo"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Lee Jae Myung ہے۔ وہ 2025 میں منتخب ہوئے اور 2026 تک عہدے پر ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.5, item 88",
+        "referenceUrl": "https://en.president.go.kr/president",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0088"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://en.president.go.kr/president",
+          "label": "President Lee Jae Myung",
+          "publisher": "Office of the President, Republic of Korea",
+          "authorityId": "rok-president",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official presidential profile identifies Lee Jae Myung as the 21st President elected in 2025."
+        },
+        {
+          "url": "https://www.korea.net/Government/Current-Affairs/National-Affairs?affairId=2796",
+          "label": "President Lee Jae Myung",
+          "publisher": "Korea.net",
+          "authorityId": "korea-net",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The government portal confirms Lee Jae Myung took office on 4 June 2025."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "Corrected the PDF's ordinal '(14th)': official Republic of Korea sources identify Lee Jae Myung as the 21st President, serving from 4 June 2025."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0088-SIM",
+      "pairId": "WGI-Q0088",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "As of 2026, in which year did President Lee Jae Myung begin his term?",
+      "questionUrdu": "2026 تک صدر Lee Jae Myung نے کس سال اپنی مدت شروع کی؟",
+      "options": [
+        "2025",
+        "2022",
+        "2024",
+        "2026"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 2025 ہے۔ Lee Jae Myung نے 4 June 2025 کو صدارتی مدت شروع کی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 88",
+        "referenceUrl": "https://en.president.go.kr/president",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0088"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://en.president.go.kr/president",
+          "label": "President Lee Jae Myung",
+          "publisher": "Office of the President, Republic of Korea",
+          "authorityId": "rok-president",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official presidential profile identifies Lee Jae Myung as the 21st President elected in 2025."
+        },
+        {
+          "url": "https://www.korea.net/Government/Current-Affairs/National-Affairs?affairId=2796",
+          "label": "President Lee Jae Myung",
+          "publisher": "Korea.net",
+          "authorityId": "korea-net",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The government portal confirms Lee Jae Myung took office on 4 June 2025."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0089",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 89,
+    "sourcePdfPage": 5,
+    "rawTextSha256": "EFA4EAC0FE51DADC2F66BEEAC9ED59FD58FD83DB1D3B8C0F6CA862C2C0D2771A",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Current ICCO and Ivorian government evidence confirms Cote d'Ivoire led cocoa production in 2024/25.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0089-SRC",
+      "pairId": "WGI-Q0089",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "According to data available in 2026 for cocoa year 2024/25, which country was the largest cocoa producer?",
+      "questionUrdu": "2026 میں دستیاب cocoa year 2024/25 کے اعداد کے مطابق سب سے بڑا کوکو پیدا کرنے والا ملک کون تھا؟",
+      "options": [
+        "Cote d'Ivoire",
+        "Ghana",
+        "Ecuador",
+        "Indonesia"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Cote d'Ivoire ہے۔ 2024/25 کے ICCO اعداد میں اس کی پیداوار سب سے زیادہ تھی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.5, item 89",
+        "referenceUrl": "https://www.icco.org/production_qbcs-li-no-2/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0089"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.icco.org/production_qbcs-li-no-2/",
+          "label": "Production of cocoa beans",
+          "publisher": "International Cocoa Organization",
+          "authorityId": "icco",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "ICCO data rank Cote d'Ivoire first and report its 2024/25 cocoa output near 1.67 million tonnes."
+        },
+        {
+          "url": "https://www.economie-ivoirienne.ci/cote-divoire-en-bref/presentation-du-pays.html",
+          "label": "Presentation of Cote d'Ivoire",
+          "publisher": "Government of Cote d'Ivoire",
+          "authorityId": "cote-divoire-government",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official economic portal identifies Cote d'Ivoire as the world's leading cocoa producer."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The dynamic ranking is explicitly scoped to evidence available in 2026 for cocoa year 2024/25."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0089-SIM",
+      "pairId": "WGI-Q0089",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "According to data available in 2026, about how much cocoa did Cote d'Ivoire produce in 2024/25?",
+      "questionUrdu": "2026 میں دستیاب اعداد کے مطابق Cote d'Ivoire نے 2024/25 میں تقریباً کتنا کوکو پیدا کیا؟",
+      "options": [
+        "1.67 million tonnes",
+        "0.60 million tonnes",
+        "0.32 million tonnes",
+        "3.25 million tonnes"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 1.67 million tonnes ہے۔ ICCO نے 2024/25 کے لیے تقریباً 1.67 million tonnes درج کیے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 89",
+        "referenceUrl": "https://www.icco.org/production_qbcs-li-no-2/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0089"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.icco.org/production_qbcs-li-no-2/",
+          "label": "Production of cocoa beans",
+          "publisher": "International Cocoa Organization",
+          "authorityId": "icco",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "ICCO data rank Cote d'Ivoire first and report its 2024/25 cocoa output near 1.67 million tonnes."
+        },
+        {
+          "url": "https://www.economie-ivoirienne.ci/cote-divoire-en-bref/presentation-du-pays.html",
+          "label": "Presentation of Cote d'Ivoire",
+          "publisher": "Government of Cote d'Ivoire",
+          "authorityId": "cote-divoire-government",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official economic portal identifies Cote d'Ivoire as the world's leading cocoa producer."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0090",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 90,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "D6B38334EA1416935CD5C389E2188F9830808EC46F68139100F418B4A8A22098",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Official Ivorian and independent reference sources agree on Yamoussoukro and the CFA franc.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0090-SRC",
+      "pairId": "WGI-Q0090",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the political capital of Cote d'Ivoire?",
+      "questionUrdu": "Cote d'Ivoire کا سیاسی دارالحکومت کیا ہے؟",
+      "options": [
+        "Yamoussoukro",
+        "Abidjan",
+        "Accra",
+        "Dakar"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Yamoussoukro ہے۔ Abidjan معاشی مرکز ہے مگر سیاسی و انتظامی دارالحکومت Yamoussoukro ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 90",
+        "referenceUrl": "https://www.presidence.ci/en/our-heritage/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0090"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.presidence.ci/en/our-heritage/",
+          "label": "Our heritage",
+          "publisher": "Presidency of Cote d'Ivoire",
+          "authorityId": "cote-divoire-presidency",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The presidency identifies Yamoussoukro as political capital and the CFA franc as currency."
+        },
+        {
+          "url": "https://www.britannica.com/place/Cote-dIvoire",
+          "label": "Cote d'Ivoire",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms Cote d'Ivoire's capital and currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The compound printed profile was split into one source and one related practice question."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0090-SIM",
+      "pairId": "WGI-Q0090",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which currency is used in Cote d'Ivoire?",
+      "questionUrdu": "Cote d'Ivoire میں کون سی کرنسی استعمال ہوتی ہے؟",
+      "options": [
+        "West African CFA franc",
+        "Ghanaian cedi",
+        "Dalasi",
+        "Naira"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب West African CFA franc ہے۔ Cote d'Ivoire مغربی افریقی CFA franc استعمال کرتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 90",
+        "referenceUrl": "https://www.presidence.ci/en/our-heritage/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0090"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.presidence.ci/en/our-heritage/",
+          "label": "Our heritage",
+          "publisher": "Presidency of Cote d'Ivoire",
+          "authorityId": "cote-divoire-presidency",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The presidency identifies Yamoussoukro as political capital and the CFA franc as currency."
+        },
+        {
+          "url": "https://www.britannica.com/place/Cote-dIvoire",
+          "label": "Cote d'Ivoire",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms Cote d'Ivoire's capital and currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0091",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 91,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "65EEB39A70AE6828C9D979B7CA5762BD45CB239E00C9C054730E3C81A9F8C52C",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The Bank of Ghana and Britannica agree that Ghana uses the cedi and has Accra as its capital.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0091-SRC",
+      "pairId": "WGI-Q0091",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the official currency of Ghana?",
+      "questionUrdu": "گھانا کی سرکاری کرنسی کیا ہے؟",
+      "options": [
+        "Ghanaian cedi",
+        "Naira",
+        "CFA franc",
+        "Rand"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Ghanaian cedi ہے۔ گھانا کی قانونی کرنسی سیڈی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 91",
+        "referenceUrl": "https://www.bog.gov.gh/news/bank-of-ghana-to-mark-cedi60/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0091"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bog.gov.gh/news/bank-of-ghana-to-mark-cedi60/",
+          "label": "Bank of Ghana to mark Cedi at 60",
+          "publisher": "Bank of Ghana",
+          "authorityId": "bank-of-ghana",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The central bank identifies the cedi as Ghana's sole legal tender."
+        },
+        {
+          "url": "https://www.britannica.com/place/Ghana",
+          "label": "Ghana",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently identifies Accra as Ghana's capital and the cedi as currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The two printed profile facts were separated into distinct answerable MCQs."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0091-SIM",
+      "pairId": "WGI-Q0091",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "What is the capital of Ghana?",
+      "questionUrdu": "گھانا کا دارالحکومت کیا ہے؟",
+      "options": [
+        "Accra",
+        "Kumasi",
+        "Lome",
+        "Abuja"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Accra ہے۔ اکرا گھانا کا دارالحکومت اور اہم انتظامی مرکز ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 91",
+        "referenceUrl": "https://www.bog.gov.gh/news/bank-of-ghana-to-mark-cedi60/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0091"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bog.gov.gh/news/bank-of-ghana-to-mark-cedi60/",
+          "label": "Bank of Ghana to mark Cedi at 60",
+          "publisher": "Bank of Ghana",
+          "authorityId": "bank-of-ghana",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The central bank identifies the cedi as Ghana's sole legal tender."
+        },
+        {
+          "url": "https://www.britannica.com/place/Ghana",
+          "label": "Ghana",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently identifies Accra as Ghana's capital and the cedi as currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0092",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 92,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "F7DDC74110064FABB6282C22E219789B7BF9472D5F5CAC2B9D4C85FF91E716C8",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The CIA country profile and Britannica agree that Ecuador's capital is Quito and its currency is the US dollar.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0092-SRC",
+      "pairId": "WGI-Q0092",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which currency is legal tender in Ecuador?",
+      "questionUrdu": "ایکواڈور میں کون سی کرنسی قانونی زر ہے؟",
+      "options": [
+        "US dollar",
+        "Ecuadorian peso",
+        "Sol",
+        "Bolivar"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب US dollar ہے۔ ایکواڈور امریکی ڈالر کو اپنی سرکاری کرنسی کے طور پر استعمال کرتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 92",
+        "referenceUrl": "https://www.cia.gov/the-world-factbook/countries/ecuador/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0092"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.cia.gov/the-world-factbook/countries/ecuador/",
+          "label": "Ecuador country profile",
+          "publisher": "CIA World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The country profile identifies Quito as Ecuador's capital and the US dollar as its currency."
+        },
+        {
+          "url": "https://www.britannica.com/place/Ecuador",
+          "label": "Ecuador",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms Ecuador's capital and currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The two profile facts were converted into separate, auditable questions."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0092-SIM",
+      "pairId": "WGI-Q0092",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "What is the capital of Ecuador?",
+      "questionUrdu": "ایکواڈور کا دارالحکومت کیا ہے؟",
+      "options": [
+        "Quito",
+        "Guayaquil",
+        "Lima",
+        "Bogota"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Quito ہے۔ کوئٹو ایکواڈور کا قومی دارالحکومت ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 92",
+        "referenceUrl": "https://www.cia.gov/the-world-factbook/countries/ecuador/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0092"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.cia.gov/the-world-factbook/countries/ecuador/",
+          "label": "Ecuador country profile",
+          "publisher": "CIA World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The country profile identifies Quito as Ecuador's capital and the US dollar as its currency."
+        },
+        {
+          "url": "https://www.britannica.com/place/Ecuador",
+          "label": "Ecuador",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms Ecuador's capital and currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0093",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 93,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "F3AED5868CCCB776370A82E2F4B03BCD2C2AB7CA1C061C682EF780BB6911C278",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "UNEP and UN sources agree that UNEP was established in 1972 and is headquartered in Nairobi.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0093-SRC",
+      "pairId": "WGI-Q0093",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Where is the global headquarters of the United Nations Environment Programme (UNEP)?",
+      "questionUrdu": "United Nations Environment Programme (UNEP) کا عالمی صدر دفتر کہاں ہے؟",
+      "options": [
+        "Nairobi",
+        "Geneva",
+        "New York",
+        "Vienna"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Nairobi ہے۔ UNEP کا عالمی صدر دفتر نیروبی، کینیا میں ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 93",
+        "referenceUrl": "https://www.unep.org/news-and-stories/story/how-nairobi-came-host-uneps-headquarters",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0093"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.unep.org/news-and-stories/story/how-nairobi-came-host-uneps-headquarters",
+          "label": "How Nairobi came to host UNEP headquarters",
+          "publisher": "United Nations Environment Programme",
+          "authorityId": "unep",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNEP records its 1972 establishment and selection of Nairobi for its headquarters."
+        },
+        {
+          "url": "https://www.un.org/en/visit/nairobi/about-us",
+          "label": "About the UN Office at Nairobi",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN confirms that Nairobi services the global headquarters of UNEP."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed headquarters is confirmed; the paired question adds the institution's founding year."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0093-SIM",
+      "pairId": "WGI-Q0093",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "In which year was the United Nations Environment Programme established?",
+      "questionUrdu": "United Nations Environment Programme کس سال قائم ہوا؟",
+      "options": [
+        "1972",
+        "1945",
+        "1965",
+        "1992"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 1972 ہے۔ UNEP کو 1972 میں قائم کیا گیا اور اس کا صدر دفتر نیروبی بنا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 93",
+        "referenceUrl": "https://www.unep.org/news-and-stories/story/how-nairobi-came-host-uneps-headquarters",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0093"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.unep.org/news-and-stories/story/how-nairobi-came-host-uneps-headquarters",
+          "label": "How Nairobi came to host UNEP headquarters",
+          "publisher": "United Nations Environment Programme",
+          "authorityId": "unep",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNEP records its 1972 establishment and selection of Nairobi for its headquarters."
+        },
+        {
+          "url": "https://www.un.org/en/visit/nairobi/about-us",
+          "label": "About the UN Office at Nairobi",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN confirms that Nairobi services the global headquarters of UNEP."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0094",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 94,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "A5330FA96B3F873DEE581FCF945056CF9E0BDDBC7D3A8F85CE4E8512F21C9E22",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Both country references confirm Nairobi as Kenya's capital and the Kenyan shilling as currency.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0094-SRC",
+      "pairId": "WGI-Q0094",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the official currency of Kenya?",
+      "questionUrdu": "کینیا کی سرکاری کرنسی کیا ہے؟",
+      "options": [
+        "Kenyan shilling",
+        "Kenyan franc",
+        "Birr",
+        "Pula"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Kenyan shilling ہے۔ کینیا کی قومی کرنسی Kenyan shilling ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 94",
+        "referenceUrl": "https://www.cia.gov/the-world-factbook/countries/kenya/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0094"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.cia.gov/the-world-factbook/countries/kenya/",
+          "label": "Kenya country profile",
+          "publisher": "CIA World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The country profile identifies Nairobi as capital and the Kenyan shilling as currency."
+        },
+        {
+          "url": "https://www.britannica.com/place/Kenya",
+          "label": "Kenya",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms Kenya's capital and currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The printed profile was split into distinct capital and currency questions."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0094-SIM",
+      "pairId": "WGI-Q0094",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "What is the capital of Kenya?",
+      "questionUrdu": "کینیا کا دارالحکومت کیا ہے؟",
+      "options": [
+        "Nairobi",
+        "Mombasa",
+        "Kampala",
+        "Dodoma"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Nairobi ہے۔ نیروبی کینیا کا دارالحکومت اور سب سے بڑا شہر ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 94",
+        "referenceUrl": "https://www.cia.gov/the-world-factbook/countries/kenya/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0094"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.cia.gov/the-world-factbook/countries/kenya/",
+          "label": "Kenya country profile",
+          "publisher": "CIA World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The country profile identifies Nairobi as capital and the Kenyan shilling as currency."
+        },
+        {
+          "url": "https://www.britannica.com/place/Kenya",
+          "label": "Kenya",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms Kenya's capital and currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0095",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 95,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "FF3931068EDE3E90375B44AE2C43395D2CF25CE7DE474D8085985C58C562E9F2",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Official tourism material and National Geographic support Myanmar's golden-pagoda epithet.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0095-SRC",
+      "pairId": "WGI-Q0095",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Which country is widely known as the 'Land of the Golden Pagodas'?",
+      "questionUrdu": "کس ملک کو وسیع طور پر 'Land of the Golden Pagodas' کہا جاتا ہے؟",
+      "options": [
+        "Myanmar",
+        "Nepal",
+        "Cambodia",
+        "Laos"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Myanmar ہے۔ میانمار کے منظرنامے میں بے شمار سنہری پگوڈا نمایاں ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 95",
+        "referenceUrl": "https://tourism.gov.mm/en/about-myanmar",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0095"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://tourism.gov.mm/en/about-myanmar",
+          "label": "About Myanmar",
+          "publisher": "Myanmar Ministry of Hotels and Tourism",
+          "authorityId": "myanmar-tourism-ministry",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official tourism page emphasizes Myanmar's golden pagodas and cultural identity."
+        },
+        {
+          "url": "https://www.nationalgeographic.com/travel/article/four-ways-travelers-can-save-burma-myanmar",
+          "label": "Four ways travelers can help save Myanmar",
+          "publisher": "National Geographic",
+          "authorityId": "national-geographic",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "National Geographic describes Myanmar as the land of the golden pagodas."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The phrase is treated as a widely used cultural epithet, not as an official constitutional title."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0095-SIM",
+      "pairId": "WGI-Q0095",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "The famous Shwedagon Pagoda is located in which Myanmar city?",
+      "questionUrdu": "مشہور Shwedagon Pagoda میانمار کے کس شہر میں واقع ہے؟",
+      "options": [
+        "Yangon",
+        "Mandalay",
+        "Naypyidaw",
+        "Bagan"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Yangon ہے۔ شیوے ڈاگون پگوڈا یانگون کی سب سے معروف مذہبی یادگاروں میں ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 95",
+        "referenceUrl": "https://tourism.gov.mm/en/about-myanmar",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0095"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://tourism.gov.mm/en/about-myanmar",
+          "label": "About Myanmar",
+          "publisher": "Myanmar Ministry of Hotels and Tourism",
+          "authorityId": "myanmar-tourism-ministry",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official tourism page emphasizes Myanmar's golden pagodas and cultural identity."
+        },
+        {
+          "url": "https://www.nationalgeographic.com/travel/article/four-ways-travelers-can-save-burma-myanmar",
+          "label": "Four ways travelers can help save Myanmar",
+          "publisher": "National Geographic",
+          "authorityId": "national-geographic",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "National Geographic describes Myanmar as the land of the golden pagodas."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0096",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 96,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "F9B0EBF4184848394A6400B2410749A85F475E25732BFDBF7260BC5CB214534D",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "UN and Britannica evidence confirm that the official English state name changed from Burma to Myanmar in 1989.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0096-SRC",
+      "pairId": "WGI-Q0096",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "In 1989, the country officially known in English as Burma changed its name to what?",
+      "questionUrdu": "1989 میں انگریزی میں سرکاری طور پر Burma کہلانے والے ملک نے اپنا نام بدل کر کیا رکھا؟",
+      "options": [
+        "Myanmar",
+        "Malaya",
+        "Sri Lanka",
+        "Cambodia"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Myanmar ہے۔ 1989 میں Burma نے اقوام متحدہ کو سرکاری نام Myanmar ہونے کی اطلاع دی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 96",
+        "referenceUrl": "https://www.un.org/zh/about-us/member-states/myanmar",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0096"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.un.org/zh/about-us/member-states/myanmar",
+          "label": "Myanmar member-state name history",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN records notification on 18 June 1989 that Burma had changed its name to Myanmar."
+        },
+        {
+          "url": "https://www.britannica.com/place/Myanmar",
+          "label": "Myanmar",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently explains the 1989 official English name change from Burma to Myanmar."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "1989",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The question states the official-name change without implying that every government or speaker stopped using Burma."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0096-SIM",
+      "pairId": "WGI-Q0096",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "On what date in 1989 did Burma notify the United Nations of the name Myanmar?",
+      "questionUrdu": "1989 میں Burma نے کس تاریخ کو اقوام متحدہ کو Myanmar نام کی اطلاع دی؟",
+      "options": [
+        "18 June 1989",
+        "1 January 1989",
+        "4 July 1989",
+        "17 September 1989"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 18 June 1989 ہے۔ اقوام متحدہ کے ریکارڈ میں یہی اطلاع کی تاریخ درج ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 96",
+        "referenceUrl": "https://www.un.org/zh/about-us/member-states/myanmar",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0096"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.un.org/zh/about-us/member-states/myanmar",
+          "label": "Myanmar member-state name history",
+          "publisher": "United Nations",
+          "authorityId": "united-nations",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN records notification on 18 June 1989 that Burma had changed its name to Myanmar."
+        },
+        {
+          "url": "https://www.britannica.com/place/Myanmar",
+          "label": "Myanmar",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently explains the 1989 official English name change from Burma to Myanmar."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "1989-06-18",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0097",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 97,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "88EB05066CB6F6041EBDE039EF54380533BF6E4078CC9A1B985217F707E2801F",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "USGS and Britannica agree that the Amazon is the world's largest river by discharge volume.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0097-SRC",
+      "pairId": "WGI-Q0097",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which river has the greatest discharge volume in the world?",
+      "questionUrdu": "دنیا میں سب سے زیادہ پانی کے اخراج والا دریا کون سا ہے؟",
+      "options": [
+        "Amazon River",
+        "Nile River",
+        "Congo River",
+        "Yangtze River"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Amazon River ہے۔ پانی کے اخراج کے لحاظ سے ایمیزون دنیا کا سب سے بڑا دریا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 97",
+        "referenceUrl": "https://www.usgs.gov/publications/amazon-measuring-a-mighty-river",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0097"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.usgs.gov/publications/amazon-measuring-a-mighty-river",
+          "label": "The Amazon, measuring a mighty river",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "usgs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USGS identifies the Amazon as the largest river by water discharge and compares it with the Congo."
+        },
+        {
+          "url": "https://www.britannica.com/place/Amazon-River",
+          "label": "Amazon River",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms the Amazon's discharge rank and Atlantic outlet."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The criterion 'by discharge' is stated explicitly to avoid confusion with disputed length rankings."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0097-SIM",
+      "pairId": "WGI-Q0097",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which river ranks second to the Amazon in average discharge?",
+      "questionUrdu": "اوسط پانی کے اخراج میں Amazon کے بعد کون سا دریا دوسرے نمبر پر ہے؟",
+      "options": [
+        "Congo River",
+        "Nile River",
+        "Mississippi River",
+        "Volga River"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Congo River ہے۔ USGS کے تقابل میں کانگو کا اخراج دنیا میں ایمیزون کے بعد ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 97",
+        "referenceUrl": "https://www.usgs.gov/publications/amazon-measuring-a-mighty-river",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0097"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.usgs.gov/publications/amazon-measuring-a-mighty-river",
+          "label": "The Amazon, measuring a mighty river",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "usgs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USGS identifies the Amazon as the largest river by water discharge and compares it with the Congo."
+        },
+        {
+          "url": "https://www.britannica.com/place/Amazon-River",
+          "label": "Amazon River",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms the Amazon's discharge rank and Atlantic outlet."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0098",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 98,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "8180AE8D2E3468DF01131A4703EF41CAE5439573F6244E71C1204333A91C4CB7",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Thai government statistics and an independent institute confirm Thailand led natural-rubber production in 2024.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0098-SRC",
+      "pairId": "WGI-Q0098",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "According to data available in 2026, which country was the largest natural-rubber producer in 2024?",
+      "questionUrdu": "2026 میں دستیاب اعداد کے مطابق 2024 میں سب سے بڑا قدرتی ربڑ پیدا کرنے والا ملک کون تھا؟",
+      "options": [
+        "Thailand",
+        "Indonesia",
+        "Vietnam",
+        "Cote d'Ivoire"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Thailand ہے۔ 2024 میں تھائی لینڈ کی قدرتی ربڑ پیداوار دنیا میں سب سے زیادہ تھی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 98",
+        "referenceUrl": "https://www.tpso.go.th/document/2604-0000000012",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0098"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.tpso.go.th/document/2604-0000000012",
+          "label": "Strengthening Thailand's rubber sector",
+          "publisher": "Thailand Trade Policy and Strategy Office",
+          "authorityId": "thailand-tpso",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Official Thai data rank Thailand first in 2024 natural-rubber output at 4.79 million tonnes and 32.3 percent."
+        },
+        {
+          "url": "https://efi.int/publication/thailands-natural-rubber-producers-are-preparing-new-market-requirements",
+          "label": "Thailand natural rubber producers",
+          "publisher": "European Forest Institute",
+          "authorityId": "european-forest-institute",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The institute independently identifies Thailand as the world's largest natural-rubber producer."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The production ranking is explicitly scoped to data available in 2026 for calendar year 2024."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0098-SIM",
+      "pairId": "WGI-Q0098",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "According to data available in 2026, about what share of world natural-rubber output did Thailand produce in 2024?",
+      "questionUrdu": "2026 میں دستیاب اعداد کے مطابق 2024 میں تھائی لینڈ نے عالمی قدرتی ربڑ کا تقریباً کتنا حصہ پیدا کیا؟",
+      "options": [
+        "32.3 percent",
+        "14.2 percent",
+        "11.4 percent",
+        "6.0 percent"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 32.3 percent ہے۔ سرکاری تھائی اعداد میں 2024 کی پیداوار کا عالمی حصہ 32.3 percent بتایا گیا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 98",
+        "referenceUrl": "https://www.tpso.go.th/document/2604-0000000012",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0098"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.tpso.go.th/document/2604-0000000012",
+          "label": "Strengthening Thailand's rubber sector",
+          "publisher": "Thailand Trade Policy and Strategy Office",
+          "authorityId": "thailand-tpso",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Official Thai data rank Thailand first in 2024 natural-rubber output at 4.79 million tonnes and 32.3 percent."
+        },
+        {
+          "url": "https://efi.int/publication/thailands-natural-rubber-producers-are-preparing-new-market-requirements",
+          "label": "Thailand natural rubber producers",
+          "publisher": "European Forest Institute",
+          "authorityId": "european-forest-institute",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The institute independently identifies Thailand as the world's largest natural-rubber producer."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0099",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 99,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "13C32DE33CBC7B47248364211EEFC1DD4C2CDD5E1AD09C6148F5C9A3A6936F7F",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Bangladesh Bank and Britannica agree that the taka is Bangladesh's currency.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0099-SRC",
+      "pairId": "WGI-Q0099",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the official currency of Bangladesh?",
+      "questionUrdu": "بنگلہ دیش کی سرکاری کرنسی کیا ہے؟",
+      "options": [
+        "Taka",
+        "Rupee",
+        "Kyat",
+        "Rufiyaa"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Taka ہے۔ بنگلہ دیش کی سرکاری کرنسی ٹکا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 99",
+        "referenceUrl": "https://www.bb.org.bd/en/index.php/currency",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0099"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bb.org.bd/en/index.php/currency",
+          "label": "Currency",
+          "publisher": "Bangladesh Bank",
+          "authorityId": "bangladesh-bank",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Bangladesh Bank documents the taka and its denominations, including the poisha subdivision."
+        },
+        {
+          "url": "https://www.britannica.com/place/Bangladesh",
+          "label": "Bangladesh",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently identifies the taka as Bangladesh's currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related question adds the taka's 100-poisha subdivision rather than repeating the bank's existing Dhaka-capital question."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0099-SIM",
+      "pairId": "WGI-Q0099",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "One Bangladeshi taka is divided into how many poisha?",
+      "questionUrdu": "ایک بنگلہ دیشی ٹکا کتنے poisha میں تقسیم ہوتا ہے؟",
+      "options": [
+        "100",
+        "10",
+        "50",
+        "1,000"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 100 ہے۔ ایک ٹکا 100 poisha کے برابر ہوتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 99",
+        "referenceUrl": "https://www.bb.org.bd/en/index.php/currency",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0099"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.bb.org.bd/en/index.php/currency",
+          "label": "Currency",
+          "publisher": "Bangladesh Bank",
+          "authorityId": "bangladesh-bank",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Bangladesh Bank documents the taka and its denominations, including the poisha subdivision."
+        },
+        {
+          "url": "https://www.britannica.com/place/Bangladesh",
+          "label": "Bangladesh",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently identifies the taka as Bangladesh's currency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0100",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 100,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "D0C85DA36AFC4FC0E6F9AD7CC20E48B472A9C122062BC2EA53F2A0566EFB393E",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "IMO and UN sources agree that IMO is headquartered in London and its convention was adopted in 1948.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0100-SRC",
+      "pairId": "WGI-Q0100",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "In which city is the International Maritime Organization (IMO) headquartered?",
+      "questionUrdu": "International Maritime Organization (IMO) کا صدر دفتر کس شہر میں ہے؟",
+      "options": [
+        "London",
+        "Geneva",
+        "New York",
+        "Hamburg"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب London ہے۔ IMO کا صدر دفتر لندن، برطانیہ میں ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 100",
+        "referenceUrl": "https://www.imo.org/en/mediacentre/pages/whatsnew-1214.aspx",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0100"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.imo.org/en/mediacentre/pages/whatsnew-1214.aspx",
+          "label": "IMO 70th anniversary and headquarters",
+          "publisher": "International Maritime Organization",
+          "authorityId": "imo",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "IMO confirms its London headquarters and adoption of its founding convention in March 1948."
+        },
+        {
+          "url": "https://legal.un.org/ola/lc_06-19-2019_London_IMO.aspx",
+          "label": "Visit to IMO headquarters in London",
+          "publisher": "United Nations Office of Legal Affairs",
+          "authorityId": "united-nations",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN independently confirms that IMO headquarters are in London."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF's headquarters answer is confirmed; the related question uses the founding-convention year."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0100-SIM",
+      "pairId": "WGI-Q0100",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "In which year was the convention establishing the International Maritime Organization adopted?",
+      "questionUrdu": "International Maritime Organization قائم کرنے والا کنونشن کس سال منظور ہوا؟",
+      "options": [
+        "1948",
+        "1945",
+        "1958",
+        "1965"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 1948 ہے۔ IMO قائم کرنے والا کنونشن March 1948 میں منظور ہوا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 100",
+        "referenceUrl": "https://www.imo.org/en/mediacentre/pages/whatsnew-1214.aspx",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0100"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.imo.org/en/mediacentre/pages/whatsnew-1214.aspx",
+          "label": "IMO 70th anniversary and headquarters",
+          "publisher": "International Maritime Organization",
+          "authorityId": "imo",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "IMO confirms its London headquarters and adoption of its founding convention in March 1948."
+        },
+        {
+          "url": "https://legal.un.org/ola/lc_06-19-2019_London_IMO.aspx",
+          "label": "Visit to IMO headquarters in London",
+          "publisher": "United Nations Office of Legal Affairs",
+          "authorityId": "united-nations",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN independently confirms that IMO headquarters are in London."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0101",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 101,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "501812657F1462C2F9D28E7D705632119E83F44DB00F38928AF913479172BD0C",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Ontario and Statistics Canada independently identify Manitoulin as the world's largest freshwater island.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0101-SRC",
+      "pairId": "WGI-Q0101",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which is the world's largest island situated in a freshwater lake?",
+      "questionUrdu": "میٹھے پانی کی جھیل میں واقع دنیا کا سب سے بڑا جزیرہ کون سا ہے؟",
+      "options": [
+        "Manitoulin Island",
+        "Victoria Island",
+        "Baffin Island",
+        "Isle Royale"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Manitoulin Island ہے۔ یہ Lake Huron میں واقع دنیا کا سب سے بڑا freshwater-lake island ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 101",
+        "referenceUrl": "https://www.ontario.ca/page/about-ontario",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0101"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.ontario.ca/page/about-ontario",
+          "label": "About Ontario",
+          "publisher": "Government of Ontario",
+          "authorityId": "ontario-government",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Ontario identifies Manitoulin as the world's largest freshwater island in Lake Huron."
+        },
+        {
+          "url": "https://www150.statcan.gc.ca/n1/pub/11-402-x/2011000/chap/geo/geo-eng.htm",
+          "label": "Geography of Canada",
+          "publisher": "Statistics Canada",
+          "authorityId": "statistics-canada",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Statistics Canada independently identifies Manitoulin in Lake Huron as the largest island in a freshwater lake."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The wording is tightened to 'island in a freshwater lake'; Manitoulin lies in Lake Huron, Ontario."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0101-SIM",
+      "pairId": "WGI-Q0101",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Manitoulin Island is located in which Great Lake?",
+      "questionUrdu": "Manitoulin Island کس Great Lake میں واقع ہے؟",
+      "options": [
+        "Lake Huron",
+        "Lake Superior",
+        "Lake Erie",
+        "Lake Ontario"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Lake Huron ہے۔ Manitoulin Island کینیڈا کے صوبہ Ontario میں Lake Huron کے اندر واقع ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 101",
+        "referenceUrl": "https://www.ontario.ca/page/about-ontario",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0101"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.ontario.ca/page/about-ontario",
+          "label": "About Ontario",
+          "publisher": "Government of Ontario",
+          "authorityId": "ontario-government",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Ontario identifies Manitoulin as the world's largest freshwater island in Lake Huron."
+        },
+        {
+          "url": "https://www150.statcan.gc.ca/n1/pub/11-402-x/2011000/chap/geo/geo-eng.htm",
+          "label": "Geography of Canada",
+          "publisher": "Statistics Canada",
+          "authorityId": "statistics-canada",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Statistics Canada independently identifies Manitoulin in Lake Huron as the largest island in a freshwater lake."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0102",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 102,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "A7CCDC86D3FBE9BFB76C414D2D3D2FD529FC32080CA252D6C368E3E999FC8762",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Guinness and Indian Railways confirm Hubballi's 1,507-metre platform record.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0102-SRC",
+      "pairId": "WGI-Q0102",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "As of 2026, where is the Guinness-record longest railway platform located?",
+      "questionUrdu": "2026 تک Guinness-record سب سے طویل ریلوے پلیٹ فارم کہاں واقع ہے؟",
+      "options": [
+        "Hubballi, India",
+        "Gorakhpur, India",
+        "Kharagpur, India",
+        "Chicago, USA"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Hubballi, India ہے۔ 2026 تک Guinness record Hubballi Railway Station کے نام ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 102",
+        "referenceUrl": "https://www.guinnessworldrecords.com/world-records/longest-railway-platform",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0102"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.guinnessworldrecords.com/world-records/longest-railway-platform",
+          "label": "Longest railway platform",
+          "publisher": "Guinness World Records",
+          "authorityId": "guinness-world-records",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Guinness records Hubballi's platform as 1,507 metres, verified in January 2023."
+        },
+        {
+          "url": "https://swr.indianrailways.gov.in/uploads/files/1680092838297-Stations_Redevelped_over_SWR.pdf",
+          "label": "Stations redeveloped over South Western Railway",
+          "publisher": "Indian Railways",
+          "authorityId": "indian-railways",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Indian Railways identifies Hubballi's redeveloped station platform as the world-record platform."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "Because records can change, both questions are explicitly scoped to the status on 12 October 2026."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0102-SIM",
+      "pairId": "WGI-Q0102",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "As of 2026, what is the recorded length of Hubballi's world-record railway platform?",
+      "questionUrdu": "2026 تک Hubballi کے عالمی ریکارڈ ریلوے پلیٹ فارم کی درج شدہ لمبائی کیا ہے؟",
+      "options": [
+        "1,507 metres",
+        "1,366 metres",
+        "1,180 metres",
+        "2,023 metres"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 1,507 metres ہے۔ Guinness نے Hubballi پلیٹ فارم کی لمبائی 1,507 metres درج کی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 102",
+        "referenceUrl": "https://www.guinnessworldrecords.com/world-records/longest-railway-platform",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0102"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.guinnessworldrecords.com/world-records/longest-railway-platform",
+          "label": "Longest railway platform",
+          "publisher": "Guinness World Records",
+          "authorityId": "guinness-world-records",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Guinness records Hubballi's platform as 1,507 metres, verified in January 2023."
+        },
+        {
+          "url": "https://swr.indianrailways.gov.in/uploads/files/1680092838297-Stations_Redevelped_over_SWR.pdf",
+          "label": "Stations redeveloped over South Western Railway",
+          "publisher": "Indian Railways",
+          "authorityId": "indian-railways",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Indian Railways identifies Hubballi's redeveloped station platform as the world-record platform."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0103",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 103,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "3EEE38C2CF5C0A5AE055E8BED7AE3C8A997862D195353337E37A4F2A3615A0BC",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "USDA and FAOSTAT evidence support China as the leading country and India second for 2024/25 wheat production.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0103-SRC",
+      "pairId": "WGI-Q0103",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "According to data available in 2026 for 2024/25, which country was the largest wheat producer?",
+      "questionUrdu": "2026 میں دستیاب 2024/25 کے اعداد کے مطابق سب سے بڑا گندم پیدا کرنے والا ملک کون تھا؟",
+      "options": [
+        "China",
+        "India",
+        "Russia",
+        "Canada"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب China ہے۔ 2024/25 کے ملک وار اعداد میں چین کی گندم پیداوار سب سے زیادہ تھی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 103",
+        "referenceUrl": "https://www.fas.usda.gov/sites/default/files/2024-10/grain.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0103"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fas.usda.gov/sites/default/files/2024-10/grain.pdf",
+          "label": "Grain: World Markets and Trade, October 2024",
+          "publisher": "USDA Foreign Agricultural Service",
+          "authorityId": "usda-fas",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USDA data rank China first and India second among countries for 2024/25 wheat production."
+        },
+        {
+          "url": "https://www.fao.org/faostat/en/#data/QCL",
+          "label": "FAOSTAT crops and livestock products",
+          "publisher": "Food and Agriculture Organization",
+          "authorityId": "fao",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FAOSTAT provides independent country-level wheat-production data supporting the leading producers."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The dynamic agricultural ranking is scoped to data available in 2026 and marketing year 2024/25."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0103-SIM",
+      "pairId": "WGI-Q0103",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "According to data available in 2026 for 2024/25, which country ranked second in wheat production?",
+      "questionUrdu": "2026 میں دستیاب 2024/25 کے اعداد کے مطابق گندم کی پیداوار میں دوسرا ملک کون تھا؟",
+      "options": [
+        "India",
+        "China",
+        "Russia",
+        "Pakistan"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب India ہے۔ 2024/25 کے اعداد میں چین کے بعد بھارت سب سے بڑا ملک وار پیدا کنندہ تھا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 103",
+        "referenceUrl": "https://www.fas.usda.gov/sites/default/files/2024-10/grain.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0103"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fas.usda.gov/sites/default/files/2024-10/grain.pdf",
+          "label": "Grain: World Markets and Trade, October 2024",
+          "publisher": "USDA Foreign Agricultural Service",
+          "authorityId": "usda-fas",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USDA data rank China first and India second among countries for 2024/25 wheat production."
+        },
+        {
+          "url": "https://www.fao.org/faostat/en/#data/QCL",
+          "label": "FAOSTAT crops and livestock products",
+          "publisher": "Food and Agriculture Organization",
+          "authorityId": "fao",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "FAOSTAT provides independent country-level wheat-production data supporting the leading producers."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0104",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 104,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "C15E29404D2BFE875EAE9864E7161E6CCA8899E565A1BAB5216EA2F9AACB5D60",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The existing verified bank question already tests UNICEF headquarters in New York and agrees with the printed answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0040-Q011-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0105",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 105,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "49ACD28AAD8282F43391046CBC7BF7A4A3214F3EA21378DA121E3F1797000B9A",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Official New Zealand sources support Aotearoa and the common rendering 'land of the long white cloud'.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0105-SRC",
+      "pairId": "WGI-Q0105",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "The Maori name Aotearoa, commonly rendered 'land of the long white cloud', refers to which country?",
+      "questionUrdu": "Maori نام Aotearoa، جس کا عام مفہوم 'land of the long white cloud' ہے، کس ملک کے لیے ہے؟",
+      "options": [
+        "New Zealand",
+        "Fiji",
+        "Samoa",
+        "Tonga"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب New Zealand ہے۔ Aotearoa نیوزی لینڈ کا معروف Maori نام ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 105",
+        "referenceUrl": "https://www.newzealand.com/in/feature/manea-footprints-of-kupe/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0105"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.newzealand.com/in/feature/manea-footprints-of-kupe/",
+          "label": "Manea: Footprints of Kupe",
+          "publisher": "Tourism New Zealand",
+          "authorityId": "tourism-new-zealand",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Official tourism material uses Aotearoa for New Zealand and explains the long-white-cloud rendering."
+        },
+        {
+          "url": "https://nzhistory.govt.nz/culture/aotearoa-meaning",
+          "label": "The meaning of Aotearoa",
+          "publisher": "New Zealand Ministry for Culture and Heritage",
+          "authorityId": "nz-history",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "New Zealand's history portal explains Aotearoa as a Maori name for New Zealand and discusses its translation."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Corrected the PDF's truncated phrase 'Land of the White Cloud' to the widely used 'land of the long white cloud'; translations and origin accounts vary."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0105-SIM",
+      "pairId": "WGI-Q0105",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Aotearoa is a name from which Indigenous language?",
+      "questionUrdu": "Aotearoa کس مقامی زبان کا نام ہے؟",
+      "options": [
+        "Maori",
+        "Samoan",
+        "Tongan",
+        "Fijian"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Maori ہے۔ Aotearoa نیوزی لینڈ کی Maori زبان سے تعلق رکھنے والا نام ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 105",
+        "referenceUrl": "https://www.newzealand.com/in/feature/manea-footprints-of-kupe/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0105"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.newzealand.com/in/feature/manea-footprints-of-kupe/",
+          "label": "Manea: Footprints of Kupe",
+          "publisher": "Tourism New Zealand",
+          "authorityId": "tourism-new-zealand",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Official tourism material uses Aotearoa for New Zealand and explains the long-white-cloud rendering."
+        },
+        {
+          "url": "https://nzhistory.govt.nz/culture/aotearoa-meaning",
+          "label": "The meaning of Aotearoa",
+          "publisher": "New Zealand Ministry for Culture and Heritage",
+          "authorityId": "nz-history",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "New Zealand's history portal explains Aotearoa as a Maori name for New Zealand and discusses its translation."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0106",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 106,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "05E4AF36B80C86560BB4F666B811C3DA4A99417334A1312C9A22ECA7DD1316C3",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "USGS and World Gold Council data identify China as the leading gold-mine producer in 2024.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0106-SRC",
+      "pairId": "WGI-Q0106",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "According to data available in 2026, which country was the largest gold-mine producer in 2024?",
+      "questionUrdu": "2026 میں دستیاب اعداد کے مطابق 2024 میں سب سے بڑا gold-mine producer ملک کون تھا؟",
+      "options": [
+        "China",
+        "Russia",
+        "Australia",
+        "Canada"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب China ہے۔ 2024 کی کان کنی پیداوار میں چین پہلے نمبر پر تھا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 106",
+        "referenceUrl": "https://pubs.usgs.gov/publication/mcs2025",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0106"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://pubs.usgs.gov/publication/mcs2025",
+          "label": "Mineral Commodity Summaries 2025",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "usgs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USGS 2024 mine-production data place China first among gold-producing countries."
+        },
+        {
+          "url": "https://china.gold.org/goldhub/data/gold-production-by-country",
+          "label": "Gold production by country",
+          "publisher": "World Gold Council",
+          "authorityId": "world-gold-council",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "World Gold Council data identify China as the largest 2024 producer at about 10 percent of global output."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The ranking and approximate share are explicitly scoped to 2024 data available in 2026."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0106-SIM",
+      "pairId": "WGI-Q0106",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "According to data available in 2026, approximately what share of global mine gold did China produce in 2024?",
+      "questionUrdu": "2026 میں دستیاب اعداد کے مطابق 2024 میں چین نے عالمی کان کنی کے سونے کا تقریباً کتنا حصہ پیدا کیا؟",
+      "options": [
+        "10 percent",
+        "25 percent",
+        "40 percent",
+        "5 percent"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 10 percent ہے۔ World Gold Council کے مطابق 2024 میں چین کا حصہ تقریباً 10 percent تھا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 106",
+        "referenceUrl": "https://pubs.usgs.gov/publication/mcs2025",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0106"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://pubs.usgs.gov/publication/mcs2025",
+          "label": "Mineral Commodity Summaries 2025",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "usgs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USGS 2024 mine-production data place China first among gold-producing countries."
+        },
+        {
+          "url": "https://china.gold.org/goldhub/data/gold-production-by-country",
+          "label": "Gold production by country",
+          "publisher": "World Gold Council",
+          "authorityId": "world-gold-council",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "World Gold Council data identify China as the largest 2024 producer at about 10 percent of global output."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0107",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 107,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "2D89CDA141A4A6DCA989A4B3C5F8707F32FBCFF8DB8E733281EC4469FE54D95D",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The CIA country profile and Britannica independently confirm the Iranian rial.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0107-SRC",
+      "pairId": "WGI-Q0107",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "What is the official currency of Iran?",
+      "questionUrdu": "ایران کی سرکاری کرنسی کیا ہے؟",
+      "options": [
+        "Iranian rial",
+        "Iranian dinar",
+        "Toman",
+        "Dirham"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Iranian rial ہے۔ ایران کی سرکاری monetary unit ریال ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 107",
+        "referenceUrl": "https://www.cia.gov/the-world-factbook/countries/iran/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0107"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.cia.gov/the-world-factbook/countries/iran/",
+          "label": "Iran country profile",
+          "publisher": "CIA World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The country profile identifies the Iranian rial and its IRR currency code."
+        },
+        {
+          "url": "https://www.britannica.com/place/Iran",
+          "label": "Iran",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms that Iran's monetary unit is the rial."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related question tests the international currency code IRR instead of repeating Tehran-capital material."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0107-SIM",
+      "pairId": "WGI-Q0107",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "What is the international currency code for the Iranian rial?",
+      "questionUrdu": "ایرانی ریال کا بین الاقوامی currency code کیا ہے؟",
+      "options": [
+        "IRR",
+        "IRA",
+        "IRN",
+        "RIL"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب IRR ہے۔ ایرانی ریال کو بین الاقوامی مالیاتی نظام میں IRR code دیا گیا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 107",
+        "referenceUrl": "https://www.cia.gov/the-world-factbook/countries/iran/",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0107"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.cia.gov/the-world-factbook/countries/iran/",
+          "label": "Iran country profile",
+          "publisher": "CIA World Factbook",
+          "authorityId": "cia-world-factbook",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The country profile identifies the Iranian rial and its IRR currency code."
+        },
+        {
+          "url": "https://www.britannica.com/place/Iran",
+          "label": "Iran",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms that Iran's monetary unit is the rial."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0108",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 108,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "CFE36774CAB479EDA4731F4DC9486849E18B7F1CD1D6A17FE1E6A47AF1C4731F",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "UNDP and OECD evidence confirm UNDP's New York global headquarters and worldwide development role.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0108-SRC",
+      "pairId": "WGI-Q0108",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Where is the global headquarters of the United Nations Development Programme (UNDP)?",
+      "questionUrdu": "United Nations Development Programme (UNDP) کا عالمی صدر دفتر کہاں ہے؟",
+      "options": [
+        "New York City",
+        "Geneva",
+        "Nairobi",
+        "Bonn"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب New York City ہے۔ کچھ اسامیاں منتقل ہونے کے باوجود UNDP کا عالمی صدر دفتر نیویارک ہی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 108",
+        "referenceUrl": "https://www.undp.org/about-us/faqs",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0108"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.undp.org/about-us/faqs",
+          "label": "UNDP frequently asked questions",
+          "publisher": "United Nations Development Programme",
+          "authorityId": "undp",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNDP states that its global headquarters are in New York and it works in about 170 countries and territories."
+        },
+        {
+          "url": "https://www.oecd.org/en/about/organisations/united-nations-development-programme.html",
+          "label": "United Nations Development Programme",
+          "publisher": "OECD",
+          "authorityId": "oecd",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The OECD organization profile independently describes UNDP's global development role and reach."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The headquarters remains New York despite a 2026 relocation of many posts to Bonn and Madrid."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0108-SIM",
+      "pairId": "WGI-Q0108",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "UNDP works in approximately how many countries and territories?",
+      "questionUrdu": "UNDP تقریباً کتنے ممالک اور علاقوں میں کام کرتا ہے؟",
+      "options": [
+        "170",
+        "50",
+        "90",
+        "230"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 170 ہے۔ UNDP تقریباً 170 ممالک اور علاقوں میں ترقیاتی کام کرتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 108",
+        "referenceUrl": "https://www.undp.org/about-us/faqs",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0108"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.undp.org/about-us/faqs",
+          "label": "UNDP frequently asked questions",
+          "publisher": "United Nations Development Programme",
+          "authorityId": "undp",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNDP states that its global headquarters are in New York and it works in about 170 countries and territories."
+        },
+        {
+          "url": "https://www.oecd.org/en/about/organisations/united-nations-development-programme.html",
+          "label": "United Nations Development Programme",
+          "publisher": "OECD",
+          "authorityId": "oecd",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The OECD organization profile independently describes UNDP's global development role and reach."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0109",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 109,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "C2E36EFE8CB46FDFCF39326C366EF2F26AAF8C51705D7C100228AC503656DCB8",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Botswana Tourism and UNESCO identify the Okavango as a major intact inland delta in Botswana.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0109-SRC",
+      "pairId": "WGI-Q0109",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which feature is described by Botswana Tourism as the world's largest intact inland delta?",
+      "questionUrdu": "Botswana Tourism کس مقام کو دنیا کا سب سے بڑا محفوظ inland delta قرار دیتا ہے؟",
+      "options": [
+        "Okavango Delta",
+        "Nile Delta",
+        "Ganges Delta",
+        "Danube Delta"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Okavango Delta ہے۔ یہ Kalahari Basin میں واقع ایک تقریباً محفوظ inland delta ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.6, item 109",
+        "referenceUrl": "https://www.botswanatourism.co.bw/explore/okavango-delta",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0109"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.botswanatourism.co.bw/explore/okavango-delta",
+          "label": "Okavango Delta",
+          "publisher": "Botswana Tourism Organisation",
+          "authorityId": "botswana-tourism",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Botswana's tourism authority identifies Okavango as the largest intact inland delta in Botswana."
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/1432/",
+          "label": "Okavango Delta",
+          "publisher": "UNESCO World Heritage Centre",
+          "authorityId": "unesco",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNESCO independently locates the major endorheic Okavango Delta in north-western Botswana."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The stronger, auditable criterion 'largest intact inland delta' replaces an unqualified superlative."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0109-SIM",
+      "pairId": "WGI-Q0109",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "The Okavango Delta is located mainly in which country?",
+      "questionUrdu": "Okavango Delta بنیادی طور پر کس ملک میں واقع ہے؟",
+      "options": [
+        "Botswana",
+        "Namibia",
+        "Angola",
+        "Zimbabwe"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Botswana ہے۔ Okavango Delta شمال مغربی Botswana میں واقع ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 109",
+        "referenceUrl": "https://www.botswanatourism.co.bw/explore/okavango-delta",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0109"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.botswanatourism.co.bw/explore/okavango-delta",
+          "label": "Okavango Delta",
+          "publisher": "Botswana Tourism Organisation",
+          "authorityId": "botswana-tourism",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Botswana's tourism authority identifies Okavango as the largest intact inland delta in Botswana."
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/1432/",
+          "label": "Okavango Delta",
+          "publisher": "UNESCO World Heritage Centre",
+          "authorityId": "unesco",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UNESCO independently locates the major endorheic Okavango Delta in north-western Botswana."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0110",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 110,
+    "sourcePdfPage": 6,
+    "rawTextSha256": "97B2E42CBDE7D112436296BF0573C1FF3B06DBD9A7AC2A0B9CB1A169A462496B",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "Earlier retained WGI item 18 covers Botswana's location, capital and currency; item 110 is the corrected duplicate of that same fact set.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "WGI-Q0018-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0111",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 111,
+    "sourcePdfPage": 7,
+    "rawTextSha256": "0225F68C6209E292578464BC15105F8BC64E91839520C30BB5D765336E7A6C99",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "USDA and Indonesian government information identify Indonesia as the leading palm-oil producer in 2024/25.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0111-SRC",
+      "pairId": "WGI-Q0111",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "According to data available in 2026 for 2024/25, which country was the largest palm-oil producer?",
+      "questionUrdu": "2026 میں دستیاب 2024/25 کے اعداد کے مطابق سب سے بڑا palm-oil producer ملک کون تھا؟",
+      "options": [
+        "Indonesia",
+        "Malaysia",
+        "Thailand",
+        "Nigeria"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Indonesia ہے۔ 2024/25 میں انڈونیشیا عالمی palm-oil پیداوار میں پہلے نمبر پر تھا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.7, item 111",
+        "referenceUrl": "https://www.fas.usda.gov/data/production/commodity/4243000",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0111"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fas.usda.gov/data/production/commodity/4243000",
+          "label": "Palm oil production",
+          "publisher": "USDA Foreign Agricultural Service",
+          "authorityId": "usda-fas",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USDA production data rank Indonesia first for palm oil in 2024/25."
+        },
+        {
+          "url": "https://indonesiabaik.id/infografis/indonesia-produsen-minyak-sawit-terbesar-di-dunia",
+          "label": "Indonesia is the world's largest palm-oil producer",
+          "publisher": "IndonesiaBaik",
+          "authorityId": "indonesia-government",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Indonesia's government information portal reports 46.5 million tonnes and about 58 percent of 2024 world output."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "The dynamic production fact is scoped to 2024/25 evidence available in 2026."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0111-SIM",
+      "pairId": "WGI-Q0111",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "According to data available in 2026, roughly what share of global palm-oil output did Indonesia produce in 2024?",
+      "questionUrdu": "2026 میں دستیاب اعداد کے مطابق 2024 میں انڈونیشیا نے عالمی palm-oil پیداوار کا تقریباً کتنا حصہ پیدا کیا؟",
+      "options": [
+        "58 percent",
+        "25 percent",
+        "10 percent",
+        "75 percent"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 58 percent ہے۔ سرکاری معلومات میں 2024 کے لیے انڈونیشیا کا حصہ تقریباً 58 percent بتایا گیا۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 111",
+        "referenceUrl": "https://www.fas.usda.gov/data/production/commodity/4243000",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0111"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.fas.usda.gov/data/production/commodity/4243000",
+          "label": "Palm oil production",
+          "publisher": "USDA Foreign Agricultural Service",
+          "authorityId": "usda-fas",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USDA production data rank Indonesia first for palm oil in 2024/25."
+        },
+        {
+          "url": "https://indonesiabaik.id/infografis/indonesia-produsen-minyak-sawit-terbesar-di-dunia",
+          "label": "Indonesia is the world's largest palm-oil producer",
+          "publisher": "IndonesiaBaik",
+          "authorityId": "indonesia-government",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Indonesia's government information portal reports 46.5 million tonnes and about 58 percent of 2024 world output."
+        }
+      ],
+      "temporalScope": {
+        "type": "as-of",
+        "sourcePaperDate": "2026",
+        "asOf": "2026-10-12",
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": "2027-10-12"
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0112",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 112,
+    "sourcePdfPage": 7,
+    "rawTextSha256": "F168A1BC8B9D979D5EA7AA80AE74CAFAC5B6934C37180DD87E0F411AD78803B5",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "WMO and UN Geneva independently confirm that WMO headquarters are in Geneva.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0112-SRC",
+      "pairId": "WGI-Q0112",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "In which city is the World Meteorological Organization (WMO) headquartered?",
+      "questionUrdu": "World Meteorological Organization (WMO) کا صدر دفتر کس شہر میں ہے؟",
+      "options": [
+        "Geneva",
+        "Vienna",
+        "New York",
+        "Nairobi"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Geneva ہے۔ WMO کا صدر دفتر جنیوا، سوئٹزرلینڈ میں ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.7, item 112",
+        "referenceUrl": "https://wmo.int/contact-us",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0112"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://wmo.int/contact-us",
+          "label": "WMO contact and headquarters",
+          "publisher": "World Meteorological Organization",
+          "authorityId": "wmo",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "WMO lists its headquarters at 7bis Avenue de la Paix in Geneva."
+        },
+        {
+          "url": "https://www.ungeneva.org/en/about/organizations/wmo",
+          "label": "World Meteorological Organization",
+          "publisher": "United Nations Office at Geneva",
+          "authorityId": "un-geneva",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UN Geneva independently lists WMO headquarters in Geneva and identifies it as a UN specialized agency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The paired practice question adds the year WMO became a UN specialized agency."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0112-SIM",
+      "pairId": "WGI-Q0112",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "In which year did WMO become a specialized agency of the United Nations?",
+      "questionUrdu": "WMO کس سال اقوام متحدہ کا specialized agency بنا؟",
+      "options": [
+        "1951",
+        "1873",
+        "1945",
+        "1963"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب 1951 ہے۔ WMO نے 1951 میں اقوام متحدہ کے specialized agency کی حیثیت حاصل کی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 112",
+        "referenceUrl": "https://wmo.int/contact-us",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0112"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://wmo.int/contact-us",
+          "label": "WMO contact and headquarters",
+          "publisher": "World Meteorological Organization",
+          "authorityId": "wmo",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "WMO lists its headquarters at 7bis Avenue de la Paix in Geneva."
+        },
+        {
+          "url": "https://www.ungeneva.org/en/about/organizations/wmo",
+          "label": "World Meteorological Organization",
+          "publisher": "United Nations Office at Geneva",
+          "authorityId": "un-geneva",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "UN Geneva independently lists WMO headquarters in Geneva and identifies it as a UN specialized agency."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0113",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 113,
+    "sourcePdfPage": 7,
+    "rawTextSha256": "8E903993BA48E19FB872C69468BF70304452F62673E26EF06D9F2E17C56254E1",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "WMO and a UN-hosted historical review agree that WMO grew from the International Meteorological Organization.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0113-SRC",
+      "pairId": "WGI-Q0113",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Which nongovernmental predecessor organization gave rise to WMO?",
+      "questionUrdu": "کس غیر سرکاری پیش رو ادارے سے WMO وجود میں آیا؟",
+      "options": [
+        "International Meteorological Organization",
+        "International Maritime Organization",
+        "Intergovernmental Panel on Climate Change",
+        "International Hydrographic Organization"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب International Meteorological Organization ہے۔ یہی IMO بعد میں WMO میں تبدیل ہوا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.7, item 113",
+        "referenceUrl": "https://wmo.int/about-wmo/history-of-imo-and-wmo",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0113"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://wmo.int/about-wmo/history-of-imo-and-wmo",
+          "label": "History of IMO and WMO",
+          "publisher": "World Meteorological Organization",
+          "authorityId": "wmo",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "WMO traces its roots to the nongovernmental International Meteorological Organization and the 1873 Vienna congress."
+        },
+        {
+          "url": "https://digitallibrary.un.org/record/3894661/files/wmo_1036_en.pdf",
+          "label": "WMO historical review",
+          "publisher": "United Nations Digital Library",
+          "authorityId": "un-digital-library",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN-hosted historical review independently records the 1873 International Meteorological Congress and IMO origins."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The source wording is refined: the 1873 Vienna congress initiated the process; IMO formally came into being later in 1879."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0113-SIM",
+      "pairId": "WGI-Q0113",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "In which city did the 1873 International Meteorological Congress meet?",
+      "questionUrdu": "1873 کا International Meteorological Congress کس شہر میں منعقد ہوا؟",
+      "options": [
+        "Vienna",
+        "Geneva",
+        "Rome",
+        "Utrecht"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Vienna ہے۔ 1873 کے ویانا اجلاس نے بین الاقوامی موسمی تعاون کے ادارہ جاتی عمل کی بنیاد رکھی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 113",
+        "referenceUrl": "https://wmo.int/about-wmo/history-of-imo-and-wmo",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0113"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://wmo.int/about-wmo/history-of-imo-and-wmo",
+          "label": "History of IMO and WMO",
+          "publisher": "World Meteorological Organization",
+          "authorityId": "wmo",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "WMO traces its roots to the nongovernmental International Meteorological Organization and the 1873 Vienna congress."
+        },
+        {
+          "url": "https://digitallibrary.un.org/record/3894661/files/wmo_1036_en.pdf",
+          "label": "WMO historical review",
+          "publisher": "United Nations Digital Library",
+          "authorityId": "un-digital-library",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN-hosted historical review independently records the 1873 International Meteorological Congress and IMO origins."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "1873",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0114",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 114,
+    "sourcePdfPage": 7,
+    "rawTextSha256": "DD20C6A0307A66BC488EA6181230316F181A73721A0A894AD55D3DCF98149211",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "The existing verified bank question already asks the city of UNHCR headquarters and gives Geneva, matching this item.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0004-Q013-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0115",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 115,
+    "sourcePdfPage": 7,
+    "rawTextSha256": "1D94898966039EE2F464A834EE5C559AE36D6D5E3A01476A33180EC865AC4BA7",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Two specialist memorial institutions confirm the date, setting and discriminatory purpose of the Nuremberg Laws.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0115-SRC",
+      "pairId": "WGI-Q0115",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "The antisemitic Nuremberg Laws of 15 September 1935 were enacted in which country?",
+      "questionUrdu": "15 September 1935 کے یہود مخالف Nuremberg Laws کس ملک میں نافذ ہوئے؟",
+      "options": [
+        "Nazi Germany",
+        "Fascist Italy",
+        "Vichy France",
+        "Soviet Union"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Nazi Germany ہے۔ Nuremberg Laws نازی جرمنی میں 15 September 1935 کو منظور ہوئے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.7, item 115",
+        "referenceUrl": "https://encyclopedia.ushmm.org/content/en/article/nuremberg-laws",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0115"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://encyclopedia.ushmm.org/content/en/article/nuremberg-laws",
+          "label": "Nuremberg Race Laws",
+          "publisher": "United States Holocaust Memorial Museum",
+          "authorityId": "ushmm",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The museum documents the two antisemitic laws enacted in Nazi Germany on 15 September 1935."
+        },
+        {
+          "url": "https://museums.nuernberg.de/documentation-center/topics/national-socialism/racism-and-anti-semitism/the-nuremberg-laws",
+          "label": "The Nuremberg Laws",
+          "publisher": "Documentation Center Nazi Party Rally Grounds",
+          "authorityId": "nuremberg-documentation-center",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Nuremberg's documentation center independently explains the citizenship and blood-protection laws."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "1935-09-15",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The wording accurately characterizes the laws as antisemitic and racist legislation of Nazi Germany."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0115-SIM",
+      "pairId": "WGI-Q0115",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Which pair formed the core of the 1935 Nuremberg Laws?",
+      "questionUrdu": "1935 کے Nuremberg Laws کی بنیادی جوڑی کون سی تھی؟",
+      "options": [
+        "Reich Citizenship Law and German Blood and Honor Law",
+        "Enabling Act and Reichstag Fire Decree",
+        "Versailles Treaty and Dawes Plan",
+        "Munich Agreement and Locarno Treaties"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Reich Citizenship Law and German Blood and Honor Law ہے۔ انہی دونوں قوانین نے نسلی امتیاز کو قانونی شکل دی۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 115",
+        "referenceUrl": "https://encyclopedia.ushmm.org/content/en/article/nuremberg-laws",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0115"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://encyclopedia.ushmm.org/content/en/article/nuremberg-laws",
+          "label": "Nuremberg Race Laws",
+          "publisher": "United States Holocaust Memorial Museum",
+          "authorityId": "ushmm",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The museum documents the two antisemitic laws enacted in Nazi Germany on 15 September 1935."
+        },
+        {
+          "url": "https://museums.nuernberg.de/documentation-center/topics/national-socialism/racism-and-anti-semitism/the-nuremberg-laws",
+          "label": "The Nuremberg Laws",
+          "publisher": "Documentation Center Nazi Party Rally Grounds",
+          "authorityId": "nuremberg-documentation-center",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Nuremberg's documentation center independently explains the citizenship and blood-protection laws."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "1935",
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0116",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 116,
+    "sourcePdfPage": 7,
+    "rawTextSha256": "59B884E2E5B7AECBD5A72E60B33F7180F71B515F14C2B3B3B481154265222B5D",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "The UN freshwater atlas and Britannica agree that the Volga is Europe's longest river.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0116-SRC",
+      "pairId": "WGI-Q0116",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which is the longest river in Europe?",
+      "questionUrdu": "یورپ کا سب سے طویل دریا کون سا ہے؟",
+      "options": [
+        "Volga River",
+        "Danube River",
+        "Rhine River",
+        "Dnieper River"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Volga River ہے۔ وولگا یورپ کا سب سے طویل دریا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.7, item 116",
+        "referenceUrl": "https://digitallibrary.un.org/record/526114/files/freshwater_atlas.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0116"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://digitallibrary.un.org/record/526114/files/freshwater_atlas.pdf",
+          "label": "Freshwater in Europe atlas",
+          "publisher": "United Nations Digital Library",
+          "authorityId": "un-digital-library",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UN atlas identifies the Volga as Europe's longest river and its Caspian Sea outlet."
+        },
+        {
+          "url": "https://www.britannica.com/place/Volga-River",
+          "label": "Volga River",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms the Volga's European length rank and Caspian outlet."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related practice question adds the river's terminal basin, the Caspian Sea."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0116-SIM",
+      "pairId": "WGI-Q0116",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which river does the Volga-Don Canal connect with the Volga?",
+      "questionUrdu": "وولگا-ڈان نہر دریائے وولگا کو کس دریا سے ملاتی ہے؟",
+      "options": [
+        "Don River",
+        "Dnieper River",
+        "Ural River",
+        "Neva River"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "وولگا-ڈان نہر دریائے وولگا کو دریائے ڈان سے ملاتی ہے اور بحیرہ کیسپین اور بحیرہ آزوف کے آبی راستوں میں رابطہ پیدا کرتی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: rivers joined by the Volga-Don Canal",
+        "referenceUrl": "https://digitallibrary.un.org/record/526114/files/freshwater_atlas.pdf",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0116"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://digitallibrary.un.org/record/526114/files/freshwater_atlas.pdf",
+          "label": "Freshwater in Europe atlas",
+          "publisher": "United Nations Digital Library",
+          "authorityId": "un-digital-library",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The United Nations freshwater atlas states that the Don River is linked to the Volga by the Volga-Don Canal."
+        },
+        {
+          "url": "https://unece.org/DAM/trans/doc/2003/sc3/TRANS-SC3-2003-3E.pdf",
+          "label": "European inland waterways route report",
+          "publisher": "United Nations Economic Commission for Europe",
+          "authorityId": "unece",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The UNECE route report independently lists the Lower Don, Volga-Don Canal, and Volga as one continuous inland-waterway section."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The related item now tests the two rivers joined by the Volga-Don Canal, avoiding existing questions on country, source, and outlet."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0117",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 117,
+    "sourcePdfPage": 7,
+    "rawTextSha256": "B1509E596694E6811AD4DAC0DF3E8A94AA5BE1F379FE03E4502CAFF4D99847E1",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "skip",
+    "reason": "Earlier retained WGI item 34 already tests the Yangtze as Asia's longest river with the same answer.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "WGI-Q0034-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0118",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 118,
+    "sourcePdfPage": 7,
+    "rawTextSha256": "2E35513B2E8FAD752EE3831198ADC410B6491463A24E4BFA9FF82E6F15291B7E",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "USGS and the National Park Service support the Missouri as the longest individual river in North America and Mississippi as second.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0118-SRC",
+      "pairId": "WGI-Q0118",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which is the longest individual named river in North America?",
+      "questionUrdu": "شمالی امریکہ کا سب سے طویل انفرادی نام والا دریا کون سا ہے؟",
+      "options": [
+        "Missouri River",
+        "Mississippi River",
+        "Yukon River",
+        "Rio Grande"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Missouri River ہے۔ USGS کے named-river اعداد میں Missouri کی لمبائی 2,540 miles ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.7, item 118",
+        "referenceUrl": "https://www.usgs.gov/water-science-school/science/rivers-world-worlds-longest-rivers",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0118"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.usgs.gov/water-science-school/science/rivers-world-worlds-longest-rivers",
+          "label": "Rivers of the world",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "usgs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USGS lists the Missouri at 2,540 miles and the Mississippi at 2,340 miles for the United States and Canada."
+        },
+        {
+          "url": "https://www.nps.gov/miss/riverfacts.htm",
+          "label": "Mississippi River facts",
+          "publisher": "U.S. National Park Service",
+          "authorityId": "national-park-service",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The National Park Service identifies the Mississippi as North America's second-longest river, supporting Missouri's first-place rank."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Corrected the PDF's conflated 'Missouri-Mississippi River' answer: under the individual named-river criterion, Missouri is first and Mississippi second."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0118-SIM",
+      "pairId": "WGI-Q0118",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which river is identified by the U.S. National Park Service as the second-longest in North America?",
+      "questionUrdu": "U.S. National Park Service کس دریا کو شمالی امریکہ کا دوسرا طویل ترین دریا قرار دیتا ہے؟",
+      "options": [
+        "Mississippi River",
+        "Missouri River",
+        "Yukon River",
+        "Colorado River"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Mississippi River ہے۔ NPS اسے تقریباً 2,350 miles کے ساتھ دوسرے نمبر پر رکھتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 118",
+        "referenceUrl": "https://www.usgs.gov/water-science-school/science/rivers-world-worlds-longest-rivers",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0118"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.usgs.gov/water-science-school/science/rivers-world-worlds-longest-rivers",
+          "label": "Rivers of the world",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "usgs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USGS lists the Missouri at 2,540 miles and the Mississippi at 2,340 miles for the United States and Canada."
+        },
+        {
+          "url": "https://www.nps.gov/miss/riverfacts.htm",
+          "label": "Mississippi River facts",
+          "publisher": "U.S. National Park Service",
+          "authorityId": "national-park-service",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The National Park Service identifies the Mississippi as North America's second-longest river, supporting Missouri's first-place rank."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0119",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 119,
+    "sourcePdfPage": 7,
+    "rawTextSha256": "C35C5ADF12445EB03E3CD397F59EAB75379ECB9A5CE34670B92BC2B9E247A094",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "USGS and Britannica agree that the Amazon is South America's longest river under the cited conventional ranking and its greatest by discharge.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0119-SRC",
+      "pairId": "WGI-Q0119",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which is the longest river in South America?",
+      "questionUrdu": "جنوبی امریکہ کا سب سے طویل دریا کون سا ہے؟",
+      "options": [
+        "Amazon River",
+        "Parana River",
+        "Orinoco River",
+        "Sao Francisco River"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Amazon River ہے۔ ایمیزون جنوبی امریکہ کا سب سے طویل اور اخراج کے لحاظ سے دنیا کا سب سے بڑا دریا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.7, item 119",
+        "referenceUrl": "https://www.usgs.gov/publications/amazon-measuring-a-mighty-river",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0119"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.usgs.gov/publications/amazon-measuring-a-mighty-river",
+          "label": "The Amazon, measuring a mighty river",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "usgs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USGS identifies the Amazon as the largest river by water discharge and compares it with the Congo."
+        },
+        {
+          "url": "https://www.britannica.com/place/Amazon-River",
+          "label": "Amazon River",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms the Amazon's discharge rank and Atlantic outlet."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The source question follows the conventional reference ranking while avoiding claims about the disputed world-longest title."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0119-SIM",
+      "pairId": "WGI-Q0119",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Into which ocean does the Amazon River empty?",
+      "questionUrdu": "Amazon River کس سمندر میں گرتا ہے؟",
+      "options": [
+        "Atlantic Ocean",
+        "Pacific Ocean",
+        "Indian Ocean",
+        "Arctic Ocean"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Atlantic Ocean ہے۔ ایمیزون مشرق کی طرف بہہ کر بحر اوقیانوس میں گرتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 119",
+        "referenceUrl": "https://www.usgs.gov/publications/amazon-measuring-a-mighty-river",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0119"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.usgs.gov/publications/amazon-measuring-a-mighty-river",
+          "label": "The Amazon, measuring a mighty river",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "usgs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USGS identifies the Amazon as the largest river by water discharge and compares it with the Congo."
+        },
+        {
+          "url": "https://www.britannica.com/place/Amazon-River",
+          "label": "Amazon River",
+          "publisher": "Encyclopaedia Britannica",
+          "authorityId": "britannica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The encyclopedia independently confirms the Amazon's discharge rank and Atlantic outlet."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0120",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 120,
+    "sourcePdfPage": 7,
+    "rawTextSha256": "E335E000E4FB8EEDD2A1887C188EE8AD4057F7B18CCAB8C38DC39D9F75FD0948",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-12",
+    "action": "keep",
+    "reason": "Australian government sources support the Murray as Australia's longest standalone named river, with a longer Darling tributary chain under another criterion.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0120-SRC",
+      "pairId": "WGI-Q0120",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which is Australia's longest standalone named river?",
+      "questionUrdu": "آسٹریلیا کا سب سے طویل الگ نام والا دریا کون سا ہے؟",
+      "options": [
+        "Murray River",
+        "Darling River",
+        "Murrumbidgee River",
+        "Cooper Creek"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Murray River ہے۔ سرکاری آسٹریلوی حوالوں میں Murray کو longest standalone river کہا گیا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.7, item 120",
+        "referenceUrl": "https://www.dcceew.gov.au/water/policy/mdb",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0120"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.dcceew.gov.au/water/policy/mdb",
+          "label": "Murray-Darling Basin",
+          "publisher": "Australian Department of Climate Change, Energy, the Environment and Water",
+          "authorityId": "australia-dcceew",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Australian government identifies the Murray as Australia's longest river and the Murray-Darling as its largest waterway system."
+        },
+        {
+          "url": "https://www.ga.gov.au/scientific-topics/national-location-information/landforms",
+          "label": "Australian landforms",
+          "publisher": "Geoscience Australia",
+          "authorityId": "geoscience-australia",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Geoscience Australia independently distinguishes the Murray as the longest named river from the longer Darling tributary chain."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Qualified the PDF's unqualified superlative: Murray is Australia's longest standalone named river; river-system measurements can rank the Darling chain differently."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0120-SIM",
+      "pairId": "WGI-Q0120",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which is Australia's largest system of waterways?",
+      "questionUrdu": "آسٹریلیا کا سب سے بڑا آبی گزرگاہوں کا نظام کون سا ہے؟",
+      "options": [
+        "Murray-Darling Basin",
+        "Lake Eyre Basin",
+        "Ord River system",
+        "Swan-Avon system"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "درست جواب Murray-Darling Basin ہے۔ یہ جنوب مشرقی آسٹریلیا میں ملک کا سب سے بڑا waterways system ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Verified related WGI practice for item 120",
+        "referenceUrl": "https://www.dcceew.gov.au/water/policy/mdb",
+        "accessedOn": "2026-10-12"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0120"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.dcceew.gov.au/water/policy/mdb",
+          "label": "Murray-Darling Basin",
+          "publisher": "Australian Department of Climate Change, Energy, the Environment and Water",
+          "authorityId": "australia-dcceew",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Australian government identifies the Murray as Australia's longest river and the Murray-Darling as its largest waterway system."
+        },
+        {
+          "url": "https://www.ga.gov.au/scientific-topics/national-location-information/landforms",
+          "label": "Australian landforms",
+          "publisher": "Geoscience Australia",
+          "authorityId": "geoscience-australia",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-12",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Geoscience Australia independently distinguishes the Murray as the longest named river from the longer Darling tributary chain."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "Related practice fact independently checked against both cited authorities."
+    }
+  }
+]

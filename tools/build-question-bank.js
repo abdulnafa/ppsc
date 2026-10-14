@@ -13,6 +13,15 @@ const {
   validateReferences,
   validateTemporalScope
 } = require("./adv2e102-common");
+const {
+  assertCompleteReleaseDecisions,
+  getReleaseTarget,
+  itemIdPattern: wgiItemIdPattern,
+  loadManifest: loadWgiManifest,
+  pairIdPattern: wgiPairIdPattern,
+  readReviewFiles: readWgiReviewFiles,
+  retainedQuestions: retainedWgiQuestions
+} = require("./wgi-common");
 
 const projectDirectory = path.resolve(__dirname, "..");
 const workspaceDirectory = path.resolve(projectDirectory, "..");
@@ -54,8 +63,8 @@ const expectedAdv2e102SourceCount = 4169;
 const categoryIds = new Set(categories.map((category) => category.id));
 const optionLabels = ["A", "B", "C", "D"];
 const ibesDecisionFilePattern = /^ibes-dedup-decisions-p\d{3}-\d{3,4}\.json$/i;
-const productionItemIdPattern = /^(?:(?:P23[4-9]-Q\d{3}|IBES-Q\d{4})-(?:SRC|SIM)|ADV2E102-U\d{4}-Q\d{3}-(?:SRC|SIM))$/;
-const canonicalPairIdPattern = /^(?:IBES-Q\d{4}|ADV2E102-U\d{4}-Q\d{3})$/;
+const productionItemIdPattern = /^(?:(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|WGI-Q\d{4})-(?:SRC|SIM)|ADV2E102-U\d{4}-Q\d{3}-(?:SRC|SIM))$/;
+const canonicalPairIdPattern = /^(?:IBES-Q\d{4}|WGI-Q\d{4}|ADV2E102-U\d{4}-Q\d{3})$/;
 
 function fail(message) {
   throw new Error(message);
@@ -95,11 +104,17 @@ function loadBatches() {
     return value;
   });
 
+  const wgiTarget = getReleaseTarget(loadWgiManifest());
+  const wgiReviewData = readWgiReviewFiles();
+  assertCompleteReleaseDecisions(wgiReviewData.records, wgiTarget);
+  const wgiQuestions = retainedWgiQuestions(wgiReviewData.records);
+  const questionsWithWgi = paperQuestions.concat(wgiQuestions);
+
   const customPath = path.join(workDirectory, "custom-questions.json");
-  if (!fs.existsSync(customPath)) return paperQuestions;
+  if (!fs.existsSync(customPath)) return questionsWithWgi;
   const customQuestions = JSON.parse(fs.readFileSync(customPath, "utf8"));
   if (!Array.isArray(customQuestions)) fail("custom-questions.json must contain a JSON array.");
-  return paperQuestions.concat(customQuestions);
+  return questionsWithWgi.concat(customQuestions);
 }
 
 function canonicalRepeatTargetId(duplicateOf) {
@@ -118,7 +133,8 @@ function loadRepeatEvidence() {
   const adv2e102DecisionData = readArrayFiles(adv2e102DecisionFilePattern);
   const decisionSets = [
     { corpus: "IBES", ...ibesDecisionData },
-    { corpus: "ADV2E102", ...adv2e102DecisionData }
+    { corpus: "ADV2E102", ...adv2e102DecisionData },
+    { corpus: "WGI", ...readWgiReviewFiles() }
   ];
   const decisionSources = [];
   const verifiedSkips = [];
@@ -151,6 +167,15 @@ function loadRepeatEvidence() {
       const targetId = canonicalRepeatTargetId(decision.duplicateOf);
       if (!targetId) {
         fail(`${evidenceId} is a verified skip but duplicateOf does not resolve to a production question ID.`);
+      }
+      // A WGI duplicate can point at an earlier audited source item that was
+      // itself rejected as ambiguous. It remains valid duplicate evidence for
+      // the review audit, but there is no production question ID to count in
+      // the release repeat deck, so omit that one target from generated evidence.
+      const targetWgiMatch = targetId.match(/^WGI-Q(\d{4})-(?:SRC|SIM)$/);
+      if (corpus === "WGI" && targetWgiMatch) {
+        const targetDecision = records.find((record) => Number(record.sourceQuestionNumber) === Number(targetWgiMatch[1]));
+        if (targetDecision && targetDecision.action !== "keep") continue;
       }
       verifiedSkips.push({
         corpus,
@@ -322,6 +347,11 @@ function validate(questions) {
     if (adv2e102Decisions.has(decision.sourceRecordId)) fail(`${decision.sourceRecordId} has duplicate ADV2E102 decisions.`);
     adv2e102Decisions.set(decision.sourceRecordId, decision);
   }
+  const wgiDecisions = new Map();
+  for (const decision of readWgiReviewFiles().records) {
+    if (wgiDecisions.has(decision.sourceRecordId)) fail(`${decision.sourceRecordId} has duplicate WGI decisions.`);
+    wgiDecisions.set(decision.sourceRecordId, decision);
+  }
 
   for (const [index, question] of questions.entries()) {
     const location = `question index ${index}`;
@@ -335,9 +365,9 @@ function validate(questions) {
     }
     if (!question.id || ids.has(question.id)) fail(`${location} has a missing/duplicate id: ${question.id}`);
     ids.add(question.id);
-    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})-(SRC|SIM)$/.test(question.id) &&
+    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4}|WGI-Q\d{4})-(SRC|SIM)$/.test(question.id) &&
         !adv2e102ItemIdPattern.test(question.id)) fail(`${question.id} has an invalid id format.`);
-    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4})$/.test(question.pairId || "") &&
+    if (!/^(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|USR-Q\d{4}|WGI-Q\d{4})$/.test(question.pairId || "") &&
         !adv2e102PairIdPattern.test(question.pairId || "")) fail(`${question.id} has an invalid pairId.`);
     if (!categoryIds.has(question.categoryId)) fail(`${question.id} has unknown category ${question.categoryId}.`);
     if (!question.question || !String(question.question).trim()) fail(`${question.id} has no question text.`);
@@ -364,21 +394,23 @@ function validate(questions) {
     if (question.kind === "similar" && question.source.type !== "practice") {
       fail(`${question.id} similar item must use source.type practice.`);
     }
-    if (question.kind === "source" && /^(?:P23|IBES-|ADV2E102-)/.test(question.id) && question.source.type !== "book") {
+    if (question.kind === "source" && /^(?:P23|IBES-|ADV2E102-|WGI-)/.test(question.id) && question.source.type !== "book") {
       fail(`${question.id} PDF source item must use source.type book.`);
     }
     if (question.kind === "source" && question.id.startsWith("USR-") && question.source.type !== "user") {
       fail(`${question.id} user-supplied source item must use source.type user.`);
     }
-    if (adv2e102PairIdPattern.test(question.pairId || "")) {
-      if (question.verificationStatus !== "verified") fail(`${question.id} cannot build unresolved or disputed ADV2E102 content.`);
+    if (adv2e102PairIdPattern.test(question.pairId || "") || wgiPairIdPattern.test(question.pairId || "")) {
+      if (question.verificationStatus !== "verified") fail(`${question.id} cannot build unresolved or disputed verified content.`);
       const referenceResult = validateReferences(question.references, question.id, fail, 2);
       validateTemporalScope(question.temporalScope, question.question, question.id, fail);
-      if (!isDirectHttpsUrl(question.source.referenceUrl)) fail(`${question.id} ADV2E102 canonical source URL must be direct HTTPS.`);
+      if (!isDirectHttpsUrl(question.source.referenceUrl)) fail(`${question.id} canonical source URL must be direct HTTPS.`);
       if (!referenceResult.answerUrls.has(question.source.referenceUrl)) {
-        fail(`${question.id} ADV2E102 canonical source URL must be one of its answer-supporting references.`);
+        fail(`${question.id} canonical source URL must be one of its answer-supporting references.`);
       }
-      const decision = adv2e102Decisions.get(question.pairId);
+      const decision = adv2e102PairIdPattern.test(question.pairId || "")
+        ? adv2e102Decisions.get(question.pairId)
+        : wgiDecisions.get(question.pairId);
       if (!decision || decision.action !== "keep" || decision.reviewStatus !== "verified") {
         fail(`${question.id} requires a verified keep decision before build.`);
       }
@@ -422,6 +454,11 @@ function validate(questions) {
   )).length;
   if (adv2e102SourceCount !== expectedAdv2e102SourceCount) {
     fail(`ADV2E102 release has ${adv2e102SourceCount} retained source items; expected ${expectedAdv2e102SourceCount}.`);
+  }
+  const expectedWgiSourceCount = [...wgiDecisions.values()].filter((decision) => decision.action === "keep").length;
+  const wgiSourceCount = questions.filter((question) => question.kind === "source" && wgiItemIdPattern.test(question.id)).length;
+  if (wgiSourceCount !== expectedWgiSourceCount) {
+    fail(`WGI release has ${wgiSourceCount} retained source items; expected ${expectedWgiSourceCount}.`);
   }
 }
 
@@ -498,7 +535,7 @@ function websiteQuestion(question, pairsById, translations, urduCategoryDisplay,
       repeatCount: verifiedSkipCount + 1,
       isImportant: true
     } : {}),
-    ...(adv2e102PairIdPattern.test(question.pairId) ? {
+    ...(adv2e102PairIdPattern.test(question.pairId) || wgiPairIdPattern.test(question.pairId) ? {
       references: question.references,
       temporalScope: question.temporalScope
     } : {})

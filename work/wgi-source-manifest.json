@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "corpusId": "WGI-ONE-PAPER-2026",
+  "sourceTitle": "Mastering One-Paper with WGI",
+  "sourceFileName": "Mastering One-Paper with WGI.pdf",
+  "sourceSha256": "6E207E4B526594241137EAE2A2B7B5CEE055C2A9C936939690CCFBF877472E4B",
+  "sourcePageCount": 30,
+  "numberedEntryCount": 671,
+  "firstQuestionNumber": 1,
+  "lastQuestionNumber": 671,
+  "releaseTarget": {
+    "firstQuestionNumber": 1,
+    "lastQuestionNumber": 450,
+    "decisionCount": 450
+  },
+  "sourceCreatedOn": "2026-09-17",
+  "suppliedByUser": true,
+  "approvedBaseline": {
+    "questionCount": 11412,
+    "stableSignature": "v1:11412:57e37c68",
+    "policy": "Retained WGI questions append after the unchanged baseline. Existing active sessions and review state migrate only when this exact signature-relevant prefix is preserved."
+  },
+  "auditArtifacts": {
+    "extraction": "work/wgi-extracted-q0001-0671.json",
+    "semanticDedupe": "work/wgi-dedupe-agent.json",
+    "correctionEvidence": "work/wgi-authoritative-sources-agent.json",
+    "reviewPattern": "work/wgi-reviewed-q####-####.json"
+  },
+  "extractionMethod": "Native selectable PDF text extracted with Xpdf pdftotext 4.00 using layout and UTF-8 modes.",
+  "reviewPolicy": "This release requires a verified keep, duplicate-skip, or reject decision for each source item 1-450 only; the full 671-item extraction and audit remain available for later work. A keep requires two independent, direct answer references on different websites for both the source and related MCQ, four options, and a fact-specific Urdu translation and explanation."
+}

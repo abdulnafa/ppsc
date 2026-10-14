@@ -140,6 +140,7 @@ const SEQUENTIAL_ATTEMPT_QUEUE_RAW = JSON.stringify({
   // after one complete pass. sequentialIndex=5 is its flat-bank mirror.
   sequentialTurn: 11,
   sequentialIndex: 5,
+  sequentialQuestionId: SECOND_QUESTION_ID,
   nextSequence: 1,
   dedicatedDeck: [],
   dedicatedLastQuestionId: null,
@@ -759,6 +760,7 @@ async function testSequentialPracticeRoundTrip() {
   assert.equal(uploadedQueue.sequentialOrderVersion, 2);
   assert.equal(uploadedQueue.sequentialTurn, 11);
   assert.equal(uploadedQueue.sequentialIndex, 5);
+  assert.equal(uploadedQueue.sequentialQuestionId, SECOND_QUESTION_ID);
   assert.equal(uploadedQueue.activeAttempt.kind, "sequential");
   assert.equal(uploadedQueue.activeAttempt.submitted, true);
 
@@ -780,6 +782,7 @@ async function testSequentialPracticeRoundTrip() {
   assert.equal(restoredQueue.sequentialOrderVersion, 2);
   assert.equal(restoredQueue.sequentialTurn, 11);
   assert.equal(restoredQueue.sequentialIndex, 5);
+  assert.equal(restoredQueue.sequentialQuestionId, SECOND_QUESTION_ID);
   assert.equal(restoredQueue.activeAttempt.kind, "sequential");
   assert.equal(restoredQueue.activeAttempt.submitted, true);
 }

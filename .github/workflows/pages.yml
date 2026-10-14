@@ -32,7 +32,8 @@ jobs:
       - name: Validate committed release
         run: |
           node --check data/detailed-learning.js
-          node tools/validate-site-data.js --expected=11412
+          node tools/validate-wgi.js --complete
+          node tools/validate-site-data.js --expected=11892
 
       - name: Validate authentication and cloud sync
         run: |

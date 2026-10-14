@@ -165,6 +165,41 @@ async function main() {
     })()`;
     await client.send("Page.addScriptToEvaluateOnNewDocument", { source: sequentialFeatureSetup });
     await client.evaluate(sequentialFeatureSetup);
+    const additiveBankFixtureSetup = `(() => {
+      if (sessionStorage.getItem("ppsc-smoke:additive-bank") !== "on") return false;
+      sessionStorage.setItem("ppsc-smoke:additive-events", "[]");
+      window.addEventListener("ppsc:local-state-changed", (event) => {
+        const events = JSON.parse(sessionStorage.getItem("ppsc-smoke:additive-events") || "[]");
+        events.push({ key: event.detail?.key || "", action: event.detail?.action || "" });
+        sessionStorage.setItem("ppsc-smoke:additive-events", JSON.stringify(events));
+      });
+      let quizData;
+      Object.defineProperty(window, "PPSC_QUIZ_DATA", {
+        configurable: true,
+        enumerable: true,
+        get() { return quizData; },
+        set(value) {
+          if (value && Array.isArray(value.questions)
+            && !value.questions.some((question) => question.id === "SMOKE-ADDITIVE-Q0001-SRC")) {
+            value.questions.push({
+              id: "SMOKE-ADDITIVE-Q0001-SRC",
+              pairId: "SMOKE-ADDITIVE-Q0001",
+              kind: "source",
+              categoryId: "general-knowledge",
+              question: "Which fixture verifies additive question-bank migration?",
+              questionUrdu: "",
+              options: ["Stable prefix", "Changed prefix", "Unknown signature", "Deleted state"],
+              correctOptionIndex: 0,
+              isImportant: false,
+              repeatCount: 1
+            });
+          }
+          quizData = value;
+        }
+      });
+      return true;
+    })()`;
+    await client.send("Page.addScriptToEvaluateOnNewDocument", { source: additiveBankFixtureSetup });
     await client.send("Emulation.setDeviceMetricsOverride", {
       width: 430,
       height: 1200,
@@ -482,10 +517,10 @@ async function main() {
         other: computerQuestions.filter((question) => sourceFor(question) === "other")
       };
       const expectedCounts = {
-        all: [2554, 458],
-        "initial-original": [1088, 397],
-        "initial-related": [1088, 19],
-        other: [378, 42]
+        all: [2564, 463],
+        "initial-original": [1088, 399],
+        "initial-related": [1088, 20],
+        other: [388, 44]
       };
       for (const [scope, questions] of Object.entries(scopeQuestions)) {
         if (questions.length !== expectedCounts[scope][0] || questions.filter(important).length !== expectedCounts[scope][1]) {
@@ -499,9 +534,9 @@ async function main() {
         errors.push("Initial-related fixture includes a non-IBES related-practice question.");
       }
       if (scopeQuestions.other.some((question) => String(question.id).startsWith("IBES-"))
-        || scopeQuestions.other.filter((question) => question.kind === "source").length !== 189
-        || scopeQuestions.other.filter((question) => question.kind === "similar").length !== 189) {
-        errors.push("Other Papers fixture is not the expected non-IBES 189 source + 189 related partition.");
+        || scopeQuestions.other.filter((question) => question.kind === "source").length !== 194
+        || scopeQuestions.other.filter((question) => question.kind === "similar").length !== 194) {
+        errors.push("Other Papers fixture is not the expected non-IBES 194 source + 194 related partition.");
       }
       if (computerQuestions.some((question) => /^IBES-Q0254-/.test(question.id))) {
         errors.push("Absent IBES Q254 was fabricated in the Basic Computer bank.");
@@ -555,10 +590,10 @@ async function main() {
       const errors = [];
       const expected = ${JSON.stringify(computerSourceFixture.scopes)};
       const definitions = [
-        ["all", "computer-source-all", "All Basic Computer", 2554, 458],
-        ["initial-original", "computer-source-initial-original", "Initial PDF — Original MCQs", 1088, 397],
-        ["initial-related", "computer-source-initial-related", "Initial PDF — Related Practice", 1088, 19],
-        ["other", "computer-source-other", "Other Papers", 378, 42]
+        ["all", "computer-source-all", "All Basic Computer", 2564, 463],
+        ["initial-original", "computer-source-initial-original", "Initial PDF — Original MCQs", 1088, 399],
+        ["initial-related", "computer-source-initial-related", "Initial PDF — Related Practice", 1088, 20],
+        ["other", "computer-source-other", "Other Papers", 388, 44]
       ];
 
       document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
@@ -590,8 +625,8 @@ async function main() {
       }
       if (!document.querySelector("#computer-source-all")?.checked
         || radios.filter((radio) => radio.checked).length !== 1
-        || !document.querySelector("#study-scope-summary")?.textContent.includes("2554")
-        || !document.querySelector("#important-count")?.textContent.startsWith("458")) {
+        || !document.querySelector("#study-scope-summary")?.textContent.includes("2564")
+        || !document.querySelector("#important-count")?.textContent.startsWith("463")) {
         errors.push("Basic Computer did not open with the All source and its exact total/important counts.");
       }
       return { errors };
@@ -2721,10 +2756,10 @@ async function main() {
       const expected = ${JSON.stringify(computerSourceFixture.scopes)};
       const questionById = new Map(data.questions.map((question) => [String(question.id), question]));
       const definitions = [
-        ["all", "All Basic Computer", 2554, 458],
-        ["initial-original", "Initial PDF — Original MCQs", 1088, 397],
-        ["initial-related", "Initial PDF — Related Practice", 1088, 19],
-        ["other", "Other Papers", 378, 42]
+        ["all", "All Basic Computer", 2564, 463],
+        ["initial-original", "Initial PDF — Original MCQs", 1088, 399],
+        ["initial-related", "Initial PDF — Related Practice", 1088, 20],
+        ["other", "Other Papers", 388, 44]
       ];
       const optionText = (option) => String(option && typeof option === "object" ? option.text : option);
       const answerText = (question) => optionText(question.options[question.correctOptionIndex]);
@@ -3051,7 +3086,7 @@ async function main() {
       await pause();
       const fullV8 = JSON.parse(localStorage.getItem(storageKey) || "null");
       const legacyV6 = fullV8 ? JSON.parse(JSON.stringify(fullV8)) : null;
-      if (!legacyV6 || legacyV6.computerSourceScope !== "all" || legacyV6.questionIds.length !== 2554) {
+      if (!legacyV6 || legacyV6.computerSourceScope !== "all" || legacyV6.questionIds.length !== 2564) {
         errors.push("Could not construct a full Basic Computer v6 migration fixture.");
       } else {
         legacyV6.version = 6;
@@ -3083,9 +3118,9 @@ async function main() {
       await pause();
       const migrated = JSON.parse(localStorage.getItem(storageKey) || "null");
       if (!visible(document.querySelector("#quiz-screen")) || !migrated || migrated.version !== 8
-        || migrated.computerSourceScope !== "all" || migrated.rangeStart !== 1 || migrated.rangeEnd !== 2554
-        || migrated.rangePoolSize !== 2554 || migrated.rangePoolQuestionIds?.length !== 2554
-        || migrated.rangeQuestionIds?.length !== 2554 || migrated.questionIds?.length !== 2554) {
+        || migrated.computerSourceScope !== "all" || migrated.rangeStart !== 1 || migrated.rangeEnd !== 2564
+        || migrated.rangePoolSize !== 2564 || migrated.rangePoolQuestionIds?.length !== 2564
+        || migrated.rangeQuestionIds?.length !== 2564 || migrated.questionIds?.length !== 2564) {
         errors.push("v6 Continue did not migrate to the complete v8 All Basic Computer range.");
       }
       const invalidFixture = ${JSON.stringify(computerSourceFlowResult.resumeSnapshot)};
@@ -3376,10 +3411,10 @@ async function main() {
       };
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
-      if (!data || data.questions.length !== 11412) errors.push("Expected the current 11,412-question release bank.");
+      if (!data || data.questions.length !== 11892) errors.push("Expected the current 11,892-question release bank.");
       if (!data || data.version !== 5) errors.push("Expected question-data schema version 5.");
       const importantQuestions = data ? data.questions.filter((question) => question.isImportant === true) : [];
-      if (importantQuestions.length !== 1071) errors.push("Expected 1,071 evidence-based important questions.");
+      if (importantQuestions.length !== 1197) errors.push("Expected 1,197 evidence-based important questions.");
       if (importantQuestions.some((question) => !Number.isInteger(question.repeatCount) || question.repeatCount < 2)) errors.push("Important repeat metadata is invalid.");
       if (data && data.questions.some((question) => !/[\u0600-\u06ff]/u.test(String(question.questionUrdu || "")))) errors.push("A question is missing its Urdu translation.");
       const urduQuestions = data ? data.questions.filter((question) => question.categoryId === "urdu") : [];
@@ -3690,15 +3725,15 @@ async function main() {
 
       const notesData = window.PPSC_GK_STUDY_NOTES_DATA;
       const notesEntry = document.querySelector("#gk-study-notes-card");
-      if (!notesData || notesData.schemaVersion !== 1 || !Array.isArray(notesData.notes) || notesData.notes.length !== 708) {
-        errors.push("Expected the schema-v1 708-card GK Study Notes dataset.");
+      if (!notesData || notesData.schemaVersion !== 1 || !Array.isArray(notesData.notes) || notesData.notes.length !== 776) {
+        errors.push("Expected the schema-v1 776-card GK Study Notes dataset.");
       }
       if (!Array.isArray(window.PPSC_GK_STUDY_NOTES) || window.PPSC_GK_STUDY_NOTES !== notesData.notes) {
         errors.push("GK Study Notes convenience global did not expose the notes array.");
       }
       if (!notesEntry || !notesEntry.closest("#quick-notes-screen") || visible(notesEntry)) errors.push("Detailed GK Stories was not confined to the hidden Quick Notes screen on the homepage.");
       if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("GK Study Notes changed the 11 subject categories.");
-      if (document.querySelectorAll("#gk-notes-list .gk-note-card").length !== 0) errors.push("GK Study Notes eagerly built its 708-card DOM before the library was opened.");
+        if (document.querySelectorAll("#gk-notes-list .gk-note-card").length !== 0) errors.push("GK Study Notes eagerly built its 776-card DOM before the library was opened.");
 
       if (notesEntry) {
         document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
@@ -3722,7 +3757,7 @@ async function main() {
         if (!visible(notesScreen) || visible(document.querySelector("#category-screen"))) errors.push("GK Study Notes screen did not replace the category screen.");
         if (document.documentElement.scrollWidth > window.innerWidth) errors.push("GK Study Notes has horizontal overflow on mobile.");
         if (!notesList || allNoteCards().length !== 40 || visibleNoteCards().length !== 40) errors.push("GK Study Notes did not render the first 40-card page.");
-        if (!resultsStatus || !resultsStatus.textContent.includes("40 of 708")) errors.push("GK Study Notes result status did not report its progressive 40-of-708 page.");
+        if (!resultsStatus || !resultsStatus.textContent.includes("40 of 776")) errors.push("GK Study Notes result status did not report its progressive 40-of-776 page.");
         if (!notesLoadMore || !visible(notesLoadMore)) errors.push("GK Study Notes Load more control was not available for the first page.");
         if (visible(emptyState)) errors.push("GK Study Notes empty state was visible before filtering.");
         const topicButtons = [...document.querySelectorAll("#gk-notes-topic-filters .gk-notes-topic-button[data-gk-notes-topic]")];
@@ -3780,7 +3815,7 @@ async function main() {
         if (notesLoadMore) {
           notesLoadMore.click();
           await pause();
-          if (allNoteCards().length !== 80 || visibleNoteCards().length !== 80 || !resultsStatus.textContent.includes("80 of 708")) {
+        if (allNoteCards().length !== 80 || visibleNoteCards().length !== 80 || !resultsStatus.textContent.includes("80 of 776")) {
             errors.push("GK Study Notes Load more did not append the next 40-card page.");
           }
         }
@@ -3798,7 +3833,7 @@ async function main() {
           }
           notesClear.click();
           await pause();
-          if (notesSearch.value || visibleNoteCards().length !== 40 || !resultsStatus.textContent.includes("40 of 708")) errors.push("GK Study Notes Clear did not restore the first full-list page after search.");
+        if (notesSearch.value || visibleNoteCards().length !== 40 || !resultsStatus.textContent.includes("40 of 776")) errors.push("GK Study Notes Clear did not restore the first full-list page after search.");
         }
 
         const datedNote = notesData.notes.find((note) => note.facts.some((fact) => ["as-of", "version"].includes(fact.temporalScope?.type)));
@@ -3854,7 +3889,7 @@ async function main() {
         }
 
         if (notesSearch && notesClear) {
-          notesSearch.value = "zzzz-no-such-gk-study-note-708";
+          notesSearch.value = "zzzz-no-such-gk-study-note-766";
           notesSearch.dispatchEvent(new Event("input", { bubbles: true }));
           await pause();
           if (visibleNoteCards().length !== 0 || !visible(emptyState) || !resultsStatus.textContent.includes("0")) {
@@ -8142,6 +8177,7 @@ async function main() {
       queue.sequentialIndex = questions.findIndex((question) =>
         String(question.id) === String(lastCategoryFirst?.id || "")
       );
+      queue.sequentialQuestionId = String(lastCategoryFirst?.id || "");
       queue.nextSequentialReviewStep = queue.practiceStep + 1;
       queue.nextImportantReviewStep = queue.practiceStep + 1000;
       queue.nextQuizReviewStep = queue.practiceStep + 1000;
@@ -8243,6 +8279,7 @@ async function main() {
       queue.sequentialIndex = questions.findIndex((question) =>
         String(question.id) === String(smallFirst?.id || "")
       );
+      queue.sequentialQuestionId = String(smallFirst?.id || "");
       queue.nextSequentialReviewStep = queue.practiceStep + 1;
       queue.nextImportantReviewStep = queue.practiceStep + 1000;
       queue.nextQuizReviewStep = queue.practiceStep + 1000;
@@ -9096,6 +9133,305 @@ async function main() {
       rightArrowNext: !nativeKeyboardErrors.some((message) => message.includes("real Right Arrow"))
     };
 
+    const additiveMigrationSeed = await client.evaluate(`(() => {
+      const errors = [];
+      const data = window.PPSC_QUIZ_DATA;
+      const oldCount = 11412;
+      const oldSignature = "v1:11412:57e37c68";
+      const oldQuestions = data.questions.slice(0, oldCount);
+      const hashText = (hash, value) => {
+        const text = String(value);
+        for (let index = 0; index < text.length; index += 1) {
+          hash ^= text.charCodeAt(index);
+          hash = Math.imul(hash, 16777619);
+        }
+        return hash;
+      };
+      const signatureFor = (questions) => {
+        let hash = 2166136261;
+        questions.forEach((question) => {
+          hash = hashText(hash, JSON.stringify([
+            question.id,
+            question.categoryId,
+            question.question,
+            question.questionUrdu,
+            question.correctOptionIndex,
+            question.options,
+            question.optionsUrdu
+          ]));
+          hash = hashText(hash, "\\n");
+        });
+        return "v1:" + questions.length + ":" + (hash >>> 0).toString(16);
+      };
+      const prefixSignature = signatureFor(oldQuestions);
+      if (oldQuestions.length !== oldCount || prefixSignature !== oldSignature) {
+        errors.push("The approved additive migration fixture no longer matches the exact 11,412-question prefix.");
+      }
+      const syntheticQuestion = {
+        id: "SMOKE-ADDITIVE-Q0001-SRC",
+        pairId: "SMOKE-ADDITIVE-Q0001",
+        kind: "source",
+        categoryId: "general-knowledge",
+        question: "Which fixture verifies additive question-bank migration?",
+        questionUrdu: "",
+        options: ["Stable prefix", "Changed prefix", "Unknown signature", "Deleted state"],
+        correctOptionIndex: 0,
+        isImportant: false,
+        repeatCount: 1
+      };
+      const currentSignature = signatureFor(data.questions.concat(syntheticQuestion));
+      const categoryId = "general-knowledge";
+      const frozenPool = oldQuestions.filter((question) => question.categoryId === categoryId);
+      const frozenIds = frozenPool.map((question) => String(question.id));
+      const itemOne = oldQuestions.find((question) => question.categoryId === categoryId);
+      const itemTwo = oldQuestions.find((question) => question.categoryId === "pakistan-studies");
+      const oldEntries = data.categories.map((category) => ({
+        category,
+        questions: oldQuestions.filter((question) => question.categoryId === category.id)
+      })).filter((entry) => entry.questions.length > 0);
+      const sequentialTurn = oldEntries.length;
+      const sequentialQuestion = oldEntries[0]?.questions[1];
+      const sequentialIndex = oldQuestions.findIndex(
+        (question) => String(question.id) === String(sequentialQuestion?.id || "")
+      );
+      const currentEntries = data.categories.map((category) => ({
+        category,
+        questions: data.questions.filter((question) => question.categoryId === category.id)
+      })).filter((entry) => entry.questions.length > 0);
+      const currentQuestionAtOldTurn = currentEntries.length > 0
+        ? currentEntries[sequentialTurn % currentEntries.length]?.questions[
+          Math.floor(sequentialTurn / currentEntries.length)
+            % currentEntries[sequentialTurn % currentEntries.length].questions.length
+        ]
+        : null;
+      const migratedSequentialTurn = currentQuestionAtOldTurn
+        && String(currentQuestionAtOldTurn.id) === String(sequentialQuestion?.id || "")
+        ? sequentialTurn
+        : (() => {
+          const categoryIndex = currentEntries.findIndex(
+            (entry) => entry.category.id === sequentialQuestion?.categoryId
+          );
+          const questionIndex = categoryIndex < 0 ? -1 : currentEntries[categoryIndex].questions.findIndex(
+            (question) => String(question.id) === String(sequentialQuestion?.id || "")
+          );
+          return categoryIndex < 0 || questionIndex < 0
+            ? -1
+            : questionIndex * currentEntries.length + categoryIndex;
+        })();
+      const importantQuestions = oldQuestions.filter(
+        (question) => question.isImportant === true || Number(question.repeatCount) >= 2
+      );
+      if (frozenIds.length < 3 || !itemOne || !itemTwo || !sequentialQuestion
+        || sequentialIndex < 0 || importantQuestions.length < 2) {
+        errors.push("The approved additive migration fixture could not resolve its frozen questions.");
+      }
+
+      const session = {
+        version: 8,
+        bankSignature: oldSignature,
+        sessionKind: "category",
+        categoryId,
+        paperCategoryIds: null,
+        mode: "learn",
+        scope: "all",
+        computerSourceScope: "all",
+        partIndex: null,
+        importantOnly: false,
+        rangeStart: 1,
+        rangeEnd: frozenIds.length,
+        rangePoolSize: frozenIds.length,
+        rangePoolQuestionIds: frozenIds.slice(),
+        rangeQuestionIds: frozenIds.slice(),
+        questionIds: frozenIds.slice(),
+        optionOrders: null,
+        answerHistory: null,
+        learnVisitedQuestionIds: frozenIds.slice(0, 2),
+        learnReviewCountedQuestionIds: frozenIds.slice(0, 2),
+        currentIndex: 2,
+        selectedIndex: null,
+        submitted: false,
+        score: 0,
+        savedAt: 24680
+      };
+      const queue = {
+        version: 1,
+        bankSignature: oldSignature,
+        countBaselineVersion: 1,
+        embeddedCadenceVersion: 2,
+        practiceStep: 41,
+        nextQuizReviewStep: 46,
+        nextImportantReviewStep: 57,
+        nextSequentialReviewStep: 45,
+        sequentialOrderVersion: 2,
+        sequentialTurn,
+        sequentialIndex,
+        // Deliberately absent: pre-upgrade saves did not yet persist this ID.
+        nextSequence: 9,
+        dedicatedDeck: [String(itemTwo.id), String(itemOne.id)],
+        dedicatedLastQuestionId: String(itemTwo.id),
+        dedicatedRepeatGap: 10,
+        dedicatedRecentQuestionIds: [String(itemOne.id), String(itemTwo.id)],
+        importantDeck: [String(importantQuestions[1].id)],
+        importantLastQuestionId: String(importantQuestions[0].id),
+        items: [
+          { questionId: String(itemOne.id), remaining: 7, dueStep: 46, sequence: 7 },
+          {
+            questionId: String(itemTwo.id),
+            remaining: 3,
+            dueStep: 54,
+            wrongRetryDueStep: 54,
+            sequence: 8
+          }
+        ],
+        activeAttempt: {
+          questionId: String(sequentialQuestion.id),
+          optionOrder: [0, 1, 2, 3],
+          selectedIndex: sequentialQuestion.correctOptionIndex,
+          submitted: true,
+          outcome: "correct",
+          wrongIncrement: null,
+          resumeAction: "next:3",
+          context: "embedded",
+          kind: "sequential"
+        }
+      };
+      localStorage.setItem("ppsc-prep:active-session:v1", JSON.stringify(session));
+      localStorage.setItem("ppsc-prep:retry-queue:v1", JSON.stringify(queue));
+      sessionStorage.setItem("ppsc-smoke:additive-bank", "on");
+      return {
+        errors,
+        oldSignature,
+        currentSignature,
+        session,
+        queue,
+        sequentialQuestionId: String(sequentialQuestion?.id || ""),
+        migratedSequentialTurn
+      };
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.querySelector("#continue-session-card")) {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for approved additive-bank migration testing."));
+        }
+      }, 50);
+    })`);
+    const additiveMigrationResult = await client.evaluate(`(() => {
+      const expected = ${JSON.stringify(additiveMigrationSeed)};
+      const errors = expected.errors.slice();
+      const session = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      const queue = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      const migrationEvents = JSON.parse(sessionStorage.getItem("ppsc-smoke:additive-events") || "[]");
+      const stable = (value) => {
+        if (Array.isArray(value)) return value.map(stable);
+        if (!value || typeof value !== "object") return value;
+        return Object.fromEntries(Object.keys(value).sort().map((key) => [key, stable(value[key])]));
+      };
+      const same = (left, right) => JSON.stringify(stable(left)) === JSON.stringify(stable(right));
+      if (!session || session.bankSignature !== expected.currentSignature) {
+        errors.push("Approved additive migration did not rewrite the frozen active session to the current signature.");
+      } else {
+        for (const key of [
+          "questionIds", "rangePoolQuestionIds", "rangeQuestionIds",
+          "learnVisitedQuestionIds", "learnReviewCountedQuestionIds"
+        ]) {
+          if (!same(session[key], expected.session[key])) {
+            errors.push("Approved additive migration changed the active session's frozen " + key + ".");
+          }
+        }
+        for (const key of [
+          "rangeStart", "rangeEnd", "rangePoolSize", "currentIndex",
+          "selectedIndex", "submitted", "score", "savedAt"
+        ]) {
+          if (session[key] !== expected.session[key]) {
+            errors.push("Approved additive migration changed active-session state " + key + ".");
+          }
+        }
+      }
+      if (!queue || queue.bankSignature !== expected.currentSignature) {
+        errors.push("Approved additive migration did not rewrite Queue state to the current signature.");
+      } else {
+        for (const key of [
+          "practiceStep", "nextQuizReviewStep", "nextImportantReviewStep",
+          "nextSequentialReviewStep", "nextSequence", "dedicatedRepeatGap",
+          "dedicatedLastQuestionId", "importantLastQuestionId", "sequentialIndex"
+        ]) {
+          if (queue[key] !== expected.queue[key]) {
+            errors.push("Approved additive migration changed Queue/gate state " + key + ".");
+          }
+        }
+        if (queue.sequentialTurn !== expected.migratedSequentialTurn) {
+          errors.push("Approved additive migration did not map the exact Sequential MCQ to its current turn.");
+        }
+        for (const key of [
+          "items", "dedicatedDeck", "dedicatedRecentQuestionIds", "importantDeck", "activeAttempt"
+        ]) {
+          if (!same(queue[key], expected.queue[key])) {
+            errors.push("Approved additive migration changed Queue/deck/attempt state " + key + ".");
+          }
+        }
+        if (queue.sequentialQuestionId !== expected.sequentialQuestionId) {
+          errors.push("Approved additive migration did not preserve and persist the exact Sequential MCQ ID.");
+        }
+      }
+      for (const key of ["ppsc-prep:active-session:v1", "ppsc-prep:retry-queue:v1"]) {
+        if (!migrationEvents.some((event) => event.key === key && event.action === "set")) {
+          errors.push("Approved additive migration did not notify cloud sync for " + key + ".");
+        }
+      }
+      return {
+        errors,
+        bankActuallyGrew: expected.currentSignature !== expected.oldSignature,
+        frozenSessionQuestionCount: session?.questionIds?.length || 0,
+        currentQuestionCount: window.PPSC_QUIZ_DATA.questions.length,
+        sequentialQuestionId: queue?.sequentialQuestionId || ""
+      };
+    })()`);
+
+    const unknownSignatureSeed = await client.evaluate(`(() => {
+      const sessionKey = "ppsc-prep:active-session:v1";
+      const queueKey = "ppsc-prep:retry-queue:v1";
+      const session = JSON.parse(localStorage.getItem(sessionKey) || "null");
+      const queue = JSON.parse(localStorage.getItem(queueKey) || "null");
+      if (!session || !queue) return false;
+      session.bankSignature = "v1:11412:00000000";
+      queue.bankSignature = "v1:11412:00000000";
+      localStorage.setItem(sessionKey, JSON.stringify(session));
+      localStorage.setItem(queueKey, JSON.stringify(queue));
+      return true;
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.querySelector("#category-grid .category-card")) {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for unknown-signature rejection testing."));
+        }
+      }, 50);
+    })`);
+    const unknownSignatureResult = await client.evaluate(`(() => {
+      const errors = [];
+      const session = localStorage.getItem("ppsc-prep:active-session:v1");
+      const queue = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      if (!${JSON.stringify(unknownSignatureSeed)}) {
+        errors.push("Unknown-signature rejection fixture could not be seeded.");
+      }
+      if (session !== null) errors.push("An unknown stale active-session signature was not rejected.");
+      if (queue !== null && (queue.items?.length || queue.activeAttempt)) {
+        errors.push("An unknown stale Queue signature was not rejected and reset.");
+      }
+      return { errors };
+    })()`);
+
     const { resumeExpected, legacyV6Snapshot, ...normalSummary } = normalResult;
     const result = {
       ...normalSummary,
@@ -9148,6 +9484,8 @@ async function main() {
         .concat(sequentialReviewResult.errors)
         .concat(keyboardControlResult.errors)
         .concat(nativeKeyboardResult.errors)
+        .concat(additiveMigrationResult.errors)
+        .concat(unknownSignatureResult.errors)
         .concat(paperSetupResult.errors)
         .concat(paperResumeResult.errors),
       resume: {
@@ -9163,7 +9501,9 @@ async function main() {
         permutedCategoryQuizOrderRejected: rangePoolGuardRecoveryResult.errors.length === 0
           && questionOrderGuardRecoveryResult.errors.length === 0,
         staleDataRecovered: !difficultResult.errors.some((message) => message.includes("Legacy Part resume data"))
-          && !difficultResumeSetup.errors.some((message) => message.includes("Stale-bank resume data"))
+          && !difficultResumeSetup.errors.some((message) => message.includes("Stale-bank resume data")),
+        approvedAdditiveBank: additiveMigrationResult,
+        unknownSignatureRejected: unknownSignatureResult.errors.length === 0
       },
       positionOptionGuard: {
         verifiedSensitiveCount: positionGuardSetupResult.verifiedSensitiveCount,

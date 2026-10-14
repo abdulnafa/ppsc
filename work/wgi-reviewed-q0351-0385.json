@@ -1,0 +1,2947 @@
+[
+  {
+    "sourceRecordId": "WGI-Q0351",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 351,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "6BEE37AF8BE79B54DFAC4F9F0D8C6DA2B0667841AF67B3B98AE49C8A3486AB87",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Both the fossil-fuel carbon dioxide fact and the related photosynthesis fact already exist as canonical ADV2E102 bank questions; adding this pair would duplicate practice.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0002-Q068-SIM"
+  },
+  {
+    "sourceRecordId": "WGI-Q0352",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 352,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "9DF326B8F2984D1535D36947FD1F8A490CECDBC27EFEFD63717FF543C8B67C6E",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0352-SRC",
+      "pairId": "WGI-Q0352",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "From which country have Rohingya refugees primarily fled?",
+      "questionUrdu": "روہنگیا پناہ گزین بنیادی طور پر کس ملک سے ہجرت پر مجبور ہوئے؟",
+      "options": [
+        "Myanmar",
+        "Nepal",
+        "Sri Lanka",
+        "Mongolia"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "روہنگیا برادری تاریخی طور پر میانمار کی ریاست راکھین میں آباد رہی ہے، جہاں سے بڑی تعداد نے نقل مکانی کی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 352",
+        "referenceUrl": "https://www.unhcr.org/emergencies/rohingya-emergency",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0352"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.unhcr.org/emergencies/rohingya-emergency",
+          "label": "UNHCR: Rohingya emergency",
+          "publisher": "UNHCR",
+          "authorityId": "unhcr",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Rohingya refugees fled from Myanmar, particularly Rakhine State."
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/burma-country-policy-and-information-notes/country-policy-and-information-note-rohingya-including-rohingya-in-bangladesh-burma-january-2026-accessible",
+          "label": "UK Home Office: Rohingya country note",
+          "publisher": "UK Home Office",
+          "authorityId": "uk-home-office",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Rohingya are a community historically associated with Myanmar's Rakhine State."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0352-SIM",
+      "pairId": "WGI-Q0352",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which city is designated as Myanmar's capital?",
+      "questionUrdu": "میانمار کا اعلان کردہ دارالحکومت کون سا شہر ہے؟",
+      "options": [
+        "Naypyidaw",
+        "Yangon",
+        "Dhaka",
+        "Kathmandu"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "میانمار کی حکومت نے نیپیڈا کو دارالحکومت مقرر کیا؛ ینگون اس سے پہلے دارالحکومت تھا۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 352",
+        "referenceUrl": "https://geonames.nga.mil/geonames/GNSSearch/GNSDocs/pdfdocs/fnc/Burma_Statement_Latest.pdf",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0352"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://geonames.nga.mil/geonames/GNSSearch/GNSDocs/pdfdocs/fnc/Burma_Statement_Latest.pdf",
+          "label": "US Board on Geographic Names: Myanmar capital",
+          "publisher": "U.S. Board on Geographic Names",
+          "authorityId": "us-bgn",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Burmese government-designated capital is Nay Pyi Taw, although US State Department usage differs."
+        },
+        {
+          "url": "https://assets.publishing.service.gov.uk/media/654d01595d60950011bec8b7/Myanmar__Burma__factfile.pdf",
+          "label": "UK PCGN: Myanmar factfile",
+          "publisher": "UK Permanent Committee on Geographical Names",
+          "authorityId": "uk-pcgn",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official country factfile names Nay Pyi Taw as Myanmar's capital."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0353",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 353,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "88DACBFE00223ED409474C6182BA7A55E7BCAB8ECEE57980859AB3771FF4A0A0",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "WGI-Q0314-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0354",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 354,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "6C2591DDD011C7521598802BB05859C2BC5990C80F068ABE826569B2F663388C",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0354-SRC",
+      "pairId": "WGI-Q0354",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Biogas is chiefly a mixture of which gases?",
+      "questionUrdu": "بایو گیس بنیادی طور پر کن دو گیسوں کا مرکب ہے؟",
+      "options": [
+        "Methane and carbon dioxide",
+        "Oxygen and nitrogen",
+        "Hydrogen and helium",
+        "Chlorine and ozone"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "نامیاتی مواد کے بے ہوا گلنے سے بننے والی بایو گیس میں میتھین اور کاربن ڈائی آکسائیڈ غالب ہوتی ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 354",
+        "referenceUrl": "https://www.epa.gov/anaerobic-digestion/frequent-questions-about-anaerobic-digestion",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0354"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.epa.gov/anaerobic-digestion/frequent-questions-about-anaerobic-digestion",
+          "label": "EPA: Anaerobic digestion FAQ",
+          "publisher": "U.S. Environmental Protection Agency",
+          "authorityId": "epa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Biogas chiefly contains methane and carbon dioxide and can generate energy."
+        },
+        {
+          "url": "https://www.energy.gov/cmei/fuels/full-text-glossary",
+          "label": "DOE: Fuel glossary, biogas entry",
+          "publisher": "U.S. Department of Energy",
+          "authorityId": "doe",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Biogas is defined as a methane and carbon dioxide gas mixture."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0354-SIM",
+      "pairId": "WGI-Q0354",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "How can biogas be used to produce electricity?",
+      "questionUrdu": "بایو گیس سے بجلی کس طرح پیدا کی جا سکتی ہے؟",
+      "options": [
+        "By fueling a generator",
+        "By acting as a solar cell",
+        "By cooling a turbine",
+        "By making nuclear fuel"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "بایو گیس کو بطور ایندھن جنریٹر یا انجن میں جلایا جاتا ہے، جس سے بجلی پیدا ہو سکتی ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 354",
+        "referenceUrl": "https://www.epa.gov/anaerobic-digestion/frequent-questions-about-anaerobic-digestion",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0354"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.epa.gov/anaerobic-digestion/frequent-questions-about-anaerobic-digestion",
+          "label": "EPA: Anaerobic digestion FAQ",
+          "publisher": "U.S. Environmental Protection Agency",
+          "authorityId": "epa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Biogas chiefly contains methane and carbon dioxide and can generate energy."
+        },
+        {
+          "url": "https://www.eia.gov/energyexplained/biomass/landfill-gas-and-biogas.php",
+          "label": "EIA: Landfill gas and biogas",
+          "publisher": "U.S. Energy Information Administration",
+          "authorityId": "eia",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Biogas is burned to produce heat or electricity, including through generators."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0355",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 355,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "4520310F1B906E3423C0B79EA4AD51A97B8AE859529C707720872A29060E7234",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0355-SRC",
+      "pairId": "WGI-Q0355",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the chemical formula of methane?",
+      "questionUrdu": "میتھین کا کیمیائی فارمولا کیا ہے؟",
+      "options": [
+        "CH4",
+        "CO2",
+        "NH3",
+        "H2O"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "میتھین کے ایک سالمے میں ایک کاربن اور چار ہائیڈروجن ایٹم ہوتے ہیں، اس لیے فارمولا CH4 ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 355",
+        "referenceUrl": "https://www.epa.gov/ghgemissions/methane-emissions",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0355"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.epa.gov/ghgemissions/methane-emissions",
+          "label": "EPA: Methane emissions",
+          "publisher": "U.S. Environmental Protection Agency",
+          "authorityId": "epa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "EPA identifies methane with the chemical formula CH4."
+        },
+        {
+          "url": "https://www.eia.gov/energyexplained/natural-gas/",
+          "label": "EIA: Natural gas explained",
+          "publisher": "U.S. Energy Information Administration",
+          "authorityId": "eia",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Methane, CH4, is the largest constituent of natural gas."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0355-SIM",
+      "pairId": "WGI-Q0355",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which gas is the principal component of natural gas?",
+      "questionUrdu": "قدرتی گیس کا سب سے بڑا جزو کون سی گیس ہے؟",
+      "options": [
+        "Methane",
+        "Oxygen",
+        "Nitrogen",
+        "Chlorine"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "قدرتی گیس میں سب سے زیادہ مقدار میتھین کی ہوتی ہے، اگرچہ دیگر گیسیں بھی تھوڑی مقدار میں مل سکتی ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 355",
+        "referenceUrl": "https://www.eia.gov/energyexplained/natural-gas/",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0355"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.eia.gov/energyexplained/natural-gas/",
+          "label": "EIA: Natural gas explained",
+          "publisher": "U.S. Energy Information Administration",
+          "authorityId": "eia",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Methane, CH4, is the largest constituent of natural gas."
+        },
+        {
+          "url": "https://www.epa.gov/anaerobic-digestion/basic-information-about-anaerobic-digestion",
+          "label": "EPA: Anaerobic digestion basics",
+          "publisher": "U.S. Environmental Protection Agency",
+          "authorityId": "epa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "EPA identifies methane as the primary component of natural gas."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0356",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 356,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "B549850FC23313E6FC5E6CC76B0DB28B6148D3530FA2AE90A4702B39CDD65A48",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0356-SRC",
+      "pairId": "WGI-Q0356",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which reaction supplies the Sun's energy?",
+      "questionUrdu": "سورج کی توانائی کس جوہری عمل سے پیدا ہوتی ہے؟",
+      "options": [
+        "Nuclear fusion",
+        "Nuclear fission",
+        "Combustion",
+        "Condensation"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "سورج میں ہائیڈروجن کے مرکزے مل کر ہیلیم بناتے ہیں؛ اس عمل کو جوہری انضمام کہتے ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 356",
+        "referenceUrl": "https://spaceplace.nasa.gov/sun-heat/sp/",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0356"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://spaceplace.nasa.gov/sun-heat/sp/",
+          "label": "NASA Space Place: How does the Sun make energy?",
+          "publisher": "NASA",
+          "authorityId": "nasa",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Sun's heat and light originate from nuclear fusion."
+        },
+        {
+          "url": "https://www.energy.gov/science/doe-explainsburning-plasma",
+          "label": "DOE: Burning plasma and fusion",
+          "publisher": "U.S. Department of Energy",
+          "authorityId": "doe",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Fusion in the Sun's core is its energy source."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0356-SIM",
+      "pairId": "WGI-Q0356",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Where does nuclear fusion take place in the Sun?",
+      "questionUrdu": "سورج کے کس حصے میں جوہری انضمام ہوتا ہے؟",
+      "options": [
+        "Its core",
+        "Its photosphere",
+        "Its corona",
+        "Its chromosphere"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "جوہری انضمام کے لیے درکار انتہائی بلند درجہ حرارت اور دباؤ سورج کے مرکز میں پائے جاتے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 356",
+        "referenceUrl": "https://soho.nascom.nasa.gov/gallery/images/cutaway00.html",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0356"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://soho.nascom.nasa.gov/gallery/images/cutaway00.html",
+          "label": "NASA/ESA SOHO: Cutaway of the Sun",
+          "publisher": "NASA SOHO",
+          "authorityId": "nasa-soho",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Sun's core is the region where nuclear fusion occurs."
+        },
+        {
+          "url": "https://www.energy.gov/science/doe-explainsburning-plasma",
+          "label": "DOE: Burning plasma and fusion",
+          "publisher": "U.S. Department of Energy",
+          "authorityId": "doe",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Fusion in the Sun's core is its energy source."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0357",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 357,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "9071230D705AB162B4915764CEA126545BE2ED88DC67B75D26310AC0B9390AAE",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0358",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 358,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "236641E80AACB72CD5E2E60151D0E76A5DF30489AE4647FF2DB375CF20B94567",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0358-SRC",
+      "pairId": "WGI-Q0358",
+      "kind": "source",
+      "categoryId": "pakistan-studies",
+      "question": "Which line marked the 1947 partition boundary through Punjab?",
+      "questionUrdu": "1947 میں پنجاب کی تقسیم کی سرحد کس لکیر سے متعین ہوئی؟",
+      "options": [
+        "Radcliffe Line",
+        "Durand Line",
+        "McMahon Line",
+        "Hindenburg Line"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "برطانوی ہند کی تقسیم میں پنجاب کی نئی سرحد سر سیرل ریڈکلف کی مرتب کردہ ریڈکلف لائن سے متعین ہوئی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 358",
+        "referenceUrl": "https://www.nationalgeographic.com/history/article/partition-of-india-and-pakistan-history-legacy",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0358"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nationalgeographic.com/history/article/partition-of-india-and-pakistan-history-legacy",
+          "label": "National Geographic: Partition's borders",
+          "publisher": "National Geographic",
+          "authorityId": "national-geographic",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The article identifies the Radcliffe Line and says Radcliffe's team partitioned Punjab and Bengal in 1947."
+        },
+        {
+          "url": "https://www.aljazeera.com/news/2017/8/17/how-were-the-india-pakistan-partition-borders-drawn",
+          "label": "Al Jazeera: Drawing the partition borders",
+          "publisher": "Al Jazeera",
+          "authorityId": "al-jazeera",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Radcliffe Line marked the 1947 India-Pakistan partition border through Punjab."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0358-SIM",
+      "pairId": "WGI-Q0358",
+      "kind": "similar",
+      "categoryId": "pakistan-studies",
+      "question": "Which two British Indian provinces were divided by the 1947 boundary commissions?",
+      "questionUrdu": "1947 کے سرحدی کمیشنوں نے برطانوی ہند کے کن دو صوبوں کو تقسیم کیا؟",
+      "options": [
+        "Punjab and Bengal",
+        "Punjab and Sindh",
+        "Bengal and Assam",
+        "Sindh and Bombay"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "تقسیمِ ہند میں سرحدی کمیشنوں نے پنجاب اور بنگال کی نئی حدبندیاں طے کیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 358",
+        "referenceUrl": "https://hansard.parliament.uk/Commons/1947-07-10/debates/584499a6-8830-4426-be23-7215df06d57e/IndianIndependenceBill",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0358"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://hansard.parliament.uk/Commons/1947-07-10/debates/584499a6-8830-4426-be23-7215df06d57e/IndianIndependenceBill",
+          "label": "UK Parliament: Indian Independence Bill debate",
+          "publisher": "UK Parliament",
+          "authorityId": "uk-parliament",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Prime Minister Attlee states in the July 1947 debate that Bengal and Punjab were to be divided by boundary commissions."
+        },
+        {
+          "url": "https://www.nationalgeographic.com/history/article/partition-of-india-and-pakistan-history-legacy",
+          "label": "National Geographic: Partition's borders",
+          "publisher": "National Geographic",
+          "authorityId": "national-geographic",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The article identifies the Radcliffe Line and says Radcliffe's team partitioned Punjab and Bengal in 1947."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0359",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 359,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "22B7D81B23C074C7B73FE276087C34266AC96F33B29FC7720D0FDBD46CCC45AA",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Belgium's location and the distinct related fact about its three official languages were checked against direct Belgian-government and EU pages; Urdu wording was reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0359-SRC",
+      "pairId": "WGI-Q0359",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Belgium is located on which continent?",
+      "questionUrdu": "بیلجیم کس براعظم میں واقع ہے؟",
+      "options": [
+        "Europe",
+        "Asia",
+        "Africa",
+        "South America"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "بیلجیم مغربی یورپ کا ملک ہے اور یورپی یونین کا رکن بھی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 359",
+        "referenceUrl": "https://european-union.europa.eu/principles-countries-history/eu-countries/belgium_en",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0359"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries/belgium_en",
+          "label": "EU: Belgium country profile",
+          "publisher": "European Union",
+          "authorityId": "european-union",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Belgium is a country in Europe."
+        },
+        {
+          "url": "https://finlande.diplomatie.belgium.be/sites/default/files/2024-10/Belgium%20-%20The%20beating%20heart%20of%20Europe.pdf",
+          "label": "Belgian Foreign Affairs: Belgium country brochure",
+          "publisher": "Belgian Foreign Affairs",
+          "authorityId": "belgian-foreign-affairs",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The official brochure places Belgium in Western Europe."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0359-SIM",
+      "pairId": "WGI-Q0359",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "How many official languages does Belgium have?",
+      "questionUrdu": "بیلجیم کی سرکاری زبانیں کل کتنی ہیں؟",
+      "options": [
+        "Three",
+        "Two",
+        "Four",
+        "Five"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "بیلجیم کی تین سرکاری زبانیں ڈچ، فرانسیسی اور جرمن ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 359",
+        "referenceUrl": "https://www.belgium.be/en/about_belgium/government/federale_staat",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0359"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.belgium.be/en/about_belgium/government/federale_staat",
+          "label": "Belgium.be: Belgium, a federal state",
+          "publisher": "Belgian Federal Government",
+          "authorityId": "belgian-federal-government",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Belgian federal government explicitly names Dutch, French and German as the country's three official languages."
+        },
+        {
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries/belgium_en",
+          "label": "European Union: Belgium country profile",
+          "publisher": "European Union",
+          "authorityId": "european-union",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The EU Belgium country profile lists Dutch, French and German as the official languages."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0360",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 360,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "4A8D95F6A10F825B3F884B03D61EB33A8EFE46CEF19889C92A5E9068D439DD7B",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0360-SRC",
+      "pairId": "WGI-Q0360",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which tissue covers bone ends at movable joints and reduces friction?",
+      "questionUrdu": "حرکت کرنے والے جوڑوں میں ہڈیوں کے سروں کو ڈھانپ کر رگڑ کم کرنے والا بافتہ کون سا ہے؟",
+      "options": [
+        "Cartilage",
+        "Keratin",
+        "Marrow",
+        "Enamel"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "جوڑوں کی غضروفی تہہ ہڈیوں کے سروں کو ہموار سطح دیتی ہے اور حرکت کے دوران رگڑ کم کرتی ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 360",
+        "referenceUrl": "https://my.clevelandclinic.org/health/articles/23173-cartilage",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0360"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://my.clevelandclinic.org/health/articles/23173-cartilage",
+          "label": "Cleveland Clinic: Cartilage",
+          "publisher": "Cleveland Clinic",
+          "authorityId": "cleveland-clinic",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Articular cartilage covers bone ends and reduces friction at joints."
+        },
+        {
+          "url": "https://orthoinfo.aaos.org/globalassets/pdfs/glenohumeral-joint-oa-cpg_pls.pdf",
+          "label": "AAOS: Shoulder joint osteoarthritis plain-language summary",
+          "publisher": "American Academy of Orthopaedic Surgeons",
+          "authorityId": "aaos",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Cartilage covers the ends of joint bones and reduces friction during movement."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0360-SIM",
+      "pairId": "WGI-Q0360",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which structural protein is predominant in cartilage?",
+      "questionUrdu": "غضروف میں غالب ساختی پروٹین کون سا ہے؟",
+      "options": [
+        "Type II collagen",
+        "Haemoglobin",
+        "Keratin",
+        "Insulin"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "غضروف کے میٹرکس میں بالخصوص ٹائپ II کولیجن ہوتا ہے، جو اسے ساخت اور مضبوطی دیتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 360",
+        "referenceUrl": "https://medlineplus.gov/genetics/gene/col2a1/",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0360"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://medlineplus.gov/genetics/gene/col2a1/",
+          "label": "MedlinePlus Genetics: COL2A1",
+          "publisher": "U.S. National Library of Medicine",
+          "authorityId": "nlm",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Type II collagen is a major structural protein in cartilage."
+        },
+        {
+          "url": "https://www.arthritis.org/health-wellness/treatment/complementary-therapies/supplements-and-vitamins/can-collagen-supplements-help-arthritis",
+          "label": "Arthritis Foundation: Collagen in cartilage",
+          "publisher": "Arthritis Foundation",
+          "authorityId": "arthritis-foundation",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Type II collagen is the predominant collagen in cartilage."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0361",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 361,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "7B61298728A1E4682BEB03F5DCA9B81DA53FAD8E1F2F58FAB1DC02E2965D784C",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0361-SRC",
+      "pairId": "WGI-Q0361",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "Which protein provides tensile strength in tendons?",
+      "questionUrdu": "کنڈروں کو کھنچاؤ برداشت کرنے کی طاقت کون سا پروٹین دیتا ہے؟",
+      "options": [
+        "Collagen",
+        "Insulin",
+        "Keratin",
+        "Glycogen"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کنڈروں میں کولیجن کے مضبوط ریشے پائے جاتے ہیں جو کھنچاؤ کے مقابلے میں طاقت دیتے ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 361",
+        "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK230857/",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0361"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK230857/",
+          "label": "NCBI Bookshelf: Connective tissue",
+          "publisher": "National Academies Press",
+          "authorityId": "national-academies",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Collagen fibers provide the tensile strength of tendons, which attach muscle to bone."
+        },
+        {
+          "url": "https://my.clevelandclinic.org/health/body/21738-tendon",
+          "label": "Cleveland Clinic: Tendon",
+          "publisher": "Cleveland Clinic",
+          "authorityId": "cleveland-clinic",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Tendons connect muscle to bone and are composed largely of strong collagen fibers."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0361-SIM",
+      "pairId": "WGI-Q0361",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which connective tissue attaches muscle to bone?",
+      "questionUrdu": "پٹھے کو ہڈی سے جوڑنے والا مربوط بافتہ کون سا ہے؟",
+      "options": [
+        "Tendon",
+        "Ligament",
+        "Cartilage",
+        "Bone marrow"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کنڈرا پٹھے کو ہڈی سے جوڑتا ہے؛ رباط عموماً ایک ہڈی کو دوسری ہڈی سے جوڑتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 361",
+        "referenceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK230857/",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0361"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK230857/",
+          "label": "NCBI Bookshelf: Connective tissue",
+          "publisher": "National Academies Press",
+          "authorityId": "national-academies",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Collagen fibers provide the tensile strength of tendons, which attach muscle to bone."
+        },
+        {
+          "url": "https://my.clevelandclinic.org/health/body/21738-tendon",
+          "label": "Cleveland Clinic: Tendon",
+          "publisher": "Cleveland Clinic",
+          "authorityId": "cleveland-clinic",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Tendons connect muscle to bone and are composed largely of strong collagen fibers."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0362",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 362,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "5337E9F74BB79F9D198FFD6D24CBA90195D89FFD603B603153561B38A5243910",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0363",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 363,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "52BAC70293B9974578EC4F3E94001683AD787B12140D401E0DB94DA5FA5F7192",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0363-SRC",
+      "pairId": "WGI-Q0363",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which rock type commonly forms from deposits accumulating in an ocean?",
+      "questionUrdu": "سمندر میں جمع ہونے والی تلچھٹ سے عموماً کس قسم کی چٹان بنتی ہے؟",
+      "options": [
+        "Sedimentary rock",
+        "Igneous rock",
+        "Metamorphic rock",
+        "Magma"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "تلچھٹ کی تہیں دباؤ اور سیمنٹیشن کے بعد رسوبی چٹان میں بدل سکتی ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 363",
+        "referenceUrl": "https://www.usgs.gov/faqs/what-are-sedimentary-rocks",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0363"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.usgs.gov/faqs/what-are-sedimentary-rocks",
+          "label": "USGS: What are sedimentary rocks?",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "usgs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Sediments deposited in oceans can compact and cement into sedimentary rocks, including limestone."
+        },
+        {
+          "url": "https://www.nps.gov/zion/learn/nature/carmel.htm",
+          "label": "NPS: Carmel Formation",
+          "publisher": "U.S. National Park Service",
+          "authorityId": "nps",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Limestone with marine fossils was deposited in an ancient shallow sea."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0363-SIM",
+      "pairId": "WGI-Q0363",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which sedimentary rock can form from accumulated marine shells?",
+      "questionUrdu": "سمندری جانداروں کے جمع شدہ خولوں سے کون سی رسوبی چٹان بن سکتی ہے؟",
+      "options": [
+        "Limestone",
+        "Basalt",
+        "Granite",
+        "Gneiss"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کیلشیم کاربونیٹ والے سمندری خول جمع اور سخت ہو کر چونے کے پتھر کی تہیں بنا سکتے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 363",
+        "referenceUrl": "https://www.nps.gov/goga/learn/education/limestone-faq.htm",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0363"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nps.gov/goga/learn/education/limestone-faq.htm",
+          "label": "NPS: Limestone FAQ",
+          "publisher": "U.S. National Park Service",
+          "authorityId": "nps",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Limestone is a sedimentary rock that can form from marine carbonate shells."
+        },
+        {
+          "url": "https://www.usgs.gov/faqs/what-are-sedimentary-rocks",
+          "label": "USGS: What are sedimentary rocks?",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "usgs",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Sediments deposited in oceans can compact and cement into sedimentary rocks, including limestone."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0364",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 364,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "72D241759BC3D49ADBB0AC9E007FB2657DDE4D772F5295B3759D1F2DA9476074",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0365",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 365,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "EC9B3A983E9C2DB8F8EAD540190D7E026FF76B87B55C991E17682E81B9996467",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The audited bank already contains this fact as a canonical duplicate, so it is not added again.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "ADV2E102-U0014-Q045-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0366",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 366,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "2BAFE11CF641E5B82FA84842F8DE2E1AF57B45C23DA4B8F0DCA55E1C680C3C8D",
+    "action": "skip",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source tests Ray Tomlinson as the creator of network email, already covered by canonical existing-bank item IBES-Q0648-SRC; adding it would duplicate practice.",
+    "printedAnswerAssessment": "not-applicable",
+    "duplicateOf": "IBES-Q0648-SRC"
+  },
+  {
+    "sourceRecordId": "WGI-Q0367",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 367,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "B2718E2853BB6FAF69F836E84E9ACDEEDB61302FF9D7D40EEC7BA3367CF4D9DC",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0368",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 368,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "E5E7F081420A18BA8618039876EDAFB28458E4B5F463E6A0AE95F25512E32D6F",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The PDF's word 'founded' is ambiguous because founding and public launch dates differ; the verified 1996 answer refers specifically to the commercial launch.",
+    "printedAnswerAssessment": "corrected",
+    "sourceQuestion": {
+      "id": "WGI-Q0368-SRC",
+      "pairId": "WGI-Q0368",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "In which year was Hotmail commercially launched?",
+      "questionUrdu": "ہاٹ میل کی ویب ای میل سروس تجارتی طور پر کس سال شروع ہوئی؟",
+      "options": [
+        "1996",
+        "1989",
+        "2001",
+        "2006"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ہاٹ میل کی ویب پر مبنی ای میل سروس 1996 میں عوام کے لیے شروع ہوئی تھی؛ کمپنی کے ابتدائی قیام کے سال سے اسے الگ سمجھیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 368",
+        "referenceUrl": "https://news.microsoft.com/source/2007/05/06/microsoft-launches-windows-live-hotmail-worldwide/",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0368"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://news.microsoft.com/source/2007/05/06/microsoft-launches-windows-live-hotmail-worldwide/",
+          "label": "Microsoft: Hotmail history",
+          "publisher": "Microsoft",
+          "authorityId": "microsoft",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Microsoft describes Hotmail as pioneering web-based email in 1996."
+        },
+        {
+          "url": "https://www.oreilly.com/library/view/founders-at-work/9781590597149/Chapter02.html",
+          "label": "Founders at Work: Sabeer Bhatia interview",
+          "publisher": "Apress / O'Reilly",
+          "authorityId": "oreilly-apress",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The founder interview places Hotmail's launch in 1996 and names Jack Smith as Bhatia's co-founder."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      },
+      "sourceNotes": "The PDF asks when Hotmail was founded and marks 1996. Sources distinguish earlier founding/startup work from the publicly launched webmail service in 1996. The stem was narrowed to commercial launch while retaining its 1996 answer."
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0368-SIM",
+      "pairId": "WGI-Q0368",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Who co-founded Hotmail with Sabeer Bhatia?",
+      "questionUrdu": "صابر بھاٹیا کے ساتھ ہاٹ میل کی بنیاد کس نے رکھی؟",
+      "options": [
+        "Jack Smith",
+        "Bill Gates",
+        "Steve Jobs",
+        "Tim Berners-Lee"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ہاٹ میل کے شریک بانی صابر بھاٹیا اور جیک اسمتھ تھے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 368",
+        "referenceUrl": "https://www.oreilly.com/library/view/founders-at-work/9781590597149/Chapter02.html",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0368"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.oreilly.com/library/view/founders-at-work/9781590597149/Chapter02.html",
+          "label": "Founders at Work: Sabeer Bhatia interview",
+          "publisher": "Apress / O'Reilly",
+          "authorityId": "oreilly-apress",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The founder interview places Hotmail's launch in 1996 and names Jack Smith as Bhatia's co-founder."
+        },
+        {
+          "url": "https://arstechnica.com/information-technology/2017/12/how-hotmail-changed-microsoft-and-email-forever/",
+          "label": "Ars Technica: Hotmail history",
+          "publisher": "Ars Technica",
+          "authorityId": "ars-technica",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The historical account identifies Jack Smith and Sabeer Bhatia as Hotmail's founders."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0369",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 369,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "54CA080C1C95AF76A2D2229A48317A00B5827B45D28D764B11916B479F6A8199",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0369-SRC",
+      "pairId": "WGI-Q0369",
+      "kind": "source",
+      "categoryId": "current-affairs",
+      "question": "How much Pakistan PRID-MPA financing did the World Bank approve on 19 December 2025?",
+      "questionUrdu": "عالمی بینک نے 19 دسمبر 2025 کو پاکستان کے PRID-MPA پروگرام کے لیے کتنی مالی معاونت منظور کی؟",
+      "options": [
+        "700 million US dollars",
+        "70 million US dollars",
+        "7 billion US dollars",
+        "700 billion US dollars"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "19 دسمبر 2025 کے فیصلے میں مجموعی طور پر 700 ملین امریکی ڈالر منظور ہوئے؛ یہ پوری ممکنہ پروگرام حد نہیں تھی۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 369",
+        "referenceUrl": "https://www.worldbank.org/en/news/press-release/2025/12/19/pakistan-world-bank-supports-efforts-to-strengthen-fiscal-systems-and-enhance-service-delivery",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0369"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2025/12/19/pakistan-world-bank-supports-efforts-to-strengthen-fiscal-systems-and-enhance-service-delivery",
+          "label": "World Bank: Pakistan PRID-MPA approval, 19 Dec 2025",
+          "publisher": "World Bank",
+          "authorityId": "world-bank",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "On 19 December 2025 the Board approved $700 million, including $100 million for Sindh."
+        },
+        {
+          "url": "https://www.investing.com/news/economy-news/world-bank-approves-700-million-for-pakistans-economic-stability-4418271",
+          "label": "Reuters: World Bank approves Pakistan financing",
+          "publisher": "Reuters",
+          "authorityId": "reuters",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Reuters independently reports the $700 million 2025 approval and $100 million Sindh allocation."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2025-12-19",
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0369-SIM",
+      "pairId": "WGI-Q0369",
+      "kind": "similar",
+      "categoryId": "current-affairs",
+      "question": "Of the 2025 World Bank Pakistan PRID-MPA approval, how much was allocated to Sindh?",
+      "questionUrdu": "2025 میں عالمی بینک کی پاکستان کے لیے PRID-MPA منظوری میں سندھ کا حصہ کتنا تھا؟",
+      "options": [
+        "100 million US dollars",
+        "600 million US dollars",
+        "700 million US dollars",
+        "1.35 billion US dollars"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "منظور شدہ 700 ملین ڈالر میں 600 ملین وفاقی پروگراموں اور 100 ملین سندھ کے پروگرام کے لیے تھے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 369",
+        "referenceUrl": "https://www.worldbank.org/en/news/press-release/2025/12/19/pakistan-world-bank-supports-efforts-to-strengthen-fiscal-systems-and-enhance-service-delivery",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0369"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.worldbank.org/en/news/press-release/2025/12/19/pakistan-world-bank-supports-efforts-to-strengthen-fiscal-systems-and-enhance-service-delivery",
+          "label": "World Bank: Pakistan PRID-MPA approval, 19 Dec 2025",
+          "publisher": "World Bank",
+          "authorityId": "world-bank",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "On 19 December 2025 the Board approved $700 million, including $100 million for Sindh."
+        },
+        {
+          "url": "https://www.investing.com/news/economy-news/world-bank-approves-700-million-for-pakistans-economic-stability-4418271",
+          "label": "Reuters: World Bank approves Pakistan financing",
+          "publisher": "Reuters",
+          "authorityId": "reuters",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Reuters independently reports the $700 million 2025 approval and $100 million Sindh allocation."
+        }
+      ],
+      "temporalScope": {
+        "type": "event-date",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": "2025-12-19",
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0370",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 370,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "B975AAE2133ABEE94A09C4E4B03302834A333D68FBCD8B5C6721B2A50AF3567F",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0370-SRC",
+      "pairId": "WGI-Q0370",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "What is a conflict fought by local forces backed by outside powers called?",
+      "questionUrdu": "بیرونی طاقتوں کی حمایت سے مقامی گروہوں کے ذریعے لڑی جانے والی جنگ کو کیا کہتے ہیں؟",
+      "options": [
+        "Proxy war",
+        "Cold war",
+        "Trade war",
+        "Total war"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "پراکسی جنگ میں طاقتیں خود براہ راست لڑنے کے بجائے مقامی فریقوں کی حمایت کرتی ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 370",
+        "referenceUrl": "https://academic.oup.com/ia/article/102/5/1587/8785717",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0370"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://academic.oup.com/ia/article/102/5/1587/8785717",
+          "label": "International Affairs: Proxy warfare",
+          "publisher": "Oxford University Press",
+          "authorityId": "oxford-academic",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The research defines proxy warfare as an indirect conflict using another armed actor."
+        },
+        {
+          "url": "https://www.brookings.edu/articles/the-proxy-war-problem-in-syria/",
+          "label": "Brookings: The proxy-war problem",
+          "publisher": "Brookings Institution",
+          "authorityId": "brookings",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "External powers use and support local forces as proxies in an armed conflict."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0370-SIM",
+      "pairId": "WGI-Q0370",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Which aid can an outside state give to forces in a proxy war?",
+      "questionUrdu": "پراکسی جنگ میں بیرونی ریاست مقامی گروہ کو کون سی مدد دے سکتی ہے؟",
+      "options": [
+        "Arms and funding",
+        "Only neutral mediation",
+        "Only weather reports",
+        "Only trade tariffs"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "پراکسی فریقوں کی حمایت میں اسلحہ اور مالی وسائل فراہم کرنا عام طریقے ہیں۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 370",
+        "referenceUrl": "https://assets.cambridge.org/97811084/73361/excerpt/9781108473361_excerpt.pdf",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0370"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://assets.cambridge.org/97811084/73361/excerpt/9781108473361_excerpt.pdf",
+          "label": "Cambridge: The Struggle for Supremacy in the Middle East, excerpt",
+          "publisher": "Cambridge University Press",
+          "authorityId": "cambridge-university-press",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The scholarly book excerpt identifies weapons, funding and training as support provided to proxy forces."
+        },
+        {
+          "url": "https://international-review.icrc.org/articles/reports-and-documents-ihl-and-the-challenges-of-contemporary-armed-conflicts-927",
+          "label": "ICRC Review: Contemporary armed conflicts",
+          "publisher": "International Committee of the Red Cross",
+          "authorityId": "icrc",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The ICRC describes proxy warfare as involving political, material, financial or military support."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0371",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 371,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "24D7FACAF8BB4DC564CE4F736BA75B606886C1F1B3E8F2CD12C3CF9A20031B73",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0372",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 372,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "894DF6A5B6BC11E07D5EE85A908F23BD4DCE94E260A21C2431DEE6DAA173096E",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0372-SRC",
+      "pairId": "WGI-Q0372",
+      "kind": "source",
+      "categoryId": "pakistan-studies",
+      "question": "What share of total National Assembly membership must vote for a constitutional amendment bill in Pakistan?",
+      "questionUrdu": "پاکستان میں آئینی ترمیمی بل کے لیے قومی اسمبلی کی کل رکنیت کے کتنے ووٹ درکار ہیں؟",
+      "options": [
+        "Two-thirds majority",
+        "Simple majority",
+        "One-fourth majority",
+        "Unanimous vote"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "آئین کے آرٹیکل 239 کے تحت ترمیمی بل کو قومی اسمبلی کی کل رکنیت کے کم از کم دو تہائی ووٹ چاہییں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 372",
+        "referenceUrl": "https://na.gov.pk/uploads/documents/640b00c9009d8_878.pdf",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0372"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://na.gov.pk/uploads/documents/640b00c9009d8_878.pdf",
+          "label": "National Assembly: Constitution, Article 239",
+          "publisher": "National Assembly of Pakistan",
+          "authorityId": "pakistan-national-assembly",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Article 239 requires votes of at least two-thirds of total membership for constitutional amendment bills."
+        },
+        {
+          "url": "https://senate.gov.pk/en/messence.php?id=1009",
+          "label": "Senate: Constitutional amendment process",
+          "publisher": "Senate of Pakistan",
+          "authorityId": "pakistan-senate",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Senate explains Article 239 and the two-thirds requirement in each House."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0372-SIM",
+      "pairId": "WGI-Q0372",
+      "kind": "similar",
+      "categoryId": "pakistan-studies",
+      "question": "Which article of Pakistan's Constitution sets the amendment procedure?",
+      "questionUrdu": "پاکستان کے آئین میں ترمیم کا طریقہ کار کس آرٹیکل میں درج ہے؟",
+      "options": [
+        "Article 239",
+        "Article 184",
+        "Article 62",
+        "Article 25"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "آئین کا آرٹیکل 239 آئینی ترمیمی بل کی منظوری کا طریقہ اور مطلوبہ ووٹ بیان کرتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 372",
+        "referenceUrl": "https://na.gov.pk/uploads/documents/640b00c9009d8_878.pdf",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0372"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://na.gov.pk/uploads/documents/640b00c9009d8_878.pdf",
+          "label": "National Assembly: Constitution, Article 239",
+          "publisher": "National Assembly of Pakistan",
+          "authorityId": "pakistan-national-assembly",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Article 239 requires votes of at least two-thirds of total membership for constitutional amendment bills."
+        },
+        {
+          "url": "https://senate.gov.pk/en/messence.php?id=1009",
+          "label": "Senate: Constitutional amendment process",
+          "publisher": "Senate of Pakistan",
+          "authorityId": "pakistan-senate",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Senate explains Article 239 and the two-thirds requirement in each House."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0373",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 373,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "2192399C9704DDD57772127ACE36ADB009E5E2690A16087753995672B2D5668E",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The ancient-Egypt Nile fact and distinct Lake Nasser dam fact were checked against direct geography, museum, USGS and NASA sources; Urdu wording was reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0373-SRC",
+      "pairId": "WGI-Q0373",
+      "kind": "source",
+      "categoryId": "geography",
+      "question": "Which river is central to the ancient Egyptian civilization?",
+      "questionUrdu": "قدیم مصری تہذیب کے لیے کون سا دریا بنیادی اہمیت رکھتا تھا؟",
+      "options": [
+        "Nile River",
+        "Amazon River",
+        "Danube River",
+        "Indus River"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "دریائے نیل کے کنارے پانی اور زرخیز زمین نے قدیم مصری آبادی اور کھیتی باڑی کو سہارا دیا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 373",
+        "referenceUrl": "https://education.nationalgeographic.org/resource/nile-river/",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0373"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://education.nationalgeographic.org/resource/nile-river/",
+          "label": "National Geographic Education: Nile River",
+          "publisher": "National Geographic Society",
+          "authorityId": "national-geographic",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Nile River was critical to the development of ancient Egyptian civilization."
+        },
+        {
+          "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_Ancient_Egypt_A_Resource_for_Educators.pdf",
+          "label": "Met Museum: Ancient Egypt educator resource",
+          "publisher": "Metropolitan Museum of Art",
+          "authorityId": "met-museum",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Nile River and its flooding shaped ancient Egyptian civilization."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0373-SIM",
+      "pairId": "WGI-Q0373",
+      "kind": "similar",
+      "categoryId": "geography",
+      "question": "Which dam on the Nile River formed Lake Nasser?",
+      "questionUrdu": "دریائے نیل پر کس ڈیم کی تعمیر سے جھیل ناصر بنی؟",
+      "options": [
+        "Aswan High Dam",
+        "Merowe Dam",
+        "Sennar Dam",
+        "Roseires Dam"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "دریائے نیل پر اسوان ہائی ڈیم کی تعمیر سے پانی جمع ہوا اور جھیل ناصر وجود میں آئی۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 373",
+        "referenceUrl": "https://eros.usgs.gov/earthshots/the-lakes-form",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0373"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://eros.usgs.gov/earthshots/the-lakes-form",
+          "label": "USGS EROS: The Lakes Form",
+          "publisher": "U.S. Geological Survey",
+          "authorityId": "usgs",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "USGS states that the Aswan High Dam on the Nile formed Lake Nasser."
+        },
+        {
+          "url": "https://science.nasa.gov/earth/earth-observatory/lake-nasser-egypt-5988/",
+          "label": "NASA Earth Observatory: Lake Nasser, Egypt",
+          "publisher": "NASA",
+          "authorityId": "nasa",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "NASA identifies the Aswan High Dam as the structure that created Lake Nasser."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0374",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 374,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "C525A5B5B7828E21B23724CAAF5C7ED3FF8696E5C2FA30D8E465E7E59258D4FD",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0374-SRC",
+      "pairId": "WGI-Q0374",
+      "kind": "source",
+      "categoryId": "basic-mathematics",
+      "question": "For x ≠ 0, simplify x(x³)² divided by x³.",
+      "questionUrdu": "اگر x ≠ 0 ہو تو x(x³)² کو x³ سے تقسیم کرنے پر کیا حاصل ہو گا؟",
+      "options": [
+        "x⁴",
+        "x²",
+        "x⁵",
+        "x⁶"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "قوتوں کے قوانین کے مطابق (x³)² = x⁶، اس لیے x·x⁶/x³ = x⁴۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 374",
+        "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry/pages/1-2-exponents-and-scientific-notation",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0374"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/algebra-and-trigonometry/pages/1-2-exponents-and-scientific-notation",
+          "label": "OpenStax: Exponent rules",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Power, product and quotient rules imply x(x³)²/x³ = x^(1+6−3) = x⁴ for x≠0."
+        },
+        {
+          "url": "https://en.khanacademy.org/math/algebra-basics/alg-basics-expressions-with-exponents/alg-basics-exponent-properties-intro/a/exponent-properties-review",
+          "label": "Khan Academy: Exponent properties review",
+          "publisher": "Khan Academy",
+          "authorityId": "khan-academy",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Product, quotient and power rules independently yield x(x³)²/x³ = x⁴ for nonzero x."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0374-SIM",
+      "pairId": "WGI-Q0374",
+      "kind": "similar",
+      "categoryId": "basic-mathematics",
+      "question": "Which exponent rule is used when multiplying powers with the same base?",
+      "questionUrdu": "ایک ہی اساس کی قوتوں کو ضرب دیتے وقت قوت نما کے ساتھ کیا کیا جاتا ہے؟",
+      "options": [
+        "Add the exponents",
+        "Subtract the exponents",
+        "Multiply the exponents",
+        "Divide the exponents"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ایک ہی اساس والی قوتوں میں ضرب کے وقت قوت نما جمع ہوتے ہیں، مثلاً x² × x³ = x⁵۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 374",
+        "referenceUrl": "https://openstax.org/books/algebra-and-trigonometry/pages/1-2-exponents-and-scientific-notation",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0374"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/algebra-and-trigonometry/pages/1-2-exponents-and-scientific-notation",
+          "label": "OpenStax: Exponent rules",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Power, product and quotient rules imply x(x³)²/x³ = x^(1+6−3) = x⁴ for x≠0."
+        },
+        {
+          "url": "https://en.khanacademy.org/math/algebra-basics/alg-basics-expressions-with-exponents/alg-basics-exponent-properties-intro/a/exponent-properties-review",
+          "label": "Khan Academy: Exponent properties review",
+          "publisher": "Khan Academy",
+          "authorityId": "khan-academy",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Product, quotient and power rules independently yield x(x³)²/x³ = x⁴ for nonzero x."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0375",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 375,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "5E453BD29C1ECC256B02703A2D197573FE0145D4462E32DBD5C455FB5DFE7605",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0375-SRC",
+      "pairId": "WGI-Q0375",
+      "kind": "source",
+      "categoryId": "general-knowledge",
+      "question": "Who is commonly called the father of the atomic bomb?",
+      "questionUrdu": "ایٹم بم کا بانی عموماً کس سائنس دان کو کہا جاتا ہے؟",
+      "options": [
+        "J. Robert Oppenheimer",
+        "Albert Einstein",
+        "Niels Bohr",
+        "Ernest Rutherford"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "جے رابرٹ اوپن ہائمر نے مین ہیٹن پراجیکٹ کی لاس الاموس تجربہ گاہ کی سائنسی قیادت کی، اسی نسبت سے یہ لقب ملا۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 375",
+        "referenceUrl": "https://www.nps.gov/people/manhattan-project-scientists-j-robert-oppenheimer.htm",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0375"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.nps.gov/people/manhattan-project-scientists-j-robert-oppenheimer.htm",
+          "label": "NPS: J. Robert Oppenheimer",
+          "publisher": "U.S. National Park Service",
+          "authorityId": "nps",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Oppenheimer directed Los Alamos and is commonly called the father of the atomic bomb."
+        },
+        {
+          "url": "https://www.energy.gov/lm/articles/keeping-change-one-digital-record-time",
+          "label": "DOE: Oppenheimer in Manhattan Project records",
+          "publisher": "U.S. Department of Energy",
+          "authorityId": "doe",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "DOE explicitly calls J. Robert Oppenheimer the father of the atomic bomb."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0375-SIM",
+      "pairId": "WGI-Q0375",
+      "kind": "similar",
+      "categoryId": "general-knowledge",
+      "question": "Which wartime project developed the first atomic bomb?",
+      "questionUrdu": "دوسری جنگِ عظیم کے دوران پہلا ایٹم بم کس منصوبے میں تیار ہوا؟",
+      "options": [
+        "The Manhattan Project",
+        "The Apollo Program",
+        "The Marshall Plan",
+        "Project Mercury"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "مین ہیٹن پراجیکٹ امریکہ کی زیرِ قیادت جنگی تحقیق تھی جس میں پہلے ایٹم بم بنائے گئے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 375",
+        "referenceUrl": "https://home.nps.gov/mapr/learn/manhattan-project.htm",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0375"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://home.nps.gov/mapr/learn/manhattan-project.htm",
+          "label": "NPS: Manhattan Project overview",
+          "publisher": "U.S. National Park Service",
+          "authorityId": "nps",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Manhattan Project was the World War II effort to produce the first atomic bombs."
+        },
+        {
+          "url": "https://www.energy.gov/management/articles/manhattan-project-making-atomic-bomb",
+          "label": "DOE: The Manhattan Project",
+          "publisher": "U.S. Department of Energy",
+          "authorityId": "doe",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The Manhattan Project developed the first atomic bombs under scientific leaders including Oppenheimer."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0376",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 376,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "85EE6FAFE9DA0DFDCFDBCA78D97187D9652D4967FAF4325A7399D701DBE6DE09",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0377",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 377,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "3144A779D824F7C916382EA34358DE19E464CD11C1FC5A6700EBC8F3D6027133",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0378",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 378,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "CE984A9871E5AD4B8CDD51C1D92FB8D0C897DE70226F92EF02C2CA5B37A8EB58",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0379",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 379,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "48F92EB1220E48CA063408FC708CB0157C6670384AA86D99BAF1ACB73D732FF2",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0380",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 380,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "D585DB5FEA4DC8917F6EB4D24A51BABED74A14549425519A6221A1A7716D7367",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0380-SRC",
+      "pairId": "WGI-Q0380",
+      "kind": "source",
+      "categoryId": "basic-mathematics",
+      "question": "What is the square root of 9801?",
+      "questionUrdu": "9801 کا مربع جذر کیا ہے؟",
+      "options": [
+        "99",
+        "89",
+        "101",
+        "111"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "99 کو 99 سے ضرب دینے پر 9801 حاصل ہوتا ہے، اس لیے 9801 کا مثبت مربع جذر 99 ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 380",
+        "referenceUrl": "https://cdn1.byjus.com/wp-content/uploads/2019/10/Mizoram-Board-Class-8-Maths-Textbook-Chapter-6.pdf",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0380"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://cdn1.byjus.com/wp-content/uploads/2019/10/Mizoram-Board-Class-8-Maths-Textbook-Chapter-6.pdf",
+          "label": "Mizoram Board Class 8 mathematics, Ch. 6",
+          "publisher": "Mizoram Board of School Education",
+          "authorityId": "mizoram-board",
+          "role": "answer-primary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The textbook gives √9801 = 99; equivalently 99² = 9801."
+        },
+        {
+          "url": "https://www.cuemath.com/algebra/square-1-to-100/",
+          "label": "Cuemath: Squares from 1 to 100",
+          "publisher": "Cuemath",
+          "authorityId": "cuemath",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The square table states that 99² equals 9801, so the positive square root is 99."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0380-SIM",
+      "pairId": "WGI-Q0380",
+      "kind": "similar",
+      "categoryId": "basic-mathematics",
+      "question": "What is 100² − 99²?",
+      "questionUrdu": "100² − 99² کی قیمت کیا ہے؟",
+      "options": [
+        "199",
+        "99",
+        "201",
+        "1"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "مربعوں کے فرق کا قاعدہ لگائیں: (100+99)(100−99) = 199۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 380",
+        "referenceUrl": "https://www.mathsisfun.com/definitions/difference-of-squares.html",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0380"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mathsisfun.com/definitions/difference-of-squares.html",
+          "label": "Math Is Fun: Difference of squares",
+          "publisher": "Math Is Fun",
+          "authorityId": "math-is-fun",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "a² − b² = (a+b)(a−b), so 100² − 99² = 199."
+        },
+        {
+          "url": "https://math.libretexts.org/Courses/Cosumnes_River_College/Corequisite_Codex/04%3A_Factoring_Techniques/4.04%3A_Factoring_Differences_of_Squares",
+          "label": "LibreTexts: Difference of squares",
+          "publisher": "LibreTexts",
+          "authorityId": "libretexts",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The identity (a+b)(a−b) evaluates 100² − 99² as 199."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0381",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 381,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "D6A0A95DE0C9B024DA3158A06BD3E03992AD34C88FDC46A58BBD942BB7179F3F",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0381-SRC",
+      "pairId": "WGI-Q0381",
+      "kind": "source",
+      "categoryId": "basic-mathematics",
+      "question": "If the three parts of the ratio 1:x:5 add up to 11, what is x?",
+      "questionUrdu": "اگر نسبت 1:x:5 کے تین اجزا کا مجموعہ 11 ہو تو x کی قیمت کیا ہو گی؟",
+      "options": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "اجزا جمع کرنے سے 1+x+5=11 بنتا ہے؛ دونوں طرف سے 6 منفی کریں تو x=5 رہتا ہے۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 381",
+        "referenceUrl": "https://www.mathsisfun.com/numbers/ratio-share.html",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0381"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mathsisfun.com/numbers/ratio-share.html",
+          "label": "Math Is Fun: Sharing in a ratio",
+          "publisher": "Math Is Fun",
+          "authorityId": "math-is-fun",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Ratio parts add to the total; 1+x+5=11 gives x=5, with middle share 5/11."
+        },
+        {
+          "url": "https://math.libretexts.org/Bookshelves/Arithmetic_and_Basic_Math/Basic_Math_(Grade_6)/02%3A_Introducing_Ratios/13%3A_Part-Part-Whole_Ratios/13.01%3A_Part-Part-Whole_Ratios",
+          "label": "LibreTexts: Part-part-whole ratios",
+          "publisher": "LibreTexts",
+          "authorityId": "libretexts",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "A ratio's total is the sum of its parts; the middle part in 1:5:5 is 5/11 of the whole."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0381-SIM",
+      "pairId": "WGI-Q0381",
+      "kind": "similar",
+      "categoryId": "basic-mathematics",
+      "question": "In the ratio 1:5:5, what fraction of the total is the middle part?",
+      "questionUrdu": "نسبت 1:5:5 میں درمیانی حصہ کل کا کون سا کسر ہے؟",
+      "options": [
+        "5/11",
+        "1/11",
+        "5/10",
+        "1/5"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "کل حصے 1+5+5=11 ہیں؛ درمیانی حصہ 5 ہے، لہٰذا کل کا 5/11 ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 381",
+        "referenceUrl": "https://www.mathsisfun.com/numbers/ratio-share.html",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0381"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.mathsisfun.com/numbers/ratio-share.html",
+          "label": "Math Is Fun: Sharing in a ratio",
+          "publisher": "Math Is Fun",
+          "authorityId": "math-is-fun",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Ratio parts add to the total; 1+x+5=11 gives x=5, with middle share 5/11."
+        },
+        {
+          "url": "https://math.libretexts.org/Bookshelves/Arithmetic_and_Basic_Math/Basic_Math_(Grade_6)/02%3A_Introducing_Ratios/13%3A_Part-Part-Whole_Ratios/13.01%3A_Part-Part-Whole_Ratios",
+          "label": "LibreTexts: Part-part-whole ratios",
+          "publisher": "LibreTexts",
+          "authorityId": "libretexts",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "A ratio's total is the sum of its parts; the middle part in 1:5:5 is 5/11 of the whole."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0382",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 382,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "DBDD03BF225125EEBFDB3013F915328398FC5119DCF0A9D494B2367EDC0CE4BE",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0382-SRC",
+      "pairId": "WGI-Q0382",
+      "kind": "source",
+      "categoryId": "everyday-science",
+      "question": "What is the process of removing the inedible central part of a fruit called?",
+      "questionUrdu": "پھل کے اندرونی بیج والے مرکزی حصے کو نکالنے کا عمل کیا کہلاتا ہے؟",
+      "options": [
+        "Coring",
+        "Blanching",
+        "Fermenting",
+        "Curing"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "پھل کا کور یا مرکزی حصہ نکالنے کو کورنگ کہتے ہیں۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.16, item 382",
+        "referenceUrl": "https://dictionary.cambridge.org/us/dictionary/english/coring",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0382"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/coring",
+          "label": "Cambridge Dictionary: coring",
+          "publisher": "Cambridge University Press",
+          "authorityId": "cambridge",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Coring means removing the central core from fruit."
+        },
+        {
+          "url": "https://www.collinsdictionary.com/us/dictionary/english/core",
+          "label": "Collins Dictionary: core as verb",
+          "publisher": "Collins Dictionary",
+          "authorityId": "collins",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "To core a fruit is to remove its central seed-bearing core."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0382-SIM",
+      "pairId": "WGI-Q0382",
+      "kind": "similar",
+      "categoryId": "everyday-science",
+      "question": "Which kitchen tool removes an apple's core?",
+      "questionUrdu": "سیب کا مرکزی حصہ نکالنے کے لیے کون سا باورچی خانے کا آلہ استعمال ہوتا ہے؟",
+      "options": [
+        "Apple corer",
+        "Peeler",
+        "Grater",
+        "Whisk"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "ایپل کورر ایک خاص آلہ ہے جو سیب کے مرکزی بیج والے حصے کو نکالتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 382",
+        "referenceUrl": "https://www.collinsdictionary.com/dictionary/english/corer",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0382"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://www.collinsdictionary.com/dictionary/english/corer",
+          "label": "Collins Dictionary: corer",
+          "publisher": "Collins Dictionary",
+          "authorityId": "collins",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "A corer is the kitchen implement used to remove fruit cores."
+        },
+        {
+          "url": "https://ucanr.edu/site/uc-master-food-preserver-program-orange-county/apples",
+          "label": "UC Master Food Preservers: Apples",
+          "publisher": "University of California Agriculture and Natural Resources",
+          "authorityId": "ucanr",
+          "role": "answer-secondary",
+          "sourceClass": "official",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The university food-preservation guide recommends an apple coring device to remove the core."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0383",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 383,
+    "sourcePdfPage": 16,
+    "rawTextSha256": "D211862DFCD269D1BFA20680D4CDEB11890B5AAFEC21205328568BE21A3CE13A",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  },
+  {
+    "sourceRecordId": "WGI-Q0384",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 384,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "E627FE1ADF541E113F8C1D7CFD15A0CDCD6303323AED5482C8752F12C273BB7F",
+    "action": "keep",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "Source answer and distinct related practice fact checked against two direct, independent references; wording and Urdu explanations were reviewed.",
+    "printedAnswerAssessment": "confirmed",
+    "sourceQuestion": {
+      "id": "WGI-Q0384-SRC",
+      "pairId": "WGI-Q0384",
+      "kind": "source",
+      "categoryId": "basic-mathematics",
+      "question": "What is the sum of 10, 13, 12 and 15?",
+      "questionUrdu": "10، 13، 12 اور 15 کا مجموعہ کیا ہے؟",
+      "options": [
+        "50",
+        "48",
+        "49",
+        "51"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "اعداد کو براہ راست جمع کریں: 10+13+12+15 = 50۔",
+      "source": {
+        "type": "book",
+        "label": "Mastering One-Paper with WGI, PDF p.17, item 384",
+        "referenceUrl": "https://openstax.org/books/introductory-business-statistics/pages/2-4-sigma-notation-and-calculating-the-arithmetic-mean",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0384"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/introductory-business-statistics/pages/2-4-sigma-notation-and-calculating-the-arithmetic-mean",
+          "label": "OpenStax: Sigma notation",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Summation means adding the listed terms; 10+13+12+15 totals 50."
+        },
+        {
+          "url": "https://math.libretexts.org/Courses/Cosumnes_River_College/Math_370%3A_Precalculus/07%3A_Sequences_and_the_Binomial_Theorem/7.02%3A_Summation_Notation",
+          "label": "LibreTexts: Summation notation",
+          "publisher": "LibreTexts",
+          "authorityId": "libretexts",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Summation adds a sequence's terms, and capital sigma denotes that operation."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    },
+    "similarQuestion": {
+      "id": "WGI-Q0384-SIM",
+      "pairId": "WGI-Q0384",
+      "kind": "similar",
+      "categoryId": "basic-mathematics",
+      "question": "Which symbol commonly denotes a summation?",
+      "questionUrdu": "مجموعہ ظاہر کرنے کے لیے عموماً کون سی علامت استعمال ہوتی ہے؟",
+      "options": [
+        "Sigma (Σ)",
+        "Delta (Δ)",
+        "Pi (π)",
+        "Theta (Θ)"
+      ],
+      "correctOptionIndex": 0,
+      "explanationUrdu": "بڑا یونانی حرف سگما، یعنی Σ، سلسلے کے اجزا کا مجموعہ ظاہر کرتا ہے۔",
+      "source": {
+        "type": "practice",
+        "label": "Related practice: WGI item 384",
+        "referenceUrl": "https://openstax.org/books/introductory-business-statistics/pages/2-4-sigma-notation-and-calculating-the-arithmetic-mean",
+        "accessedOn": "2026-10-14"
+      },
+      "tags": [
+        "wgi",
+        "wgi-q0384"
+      ],
+      "verificationStatus": "verified",
+      "references": [
+        {
+          "url": "https://openstax.org/books/introductory-business-statistics/pages/2-4-sigma-notation-and-calculating-the-arithmetic-mean",
+          "label": "OpenStax: Sigma notation",
+          "publisher": "OpenStax",
+          "authorityId": "openstax",
+          "role": "answer-primary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "Summation means adding the listed terms; 10+13+12+15 totals 50."
+        },
+        {
+          "url": "https://www.mathsisfun.com/algebra/sigma-notation.html",
+          "label": "Math Is Fun: Sigma notation",
+          "publisher": "Math Is Fun",
+          "authorityId": "math-is-fun",
+          "role": "answer-secondary",
+          "sourceClass": "authoritative-secondary",
+          "accessedOn": "2026-10-14",
+          "supports": [
+            "answer"
+          ],
+          "claimSummary": "The capital Greek letter sigma, Σ, denotes summation."
+        }
+      ],
+      "temporalScope": {
+        "type": "static",
+        "sourcePaperDate": "2026",
+        "asOf": null,
+        "eventDate": null,
+        "version": null,
+        "reverifyAfter": null
+      }
+    }
+  },
+  {
+    "sourceRecordId": "WGI-Q0385",
+    "corpusId": "WGI-ONE-PAPER-2026",
+    "sourceQuestionNumber": 385,
+    "sourcePdfPage": 17,
+    "rawTextSha256": "748902498B7A16F6CFAD6DE91731CBA032B5D2C644FDB644FEAB82C575CE5098",
+    "action": "reject",
+    "reviewStatus": "verified",
+    "verifiedOn": "2026-10-14",
+    "reason": "The source wording or claim is ambiguous, unsupported or unsuitable for a verified release item.",
+    "printedAnswerAssessment": "not-applicable"
+  }
+]
