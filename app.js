@@ -1621,16 +1621,28 @@
     return String(state.category.id);
   }
 
+  function retryQuestionMatchesCategory(questionId, categoryId) {
+    var question = questionsById.get(String(questionId || ""));
+    return Boolean(categoryId && question && String(question.categoryId) === String(categoryId));
+  }
+
   function activeStudyRetryItems() {
-    if (!activeRetryCategoryId()) return [];
-    return retryQueueState.items.slice();
+    var categoryId = activeRetryCategoryId();
+    if (!categoryId) return [];
+    return retryQueueState.items.filter(function (item) {
+      return retryQuestionMatchesCategory(item.questionId, categoryId);
+    });
   }
 
   function activeRetryAttemptMatchesSession() {
     var attempt = retryQueueState.activeAttempt;
     if (!attempt || !questionsById.has(String(attempt.questionId || ""))) return false;
     if (attempt.context === "dedicated") return retryQueuePractice.active;
-    return Boolean(activeRetryCategoryId());
+    var categoryId = activeRetryCategoryId();
+    return Boolean(categoryId && (
+      attempt.kind !== "queue"
+      || retryQuestionMatchesCategory(attempt.questionId, categoryId)
+    ));
   }
 
   function updateRetryQueueUI(announcement) {
@@ -1976,10 +1988,12 @@
   }
 
   function dueRetryQueueItem(excludedQuestionId) {
-    if (!activeRetryCategoryId()) return null;
+    var categoryId = activeRetryCategoryId();
+    if (!categoryId) return null;
     var regularQueueDue = retryQueueState.nextQuizReviewStep !== null
       && retryQueueState.practiceStep >= retryQueueState.nextQuizReviewStep;
     var dueItems = retryQueueState.items.filter(function (item) {
+      if (!retryQuestionMatchesCategory(item.questionId, categoryId)) return false;
       if (item.dueStep > retryQueueState.practiceStep) return false;
       return regularQueueDue || (
         isSafeWholeNumber(item.wrongRetryDueStep, 0)
@@ -2743,7 +2757,14 @@
       retryQueueState.activeAttempt.context === "dedicated"
       && !retryQueuePractice.active
     ) return false;
-    if (!activeRetryAttemptMatchesSession() || !renderRetryAttempt()) {
+    if (!activeRetryAttemptMatchesSession()) {
+      // A saved finite Queue popup belongs to its question's category. Keep
+      // the queued MCQ (and apply any already checked answer) when resuming
+      // a different category instead of displaying the foreign popup here.
+      releaseActiveRetryAttempt();
+      return false;
+    }
+    if (!renderRetryAttempt()) {
       retryQueueState.activeAttempt = null;
       saveRetryQueue();
       closeRetryDialog();
