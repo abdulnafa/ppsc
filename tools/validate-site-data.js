@@ -1338,15 +1338,15 @@ function validateRetryQueueContract(data) {
     ["PREVIOUS_RETRY_QUEUE_INCREMENT", "5"],
     ["RETRY_QUEUE_COUNT_BASELINE_VERSION", "1"],
     ["RETRY_QUEUE_COUNT_BASELINE", "5"],
-    ["EMBEDDED_RETRY_CADENCE_VERSION", "2"],
+    ["EMBEDDED_RETRY_CADENCE_VERSION", "3"],
     ["RETRY_QUEUE_MIN_SPACING", "5"],
-    ["RETRY_QUEUE_MAX_SPACING", "6"],
+    ["RETRY_QUEUE_MAX_SPACING", "5"],
     ["WRONG_RETRY_MIN_SPACING", "10"],
     ["WRONG_RETRY_MAX_SPACING", "15"],
     ["DEDICATED_RETRY_DEFAULT_GAP", "5"],
     ["DEDICATED_RETRY_MAX_GAP", "10"],
     ["IMPORTANT_REVIEW_MIN_SPACING", "10"],
-    ["IMPORTANT_REVIEW_MAX_SPACING", "20"],
+    ["IMPORTANT_REVIEW_MAX_SPACING", "10"],
     ["SEQUENTIAL_ORDER_VERSION", "2"],
     ["APPROVED_ADDITIVE_BANK_SIGNATURE", '"v1:11412:57e37c68"'],
     ["APPROVED_ADDITIVE_BANK_QUESTION_COUNT", "11412"]
@@ -1386,13 +1386,9 @@ function validateRetryQueueContract(data) {
     'return (state.mode === "quiz" || state.mode === "learn")',
     'learnReviewCountedQuestionIds',
     'if (state.mode === "learn") recordLearnReviewProgress(currentQuestion())',
-    'five or six new Learn or Quiz questions',
-    'ten to fifteen other Learn or Quiz questions',
     'function randomWrongRetrySpacing()',
     'entry.wrongRetryDueStep !== entry.dueStep',
     'wrongRetryDueStep: nextDueStep',
-    'isSafeWholeNumber(item.wrongRetryDueStep, 0)',
-    'if (regularQueueDue) scheduleNextQuizReview();',
     'remaining: 1',
     'var DEDICATED_RETRY_GAP_OPTIONS = [3, 5, 10];',
     'dedicatedRepeatGap: DEDICATED_RETRY_DEFAULT_GAP',
@@ -1400,7 +1396,6 @@ function validateRetryQueueContract(data) {
     'var dedicatedSpacingApplied = Boolean(normalized)',
     'retryQueueState.dedicatedDeck = [];',
     'function nextRetrySequence()',
-    'item.sequence = nextRetrySequence();',
     'retryQueuePractice.categoryId',
     'remaining: applyCountBaseline ? RETRY_QUEUE_COUNT_BASELINE : entry.remaining',
     'countBaselineVersion: Math.max(',
@@ -1417,6 +1412,41 @@ function validateRetryQueueContract(data) {
     if (!app.includes(requiredSnippet)) {
       error(`app.js: missing category Queue/Important contract snippet ${requiredSnippet}`);
     }
+  }
+  const queueSelector = appSection(
+    "function dueRetryQueueItem(",
+    "function refillImportantReviewDeck(categoryId) {"
+  );
+  if (
+    queueSelector === null
+    || !/nextQuizReviewStep/.test(queueSelector)
+    || !/practiceStep/.test(queueSelector)
+    || !/pendingQueueCycleItems\(categoryId\)/.test(queueSelector)
+    || /item\.(?:dueStep|wrongRetryDueStep|remaining)/.test(queueSelector)
+    || /\.sort\(/.test(queueSelector)
+  ) {
+    error("app.js: Queue selection must use its regular gate and the next pending insertion-order turn, without cooldown or count priority");
+  }
+  const completeRetry = appSection(
+    "function completeRetryAttempt() {",
+    "function postponeRetryAttempt() {"
+  );
+  const releaseRetry = appSection(
+    "function releaseActiveRetryAttempt() {",
+    "function loadDifficultQuestionIds() {"
+  );
+  for (const [name, section] of [["completeRetryAttempt", completeRetry], ["releaseActiveRetryAttempt", releaseRetry]]) {
+    if (section === null || /moveRetryItemToTail\(item\)/.test(section)) {
+      error(`app.js: ${name} must preserve Queue insertion order while completing a round turn`);
+    }
+  }
+  if (
+    completeRetry === null
+    || !/beginDueImportantAttempt\([^;]*\btrue\s*\)/.test(completeRetry)
+    || !/beginDueRetryAttempt\([^;]*\btrue\s*\)/.test(completeRetry)
+    || /practiceStep\s*(?:\+\+|\+=)/.test(completeRetry)
+  ) {
+    error("app.js: correct popup answers must continue their own review type without incrementing regular-question progress");
   }
   const emptyRetryState = appSection(
     "function createEmptyRetryQueueState() {",

@@ -117,10 +117,14 @@ function connect(webSocketUrl) {
   }
 
   async function evaluate(expression) {
+    const evaluationCallSite = new Error("Browser evaluation requested here");
     const response = await send("Runtime.evaluate", {
       expression,
       awaitPromise: true,
       returnByValue: true
+    }).catch((error) => {
+      error.message += "\n" + evaluationCallSite.stack;
+      throw error;
     });
     if (response.exceptionDetails) {
       throw new Error(response.exceptionDetails.exception?.description || response.exceptionDetails.text);
@@ -1162,7 +1166,7 @@ async function main() {
         version: 1,
         bankSignature: "v1:" + questions.length + ":" + (hash >>> 0).toString(16),
         countBaselineVersion: 1,
-        embeddedCadenceVersion: 2,
+        embeddedCadenceVersion: 3,
         practiceStep: 0,
         nextQuizReviewStep: null,
         nextImportantReviewStep: 1000,
@@ -1223,7 +1227,7 @@ async function main() {
         version: 1,
         bankSignature: oldQueue?.bankSignature || "v1:" + data.questions.length + ":" + (hash >>> 0).toString(16),
         countBaselineVersion: 1,
-        embeddedCadenceVersion: 2,
+        embeddedCadenceVersion: 3,
         practiceStep: 0,
         nextQuizReviewStep: 5,
         nextImportantReviewStep: 1000,
@@ -1491,7 +1495,7 @@ async function main() {
         const question = byId.get(questionId);
         const index = attempt?.optionOrder?.indexOf(question?.correctOptionIndex) ?? -1;
         if (!document.querySelector("#retry-dialog")?.open || attempt?.questionId !== questionId || index < 0) {
-          errors.push("Expected ready Queue MCQ " + questionId + " while oldest MCQ was cooling.");
+          errors.push("Expected FIFO Queue MCQ " + questionId + " despite its legacy cooldown.");
           return;
         }
         document.querySelector('[data-review-option-index="' + index + '"]')?.click();
@@ -1501,19 +1505,68 @@ async function main() {
         await pause();
       };
       await advanceLearn();
-      await solvePopup(ids[1]);
+      await solvePopup(ids[0]);
       let secondAttempt = null;
       for (let guard = 0; guard < 7 && !document.querySelector("#retry-dialog")?.open; guard += 1) {
         await advanceLearn();
       }
       secondAttempt = queue()?.activeAttempt;
-      if (!document.querySelector("#retry-dialog")?.open || secondAttempt?.questionId !== ids[2]
-        || queue()?.items.find((item) => item.questionId === ids[0])?.remaining !== 2) {
-        errors.push("A cooled oldest Queue MCQ blocked the younger ready MCQ or lost its saved count.");
+      if (!document.querySelector("#retry-dialog")?.open || secondAttempt?.questionId !== ids[1]
+        || queue()?.items.find((item) => item.questionId === ids[0])?.remaining !== 1) {
+        errors.push("FIFO Queue did not show the oldest item despite its legacy cooldown, then chain the second item.");
       }
-      return { errors, firstReadyId: ids[1], secondReadyId: secondAttempt?.questionId || "" };
+      return {
+        errors,
+        firstReadyId: ids[0],
+        secondReadyId: secondAttempt?.questionId || "",
+        activeAttempt: secondAttempt,
+        items: JSON.stringify(queue()?.items),
+        pending: JSON.stringify(queue()?.queueCyclePendingByCategory),
+        main: localStorage.getItem("ppsc-prep:active-session:v1")
+      };
     })()`);
     retryQueueFeatureResult.errors = retryQueueFeatureResult.errors.concat(cooledQueueHeadResult.errors);
+
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload in the middle of a correct Queue streak."));
+        }
+      }, 50);
+    })`);
+    const queueStreakReloadResult = await client.evaluate(`(async () => {
+      const errors = [];
+      const expected = ${JSON.stringify(cooledQueueHeadResult)};
+      const readQueue = () => JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      const restored = readQueue();
+      if (JSON.stringify(restored?.activeAttempt) !== JSON.stringify(expected.activeAttempt)
+        || JSON.stringify(restored?.items) !== expected.items
+        || JSON.stringify(restored?.queueCyclePendingByCategory) !== expected.pending
+        || document.querySelector("#retry-dialog")?.open) {
+        errors.push("Refresh during a correct Queue streak lost the next attempt, counts, or pending round.");
+      }
+      document.querySelector("#continue-session-button")?.click();
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      const current = readQueue();
+      const main = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      const expectedMain = JSON.parse(expected.main || "null");
+      if (!document.querySelector("#retry-dialog")?.open
+        || current?.activeAttempt?.questionId !== expected.secondReadyId
+        || current?.activeAttempt?.submitted
+        || main?.currentIndex !== expectedMain?.currentIndex
+        || main?.score !== expectedMain?.score
+        || JSON.stringify(main?.answerHistory) !== JSON.stringify(expectedMain?.answerHistory)) {
+        errors.push("Continue after a Queue streak refresh did not reopen the next item over the unchanged Learn session.");
+      }
+      return { errors, questionId: current?.activeAttempt?.questionId || "" };
+    })()`);
+    retryQueueFeatureResult.errors.push(...queueStreakReloadResult.errors);
 
     await client.evaluate(`(() => {
       localStorage.removeItem("ppsc-prep:active-session:v1");
@@ -1615,8 +1668,8 @@ async function main() {
       const learnQueue = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
       sessionStorage.setItem("ppsc-smoke:learn-retry-seed", JSON.stringify(learnQueue));
       const learnSpacing = learnQueue?.nextQuizReviewStep - learnQueue?.practiceStep;
-      if (!learnQueue || !Number.isInteger(learnSpacing) || learnSpacing < 5 || learnSpacing > 6) {
-        errors.push("Learn did not preserve the regular five-to-six-question Queue gate when it started.");
+      if (!learnQueue || learnSpacing !== 5) {
+        errors.push("Learn did not preserve the regular five-question Queue gate when it started.");
       }
       return { errors };
     })()`);
@@ -1672,8 +1725,8 @@ async function main() {
 
       const spacing = retry?.nextQuizReviewStep - retry?.practiceStep;
       const initialPracticeStep = retry?.practiceStep;
-      if (!Number.isInteger(spacing) || spacing < 5 || spacing > 6) {
-        errors.push("Restored Learn queue lost its persisted five-to-six-question cadence.");
+      if (spacing !== 5) {
+        errors.push("Restored Learn queue lost its exact five-question cadence.");
       }
       Math.random = () => 0;
 
@@ -1720,7 +1773,7 @@ async function main() {
         await pause();
         const dialogOpen = Boolean(document.querySelector("#retry-dialog")?.open);
         if (completion < spacing && dialogOpen) {
-          errors.push("Learn review opened before its persisted five-to-six-question gate.");
+          errors.push("Learn review opened before its persisted five-question gate.");
           break;
         }
         if (completion === spacing) {
@@ -1741,7 +1794,7 @@ async function main() {
           }
           if (JSON.stringify(Object.fromEntries((retry?.items || []).map((item) => [item.questionId, item.remaining])))
             !== JSON.stringify(initialCounts)) {
-            errors.push("Opening a shuffled embedded review changed saved repetition counts.");
+            errors.push("Opening an embedded FIFO review changed saved repetition counts.");
           }
           const reviewQuestion = questionById.get(String(attempt?.questionId || ""));
           const correctReviewIndex = reviewQuestion && attempt
@@ -1762,6 +1815,17 @@ async function main() {
           document.querySelector("#retry-action-button")?.click();
           await pause();
           retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+          if (!document.querySelector("#retry-dialog")?.open
+            || retry?.activeAttempt?.kind !== "queue"
+            || retry.activeAttempt.questionId === attempt?.questionId
+            || retry.activeAttempt.submitted
+            || retry.activeAttempt.resumeAction !== attempt?.resumeAction
+            || localStorage.getItem(sessionKey) !== mainSessionDuringReview) {
+            errors.push("A correct Learn Queue review did not chain the next category MCQ while keeping main progress paused.");
+          }
+          document.querySelector("#retry-later-button")?.click();
+          await pause();
+          retry = JSON.parse(localStorage.getItem(retryKey) || "null");
           const resumedSession = JSON.parse(localStorage.getItem(sessionKey) || "null");
           const nextSpacing = retry?.nextQuizReviewStep - retry?.practiceStep;
           const countsAfter = Object.fromEntries((retry?.items || []).map((item) => [item.questionId, item.remaining]));
@@ -1771,10 +1835,10 @@ async function main() {
           if (document.querySelector("#retry-dialog")?.open || retry?.activeAttempt !== null
             || retry.items.find((item) => item.questionId === attempt?.questionId)?.remaining !== remainingBefore - 1
             || untouchedCountsChanged
-            || !Number.isInteger(nextSpacing) || nextSpacing < 5 || nextSpacing > 6
+            || nextSpacing !== 5
             || resumedSession?.mode !== "learn" || resumedSession?.score !== 0
             || resumedSession?.currentIndex !== sessionBefore.currentIndex + 1) {
-            errors.push("Continuing a correct Learn review did not decrement once, reschedule, and resume Learn.");
+            errors.push("Correct Learn review followed by Later did not decrement once, reschedule, and resume Learn.");
           }
         }
       }
@@ -1838,8 +1902,8 @@ async function main() {
           !== JSON.stringify(expectedSession?.learnVisitedQuestionIds)
         || migratedQueue?.practiceStep !== expectedQueue?.practiceStep
         || JSON.stringify(migratedQueue?.items) !== JSON.stringify(expectedQueue?.items)
-        || !Number.isInteger(migratedSpacing) || migratedSpacing < 5 || migratedSpacing > 6) {
-        errors.push("Legacy v8 Learn Continue did not preserve counts and safely anchor the regular five-to-six-question Queue cadence.");
+        || migratedSpacing !== 5) {
+        errors.push("Legacy v8 Learn Continue did not preserve counts and safely anchor the regular five-question Queue cadence.");
       }
       return { errors, migratedSpacing };
     })()`);
@@ -1994,6 +2058,16 @@ async function main() {
         await pause();
       };
       const dialog = document.querySelector("#retry-dialog");
+      const postponeOwnPopup = async (categoryId) => {
+        if (!dialog?.open) return;
+        const attempt = queue()?.activeAttempt;
+        const question = data.questions.find((entry) => String(entry.id) === attempt?.questionId);
+        if (!["queue", "important"].includes(attempt?.kind) || question?.categoryId !== categoryId) {
+          errors.push("A foreign-category or retired popup interrupted " + categoryId + ".");
+        }
+        document.querySelector("#retry-later-button")?.click();
+        await pause();
+      };
       if (!target || queue()?.items?.length !== 1) {
         errors.push("Category-scoped retry fixture did not restore its one saved Basic Computer MCQ.");
       }
@@ -2006,10 +2080,12 @@ async function main() {
         errors.push("Job Quiz included a Basic Computer Queue item or retained global Queue access.");
       }
       await answerMain();
+      await postponeOwnPopup("job-related-finance-taxation");
       if (dialog?.open || queue()?.items.find((item) => item.questionId === targetId)?.remaining !== 2) {
         errors.push("Due Basic Computer Queue MCQ interrupted Job Quiz or changed its saved count.");
       }
       await answerMain();
+      await postponeOwnPopup("job-related-finance-taxation");
       if (dialog?.open || !visible(document.querySelector("#results-screen"))
         || queue()?.items.find((item) => item.questionId === targetId)?.remaining !== 2) {
         errors.push("Job Quiz did not finish while the other-category Queue item stayed saved.");
@@ -2041,13 +2117,18 @@ async function main() {
       await selectCategory("basic-computer-studies");
       document.querySelector("#computer-source-initial-related")?.click();
       await pause();
-      await startRange("#quiz-mode-button", 1, 2);
+      await startRange("#quiz-mode-button", 1, 3);
       if (document.querySelector("#retry-queue-chip")?.hidden
         || document.querySelector("#retry-queue-count")?.textContent !== "1"
         || JSON.parse(localStorage.getItem(sessionKey) || "null")?.computerSourceScope !== "initial-related") {
         errors.push("Basic Computer related-source Quiz hid a queued original-source MCQ from the same category.");
       }
       await answerMain();
+      let completedComputerAnswers = 1;
+      if (!dialog?.open) {
+        await answerMain();
+        completedComputerAnswers += 1;
+      }
       const active = queue()?.activeAttempt;
       const retryTexts = [...document.querySelectorAll("#retry-options-container .option-text")].map((element) => element.textContent);
       const retryLabels = [...document.querySelectorAll("#retry-options-container .option-label")].map((element) => element.textContent);
@@ -2073,10 +2154,13 @@ async function main() {
       document.querySelector("#retry-later-button")?.click();
       await pause();
       if (dialog?.open || queue()?.items.find((item) => item.questionId === targetId)?.remaining !== 2
-        || document.querySelector("#question-number-input")?.value !== "2") {
+        || document.querySelector("#question-number-input")?.value !== String(completedComputerAnswers + 1)) {
         errors.push("Later did not preserve the category Queue review and resume Quiz.");
       }
-      await answerMain();
+      for (; completedComputerAnswers < 3; completedComputerAnswers += 1) {
+        await answerMain();
+        await postponeOwnPopup("basic-computer-studies");
+      }
       if (dialog?.open || !visible(document.querySelector("#results-screen"))
         || queue()?.items.find((item) => item.questionId === targetId)?.remaining !== 2) {
         errors.push("Same-category Quiz did not finish while its postponed Queue item stayed saved.");
@@ -2963,20 +3047,18 @@ async function main() {
       const resolveRetryIfOpen = async () => {
         const dialog = document.querySelector("#retry-dialog");
         let safety = 0;
-        while (dialog && dialog.open && safety < 32) {
+        while (dialog && dialog.open && safety < 4) {
           safety += 1;
           const queue = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
           const attempt = queue && queue.activeAttempt;
-          const question = attempt && window.PPSC_QUIZ_DATA.questions.find((item) => String(item.id) === String(attempt.questionId));
           const action = document.querySelector("#retry-action-button");
-          if (!attempt || !question || !action) break;
+          if (!attempt || !action) break;
           if (!attempt.submitted) {
-            const correctIndex = attempt.optionOrder.indexOf(question.correctOptionIndex);
-            const option = document.querySelector('[data-review-option-index="' + correctIndex + '"]');
-            if (!option) break;
-            option.click();
-            action.click();
+            // These checks exercise the underlying range/notes flow. A correct
+            // Important streak is intentionally unbounded, so pause it explicitly.
+            document.querySelector("#retry-later-button")?.click();
             await rawPause();
+            continue;
           }
           action.click();
           await rawPause();
@@ -5366,6 +5448,17 @@ async function main() {
       }
       document.querySelector("#action-button").click();
       await pause();
+      if (document.querySelector("#retry-dialog")?.open) {
+        const queue = JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+        const attempt = queue?.activeAttempt;
+        const question = window.PPSC_QUIZ_DATA.questions.find((entry) => String(entry.id) === attempt?.questionId);
+        if (!["queue", "important"].includes(attempt?.kind)
+          || question?.categoryId !== restoredSnapshot?.categoryId) {
+          errors.push("Restored Learn completion guard opened an out-of-category or retired popup.");
+        }
+        document.querySelector("#retry-later-button")?.click();
+        await pause();
+      }
       if (visible(document.querySelector("#results-screen"))) errors.push("Restored Learn guard opened results with an unvisited question remaining.");
       if (document.querySelector("#question-text").dataset.questionId !== expected.firstUnvisitedId) errors.push("Restored Learn guard did not wrap to the first unvisited question.");
       const numberInput = document.querySelector("#question-number-input");
@@ -5721,7 +5814,7 @@ async function main() {
         version: 1,
         bankSignature: "v1:" + questions.length + ":" + (hash >>> 0).toString(16),
         countBaselineVersion: 1,
-        embeddedCadenceVersion: 2,
+        embeddedCadenceVersion: 3,
         practiceStep: 0,
         nextQuizReviewStep: null,
         nextImportantReviewStep: 1000,
@@ -5815,18 +5908,16 @@ async function main() {
       const firstId = first ? String(first.question.id) : "";
       let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       const session = JSON.parse(localStorage.getItem(sessionKey) || "null");
-      const firstDueStep = retry?.items?.[0]?.dueStep;
+      const firstDueStep = retry?.nextQuizReviewStep;
       const firstRegularSpacing = retry?.nextQuizReviewStep - retry?.practiceStep;
-      if (!retry || retry.version !== 1 || retry.embeddedCadenceVersion !== 2
+      if (!retry || retry.version !== 1 || retry.embeddedCadenceVersion !== 3
         || retry.bankSignature !== session?.bankSignature
         || retry.practiceStep !== 1 || retry.nextSequence !== 2 || retry.items.length !== 1
         || retry.items[0].questionId !== firstId || retry.items[0].remaining !== 2
-        || !Number.isInteger(firstDueStep) || firstDueStep < 11 || firstDueStep > 16
-        || retry.items[0].wrongRetryDueStep !== firstDueStep
-        || !Number.isInteger(firstRegularSpacing) || firstRegularSpacing < 5 || firstRegularSpacing > 6
-        || retry.nextQuizReviewStep === firstDueStep
+        || firstDueStep !== 5
+        || firstRegularSpacing !== 4
         || retry.items[0].sequence !== 1 || retry.activeAttempt !== null) {
-        errors.push("Initial main wrong answer did not create +2 with its own 10-to-15 due step beside the regular 5-to-6 Queue gate.");
+        errors.push("Initial main wrong answer did not create +2 and schedule the first Queue popup on regular MCQ five, counting the creating answer.");
       }
       if (document.querySelector("#retry-dialog")?.open) errors.push("Initial wrong answer opened its retry immediately.");
       const queueChip = document.querySelector("#retry-queue-chip");
@@ -5845,7 +5936,7 @@ async function main() {
           if (document.querySelector("#retry-dialog")?.open) {
             const intervening = JSON.parse(localStorage.getItem(retryKey) || "null")?.activeAttempt;
             if (intervening?.questionId === firstId) {
-              errors.push("The specifically wrong lifecycle MCQ opened before its saved 10-to-15 due step.");
+              errors.push("The first queued lifecycle MCQ opened before the five-question Queue gate.");
             }
             document.querySelector("#retry-later-button")?.click();
             await pause();
@@ -6113,16 +6204,20 @@ async function main() {
       document.querySelector("#retry-action-button")?.click();
       await pause();
       let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!dialog?.open || retry?.activeAttempt?.kind !== "queue"
+        || retry.activeAttempt.questionId === expected.firstId || retry.activeAttempt.submitted
+        || JSON.stringify(mainSnapshot()) !== JSON.stringify(expected.main)) {
+        errors.push("Restored correct Queue Continue did not chain another item without advancing the Quiz.");
+      }
+      document.querySelector("#retry-later-button")?.click();
+      await pause();
+      retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       const secondGateStep = retry?.nextQuizReviewStep;
       const reviewedItem = retry?.items.find((item) => item.questionId === expected.firstId);
-      const secondItemDueStep = reviewedItem?.dueStep;
-      const secondItemSpacing = secondItemDueStep - retry?.practiceStep;
       if (dialog?.open || retry?.activeAttempt !== null || reviewedItem?.remaining !== 1
-        || !Number.isInteger(secondGateStep) || secondGateStep <= retry?.practiceStep
-        || !Number.isInteger(secondItemSpacing) || secondItemSpacing < 5 || secondItemSpacing > 6
-        || reviewedItem?.wrongRetryDueStep !== undefined
-        || retry?.items[retry.items.length - 1]?.questionId !== expected.firstId) {
-        errors.push("Correct retry Continue was not applied exactly once as remaining 1 on its regular five-to-six-question item clock while preserving the existing future Queue gate.");
+        || secondGateStep - retry?.practiceStep !== 5
+        || retry?.items[0]?.questionId !== expected.firstId) {
+        errors.push("Correct retry Continue followed by Later did not decrement once, preserve insertion order, and schedule the Queue five questions later.");
       }
       if (document.querySelector("#question-number-input")?.value !== String(expected.firstDueStep + 1)
         || document.querySelector("#score-text")?.textContent !== "Score: " + (expected.firstDueStep - 1)) {
@@ -7298,12 +7393,22 @@ async function main() {
       document.querySelector("#retry-action-button")?.click();
       await pause();
       queue = JSON.parse(localStorage.getItem(retryKey) || "null");
+      if (!document.querySelector("#retry-dialog")?.open
+        || queue?.activeAttempt?.kind !== "important"
+        || queue.activeAttempt.questionId !== expected.secondId
+        || queue.activeAttempt.submitted
+        || JSON.stringify(queue?.items) !== expected.finiteItems) {
+        errors.push("Correct Important Continue did not keep the popup open on the next category Important MCQ.");
+      }
+      document.querySelector("#retry-later-button")?.click();
+      await pause();
+      queue = JSON.parse(localStorage.getItem(retryKey) || "null");
       const importantSpacing = queue?.nextImportantReviewStep - queue?.practiceStep;
       if (JSON.stringify(queue?.items) !== expected.finiteItems || queue?.activeAttempt !== null
-        || !Number.isInteger(importantSpacing) || importantSpacing < 10 || importantSpacing > 20
-        || queue?.importantLastQuestionId !== expected.firstId
+        || importantSpacing !== 10
+        || queue?.importantLastQuestionId !== expected.secondId
         || queue?.nextQuizReviewStep > queue?.practiceStep) {
-        errors.push("Correct permanent Important Continue changed finite work, moved its due gate, or failed to save a 10-to-20 Important cadence.");
+        errors.push("Correct Important chaining followed by Later changed finite work or failed to save the exact ten-question Important cadence.");
       }
       const gateBeforeFiniteReveal = queue?.practiceStep;
       document.querySelector("#action-button")?.click();
@@ -7333,18 +7438,18 @@ async function main() {
       const finiteSpacing = queue?.nextQuizReviewStep - queue?.practiceStep;
       const finiteItemsAfterCollision = JSON.stringify(queue?.items || []);
       if (document.querySelector("#retry-dialog")?.open || queue?.activeAttempt !== null
-        || !Number.isInteger(finiteSpacing) || finiteSpacing < 5 || finiteSpacing > 6
+        || finiteSpacing !== 5
         || queue?.nextImportantReviewStep <= queue?.practiceStep) {
-        errors.push("Postponing the finite review did not keep Important scheduled and move only finite Queue work by five to six questions.");
+        errors.push("Postponing the finite review did not keep Important scheduled and move finite Queue work by five questions.");
       }
       queue.nextImportantReviewStep = queue.practiceStep + 1;
-      queue.importantDeck = [expected.foreignId, expected.secondId, expected.firstId];
+      queue.importantDeck = [expected.foreignId, expected.firstId, expected.secondId];
       localStorage.setItem(retryKey, JSON.stringify(queue));
       return {
         errors,
         finiteItems: finiteItemsAfterCollision,
-        firstId: expected.firstId,
-        secondId: expected.secondId,
+        firstId: expected.secondId,
+        secondId: expected.firstId,
         foreignId: expected.foreignId,
         importantFirstCollision: importantOpenedFirst && finiteOpenedNext
       };
@@ -7433,7 +7538,7 @@ async function main() {
       queue = JSON.parse(localStorage.getItem(retryKey) || "null");
       const spacing = queue?.nextImportantReviewStep - queue?.practiceStep;
       if (JSON.stringify(queue?.items) !== expected.finiteItems || queue?.activeAttempt !== null
-        || !Number.isInteger(spacing) || spacing < 10 || spacing > 20
+        || document.querySelector("#retry-dialog")?.open || spacing !== 10
         || queue?.importantLastQuestionId !== expected.secondId) {
         errors.push("Wrong permanent Important Continue changed queue totals or failed to persist its next cadence.");
       }
@@ -7634,6 +7739,173 @@ async function main() {
     })()`);
     permanentImportantResult.errors.push(...importantCategoryReturn.errors);
 
+    // Exercise the real regular-question clocks in both modes. Popup answers
+    // must not count as normal progress, and a successful streak must remain
+    // in its original lane until an incorrect answer returns to the main flow.
+    const popupCadenceResult = { errors: [], modes: [] };
+    for (const practiceMode of ["learn", "quiz"]) {
+      const popupFixture = await client.evaluate(`(() => {
+        const all = window.PPSC_QUIZ_DATA.questions;
+        const own = all.filter((question) => question.categoryId === "general-knowledge");
+        const isImportant = (question) => question.isImportant === true || Number(question.repeatCount) >= 2;
+        const ownImportant = own.filter(isImportant).slice(0, 2).map((question) => String(question.id));
+        const foreign = all.find((question) => question.categoryId === "urdu");
+        const ids = own.slice(100, 103).map((question) => String(question.id));
+        const key = "ppsc-prep:retry-queue:v1";
+        const queue = JSON.parse(localStorage.getItem(key) || "null");
+        if (!queue || ids.length !== 3 || ownImportant.length !== 2 || !foreign) {
+          return { errors: ["Fixed cadence fixture could not find its category questions."] };
+        }
+        Object.assign(queue, {
+          embeddedCadenceVersion: ${practiceMode === "learn" ? 2 : 3},
+          practiceStep: 0,
+          nextQuizReviewStep: ${practiceMode === "learn" ? 6 : 5},
+          nextImportantReviewStep: ${practiceMode === "learn" ? 18 : 10},
+          nextSequence: 5,
+          items: [
+            ...ids.map((questionId, index) => ({ questionId, remaining: [3, 8, 4][index], dueStep: 99, sequence: index + 1 })),
+            { questionId: String(foreign.id), remaining: 9, dueStep: 0, sequence: 4 }
+          ],
+          queueCyclePendingByCategory: { "general-knowledge": ids.slice(), urdu: [String(foreign.id)] },
+          importantDeck: ownImportant.slice(),
+          importantLastQuestionId: null,
+          importantLastQuestionIdsByCategory: {},
+          activeAttempt: null
+        });
+        localStorage.setItem(key, JSON.stringify(queue));
+        localStorage.removeItem("ppsc-prep:active-session:v1");
+        return { errors: [], ids, ownImportant, foreignId: String(foreign.id) };
+      })()`);
+      await client.send("Page.reload", { ignoreCache: true });
+      await client.evaluate(`new Promise((resolve, reject) => {
+        const deadline = Date.now() + 10000;
+        const timer = setInterval(() => {
+          if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+            clearInterval(timer);
+            resolve(true);
+          } else if (Date.now() >= deadline) {
+            clearInterval(timer);
+            reject(new Error("Website did not reload for the fixed popup cadence test."));
+          }
+        }, 50);
+      })`);
+      const modeResult = await client.evaluate(`(async () => {
+        const mode = ${JSON.stringify(practiceMode)};
+        const fixture = ${JSON.stringify(popupFixture)};
+        const errors = fixture.errors.slice();
+        if (errors.length) return { errors, mode };
+        const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+        const retryKey = "ppsc-prep:retry-queue:v1";
+        const sessionKey = "ppsc-prep:active-session:v1";
+        const queue = () => JSON.parse(localStorage.getItem(retryKey) || "null");
+        const session = () => JSON.parse(localStorage.getItem(sessionKey) || "null");
+        const byId = new Map(window.PPSC_QUIZ_DATA.questions.map((question) => [String(question.id), question]));
+        const dialog = document.querySelector("#retry-dialog");
+        if (queue()?.embeddedCadenceVersion !== 3 || queue()?.nextQuizReviewStep !== 5
+          || queue()?.nextImportantReviewStep !== 10
+          || JSON.stringify(queue()?.items.map((item) => item.remaining)) !== JSON.stringify([3, 8, 4, 9])
+          || JSON.stringify(queue()?.queueCyclePendingByCategory?.["general-knowledge"]) !== JSON.stringify(fixture.ids)) {
+          errors.push(mode + " cadence migration or reload lost existing Queue counts, pending cycle, or fixed gates.");
+        }
+        const answerPopup = async (correct) => {
+          const attempt = queue()?.activeAttempt;
+          const question = byId.get(attempt?.questionId);
+          const correctIndex = attempt?.optionOrder?.indexOf(question?.correctOptionIndex) ?? -1;
+          if (!dialog?.open || correctIndex < 0) {
+            errors.push(mode + " could not answer its expected popup.");
+            return;
+          }
+          const selectedIndex = correct ? correctIndex : (correctIndex + 1) % 4;
+          document.querySelector('[data-review-option-index="' + selectedIndex + '"]')?.click();
+          document.querySelector("#retry-action-button")?.click();
+          await pause();
+          document.querySelector("#retry-action-button")?.click();
+          await pause();
+        };
+        document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
+        document.querySelector("#" + mode + "-mode-button")?.click();
+        await pause();
+        document.querySelector("#question-range-start-input").value = "1";
+        document.querySelector("#question-range-end-input").value = "20";
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+        for (let completed = 1; completed <= 11; completed += 1) {
+          if (mode === "quiz") {
+            const snapshot = session();
+            const question = byId.get(snapshot?.questionIds?.[snapshot.currentIndex]);
+            const optionOrder = snapshot?.optionOrders?.[snapshot.currentIndex];
+            const correctIndex = optionOrder?.indexOf(question?.correctOptionIndex) ?? -1;
+            document.querySelector('[data-option-index="' + correctIndex + '"]')?.click();
+          }
+          document.querySelector("#action-button")?.click();
+          await pause();
+          if (dialog?.open) errors.push(mode + " opened a popup before leaving regular question " + completed + ".");
+          document.querySelector("#action-button")?.click();
+          await pause();
+          if (![5, 10, 11].includes(completed)) {
+            if (dialog?.open) errors.push(mode + " opened an early popup at regular question " + completed + ".");
+            continue;
+          }
+          const attempt = queue()?.activeAttempt;
+          const expectedKind = completed === 10 ? "important" : "queue";
+          if (!dialog?.open || attempt?.kind !== expectedKind
+            || byId.get(attempt?.questionId)?.categoryId !== "general-knowledge"
+            || queue()?.practiceStep !== completed) {
+            errors.push(mode + " failed its category " + expectedKind + " checkpoint at " + completed + ".");
+            break;
+          }
+          const heldSession = localStorage.getItem(sessionKey);
+          if (completed === 5) {
+            for (let turn = 0; turn < 3; turn += 1) {
+              if (queue()?.activeAttempt?.questionId !== fixture.ids[turn]) {
+                errors.push(mode + " Queue ignored insertion order or repeated before completing its round.");
+                break;
+              }
+              await answerPopup(turn < 2);
+              if (queue()?.practiceStep !== completed) errors.push(mode + " counted a popup answer as a regular MCQ.");
+              if (turn < 2 && (!dialog?.open || queue()?.activeAttempt?.kind !== "queue"
+                || localStorage.getItem(sessionKey) !== heldSession)) {
+                errors.push(mode + " correct Queue streak failed to keep the underlying session paused.");
+              }
+            }
+            const counts = fixture.ids.map((id) => queue()?.items.find((item) => item.questionId === id)?.remaining);
+            if (JSON.stringify(counts) !== JSON.stringify([2, 7, 6]) || dialog?.open
+              || session()?.currentIndex !== completed) {
+              errors.push(mode + " wrong Queue answer did not add exactly two and resume regular progress.");
+            }
+          } else if (completed === 10) {
+            const firstId = attempt.questionId;
+            const beforeItems = JSON.stringify(queue()?.items);
+            await answerPopup(true);
+            if (!dialog?.open || queue()?.activeAttempt?.kind !== "important"
+              || queue()?.activeAttempt?.questionId === firstId
+              || byId.get(queue()?.activeAttempt?.questionId)?.categoryId !== "general-knowledge"
+              || localStorage.getItem(sessionKey) !== heldSession) {
+              errors.push(mode + " correct Important answer did not chain the next category Important MCQ.");
+            }
+            await answerPopup(false);
+            if (dialog?.open || queue()?.activeAttempt !== null || session()?.currentIndex !== completed
+              || JSON.stringify(queue()?.items) !== beforeItems || queue()?.practiceStep !== 10
+              || queue()?.nextImportantReviewStep !== 20) {
+              errors.push(mode + " wrong Important answer failed to preserve Queue work and resume with an exact ten-question gate.");
+            }
+          } else {
+            if (mode === "learn" && attempt.questionId !== fixture.ids[0]) {
+              errors.push("Learn Queue did not restart with its oldest remaining item after the complete first round.");
+            }
+            document.querySelector("#retry-later-button")?.click();
+            await pause();
+          }
+        }
+        if (queue()?.items.find((item) => item.questionId === fixture.foreignId)?.remaining !== 9) {
+          errors.push(mode + " changed another category's Queue count.");
+        }
+        return { errors, mode, practiceStep: queue()?.practiceStep };
+      })()`);
+      popupCadenceResult.errors.push(...modeResult.errors);
+      popupCadenceResult.modes.push(modeResult);
+    }
+
     // A legacy Sequential popup is discarded; its old cursor stays compatible,
     // but neither the pending gate nor a new 15-question popup may run.
     await client.evaluate(`(() => {
@@ -7681,7 +7953,7 @@ async function main() {
         version: 1,
         bankSignature: session.bankSignature,
         countBaselineVersion: 1,
-        embeddedCadenceVersion: 2,
+        embeddedCadenceVersion: 3,
         practiceStep: 14,
         nextQuizReviewStep: 1000,
         nextImportantReviewStep: 1000,
@@ -8186,6 +8458,7 @@ async function main() {
         errors.push("Keyboard test did not reach the permanent Important popup.");
       } else {
         const importantMainIndex = session()?.currentIndex;
+        const firstImportantId = retry.activeAttempt.questionId;
         const importantFiniteItems = JSON.stringify(retry.items || []);
         await selectRetryIndex(retryCorrectIndex());
         const importantEnterAccepted = await press(document.activeElement, "Enter", "Enter");
@@ -8205,12 +8478,21 @@ async function main() {
         }
         await press(document.querySelector("#retry-action-button"), "ArrowRight", "ArrowRight");
         retry = queue();
-        const importantSpacing = retry?.nextImportantReviewStep - retry?.practiceStep;
+        if (!document.querySelector("#retry-dialog")?.open || retry?.activeAttempt?.kind !== "important"
+          || retry.activeAttempt.questionId === firstImportantId || retry.activeAttempt.submitted
+          || session()?.currentIndex !== importantMainIndex
+          || JSON.stringify(retry.items || []) !== importantFiniteItems) {
+          errors.push("Right Arrow did not chain Important practice exactly once while keeping the Quiz paused.");
+        }
+        await selectRetryIndex((retryCorrectIndex() + 1) % 4);
+        await press(document.activeElement, "Enter", "Enter");
+        await press(document.querySelector("#retry-action-button"), " ", "Space");
+        retry = queue();
         if (document.querySelector("#retry-dialog")?.open || retry?.activeAttempt !== null
           || session()?.currentIndex !== importantMainIndex + 1
-          || !Number.isInteger(importantSpacing) || importantSpacing < 10 || importantSpacing > 20
+          || retry?.nextImportantReviewStep - retry?.practiceStep !== 10
           || JSON.stringify(retry.items || []) !== importantFiniteItems) {
-          errors.push("Right Arrow did not continue Important practice exactly once and resume the Quiz.");
+          errors.push("Wrong Important keyboard answer did not close the popup, preserve finite work, and resume the Quiz.");
         }
       }
 
@@ -8497,7 +8779,7 @@ async function main() {
         version: 1,
         bankSignature: oldSignature,
         countBaselineVersion: 1,
-        embeddedCadenceVersion: 2,
+        embeddedCadenceVersion: 3,
         practiceStep: 41,
         nextQuizReviewStep: 46,
         nextImportantReviewStep: 57,
@@ -8726,6 +9008,7 @@ async function main() {
         .concat(legacyWrongAttemptResult.errors)
         .concat(confirmationQueueResult.errors)
         .concat(permanentImportantResult.errors)
+        .concat(popupCadenceResult.errors)
         .concat(sequentialReviewResult.errors)
         .concat(keyboardControlResult.errors)
         .concat(nativeKeyboardResult.errors)
@@ -8821,6 +9104,7 @@ async function main() {
           && legacyWrongAttemptSeed.errors.length === 0 && legacyWrongAttemptResult.errors.length === 0,
         correctConfirmation: confirmationQueueResult,
         permanentImportant: permanentImportantResult,
+        fixedPopupCadenceAndStreaks: popupCadenceResult,
         sequentialRetirement: sequentialReviewResult,
         positionDependentCanonical: retryPositionResult.errors.length === 0,
         categoryScopedQueue: retryPositionResult.errors.length === 0

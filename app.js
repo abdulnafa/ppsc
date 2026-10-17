@@ -21,16 +21,16 @@
   var PREVIOUS_RETRY_QUEUE_INCREMENT = 5;
   var RETRY_QUEUE_COUNT_BASELINE_VERSION = 1;
   var RETRY_QUEUE_COUNT_BASELINE = 5;
-  var EMBEDDED_RETRY_CADENCE_VERSION = 2;
+  var EMBEDDED_RETRY_CADENCE_VERSION = 3;
   var RETRY_QUEUE_MIN_SPACING = 5;
-  var RETRY_QUEUE_MAX_SPACING = 6;
+  var RETRY_QUEUE_MAX_SPACING = 5;
   var WRONG_RETRY_MIN_SPACING = 10;
   var WRONG_RETRY_MAX_SPACING = 15;
   var DEDICATED_RETRY_GAP_OPTIONS = [3, 5, 10];
   var DEDICATED_RETRY_DEFAULT_GAP = 5;
   var DEDICATED_RETRY_MAX_GAP = 10;
   var IMPORTANT_REVIEW_MIN_SPACING = 10;
-  var IMPORTANT_REVIEW_MAX_SPACING = 20;
+  var IMPORTANT_REVIEW_MAX_SPACING = 10;
   var SEQUENTIAL_REVIEW_SPACING = 15;
   var SEQUENTIAL_ORDER_VERSION = 2;
   var APPROVED_ADDITIVE_BANK_SIGNATURE = "v1:11412:57e37c68";
@@ -1297,9 +1297,7 @@
       var normalizedItem = {
         questionId: questionId,
         remaining: applyCountBaseline ? RETRY_QUEUE_COUNT_BASELINE : entry.remaining,
-        dueStep: migratedEmbeddedReviewStep === null
-          ? entry.dueStep
-          : Math.min(entry.dueStep, migratedEmbeddedReviewStep),
+        dueStep: entry.dueStep,
         sequence: entry.sequence
       };
       if (typeof entry.wrongRetryDueStep !== "undefined") {
@@ -1307,12 +1305,7 @@
           !isSafeWholeNumber(entry.wrongRetryDueStep, 0)
           || entry.wrongRetryDueStep !== entry.dueStep
         ) return null;
-        normalizedItem.wrongRetryDueStep = applyEmbeddedCadence
-          ? undefined
-          : entry.wrongRetryDueStep;
-        if (typeof normalizedItem.wrongRetryDueStep === "undefined") {
-          delete normalizedItem.wrongRetryDueStep;
-        }
+        normalizedItem.wrongRetryDueStep = entry.wrongRetryDueStep;
       }
       return normalizedItem;
     });
@@ -1342,9 +1335,8 @@
 
     var nextQuizReviewStep = savedValue.nextQuizReviewStep;
     if (applyEmbeddedCadence) {
-      // Restore the regular finite-Queue cadence once without changing any
-      // saved question or remaining count. Only a specifically wrong MCQ uses
-      // the separate 10-to-15-question cooldown after this migration.
+      // Upgrade the popup clocks once, preserving saved entries, counts and
+      // cycle progress. Legacy per-item clocks no longer control FIFO order.
       nextQuizReviewStep = migratedEmbeddedReviewStep;
     } else if (typeof nextQuizReviewStep === "undefined") {
       // Repair a current-format payload that is missing its global gate
@@ -1358,7 +1350,7 @@
     if (items.length === 0) nextQuizReviewStep = null;
 
     var nextImportantReviewStep = savedValue.nextImportantReviewStep;
-    if (typeof nextImportantReviewStep === "undefined") {
+    if (applyEmbeddedCadence || typeof nextImportantReviewStep === "undefined") {
       // Start the permanent Important cadence from this upgrade onward. Old
       // Learn/Quiz activity must never cause an immediate retroactive popup.
       nextImportantReviewStep = importantQuestionIds.length > 0
@@ -1695,9 +1687,9 @@
   }
 
   function oldestRetryItem(items) {
-    // The saved items array has always kept insertion order. Older releases
-    // changed `sequence` after reviews, so it cannot recover which MCQ was
-    // originally added first when upgrading an existing Queue.
+    // Preserve the saved array order across this upgrade. Older releases
+    // changed both order and `sequence` after reviews, so the original add
+    // order cannot be reconstructed reliably from those legacy saves.
     return items[0] || null;
   }
 
@@ -1755,13 +1747,6 @@
     }
     if (pending.length > 0) pendingByCategory[categoryId] = pending;
     else delete pendingByCategory[categoryId];
-  }
-
-  function moveRetryItemToTail(item) {
-    var index = retryQueueState.items.indexOf(item);
-    if (index < 0) return;
-    retryQueueState.items.splice(index, 1);
-    retryQueueState.items.push(item);
   }
 
   function activeRetryAttemptMatchesSession() {
@@ -1915,7 +1900,7 @@
           saveRetryQueue(countBaselineApplied && retryQueueState.items.length > 0
             ? "Existing Review Queue counts were set to five once. Wrong answers now add two."
             : (embeddedCadenceApplied && retryQueueState.items.length > 0
-              ? "Regular Queue timing was restored. A wrong MCQ alone now waits ten to fifteen questions; saved Queue counts were kept unchanged."
+              ? "Queue practice is ready every five questions and Important practice every ten. Saved Queue counts and rounds were kept."
               : (dedicatedSpacingApplied
                 ? "Review Queue spacing is ready. Saved question counts were kept unchanged."
                 : (additiveBankMigrationApplied
@@ -1985,6 +1970,7 @@
         state.computerSourceScope
       )
     ) return null;
+    var queueWasEmpty = retryQueueState.items.length === 0;
     retryQueueState.practiceStep += 1;
     if (retryQueueState.nextImportantReviewStep === null && importantQuestionIds.length > 0) {
       scheduleNextImportantReview();
@@ -2011,36 +1997,31 @@
         retryQueueState.nextQuizReviewStep = confirmationDueStep;
       }
     }
+    if (queueWasEmpty && retryQueueState.items.length > 0) {
+      // Count the regular answer that created the first Queue entry too.
+      retryQueueState.nextQuizReviewStep = retryQueueState.practiceStep - 1 + RETRY_QUEUE_MIN_SPACING;
+    }
     saveRetryQueue(queueChanged && wrongAnswer
       ? (isUrduCategoryQuestion(question)
         ? "دہرائی کی قطار اپ ڈیٹ ہو گئی ہے۔ اس سوال کے " + item.remaining
-          + " درست جواب باقی ہیں۔ یہ سوال 10 سے 15 دوسرے سوالات کے بعد دوبارہ آئے گا۔"
+          + " درست جواب باقی ہیں۔ سوال اپنی باری پر آئے گا اور مکمل چکر کے بعد دوبارہ دہرایا جائے گا۔"
         : "Review queue updated. This question needs " + item.remaining
-          + " correct reviews and will return after 10 to 15 other questions.")
+          + " correct reviews and will return in Queue order after the current round.")
       : (queueChanged
         ? "One confirmation review was added for this correct Quiz answer."
         : ""));
     return { item: item, queueChanged: queueChanged };
   }
 
-  function dueRetryQueueItem(excludedQuestionId) {
+  function dueRetryQueueItem(excludedQuestionId, continuePractice) {
     var categoryId = activeRetryCategoryId();
     if (!categoryId) return null;
     var regularQueueDue = retryQueueState.nextQuizReviewStep !== null
       && retryQueueState.practiceStep >= retryQueueState.nextQuizReviewStep;
-    // The saved array is the persistent FIFO order. Completing a review moves
-    // only that MCQ to the tail, so every other queued MCQ gets one turn first.
-    // A wrong answer adds two repetitions but cannot jump the cycle.
-    return pendingQueueCycleItems(categoryId).find(function (item) {
-      if (item.dueStep > retryQueueState.practiceStep) return false;
-      if (item.questionId === String(excludedQuestionId || "") && state.questions.length !== 1) {
-        return false;
-      }
-      return regularQueueDue || (
-        isSafeWholeNumber(item.wrongRetryDueStep, 0)
-        && item.wrongRetryDueStep <= retryQueueState.practiceStep
-      );
-    }) || null;
+    if (!continuePractice && !regularQueueDue) return null;
+    // Counts and old cooldowns cannot skip the first pending MCQ. The cycle
+    // marker gives every entry one turn before the preserved order restarts.
+    return oldestRetryItem(pendingQueueCycleItems(categoryId));
   }
 
   function refillImportantReviewDeck(categoryId) {
@@ -2352,20 +2333,20 @@
         : importantPractice
         ? (urduQuestion
           ? (correct
-            ? "بہت خوب۔ یہ اہم سوال مستقل مشق میں رہے گا اور قطار کی گنتی تبدیل نہیں ہوگی۔"
+            ? "بہت خوب۔ اگلے اہم سوال کے لیے جاری رکھیں۔ قطار کی گنتی تبدیل نہیں ہوگی۔"
             : "درست جواب " + correctOption.label + "۔ " + correctOption.text
               + " ہے۔ یہ اہم سوال مستقل مشق میں رہے گا اور قطار کی گنتی تبدیل نہیں ہوگی۔")
           : (correct
-            ? "Well done. This Important MCQ stays in permanent practice; Review Queue totals will not change."
+            ? "Well done. Continue to the next Important MCQ. Review Queue totals will not change."
             : "The correct answer is " + correctOption.label + ". " + correctOption.text
               + ". This Important MCQ stays in permanent practice; Review Queue totals will not change."))
         : (urduQuestion
         ? (correct
-          ? "بہت خوب۔ جاری رکھنے پر ایک دہرائی مکمل ہو جائے گی۔"
+          ? "بہت خوب۔ جاری رکھنے پر ایک دہرائی مکمل ہوگی اور قطار کا اگلا سوال آئے گا۔"
           : "درست جواب " + correctOption.label + "۔ " + correctOption.text + " ہے۔ جاری رکھنے پر "
             + wrongIncrement + " مزید دہرائیاں شامل ہوں گی۔")
         : (correct
-          ? "Well done. One required review will be completed when you continue."
+          ? "Well done. Continue to complete one review and show the next queued MCQ."
           : "The correct answer is " + correctOption.label + ". " + correctOption.text
             + ". " + wrongIncrement + " extra reviews will be added when you continue."));
     }
@@ -2458,10 +2439,14 @@
               : "جاری رکھنے پر 2 دہرائیاں شامل ہوں گی اور آپ اسی جگہ اپنے سیشن پر واپس جائیں گے۔")
             : "درست جواب سے اگلے زمرے کا سوال آئے گا؛ تمام زمروں کے بعد ہر زمرے کا اگلا سوال شروع ہوگا۔ غلط جواب سے 2 دہرائیاں شامل ہوں گی۔ آپ مشق روک کر اسی سوال کو اگلی باری کے لیے محفوظ بھی رکھ سکتے ہیں۔")
           : (importantPractice
-          ? "درست یا غلط، یہ اہم سوال مستقل مشق میں رہے گا اور عام قطار کی گنتی نہیں بدلے گا۔"
+          ? "درست جواب پر اگلا اہم سوال آئے گا؛ غلط جواب کے بعد جاری رکھیں تو اصل سیشن پر واپس جائیں گے۔ قطار کی گنتی نہیں بدلے گی۔"
+          : (dedicatedPractice
+          ? "ہر سوال کی ایک باری مکمل ہونے کے بعد اگلا چکر شروع ہوگا۔ درست جواب ایک دہرائی کم اور غلط جواب دو دہرائیاں زیادہ کرتا ہے۔"
           : (attempt.submitted
-          ? "اپنے سیشن پر واپس جانے کے لیے جاری رکھیں۔"
-          : "یہ دہرائی آپ کے اصل اسکور کو تبدیل نہیں کرے گی۔")))
+          ? (attempt.outcome === "correct"
+            ? "جاری رکھنے پر اسی زمرے کی قطار کا اگلا سوال آئے گا۔"
+            : "اپنے سیشن پر واپس جانے کے لیے جاری رکھیں۔")
+          : "درست جواب پر قطار کا اگلا سوال آئے گا؛ غلط جواب کے بعد جاری رکھیں تو اصل سیشن پر واپس جائیں گے۔"))))
         : (sequentialPractice
           ? (attempt.submitted
             ? (attempt.outcome === "correct"
@@ -2469,14 +2454,16 @@
               : "Continue to add 2 Queue reviews and return to the exact place in your session.")
             : "Correct moves to the next category; after every category, the rotation uses each category's next MCQ. Wrong adds 2 Queue reviews. Pause & return keeps this MCQ for the next checkpoint.")
           : (importantPractice
-          ? "Correct or wrong, this Important MCQ stays in this category's practice and never changes Queue totals."
+          ? "Correct: continue to the next Important MCQ. Wrong: continue back to your session. Queue totals stay unchanged."
           : (dedicatedPractice
           ? (attempt.submitted
             ? "Continue to the next queued MCQ in this category. Each queued MCQ gets one turn before any repeats."
             : "A correct answer removes one review; a wrong answer adds two. The same MCQ waits until the next Queue cycle.")
           : (attempt.submitted
-            ? "Continue to return to your session."
-            : "This review does not change your Learn or Quiz progress."))));
+            ? (attempt.outcome === "correct"
+              ? "Continue to the next queued MCQ in this category. Your main question and score stay saved."
+              : "Continue to return to your session.")
+            : "Correct: continue to the next queued MCQ. Wrong: continue back to your session. Every queued MCQ gets one turn per round."))));
       elements.retryDialogHelp.lang = urduQuestion ? "ur" : "en";
       elements.retryDialogHelp.dir = urduQuestion ? "rtl" : "ltr";
     }
@@ -2493,12 +2480,12 @@
     if (elements.retryActionButton) {
       elements.retryActionButton.textContent = urduQuestion
         ? (attempt.submitted
-          ? (sequentialPractice && attempt.outcome === "correct" ? "اگلا سوال" : "جاری رکھیں")
+          ? (attempt.outcome === "correct" ? "اگلا سوال" : "جاری رکھیں")
           : "جواب چیک کریں")
         : (attempt.submitted
           ? (sequentialPractice
             ? (attempt.outcome === "correct" ? "Next MCQ" : "Add to Queue & Return")
-            : "Continue")
+            : (attempt.outcome === "correct" ? "Next MCQ" : "Continue"))
           : "Check Answer");
       elements.retryActionButton.dataset.action = attempt.submitted ? "continue" : "check";
       elements.retryActionButton.setAttribute(
@@ -2667,7 +2654,7 @@
     return beginDedicatedRetryAttempt();
   }
 
-  function beginDueImportantAttempt(resumeAction, excludedQuestionId) {
+  function beginDueImportantAttempt(resumeAction, excludedQuestionId, continuePractice) {
     if (!elements.retryDialog || !activeRetryCategoryId() || resumeAction === "results") return false;
     if (retryQueueState.activeAttempt) {
       if (activeRetryAttemptMatchesSession()) {
@@ -2675,7 +2662,7 @@
       }
       releaseActiveRetryAttempt();
     }
-    if (!isImportantReviewDue()) return false;
+    if (!continuePractice && !isImportantReviewDue()) return false;
     var questionId = nextImportantReviewQuestionId(excludedQuestionId, activeRetryCategoryId());
     var canonicalQuestion = questionId ? questionsById.get(questionId) : null;
     if (!canonicalQuestion || !isImportantQuestion(canonicalQuestion)) return false;
@@ -2698,7 +2685,7 @@
     return renderRetryAttempt() && openRetryDialog();
   }
 
-  function beginDueRetryAttempt(resumeAction, excludedQuestionId) {
+  function beginDueRetryAttempt(resumeAction, excludedQuestionId, continuePractice) {
     if (!elements.retryDialog || !activeRetryCategoryId()) return false;
     if (resumeAction === "results") return false;
     if (retryQueueState.activeAttempt) {
@@ -2707,7 +2694,7 @@
       }
       releaseActiveRetryAttempt();
     }
-    var item = dueRetryQueueItem(excludedQuestionId);
+    var item = dueRetryQueueItem(excludedQuestionId, continuePractice);
     if (!item) return false;
     var canonicalQuestion = questionsById.get(item.questionId);
     if (!canonicalQuestion) return false;
@@ -2715,9 +2702,9 @@
     if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
     var regularQueueDue = retryQueueState.nextQuizReviewStep !== null
       && retryQueueState.practiceStep >= retryQueueState.nextQuizReviewStep;
-    // A specifically wrong MCQ may return on its own 10-to-15-question clock.
-    // Do not restart the independent five-or-six-question Queue clock when it does.
-    if (regularQueueDue) scheduleNextQuizReview();
+    // Only regular Learn/Quiz answers advance this clock, including while a
+    // correct-answer streak keeps the current popup open.
+    if (!continuePractice && regularQueueDue) scheduleNextQuizReview();
     // This legacy field now avoids back-to-back equal-priority ties across both
     // embedded and dedicated practice while remaining compatible with v1 saves.
     retryQueueState.dedicatedLastQuestionId = item.questionId;
@@ -2851,10 +2838,10 @@
     }
     if (elements.retryActionButton) {
       elements.retryActionButton.textContent = isUrduCategoryQuestion(question)
-        ? (sequentialPractice && attempt.outcome === "correct" ? "اگلا سوال" : "جاری رکھیں")
+        ? (attempt.outcome === "correct" ? "اگلا سوال" : "جاری رکھیں")
         : (sequentialPractice
           ? (attempt.outcome === "correct" ? "Next MCQ" : "Add to Queue & Return")
-          : "Continue");
+          : (attempt.outcome === "correct" ? "Next MCQ" : "Continue"));
       elements.retryActionButton.dataset.action = "continue";
       elements.retryActionButton.setAttribute("aria-keyshortcuts", "Enter Space ArrowRight");
       elements.retryActionButton.focus({ preventScroll: true });
@@ -2935,6 +2922,8 @@
     if (isImportantPracticeAttempt(attempt)) {
       retryQueueState.activeAttempt = null;
       scheduleNextImportantReview();
+      if (attempt.outcome === "correct"
+        && beginDueImportantAttempt(resumeAction, attempt.questionId, true)) return;
       saveRetryQueue("Important practice saved. This MCQ remains in its category's permanent rotation.");
       closeRetryDialog();
       performRetryResumeAction(resumeAction);
@@ -2944,8 +2933,7 @@
     var dedicatedPractice = attempt.context === "dedicated";
     var mastered = applyRetryAttemptOutcome(attempt, item);
     if (dedicatedPractice) {
-      // Manual Queue practice uses the same saved FIFO order as embedded
-      // reviews; finishing this question moves it to the category's tail.
+      // Manual and embedded practice share the same saved category round.
       delete item.wrongRetryDueStep;
       retryQueueState.dedicatedDeck = [];
     }
@@ -2961,8 +2949,6 @@
         if (attempt.outcome === "wrong") item.wrongRetryDueStep = item.dueStep;
         else delete item.wrongRetryDueStep;
       }
-      item.sequence = nextRetrySequence();
-      moveRetryItemToTail(item);
     }
     completeQueueCycleTurn(item.questionId);
     if (retryQueueState.items.length === 0) {
@@ -2972,13 +2958,13 @@
       retryQueueState.dedicatedRecentQuestionIds = [];
     }
     retryQueueState.activeAttempt = null;
+    if (!dedicatedPractice && attempt.outcome === "correct"
+      && beginDueRetryAttempt(resumeAction, null, true)) return;
     saveRetryQueue(mastered
       ? "Review complete. This question has left the queue."
       : (dedicatedPractice
         ? "Review saved. The next queued MCQ in this category will be shown."
-        : (attempt.outcome === "wrong"
-          ? "Review saved. This MCQ will return after ten to fifteen other Learn or Quiz questions; the Queue keeps its normal timing."
-          : "Review saved. Another Queue review can appear after five or six new Learn or Quiz questions.")));
+        : "Review saved. Queue practice returns after five regular Learn or Quiz questions; this MCQ waits for the next round."));
     closeRetryDialog();
     if (dedicatedPractice) {
       if (categoryRetryItems(retryQueuePractice.categoryId).length === 0) {
@@ -3033,8 +3019,6 @@
     ) scheduleNextQuizReview();
     item.dueStep = retryQueueState.nextQuizReviewStep;
     delete item.wrongRetryDueStep;
-    item.sequence = nextRetrySequence();
-    moveRetryItemToTail(item);
     retryQueueState.activeAttempt = null;
     saveRetryQueue("Review postponed to the next regular Queue opportunity.");
     closeRetryDialog();
@@ -3195,8 +3179,6 @@
           if (attempt.outcome === "wrong") item.wrongRetryDueStep = item.dueStep;
           else delete item.wrongRetryDueStep;
         }
-        item.sequence = nextRetrySequence();
-        moveRetryItemToTail(item);
       }
       completeQueueCycleTurn(item.questionId);
     }
