@@ -726,6 +726,79 @@ async function testImportantPracticeRoundTrip() {
   );
 }
 
+async function testAlternatingPopupCadenceRoundTripAndOfflineReconnect() {
+  // The sync layer transports app-owned state; it must not independently
+  // recalculate the shared popup gate or reset a saved dedicated attempt.
+  const initialQueue = {
+    ...JSON.parse(DEDICATED_ATTEMPT_QUEUE_RAW),
+    embeddedCadenceVersion: 4,
+    practiceStep: 30,
+    nextEmbeddedReviewStep: 40,
+    nextEmbeddedReviewKind: "important",
+    nextQuizReviewStep: 50,
+    nextImportantReviewStep: 40
+  };
+  const initialRaw = JSON.stringify(initialQueue);
+  const store = new Map();
+  const source = createBrowser({
+    store,
+    local: {
+      [ACTIVE_SESSION_KEY]: SAMPLE_SESSION_RAW,
+      [RETRY_QUEUE_KEY]: initialRaw
+    }
+  });
+  await waitFor(source, (candidate) => candidate.phase === "migration-choice", "alternating cadence upload choice");
+  await source.window.PPSC_CLOUD.chooseLocal();
+  await waitFor(source, (candidate) => candidate.phase === "synced", "alternating cadence initial upload");
+  assert.equal(rawCloudValue(store, "retry-queue"), initialRaw);
+
+  const second = createBrowser({ store, local: {} });
+  await waitFor(second, (candidate) => candidate.ready, "alternating cadence second-device restore");
+  assert.equal(second.localStorage.getItem(RETRY_QUEUE_KEY), initialRaw);
+  assert.equal(second.localStorage.getItem(ACTIVE_SESSION_KEY), SAMPLE_SESSION_RAW);
+
+  source.window.navigator.onLine = false;
+  source.window.dispatchEvent({ type: "offline" });
+  second.window.navigator.onLine = false;
+  second.window.dispatchEvent({ type: "offline" });
+  const updatedQueue = {
+    ...initialQueue,
+    practiceStep: 43,
+    nextEmbeddedReviewStep: 50,
+    nextEmbeddedReviewKind: "queue",
+    nextQuizReviewStep: 50,
+    nextImportantReviewStep: 60
+  };
+  const updatedRaw = JSON.stringify(updatedQueue);
+  second.localStorage.setItem(RETRY_QUEUE_KEY, updatedRaw);
+  second.window.PPSC_CLOUD.notifyLocalChange(RETRY_QUEUE_KEY);
+  assert.equal(second.window.PPSC_CLOUD.getStatus().phase, "offline");
+  assert.equal(rawCloudValue(store, "retry-queue"), initialRaw, "offline changes must stay local until reconnect");
+
+  second.window.navigator.onLine = true;
+  second.window.dispatchEvent({ type: "online" });
+  await waitFor(
+    second,
+    (candidate) => candidate.phase === "synced" && rawCloudValue(store, "retry-queue") === updatedRaw,
+    "offline alternating cadence upload after reconnect",
+    3000
+  );
+  assert.equal(second.localStorage.getItem(RETRY_QUEUE_KEY), updatedRaw);
+
+  source.window.navigator.onLine = true;
+  source.window.dispatchEvent({ type: "online" });
+  await waitFor(source, () => source.window.location.reloadCalled, "alternating cadence remote reconnect pull", 3000);
+  assert.equal(source.localStorage.getItem(RETRY_QUEUE_KEY), updatedRaw);
+  assert.equal(source.localStorage.getItem(ACTIVE_SESSION_KEY), SAMPLE_SESSION_RAW);
+  const restoredQueue = JSON.parse(source.localStorage.getItem(RETRY_QUEUE_KEY));
+  assert.equal(restoredQueue.embeddedCadenceVersion, 4);
+  assert.equal(restoredQueue.nextEmbeddedReviewKind, "queue");
+  assert.equal(restoredQueue.nextEmbeddedReviewStep - restoredQueue.practiceStep, 7, "remaining shared countdown must not restart on another device");
+  assert.deepEqual(restoredQueue.items, initialQueue.items, "finite counts and saved insertion order must remain untouched");
+  assert.deepEqual(restoredQueue.queueCyclePendingByCategory, initialQueue.queueCyclePendingByCategory);
+  assert.deepEqual(restoredQueue.activeAttempt, initialQueue.activeAttempt, "pending answer must survive the cadence round trip exactly");
+}
+
 async function testRetiredSequentialStateRoundTrip() {
   const store = new Map();
   const source = createBrowser({
@@ -1022,6 +1095,7 @@ async function main() {
   await testRestoredLegacyQueueUploadsAppBaselineAndRestoresExactly(seedStore);
   await testDedicatedAttemptQueueRoundTrip();
   await testImportantPracticeRoundTrip();
+  await testAlternatingPopupCadenceRoundTripAndOfflineReconnect();
   await testRetiredSequentialStateRoundTrip();
   await testConflictWaitsForChoice(cloneStore(seedStore));
   await testAllowedEmailIsEnforcedBeforeFirestore();
@@ -1045,6 +1119,7 @@ async function main() {
       "legacy retry remaining=2 survives upload and restore",
       "dedicated retry attempt, per-category FIFO cycle, wrong cooldown, cadence, and legacy spacing fields round-trip byte-for-byte",
       "permanent Important cadence, count-baseline marker, shuffled deck, and active attempt round-trip byte-for-byte",
+      "alternating popup cadence version=4, next kind, and shared countdown survive device restore and offline reconnect without changing finite counts, FIFO round, or active answer",
       "retired Sequential gate stays off while legacy cursor fields and finite Queue reviews round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",
       "large progress round-trips through integrity-checked chunks",

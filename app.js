@@ -21,9 +21,10 @@
   var PREVIOUS_RETRY_QUEUE_INCREMENT = 5;
   var RETRY_QUEUE_COUNT_BASELINE_VERSION = 1;
   var RETRY_QUEUE_COUNT_BASELINE = 5;
-  var EMBEDDED_RETRY_CADENCE_VERSION = 3;
-  var RETRY_QUEUE_MIN_SPACING = 5;
-  var RETRY_QUEUE_MAX_SPACING = 5;
+  var EMBEDDED_RETRY_CADENCE_VERSION = 4;
+  var EMBEDDED_REVIEW_SPACING = 10;
+  var RETRY_QUEUE_MIN_SPACING = 10;
+  var RETRY_QUEUE_MAX_SPACING = 10;
   var WRONG_RETRY_MIN_SPACING = 10;
   var WRONG_RETRY_MAX_SPACING = 15;
   var DEDICATED_RETRY_GAP_OPTIONS = [3, 5, 10];
@@ -1044,8 +1045,10 @@
       countBaselineVersion: RETRY_QUEUE_COUNT_BASELINE_VERSION,
       embeddedCadenceVersion: EMBEDDED_RETRY_CADENCE_VERSION,
       practiceStep: 0,
+      nextEmbeddedReviewStep: EMBEDDED_REVIEW_SPACING,
+      nextEmbeddedReviewKind: "queue",
       nextQuizReviewStep: null,
-      nextImportantReviewStep: importantQuestionIds.length > 0 ? randomImportantSpacing() : null,
+      nextImportantReviewStep: importantQuestionIds.length > 0 ? EMBEDDED_REVIEW_SPACING * 2 : null,
       nextSequentialReviewStep: null,
       sequentialOrderVersion: SEQUENTIAL_ORDER_VERSION,
       sequentialTurn: 0,
@@ -1211,21 +1214,26 @@
       + Math.floor(Math.random() * (IMPORTANT_REVIEW_MAX_SPACING - IMPORTANT_REVIEW_MIN_SPACING + 1));
   }
 
+  function syncEmbeddedReviewClocks() {
+    // Retain these legacy fields for saved-state compatibility. Only the
+    // shared clock below decides when either popup may interrupt a session.
+    var nextStep = retryQueueState.nextEmbeddedReviewStep;
+    var queueNext = retryQueueState.nextEmbeddedReviewKind === "queue";
+    retryQueueState.nextQuizReviewStep = retryQueueState.items.length > 0
+      ? nextStep + (queueNext ? 0 : EMBEDDED_REVIEW_SPACING)
+      : null;
+    retryQueueState.nextImportantReviewStep = importantQuestionIds.length > 0
+      ? nextStep + (queueNext ? EMBEDDED_REVIEW_SPACING : 0)
+      : null;
+  }
+
   function scheduleNextImportantReview() {
-    if (importantQuestionIds.length === 0) {
-      retryQueueState.nextImportantReviewStep = null;
-      return null;
-    }
-    retryQueueState.nextImportantReviewStep = retryQueueState.practiceStep + randomImportantSpacing();
+    syncEmbeddedReviewClocks();
     return retryQueueState.nextImportantReviewStep;
   }
 
   function scheduleNextQuizReview() {
-    if (retryQueueState.items.length === 0) {
-      retryQueueState.nextQuizReviewStep = null;
-      return null;
-    }
-    retryQueueState.nextQuizReviewStep = retryQueueState.practiceStep + randomRetrySpacing();
+    syncEmbeddedReviewClocks();
     return retryQueueState.nextQuizReviewStep;
   }
 
@@ -1275,9 +1283,6 @@
       : savedValue.embeddedCadenceVersion;
     if (!isSafeWholeNumber(savedEmbeddedCadenceVersion, 0)) return null;
     var applyEmbeddedCadence = savedEmbeddedCadenceVersion < EMBEDDED_RETRY_CADENCE_VERSION;
-    var migratedEmbeddedReviewStep = applyEmbeddedCadence && savedValue.items.length > 0
-      ? savedValue.practiceStep + RETRY_QUEUE_MIN_SPACING
-      : null;
 
     var questionIds = new Set();
     var sequences = new Set();
@@ -1334,32 +1339,16 @@
     if (savedValue.nextSequence <= highestSequence) return null;
 
     var nextQuizReviewStep = savedValue.nextQuizReviewStep;
-    if (applyEmbeddedCadence) {
-      // Upgrade the popup clocks once, preserving saved entries, counts and
-      // cycle progress. Legacy per-item clocks no longer control FIFO order.
-      nextQuizReviewStep = migratedEmbeddedReviewStep;
-    } else if (typeof nextQuizReviewStep === "undefined") {
-      // Repair a current-format payload that is missing its global gate
-      // without touching any saved question or repetition count.
-      nextQuizReviewStep = items.length > 0
-        ? savedValue.practiceStep + RETRY_QUEUE_MIN_SPACING
-        : null;
-    } else if (nextQuizReviewStep !== null && !isSafeWholeNumber(nextQuizReviewStep, 0)) {
+    if (typeof nextQuizReviewStep !== "undefined"
+      && nextQuizReviewStep !== null && !isSafeWholeNumber(nextQuizReviewStep, 0)) {
       return null;
     }
-    if (items.length === 0) nextQuizReviewStep = null;
 
     var nextImportantReviewStep = savedValue.nextImportantReviewStep;
-    if (applyEmbeddedCadence || typeof nextImportantReviewStep === "undefined") {
-      // Start the permanent Important cadence from this upgrade onward. Old
-      // Learn/Quiz activity must never cause an immediate retroactive popup.
-      nextImportantReviewStep = importantQuestionIds.length > 0
-        ? savedValue.practiceStep + randomImportantSpacing()
-        : null;
-    } else if (nextImportantReviewStep !== null && !isSafeWholeNumber(nextImportantReviewStep, 0)) {
+    if (typeof nextImportantReviewStep !== "undefined"
+      && nextImportantReviewStep !== null && !isSafeWholeNumber(nextImportantReviewStep, 0)) {
       return null;
     }
-    if (importantQuestionIds.length === 0) nextImportantReviewStep = null;
 
     // Retire the old Sequential popup without discarding Queue or Important
     // progress. Keep its legacy cursor fields readable for saved-state checks.
@@ -1620,6 +1609,27 @@
       dedicatedDeck = [];
     }
 
+    var nextEmbeddedReviewStep = savedValue.nextEmbeddedReviewStep;
+    var nextEmbeddedReviewKind = savedValue.nextEmbeddedReviewKind;
+    if (applyEmbeddedCadence
+      || typeof nextEmbeddedReviewStep === "undefined"
+      || typeof nextEmbeddedReviewKind === "undefined") {
+      // Upgrade or repair the clock, never the stored work. A saved popup
+      // has already taken its turn and must resume without consuming it twice.
+      nextEmbeddedReviewStep = savedValue.practiceStep + EMBEDDED_REVIEW_SPACING;
+      nextEmbeddedReviewKind = activeAttempt && activeAttempt.context === "embedded"
+        && activeAttempt.kind === "queue" ? "important" : "queue";
+    } else if (!isSafeWholeNumber(nextEmbeddedReviewStep, 0)
+      || !["queue", "important"].includes(nextEmbeddedReviewKind)) {
+      return null;
+    }
+    nextQuizReviewStep = items.length > 0
+      ? nextEmbeddedReviewStep + (nextEmbeddedReviewKind === "queue" ? 0 : EMBEDDED_REVIEW_SPACING)
+      : null;
+    nextImportantReviewStep = importantQuestionIds.length > 0
+      ? nextEmbeddedReviewStep + (nextEmbeddedReviewKind === "important" ? 0 : EMBEDDED_REVIEW_SPACING)
+      : null;
+
     return {
       version: RETRY_QUEUE_STORAGE_VERSION,
       bankSignature: questionBankSignature,
@@ -1632,6 +1642,8 @@
         EMBEDDED_RETRY_CADENCE_VERSION
       ),
       practiceStep: savedValue.practiceStep,
+      nextEmbeddedReviewStep: nextEmbeddedReviewStep,
+      nextEmbeddedReviewKind: nextEmbeddedReviewKind,
       nextQuizReviewStep: nextQuizReviewStep,
       nextImportantReviewStep: nextImportantReviewStep,
       nextSequentialReviewStep: nextSequentialReviewStep,
@@ -1814,6 +1826,7 @@
   }
 
   function saveRetryQueue(announcement) {
+    syncEmbeddedReviewClocks();
     retryQueueState.version = RETRY_QUEUE_STORAGE_VERSION;
     retryQueueState.bankSignature = questionBankSignature;
     retryQueueState.nextSequentialReviewStep = null;
@@ -1866,6 +1879,10 @@
       var embeddedCadenceApplied = isSafeWholeNumber(savedEmbeddedCadenceVersion, 0)
         && savedEmbeddedCadenceVersion < EMBEDDED_RETRY_CADENCE_VERSION;
       var normalized = normalizeRetryQueue(savedValue);
+      var embeddedClockRepaired = Boolean(normalized) && (
+        savedValue.nextEmbeddedReviewStep !== normalized.nextEmbeddedReviewStep
+        || savedValue.nextEmbeddedReviewKind !== normalized.nextEmbeddedReviewKind
+      );
       var dedicatedSpacingApplied = Boolean(normalized) && (
         savedValue.dedicatedRepeatGap !== normalized.dedicatedRepeatGap
         || JSON.stringify(savedValue.dedicatedRecentQuestionIds) !== JSON.stringify(normalized.dedicatedRecentQuestionIds)
@@ -1894,13 +1911,14 @@
           countBaselineApplied
           || dedicatedSpacingApplied
           || embeddedCadenceApplied
+          || embeddedClockRepaired
           || sequentialMigrationApplied
           || additiveBankMigrationApplied
         ) {
           saveRetryQueue(countBaselineApplied && retryQueueState.items.length > 0
             ? "Existing Review Queue counts were set to five once. Wrong answers now add two."
-            : (embeddedCadenceApplied && retryQueueState.items.length > 0
-              ? "Queue practice is ready every five questions and Important practice every ten. Saved Queue counts and rounds were kept."
+            : (embeddedCadenceApplied || embeddedClockRepaired
+              ? "Queue and Important practice now take turns every ten regular questions. Saved counts and rounds were kept."
               : (dedicatedSpacingApplied
                 ? "Review Queue spacing is ready. Saved question counts were kept unchanged."
                 : (additiveBankMigrationApplied
@@ -1970,7 +1988,6 @@
         state.computerSourceScope
       )
     ) return null;
-    var queueWasEmpty = retryQueueState.items.length === 0;
     retryQueueState.practiceStep += 1;
     if (retryQueueState.nextImportantReviewStep === null && importantQuestionIds.length > 0) {
       scheduleNextImportantReview();
@@ -1994,12 +2011,8 @@
       addQueueCycleItem(questionId);
       queueChanged = true;
       if (retryQueueState.nextQuizReviewStep === null) {
-        retryQueueState.nextQuizReviewStep = confirmationDueStep;
+        scheduleNextQuizReview();
       }
-    }
-    if (queueWasEmpty && retryQueueState.items.length > 0) {
-      // Count the regular answer that created the first Queue entry too.
-      retryQueueState.nextQuizReviewStep = retryQueueState.practiceStep - 1 + RETRY_QUEUE_MIN_SPACING;
     }
     saveRetryQueue(queueChanged && wrongAnswer
       ? (isUrduCategoryQuestion(question)
@@ -2016,8 +2029,8 @@
   function dueRetryQueueItem(excludedQuestionId, continuePractice) {
     var categoryId = activeRetryCategoryId();
     if (!categoryId) return null;
-    var regularQueueDue = retryQueueState.nextQuizReviewStep !== null
-      && retryQueueState.practiceStep >= retryQueueState.nextQuizReviewStep;
+    var regularQueueDue = retryQueueState.nextEmbeddedReviewKind === "queue"
+      && retryQueueState.practiceStep >= retryQueueState.nextEmbeddedReviewStep;
     if (!continuePractice && !regularQueueDue) return null;
     // Counts and old cooldowns cannot skip the first pending MCQ. The cycle
     // marker gives every entry one turn before the preserved order restarts.
@@ -2066,8 +2079,8 @@
     var categoryId = activeRetryCategoryId();
     return Boolean(
       categoryId
-      && retryQueueState.nextImportantReviewStep !== null
-      && retryQueueState.practiceStep >= retryQueueState.nextImportantReviewStep
+      && retryQueueState.nextEmbeddedReviewKind === "important"
+      && retryQueueState.practiceStep >= retryQueueState.nextEmbeddedReviewStep
       && (importantQuestionIdsByCategory.get(categoryId) || []).length > 0
     );
   }
@@ -2654,6 +2667,29 @@
     return beginDedicatedRetryAttempt();
   }
 
+  function beginDueEmbeddedReview(resumeAction, excludedQuestionId) {
+    if (!activeRetryCategoryId() || !elements.retryDialog) return false;
+    if (retryQueueState.activeAttempt) {
+      if (activeRetryAttemptMatchesSession()) {
+        return renderRetryAttempt() && openRetryDialog();
+      }
+      releaseActiveRetryAttempt();
+    }
+    if (retryQueueState.practiceStep < retryQueueState.nextEmbeddedReviewStep) return false;
+
+    var kind = retryQueueState.nextEmbeddedReviewKind;
+    // Consume exactly one slot. A popup streak, a skipped empty lane, or
+    // reaching Results must never leave a second popup due on the next MCQ.
+    retryQueueState.nextEmbeddedReviewStep = retryQueueState.practiceStep + EMBEDDED_REVIEW_SPACING;
+    retryQueueState.nextEmbeddedReviewKind = kind === "queue" ? "important" : "queue";
+    syncEmbeddedReviewClocks();
+    var opened = resumeAction !== "results" && (kind === "queue"
+      ? beginDueRetryAttempt(resumeAction, excludedQuestionId, true)
+      : beginDueImportantAttempt(resumeAction, excludedQuestionId, true));
+    if (!opened) saveRetryQueue();
+    return opened;
+  }
+
   function beginDueImportantAttempt(resumeAction, excludedQuestionId, continuePractice) {
     if (!elements.retryDialog || !activeRetryCategoryId() || resumeAction === "results") return false;
     if (retryQueueState.activeAttempt) {
@@ -2700,11 +2736,6 @@
     if (!canonicalQuestion) return false;
     var reviewQuestion = shuffledReviewQuestion(canonicalQuestion);
     if (!reviewQuestion || !isIndexPermutation(reviewQuestion._sessionOptionOrder)) return false;
-    var regularQueueDue = retryQueueState.nextQuizReviewStep !== null
-      && retryQueueState.practiceStep >= retryQueueState.nextQuizReviewStep;
-    // Only regular Learn/Quiz answers advance this clock, including while a
-    // correct-answer streak keeps the current popup open.
-    if (!continuePractice && regularQueueDue) scheduleNextQuizReview();
     // This legacy field now avoids back-to-back equal-priority ties across both
     // embedded and dedicated practice while remaining compatible with v1 saves.
     retryQueueState.dedicatedLastQuestionId = item.questionId;
@@ -2964,7 +2995,7 @@
       ? "Review complete. This question has left the queue."
       : (dedicatedPractice
         ? "Review saved. The next queued MCQ in this category will be shown."
-        : "Review saved. Queue practice returns after five regular Learn or Quiz questions; this MCQ waits for the next round."));
+        : "Review saved. Queue and Important take turns every ten regular questions; this MCQ waits for the next Queue round."));
     closeRetryDialog();
     if (dedicatedPractice) {
       if (categoryRetryItems(retryQueuePractice.categoryId).length === 0) {
@@ -5766,8 +5797,7 @@
       resumeAction = "next:" + (state.currentIndex + 1);
     }
 
-    if (beginDueImportantAttempt(resumeAction, completedQuestionId)) return;
-    if (beginDueRetryAttempt(resumeAction, completedQuestionId)) return;
+    if (beginDueEmbeddedReview(resumeAction, completedQuestionId)) return;
     performRetryResumeAction(resumeAction);
   }
 

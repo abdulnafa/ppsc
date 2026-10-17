@@ -1330,6 +1330,12 @@ function validateRetryQueueContract(data) {
     if (endIndex < 0) return null;
     return app.slice(startIndex + startMarker.length, endIndex);
   }
+  function appFunction(name) {
+    const startIndex = app.indexOf("  function " + name + "(");
+    if (startIndex < 0) return null;
+    const endIndex = app.indexOf("\n  function ", startIndex + 2);
+    return app.slice(startIndex, endIndex < 0 ? undefined : endIndex);
+  }
   const requiredConstants = [
     ["RETRY_QUEUE_STORAGE_KEY", '"ppsc-prep:retry-queue:v1"'],
     ["RETRY_QUEUE_STORAGE_VERSION", "1"],
@@ -1338,9 +1344,10 @@ function validateRetryQueueContract(data) {
     ["PREVIOUS_RETRY_QUEUE_INCREMENT", "5"],
     ["RETRY_QUEUE_COUNT_BASELINE_VERSION", "1"],
     ["RETRY_QUEUE_COUNT_BASELINE", "5"],
-    ["EMBEDDED_RETRY_CADENCE_VERSION", "3"],
-    ["RETRY_QUEUE_MIN_SPACING", "5"],
-    ["RETRY_QUEUE_MAX_SPACING", "5"],
+    ["EMBEDDED_RETRY_CADENCE_VERSION", "4"],
+    ["EMBEDDED_REVIEW_SPACING", "10"],
+    ["RETRY_QUEUE_MIN_SPACING", "10"],
+    ["RETRY_QUEUE_MAX_SPACING", "10"],
     ["WRONG_RETRY_MIN_SPACING", "10"],
     ["WRONG_RETRY_MAX_SPACING", "15"],
     ["DEDICATED_RETRY_DEFAULT_GAP", "5"],
@@ -1401,7 +1408,7 @@ function validateRetryQueueContract(data) {
     'countBaselineVersion: Math.max(',
     'embeddedCadenceVersion: EMBEDDED_RETRY_CADENCE_VERSION',
     'var applyEmbeddedCadence = savedEmbeddedCadenceVersion < EMBEDDED_RETRY_CADENCE_VERSION;',
-    'savedValue.practiceStep + RETRY_QUEUE_MIN_SPACING',
+    'savedValue.practiceStep + EMBEDDED_REVIEW_SPACING',
     'retryQueueState.practiceStep + randomWrongRetrySpacing()',
     'embeddedCadenceVersion: Math.max(',
     'retryQueueState.embeddedCadenceVersion = Math.max(',
@@ -1419,13 +1426,11 @@ function validateRetryQueueContract(data) {
   );
   if (
     queueSelector === null
-    || !/nextQuizReviewStep/.test(queueSelector)
-    || !/practiceStep/.test(queueSelector)
     || !/pendingQueueCycleItems\(categoryId\)/.test(queueSelector)
     || /item\.(?:dueStep|wrongRetryDueStep|remaining)/.test(queueSelector)
     || /\.sort\(/.test(queueSelector)
   ) {
-    error("app.js: Queue selection must use its regular gate and the next pending insertion-order turn, without cooldown or count priority");
+    error("app.js: Queue selection must use the next pending insertion-order turn, without cooldown or count priority");
   }
   const completeRetry = appSection(
     "function completeRetryAttempt() {",
@@ -1448,19 +1453,41 @@ function validateRetryQueueContract(data) {
   ) {
     error("app.js: correct popup answers must continue their own review type without incrementing regular-question progress");
   }
+  const embeddedCoordinator = appFunction("beginDueEmbeddedReview");
+  if (
+    embeddedCoordinator === null
+    || !/nextEmbeddedReviewStep/.test(embeddedCoordinator)
+    || !/nextEmbeddedReviewKind/.test(embeddedCoordinator)
+    || !/beginDueImportantAttempt\(/.test(embeddedCoordinator)
+    || !/beginDueRetryAttempt\(/.test(embeddedCoordinator)
+    || !/["']results["']/.test(embeddedCoordinator)
+  ) {
+    error("app.js: one alternating-popup coordinator must dispatch the due type and consume result-boundary turns without showing a popup");
+  }
+  for (const name of [
+    "scheduleNextQuizReview", "scheduleNextImportantReview", "completeRetryAttempt",
+    "postponeRetryAttempt", "releaseActiveRetryAttempt", "beginDedicatedRetryAttempt"
+  ]) {
+    const section = appFunction(name);
+    if (section === null || /nextEmbeddedReview(?:Step|Kind)\s*=(?!=)/.test(section)) {
+      error(`app.js: ${name} must not move the shared alternating popup checkpoint`);
+    }
+  }
   const emptyRetryState = appSection(
     "function createEmptyRetryQueueState() {",
     "function isSafeWholeNumber(value, minimum) {"
   );
   if (
     emptyRetryState === null
+    || !/nextEmbeddedReviewStep\s*:\s*EMBEDDED_REVIEW_SPACING/.test(emptyRetryState)
+    || !/nextEmbeddedReviewKind\s*:\s*["']queue["']/.test(emptyRetryState)
     || !/nextSequentialReviewStep\s*:\s*null/.test(emptyRetryState)
     || !/sequentialOrderVersion\s*:\s*SEQUENTIAL_ORDER_VERSION/.test(emptyRetryState)
     || !/sequentialTurn\s*:\s*0/.test(emptyRetryState)
     || !/sequentialIndex\s*:\s*0/.test(emptyRetryState)
     || !/sequentialQuestionId\s*:\s*allQuestions\.length\s*>\s*0/.test(emptyRetryState)
   ) {
-    error("app.js: fresh Review Queue state must disable Sequential while retaining v1 cursor fields");
+    error("app.js: fresh Review Queue must start a Queue turn after ten main MCQs and disable Sequential while retaining v1 cursor fields");
   }
 
   const loadRetryState = appSection(
@@ -1485,6 +1512,10 @@ function validateRetryQueueContract(data) {
     error("app.js: missing Review Queue normalization for retired Sequential state");
   } else {
     for (const requiredSnippet of [
+      "savedValue.nextEmbeddedReviewStep",
+      "savedValue.nextEmbeddedReviewKind",
+      "nextEmbeddedReviewStep: nextEmbeddedReviewStep",
+      "nextEmbeddedReviewKind: nextEmbeddedReviewKind",
       "savedValue.nextSequentialReviewStep",
       "savedValue.sequentialOrderVersion",
       "savedValue.sequentialTurn",
@@ -1583,13 +1614,15 @@ function validateRetryQueueContract(data) {
   );
   if (
     handleAction === null
-    || !/if\s*\(\s*beginDueImportantAttempt\([^)]*\)\s*\)\s*return\s*;\s*if\s*\(\s*beginDueRetryAttempt\([^)]*\)\s*\)\s*return\s*;/.test(handleAction)
-    || /\bbeginDueSequentialAttempt\s*\(/.test(handleAction)
+    || !/if\s*\(\s*beginDueEmbeddedReview\([^)]*\)\s*\)\s*return\s*;/.test(handleAction)
+    || /\bbeginDue(?:Sequential|Important|Retry)Attempt\s*\(/.test(handleAction)
   ) {
-    error("app.js: embedded popups must use Important then finite Queue, with no Sequential popup");
+    error("app.js: main-session checkpoints must use only the shared alternating-popup coordinator");
   }
-  if (!/function startQuiz\([\s\S]*?releaseActiveRetryAttempt\(\);\s*if \(retryQueueState\.items\.length > 0 && retryQueueState\.nextQuizReviewStep === null\) \{\s*scheduleNextQuizReview\(\);/.test(app)) {
-    error("app.js: starting another Learn or Quiz session must preserve an existing regular Queue gate");
+  const startQuiz = appFunction("startQuiz");
+  if (startQuiz === null || !/releaseActiveRetryAttempt\(\)/.test(startQuiz)
+    || /nextEmbeddedReview(?:Step|Kind)\s*=(?!=)/.test(startQuiz)) {
+    error("app.js: starting another Learn or Quiz must preserve the shared popup clock while releasing its prior review safely");
   }
   if (!styles.includes(".queue-screen") && !styles.includes("#queue-screen")) {
     error("styles.css: category Queue screen needs its own full-screen layout");
