@@ -2,6 +2,12 @@
 
 A category-wise PPSC General Ability practice website for GitHub Pages. Question rendering stays in the browser, while Firebase Google Authentication and Cloud Firestore keep the approved user's study progress synchronized across devices.
 
+## Practice popup control
+
+**Practice popups** in the category Learn/Quiz session header switches both automatic Queue and Important reviews on or off, including Difficult Learn/Quiz. It defaults to On for existing saves. Off pauses the remaining popup interval without changing the next review type, queue counts, or round order. Ordinary Quiz answers still enter the queue, and full-screen category Queue Practice remains available.
+
+The preference is saved with the existing offline-first queue record and uses its normal cloud sync. Re-enabling resumes the paused interval. Any already checked embedded review is settled once before it is dismissed, preventing a stale popup from rewinding the main session. Custom Paper does not show this control because it never opens automatic practice popups.
+
 ## Question bank
 
 - 449 source MCQs transcribed from the supplied `PPSC 110 Edition` scan.
@@ -118,11 +124,14 @@ node tools/build-gk-study-notes.js
 node --check data/detailed-learning.js
 node tools/validate-site-data.js --expected=11892 --verify-work-repeat-evidence
 node tools/answer-text-migration-smoke.js
+node tools/popup-preference-smoke.js
 node tools/cloud-sync-smoke.js
 node tools/browser-smoke.js
 ```
 
 The strict repeat-evidence flag belongs to a deliberate question-bank rebuild, after the source validators and builder are clean. GitHub Pages deployment validates the committed question bank against its pinned, hashed release-evidence snapshot without coupling it to newer restart-safe work-in-progress decision files.
+
+The popup-preference smoke test verifies backward-compatible defaults, paused countdowns, retained Queue order/counts, exactly-once handling of checked reviews, and independent full-screen Queue Practice. Browser coverage additionally checks the On/Off control in Learn and Quiz, refresh/category changes, keyboard safety, and mobile light/dark layouts; cloud tests check cross-device and offline preference round-trips.
 
 The browser smoke test requires local Chrome or Edge. It covers category Learn, Quiz, Queue, Difficult, Study Notes and Detailed Learning, plus Custom Paper on desktop and mobile. Existing coverage checks inclusive ranges, answers and score restoration, question/option ordering, the 100-question paper and negative marking, Basic Computer source partitions, Urdu rendering, keyboard controls, notes, and safe Continue/cloud-sync migrations. Queue coverage checks that the old all-subject controls are absent, each category opens only its own full-screen Queue, embedded Queue and Important popups remain category-only, and the retired Sequential popup stays off. It checks alternating ten-regular-MCQ checkpoints, skipped empty and result-boundary turns, insertion-order Queue rounds, correct-answer popup chains, wrong-answer return, +2 wrong / −1 correct Queue counts, atomic Check-versus-Continue saves, and preservation of unrelated categories' reviews across reloads. Legacy Queue state fields and counts remain compatible with offline-first cloud sync.
 

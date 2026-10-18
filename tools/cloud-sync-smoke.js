@@ -732,6 +732,7 @@ async function testAlternatingPopupCadenceRoundTripAndOfflineReconnect() {
   const initialQueue = {
     ...JSON.parse(DEDICATED_ATTEMPT_QUEUE_RAW),
     embeddedCadenceVersion: 4,
+    embeddedPopupsEnabled: false,
     practiceStep: 30,
     nextEmbeddedReviewStep: 40,
     nextEmbeddedReviewKind: "important",
@@ -755,6 +756,8 @@ async function testAlternatingPopupCadenceRoundTripAndOfflineReconnect() {
   const second = createBrowser({ store, local: {} });
   await waitFor(second, (candidate) => candidate.ready, "alternating cadence second-device restore");
   assert.equal(second.localStorage.getItem(RETRY_QUEUE_KEY), initialRaw);
+  assert.equal(JSON.parse(second.localStorage.getItem(RETRY_QUEUE_KEY)).embeddedPopupsEnabled, false,
+    "automatic popups OFF must restore on another device without enabling them");
   assert.equal(second.localStorage.getItem(ACTIVE_SESSION_KEY), SAMPLE_SESSION_RAW);
 
   source.window.navigator.onLine = false;
@@ -763,6 +766,7 @@ async function testAlternatingPopupCadenceRoundTripAndOfflineReconnect() {
   second.window.dispatchEvent({ type: "offline" });
   const updatedQueue = {
     ...initialQueue,
+    embeddedPopupsEnabled: true,
     practiceStep: 43,
     nextEmbeddedReviewStep: 50,
     nextEmbeddedReviewKind: "queue",
@@ -792,6 +796,8 @@ async function testAlternatingPopupCadenceRoundTripAndOfflineReconnect() {
   assert.equal(source.localStorage.getItem(ACTIVE_SESSION_KEY), SAMPLE_SESSION_RAW);
   const restoredQueue = JSON.parse(source.localStorage.getItem(RETRY_QUEUE_KEY));
   assert.equal(restoredQueue.embeddedCadenceVersion, 4);
+  assert.equal(restoredQueue.embeddedPopupsEnabled, true,
+    "offline popup-preference changes must upload and reach the other device on reconnect");
   assert.equal(restoredQueue.nextEmbeddedReviewKind, "queue");
   assert.equal(restoredQueue.nextEmbeddedReviewStep - restoredQueue.practiceStep, 7, "remaining shared countdown must not restart on another device");
   assert.deepEqual(restoredQueue.items, initialQueue.items, "finite counts and saved insertion order must remain untouched");
@@ -1119,7 +1125,7 @@ async function main() {
       "legacy retry remaining=2 survives upload and restore",
       "dedicated retry attempt, per-category FIFO cycle, wrong cooldown, cadence, and legacy spacing fields round-trip byte-for-byte",
       "permanent Important cadence, count-baseline marker, shuffled deck, and active attempt round-trip byte-for-byte",
-      "alternating popup cadence version=4, next kind, and shared countdown survive device restore and offline reconnect without changing finite counts, FIFO round, or active answer",
+      "alternating popup cadence version=4, ON/OFF preference, next kind, and shared countdown survive device restore and offline reconnect without changing finite counts, FIFO round, or active answer",
       "retired Sequential gate stays off while legacy cursor fields and finite Queue reviews round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",
       "large progress round-trips through integrity-checked chunks",

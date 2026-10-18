@@ -303,6 +303,10 @@
     elements.retryQueueChip = firstElement(["#retry-queue-chip", "[data-retry-queue-chip]"]);
     elements.retryQueueCount = firstElement(["#retry-queue-count", "[data-retry-queue-count]"]);
     elements.retryQueueAnnouncer = firstElement(["#retry-queue-announcer", "[data-retry-queue-announcer]"]);
+    elements.practicePopupsControl = firstElement(["#practice-popups-control"]);
+    elements.practicePopupsToggle = firstElement(["#practice-popups-toggle"]);
+    elements.practicePopupsStatus = firstElement(["#practice-popups-status"]);
+    elements.practicePopupsHelp = firstElement(["#practice-popups-help"]);
     elements.queueScreen = firstElement(["#queue-screen"]);
     elements.queueBackButton = firstElement(["#queue-back-button"]);
     elements.queuePracticeTitle = firstElement(["#queue-practice-title"]);
@@ -1144,6 +1148,7 @@
       bankSignature: questionBankSignature,
       countBaselineVersion: RETRY_QUEUE_COUNT_BASELINE_VERSION,
       embeddedCadenceVersion: EMBEDDED_RETRY_CADENCE_VERSION,
+      embeddedPopupsEnabled: true,
       practiceStep: 0,
       nextEmbeddedReviewStep: EMBEDDED_REVIEW_SPACING,
       nextEmbeddedReviewKind: "queue",
@@ -1742,6 +1747,9 @@
         EMBEDDED_RETRY_CADENCE_VERSION
       ),
       practiceStep: savedValue.practiceStep,
+      // Older saves have no preference. A malformed optional setting must not
+      // invalidate an otherwise valid queue or its pending answers.
+      embeddedPopupsEnabled: savedValue.embeddedPopupsEnabled !== false,
       nextEmbeddedReviewStep: nextEmbeddedReviewStep,
       nextEmbeddedReviewKind: nextEmbeddedReviewKind,
       nextQuizReviewStep: nextQuizReviewStep,
@@ -1875,7 +1883,33 @@
     ));
   }
 
+  function embeddedPopupsEnabled() {
+    return retryQueueState.embeddedPopupsEnabled !== false;
+  }
+
+  function setEmbeddedPopupsEnabled(enabled) {
+    retryQueueState.embeddedPopupsEnabled = enabled !== false;
+    if (!embeddedPopupsEnabled() && retryQueueState.activeAttempt
+      && retryQueueState.activeAttempt.context === "embedded") {
+      // Settle a checked answer once, or leave an unchecked MCQ queued. Keeping
+      // its old resumeAction while regular practice advances could rewind it.
+      releaseActiveRetryAttempt();
+    }
+    saveRetryQueue(embeddedPopupsEnabled()
+      ? "Practice popups on. Queue and Important reviews will resume."
+      : "Practice popups off. Your queue stays saved and Queue Practice is still available.");
+  }
+
   function updateRetryQueueUI(announcement) {
+    var popupsEnabled = embeddedPopupsEnabled();
+    setHidden(elements.practicePopupsControl, !isRetryEligibleStudySession());
+    if (elements.practicePopupsToggle) elements.practicePopupsToggle.checked = popupsEnabled;
+    if (elements.practicePopupsStatus) elements.practicePopupsStatus.textContent = popupsEnabled ? "On" : "Off";
+    if (elements.practicePopupsHelp) {
+      elements.practicePopupsHelp.textContent = popupsEnabled
+        ? "Queue & Important popups are on."
+        : "No automatic popups. Your queue stays saved.";
+    }
     var studyItems = activeStudyRetryItems();
     var itemCount = studyItems.length;
     var totalRemaining = studyItems.reduce(function (total, item) {
@@ -2089,6 +2123,11 @@
       )
     ) return null;
     retryQueueState.practiceStep += 1;
+    if (!embeddedPopupsEnabled()) {
+      // Pause the remaining interval without skipping a lane or consuming a
+      // Queue turn. Normal Quiz answers still update the queue below.
+      retryQueueState.nextEmbeddedReviewStep += 1;
+    }
     if (retryQueueState.nextImportantReviewStep === null && importantQuestionIds.length > 0) {
       scheduleNextImportantReview();
     }
@@ -2127,6 +2166,7 @@
   }
 
   function dueRetryQueueItem(excludedQuestionId, continuePractice) {
+    if (!embeddedPopupsEnabled()) return null;
     var categoryId = activeRetryCategoryId();
     if (!categoryId) return null;
     var regularQueueDue = retryQueueState.nextEmbeddedReviewKind === "queue"
@@ -2178,7 +2218,7 @@
   function isImportantReviewDue() {
     var categoryId = activeRetryCategoryId();
     return Boolean(
-      categoryId
+      embeddedPopupsEnabled() && categoryId
       && retryQueueState.nextEmbeddedReviewKind === "important"
       && retryQueueState.practiceStep >= retryQueueState.nextEmbeddedReviewStep
       && (importantQuestionIdsByCategory.get(categoryId) || []).length > 0
@@ -2616,6 +2656,7 @@
     if (!elements.retryDialog) return false;
     var attempt = retryQueueState.activeAttempt;
     var dedicatedPractice = Boolean(attempt && attempt.context === "dedicated");
+    if (!dedicatedPractice && !embeddedPopupsEnabled()) return false;
     if (dedicatedPractice) {
       if (!elements.queuePracticeSlot || !elements.retryDialogCard) return false;
       if (elements.retryDialog.open && typeof elements.retryDialog.close === "function") {
@@ -2768,6 +2809,7 @@
   }
 
   function beginDueEmbeddedReview(resumeAction, excludedQuestionId) {
+    if (!embeddedPopupsEnabled()) return false;
     if (!activeRetryCategoryId() || !elements.retryDialog) return false;
     if (retryQueueState.activeAttempt) {
       if (activeRetryAttemptMatchesSession()) {
@@ -2791,6 +2833,7 @@
   }
 
   function beginDueImportantAttempt(resumeAction, excludedQuestionId, continuePractice) {
+    if (!embeddedPopupsEnabled()) return false;
     if (!elements.retryDialog || !activeRetryCategoryId() || resumeAction === "results") return false;
     if (retryQueueState.activeAttempt) {
       if (activeRetryAttemptMatchesSession()) {
@@ -2822,6 +2865,7 @@
   }
 
   function beginDueRetryAttempt(resumeAction, excludedQuestionId, continuePractice) {
+    if (!embeddedPopupsEnabled()) return false;
     if (!elements.retryDialog || !activeRetryCategoryId()) return false;
     if (resumeAction === "results") return false;
     if (retryQueueState.activeAttempt) {
@@ -2909,6 +2953,10 @@
 
   function restoreActiveRetryAttempt() {
     if (!retryQueueState.activeAttempt) return false;
+    if (!embeddedPopupsEnabled() && retryQueueState.activeAttempt.context === "embedded") {
+      releaseActiveRetryAttempt();
+      return false;
+    }
     if (
       retryQueueState.activeAttempt.context === "dedicated"
       && !retryQueuePractice.active
@@ -6882,6 +6930,11 @@
     }
     if (elements.difficultCheckbox) {
       elements.difficultCheckbox.addEventListener("change", handleDifficultCheckboxChange);
+    }
+    if (elements.practicePopupsToggle) {
+      elements.practicePopupsToggle.addEventListener("change", function () {
+        setEmbeddedPopupsEnabled(elements.practicePopupsToggle.checked);
+      });
     }
     document.addEventListener("keydown", handleLearnAdvanceKeydown);
     document.addEventListener("keydown", handleQuizKeyboardShortcut);

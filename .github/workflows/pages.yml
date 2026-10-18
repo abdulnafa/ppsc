@@ -41,6 +41,7 @@ jobs:
           node --check firebase-config.js
           node --check firebase-sync.js
           node --check app.js
+          node tools/popup-preference-smoke.js
           node tools/cloud-sync-smoke.js
 
       - name: Prepare static site

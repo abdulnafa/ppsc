@@ -8923,6 +8923,297 @@ async function main() {
       rightArrowNext: !nativeKeyboardErrors.some((message) => message.includes("real Right Arrow"))
     };
 
+    const popupPreferenceHelpers = `
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const visible = (element) => Boolean(element && !element.hidden && element.getClientRects().length);
+      const queue = () => JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
+      const session = () => JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      const byId = new Map(window.PPSC_QUIZ_DATA.questions.map((question) => [String(question.id), question]));
+      const dialog = document.querySelector("#retry-dialog");
+      const toggle = () => document.querySelector("#practice-popups-toggle");
+      const startRange = async (categoryId, mode, start = 1, end = 50) => {
+        if (visible(document.querySelector("#quiz-screen"))) document.querySelector("#back-button")?.click();
+        if (visible(document.querySelector("#queue-screen"))) document.querySelector("#queue-back-button")?.click();
+        if (visible(document.querySelector("#mode-screen"))) document.querySelector("#mode-back-button")?.click();
+        document.querySelector('#category-grid .category-card[data-category="' + categoryId + '"]')?.click();
+        document.querySelector("#" + mode + "-mode-button")?.click();
+        await pause();
+        const first = document.querySelector("#question-range-start-input");
+        const last = document.querySelector("#question-range-end-input");
+        if (!first || !last) { errors.push("Popup preference range form did not open."); return; }
+        first.value = String(start);
+        last.value = String(end);
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+      };
+      const completeRegular = async (correct = true) => {
+        const saved = session();
+        if (saved?.mode === "quiz") {
+          const question = byId.get(saved.questionIds?.[saved.currentIndex]);
+          const correctIndex = saved.optionOrders?.[saved.currentIndex]?.indexOf(question?.correctOptionIndex) ?? -1;
+          if (correctIndex < 0) { errors.push("Popup preference fixture could not resolve a regular Quiz answer."); return; }
+          const index = correct ? correctIndex : (correctIndex + 1) % 4;
+          document.querySelector('#options-container [data-option-index="' + index + '"]')?.click();
+        }
+        document.querySelector("#action-button")?.click();
+        await pause();
+        document.querySelector("#action-button")?.click();
+        await pause();
+      };
+      const answerReview = async (correct) => {
+        const attempt = queue()?.activeAttempt;
+        const question = byId.get(attempt?.questionId);
+        const correctIndex = attempt?.optionOrder?.indexOf(question?.correctOptionIndex) ?? -1;
+        if (correctIndex < 0) { errors.push("Popup preference fixture could not resolve its manual/embedded review."); return; }
+        const index = correct ? correctIndex : (correctIndex + 1) % 4;
+        document.querySelector('[data-review-option-index="' + index + '"]')?.click();
+        document.querySelector("#retry-action-button")?.click();
+        await pause();
+        document.querySelector("#retry-action-button")?.click();
+        await pause();
+      };
+    `;
+    const popupPreferenceSeed = await client.evaluate(`(() => {
+      const errors = [];
+      const all = window.PPSC_QUIZ_DATA.questions;
+      const own = all.filter((question) => question.categoryId === "general-knowledge");
+      const foreign = all.filter((question) => question.categoryId === "pakistan-studies");
+      const isImportant = (question) => question.isImportant === true || Number(question.repeatCount) >= 2;
+      const ids = own.slice(100, 102).map((question) => String(question.id));
+      const importantIds = own.filter(isImportant).slice(0, 2).map((question) => String(question.id));
+      const foreignStart = foreign.findIndex((question) => !isImportant(question)) + 1;
+      const key = "ppsc-prep:retry-queue:v1";
+      const queue = JSON.parse(localStorage.getItem(key) || "null");
+      if (!queue || ids.length !== 2 || importantIds.length !== 2 || foreignStart < 1) {
+        return { errors: ["Popup preference fixture lacks its Queue or category data."] };
+      }
+      Object.assign(queue, {
+        countBaselineVersion: 1, embeddedCadenceVersion: 4,
+        practiceStep: 0, nextEmbeddedReviewStep: 10, nextEmbeddedReviewKind: "queue",
+        nextQuizReviewStep: 10, nextImportantReviewStep: 20, nextSequence: 3,
+        items: ids.map((questionId, index) => ({ questionId, remaining: index ? 7 : 4, dueStep: 10, sequence: index + 1 })),
+        queueCyclePendingByCategory: { "general-knowledge": ids.slice() },
+        importantDeck: importantIds.slice(), importantLastQuestionId: null,
+        importantLastQuestionIdsByCategory: {}, activeAttempt: null
+      });
+      delete queue.embeddedPopupsEnabled;
+      localStorage.setItem(key, JSON.stringify(queue));
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      return { errors, ids, importantIds, foreignStart, wrongId: foreign[foreignStart - 1].id };
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer); resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer); reject(new Error("Website did not reload for popup preference testing."));
+        }
+      }, 50);
+    })`);
+    const popupPreferenceLearn = await client.evaluate(`(async () => {
+      const expected = ${JSON.stringify(popupPreferenceSeed)};
+      const errors = expected.errors.slice();
+      ${popupPreferenceHelpers}
+      if (errors.length) return { errors };
+      await startRange("general-knowledge", "learn");
+      const control = toggle();
+      if (!visible(control) || control?.type !== "checkbox" || !control.checked
+        || !control.labels?.length || queue()?.embeddedPopupsEnabled === false) {
+        errors.push("Practice popups did not default ON with a labeled visible checkbox for legacy saves.");
+      }
+      for (let index = 0; index < 3; index += 1) await completeRegular();
+      const before = queue();
+      control?.click();
+      await pause();
+      if (toggle()?.checked || queue()?.embeddedPopupsEnabled !== false
+        || queue()?.nextEmbeddedReviewStep !== before?.nextEmbeddedReviewStep
+        || JSON.stringify(queue()?.items) !== JSON.stringify(before?.items)) {
+        errors.push("Switching Practice popups OFF changed Queue counts or the remaining countdown.");
+      }
+      for (let index = 0; index < 25; index += 1) {
+        await completeRegular();
+        if (dialog?.open) { errors.push("OFF still opened a Learn popup after " + (index + 1) + " questions."); break; }
+      }
+      const after = queue();
+      if (after?.practiceStep !== 28 || after?.nextEmbeddedReviewStep !== 35
+        || after?.nextEmbeddedReviewKind !== "queue" || after?.activeAttempt
+        || JSON.stringify(after?.items) !== JSON.stringify(before?.items)
+        || JSON.stringify(after?.queueCyclePendingByCategory) !== JSON.stringify(before?.queueCyclePendingByCategory)
+        || JSON.stringify(after?.importantDeck) !== JSON.stringify(before?.importantDeck)) {
+        errors.push("OFF Learn did not preserve Queue/FIFO/Important deck and pause its seven-question countdown.");
+      }
+      return { errors, mainIndex: session()?.currentIndex, practiceStep: after?.practiceStep,
+        gate: after?.nextEmbeddedReviewStep, kind: after?.nextEmbeddedReviewKind };
+    })()`);
+    const popupPreferenceScreenshots = {};
+    const popupPreferenceLayoutErrors = [];
+    const popupPreferenceKeyboardErrors = [];
+    const popupPreferenceKeyboardSeed = await client.evaluate(`(() => {
+      document.querySelector("#practice-popups-toggle")?.focus();
+      return localStorage.getItem("ppsc-prep:active-session:v1");
+    })()`);
+    await sendNativeKey(" ", "Space", 32);
+    await delay(50);
+    const popupPreferenceSpaceOn = await client.evaluate(`(() => ({
+      checked: document.querySelector("#practice-popups-toggle")?.checked,
+      enabled: JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null")?.embeddedPopupsEnabled,
+      session: localStorage.getItem("ppsc-prep:active-session:v1")
+    }))()`);
+    if (popupPreferenceSpaceOn.checked !== true || popupPreferenceSpaceOn.enabled !== true
+      || popupPreferenceSpaceOn.session !== popupPreferenceKeyboardSeed) {
+      popupPreferenceKeyboardErrors.push("Native Space on the focused popup switch did not toggle ON without advancing Learn.");
+    }
+    await sendNativeKey("Enter", "Enter", 13);
+    await sendNativeKey("ArrowRight", "ArrowRight", 39);
+    const popupPreferenceIgnoredKeys = await client.evaluate(`(() => ({
+      checked: document.querySelector("#practice-popups-toggle")?.checked,
+      session: localStorage.getItem("ppsc-prep:active-session:v1")
+    }))()`);
+    if (popupPreferenceIgnoredKeys.checked !== true || popupPreferenceIgnoredKeys.session !== popupPreferenceKeyboardSeed) {
+      popupPreferenceKeyboardErrors.push("Enter/Right Arrow on the focused popup switch leaked into Learn navigation.");
+    }
+    await sendNativeKey(" ", "Space", 32);
+    await delay(50);
+    const popupPreferenceSpaceOff = await client.evaluate(`(() => ({
+      checked: document.querySelector("#practice-popups-toggle")?.checked,
+      enabled: JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null")?.embeddedPopupsEnabled,
+      session: localStorage.getItem("ppsc-prep:active-session:v1")
+    }))()`);
+    if (popupPreferenceSpaceOff.checked !== false || popupPreferenceSpaceOff.enabled !== false
+      || popupPreferenceSpaceOff.session !== popupPreferenceKeyboardSeed) {
+      popupPreferenceKeyboardErrors.push("Second native Space did not restore OFF without advancing Learn.");
+    }
+    for (const [name, width, height, mobile] of [["desktop", 1366, 900, false], ["mobile", 320, 900, true], ["mobileDark", 320, 900, true]]) {
+      await client.send("Emulation.setDeviceMetricsOverride", { width, height, deviceScaleFactor: 1, mobile });
+      await client.evaluate(`(() => {
+        if (document.documentElement.dataset.theme !== ${JSON.stringify(name === "mobileDark" ? "dark" : "light")}) {
+          document.querySelector("#theme-toggle-button")?.click();
+        }
+        return true;
+      })()`);
+      await delay(300);
+      const layout = await client.evaluate(`(() => {
+        const control = document.querySelector("#practice-popups-toggle");
+        const label = control?.labels?.[0];
+        const rect = label?.getBoundingClientRect();
+        const errors = [];
+        if (!rect || rect.width <= 0 || rect.height <= 0 || rect.left < -1 || rect.right > innerWidth + 1
+          || document.documentElement.scrollWidth > innerWidth || control?.checked !== false) {
+          errors.push("Practice popup OFF control overflowed or was hidden at " + innerWidth + "px.");
+        }
+        return { errors };
+      })()`);
+      popupPreferenceLayoutErrors.push(...layout.errors);
+      const capture = await client.send("Page.captureScreenshot", { format: "png" });
+      const file = path.join(os.tmpdir(), "ppsc-practice-popups-off-" + name + "-smoke.png");
+      fs.writeFileSync(file, Buffer.from(capture.data, "base64"));
+      popupPreferenceScreenshots[name] = file;
+    }
+    await client.evaluate(`(() => {
+      if (document.documentElement.dataset.theme !== "light") document.querySelector("#theme-toggle-button")?.click();
+      return true;
+    })()`);
+    await client.send("Emulation.setDeviceMetricsOverride", { width: 430, height: 1200, deviceScaleFactor: 1, mobile: true });
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer); resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer); reject(new Error("Website did not reload with Practice popups OFF."));
+        }
+      }, 50);
+    })`);
+    const popupPreferenceResume = await client.evaluate(`(async () => {
+      const expected = ${JSON.stringify(popupPreferenceSeed)};
+      const learn = ${JSON.stringify(popupPreferenceLearn)};
+      const errors = [];
+      ${popupPreferenceHelpers}
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      if (toggle()?.checked !== false || queue()?.embeddedPopupsEnabled !== false
+        || session()?.mode !== "learn" || session()?.currentIndex !== learn.mainIndex
+        || queue()?.practiceStep !== 28 || queue()?.nextEmbeddedReviewStep !== 35 || dialog?.open) {
+        errors.push("Reload did not retain OFF, the Learn checkpoint, and its paused countdown.");
+      }
+      await startRange("pakistan-studies", "quiz", expected.foreignStart, expected.foreignStart + 40);
+      if (toggle()?.checked !== false || queue()?.embeddedPopupsEnabled !== false) {
+        errors.push("Changing category/mode reset the global Practice popups preference.");
+      }
+      for (let index = 0; index < 21; index += 1) {
+        await completeRegular(index !== 0);
+        if (dialog?.open) { errors.push("OFF still opened a Quiz popup after " + (index + 1) + " questions."); break; }
+      }
+      const paused = queue();
+      if (paused?.items.find((item) => item.questionId === expected.wrongId)?.remaining !== 2
+        || paused?.practiceStep !== 49 || paused?.nextEmbeddedReviewStep !== 56
+        || paused?.nextEmbeddedReviewKind !== "queue" || paused?.activeAttempt
+        || JSON.stringify(paused?.queueCyclePendingByCategory?.["general-knowledge"]) !== JSON.stringify(expected.ids)
+        || JSON.stringify(paused?.importantDeck) !== JSON.stringify(expected.importantIds)
+        || expected.ids.some((id, index) => paused?.items.find((item) => item.questionId === id)?.remaining !== (index ? 7 : 4))) {
+        errors.push("OFF Quiz lost wrong-answer +2, original Queue counts/FIFO, Important deck, or paused cadence.");
+      }
+      document.querySelector("#back-button")?.click();
+      document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
+      document.querySelector("#queue-mode-button")?.click();
+      await pause();
+      if (!visible(document.querySelector("#queue-screen")) || dialog?.open
+        || queue()?.activeAttempt?.context !== "dedicated"
+        || queue()?.activeAttempt?.questionId !== expected.ids[0]) {
+        errors.push("OFF blocked manual category Queue Practice or changed its FIFO first item.");
+      }
+      await answerReview(true);
+      if (queue()?.items.find((item) => item.questionId === expected.ids[0])?.remaining !== 3
+        || queue()?.activeAttempt?.questionId !== expected.ids[1]
+        || queue()?.practiceStep !== 49 || queue()?.nextEmbeddedReviewStep !== 56
+        || queue()?.embeddedPopupsEnabled !== false) {
+        errors.push("Manual Queue while OFF failed to update its count/FIFO without moving the popup clock.");
+      }
+      await startRange("general-knowledge", "quiz", 51, 90);
+      if (toggle()?.checked !== false) errors.push("Returning from manual Queue unexpectedly enabled Practice popups.");
+      toggle()?.click();
+      await pause();
+      if (!toggle()?.checked || queue()?.embeddedPopupsEnabled !== true
+        || queue()?.nextEmbeddedReviewStep !== 56 || dialog?.open) {
+        errors.push("Re-enabling Practice popups reset the countdown or opened an immediate popup.");
+      }
+      for (let index = 1; index <= 7; index += 1) {
+        await completeRegular();
+        if (index < 7 && dialog?.open) errors.push("Re-enabled Queue appeared before its remaining seven questions.");
+      }
+      if (!dialog?.open || queue()?.activeAttempt?.kind !== "queue"
+        || queue()?.activeAttempt?.questionId !== expected.ids[1]
+        || queue()?.practiceStep !== 56 || queue()?.nextEmbeddedReviewStep !== 66
+        || queue()?.nextEmbeddedReviewKind !== "important") {
+        errors.push("Re-enabled Queue did not resume its paused cadence and next FIFO item exactly.");
+      }
+      await answerReview(false);
+      if (dialog?.open || queue()?.items.find((item) => item.questionId === expected.ids[1])?.remaining !== 9) {
+        errors.push("Re-enabled wrong Queue answer did not add two and return to main Quiz.");
+      }
+      for (let index = 1; index <= 10; index += 1) {
+        await completeRegular();
+        if (index < 10 && dialog?.open) errors.push("Re-enabled Important popup appeared before ten regular questions.");
+      }
+      if (!dialog?.open || queue()?.activeAttempt?.kind !== "important"
+        || byId.get(queue()?.activeAttempt?.questionId)?.categoryId !== "general-knowledge"
+        || queue()?.practiceStep !== 66 || queue()?.nextEmbeddedReviewStep !== 76
+        || queue()?.nextEmbeddedReviewKind !== "queue") {
+        errors.push("Practice popups did not resume alternating Important practice after Queue.");
+      }
+      document.querySelector("#retry-later-button")?.click();
+      return { errors, wrongWhileOffRemaining: paused?.items.find((item) => item.questionId === expected.wrongId)?.remaining,
+        resumedQueueAt: 56, resumedImportantAt: 66, manualQueueWorked: true };
+    })()`);
+    const popupPreferenceResult = {
+      errors: popupPreferenceSeed.errors.concat(popupPreferenceLearn.errors, popupPreferenceKeyboardErrors,
+        popupPreferenceLayoutErrors, popupPreferenceResume.errors),
+      learn: popupPreferenceLearn, resume: popupPreferenceResume, screenshots: popupPreferenceScreenshots
+    };
+
     await client.evaluate(`(() => {
       localStorage.removeItem("ppsc-prep:active-session:v1");
       localStorage.removeItem("ppsc-prep:retry-queue:v1");
@@ -9439,6 +9730,7 @@ async function main() {
         .concat(sequentialReviewResult.errors)
         .concat(keyboardControlResult.errors)
         .concat(nativeKeyboardResult.errors)
+        .concat(popupPreferenceResult.errors)
         .concat(directAnswerCorrectionsResult.errors)
         .concat(additiveMigrationResult.errors)
         .concat(unknownSignatureResult.errors)
@@ -9476,6 +9768,7 @@ async function main() {
         ...directAnswerCorrectionsResult,
         screenshot: directAnswerCorrectionsScreenshot
       },
+      practicePopupPreference: popupPreferenceResult,
       theme: {
         initialLight: themeInitialResult.initialTheme === "light",
         toggledDark: themeInitialResult.toggledTheme === "dark",
