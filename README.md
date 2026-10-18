@@ -8,6 +8,14 @@ A category-wise PPSC General Ability practice website for GitHub Pages. Question
 
 The preference is saved with the existing offline-first queue record and uses its normal cloud sync. Re-enabling resumes the paused interval. Any already checked embedded review is settled once before it is dismissed, preventing a stale popup from rewinding the main session. Custom Paper does not show this control because it never opens automatic practice popups.
 
+## Wrong Quiz
+
+Each category now has a **Wrong Quiz** option, also available on category Quiz results. Wrong answers from ordinary and Difficult category quizzes are saved immediately in a separate list. Wrong Quiz starts all remaining mistakes in canonical question order; a correct answer removes that MCQ from this list, while a wrong answer keeps it there once. After the round, **Next Wrong Quiz Round** uses only the remaining list. When none remain, the page confirms completion and disables the retry button.
+
+The list is category-specific and respects the selected Basic Computer source. It ignores Important-only filtering so that non-Important mistakes are not hidden. It is independent of the finite Queue: normal +2 wrong-answer and confirmation-review behavior, FIFO rounds, and the Practice popups preference still apply. Learn, Custom Paper, Queue Practice and Important popups do not add to or clear Wrong Quiz.
+
+Wrong IDs share the existing offline-first cloud-synced progress record; no prior Queue entries are removed or reclassified. An active Wrong Quiz keeps its original question set, checked answers, options, score and position across Continue/refresh even as correct answers leave the live wrong list. The next round uses the updated list. Checked mistakes from a pre-feature in-progress category quiz are captured when that quiz reaches Results. Past completed quizzes cannot be reconstructed from the Queue, which also contains correct-answer confirmations.
+
 ## Question bank
 
 - 449 source MCQs transcribed from the supplied `PPSC 110 Edition` scan.
@@ -125,6 +133,7 @@ node --check data/detailed-learning.js
 node tools/validate-site-data.js --expected=11892 --verify-work-repeat-evidence
 node tools/answer-text-migration-smoke.js
 node tools/popup-preference-smoke.js
+node tools/wrong-quiz-smoke.js
 node tools/cloud-sync-smoke.js
 node tools/browser-smoke.js
 ```

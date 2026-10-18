@@ -8,13 +8,13 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261018-2">
+  <link rel="stylesheet" href="styles.css?v=20261018-3">
   <script src="firebase-config.js?v=20260912-2" defer></script>
-  <script src="firebase-sync.js?v=20261012-2" defer></script>
+  <script src="firebase-sync.js?v=20261018-3" defer></script>
   <script src="data/questions.js?v=20261018-1" defer></script>
   <script src="data/gk-study-notes.js?v=20261018-1" defer></script>
   <script src="data/detailed-learning.js?v=20260917-1" defer></script>
-  <script src="app.js?v=20261018-2" defer></script>
+  <script src="app.js?v=20261018-3" defer></script>
 </head>
 <body>
   <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
@@ -531,6 +531,15 @@
             <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
           </button>
 
+          <button id="wrong-quiz-mode-button" class="mode-option mode-option-wrong" type="button" aria-describedby="wrong-quiz-mode-meta" disabled>
+            <span class="mode-option-icon" aria-hidden="true">W</span>
+            <span class="mode-option-copy">
+              <strong>Wrong Quiz</strong>
+              <small id="wrong-quiz-mode-meta">Quiz your wrong answers. Correct answers leave this list; retry the remaining ones next round.</small>
+            </span>
+            <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+
           <button id="difficult-mode-button" class="mode-option mode-option-difficult" type="button" aria-controls="difficult-mode-options" aria-expanded="false">
             <span class="mode-option-icon" aria-hidden="true">D</span>
             <span class="mode-option-copy">
@@ -671,6 +680,8 @@
         <span id="progress-fill" role="progressbar" aria-label="Session progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></span>
       </div>
 
+      <p id="wrong-quiz-progress" class="wrong-quiz-progress" role="status" aria-live="polite" hidden></p>
+
       <article class="question-card">
         <span id="question-kind" class="question-label">SOURCE PAPER</span>
         <h2 id="question-text">Loading question…</h2>
@@ -800,7 +811,9 @@
           </div>
           <ol id="result-review-list" class="result-review-list"></ol>
         </section>
+        <p id="result-wrong-quiz-summary" class="result-wrong-quiz-summary" hidden></p>
         <div class="result-actions">
+          <button id="result-wrong-quiz-button" class="primary-button" type="button" aria-describedby="result-wrong-quiz-summary" hidden>Wrong Quiz</button>
           <button id="play-again-button" class="primary-button" type="button">Practice Again</button>
           <button id="change-category-button" class="secondary-button" type="button">Choose Another Category</button>
         </div>

@@ -256,6 +256,11 @@
     elements.studyScopePanel = firstElement(["#study-scope-panel", "[data-study-scope-panel]"]);
     elements.learnModeButton = firstElement(["#learn-mode-button", "[data-start-learn]"]);
     elements.quizModeButton = firstElement(["#quiz-mode-button", "[data-start-quiz]"]);
+    elements.wrongQuizModeButton = firstElement(["#wrong-quiz-mode-button"]);
+    elements.wrongQuizModeMeta = firstElement(["#wrong-quiz-mode-meta"]);
+    elements.resultWrongQuizButton = firstElement(["#result-wrong-quiz-button"]);
+    elements.resultWrongQuizSummary = firstElement(["#result-wrong-quiz-summary"]);
+    elements.wrongQuizProgress = firstElement(["#wrong-quiz-progress"]);
     elements.queueModeButton = firstElement(["#queue-mode-button"]);
     elements.queueModeMeta = firstElement(["#queue-mode-meta"]);
     elements.studyNotesModeButton = firstElement(["#study-notes-mode-button", "[data-open-study-notes]"]);
@@ -494,6 +499,7 @@
   }
 
   function sessionModeLabel(mode, scope) {
+    if (scope === "wrong") return "Wrong Quiz";
     var modeName = mode === "learn" ? "Learn" : "Quiz";
     return scope === "difficult" ? "Difficult " + modeName : modeName;
   }
@@ -627,7 +633,9 @@
     if (savedValue.mode !== "learn" && savedValue.mode !== "quiz") return null;
     var paperSession = savedValue.sessionKind === "paper";
     if (paperSession && (savedValue.mode !== "quiz" || savedValue.scope !== "all")) return null;
-    if (!paperSession && savedValue.scope !== "all" && savedValue.scope !== "difficult") return null;
+    if (!paperSession && !["all", "difficult", "wrong"].includes(savedValue.scope)) return null;
+    if (savedValue.scope === "wrong" && (savedValue.mode !== "quiz"
+      || savedValue.importantOnly !== false || legacySession || rangeSession)) return null;
 
     var category = paperSession ? null : findCategory(String(savedValue.categoryId || ""));
     if (paperSession && savedValue.categoryId !== null) return null;
@@ -775,6 +783,9 @@
         if (orderKey(rangeQuestionIds, function (questionId) { return questionId; })
           !== orderKey(expectedRangeIds, function (questionId) { return questionId; })) return null;
 
+        // Difficult and Wrong Quiz rounds are frozen subsets. In particular,
+        // cleared Wrong Quiz answers may no longer exist in the live list;
+        // stable category/source membership above still validates their save.
         if (savedValue.scope === "all") {
           var expectedPoolIds = selectedQuestionIds;
           if (savedPoolBankSignature !== null) {
@@ -1149,6 +1160,7 @@
       countBaselineVersion: RETRY_QUEUE_COUNT_BASELINE_VERSION,
       embeddedCadenceVersion: EMBEDDED_RETRY_CADENCE_VERSION,
       embeddedPopupsEnabled: true,
+      wrongQuestionIds: [],
       practiceStep: 0,
       nextEmbeddedReviewStep: EMBEDDED_REVIEW_SPACING,
       nextEmbeddedReviewKind: "queue",
@@ -1750,6 +1762,7 @@
       // Older saves have no preference. A malformed optional setting must not
       // invalidate an otherwise valid queue or its pending answers.
       embeddedPopupsEnabled: savedValue.embeddedPopupsEnabled !== false,
+      wrongQuestionIds: normalizeWrongQuestionIds(savedValue.wrongQuestionIds),
       nextEmbeddedReviewStep: nextEmbeddedReviewStep,
       nextEmbeddedReviewKind: nextEmbeddedReviewKind,
       nextQuizReviewStep: nextQuizReviewStep,
@@ -1901,6 +1914,7 @@
   }
 
   function updateRetryQueueUI(announcement) {
+    updateWrongQuizUI();
     var popupsEnabled = embeddedPopupsEnabled();
     setHidden(elements.practicePopupsControl, !isRetryEligibleStudySession());
     if (elements.practicePopupsToggle) elements.practicePopupsToggle.checked = popupsEnabled;
@@ -2135,6 +2149,7 @@
     var item = retryQueueItem(questionId);
     var queueChanged = false;
     var quizAnswer = state.mode === "quiz";
+    if (quizAnswer) recordWrongQuizAnswer(questionId, wrongAnswer);
     if (quizAnswer && wrongAnswer) {
       item = addWrongQuestionToRetryQueue(question);
       queueChanged = true;
@@ -3431,6 +3446,99 @@
     return baseQuestionsForSelection(categoryId, partIndex, computerSourceScope).filter(function (question) {
       return !importantOnly || isImportantQuestion(question);
     });
+  }
+
+  function normalizeWrongQuestionIds(value) {
+    return Array.isArray(value) ? Array.from(new Set(value.filter(function (questionId) {
+      return typeof questionId === "string" && knownQuestionIds.has(questionId);
+    }))) : [];
+  }
+
+  function wrongQuestionsForCategory(categoryId, computerSourceScope) {
+    var wrongIds = new Set(retryQueueState.wrongQuestionIds || []);
+    // All wrong answers in the chosen source, regardless of the Important
+    // filter. Use canonical order, not queue counts or the order of mistakes.
+    return baseQuestionsForSelection(categoryId, null, computerSourceScope).filter(function (question) {
+      return wrongIds.has(String(question.id));
+    });
+  }
+
+  function recordWrongQuizAnswer(questionId, wrongAnswer) {
+    if (state.mode !== "quiz" || !isRetryEligibleStudySession()
+      || !questionMatchesComputerSourceScope(questionsById.get(questionId),
+        state.category.id, state.computerSourceScope)) return;
+    if (wrongAnswer) {
+      if (!retryQueueState.wrongQuestionIds.includes(questionId)) {
+        retryQueueState.wrongQuestionIds.push(questionId);
+      }
+    } else if (state.scope === "wrong") {
+      retryQueueState.wrongQuestionIds = retryQueueState.wrongQuestionIds.filter(function (id) {
+        return id !== questionId;
+      });
+    }
+  }
+
+  function captureCurrentQuizMistakes() {
+    if (!isRetryEligibleStudySession() || state.mode !== "quiz" || state.scope === "wrong") return;
+    var before = retryQueueState.wrongQuestionIds.length;
+    // This also captures checked mistakes from an in-progress Quiz saved
+    // before Wrong Quiz existed. Queue items cannot identify past mistakes:
+    // they include correct-answer confirmations too.
+    state.responses.forEach(function (response, index) {
+      var question = state.questions[index];
+      if (response && response.submitted && question
+        && response.selectedIndex !== question.correctOptionIndex) {
+        recordWrongQuizAnswer(String(question.id), true);
+      }
+    });
+    if (retryQueueState.wrongQuestionIds.length !== before) saveRetryQueue();
+  }
+
+  function updateWrongQuizUI() {
+    var categoryId = state.category ? state.category.id : "";
+    var count = categoryId ? wrongQuestionsForCategory(categoryId, state.computerSourceScope).length : 0;
+    var location = isBasicComputerCategory(categoryId) && state.computerSourceScope !== "all"
+      ? "this source selection" : "this category";
+    var summary = count > 0
+      ? count + (count === 1 ? " wrong MCQ" : " wrong MCQs") + " in " + location
+        + ". Correct answers leave this list."
+      : "No wrong MCQs in " + location + ". Mistakes from your quizzes will appear here.";
+    if (elements.wrongQuizModeMeta) elements.wrongQuizModeMeta.textContent = summary;
+    if (elements.wrongQuizModeButton) {
+      elements.wrongQuizModeButton.disabled = count === 0;
+      elements.wrongQuizModeButton.dataset.count = String(count);
+      elements.wrongQuizModeButton.setAttribute("aria-label", "Wrong Quiz. " + summary);
+    }
+    var categoryQuiz = isRetryEligibleStudySession() && state.mode === "quiz";
+    var wrongRound = categoryQuiz && state.scope === "wrong";
+    setHidden(elements.wrongQuizProgress, !wrongRound);
+    if (elements.wrongQuizProgress) {
+      elements.wrongQuizProgress.textContent = count > 0
+        ? count + (count === 1 ? " wrong MCQ remains" : " wrong MCQs remain")
+          + ". Correct answers will not appear in the next round."
+        : "All wrong MCQs cleared! Finish this round to see your results.";
+    }
+    setHidden(elements.resultWrongQuizButton, !categoryQuiz);
+    setHidden(elements.resultWrongQuizSummary, !categoryQuiz);
+    if (elements.resultWrongQuizButton) {
+      elements.resultWrongQuizButton.disabled = count === 0;
+      elements.resultWrongQuizButton.dataset.count = String(count);
+      elements.resultWrongQuizButton.textContent = count === 0 ? "No wrong MCQs remaining"
+        : (wrongRound ? "Next Wrong Quiz Round" : "Wrong Quiz") + " (" + count + ")";
+    }
+    if (elements.resultWrongQuizSummary) {
+      elements.resultWrongQuizSummary.textContent = count > 0 ? summary
+        : "No wrong MCQs left in " + location + ".";
+    }
+    setHidden(elements.playAgainButton, wrongRound);
+    if (elements.restartButton) elements.restartButton.disabled = wrongRound && count === 0;
+  }
+
+  function startWrongQuiz() {
+    if (!state.category || isPaperSession()) return false;
+    var started = startQuiz(state.category.id, "quiz", "wrong", null, state.computerSourceScope);
+    if (!started) updateWrongQuizUI();
+    return started;
   }
 
   function difficultQuestionCount(categoryId, partIndex, importantOnly, computerSourceScope) {
@@ -4788,6 +4896,7 @@
     if (elements.learnModeButton) elements.learnModeButton.disabled = !hasSelectedQuestions;
     if (elements.quizModeButton) elements.quizModeButton.disabled = !hasSelectedQuestions;
     updateDifficultModeUI();
+    updateWrongQuizUI();
   }
 
   function updateDifficultModeUI() {
@@ -4869,6 +4978,7 @@
   }
 
   function eligibleQuestionsForRange(categoryId, importantOnly, scope, computerSourceScope) {
+    if (scope === "wrong") return wrongQuestionsForCategory(categoryId, computerSourceScope);
     return questionsForSelection(categoryId, null, importantOnly, computerSourceScope).filter(function (question) {
       return scope !== "difficult" || difficultQuestionIds.has(String(question.id));
     });
@@ -5550,7 +5660,8 @@
   function startQuiz(categoryId, mode, scope, rangeConfig, computerSourceScope) {
     var category = findCategory(categoryId);
     if (!category) return false;
-    var selectedScope = scope === "difficult" ? "difficult" : "all";
+    if (scope === "wrong" && mode !== "quiz") return false;
+    var selectedScope = scope === "wrong" ? "wrong" : scope === "difficult" ? "difficult" : "all";
     var selectedComputerSourceScope = computerSourceScopeForCategory(
       categoryId,
       arguments.length >= 5 ? computerSourceScope : state.computerSourceScope
@@ -5598,6 +5709,7 @@
     state.questions = sessionQuestions;
     state.mode = selectedMode;
     state.scope = selectedScope;
+    if (selectedScope === "wrong") state.importantOnly = false;
     state.computerSourceScope = selectedComputerSourceScope;
     state.partIndex = null;
     state.rangeStart = rangeStart;
@@ -6471,6 +6583,7 @@
       renderQuestion();
       return;
     }
+    captureCurrentQuizMistakes();
     var total = state.questions.length;
     var percent = total > 0 ? Math.round((state.score / total) * 100) : 0;
     var remainingInScope = state.category && state.scope === "difficult"
@@ -6551,6 +6664,15 @@
         state.mode === "learn" ? "Questions in learning set" : "Final score"
       );
     }
+    if (state.scope === "wrong") {
+      var wrongRemaining = wrongQuestionsForCategory(state.category.id, state.computerSourceScope).length;
+      if (elements.resultTitle) elements.resultTitle.textContent = wrongRemaining > 0
+        ? "Wrong Quiz round complete!" : "All wrong MCQs cleared!";
+      if (elements.resultSummary) elements.resultSummary.textContent = state.score + " correct, "
+        + (total - state.score) + " wrong in this round. " + wrongRemaining
+        + (wrongRemaining === 1 ? " MCQ remains" : " MCQs remain") + " for the next round.";
+      return;
+    }
     if (elements.playAgainButton) {
       elements.playAgainButton.textContent = canRepeatScope
         ? (state.mode === "learn" ? "Start Quiz" : "Practice Again")
@@ -6606,6 +6728,7 @@
 
   function restartCategoryRange(mode) {
     if (!state.category) return false;
+    if (state.scope === "wrong") return startWrongQuiz();
     var selectedMode = mode === "learn" ? "learn" : "quiz";
     var currentPoolIds = eligibleQuestionsForRange(
       state.category.id,
@@ -6708,6 +6831,10 @@
   function startSelectedMode(mode, scope) {
     if (!state.category) {
       returnToCategories();
+      return;
+    }
+    if (scope === "wrong") {
+      startWrongQuiz();
       return;
     }
     if (!elements.questionRangeOptions) {
@@ -6837,6 +6964,8 @@
     if (elements.queueModeButton) {
       elements.queueModeButton.addEventListener("click", startDedicatedRetryPractice);
     }
+    if (elements.wrongQuizModeButton) elements.wrongQuizModeButton.addEventListener("click", startWrongQuiz);
+    if (elements.resultWrongQuizButton) elements.resultWrongQuizButton.addEventListener("click", startWrongQuiz);
     if (elements.queueBackButton) {
       elements.queueBackButton.addEventListener("click", endDedicatedRetryPractice);
     }

@@ -317,6 +317,7 @@
     var sessionPosition = sessionCount && Number.isInteger(session.currentIndex)
       ? Math.min(session.currentIndex + 1, sessionCount) : 0;
     var retryCount = queue && Array.isArray(queue.items) ? queue.items.length : 0;
+    var wrongCount = queue && Array.isArray(queue.wrongQuestionIds) ? queue.wrongQuestionIds.length : 0;
     var retryReviews = queue && Array.isArray(queue.items)
       ? queue.items.reduce(function (total, item) {
           return total + (item && Number.isFinite(item.remaining) ? item.remaining : 0);
@@ -331,7 +332,7 @@
       : difficult && Array.isArray(difficult.questionIds) ? difficult.questionIds
         : difficult && Array.isArray(difficult.ids) ? difficult.ids : [];
     var activeReview = Boolean(queue && queue.activeAttempt && queue.activeAttempt.kind !== "sequential");
-    var hasProgress = malformed || sessionCount > 0 || retryCount > 0
+    var hasProgress = malformed || sessionCount > 0 || retryCount > 0 || wrongCount > 0
       || importantPractice || activeReview || difficultIds.length > 0;
     var totalBytes = STORAGE_SLOTS.reduce(function (total, slot) {
       return total + (typeof snapshot[slot.key] === "string" ? utf8Length(snapshot[slot.key]) : 0);
@@ -344,6 +345,7 @@
       sessionPosition: sessionPosition,
       sessionCount: sessionCount,
       retryCount: retryCount,
+      wrongCount: wrongCount,
       retryReviews: retryReviews,
       importantPractice: importantPractice,
       difficultCount: difficultIds.length,
@@ -361,9 +363,10 @@
         + (summary.sessionCategory ? " · " + summary.sessionCategory : ""));
     }
     if (summary.retryCount) parts.push(summary.retryCount + " queued · " + summary.retryReviews + " reviews left");
+    if (summary.wrongCount) parts.push(summary.wrongCount + " Wrong Quiz questions");
     if (summary.importantPractice) parts.push("category Important practice saved");
     if (summary.difficultCount) parts.push(summary.difficultCount + " difficult questions");
-    return parts.length ? parts.join("; ") : "No active session, review queue or difficult marks.";
+    return parts.length ? parts.join("; ") : "No active session, review queue, Wrong Quiz questions or difficult marks.";
   }
 
   function readLocalSnapshot() {

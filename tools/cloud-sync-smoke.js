@@ -733,6 +733,7 @@ async function testAlternatingPopupCadenceRoundTripAndOfflineReconnect() {
     ...JSON.parse(DEDICATED_ATTEMPT_QUEUE_RAW),
     embeddedCadenceVersion: 4,
     embeddedPopupsEnabled: false,
+    wrongQuestionIds: [SAMPLE_QUESTION_ID, SECOND_QUESTION_ID],
     practiceStep: 30,
     nextEmbeddedReviewStep: 40,
     nextEmbeddedReviewKind: "important",
@@ -767,6 +768,7 @@ async function testAlternatingPopupCadenceRoundTripAndOfflineReconnect() {
   const updatedQueue = {
     ...initialQueue,
     embeddedPopupsEnabled: true,
+    wrongQuestionIds: [SECOND_QUESTION_ID],
     practiceStep: 43,
     nextEmbeddedReviewStep: 50,
     nextEmbeddedReviewKind: "queue",
@@ -801,6 +803,8 @@ async function testAlternatingPopupCadenceRoundTripAndOfflineReconnect() {
   assert.equal(restoredQueue.nextEmbeddedReviewKind, "queue");
   assert.equal(restoredQueue.nextEmbeddedReviewStep - restoredQueue.practiceStep, 7, "remaining shared countdown must not restart on another device");
   assert.deepEqual(restoredQueue.items, initialQueue.items, "finite counts and saved insertion order must remain untouched");
+  assert.deepEqual(restoredQueue.wrongQuestionIds, [SECOND_QUESTION_ID],
+    "Wrong-list removal must sync independently of existing finite counts and a pending review");
   assert.deepEqual(restoredQueue.queueCyclePendingByCategory, initialQueue.queueCyclePendingByCategory);
   assert.deepEqual(restoredQueue.activeAttempt, initialQueue.activeAttempt, "pending answer must survive the cadence round trip exactly");
 }
@@ -858,6 +862,93 @@ async function testRetiredSequentialStateRoundTrip() {
   assert.equal(restoredQueue.sequentialQuestionId, SECOND_QUESTION_ID);
   assert.equal(restoredQueue.activeAttempt, null);
   assert.equal(restoredQueue.items[0].remaining, 5);
+}
+
+async function testWrongQuizListRoundTripAndOfflineRemoval() {
+  // Wrong Quiz membership is independent of finite retry counts and remains
+  // progress even after the normal review queue has been cleared.
+  const initialQueue = {
+    ...JSON.parse(BASELINED_FIVE_REVIEW_QUEUE_RAW),
+    embeddedCadenceVersion: 4,
+    embeddedPopupsEnabled: false,
+    nextEmbeddedReviewStep: 10,
+    nextEmbeddedReviewKind: "queue",
+    nextQuizReviewStep: null,
+    nextImportantReviewStep: null,
+    nextSequence: 1,
+    queueCyclePendingByCategory: {},
+    wrongQuestionIds: [SAMPLE_QUESTION_ID, SECOND_QUESTION_ID],
+    items: []
+  };
+  const initialRaw = JSON.stringify(initialQueue);
+  const store = new Map();
+  const source = createBrowser({ store, local: { [RETRY_QUEUE_KEY]: initialRaw } });
+  const choice = await waitFor(source, (candidate) => candidate.phase === "migration-choice", "wrong-only upload choice");
+  assert.equal(choice.localSummary.hasProgress, true, "Wrong Quiz IDs alone must count as saved progress");
+  assert.equal(choice.localSummary.wrongCount, 2);
+  assert.equal(choice.localSummary.retryCount, 0);
+  assert.equal(choice.decision, "device-upload");
+  await source.window.PPSC_CLOUD.chooseLocal();
+  await waitFor(source, (candidate) => candidate.phase === "synced", "wrong-only initial upload");
+  assert.equal(rawCloudValue(store, "retry-queue"), initialRaw);
+
+  const second = createBrowser({ store, local: {} });
+  const restored = await waitFor(second, (candidate) => candidate.ready, "wrong-only second-device restore");
+  assert.equal(second.localStorage.getItem(RETRY_QUEUE_KEY), initialRaw);
+  assert.equal(restored.localSummary.wrongCount, 2);
+
+  source.window.navigator.onLine = false;
+  source.window.dispatchEvent({ type: "offline" });
+  second.window.navigator.onLine = false;
+  second.window.dispatchEvent({ type: "offline" });
+  // The correct first answer is removed from the live Wrong list while its
+  // checked result stays in the frozen, resumable Wrong Quiz session.
+  const updatedQueue = { ...initialQueue, wrongQuestionIds: [SECOND_QUESTION_ID] };
+  const updatedRaw = JSON.stringify(updatedQueue);
+  const frozenSessionRaw = JSON.stringify({
+    ...JSON.parse(SAMPLE_SESSION_RAW),
+    mode: "quiz", scope: "wrong", importantOnly: false,
+    rangeStart: 1, rangeEnd: 2, rangePoolSize: 2,
+    rangePoolQuestionIds: initialQueue.wrongQuestionIds,
+    rangeQuestionIds: initialQueue.wrongQuestionIds,
+    questionIds: initialQueue.wrongQuestionIds,
+    optionOrders: [[0, 1, 2, 3], [0, 1, 2, 3]],
+    answerHistory: [[1, true], null],
+    learnVisitedQuestionIds: null, learnReviewCountedQuestionIds: null,
+    currentIndex: 0, selectedIndex: 1, submitted: true, score: 1
+  });
+  second.localStorage.setItem(RETRY_QUEUE_KEY, updatedRaw);
+  second.localStorage.setItem(ACTIVE_SESSION_KEY, frozenSessionRaw);
+  second.window.PPSC_CLOUD.notifyLocalChange(RETRY_QUEUE_KEY);
+  second.window.PPSC_CLOUD.notifyLocalChange(ACTIVE_SESSION_KEY);
+  assert.equal(second.window.PPSC_CLOUD.getStatus().phase, "offline");
+  assert.equal(rawCloudValue(store, "retry-queue"), initialRaw);
+
+  second.window.navigator.onLine = true;
+  second.window.dispatchEvent({ type: "online" });
+  await waitFor(second, (candidate) => candidate.phase === "synced"
+    && rawCloudValue(store, "retry-queue") === updatedRaw,
+  "offline wrong-answer removal upload", 3000);
+  source.window.navigator.onLine = true;
+  source.window.dispatchEvent({ type: "online" });
+  await waitFor(source, () => source.window.location.reloadCalled, "Wrong Quiz removal remote pull", 3000);
+  assert.equal(source.localStorage.getItem(RETRY_QUEUE_KEY), updatedRaw);
+  assert.equal(source.localStorage.getItem(ACTIVE_SESSION_KEY), frozenSessionRaw);
+  const pulledQueue = JSON.parse(source.localStorage.getItem(RETRY_QUEUE_KEY));
+  assert.deepEqual(pulledQueue.wrongQuestionIds, [SECOND_QUESTION_ID], "removed Wrong IDs must not resurrect on another device");
+  assert.deepEqual({ ...pulledQueue, wrongQuestionIds: initialQueue.wrongQuestionIds }, initialQueue,
+    "Wrong membership changes must preserve all unrelated retry state and the OFF preference");
+  assert.deepEqual(JSON.parse(frozenSessionRaw).questionIds, initialQueue.wrongQuestionIds,
+    "active Wrong Quiz must retain its frozen round including an already-correct question");
+
+  const conflict = createBrowser({ store: cloneStore(store), local: { [RETRY_QUEUE_KEY]: initialRaw } });
+  await waitFor(conflict, (candidate) => candidate.phase === "conflict", "Wrong Quiz-only local conflict");
+  assert.equal(conflict.localStorage.getItem(RETRY_QUEUE_KEY), initialRaw,
+    "Wrong Quiz-only local progress must not be silently replaced");
+  await conflict.window.PPSC_CLOUD.chooseCloud();
+  await waitFor(conflict, (candidate) => candidate.phase === "synced", "Wrong Quiz conflict choice");
+  assert.equal(JSON.parse(conflict.localStorage.getItem(CONFLICT_BACKUP_KEY)).values[RETRY_QUEUE_KEY], initialRaw,
+    "replaced Wrong Quiz-only progress must remain in the local conflict backup");
 }
 
 async function testConflictWaitsForChoice(seedStore) {
@@ -1102,6 +1193,7 @@ async function main() {
   await testDedicatedAttemptQueueRoundTrip();
   await testImportantPracticeRoundTrip();
   await testAlternatingPopupCadenceRoundTripAndOfflineReconnect();
+  await testWrongQuizListRoundTripAndOfflineRemoval();
   await testRetiredSequentialStateRoundTrip();
   await testConflictWaitsForChoice(cloneStore(seedStore));
   await testAllowedEmailIsEnforcedBeforeFirestore();
@@ -1126,6 +1218,7 @@ async function main() {
       "dedicated retry attempt, per-category FIFO cycle, wrong cooldown, cadence, and legacy spacing fields round-trip byte-for-byte",
       "permanent Important cadence, count-baseline marker, shuffled deck, and active attempt round-trip byte-for-byte",
       "alternating popup cadence version=4, ON/OFF preference, next kind, and shared countdown survive device restore and offline reconnect without changing finite counts, FIFO round, or active answer",
+      "Wrong Quiz-only IDs count as progress; offline correct-answer removal syncs without resurrecting IDs or changing the frozen active round and unrelated retry state",
       "retired Sequential gate stays off while legacy cursor fields and finite Queue reviews round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",
       "large progress round-trips through integrity-checked chunks",

@@ -3221,7 +3221,7 @@ async function main() {
         categoryButtonForNotes.click();
         await pause();
         if (!visible(document.querySelector("#mode-screen"))) errors.push(category.name + " did not open its mode screen.");
-        if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 6) errors.push(category.name + " did not show all six preparation modes.");
+        if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 7) errors.push(category.name + " did not show all seven preparation modes including Wrong Quiz.");
         const quickNotesButton = document.querySelector("#study-notes-mode-button");
         quickNotesButton?.click();
         await pause();
@@ -3930,7 +3930,7 @@ async function main() {
       await pause();
       if (!visible(document.querySelector("#mode-screen"))) errors.push("Mode chooser did not open after selecting a category.");
       if (document.documentElement.scrollWidth > window.innerWidth) errors.push("Mode chooser has horizontal overflow on mobile.");
-      if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 6) errors.push("Mode chooser did not show Learn, Quiz, Queue, Difficult, Study Notes and Detailed Learning.");
+      if (document.querySelectorAll("#standard-mode-options > .mode-option").length !== 7) errors.push("Mode chooser did not show Learn, Quiz, Wrong Quiz, Queue, Difficult, Study Notes and Detailed Learning.");
       if (document.querySelector("#part-select, [data-part-select]")) errors.push("Removed Part dropdown is still present.");
       if (!document.querySelector("#study-scope-summary").textContent.includes(String(allCategoryQuestions.length))) errors.push("Study summary did not show the full-category total.");
       const expectedImportant = allCategoryQuestions.filter((question) => question.isImportant === true);
@@ -9214,6 +9214,279 @@ async function main() {
       learn: popupPreferenceLearn, resume: popupPreferenceResume, screenshots: popupPreferenceScreenshots
     };
 
+    const wrongQuizHelpers = `
+      ${popupPreferenceHelpers}
+      const wrongIds = () => queue()?.wrongQuestionIds || [];
+      const checkMain = async (correct) => {
+        const saved = session();
+        const question = byId.get(saved?.questionIds?.[saved.currentIndex]);
+        const correctIndex = saved?.optionOrders?.[saved.currentIndex]?.indexOf(question?.correctOptionIndex) ?? -1;
+        if (correctIndex < 0) { errors.push("Wrong Quiz fixture cannot resolve its current answer."); return; }
+        const selected = correct ? correctIndex : (correctIndex + 1) % 4;
+        document.querySelector('#options-container [data-option-index="' + selected + '"]')?.click();
+        document.querySelector("#action-button")?.click();
+        await pause();
+      };
+      const assertWrongRound = (expectedIds, sourceScope, context) => {
+        const saved = session();
+        if (!visible(document.querySelector("#quiz-screen")) || dialog?.open
+          || visible(document.querySelector("#question-range-options"))
+          || saved?.mode !== "quiz" || saved?.scope !== "wrong" || saved?.sessionKind !== "category"
+          || saved?.importantOnly !== false || saved?.computerSourceScope !== sourceScope
+          || JSON.stringify(saved?.questionIds) !== JSON.stringify(expectedIds)
+          || saved?.rangeStart !== 1 || saved?.rangeEnd !== expectedIds.length
+          || document.querySelector("#question-text")?.dataset.questionId !== expectedIds[saved?.currentIndex || 0]) {
+          errors.push(context + " did not open the ordered frozen wrong-only pool in the normal Quiz screen.");
+        }
+        if (toggle()?.checked !== false || queue()?.embeddedPopupsEnabled !== false) {
+          errors.push(context + " changed the existing Practice popups OFF preference.");
+        }
+      };
+    `;
+    const wrongQuizSeed = await client.evaluate(`(() => {
+      const all = window.PPSC_QUIZ_DATA.questions;
+      const own = all.filter((question) => question.categoryId === "general-knowledge").slice(0, 3);
+      const foreign = all.find((question) => question.categoryId === "urdu");
+      const key = "ppsc-prep:retry-queue:v1";
+      const queue = JSON.parse(localStorage.getItem(key) || "null");
+      if (!queue || own.length !== 3 || !foreign) return { errors: ["Wrong Quiz seed could not resolve existing data."] };
+      Object.assign(queue, {
+        countBaselineVersion: 1, embeddedCadenceVersion: 4, embeddedPopupsEnabled: false,
+        wrongQuestionIds: [], practiceStep: 0, nextEmbeddedReviewStep: 10, nextEmbeddedReviewKind: "queue",
+        nextQuizReviewStep: 10, nextImportantReviewStep: 20, nextSequence: 2,
+        items: [{ questionId: foreign.id, remaining: 9, dueStep: 10, sequence: 1 }],
+        queueCyclePendingByCategory: { urdu: [foreign.id] }, importantDeck: [],
+        importantLastQuestionId: null, importantLastQuestionIdsByCategory: {}, activeAttempt: null
+      });
+      localStorage.setItem(key, JSON.stringify(queue));
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      return { errors: [], ids: own.map((question) => question.id), foreignId: foreign.id };
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer); resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer); reject(new Error("Website did not reload for Wrong Quiz testing."));
+        }
+      }, 50);
+    })`);
+    const wrongQuizResults = await client.evaluate(`(async () => {
+      const fixture = ${JSON.stringify(wrongQuizSeed)};
+      const errors = fixture.errors.slice();
+      ${wrongQuizHelpers}
+      if (errors.length) return { errors };
+      document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
+      await pause();
+      if (!visible(document.querySelector("#wrong-quiz-mode-button"))
+        || !document.querySelector("#wrong-quiz-mode-button")?.disabled) {
+        errors.push("Empty category Wrong Quiz was not visible and disabled.");
+      }
+      document.querySelector("#mode-back-button")?.click();
+      await startRange("general-knowledge", "quiz", 1, 3);
+      await completeRegular(false);
+      await completeRegular(true);
+      await completeRegular(false);
+      const expectedWrong = [fixture.ids[0], fixture.ids[2]];
+      if (!visible(document.querySelector("#results-screen")) || dialog?.open
+        || JSON.stringify(wrongIds()) !== JSON.stringify(expectedWrong)
+        || !visible(document.querySelector("#result-wrong-quiz-button"))
+        || document.querySelector("#result-wrong-quiz-button")?.disabled
+        || !visible(document.querySelector("#result-wrong-quiz-summary"))) {
+        errors.push("Real category Quiz mistakes did not create its two-item Wrong Quiz result action.");
+      }
+      if (queue()?.items.find((item) => item.questionId === fixture.foreignId)?.remaining !== 9
+        || fixture.ids.filter((_, index) => index !== 1).some((id) => queue()?.items.find((item) => item.questionId === id)?.remaining !== 2)) {
+        errors.push("Recording Wrong Quiz mistakes changed existing Queue counts or lost normal wrong-answer +2.");
+      }
+      return { errors, expectedWrong, foreignId: fixture.foreignId };
+    })()`);
+    const wrongQuizScreenshots = {};
+    const wrongQuizLayoutErrors = [];
+    for (const [name, width, height, mobile] of [["resultsDesktop", 1366, 900, false], ["resultsMobile", 320, 900, true]]) {
+      await client.send("Emulation.setDeviceMetricsOverride", { width, height, deviceScaleFactor: 1, mobile });
+      await delay(250);
+      const layout = await client.evaluate(`(() => {
+        const button = document.querySelector("#result-wrong-quiz-button");
+        const rect = button?.getBoundingClientRect();
+        return { errors: !rect || rect.width <= 0 || rect.left < -1 || rect.right > innerWidth + 1
+          || document.documentElement.scrollWidth > innerWidth
+          ? ["Results Wrong Quiz action overflowed or was hidden at " + innerWidth + "px."] : [] };
+      })()`);
+      wrongQuizLayoutErrors.push(...layout.errors);
+      const capture = await client.send("Page.captureScreenshot", { format: "png" });
+      const file = path.join(os.tmpdir(), "ppsc-wrong-quiz-" + name + "-smoke.png");
+      fs.writeFileSync(file, Buffer.from(capture.data, "base64"));
+      wrongQuizScreenshots[name] = file;
+    }
+    await client.send("Emulation.setDeviceMetricsOverride", { width: 430, height: 1200, deviceScaleFactor: 1, mobile: true });
+    const wrongQuizCheckpoint = await client.evaluate(`(async () => {
+      const fixture = ${JSON.stringify(wrongQuizResults)};
+      const errors = [];
+      ${wrongQuizHelpers}
+      document.querySelector("#result-wrong-quiz-button")?.click();
+      await pause();
+      assertWrongRound(fixture.expectedWrong, "all", "Results Wrong Quiz");
+      const before = session();
+      const beforeQueue = queue();
+      await checkMain(true);
+      const checked = session();
+      if (wrongIds().includes(fixture.expectedWrong[0]) || !wrongIds().includes(fixture.expectedWrong[1])
+        || checked?.submitted !== true || checked?.score !== 1 || checked?.currentIndex !== 0
+        || JSON.stringify(checked?.questionIds) !== JSON.stringify(fixture.expectedWrong)
+        || JSON.stringify(checked?.rangePoolQuestionIds) !== JSON.stringify(before?.rangePoolQuestionIds)
+        || JSON.stringify(queue()?.items) !== JSON.stringify(beforeQueue?.items)) {
+        errors.push("Correct Wrong Quiz answer did not remove only its wrong-pool ID while preserving frozen round and Queue counts.");
+      }
+      return { errors, expectedWrong: fixture.expectedWrong, snapshot: checked, foreignId: fixture.foreignId };
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer); resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer); reject(new Error("Website did not reload a partially cleared Wrong Quiz round."));
+        }
+      }, 50);
+    })`);
+    const wrongQuizRounds = await client.evaluate(`(async () => {
+      const fixture = ${JSON.stringify(wrongQuizCheckpoint)};
+      const errors = [];
+      ${wrongQuizHelpers}
+      if (!visible(document.querySelector("#continue-session-button"))) {
+        errors.push("Reload discarded Wrong Quiz after its first ID was removed from the live pool.");
+      }
+      document.querySelector("#continue-session-button")?.click();
+      await pause();
+      assertWrongRound(fixture.expectedWrong, "all", "Resumed Wrong Quiz");
+      const resumed = session();
+      for (const key of ["questionIds", "rangePoolQuestionIds", "rangeQuestionIds", "optionOrders", "answerHistory",
+        "currentIndex", "selectedIndex", "submitted", "score"]) {
+        if (JSON.stringify(resumed?.[key]) !== JSON.stringify(fixture.snapshot?.[key])) {
+          errors.push("Wrong Quiz reload changed frozen/submitted field " + key + ".");
+        }
+      }
+      if (JSON.stringify(wrongIds()) !== JSON.stringify([fixture.expectedWrong[1]])) {
+        errors.push("Reload resurrected the correctly cleared Wrong Quiz ID.");
+      }
+      document.querySelector("#action-button")?.click();
+      await pause();
+      await completeRegular(false);
+      if (!visible(document.querySelector("#results-screen"))
+        || JSON.stringify(wrongIds()) !== JSON.stringify([fixture.expectedWrong[1]])
+        || visible(document.querySelector("#play-again-button"))
+        || document.querySelector("#result-wrong-quiz-button")?.disabled
+        || queue()?.items.find((item) => item.questionId === fixture.expectedWrong[1])?.remaining !== 4) {
+        errors.push("Wrong Quiz first round did not retain only its remaining wrong item with normal Queue +2.");
+      }
+      document.querySelector("#result-wrong-quiz-button")?.click();
+      await pause();
+      assertWrongRound([fixture.expectedWrong[1]], "all", "Next Wrong Quiz round");
+      await completeRegular(true);
+      if (!visible(document.querySelector("#results-screen")) || wrongIds().length !== 0
+        || !document.querySelector("#result-wrong-quiz-button")?.disabled
+        || !/No wrong MCQs remaining/i.test(document.querySelector("#result-wrong-quiz-button")?.textContent || "")
+        || queue()?.items.find((item) => item.questionId === fixture.expectedWrong[0])?.remaining !== 2
+        || queue()?.items.find((item) => item.questionId === fixture.expectedWrong[1])?.remaining !== 4
+        || queue()?.items.find((item) => item.questionId === fixture.foreignId)?.remaining !== 9
+        || queue()?.embeddedPopupsEnabled !== false) {
+        errors.push("Clearing the final Wrong Quiz MCQ lost Queue counts/preference or failed to show its empty state.");
+      }
+      document.querySelector("#change-category-button")?.click();
+      document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
+      await pause();
+      if (!document.querySelector("#wrong-quiz-mode-button")?.disabled) {
+        errors.push("Category Wrong Quiz did not become disabled after its pool emptied.");
+      }
+      return { errors, roundSizes: [2, 1], reloadPreservedFrozenRound: true, queueCountsAfterClear: [2, 4, 9] };
+    })()`);
+    const wrongQuizSourceSeed = await client.evaluate(`(() => {
+      const all = window.PPSC_QUIZ_DATA.questions;
+      const computer = all.filter((question) => question.categoryId === "basic-computer-studies");
+      const original = computer.filter((question) => question.id.startsWith("IBES-") && question.kind === "source"
+        && !(question.isImportant === true || Number(question.repeatCount) >= 2)).slice(0, 2);
+      const related = computer.find((question) => question.id.startsWith("IBES-") && question.kind === "similar");
+      const other = computer.find((question) => !question.id.startsWith("IBES-"));
+      const foreign = all.find((question) => question.categoryId === "urdu");
+      const key = "ppsc-prep:retry-queue:v1";
+      const queue = JSON.parse(localStorage.getItem(key) || "null");
+      if (!queue || original.length !== 2 || !related || !other || !foreign) {
+        return { errors: ["Wrong Quiz Basic Computer source fixture is incomplete."] };
+      }
+      queue.wrongQuestionIds = [foreign.id, other.id, original[1].id, related.id, original[0].id];
+      localStorage.setItem(key, JSON.stringify(queue));
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      return { errors: [], originalIds: original.map((question) => question.id), relatedId: related.id,
+        otherId: other.id, foreignId: foreign.id, items: JSON.stringify(queue.items) };
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.readyState === "complete") {
+          clearInterval(timer); resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer); reject(new Error("Website did not reload Wrong Quiz category/source isolation fixture."));
+        }
+      }, 50);
+    })`);
+    const wrongQuizSources = await client.evaluate(`(async () => {
+      const fixture = ${JSON.stringify(wrongQuizSourceSeed)};
+      const errors = fixture.errors.slice();
+      ${wrongQuizHelpers}
+      if (errors.length) return { errors };
+      document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
+      await pause();
+      if (!document.querySelector("#wrong-quiz-mode-button")?.disabled) {
+        errors.push("General Knowledge Wrong Quiz included another category's saved mistakes.");
+      }
+      document.querySelector("#mode-back-button")?.click();
+      document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]')?.click();
+      document.querySelector("#computer-source-initial-original")?.click();
+      document.querySelector("#important-only-checkbox")?.click();
+      await pause();
+      document.querySelector("#wrong-quiz-mode-button")?.click();
+      await pause();
+      assertWrongRound(fixture.originalIds, "initial-original", "Original Computer Wrong Quiz ignoring Important filter");
+      await checkMain(true);
+      if (wrongIds().includes(fixture.originalIds[0])
+        || ![fixture.originalIds[1], fixture.relatedId, fixture.otherId, fixture.foreignId].every((id) => wrongIds().includes(id))) {
+        errors.push("Clearing an original Computer mistake removed another source/category or retained its own ID.");
+      }
+      document.querySelector("#back-button")?.click();
+      document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]')?.click();
+      document.querySelector("#computer-source-initial-related")?.click();
+      document.querySelector("#wrong-quiz-mode-button")?.click();
+      await pause();
+      assertWrongRound([fixture.relatedId], "initial-related", "Related Computer Wrong Quiz");
+      document.querySelector("#back-button")?.click();
+      document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]')?.click();
+      document.querySelector("#computer-source-other")?.click();
+      document.querySelector("#wrong-quiz-mode-button")?.click();
+      await pause();
+      assertWrongRound([fixture.otherId], "other", "Other Papers Computer Wrong Quiz");
+      document.querySelector("#back-button")?.click();
+      document.querySelector('#category-grid .category-card[data-category="urdu"]')?.click();
+      document.querySelector("#wrong-quiz-mode-button")?.click();
+      await pause();
+      assertWrongRound([fixture.foreignId], "all", "Urdu category Wrong Quiz");
+      if (document.querySelector("#question-text")?.lang !== "ur"
+        || [...document.querySelectorAll("#options-container .option-text")].some((option) => /[A-Za-z]/.test(option.textContent))) {
+        errors.push("Wrong Quiz lost Urdu-only question/answer display.");
+      }
+      return { errors, originalOrder: fixture.originalIds, relatedId: fixture.relatedId,
+        otherId: fixture.otherId, urduId: fixture.foreignId, categoryAndSourceIsolated: true };
+    })()`);
+    const wrongQuizResult = {
+      errors: wrongQuizSeed.errors.concat(wrongQuizResults.errors, wrongQuizLayoutErrors, wrongQuizCheckpoint.errors,
+        wrongQuizRounds.errors, wrongQuizSourceSeed.errors, wrongQuizSources.errors),
+      rounds: wrongQuizRounds, sources: wrongQuizSources, screenshots: wrongQuizScreenshots
+    };
+
     await client.evaluate(`(() => {
       localStorage.removeItem("ppsc-prep:active-session:v1");
       localStorage.removeItem("ppsc-prep:retry-queue:v1");
@@ -9731,6 +10004,7 @@ async function main() {
         .concat(keyboardControlResult.errors)
         .concat(nativeKeyboardResult.errors)
         .concat(popupPreferenceResult.errors)
+        .concat(wrongQuizResult.errors)
         .concat(directAnswerCorrectionsResult.errors)
         .concat(additiveMigrationResult.errors)
         .concat(unknownSignatureResult.errors)
@@ -9769,6 +10043,7 @@ async function main() {
         screenshot: directAnswerCorrectionsScreenshot
       },
       practicePopupPreference: popupPreferenceResult,
+      wrongQuiz: wrongQuizResult,
       theme: {
         initialLight: themeInitialResult.initialTheme === "light",
         toggledDark: themeInitialResult.toggledTheme === "dark",

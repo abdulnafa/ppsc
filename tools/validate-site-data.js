@@ -1062,6 +1062,8 @@ function validateHtml() {
     "computer-source-count-initial-related", "computer-source-count-other",
     "study-scope-panel", "standard-mode-options", "learn-mode-button", "quiz-mode-button",
     "queue-mode-button", "queue-mode-meta", "queue-back-button",
+    "wrong-quiz-mode-button", "wrong-quiz-mode-meta", "wrong-quiz-progress",
+    "result-wrong-quiz-button", "result-wrong-quiz-summary",
     "queue-practice-title", "queue-practice-category", "queue-practice-status", "queue-practice-slot",
     "study-notes-mode-button", "question-range-options", "question-range-title",
     "question-range-context", "question-range-form", "question-range-start-input",
@@ -1217,8 +1219,8 @@ function validateHtml() {
     error("index.html: category Queue option must appear with the standard study modes");
   }
   const standardModeButtons = standardModesHtml.match(/<button\b[^>]*\bclass=["'][^"']*\bmode-option\b[^"']*["']/gi) || [];
-  if (standardModeButtons.length !== 6) {
-    error(`index.html: expected six standard preparation mode buttons, found ${standardModeButtons.length}`);
+  if (standardModeButtons.length !== 7) {
+    error(`index.html: expected seven standard preparation mode buttons, found ${standardModeButtons.length}`);
   }
   const questionNumberInput = html.match(/<input\b[^>]*\bid=["']question-number-input["'][^>]*>/i)?.[0] || "";
   for (const [attribute, expectedValue] of [["type", "number"], ["min", "1"], ["step", "1"], ["inputmode", "numeric"]]) {

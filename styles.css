@@ -1691,6 +1691,8 @@ h2[tabindex="-1"]:focus {
 .mode-option-queue .mode-option-icon { background: linear-gradient(145deg, #e49a20, #b76313); }
 .mode-option-queue:not(:disabled):hover { border-color: #e0aa57; background: #fffaf0; }
 .mode-option-difficult .mode-option-icon { background: linear-gradient(145deg, #e49a20, #b76313); }
+.mode-option-wrong .mode-option-icon { background: var(--red); }
+.mode-option-wrong:not(:disabled):hover { border-color: var(--red); background: var(--red-soft); }
 .mode-option-difficult:hover { border-color: #e0aa57; background: #fffaf0; }
 .mode-option-notes .mode-option-icon { background: linear-gradient(145deg, #168f87, #0b6864); }
 .mode-option-notes:hover { border-color: #7fc7c0; background: #f1fbfa; }
@@ -2305,6 +2307,8 @@ body.has-retry-dialog { overflow: hidden; }
 .result-review-item.is-urdu p { font-size: .88rem; line-height: 1.85; }
 .result-review-empty { padding: 24px; color: var(--muted); text-align: center; background: #f8fafc; border: 1px dashed #c9d3e2; border-radius: 11px; }
 .result-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.wrong-quiz-progress { margin: 0 0 18px; padding: 12px 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; font-size: .82rem; }
+.result-wrong-quiz-summary { margin: 24px 0 14px; color: var(--muted); font-size: .86rem; }
 .noscript { padding: 12px; text-align: center; color: var(--red); background: var(--red-soft); border-radius: 8px; }
 
 .site-footer { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 20px 0 30px; display: flex; justify-content: space-between; color: #8390a4; border-top: 1px solid var(--line); font-size: .75rem; }
