@@ -4,6 +4,7 @@ const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
+const { corrections, isNoneOfTheseAnswer, restoreLegacyAnswerOptions } = require("./answer-text-corrections");
 
 const projectDirectory = path.resolve(__dirname, "..");
 const workDirectory = path.join(projectDirectory, "work");
@@ -888,6 +889,13 @@ function validateKnownCorrections(questions) {
     "P238-Q081-SRC": "محنت زیادہ مگر فائدہ کم",
     "P239-Q015-SRC": "25"
   };
+  for (const correction of corrections) expectedAnswers[correction.id] = correction.answer;
+  for (const question of questions) {
+    if (isNoneOfTheseAnswer(question.options?.[question.correctOptionIndex])
+      || isNoneOfTheseAnswer(question.optionsUrdu?.[question.correctOptionIndex])) {
+      error(`${question.id}: correct answer must be explicit, not None of these`);
+    }
+  }
 
   for (const [id, expectedAnswer] of Object.entries(expectedAnswers)) {
     const question = questions.find((item) => item.id === id);
@@ -1356,7 +1364,11 @@ function validateRetryQueueContract(data) {
     ["IMPORTANT_REVIEW_MAX_SPACING", "10"],
     ["SEQUENTIAL_ORDER_VERSION", "2"],
     ["APPROVED_ADDITIVE_BANK_SIGNATURE", '"v1:11412:57e37c68"'],
-    ["APPROVED_ADDITIVE_BANK_QUESTION_COUNT", "11412"]
+    ["APPROVED_ADDITIVE_BANK_QUESTION_COUNT", "11412"],
+    ["APPROVED_ADDITIVE_UPDATED_SIGNATURE", '"v1:11412:40563d50"'],
+    ["APPROVED_ANSWER_TEXT_BANK_SIGNATURE", '"v1:11892:9437487f"'],
+    ["APPROVED_ANSWER_TEXT_BANK_QUESTION_COUNT", "11892"],
+    ["APPROVED_ANSWER_TEXT_UPDATED_SIGNATURE", '"v1:11892:57530f77"']
   ];
   for (const [name, value] of requiredConstants) {
     const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -1365,7 +1377,13 @@ function validateRetryQueueContract(data) {
     }
   }
   let approvedPrefixHash = 2166136261;
-  questions.slice(0, approvedAdditiveQuestionCount).forEach((question) => {
+  let legacyPrefix = [];
+  try {
+    legacyPrefix = restoreLegacyAnswerOptions(questions.slice(0, approvedAdditiveQuestionCount));
+  } catch (reason) {
+    error(reason.message);
+  }
+  legacyPrefix.forEach((question) => {
     const signatureText = JSON.stringify([
       question.id,
       question.categoryId,
@@ -1595,7 +1613,7 @@ function validateRetryQueueContract(data) {
     normalizeSession === null
     || !/isApprovedAdditiveBankMigration\(savedValue\.bankSignature\)/.test(normalizeSession)
     || !/savedValue\.bankSignature\s*!==\s*questionBankSignature\s*&&\s*!additiveBankMigration/.test(normalizeSession)
-    || !/savedValue\.scope\s*===\s*["']all["']\s*&&\s*!additiveBankMigration/.test(normalizeSession)
+    || !/rangePoolBankSignature/.test(normalizeSession)
     || loadSession === null
     || !/setItem\(SESSION_STORAGE_KEY,\s*JSON\.stringify\(activeSessionSnapshot\)\)/.test(loadSession)
     || !/notifyLocalStateChanged\(SESSION_STORAGE_KEY,\s*["']set["']\)/.test(loadSession)

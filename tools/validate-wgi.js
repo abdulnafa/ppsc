@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 const crypto = require("crypto");
+const { restoreLegacyAnswerOptions } = require("./answer-text-corrections");
 const { exactFingerprint, hasMojibake } = require("./adv2e102-common");
 const {
   assertCompleteReleaseDecisions,
@@ -196,8 +197,14 @@ if (!evidence || typeof evidence !== "object" || Array.isArray(evidence)) {
 const bankWithoutWgi = currentBank.filter((question) => !String(question.id || "").startsWith("WGI-"));
 if (bankWithoutWgi.length < 11412) addError("current bank is missing the approved 11,412-question baseline");
 const baselineQuestions = bankWithoutWgi.slice(0, 11412);
-if (stableQuestionSignature(baselineQuestions) !== expectedBaselineSignature) {
-  addError("the approved 11,412-question stable prefix changed");
+// Reconstruct only the seven reviewed option-D wording edits. Every other
+// signature-relevant field must still match the original WGI audit baseline.
+try {
+  if (stableQuestionSignature(restoreLegacyAnswerOptions(baselineQuestions)) !== expectedBaselineSignature) {
+    addError("the approved 11,412-question stable prefix changed outside the reviewed answer-text corrections");
+  }
+} catch (reason) {
+  addError(reason.message);
 }
 
 const recordsByNumber = new Map();

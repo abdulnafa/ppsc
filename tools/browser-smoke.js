@@ -8923,6 +8923,163 @@ async function main() {
       rightArrowNext: !nativeKeyboardErrors.some((message) => message.includes("real Right Arrow"))
     };
 
+    await client.evaluate(`(() => {
+      localStorage.removeItem("ppsc-prep:active-session:v1");
+      localStorage.removeItem("ppsc-prep:retry-queue:v1");
+      return true;
+    })()`);
+    await client.send("Page.reload", { ignoreCache: true });
+    await client.evaluate(`new Promise((resolve, reject) => {
+      const deadline = Date.now() + 10000;
+      const timer = setInterval(() => {
+        if (window.PPSC_QUIZ_DATA && document.querySelector("#category-grid .category-card")
+          && document.readyState === "complete") {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() >= deadline) {
+          clearInterval(timer);
+          reject(new Error("Website did not reload for direct-answer correction testing."));
+        }
+      }, 50);
+    })`);
+    const directAnswerCorrectionsResult = await client.evaluate(`(async () => {
+      const errors = [];
+      const checks = [];
+      const data = window.PPSC_QUIZ_DATA;
+      const storageKey = "ppsc-prep:active-session:v1";
+      const pause = () => new Promise((resolve) => setTimeout(resolve, 35));
+      const visible = (element) => Boolean(element && !element.hidden && element.getClientRects().length);
+      const snapshot = () => JSON.parse(localStorage.getItem(storageKey) || "null");
+      const correctedAnswers = [
+        ["ADV2E102-U0003-Q015-SRC", "Sir Cyril Radcliffe"],
+        ["ADV2E102-U0036-Q036-SRC", "1919"],
+        ["ADV2E102-U0043-Q089-SRC", "Talib Ansari", "طالب انصاری"],
+        ["ADV2E102-U0045-Q056-SRC", "Nasal (supraorbital) salt glands"],
+        ["ADV2E102-U0045-Q098-SRC", "Al-Baqarah"],
+        ["ADV2E102-U0131-Q003-SRC", "1914"],
+        ["ADV2E102-U0045-Q081-SRC", "چوتھے مصرعے کو", "چوتھے مصرعے کو"]
+      ];
+      const openQuestion = async (question, rangeNumber, mode) => {
+        if (document.querySelector("#retry-dialog")?.open) {
+          document.querySelector("#retry-later-button")?.click();
+        }
+        if (visible(document.querySelector("#quiz-screen"))) {
+          document.querySelector("#back-button")?.click();
+          await pause();
+        }
+        document.querySelector('#category-grid .category-card[data-category="' + question.categoryId + '"]')?.click();
+        await pause();
+        document.querySelector(mode === "learn" ? "#learn-mode-button" : "#quiz-mode-button")?.click();
+        await pause();
+        const start = document.querySelector("#question-range-start-input");
+        const end = document.querySelector("#question-range-end-input");
+        if (!start || !end || !visible(document.querySelector("#question-range-options"))) {
+          errors.push(question.id + " " + mode + " did not show its range form.");
+          return false;
+        }
+        start.value = String(rangeNumber);
+        end.value = String(rangeNumber);
+        document.querySelector("#question-range-form")?.requestSubmit();
+        await pause();
+        const saved = snapshot();
+        if (!visible(document.querySelector("#quiz-screen"))
+          || document.querySelector("#question-text")?.dataset.questionId !== question.id
+          || saved?.mode !== mode || saved?.questionIds?.length !== 1
+          || saved.questionIds[0] !== question.id || saved.rangeStart !== rangeNumber
+          || saved.rangeEnd !== rangeNumber) {
+          errors.push(question.id + " " + mode + " did not retain its canonical category/range position.");
+          return false;
+        }
+        return true;
+      };
+      const assertRenderedOptions = (question, expectedAnswer, mode) => {
+        const saved = snapshot();
+        const order = mode === "Learn" ? [0, 1, 2, 3] : saved?.optionOrders?.[0] || [];
+        const canonicalOptions = question.categoryId === "urdu" ? question.optionsUrdu : question.options;
+        const optionTexts = [...document.querySelectorAll("#options-container .option-text")];
+        const expectedOptions = order.map((index) => canonicalOptions[index]);
+        if (order.length !== 4 || JSON.stringify(optionTexts.map((element) => element.textContent))
+          !== JSON.stringify(expectedOptions)) {
+          errors.push(question.id + " " + mode + " rendered incorrect direct-answer option text/order.");
+        }
+        const correctIndex = order.indexOf(3);
+        const correctButton = document.querySelector('#options-container [data-option-index="' + correctIndex + '"]');
+        if (!correctButton || correctButton.querySelector(".option-text")?.textContent !== expectedAnswer) {
+          errors.push(question.id + " " + mode + " did not display its explicit correct answer.");
+        }
+        if (question.categoryId === "urdu") {
+          const questionText = document.querySelector("#question-text");
+          const options = document.querySelector("#options-container");
+          if (questionText?.textContent !== question.questionUrdu
+            || questionText?.lang !== "ur" || questionText?.dir !== "rtl"
+            || options?.lang !== "ur" || options?.dir !== "rtl"
+            || optionTexts.some((element) => /[A-Za-z]/.test(element.textContent)
+              || element.lang !== "ur" || element.dir !== "rtl")) {
+            errors.push(question.id + " " + mode + " lost its Urdu-only RTL question/answer presentation.");
+          }
+        }
+        return { correctButton, correctIndex };
+      };
+      for (const [id, expectedCanonicalAnswer, expectedUrduAnswer] of correctedAnswers) {
+        const errorCount = errors.length;
+        const question = data.questions.find((candidate) => candidate.id === id);
+        if (!question || question.kind !== "source" || question.correctOptionIndex !== 3
+          || question.options[3] !== expectedCanonicalAnswer
+          || (expectedUrduAnswer && question.optionsUrdu?.[3] !== expectedUrduAnswer)) {
+          errors.push(id + " does not preserve its source identity/index with the expected direct answer.");
+          continue;
+        }
+        const categoryQuestions = data.questions.filter((candidate) => candidate.categoryId === question.categoryId);
+        const rangeNumber = categoryQuestions.findIndex((candidate) => candidate.id === id) + 1;
+        const expectedAnswer = expectedUrduAnswer || expectedCanonicalAnswer;
+        if (!await openQuestion(question, rangeNumber, "learn")) continue;
+        const learn = assertRenderedOptions(question, expectedAnswer, "Learn");
+        if (!learn.correctButton?.disabled || learn.correctButton.classList.contains("is-correct")
+          || learn.correctButton.classList.contains("is-selected")
+          || visible(document.querySelector("#feedback"))
+          || document.querySelector("#action-button")?.textContent !== "Show Answer") {
+          errors.push(id + " Learn did not initially hide/lock its corrected answer.");
+        }
+        document.querySelector("#action-button")?.click();
+        await pause();
+        const revealed = document.querySelector('#options-container [data-option-index="' + learn.correctIndex + '"]');
+        const revealedState = snapshot();
+        if (!revealed?.classList.contains("is-correct") || !revealed.classList.contains("is-selected")
+          || !visible(document.querySelector("#feedback")) || revealedState?.submitted !== true
+          || revealedState.selectedIndex !== learn.correctIndex
+          || document.querySelector("#question-text")?.dataset.questionId !== id) {
+          errors.push(id + " Learn reveal failed to mark the direct answer in place.");
+        }
+        const learnPassed = errors.length === errorCount;
+        const quizErrorCount = errors.length;
+        if (!await openQuestion(question, rangeNumber, "quiz")) continue;
+        const quiz = assertRenderedOptions(question, expectedAnswer, "Quiz");
+        if (!quiz.correctButton || quiz.correctButton.disabled
+          || quiz.correctButton.classList.contains("is-correct")) {
+          errors.push(id + " Quiz did not initially offer its corrected answer unmarked.");
+        }
+        quiz.correctButton?.click();
+        document.querySelector("#action-button")?.click();
+        await pause();
+        const checked = document.querySelector('#options-container [data-option-index="' + quiz.correctIndex + '"]');
+        const checkedState = snapshot();
+        if (!checked?.classList.contains("is-correct") || !checked.disabled
+          || !document.querySelector("#feedback")?.classList.contains("is-correct")
+          || checkedState?.submitted !== true || checkedState.score !== 1
+          || checkedState.selectedIndex !== quiz.correctIndex
+          || document.querySelector("#score-text")?.textContent !== "Score: 1") {
+          errors.push(id + " Quiz did not accept/score its direct answer as correct.");
+        }
+        checks.push({ id, categoryId: question.categoryId, rangeNumber, answer: expectedAnswer,
+          learnPassed, quizPassed: errors.length === quizErrorCount });
+      }
+      if (checks.length !== 7) errors.push("Direct-answer rendered coverage did not exercise all seven corrected source MCQs.");
+      return { errors, checks };
+    })()`);
+    const directAnswerCorrectionsScreenshot = path.join(os.tmpdir(), "ppsc-direct-answer-corrections-urdu-430-smoke.png");
+    const directAnswerCorrectionsCapture = await client.send("Page.captureScreenshot", { format: "png" });
+    fs.writeFileSync(directAnswerCorrectionsScreenshot, Buffer.from(directAnswerCorrectionsCapture.data, "base64"));
+
     const additiveMigrationSeed = await client.evaluate(`(() => {
       const errors = [];
       const data = window.PPSC_QUIZ_DATA;
@@ -8954,8 +9111,8 @@ async function main() {
         return "v1:" + questions.length + ":" + (hash >>> 0).toString(16);
       };
       const prefixSignature = signatureFor(oldQuestions);
-      if (oldQuestions.length !== oldCount || prefixSignature !== oldSignature) {
-        errors.push("The approved additive migration fixture no longer matches the exact 11,412-question prefix.");
+      if (oldQuestions.length !== oldCount || prefixSignature !== "v1:11412:40563d50") {
+        errors.push("The approved additive migration fixture no longer matches the explicitly corrected 11,412-question prefix.");
       }
       const syntheticQuestion = {
         id: "SMOKE-ADDITIVE-Q0001-SRC",
@@ -9282,6 +9439,7 @@ async function main() {
         .concat(sequentialReviewResult.errors)
         .concat(keyboardControlResult.errors)
         .concat(nativeKeyboardResult.errors)
+        .concat(directAnswerCorrectionsResult.errors)
         .concat(additiveMigrationResult.errors)
         .concat(unknownSignatureResult.errors)
         .concat(paperSetupResult.errors)
@@ -9314,6 +9472,10 @@ async function main() {
       },
       difficult: difficultResult,
       urdu: urduResumeResult,
+      directAnswerCorrections: {
+        ...directAnswerCorrectionsResult,
+        screenshot: directAnswerCorrectionsScreenshot
+      },
       theme: {
         initialLight: themeInitialResult.initialTheme === "light",
         toggledDark: themeInitialResult.toggledTheme === "dark",

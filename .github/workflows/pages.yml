@@ -34,6 +34,7 @@ jobs:
           node --check data/detailed-learning.js
           node tools/validate-wgi.js --complete
           node tools/validate-site-data.js --expected=11892
+          node tools/answer-text-migration-smoke.js
 
       - name: Validate authentication and cloud sync
         run: |

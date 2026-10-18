@@ -129912,11 +129912,11 @@
       "Mountbatten",
       "Auchinleck",
       "Gracey",
-      "None of these"
+      "Sir Cyril Radcliffe"
     ],
     "correctOptionIndex": 3,
-    "explanationUrdu": "درست جواب ”None of these“ ہے۔ دونوں کمیشنوں کے چیئرمین Sir Cyril Radcliffe تھے، مگر وہ options میں نہیں؛ اس لیے None of these درست ہے۔",
-    "relatedHistoryUrdu": "درست جواب ”Barrister“ ہے۔ Cyril Radcliffe ایک برطانوی barrister تھے، نہ کہ پیشہ ور جغرافیہ دان یا surveyor۔ موجودہ سوال کے جواب ”None of these“ کو اس متعلقہ مستند حقیقت ”Barrister“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "explanationUrdu": "درست جواب سر سیرل ریڈکلف ہے۔ 1947 میں پنجاب اور بنگال کے دونوں باؤنڈری کمیشنوں کے چیئرمین سر سیرل ریڈکلف تھے۔",
+    "relatedHistoryUrdu": "درست جواب ”Barrister“ ہے۔ Cyril Radcliffe ایک برطانوی barrister تھے، نہ کہ پیشہ ور جغرافیہ دان یا surveyor۔ موجودہ سوال کے جواب ”Sir Cyril Radcliffe“ کو اس متعلقہ مستند حقیقت ”Barrister“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://www.nationalarchives.gov.uk/education/resources/the-road-to-partition/radcliffe-boundary-commission/",
     "relatedHistoryAccessedOn": "2026-08-27",
     "source": {
@@ -129930,7 +129930,7 @@
       "u0003-q015"
     ],
     "verificationStatus": "verified",
-    "sourceNotes": "Cyril Radcliffe is not listed, so the verified choice is 'None of these'. The stem was repaired to specify the two commissions and year.",
+    "sourceNotes": "The stem was repaired to specify both boundary commissions and 1947. Option D now explicitly names Sir Cyril Radcliffe instead of the original 'None of these'; its verified answer index and question ID are unchanged.",
     "repeatCount": 3,
     "isImportant": true,
     "references": [
@@ -129985,7 +129985,7 @@
     ],
     "correctOptionIndex": 0,
     "explanationUrdu": "درست جواب ”Barrister“ ہے۔ Cyril Radcliffe ایک برطانوی barrister تھے، نہ کہ پیشہ ور جغرافیہ دان یا surveyor۔",
-    "relatedHistoryUrdu": "درست جواب ”None of these“ ہے۔ دونوں کمیشنوں کے چیئرمین Sir Cyril Radcliffe تھے، مگر وہ options میں نہیں؛ اس لیے None of these درست ہے۔ موجودہ سوال کے جواب ”Barrister“ کو اس متعلقہ مستند حقیقت ”None of these“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistoryUrdu": "درست جواب سر سیرل ریڈکلف ہے۔ 1947 میں پنجاب اور بنگال کے دونوں باؤنڈری کمیشنوں کے چیئرمین سر سیرل ریڈکلف تھے۔ موجودہ سوال کے جواب ”Barrister“ کو اس متعلقہ مستند حقیقت ”Sir Cyril Radcliffe“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://www.britannica.com/place/Radcliffe-Line",
     "relatedHistoryAccessedOn": "2026-08-27",
     "source": {
@@ -434063,11 +434063,11 @@
       "1913",
       "1924",
       "1934",
-      "None of these"
+      "1919"
     ],
     "correctOptionIndex": 3,
-    "explanationUrdu": "درست جواب None of these ہے۔ محمد علی جناح 1919 میں مسلم لیگ کے مستقل صدر منتخب ہوئے؛ چونکہ 1919 اصل اختیارات میں نہیں تھا اس لیے None of these درست ہے۔",
-    "relatedHistoryUrdu": "درست جواب He was elected permanent President of the All-India Muslim League ہے۔ جناح 1919 میں مسلم لیگ کے مستقل صدر منتخب ہوئے۔ موجودہ سوال کے جواب ”None of these“ کو اس متعلقہ مستند حقیقت ”He was elected permanent President of the All-India Muslim League“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "explanationUrdu": "درست جواب 1919 ہے۔ قومی اسمبلی کی تاریخی ترتیب کے مطابق محمد علی جناح 31 دسمبر 1919 کو آل انڈیا مسلم لیگ کے مستقل صدر منتخب ہوئے؛ 1934 ان کے دوبارہ انتخاب کا سال تھا۔",
+    "relatedHistoryUrdu": "درست جواب He was elected permanent President of the All-India Muslim League ہے۔ جناح 1919 میں مسلم لیگ کے مستقل صدر منتخب ہوئے۔ موجودہ سوال کے جواب ”1919“ کو اس متعلقہ مستند حقیقت ”He was elected permanent President of the All-India Muslim League“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://na.gov.pk/uploads/documents/1393237355_142.pdf",
     "relatedHistoryAccessedOn": "2026-08-30",
     "source": {
@@ -434081,7 +434081,7 @@
       "u0036-q036"
     ],
     "verificationStatus": "verified",
-    "sourceNotes": "The printed key 1934 refers to Jinnah's presidency of the reunited League, not his election as permanent President. The exact source wording is retained; 1919 is absent from the listed years, so 'None of these' is correct.",
+    "sourceNotes": "The printed key 1934 refers to Jinnah's later re-election, not his election as permanent President on 31 December 1919. Option D now explicitly states 1919 instead of the original 'None of these'; its verified answer index and question ID are unchanged.",
     "references": [
       {
         "url": "https://na.gov.pk/uploads/documents/1393237355_142.pdf",
@@ -434134,7 +434134,7 @@
     ],
     "correctOptionIndex": 1,
     "explanationUrdu": "درست جواب He was elected permanent President of the All-India Muslim League ہے۔ جناح 1919 میں مسلم لیگ کے مستقل صدر منتخب ہوئے۔",
-    "relatedHistoryUrdu": "درست جواب None of these ہے۔ محمد علی جناح 1919 میں مسلم لیگ کے مستقل صدر منتخب ہوئے؛ چونکہ 1919 اصل اختیارات میں نہیں تھا اس لیے None of these درست ہے۔ موجودہ سوال کے جواب ”He was elected permanent President of the All-India Muslim League“ کو اس متعلقہ مستند حقیقت ”None of these“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistoryUrdu": "درست جواب 1919 ہے۔ قومی اسمبلی کی تاریخی ترتیب کے مطابق محمد علی جناح 31 دسمبر 1919 کو آل انڈیا مسلم لیگ کے مستقل صدر منتخب ہوئے؛ 1934 ان کے دوبارہ انتخاب کا سال تھا۔ موجودہ سوال کے جواب ”He was elected permanent President of the All-India Muslim League“ کو اس متعلقہ مستند حقیقت ”1919“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://na.gov.pk/uploads/documents/1393237355_142.pdf",
     "relatedHistoryAccessedOn": "2026-08-30",
     "source": {
@@ -496805,17 +496805,17 @@
       "Barkat Ali Chaudhry",
       "Zafar Ali Khan",
       "Muhammad Ali Jauhar",
-      "None of these"
+      "Talib Ansari"
     ],
     "optionsUrdu": [
       "برکت علی چوہدری",
       "ظفر علی خان",
       "محمد علی جوہر",
-      "ان میں سے کوئی نہیں"
+      "طالب انصاری"
     ],
     "correctOptionIndex": 3,
-    "explanationUrdu": "درست جواب ”None of these“ ہے۔ پہلا شمارہ Talib Ansari کی ادارت میں شائع ہوا؛ چونکہ یہ نام A–C میں نہیں تھا، اس لیے None of these درست ہے۔",
-    "relatedHistoryUrdu": "درست جواب ”March 1935“ ہے۔ Adab-e-Latif کا پہلا شمارہ March 1935 میں Lahore سے شائع ہوا۔ موجودہ سوال کے جواب ”None of these“ کو اس متعلقہ مستند حقیقت ”March 1935“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "explanationUrdu": "درست جواب طالب انصاری ہے۔ ریختہ کے رسالہ جاتی ذخیرے کے تعارف کے مطابق اردو ماہنامہ ’ادبِ لطیف‘ کا پہلا شمارہ طالب انصاری نے ترتیب دیا تھا۔",
+    "relatedHistoryUrdu": "درست جواب ”March 1935“ ہے۔ Adab-e-Latif کا پہلا شمارہ March 1935 میں Lahore سے شائع ہوا۔ موجودہ سوال کے جواب ”Talib Ansari“ کو اس متعلقہ مستند حقیقت ”March 1935“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://www.rekhta.org/emagazines/adab-e-lateef-lahore",
     "relatedHistoryAccessedOn": "2026-08-27",
     "source": {
@@ -496829,7 +496829,7 @@
       "u0043-q089"
     ],
     "verificationStatus": "verified",
-    "sourceNotes": "The source's 'first editor' wording was made documentable as compiler of the first issue. Talib Ansari is absent from A-C, so None of these is uniquely option D.",
+    "sourceNotes": "The source's 'first editor' wording was made documentable as compiler of the first issue. Option D now explicitly names Talib Ansari instead of the original 'None of these'; its verified answer index and question ID are unchanged.",
     "references": [
       {
         "url": "https://www.rekhta.org/emagazines/adab-e-lateef-lahore",
@@ -496888,7 +496888,7 @@
     ],
     "correctOptionIndex": 3,
     "explanationUrdu": "درست جواب ”March 1935“ ہے۔ Adab-e-Latif کا پہلا شمارہ March 1935 میں Lahore سے شائع ہوا۔",
-    "relatedHistoryUrdu": "درست جواب ”None of these“ ہے۔ پہلا شمارہ Talib Ansari کی ادارت میں شائع ہوا؛ چونکہ یہ نام A–C میں نہیں تھا، اس لیے None of these درست ہے۔ موجودہ سوال کے جواب ”March 1935“ کو اس متعلقہ مستند حقیقت ”None of these“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistoryUrdu": "درست جواب طالب انصاری ہے۔ ریختہ کے رسالہ جاتی ذخیرے کے تعارف کے مطابق اردو ماہنامہ ’ادبِ لطیف‘ کا پہلا شمارہ طالب انصاری نے ترتیب دیا تھا۔ موجودہ سوال کے جواب ”March 1935“ کو اس متعلقہ مستند حقیقت ”Talib Ansari“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://www.rekhta.org/emagazines/adab-e-lateef-lahore",
     "relatedHistoryAccessedOn": "2026-08-27",
     "source": {
@@ -509355,11 +509355,11 @@
       "Rectal salt glands",
       "Endocrine glands generally",
       "Pituitary glands",
-      "None of these"
+      "Nasal (supraorbital) salt glands"
     ],
     "correctOptionIndex": 3,
-    "explanationUrdu": "درست جواب None of these ہے۔ طبی جائزہ اور سمتھ سونین دونوں بتاتے ہیں کہ سمندری پرندے جوڑے دار ناکی یا آنکھوں کے اوپر واقع نمکی غدود سے اضافی نمک خارج کرتے ہیں۔",
-    "relatedHistoryUrdu": "درست جواب آنکھوں کے اوپر واقع نمکی غدود ہیں۔ یہ مخصوص غدود سمندری پرندوں کے جسم سے فاضل نمک نکالتے ہیں۔ موجودہ سوال کے جواب ”None of these“ کو اس متعلقہ مستند حقیقت ”Supraorbital salt glands“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "explanationUrdu": "درست جواب ناکی یا آنکھوں کے اوپر واقع نمکی غدود ہے۔ سمندری پرندے ان جوڑے دار غدود کے ذریعے اضافی نمک خارج کرتے ہیں؛ انہیں nasal یا supraorbital salt glands کہا جاتا ہے۔",
+    "relatedHistoryUrdu": "درست جواب آنکھوں کے اوپر واقع نمکی غدود ہیں۔ یہ مخصوص غدود سمندری پرندوں کے جسم سے فاضل نمک نکالتے ہیں۔ موجودہ سوال کے جواب ”Nasal (supraorbital) salt glands“ کو اس متعلقہ مستند حقیقت ”Supraorbital salt glands“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://pubmed.ncbi.nlm.nih.gov/11060412/",
     "relatedHistoryAccessedOn": "2026-08-30",
     "source": {
@@ -509373,7 +509373,7 @@
       "u0045-q056"
     ],
     "verificationStatus": "verified",
-    "sourceNotes": "The malformed stem was repaired. Marine birds use nasal or supraorbital salt glands, which are absent from the named choices; the printed answer A was corrected to None of these at D.",
+    "sourceNotes": "The malformed stem was repaired and the printed answer A corrected. Option D now explicitly names nasal (supraorbital) salt glands instead of the original 'None of these'; its verified answer index and question ID are unchanged.",
     "references": [
       {
         "url": "https://pubmed.ncbi.nlm.nih.gov/11060412/",
@@ -509426,7 +509426,7 @@
     ],
     "correctOptionIndex": 3,
     "explanationUrdu": "درست جواب آنکھوں کے اوپر واقع نمکی غدود ہیں۔ یہ مخصوص غدود سمندری پرندوں کے جسم سے فاضل نمک نکالتے ہیں۔",
-    "relatedHistoryUrdu": "درست جواب None of these ہے۔ طبی جائزہ اور سمتھ سونین دونوں بتاتے ہیں کہ سمندری پرندے جوڑے دار ناکی یا آنکھوں کے اوپر واقع نمکی غدود سے اضافی نمک خارج کرتے ہیں۔ موجودہ سوال کے جواب ”Supraorbital salt glands“ کو اس متعلقہ مستند حقیقت ”None of these“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistoryUrdu": "درست جواب ناکی یا آنکھوں کے اوپر واقع نمکی غدود ہے۔ سمندری پرندے ان جوڑے دار غدود کے ذریعے اضافی نمک خارج کرتے ہیں؛ انہیں nasal یا supraorbital salt glands کہا جاتا ہے۔ موجودہ سوال کے جواب ”Supraorbital salt glands“ کو اس متعلقہ مستند حقیقت ”Nasal (supraorbital) salt glands“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://pubmed.ncbi.nlm.nih.gov/11060412/",
     "relatedHistoryAccessedOn": "2026-08-30",
     "source": {
@@ -511920,17 +511920,17 @@
       "تیسرے مصرعے کو",
       "دوسرے مصرعے کو",
       "پہلے مصرعے کو",
-      "ان میں سے کوئی نہیں"
+      "چوتھے مصرعے کو"
     ],
     "optionsUrdu": [
       "تیسرے مصرعے کو",
       "دوسرے مصرعے کو",
       "پہلے مصرعے کو",
-      "ان میں سے کوئی نہیں"
+      "چوتھے مصرعے کو"
     ],
     "correctOptionIndex": 3,
-    "explanationUrdu": "درست جواب ان میں سے کوئی نہیں ہے۔ جامعہ کے ادبی متن اور آزاد تنقیدی مضمون دونوں چوتھے مصرعے کو خیال کی تکمیل اور رباعی کا حاصل قرار دیتے ہیں؛ چونکہ چوتھا مصرع آپشنز میں نہیں، اصل درست انتخاب ان میں سے کوئی نہیں ہے۔",
-    "relatedHistoryUrdu": "درست جواب چوتھا مصرع ہے۔ دونوں ادبی ماخذ اسے خیال کی تکمیل، خلاصہ اور رباعی کی جان قرار دیتے ہیں۔ موجودہ سوال کے جواب ”ان میں سے کوئی نہیں“ کو اس متعلقہ مستند حقیقت ”Fourth line“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "explanationUrdu": "درست جواب چوتھے مصرعے کو ہے۔ کلاسیکی رباعی میں آخری یعنی چوتھا مصرع خیال کو مکمل کرتا ہے اور اس کے خلاصے یا حاصلِ رباعی کی حیثیت رکھتا ہے۔",
+    "relatedHistoryUrdu": "درست جواب چوتھا مصرع ہے۔ دونوں ادبی ماخذ اسے خیال کی تکمیل، خلاصہ اور رباعی کی جان قرار دیتے ہیں۔ موجودہ سوال کے جواب ”چوتھے مصرعے کو“ کو اس متعلقہ مستند حقیقت ”Fourth line“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/120_Inner.pdf",
     "relatedHistoryAccessedOn": "2026-08-30",
     "source": {
@@ -511944,7 +511944,7 @@
       "u0045-q081"
     ],
     "verificationStatus": "verified",
-    "sourceNotes": "The exact Urdu source question and options are preserved separately. Both literary authorities identify the fourth line as the culmination, but the listed options name only the first three lines; therefore None of these at D is retained.",
+    "sourceNotes": "The original Urdu source question and options remain in the extraction audit. Both literary authorities identify the fourth line as the culmination. Option D now explicitly names the fourth line instead of the original 'None of these'; its verified answer index and question ID are unchanged.",
     "references": [
       {
         "url": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/120_Inner.pdf",
@@ -512003,7 +512003,7 @@
     ],
     "correctOptionIndex": 3,
     "explanationUrdu": "درست جواب چوتھا مصرع ہے۔ دونوں ادبی ماخذ اسے خیال کی تکمیل، خلاصہ اور رباعی کی جان قرار دیتے ہیں۔",
-    "relatedHistoryUrdu": "درست جواب ان میں سے کوئی نہیں ہے۔ جامعہ کے ادبی متن اور آزاد تنقیدی مضمون دونوں چوتھے مصرعے کو خیال کی تکمیل اور رباعی کا حاصل قرار دیتے ہیں؛ چونکہ چوتھا مصرع آپشنز میں نہیں، اصل درست انتخاب ان میں سے کوئی نہیں ہے۔ موجودہ سوال کے جواب ”Fourth line“ کو اس متعلقہ مستند حقیقت ”ان میں سے کوئی نہیں“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistoryUrdu": "درست جواب چوتھے مصرعے کو ہے۔ کلاسیکی رباعی میں آخری یعنی چوتھا مصرع خیال کو مکمل کرتا ہے اور اس کے خلاصے یا حاصلِ رباعی کی حیثیت رکھتا ہے۔ موجودہ سوال کے جواب ”Fourth line“ کو اس متعلقہ مستند حقیقت ”چوتھے مصرعے کو“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://dde.manuu.edu.in/sites/default/files/DDE/DDE-SelfLearnmaterial/NEW-SLM/120_Inner.pdf",
     "relatedHistoryAccessedOn": "2026-08-30",
     "source": {
@@ -513074,11 +513074,11 @@
       "Al-Ma'idah",
       "An-Nur",
       "Hud",
-      "None of these"
+      "Al-Baqarah"
     ],
     "correctOptionIndex": 3,
-    "explanationUrdu": "درست جواب None of these ہے۔ قرآن فاؤنڈیشن اور یونیورسٹی آف لیڈز کا قرآنی عربی کارپس دونوں آیت 2:256 کو سورۃ البقرہ میں رکھتے ہیں؛ اصل اختیارات میں یہ نام موجود نہیں تھا، اس لیے None of these درست ہے۔",
-    "relatedHistoryUrdu": "درست جواب 2 ہے۔ دونوں براہِ راست قرآنی ماخذ 2:256 کو دوسرے باب، سورۃ البقرہ، کی آیت کے طور پر دکھاتے ہیں۔ موجودہ سوال کے جواب ”None of these“ کو اس متعلقہ مستند حقیقت ”2“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "explanationUrdu": "درست جواب سورۃ البقرہ ہے۔ ’دین میں کوئی جبر نہیں‘ کے الفاظ سورۃ البقرہ کی آیت 256 میں ہیں، جس کا حوالہ 2:256 ہے۔",
+    "relatedHistoryUrdu": "درست جواب 2 ہے۔ دونوں براہِ راست قرآنی ماخذ 2:256 کو دوسرے باب، سورۃ البقرہ، کی آیت کے طور پر دکھاتے ہیں۔ موجودہ سوال کے جواب ”Al-Baqarah“ کو اس متعلقہ مستند حقیقت ”2“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://quran.com/2/256",
     "relatedHistoryAccessedOn": "2026-08-30",
     "source": {
@@ -513092,7 +513092,7 @@
       "u0045-q098"
     ],
     "verificationStatus": "verified",
-    "sourceNotes": "The grammar and verse number were added. Both complete Quran sources place the phrase in Surah Al-Baqarah, which is absent from the listed options; None of these at D is retained.",
+    "sourceNotes": "The grammar and verse number were added. Both complete Quran sources place the phrase in Surah Al-Baqarah. Option D now explicitly names Al-Baqarah instead of the original 'None of these'; its verified answer index and question ID are unchanged.",
     "references": [
       {
         "url": "https://quran.com/2/256",
@@ -513145,7 +513145,7 @@
     ],
     "correctOptionIndex": 0,
     "explanationUrdu": "درست جواب 2 ہے۔ دونوں براہِ راست قرآنی ماخذ 2:256 کو دوسرے باب، سورۃ البقرہ، کی آیت کے طور پر دکھاتے ہیں۔",
-    "relatedHistoryUrdu": "درست جواب None of these ہے۔ قرآن فاؤنڈیشن اور یونیورسٹی آف لیڈز کا قرآنی عربی کارپس دونوں آیت 2:256 کو سورۃ البقرہ میں رکھتے ہیں؛ اصل اختیارات میں یہ نام موجود نہیں تھا، اس لیے None of these درست ہے۔ موجودہ سوال کے جواب ”2“ کو اس متعلقہ مستند حقیقت ”None of these“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistoryUrdu": "درست جواب سورۃ البقرہ ہے۔ ’دین میں کوئی جبر نہیں‘ کے الفاظ سورۃ البقرہ کی آیت 256 میں ہیں، جس کا حوالہ 2:256 ہے۔ موجودہ سوال کے جواب ”2“ کو اس متعلقہ مستند حقیقت ”Al-Baqarah“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://quran.com/2/256",
     "relatedHistoryAccessedOn": "2026-08-30",
     "source": {
@@ -590754,11 +590754,11 @@
       "1896",
       "1904",
       "1913",
-      "None of these"
+      "1914"
     ],
     "correctOptionIndex": 3,
-    "explanationUrdu": "درست جواب None of these ہے۔ حلقے 1913 میں بنائے گئے مگر ان کی سرکاری عوامی رونمائی 1914 میں ہوئی، جو پہلے تین اختیارات میں نہیں۔",
-    "relatedHistoryUrdu": "درست جواب Pierre de Coubertin ہے۔ Pierre de Coubertin نے 1913 میں پانچ اولمپک حلقوں کا نشان تیار کیا۔ موجودہ سوال کے جواب ”None of these“ کو اس متعلقہ مستند حقیقت ”Pierre de Coubertin“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "explanationUrdu": "درست جواب 1914 ہے۔ اولمپک حلقے 1913 میں بنائے گئے، جبکہ پیرس کی اولمپک کانگریس میں ان کی باقاعدہ رونمائی 1914 میں ہوئی۔ اولمپک کھیلوں میں یہ پرچم پہلی بار 1920 میں استعمال ہوا۔",
+    "relatedHistoryUrdu": "درست جواب Pierre de Coubertin ہے۔ Pierre de Coubertin نے 1913 میں پانچ اولمپک حلقوں کا نشان تیار کیا۔ موجودہ سوال کے جواب ”1914“ کو اس متعلقہ مستند حقیقت ”Pierre de Coubertin“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://library.olympics.com/default/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=168650&parentDocumentId=168649&skipCopyright=true&skipWatermark=true",
     "relatedHistoryAccessedOn": "2026-08-26",
     "source": {
@@ -590772,7 +590772,7 @@
       "u0131-q003"
     ],
     "verificationStatus": "verified",
-    "sourceNotes": "The printed key selects 1913, the year Coubertin designed and published the rings. IOC archives distinguish that from their first official public debut in 1914, which is absent from A-C; the verified answer is option D, None of these.",
+    "sourceNotes": "The printed key selects 1913, the year Coubertin designed and published the rings. IOC sources distinguish this from the 1914 Paris Congress unveiling. Option D now explicitly states 1914 instead of the original 'None of these'; its verified answer index and question ID are unchanged.",
     "references": [
       {
         "url": "https://library.olympics.com/default/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=168650&parentDocumentId=168649&skipCopyright=true&skipWatermark=true",
@@ -590825,7 +590825,7 @@
     ],
     "correctOptionIndex": 3,
     "explanationUrdu": "درست جواب Pierre de Coubertin ہے۔ Pierre de Coubertin نے 1913 میں پانچ اولمپک حلقوں کا نشان تیار کیا۔",
-    "relatedHistoryUrdu": "درست جواب None of these ہے۔ حلقے 1913 میں بنائے گئے مگر ان کی سرکاری عوامی رونمائی 1914 میں ہوئی، جو پہلے تین اختیارات میں نہیں۔ موجودہ سوال کے جواب ”Pierre de Coubertin“ کو اس متعلقہ مستند حقیقت ”None of these“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistoryUrdu": "درست جواب 1914 ہے۔ اولمپک حلقے 1913 میں بنائے گئے، جبکہ پیرس کی اولمپک کانگریس میں ان کی باقاعدہ رونمائی 1914 میں ہوئی۔ موجودہ سوال کے جواب ”Pierre de Coubertin“ کو اس متعلقہ مستند حقیقت ”1914“ کے ساتھ جوڑ کر یاد رکھیں۔",
     "relatedHistorySource": "https://library.olympics.com/default/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=168650&parentDocumentId=168649&skipCopyright=true&skipWatermark=true",
     "relatedHistoryAccessedOn": "2026-08-26",
     "source": {

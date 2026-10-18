@@ -3,6 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const { isNoneOfTheseAnswer } = require("./answer-text-corrections");
 const {
   decisionFilePattern: adv2e102DecisionFilePattern,
   enrichedFilePattern: adv2e102EnrichedFilePattern,
@@ -380,6 +381,9 @@ function validate(questions) {
     }
     if (!Number.isInteger(question.correctOptionIndex) || question.correctOptionIndex < 0 || question.correctOptionIndex > 3) {
       fail(`${question.id} has an invalid correctOptionIndex.`);
+    }
+    if (isNoneOfTheseAnswer(question.options[question.correctOptionIndex])) {
+      fail(`${question.id} needs its explicit researched answer instead of None of these.`);
     }
     if (!question.explanationUrdu || String(question.explanationUrdu).trim().length < 20) {
       fail(`${question.id} needs a useful Urdu explanation.`);

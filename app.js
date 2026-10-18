@@ -36,6 +36,29 @@
   var SEQUENTIAL_ORDER_VERSION = 2;
   var APPROVED_ADDITIVE_BANK_SIGNATURE = "v1:11412:57e37c68";
   var APPROVED_ADDITIVE_BANK_QUESTION_COUNT = 11412;
+  var APPROVED_ADDITIVE_UPDATED_SIGNATURE = "v1:11412:40563d50";
+  var APPROVED_ANSWER_TEXT_BANK_SIGNATURE = "v1:11892:9437487f";
+  var APPROVED_ANSWER_TEXT_BANK_QUESTION_COUNT = 11892;
+  var APPROVED_ANSWER_TEXT_UPDATED_SIGNATURE = "v1:11892:57530f77";
+  // Exact ordered Important pools from the approved 11,412-question release.
+  // Later duplicate evidence promoted more questions without changing the
+  // bank's content fingerprint, so frozen Important sessions need these too.
+  var APPROVED_HISTORICAL_IMPORTANT_POOLS = {
+    "general-knowledge:all": "v1:118:8839676c",
+    "pakistan-studies:all": "v1:145:381aabf",
+    "current-affairs:all": "v1:33:690ec77",
+    "islamic-studies:all": "v1:56:c2127588",
+    "geography:all": "v1:74:48ae5ee6",
+    "basic-mathematics:all": "v1:27:9980098",
+    "english:all": "v1:44:4c00b23b",
+    "urdu:all": "v1:49:306ddee1",
+    "everyday-science:all": "v1:64:3e696f62",
+    "basic-computer-studies:all": "v1:458:584049ec",
+    "basic-computer-studies:initial-original": "v1:397:4decb387",
+    "basic-computer-studies:initial-related": "v1:19:5d3bd5d1",
+    "basic-computer-studies:other": "v1:42:33938932",
+    "job-related-finance-taxation:all": "v1:3:26d5ddb"
+  };
   var BASIC_COMPUTER_CATEGORY_ID = "basic-computer-studies";
   var COMPUTER_SOURCE_SCOPES = ["all", "initial-original", "initial-related", "other"];
   var data = window.PPSC_QUIZ_DATA || {};
@@ -143,6 +166,7 @@
     rangeEnd: null,
     rangePoolSize: null,
     rangePoolQuestionIds: null,
+    rangePoolBankSignature: null,
     rangeQuestionIds: null,
     responses: [],
     learnVisitedQuestionIds: new Set(),
@@ -365,17 +389,48 @@
   }
 
   function approvedAdditiveBankQuestionCount(savedSignature) {
+    // These fingerprints authorize only the audited seven answer-text
+    // replacements. IDs, order, correct indices and every other hashed field
+    // must still match the approved bank exactly; unknown edits stay invalid.
+    if (savedSignature === APPROVED_ANSWER_TEXT_BANK_SIGNATURE) {
+      return allQuestions.length >= APPROVED_ANSWER_TEXT_BANK_QUESTION_COUNT
+        && (allQuestions.length === APPROVED_ANSWER_TEXT_BANK_QUESTION_COUNT
+          ? questionBankSignature
+          : buildQuestionBankSignature(APPROVED_ANSWER_TEXT_BANK_QUESTION_COUNT))
+          === APPROVED_ANSWER_TEXT_UPDATED_SIGNATURE
+        ? APPROVED_ANSWER_TEXT_BANK_QUESTION_COUNT
+        : null;
+    }
     if (
       savedSignature !== APPROVED_ADDITIVE_BANK_SIGNATURE
       || allQuestions.length <= APPROVED_ADDITIVE_BANK_QUESTION_COUNT
-      || buildQuestionBankSignature(APPROVED_ADDITIVE_BANK_QUESTION_COUNT)
-        !== APPROVED_ADDITIVE_BANK_SIGNATURE
     ) return null;
+    var prefixSignature = buildQuestionBankSignature(APPROVED_ADDITIVE_BANK_QUESTION_COUNT);
+    if (prefixSignature !== APPROVED_ADDITIVE_BANK_SIGNATURE
+      && prefixSignature !== APPROVED_ADDITIVE_UPDATED_SIGNATURE) return null;
     return APPROVED_ADDITIVE_BANK_QUESTION_COUNT;
   }
 
   function isApprovedAdditiveBankMigration(savedSignature) {
     return approvedAdditiveBankQuestionCount(savedSignature) !== null;
+  }
+
+  function approvedSessionPoolForOrigin(savedSignature, selectedQuestionIds) {
+    var approvedQuestionCount = approvedAdditiveBankQuestionCount(savedSignature);
+    if (approvedQuestionCount === null) return null;
+    return selectedQuestionIds.filter(function (questionId) {
+      return allQuestionIndexes.get(questionId) < approvedQuestionCount;
+    });
+  }
+
+  function isApprovedHistoricalImportantPool(originSignature, categoryId, computerSourceScope, questionIds) {
+    if (originSignature !== APPROVED_ADDITIVE_BANK_SIGNATURE
+      || approvedAdditiveBankQuestionCount(originSignature) === null) return false;
+    var expected = APPROVED_HISTORICAL_IMPORTANT_POOLS[categoryId + ":" + computerSourceScope];
+    if (!expected) return false;
+    var actual = "v1:" + questionIds.length + ":"
+      + (hashText(2166136261, JSON.stringify(questionIds)) >>> 0).toString(16);
+    return actual === expected;
   }
 
   function isIndexPermutation(value) {
@@ -621,6 +676,14 @@
     var rangeEnd = null;
     var rangePoolSize = null;
     var rangePoolQuestionIds = null;
+    var rangePoolBankSignature = null;
+    var savedPoolBankSignature = typeof savedValue.rangePoolBankSignature === "undefined"
+      ? null : savedValue.rangePoolBankSignature;
+    if (savedPoolBankSignature !== null && (
+      typeof savedPoolBankSignature !== "string"
+      || paperSession
+      || savedValue.scope !== "all"
+    )) return null;
     var rangeQuestionIds = null;
     if (paperSession) {
       if (!legacySession && (
@@ -651,9 +714,18 @@
       var questionIdSet = new Set(questionIds);
 
       if (legacySession) {
+        var legacyPoolIds = selectedQuestionIds;
+        if (savedValue.scope === "all" && additiveBankMigration) {
+          legacyPoolIds = approvedSessionPoolForOrigin(savedValue.bankSignature, selectedQuestionIds);
+          if (!legacyPoolIds) return null;
+          if (legacyPoolIds.length !== selectedQuestionIds.length) {
+            rangePoolBankSignature = savedValue.bankSignature;
+          }
+        }
+        if (savedPoolBankSignature !== null) return null;
         if (savedValue.scope === "all" && (
-          questionIds.length !== selectedQuestionIds.length
-          || selectedQuestionIds.some(function (questionId) { return !questionIdSet.has(questionId); })
+          questionIds.length !== legacyPoolIds.length
+          || legacyPoolIds.some(function (questionId) { return !questionIdSet.has(questionId); })
         )) return null;
         if (questionIds.some(function (questionId) { return !selectedQuestionIds.includes(questionId); })) return null;
 
@@ -699,10 +771,32 @@
         if (orderKey(rangeQuestionIds, function (questionId) { return questionId; })
           !== orderKey(expectedRangeIds, function (questionId) { return questionId; })) return null;
 
-        if (savedValue.scope === "all" && !additiveBankMigration) {
-          if (rangePoolSize !== selectedQuestionIds.length) return null;
-          if (orderKey(rangePoolQuestionIds, function (questionId) { return questionId; })
-            !== orderKey(selectedQuestionIds, function (questionId) { return questionId; })) return null;
+        if (savedValue.scope === "all") {
+          var expectedPoolIds = selectedQuestionIds;
+          if (savedPoolBankSignature !== null) {
+            expectedPoolIds = approvedSessionPoolForOrigin(savedPoolBankSignature, selectedQuestionIds);
+            if (!expectedPoolIds) return null;
+            rangePoolBankSignature = savedPoolBankSignature;
+          } else if (rangePoolSize !== selectedQuestionIds.length) {
+            // Older additive migrations rewrote the bank signature without
+            // retaining the frozen pool's origin. Recover only an exact known
+            // prefix pool, never an arbitrary subset or an unknown signature.
+            var poolOrigin = additiveBankMigration ? savedValue.bankSignature : APPROVED_ADDITIVE_BANK_SIGNATURE;
+            expectedPoolIds = approvedSessionPoolForOrigin(poolOrigin, selectedQuestionIds);
+            if (!expectedPoolIds || expectedPoolIds.length !== rangePoolSize) {
+              poolOrigin = APPROVED_ADDITIVE_BANK_SIGNATURE;
+              expectedPoolIds = approvedSessionPoolForOrigin(poolOrigin, selectedQuestionIds);
+            }
+            if (!expectedPoolIds) return null;
+            rangePoolBankSignature = poolOrigin;
+          }
+          var exactCurrentOriginPool = rangePoolSize === expectedPoolIds.length
+            && orderKey(rangePoolQuestionIds, function (questionId) { return questionId; })
+              === orderKey(expectedPoolIds, function (questionId) { return questionId; });
+          if (!exactCurrentOriginPool && !(importantOnly
+            && isApprovedHistoricalImportantPool(
+              rangePoolBankSignature, category.id, computerSourceScope, rangePoolQuestionIds
+            ))) return null;
         }
       }
 
@@ -824,6 +918,7 @@
       score: score,
       savedAt: Number.isFinite(savedValue.savedAt) ? savedValue.savedAt : 0
     };
+    if (rangePoolBankSignature !== null) snapshot.rangePoolBankSignature = rangePoolBankSignature;
 
     return {
       snapshot: snapshot,
@@ -850,7 +945,8 @@
         return null;
       }
       activeSessionSnapshot = normalized.snapshot;
-      if (savedValue.bankSignature !== questionBankSignature) {
+      if (savedValue.bankSignature !== questionBankSignature
+        || (savedValue.rangePoolBankSignature || null) !== (activeSessionSnapshot.rangePoolBankSignature || null)) {
         try {
           window.localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(activeSessionSnapshot));
           notifyLocalStateChanged(SESSION_STORAGE_KEY, "set");
@@ -976,6 +1072,9 @@
       score: state.score,
       savedAt: Date.now()
     };
+    if (!isPaperSession() && state.rangePoolBankSignature !== null) {
+      snapshot.rangePoolBankSignature = state.rangePoolBankSignature;
+    }
 
     try {
       window.localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(snapshot));
@@ -1012,6 +1111,7 @@
     state.rangeStart = normalized.snapshot.rangeStart;
     state.rangeEnd = normalized.snapshot.rangeEnd;
     state.rangePoolSize = normalized.snapshot.rangePoolSize;
+    state.rangePoolBankSignature = normalized.snapshot.rangePoolBankSignature || null;
     state.rangePoolQuestionIds = normalized.snapshot.rangePoolQuestionIds
       ? normalized.snapshot.rangePoolQuestionIds.slice()
       : null;
@@ -1922,7 +2022,7 @@
               : (dedicatedSpacingApplied
                 ? "Review Queue spacing is ready. Saved question counts were kept unchanged."
                 : (additiveBankMigrationApplied
-                  ? "New MCQs are ready. Your Queue and Important progress were kept unchanged."
+                  ? "Updated MCQs are ready. Your Queue and Important progress were kept unchanged."
                   : (sequentialMigrationApplied
                   ? "Sequential popups are off. Your Queue and Important progress were kept unchanged."
                   : "")))));
@@ -5195,6 +5295,7 @@
     state.rangeEnd = null;
     state.rangePoolSize = null;
     state.rangePoolQuestionIds = null;
+    state.rangePoolBankSignature = null;
     state.rangeQuestionIds = null;
     state.responses = new Array(PAPER_QUESTION_COUNT).fill(null);
     state.learnVisitedQuestionIds = new Set();
@@ -5235,6 +5336,7 @@
     state.rangeEnd = null;
     state.rangePoolSize = null;
     state.rangePoolQuestionIds = null;
+    state.rangePoolBankSignature = null;
     state.rangeQuestionIds = null;
     state.responses = [];
     state.learnVisitedQuestionIds = new Set();
@@ -5454,6 +5556,7 @@
     state.rangeEnd = rangeEnd;
     state.rangePoolSize = filteredQuestions.length;
     state.rangePoolQuestionIds = currentPoolIds.slice();
+    state.rangePoolBankSignature = null;
     state.rangeQuestionIds = canonicalRangeQuestions.map(function (question) { return String(question.id); });
     state.responses = new Array(sessionQuestions.length).fill(null);
     state.learnVisitedQuestionIds = new Set();
@@ -6527,6 +6630,7 @@
     state.rangeEnd = null;
     state.rangePoolSize = null;
     state.rangePoolQuestionIds = null;
+    state.rangePoolBankSignature = null;
     state.rangeQuestionIds = null;
     state.responses = [];
     state.learnVisitedQuestionIds = new Set();

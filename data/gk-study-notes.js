@@ -7,7 +7,7 @@
   "sourceBankVersion": 5,
   "sourceBankGeneratedOn": "2026-10-14",
   "sourceBankQuestionCount": 11892,
-  "sourceBankSignature": "sha256:b41b6bc86538ac7a3bcf01eb9a1a52a4131d35545ab97f341a6a4b245e96cdac",
+  "sourceBankSignature": "sha256:bf7c5c866864e3252e12fe6e7148c3f3a9db6bf335eef5f59dd2af72b0f7ba50",
   "includedPairCount": 776,
   "includedQuestionCount": 1552,
   "excludedPairCount": 18,
@@ -76854,18 +76854,18 @@
         "people-offices",
         "sports-records"
       ],
-      "title": "حلقے 1913 میں بنائے گئے مگر ان کی سرکاری عوامی رونمائی 1914 میں ہوئی، جو پہلے تین اختیارات میں نہیں۔",
-      "subtitleUrdu": "حلقے 1913 میں بنائے گئے مگر ان کی سرکاری عوامی رونمائی 1914 میں ہوئی، جو پہلے تین اختیارات میں نہیں۔",
+      "title": "1914 ↔ Pierre de Coubertin",
+      "subtitleUrdu": "اولمپک حلقے 1913 میں بنائے گئے، جبکہ پیرس کی اولمپک کانگریس میں ان کی باقاعدہ رونمائی 1914 میں ہوئی۔",
       "important": false,
       "repeatCount": 1,
-      "memoryHookUrdu": "یاد رکھنے کی جوڑی: None of these ↔ Pierre de Coubertin",
+      "memoryHookUrdu": "یاد رکھنے کی جوڑی: 1914 ↔ Pierre de Coubertin",
       "searchTerms": [
         "ADV2E102-U0131-Q003",
         "In which year did the Olympic rings make their official public debut at the 1914 IOC Congress in Paris?",
         "Olympic rings نے Paris کے 1914 IOC Congress میں سرکاری عوامی آغاز کس سال کیا؟",
         "Who designed the Olympic rings in 1913?",
         "1913 میں Olympic rings کس نے ڈیزائن کیے؟",
-        "None of these",
+        "1914",
         "Pierre de Coubertin",
         "adv2e102",
         "u0131-q003",
@@ -76877,8 +76877,8 @@
         {
           "questionId": "ADV2E102-U0131-Q003-SRC",
           "kind": "source",
-          "textUrdu": "درست جواب None of these ہے۔ حلقے 1913 میں بنائے گئے مگر ان کی سرکاری عوامی رونمائی 1914 میں ہوئی، جو پہلے تین اختیارات میں نہیں۔",
-          "answer": "None of these",
+          "textUrdu": "درست جواب 1914 ہے۔ اولمپک حلقے 1913 میں بنائے گئے، جبکہ پیرس کی اولمپک کانگریس میں ان کی باقاعدہ رونمائی 1914 میں ہوئی۔ اولمپک کھیلوں میں یہ پرچم پہلی بار 1920 میں استعمال ہوا۔",
+          "answer": "1914",
           "source": {
             "type": "book",
             "label": "The Olympic Symbol",
@@ -76921,7 +76921,7 @@
             "version": null,
             "reverifyAfter": null
           },
-          "sourceNotes": "The printed key selects 1913, the year Coubertin designed and published the rings. IOC archives distinguish that from their first official public debut in 1914, which is absent from A-C; the verified answer is option D, None of these."
+          "sourceNotes": "The printed key selects 1913, the year Coubertin designed and published the rings. IOC sources distinguish this from the 1914 Paris Congress unveiling. Option D now explicitly states 1914 instead of the original 'None of these'; its verified answer index and question ID are unchanged."
         },
         {
           "questionId": "ADV2E102-U0131-Q003-SIM",
