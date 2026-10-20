@@ -8,15 +8,15 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261020-4">
+  <link rel="stylesheet" href="styles.css?v=20261020-5">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20261020-2" defer></script>
   <script src="data/questions.js?v=20261018-1" defer></script>
   <script src="data/gk-study-notes.js?v=20261018-1" defer></script>
   <script src="data/detailed-learning.js?v=20260917-1" defer></script>
   <script src="years-topics.js?v=20261020-1" defer></script>
-  <script src="water-topics.js?v=20261020-1" defer></script>
-  <script src="app.js?v=20261020-4" defer></script>
+  <script src="water-topics.js?v=20261020-2" defer></script>
+  <script src="app.js?v=20261020-5" defer></script>
 </head>
 <body>
   <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
@@ -184,7 +184,7 @@
           </span>
           <span class="study-tools-copy">
             <strong>Study Tools</strong>
-            <small lang="ur-Latn">Practice paper, years-wise topics aur Pakistan dams &amp; rivers — options kholein.</small>
+            <small lang="ur-Latn">Practice paper, years, dams &amp; rivers aur Constitution Articles — options kholein.</small>
           </span>
           <span class="study-tools-chevron" aria-hidden="true">&#9662;</span>
         </summary>
@@ -215,6 +215,18 @@
             <span class="category-copy">
               <strong>Pakistan Dams &amp; Rivers</strong>
               <small lang="ur-Latn">Dams, rivers, barrages aur water treaties ke MCQs, answers aur mukhtasar notes.</small>
+            </span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+          <button id="articles-topics-card" class="category-card water-topics-card" type="button" aria-controls="articles-topics-screen">
+            <span class="category-icon water-topics-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+            <span class="category-copy">
+              <strong>Pakistan Constitution Articles</strong>
+              <small lang="ur-Latn">Article number ke mutabiq MCQs, answers aur Roman Urdu notes; purane provisions ki alag wazahat.</small>
             </span>
             <span class="card-arrow" aria-hidden="true">&rarr;</span>
           </button>
@@ -386,6 +398,43 @@
           <strong>No matching notes found</strong>
           <p>Try another name, date, country or topic, or clear the filters.</p>
         </div>
+      </article>
+    </section>
+
+    <section id="articles-topics-screen" class="screen" aria-labelledby="articles-topics-title" hidden>
+      <button id="articles-topics-back" class="text-button" type="button">&larr; Back to categories</button>
+      <article class="water-topics-shell">
+        <header class="water-topics-header">
+          <p class="eyebrow">STUDY TOOLS / CONSTITUTION OF PAKISTAN</p>
+          <h1 id="articles-topics-title">Pakistan Constitution Articles</h1>
+          <p lang="ur-Latn">Article kholein: us ka mauzu, related MCQs aur answers ek jagah parhein.</p>
+          <p class="water-topics-note" lang="ur-Latn">Yeh exam revision ke liye selected Articles hain, mukammal Constitution nahi. Purane Constitution ya amendment-date wale sawal ko usi tareekhi context mein parhein. Official references har topic ke andar hain.</p>
+          <p id="articles-topics-coverage" class="water-topics-note" lang="ur-Latn">Existing question bank se muntakhib MCQs; quiz aur queue mein koi tabdeeli nahi.</p>
+        </header>
+        <div class="water-topics-tools">
+          <label for="articles-topics-search">Search article number, topic or answer
+            <input id="articles-topics-search" type="search" autocomplete="off" placeholder="e.g. Article 25, 10A, Urdu">
+          </label>
+          <label for="articles-topics-section">Section
+            <select id="articles-topics-section">
+              <option value="all">All sections</option>
+              <option value="foundations">State, language &amp; definitions</option>
+              <option value="rights">Fundamental rights</option>
+              <option value="government">Parliament &amp; institutions</option>
+              <option value="justice">Courts &amp; judiciary</option>
+              <option value="history">Historical provisions</option>
+            </select>
+          </label>
+          <button id="articles-topics-clear" class="secondary-button" type="button" disabled>Clear filters</button>
+        </div>
+        <div class="water-topics-toolbar">
+          <p id="articles-topics-status" role="status" aria-live="polite"></p>
+          <button id="articles-topics-collapse" class="text-button" type="button" disabled>Close all topics</button>
+        </div>
+        <p id="articles-topics-error" class="water-topics-message" role="alert" hidden lang="ur-Latn">Articles load nahi ho sake. Internet check karke dobara koshish karein.</p>
+        <button id="articles-topics-retry" class="secondary-button" type="button" hidden>Try again</button>
+        <p id="articles-topics-empty" class="water-topics-message" hidden lang="ur-Latn">Is search ya section mein koi topic nahi mila. Doosra Article number ya lafz likhein.</p>
+        <div id="articles-topics-list" class="water-topics-list"></div>
       </article>
     </section>
 

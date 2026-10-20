@@ -746,7 +746,7 @@ h2[tabindex="-1"]:focus {
 .water-topic-source { color: var(--muted); font-size: .75rem; }
 .water-topic-context { margin-top: 8px; color: var(--muted); font-size: .8rem; line-height: 1.7; }
 .water-topics-message { padding: 0 24px 24px; }
-#water-topics-retry { margin: 0 24px 24px; }
+#water-topics-retry, #articles-topics-retry { margin: 0 24px 24px; }
 @media (max-width: 700px) {
   .water-topics-tools { grid-template-columns: 1fr; padding: 16px; }
   .water-topics-list { padding: 0 12px 20px; }

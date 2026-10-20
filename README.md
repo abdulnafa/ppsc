@@ -4,7 +4,15 @@ A category-wise PPSC General Ability practice website for GitHub Pages. Question
 
 ## Study Tools
 
-The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics** and **Pakistan Dams & Rivers**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
+The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics**, **Pakistan Dams & Rivers** and **Pakistan Constitution Articles**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
+
+## Pakistan Constitution Articles
+
+This read-only library groups **102 existing MCQ references into 35 topics** by Article and subject: State/language/definitions, fundamental rights, Parliament/institutions, courts/judiciary and historical provisions. Expand a topic to read its short Roman Urdu summary, canonical question/answer, original category/MCQ number, source context and official references. Plain numbers or `Article 25` search exact Article numbers (not 251); text searches include question and correct-answer text. Historical provisions, especially the 1956 Constitution and pre-2025 court jurisdiction, are explicitly labelled instead of presented as current law. The library is selected exam revision, not a complete Constitution or legal advice.
+
+The shared read-only renderer in `water-topics.js` creates separate Water and Articles instances: filters, loaded bundles and open accordions never leak between them. `data/pakistan-articles-topics.js` is fetched only when Articles opens; unopened bodies are lazy-rendered. Neither library writes progress or changes questions, queues, scores, popups, guest/login or cloud behavior.
+
+Author content in `data/pakistan-articles-foundations.json` and `data/pakistan-articles-institutions.json`; run `node tools/build-pakistan-articles-topics.js` to regenerate or add `--check` for deterministic data, ID/source/schema checks and deployment coverage. Summaries use official constitutional texts with historical qualifications; original canonical wording is preserved with visible notes where needed, including Article 25(2)'s older wording. `node tools/articles-topics-browser-smoke.js` verifies the rendered question/answer mapping, article search, filters, separate Water/Articles state, retry, keyboard, responsive layouts, guest access and saved-progress preservation.
 
 ## Pakistan Dams & Rivers
 

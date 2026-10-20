@@ -92,7 +92,7 @@ async function main() {
       const card = document.getElementById('water-topics-card');
       return card?.parentElement.id === 'study-tools-options'
         && document.querySelectorAll('#water-topics-card').length === 1
-        && document.querySelectorAll('#study-tools-options > button').length === 3
+        && document.querySelectorAll('#study-tools-options > button').length === 4
         && document.querySelectorAll('#category-grid .category-card').length === 11
         && !document.getElementById('study-tools-box').contains(document.getElementById('category-grid'));
     })()`), "Water library must be the third Study Tools launcher without changing subjects");
