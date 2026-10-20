@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261020-2">
+  <link rel="stylesheet" href="styles.css?v=20261020-3">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20261020-2" defer></script>
   <script src="data/questions.js?v=20261018-1" defer></script>
@@ -171,25 +171,42 @@
         <p>Pick a subject to begin your practice session.</p>
       </div>
 
-      <div class="category-grid paper-entry-grid">
-        <button id="paper-builder-card" class="category-card paper-builder-card" type="button" aria-controls="paper-setup-screen">
-          <span class="category-icon paper-builder-icon" aria-hidden="true">100</span>
-          <span class="category-copy">
-            <strong>Start Paper Here</strong>
-            <small>Choose subjects and attempt a complete 100-MCQ practice paper.</small>
+      <details id="study-tools-box" class="study-tools-box">
+        <summary id="study-tools-summary" class="study-tools-summary">
+          <span class="study-tools-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+              <path d="M14 17.5h7M17.5 14v7" stroke-linecap="round"></path>
+            </svg>
           </span>
-          <span class="paper-card-badge" aria-hidden="true">FULL PAPER</span>
-          <span class="card-arrow" aria-hidden="true">&rarr;</span>
-        </button>
-        <button id="years-topics-card" class="category-card years-topics-card" type="button" aria-controls="years-topics-screen">
-          <span class="category-icon years-topics-icon" aria-hidden="true">YR</span>
-          <span class="category-copy">
-            <strong>Years Wise Topics</strong>
-            <small lang="ur-Latn">Saal kholein, numbered topics aur Roman Urdu mein mukhtasar tafseel parhein.</small>
+          <span class="study-tools-copy">
+            <strong>Study Tools</strong>
+            <small lang="ur-Latn">Practice paper aur years-wise topics — options dekhne ke liye kholein.</small>
           </span>
-          <span class="card-arrow" aria-hidden="true">&rarr;</span>
-        </button>
-      </div>
+          <span class="study-tools-chevron" aria-hidden="true">&#9662;</span>
+        </summary>
+        <!-- Add future cross-category tools here, outside the subject grid. -->
+        <div id="study-tools-options" class="study-tools-options">
+          <button id="paper-builder-card" class="category-card paper-builder-card" type="button" aria-controls="paper-setup-screen">
+            <span class="category-icon paper-builder-icon" aria-hidden="true">100</span>
+            <span class="category-copy">
+              <strong>Start Paper Here</strong>
+              <small>Choose subjects and attempt a complete 100-MCQ practice paper.</small>
+            </span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+          <button id="years-topics-card" class="category-card years-topics-card" type="button" aria-controls="years-topics-screen">
+            <span class="category-icon years-topics-icon" aria-hidden="true">YR</span>
+            <span class="category-copy">
+              <strong>Years Wise Topics</strong>
+              <small lang="ur-Latn">Saal kholein, numbered topics aur Roman Urdu mein mukhtasar tafseel parhein.</small>
+            </span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+      </details>
 
       <div id="category-grid" class="category-grid">
         <button class="category-card" type="button" data-category="general-knowledge">

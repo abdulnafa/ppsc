@@ -6662,8 +6662,15 @@ async function main() {
       }
       localStorage.removeItem(storageKey);
 
+      const studyTools = document.querySelector("#study-tools-box");
+      if (!studyTools || studyTools.tagName !== "DETAILS") errors.push("Study Tools accordion was missing.");
+      if (studyTools && !studyTools.open) {
+        studyTools.querySelector("summary").click();
+        await pause();
+      }
       const paperCard = document.querySelector("#paper-builder-card");
       if (!paperCard || !visible(paperCard)) errors.push("Start Paper Here card was not visible on the category screen.");
+      if (paperCard && paperCard.closest("#study-tools-box") !== studyTools) errors.push("Start Paper Here card was outside Study Tools.");
       if (paperCard && paperCard.closest("#category-grid")) errors.push("Start Paper Here card was incorrectly rendered inside the subject category grid.");
       if (document.querySelectorAll("#category-grid .category-card").length !== 11) errors.push("The paper card changed the 11 subject-category cards.");
       if (paperCard) paperCard.click();

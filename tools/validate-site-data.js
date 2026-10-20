@@ -1036,7 +1036,7 @@ function validateAdv2e102Bank(questions) {
 function validateHtml() {
   const html = fs.readFileSync(htmlPath, "utf8");
   const requiredIds = [
-    "category-screen", "paper-builder-card",
+    "category-screen", "paper-builder-card", "study-tools-box", "study-tools-summary", "study-tools-options",
     "paper-setup-screen", "paper-setup-back-button",
     "quick-notes-screen", "quick-notes-back-button", "quick-notes-category",
     "quick-notes-title", "quick-notes-count", "quick-notes-language-note",
@@ -1093,6 +1093,14 @@ function validateHtml() {
   for (const id of requiredIds) {
     const matches = html.match(new RegExp(`\\bid=["']${id}["']`, "g")) || [];
     if (matches.length !== 1) error(`index.html: expected one #${id}, found ${matches.length}`);
+  }
+  const studyTools = html.match(/<details\b([^>]*\bid=["']study-tools-box["'][^>]*)>([\s\S]*?)<\/details>/i);
+  if (!studyTools || /\bopen(?:\s|=|$)/i.test(studyTools[1])
+    || !/<summary\b[^>]*\bid=["']study-tools-summary["']/i.test(studyTools[2])
+    || !studyTools[2].includes('id="paper-builder-card"')
+    || !studyTools[2].includes('id="years-topics-card"')
+    || studyTools[2].includes('id="category-grid"')) {
+    error("index.html: Study Tools must start collapsed and group the paper/timeline launchers outside the subject grid");
   }
   const headerStartIndex = html.search(/<header\b[^>]*\bclass=["'][^"']*\bsite-header\b[^"']*["'][^>]*>/i);
   const headerEndIndex = headerStartIndex < 0 ? -1 : html.indexOf("</header>", headerStartIndex);

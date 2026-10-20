@@ -57,6 +57,53 @@ async function main() {
     assert.equal(await client.evaluate("location.href"), url);
     assert.match(await client.evaluate("document.title"), /PPSC Prep/);
     assert.equal(dataRequests, 0, "Data must not load on home screen");
+    const studyToolsChecks = await client.evaluate(`(() => {
+      const errors = [], check = (value, message) => { if (!value) errors.push(message); };
+      const box = document.getElementById('study-tools-box');
+      const options = document.getElementById('study-tools-options');
+      const visible = node => !!node && node.checkVisibility({ checkVisibilityCSS: true });
+      check(document.querySelectorAll('#study-tools-box').length === 1, 'Expected one Study Tools box');
+      check(box?.tagName === 'DETAILS' && !box.open, 'Study Tools must initially be a closed native accordion');
+      check(document.getElementById('study-tools-summary')?.parentElement === box, 'Study Tools summary missing');
+      check(options?.parentElement === box, 'Study Tools options outside the box');
+      for (const id of ['paper-builder-card', 'years-topics-card']) {
+        const card = document.getElementById(id);
+        check(document.querySelectorAll('#' + id).length === 1, id + ' duplicated');
+        check(card?.parentElement === options, id + ' outside Study Tools options');
+        check(!visible(card), id + ' visible before expanding Study Tools');
+      }
+      check(document.querySelectorAll('#category-grid .category-card').length === 11, 'Subject category count changed');
+      check(!box?.contains(document.getElementById('category-grid')), 'Subject categories moved inside Study Tools');
+      document.getElementById('study-tools-summary').focus();
+      return { errors };
+    })()`);
+    assert.deepEqual(studyToolsChecks.errors, []);
+    // Real key input exercises the browser's native details/summary behavior.
+    await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: "Enter", code: "Enter", windowsVirtualKeyCode: 13, text: "\r", unmodifiedText: "\r" });
+    await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: "Enter", code: "Enter", windowsVirtualKeyCode: 13 });
+    await wait('document.getElementById("study-tools-box").open');
+    assert(await client.evaluate(`['paper-builder-card','years-topics-card'].every(id => document.getElementById(id).checkVisibility({ checkVisibilityCSS: true }))`), "Expanded Study Tools buttons not visible");
+    await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: " ", code: "Space", windowsVirtualKeyCode: 32, text: " " });
+    await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: " ", code: "Space", windowsVirtualKeyCode: 32 });
+    await wait('!document.getElementById("study-tools-box").open');
+    for (const [name, width, height, dark] of [["desktop", 1366, 900, false], ["mobile-dark", 320, 900, true]]) {
+      await client.send("Emulation.setDeviceMetricsOverride", { width, height, deviceScaleFactor: 1, mobile: width < 500 });
+      for (const [state, open] of [["collapsed", false], ["open", true]]) {
+        await client.evaluate(`(() => {
+          document.documentElement.setAttribute('data-theme', ${JSON.stringify(dark ? "dark" : "light")});
+          const box = document.getElementById('study-tools-box');
+          if (box.open !== ${open}) document.getElementById('study-tools-summary').click();
+          box.scrollIntoView({ behavior: 'instant', block: 'start' });
+        })()`);
+        await pause(150);
+        assert(await client.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), `Study Tools ${name} ${state} horizontal overflow`);
+        const screenshot = path.join(os.tmpdir(), `ppsc-study-tools-${name}-${state}.png`);
+        fs.writeFileSync(screenshot, Buffer.from((await client.send("Page.captureScreenshot", { format: "png" })).data, "base64"));
+        screenshots.push(screenshot);
+      }
+    }
+    await client.send("Emulation.setDeviceMetricsOverride", { width: 1366, height: 900, deviceScaleFactor: 1, mobile: false });
+    await client.evaluate(`document.documentElement.setAttribute('data-theme', 'light');window.scrollTo(0,0);`);
     // Seed a genuine unfinished quiz and finite queue via the public UI.
     await client.evaluate(`(() => {
       document.querySelector('[data-category="general-knowledge"]').click();
@@ -67,6 +114,15 @@ async function main() {
       document.getElementById('action-button').click();
       document.getElementById('back-button').click();
       window.__yearSaved = Object.fromEntries(Object.keys(localStorage).map(key => [key,localStorage.getItem(key)]));
+      document.getElementById('paper-builder-card').click();
+    })()`);
+    assert(await client.evaluate('!document.getElementById("paper-setup-screen").hidden && document.getElementById("category-screen").hidden'), "Study Tools paper button did not open setup");
+    await client.evaluate('document.getElementById("paper-setup-back-button").click()');
+    assert(await client.evaluate('!document.getElementById("category-screen").hidden && !document.getElementById("continue-session-card").hidden'), "Paper back did not restore home and Continue");
+    assert(await client.evaluate('JSON.stringify(window.__yearSaved) === JSON.stringify(Object.fromEntries(Object.keys(localStorage).map(key => [key,localStorage.getItem(key)])))'), "Paper setup/back changed saved progress");
+    assert.equal(dataRequests, 0, "Paper navigation must not load timeline data");
+    await client.evaluate(`(() => {
+      if (!document.getElementById('study-tools-box').open) document.getElementById('study-tools-summary').click();
       document.getElementById('years-topics-card').click();
     })()`);
     await wait('!document.getElementById("years-topics-error").hidden');
@@ -143,6 +199,7 @@ async function main() {
     assert(await client.evaluate('!document.getElementById("quiz-screen").hidden && document.getElementById("years-topics-screen").hidden'), "Continue failed after timeline");
     assert.deepEqual(runtimeErrors, []);
     console.log(JSON.stringify({ ok: true, url, ...checks, lazyLoadRetry: true, progressPreserved: true, keyboard: true,
+      studyTools: { defaultCollapsed: true, singleBox: true, keyboard: true, paperAndTimelineNavigation: true, subjectsUnchanged: true },
       runtimeErrors, screenshots, browser: "Browser plugin not available; existing native Chrome test harness used" }, null, 2));
   } finally {
     if (client && client.socket.readyState < WebSocket.CLOSING) client.socket.close();

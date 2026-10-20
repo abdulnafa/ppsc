@@ -2,9 +2,13 @@
 
 A category-wise PPSC General Ability practice website for GitHub Pages. Question rendering stays in the browser, while Firebase Google Authentication and Cloud Firestore keep the approved user's study progress synchronized across devices.
 
+## Study Tools
+
+The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here** and **Years Wise Topics**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from either tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
+
 ## Years Wise Topics
 
-The category screen includes a separate **Years Wise Topics** reading library. Open a year accordion to read numbered topic titles and short Roman Urdu descriptions. Search by year, name or phrase, filter by category/calendar, or close all years. Each topic includes a collapsed MCQ reference showing its canonical category question number, question and correct answer.
+The category screen's **Study Tools** box includes the **Years Wise Topics** reading library. Open a year accordion to read numbered topic titles and short Roman Urdu descriptions. Search by year, name or phrase, filter by category/calendar, or close all years. Each topic includes a collapsed MCQ reference showing its canonical category question number, question and correct answer.
 
 This is a manually curated collection of historical/event topics grounded in the current question bank, **not an exhaustive index of every date in all MCQs**. Repeated questions can share one topic. Hypothetical maths/grammar dates, quantities, software version numbers, wrong-option dates and mere “as of” metadata are not treated as historical events. Only years with topics are shown. BCE years run oldest-first, followed by ascending CE years; AH/Hijri years have their own explicitly separate calendar section without guessed conversions. The library does not invent events for empty years or unknown publication dates.
 
