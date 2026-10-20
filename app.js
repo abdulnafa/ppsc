@@ -193,6 +193,7 @@
     elements.quickNotesScreen = firstElement(["#quick-notes-screen", "[data-screen='quick-notes']"]);
     elements.gkNotesScreen = firstElement(["#gk-notes-screen", "[data-screen='gk-notes']"]);
     elements.detailedLearningScreen = firstElement(["#detailed-learning-screen", "[data-screen='detailed-learning']"]);
+    elements.yearsTopicsScreen = firstElement(["#years-topics-screen"]);
     elements.paperSetupScreen = firstElement(["#paper-setup-screen", "[data-screen='paper-setup']"]);
     elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
     elements.quizScreen = firstElement(["#quiz-screen", "[data-screen='quiz']"]);
@@ -3719,6 +3720,7 @@
     setHidden(elements.quickNotesScreen, screenName !== "quick-notes");
     setHidden(elements.gkNotesScreen, screenName !== "gk-notes");
     setHidden(elements.detailedLearningScreen, screenName !== "detailed-learning");
+    setHidden(elements.yearsTopicsScreen, screenName !== "years-topics");
     setHidden(elements.paperSetupScreen, screenName !== "paper-setup");
     setHidden(elements.modeScreen, screenName !== "mode");
     setHidden(elements.quizScreen, screenName !== "quiz");
@@ -3732,6 +3734,8 @@
       ? elements.gkNotesScreen
       : screenName === "detailed-learning"
       ? elements.detailedLearningScreen
+      : screenName === "years-topics"
+      ? elements.yearsTopicsScreen
       : screenName === "paper-setup"
       ? elements.paperSetupScreen
       : screenName === "quiz"
@@ -6851,6 +6855,17 @@
   }
 
   function bindEvents() {
+    if (window.PPSC_YEAR_TOPICS && elements.yearsTopicsScreen) {
+      window.PPSC_YEAR_TOPICS.init({
+        categories: categories,
+        questions: allQuestions,
+        open: function () { showScreen("years-topics"); },
+        close: function () {
+          showScreen("categories");
+          updateContinueSessionUI();
+        }
+      });
+    }
     if (elements.detailedLearningBackButton) {
       elements.detailedLearningBackButton.addEventListener("click", closeDetailedLearning);
     }

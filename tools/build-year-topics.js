@@ -1,0 +1,108 @@
+"use strict";
+
+const fs = require("node:fs");
+const path = require("node:path");
+const vm = require("node:vm");
+const assert = require("node:assert/strict");
+
+const root = path.resolve(__dirname, "..");
+const contentFiles = ["year-topics-world.json", "year-topics-pakistan.json", "year-topics-other.json"];
+const context = { window: {} };
+vm.runInNewContext(fs.readFileSync(path.join(root, "data/questions.js"), "utf8"), context);
+const bank = context.window.PPSC_QUIZ_DATA;
+const questions = new Map(bank.questions.map((q) => [q.id, q]));
+const ids = new Set();
+const identities = new Map();
+const entries = [];
+const asciiNumbers = (value) => String(value || "").replace(/[۰-۹]/g, (digit) => String("۰۱۲۳۴۵۶۷۸۹".indexOf(digit)))
+  .replace(/[٠-٩]/g, (digit) => String("٠١٢٣٤٥٦٧٨٩".indexOf(digit)));
+
+for (const file of contentFiles) {
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data", file), "utf8"));
+  assert(Array.isArray(data.entries) && data.entries.length, `${file}: empty content`);
+  assert(typeof data.coverageNote === "string" && data.coverageNote.length > 20, `${file}: coverage note missing`);
+  for (const entry of data.entries) {
+    assert(/^[a-z0-9-]+$/.test(entry.id) && !ids.has(entry.id), `Invalid/duplicate topic ID: ${entry.id}`);
+    ids.add(entry.id);
+    assert(["CE", "BCE", "AH"].includes(entry.era), `${entry.id}: unsupported calendar`);
+    assert(Number.isInteger(entry.year) && entry.year >= 1 && entry.year <= (entry.era === "CE" ? 2026 : 10000), `${entry.id}: invalid year`);
+    for (const field of ["title", "description"]) {
+      assert(typeof entry[field] === "string" && entry[field].trim().length >= 6, `${entry.id}: missing ${field}`);
+      assert(!/[\u0600-\u06ff]/.test(entry[field]), `${entry.id}: ${field} must be Roman Urdu`);
+    }
+    assert(entry.description.length <= 650, `${entry.id}: description too long`);
+    assert(Array.isArray(entry.questionIds) && entry.questionIds.length, `${entry.id}: missing MCQ references`);
+    const linkedQuestions = entry.questionIds.map((id) => {
+      assert(questions.has(id), `${entry.id}: unknown MCQ ${id}`);
+      return questions.get(id);
+    });
+    const evidence = asciiNumbers(linkedQuestions.map((q) => [q.question, q.options[q.correctOptionIndex], q.explanationUrdu, q.relatedHistoryUrdu].join(" ")).join(" "));
+    assert(new RegExp(`(^|\\D)${entry.year}(\\D|$)`).test(evidence), `${entry.id}: year ${entry.year} absent from linked question/answer/explanation`);
+    entries.push({
+      id: entry.id, year: entry.year, era: entry.era, title: entry.title.trim(),
+      description: entry.description.trim(),
+      ...(entry.dateLabel ? { dateLabel: entry.dateLabel } : {}),
+      questionIds: [...new Set(entry.questionIds)],
+      categoryIds: bank.categories.filter((c) => linkedQuestions.some((q) => q.categoryId === c.id)).map((c) => c.id)
+    });
+  }
+}
+// Explicit editorial same-event merges keep all MCQ/category provenance. Other
+// events in the same year (e.g. founding vs joining an organization) stay separate.
+const aliases = new Map(entries.map((entry) => [entry.id, entry]));
+const removed = new Set();
+function mergeInto(target, duplicate) {
+  assert(target.year === duplicate.year && target.era === duplicate.era, `Calendar/year mismatch: ${duplicate.id}`);
+  target.questionIds = [...new Set([...target.questionIds, ...duplicate.questionIds])];
+  target.categoryIds = bank.categories.filter((c) => target.questionIds.some((id) => questions.get(id).categoryId === c.id)).map((c) => c.id);
+  if (!target.dateLabel && duplicate.dateLabel) target.dateLabel = duplicate.dateLabel;
+  removed.add(duplicate.id);
+}
+const merges = JSON.parse(fs.readFileSync(path.join(root, "data/year-topics-merges.json"), "utf8"));
+for (const group of merges) {
+  assert(Array.isArray(group) && group.length >= 2, "Invalid topic merge group");
+  const target = aliases.get(group[0]);
+  assert(target && !removed.has(target.id), `Unknown/removed merge target ${group[0]}`);
+  for (const id of group.slice(1)) {
+    assert(aliases.has(id) && !removed.has(id), `Unknown/duplicate merge source ${id}`);
+    mergeInto(target, aliases.get(id));
+  }
+}
+for (const entry of entries) {
+  if (removed.has(entry.id)) continue;
+  const identity = `${entry.era}:${entry.year}:${entry.title.toLowerCase().replace(/[^a-z0-9]/g, "")}`;
+  if (identities.has(identity)) mergeInto(identities.get(identity), entry);
+  else identities.set(identity, entry);
+}
+for (let index = entries.length - 1; index >= 0; index -= 1) {
+  if (removed.has(entries[index].id)) entries.splice(index, 1);
+}
+const eraOrder = { BCE: 0, CE: 1, AH: 2 };
+entries.sort((a, b) => eraOrder[a.era] - eraOrder[b.era]
+  || (a.era === "BCE" ? b.year - a.year : a.year - b.year)
+  || a.title.localeCompare(b.title, "en") || a.id.localeCompare(b.id, "en"));
+const bundle = { schemaVersion: 1, generatedOn: "2026-10-20", coverage: "curated-mcq-linked-topics", entries };
+const output = "// Generated by tools/build-year-topics.js; edit year-topics-*.json instead.\n"
+  + "window.PPSC_YEAR_TOPICS_DATA = " + JSON.stringify(bundle, null, 2) + ";\n";
+const outputPath = path.join(root, "data/year-topics.js");
+if (process.argv.includes("--check")) {
+  assert.equal(fs.readFileSync(outputPath, "utf8").replace(/\r\n/g, "\n"), output, "Year topics bundle is stale. Run node tools/build-year-topics.js");
+  const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  const app = fs.readFileSync(path.join(root, "app.js"), "utf8");
+  const controller = fs.readFileSync(path.join(root, "years-topics.js"), "utf8");
+  const workflow = fs.readFileSync(path.join(root, ".github/workflows/pages.yml"), "utf8");
+  for (const id of ["card", "screen", "back", "search", "list", "empty", "retry", "category", "calendar"]) {
+    assert.equal((html.match(new RegExp(`id="years-topics-${id}"`, "g")) || []).length, 1, `Missing/duplicate timeline ${id}`);
+  }
+  assert(html.includes('src="years-topics.js?'), "Missing timeline controller");
+  assert(!html.includes('src="data/year-topics.js'), "Timeline data should be lazy-loaded");
+  assert(app.includes('setHidden(elements.yearsTopicsScreen, screenName !== "years-topics")'), "Timeline must obey screen navigation");
+  assert(!/localStorage|sessionStorage|firestore|notifyLocalStateChanged/.test(controller), "Timeline must not write progress");
+  assert(workflow.includes("cp theme.js years-topics.js _site/"), "Timeline/theme controller not deployed");
+  assert(workflow.includes("cp data/year-topics.js _site/data/"), "Timeline data not deployed");
+} else {
+  fs.writeFileSync(outputPath, output);
+}
+console.log(`Years Wise Topics: ${entries.length} topics, ${new Set(entries.map((e) => e.era + ':' + e.year)).size} year/calendar groups.`);
+console.log(`Linked MCQs: ${new Set(entries.flatMap((e) => e.questionIds)).size}. Canonical bank unchanged: ${bank.questions.length} questions.`);
+

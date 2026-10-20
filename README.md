@@ -2,6 +2,16 @@
 
 A category-wise PPSC General Ability practice website for GitHub Pages. Question rendering stays in the browser, while Firebase Google Authentication and Cloud Firestore keep the approved user's study progress synchronized across devices.
 
+## Years Wise Topics
+
+The category screen includes a separate **Years Wise Topics** reading library. Open a year accordion to read numbered topic titles and short Roman Urdu descriptions. Search by year, name or phrase, filter by category/calendar, or close all years. Each topic includes a collapsed MCQ reference showing its canonical category question number, question and correct answer.
+
+This is a manually curated collection of historical/event topics grounded in the current question bank, **not an exhaustive index of every date in all MCQs**. Repeated questions can share one topic. Hypothetical maths/grammar dates, quantities, software version numbers, wrong-option dates and mere “as of” metadata are not treated as historical events. Only years with topics are shown. BCE years run oldest-first, followed by ascending CE years; AH/Hijri years have their own explicitly separate calendar section without guessed conversions. The library does not invent events for empty years or unknown publication dates.
+
+The controller is `years-topics.js`; the generated `data/year-topics.js` is fetched only on first opening, with a retry option on failure. Topic bodies render only when their accordion opens. Content is authored in `data/year-topics-world.json`, `data/year-topics-pakistan.json` and `data/year-topics-other.json`; `data/year-topics-merges.json` identifies editorial same-event merges across categories without losing MCQ references. Run `node tools/build-year-topics.js` after editing, and `node tools/build-year-topics.js --check` to validate the generated bundle, linked MCQ IDs, year evidence, ordering and deployment assets. These mechanical checks do not replace editorial fact checking.
+
+This read-only view neither changes the canonical question bank nor writes learning, quiz, Wrong Quiz, Queue, Important, local-storage or cloud progress. Returning to categories retains the normal Continue option. The existing theme applies to both desktop and mobile. Run `node tools/year-topics-browser-smoke.js` for the new page's lazy-load failure/retry, filters, keyboard accordion, 1366px/320px layout and saved-progress checks.
+
 ## Practice popup control
 
 **Practice popups** in the category Learn/Quiz session header switches both automatic Queue and Important reviews on or off, including Difficult Learn/Quiz. It defaults to On for existing saves. Off pauses the remaining popup interval without changing the next review type, queue counts, or round order. Ordinary Quiz answers still enter the queue, and full-screen category Queue Practice remains available.
@@ -134,6 +144,8 @@ node tools/validate-site-data.js --expected=11892 --verify-work-repeat-evidence
 node tools/answer-text-migration-smoke.js
 node tools/popup-preference-smoke.js
 node tools/wrong-quiz-smoke.js
+node tools/build-year-topics.js --check
+node tools/year-topics-browser-smoke.js
 node tools/cloud-sync-smoke.js
 node tools/browser-smoke.js
 ```
