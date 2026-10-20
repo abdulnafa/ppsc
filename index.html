@@ -8,14 +8,14 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261020-1">
+  <link rel="stylesheet" href="styles.css?v=20261020-2">
   <script src="firebase-config.js?v=20260912-2" defer></script>
-  <script src="firebase-sync.js?v=20261018-3" defer></script>
+  <script src="firebase-sync.js?v=20261020-2" defer></script>
   <script src="data/questions.js?v=20261018-1" defer></script>
   <script src="data/gk-study-notes.js?v=20261018-1" defer></script>
   <script src="data/detailed-learning.js?v=20260917-1" defer></script>
   <script src="years-topics.js?v=20261020-1" defer></script>
-  <script src="app.js?v=20261020-1" defer></script>
+  <script src="app.js?v=20261020-2" defer></script>
 </head>
 <body>
   <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
@@ -32,9 +32,9 @@
       </div>
 
       <div class="auth-heading">
-        <span class="eyebrow">PRIVATE STUDY SPACE</span>
+        <span class="eyebrow">YOUR STUDY SPACE</span>
         <h1 id="auth-gate-title" tabindex="-1">Your progress, on every device.</h1>
-        <p id="auth-gate-description">Sign in with your approved Google account to continue your learning, quizzes and review queue securely.</p>
+        <p id="auth-gate-description">Practice without login on any device, or sign in with your approved Google account to sync your private learning, quizzes and review queue.</p>
       </div>
 
       <div class="auth-status-panel">
@@ -53,6 +53,9 @@
         </svg>
         <span>Continue with Google</span>
       </button>
+
+      <button id="guest-continue-button" class="guest-continue-button" type="button" aria-describedby="guest-access-description">Continue without login</button>
+      <p id="guest-access-description" class="guest-access-description">Guest practice is separate from your Google account and saves only in this browser. Closing an incognito session clears its progress.</p>
 
       <section id="progress-choice-panel" class="progress-choice-panel" aria-labelledby="progress-choice-title" hidden>
         <div class="progress-choice-heading">
@@ -85,8 +88,8 @@
         <p id="progress-choice-warning" class="progress-choice-warning">Choose carefully: the selected copy becomes your progress on both mobile and laptop.</p>
       </section>
 
-      <p class="auth-privacy-note"><span aria-hidden="true">&#128274;</span> Your quiz position and review queue stay private to the approved account.</p>
-      <noscript><p class="auth-error">Please enable JavaScript to sign in and use PPSC Prep.</p></noscript>
+      <p class="auth-privacy-note"><span aria-hidden="true">&#128274;</span> Cloud progress stays private to the approved account. Guest practice never changes it.</p>
+      <noscript><p class="auth-error">Please enable JavaScript to use PPSC Prep.</p></noscript>
     </div>
   </section>
 
@@ -114,11 +117,14 @@
         </div>
         <span id="cloud-user-email" class="cloud-user-email" title="Signed-in Google account"></span>
         <button id="sign-out-button" class="header-sign-out-button" type="button">Sign out</button>
+        <button id="guest-sign-in-button" class="header-sign-out-button" type="button" hidden>Sign in</button>
       </div>
     </div>
   </header>
 
   <span id="retry-queue-announcer" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></span>
+
+  <aside id="guest-mode-note" class="guest-mode-note" hidden>Guest mode: practice saves only in this browser, without cloud sync. Incognito progress is cleared when its session closes. Your Google account progress is separate.</aside>
 
   <aside id="cloud-sync-warning" class="cloud-sync-warning" role="alert" hidden>
     <span id="cloud-sync-warning-text">Cloud sync needs attention. Your browser copy is still safe.</span>

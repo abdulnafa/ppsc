@@ -14,6 +14,7 @@
   var MAX_CHUNKS_PER_SLOT = 64;
   var SYNC_DEBOUNCE_MS = 650;
   var SDK_BASE_URL = "https://www.gstatic.com/firebasejs/12.18.0/";
+  var ACCESS_MODE_KEY = "ppsc-prep:access-mode:v1";
 
   var config = window.PPSC_FIREBASE_CONFIG || null;
   var listeners = new Set();
@@ -31,6 +32,7 @@
   };
   var runtime = {
     started: false,
+    guest: false,
     startPromise: null,
     sdk: null,
     auth: null,
@@ -56,6 +58,13 @@
     start: start,
     signIn: signIn,
     signOut: signOutUser,
+    continueAsGuest: continueAsGuest,
+    leaveGuest: leaveGuest,
+    storage: Object.freeze({
+      getItem: function (key) { return window.localStorage.getItem(progressStorageKey(key)); },
+      setItem: function (key, value) { window.localStorage.setItem(progressStorageKey(key), value); },
+      removeItem: function (key) { window.localStorage.removeItem(progressStorageKey(key)); }
+    }),
     chooseLocal: chooseLocalProgress,
     chooseCloud: chooseCloudProgress,
     notifyLocalChange: notifyLocalChange,
@@ -63,6 +72,89 @@
     subscribe: subscribe
   });
   window.PPSC_CLOUD = api;
+
+  // Only app progress uses this facade. Cloud sync always uses the original
+  // owner slots, never guest data, including when another tab is signed in.
+  function progressStorageKey(key) {
+    return runtime.guest && SLOT_BY_KEY.has(key)
+      ? key.replace("ppsc-prep:", "ppsc-prep:guest:") : key;
+  }
+
+  function guestModeRemembered() {
+    try { return window.sessionStorage.getItem(ACCESS_MODE_KEY) === "guest"; }
+    catch (error) { return false; }
+  }
+
+  function pauseCloudWork() {
+    runtime.authSequence += 1;
+    runtime.syncPaused = true;
+    window.clearTimeout(runtime.syncTimer);
+    window.clearTimeout(runtime.reconnectTimer);
+    runtime.syncTimer = null;
+    runtime.reconnectTimer = null;
+    runtime.pendingKeys.clear();
+    runtime.pendingDecision = null;
+  }
+
+  function activateGuest() {
+    pauseCloudWork();
+    runtime.guest = true;
+    runtime.user = null;
+    runtime.knownRevision = null;
+    runtime.cloudRaw = emptyRawSnapshot();
+    runtime.cloudManifests = Object.create(null);
+    updateStatus({
+      phase: "guest-ready",
+      ready: true,
+      authRequired: false,
+      message: "Guest practice stays in this browser only. Cloud sync is off.",
+      error: "",
+      user: null,
+      localSummary: null,
+      cloudSummary: null,
+      decision: null,
+      revision: null
+    });
+    emitReady("guest");
+  }
+
+  function continueAsGuest() {
+    if (runtime.guest || status.ready
+      || ["authenticating", "uploading", "downloading"].includes(status.phase)) return;
+    var remembered = false;
+    try {
+      window.sessionStorage.setItem(ACCESS_MODE_KEY, "guest");
+      remembered = true;
+    } catch (error) { /* Fresh guest practice still works without persistence. */ }
+    // The app initializes once. After an owner session (including sign-out in
+    // another tab), reload before changing namespaces to discard owner memory.
+    if (runtime.readySerial > 0) {
+      if (!remembered) {
+        failBeforeReady(new Error("Open a new private window for guest practice."),
+          "This browser blocked the safe switch from account progress.");
+        return;
+      }
+      pauseCloudWork();
+      protectApp();
+      window.location.reload();
+      return;
+    }
+    activateGuest();
+  }
+
+  function leaveGuest() {
+    if (!runtime.guest) return;
+    try { window.sessionStorage.removeItem(ACCESS_MODE_KEY); }
+    catch (error) {
+      updateStatus({ error: "This browser blocked switching modes. Open the site in a new tab to sign in." });
+      return;
+    }
+    // Do not switch the facade in a running app: its in-memory guest session
+    // must never get saved or uploaded into the owner's canonical slots.
+    pauseCloudWork();
+    protectApp();
+    window.location.reload();
+  }
 
   function isDevelopmentRuntime() {
     var hostname = String(window.location.hostname || "").toLowerCase();
@@ -197,6 +289,10 @@
     var gateStatus = byId("auth-gate-status");
     var gateError = byId("auth-gate-error");
     var signInButton = byId("google-sign-in-button");
+    var guestButton = byId("guest-continue-button");
+    var guestSignInButton = byId("guest-sign-in-button");
+    var guestNote = byId("guest-mode-note");
+    var signOutButton = byId("sign-out-button");
     var choicePanel = byId("progress-choice-panel");
     var useDeviceButton = byId("use-device-progress-button");
     var useCloudButton = byId("use-cloud-progress-button");
@@ -210,6 +306,7 @@
     var userEmail = byId("cloud-user-email");
     var syncWarning = byId("cloud-sync-warning");
     var syncWarningText = byId("cloud-sync-warning-text");
+    var syncRefreshButton = byId("cloud-sync-refresh-button");
 
     if (gate) gate.dataset.authPhase = publicStatus.phase;
     if (gateStatus) gateStatus.textContent = phaseMessage(publicStatus);
@@ -220,6 +317,8 @@
 
     var choosing = publicStatus.phase === "migration-choice" || publicStatus.phase === "conflict";
     var busy = ["loading", "authenticating", "checking", "uploading", "downloading"].includes(publicStatus.phase);
+    var guest = publicStatus.phase === "guest-ready";
+    if (guestButton) guestButton.disabled = ["authenticating", "uploading", "downloading"].includes(publicStatus.phase);
     if (signInButton) {
       signInButton.disabled = busy;
       setHidden(signInButton, choosing || (Boolean(publicStatus.user) && !publicStatus.error));
@@ -261,18 +360,25 @@
       setHidden(useCloudButton, publicStatus.phase === "migration-choice");
     }
 
-    setHidden(accountControls, !publicStatus.user || !publicStatus.ready);
+    setHidden(accountControls, !publicStatus.ready || (!publicStatus.user && !guest));
+    setHidden(signOutButton, guest || !publicStatus.user);
+    setHidden(guestSignInButton, !guest);
+    setHidden(guestNote, !guest);
+    setHidden(userEmail, guest);
     if (userEmail) userEmail.textContent = publicStatus.user ? publicStatus.user.email : "";
     if (syncStatus) syncStatus.dataset.syncState = publicStatus.phase;
     if (syncStatusText) {
-      syncStatusText.textContent = publicStatus.phase === "syncing" ? "Saving…"
+      syncStatusText.textContent = guest ? "Guest · local only"
+        : publicStatus.phase === "syncing" ? "Saving…"
         : publicStatus.phase === "error" && publicStatus.ready ? "Not synced"
           : publicStatus.phase === "offline" ? "Saved locally"
           : publicStatus.phase === "dev-ready" ? "Local only"
             : publicStatus.ready ? "Synced" : "Waiting";
     }
-    var showSyncWarning = publicStatus.ready && publicStatus.phase === "error";
+    var showSyncWarning = publicStatus.ready
+      && (publicStatus.phase === "error" || (guest && Boolean(publicStatus.error)));
     setHidden(syncWarning, !showSyncWarning);
+    setHidden(syncRefreshButton, guest);
     if (syncWarningText && showSyncWarning) {
       syncWarningText.textContent = [publicStatus.message, publicStatus.error].filter(Boolean).join(" ");
     }
@@ -285,11 +391,15 @@
     if (runtime.uiBound) return;
     runtime.uiBound = true;
     var signInButton = byId("google-sign-in-button");
+    var guestButton = byId("guest-continue-button");
+    var guestSignInButton = byId("guest-sign-in-button");
     var signOutButton = byId("sign-out-button");
     var useDeviceButton = byId("use-device-progress-button");
     var useCloudButton = byId("use-cloud-progress-button");
     var syncRefreshButton = byId("cloud-sync-refresh-button");
     if (signInButton) signInButton.addEventListener("click", signIn);
+    if (guestButton) guestButton.addEventListener("click", continueAsGuest);
+    if (guestSignInButton) guestSignInButton.addEventListener("click", leaveGuest);
     if (signOutButton) signOutButton.addEventListener("click", signOutUser);
     if (useDeviceButton) useDeviceButton.addEventListener("click", chooseLocalProgress);
     if (useCloudButton) useCloudButton.addEventListener("click", chooseCloudProgress);
@@ -770,6 +880,10 @@
   async function startInternal() {
     bindUi();
     installStorageListeners();
+    if (runtime.guest || guestModeRemembered()) {
+      if (!runtime.guest) activateGuest();
+      return;
+    }
     if (isDevelopmentRuntime()) {
       updateStatus({
         phase: "dev-ready",
@@ -787,6 +901,7 @@
     }
     updateStatus({ phase: "loading", ready: false, message: "Loading secure sign-in…", error: "" });
     runtime.sdk = await loadFirebaseSdk();
+    if (runtime.guest) return;
     var existingApp = runtime.sdk.app.getApps().find(function (app) { return app.name === "ppsc-prep-cloud"; });
     var firebaseApp = existingApp || runtime.sdk.app.initializeApp(config.firebase, "ppsc-prep-cloud");
     runtime.auth = runtime.sdk.auth.getAuth(firebaseApp);
@@ -797,6 +912,7 @@
       // Auth already uses local persistence in supported browsers. Continue if an old
       // embedded browser refuses the explicit persistence call.
     }
+    if (runtime.guest) return;
     runtime.sdk.auth.onAuthStateChanged(runtime.auth, function (user) {
       handleAuthState(user).catch(function (error) { failBeforeReady(error, "Progress could not be checked."); });
     }, function (error) {
@@ -805,6 +921,7 @@
   }
 
   async function handleAuthState(user) {
+    if (runtime.guest) return;
     var sequence = ++runtime.authSequence;
     runtime.pendingDecision = null;
     runtime.syncPaused = false;
@@ -818,7 +935,7 @@
         ready: false,
         message: deniedEmail
           ? "Access denied for " + deniedEmail + ". Use " + config.allowedEmail + "."
-          : "Sign in with " + config.allowedEmail + " to open PPSC Prep.",
+          : "Continue without login, or sign in with " + config.allowedEmail + " for private cloud progress.",
         error: deniedEmail ? "This Google account is not allowed." : "",
         user: null,
         localSummary: null,
@@ -887,6 +1004,7 @@
   }
 
   function finishReady(mode, rawSnapshot) {
+    if (runtime.guest) return;
     runtime.cloudRaw = cloneRawSnapshot(rawSnapshot);
     runtime.pendingDecision = null;
     runtime.syncPaused = false;
@@ -904,6 +1022,7 @@
   }
 
   async function signIn() {
+    if (runtime.guest) { leaveGuest(); return; }
     if (isDevelopmentRuntime()) return;
     try {
       await start();
@@ -947,7 +1066,7 @@
 
   async function chooseLocalProgress() {
     var decision = runtime.pendingDecision;
-    if (!decision || !runtime.user) return;
+    if (runtime.guest || !decision || !runtime.user) return;
     try {
       var currentLocal = readLocalSnapshot();
       if (!decision.cloud.exists && !summarizeSnapshot(currentLocal).hasProgress) {
@@ -981,10 +1100,12 @@
 
   async function chooseCloudProgress() {
     var decision = runtime.pendingDecision;
-    if (!decision || !decision.cloud || !decision.cloud.exists) return;
+    if (runtime.guest || !decision || !decision.cloud || !decision.cloud.exists) return;
+    var sequence = runtime.authSequence;
     try {
       updateStatus({ phase: "downloading", ready: false, message: "Restoring cloud progress…", error: "" });
       var latestCloud = await readCloudSnapshot();
+      if (runtime.guest || sequence !== runtime.authSequence) return;
       if (!latestCloud.exists) throw new Error("The cloud copy is no longer available. Refresh and compare again.");
       var currentLocal = readLocalSnapshot();
       if (!snapshotsEqual(currentLocal, latestCloud.raw)
@@ -1267,6 +1388,7 @@
   }
 
   function failBeforeReady(error, context) {
+    if (runtime.guest) return;
     updateStatus({
       phase: "error",
       ready: status.ready,

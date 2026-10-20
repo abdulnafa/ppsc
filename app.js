@@ -133,12 +133,17 @@
   var gkNotesReturnTarget = "quick-notes";
   var appInitialized = false;
 
+  function progressStorage() {
+    return window.PPSC_CLOUD && window.PPSC_CLOUD.storage
+      ? window.PPSC_CLOUD.storage : window.localStorage;
+  }
+
   function notifyLocalStateChanged(storageKey, action) {
     if (window.PPSC_CLOUD_APPLYING === true || typeof window.CustomEvent !== "function") return;
     var value = null;
     if (action !== "remove") {
       try {
-        value = window.localStorage.getItem(storageKey);
+        value = progressStorage().getItem(storageKey);
       } catch (error) {
         return;
       }
@@ -613,7 +618,7 @@
 
   function removeStoredActiveSession() {
     try {
-      window.localStorage.removeItem(SESSION_STORAGE_KEY);
+      progressStorage().removeItem(SESSION_STORAGE_KEY);
       notifyLocalStateChanged(SESSION_STORAGE_KEY, "remove");
     } catch (error) {
       // Storage can be unavailable. The in-memory state is still cleared.
@@ -949,7 +954,7 @@
 
   function loadActiveSession() {
     try {
-      var rawValue = window.localStorage.getItem(SESSION_STORAGE_KEY);
+      var rawValue = progressStorage().getItem(SESSION_STORAGE_KEY);
       if (!rawValue) {
         activeSessionSnapshot = null;
         return null;
@@ -964,7 +969,7 @@
       if (savedValue.bankSignature !== questionBankSignature
         || (savedValue.rangePoolBankSignature || null) !== (activeSessionSnapshot.rangePoolBankSignature || null)) {
         try {
-          window.localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(activeSessionSnapshot));
+          progressStorage().setItem(SESSION_STORAGE_KEY, JSON.stringify(activeSessionSnapshot));
           notifyLocalStateChanged(SESSION_STORAGE_KEY, "set");
         } catch (migrationWriteError) {
           // The validated frozen session remains usable in memory. A later
@@ -1093,7 +1098,7 @@
     }
 
     try {
-      window.localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(snapshot));
+      progressStorage().setItem(SESSION_STORAGE_KEY, JSON.stringify(snapshot));
       notifyLocalStateChanged(SESSION_STORAGE_KEY, "set");
       activeSessionSnapshot = snapshot;
       updateContinueSessionUI();
@@ -2000,7 +2005,7 @@
       EMBEDDED_RETRY_CADENCE_VERSION
     );
     try {
-      window.localStorage.setItem(RETRY_QUEUE_STORAGE_KEY, JSON.stringify(retryQueueState));
+      progressStorage().setItem(RETRY_QUEUE_STORAGE_KEY, JSON.stringify(retryQueueState));
       notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "set");
     } catch (error) {
       // The queue remains available in memory when browser storage is blocked.
@@ -2010,7 +2015,7 @@
 
   function loadRetryQueue() {
     try {
-      var rawValue = window.localStorage.getItem(RETRY_QUEUE_STORAGE_KEY);
+      var rawValue = progressStorage().getItem(RETRY_QUEUE_STORAGE_KEY);
       if (!rawValue) {
         retryQueueState = createEmptyRetryQueueState();
         updateRetryQueueUI();
@@ -2051,7 +2056,7 @@
       var additiveBankMigrationApplied = Boolean(normalized)
         && savedValue.bankSignature !== questionBankSignature;
       if (!normalized) {
-        window.localStorage.removeItem(RETRY_QUEUE_STORAGE_KEY);
+        progressStorage().removeItem(RETRY_QUEUE_STORAGE_KEY);
         notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "remove");
         retryQueueState = createEmptyRetryQueueState();
       } else {
@@ -2080,7 +2085,7 @@
       }
     } catch (error) {
       try {
-        window.localStorage.removeItem(RETRY_QUEUE_STORAGE_KEY);
+        progressStorage().removeItem(RETRY_QUEUE_STORAGE_KEY);
         notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "remove");
       } catch (removeError) {
         // Storage is unavailable; use the clean in-memory queue for this visit.
@@ -3391,7 +3396,7 @@
 
   function loadDifficultQuestionIds() {
     try {
-      var rawValue = window.localStorage.getItem(DIFFICULT_STORAGE_KEY);
+      var rawValue = progressStorage().getItem(DIFFICULT_STORAGE_KEY);
       if (!rawValue) return new Set();
 
       var savedValue = JSON.parse(rawValue);
@@ -3415,7 +3420,7 @@
 
   function saveDifficultQuestionIds() {
     try {
-      window.localStorage.setItem(DIFFICULT_STORAGE_KEY, JSON.stringify({
+      progressStorage().setItem(DIFFICULT_STORAGE_KEY, JSON.stringify({
         version: 1,
         questionIds: Array.from(difficultQuestionIds)
       }));

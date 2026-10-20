@@ -66,11 +66,21 @@ Active Learn/Quiz/Paper question IDs, range, answers, score and current position
 
 The finite Queue count baseline was a one-time earlier migration: each item present then was set to exactly 5, and a saved version marker prevents future refreshes or devices from applying that reset again. This release preserves every current question ID and remaining count. The cadence-version-4 migration creates one alternating checkpoint ten regular MCQs after the saved practice position, once only. Queue is first unless an embedded popup is already in progress; that popup and its answer are preserved, and the next scheduled type is the opposite one. Saved round positions and category decks remain intact. The checkpoint and next type survive refresh and cloud restore; missing new clock fields are repaired even if an older client retained the version marker. Legacy individual clocks remain compatibility mirrors, while repeat-gap, cooldown and recent-question fields stay readable without determining popup timing or Queue order. New wrong Quiz or finite Queue answers add 2 and each correct Queue review removes 1. A checked review saved under the old `+5` rule keeps that pending atomic outcome after refresh.
 
-If the internet disconnects while the unlocked app is open, Learn, Quiz, Difficult marks, category Queue changes and Important practice continue saving in browser storage and the header shows **Saved locally**. When the connection returns, the browser and cloud revisions are compared automatically: local-only changes upload, cloud-only changes restore, and changes made independently on both devices stop for an explicit conflict choice instead of overwriting either copy. A completely fresh offline load remains locked until Firebase can verify the Google account again; reconnect once to continue from the browser copy.
+If the internet disconnects while the signed-in app is open, Learn, Quiz, Difficult marks, category Queue changes and Important practice continue saving in browser storage and the header shows **Saved locally**. When the connection returns, the browser and cloud revisions are compared automatically: local-only changes upload, cloud-only changes restore, and changes made independently on both devices stop for an explicit conflict choice instead of overwriting either copy. A fresh signed-in load still needs Firebase to verify the Google account; guest practice does not need Firebase once the app assets have loaded.
+
+## Continue without login
+
+The access screen offers **Continue without login** on any device, including incognito windows. Guest mode supports the same categories, Learn, Quiz, Wrong Quiz, Queue, Important popups, notes and Years Wise Topics. Its header says **Guest · local only**; the banner explains that there is no cross-device cloud sync and closing an incognito session clears its storage.
+
+Guest practice uses separate `ppsc-prep:guest:*` local-storage slots for the active session, retry queue (including Wrong Quiz and popup preferences), and difficult marks. It never reads, replaces or uploads the owner's existing progress. The tab remembers its guest choice in `sessionStorage`, so refresh can continue guest practice without loading the Firebase SDK. Guest practice can still run in memory if browser storage is unavailable, but then it cannot promise resume.
+
+The guest header's **Sign in** button returns to the access screen using a full reload, leaving both namespaces intact. Guest progress is not automatically imported into an account. If an owner session was previously open before an external sign-out, entering guest also requires a reload so the old in-memory owner session cannot leak into guest practice. Guest mode does not create a Firebase anonymous user or relax Firestore rules.
+
+`node tools/cloud-sync-smoke.js` checks namespace isolation, SDK/auth races and existing cloud behavior. `node tools/guest-browser-smoke.js` checks the production access gate, guest Learn/Quiz/Continue, separate progress, unavailable Firebase, refresh and responsive layouts using an isolated local Chrome profile.
 
 ## Google sign-in and first-device migration
 
-Production access is gated by Firebase Google Authentication and restricted to `developerabdulnafa@gmail.com` in both the client and `firestore.rules`. Local `file://`, `localhost`, and `127.0.0.1` previews intentionally use development mode so the offline browser tests still run.
+Private cloud access is gated by Firebase Google Authentication and restricted to `developerabdulnafa@gmail.com` in both the client and `firestore.rules`. Practice content is also available through the separate guest option. Local `file://`, `localhost`, and `127.0.0.1` previews intentionally use development mode so the offline browser tests still run.
 
 The first cloud migration must be performed on the mobile browser that already contains the saved session and retry queue:
 
@@ -83,7 +93,7 @@ The first cloud migration must be performed on the mobile browser that already c
 
 An empty new device cannot create or replace the first cloud copy. The first import must come from the browser that contains actual progress. If local and cloud records later differ, the gate remains closed until the user explicitly chooses which copy to keep; the copy being replaced is first retained in a local safety backup. The app automatically creates the required Firestore documents, so no collection needs to be entered manually in the Data tab.
 
-The Firebase web configuration is public by design; access control comes from Authentication and the deployed Firestore rules. The login gate protects normal app access and Firestore progress, but GitHub Pages is static hosting, so its question-bank asset itself is still publicly downloadable. Protecting the static question files as private content would require a later move to authenticated server-side hosting.
+The Firebase web configuration is public by design; access control for cloud progress comes from Authentication and the deployed Firestore rules. Guest mode exposes practice content, not the owner's cloud progress. GitHub Pages is static hosting, so the question-bank asset is publicly downloadable. Protecting the static question files as private content would require authenticated server-side hosting. Browser-local data is not encrypted; use incognito or a trusted browser on shared devices.
 
 ## Project structure
 

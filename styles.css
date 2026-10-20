@@ -239,6 +239,37 @@ html.auth-pending body { min-height: 100%; overflow: hidden; }
 }
 .google-sign-in-button:disabled { color: #8b97a9; background: #f3f5f8; cursor: wait; box-shadow: none; }
 
+.guest-continue-button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 11px;
+  padding: 12px 18px;
+  color: var(--navy-900);
+  background: var(--blue-50);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  font-weight: 800;
+}
+.guest-continue-button:not(:disabled):hover { border-color: var(--blue-600); }
+.guest-continue-button:disabled { opacity: .6; cursor: wait; }
+.guest-access-description {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: .74rem;
+  line-height: 1.6;
+}
+.guest-mode-note {
+  width: min(1180px, calc(100% - 40px));
+  margin: 14px auto 0;
+  padding: 10px 13px;
+  color: var(--navy-900);
+  background: var(--blue-50);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  font-size: .74rem;
+  line-height: 1.55;
+}
+
 .progress-choice-panel {
   margin-top: 16px;
   padding: 19px;

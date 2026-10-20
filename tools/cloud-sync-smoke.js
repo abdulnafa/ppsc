@@ -11,6 +11,7 @@ const ACTIVE_SESSION_KEY = "ppsc-prep:active-session:v1";
 const RETRY_QUEUE_KEY = "ppsc-prep:retry-queue:v1";
 const DIFFICULT_IDS_KEY = "ppsc-prep:difficult-question-ids:v1";
 const CONFLICT_BACKUP_KEY = "ppsc-prep:cloud-conflict-backup:v1";
+const ACCESS_MODE_KEY = "ppsc-prep:access-mode:v1";
 const ALLOWED_EMAIL = "developerabdulnafa@gmail.com";
 const TEST_UID = "owner-uid";
 const BANK_SIGNATURE = "v1:11412:57e37c68";
@@ -244,7 +245,7 @@ function makeSnapshot(store, reference) {
   };
 }
 
-function createFirebaseSdk({ store, initialUser }) {
+function createFirebaseSdk({ store, initialUser, deferInitialAuth = false }) {
   const auth = {
     currentUser: initialUser || null,
     observers: []
@@ -256,7 +257,7 @@ function createFirebaseSdk({ store, initialUser }) {
     batchCommits: 0
   };
   const apps = [];
-  const controls = { beforeTransaction: null };
+  const controls = { beforeTransaction: null, beforeRead: null };
 
   const app = {
     getApps: () => apps.slice(),
@@ -287,7 +288,7 @@ function createFirebaseSdk({ store, initialUser }) {
     onAuthStateChanged: (_auth, next, error) => {
       const observer = { next, error };
       auth.observers.push(observer);
-      queueMicrotask(() => next(auth.currentUser));
+      if (!deferInitialAuth) queueMicrotask(() => next(auth.currentUser));
       return () => {
         auth.observers = auth.observers.filter((candidate) => candidate !== observer);
       };
@@ -306,6 +307,11 @@ function createFirebaseSdk({ store, initialUser }) {
 
   const readDocument = async (reference) => {
     metrics.firestoreReads += 1;
+    if (typeof controls.beforeRead === "function") {
+      const hook = controls.beforeRead;
+      controls.beforeRead = null;
+      await hook(reference);
+    }
     return makeSnapshot(store, reference);
   };
 
@@ -371,7 +377,7 @@ function syncSourceWithSdkSeam() {
   assert.equal(occurrences, 1, "firebase-sync.js must contain one SDK loader seam");
   return source.replace(
     marker,
-    `${marker}\n    if (window.__PPSC_TEST_SDK__) return window.__PPSC_TEST_SDK__;`
+    `${marker}\n    window.__PPSC_TEST_SDK_LOADS__ = (window.__PPSC_TEST_SDK_LOADS__ || 0) + 1;\n    if (window.__PPSC_TEST_SDK__) return window.__PPSC_TEST_SDK__;`
   );
 }
 
@@ -379,15 +385,22 @@ function createBrowser({
   protocol = "https:",
   hostname = "abdulnafa.github.io",
   local = {},
+  session = {},
   store = new Map(),
   user = allowedUser(),
-  injectSdk = true
+  injectSdk = true,
+  deferSdk = false,
+  deferInitialAuth = false,
+  omitConfig = false,
+  setupFirebase = null
 } = {}) {
   const window = new MiniEventTarget();
   const document = createDocument();
   const localStorage = new MemoryStorage(local);
-  const sessionStorage = new MemoryStorage();
-  const fake = createFirebaseSdk({ store, initialUser: user });
+  const sessionStorage = new MemoryStorage(session);
+  const fake = createFirebaseSdk({ store, initialUser: user, deferInitialAuth });
+  if (setupFirebase) setupFirebase(fake);
+  const sdkGate = deferSdk ? deferred() : null;
   let randomSeed = 100;
 
   Object.assign(window, {
@@ -425,7 +438,8 @@ function createBrowser({
       allowedEmail: ALLOWED_EMAIL
     }
   });
-  if (injectSdk) window.__PPSC_TEST_SDK__ = fake.sdk;
+  if (omitConfig) delete window.PPSC_FIREBASE_CONFIG;
+  if (injectSdk) window.__PPSC_TEST_SDK__ = sdkGate ? sdkGate.promise : fake.sdk;
 
   const context = vm.createContext({
     window,
@@ -441,7 +455,17 @@ function createBrowser({
   const script = new vm.Script(syncSourceWithSdkSeam(), { filename: SYNC_SOURCE_PATH });
   script.runInContext(context);
 
-  return { window, document, localStorage, sessionStorage, store, fake };
+  return { window, document, localStorage, sessionStorage, store, fake, sdkGate };
+}
+
+function deferred() {
+  let resolve;
+  let reject;
+  const promise = new Promise((resolvePromise, rejectPromise) => {
+    resolve = resolvePromise;
+    reject = rejectPromise;
+  });
+  return { promise, resolve, reject };
 }
 
 async function waitFor(browser, predicate, description, timeoutMs = 1500) {
@@ -1183,6 +1207,286 @@ async function testEquivalentConcurrentBaselineSyncConflictReconciles(seedStore)
   );
 }
 
+function guestKey(key) {
+  return key.replace("ppsc-prep:", "ppsc-prep:guest:");
+}
+
+function assertGuestReady(browser) {
+  const status = browser.window.PPSC_CLOUD.getStatus();
+  assert.equal(status.phase, "guest-ready");
+  assert.equal(status.ready, true);
+  assert.equal(status.authRequired, false);
+  assert.equal(status.user, null, "guest access must not expose an authenticated owner's identity");
+  assert.equal(status.error, "");
+  assert.equal(browser.window.PPSC_CLOUD_READY, true);
+  assert.equal(browser.document.documentElement.classList.contains("auth-pending"), false);
+}
+
+function assertOwnerValues(browser, original) {
+  for (const key of [ACTIVE_SESSION_KEY, RETRY_QUEUE_KEY, DIFFICULT_IDS_KEY]) {
+    assert.equal(browser.localStorage.getItem(key), original[key] || null, `${key} must remain unchanged`);
+  }
+}
+
+async function settleGuestCallbacks() {
+  await new Promise((resolve) => setTimeout(resolve, 25));
+}
+
+async function testGuestStorageIsolationAndReconnect() {
+  const original = legacyLocalProgress();
+  const browser = createBrowser({ local: original, user: null });
+  await waitFor(browser, (candidate) => candidate.phase === "auth-required", "guest entry from sign-in screen");
+  await browser.window.PPSC_CLOUD.continueAsGuest();
+  assertGuestReady(browser);
+  assert.equal(browser.sessionStorage.getItem(ACCESS_MODE_KEY), "guest");
+  assert.equal(readyEventMode(browser), "guest");
+  const storage = browser.window.PPSC_CLOUD.storage;
+  assert.ok(storage, "the application must use the owner/guest-isolating storage facade");
+
+  for (const key of [ACTIVE_SESSION_KEY, RETRY_QUEUE_KEY, DIFFICULT_IDS_KEY]) {
+    assert.equal(storage.getItem(key), null, "a guest must not inherit the owner's saved progress");
+    storage.setItem(key, `guest:${original[key]}`);
+    assert.equal(storage.getItem(key), `guest:${original[key]}`);
+    assert.equal(browser.localStorage.getItem(guestKey(key)), `guest:${original[key]}`);
+    browser.window.PPSC_CLOUD.notifyLocalChange(key);
+  }
+  storage.removeItem(DIFFICULT_IDS_KEY);
+  assert.equal(storage.getItem(DIFFICULT_IDS_KEY), null);
+  assert.equal(browser.localStorage.getItem(guestKey(DIFFICULT_IDS_KEY)), null);
+  assertOwnerValues(browser, original);
+
+  const readsBefore = browser.fake.metrics.firestoreReads;
+  browser.window.navigator.onLine = false;
+  browser.window.dispatchEvent({ type: "offline" });
+  storage.setItem(RETRY_QUEUE_KEY, retryQueueRaw(SECOND_QUESTION_ID, 4));
+  browser.window.PPSC_CLOUD.notifyLocalChange(RETRY_QUEUE_KEY);
+  browser.window.navigator.onLine = true;
+  browser.window.dispatchEvent({ type: "online" });
+  // Longer than the normal sync debounce: guest progress must not upload later.
+  await new Promise((resolve) => setTimeout(resolve, 750));
+  assertGuestReady(browser);
+  assertOwnerValues(browser, original);
+  assert.equal(browser.fake.metrics.firestoreReads, readsBefore, "guest reconnect must not read Firestore");
+  assert.equal(browser.fake.metrics.batchCommits, 0);
+  assert.equal(browser.fake.metrics.transactions, 0);
+  assert.equal(browser.store.size, 0);
+}
+
+async function testRememberedGuestStartsWithoutSdkOrConfig() {
+  const original = legacyLocalProgress();
+  const guestQueue = retryQueueRaw(SECOND_QUESTION_ID, 7);
+  const local = {
+    ...original,
+    [guestKey(ACTIVE_SESSION_KEY)]: SAMPLE_SESSION_RAW,
+    [guestKey(RETRY_QUEUE_KEY)]: guestQueue,
+    [guestKey(DIFFICULT_IDS_KEY)]: SAMPLE_DIFFICULT_RAW
+  };
+  const browser = createBrowser({
+    local,
+    session: { [ACCESS_MODE_KEY]: "guest" },
+    injectSdk: false,
+    omitConfig: true
+  });
+  await waitFor(browser, (candidate) => candidate.phase === "guest-ready", "remembered guest without Firebase");
+  assertGuestReady(browser);
+  assert.equal(browser.window.__PPSC_TEST_SDK_LOADS__ || 0, 0, "guest reload must bypass SDK loading entirely");
+  assert.equal(browser.window.PPSC_CLOUD.storage.getItem(RETRY_QUEUE_KEY), guestQueue);
+  assertOwnerValues(browser, original);
+  assert.equal(browser.fake.metrics.firestoreReads, 0);
+  assert.equal(browser.fake.metrics.batchCommits, 0);
+  assert.equal(browser.fake.metrics.transactions, 0);
+}
+
+async function testGuestChoiceOutlivesDelayedSdk() {
+  for (const rejectSdk of [false, true]) {
+    const original = legacyLocalProgress();
+    const browser = createBrowser({ local: original, deferSdk: true });
+    assert.equal(browser.window.__PPSC_TEST_SDK_LOADS__, 1);
+    await browser.window.PPSC_CLOUD.continueAsGuest();
+    assertGuestReady(browser);
+    if (rejectSdk) browser.sdkGate.reject(new Error("late SDK download failure"));
+    else browser.sdkGate.resolve(browser.fake.sdk);
+    await settleGuestCallbacks();
+    assertGuestReady(browser);
+    assertOwnerValues(browser, original);
+    assert.equal(browser.fake.metrics.firestoreReads, 0, "SDK completion must not start cloud access after guest choice");
+    assert.equal(browser.fake.metrics.transactions, 0);
+    assert.equal(browser.fake.metrics.batchCommits, 0);
+  }
+}
+
+async function testGuestChoiceOutlivesDelayedAuthCallbacks() {
+  const original = legacyLocalProgress();
+  const browser = createBrowser({ local: original, user: null, deferInitialAuth: true });
+  await waitFor(browser, () => browser.fake.auth.observers.length === 1, "held authentication callback");
+  const pendingObserver = browser.fake.auth.observers[0];
+  await browser.window.PPSC_CLOUD.continueAsGuest();
+  // These callbacks were already queued before unsubscribe and may still arrive.
+  pendingObserver.next(allowedUser());
+  await settleGuestCallbacks();
+  pendingObserver.error(new Error("late authentication failure"));
+  await settleGuestCallbacks();
+  assertGuestReady(browser);
+  assertOwnerValues(browser, original);
+  assert.equal(browser.fake.metrics.firestoreReads, 0);
+  assert.equal(browser.fake.metrics.transactions, 0);
+  assert.equal(browser.fake.metrics.batchCommits, 0);
+}
+
+async function testGuestChoiceOutlivesDelayedCloudRead(seedStore) {
+  for (const rejectRead of [false, true]) {
+    const gate = deferred();
+    const original = legacyLocalProgress();
+    const store = cloneStore(seedStore);
+    const cloudBefore = cloneStore(store);
+    const browser = createBrowser({
+      local: original,
+      store,
+      setupFirebase(fake) { fake.controls.beforeRead = () => gate.promise; }
+    });
+    await waitFor(browser, () => browser.fake.metrics.firestoreReads === 1, "held cloud read before guest selection");
+    await browser.window.PPSC_CLOUD.continueAsGuest();
+    const guestQueue = retryQueueRaw(SECOND_QUESTION_ID, 9);
+    browser.window.PPSC_CLOUD.storage.setItem(RETRY_QUEUE_KEY, guestQueue);
+    if (rejectRead) gate.reject(new Error("late Firestore permission failure"));
+    else gate.resolve();
+    await settleGuestCallbacks();
+    assertGuestReady(browser);
+    assertOwnerValues(browser, original);
+    assert.equal(browser.window.PPSC_CLOUD.storage.getItem(RETRY_QUEUE_KEY), guestQueue);
+    assert.equal(browser.fake.metrics.firestoreReads, 1, "an obsolete read must not trigger more Firestore reads");
+    assert.equal(browser.fake.metrics.transactions, 0);
+    assert.equal(browser.fake.metrics.batchCommits, 0);
+    assert.deepEqual(store, cloudBefore);
+  }
+}
+
+async function testGuestSignInReloadDoesNotMergeProgress() {
+  const original = legacyLocalProgress();
+  const local = {
+    ...original,
+    [guestKey(ACTIVE_SESSION_KEY)]: SAMPLE_SESSION_RAW,
+    [guestKey(RETRY_QUEUE_KEY)]: retryQueueRaw(SECOND_QUESTION_ID, 6),
+    [guestKey(DIFFICULT_IDS_KEY)]: SAMPLE_DIFFICULT_RAW
+  };
+  const browser = createBrowser({ local, session: { [ACCESS_MODE_KEY]: "guest" } });
+  await waitFor(browser, (candidate) => candidate.phase === "guest-ready", "guest before sign-in reload");
+  const before = Array.from(browser.localStorage.values.entries());
+  await browser.window.PPSC_CLOUD.leaveGuest();
+  assert.equal(browser.sessionStorage.getItem(ACCESS_MODE_KEY), null);
+  assert.equal(browser.window.location.reloadCalled, true, "switching namespaces requires a clean app initialization");
+  assert.deepEqual(Array.from(browser.localStorage.values.entries()), before, "sign-in switch must not merge or erase guest/owner progress");
+  assert.equal(browser.fake.metrics.firestoreReads, 0);
+  assert.equal(browser.fake.metrics.transactions, 0);
+  assert.equal(browser.fake.metrics.batchCommits, 0);
+
+  const reloaded = createBrowser({
+    local: Object.fromEntries(browser.localStorage.values),
+    session: Object.fromEntries(browser.sessionStorage.values),
+    user: null
+  });
+  await waitFor(reloaded, (candidate) => candidate.phase === "auth-required", "normal sign-in screen after leaving guest");
+  assert.equal(reloaded.window.PPSC_CLOUD.storage.getItem(RETRY_QUEUE_KEY), original[RETRY_QUEUE_KEY]);
+  assert.equal(reloaded.localStorage.getItem(guestKey(RETRY_QUEUE_KEY)), local[guestKey(RETRY_QUEUE_KEY)]);
+  assertOwnerValues(reloaded, original);
+}
+
+async function testOwnerInitializedGuestSwitchRequiresReload(seedStore) {
+  const browser = createBrowser({ store: cloneStore(seedStore) });
+  await waitFor(browser, (candidate) => candidate.ready, "owner initialized before guest namespace switch");
+  const readyEventsBefore = browser.window.events.filter((event) => event.type === "ppsc:cloud-ready").length;
+  const ownerBefore = Object.fromEntries(browser.localStorage.values);
+  // A signed-in owner cannot switch the running app to a different namespace.
+  await browser.window.PPSC_CLOUD.continueAsGuest();
+  assert.equal(browser.sessionStorage.getItem(ACCESS_MODE_KEY), null);
+  assert.notEqual(browser.window.PPSC_CLOUD.getStatus().phase, "guest-ready");
+
+  const authObserver = browser.fake.auth.observers[0];
+  browser.fake.auth.currentUser = null;
+  authObserver.next(null);
+  await waitFor(browser, (candidate) => candidate.phase === "auth-required", "external owner sign-out");
+  await browser.window.PPSC_CLOUD.continueAsGuest();
+  assert.equal(browser.sessionStorage.getItem(ACCESS_MODE_KEY), "guest");
+  assert.equal(browser.window.location.reloadCalled, true);
+  assert.notEqual(browser.window.PPSC_CLOUD.getStatus().phase, "guest-ready", "an app already holding owner data cannot be revealed as guest");
+  assert.equal(browser.window.events.filter((event) => event.type === "ppsc:cloud-ready").length, readyEventsBefore);
+  assertOwnerValues(browser, ownerBefore);
+
+  const reloaded = createBrowser({
+    local: Object.fromEntries(browser.localStorage.values),
+    session: Object.fromEntries(browser.sessionStorage.values),
+    injectSdk: false
+  });
+  await waitFor(reloaded, (candidate) => candidate.phase === "guest-ready", "clean guest initialization after owner sign-out");
+  assert.equal(reloaded.window.PPSC_CLOUD.storage.getItem(RETRY_QUEUE_KEY), null);
+  assertOwnerValues(reloaded, ownerBefore);
+}
+
+async function testGuestWithUnavailableSessionStorage(seedStore) {
+  const original = legacyLocalProgress();
+  const fresh = createBrowser({ local: original, deferSdk: true });
+  fresh.sessionStorage.setItem = () => { throw new Error("sessionStorage blocked"); };
+  await fresh.window.PPSC_CLOUD.continueAsGuest();
+  assertGuestReady(fresh);
+  assertOwnerValues(fresh, original);
+  fresh.sdkGate.resolve(fresh.fake.sdk);
+  await settleGuestCallbacks();
+  assertGuestReady(fresh);
+  assert.equal(fresh.fake.metrics.firestoreReads, 0, "fresh guest use remains available in memory");
+
+  const owner = createBrowser({ store: cloneStore(seedStore) });
+  await waitFor(owner, (candidate) => candidate.ready, "owner ready before blocked namespace switch");
+  const ownerBefore = Object.fromEntries(owner.localStorage.values);
+  owner.fake.auth.currentUser = null;
+  owner.fake.auth.observers[0].next(null);
+  await waitFor(owner, (candidate) => candidate.phase === "auth-required", "owner signed out before blocked guest marker");
+  owner.sessionStorage.setItem = () => { throw new Error("sessionStorage blocked"); };
+  await owner.window.PPSC_CLOUD.continueAsGuest();
+  assert.equal(owner.window.PPSC_CLOUD.getStatus().ready, false, "failed namespace reload marker must keep an initialized owner app locked");
+  assert.notEqual(owner.window.PPSC_CLOUD.getStatus().phase, "guest-ready");
+  assert.equal(owner.window.location.reloadCalled, false);
+  assertOwnerValues(owner, ownerBefore);
+
+  const guest = createBrowser({
+    local: { ...original, [guestKey(RETRY_QUEUE_KEY)]: retryQueueRaw(SECOND_QUESTION_ID, 3) },
+    session: { [ACCESS_MODE_KEY]: "guest" }
+  });
+  await waitFor(guest, (candidate) => candidate.phase === "guest-ready", "guest before blocked sign-in switch");
+  const guestValuesBefore = Array.from(guest.localStorage.values.entries());
+  guest.sessionStorage.removeItem = () => { throw new Error("sessionStorage removal blocked"); };
+  await guest.window.PPSC_CLOUD.leaveGuest();
+  const blockedExit = guest.window.PPSC_CLOUD.getStatus();
+  assert.equal(blockedExit.phase, "guest-ready", "blocked mode change must not switch the active namespace");
+  assert.equal(blockedExit.ready, true, "guest practice remains usable after a blocked sign-in switch");
+  assert.equal(blockedExit.authRequired, false);
+  assert.match(blockedExit.error, /blocked switching modes|new tab/i);
+  assert.equal(guest.window.location.reloadCalled, false);
+  assert.equal(guest.sessionStorage.getItem(ACCESS_MODE_KEY), "guest");
+  assert.deepEqual(Array.from(guest.localStorage.values.entries()), guestValuesBefore);
+  assert.equal(guest.fake.metrics.firestoreReads, 0);
+  assert.equal(guest.fake.metrics.transactions, 0);
+  assert.equal(guest.fake.metrics.batchCommits, 0);
+}
+
+async function testGuestCannotInterruptOwnerUpload() {
+  const gate = deferred();
+  const original = legacyLocalProgress();
+  const browser = createBrowser({ local: original });
+  await waitFor(browser, (candidate) => candidate.phase === "migration-choice", "owner upload before guest guard");
+  browser.fake.controls.beforeTransaction = () => gate.promise;
+  const upload = browser.window.PPSC_CLOUD.chooseLocal();
+  await waitFor(browser, () => browser.fake.metrics.transactions === 1, "owner upload already in flight");
+  await browser.window.PPSC_CLOUD.continueAsGuest();
+  assert.equal(browser.sessionStorage.getItem(ACCESS_MODE_KEY), null, "guest selection cannot pretend to cancel a committed cloud-write operation");
+  assert.notEqual(browser.window.PPSC_CLOUD.getStatus().phase, "guest-ready");
+  assert.equal(browser.window.location.reloadCalled, false);
+  gate.resolve();
+  await upload;
+  await waitFor(browser, (candidate) => candidate.phase === "synced", "owner upload completes under original identity");
+  assertOwnerValues(browser, original);
+  assert.equal(rawCloudValue(browser.store, "retry-queue"), original[RETRY_QUEUE_KEY]);
+}
+
 async function main() {
   assert.ok(fs.existsSync(SYNC_SOURCE_PATH), "firebase-sync.js is required");
   await testDevelopmentBypassNeedsNoSdk();
@@ -1203,6 +1507,15 @@ async function main() {
   await testReconnectPullsRemoteOnlyChange(seedStore);
   await testFirstUploadQueuesBaselineMigrationFollowUp();
   await testEquivalentConcurrentBaselineSyncConflictReconciles(seedStore);
+  await testGuestStorageIsolationAndReconnect();
+  await testRememberedGuestStartsWithoutSdkOrConfig();
+  await testGuestChoiceOutlivesDelayedSdk();
+  await testGuestChoiceOutlivesDelayedAuthCallbacks();
+  await testGuestChoiceOutlivesDelayedCloudRead(seedStore);
+  await testGuestSignInReloadDoesNotMergeProgress();
+  await testOwnerInitializedGuestSwitchRequiresReload(seedStore);
+  await testGuestWithUnavailableSessionStorage(seedStore);
+  await testGuestCannotInterruptOwnerUpload();
 
   console.log(JSON.stringify({
     ok: true,
@@ -1225,7 +1538,16 @@ async function main() {
       "offline local changes upload when the connection returns",
       "remote-only reconnect changes pull safely before reload",
       "the cadence marker=2/count=5 baseline change during first upload is queued and synced",
-      "equivalent concurrent marked-five baseline writes reconcile without pausing the losing client"
+      "equivalent concurrent marked-five baseline writes reconcile without pausing the losing client",
+      "guest session, queue, and difficult marks use isolated browser keys and never read or write cloud data on reconnect",
+      "remembered guest access restores guest-only progress without loading Firebase SDK or requiring configuration",
+      "late Firebase SDK success and failure cannot relock or cloud-initialize guest access",
+      "late authentication success and failure cannot replace or relock guest access",
+      "late cloud read success and failure cannot replace guest/owner progress or start further cloud reads",
+      "guest-to-Google sign-in reloads into owner storage without merging or removing either namespace",
+      "owner-ready to signed-out to guest switches only after a clean reload, never exposing initialized owner data as guest",
+      "blocked sessionStorage still permits a fresh in-memory guest but fails closed when owner state has already initialized",
+      "guest selection is refused while an explicit owner upload is already in flight"
     ]
   }, null, 2));
 }

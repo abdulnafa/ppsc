@@ -2042,6 +2042,10 @@ function validateCloudSyncContract() {
     'addEventListener("online"',
     'window.PPSC_CLOUD_APPLYING = true',
     'window.PPSC_CLOUD_READY = true',
+    'continueAsGuest',
+    'guestModeRemembered',
+    'ppsc-prep:guest:',
+    'guest-ready',
     'importantPractice'
   ]) {
     if (!syncSource.includes(requiredSnippet)) error(`firebase-sync.js: missing ${requiredSnippet}`);
@@ -2063,7 +2067,8 @@ function validateCloudSyncContract() {
   const authIds = [
     "auth-gate", "google-sign-in-button", "progress-choice-panel", "protected-app",
     "use-device-progress-button", "use-cloud-progress-button", "cloud-sync-warning",
-    "cloud-sync-refresh-button", "sign-out-button"
+    "cloud-sync-refresh-button", "sign-out-button", "guest-continue-button",
+    "guest-sign-in-button", "guest-mode-note"
   ];
   for (const id of authIds) {
     const matches = html.match(new RegExp(`\\bid=["']${id}["']`, "g")) || [];
@@ -2086,6 +2091,10 @@ function validateCloudSyncContract() {
     || !app.includes('window.addEventListener("ppsc:cloud-ready"')
     || !app.includes("window.PPSC_APP_START")) {
     error("app.js: cloud-ready startup and local-state notification hooks are incomplete");
+  }
+  if (!app.includes("window.PPSC_CLOUD.storage") || !app.includes("function progressStorage()")
+    || /window\.localStorage\.(?:getItem|setItem|removeItem)\(/.test(app)) {
+    error("app.js: all study progress must use the guest-aware storage facade");
   }
   for (const requiredWorkflowText of [
     "node tools/cloud-sync-smoke.js",
