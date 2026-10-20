@@ -199,6 +199,7 @@
     elements.gkNotesScreen = firstElement(["#gk-notes-screen", "[data-screen='gk-notes']"]);
     elements.detailedLearningScreen = firstElement(["#detailed-learning-screen", "[data-screen='detailed-learning']"]);
     elements.yearsTopicsScreen = firstElement(["#years-topics-screen"]);
+    elements.waterTopicsScreen = firstElement(["#water-topics-screen"]);
     elements.paperSetupScreen = firstElement(["#paper-setup-screen", "[data-screen='paper-setup']"]);
     elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
     elements.quizScreen = firstElement(["#quiz-screen", "[data-screen='quiz']"]);
@@ -3726,6 +3727,7 @@
     setHidden(elements.gkNotesScreen, screenName !== "gk-notes");
     setHidden(elements.detailedLearningScreen, screenName !== "detailed-learning");
     setHidden(elements.yearsTopicsScreen, screenName !== "years-topics");
+    setHidden(elements.waterTopicsScreen, screenName !== "water-topics");
     setHidden(elements.paperSetupScreen, screenName !== "paper-setup");
     setHidden(elements.modeScreen, screenName !== "mode");
     setHidden(elements.quizScreen, screenName !== "quiz");
@@ -3741,6 +3743,8 @@
       ? elements.detailedLearningScreen
       : screenName === "years-topics"
       ? elements.yearsTopicsScreen
+      : screenName === "water-topics"
+      ? elements.waterTopicsScreen
       : screenName === "paper-setup"
       ? elements.paperSetupScreen
       : screenName === "quiz"
@@ -6860,6 +6864,17 @@
   }
 
   function bindEvents() {
+    if (window.PPSC_WATER_TOPICS && elements.waterTopicsScreen) {
+      window.PPSC_WATER_TOPICS.init({
+        categories: categories,
+        questions: allQuestions,
+        open: function () { showScreen("water-topics"); },
+        close: function () {
+          showScreen("categories");
+          updateContinueSessionUI();
+        }
+      });
+    }
     if (window.PPSC_YEAR_TOPICS && elements.yearsTopicsScreen) {
       window.PPSC_YEAR_TOPICS.init({
         categories: categories,

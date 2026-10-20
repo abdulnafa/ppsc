@@ -4,7 +4,15 @@ A category-wise PPSC General Ability practice website for GitHub Pages. Question
 
 ## Study Tools
 
-The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here** and **Years Wise Topics**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from either tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
+The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics** and **Pakistan Dams & Rivers**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
+
+## Pakistan Dams & Rivers
+
+The read-only water library groups **116 existing MCQ references into 43 topics**: dams/reservoirs, rivers/water geography, barrages/headworks/canals, and water treaties/institutions. Search by topic, question or answer; filter by section; open a topic to read a short Roman Urdu introduction, canonical questions and correct answers, original category/MCQ numbers, answer context and primary-source links. The selection includes Pakistan-related Indus treaty projects in India, explicitly labelled as Indian projects; unrelated foreign dams and rivers are excluded. This is a curated reading aid, not an exhaustive list of possible exam questions or a live project-status feed.
+
+`water-topics.js` loads `data/pakistan-water-topics.js` only when opened; topic bodies render on expansion. The library does not add or change canonical questions, IDs, scoring, queue counts, sessions, guest/owner storage or cloud sync. No automatic popup is added. Existing time qualifiers remain; Warsak commissioning dates and the inherited Baglihar answer-option wording have explicit reading notes rather than silent bank changes.
+
+Content lives in `data/pakistan-water-dams.json` and `data/pakistan-water-rivers.json`. Run `node tools/build-pakistan-water-topics.js` to regenerate or add `--check` to validate references, schema, duplicate MCQ IDs, canonical IDs, deterministic output and deployed assets. These checks do not replace editorial fact checking. `node tools/water-topics-browser-smoke.js` tests search, filters, source-answer fidelity, lazy-load retry, keyboard, responsive layouts, progress preservation and guest access with the existing native Chrome harness.
 
 ## Years Wise Topics
 
