@@ -747,6 +747,17 @@ h2[tabindex="-1"]:focus {
 .water-topic-context { margin-top: 8px; color: var(--muted); font-size: .8rem; line-height: 1.7; }
 .water-topics-message { padding: 0 24px 24px; }
 #water-topics-retry, #articles-topics-retry, #prime-ministers-retry, #presidents-retry { margin: 0 24px 24px; }
+.category-saved-progress { display: block; margin-top: 6px; color: var(--blue-600); font-size: .75rem; font-weight: 700; }
+.category-sessions-panel { margin: 24px 0; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.category-sessions-panel h2 { margin: 8px 0; }
+.category-sessions-panel > p { color: var(--muted); line-height: 1.6; }
+.category-sessions-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px; margin-top: 16px; }
+.saved-category-session { padding: 16px; border: 1px solid var(--line); border-radius: 12px; min-width: 0; overflow-wrap: anywhere; }
+.saved-category-session h3 { margin: 0 0 8px; }
+.saved-category-session-meta { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+.saved-category-session details { margin: 12px 0; font-size: .85rem; line-height: 1.7; }
+.saved-category-session summary { cursor: pointer; color: var(--ink); font-weight: 600; }
+.saved-category-session button { margin-top: 8px; }
 .pm-entry { margin: 10px 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); overflow: hidden; }
 .pm-entry > summary { padding: 17px 18px; cursor: pointer; color: var(--ink); overflow-wrap: anywhere; }
 .pm-entry > summary:focus-visible { outline: 3px solid var(--blue-600); outline-offset: -3px; }

@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 const { corrections, isNoneOfTheseAnswer, restoreLegacyAnswerOptions } = require("./answer-text-corrections");
+const { validateSupplement } = require("./current-affairs-common");
 
 const projectDirectory = path.resolve(__dirname, "..");
 const workDirectory = path.join(projectDirectory, "work");
@@ -2119,6 +2120,11 @@ function validateCloudSyncContract() {
 
 const data = loadData();
 const result = validateData(data);
+try {
+  validateSupplement(data);
+} catch (reason) {
+  error(`Append-only Current Affairs release: ${reason.message}`);
+}
 const gkStudyNotesBundle = loadGkStudyNotes();
 validateGkStudyNotes(gkStudyNotesBundle, data, result.questions);
 const detailedLearningLibrary = loadDetailedLearning();

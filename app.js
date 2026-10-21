@@ -11,6 +11,7 @@
   var QUICK_NOTES_PAGE_SIZE = 100;
   var DIFFICULT_STORAGE_KEY = "ppsc-prep:difficult-question-ids:v1";
   var SESSION_STORAGE_KEY = "ppsc-prep:active-session:v1";
+  var CATEGORY_SESSIONS_STORAGE_KEY = "ppsc-prep:category-sessions:v1";
   var RETRY_QUEUE_STORAGE_KEY = "ppsc-prep:retry-queue:v1";
   var SESSION_STORAGE_VERSION = 8;
   var RANGE_SESSION_STORAGE_VERSION = 7;
@@ -106,6 +107,10 @@
   var questionBankSignature = buildQuestionBankSignature();
   var difficultQuestionIds = new Set();
   var activeSessionSnapshot = null;
+  var categorySessions = Object.create(null);
+  var categorySessionsLoaded = false;
+  var categorySessionsPersisted = true;
+  var categorySessionsWritable = true;
   var retryQueueState = createEmptyRetryQueueState();
   var retryQueuePractice = { active: false, categoryId: "", returnTarget: null };
   var previousOptionOrders = Object.create(null);
@@ -252,6 +257,9 @@
     elements.continueSessionButton = firstElement(["#continue-session-button", "[data-continue-session]"]);
     elements.continueSessionTitle = firstElement(["#continue-session-title", "[data-continue-session-title]"]);
     elements.continueSessionMeta = firstElement(["#continue-session-meta", "[data-continue-session-meta]"]);
+    elements.categorySessionsPanel = firstElement(["#category-sessions-panel"]);
+    elements.categorySessionsList = firstElement(["#category-sessions-list"]);
+    elements.categorySessionsStatus = firstElement(["#category-sessions-status"]);
     elements.modeCategory = firstElement(["#mode-category", "[data-mode-category]"]);
     elements.computerSourcePanel = firstElement(["#computer-source-panel", "[data-computer-source-panel]"]);
     elements.computerSourceRadios = document.querySelectorAll("input[name='computer-source']");
@@ -408,6 +416,13 @@
   }
 
   function approvedAdditiveBankQuestionCount(savedSignature) {
+    // Current Affairs is append-only after the exact, corrected 11,892 bank.
+    // Never accept an arbitrary older fingerprint or edits inside that prefix.
+    if (savedSignature === APPROVED_ANSWER_TEXT_UPDATED_SIGNATURE
+      && allQuestions.length > APPROVED_ANSWER_TEXT_BANK_QUESTION_COUNT) {
+      return buildQuestionBankSignature(APPROVED_ANSWER_TEXT_BANK_QUESTION_COUNT)
+        === APPROVED_ANSWER_TEXT_UPDATED_SIGNATURE ? APPROVED_ANSWER_TEXT_BANK_QUESTION_COUNT : null;
+    }
     // These fingerprints authorize only the audited seven answer-text
     // replacements. IDs, order, correct indices and every other hashed field
     // must still match the approved bank exactly; unknown edits stay invalid.
@@ -620,7 +635,139 @@
     setHidden(elements.continueSessionCard, false);
   }
 
-  function removeStoredActiveSession() {
+  function categorySessionKey(snapshot) {
+    if (!snapshot || snapshot.sessionKind !== "category") return "";
+    return [snapshot.categoryId, snapshot.mode, snapshot.scope,
+      snapshot.computerSourceScope, snapshot.importantOnly ? "important" : "all"].join(":");
+  }
+
+  function loadCategorySessions() {
+    if (categorySessionsLoaded) return;
+    categorySessionsLoaded = true;
+    try {
+      var raw = progressStorage().getItem(CATEGORY_SESSIONS_STORAGE_KEY);
+      if (!raw) return;
+      var saved = JSON.parse(raw);
+      if (!saved || saved.version !== 1 || !saved.sessions || typeof saved.sessions !== "object"
+        || Array.isArray(saved.sessions)) {
+        categorySessionsPersisted = categorySessionsWritable = false;
+        return;
+      }
+      Object.keys(saved.sessions).forEach(function (key) {
+        var normalized = normalizeStoredSession(saved.sessions[key]);
+        if (normalized && categorySessionKey(normalized.snapshot) === key) {
+          categorySessions[key] = normalized.snapshot;
+        } else categorySessionsPersisted = categorySessionsWritable = false;
+      });
+    } catch (error) {
+      // Do not clear a damaged/unavailable stored archive during startup.
+      categorySessionsPersisted = categorySessionsWritable = false;
+    }
+  }
+
+  function persistCategorySessions() {
+    // Unknown/corrupt archives are not silently replaced by a fresh session.
+    if (!categorySessionsWritable) return false;
+    try {
+      progressStorage().setItem(CATEGORY_SESSIONS_STORAGE_KEY,
+        JSON.stringify({ version: 1, sessions: categorySessions }));
+      notifyLocalStateChanged(CATEGORY_SESSIONS_STORAGE_KEY, "set");
+      categorySessionsPersisted = true;
+      return true;
+    } catch (error) {
+      // Keep this visit's saves in memory and leave previously stored data intact.
+      categorySessionsPersisted = false;
+      return false;
+    }
+  }
+
+  function archiveCategorySession(snapshot, migrateOnly) {
+    loadCategorySessions();
+    var key = categorySessionKey(snapshot);
+    if (!key) return;
+    var previous = categorySessions[key];
+    if (migrateOnly && previous && previous.savedAt >= snapshot.savedAt) return;
+    categorySessions[key] = snapshot;
+    persistCategorySessions();
+  }
+
+  function savedCategorySessions(categoryId) {
+    return Object.keys(categorySessions).map(function (key) { return categorySessions[key]; })
+      .filter(function (snapshot) { return snapshot.categoryId === categoryId; })
+      .sort(function (a, b) { return b.savedAt - a.savedAt; });
+  }
+
+  function renderCategorySessions() {
+    if (!elements.categorySessionsPanel || !elements.categorySessionsList) return;
+    var snapshots = state.category ? savedCategorySessions(state.category.id) : [];
+    elements.categorySessionsList.textContent = "";
+    setHidden(elements.categorySessionsPanel, snapshots.length === 0);
+    if (elements.categorySessionsStatus) {
+      elements.categorySessionsStatus.textContent = categorySessionsPersisted
+        ? "Har mode ka aakhri session alag save hai. Preview se score ya queue nahi badalti."
+        : "Saved archive invalid, storage full ya unavailable hai. Nayi category saves is visit tak hain; refresh se pehle storage check karein.";
+    }
+    snapshots.forEach(function (snapshot) {
+      var card = document.createElement("article");
+      card.className = "saved-category-session";
+      card.dataset.sessionKey = categorySessionKey(snapshot);
+      var title = document.createElement("h3");
+      title.textContent = sessionModeLabel(snapshot.mode, snapshot.scope);
+      var meta = document.createElement("p");
+      meta.className = "saved-category-session-meta";
+      meta.textContent = sessionSelectionLabel(null, snapshot.importantOnly, snapshot.rangeStart,
+        snapshot.rangeEnd, snapshot.rangePoolSize, snapshot.computerSourceScope, snapshot.categoryId)
+        + " · Question " + (snapshot.currentIndex + 1) + " of " + snapshot.questionIds.length;
+      var details = document.createElement("details");
+      var summary = document.createElement("summary");
+      summary.textContent = "Preview saved position";
+      details.appendChild(summary);
+      var preview = document.createElement("p");
+      var question = questionsById.get(snapshot.questionIds[snapshot.currentIndex]);
+      preview.textContent = displayQuestionText(question);
+      if (isUrduCategoryQuestion(question)) { preview.lang = "ur"; preview.dir = "rtl"; }
+      details.appendChild(preview);
+      var stats = document.createElement("p");
+      var completed = snapshot.mode === "quiz"
+        ? snapshot.answerHistory.filter(function (answer) { return answer && answer[1]; }).length
+        : snapshot.learnVisitedQuestionIds.length;
+      stats.textContent = snapshot.mode === "quiz"
+        ? completed + " checked · " + snapshot.score + " correct · " + (completed - snapshot.score) + " wrong"
+        : completed + " answers revealed";
+      details.appendChild(stats);
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "secondary-button";
+      button.dataset.continueCategorySession = categorySessionKey(snapshot);
+      button.textContent = "Continue " + sessionModeLabel(snapshot.mode, snapshot.scope);
+      button.setAttribute("aria-label", button.textContent + ", " + meta.textContent);
+      card.appendChild(title);
+      card.appendChild(meta);
+      card.appendChild(details);
+      card.appendChild(button);
+      elements.categorySessionsList.appendChild(card);
+    });
+  }
+
+  function restoreCategorySession(key) {
+    var normalized = normalizeStoredSession(categorySessions[key]);
+    if (!normalized || !state.category || normalized.snapshot.categoryId !== state.category.id) return false;
+    // A pending review belongs to the previously active main session. Settle it
+    // once using the existing queue logic before switching to another session.
+    if (categorySessionKey(activeSessionSnapshot) !== key) releaseActiveRetryAttempt();
+    return restoreNormalizedSession(normalized);
+  }
+
+  function removeStoredActiveSession(removeCategory) {
+    var completedCategoryKey = removeCategory ? categorySessionKey({
+      sessionKind: state.sessionKind, categoryId: state.category && state.category.id,
+      mode: state.mode, scope: state.scope, computerSourceScope: state.computerSourceScope,
+      importantOnly: state.importantOnly
+    }) : "";
+    if (completedCategoryKey) {
+      delete categorySessions[completedCategoryKey];
+      persistCategorySessions();
+    }
     try {
       progressStorage().removeItem(SESSION_STORAGE_KEY);
       notifyLocalStateChanged(SESSION_STORAGE_KEY, "remove");
@@ -957,6 +1104,7 @@
   }
 
   function loadActiveSession() {
+    loadCategorySessions();
     try {
       var rawValue = progressStorage().getItem(SESSION_STORAGE_KEY);
       if (!rawValue) {
@@ -969,8 +1117,14 @@
         removeStoredActiveSession();
         return null;
       }
+      // The archive is written first. If a browser quota/error interrupted the
+      // active-slot write, Continue must not rewind the newer same-profile save.
+      var archived = categorySessions[categorySessionKey(normalized.snapshot)];
+      var recoveredNewerArchive = Boolean(archived && archived.savedAt > normalized.snapshot.savedAt);
+      if (recoveredNewerArchive) normalized = normalizeStoredSession(archived) || normalized;
       activeSessionSnapshot = normalized.snapshot;
-      if (savedValue.bankSignature !== questionBankSignature
+      archiveCategorySession(activeSessionSnapshot, true);
+      if (recoveredNewerArchive || savedValue.bankSignature !== questionBankSignature
         || (savedValue.rangePoolBankSignature || null) !== (activeSessionSnapshot.rangePoolBankSignature || null)) {
         try {
           progressStorage().setItem(SESSION_STORAGE_KEY, JSON.stringify(activeSessionSnapshot));
@@ -1101,6 +1255,8 @@
       snapshot.rangePoolBankSignature = state.rangePoolBankSignature;
     }
 
+    archiveCategorySession(snapshot, false);
+
     try {
       progressStorage().setItem(SESSION_STORAGE_KEY, JSON.stringify(snapshot));
       notifyLocalStateChanged(SESSION_STORAGE_KEY, "set");
@@ -1122,6 +1278,10 @@
       return false;
     }
 
+    return restoreNormalizedSession(normalized);
+  }
+
+  function restoreNormalizedSession(normalized) {
     state.category = normalized.category;
     state.sessionKind = normalized.snapshot.sessionKind;
     state.paperCategoryIds = normalized.snapshot.paperCategoryIds
@@ -3725,6 +3885,8 @@
   }
 
   function showScreen(screenName) {
+    if (screenName === "categories") updateCategoryProgressBadges();
+    if (screenName === "mode") renderCategorySessions();
     setHidden(elements.categoryScreen, screenName !== "categories");
     setHidden(elements.quickNotesScreen, screenName !== "quick-notes");
     setHidden(elements.gkNotesScreen, screenName !== "gk-notes");
@@ -5301,9 +5463,38 @@
       content.appendChild(title);
       content.appendChild(description);
       content.appendChild(meta);
+      var saved = savedCategorySessions(category.id);
+      if (saved.length) {
+        var progress = document.createElement("span");
+        progress.className = "category-saved-progress";
+        progress.textContent = saved.length + (saved.length === 1 ? " saved session" : " saved sessions")
+          + " · Preview / Continue";
+        content.appendChild(progress);
+      }
       card.appendChild(badge);
       card.appendChild(content);
       elements.categoryGrid.appendChild(card);
+    });
+  }
+
+  function updateCategoryProgressBadges() {
+    if (!elements.categoryGrid) return;
+    Array.prototype.forEach.call(elements.categoryGrid.querySelectorAll(".category-card"), function (card) {
+      var content = card.querySelector(".category-card__content");
+      if (!content) return;
+      var progress = content.querySelector(".category-saved-progress");
+      var savedCount = savedCategorySessions(card.dataset.categoryId).length;
+      if (!savedCount) {
+        if (progress) progress.remove();
+        return;
+      }
+      if (!progress) {
+        progress = document.createElement("span");
+        progress.className = "category-saved-progress";
+        content.appendChild(progress);
+      }
+      progress.textContent = savedCount + (savedCount === 1 ? " saved session" : " saved sessions")
+        + " · Preview / Continue";
     });
   }
 
@@ -5825,7 +6016,8 @@
       var paperQuestionCategory = isPaperSession() ? findCategory(question.categoryId) : null;
       var kindLabel = paperQuestionCategory
         ? "CUSTOM PAPER · " + paperQuestionCategory.name.toUpperCase()
-        : (question.kind === "similar" ? "SIMILAR PRACTICE" : "SOURCE PAPER");
+        : (question.kind === "similar" ? "SIMILAR PRACTICE"
+          : (String(question.id).startsWith("USR-") ? "RESEARCHED UPDATE" : "SOURCE PAPER"));
       if (isImportantQuestion(question)) {
         kindLabel += " · IMPORTANT · REPEATED " + question.repeatCount + "x";
       }
@@ -6627,7 +6819,7 @@
     }
     if (completedRangeLabel) completedScopeLabels.push(completedRangeLabel);
     var completedRangePrefix = completedScopeLabels.length ? completedScopeLabels.join(" \u00b7 ") + ". " : "";
-    removeStoredActiveSession();
+    removeStoredActiveSession(true);
     showScreen("results");
 
     if (isPaperSession()) {
@@ -7027,6 +7219,14 @@
     if (elements.continueSessionButton) {
       elements.continueSessionButton.addEventListener("click", restoreActiveSession);
     }
+    if (elements.categorySessionsList) {
+      elements.categorySessionsList.addEventListener("click", function (event) {
+        var button = event.target.closest("[data-continue-category-session]");
+        if (button && elements.categorySessionsList.contains(button)) {
+          restoreCategorySession(button.dataset.continueCategorySession);
+        }
+      });
+    }
     if (elements.learnModeButton) {
       elements.learnModeButton.addEventListener("click", function () {
         startSelectedMode("learn", "all");
@@ -7211,6 +7411,7 @@
   window.PPSC_APP_START = startAppWhenDocumentIsReady;
   window.PPSC_APP_STORAGE_KEYS = Object.freeze({
     activeSession: SESSION_STORAGE_KEY,
+    categorySessions: CATEGORY_SESSIONS_STORAGE_KEY,
     retryQueue: RETRY_QUEUE_STORAGE_KEY,
     difficultQuestions: DIFFICULT_STORAGE_KEY
   });

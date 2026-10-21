@@ -41,7 +41,8 @@ jobs:
           node tools/build-prime-ministers.js --check
           node tools/build-presidents.js --check
           node tools/validate-wgi.js --complete
-          node tools/validate-site-data.js --expected=11892
+          node tools/validate-site-data.js --expected=11932
+          node tools/current-affairs-smoke.js
           node tools/answer-text-migration-smoke.js
 
       - name: Validate authentication and cloud sync
@@ -52,6 +53,7 @@ jobs:
           node tools/popup-preference-smoke.js
           node tools/wrong-quiz-smoke.js
           node tools/cloud-sync-smoke.js
+          node tools/category-progress-smoke.js
 
       - name: Prepare static site
         run: |

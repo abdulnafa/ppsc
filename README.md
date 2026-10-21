@@ -6,6 +6,18 @@ A category-wise PPSC General Ability practice website for GitHub Pages. Question
 
 The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics**, **Pakistan Dams & Rivers**, **Pakistan Constitution Articles**, **Prime Ministers** and **Presidents**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
 
+## Per-category Preview & Continue
+
+Each category now shows a **Preview & Continue** panel for its unfinished sessions, and the home category card shows that saves exist. Learn and Quiz are saved independently; Important, Difficult, Wrong Quiz and Basic Computer source selections have distinct saves too. Each mode/filter combination retains its latest inclusive range. Preview displays the saved question and progress without revealing its answer or altering score/queue; Continue restores the exact range, question position, shuffled choices, checked/unchecked answers and Learn reveal state. Starting a new range deliberately replaces only that same combination. Completing one session removes only that save, not other categories/modes.
+
+`ppsc-prep:category-sessions:v1` stores the archive alongside the existing active-session slot, so the homepage Continue still works as before. The existing active save is copied on upgrade; sessions already overwritten before this feature cannot be recovered. Signed-in archives use the same offline/cloud conflict protection and guest archives stay in the separate guest namespace. Older three-slot cloud backups remain compatible; a missing archive is not treated as a deletion, while an explicit empty archive represents completed work. Invalid archives are preserved without silently overwriting them. If browser storage is full/unavailable, the panel warns that new category saves are only in memory.
+
+## Current Affairs supplement — 21 October 2026
+
+40 newly researched, date-qualified MCQs (20 distinct related pairs) are appended to the bank: **Current Affairs 610 → 650; total 11,892 → 11,932**. The source is `work/current-affairs-20261021.json`; matching/review scope is recorded in `work/current-affairs-20261021-audit.json`. Each new answer has at least two named authoritative references, Urdu question text and explanation. This is a bounded addition, not a claim that every historical Current Affairs answer has been reverified for today. Historical date-qualified questions keep their original context.
+
+The complete original 11,892 objects, order and Important/repeat evidence are protected by a pinned SHA-256. No existing MCQ was rewritten or renumbered. New sessions and Quick Notes can include the additions; an ongoing session keeps its original question pool, answers and position, and existing Queue counts/order remain unchanged across reloads. New questions are not falsely labelled repeated/Important without evidence. `node tools/current-affairs-smoke.js` checks this contract; `node tools/category-progress-smoke.js` tests all 22 category/mode combinations and the append-only save migration. `node tools/category-progress-browser-smoke.js` exercises the actual preview, resume, completion, guest and responsive UI flows.
+
 ## Presidents
 
 The **Presidents** reading tool contains 45 names: 13 Pakistan Presidents, 2 acting-only office-holders during vacancies, and 30 selected foreign Presidents across 17 countries. It includes 58 primary/official sources, checked on 21 October 2026. Repeat terms belong to one person, not duplicate person counts. A regular President's initial acting phase is explained inside that person's entry; the acting list is not a list of every temporary substitute during foreign visits. Governor-General and Prime Minister offices are distinguished from President. Source differences, oath versus election dates, year-only precision and date-qualified current offices are explicitly explained.
@@ -68,7 +80,7 @@ Wrong IDs share the existing offline-first cloud-synced progress record; no prio
 - 1,295 source-present MCQs extracted from `IBES CAPSULE Computer 2025`; 207 semantic repeats were excluded and 1,088 unique MCQs were retained. Printed Q254 is absent from the supplied scan and was not fabricated.
 - Basic Computer Studies can be narrowed to **All Basic Computer** (2,564), the 1,088 retained **Initial PDF — Original MCQs**, the 1,088 generated **Initial PDF — Related Practice** questions, or 388 **Other Papers** questions (194 source + 194 related, including the WGI additions). The source choice also scopes Important counts, Difficult practice, Study Notes search/results, and Learn/Quiz range numbering; every filtered list keeps canonical data order and normal Quiz scoring. Other categories and the random Custom Paper flow remain unchanged.
 - The current partial release of `Advanced PPSC MCQs Papers, Volume 2` contains 4,169 independently verified, retained source MCQs and 4,169 original researched related questions. Work on the remaining supplied scan continues in restart-safe batches; unresolved and unreviewed records are excluded from the website.
-- **5,946 retained source MCQs + 5,946 original researched PPSC-style related questions = 11,892 website questions.**
+- **11,932 website questions:** the original 5,946 source/related pairs (11,892 MCQs), plus 20 independently researched Current Affairs pairs (40 MCQs).
 - The current WGI release covers source items **1–450**. All 450 items have a verified keep, duplicate-skip, or reject decision; 240 retained source items contribute 240 independently researched related questions, for 480 website MCQs. The supplied PDF's full **671-item extraction and audit** remain intact for later work; items 451–671 are not part of this release.
 - 10 advertised syllabus subjects, plus a separate **Finance, Taxation & Job-related** category for questions found in the supplied papers but outside that syllabus.
 - Non-Urdu subjects show English question stems and options with a readable Urdu translation below each question. The Urdu category shows its question and all four answer choices directly in Urdu with right-to-left typography.
@@ -108,7 +120,7 @@ If the internet disconnects while the signed-in app is open, Learn, Quiz, Diffic
 
 The access screen offers **Continue without login** on any device, including incognito windows. Guest mode supports the same categories, Learn, Quiz, Wrong Quiz, Queue, Important popups, notes and Years Wise Topics. Its header says **Guest · local only**; the banner explains that there is no cross-device cloud sync and closing an incognito session clears its storage.
 
-Guest practice uses separate `ppsc-prep:guest:*` local-storage slots for the active session, retry queue (including Wrong Quiz and popup preferences), and difficult marks. It never reads, replaces or uploads the owner's existing progress. The tab remembers its guest choice in `sessionStorage`, so refresh can continue guest practice without loading the Firebase SDK. Guest practice can still run in memory if browser storage is unavailable, but then it cannot promise resume.
+Guest practice uses separate `ppsc-prep:guest:*` local-storage slots for the active session, per-category session archive, retry queue (including Wrong Quiz and popup preferences), and difficult marks. It never reads, replaces or uploads the owner's existing progress. The tab remembers its guest choice in `sessionStorage`, so refresh can continue guest practice without loading the Firebase SDK. Guest practice can still run in memory if browser storage is unavailable, but then it cannot promise resume.
 
 The guest header's **Sign in** button returns to the access screen using a full reload, leaving both namespaces intact. Guest progress is not automatically imported into an account. If an owner session was previously open before an external sign-out, entering guest also requires a reload so the old in-memory owner session cannot leak into guest practice. Guest mode does not create a Firebase anonymous user or relax Firestore rules.
 
@@ -183,10 +195,13 @@ node tools/validate-adv2e102-verification.js
 node tools/validate-adv2e102-dedup.js
 node tools/validate-adv2e102-enriched.js
 node tools/validate-wgi.js --complete
-node tools/build-question-bank.js
+node tools/build-question-bank.js --site-only
 node tools/build-gk-study-notes.js
 node --check data/detailed-learning.js
-node tools/validate-site-data.js --expected=11892 --verify-work-repeat-evidence
+node tools/validate-site-data.js --expected=11932 --verify-work-repeat-evidence
+node tools/current-affairs-smoke.js
+node tools/category-progress-smoke.js
+node tools/category-progress-browser-smoke.js
 node tools/answer-text-migration-smoke.js
 node tools/popup-preference-smoke.js
 node tools/wrong-quiz-smoke.js
@@ -211,11 +226,11 @@ The question-bank build script validates all six `PPSC 110 Edition` papers, all 
 
 The dedicated `tools/build-gk-study-notes.js` command then reads the committed question-bank asset and creates `data/gk-study-notes.js` with the strict 776-card library and its explicit 18-pair exclusion evidence.
 
-The original PDF option order is never rearranged.
+Use `--site-only` to avoid rewriting the parent-folder Markdown exports, or `--check` to verify committed assets without writing them. The original PDF option order is never rearranged.
 
 ## Add future user-supplied MCQs
 
-Add each new user question and its independently researched similar question as one adjacent pair in `work/custom-questions.json`. Use IDs such as `USR-Q0001-SRC` and `USR-Q0001-SIM`, with the shared `pairId` `USR-Q0001`.
+Add each new user question and its independently researched similar question as one adjacent pair in `work/custom-questions.json`. IDs `USR-Q0001` through `USR-Q0020` are reserved for the 21 October 2026 Current Affairs supplement; start future pairs at an unused ID such as `USR-Q0021-SRC` and `USR-Q0021-SIM`, with the shared `pairId` `USR-Q0021`.
 
 Each pair must:
 
@@ -230,7 +245,7 @@ Each pair must:
 
 Explanations, source notes and evidence links remain in the verified data for research and validation, but the website does not display per-question explanation, history or source-detail panels.
 
-After adding a pair, run the validation and build commands again. For a bank larger than 11,412, update the `--expected` value or omit that argument.
+After adding a pair, run the validation and build commands again. A new release must deliberately update the pinned append-only release contract and resume-migration tests; changing only a count is not sufficient. Preserve all existing IDs, question contents and ordering, then update the expected total from 11,932.
 
 ## Push this update
 
@@ -238,8 +253,12 @@ The repository is already initialized on branch `main`, with `origin` set to `ht
 
 ```powershell
 cd "D:\PPSC\codex\ppsc-project"
-git add -- "README.md" "app.js" "firebase-sync.js" "index.html" "tools/browser-smoke.js" "tools/cloud-sync-smoke.js" "tools/validate-site-data.js"
-git commit -m "Rotate global MCQs across categories"
+git add -- .github/workflows/pages.yml README.md app.js firebase-sync.js index.html styles.css
+git add -- data/questions.js data/gk-study-notes.js data/release-repeat-evidence.json
+git add -- tools/answer-text-migration-smoke.js tools/browser-smoke.js tools/build-question-bank.js tools/cloud-sync-smoke.js tools/validate-site-data.js
+git add -- tools/category-progress-smoke.js tools/category-progress-browser-smoke.js tools/current-affairs-common.js tools/current-affairs-smoke.js
+git add -- work/current-affairs-20261021.json work/current-affairs-20261021-audit.json
+git commit -m "Preserve per-category practice and add verified current affairs"
 git push origin main
 git status --short
 ```

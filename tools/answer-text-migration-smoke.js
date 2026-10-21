@@ -40,6 +40,9 @@ const CORRECTIONS = [
 const dataContext = { window: {} };
 vm.runInNewContext(fs.readFileSync(path.join(ROOT, "data/questions.js"), "utf8"), dataContext);
 const DATA = JSON.parse(JSON.stringify(dataContext.window.PPSC_QUIZ_DATA));
+// This suite replays the exact 2026-10-18 answer-text migration. Later append-only
+// releases are checked separately; never let new questions rewrite this fixture.
+DATA.questions = DATA.questions.slice(0, 11892);
 const APP_SOURCE = fs.readFileSync(path.join(ROOT, "app.js"), "utf8");
 let emptyQueueFixture;
 

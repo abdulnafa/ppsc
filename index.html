@@ -8,16 +8,16 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261021-2">
+  <link rel="stylesheet" href="styles.css?v=20261021-3">
   <script src="firebase-config.js?v=20260912-2" defer></script>
-  <script src="firebase-sync.js?v=20261020-2" defer></script>
-  <script src="data/questions.js?v=20261018-1" defer></script>
-  <script src="data/gk-study-notes.js?v=20261018-1" defer></script>
+  <script src="firebase-sync.js?v=20261021-1" defer></script>
+  <script src="data/questions.js?v=20261021-1" defer></script>
+  <script src="data/gk-study-notes.js?v=20261021-1" defer></script>
   <script src="data/detailed-learning.js?v=20260917-1" defer></script>
   <script src="years-topics.js?v=20261020-1" defer></script>
   <script src="water-topics.js?v=20261020-2" defer></script>
   <script src="prime-ministers.js?v=20261021-2" defer></script>
-  <script src="app.js?v=20261021-2" defer></script>
+  <script src="app.js?v=20261021-3" defer></script>
 </head>
 <body>
   <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
@@ -691,6 +691,14 @@
         <span id="mode-category" class="mode-category">Selected category</span>
         <h1 id="mode-title">How would you like to prepare?</h1>
         <p class="mode-intro">Learn each answer, test yourself, review your notes, or explore complete topic-wise reference lists.</p>
+
+        <section id="category-sessions-panel" class="category-sessions-panel" aria-labelledby="category-sessions-title" hidden>
+          <span class="eyebrow">YOUR SAVED PRACTICE</span>
+          <h2 id="category-sessions-title">Preview &amp; Continue</h2>
+          <p id="category-sessions-status" lang="ur-Latn" role="status"></p>
+          <p class="saved-category-session-meta" lang="ur-Latn">Neeche Learn / Quiz se naya range shuru karne par sirf usi mode aur filter ka purana save replace hoga. Continue se wahi sawal, answers aur score wapas aayein ge.</p>
+          <div id="category-sessions-list" class="category-sessions-list"></div>
+        </section>
 
         <section id="computer-source-panel" class="computer-source-panel" aria-labelledby="computer-source-title" hidden>
           <div class="computer-source-heading">

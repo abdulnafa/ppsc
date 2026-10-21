@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 const { isNoneOfTheseAnswer } = require("./answer-text-corrections");
+const { SOURCE_FILE: currentAffairsSourceFile, validateSupplement } = require("./current-affairs-common");
 const {
   decisionFilePattern: adv2e102DecisionFilePattern,
   enrichedFilePattern: adv2e102EnrichedFilePattern,
@@ -66,6 +67,7 @@ const optionLabels = ["A", "B", "C", "D"];
 const ibesDecisionFilePattern = /^ibes-dedup-decisions-p\d{3}-\d{3,4}\.json$/i;
 const productionItemIdPattern = /^(?:(?:P23[4-9]-Q\d{3}|IBES-Q\d{4}|WGI-Q\d{4})-(?:SRC|SIM)|ADV2E102-U\d{4}-Q\d{3}-(?:SRC|SIM))$/;
 const canonicalPairIdPattern = /^(?:IBES-Q\d{4}|WGI-Q\d{4}|ADV2E102-U\d{4}-Q\d{3})$/;
+const userPairIdPattern = /^USR-Q\d{4}$/;
 
 function fail(message) {
   throw new Error(message);
@@ -112,10 +114,11 @@ function loadBatches() {
   const questionsWithWgi = paperQuestions.concat(wgiQuestions);
 
   const customPath = path.join(workDirectory, "custom-questions.json");
-  if (!fs.existsSync(customPath)) return questionsWithWgi;
-  const customQuestions = JSON.parse(fs.readFileSync(customPath, "utf8"));
+  const customQuestions = fs.existsSync(customPath) ? JSON.parse(fs.readFileSync(customPath, "utf8")) : [];
   if (!Array.isArray(customQuestions)) fail("custom-questions.json must contain a JSON array.");
-  return questionsWithWgi.concat(customQuestions);
+  const supplement = JSON.parse(fs.readFileSync(path.join(workDirectory, currentAffairsSourceFile), "utf8"));
+  if (!Array.isArray(supplement)) fail(`${currentAffairsSourceFile} must contain a JSON array.`);
+  return questionsWithWgi.concat(customQuestions, supplement);
 }
 
 function canonicalRepeatTargetId(duplicateOf) {
@@ -404,7 +407,7 @@ function validate(questions) {
     if (question.kind === "source" && question.id.startsWith("USR-") && question.source.type !== "user") {
       fail(`${question.id} user-supplied source item must use source.type user.`);
     }
-    if (adv2e102PairIdPattern.test(question.pairId || "") || wgiPairIdPattern.test(question.pairId || "")) {
+    if (adv2e102PairIdPattern.test(question.pairId || "") || wgiPairIdPattern.test(question.pairId || "") || userPairIdPattern.test(question.pairId || "")) {
       if (question.verificationStatus !== "verified") fail(`${question.id} cannot build unresolved or disputed verified content.`);
       const referenceResult = validateReferences(question.references, question.id, fail, 2);
       validateTemporalScope(question.temporalScope, question.question, question.id, fail);
@@ -415,7 +418,7 @@ function validate(questions) {
       const decision = adv2e102PairIdPattern.test(question.pairId || "")
         ? adv2e102Decisions.get(question.pairId)
         : wgiDecisions.get(question.pairId);
-      if (!decision || decision.action !== "keep" || decision.reviewStatus !== "verified") {
+      if (!userPairIdPattern.test(question.pairId || "") && (!decision || decision.action !== "keep" || decision.reviewStatus !== "verified")) {
         fail(`${question.id} requires a verified keep decision before build.`);
       }
     }
@@ -539,7 +542,7 @@ function websiteQuestion(question, pairsById, translations, urduCategoryDisplay,
       repeatCount: verifiedSkipCount + 1,
       isImportant: true
     } : {}),
-    ...(adv2e102PairIdPattern.test(question.pairId) || wgiPairIdPattern.test(question.pairId) ? {
+    ...(adv2e102PairIdPattern.test(question.pairId) || wgiPairIdPattern.test(question.pairId) || userPairIdPattern.test(question.pairId) ? {
       references: question.references,
       temporalScope: question.temporalScope
     } : {})
@@ -653,7 +656,7 @@ function writeMarkdown(questions) {
   const master = [
     "# PPSC Similar Practice MCQs",
     "",
-    `This generated bank contains ${practiceQuestions.length} original practice MCQs, one for each retained source question in the supplied study PDFs. Questions/options are in English; explanations are in Urdu.`,
+    `This generated bank contains ${practiceQuestions.length} original practice MCQs, paired with retained items from supplied study PDFs or researched supplements. Questions/options are in English; explanations are in Urdu.`,
     "",
     ...practiceQuestions.map(renderPracticeItem)
   ].join("\n");
@@ -664,7 +667,7 @@ function writeMarkdown(questions) {
     const content = [
       `# ${category.name} — Similar Practice MCQs`,
       "",
-      `${items.length} original practice questions generated from the supplied PPSC study sources.`,
+      `${items.length} original practice questions generated from the supplied PPSC study sources and researched supplements.`,
       "",
       ...items.map(renderPracticeItem)
     ].join("\n");
@@ -685,11 +688,20 @@ const { javascript: generatedJavaScript, releaseData } = buildJavaScript(
   repeatEvidence
 );
 const releaseRepeatEvidence = buildReleaseRepeatEvidence(releaseData, repeatEvidence);
+validateSupplement(releaseData);
 const validateOnly = process.argv.includes("--validate-only");
-if (!validateOnly) {
+const checkOnly = process.argv.includes("--check");
+if (checkOnly) {
+  if (fs.readFileSync(outputFile, "utf8").replace(/\r\n/g, "\n") !== generatedJavaScript) {
+    fail("data/questions.js is stale; run node tools/build-question-bank.js --site-only");
+  }
+  if (JSON.stringify(JSON.parse(fs.readFileSync(releaseRepeatEvidencePath, "utf8"))) !== JSON.stringify(releaseRepeatEvidence)) {
+    fail("data/release-repeat-evidence.json is stale; rebuild the question bank");
+  }
+} else if (!validateOnly) {
   fs.writeFileSync(outputFile, generatedJavaScript, "utf8");
   fs.writeFileSync(releaseRepeatEvidencePath, `${JSON.stringify(releaseRepeatEvidence, null, 2)}\n`, "utf8");
-  writeMarkdown(questions);
+  if (!process.argv.includes("--site-only")) writeMarkdown(questions);
 }
 
 const counts = Object.fromEntries(categories.map((category) => [
@@ -701,6 +713,6 @@ for (const skipCount of repeatEvidence.skipCountsByTargetId.values()) {
   const repeatCount = skipCount + 1;
   repeatDistribution[repeatCount] = (repeatDistribution[repeatCount] || 0) + 1;
 }
-console.log(`${validateOnly ? "Validated" : "Built"} ${questions.length} website MCQs (${questions.length / 2} source + ${questions.length / 2} similar).`);
+console.log(`${validateOnly || checkOnly ? "Validated" : "Built"} ${questions.length} website MCQs (${questions.length / 2} source + ${questions.length / 2} similar).`);
 console.log(`Repeat metadata: ${repeatEvidence.skipCountsByTargetId.size} important questions from ${repeatEvidence.verifiedSkipCount} verified skip decisions; repeatCount distribution ${JSON.stringify(repeatDistribution)}.`);
 console.log(counts);

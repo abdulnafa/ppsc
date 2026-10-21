@@ -1,10 +1,13 @@
 (function (window, document) {
   "use strict";
 
+  var CATEGORY_SESSIONS_KEY = "ppsc-prep:category-sessions:v1";
   var STORAGE_SLOTS = Object.freeze([
     Object.freeze({ id: "active-session", key: "ppsc-prep:active-session:v1" }),
     Object.freeze({ id: "retry-queue", key: "ppsc-prep:retry-queue:v1" }),
-    Object.freeze({ id: "difficult-questions", key: "ppsc-prep:difficult-question-ids:v1" })
+    Object.freeze({ id: "difficult-questions", key: "ppsc-prep:difficult-question-ids:v1" }),
+    // Missing only on clients/cloud backups created before per-category resume.
+    Object.freeze({ id: "category-sessions", key: CATEGORY_SESSIONS_KEY, optional: true })
   ]);
   var SLOT_BY_KEY = new Map(STORAGE_SLOTS.map(function (slot) { return [slot.key, slot]; }));
   var CLOUD_SCHEMA_VERSION = 1;
@@ -418,11 +421,18 @@
     var sessionRaw = snapshot[STORAGE_SLOTS[0].key];
     var queueRaw = snapshot[STORAGE_SLOTS[1].key];
     var difficultRaw = snapshot[STORAGE_SLOTS[2].key];
+    var categorySessionsRaw = snapshot[CATEGORY_SESSIONS_KEY];
     var session = safeJson(sessionRaw);
     var queue = safeJson(queueRaw);
     var difficult = safeJson(difficultRaw);
+    var categorySessions = safeJson(categorySessionsRaw);
+    var validCategorySessions = categorySessions && categorySessions.version === 1
+      && categorySessions.sessions && typeof categorySessions.sessions === "object"
+      && !Array.isArray(categorySessions.sessions);
+    var categorySessionCount = validCategorySessions ? Object.keys(categorySessions.sessions).length : 0;
     var malformed = [sessionRaw !== null && session === undefined, queueRaw !== null && queue === undefined,
-      difficultRaw !== null && difficult === undefined].some(Boolean);
+      difficultRaw !== null && difficult === undefined,
+      categorySessionsRaw !== null && !validCategorySessions].some(Boolean);
     var sessionCount = session && Array.isArray(session.questionIds) ? session.questionIds.length : 0;
     var sessionPosition = sessionCount && Number.isInteger(session.currentIndex)
       ? Math.min(session.currentIndex + 1, sessionCount) : 0;
@@ -443,7 +453,7 @@
         : difficult && Array.isArray(difficult.ids) ? difficult.ids : [];
     var activeReview = Boolean(queue && queue.activeAttempt && queue.activeAttempt.kind !== "sequential");
     var hasProgress = malformed || sessionCount > 0 || retryCount > 0 || wrongCount > 0
-      || importantPractice || activeReview || difficultIds.length > 0;
+      || importantPractice || activeReview || difficultIds.length > 0 || categorySessionCount > 0;
     var totalBytes = STORAGE_SLOTS.reduce(function (total, slot) {
       return total + (typeof snapshot[slot.key] === "string" ? utf8Length(snapshot[slot.key]) : 0);
     }, 0);
@@ -454,6 +464,7 @@
       sessionCategory: session && typeof session.categoryId === "string" ? session.categoryId : "",
       sessionPosition: sessionPosition,
       sessionCount: sessionCount,
+      categorySessionCount: categorySessionCount,
       retryCount: retryCount,
       wrongCount: wrongCount,
       retryReviews: retryReviews,
@@ -473,6 +484,7 @@
         + (summary.sessionCategory ? " · " + summary.sessionCategory : ""));
     }
     if (summary.retryCount) parts.push(summary.retryCount + " queued · " + summary.retryReviews + " reviews left");
+    if (summary.categorySessionCount) parts.push(summary.categorySessionCount + " saved category sessions");
     if (summary.wrongCount) parts.push(summary.wrongCount + " Wrong Quiz questions");
     if (summary.importantPractice) parts.push("category Important practice saved");
     if (summary.difficultCount) parts.push(summary.difficultCount + " difficult questions");
@@ -534,6 +546,25 @@
 
   function snapshotsEqual(first, second) {
     return STORAGE_SLOTS.every(function (slot) { return first[slot.key] === second[slot.key]; });
+  }
+
+  // A pre-feature device has no archive, not an intentional deletion. Completed
+  // sessions are represented by an explicit {version:1,sessions:{}} value, which
+  // remains authoritative. Never union two existing archives: that could bring
+  // completed sessions back or silently choose between conflicting positions.
+  function preserveCategorySessions(snapshot, fallback) {
+    var preserved = cloneRawSnapshot(snapshot);
+    if (preserved[CATEGORY_SESSIONS_KEY] === null && typeof fallback[CATEGORY_SESSIONS_KEY] === "string") {
+      preserved[CATEGORY_SESSIONS_KEY] = fallback[CATEGORY_SESSIONS_KEY];
+    }
+    return preserved;
+  }
+
+  function onlyMissingCategorySessionsDiffer(first, second) {
+    return (first[CATEGORY_SESSIONS_KEY] === null || second[CATEGORY_SESSIONS_KEY] === null)
+      && STORAGE_SLOTS.every(function (slot) {
+        return slot.key === CATEGORY_SESSIONS_KEY || first[slot.key] === second[slot.key];
+      });
   }
 
   function utf8Length(value) {
@@ -749,6 +780,7 @@
 
   async function readSlot(slot, manifestSnapshot) {
     if (!manifestSnapshot.exists()) {
+      if (slot.optional) return { rawValue: null, manifest: null };
       throw new Error("Cloud progress is incomplete: a storage manifest is missing.");
     }
     var manifest = manifestSnapshot.data() || {};
@@ -987,6 +1019,12 @@
       finishReady("already-current", cloud.raw);
       return;
     }
+    if (onlyMissingCategorySessionsDiffer(local, cloud.raw)) {
+      applySnapshotToLocal(preserveCategorySessions(cloud.raw, local));
+      finishReady("category-sessions-upgraded", cloud.raw);
+      if (!snapshotsEqual(readLocalSnapshot(), cloud.raw)) notifyLocalChange(CATEGORY_SESSIONS_KEY);
+      return;
+    }
     if (!localSummary.hasProgress) {
       updateStatus({ phase: "downloading", ready: false, message: "Restoring your cloud progress on this device…" });
       applySnapshotToLocal(cloud.raw);
@@ -1069,6 +1107,13 @@
     if (runtime.guest || !decision || !runtime.user) return;
     try {
       var currentLocal = readLocalSnapshot();
+      if (decision.cloud.exists) {
+        var preservedLocal = preserveCategorySessions(currentLocal, decision.cloud.raw);
+        if (!snapshotsEqual(currentLocal, preservedLocal)) {
+          applySnapshotToLocal(preservedLocal);
+          currentLocal = preservedLocal;
+        }
+      }
       if (!decision.cloud.exists && !summarizeSnapshot(currentLocal).hasProgress) {
         updateStatus({
           phase: "migration-choice",
@@ -1112,9 +1157,10 @@
         && !backupSnapshotLocally(currentLocal, "device-before-cloud-choice")) {
         throw new Error("A safety backup could not be created, so this device's progress was not replaced.");
       }
-      applySnapshotToLocal(latestCloud.raw);
+      applySnapshotToLocal(preserveCategorySessions(latestCloud.raw, currentLocal));
       rememberCloudSnapshot(latestCloud);
       finishReady("cloud-chosen", latestCloud.raw);
+      if (!snapshotsEqual(readLocalSnapshot(), latestCloud.raw)) notifyLocalChange(CATEGORY_SESSIONS_KEY);
     } catch (error) {
       failBeforeReady(error, "Cloud progress could not be applied. This device's copy was not uploaded.");
     }

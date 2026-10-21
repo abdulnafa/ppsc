@@ -10,6 +10,7 @@ const SYNC_SOURCE_PATH = path.join(PROJECT_ROOT, "firebase-sync.js");
 const ACTIVE_SESSION_KEY = "ppsc-prep:active-session:v1";
 const RETRY_QUEUE_KEY = "ppsc-prep:retry-queue:v1";
 const DIFFICULT_IDS_KEY = "ppsc-prep:difficult-question-ids:v1";
+const CATEGORY_SESSIONS_KEY = "ppsc-prep:category-sessions:v1";
 const CONFLICT_BACKUP_KEY = "ppsc-prep:cloud-conflict-backup:v1";
 const ACCESS_MODE_KEY = "ppsc-prep:access-mode:v1";
 const ALLOWED_EMAIL = "developerabdulnafa@gmail.com";
@@ -43,6 +44,22 @@ const SAMPLE_SESSION_RAW = JSON.stringify({
   submitted: true,
   score: 0,
   savedAt: 1
+});
+const SAMPLE_CATEGORY_SESSIONS_RAW = JSON.stringify({
+  version: 1,
+  sessions: {
+    "general-knowledge:learn:difficult:all:all": JSON.parse(SAMPLE_SESSION_RAW),
+    "general-knowledge:quiz:all:all:all": {
+      ...JSON.parse(SAMPLE_SESSION_RAW), mode: "quiz", scope: "all",
+      questionIds: [SAMPLE_QUESTION_ID, SECOND_QUESTION_ID],
+      rangeQuestionIds: [SAMPLE_QUESTION_ID, SECOND_QUESTION_ID],
+      rangePoolQuestionIds: [SAMPLE_QUESTION_ID, SECOND_QUESTION_ID],
+      rangePoolSize: 2, rangeEnd: 2, currentIndex: 1,
+      optionOrders: [[0, 1, 2, 3], [3, 1, 0, 2]],
+      answerHistory: [{ questionId: SAMPLE_QUESTION_ID, selectedIndex: 1, correct: true }],
+      selectedIndex: 2, submitted: false, score: 1, savedAt: 2
+    }
+  }
 });
 const LEGACY_TWO_REVIEW_QUEUE_RAW = JSON.stringify({
   version: 1,
@@ -1119,6 +1136,171 @@ async function testReconnectPullsRemoteOnlyChange(seedStore) {
   assert.equal(first.localStorage.getItem(RETRY_QUEUE_KEY), remoteQueue);
 }
 
+async function testCategorySessionsRoundTripAndOfflineResume() {
+  const store = new Map();
+  const first = createBrowser({ store, local: { [CATEGORY_SESSIONS_KEY]: SAMPLE_CATEGORY_SESSIONS_RAW } });
+  const migration = await waitFor(first, (status) => status.phase === "migration-choice", "archive-only progress migration");
+  assert.equal(migration.localSummary.hasProgress, true, "an archive alone is valuable progress");
+  assert.equal(migration.localSummary.categorySessionCount, 2);
+  await first.window.PPSC_CLOUD.chooseLocal();
+  await waitFor(first, (status) => status.ready, "archive first upload");
+  assert.equal(rawCloudValue(store, "category-sessions"), SAMPLE_CATEGORY_SESSIONS_RAW);
+
+  const second = createBrowser({ store });
+  await waitFor(second, (status) => status.ready, "archive empty-device restore");
+  assert.equal(second.localStorage.getItem(CATEGORY_SESSIONS_KEY), SAMPLE_CATEGORY_SESSIONS_RAW);
+  assert.equal(second.window.PPSC_CLOUD.getStatus().cloudSummary.categorySessionCount, 2);
+  assert.equal(second.localStorage.getItem(ACTIVE_SESSION_KEY), null);
+
+  first.window.navigator.onLine = false;
+  first.window.dispatchEvent({ type: "offline" });
+  const updated = JSON.parse(SAMPLE_CATEGORY_SESSIONS_RAW);
+  delete updated.sessions["general-knowledge:learn:difficult:all:all"];
+  updated.sessions["general-knowledge:quiz:all:all:all"].submitted = true;
+  updated.sessions["general-knowledge:quiz:all:all:all"].score = 2;
+  updated.sessions["general-knowledge:quiz:all:all:all"].savedAt = 3;
+  const updatedRaw = JSON.stringify(updated);
+  first.window.PPSC_CLOUD.storage.setItem(CATEGORY_SESSIONS_KEY, updatedRaw);
+  first.window.PPSC_CLOUD.notifyLocalChange(CATEGORY_SESSIONS_KEY);
+  assert.equal(first.window.PPSC_CLOUD.getStatus().phase, "offline");
+  assert.equal(rawCloudValue(store, "category-sessions"), SAMPLE_CATEGORY_SESSIONS_RAW);
+  first.window.navigator.onLine = true;
+  first.window.dispatchEvent({ type: "online" });
+  await waitFor(first, (status) => status.phase === "synced"
+    && rawCloudValue(store, "category-sessions") === updatedRaw, "archive offline upload", 3000);
+
+  second.window.dispatchEvent({ type: "online" });
+  await waitFor(second, () => second.window.location.reloadCalled, "archive remote-only reconnect reload", 3000);
+  assert.equal(second.localStorage.getItem(CATEGORY_SESSIONS_KEY), updatedRaw);
+  const reloaded = createBrowser({ store, local: Object.fromEntries(second.localStorage.values) });
+  await waitFor(reloaded, (status) => status.ready, "archive reload resumes exact saved state");
+  assert.equal(reloaded.localStorage.getItem(CATEGORY_SESSIONS_KEY), updatedRaw);
+  assert.equal(Object.keys(JSON.parse(updatedRaw).sessions).length, 1, "completed Learn must not be resurrected");
+
+  // Writing another known slot must not replace the untouched archive document.
+  const archiveManifest = clone(store.get(slotPath("category-sessions")));
+  reloaded.localStorage.setItem(RETRY_QUEUE_KEY, LEGACY_TWO_REVIEW_QUEUE_RAW);
+  reloaded.window.PPSC_CLOUD.notifyLocalChange(RETRY_QUEUE_KEY);
+  await waitFor(reloaded, (status) => status.phase === "synced"
+    && rawCloudValue(store, "retry-queue") === LEGACY_TWO_REVIEW_QUEUE_RAW, "queue-only slot upload", 3000);
+  assert.deepEqual(store.get(slotPath("category-sessions")), archiveManifest);
+  assert.equal(rawCloudValue(store, "category-sessions"), updatedRaw);
+}
+
+async function testLegacyThreeSlotCloudUpgradesWithoutLoss(seedStore) {
+  const legacyStore = cloneStore(seedStore);
+  legacyStore.delete(slotPath("category-sessions"));
+  assert.equal(legacyStore.size, 4, "legacy fixture must contain only metadata and the original three slot documents");
+  const restored = createBrowser({ store: cloneStore(legacyStore) });
+  await waitFor(restored, (status) => status.ready, "three-slot cloud remains readable");
+  assertOwnerValues(restored, legacyLocalProgress());
+  assert.equal(restored.localStorage.getItem(CATEGORY_SESSIONS_KEY), null);
+
+  const local = { ...legacyLocalProgress(), [CATEGORY_SESSIONS_KEY]: SAMPLE_CATEGORY_SESSIONS_RAW };
+  const upgrade = createBrowser({ store: legacyStore, local });
+  await waitFor(upgrade, (status) => status.ready
+    && legacyStore.has(slotPath("category-sessions"))
+    && rawCloudValue(legacyStore, "category-sessions") === SAMPLE_CATEGORY_SESSIONS_RAW,
+  "one-sided archive uploads without conflict or loss", 3000);
+  assertOwnerValues(upgrade, local);
+  assert.equal(readyEventMode(upgrade), "category-sessions-upgraded");
+
+  const missingLocal = createBrowser({ store: legacyStore, local: legacyLocalProgress() });
+  await waitFor(missingLocal, (status) => status.ready, "older device receives the existing archive");
+  assertOwnerValues(missingLocal, local);
+  assert.equal(missingLocal.fake.metrics.transactions, 0, "receiving an archive must not rewrite cloud progress");
+
+  const brokenStore = cloneStore(legacyStore);
+  brokenStore.delete(slotPath("retry-queue"));
+  const broken = createBrowser({ store: brokenStore, local });
+  await waitFor(broken, (status) => status.phase === "error", "required legacy manifest still fails closed");
+  assert.equal(broken.window.PPSC_CLOUD.getStatus().ready, false);
+  assert.match(broken.window.PPSC_CLOUD.getStatus().error, /manifest is missing/i);
+  assertOwnerValues(broken, local);
+  assert.equal(broken.fake.metrics.transactions, 0);
+}
+
+async function testCategorySessionsChoicesPreserveMissingButNotExplicitEmpty(seedStore) {
+  const oldCloud = cloneStore(seedStore);
+  oldCloud.delete(slotPath("category-sessions"));
+  const local = {
+    ...legacyLocalProgress(), [RETRY_QUEUE_KEY]: retryQueueRaw(SECOND_QUESTION_ID, 9),
+    [CATEGORY_SESSIONS_KEY]: SAMPLE_CATEGORY_SESSIONS_RAW
+  };
+  const cloudChoice = createBrowser({ store: oldCloud, local });
+  await waitFor(cloudChoice, (status) => status.phase === "conflict", "old-cloud choice keeps independent local archive");
+  await cloudChoice.window.PPSC_CLOUD.chooseCloud();
+  await waitFor(cloudChoice, (status) => status.ready && oldCloud.has(slotPath("category-sessions"))
+    && rawCloudValue(oldCloud, "category-sessions") === SAMPLE_CATEGORY_SESSIONS_RAW, "old-cloud choice archive follow-up", 3000);
+  assert.equal(cloudChoice.localStorage.getItem(RETRY_QUEUE_KEY), LEGACY_TWO_REVIEW_QUEUE_RAW);
+  assert.equal(cloudChoice.localStorage.getItem(CATEGORY_SESSIONS_KEY), SAMPLE_CATEGORY_SESSIONS_RAW);
+  assert.equal(JSON.parse(cloudChoice.localStorage.getItem(CONFLICT_BACKUP_KEY)).values[RETRY_QUEUE_KEY], local[RETRY_QUEUE_KEY]);
+
+  const localChoice = createBrowser({ store: oldCloud,
+    local: { ...legacyLocalProgress(), [RETRY_QUEUE_KEY]: retryQueueRaw(SECOND_QUESTION_ID, 11) } });
+  await waitFor(localChoice, (status) => status.phase === "conflict", "older local-device choice");
+  await localChoice.window.PPSC_CLOUD.chooseLocal();
+  await waitFor(localChoice, (status) => status.ready, "older local-device choice retains cloud archive");
+  assert.equal(localChoice.localStorage.getItem(CATEGORY_SESSIONS_KEY), SAMPLE_CATEGORY_SESSIONS_RAW);
+  assert.equal(rawCloudValue(oldCloud, "category-sessions"), SAMPLE_CATEGORY_SESSIONS_RAW);
+  assert.equal(rawCloudValue(oldCloud, "retry-queue"), retryQueueRaw(SECOND_QUESTION_ID, 11));
+
+  const emptyArchive = JSON.stringify({ version: 1, sessions: {} });
+  localChoice.localStorage.setItem(CATEGORY_SESSIONS_KEY, emptyArchive);
+  localChoice.window.PPSC_CLOUD.notifyLocalChange(CATEGORY_SESSIONS_KEY);
+  await waitFor(localChoice, (status) => status.phase === "synced"
+    && rawCloudValue(oldCloud, "category-sessions") === emptyArchive, "explicit completed archive uploads", 3000);
+  const stale = createBrowser({ store: oldCloud, local: {
+    ...Object.fromEntries(localChoice.localStorage.values), [CATEGORY_SESSIONS_KEY]: SAMPLE_CATEGORY_SESSIONS_RAW
+  } });
+  await waitFor(stale, (status) => status.phase === "conflict", "non-null conflicting archive requires choice");
+  assert.equal(stale.localStorage.getItem(CATEGORY_SESSIONS_KEY), SAMPLE_CATEGORY_SESSIONS_RAW);
+  assert.equal(rawCloudValue(oldCloud, "category-sessions"), emptyArchive);
+  await stale.window.PPSC_CLOUD.chooseCloud();
+  await waitFor(stale, (status) => status.ready, "explicit empty archive remains authoritative");
+  assert.equal(stale.localStorage.getItem(CATEGORY_SESSIONS_KEY), emptyArchive);
+  assert.equal(rawCloudValue(oldCloud, "category-sessions"), emptyArchive);
+  assert.equal(JSON.parse(stale.localStorage.getItem(CONFLICT_BACKUP_KEY)).values[CATEGORY_SESSIONS_KEY], SAMPLE_CATEGORY_SESSIONS_RAW);
+}
+
+async function testCategorySessionsConcurrentConflictAndChunks() {
+  const store = new Map();
+  const initial = createBrowser({ store, local: { [CATEGORY_SESSIONS_KEY]: SAMPLE_CATEGORY_SESSIONS_RAW } });
+  await waitFor(initial, (status) => status.phase === "migration-choice", "archive conflict seed");
+  await initial.window.PPSC_CLOUD.chooseLocal();
+  await waitFor(initial, (status) => status.ready, "archive conflict seed ready");
+  const other = createBrowser({ store });
+  await waitFor(other, (status) => status.ready, "archive conflict second device");
+  initial.window.navigator.onLine = false;
+  initial.window.dispatchEvent({ type: "offline" });
+  const localValue = JSON.stringify({ ...JSON.parse(SAMPLE_CATEGORY_SESSIONS_RAW), localEdit: true });
+  initial.localStorage.setItem(CATEGORY_SESSIONS_KEY, localValue);
+  initial.window.PPSC_CLOUD.notifyLocalChange(CATEGORY_SESSIONS_KEY);
+  const remoteValue = JSON.stringify({ version: 1, sessions: {} });
+  other.localStorage.setItem(CATEGORY_SESSIONS_KEY, remoteValue);
+  other.window.PPSC_CLOUD.notifyLocalChange(CATEGORY_SESSIONS_KEY);
+  await waitFor(other, (status) => status.phase === "synced"
+    && rawCloudValue(store, "category-sessions") === remoteValue, "remote archive completion", 3000);
+  initial.window.navigator.onLine = true;
+  initial.window.dispatchEvent({ type: "online" });
+  await waitFor(initial, (status) => status.phase === "error", "two offline archives must not silently overwrite", 3000);
+  assert.equal(initial.localStorage.getItem(CATEGORY_SESSIONS_KEY), localValue);
+  assert.equal(rawCloudValue(store, "category-sessions"), remoteValue);
+  assert.equal(initial.window.location.reloadCalled, false);
+
+  const largeRaw = JSON.stringify({ ...JSON.parse(SAMPLE_CATEGORY_SESSIONS_RAW), transportPadding: "x".repeat(730 * 1024) });
+  const largeStore = new Map();
+  const large = createBrowser({ store: largeStore, local: { [CATEGORY_SESSIONS_KEY]: largeRaw } });
+  await waitFor(large, (status) => status.phase === "migration-choice", "large archive migration");
+  await large.window.PPSC_CLOUD.chooseLocal();
+  await waitFor(large, (status) => status.ready, "large archive chunk upload", 3000);
+  assert.ok(largeStore.get(slotPath("category-sessions")).chunkCount >= 2);
+  assert.equal(rawCloudValue(largeStore, "category-sessions"), largeRaw);
+  const restored = createBrowser({ store: largeStore });
+  await waitFor(restored, (status) => status.ready, "large archive integrity checked restore", 3000);
+  assert.equal(restored.localStorage.getItem(CATEGORY_SESSIONS_KEY), largeRaw);
+}
+
 async function testFirstUploadQueuesBaselineMigrationFollowUp() {
   const store = new Map();
   const browser = createBrowser({ store, local: legacyLocalProgress() });
@@ -1223,7 +1405,7 @@ function assertGuestReady(browser) {
 }
 
 function assertOwnerValues(browser, original) {
-  for (const key of [ACTIVE_SESSION_KEY, RETRY_QUEUE_KEY, DIFFICULT_IDS_KEY]) {
+  for (const key of [ACTIVE_SESSION_KEY, RETRY_QUEUE_KEY, DIFFICULT_IDS_KEY, CATEGORY_SESSIONS_KEY]) {
     assert.equal(browser.localStorage.getItem(key), original[key] || null, `${key} must remain unchanged`);
   }
 }
@@ -1233,7 +1415,7 @@ async function settleGuestCallbacks() {
 }
 
 async function testGuestStorageIsolationAndReconnect() {
-  const original = legacyLocalProgress();
+  const original = { ...legacyLocalProgress(), [CATEGORY_SESSIONS_KEY]: SAMPLE_CATEGORY_SESSIONS_RAW };
   const browser = createBrowser({ local: original, user: null });
   await waitFor(browser, (candidate) => candidate.phase === "auth-required", "guest entry from sign-in screen");
   await browser.window.PPSC_CLOUD.continueAsGuest();
@@ -1243,7 +1425,7 @@ async function testGuestStorageIsolationAndReconnect() {
   const storage = browser.window.PPSC_CLOUD.storage;
   assert.ok(storage, "the application must use the owner/guest-isolating storage facade");
 
-  for (const key of [ACTIVE_SESSION_KEY, RETRY_QUEUE_KEY, DIFFICULT_IDS_KEY]) {
+  for (const key of [ACTIVE_SESSION_KEY, RETRY_QUEUE_KEY, DIFFICULT_IDS_KEY, CATEGORY_SESSIONS_KEY]) {
     assert.equal(storage.getItem(key), null, "a guest must not inherit the owner's saved progress");
     storage.setItem(key, `guest:${original[key]}`);
     assert.equal(storage.getItem(key), `guest:${original[key]}`);
@@ -1273,13 +1455,14 @@ async function testGuestStorageIsolationAndReconnect() {
 }
 
 async function testRememberedGuestStartsWithoutSdkOrConfig() {
-  const original = legacyLocalProgress();
+  const original = { ...legacyLocalProgress(), [CATEGORY_SESSIONS_KEY]: SAMPLE_CATEGORY_SESSIONS_RAW };
   const guestQueue = retryQueueRaw(SECOND_QUESTION_ID, 7);
   const local = {
     ...original,
     [guestKey(ACTIVE_SESSION_KEY)]: SAMPLE_SESSION_RAW,
     [guestKey(RETRY_QUEUE_KEY)]: guestQueue,
-    [guestKey(DIFFICULT_IDS_KEY)]: SAMPLE_DIFFICULT_RAW
+    [guestKey(DIFFICULT_IDS_KEY)]: SAMPLE_DIFFICULT_RAW,
+    [guestKey(CATEGORY_SESSIONS_KEY)]: JSON.stringify({ version: 1, sessions: {} })
   };
   const browser = createBrowser({
     local,
@@ -1291,6 +1474,7 @@ async function testRememberedGuestStartsWithoutSdkOrConfig() {
   assertGuestReady(browser);
   assert.equal(browser.window.__PPSC_TEST_SDK_LOADS__ || 0, 0, "guest reload must bypass SDK loading entirely");
   assert.equal(browser.window.PPSC_CLOUD.storage.getItem(RETRY_QUEUE_KEY), guestQueue);
+  assert.equal(browser.window.PPSC_CLOUD.storage.getItem(CATEGORY_SESSIONS_KEY), local[guestKey(CATEGORY_SESSIONS_KEY)]);
   assertOwnerValues(browser, original);
   assert.equal(browser.fake.metrics.firestoreReads, 0);
   assert.equal(browser.fake.metrics.batchCommits, 0);
@@ -1362,12 +1546,13 @@ async function testGuestChoiceOutlivesDelayedCloudRead(seedStore) {
 }
 
 async function testGuestSignInReloadDoesNotMergeProgress() {
-  const original = legacyLocalProgress();
+  const original = { ...legacyLocalProgress(), [CATEGORY_SESSIONS_KEY]: SAMPLE_CATEGORY_SESSIONS_RAW };
   const local = {
     ...original,
     [guestKey(ACTIVE_SESSION_KEY)]: SAMPLE_SESSION_RAW,
     [guestKey(RETRY_QUEUE_KEY)]: retryQueueRaw(SECOND_QUESTION_ID, 6),
-    [guestKey(DIFFICULT_IDS_KEY)]: SAMPLE_DIFFICULT_RAW
+    [guestKey(DIFFICULT_IDS_KEY)]: SAMPLE_DIFFICULT_RAW,
+    [guestKey(CATEGORY_SESSIONS_KEY)]: JSON.stringify({ version: 1, sessions: {} })
   };
   const browser = createBrowser({ local, session: { [ACCESS_MODE_KEY]: "guest" } });
   await waitFor(browser, (candidate) => candidate.phase === "guest-ready", "guest before sign-in reload");
@@ -1388,6 +1573,8 @@ async function testGuestSignInReloadDoesNotMergeProgress() {
   await waitFor(reloaded, (candidate) => candidate.phase === "auth-required", "normal sign-in screen after leaving guest");
   assert.equal(reloaded.window.PPSC_CLOUD.storage.getItem(RETRY_QUEUE_KEY), original[RETRY_QUEUE_KEY]);
   assert.equal(reloaded.localStorage.getItem(guestKey(RETRY_QUEUE_KEY)), local[guestKey(RETRY_QUEUE_KEY)]);
+  assert.equal(reloaded.window.PPSC_CLOUD.storage.getItem(CATEGORY_SESSIONS_KEY), SAMPLE_CATEGORY_SESSIONS_RAW);
+  assert.equal(reloaded.localStorage.getItem(guestKey(CATEGORY_SESSIONS_KEY)), local[guestKey(CATEGORY_SESSIONS_KEY)]);
   assertOwnerValues(reloaded, original);
 }
 
@@ -1505,6 +1692,10 @@ async function main() {
   await testLargeProgressUsesIntegrityCheckedChunks();
   await testOfflineChangeSyncsWhenConnectionReturns(seedStore);
   await testReconnectPullsRemoteOnlyChange(seedStore);
+  await testCategorySessionsRoundTripAndOfflineResume();
+  await testLegacyThreeSlotCloudUpgradesWithoutLoss(seedStore);
+  await testCategorySessionsChoicesPreserveMissingButNotExplicitEmpty(seedStore);
+  await testCategorySessionsConcurrentConflictAndChunks();
   await testFirstUploadQueuesBaselineMigrationFollowUp();
   await testEquivalentConcurrentBaselineSyncConflictReconciles(seedStore);
   await testGuestStorageIsolationAndReconnect();
@@ -1537,6 +1728,10 @@ async function main() {
       "large progress round-trips through integrity-checked chunks",
       "offline local changes upload when the connection returns",
       "remote-only reconnect changes pull safely before reload",
+      "category Learn/Quiz snapshots round-trip byte-for-byte with answers, option order and position; offline completion uploads and remote-only reconnect reloads without resurrecting completed sessions",
+      "legacy three-slot cloud backups remain readable; one-sided category archives upgrade without conflict while missing required manifests still fail closed",
+      "explicit local/cloud choice preserves an archive absent from the older side, but existing empty archives and non-null conflicts remain authoritative with safety backups",
+      "concurrent offline category-archive changes retain both copies for explicit choice, and large archives use integrity-checked chunks",
       "the cadence marker=2/count=5 baseline change during first upload is queued and synced",
       "equivalent concurrent marked-five baseline writes reconcile without pausing the losing client",
       "guest session, queue, and difficult marks use isolated browser keys and never read or write cloud data on reconnect",

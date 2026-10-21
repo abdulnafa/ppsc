@@ -1,0 +1,444 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-10-21",
+  "sourceFile": "work/current-affairs-20261021.json",
+  "categoryId": "current-affairs",
+  "scope": "Bounded additive supplement. All-bank duplicate comparison is not a claim that every pre-existing Current Affairs answer was freshly reverified.",
+  "baseline": {
+    "questionCount": 11892,
+    "sha256": "1E1A1BCA313EF5D70814AB33E6F88C4A8A164F26C098537EC50B51769836E814",
+    "sha256Scope": "Ordered records containing id, pairId, kind, question, options and correctOptionIndex; not a raw-file hash. The complete original objects are independently pinned in tools/current-affairs-common.js."
+  },
+  "baselineCurrentAffairsCount": 610,
+  "addedQuestionCount": 40,
+  "addedPairCount": 20,
+  "expectedCurrentAffairsCountAfterAppend": 650,
+  "uniqueReferenceUrlCount": 40,
+  "independentAuthorityCount": 28,
+  "verificationMethod": "Primary/official web search results and selective page reads. Each item has two distinct named answer-supporting authorities and direct HTTPS evidence. Event-date wording prevents a past event being represented as an unqualified current status.",
+  "bankProtection": "No existing question, answer, option order, ID, repetition count or importance flag changed. Append USR pairs at the tail. No past-paper provenance is claimed for the researched source items.",
+  "duplicateMethod": "Exact normalized stems compared against all 11,892 baseline items; zero matches. Keyword/entity search covered stems and correct answers, followed by token-overlap candidates and manual fact/year/body comparison. Source/practice items within each pair test different facts.",
+  "skippedCandidates": [
+    {
+      "topic": "2024 Olympic javelin gold winner and record",
+      "existingIds": [
+        "P235-Q012-SRC",
+        "P235-Q012-SIM"
+      ],
+      "reason": "Already present, so not added."
+    },
+    {
+      "topic": "Pakistan UN Security Council 2025–2026 membership",
+      "existingIds": [
+        "P235-Q015-SRC",
+        "P235-Q015-SIM"
+      ],
+      "reason": "Already present, so not added."
+    },
+    {
+      "topic": "Nobel Literature 2025 winner and nationality",
+      "existingIds": [
+        "WGI-Q0304-SRC",
+        "WGI-Q0304-SIM"
+      ],
+      "reason": "Already present; supplement instead covers Literature 2024 and other award disciplines."
+    },
+    {
+      "topic": "2024 IMF Extended Fund Facility amount and duration",
+      "existingIds": [
+        "WGI-Q0306-SRC",
+        "WGI-Q0306-SIM"
+      ],
+      "reason": "Already present, so not added."
+    },
+    {
+      "topic": "COP30 venue and COP31 schedule",
+      "existingIds": [
+        "WGI-Q0293-SRC",
+        "WGI-Q0293-SIM",
+        "WGI-Q0294-SRC",
+        "WGI-Q0294-SIM"
+      ],
+      "reason": "Already present; added COP29 instead."
+    },
+    {
+      "topic": "SCO Heads of State summit locations 2024–2026",
+      "existingIds": [
+        "WGI-Q0342-SRC",
+        "WGI-Q0295-SRC",
+        "WGI-Q0296-SRC"
+      ],
+      "reason": "Already present; added the different Heads of Government meeting."
+    },
+    {
+      "topic": "WEF Davos town and January meeting month",
+      "existingIds": [
+        "ADV2E102-U0027-Q012-SRC",
+        "ADV2E102-U0027-Q012-SIM"
+      ],
+      "reason": "Rejected initial year-qualified town draft as semantic duplicate. Retained 2026 edition number and theme instead."
+    }
+  ],
+  "semanticReview": [
+    {
+      "pairId": "USR-Q0001",
+      "action": "keep",
+      "comparedExistingIds": [
+        "ADV2E102-U0009-Q011-SRC",
+        "WGI-Q0085-SRC"
+      ],
+      "decision": "Existing questions concern award venue or 1901 winners; 2024 organization and its country are new."
+    },
+    {
+      "pairId": "USR-Q0002",
+      "action": "keep",
+      "comparedExistingIds": [
+        "WGI-Q0304-SRC",
+        "WGI-Q0304-SIM",
+        "ADV2E102-U0004-Q005-SRC"
+      ],
+      "decision": "The existing literature pair is for 2025, not the 2024 Han Kang award. Different award-year/winner facts."
+    },
+    {
+      "pairId": "USR-Q0003",
+      "action": "keep",
+      "comparedExistingIds": [
+        "ADV2E102-U0009-Q011-SRC",
+        "WGI-Q0304-SRC"
+      ],
+      "decision": "Award venue and literature laureate are distinct from the 2025 Peace winner and her country."
+    },
+    {
+      "pairId": "USR-Q0004",
+      "action": "keep",
+      "comparedExistingIds": [
+        "WGI-Q0304-SRC",
+        "ADV2E102-U0005-Q007-SIM"
+      ],
+      "decision": "Existing Nobel facts do not cover the 2025 Chemistry award topic or the Kitagawa/Robson/Yaghi trio."
+    },
+    {
+      "pairId": "USR-Q0005",
+      "action": "keep",
+      "comparedExistingIds": [
+        "ADV2E102-U0027-Q012-SRC",
+        "ADV2E102-U0027-Q012-SIM"
+      ],
+      "decision": "Davos town draft was rejected as a semantic duplicate of the normal meeting venue. Replacement tests 2026 edition number; paired item tests that year's theme, neither the usual venue nor usual month."
+    },
+    {
+      "pairId": "USR-Q0006",
+      "action": "keep",
+      "comparedExistingIds": [
+        "WGI-Q0303-SRC",
+        "WGI-Q0303-SIM"
+      ],
+      "decision": "Existing medicine pair is explicitly the 2018 immune-regulation award; new items test 2024 microRNA and its winners."
+    },
+    {
+      "pairId": "USR-Q0007",
+      "action": "keep",
+      "comparedExistingIds": [
+        "ADV2E102-U0001-Q013-SRC",
+        "ADV2E102-U0001-Q013-SIM"
+      ],
+      "decision": "Existing agreement questions concern Paris climate agreement; new items concern WHO Pandemic Agreement adoption, not entry into force."
+    },
+    {
+      "pairId": "USR-Q0008",
+      "action": "keep",
+      "comparedExistingIds": [
+        "WGI-Q0342-SIM"
+      ],
+      "decision": "Astana Declaration is an SCO outcome; UN Pact for the Future and its digital annex are separate events/documents."
+    },
+    {
+      "pairId": "USR-Q0009",
+      "action": "keep",
+      "comparedExistingIds": [
+        "ADV2E102-U0081-Q007-SRC",
+        "WGI-Q0293-SRC",
+        "WGI-Q0294-SRC"
+      ],
+      "decision": "Existing climate-conference coverage includes COP26/COP30/COP31; COP29 venue and precise developed-country-led finance goal are new."
+    },
+    {
+      "pairId": "USR-Q0010",
+      "action": "keep",
+      "comparedExistingIds": [
+        "ADV2E102-U0051-Q003-SRC",
+        "ADV2E102-U0038-Q003-SIM"
+      ],
+      "decision": "Older questions explicitly freeze BRICS membership in 2020. Indonesia's 2025 accession and Brazil's 2025 chairmanship are distinct."
+    },
+    {
+      "pairId": "USR-Q0011",
+      "action": "keep",
+      "comparedExistingIds": [
+        "ADV2E102-U0004-Q014-SIM"
+      ],
+      "decision": "Pakistan's 2017 accession is a different event. Belarus accession and the resulting July 2024 count are distinct facts."
+    },
+    {
+      "pairId": "USR-Q0012",
+      "action": "keep",
+      "comparedExistingIds": [
+        "WGI-Q0295-SRC",
+        "WGI-Q0342-SRC",
+        "WGI-Q0296-SRC"
+      ],
+      "decision": "Heads of Government meeting in Islamabad differs from Heads of State summits in Astana/Tianjin/Bishkek. Body distinction is explicit in stems and Urdu explanations."
+    },
+    {
+      "pairId": "USR-Q0013",
+      "action": "keep",
+      "comparedExistingIds": [
+        "ADV2E102-U0001-Q007-SRC",
+        "ADV2E102-U0001-Q007-SIM",
+        "ADV2E102-U0003-Q012-SIM"
+      ],
+      "decision": "2017 ICC final and 2016 Asian hockey tournament are distinct from the 2025 ICC Champions Trophy winner/runner-up."
+    },
+    {
+      "pairId": "USR-Q0014",
+      "action": "keep",
+      "comparedExistingIds": [
+        "ADV2E102-U0012-Q010-SRC",
+        "ADV2E102-U0012-Q010-SIM",
+        "ADV2E102-U0005-Q019-SIM"
+      ],
+      "decision": "Existing T20 items concern 2016 and 2009 editions; 2024 final winner and runner-up are separate event facts."
+    },
+    {
+      "pairId": "USR-Q0015",
+      "action": "keep",
+      "comparedExistingIds": [
+        "WGI-Q0347-SIM",
+        "ADV2E102-U0151-Q073-SRC"
+      ],
+      "decision": "PIMEC Karachi venue and Environment Day theme are unrelated; Expo 2025 Osaka and its theme are absent."
+    },
+    {
+      "pairId": "USR-Q0016",
+      "action": "keep",
+      "comparedExistingIds": [
+        "ADV2E102-U0036-Q005-SIM",
+        "ADV2E102-U0034-Q005-SRC"
+      ],
+      "decision": "Existing NASA acronym and Tianwen-1 mission questions do not test Europa Clipper's operator or target."
+    },
+    {
+      "pairId": "USR-Q0017",
+      "action": "keep",
+      "comparedExistingIds": [
+        "ADV2E102-U0034-Q005-SRC"
+      ],
+      "decision": "China's Mars mission is distinct from Chang'e-6 lunar sample return and its first far-side samples."
+    },
+    {
+      "pairId": "USR-Q0018",
+      "action": "keep",
+      "comparedExistingIds": [
+        "WGI-Q0290-SRC",
+        "WGI-Q0290-SIM"
+      ],
+      "decision": "Pakistan PRSC-EO1 is distinct from the NASA-ISRO NISAR satellite, its partners and radar-observation purpose."
+    },
+    {
+      "pairId": "USR-Q0019",
+      "action": "keep",
+      "comparedExistingIds": [
+        "P236-Q016-SRC",
+        "P236-Q016-SIM"
+      ],
+      "decision": "Existing G20 pair is 2023 India/New Delhi. New pair covers 2024 Rio and its anti-hunger alliance."
+    },
+    {
+      "pairId": "USR-Q0020",
+      "action": "keep",
+      "comparedExistingIds": [
+        "WGI-Q0290-SRC",
+        "WGI-Q0290-SIM"
+      ],
+      "decision": "PRSC-EO1 imaging satellite differs from PAKSAT-MM1 communications satellite. Launch name and service purpose are distinct."
+    }
+  ],
+  "existingCurrentAffairsConcerns": {
+    "accuracyCorrectionsMade": 0,
+    "note": "These are maintenance flags based on the existing temporal metadata, not newly proven factual errors. Historical dated questions must not be silently overwritten or treated as today's answer.",
+    "overdueReverification": [
+      {
+        "id": "ADV2E102-U0001-Q040-SRC",
+        "question": "As of 2026, who is serving as Acting President of Azad Jammu and Kashmir?",
+        "asOf": "2026-08-26",
+        "reverifyAfter": "2026-09-26",
+        "action": "Not changed; historical snapshot retained; future current-status audit needed."
+      },
+      {
+        "id": "ADV2E102-U0016-Q061-SRC",
+        "question": "As of 29 August 2026, who is Speaker of the National Assembly of Pakistan?",
+        "asOf": "2026-08-29",
+        "reverifyAfter": "2026-09-29",
+        "action": "Not changed; historical snapshot retained; future current-status audit needed."
+      }
+    ],
+    "yearOnlyAsOfStems": [
+      {
+        "id": "ADV2E102-U0001-Q039-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0001-Q040-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0001-Q041-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0004-Q058-SRC",
+        "asOf": "2026-08-28"
+      },
+      {
+        "id": "ADV2E102-U0004-Q058-SIM",
+        "asOf": "2026-08-28"
+      },
+      {
+        "id": "ADV2E102-U0011-Q001-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0011-Q042-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0013-Q011-SRC",
+        "asOf": "2026-08-27"
+      },
+      {
+        "id": "ADV2E102-U0013-Q016-SRC",
+        "asOf": "2026-08-27"
+      },
+      {
+        "id": "ADV2E102-U0013-Q041-SRC",
+        "asOf": "2026-08-27"
+      },
+      {
+        "id": "ADV2E102-U0014-Q022-SRC",
+        "asOf": "2026-08-28"
+      },
+      {
+        "id": "ADV2E102-U0021-Q012-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0021-Q012-SIM",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0040-Q016-SRC",
+        "asOf": "2026-08-30"
+      },
+      {
+        "id": "ADV2E102-U0040-Q016-SIM",
+        "asOf": "2026-08-30"
+      },
+      {
+        "id": "ADV2E102-U0043-Q054-SRC",
+        "asOf": "2026-08-27"
+      },
+      {
+        "id": "ADV2E102-U0043-Q054-SIM",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0061-Q052-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0061-Q060-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0061-Q063-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0081-Q035-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0081-Q037-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0081-Q038-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0160-Q053-SRC",
+        "asOf": "2026-08-26"
+      },
+      {
+        "id": "ADV2E102-U0170-Q005-SRC",
+        "asOf": "2026-08-27"
+      },
+      {
+        "id": "ADV2E102-U0170-Q016-SRC",
+        "asOf": "2026-08-27"
+      },
+      {
+        "id": "ADV2E102-U0170-Q016-SIM",
+        "asOf": "2026-08-27"
+      },
+      {
+        "id": "ADV2E102-U0170-Q019-SIM",
+        "asOf": "2026-08-27"
+      },
+      {
+        "id": "WGI-Q0088-SRC",
+        "asOf": "2026-10-12"
+      },
+      {
+        "id": "WGI-Q0088-SIM",
+        "asOf": "2026-10-12"
+      },
+      {
+        "id": "WGI-Q0102-SRC",
+        "asOf": "2026-10-12"
+      },
+      {
+        "id": "WGI-Q0102-SIM",
+        "asOf": "2026-10-12"
+      },
+      {
+        "id": "WGI-Q0130-SRC",
+        "asOf": "2026-10-12"
+      },
+      {
+        "id": "WGI-Q0193-SIM",
+        "asOf": "2026-10-12"
+      },
+      {
+        "id": "WGI-Q0194-SIM",
+        "asOf": "2026-10-12"
+      },
+      {
+        "id": "WGI-Q0324-SRC",
+        "asOf": "2026-10-12"
+      },
+      {
+        "id": "WGI-Q0324-SIM",
+        "asOf": "2026-10-12"
+      }
+    ],
+    "recommendation": "A future dedicated current-status review should check overdue entries and display precise as-of dates. This additive release leaves their historical question IDs and study progress unchanged."
+  },
+  "sourceCaveats": [
+    "Armenia MFA reference for Belarus is used only for its July 2024 membership record, independently confirmed by the SCO. Unrelated background statements on that page are not copied.",
+    "WHO Pandemic Agreement questions ask adoption, not entry into force or universal national ratification.",
+    "COP29 US$300 billion goal is distinguished from the wider US$1.3 trillion mobilization ambition.",
+    "WEF 2026 edition and theme are supported by the event organizer and an official Saudi delegation statement; the original draft about the usual Davos venue was discarded.",
+    "Website fetch restrictions can affect an official page independently of its indexed evidence; references are not a guarantee of perpetual availability."
+  ]
+}

@@ -706061,12 +706061,2812 @@
       "version": null,
       "reverifyAfter": null
     }
+  },
+  {
+    "id": "USR-Q0001-SRC",
+    "pairId": "USR-Q0001",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which organization received the Nobel Peace Prize in 2024?",
+    "questionUrdu": "2024 میں امن کا نوبیل انعام کس تنظیم کو ملا؟",
+    "options": [
+      "Nihon Hidankyo",
+      "World Food Programme",
+      "International Campaign to Abolish Nuclear Weapons",
+      "Doctors Without Borders"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "2024 کا امن نوبیل انعام جاپانی تنظیم نیہون ہیدانکیو کو ملا۔ یہ ایٹمی ہتھیاروں کے خاتمے کے لیے متاثرین کی گواہی سامنے لاتی ہے۔",
+    "relatedHistoryUrdu": "نیہون ہیدانکیو جاپان کی تنظیم ہے۔ اسے جاپانی ایٹمی بم حملوں کے متاثرین، یعنی ہیباکوشا، کی نمائندگی سے یاد رکھیں۔ موجودہ سوال کے جواب ”Nihon Hidankyo“ کو اس متعلقہ مستند حقیقت ”Japan“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelprize.org/prizes/peace/2024/nihon-hidankyo/facts/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.nobelprize.org/prizes/peace/2024/nihon-hidankyo/facts/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "nobel-peace"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/peace/2024/nihon-hidankyo/facts/",
+        "label": "Nihon Hidankyo — Facts",
+        "publisher": "Nobel Prize",
+        "authorityId": "nobel-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Nihon Hidankyo received the 2024 Peace Prize; the organization is based in Japan."
+      },
+      {
+        "url": "https://webtv.un.org/en/asset/k15/k15py7m42n",
+        "label": "UN congratulates Nihon Hidankyo",
+        "publisher": "United Nations",
+        "authorityId": "un",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "UN statement identifies Nihon Hidankyo as the Japanese winner of the 2024 Peace Prize."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-10-11",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0001-SIM",
+    "pairId": "USR-Q0001",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "The 2024 Nobel Peace laureate Nihon Hidankyo is an organization from which country?",
+    "questionUrdu": "2024 کا امن نوبیل انعام جیتنے والی نیہون ہیدانکیو کس ملک کی تنظیم ہے؟",
+    "options": [
+      "Japan",
+      "Norway",
+      "South Korea",
+      "Sweden"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "نیہون ہیدانکیو جاپان کی تنظیم ہے۔ اسے جاپانی ایٹمی بم حملوں کے متاثرین، یعنی ہیباکوشا، کی نمائندگی سے یاد رکھیں۔",
+    "relatedHistoryUrdu": "2024 کا امن نوبیل انعام جاپانی تنظیم نیہون ہیدانکیو کو ملا۔ یہ ایٹمی ہتھیاروں کے خاتمے کے لیے متاثرین کی گواہی سامنے لاتی ہے۔ موجودہ سوال کے جواب ”Japan“ کو اس متعلقہ مستند حقیقت ”Nihon Hidankyo“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelprize.org/prizes/peace/2024/nihon-hidankyo/facts/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.nobelprize.org/prizes/peace/2024/nihon-hidankyo/facts/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "nobel-peace"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/peace/2024/nihon-hidankyo/facts/",
+        "label": "Nihon Hidankyo — Facts",
+        "publisher": "Nobel Prize",
+        "authorityId": "nobel-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Nihon Hidankyo received the 2024 Peace Prize; the organization is based in Japan."
+      },
+      {
+        "url": "https://webtv.un.org/en/asset/k15/k15py7m42n",
+        "label": "UN congratulates Nihon Hidankyo",
+        "publisher": "United Nations",
+        "authorityId": "un",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "UN statement identifies Nihon Hidankyo as the Japanese winner of the 2024 Peace Prize."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-10-11",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0002-SRC",
+    "pairId": "USR-Q0002",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Who received the Nobel Prize in Literature in 2024?",
+    "questionUrdu": "2024 میں ادب کا نوبیل انعام کسے ملا؟",
+    "options": [
+      "Jon Fosse",
+      "Annie Ernaux",
+      "Han Kang",
+      "Olga Tokarczuk"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "2024 کا ادب نوبیل انعام ہان کانگ کو ملا۔ ان کی تحریروں میں تاریخی صدمات اور انسانی زندگی کی نزاکت نمایاں ہیں۔",
+    "relatedHistoryUrdu": "ہان کانگ جنوبی کوریا کی مصنفہ ہیں۔ ان کا تعلق گوانگجو سے ہے اور وہ ادب کا نوبیل جیتنے والی پہلی کوریائی مصنفہ بنیں۔ موجودہ سوال کے جواب ”Han Kang“ کو اس متعلقہ مستند حقیقت ”South Korea“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelprize.org/prizes/literature/2024/han/facts/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.nobelprize.org/prizes/literature/2024/han/facts/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "nobel-literature"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/literature/2024/han/facts/",
+        "label": "Han Kang — Facts",
+        "publisher": "Nobel Prize",
+        "authorityId": "nobel-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Han Kang is the 2024 literature laureate, born in Gwangju, South Korea."
+      },
+      {
+        "url": "https://www.korea.net/NewsFocus/People/view?articleId=263260&koreanId=263166",
+        "label": "Korea.net names Han Kang Person of the Year",
+        "publisher": "Republic of Korea — Korea.net",
+        "authorityId": "korea-government",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Official Korean account identifies Han Kang as the country's 2024 Nobel literature winner."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-10-10",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0002-SIM",
+    "pairId": "USR-Q0002",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Han Kang, the 2024 Nobel literature laureate, is a writer from which country?",
+    "questionUrdu": "2024 کی ادب نوبیل انعام یافتہ ہان کانگ کس ملک کی مصنفہ ہیں؟",
+    "options": [
+      "South Korea",
+      "China",
+      "Vietnam",
+      "Japan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "ہان کانگ جنوبی کوریا کی مصنفہ ہیں۔ ان کا تعلق گوانگجو سے ہے اور وہ ادب کا نوبیل جیتنے والی پہلی کوریائی مصنفہ بنیں۔",
+    "relatedHistoryUrdu": "2024 کا ادب نوبیل انعام ہان کانگ کو ملا۔ ان کی تحریروں میں تاریخی صدمات اور انسانی زندگی کی نزاکت نمایاں ہیں۔ موجودہ سوال کے جواب ”South Korea“ کو اس متعلقہ مستند حقیقت ”Han Kang“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelprize.org/prizes/literature/2024/han/facts/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.nobelprize.org/prizes/literature/2024/han/facts/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "nobel-literature"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/literature/2024/han/facts/",
+        "label": "Han Kang — Facts",
+        "publisher": "Nobel Prize",
+        "authorityId": "nobel-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Han Kang is the 2024 literature laureate, born in Gwangju, South Korea."
+      },
+      {
+        "url": "https://www.korea.net/NewsFocus/People/view?articleId=263260&koreanId=263166",
+        "label": "Korea.net names Han Kang Person of the Year",
+        "publisher": "Republic of Korea — Korea.net",
+        "authorityId": "korea-government",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Official Korean account identifies Han Kang as the country's 2024 Nobel literature winner."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-10-10",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0003-SRC",
+    "pairId": "USR-Q0003",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Who was awarded the Nobel Peace Prize in 2025?",
+    "questionUrdu": "2025 میں امن کا نوبیل انعام کسے دیا گیا؟",
+    "options": [
+      "Maria Corina Machado",
+      "Narges Mohammadi",
+      "Malala Yousafzai",
+      "Ellen Johnson Sirleaf"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "2025 کا امن نوبیل انعام ماریا کورینا ماچادو کو وینزویلا میں جمہوری حقوق کے لیے ان کی کوششوں پر دیا گیا۔",
+    "relatedHistoryUrdu": "ماچادو کی سیاسی اور جمہوری حقوق کی جدوجہد وینزویلا سے متعلق ہے۔ ملک اور انعام کا سال الگ الگ یاد رکھیں۔ موجودہ سوال کے جواب ”Maria Corina Machado“ کو اس متعلقہ مستند حقیقت ”Venezuela“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelprize.org/prizes/peace/2025/summary/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.nobelprize.org/prizes/peace/2025/summary/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "nobel-peace"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/peace/2025/summary/",
+        "label": "Nobel Peace Prize 2025",
+        "publisher": "Nobel Prize",
+        "authorityId": "nobel-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 2025 Peace Prize was awarded to Maria Corina Machado for democratic rights work in Venezuela."
+      },
+      {
+        "url": "https://www.un.org/sg/en/content/sg/statements/2025-10-10/secretary-generals-message-the-awarding-of-the-nobel-peace-prize-2025",
+        "label": "Secretary-General on Nobel Peace Prize 2025",
+        "publisher": "United Nations",
+        "authorityId": "un",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The Secretary-General congratulates 2025 laureate Machado and identifies her country as Venezuela."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-10-10",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0003-SIM",
+    "pairId": "USR-Q0003",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Maria Corina Machado, the 2025 Nobel Peace laureate, is associated with democratic-rights work in which country?",
+    "questionUrdu": "2025 کی امن نوبیل انعام یافتہ ماریا کورینا ماچادو کس ملک میں جمہوری حقوق کی جدوجہد سے وابستہ ہیں؟",
+    "options": [
+      "Colombia",
+      "Chile",
+      "Venezuela",
+      "Peru"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "ماچادو کی سیاسی اور جمہوری حقوق کی جدوجہد وینزویلا سے متعلق ہے۔ ملک اور انعام کا سال الگ الگ یاد رکھیں۔",
+    "relatedHistoryUrdu": "2025 کا امن نوبیل انعام ماریا کورینا ماچادو کو وینزویلا میں جمہوری حقوق کے لیے ان کی کوششوں پر دیا گیا۔ موجودہ سوال کے جواب ”Venezuela“ کو اس متعلقہ مستند حقیقت ”Maria Corina Machado“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelprize.org/prizes/peace/2025/summary/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.nobelprize.org/prizes/peace/2025/summary/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "nobel-peace"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/peace/2025/summary/",
+        "label": "Nobel Peace Prize 2025",
+        "publisher": "Nobel Prize",
+        "authorityId": "nobel-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 2025 Peace Prize was awarded to Maria Corina Machado for democratic rights work in Venezuela."
+      },
+      {
+        "url": "https://www.un.org/sg/en/content/sg/statements/2025-10-10/secretary-generals-message-the-awarding-of-the-nobel-peace-prize-2025",
+        "label": "Secretary-General on Nobel Peace Prize 2025",
+        "publisher": "United Nations",
+        "authorityId": "un",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The Secretary-General congratulates 2025 laureate Machado and identifies her country as Venezuela."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-10-10",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0004-SRC",
+    "pairId": "USR-Q0004",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "The 2025 Nobel Prize in Chemistry recognized the development of which materials?",
+    "questionUrdu": "2025 کا کیمیا نوبیل انعام کن مادوں کی ترقی پر دیا گیا؟",
+    "options": [
+      "Graphene sheets",
+      "Perovskite solar cells",
+      "Metal-organic frameworks (MOFs)",
+      "Carbon nanotubes"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "2025 کے کیمیا نوبیل کا تعلق میٹل آرگینک فریم ورکس سے ہے۔ ان مسام دار ڈھانچوں میں گیسیں یا دوسرے سالمات جمع کیے جا سکتے ہیں۔",
+    "relatedHistoryUrdu": "عمر ایم یاغی نے کیتاگاوا اور رابسن کے ساتھ 2025 کا کیمیا نوبیل جیتا۔ تینوں ناموں کو میٹل آرگینک فریم ورکس کے ساتھ جوڑیں۔ موجودہ سوال کے جواب ”Metal-organic frameworks (MOFs)“ کو اس متعلقہ مستند حقیقت ”Omar M. Yaghi“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelprize.org/prizes/chemistry/2025/press-release/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.nobelprize.org/prizes/chemistry/2025/press-release/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "nobel-chemistry"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/chemistry/2025/press-release/",
+        "label": "Chemistry Prize 2025 press release",
+        "publisher": "Nobel Prize",
+        "authorityId": "nobel-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The award recognizes metal-organic frameworks and names Kitagawa, Robson and Omar M. Yaghi."
+      },
+      {
+        "url": "https://news.berkeley.edu/2025/10/08/uc-berkeleys-omar-yaghi-shares-2025-nobel-prize-in-chemistry/",
+        "label": "Omar Yaghi shares 2025 Chemistry Nobel",
+        "publisher": "University of California, Berkeley",
+        "authorityId": "uc-berkeley",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Berkeley confirms Yaghi shared the prize with Kitagawa and Robson for metal-organic frameworks."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-10-08",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0004-SIM",
+    "pairId": "USR-Q0004",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Who shared the 2025 Chemistry Nobel with Susumu Kitagawa and Richard Robson?",
+    "questionUrdu": "سوسومو کیتاگاوا اور رچرڈ رابسن کے ساتھ 2025 کا کیمیا نوبیل کس نے مشترکہ طور پر جیتا؟",
+    "options": [
+      "John B. Goodenough",
+      "Omar M. Yaghi",
+      "John Hopfield",
+      "Demis Hassabis"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "عمر ایم یاغی نے کیتاگاوا اور رابسن کے ساتھ 2025 کا کیمیا نوبیل جیتا۔ تینوں ناموں کو میٹل آرگینک فریم ورکس کے ساتھ جوڑیں۔",
+    "relatedHistoryUrdu": "2025 کے کیمیا نوبیل کا تعلق میٹل آرگینک فریم ورکس سے ہے۔ ان مسام دار ڈھانچوں میں گیسیں یا دوسرے سالمات جمع کیے جا سکتے ہیں۔ موجودہ سوال کے جواب ”Omar M. Yaghi“ کو اس متعلقہ مستند حقیقت ”Metal-organic frameworks (MOFs)“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelprize.org/prizes/chemistry/2025/press-release/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.nobelprize.org/prizes/chemistry/2025/press-release/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "nobel-chemistry"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/chemistry/2025/press-release/",
+        "label": "Chemistry Prize 2025 press release",
+        "publisher": "Nobel Prize",
+        "authorityId": "nobel-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The award recognizes metal-organic frameworks and names Kitagawa, Robson and Omar M. Yaghi."
+      },
+      {
+        "url": "https://news.berkeley.edu/2025/10/08/uc-berkeleys-omar-yaghi-shares-2025-nobel-prize-in-chemistry/",
+        "label": "Omar Yaghi shares 2025 Chemistry Nobel",
+        "publisher": "University of California, Berkeley",
+        "authorityId": "uc-berkeley",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Berkeley confirms Yaghi shared the prize with Kitagawa and Robson for metal-organic frameworks."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-10-08",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0005-SRC",
+    "pairId": "USR-Q0005",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which numbered Annual Meeting of the World Economic Forum took place in January 2026?",
+    "questionUrdu": "جنوری 2026 میں ورلڈ اکنامک فورم کا کون سے نمبر کا سالانہ اجلاس ہوا؟",
+    "options": [
+      "56th",
+      "50th",
+      "54th",
+      "60th"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "جنوری 2026 میں ورلڈ اکنامک فورم کا 56واں سالانہ اجلاس ہوا۔ اس کا موضوع مکالمے کا جذبہ تھا۔",
+    "relatedHistoryUrdu": "2026 کے اجلاس کا موضوع اے اسپرٹ آف ڈائیلاگ، یعنی مکالمے کا جذبہ، تھا۔ مختلف سالوں کے موضوعات کو ایک دوسرے سے نہ ملائیں۔ موجودہ سوال کے جواب ”56th“ کو اس متعلقہ مستند حقیقت ”A Spirit of Dialogue“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.weforum.org/media/annual-meeting-2026-a-spirit-of-dialogue-ceb3ae9c08",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.weforum.org/media/annual-meeting-2026-a-spirit-of-dialogue-ceb3ae9c08",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "world-economic-forum"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.weforum.org/media/annual-meeting-2026-a-spirit-of-dialogue-ceb3ae9c08",
+        "label": "Annual Meeting 2026: A Spirit of Dialogue",
+        "publisher": "World Economic Forum",
+        "authorityId": "wef",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The completed January 2026 meeting was WEF's 56th Annual Meeting under the theme A Spirit of Dialogue."
+      },
+      {
+        "url": "https://spa.gov.sa/en/N2490212",
+        "label": "Saudi delegation at the 56th WEF Annual Meeting",
+        "publisher": "Saudi Press Agency",
+        "authorityId": "saudi-government",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The Saudi delegation announcement names the 56th Annual Meeting in January 2026 and its theme A Spirit of Dialogue."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-01",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0005-SIM",
+    "pairId": "USR-Q0005",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "What was the theme of the World Economic Forum Annual Meeting in 2026?",
+    "questionUrdu": "2026 میں ورلڈ اکنامک فورم کے سالانہ اجلاس کا موضوع کیا تھا؟",
+    "options": [
+      "Rebuilding Trust",
+      "The Great Reset",
+      "Cooperation in a Fragmented World",
+      "A Spirit of Dialogue"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "2026 کے اجلاس کا موضوع اے اسپرٹ آف ڈائیلاگ، یعنی مکالمے کا جذبہ، تھا۔ مختلف سالوں کے موضوعات کو ایک دوسرے سے نہ ملائیں۔",
+    "relatedHistoryUrdu": "جنوری 2026 میں ورلڈ اکنامک فورم کا 56واں سالانہ اجلاس ہوا۔ اس کا موضوع مکالمے کا جذبہ تھا۔ موجودہ سوال کے جواب ”A Spirit of Dialogue“ کو اس متعلقہ مستند حقیقت ”56th“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.weforum.org/media/annual-meeting-2026-a-spirit-of-dialogue-ceb3ae9c08",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.weforum.org/media/annual-meeting-2026-a-spirit-of-dialogue-ceb3ae9c08",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "world-economic-forum"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.weforum.org/media/annual-meeting-2026-a-spirit-of-dialogue-ceb3ae9c08",
+        "label": "Annual Meeting 2026: A Spirit of Dialogue",
+        "publisher": "World Economic Forum",
+        "authorityId": "wef",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The completed January 2026 meeting was WEF's 56th Annual Meeting under the theme A Spirit of Dialogue."
+      },
+      {
+        "url": "https://spa.gov.sa/en/N2490212",
+        "label": "Saudi delegation at the 56th WEF Annual Meeting",
+        "publisher": "Saudi Press Agency",
+        "authorityId": "saudi-government",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The Saudi delegation announcement names the 56th Annual Meeting in January 2026 and its theme A Spirit of Dialogue."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-01",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0006-SRC",
+    "pairId": "USR-Q0006",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "The 2024 Nobel Prize in Physiology or Medicine recognized the discovery of which gene-regulating molecules?",
+    "questionUrdu": "2024 کا طب یا فعلیات کا نوبیل انعام جین کی تنظیم کرنے والے کن سالمات کی دریافت پر دیا گیا؟",
+    "options": [
+      "Antibodies",
+      "Insulin",
+      "microRNA",
+      "Chlorophyll"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "2024 کا طب نوبیل مائیکرو آر این اے کی دریافت اور جین کی سرگرمی کو منظم کرنے میں اس کے کردار پر دیا گیا۔",
+    "relatedHistoryUrdu": "وکٹر ایمبروس اور گیری رووکن نے 2024 کا طب نوبیل مشترکہ طور پر حاصل کیا۔ ان کا متعلقہ کام مائیکرو آر این اے پر تھا۔ موجودہ سوال کے جواب ”microRNA“ کو اس متعلقہ مستند حقیقت ”Victor Ambros and Gary Ruvkun“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelprize.org/prizes/medicine/2024/press-release/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.nobelprize.org/prizes/medicine/2024/press-release/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "nobel-medicine"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/medicine/2024/press-release/",
+        "label": "Medicine Prize 2024 press release",
+        "publisher": "Nobel Prize",
+        "authorityId": "nobel-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Victor Ambros and Gary Ruvkun received the 2024 medicine prize for microRNA and gene regulation."
+      },
+      {
+        "url": "https://www.umassmed.edu/news/articles/archives/2024/12/top-story-umass-chan-scientist-victor-ambros-wins-nobel-prize/",
+        "label": "Scientist Victor Ambros wins Nobel Prize",
+        "publisher": "UMass Chan Medical School",
+        "authorityId": "umass-chan",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The university confirms Ambros and Ruvkun shared the 2024 prize for discovering microRNA."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-10-07",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0006-SIM",
+    "pairId": "USR-Q0006",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which pair of scientists received the 2024 Nobel Prize in Physiology or Medicine?",
+    "questionUrdu": "سائنس دانوں کی کس جوڑی نے 2024 کا طب یا فعلیات کا نوبیل انعام حاصل کیا؟",
+    "options": [
+      "Katalin Kariko and Drew Weissman",
+      "James Watson and Francis Crick",
+      "Victor Ambros and Gary Ruvkun",
+      "Jennifer Doudna and Emmanuelle Charpentier"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "وکٹر ایمبروس اور گیری رووکن نے 2024 کا طب نوبیل مشترکہ طور پر حاصل کیا۔ ان کا متعلقہ کام مائیکرو آر این اے پر تھا۔",
+    "relatedHistoryUrdu": "2024 کا طب نوبیل مائیکرو آر این اے کی دریافت اور جین کی سرگرمی کو منظم کرنے میں اس کے کردار پر دیا گیا۔ موجودہ سوال کے جواب ”Victor Ambros and Gary Ruvkun“ کو اس متعلقہ مستند حقیقت ”microRNA“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelprize.org/prizes/medicine/2024/press-release/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.nobelprize.org/prizes/medicine/2024/press-release/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "nobel-medicine"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelprize.org/prizes/medicine/2024/press-release/",
+        "label": "Medicine Prize 2024 press release",
+        "publisher": "Nobel Prize",
+        "authorityId": "nobel-foundation",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Victor Ambros and Gary Ruvkun received the 2024 medicine prize for microRNA and gene regulation."
+      },
+      {
+        "url": "https://www.umassmed.edu/news/articles/archives/2024/12/top-story-umass-chan-scientist-victor-ambros-wins-nobel-prize/",
+        "label": "Scientist Victor Ambros wins Nobel Prize",
+        "publisher": "UMass Chan Medical School",
+        "authorityId": "umass-chan",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The university confirms Ambros and Ruvkun shared the 2024 prize for discovering microRNA."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-10-07",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0007-SRC",
+    "pairId": "USR-Q0007",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "The Pandemic Agreement adopted in May 2025 was negotiated within which organization's framework?",
+    "questionUrdu": "مئی 2025 میں منظور ہونے والا پانڈیمک ایگریمنٹ کس تنظیم کے نظام کے تحت طے پایا؟",
+    "options": [
+      "World Health Organization",
+      "World Trade Organization",
+      "UNESCO",
+      "International Labour Organization"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "یہ عالمی ادارہ صحت کا پانڈیمک ایگریمنٹ ہے، جسے ورلڈ ہیلتھ اسمبلی نے منظور کیا۔ منظوری اور تمام ممالک میں قانونی نفاذ ایک ہی بات نہیں۔",
+    "relatedHistoryUrdu": "باضابطہ منظوری کی تاریخ 20 مئی 2025 ہے۔ یہ معاہدے کی منظوری کی تاریخ ہے، ہر ملک میں قانونی نفاذ کی تاریخ نہیں۔ موجودہ سوال کے جواب ”World Health Organization“ کو اس متعلقہ مستند حقیقت ”20 May 2025“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.who.int/news/item/20-05-2025-world-health-assembly-adopts-historic-pandemic-agreement-to-make-the-world-more-equitable-and-safer-from-future-pandemics",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.who.int/news/item/20-05-2025-world-health-assembly-adopts-historic-pandemic-agreement-to-make-the-world-more-equitable-and-safer-from-future-pandemics",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "global-health"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.who.int/news/item/20-05-2025-world-health-assembly-adopts-historic-pandemic-agreement-to-make-the-world-more-equitable-and-safer-from-future-pandemics",
+        "label": "World Health Assembly adopts Pandemic Agreement",
+        "publisher": "World Health Organization",
+        "authorityId": "who",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The World Health Assembly formally adopted the Pandemic Agreement on 20 May 2025."
+      },
+      {
+        "url": "https://health.ec.europa.eu/latest-updates/commission-welcomes-formal-adoption-pandemic-agreement-2025-05-20_en",
+        "label": "Commission welcomes adoption of Pandemic Agreement",
+        "publisher": "European Commission",
+        "authorityId": "european-commission",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The Commission reports WHO member adoption on 20 May 2025 and the outstanding annex process."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-05-20",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0007-SIM",
+    "pairId": "USR-Q0007",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "On which date was the WHO Pandemic Agreement formally adopted in 2025?",
+    "questionUrdu": "2025 میں عالمی ادارہ صحت کا پانڈیمک ایگریمنٹ باضابطہ طور پر کس تاریخ کو منظور ہوا؟",
+    "options": [
+      "7 April 2025",
+      "24 October 2025",
+      "20 May 2025",
+      "1 December 2025"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "باضابطہ منظوری کی تاریخ 20 مئی 2025 ہے۔ یہ معاہدے کی منظوری کی تاریخ ہے، ہر ملک میں قانونی نفاذ کی تاریخ نہیں۔",
+    "relatedHistoryUrdu": "یہ عالمی ادارہ صحت کا پانڈیمک ایگریمنٹ ہے، جسے ورلڈ ہیلتھ اسمبلی نے منظور کیا۔ منظوری اور تمام ممالک میں قانونی نفاذ ایک ہی بات نہیں۔ موجودہ سوال کے جواب ”20 May 2025“ کو اس متعلقہ مستند حقیقت ”World Health Organization“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.who.int/news/item/20-05-2025-world-health-assembly-adopts-historic-pandemic-agreement-to-make-the-world-more-equitable-and-safer-from-future-pandemics",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.who.int/news/item/20-05-2025-world-health-assembly-adopts-historic-pandemic-agreement-to-make-the-world-more-equitable-and-safer-from-future-pandemics",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "global-health"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.who.int/news/item/20-05-2025-world-health-assembly-adopts-historic-pandemic-agreement-to-make-the-world-more-equitable-and-safer-from-future-pandemics",
+        "label": "World Health Assembly adopts Pandemic Agreement",
+        "publisher": "World Health Organization",
+        "authorityId": "who",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The World Health Assembly formally adopted the Pandemic Agreement on 20 May 2025."
+      },
+      {
+        "url": "https://health.ec.europa.eu/latest-updates/commission-welcomes-formal-adoption-pandemic-agreement-2025-05-20_en",
+        "label": "Commission welcomes adoption of Pandemic Agreement",
+        "publisher": "European Commission",
+        "authorityId": "european-commission",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The Commission reports WHO member adoption on 20 May 2025 and the outstanding annex process."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-05-20",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0008-SRC",
+    "pairId": "USR-Q0008",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which agreement was adopted at the UN Summit of the Future in September 2024?",
+    "questionUrdu": "ستمبر 2024 میں اقوام متحدہ کے سمٹ آف دی فیوچر میں کون سا معاہدہ منظور ہوا؟",
+    "options": [
+      "Kyoto Protocol",
+      "Montreal Protocol",
+      "Pact for the Future",
+      "Marrakesh Agreement"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "ستمبر 2024 کے سمٹ آف دی فیوچر میں پیکٹ فار دی فیوچر منظور ہوا۔ اس میں عالمی تعاون اور آئندہ نسلوں سے متعلق وعدے شامل ہیں۔",
+    "relatedHistoryUrdu": "گلوبل ڈیجیٹل کمپیکٹ پیکٹ فار دی فیوچر کا ایک ضمیمہ ہے۔ دوسرا ضمیمہ آئندہ نسلوں کے متعلق اعلامیہ ہے۔ موجودہ سوال کے جواب ”Pact for the Future“ کو اس متعلقہ مستند حقیقت ”Global Digital Compact“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.un.org/en/summit-of-the-future/pact-for-the-future",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.un.org/en/summit-of-the-future/pact-for-the-future",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "un-summit"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.un.org/en/summit-of-the-future/pact-for-the-future",
+        "label": "Pact for the Future — Summit of the Future",
+        "publisher": "United Nations",
+        "authorityId": "un",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 2024 Summit of the Future adopted the Pact with a Global Digital Compact annex."
+      },
+      {
+        "url": "https://www.eeas.europa.eu/eeas/international-day-multilateralism-and-diplomacy-peace-2025_en",
+        "label": "International Day of Multilateralism 2025",
+        "publisher": "European External Action Service",
+        "authorityId": "european-union",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The EU records the 2024 Summit's adoption of the Pact and its Global Digital Compact annex."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-09-22",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0008-SIM",
+    "pairId": "USR-Q0008",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which digital-cooperation document was annexed to the Pact for the Future adopted in 2024?",
+    "questionUrdu": "2024 میں منظور ہونے والے پیکٹ فار دی فیوچر کے ساتھ ڈیجیٹل تعاون کی کون سی دستاویز منسلک تھی؟",
+    "options": [
+      "Global Digital Compact",
+      "Digital Services Act",
+      "Tallinn Manual",
+      "Budapest Convention"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "گلوبل ڈیجیٹل کمپیکٹ پیکٹ فار دی فیوچر کا ایک ضمیمہ ہے۔ دوسرا ضمیمہ آئندہ نسلوں کے متعلق اعلامیہ ہے۔",
+    "relatedHistoryUrdu": "ستمبر 2024 کے سمٹ آف دی فیوچر میں پیکٹ فار دی فیوچر منظور ہوا۔ اس میں عالمی تعاون اور آئندہ نسلوں سے متعلق وعدے شامل ہیں۔ موجودہ سوال کے جواب ”Global Digital Compact“ کو اس متعلقہ مستند حقیقت ”Pact for the Future“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.un.org/en/summit-of-the-future/pact-for-the-future",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.un.org/en/summit-of-the-future/pact-for-the-future",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "un-summit"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.un.org/en/summit-of-the-future/pact-for-the-future",
+        "label": "Pact for the Future — Summit of the Future",
+        "publisher": "United Nations",
+        "authorityId": "un",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 2024 Summit of the Future adopted the Pact with a Global Digital Compact annex."
+      },
+      {
+        "url": "https://www.eeas.europa.eu/eeas/international-day-multilateralism-and-diplomacy-peace-2025_en",
+        "label": "International Day of Multilateralism 2025",
+        "publisher": "European External Action Service",
+        "authorityId": "european-union",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The EU records the 2024 Summit's adoption of the Pact and its Global Digital Compact annex."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-09-22",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0009-SRC",
+    "pairId": "USR-Q0009",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which city hosted the COP29 UN climate conference in 2024?",
+    "questionUrdu": "2024 میں اقوام متحدہ کی موسمیاتی کانفرنس COP29 کس شہر میں ہوئی؟",
+    "options": [
+      "Baku",
+      "Dubai",
+      "Belem",
+      "Sharm el-Sheikh"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "COP29 آذربائیجان کے شہر باکو میں ہوئی۔ اسے دبئی کی COP28 یا برازیل کی بیلیم والی COP30 کے ساتھ نہ ملائیں۔",
+    "relatedHistoryUrdu": "بنیادی نیا ہدف 2035 تک کم از کم 300 ارب امریکی ڈالر سالانہ ہے۔ تمام ذرائع سے 1.3 ٹریلین ڈالر کی وسیع تر کوشش ایک الگ سطح کا ہدف ہے۔ موجودہ سوال کے جواب ”Baku“ کو اس متعلقہ مستند حقیقت ”At least US$300 billion“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://unfccc.int/news/cop29-un-climate-conference-agrees-to-triple-finance-to-developing-countries-protecting-lives-and",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://unfccc.int/news/cop29-un-climate-conference-agrees-to-triple-finance-to-developing-countries-protecting-lives-and",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "climate-summits"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://unfccc.int/news/cop29-un-climate-conference-agrees-to-triple-finance-to-developing-countries-protecting-lives-and",
+        "label": "COP29 agrees new climate-finance goal",
+        "publisher": "UN Framework Convention on Climate Change",
+        "authorityId": "unfccc",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "COP29 met in Baku and set a USD300 billion annual finance goal by 2035, distinct from the wider USD1.3 trillion ambition."
+      },
+      {
+        "url": "https://climate.ec.europa.eu/areas-action/international-action-climate-change/international-climate-finance_en",
+        "label": "International climate finance — NCQG",
+        "publisher": "European Commission",
+        "authorityId": "european-commission",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The Commission identifies Baku COP29 and at least USD300 billion per year by 2035 with developed countries leading."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-11",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0009-SIM",
+    "pairId": "USR-Q0009",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "At COP29 in 2024, what annual climate-finance goal for developing countries was agreed for 2035, with developed countries taking the lead?",
+    "questionUrdu": "2024 کی COP29 میں ترقی یافتہ ممالک کی قیادت میں ترقی پذیر ممالک کے لیے 2035 تک سالانہ موسمیاتی مالیات کا کیا ہدف طے ہوا؟",
+    "options": [
+      "US$100 billion",
+      "At least US$300 billion",
+      "US$30 billion",
+      "US$3 trillion"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "بنیادی نیا ہدف 2035 تک کم از کم 300 ارب امریکی ڈالر سالانہ ہے۔ تمام ذرائع سے 1.3 ٹریلین ڈالر کی وسیع تر کوشش ایک الگ سطح کا ہدف ہے۔",
+    "relatedHistoryUrdu": "COP29 آذربائیجان کے شہر باکو میں ہوئی۔ اسے دبئی کی COP28 یا برازیل کی بیلیم والی COP30 کے ساتھ نہ ملائیں۔ موجودہ سوال کے جواب ”At least US$300 billion“ کو اس متعلقہ مستند حقیقت ”Baku“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://unfccc.int/news/cop29-un-climate-conference-agrees-to-triple-finance-to-developing-countries-protecting-lives-and",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://unfccc.int/news/cop29-un-climate-conference-agrees-to-triple-finance-to-developing-countries-protecting-lives-and",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "climate-summits"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://unfccc.int/news/cop29-un-climate-conference-agrees-to-triple-finance-to-developing-countries-protecting-lives-and",
+        "label": "COP29 agrees new climate-finance goal",
+        "publisher": "UN Framework Convention on Climate Change",
+        "authorityId": "unfccc",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "COP29 met in Baku and set a USD300 billion annual finance goal by 2035, distinct from the wider USD1.3 trillion ambition."
+      },
+      {
+        "url": "https://climate.ec.europa.eu/areas-action/international-action-climate-change/international-climate-finance_en",
+        "label": "International climate finance — NCQG",
+        "publisher": "European Commission",
+        "authorityId": "european-commission",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The Commission identifies Baku COP29 and at least USD300 billion per year by 2035 with developed countries leading."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-11",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0010-SRC",
+    "pairId": "USR-Q0010",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which Southeast Asian country joined BRICS as a full member in January 2025?",
+    "questionUrdu": "جنوری 2025 میں جنوب مشرقی ایشیا کا کون سا ملک برکس کا مکمل رکن بنا؟",
+    "options": [
+      "Malaysia",
+      "Thailand",
+      "Indonesia",
+      "Vietnam"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "انڈونیشیا جنوری 2025 میں برکس کا مکمل رکن بنا۔ مکمل رکنیت اور شراکت دار ملک کا درجہ الگ حیثیتیں ہیں۔",
+    "relatedHistoryUrdu": "2025 میں برکس کی صدارت برازیل کے پاس تھی۔ اسی صدارت کے دوران انڈونیشیا کی مکمل رکنیت کا اعلان ہوا۔ موجودہ سوال کے جواب ”Indonesia“ کو اس متعلقہ مستند حقیقت ”Brazil“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://kemlu.go.id/berita/pernyataan-kementerian-luar-negeri-republik-indonesia-tentang-keanggotaan-indonesia-di-brics?type=publication",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://kemlu.go.id/berita/pernyataan-kementerian-luar-negeri-republik-indonesia-tentang-keanggotaan-indonesia-di-brics?type=publication",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "brics"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://kemlu.go.id/berita/pernyataan-kementerian-luar-negeri-republik-indonesia-tentang-keanggotaan-indonesia-di-brics?type=publication",
+        "label": "Indonesia's BRICS membership statement",
+        "publisher": "Indonesia Ministry of Foreign Affairs",
+        "authorityId": "indonesia-mfa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Indonesia welcomes becoming a full member and identifies Brazil as BRICS chair in 2025."
+      },
+      {
+        "url": "https://www.fmprc.gov.cn/mfa_eng/xw/fyrbt/202501/t20250106_11527794.html",
+        "label": "Indonesia becomes full member of BRICS",
+        "publisher": "China Ministry of Foreign Affairs",
+        "authorityId": "china-mfa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The January 2025 statement names Indonesia as the new full member and Brazil as that year's chair."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-01",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0010-SIM",
+    "pairId": "USR-Q0010",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which country held the BRICS chairmanship in 2025 when Indonesia's full membership was announced?",
+    "questionUrdu": "2025 میں انڈونیشیا کی مکمل رکنیت کے اعلان کے وقت برکس کی صدارت کس ملک کے پاس تھی؟",
+    "options": [
+      "Russia",
+      "Brazil",
+      "South Africa",
+      "India"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "2025 میں برکس کی صدارت برازیل کے پاس تھی۔ اسی صدارت کے دوران انڈونیشیا کی مکمل رکنیت کا اعلان ہوا۔",
+    "relatedHistoryUrdu": "انڈونیشیا جنوری 2025 میں برکس کا مکمل رکن بنا۔ مکمل رکنیت اور شراکت دار ملک کا درجہ الگ حیثیتیں ہیں۔ موجودہ سوال کے جواب ”Brazil“ کو اس متعلقہ مستند حقیقت ”Indonesia“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://kemlu.go.id/berita/pernyataan-kementerian-luar-negeri-republik-indonesia-tentang-keanggotaan-indonesia-di-brics?type=publication",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://kemlu.go.id/berita/pernyataan-kementerian-luar-negeri-republik-indonesia-tentang-keanggotaan-indonesia-di-brics?type=publication",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "brics"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://kemlu.go.id/berita/pernyataan-kementerian-luar-negeri-republik-indonesia-tentang-keanggotaan-indonesia-di-brics?type=publication",
+        "label": "Indonesia's BRICS membership statement",
+        "publisher": "Indonesia Ministry of Foreign Affairs",
+        "authorityId": "indonesia-mfa",
+        "role": "answer-primary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Indonesia welcomes becoming a full member and identifies Brazil as BRICS chair in 2025."
+      },
+      {
+        "url": "https://www.fmprc.gov.cn/mfa_eng/xw/fyrbt/202501/t20250106_11527794.html",
+        "label": "Indonesia becomes full member of BRICS",
+        "publisher": "China Ministry of Foreign Affairs",
+        "authorityId": "china-mfa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The January 2025 statement names Indonesia as the new full member and Brazil as that year's chair."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-01",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0011-SRC",
+    "pairId": "USR-Q0011",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which country became a full member of the SCO in July 2024?",
+    "questionUrdu": "جولائی 2024 میں کون سا ملک شنگھائی تعاون تنظیم کا مکمل رکن بنا؟",
+    "options": [
+      "Belarus",
+      "Mongolia",
+      "Nepal",
+      "Sri Lanka"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "بیلاروس جولائی 2024 میں شنگھائی تعاون تنظیم کا مکمل رکن بنا۔ یہ اس وقت تنظیم کا دسواں رکن تھا۔",
+    "relatedHistoryUrdu": "بیلاروس کی شمولیت سے مکمل اراکین کی تعداد 10 ہو گئی تھی۔ یہ جولائی 2024 کے فوراً بعد کی تاریخی تعداد ہے، مستقل یا ہمیشہ کی تعداد نہیں۔ موجودہ سوال کے جواب ”Belarus“ کو اس متعلقہ مستند حقیقت ”10“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://eng.sectsco.org/20240706/1446166.html",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://eng.sectsco.org/20240706/1446166.html",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "sco-membership"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://eng.sectsco.org/20240706/1446166.html",
+        "label": "SCO welcomes Belarus as tenth member",
+        "publisher": "Shanghai Cooperation Organisation",
+        "authorityId": "sco",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The SCO Secretary-General congratulates Belarus on becoming the organization's tenth member state."
+      },
+      {
+        "url": "https://www.mfa.am/en/international-organisations/7",
+        "label": "SCO membership record",
+        "publisher": "Armenia Ministry of Foreign Affairs",
+        "authorityId": "armenia-mfa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The official international-organizations record states Belarus joined on 4 July 2024 as the tenth member."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-07",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0011-SIM",
+    "pairId": "USR-Q0011",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "How many full member states did the SCO have immediately after Belarus joined in July 2024?",
+    "questionUrdu": "جولائی 2024 میں بیلاروس کی شمولیت کے فوراً بعد شنگھائی تعاون تنظیم کے کتنے مکمل رکن ممالک تھے؟",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "15"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "بیلاروس کی شمولیت سے مکمل اراکین کی تعداد 10 ہو گئی تھی۔ یہ جولائی 2024 کے فوراً بعد کی تاریخی تعداد ہے، مستقل یا ہمیشہ کی تعداد نہیں۔",
+    "relatedHistoryUrdu": "بیلاروس جولائی 2024 میں شنگھائی تعاون تنظیم کا مکمل رکن بنا۔ یہ اس وقت تنظیم کا دسواں رکن تھا۔ موجودہ سوال کے جواب ”10“ کو اس متعلقہ مستند حقیقت ”Belarus“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://eng.sectsco.org/20240706/1446166.html",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://eng.sectsco.org/20240706/1446166.html",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "sco-membership"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://eng.sectsco.org/20240706/1446166.html",
+        "label": "SCO welcomes Belarus as tenth member",
+        "publisher": "Shanghai Cooperation Organisation",
+        "authorityId": "sco",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The SCO Secretary-General congratulates Belarus on becoming the organization's tenth member state."
+      },
+      {
+        "url": "https://www.mfa.am/en/international-organisations/7",
+        "label": "SCO membership record",
+        "publisher": "Armenia Ministry of Foreign Affairs",
+        "authorityId": "armenia-mfa",
+        "role": "answer-secondary",
+        "sourceClass": "official",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The official international-organizations record states Belarus joined on 4 July 2024 as the tenth member."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-07",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0012-SRC",
+    "pairId": "USR-Q0012",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which Pakistani city hosted the SCO Council of Heads of Government meeting in October 2024?",
+    "questionUrdu": "اکتوبر 2024 میں شنگھائی تعاون تنظیم کی حکومتوں کے سربراہان کا اجلاس پاکستان کے کس شہر میں ہوا؟",
+    "options": [
+      "Karachi",
+      "Lahore",
+      "Islamabad",
+      "Peshawar"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "اکتوبر 2024 میں ایس سی او کی کونسل آف ہیڈز آف گورنمنٹ کا اجلاس اسلام آباد میں ہوا۔ اسے اسی سال کے آستانہ ہیڈز آف اسٹیٹ اجلاس سے الگ یاد رکھیں۔",
+    "relatedHistoryUrdu": "پاکستان نے اس کونسل کے 23ویں اجلاس کی میزبانی کی۔ کونسل آف ہیڈز آف گورنمنٹ اور کونسل آف ہیڈز آف اسٹیٹ الگ فورم ہیں۔ موجودہ سوال کے جواب ”Islamabad“ کو اس متعلقہ مستند حقیقت ”23rd“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://mofa.gov.pk/press-releases/23rd-meeting-of-the-council-of-the-heads-of-government-of-the-sco-member-states",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://mofa.gov.pk/press-releases/23rd-meeting-of-the-council-of-the-heads-of-government-of-the-sco-member-states",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "pakistan-sco"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://mofa.gov.pk/press-releases/23rd-meeting-of-the-council-of-the-heads-of-government-of-the-sco-member-states",
+        "label": "23rd SCO Council of Heads of Government",
+        "publisher": "Pakistan Ministry of Foreign Affairs",
+        "authorityId": "pakistan-mofa",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Pakistan identifies Islamabad as host of the 23rd Council of Heads of Government meeting in October 2024."
+      },
+      {
+        "url": "https://eng.sectsco.org/20240925/1543179.html",
+        "label": "SCO National Coordinators meeting",
+        "publisher": "Shanghai Cooperation Organisation",
+        "authorityId": "sco",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The SCO announcement places the 23rd Council of Heads of Government meeting in Islamabad in October 2024."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-10",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0012-SIM",
+    "pairId": "USR-Q0012",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which numbered meeting of the SCO Council of Heads of Government was hosted by Pakistan in October 2024?",
+    "questionUrdu": "پاکستان نے اکتوبر 2024 میں ایس سی او کی کونسل آف ہیڈز آف گورنمنٹ کے کون سے نمبر کے اجلاس کی میزبانی کی؟",
+    "options": [
+      "23rd",
+      "21st",
+      "22nd",
+      "20th"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "پاکستان نے اس کونسل کے 23ویں اجلاس کی میزبانی کی۔ کونسل آف ہیڈز آف گورنمنٹ اور کونسل آف ہیڈز آف اسٹیٹ الگ فورم ہیں۔",
+    "relatedHistoryUrdu": "اکتوبر 2024 میں ایس سی او کی کونسل آف ہیڈز آف گورنمنٹ کا اجلاس اسلام آباد میں ہوا۔ اسے اسی سال کے آستانہ ہیڈز آف اسٹیٹ اجلاس سے الگ یاد رکھیں۔ موجودہ سوال کے جواب ”23rd“ کو اس متعلقہ مستند حقیقت ”Islamabad“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://mofa.gov.pk/press-releases/23rd-meeting-of-the-council-of-the-heads-of-government-of-the-sco-member-states",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://mofa.gov.pk/press-releases/23rd-meeting-of-the-council-of-the-heads-of-government-of-the-sco-member-states",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "pakistan-sco"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://mofa.gov.pk/press-releases/23rd-meeting-of-the-council-of-the-heads-of-government-of-the-sco-member-states",
+        "label": "23rd SCO Council of Heads of Government",
+        "publisher": "Pakistan Ministry of Foreign Affairs",
+        "authorityId": "pakistan-mofa",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Pakistan identifies Islamabad as host of the 23rd Council of Heads of Government meeting in October 2024."
+      },
+      {
+        "url": "https://eng.sectsco.org/20240925/1543179.html",
+        "label": "SCO National Coordinators meeting",
+        "publisher": "Shanghai Cooperation Organisation",
+        "authorityId": "sco",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The SCO announcement places the 23rd Council of Heads of Government meeting in Islamabad in October 2024."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-10",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0013-SRC",
+    "pairId": "USR-Q0013",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which team won the ICC Champions Trophy in 2025?",
+    "questionUrdu": "2025 میں آئی سی سی چیمپئنز ٹرافی کس ٹیم نے جیتی؟",
+    "options": [
+      "India",
+      "New Zealand",
+      "Australia",
+      "Pakistan"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "بھارت نے 2025 کی چیمپئنز ٹرافی جیتی۔ فائنل میں اس کا مقابلہ نیوزی لینڈ سے ہوا تھا۔",
+    "relatedHistoryUrdu": "2025 کی چیمپئنز ٹرافی میں نیوزی لینڈ رنر اپ رہا۔ فاتح بھارت اور رنر اپ نیوزی لینڈ کو جوڑی کی صورت یاد رکھیں۔ موجودہ سوال کے جواب ”India“ کو اس متعلقہ مستند حقیقت ”New Zealand“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.icc-cricket.com/news/live-india-and-new-zealand-on-crossroads-in-the-champions-trophy-final",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.icc-cricket.com/news/live-india-and-new-zealand-on-crossroads-in-the-champions-trophy-final",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "cricket-champions-trophy"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.icc-cricket.com/news/live-india-and-new-zealand-on-crossroads-in-the-champions-trophy-final",
+        "label": "India wins Champions Trophy 2025",
+        "publisher": "International Cricket Council",
+        "authorityId": "icc",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "India defeated New Zealand in the Champions Trophy final on 9 March 2025."
+      },
+      {
+        "url": "https://www.bcci.tv/news/article/bcci-hails-team-india-s-unbeaten-run-to-icc-champions-trophy-2025-glory",
+        "label": "BCCI celebrates unbeaten Champions Trophy win",
+        "publisher": "Board of Control for Cricket in India",
+        "authorityId": "bcci",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "BCCI's own statement congratulates India and identifies New Zealand as the final opponent."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-03-09",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0013-SIM",
+    "pairId": "USR-Q0013",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which team was runner-up in the ICC Champions Trophy in 2025?",
+    "questionUrdu": "2025 میں آئی سی سی چیمپئنز ٹرافی کی رنر اپ ٹیم کون سی تھی؟",
+    "options": [
+      "New Zealand",
+      "South Africa",
+      "Australia",
+      "England"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "2025 کی چیمپئنز ٹرافی میں نیوزی لینڈ رنر اپ رہا۔ فاتح بھارت اور رنر اپ نیوزی لینڈ کو جوڑی کی صورت یاد رکھیں۔",
+    "relatedHistoryUrdu": "بھارت نے 2025 کی چیمپئنز ٹرافی جیتی۔ فائنل میں اس کا مقابلہ نیوزی لینڈ سے ہوا تھا۔ موجودہ سوال کے جواب ”New Zealand“ کو اس متعلقہ مستند حقیقت ”India“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.icc-cricket.com/news/live-india-and-new-zealand-on-crossroads-in-the-champions-trophy-final",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.icc-cricket.com/news/live-india-and-new-zealand-on-crossroads-in-the-champions-trophy-final",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "cricket-champions-trophy"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.icc-cricket.com/news/live-india-and-new-zealand-on-crossroads-in-the-champions-trophy-final",
+        "label": "India wins Champions Trophy 2025",
+        "publisher": "International Cricket Council",
+        "authorityId": "icc",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "India defeated New Zealand in the Champions Trophy final on 9 March 2025."
+      },
+      {
+        "url": "https://www.bcci.tv/news/article/bcci-hails-team-india-s-unbeaten-run-to-icc-champions-trophy-2025-glory",
+        "label": "BCCI celebrates unbeaten Champions Trophy win",
+        "publisher": "Board of Control for Cricket in India",
+        "authorityId": "bcci",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "BCCI's own statement congratulates India and identifies New Zealand as the final opponent."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-03-09",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0014-SRC",
+    "pairId": "USR-Q0014",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which team won the ICC Men's T20 World Cup in 2024?",
+    "questionUrdu": "2024 میں آئی سی سی مردوں کا T20 ورلڈ کپ کس ٹیم نے جیتا؟",
+    "options": [
+      "England",
+      "Australia",
+      "India",
+      "South Africa"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "بھارت نے 2024 کا مردوں کا ٹی ٹوئنٹی ورلڈ کپ جیتا۔ فائنل میں جنوبی افریقہ کو سات رنز سے شکست ہوئی۔",
+    "relatedHistoryUrdu": "2024 کے مردوں کے ٹی ٹوئنٹی ورلڈ کپ میں جنوبی افریقہ رنر اپ تھا۔ اسے 2025 کی چیمپئنز ٹرافی کے رنر اپ نیوزی لینڈ سے الگ رکھیں۔ موجودہ سوال کے جواب ”India“ کو اس متعلقہ مستند حقیقت ”South Africa“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.icc-cricket.com/tournaments/t20cricketworldcup/news/live-india-and-south-africa-face-off-in-t20-world-cup-final",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.icc-cricket.com/tournaments/t20cricketworldcup/news/live-india-and-south-africa-face-off-in-t20-world-cup-final",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "cricket-t20-world-cup"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.icc-cricket.com/tournaments/t20cricketworldcup/news/live-india-and-south-africa-face-off-in-t20-world-cup-final",
+        "label": "India wins men's T20 World Cup 2024",
+        "publisher": "International Cricket Council",
+        "authorityId": "icc",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "India defeated South Africa in the 2024 men's T20 World Cup final."
+      },
+      {
+        "url": "https://www.bcci.tv/matches/0aaa903c-1b4e-4647-b739-bdfa695798f4/About/news",
+        "label": "South Africa v India — World Cup final",
+        "publisher": "Board of Control for Cricket in India",
+        "authorityId": "bcci",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The official final scorecard records India beating South Africa by seven runs on 29 June 2024."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-06-29",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0014-SIM",
+    "pairId": "USR-Q0014",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which team was runner-up in the ICC Men's T20 World Cup in 2024?",
+    "questionUrdu": "2024 میں آئی سی سی مردوں کے T20 ورلڈ کپ کی رنر اپ ٹیم کون سی تھی؟",
+    "options": [
+      "South Africa",
+      "Pakistan",
+      "England",
+      "New Zealand"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "2024 کے مردوں کے ٹی ٹوئنٹی ورلڈ کپ میں جنوبی افریقہ رنر اپ تھا۔ اسے 2025 کی چیمپئنز ٹرافی کے رنر اپ نیوزی لینڈ سے الگ رکھیں۔",
+    "relatedHistoryUrdu": "بھارت نے 2024 کا مردوں کا ٹی ٹوئنٹی ورلڈ کپ جیتا۔ فائنل میں جنوبی افریقہ کو سات رنز سے شکست ہوئی۔ موجودہ سوال کے جواب ”South Africa“ کو اس متعلقہ مستند حقیقت ”India“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.icc-cricket.com/tournaments/t20cricketworldcup/news/live-india-and-south-africa-face-off-in-t20-world-cup-final",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.icc-cricket.com/tournaments/t20cricketworldcup/news/live-india-and-south-africa-face-off-in-t20-world-cup-final",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "cricket-t20-world-cup"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.icc-cricket.com/tournaments/t20cricketworldcup/news/live-india-and-south-africa-face-off-in-t20-world-cup-final",
+        "label": "India wins men's T20 World Cup 2024",
+        "publisher": "International Cricket Council",
+        "authorityId": "icc",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "India defeated South Africa in the 2024 men's T20 World Cup final."
+      },
+      {
+        "url": "https://www.bcci.tv/matches/0aaa903c-1b4e-4647-b739-bdfa695798f4/About/news",
+        "label": "South Africa v India — World Cup final",
+        "publisher": "Board of Control for Cricket in India",
+        "authorityId": "bcci",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The official final scorecard records India beating South Africa by seven runs on 29 June 2024."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-06-29",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0015-SRC",
+    "pairId": "USR-Q0015",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which Japanese city hosted World Expo 2025?",
+    "questionUrdu": "جاپان کے کس شہر نے ورلڈ ایکسپو 2025 کی میزبانی کی؟",
+    "options": [
+      "Osaka",
+      "Tokyo",
+      "Kyoto",
+      "Hiroshima"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "ورلڈ ایکسپو 2025 اوساکا، کانسائی، جاپان میں ہوئی۔ میزبان شہر اوساکا ہے، جبکہ کانسائی خطے کا نام ہے۔",
+    "relatedHistoryUrdu": "ایکسپو 2025 کا موضوع ہماری زندگیوں کے لیے مستقبل کے معاشرے کی تشکیل تھا۔ آپشن میں اسی کا سرکاری انگریزی عنوان دیا گیا ہے۔ موجودہ سوال کے جواب ”Osaka“ کو اس متعلقہ مستند حقیقت ”Designing Future Society for Our Lives“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.bie-paris.org/site/en/2025-osaka",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.bie-paris.org/site/en/2025-osaka",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "world-expo"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.bie-paris.org/site/en/2025-osaka",
+        "label": "Expo 2025 Osaka Kansai",
+        "publisher": "Bureau International des Expositions",
+        "authorityId": "bie",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "BIE records the Osaka host city and theme Designing Future Society for Our Lives."
+      },
+      {
+        "url": "https://www.expo2025.or.jp/en/expo-archive/theme-weeks/about/",
+        "label": "Expo 2025 theme weeks",
+        "publisher": "Japan Association for the 2025 World Exposition",
+        "authorityId": "expo2025-association",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The organizer identifies Expo 2025 Osaka, Kansai and its main theme."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0015-SIM",
+    "pairId": "USR-Q0015",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "What was the main theme of World Expo 2025 Osaka, Kansai?",
+    "questionUrdu": "اوساکا کانسائی کی ورلڈ ایکسپو 2025 کا بنیادی موضوع کیا تھا؟",
+    "options": [
+      "Connecting Minds, Creating the Future",
+      "Feeding the Planet, Energy for Life",
+      "Designing Future Society for Our Lives",
+      "Better City, Better Life"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "ایکسپو 2025 کا موضوع ہماری زندگیوں کے لیے مستقبل کے معاشرے کی تشکیل تھا۔ آپشن میں اسی کا سرکاری انگریزی عنوان دیا گیا ہے۔",
+    "relatedHistoryUrdu": "ورلڈ ایکسپو 2025 اوساکا، کانسائی، جاپان میں ہوئی۔ میزبان شہر اوساکا ہے، جبکہ کانسائی خطے کا نام ہے۔ موجودہ سوال کے جواب ”Designing Future Society for Our Lives“ کو اس متعلقہ مستند حقیقت ”Osaka“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.bie-paris.org/site/en/2025-osaka",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.bie-paris.org/site/en/2025-osaka",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "world-expo"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.bie-paris.org/site/en/2025-osaka",
+        "label": "Expo 2025 Osaka Kansai",
+        "publisher": "Bureau International des Expositions",
+        "authorityId": "bie",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "BIE records the Osaka host city and theme Designing Future Society for Our Lives."
+      },
+      {
+        "url": "https://www.expo2025.or.jp/en/expo-archive/theme-weeks/about/",
+        "label": "Expo 2025 theme weeks",
+        "publisher": "Japan Association for the 2025 World Exposition",
+        "authorityId": "expo2025-association",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The organizer identifies Expo 2025 Osaka, Kansai and its main theme."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0016-SRC",
+    "pairId": "USR-Q0016",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Europa Clipper, launched in October 2024, is a mission led by which space agency?",
+    "questionUrdu": "اکتوبر 2024 میں روانہ ہونے والا یوروپا کلپر کس خلائی ادارے کا مشن ہے؟",
+    "options": [
+      "ESA",
+      "ISRO",
+      "NASA",
+      "JAXA"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "یوروپا کلپر ناسا کا مشن ہے۔ یورپی خلائی ادارے کا الگ جوائس مشن بھی مشتری کے نظام کا مطالعہ کرتا ہے۔",
+    "relatedHistoryUrdu": "یوروپا کلپر کا بنیادی ہدف مشتری کا چاند یوروپا ہے۔ مقصد وہاں زندگی کے لیے مناسب حالات کے امکان کا مطالعہ کرنا ہے، زندگی کی دریافت کا دعویٰ نہیں۔ موجودہ سوال کے جواب ”NASA“ کو اس متعلقہ مستند حقیقت ”Europa“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nasa.gov/event/nasas-europa-clipper/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.nasa.gov/event/nasas-europa-clipper/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "space-exploration"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nasa.gov/event/nasas-europa-clipper/",
+        "label": "NASA's Europa Clipper mission launch",
+        "publisher": "NASA",
+        "authorityId": "nasa",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "NASA describes its 2024 Europa Clipper mission and its target, Jupiter's icy moon Europa."
+      },
+      {
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Juice_and_Europa_Clipper_Dream_team_to_Jupiter",
+        "label": "Juice and Europa Clipper: Dream team to Jupiter",
+        "publisher": "European Space Agency",
+        "authorityId": "esa",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "ESA identifies Europa Clipper as NASA's mission launched in October 2024 to investigate Europa."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-10",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0016-SIM",
+    "pairId": "USR-Q0016",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which icy moon is the main target of the Europa Clipper mission launched in 2024?",
+    "questionUrdu": "2024 میں روانہ ہونے والے یوروپا کلپر مشن کا بنیادی ہدف کون سا برفانی چاند ہے؟",
+    "options": [
+      "Titan",
+      "Enceladus",
+      "Triton",
+      "Europa"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "یوروپا کلپر کا بنیادی ہدف مشتری کا چاند یوروپا ہے۔ مقصد وہاں زندگی کے لیے مناسب حالات کے امکان کا مطالعہ کرنا ہے، زندگی کی دریافت کا دعویٰ نہیں۔",
+    "relatedHistoryUrdu": "یوروپا کلپر ناسا کا مشن ہے۔ یورپی خلائی ادارے کا الگ جوائس مشن بھی مشتری کے نظام کا مطالعہ کرتا ہے۔ موجودہ سوال کے جواب ”Europa“ کو اس متعلقہ مستند حقیقت ”NASA“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nasa.gov/event/nasas-europa-clipper/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.nasa.gov/event/nasas-europa-clipper/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "space-exploration"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nasa.gov/event/nasas-europa-clipper/",
+        "label": "NASA's Europa Clipper mission launch",
+        "publisher": "NASA",
+        "authorityId": "nasa",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "NASA describes its 2024 Europa Clipper mission and its target, Jupiter's icy moon Europa."
+      },
+      {
+        "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Juice_and_Europa_Clipper_Dream_team_to_Jupiter",
+        "label": "Juice and Europa Clipper: Dream team to Jupiter",
+        "publisher": "European Space Agency",
+        "authorityId": "esa",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "ESA identifies Europa Clipper as NASA's mission launched in October 2024 to investigate Europa."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-10",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0017-SRC",
+    "pairId": "USR-Q0017",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which country's Chang'e-6 mission returned samples from the Moon in June 2024?",
+    "questionUrdu": "جون 2024 میں چاند سے نمونے واپس لانے والا چانگ ای 6 مشن کس ملک کا تھا؟",
+    "options": [
+      "China",
+      "Japan",
+      "India",
+      "United States"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "چانگ ای 6 چین کا مشن تھا۔ اس نے جون 2024 میں چاند کے دور والے رخ سے نمونے واپس لائے۔",
+    "relatedHistoryUrdu": "یہ چاند کے دور والے رخ سے زمین پر لائے جانے والے پہلے نمونے تھے۔ اس رخ کو مستقل تاریک کہنا درست نہیں؛ دور والا رخ زیادہ صحیح اصطلاح ہے۔ موجودہ سوال کے جواب ”China“ کو اس متعلقہ مستند حقیقت ”They came from the Moon's far side“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.cnsa.gov.cn/english/n6465652/n6465653/c10573102/content.html",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.cnsa.gov.cn/english/n6465652/n6465653/c10573102/content.html",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "lunar-exploration"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.cnsa.gov.cn/english/n6465652/n6465653/c10573102/content.html",
+        "label": "Timeline of Chang'e-6",
+        "publisher": "China National Space Administration",
+        "authorityId": "cnsa",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The mission timeline records China's Chang'e-6 returning far-side lunar samples on 25 June 2024."
+      },
+      {
+        "url": "https://www.esa.int/Enabling_Support/Operations/ESA_Ground_Stations/ESA_stations_support_three_Moon_missions_in_2024",
+        "label": "ESA stations support Moon missions in 2024",
+        "publisher": "European Space Agency",
+        "authorityId": "esa",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "ESA supported the Chinese Chang'e-6 mission and records its return of far-side samples in June 2024."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-06-25",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0017-SIM",
+    "pairId": "USR-Q0017",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "What made the lunar samples returned by Chang'e-6 in June 2024 a world first?",
+    "questionUrdu": "جون 2024 میں چانگ ای 6 کے واپس لائے گئے قمری نمونے دنیا میں پہلی بار کس وجہ سے اہم تھے؟",
+    "options": [
+      "They were the first samples ever returned from the Moon",
+      "They were collected by astronauts on the Moon",
+      "They came from the Moon's near side",
+      "They came from the Moon's far side"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "یہ چاند کے دور والے رخ سے زمین پر لائے جانے والے پہلے نمونے تھے۔ اس رخ کو مستقل تاریک کہنا درست نہیں؛ دور والا رخ زیادہ صحیح اصطلاح ہے۔",
+    "relatedHistoryUrdu": "چانگ ای 6 چین کا مشن تھا۔ اس نے جون 2024 میں چاند کے دور والے رخ سے نمونے واپس لائے۔ موجودہ سوال کے جواب ”They came from the Moon's far side“ کو اس متعلقہ مستند حقیقت ”China“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.cnsa.gov.cn/english/n6465652/n6465653/c10573102/content.html",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.cnsa.gov.cn/english/n6465652/n6465653/c10573102/content.html",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "lunar-exploration"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.cnsa.gov.cn/english/n6465652/n6465653/c10573102/content.html",
+        "label": "Timeline of Chang'e-6",
+        "publisher": "China National Space Administration",
+        "authorityId": "cnsa",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The mission timeline records China's Chang'e-6 returning far-side lunar samples on 25 June 2024."
+      },
+      {
+        "url": "https://www.esa.int/Enabling_Support/Operations/ESA_Ground_Stations/ESA_stations_support_three_Moon_missions_in_2024",
+        "label": "ESA stations support Moon missions in 2024",
+        "publisher": "European Space Agency",
+        "authorityId": "esa",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "ESA supported the Chinese Chang'e-6 mission and records its return of far-side samples in June 2024."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-06-25",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0018-SRC",
+    "pairId": "USR-Q0018",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "The NISAR satellite launched in July 2025 was jointly developed by which two space agencies?",
+    "questionUrdu": "جولائی 2025 میں روانہ کیے گئے نیسار سیٹلائٹ کو کن دو خلائی اداروں نے مشترکہ طور پر تیار کیا؟",
+    "options": [
+      "NASA and ESA",
+      "ISRO and JAXA",
+      "NASA and ISRO",
+      "CNSA and Roscosmos"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "نیسار ناسا اور اسرو کا مشترکہ سیٹلائٹ ہے۔ اس کا نام ناسا اسرو سنتھیٹک اپرچر ریڈار سے بنا ہے۔",
+    "relatedHistoryUrdu": "نیسار ریڈار کے ذریعے زمین کی خشکی اور برف میں تبدیلیوں کا مشاہدہ کرتا ہے۔ یہ زمین کے مشاہدے کا مشن ہے، انسانی یا مریخی مشن نہیں۔ موجودہ سوال کے جواب ”NASA and ISRO“ کو اس متعلقہ مستند حقیقت ”Radar observation of Earth's land and ice“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://science.nasa.gov/blogs/nisar/2025/07/30/nasa-isros-nisar-mission-set-to-capture-earths-land-ice-in-detail/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://science.nasa.gov/blogs/nisar/2025/07/30/nasa-isros-nisar-mission-set-to-capture-earths-land-ice-in-detail/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "earth-observation"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://science.nasa.gov/blogs/nisar/2025/07/30/nasa-isros-nisar-mission-set-to-capture-earths-land-ice-in-detail/",
+        "label": "NISAR mission to capture Earth's land and ice",
+        "publisher": "NASA",
+        "authorityId": "nasa",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "NASA and ISRO jointly developed NISAR to observe Earth's land and ice using radar; it launched in July 2025."
+      },
+      {
+        "url": "https://www.isro.gov.in/media_isro/pdf/AnnualReport/Annual_Report_2025-26_EN_28042026.pdf",
+        "label": "ISRO Annual Report 2025–26 — NISAR launch",
+        "publisher": "Indian Space Research Organisation",
+        "authorityId": "isro",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The report describes NISAR as a NASA-ISRO Earth-observation satellite successfully launched on 30 July 2025."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-07-30",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0018-SIM",
+    "pairId": "USR-Q0018",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "What is the main scientific role of the NISAR satellite launched in 2025?",
+    "questionUrdu": "2025 میں روانہ کیے گئے نیسار سیٹلائٹ کا بنیادی سائنسی کردار کیا ہے؟",
+    "options": [
+      "Radar observation of Earth's land and ice",
+      "Imaging of the Sun's outer atmosphere",
+      "Radar mapping of the Martian surface",
+      "Radar mapping of the Moon's surface"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "نیسار ریڈار کے ذریعے زمین کی خشکی اور برف میں تبدیلیوں کا مشاہدہ کرتا ہے۔ یہ زمین کے مشاہدے کا مشن ہے، انسانی یا مریخی مشن نہیں۔",
+    "relatedHistoryUrdu": "نیسار ناسا اور اسرو کا مشترکہ سیٹلائٹ ہے۔ اس کا نام ناسا اسرو سنتھیٹک اپرچر ریڈار سے بنا ہے۔ موجودہ سوال کے جواب ”Radar observation of Earth's land and ice“ کو اس متعلقہ مستند حقیقت ”NASA and ISRO“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://science.nasa.gov/blogs/nisar/2025/07/30/nasa-isros-nisar-mission-set-to-capture-earths-land-ice-in-detail/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://science.nasa.gov/blogs/nisar/2025/07/30/nasa-isros-nisar-mission-set-to-capture-earths-land-ice-in-detail/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "earth-observation"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://science.nasa.gov/blogs/nisar/2025/07/30/nasa-isros-nisar-mission-set-to-capture-earths-land-ice-in-detail/",
+        "label": "NISAR mission to capture Earth's land and ice",
+        "publisher": "NASA",
+        "authorityId": "nasa",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "NASA and ISRO jointly developed NISAR to observe Earth's land and ice using radar; it launched in July 2025."
+      },
+      {
+        "url": "https://www.isro.gov.in/media_isro/pdf/AnnualReport/Annual_Report_2025-26_EN_28042026.pdf",
+        "label": "ISRO Annual Report 2025–26 — NISAR launch",
+        "publisher": "Indian Space Research Organisation",
+        "authorityId": "isro",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The report describes NISAR as a NASA-ISRO Earth-observation satellite successfully launched on 30 July 2025."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2025-07-30",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0019-SRC",
+    "pairId": "USR-Q0019",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which city hosted the G20 Leaders' Summit in November 2024?",
+    "questionUrdu": "نومبر 2024 میں جی 20 رہنماؤں کا سربراہی اجلاس کس شہر میں ہوا؟",
+    "options": [
+      "Rio de Janeiro",
+      "New Delhi",
+      "Johannesburg",
+      "Rome"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "نومبر 2024 کا جی 20 سربراہی اجلاس برازیل کے شہر ریو ڈی جنیرو میں ہوا۔ نئی دہلی 2023 کے اجلاس کا مقام تھا۔",
+    "relatedHistoryUrdu": "بھوک اور غربت کے خلاف عالمی اتحاد اس اجلاس کی نمایاں پیش رفت تھی۔ اس کا مقصد آزمودہ پالیسیوں اور تعاون سے ان مسائل میں کمی لانا ہے۔ موجودہ سوال کے جواب ”Rio de Janeiro“ کو اس متعلقہ مستند حقیقت ”Global Alliance against Hunger and Poverty“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://g20.gov.br/en/documents/g20-rio-de-janeiro-leaders-declaration",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://g20.gov.br/en/documents/g20-rio-de-janeiro-leaders-declaration",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "g20"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://g20.gov.br/en/documents/g20-rio-de-janeiro-leaders-declaration",
+        "label": "G20 Rio de Janeiro Leaders' Declaration",
+        "publisher": "Brazil G20 Presidency",
+        "authorityId": "brazil-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 2024 leaders met in Rio de Janeiro; the declaration includes the Global Alliance against Hunger and Poverty."
+      },
+      {
+        "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2024/11/18-19/",
+        "label": "G20 summit in Rio de Janeiro, 2024",
+        "publisher": "European Council",
+        "authorityId": "european-council",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The Council records the Rio summit and the launch of the Global Alliance against Hunger and Poverty."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-11",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0019-SIM",
+    "pairId": "USR-Q0019",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which global alliance was launched at the G20 summit in November 2024 to address deprivation?",
+    "questionUrdu": "نومبر 2024 کے جی 20 اجلاس میں محرومی سے نمٹنے کے لیے کون سا عالمی اتحاد شروع کیا گیا؟",
+    "options": [
+      "International Solar Alliance",
+      "Global Alliance against Hunger and Poverty",
+      "Coalition for Epidemic Preparedness Innovations",
+      "International Big Cat Alliance"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "بھوک اور غربت کے خلاف عالمی اتحاد اس اجلاس کی نمایاں پیش رفت تھی۔ اس کا مقصد آزمودہ پالیسیوں اور تعاون سے ان مسائل میں کمی لانا ہے۔",
+    "relatedHistoryUrdu": "نومبر 2024 کا جی 20 سربراہی اجلاس برازیل کے شہر ریو ڈی جنیرو میں ہوا۔ نئی دہلی 2023 کے اجلاس کا مقام تھا۔ موجودہ سوال کے جواب ”Global Alliance against Hunger and Poverty“ کو اس متعلقہ مستند حقیقت ”Rio de Janeiro“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://g20.gov.br/en/documents/g20-rio-de-janeiro-leaders-declaration",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://g20.gov.br/en/documents/g20-rio-de-janeiro-leaders-declaration",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "g20"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://g20.gov.br/en/documents/g20-rio-de-janeiro-leaders-declaration",
+        "label": "G20 Rio de Janeiro Leaders' Declaration",
+        "publisher": "Brazil G20 Presidency",
+        "authorityId": "brazil-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 2024 leaders met in Rio de Janeiro; the declaration includes the Global Alliance against Hunger and Poverty."
+      },
+      {
+        "url": "https://www.consilium.europa.eu/en/meetings/international-summit/2024/11/18-19/",
+        "label": "G20 summit in Rio de Janeiro, 2024",
+        "publisher": "European Council",
+        "authorityId": "european-council",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The Council records the Rio summit and the launch of the Global Alliance against Hunger and Poverty."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-11",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0020-SRC",
+    "pairId": "USR-Q0020",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which Pakistani multi-mission communications satellite was launched on 30 May 2024?",
+    "questionUrdu": "30 مئی 2024 کو پاکستان کا کون سا کثیر المقاصد مواصلاتی سیٹلائٹ روانہ کیا گیا؟",
+    "options": [
+      "Badr-1",
+      "PRSS-1",
+      "PAKSAT-MM1",
+      "iCube-Qamar"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "30 مئی 2024 کو پاک سیٹ ایم ایم ون روانہ کیا گیا۔ یہ مواصلاتی سیٹلائٹ ہے اور اسے قمری کیوب سیٹ مشن سے الگ یاد رکھیں۔",
+    "relatedHistoryUrdu": "پاک سیٹ ایم ایم ون براڈ بینڈ اور مواصلاتی خدمات کے لیے ہے۔ اس کا کام چاند سے نمونے لانا یا خلا نورد لے جانا نہیں۔ موجودہ سوال کے جواب ”PAKSAT-MM1“ کو اس متعلقہ مستند حقیقت ”Providing broadband and communication services“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.cgwic.com.cn/News/2024/20240530.html",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026",
+      "referenceUrl": "https://www.cgwic.com.cn/News/2024/20240530.html",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "pakistan-space"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.cgwic.com.cn/News/2024/20240530.html",
+        "label": "Successful PAKSAT-MM1 launch",
+        "publisher": "China Great Wall Industry Corporation",
+        "authorityId": "cgwic",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The launch provider records PAKSAT-MM1's 30 May 2024 launch and communications role for Pakistan."
+      },
+      {
+        "url": "https://paksat.com.pk/hts/",
+        "label": "PAKSAT-MM1 high-throughput satellite",
+        "publisher": "PAKSAT International",
+        "authorityId": "paksat",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The satellite operator confirms the 30 May 2024 launch and broadband communications purpose."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-05-30",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0020-SIM",
+    "pairId": "USR-Q0020",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "What is a principal purpose of Pakistan's PAKSAT-MM1 satellite launched in 2024?",
+    "questionUrdu": "2024 میں روانہ کیے گئے پاکستانی سیٹلائٹ PAKSAT-MM1 کا اہم مقصد کیا ہے؟",
+    "options": [
+      "Providing broadband and communication services",
+      "Monitoring atmospheric temperature and cloud systems",
+      "Measuring ocean salinity and currents",
+      "Capturing high-resolution land-use images"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "پاک سیٹ ایم ایم ون براڈ بینڈ اور مواصلاتی خدمات کے لیے ہے۔ اس کا کام چاند سے نمونے لانا یا خلا نورد لے جانا نہیں۔",
+    "relatedHistoryUrdu": "30 مئی 2024 کو پاک سیٹ ایم ایم ون روانہ کیا گیا۔ یہ مواصلاتی سیٹلائٹ ہے اور اسے قمری کیوب سیٹ مشن سے الگ یاد رکھیں۔ موجودہ سوال کے جواب ”Providing broadband and communication services“ کو اس متعلقہ مستند حقیقت ”PAKSAT-MM1“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.cgwic.com.cn/News/2024/20240530.html",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested researched Current Affairs supplement — 21 October 2026 — related practice",
+      "referenceUrl": "https://www.cgwic.com.cn/News/2024/20240530.html",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "pakistan-space"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Newly researched supplement requested by the user; not transcribed from a supplied paper. The paired practice item tests a different related fact. Event wording is historical and date-qualified. No past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.cgwic.com.cn/News/2024/20240530.html",
+        "label": "Successful PAKSAT-MM1 launch",
+        "publisher": "China Great Wall Industry Corporation",
+        "authorityId": "cgwic",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The launch provider records PAKSAT-MM1's 30 May 2024 launch and communications role for Pakistan."
+      },
+      {
+        "url": "https://paksat.com.pk/hts/",
+        "label": "PAKSAT-MM1 high-throughput satellite",
+        "publisher": "PAKSAT International",
+        "authorityId": "paksat",
+        "role": "answer-secondary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The satellite operator confirms the 30 May 2024 launch and broadband communications purpose."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2024-05-30",
+      "version": null,
+      "reverifyAfter": null
+    }
   }
 ];
 
   window.PPSC_QUIZ_DATA = {
     version: 5,
-    generatedOn: "2026-10-14",
+    generatedOn: "2026-10-21",
     categories: categories,
     questions: questions
   };

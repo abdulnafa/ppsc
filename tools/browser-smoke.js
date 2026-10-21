@@ -3142,7 +3142,7 @@ async function main() {
       };
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
-      if (!data || data.questions.length !== 11892) errors.push("Expected the current 11,892-question release bank.");
+      if (!data || data.questions.length !== 11932) errors.push("Expected the current 11,932-question release bank.");
       if (!data || data.version !== 5) errors.push("Expected question-data schema version 5.");
       const importantQuestions = data ? data.questions.filter((question) => question.isImportant === true) : [];
       if (importantQuestions.length !== 1197) errors.push("Expected 1,197 evidence-based important questions.");
