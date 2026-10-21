@@ -210,6 +210,7 @@
     elements.articlesTopicsScreen = firstElement(["#articles-topics-screen"]);
     elements.primeMinistersScreen = firstElement(["#prime-ministers-screen"]);
     elements.presidentsScreen = firstElement(["#presidents-screen"]);
+    elements.organizationsTopicsScreen = firstElement(["#organizations-topics-screen"]);
     elements.paperSetupScreen = firstElement(["#paper-setup-screen", "[data-screen='paper-setup']"]);
     elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
     elements.quizScreen = firstElement(["#quiz-screen", "[data-screen='quiz']"]);
@@ -3907,6 +3908,7 @@
     setHidden(elements.articlesTopicsScreen, screenName !== "articles-topics");
     setHidden(elements.primeMinistersScreen, screenName !== "prime-ministers");
     setHidden(elements.presidentsScreen, screenName !== "presidents");
+    setHidden(elements.organizationsTopicsScreen, screenName !== "organizations-topics");
     setHidden(elements.paperSetupScreen, screenName !== "paper-setup");
     setHidden(elements.modeScreen, screenName !== "mode");
     setHidden(elements.quizScreen, screenName !== "quiz");
@@ -3930,6 +3932,8 @@
       ? elements.primeMinistersScreen
       : screenName === "presidents"
       ? elements.presidentsScreen
+      : screenName === "organizations-topics"
+      ? elements.organizationsTopicsScreen
       : screenName === "paper-setup"
       ? elements.paperSetupScreen
       : screenName === "quiz"
@@ -7079,6 +7083,15 @@
   }
 
   function bindEvents() {
+    if (window.PPSC_ORGANIZATIONS_TOPICS && elements.organizationsTopicsScreen) {
+      window.PPSC_ORGANIZATIONS_TOPICS.init({
+        open: function () { showScreen("organizations-topics"); },
+        close: function () {
+          showScreen("categories");
+          updateContinueSessionUI();
+        }
+      });
+    }
     if (window.PPSC_PRESIDENTS && elements.presidentsScreen) {
       window.PPSC_PRESIDENTS.init({
         open: function () { showScreen("presidents"); },

@@ -754,7 +754,17 @@ h2[tabindex="-1"]:focus {
 .water-topic-source { color: var(--muted); font-size: .75rem; }
 .water-topic-context { margin-top: 8px; color: var(--muted); font-size: .8rem; line-height: 1.7; }
 .water-topics-message { padding: 0 24px 24px; }
-#water-topics-retry, #articles-topics-retry, #prime-ministers-retry, #presidents-retry { margin: 0 24px 24px; }
+#water-topics-retry, #articles-topics-retry, #prime-ministers-retry, #presidents-retry, #organizations-topics-retry { margin: 0 24px 24px; }
+.organizations-name-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 8px 24px; margin: 0; padding: 18px 24px 22px 42px; line-height: 1.65; }
+.organizations-name-list li { padding: 3px 0; overflow-wrap: anywhere; }
+.organizations-question > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.organizations-question .water-topic-title { flex: 1 1 320px; margin-left: 0; }
+.organizations-question .water-topic-count { margin-left: auto; }
+.organizations-question .water-topic-answer { margin: 0; padding: 14px 18px; border-radius: 0; }
+@media (max-width: 700px) {
+  .organizations-name-list { grid-template-columns: 1fr; padding: 14px 16px 18px 34px; }
+  .organizations-question .water-topic-count { margin-left: 0; }
+}
 .category-saved-progress { display: block; margin-top: 6px; color: var(--blue-600); font-size: .75rem; font-weight: 700; }
 .category-sessions-panel { margin: 24px 0; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
 .category-sessions-panel h2 { margin: 8px 0; }
