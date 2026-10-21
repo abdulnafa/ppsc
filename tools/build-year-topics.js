@@ -14,6 +14,7 @@ const questions = new Map(bank.questions.map((q) => [q.id, q]));
 const ids = new Set();
 const identities = new Map();
 const entries = [];
+const rawEntries = new Map();
 const asciiNumbers = (value) => String(value || "").replace(/[۰-۹]/g, (digit) => String("۰۱۲۳۴۵۶۷۸۹".indexOf(digit)))
   .replace(/[٠-٩]/g, (digit) => String("٠١٢٣٤٥٦٧٨٩".indexOf(digit)));
 
@@ -24,6 +25,7 @@ for (const file of contentFiles) {
   for (const entry of data.entries) {
     assert(/^[a-z0-9-]+$/.test(entry.id) && !ids.has(entry.id), `Invalid/duplicate topic ID: ${entry.id}`);
     ids.add(entry.id);
+    rawEntries.set(entry.id, entry);
     assert(["CE", "BCE", "AH"].includes(entry.era), `${entry.id}: unsupported calendar`);
     assert(Number.isInteger(entry.year) && entry.year >= 1 && entry.year <= (entry.era === "CE" ? 2026 : 10000), `${entry.id}: invalid year`);
     for (const field of ["title", "description"]) {
@@ -47,6 +49,44 @@ for (const file of contentFiles) {
     });
   }
 }
+// Editorial Roman Urdu paraphrases of the existing, linked MCQ explanations.
+// These do not add questions, new timeline topics or unverified history.
+const explanations = new Map();
+for (const section of ["world", "pakistan", "other"]) {
+  const file = `year-explanations-${section}.json`;
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data", file), "utf8"));
+  assert(data.schemaVersion === 1 && Array.isArray(data.entries), `${file}: invalid explanation bundle`);
+  for (const item of data.entries) {
+    assert(rawEntries.has(item.topicId) && !explanations.has(item.topicId), `${file}: unknown/duplicate explanation ${item.topicId}`);
+    assert(typeof item.explanation === "string" && item.explanation.trim().length >= 60
+      && item.explanation.length <= 900, `${item.topicId}: explanation must be concise and meaningful`);
+    assert(!/[\u0600-\u06ff]/.test(item.explanation), `${item.topicId}: explanation must be Roman Urdu`);
+    assert(item.explanation.trim() !== rawEntries.get(item.topicId).description.trim(), `${item.topicId}: explanation only repeats the original summary`);
+    assert(Array.isArray(item.questionIds) && item.questionIds.length > 0, `${item.topicId}: explanation evidence missing`);
+    for (const id of item.questionIds) assert(questions.has(id), `${item.topicId}: unknown explanation MCQ ${id}`);
+    const topic = rawEntries.get(item.topicId);
+    const explanationEvidence = asciiNumbers([topic.year, topic.dateLabel, topic.title, topic.description,
+      ...item.questionIds.flatMap(id => {
+        const q = questions.get(id);
+        return [q.question, q.questionUrdu, q.options[q.correctOptionIndex], q.explanationUrdu,
+          q.sourceNotes, ...(q.references || []).map(reference => reference.claimSummary)];
+      })].join(" "));
+    for (const year of new Set(item.explanation.match(/\b\d{4}\b/g) || [])) {
+      assert(new RegExp(`(^|\\D)${year}(\\D|$)`).test(explanationEvidence),
+        `${item.topicId}: explanation number/year ${year} is not in its cited existing evidence`);
+    }
+    const originalPairs = new Set(rawEntries.get(item.topicId).questionIds.map(id => questions.get(id).pairId));
+    assert(item.questionIds.some(id => originalPairs.has(questions.get(id).pairId)), `${item.topicId}: explanation is not linked to its topic`);
+    explanations.set(item.topicId, {
+      explanation: item.explanation.trim(), explanationQuestionIds: [...new Set(item.questionIds)]
+    });
+  }
+}
+assert.equal(explanations.size, rawEntries.size, "Every existing topic needs its own explanation");
+for (const entry of entries) {
+  assert(explanations.has(entry.id), `${entry.id}: missing explanation`);
+  Object.assign(entry, explanations.get(entry.id));
+}
 // Explicit editorial same-event merges keep all MCQ/category provenance. Other
 // events in the same year (e.g. founding vs joining an organization) stay separate.
 const aliases = new Map(entries.map((entry) => [entry.id, entry]));
@@ -55,6 +95,7 @@ function mergeInto(target, duplicate) {
   assert(target.year === duplicate.year && target.era === duplicate.era, `Calendar/year mismatch: ${duplicate.id}`);
   target.questionIds = [...new Set([...target.questionIds, ...duplicate.questionIds])];
   target.categoryIds = bank.categories.filter((c) => target.questionIds.some((id) => questions.get(id).categoryId === c.id)).map((c) => c.id);
+  target.explanationQuestionIds = [...new Set([...target.explanationQuestionIds, ...duplicate.explanationQuestionIds])];
   if (!target.dateLabel && duplicate.dateLabel) target.dateLabel = duplicate.dateLabel;
   removed.add(duplicate.id);
 }
@@ -81,8 +122,26 @@ const eraOrder = { BCE: 0, CE: 1, AH: 2 };
 entries.sort((a, b) => eraOrder[a.era] - eraOrder[b.era]
   || (a.era === "BCE" ? b.year - a.year : a.year - b.year)
   || a.title.localeCompare(b.title, "en") || a.id.localeCompare(b.id, "en"));
-const bundle = { schemaVersion: 1, generatedOn: "2026-10-20", coverage: "curated-mcq-linked-topics", entries };
-const output = "// Generated by tools/build-year-topics.js; edit year-topics-*.json instead.\n"
+// Only explicit shared SRC/SIM pairs create context links. Similar keywords,
+// neighbouring years and a common website are not evidence of the same topic.
+const topicsByPair = new Map();
+for (const entry of entries) {
+  for (const pairId of new Set(entry.questionIds.map(id => questions.get(id).pairId))) {
+    if (!pairId) continue;
+    if (!topicsByPair.has(pairId)) topicsByPair.set(pairId, new Set());
+    topicsByPair.get(pairId).add(entry.id);
+  }
+}
+for (const entry of entries) {
+  const related = new Set();
+  for (const id of entry.questionIds) {
+    for (const topicId of topicsByPair.get(questions.get(id).pairId) || []) related.add(topicId);
+  }
+  entry.relatedTopicIds = entries.filter(other => other.id !== entry.id && other.era === entry.era
+    && other.year !== entry.year && related.has(other.id)).map(other => other.id);
+}
+const bundle = { schemaVersion: 1, generatedOn: "2026-10-21", coverage: "curated-mcq-linked-explanations", entries };
+const output = "// Generated by tools/build-year-topics.js; edit year-topics-*.json / year-explanations-*.json instead.\n"
   + "window.PPSC_YEAR_TOPICS_DATA = " + JSON.stringify(bundle, null, 2) + ";\n";
 const outputPath = path.join(root, "data/year-topics.js");
 if (process.argv.includes("--check")) {
@@ -105,4 +164,5 @@ if (process.argv.includes("--check")) {
 }
 console.log(`Years Wise Topics: ${entries.length} topics, ${new Set(entries.map((e) => e.era + ':' + e.year)).size} year/calendar groups.`);
 console.log(`Linked MCQs: ${new Set(entries.flatMap((e) => e.questionIds)).size}. Canonical bank unchanged: ${bank.questions.length} questions.`);
+console.log(`Roman Urdu explanations: ${entries.length}; topics with explicitly related years: ${entries.filter(e => e.relatedTopicIds.length).length}.`);
 

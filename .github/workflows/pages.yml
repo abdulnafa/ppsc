@@ -34,6 +34,7 @@ jobs:
           node --check data/detailed-learning.js
           node --check years-topics.js
           node tools/build-year-topics.js --check
+          node tools/year-explanations-smoke.js
           node --check water-topics.js
           node tools/build-pakistan-water-topics.js --check
           node tools/build-pakistan-articles-topics.js --check

@@ -9,7 +9,9 @@
   var categoryNames = new Map();
   var questionsById = new Map();
   var questionNumbers = new Map();
-  var openedYears = new Set();
+  var topicsById = new Map();
+  var topicOrder = new Map();
+  var openedYearKey = "";
 
   function text(value) {
     return String(value == null ? "" : value).normalize("NFKC").toLowerCase().replace(/\s+/g, " ").trim();
@@ -44,9 +46,13 @@
           return;
         }
         entries = bundle.entries;
+        entries.forEach(function (entry, index) {
+          topicsById.set(entry.id, entry);
+          topicOrder.set(entry.id, index);
+        });
         resolve(entries);
       }
-      script.src = "data/year-topics.js?v=20261020-1";
+      script.src = "data/year-topics.js?v=20261021-2";
       script.onload = function () { finish(); };
       script.onerror = function () { finish(new Error("Year topics could not load")); };
       timer = window.setTimeout(function () { finish(new Error("Year topics load timeout")); }, 20000);
@@ -73,7 +79,53 @@
       list.appendChild(row);
     });
     details.appendChild(list);
+    var referenceLinks = new Map();
+    (entry.explanationQuestionIds || entry.questionIds).forEach(function (id) {
+      var question = questionsById.get(id);
+      if (!question) return;
+      var sources = (question.references || []).concat(question.source ? [{
+        url: question.source.referenceUrl, label: question.source.label
+      }] : []);
+      sources.forEach(function (source) {
+        if (typeof source.url === "string" && /^https:\/\//i.test(source.url) && !referenceLinks.has(source.url)) {
+          referenceLinks.set(source.url, source.label || source.publisher || "Source");
+        }
+      });
+    });
+    if (referenceLinks.size) {
+      details.appendChild(make("p", "year-topic-evidence-label", "Wazahat ke asal hawalay"));
+      var links = make("ul", "year-topic-source-list");
+      referenceLinks.forEach(function (label, url) {
+        var item = make("li");
+        var link = make("a", "", label);
+        link.href = url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        item.appendChild(link);
+        links.appendChild(item);
+      });
+      details.appendChild(links);
+    }
     container.appendChild(details);
+  }
+
+  function renderChronology(entry, container) {
+    if (!entry.relatedTopicIds || !entry.relatedTopicIds.length) return;
+    var related = [entry].concat(entry.relatedTopicIds.map(function (id) { return topicsById.get(id); }).filter(Boolean));
+    related.sort(function (a, b) { return topicOrder.get(a.id) - topicOrder.get(b.id); });
+    var box = make("section", "year-topic-sequence");
+    box.appendChild(make("h4", "", "Isi topic ki juri hui tareekhein"));
+    var list = make("ol");
+    related.forEach(function (topic) {
+      var item = make("li");
+      item.dataset.relatedTopicId = topic.id;
+      if (topic.id === entry.id) item.dataset.currentTopic = "true";
+      item.appendChild(make("strong", "", (topic.dateLabel || topic.year + " " + topic.era) + " — " + topic.title));
+      item.appendChild(make("p", "", topic.description));
+      list.appendChild(item);
+    });
+    box.appendChild(list);
+    container.appendChild(box);
   }
 
   function renderYearTopics(group, details) {
@@ -86,7 +138,8 @@
       row.dataset.topicId = entry.id;
       row.appendChild(make("h3", "", entry.title));
       if (entry.dateLabel) row.appendChild(make("p", "year-topic-date", entry.dateLabel));
-      row.appendChild(make("p", "year-topic-description", entry.description));
+      row.appendChild(make("p", "year-topic-description", entry.explanation || entry.description));
+      renderChronology(entry, row);
       row.appendChild(make("p", "year-topic-category", entry.categoryIds.map(function (id) {
         return categoryNames.get(id) || id;
       }).join(" · ")));
@@ -106,7 +159,7 @@
       return (categoryId === "all" || entry.categoryIds.includes(categoryId))
         && (era === "all" || entry.era === era)
         && (!query || (yearQuery !== null ? entry.year === yearQuery
-          : text([entry.year, entry.era, entry.dateLabel, entry.title, entry.description,
+          : text([entry.year, entry.era, entry.dateLabel, entry.title, entry.description, entry.explanation,
             entry.categoryIds.map(function (id) { return categoryNames.get(id); }).join(" ")].join(" ")).includes(query)));
     });
     var groups = new Map();
@@ -131,18 +184,27 @@
       }
       var details = make("details", "year-topics-year");
       details.dataset.yearKey = group.key;
+      // Native exclusive accordions preserve summary keyboard behavior. The
+      // toggle handler also covers browsers without details[name] support.
+      details.setAttribute("name", "ppsc-year-topics");
       var summary = make("summary", "year-topics-year-heading");
       summary.appendChild(make("span", "year-topics-year-label", group.year + " " + group.era));
       summary.appendChild(make("span", "year-topics-year-count", group.entries.length + (group.entries.length === 1 ? " topic" : " topics")));
       details.appendChild(summary);
-      details.open = openedYears.has(group.key);
+      details.open = openedYearKey === group.key;
       if (details.open) renderYearTopics(group, details);
-      details.addEventListener("toggle", function () {
+      details.addEventListener("toggle", function (event) {
+        // A filtered rerender can leave a queued toggle on a detached node.
+        // Nested MCQ reference details are independent of the year accordion.
+        if (!details.isConnected || event.target !== details) return;
         if (details.open) {
-          openedYears.add(group.key);
+          openedYearKey = group.key;
+          nodes.list.querySelectorAll(".year-topics-year[open]").forEach(function (other) {
+            if (other !== details) other.open = false;
+          });
           renderYearTopics(group, details);
-        } else {
-          openedYears.delete(group.key);
+        } else if (openedYearKey === group.key) {
+          openedYearKey = "";
         }
       });
       fragment.appendChild(details);
@@ -153,7 +215,7 @@
     nodes.clear.disabled = !query && categoryId === "all" && era === "all";
     nodes.status.textContent = groups.size + " saal · " + filtered.length + " topics nazar aa rahe hain";
     nodes.coverage.textContent = entries.length
-      + " muntakhib MCQ topics. Har date ka mukammal index nahi.";
+      + " maujooda topics ki mukhtasar wazahat. Juri hui tareekhein jahan maujooda sawalon se sabit hain; mukammal tareekh ka index nahi.";
   }
 
   function show() {
@@ -213,7 +275,7 @@
       nodes.search.focus();
     });
     nodes.collapse.addEventListener("click", function () {
-      openedYears.clear();
+      openedYearKey = "";
       nodes.list.querySelectorAll(".year-topics-year[open]").forEach(function (details) { details.open = false; });
     });
   }

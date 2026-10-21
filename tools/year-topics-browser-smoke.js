@@ -116,6 +116,7 @@ async function main() {
       window.__yearSaved = Object.fromEntries(Object.keys(localStorage).map(key => [key,localStorage.getItem(key)]));
       document.getElementById('paper-builder-card').click();
     })()`);
+    assert(await client.evaluate(`JSON.parse(localStorage.getItem('ppsc-prep:retry-queue:v1')).items.length > 0`), "Progress-preservation check needs a real saved queue");
     assert(await client.evaluate('!document.getElementById("paper-setup-screen").hidden && document.getElementById("category-screen").hidden'), "Study Tools paper button did not open setup");
     await client.evaluate('document.getElementById("paper-setup-back-button").click()');
     assert(await client.evaluate('!document.getElementById("category-screen").hidden && !document.getElementById("continue-session-card").hidden'), "Paper back did not restore home and Continue");
@@ -144,9 +145,45 @@ async function main() {
         check(values.every((year,i) => !i || (era === 'BCE' ? year < values[i-1] : year > values[i-1])), 'Incorrect ' + era + ' order');
       }
       const search = (value) => { el('search').value = value; el('search').dispatchEvent(new Event('input')); };
+      const toggled = () => new Promise(resolve => setTimeout(resolve, 40));
+      const yearNodes = [...el('list').querySelectorAll('.year-topics-year')];
+      check(yearNodes.length > 1, 'Two year groups required for exclusive accordion test');
+      const firstYear = yearNodes[0], secondYear = yearNodes[1];
+      firstYear.querySelector('summary').click();
+      await toggled();
+      check(firstYear.open && el('list').querySelectorAll('.year-topics-year[open]').length === 1, 'First year did not open alone');
+      secondYear.querySelector('summary').click();
+      await toggled();
+      check(secondYear.open && !firstYear.open && el('list').querySelectorAll('.year-topics-year[open]').length === 1, 'Opening next year did not close previous year');
+      const rememberedKey = secondYear.dataset.yearKey;
+      const nestedSources = secondYear.querySelector('.year-topic-sources');
+      nestedSources.querySelector('summary').click();
+      await toggled();
+      check(nestedSources.open && secondYear.open && el('list').querySelectorAll('.year-topics-year[open]').length === 1, 'Nested references changed the parent accordion');
+      // Exercise the JS fallback as well as native details[name] exclusivity.
+      yearNodes.forEach(node => node.removeAttribute('name'));
+      firstYear.querySelector('summary').click();
+      await toggled();
+      check(firstYear.open && !secondYear.open, 'Non-native accordion fallback did not close previous year');
+      secondYear.querySelector('summary').click();
+      await toggled();
+      check(secondYear.open && !firstYear.open, 'Non-native accordion fallback did not advance');
+      yearNodes.forEach(node => node.setAttribute('name', 'ppsc-year-topics'));
+      search(rememberedKey.split(':')[1]);
+      await toggled();
+      check(el('list').querySelector('.year-topics-year[open]')?.dataset.yearKey === rememberedKey, 'Filtered rerender lost the single open year');
       search('___no_timeline_topic___');
+      await toggled();
       check(!el('empty').hidden && !el('list').children.length, 'Empty search state wrong');
       el('clear').click();
+      await toggled();
+      check(el('list').querySelector('.year-topics-year[open]')?.dataset.yearKey === rememberedKey && el('list').querySelectorAll('.year-topics-year[open]').length === 1, 'Clearing filter restored more than one year or lost the remembered year');
+      el('collapse').click();
+      await toggled();
+      search(rememberedKey.split(':')[1]);
+      el('clear').click();
+      await toggled();
+      check(!el('list').querySelector('.year-topics-year[open]'), 'Collapse all did not clear remembered open year');
       el('calendar').value = 'AH'; el('calendar').dispatchEvent(new Event('change'));
       check([...el('list').querySelectorAll('[data-year-key]')].every(n => n.dataset.yearKey.startsWith('AH:')), 'AH mixed with CE');
       check(el('list').textContent.includes('alag taqweem'), 'Hijri separation label missing');
@@ -166,8 +203,33 @@ async function main() {
       const sources = year.querySelector('.year-topic-sources'); sources.open = true;
       check(sources.textContent.includes('MCQ') && sources.textContent.includes('Answer:'), 'Evidence missing');
       sources.open = false;
+      check(entries.every(entry => entry.explanation && entry.explanation !== entry.description), 'Some existing topics lack a new explanation');
+      for (const entry of entries.filter(entry => entry.year === 1930 && entry.era === 'CE')) {
+        const row = year.querySelector('[data-topic-id="' + entry.id + '"]');
+        check(row?.querySelector('.year-topic-description').textContent === entry.explanation, 'Reader still shows only the old one-line answer');
+      }
+      const topic = entries.find(entry => entry.id === 'pakistan-khilji-start-1290');
+      search('1290');
+      const contextYear = el('list').querySelector('[data-year-key="CE:1290"]');
+      contextYear.querySelector('summary').click();
+      await toggled();
+      const contextRow = contextYear.querySelector('[data-topic-id="' + topic.id + '"]');
+      check(contextRow.querySelector('.year-topic-description').textContent === topic.explanation, 'Khilji explanation not rendered');
+      check(JSON.stringify([...contextRow.querySelectorAll('[data-related-topic-id]')].map(node => node.dataset.relatedTopicId)) === JSON.stringify(['pakistan-khilji-start-1290', 'pakistan-khilji-end-1320']), 'Dynasty start/end missing or out of order');
+      check(contextRow.querySelectorAll('[data-current-topic="true"]').length === 1, 'Current chronology entry not marked');
+      const evidenceLinks = [...contextRow.querySelectorAll('.year-topic-sources a')];
+      check(evidenceLinks.length > 0 && evidenceLinks.every(link => link.protocol === 'https:' && link.rel.includes('noopener') && link.target === '_blank'), 'Explanation references missing or unsafe');
+      check(el('list').querySelectorAll('.year-topics-year[open]').length === 1, 'Context opened multiple year groups');
+      // A phrase from the explanation must be searchable, even when it is not
+      // part of the old title/one-line summary. The target must remain visible.
+      const phrase = topic.explanation.split(/\\s+/).slice(0, 7).join(' ');
+      search(phrase);
+      await toggled();
+      check(el('list').querySelector('[data-topic-id="' + topic.id + '"]'), 'Explanation phrase not searchable');
+      search('1290');
+      await toggled();
       check(JSON.stringify(window.__yearSaved) === JSON.stringify(Object.fromEntries(Object.keys(localStorage).map(key => [key,localStorage.getItem(key)]))), 'Timeline changed saved progress');
-      return { errors, topicCount: entries.length, yearCount: years.length };
+      return { errors, topicCount: entries.length, yearCount: years.length, explanations: true, linkedChronology: true, sourceLinks: true, explanationSearch: true, exclusiveAccordion: true, nestedReferencesIndependent: true, filterPreservesSingleYear: true, collapseResetsOpenYear: true };
     })()`);
     assert.deepEqual(checks.errors, []);
     for (const [name, width, height, dark] of [["desktop", 1366, 900, false], ["mobile-dark", 320, 900, true]]) {
@@ -178,18 +240,22 @@ async function main() {
       const screenshot = path.join(os.tmpdir(), `ppsc-years-${name}.png`);
       fs.writeFileSync(screenshot, Buffer.from((await client.send("Page.captureScreenshot", { format: "png" })).data, "base64"));
       screenshots.push(screenshot);
-      await client.evaluate(`document.querySelector('[data-year-key="CE:1930"]').scrollIntoView({ behavior: 'instant', block: 'start' });`);
+      await client.evaluate(`document.querySelector('[data-year-key="CE:1290"]').scrollIntoView({ behavior: 'instant', block: 'start' });`);
       const topicsShot = path.join(os.tmpdir(), `ppsc-years-${name}-topics.png`);
       fs.writeFileSync(topicsShot, Buffer.from((await client.send("Page.captureScreenshot", { format: "png" })).data, "base64"));
       screenshots.push(topicsShot);
     }
-    await client.evaluate(`document.getElementById('years-topics-collapse').click();document.querySelector('.year-topics-year > summary').focus();`);
+    await client.evaluate(`document.getElementById('years-topics-collapse').click();document.getElementById('years-topics-clear').click();document.querySelector('.year-topics-year > summary').focus();`);
     await pause(50);
     assert.equal(await client.evaluate('document.querySelectorAll(".year-topics-year[open]").length'), 0);
     assert.equal(await client.evaluate('document.activeElement.tagName'), 'SUMMARY', 'Accordion not focused');
     await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: "Enter", code: "Enter", windowsVirtualKeyCode: 13, text: "\r", unmodifiedText: "\r" });
     await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: "Enter", code: "Enter", windowsVirtualKeyCode: 13 });
     await wait('document.querySelectorAll(".year-topics-year[open]").length === 1');
+    await client.evaluate(`document.querySelectorAll('.year-topics-year > summary')[1].focus()`);
+    await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: "Enter", code: "Enter", windowsVirtualKeyCode: 13, text: "\r", unmodifiedText: "\r" });
+    await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: "Enter", code: "Enter", windowsVirtualKeyCode: 13 });
+    await wait('document.querySelectorAll(".year-topics-year")[1].open && !document.querySelectorAll(".year-topics-year")[0].open && document.querySelectorAll(".year-topics-year[open]").length === 1');
     await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: " ", code: "Space", windowsVirtualKeyCode: 32, text: " " });
     await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: " ", code: "Space", windowsVirtualKeyCode: 32 });
     await wait('document.querySelectorAll(".year-topics-year[open]").length === 0');
