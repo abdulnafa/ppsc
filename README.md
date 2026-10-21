@@ -4,7 +4,15 @@ A category-wise PPSC General Ability practice website for GitHub Pages. Question
 
 ## Study Tools
 
-The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics**, **Pakistan Dams & Rivers** and **Pakistan Constitution Articles**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
+The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics**, **Pakistan Dams & Rivers**, **Pakistan Constitution Articles** and **Prime Ministers**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
+
+## Prime Ministers
+
+The read-only **Prime Ministers** tool includes **20 regular Pakistani PMs**, **8 caretakers**, and **27 selected foreign PMs across 13 countries**, with 67 reference sources checked on 21 October 2026. Pakistan entries follow first appointment, grouping a person's repeat tenures under one name; this is not official prime-minister numbering. Dates remain visible before expanding the Roman Urdu summary, exam facts and sources. World entries are selected historical/MCQ-related figures plus clearly identified broader revision facts, not an exhaustive or live list of every country's current leader. Current tenures are date-qualified; source differences and election-versus-oath dates are noted explicitly. Year-only ranges retain the source's precision.
+
+Search names, countries, years and facts, filter the three sections, or close all entries. `prime-ministers.js` loads `data/prime-ministers.js` only on opening the tool and renders facts on expansion. It never writes quiz, queue, learning, guest/owner storage or cloud state, and adds no new quiz questions or popups.
+
+Author content in `data/pakistan-prime-ministers.json` and `data/world-prime-ministers.json`. Run `node tools/build-prime-ministers.js` to generate the bundle, or `node tools/build-prime-ministers.js --check` to check deterministic output, dates, sources, canonical MCQ links and deployment coverage. `node tools/prime-ministers-browser-smoke.js` checks the full Home → Study Tools → Prime Ministers → Back → Continue flow, lazy-load retry, filters/search, keyboard, mobile/dark mode, guest isolation and unchanged saved practice. Automated validation does not replace editorial source checking.
 
 ## Pakistan Constitution Articles
 

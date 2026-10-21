@@ -201,6 +201,7 @@
     elements.yearsTopicsScreen = firstElement(["#years-topics-screen"]);
     elements.waterTopicsScreen = firstElement(["#water-topics-screen"]);
     elements.articlesTopicsScreen = firstElement(["#articles-topics-screen"]);
+    elements.primeMinistersScreen = firstElement(["#prime-ministers-screen"]);
     elements.paperSetupScreen = firstElement(["#paper-setup-screen", "[data-screen='paper-setup']"]);
     elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
     elements.quizScreen = firstElement(["#quiz-screen", "[data-screen='quiz']"]);
@@ -3730,6 +3731,7 @@
     setHidden(elements.yearsTopicsScreen, screenName !== "years-topics");
     setHidden(elements.waterTopicsScreen, screenName !== "water-topics");
     setHidden(elements.articlesTopicsScreen, screenName !== "articles-topics");
+    setHidden(elements.primeMinistersScreen, screenName !== "prime-ministers");
     setHidden(elements.paperSetupScreen, screenName !== "paper-setup");
     setHidden(elements.modeScreen, screenName !== "mode");
     setHidden(elements.quizScreen, screenName !== "quiz");
@@ -3749,6 +3751,8 @@
       ? elements.waterTopicsScreen
       : screenName === "articles-topics"
       ? elements.articlesTopicsScreen
+      : screenName === "prime-ministers"
+      ? elements.primeMinistersScreen
       : screenName === "paper-setup"
       ? elements.paperSetupScreen
       : screenName === "quiz"
@@ -6868,6 +6872,15 @@
   }
 
   function bindEvents() {
+    if (window.PPSC_PRIME_MINISTERS && elements.primeMinistersScreen) {
+      window.PPSC_PRIME_MINISTERS.init({
+        open: function () { showScreen("prime-ministers"); },
+        close: function () {
+          showScreen("categories");
+          updateContinueSessionUI();
+        }
+      });
+    }
     if (window.PPSC_ARTICLES_TOPICS && elements.articlesTopicsScreen) {
       window.PPSC_ARTICLES_TOPICS.init({
         categories: categories,

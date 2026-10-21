@@ -37,6 +37,8 @@ jobs:
           node --check water-topics.js
           node tools/build-pakistan-water-topics.js --check
           node tools/build-pakistan-articles-topics.js --check
+          node --check prime-ministers.js
+          node tools/build-prime-ministers.js --check
           node tools/validate-wgi.js --complete
           node tools/validate-site-data.js --expected=11892
           node tools/answer-text-migration-smoke.js
@@ -56,10 +58,12 @@ jobs:
           cp index.html styles.css app.js firebase-config.js firebase-sync.js _site/
           cp theme.js years-topics.js _site/
           cp water-topics.js _site/
+          cp prime-ministers.js _site/
           cp data/questions.js data/gk-study-notes.js data/detailed-learning.js _site/data/
           cp data/year-topics.js _site/data/
           cp data/pakistan-water-topics.js _site/data/
           cp data/pakistan-articles-topics.js _site/data/
+          cp data/prime-ministers.js _site/data/
           cp assets/fonts/*.woff2 _site/assets/fonts/
 
       - name: Upload static site
