@@ -708861,6 +708861,1436 @@
       "version": null,
       "reverifyAfter": null
     }
+  },
+  {
+    "id": "USR-Q0021-SRC",
+    "pairId": "USR-Q0021",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which civil award did Pakistan confer on UN Secretary-General António Guterres on 6 October 2026?",
+    "questionUrdu": "6 اکتوبر 2026 کو پاکستان نے اقوام متحدہ کے سیکرٹری جنرل انتونیو گوتریس کو کون سا سول اعزاز دیا؟",
+    "options": [
+      "Nishan-e-Pakistan",
+      "Nishan-e-Imtiaz",
+      "Hilal-e-Pakistan",
+      "Sitara-e-Imtiaz"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "صدر آصف علی زرداری نے 6 اکتوبر 2026 کو انتونیو گوتریس کو نشانِ امتیاز دیا۔ یہ اعزاز ان کی عالمی امن اور ترقی کے لیے خدمات کے اعتراف میں تھا۔",
+    "relatedHistoryUrdu": "گوتریس کو این ڈی ایم اے کے نیشنل ایمرجنسیز آپریشنز سینٹر میں بریفنگ دی گئی۔ موضوع آفات کی پیشگی اطلاع، تیاری اور مربوط امدادی کارروائی تھا۔ موجودہ سوال کے جواب ”Nishan-e-Imtiaz“ کو اس متعلقہ مستند حقیقت ”National Disaster Management Authority (NDMA)“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://pid.gov.pk/site/press_detail/34171",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan",
+      "referenceUrl": "https://pid.gov.pk/site/press_detail/34176",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "guterres-pakistan-visit"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Primary PID release dated 6 October 2026 and same-day news report read directly. This asks the award, not its national precedence. No past-paper repetition or importance claimed.",
+    "references": [
+      {
+        "url": "https://pid.gov.pk/site/press_detail/34176",
+        "label": "PID PR 61: Award for UN Secretary-General, 6 October 2026",
+        "publisher": "Press Information Department, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 6 October ceremony conferred Nishan-e-Imtiaz on António Guterres."
+      },
+      {
+        "url": "https://www.dawn.com/news/2035126/un-chief-guterres-arrives-in-pakistan-for-2-day-visit",
+        "label": "Pakistan visit",
+        "publisher": "Dawn",
+        "authorityId": "dawn",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Confirms Guterres's Nishan-e-Imtiaz award."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-06",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0021-SIM",
+    "pairId": "USR-Q0021",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which Pakistani authority briefed António Guterres at its National Emergencies Operations Centre on 6 October 2026?",
+    "questionUrdu": "6 اکتوبر 2026 کو کس پاکستانی ادارے نے اپنے نیشنل ایمرجنسیز آپریشنز سینٹر میں انتونیو گوتریس کو بریفنگ دی؟",
+    "options": [
+      "National Command and Operation Centre",
+      "Pakistan Meteorological Department",
+      "National Disaster Management Authority (NDMA)",
+      "Pakistan Nuclear Regulatory Authority (PNRA)"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "گوتریس کو این ڈی ایم اے کے نیشنل ایمرجنسیز آپریشنز سینٹر میں بریفنگ دی گئی۔ موضوع آفات کی پیشگی اطلاع، تیاری اور مربوط امدادی کارروائی تھا۔",
+    "relatedHistoryUrdu": "صدر آصف علی زرداری نے 6 اکتوبر 2026 کو انتونیو گوتریس کو نشانِ امتیاز دیا۔ یہ اعزاز ان کی عالمی امن اور ترقی کے لیے خدمات کے اعتراف میں تھا۔ موجودہ سوال کے جواب ”National Disaster Management Authority (NDMA)“ کو اس متعلقہ مستند حقیقت ”Nishan-e-Imtiaz“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://pid.gov.pk/site/press_detail/34176",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan — related practice",
+      "referenceUrl": "https://pid.gov.pk/site/press_detail/34171",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "guterres-pakistan-visit"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Distinct related fact: disaster-management briefing institution. The full PID release, not the differently worded visit-duration news headline, supplies the NEOC detail.",
+    "references": [
+      {
+        "url": "https://pid.gov.pk/site/press_detail/34171",
+        "label": "PID PR 56: Guterres visits NDMA headquarters, 6 October 2026",
+        "publisher": "Press Information Department, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "NDMA briefed Guterres at its National Emergencies Operations Centre on 6 October 2026."
+      },
+      {
+        "url": "https://www.dawn.com/news/2035126/un-chief-guterres-arrives-in-pakistan-for-2-day-visit",
+        "label": "Pakistan visit",
+        "publisher": "Dawn",
+        "authorityId": "dawn",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Confirms his NDMA visit."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-06",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0022-SRC",
+    "pairId": "USR-Q0022",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Pakistan's October 2026 IMF staff-level agreement covered which Extended Fund Facility (EFF) and Resilience and Sustainability Facility (RSF) reviews?",
+    "questionUrdu": "اکتوبر 2026 میں پاکستان اور آئی ایم ایف کا اسٹاف لیول معاہدہ ای ایف ایف اور آر ایس ایف کے کن جائزوں سے متعلق تھا؟",
+    "options": [
+      "Second EFF review and first RSF review",
+      "Third EFF review and second RSF review",
+      "Fourth EFF review and third RSF review",
+      "Fifth EFF review and fourth RSF review"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "معاہدہ ای ایف ایف کے چوتھے اور آر ایس ایف کے تیسرے جائزے سے متعلق تھا۔ اسٹاف لیول اتفاق کے بعد رقم کے اجرا کے لیے آئی ایم ایف ایگزیکٹو بورڈ کی منظوری لازم تھی۔",
+    "relatedHistoryUrdu": "صرف ای ایف ایف کے تحت تقریباً ایک ارب ڈالر دستیاب ہونا تھے۔ آر ایس ایف کے تقریباً 21 کروڑ ڈالر الگ تھے؛ دونوں رقوم بورڈ کی منظوری سے مشروط تھیں۔ موجودہ سوال کے جواب ”Fourth EFF review and third RSF review“ کو اس متعلقہ مستند حقیقت ”About US$1 billion“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan",
+      "referenceUrl": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "imf-october-reviews"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "IMF publication date 7 October 2026; Pakistani corroborating article published 8 October 2026. Question uses the month to avoid confusing publication dates. Staff agreement is not final disbursement.",
+    "references": [
+      {
+        "url": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+        "label": "IMF staff agreement announcement, 7 October 2026",
+        "publisher": "International Monetary Fund",
+        "authorityId": "imf",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "October staff agreement covers the fourth EFF and third RSF reviews, subject to Executive Board approval."
+      },
+      {
+        "url": "https://dailytimes.com.pk/1564148/imf-agreement-clears-path-for-1-21bn-pakistan-funding/",
+        "label": "Daily Times: Conditional IMF financing, 8 October 2026",
+        "publisher": "Daily Times",
+        "authorityId": "daily-times",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The report identifies fourth EFF and third RSF reviews and the remaining Board approval."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-07",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0022-SIM",
+    "pairId": "USR-Q0022",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Under Pakistan's October 2026 IMF staff-level agreement, how much would become available under the EFF alone after Executive Board approval?",
+    "questionUrdu": "اکتوبر 2026 کے آئی ایم ایف اسٹاف لیول معاہدے کے تحت ایگزیکٹو بورڈ کی منظوری کے بعد صرف ای ایف ایف سے تقریباً کتنی رقم دستیاب ہونا تھی؟",
+    "options": [
+      "About US$210 million",
+      "About US$1 billion",
+      "About US$7 billion",
+      "About US$500 million"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "صرف ای ایف ایف کے تحت تقریباً ایک ارب ڈالر دستیاب ہونا تھے۔ آر ایس ایف کے تقریباً 21 کروڑ ڈالر الگ تھے؛ دونوں رقوم بورڈ کی منظوری سے مشروط تھیں۔",
+    "relatedHistoryUrdu": "معاہدہ ای ایف ایف کے چوتھے اور آر ایس ایف کے تیسرے جائزے سے متعلق تھا۔ اسٹاف لیول اتفاق کے بعد رقم کے اجرا کے لیے آئی ایم ایف ایگزیکٹو بورڈ کی منظوری لازم تھی۔ موجودہ سوال کے جواب ”About US$1 billion“ کو اس متعلقہ مستند حقیقت ”Fourth EFF review and third RSF review“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan — related practice",
+      "referenceUrl": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "imf-october-reviews"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Distinct related fact: the conditional EFF-only amount, not combined financing, total programme size or already disbursed funds. Historical announcement terms are preserved.",
+    "references": [
+      {
+        "url": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+        "label": "IMF staff agreement announcement, 7 October 2026",
+        "publisher": "International Monetary Fund",
+        "authorityId": "imf",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The agreement envisages approximately US$1 billion under EFF, separate from US$210 million under RSF, after Board approval."
+      },
+      {
+        "url": "https://dailytimes.com.pk/1564148/imf-agreement-clears-path-for-1-21bn-pakistan-funding/",
+        "label": "Daily Times: Conditional IMF financing, 8 October 2026",
+        "publisher": "Daily Times",
+        "authorityId": "daily-times",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "EFF-only access is about US$1 billion, contingent on Executive Board approval."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-07",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0023-SRC",
+    "pairId": "USR-Q0023",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which international agency completed its first International Physical Protection Advisory Service (IPPAS) mission to Pakistan on 9 October 2026?",
+    "questionUrdu": "9 اکتوبر 2026 کو کس عالمی ادارے نے پاکستان میں اپنا پہلا انٹرنیشنل فزیکل پروٹیکشن ایڈوائزری سروس مشن مکمل کیا؟",
+    "options": [
+      "International Atomic Energy Agency (IAEA)",
+      "International Renewable Energy Agency (IRENA)",
+      "Organisation for the Prohibition of Chemical Weapons (OPCW)",
+      "United Nations Environment Programme (UNEP)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "یہ آئی اے ای اے کا پاکستان کے لیے پہلا آئی پی پی اے ایس مشن تھا۔ اس میں جوہری مواد اور تنصیبات کے جسمانی تحفظ کے نظام کا جائزہ لیا گیا۔",
+    "relatedHistoryUrdu": "مشن کی میزبان پاکستان نیوکلیئر ریگولیٹری اتھارٹی تھی۔ پاکستان اٹامک انرجی کمیشن اور دوسرے متعلقہ اداروں نے تعاون کیا، مگر میزبان ادارہ پی این آر اے تھا۔ موجودہ سوال کے جواب ”International Atomic Energy Agency (IAEA)“ کو اس متعلقہ مستند حقیقت ”Pakistan Nuclear Regulatory Authority (PNRA)“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan",
+      "referenceUrl": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "first-ippas-pakistan"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "IAEA release and news report read directly. Event is mission completion on 9 October 2026. Completion city is intentionally not tested because the reports differ on that detail.",
+    "references": [
+      {
+        "url": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+        "label": "IAEA completes first IPPAS mission to Pakistan, 9 October 2026",
+        "publisher": "International Atomic Energy Agency",
+        "authorityId": "iaea",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "IAEA completed Pakistan's first IPPAS mission on 9 October 2026, following a 12-day review."
+      },
+      {
+        "url": "https://www.radio.gov.pk/09-10-2026/iaeas-physical-protection-advisory-service-mission-concludes-in-pakistan",
+        "label": "Radio Pakistan: IPPAS mission conclusion, 9 October 2026",
+        "publisher": "Radio Pakistan",
+        "authorityId": "pakistan-broadcasting-corporation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The broadcaster identifies IAEA and confirms completion of its first IPPAS mission to Pakistan."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-09",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0023-SIM",
+    "pairId": "USR-Q0023",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which Pakistani institution hosted the first IAEA IPPAS mission that concluded on 9 October 2026?",
+    "questionUrdu": "9 اکتوبر 2026 کو مکمل ہونے والے آئی اے ای اے کے پہلے آئی پی پی اے ایس مشن کی میزبانی کس پاکستانی ادارے نے کی؟",
+    "options": [
+      "Pakistan Nuclear Regulatory Authority (PNRA)",
+      "Space and Upper Atmosphere Research Commission (SUPARCO)",
+      "Pakistan Atomic Energy Commission (PAEC)",
+      "National Disaster Management Authority (NDMA)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "مشن کی میزبان پاکستان نیوکلیئر ریگولیٹری اتھارٹی تھی۔ پاکستان اٹامک انرجی کمیشن اور دوسرے متعلقہ اداروں نے تعاون کیا، مگر میزبان ادارہ پی این آر اے تھا۔",
+    "relatedHistoryUrdu": "یہ آئی اے ای اے کا پاکستان کے لیے پہلا آئی پی پی اے ایس مشن تھا۔ اس میں جوہری مواد اور تنصیبات کے جسمانی تحفظ کے نظام کا جائزہ لیا گیا۔ موجودہ سوال کے جواب ”Pakistan Nuclear Regulatory Authority (PNRA)“ کو اس متعلقہ مستند حقیقت ”International Atomic Energy Agency (IAEA)“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan — related practice",
+      "referenceUrl": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "first-ippas-pakistan"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Distinct related fact: national host institution, not international mission provider. PAEC participated but PNRA hosted; neither record states that PAEC was the host.",
+    "references": [
+      {
+        "url": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+        "label": "IAEA completes first IPPAS mission to Pakistan, 9 October 2026",
+        "publisher": "International Atomic Energy Agency",
+        "authorityId": "iaea",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "IAEA names PNRA as host of the first Pakistan IPPAS mission completed on 9 October 2026."
+      },
+      {
+        "url": "https://www.radio.gov.pk/09-10-2026/iaeas-physical-protection-advisory-service-mission-concludes-in-pakistan",
+        "label": "Radio Pakistan: IPPAS mission conclusion, 9 October 2026",
+        "publisher": "Radio Pakistan",
+        "authorityId": "pakistan-broadcasting-corporation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "PNRA hosted the mission in coordination with PAEC and other organizations."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-09",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0024-SRC",
+    "pairId": "USR-Q0024",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which country assumed the chairmanship of the Governing Council of the Borrowers' Platform on 12 October 2026?",
+    "questionUrdu": "12 اکتوبر 2026 کو کس ملک نے قرض لینے والے ممالک کے پلیٹ فارم کی گورننگ کونسل کی چیئرمین شپ سنبھالی؟",
+    "options": [
+      "Egypt",
+      "Pakistan",
+      "Nepal",
+      "Zambia"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "پاکستان نے گورننگ کونسل کی چیئرمین شپ سنبھالی۔ وزیر خزانہ محمد اورنگزیب نے بنکاک میں پاکستان کی جانب سے یہ ذمہ داری قبول کی۔",
+    "relatedHistoryUrdu": "پلیٹ فارم کا کردار قرض کے انتظام پر باہمی تجربات اور فنی تعاون تھا۔ اسے مشترکہ سودے بازی یا قرض کے بحران کا انتظام کرنے والا ادارہ نہیں بتایا گیا۔ موجودہ سوال کے جواب ”Pakistan“ کو اس متعلقہ مستند حقیقت ”Mutual learning and technical cooperation on debt management“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://pid.gov.pk/site/press_detail/34251",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan",
+      "referenceUrl": "https://pid.gov.pk/site/press_detail/34251",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "borrowers-platform"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "New October event, not the platform's earlier April launch. Both primary release and independent newspaper report were published on 12 October 2026 and read directly.",
+    "references": [
+      {
+        "url": "https://pid.gov.pk/site/press_detail/34251",
+        "label": "PID PR 135: Borrowers' Platform chairmanship, 12 October 2026",
+        "publisher": "Press Information Department, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Muhammad Aurangzeb accepted the governing-council chairmanship on Pakistan's behalf in Bangkok on 12 October 2026."
+      },
+      {
+        "url": "https://profit.pakistantoday.com.pk/2026/10/12/pakistan-assumes-chairmanship-of-borrowers-platform-governing-council",
+        "label": "Profit: Pakistan assumes Borrowers' Platform chairmanship, 12 October 2026",
+        "publisher": "Profit by Pakistan Today",
+        "authorityId": "pakistan-today",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Pakistan assumed the Borrowers' Platform governing-council chairmanship through Finance Minister Aurangzeb."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-12",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0024-SIM",
+    "pairId": "USR-Q0024",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "When accepting the Borrowers' Platform chairmanship on 12 October 2026, what did Pakistan describe as the platform's role?",
+    "questionUrdu": "12 اکتوبر 2026 کو چیئرمین شپ قبول کرتے ہوئے پاکستان نے قرض لینے والے ممالک کے پلیٹ فارم کا کیا کردار بیان کیا؟",
+    "options": [
+      "Imposing mandatory lending conditions on countries",
+      "Collectively negotiating every member's debt restructuring",
+      "Replacing the IMF as an emergency lender",
+      "Mutual learning and technical cooperation on debt management"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "پلیٹ فارم کا کردار قرض کے انتظام پر باہمی تجربات اور فنی تعاون تھا۔ اسے مشترکہ سودے بازی یا قرض کے بحران کا انتظام کرنے والا ادارہ نہیں بتایا گیا۔",
+    "relatedHistoryUrdu": "پاکستان نے گورننگ کونسل کی چیئرمین شپ سنبھالی۔ وزیر خزانہ محمد اورنگزیب نے بنکاک میں پاکستان کی جانب سے یہ ذمہ داری قبول کی۔ موجودہ سوال کے جواب ”Mutual learning and technical cooperation on debt management“ کو اس متعلقہ مستند حقیقت ”Pakistan“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://pid.gov.pk/site/press_detail/34251",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan — related practice",
+      "referenceUrl": "https://pid.gov.pk/site/press_detail/34251",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "borrowers-platform"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Distinct related fact: stated purpose and limits. This does not claim automatic debt relief, collective debt negotiations or new lending authority.",
+    "references": [
+      {
+        "url": "https://pid.gov.pk/site/press_detail/34251",
+        "label": "PID PR 135: Borrowers' Platform chairmanship, 12 October 2026",
+        "publisher": "Press Information Department, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The minister distinguished mutual learning and technical cooperation from collective bargaining and crisis management."
+      },
+      {
+        "url": "https://profit.pakistantoday.com.pk/2026/10/12/pakistan-assumes-chairmanship-of-borrowers-platform-governing-council",
+        "label": "Profit: Pakistan assumes Borrowers' Platform chairmanship, 12 October 2026",
+        "publisher": "Profit by Pakistan Today",
+        "authorityId": "pakistan-today",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The platform's described role was technical cooperation and mutual learning, not collective bargaining or crisis management."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-12",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0025-SRC",
+    "pairId": "USR-Q0025",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Who was announced on 16 October 2026 as incoming Chair of the IMF and World Bank Group Boards of Governors for 2027?",
+    "questionUrdu": "16 اکتوبر 2026 کو 2027 کے لیے آئی ایم ایف اور ورلڈ بینک گروپ کے بورڈز آف گورنرز کا آئندہ چیئرمین کس کو نامزد کیا گیا؟",
+    "options": [
+      "Ahad Khan Cheema",
+      "Muhammad Aurangzeb",
+      "Jameel Ahmad",
+      "Ahsan Iqbal"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "احد خان چیمہ کو 2027 کے لیے آئندہ چیئرمین نامزد کیا گیا۔ اکتوبر 2026 کی خبر مستقبل کی اس ذمہ داری کا اعلان تھی، عہدہ سنبھالنے کی خبر نہیں۔",
+    "relatedHistoryUrdu": "اعلان تھائی لینڈ کے شہر بنکاک میں ہوا۔ یہ 2026 کے ورلڈ بینک اور آئی ایم ایف سالانہ اجلاسوں کے مرکزی اجلاس میں کیا گیا تھا۔ موجودہ سوال کے جواب ”Ahad Khan Cheema“ کو اس متعلقہ مستند حقیقت ”Bangkok“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan",
+      "referenceUrl": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "imf-world-bank-chair-2027"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Temporal scope records the 16 October 2026 announcement. The role is explicitly incoming for 2027, not already held in October 2026. Boards of Governors chair is not chief executive.",
+    "references": [
+      {
+        "url": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+        "label": "EAD: Incoming 2027 IMF-WBG boards chair, 16 October 2026",
+        "publisher": "Ministry of Economic Affairs, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Ahad Khan Cheema was announced as incoming Boards of Governors chair for 2027 on 16 October 2026."
+      },
+      {
+        "url": "https://tribune.com.pk/story/2635184/pakistan-to-chair-imf-world-bank-boards-in-2027-for-first-time-since-1953",
+        "label": "2027 chair announcement",
+        "publisher": "The Express Tribune",
+        "authorityId": "express-tribune",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Names Cheema as incoming chair."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-16",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0025-SIM",
+    "pairId": "USR-Q0025",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "In which city was Ahad Khan Cheema announced as incoming 2027 IMF-World Bank Boards of Governors chair on 16 October 2026?",
+    "questionUrdu": "16 اکتوبر 2026 کو کس شہر میں احد خان چیمہ کو 2027 کے لیے آئی ایم ایف اور ورلڈ بینک کے بورڈز آف گورنرز کا آئندہ چیئرمین نامزد کرنے کا اعلان ہوا؟",
+    "options": [
+      "Washington, D.C.",
+      "Marrakesh",
+      "Bangkok",
+      "Singapore"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "اعلان تھائی لینڈ کے شہر بنکاک میں ہوا۔ یہ 2026 کے ورلڈ بینک اور آئی ایم ایف سالانہ اجلاسوں کے مرکزی اجلاس میں کیا گیا تھا۔",
+    "relatedHistoryUrdu": "احد خان چیمہ کو 2027 کے لیے آئندہ چیئرمین نامزد کیا گیا۔ اکتوبر 2026 کی خبر مستقبل کی اس ذمہ داری کا اعلان تھی، عہدہ سنبھالنے کی خبر نہیں۔ موجودہ سوال کے جواب ”Bangkok“ کو اس متعلقہ مستند حقیقت ”Ahad Khan Cheema“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan — related practice",
+      "referenceUrl": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "imf-world-bank-chair-2027"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Distinct related fact: announcement venue. The event date is in October 2026 although the announced chairmanship is for 2027.",
+    "references": [
+      {
+        "url": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+        "label": "EAD: Incoming 2027 IMF-WBG boards chair, 16 October 2026",
+        "publisher": "Ministry of Economic Affairs, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The announcement was made at the 2026 annual-meetings plenary in Bangkok on 16 October."
+      },
+      {
+        "url": "https://tribune.com.pk/story/2635184/pakistan-to-chair-imf-world-bank-boards-in-2027-for-first-time-since-1953",
+        "label": "2027 chair announcement",
+        "publisher": "The Express Tribune",
+        "authorityId": "express-tribune",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Confirms Bangkok as announcement venue."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-16",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0026-SRC",
+    "pairId": "USR-Q0026",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which trio was announced as the 2026 Nobel Prize in Physiology or Medicine laureates on 5 October 2026?",
+    "questionUrdu": "5 اکتوبر 2026 کو طب یا فعلیات کے نوبیل انعام کے لیے کن تین سائنس دانوں کے ناموں کا اعلان ہوا؟",
+    "options": [
+      "Mary E. Brunkow, Fred Ramsdell and Shimon Sakaguchi",
+      "Karl Deisseroth, Peter Hegemann and Georg Nagel",
+      "Victor Ambros, Gary Ruvkun and Svante Paabo",
+      "Katalin Kariko, Drew Weissman and James P. Allison"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "کارل ڈائسراتھ، پیٹر ہیگمین اور گیورگ ناگل کو 2026 کے طب یا فعلیات کے نوبیل انعام کے لیے منتخب کیا گیا۔ ان کی تحقیق روشنی کے ذریعے عصبی خلیوں کی سرگرمی قابو کرنے سے متعلق ہے۔ 5 اکتوبر اعلان کی تاریخ ہے۔",
+    "relatedHistoryUrdu": "درست جواب اوپٹوجینیٹکس ہے۔ اس تکنیک میں روشنی کے لیے حساس پروٹین استعمال کرکے منتخب عصبی خلیوں کی سرگرمی بڑھائی یا روکی جا سکتی ہے۔ موجودہ سوال کے جواب ”Karl Deisseroth, Peter Hegemann and Georg Nagel“ کو اس متعلقہ مستند حقیقت ”Optogenetics“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://news.stanford.edu/stories/2026/10/karl-deisseroth-nobel-prize-physiology-medicine",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested October 2026 Current Affairs — researched event",
+      "referenceUrl": "https://news.stanford.edu/stories/2026/10/karl-deisseroth-nobel-prize-physiology-medicine",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "october-2026",
+      "nobel-medicine-2026"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "User-requested October 2026 news supplement, not a question transcribed from a supplied paper. The paired item tests a distinct related fact. The event date is the Nobel announcement date, not the December award ceremony. Sources were checked on 21 October 2026; no past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://news.stanford.edu/stories/2026/10/karl-deisseroth-nobel-prize-physiology-medicine",
+        "label": "Karl Deisseroth awarded 2026 Nobel Prize in physiology or medicine",
+        "publisher": "Stanford University",
+        "authorityId": "stanford-university",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Identifies Deisseroth, Hegemann and Nagel as the 2026 laureates and explains optogenetic control of neurons using light."
+      },
+      {
+        "url": "https://www.nature.com/articles/d41586-026-03091-2",
+        "label": "Medicine Nobel awarded for brain switch that controls neurons with light",
+        "publisher": "Nature",
+        "authorityId": "springer-nature",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 5 October 2026 report names all three medicine laureates and describes optogenetics as controlling neurons with light."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-05",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0026-SIM",
+    "pairId": "USR-Q0026",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which technique, recognized by the 2026 Nobel Prize in Physiology or Medicine, allows researchers to control nerve-cell activity using light?",
+    "questionUrdu": "2026 کے طب یا فعلیات کے نوبیل انعام میں تسلیم کی گئی کون سی تکنیک روشنی کے ذریعے عصبی خلیوں کی سرگرمی قابو کرنے دیتی ہے؟",
+    "options": [
+      "Optogenetics",
+      "Magnetic resonance imaging",
+      "Polymerase chain reaction",
+      "X-ray crystallography"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب اوپٹوجینیٹکس ہے۔ اس تکنیک میں روشنی کے لیے حساس پروٹین استعمال کرکے منتخب عصبی خلیوں کی سرگرمی بڑھائی یا روکی جا سکتی ہے۔ اسے دماغ کی عمومی عکس بندی کی تکنیکوں سے الگ سمجھیں۔",
+    "relatedHistoryUrdu": "کارل ڈائسراتھ، پیٹر ہیگمین اور گیورگ ناگل کو 2026 کے طب یا فعلیات کے نوبیل انعام کے لیے منتخب کیا گیا۔ ان کی تحقیق روشنی کے ذریعے عصبی خلیوں کی سرگرمی قابو کرنے سے متعلق ہے۔ موجودہ سوال کے جواب ”Optogenetics“ کو اس متعلقہ مستند حقیقت ”Karl Deisseroth, Peter Hegemann and Georg Nagel“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://news.stanford.edu/stories/2026/10/karl-deisseroth-nobel-prize-physiology-medicine",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested October 2026 Current Affairs — related practice",
+      "referenceUrl": "https://news.stanford.edu/stories/2026/10/karl-deisseroth-nobel-prize-physiology-medicine",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "october-2026",
+      "nobel-medicine-2026"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "User-requested October 2026 news supplement, not a question transcribed from a supplied paper. The paired item tests a distinct related fact. The event date is the Nobel announcement date, not the December award ceremony. Sources were checked on 21 October 2026; no past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://news.stanford.edu/stories/2026/10/karl-deisseroth-nobel-prize-physiology-medicine",
+        "label": "Karl Deisseroth awarded 2026 Nobel Prize in physiology or medicine",
+        "publisher": "Stanford University",
+        "authorityId": "stanford-university",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Identifies Deisseroth, Hegemann and Nagel as the 2026 laureates and explains optogenetic control of neurons using light."
+      },
+      {
+        "url": "https://www.nature.com/articles/d41586-026-03091-2",
+        "label": "Medicine Nobel awarded for brain switch that controls neurons with light",
+        "publisher": "Nature",
+        "authorityId": "springer-nature",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 5 October 2026 report names all three medicine laureates and describes optogenetics as controlling neurons with light."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-05",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0027-SRC",
+    "pairId": "USR-Q0027",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Who was announced as the 2026 Nobel Prize in Physics laureate on 6 October 2026?",
+    "questionUrdu": "6 اکتوبر 2026 کو طبیعیات کے نوبیل انعام کے لیے کس سائنس دان کے نام کا اعلان ہوا؟",
+    "options": [
+      "Alain Aspect",
+      "Roger Penrose",
+      "Geoffrey Hinton",
+      "Francis Halzen"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "فرانسس ہالزن کو 2026 کے طبیعیات کے نوبیل انعام کے لیے منتخب کیا گیا۔ ان کا اعزاز آئس کیوب رصدگاہ اور کائناتی ذرائع سے آنے والے بلند توانائی کے نیوٹرینو کی دریافت سے متعلق ہے۔ 6 اکتوبر انعام کے اعلان کی تاریخ ہے۔",
+    "relatedHistoryUrdu": "درست جواب آئس کیوب نیوٹرینو آبزرویٹری ہے۔ قطب جنوبی کی گہری برف میں نصب اس کے آلات نیوٹرینو کے تعامل سے پیدا ہونے والے اشارے معلوم کرتے ہیں۔ موجودہ سوال کے جواب ”Francis Halzen“ کو اس متعلقہ مستند حقیقت ”IceCube Neutrino Observatory“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nsf.gov/mps/updates/2026-nobel-prize-physics-awarded-nsf-icecube-neutrino",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested October 2026 Current Affairs — researched event",
+      "referenceUrl": "https://www.nsf.gov/mps/updates/2026-nobel-prize-physics-awarded-nsf-icecube-neutrino",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "october-2026",
+      "nobel-physics-2026"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "User-requested October 2026 news supplement, not a question transcribed from a supplied paper. The paired item tests a distinct related fact. The event date is the Nobel announcement date, not the December award ceremony. Sources were checked on 21 October 2026; no past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nsf.gov/mps/updates/2026-nobel-prize-physics-awarded-nsf-icecube-neutrino",
+        "label": "2026 Nobel Prize in physics awarded for NSF IceCube neutrino discoveries",
+        "publisher": "U.S. National Science Foundation",
+        "authorityId": "us-nsf",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 6 October 2026 statement identifies Francis Halzen as the physics laureate for IceCube and high-energy astrophysical neutrino discoveries."
+      },
+      {
+        "url": "https://amp.dw.com/en/nobel-physics-prize-goes-to-francis-halzen-for-neutrino-work/a-79561506",
+        "label": "Nobel Physics Prize goes to Francis Halzen for neutrino work",
+        "publisher": "Deutsche Welle",
+        "authorityId": "deutsche-welle",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 6 October 2026 report confirms Halzen's physics award and identifies the IceCube Neutrino Observatory in Antarctica."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-06",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0027-SIM",
+    "pairId": "USR-Q0027",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which observatory was central to the astrophysical-neutrino discoveries recognized by the 2026 Nobel Prize in Physics?",
+    "questionUrdu": "2026 کے طبیعیات کے نوبیل انعام میں تسلیم کی گئی کائناتی نیوٹرینو کی دریافتوں میں کون سی رصدگاہ بنیادی حیثیت رکھتی تھی؟",
+    "options": [
+      "IceCube Neutrino Observatory",
+      "LIGO",
+      "James Webb Space Telescope",
+      "Event Horizon Telescope"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "درست جواب آئس کیوب نیوٹرینو آبزرویٹری ہے۔ قطب جنوبی کی گہری برف میں نصب اس کے آلات نیوٹرینو کے تعامل سے پیدا ہونے والے اشارے معلوم کرتے ہیں۔ فرانسس ہالزن کا 2026 کا نوبیل اعزاز اسی تحقیق سے جڑا ہے۔",
+    "relatedHistoryUrdu": "فرانسس ہالزن کو 2026 کے طبیعیات کے نوبیل انعام کے لیے منتخب کیا گیا۔ ان کا اعزاز آئس کیوب رصدگاہ اور کائناتی ذرائع سے آنے والے بلند توانائی کے نیوٹرینو کی دریافت سے متعلق ہے۔ موجودہ سوال کے جواب ”IceCube Neutrino Observatory“ کو اس متعلقہ مستند حقیقت ”Francis Halzen“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nsf.gov/mps/updates/2026-nobel-prize-physics-awarded-nsf-icecube-neutrino",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested October 2026 Current Affairs — related practice",
+      "referenceUrl": "https://www.nsf.gov/mps/updates/2026-nobel-prize-physics-awarded-nsf-icecube-neutrino",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "october-2026",
+      "nobel-physics-2026"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "User-requested October 2026 news supplement, not a question transcribed from a supplied paper. The paired item tests a distinct related fact. The event date is the Nobel announcement date, not the December award ceremony. Sources were checked on 21 October 2026; no past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nsf.gov/mps/updates/2026-nobel-prize-physics-awarded-nsf-icecube-neutrino",
+        "label": "2026 Nobel Prize in physics awarded for NSF IceCube neutrino discoveries",
+        "publisher": "U.S. National Science Foundation",
+        "authorityId": "us-nsf",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 6 October 2026 statement identifies Francis Halzen as the physics laureate for IceCube and high-energy astrophysical neutrino discoveries."
+      },
+      {
+        "url": "https://amp.dw.com/en/nobel-physics-prize-goes-to-francis-halzen-for-neutrino-work/a-79561506",
+        "label": "Nobel Physics Prize goes to Francis Halzen for neutrino work",
+        "publisher": "Deutsche Welle",
+        "authorityId": "deutsche-welle",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 6 October 2026 report confirms Halzen's physics award and identifies the IceCube Neutrino Observatory in Antarctica."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-06",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0028-SRC",
+    "pairId": "USR-Q0028",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Who shared the 2026 Nobel Prize in Chemistry announced on 7 October 2026?",
+    "questionUrdu": "7 اکتوبر 2026 کے اعلان کے مطابق کیمیا کا نوبیل انعام کن دو سائنس دانوں نے مشترکہ طور پر جیتا؟",
+    "options": [
+      "Benjamin List and David MacMillan",
+      "Henri B. Kagan and Kenso Soai",
+      "John Goodenough and Stanley Whittingham",
+      "Emmanuelle Charpentier and Jennifer Doudna"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "ہنری بی کیگن اور کینسو سوائی کو 2026 کا کیمیا کا نوبیل انعام مشترکہ طور پر دیا گیا۔ 7 اکتوبر کو اس انتخاب کا اعلان ہوا۔ ان کی تحقیق غیر متناسب نامیاتی تالیف میں ایک سالماتی شکل کو غالب بنانے سے متعلق ہے۔",
+    "relatedHistoryUrdu": "یہ اعزاز غیر متناسب نامیاتی تالیف میں غیر خطی اثرات اور خود اتپریرک عمل کی دریافت پر دیا گیا۔ اس تحقیق سے سمجھ آتی ہے کہ کیمیائی عمل آئینے جیسی دو سالماتی شکلوں میں سے ایک کو بڑی مقدار میں کیسے پیدا کر سکتا ہے۔ موجودہ سوال کے جواب ”Henri B. Kagan and Kenso Soai“ کو اس متعلقہ مستند حقیقت ”Nonlinear effects and autocatalysis in asymmetric organic synthesis“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.kva.se/en/news/the-nobel-prize-in-chemistry-2026/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested October 2026 Current Affairs — researched event",
+      "referenceUrl": "https://www.kva.se/en/news/the-nobel-prize-in-chemistry-2026/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "october-2026",
+      "nobel-chemistry-2026"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "User-requested October 2026 news supplement, not a question transcribed from a supplied paper. The paired item tests a distinct related fact. The event date is the Nobel announcement date, not the December award ceremony. Sources were checked on 21 October 2026; no past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.kva.se/en/news/the-nobel-prize-in-chemistry-2026/",
+        "label": "The Nobel Prize in Chemistry 2026",
+        "publisher": "Royal Swedish Academy of Sciences",
+        "authorityId": "royal-swedish-academy-sciences",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The awarding academy's 7 October announcement names Henri B. Kagan and Kenso Soai for nonlinear effects and autocatalysis in asymmetric organic synthesis."
+      },
+      {
+        "url": "https://www.theguardian.com/science/2026/oct/07/nobel-prize-chemistry-awarded-work-on-mirror-image-molecules",
+        "label": "Chemistry Nobel 2026",
+        "publisher": "The Guardian",
+        "authorityId": "guardian",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Confirms Kagan/Soai's award and discovery."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-07",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0028-SIM",
+    "pairId": "USR-Q0028",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "The 2026 Nobel Prize in Chemistry recognized discoveries concerning which process?",
+    "questionUrdu": "2026 کے کیمیا کے نوبیل انعام میں کس عمل سے متعلق دریافتوں کو تسلیم کیا گیا؟",
+    "options": [
+      "Development of metal-organic frameworks",
+      "Discovery and synthesis of quantum dots",
+      "Development of lithium-ion batteries",
+      "Nonlinear effects and autocatalysis in asymmetric organic synthesis"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "یہ اعزاز غیر متناسب نامیاتی تالیف میں غیر خطی اثرات اور خود اتپریرک عمل کی دریافت پر دیا گیا۔ اس تحقیق سے سمجھ آتی ہے کہ کیمیائی عمل آئینے جیسی دو سالماتی شکلوں میں سے ایک کو بڑی مقدار میں کیسے پیدا کر سکتا ہے۔",
+    "relatedHistoryUrdu": "ہنری بی کیگن اور کینسو سوائی کو 2026 کا کیمیا کا نوبیل انعام مشترکہ طور پر دیا گیا۔ 7 اکتوبر کو اس انتخاب کا اعلان ہوا۔ موجودہ سوال کے جواب ”Nonlinear effects and autocatalysis in asymmetric organic synthesis“ کو اس متعلقہ مستند حقیقت ”Henri B. Kagan and Kenso Soai“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.kva.se/en/news/the-nobel-prize-in-chemistry-2026/",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested October 2026 Current Affairs — related practice",
+      "referenceUrl": "https://www.kva.se/en/news/the-nobel-prize-in-chemistry-2026/",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "october-2026",
+      "nobel-chemistry-2026"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "User-requested October 2026 news supplement, not a question transcribed from a supplied paper. The paired item tests a distinct related fact. The event date is the Nobel announcement date, not the December award ceremony. Sources were checked on 21 October 2026; no past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.kva.se/en/news/the-nobel-prize-in-chemistry-2026/",
+        "label": "The Nobel Prize in Chemistry 2026",
+        "publisher": "Royal Swedish Academy of Sciences",
+        "authorityId": "royal-swedish-academy-sciences",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The awarding academy's 7 October announcement names Henri B. Kagan and Kenso Soai for nonlinear effects and autocatalysis in asymmetric organic synthesis."
+      },
+      {
+        "url": "https://www.theguardian.com/science/2026/oct/07/nobel-prize-chemistry-awarded-work-on-mirror-image-molecules",
+        "label": "Chemistry Nobel 2026",
+        "publisher": "The Guardian",
+        "authorityId": "guardian",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Confirms Kagan/Soai's award and discovery."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-07",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0029-SRC",
+    "pairId": "USR-Q0029",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Who was announced as the 2026 Nobel Prize in Literature laureate on 8 October 2026?",
+    "questionUrdu": "8 اکتوبر 2026 کو ادب کے نوبیل انعام کے لیے کس مصنفہ کے نام کا اعلان ہوا؟",
+    "options": [
+      "Margaret Atwood",
+      "Haruki Murakami",
+      "Salman Rushdie",
+      "Anne Carson"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "این کارسن کو 2026 کے ادب کے نوبیل انعام کے لیے منتخب کیا گیا۔ ان کی تحریروں میں قدیم ادبی روایت اور جدید اظہار یکجا ہوتے ہیں۔ انتخاب کا اعلان 8 اکتوبر 2026 کو ہوا۔",
+    "relatedHistoryUrdu": "این کارسن کینیڈا کی شاعرہ، مضمون نگار اور مترجم ہیں۔ ان کا 2026 کا ادب کا نوبیل انعام اور کینیڈا سے تعلق ایک ساتھ یاد رکھیں۔ موجودہ سوال کے جواب ”Anne Carson“ کو اس متعلقہ مستند حقیقت ”Canada“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.svenskaakademien.se/nobelpriset/2026",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested October 2026 Current Affairs — researched event",
+      "referenceUrl": "https://www.svenskaakademien.se/nobelpriset/2026",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "october-2026",
+      "nobel-literature-2026"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "User-requested October 2026 news supplement, not a question transcribed from a supplied paper. The paired item tests a distinct related fact. The event date is the Nobel announcement date, not the December award ceremony. Sources were checked on 21 October 2026; no past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.svenskaakademien.se/nobelpriset/2026",
+        "label": "Nobel Prize in Literature 2026: Anne Carson",
+        "publisher": "Swedish Academy",
+        "authorityId": "swedish-academy",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The awarding academy identifies Canadian author Anne Carson as its 2026 literature laureate."
+      },
+      {
+        "url": "https://www.lemonde.fr/en/books/article/2026/10/08/canadian-writer-anne-carson-awarded-2026-nobel-prize-in-literature_6758386_33.html",
+        "label": "Canadian writer Anne Carson awarded 2026 Nobel Prize in literature",
+        "publisher": "Le Monde",
+        "authorityId": "le-monde",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 8 October report confirms Carson's literature award and Canadian nationality."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-08",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0029-SIM",
+    "pairId": "USR-Q0029",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Anne Carson, the 2026 Nobel Prize in Literature laureate, is a writer from which country?",
+    "questionUrdu": "2026 کی ادب کے نوبیل انعام یافتہ این کارسن کس ملک کی مصنفہ ہیں؟",
+    "options": [
+      "Canada",
+      "Ireland",
+      "Australia",
+      "New Zealand"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "این کارسن کینیڈا کی شاعرہ، مضمون نگار اور مترجم ہیں۔ ان کا 2026 کا ادب کا نوبیل انعام اور کینیڈا سے تعلق ایک ساتھ یاد رکھیں۔",
+    "relatedHistoryUrdu": "این کارسن کو 2026 کے ادب کے نوبیل انعام کے لیے منتخب کیا گیا۔ ان کی تحریروں میں قدیم ادبی روایت اور جدید اظہار یکجا ہوتے ہیں۔ موجودہ سوال کے جواب ”Canada“ کو اس متعلقہ مستند حقیقت ”Anne Carson“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.svenskaakademien.se/nobelpriset/2026",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested October 2026 Current Affairs — related practice",
+      "referenceUrl": "https://www.svenskaakademien.se/nobelpriset/2026",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "october-2026",
+      "nobel-literature-2026"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "User-requested October 2026 news supplement, not a question transcribed from a supplied paper. The paired item tests a distinct related fact. The event date is the Nobel announcement date, not the December award ceremony. Sources were checked on 21 October 2026; no past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.svenskaakademien.se/nobelpriset/2026",
+        "label": "Nobel Prize in Literature 2026: Anne Carson",
+        "publisher": "Swedish Academy",
+        "authorityId": "swedish-academy",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The awarding academy identifies Canadian author Anne Carson as its 2026 literature laureate."
+      },
+      {
+        "url": "https://www.lemonde.fr/en/books/article/2026/10/08/canadian-writer-anne-carson-awarded-2026-nobel-prize-in-literature_6758386_33.html",
+        "label": "Canadian writer Anne Carson awarded 2026 Nobel Prize in literature",
+        "publisher": "Le Monde",
+        "authorityId": "le-monde",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 8 October report confirms Carson's literature award and Canadian nationality."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-08",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0030-SRC",
+    "pairId": "USR-Q0030",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Who was announced as the 2026 Nobel Peace Prize laureate on 9 October 2026?",
+    "questionUrdu": "9 اکتوبر 2026 کو امن کے نوبیل انعام کے لیے کس شخصیت کے نام کا اعلان ہوا؟",
+    "options": [
+      "Antonio Guterres",
+      "Navanethem (Navi) Pillay",
+      "Michelle Bachelet",
+      "Maria Corina Machado"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "نوی پلائی کو امن اور بین الاقوامی قانون کے فروغ کی کوششوں پر 2026 کے امن کے نوبیل انعام کے لیے منتخب کیا گیا۔ وہ جنوبی افریقہ سے تعلق رکھنے والی ماہر قانون ہیں۔ انعام کا اعلان 9 اکتوبر کو ہوا۔",
+    "relatedHistoryUrdu": "نوی پلائی اقوام متحدہ کی ہائی کمشنر برائے انسانی حقوق رہ چکی ہیں۔ انسانی حقوق کے اس منصب کو پناہ گزینوں کے ہائی کمشنر کے عہدے سے الگ یاد رکھیں۔ موجودہ سوال کے جواب ”Navanethem (Navi) Pillay“ کو اس متعلقہ مستند حقیقت ”High Commissioner for Human Rights“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelpeaceprize.org/articles/announcement-of-the-nobel-peace-prize-2026",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "label": "User-requested October 2026 Current Affairs — researched event",
+      "referenceUrl": "https://www.nobelpeaceprize.org/articles/announcement-of-the-nobel-peace-prize-2026",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "october-2026",
+      "nobel-peace-2026"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "User-requested October 2026 news supplement, not a question transcribed from a supplied paper. The paired item tests a distinct related fact. The event date is the Nobel announcement date, not the December award ceremony. Sources were checked on 21 October 2026; no past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelpeaceprize.org/articles/announcement-of-the-nobel-peace-prize-2026",
+        "label": "Announcement of the Nobel Peace Prize 2026",
+        "publisher": "Norwegian Nobel Committee",
+        "authorityId": "norwegian-nobel-committee",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The committee names Navi Pillay as the 2026 peace laureate and records her previous role as UN High Commissioner for Human Rights."
+      },
+      {
+        "url": "https://www.hrw.org/news/2026/10/09/human-rights-justice-advocate-navi-pillay-wins-nobel-peace-prize",
+        "label": "Human Rights, Justice Advocate Navi Pillay Wins Nobel Peace Prize",
+        "publisher": "Human Rights Watch",
+        "authorityId": "human-rights-watch",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The statement explicitly dates the announcement to 9 October 2026 and identifies Pillay's former UN human-rights commissioner role."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-09",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0030-SIM",
+    "pairId": "USR-Q0030",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which United Nations office was previously held by Navi Pillay, the 2026 Nobel Peace Prize laureate?",
+    "questionUrdu": "2026 کی امن کے نوبیل انعام یافتہ نوی پلائی ماضی میں اقوام متحدہ کے کس عہدے پر فائز رہ چکی ہیں؟",
+    "options": [
+      "High Commissioner for Human Rights",
+      "UNESCO Director-General",
+      "Secretary-General",
+      "High Commissioner for Refugees"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "نوی پلائی اقوام متحدہ کی ہائی کمشنر برائے انسانی حقوق رہ چکی ہیں۔ انسانی حقوق کے اس منصب کو پناہ گزینوں کے ہائی کمشنر کے عہدے سے الگ یاد رکھیں۔",
+    "relatedHistoryUrdu": "نوی پلائی کو امن اور بین الاقوامی قانون کے فروغ کی کوششوں پر 2026 کے امن کے نوبیل انعام کے لیے منتخب کیا گیا۔ وہ جنوبی افریقہ سے تعلق رکھنے والی ماہر قانون ہیں۔ موجودہ سوال کے جواب ”High Commissioner for Human Rights“ کو اس متعلقہ مستند حقیقت ”Navanethem (Navi) Pillay“ کے ساتھ جوڑ کر یاد رکھیں۔",
+    "relatedHistorySource": "https://www.nobelpeaceprize.org/articles/announcement-of-the-nobel-peace-prize-2026",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "label": "User-requested October 2026 Current Affairs — related practice",
+      "referenceUrl": "https://www.nobelpeaceprize.org/articles/announcement-of-the-nobel-peace-prize-2026",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "researched-supplement-20261021",
+      "october-2026",
+      "nobel-peace-2026"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "User-requested October 2026 news supplement, not a question transcribed from a supplied paper. The paired item tests a distinct related fact. The event date is the Nobel announcement date, not the December award ceremony. Sources were checked on 21 October 2026; no past-paper repetition or importance is claimed.",
+    "references": [
+      {
+        "url": "https://www.nobelpeaceprize.org/articles/announcement-of-the-nobel-peace-prize-2026",
+        "label": "Announcement of the Nobel Peace Prize 2026",
+        "publisher": "Norwegian Nobel Committee",
+        "authorityId": "norwegian-nobel-committee",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The committee names Navi Pillay as the 2026 peace laureate and records her previous role as UN High Commissioner for Human Rights."
+      },
+      {
+        "url": "https://www.hrw.org/news/2026/10/09/human-rights-justice-advocate-navi-pillay-wins-nobel-peace-prize",
+        "label": "Human Rights, Justice Advocate Navi Pillay Wins Nobel Peace Prize",
+        "publisher": "Human Rights Watch",
+        "authorityId": "human-rights-watch",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The statement explicitly dates the announcement to 9 October 2026 and identifies Pillay's former UN human-rights commissioner role."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-09",
+      "version": null,
+      "reverifyAfter": null
+    }
   }
 ];
 

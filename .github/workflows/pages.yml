@@ -42,7 +42,7 @@ jobs:
           node tools/build-prime-ministers.js --check
           node tools/build-presidents.js --check
           node tools/validate-wgi.js --complete
-          node tools/validate-site-data.js --expected=11932
+          node tools/validate-site-data.js --expected=11952
           node tools/current-affairs-smoke.js
           node tools/answer-text-migration-smoke.js
 

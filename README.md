@@ -14,6 +14,14 @@ Each category now shows a **Preview & Continue** panel for its unfinished sessio
 
 ## Current Affairs supplement — 21 October 2026
 
+The subsequent **October-news batch adds 20 MCQs (10 distinct related pairs)** about confirmed announcements/events in **1–21 October 2026**: Current Affairs **650 → 670**, total bank **11,932 → 11,952**. Its sources are `work/current-affairs-october-2026-pakistan.json` and `work/current-affairs-october-2026-world.json`, with duplicate/source review in `work/current-affairs-october-2026-audit.json`. This is a selected important-news batch, not exhaustive coverage of the month. Each answer has independent corroboration, explicit event dates and Urdu translation/explanation. Research topics include Pakistan's UN/IMF/IAEA developments and the October Nobel announcements. Conditional IMF funding and the incoming 2027 chairmanship are not described as completed disbursements or an already-started term.
+
+The complete **11,932-question published prefix** is additionally SHA-256 pinned, including the earlier 40-question supplement. An ongoing Current Affairs session retains its original 650-question eligible pool, selected range, current question, options, answers and score; Queue/Important cadence, counts and archived sessions remain unchanged. The new items are Current Affairs positions **651–670** in new full-range/range-selected sessions. `node tools/category-progress-browser-smoke.js --baseline=11932` exercises an actual before/after bank refresh near the old category's end, with desktop/mobile screenshots. No New/Unread tab is introduced by this batch.
+
+The newspaper-source audit is recorded in the parent workspace's `project_context.md` (outside this Git repository). Dawn was the most frequently referenced newspaper among the earlier 650 MCQs, but verification links do not establish which newspapers PPSC paper setters used.
+
+### Earlier supplement (retained unchanged)
+
 40 newly researched, date-qualified MCQs (20 distinct related pairs) are appended to the bank: **Current Affairs 610 → 650; total 11,892 → 11,932**. The source is `work/current-affairs-20261021.json`; matching/review scope is recorded in `work/current-affairs-20261021-audit.json`. Each new answer has at least two named authoritative references, Urdu question text and explanation. This is a bounded addition, not a claim that every historical Current Affairs answer has been reverified for today. Historical date-qualified questions keep their original context.
 
 The complete original 11,892 objects, order and Important/repeat evidence are protected by a pinned SHA-256. No existing MCQ was rewritten or renumbered. New sessions and Quick Notes can include the additions; an ongoing session keeps its original question pool, answers and position, and existing Queue counts/order remain unchanged across reloads. New questions are not falsely labelled repeated/Important without evidence. `node tools/current-affairs-smoke.js` checks this contract; `node tools/category-progress-smoke.js` tests all 22 category/mode combinations and the append-only save migration. `node tools/category-progress-browser-smoke.js` exercises the actual preview, resume, completion, guest and responsive UI flows.
@@ -82,7 +90,7 @@ Wrong IDs share the existing offline-first cloud-synced progress record; no prio
 - 1,295 source-present MCQs extracted from `IBES CAPSULE Computer 2025`; 207 semantic repeats were excluded and 1,088 unique MCQs were retained. Printed Q254 is absent from the supplied scan and was not fabricated.
 - Basic Computer Studies can be narrowed to **All Basic Computer** (2,564), the 1,088 retained **Initial PDF — Original MCQs**, the 1,088 generated **Initial PDF — Related Practice** questions, or 388 **Other Papers** questions (194 source + 194 related, including the WGI additions). The source choice also scopes Important counts, Difficult practice, Study Notes search/results, and Learn/Quiz range numbering; every filtered list keeps canonical data order and normal Quiz scoring. Other categories and the random Custom Paper flow remain unchanged.
 - The current partial release of `Advanced PPSC MCQs Papers, Volume 2` contains 4,169 independently verified, retained source MCQs and 4,169 original researched related questions. Work on the remaining supplied scan continues in restart-safe batches; unresolved and unreviewed records are excluded from the website.
-- **11,932 website questions:** the original 5,946 source/related pairs (11,892 MCQs), plus 20 independently researched Current Affairs pairs (40 MCQs).
+- **11,952 website questions:** the original 5,946 source/related pairs (11,892 MCQs), plus 30 independently researched Current Affairs pairs (60 MCQs).
 - The current WGI release covers source items **1–450**. All 450 items have a verified keep, duplicate-skip, or reject decision; 240 retained source items contribute 240 independently researched related questions, for 480 website MCQs. The supplied PDF's full **671-item extraction and audit** remain intact for later work; items 451–671 are not part of this release.
 - 10 advertised syllabus subjects, plus a separate **Finance, Taxation & Job-related** category for questions found in the supplied papers but outside that syllabus.
 - Non-Urdu subjects show English question stems and options with a readable Urdu translation below each question. The Urdu category shows its question and all four answer choices directly in Urdu with right-to-left typography.
@@ -200,7 +208,7 @@ node tools/validate-wgi.js --complete
 node tools/build-question-bank.js --site-only
 node tools/build-gk-study-notes.js
 node --check data/detailed-learning.js
-node tools/validate-site-data.js --expected=11932 --verify-work-repeat-evidence
+node tools/validate-site-data.js --expected=11952 --verify-work-repeat-evidence
 node tools/current-affairs-smoke.js
 node tools/category-progress-smoke.js
 node tools/category-progress-browser-smoke.js
@@ -233,7 +241,7 @@ Use `--site-only` to avoid rewriting the parent-folder Markdown exports, or `--c
 
 ## Add future user-supplied MCQs
 
-Add each new user question and its independently researched similar question as one adjacent pair in `work/custom-questions.json`. IDs `USR-Q0001` through `USR-Q0020` are reserved for the 21 October 2026 Current Affairs supplement; start future pairs at an unused ID such as `USR-Q0021-SRC` and `USR-Q0021-SIM`, with the shared `pairId` `USR-Q0021`.
+Add each new user question and its independently researched similar question as one adjacent pair in a new append-only source batch. Register that batch AFTER all already published supplements in `tools/build-question-bank.js`; `custom-questions.json` currently loads before these supplements, so inserting there would violate the protected prefix. IDs `USR-Q0001` through `USR-Q0030` are reserved for the 21 October 2026 supplements; start future pairs at an unused ID such as `USR-Q0031-SRC` and `USR-Q0031-SIM`, with the shared `pairId` `USR-Q0031`.
 
 Each pair must:
 
@@ -248,7 +256,7 @@ Each pair must:
 
 Explanations, source notes and evidence links remain in the verified data for research and validation, but the website does not display per-question explanation, history or source-detail panels.
 
-After adding a pair, run the validation and build commands again. A new release must deliberately update the pinned append-only release contract and resume-migration tests; changing only a count is not sufficient. Preserve all existing IDs, question contents and ordering, then update the expected total from 11,932.
+After adding a pair, run the validation and build commands again. A new release must deliberately update the pinned append-only release contract and resume-migration tests; changing only a count is not sufficient. Preserve all existing IDs, question contents and ordering, then update the expected total from 11,952.
 
 ## Push this update
 
@@ -256,12 +264,12 @@ The repository is already initialized on branch `main`, with `origin` set to `ht
 
 ```powershell
 cd "D:\PPSC\codex\ppsc-project"
-git add -- .github/workflows/pages.yml README.md app.js firebase-sync.js index.html styles.css
+git add -- .github/workflows/pages.yml README.md app.js index.html
 git add -- data/questions.js data/gk-study-notes.js data/release-repeat-evidence.json
-git add -- tools/answer-text-migration-smoke.js tools/browser-smoke.js tools/build-question-bank.js tools/cloud-sync-smoke.js tools/validate-site-data.js
+git add -- tools/build-question-bank.js
 git add -- tools/category-progress-smoke.js tools/category-progress-browser-smoke.js tools/current-affairs-common.js tools/current-affairs-smoke.js
-git add -- work/current-affairs-20261021.json work/current-affairs-20261021-audit.json
-git commit -m "Preserve per-category practice and add verified current affairs"
+git add -- work/current-affairs-october-2026-pakistan.json work/current-affairs-october-2026-world.json work/current-affairs-october-2026-audit.json
+git commit -m "Append October current affairs without resetting ongoing practice"
 git push origin main
 git status --short
 ```

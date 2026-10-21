@@ -41,6 +41,8 @@
   var APPROVED_ANSWER_TEXT_BANK_SIGNATURE = "v1:11892:9437487f";
   var APPROVED_ANSWER_TEXT_BANK_QUESTION_COUNT = 11892;
   var APPROVED_ANSWER_TEXT_UPDATED_SIGNATURE = "v1:11892:57530f77";
+  var APPROVED_CURRENT_AFFAIRS_BANK_SIGNATURE = "v1:11932:27bcab12";
+  var APPROVED_CURRENT_AFFAIRS_BANK_QUESTION_COUNT = 11932;
   // Exact ordered Important pools from the approved 11,412-question release.
   // Later duplicate evidence promoted more questions without changing the
   // bank's content fingerprint, so frozen Important sessions need these too.
@@ -416,6 +418,15 @@
   }
 
   function approvedAdditiveBankQuestionCount(savedSignature) {
+    // Preserve sessions from the audited first Current Affairs supplement.
+    // Accept this one known release only when its entire ordered fingerprint
+    // is still the exact prefix of a larger, append-only question bank.
+    if (savedSignature === APPROVED_CURRENT_AFFAIRS_BANK_SIGNATURE) {
+      return allQuestions.length > APPROVED_CURRENT_AFFAIRS_BANK_QUESTION_COUNT
+        && buildQuestionBankSignature(APPROVED_CURRENT_AFFAIRS_BANK_QUESTION_COUNT)
+          === APPROVED_CURRENT_AFFAIRS_BANK_SIGNATURE
+        ? APPROVED_CURRENT_AFFAIRS_BANK_QUESTION_COUNT : null;
+    }
     // Current Affairs is append-only after the exact, corrected 11,892 bank.
     // Never accept an arbitrary older fingerprint or edits inside that prefix.
     if (savedSignature === APPROVED_ANSWER_TEXT_UPDATED_SIGNATURE

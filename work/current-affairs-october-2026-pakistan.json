@@ -1,0 +1,722 @@
+[
+  {
+    "id": "USR-Q0021-SRC",
+    "pairId": "USR-Q0021",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which civil award did Pakistan confer on UN Secretary-General António Guterres on 6 October 2026?",
+    "questionUrdu": "6 اکتوبر 2026 کو پاکستان نے اقوام متحدہ کے سیکرٹری جنرل انتونیو گوتریس کو کون سا سول اعزاز دیا؟",
+    "options": [
+      "Nishan-e-Pakistan",
+      "Nishan-e-Imtiaz",
+      "Hilal-e-Pakistan",
+      "Sitara-e-Imtiaz"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "صدر آصف علی زرداری نے 6 اکتوبر 2026 کو انتونیو گوتریس کو نشانِ امتیاز دیا۔ یہ اعزاز ان کی عالمی امن اور ترقی کے لیے خدمات کے اعتراف میں تھا۔",
+    "relatedHistoryUrdu": "Nishan-e-Imtiaz گوتریس کو ایوانِ صدر کی تقریب میں دیا گیا۔ اسی دورے میں انہوں نے پاکستان کے آفات سے نمٹنے کے انتظامات بھی دیکھے۔",
+    "relatedHistorySource": "https://pid.gov.pk/site/press_detail/34176",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan",
+      "referenceUrl": "https://pid.gov.pk/site/press_detail/34176",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "guterres-pakistan-visit"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Primary PID release dated 6 October 2026 and same-day news report read directly. This asks the award, not its national precedence. No past-paper repetition or importance claimed.",
+    "references": [
+      {
+        "url": "https://pid.gov.pk/site/press_detail/34176",
+        "label": "PID PR 61: Award for UN Secretary-General, 6 October 2026",
+        "publisher": "Press Information Department, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The 6 October ceremony conferred Nishan-e-Imtiaz on António Guterres."
+      },
+      {
+        "url": "https://www.dawn.com/news/2035126/un-chief-guterres-arrives-in-pakistan-for-2-day-visit",
+        "label": "Pakistan visit",
+        "publisher": "Dawn",
+        "authorityId": "dawn",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Confirms Guterres's Nishan-e-Imtiaz award."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-06",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0021-SIM",
+    "pairId": "USR-Q0021",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which Pakistani authority briefed António Guterres at its National Emergencies Operations Centre on 6 October 2026?",
+    "questionUrdu": "6 اکتوبر 2026 کو کس پاکستانی ادارے نے اپنے نیشنل ایمرجنسیز آپریشنز سینٹر میں انتونیو گوتریس کو بریفنگ دی؟",
+    "options": [
+      "National Disaster Management Authority (NDMA)",
+      "Pakistan Meteorological Department",
+      "National Command and Operation Centre",
+      "Pakistan Nuclear Regulatory Authority (PNRA)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "گوتریس کو این ڈی ایم اے کے نیشنل ایمرجنسیز آپریشنز سینٹر میں بریفنگ دی گئی۔ موضوع آفات کی پیشگی اطلاع، تیاری اور مربوط امدادی کارروائی تھا۔",
+    "relatedHistoryUrdu": "National Disaster Management Authority (NDMA) کی بریفنگ میں آفات آنے سے پہلے تیاری پر زور تھا۔ یہ اسی دورے کا الگ واقعہ ہے جس میں گوتریس کو سول اعزاز ملا۔",
+    "relatedHistorySource": "https://pid.gov.pk/site/press_detail/34171",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan — related practice",
+      "referenceUrl": "https://pid.gov.pk/site/press_detail/34171",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "guterres-pakistan-visit"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Distinct related fact: disaster-management briefing institution. The full PID release, not the differently worded visit-duration news headline, supplies the NEOC detail.",
+    "references": [
+      {
+        "url": "https://pid.gov.pk/site/press_detail/34171",
+        "label": "PID PR 56: Guterres visits NDMA headquarters, 6 October 2026",
+        "publisher": "Press Information Department, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "NDMA briefed Guterres at its National Emergencies Operations Centre on 6 October 2026."
+      },
+      {
+        "url": "https://www.dawn.com/news/2035126/un-chief-guterres-arrives-in-pakistan-for-2-day-visit",
+        "label": "Pakistan visit",
+        "publisher": "Dawn",
+        "authorityId": "dawn",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Confirms his NDMA visit."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-06",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0022-SRC",
+    "pairId": "USR-Q0022",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Pakistan's October 2026 IMF staff-level agreement covered which Extended Fund Facility (EFF) and Resilience and Sustainability Facility (RSF) reviews?",
+    "questionUrdu": "اکتوبر 2026 میں پاکستان اور آئی ایم ایف کا اسٹاف لیول معاہدہ ای ایف ایف اور آر ایس ایف کے کن جائزوں سے متعلق تھا؟",
+    "options": [
+      "Second EFF review and first RSF review",
+      "Third EFF review and second RSF review",
+      "Fourth EFF review and third RSF review",
+      "Fifth EFF review and fourth RSF review"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "معاہدہ ای ایف ایف کے چوتھے اور آر ایس ایف کے تیسرے جائزے سے متعلق تھا۔ اسٹاف لیول اتفاق کے بعد رقم کے اجرا کے لیے آئی ایم ایف ایگزیکٹو بورڈ کی منظوری لازم تھی۔",
+    "relatedHistoryUrdu": "Fourth EFF review and third RSF review اکتوبر کے معاہدے کی درست ترتیب ہے۔ یہ اسٹاف کی سطح کا اتفاق تھا، بورڈ کی حتمی منظوری نہیں۔",
+    "relatedHistorySource": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan",
+      "referenceUrl": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "imf-october-reviews"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "IMF publication date 7 October 2026; Pakistani corroborating article published 8 October 2026. Question uses the month to avoid confusing publication dates. Staff agreement is not final disbursement.",
+    "references": [
+      {
+        "url": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+        "label": "IMF staff agreement announcement, 7 October 2026",
+        "publisher": "International Monetary Fund",
+        "authorityId": "imf",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "October staff agreement covers the fourth EFF and third RSF reviews, subject to Executive Board approval."
+      },
+      {
+        "url": "https://dailytimes.com.pk/1564148/imf-agreement-clears-path-for-1-21bn-pakistan-funding/",
+        "label": "Daily Times: Conditional IMF financing, 8 October 2026",
+        "publisher": "Daily Times",
+        "authorityId": "daily-times",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The report identifies fourth EFF and third RSF reviews and the remaining Board approval."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-07",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0022-SIM",
+    "pairId": "USR-Q0022",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Under Pakistan's October 2026 IMF staff-level agreement, how much would become available under the EFF alone after Executive Board approval?",
+    "questionUrdu": "اکتوبر 2026 کے آئی ایم ایف اسٹاف لیول معاہدے کے تحت ایگزیکٹو بورڈ کی منظوری کے بعد صرف ای ایف ایف سے تقریباً کتنی رقم دستیاب ہونا تھی؟",
+    "options": [
+      "About US$210 million",
+      "About US$500 million",
+      "About US$7 billion",
+      "About US$1 billion"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "صرف ای ایف ایف کے تحت تقریباً ایک ارب ڈالر دستیاب ہونا تھے۔ آر ایس ایف کے تقریباً 21 کروڑ ڈالر الگ تھے؛ دونوں رقوم بورڈ کی منظوری سے مشروط تھیں۔",
+    "relatedHistoryUrdu": "About US$1 billion صرف ای ایف ایف کا حصہ تھا۔ اسے آر ایس ایف کی الگ رقم یا پورے کئی سالہ پروگرام کی مالیت سے نہ ملائیں۔",
+    "relatedHistorySource": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan — related practice",
+      "referenceUrl": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "imf-october-reviews"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Distinct related fact: the conditional EFF-only amount, not combined financing, total programme size or already disbursed funds. Historical announcement terms are preserved.",
+    "references": [
+      {
+        "url": "https://www.imf.org/en/news/articles/2026/10/07/pr26326-pakistan-imf-complete-2026-aiv-consultation-reaches-sla-on-4th-review-eff-3rd-review-for-rsf",
+        "label": "IMF staff agreement announcement, 7 October 2026",
+        "publisher": "International Monetary Fund",
+        "authorityId": "imf",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The agreement envisages approximately US$1 billion under EFF, separate from US$210 million under RSF, after Board approval."
+      },
+      {
+        "url": "https://dailytimes.com.pk/1564148/imf-agreement-clears-path-for-1-21bn-pakistan-funding/",
+        "label": "Daily Times: Conditional IMF financing, 8 October 2026",
+        "publisher": "Daily Times",
+        "authorityId": "daily-times",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "EFF-only access is about US$1 billion, contingent on Executive Board approval."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-07",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0023-SRC",
+    "pairId": "USR-Q0023",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which international agency completed its first International Physical Protection Advisory Service (IPPAS) mission to Pakistan on 9 October 2026?",
+    "questionUrdu": "9 اکتوبر 2026 کو کس عالمی ادارے نے پاکستان میں اپنا پہلا انٹرنیشنل فزیکل پروٹیکشن ایڈوائزری سروس مشن مکمل کیا؟",
+    "options": [
+      "International Atomic Energy Agency (IAEA)",
+      "International Renewable Energy Agency (IRENA)",
+      "Organisation for the Prohibition of Chemical Weapons (OPCW)",
+      "United Nations Environment Programme (UNEP)"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "یہ آئی اے ای اے کا پاکستان کے لیے پہلا آئی پی پی اے ایس مشن تھا۔ اس میں جوہری مواد اور تنصیبات کے جسمانی تحفظ کے نظام کا جائزہ لیا گیا۔",
+    "relatedHistoryUrdu": "International Atomic Energy Agency (IAEA) کا یہ مشن 28 ستمبر سے 9 اکتوبر 2026 تک جاری رہا۔ یہ جوہری تحفظ کا مشاورتی جائزہ تھا، ہر جوہری سرگرمی کی عمومی منظوری نہیں۔",
+    "relatedHistorySource": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan",
+      "referenceUrl": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "first-ippas-pakistan"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "IAEA release and news report read directly. Event is mission completion on 9 October 2026. Completion city is intentionally not tested because the reports differ on that detail.",
+    "references": [
+      {
+        "url": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+        "label": "IAEA completes first IPPAS mission to Pakistan, 9 October 2026",
+        "publisher": "International Atomic Energy Agency",
+        "authorityId": "iaea",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "IAEA completed Pakistan's first IPPAS mission on 9 October 2026, following a 12-day review."
+      },
+      {
+        "url": "https://www.radio.gov.pk/09-10-2026/iaeas-physical-protection-advisory-service-mission-concludes-in-pakistan",
+        "label": "Radio Pakistan: IPPAS mission conclusion, 9 October 2026",
+        "publisher": "Radio Pakistan",
+        "authorityId": "pakistan-broadcasting-corporation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The broadcaster identifies IAEA and confirms completion of its first IPPAS mission to Pakistan."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-09",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0023-SIM",
+    "pairId": "USR-Q0023",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "Which Pakistani institution hosted the first IAEA IPPAS mission that concluded on 9 October 2026?",
+    "questionUrdu": "9 اکتوبر 2026 کو مکمل ہونے والے آئی اے ای اے کے پہلے آئی پی پی اے ایس مشن کی میزبانی کس پاکستانی ادارے نے کی؟",
+    "options": [
+      "Pakistan Atomic Energy Commission (PAEC)",
+      "Space and Upper Atmosphere Research Commission (SUPARCO)",
+      "Pakistan Nuclear Regulatory Authority (PNRA)",
+      "National Disaster Management Authority (NDMA)"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "مشن کی میزبان پاکستان نیوکلیئر ریگولیٹری اتھارٹی تھی۔ پاکستان اٹامک انرجی کمیشن اور دوسرے متعلقہ اداروں نے تعاون کیا، مگر میزبان ادارہ پی این آر اے تھا۔",
+    "relatedHistoryUrdu": "Pakistan Nuclear Regulatory Authority (PNRA) نے میزبانی کی۔ مشن میں قانونی اور ضابطہ جاتی نظام کے ساتھ مخصوص تنصیب پر جوہری تحفظ کا جائزہ بھی شامل تھا۔",
+    "relatedHistorySource": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan — related practice",
+      "referenceUrl": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "first-ippas-pakistan"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Distinct related fact: national host institution, not international mission provider. PAEC participated but PNRA hosted; neither record states that PAEC was the host.",
+    "references": [
+      {
+        "url": "https://www.iaea.org/newscenter/pressreleases/iaea-completes-international-physical-protection-advisory-service-mission-in-pakistan",
+        "label": "IAEA completes first IPPAS mission to Pakistan, 9 October 2026",
+        "publisher": "International Atomic Energy Agency",
+        "authorityId": "iaea",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "IAEA names PNRA as host of the first Pakistan IPPAS mission completed on 9 October 2026."
+      },
+      {
+        "url": "https://www.radio.gov.pk/09-10-2026/iaeas-physical-protection-advisory-service-mission-concludes-in-pakistan",
+        "label": "Radio Pakistan: IPPAS mission conclusion, 9 October 2026",
+        "publisher": "Radio Pakistan",
+        "authorityId": "pakistan-broadcasting-corporation",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "PNRA hosted the mission in coordination with PAEC and other organizations."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-09",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0024-SRC",
+    "pairId": "USR-Q0024",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Which country assumed the chairmanship of the Governing Council of the Borrowers' Platform on 12 October 2026?",
+    "questionUrdu": "12 اکتوبر 2026 کو کس ملک نے قرض لینے والے ممالک کے پلیٹ فارم کی گورننگ کونسل کی چیئرمین شپ سنبھالی؟",
+    "options": [
+      "Egypt",
+      "Pakistan",
+      "Nepal",
+      "Zambia"
+    ],
+    "correctOptionIndex": 1,
+    "explanationUrdu": "پاکستان نے گورننگ کونسل کی چیئرمین شپ سنبھالی۔ وزیر خزانہ محمد اورنگزیب نے بنکاک میں پاکستان کی جانب سے یہ ذمہ داری قبول کی۔",
+    "relatedHistoryUrdu": "Pakistan کی یہ ذمہ داری اکتوبر 2026 کی گورننگ کونسل سے متعلق ہے۔ اسے ابتدائی ورکنگ گروپ میں مصر کی سربراہی کے ساتھ نہ ملائیں۔",
+    "relatedHistorySource": "https://pid.gov.pk/site/press_detail/34251",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan",
+      "referenceUrl": "https://pid.gov.pk/site/press_detail/34251",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "borrowers-platform"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "New October event, not the platform's earlier April launch. Both primary release and independent newspaper report were published on 12 October 2026 and read directly.",
+    "references": [
+      {
+        "url": "https://pid.gov.pk/site/press_detail/34251",
+        "label": "PID PR 135: Borrowers' Platform chairmanship, 12 October 2026",
+        "publisher": "Press Information Department, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Muhammad Aurangzeb accepted the governing-council chairmanship on Pakistan's behalf in Bangkok on 12 October 2026."
+      },
+      {
+        "url": "https://profit.pakistantoday.com.pk/2026/10/12/pakistan-assumes-chairmanship-of-borrowers-platform-governing-council",
+        "label": "Profit: Pakistan assumes Borrowers' Platform chairmanship, 12 October 2026",
+        "publisher": "Profit by Pakistan Today",
+        "authorityId": "pakistan-today",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Pakistan assumed the Borrowers' Platform governing-council chairmanship through Finance Minister Aurangzeb."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-12",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0024-SIM",
+    "pairId": "USR-Q0024",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "When accepting the Borrowers' Platform chairmanship on 12 October 2026, what did Pakistan describe as the platform's role?",
+    "questionUrdu": "12 اکتوبر 2026 کو چیئرمین شپ قبول کرتے ہوئے پاکستان نے قرض لینے والے ممالک کے پلیٹ فارم کا کیا کردار بیان کیا؟",
+    "options": [
+      "Imposing mandatory lending conditions on countries",
+      "Collectively negotiating every member's debt restructuring",
+      "Replacing the IMF as an emergency lender",
+      "Mutual learning and technical cooperation on debt management"
+    ],
+    "correctOptionIndex": 3,
+    "explanationUrdu": "پلیٹ فارم کا کردار قرض کے انتظام پر باہمی تجربات اور فنی تعاون تھا۔ اسے مشترکہ سودے بازی یا قرض کے بحران کا انتظام کرنے والا ادارہ نہیں بتایا گیا۔",
+    "relatedHistoryUrdu": "Mutual learning and technical cooperation on debt management اس پلیٹ فارم کا بیان کردہ کام تھا۔ مقصد بہتر تجربات کا تبادلہ تھا، رکن ممالک کے قرضوں کی مشترکہ مذاکراتی نمائندگی نہیں۔",
+    "relatedHistorySource": "https://pid.gov.pk/site/press_detail/34251",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan — related practice",
+      "referenceUrl": "https://pid.gov.pk/site/press_detail/34251",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "borrowers-platform"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Distinct related fact: stated purpose and limits. This does not claim automatic debt relief, collective debt negotiations or new lending authority.",
+    "references": [
+      {
+        "url": "https://pid.gov.pk/site/press_detail/34251",
+        "label": "PID PR 135: Borrowers' Platform chairmanship, 12 October 2026",
+        "publisher": "Press Information Department, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The minister distinguished mutual learning and technical cooperation from collective bargaining and crisis management."
+      },
+      {
+        "url": "https://profit.pakistantoday.com.pk/2026/10/12/pakistan-assumes-chairmanship-of-borrowers-platform-governing-council",
+        "label": "Profit: Pakistan assumes Borrowers' Platform chairmanship, 12 October 2026",
+        "publisher": "Profit by Pakistan Today",
+        "authorityId": "pakistan-today",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The platform's described role was technical cooperation and mutual learning, not collective bargaining or crisis management."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-12",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0025-SRC",
+    "pairId": "USR-Q0025",
+    "kind": "source",
+    "categoryId": "current-affairs",
+    "question": "Who was announced on 16 October 2026 as incoming Chair of the IMF and World Bank Group Boards of Governors for 2027?",
+    "questionUrdu": "16 اکتوبر 2026 کو 2027 کے لیے آئی ایم ایف اور ورلڈ بینک گروپ کے بورڈز آف گورنرز کا آئندہ چیئرمین کس کو نامزد کیا گیا؟",
+    "options": [
+      "Ahad Khan Cheema",
+      "Muhammad Aurangzeb",
+      "Jameel Ahmad",
+      "Ahsan Iqbal"
+    ],
+    "correctOptionIndex": 0,
+    "explanationUrdu": "احد خان چیمہ کو 2027 کے لیے آئندہ چیئرمین نامزد کیا گیا۔ اکتوبر 2026 کی خبر مستقبل کی اس ذمہ داری کا اعلان تھی، عہدہ سنبھالنے کی خبر نہیں۔",
+    "relatedHistoryUrdu": "Ahad Khan Cheema کی نامزدگی بورڈز آف گورنرز کی چیئرمین شپ کے لیے تھی۔ اسے آئی ایم ایف کے مینیجنگ ڈائریکٹر یا ورلڈ بینک کے صدر کے عہدے سے الگ رکھیں۔",
+    "relatedHistorySource": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "user",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan",
+      "referenceUrl": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "imf-world-bank-chair-2027"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Temporal scope records the 16 October 2026 announcement. The role is explicitly incoming for 2027, not already held in October 2026. Boards of Governors chair is not chief executive.",
+    "references": [
+      {
+        "url": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+        "label": "EAD: Incoming 2027 IMF-WBG boards chair, 16 October 2026",
+        "publisher": "Ministry of Economic Affairs, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Ahad Khan Cheema was announced as incoming Boards of Governors chair for 2027 on 16 October 2026."
+      },
+      {
+        "url": "https://tribune.com.pk/story/2635184/pakistan-to-chair-imf-world-bank-boards-in-2027-for-first-time-since-1953",
+        "label": "2027 chair announcement",
+        "publisher": "The Express Tribune",
+        "authorityId": "express-tribune",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Names Cheema as incoming chair."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-16",
+      "version": null,
+      "reverifyAfter": null
+    }
+  },
+  {
+    "id": "USR-Q0025-SIM",
+    "pairId": "USR-Q0025",
+    "kind": "similar",
+    "categoryId": "current-affairs",
+    "question": "In which city was Ahad Khan Cheema announced as incoming 2027 IMF-World Bank Boards of Governors chair on 16 October 2026?",
+    "questionUrdu": "16 اکتوبر 2026 کو کس شہر میں احد خان چیمہ کو 2027 کے لیے آئی ایم ایف اور ورلڈ بینک کے بورڈز آف گورنرز کا آئندہ چیئرمین نامزد کرنے کا اعلان ہوا؟",
+    "options": [
+      "Washington, D.C.",
+      "Marrakesh",
+      "Bangkok",
+      "Singapore"
+    ],
+    "correctOptionIndex": 2,
+    "explanationUrdu": "اعلان تھائی لینڈ کے شہر بنکاک میں ہوا۔ یہ 2026 کے ورلڈ بینک اور آئی ایم ایف سالانہ اجلاسوں کے مرکزی اجلاس میں کیا گیا تھا۔",
+    "relatedHistoryUrdu": "Bangkok اعلان کا مقام تھا، جبکہ نامزد چیئرمین شپ کا سال 2027 تھا۔ اعلان کی تاریخ اور آئندہ ذمہ داری کا سال الگ یاد رکھیں۔",
+    "relatedHistorySource": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+    "relatedHistoryAccessedOn": "2026-10-21",
+    "source": {
+      "type": "practice",
+      "file": "current-affairs-october-2026-pakistan.json",
+      "label": "User-requested October 2026 Current Affairs research — Pakistan — related practice",
+      "referenceUrl": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+      "accessedOn": "2026-10-21"
+    },
+    "tags": [
+      "current-affairs",
+      "october-2026",
+      "researched-supplement-20261021",
+      "imf-world-bank-chair-2027"
+    ],
+    "verificationStatus": "verified",
+    "sourceNotes": "Distinct related fact: announcement venue. The event date is in October 2026 although the announced chairmanship is for 2027.",
+    "references": [
+      {
+        "url": "https://ead.gov.pk/NewsDetail/NjVjZjdmZWYtOTg0Ni00NjVhLWE5NzMtYzYyZTIwMjE0OGJh",
+        "label": "EAD: Incoming 2027 IMF-WBG boards chair, 16 October 2026",
+        "publisher": "Ministry of Economic Affairs, Government of Pakistan",
+        "authorityId": "pakistan-government",
+        "role": "answer-primary",
+        "sourceClass": "primary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "The announcement was made at the 2026 annual-meetings plenary in Bangkok on 16 October."
+      },
+      {
+        "url": "https://tribune.com.pk/story/2635184/pakistan-to-chair-imf-world-bank-boards-in-2027-for-first-time-since-1953",
+        "label": "2027 chair announcement",
+        "publisher": "The Express Tribune",
+        "authorityId": "express-tribune",
+        "role": "answer-secondary",
+        "sourceClass": "authoritative-secondary",
+        "accessedOn": "2026-10-21",
+        "supports": [
+          "answer",
+          "temporal-scope"
+        ],
+        "claimSummary": "Confirms Bangkok as announcement venue."
+      }
+    ],
+    "temporalScope": {
+      "type": "event-date",
+      "sourcePaperDate": null,
+      "asOf": null,
+      "eventDate": "2026-10-16",
+      "version": null,
+      "reverifyAfter": null
+    }
+  }
+]

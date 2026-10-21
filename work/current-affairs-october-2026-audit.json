@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-10-21",
+  "sourceFiles": ["work/current-affairs-october-2026-pakistan.json", "work/current-affairs-october-2026-world.json"],
+  "categoryId": "current-affairs",
+  "coverage": {"from": "2026-10-01", "through": "2026-10-21", "exhaustive": false},
+  "scope": "Selected important October 2026 announcements/events, not a fresh verification or replacement of all existing Current Affairs answers.",
+  "baseline": {
+    "questionCount": 11932,
+    "signature": "v1:11932:27bcab12",
+    "sha256": "1ec0c981c6501c1656205b8be1275c583e1671adc0168eabe52b61273fefaf19",
+    "sha256Scope": "SHA-256 of JSON.stringify of the complete ordered published question objects, including options, answers, explanations and repeat metadata."
+  },
+  "baselineCurrentAffairsCount": 650,
+  "addedQuestionCount": 20,
+  "addedPairCount": 10,
+  "expectedCurrentAffairsCountAfterAppend": 670,
+  "uniqueReferenceUrlCount": 21,
+  "independentAuthorityCount": 18,
+  "verificationMethod": "Direct primary-page reads plus independent news/institutional corroboration. Every MCQ records two named answer-supporting authorities, direct HTTPS URLs and access date. Article publication dates and actual event/announcement dates were distinguished. Paywalled previews only support claims visible in those previews; failed canonical URLs are not presented as reviewed references.",
+  "bankProtection": "Append USR-Q0021 through USR-Q0030 after the entire 11932-question release. Keep all previous question objects/order unchanged. Explicit app migration accepts only the approved old signature and unchanged prefix. Existing session pools and queue counts/cycles are preserved; newly started sessions see the appended category tail. No importance or past-paper repetition is fabricated.",
+  "duplicateMethod": "All-bank normalized-stem and ID comparison, plus keyword/entity and correct-answer searches followed by manual event/year/office/fact comparison. Related pairs test different propositions, not rewordings of the same answer. Comparison IDs below are actual nearby prior facts, not exact duplicate findings.",
+  "sourceCaveats": [
+    "The Guterres visit headline duration differs from official completion coverage. No duration question is added; the award and NDMA briefing are independently supported by accessible PID releases and Dawn.",
+    "IMF staff agreement announced 7 October is not Executive Board approval or disbursement. EFF-only US$1 billion must not be confused with RSF US$210 million or combined financing.",
+    "IAEA and broadcaster coverage differ in completion-city wording. No city question is added; both support the agency, first mission and PNRA host.",
+    "Borrowers' Platform governing council is not its earlier working group; the described role is technical learning/cooperation, not collective debt bargaining.",
+    "Ahad Khan Cheema was named incoming chair for 2027 on 16 October 2026, not said to have begun the term.",
+    "Nobel event dates are October announcement dates, not December ceremony dates. Canonical NobelPrize.org 2026 pages returned access errors; directly accessible awarding institutions and corroborating sources are used instead."
+  ],
+  "skippedCandidates": [
+    {"topic": "IMF EFF 2024 programme duration and full arrangement", "existingIds": ["WGI-Q0306-SRC", "WGI-Q0306-SIM"], "reason": "Already asked; the new pair tests October 2026 review numbers and conditional EFF-only access instead."},
+    {"topic": "Unqualified Guterres office, nationality and numbered tenure", "existingIds": ["ADV2E102-U0005-Q003-SRC", "ADV2E102-U0091-Q036-SRC", "ADV2E102-U0091-Q036-SIM"], "reason": "Avoid repeating existing biographical/office facts; ask the October Pakistan award and NDMA briefing."}
+  ],
+  "semanticReview": [
+    {"pairId": "USR-Q0021", "action": "keep", "comparedExistingIds": ["P234-Q013-SIM", "ADV2E102-U0091-Q036-SRC"], "decision": "Existing items ask NDMA's expansion and the UN Secretary-General's identity. The October award and specific NEOC briefing host are separate event facts."},
+    {"pairId": "USR-Q0022", "action": "keep", "comparedExistingIds": ["WGI-Q0306-SRC", "WGI-Q0306-SIM"], "decision": "The 2024 facility/duration questions differ from the October 2026 review sequence and EFF-only financing conditional on Board approval."},
+    {"pairId": "USR-Q0023", "action": "keep", "comparedExistingIds": [], "decision": "All-bank IPPAS, physical-protection and regulatory-host search found no question on Pakistan's first October 2026 mission. International agency and domestic host are distinct."},
+    {"pairId": "USR-Q0024", "action": "keep", "comparedExistingIds": [], "decision": "No existing Borrowers' Platform governing-council question was found. New items distinguish the assuming country from the platform's stated operational role."},
+    {"pairId": "USR-Q0025", "action": "keep", "comparedExistingIds": ["ADV2E102-U0007-Q004-SRC", "ADV2E102-U0009-Q008-SIM"], "decision": "Existing Bangkok questions cover Thailand's capital and the 1996 ASEM summit. These ask a new 2026 announcement's incoming chair and actual meeting city."},
+    {"pairId": "USR-Q0026", "action": "keep", "comparedExistingIds": ["WGI-Q0303-SRC", "WGI-Q0303-SIM", "USR-Q0006-SRC", "USR-Q0006-SIM"], "decision": "Existing medicine awards concern 2018 and 2024. The 2026 trio and optogenetics technique were absent from all-bank entity/topic searches."},
+    {"pairId": "USR-Q0027", "action": "keep", "comparedExistingIds": ["P236-Q025-SIM", "ADV2E102-U0005-Q007-SIM"], "decision": "Earlier physics laureate facts concern Hess and Einstein. Neither Halzen's 2026 award nor its IceCube observatory linkage is already tested."},
+    {"pairId": "USR-Q0028", "action": "keep", "comparedExistingIds": ["USR-Q0004-SRC", "USR-Q0004-SIM"], "decision": "The prior chemistry pair asks 2025 MOF research. The 2026 Kagan/Soai laureates and asymmetric-synthesis discovery are new and mutually distinct."},
+    {"pairId": "USR-Q0029", "action": "keep", "comparedExistingIds": ["WGI-Q0304-SRC", "WGI-Q0304-SIM", "USR-Q0002-SRC", "USR-Q0002-SIM"], "decision": "2024 Han Kang and 2025 Krasznahorkai pairs do not test Anne Carson's 2026 award or Canadian nationality. Both new propositions were absent."},
+    {"pairId": "USR-Q0030", "action": "keep", "comparedExistingIds": ["USR-Q0001-SRC", "USR-Q0003-SRC"], "decision": "Earlier Peace Prize facts concern 2024 and 2025. Navi Pillay's 2026 selection and former UN human-rights office were absent from the bank."}
+  ]
+}

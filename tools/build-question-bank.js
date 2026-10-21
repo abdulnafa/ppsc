@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 const { isNoneOfTheseAnswer } = require("./answer-text-corrections");
-const { SOURCE_FILE: currentAffairsSourceFile, validateSupplement } = require("./current-affairs-common");
+const { SOURCE_FILE: currentAffairsSourceFile, OCTOBER_SOURCE_FILES, validateSupplement } = require("./current-affairs-common");
 const {
   decisionFilePattern: adv2e102DecisionFilePattern,
   enrichedFilePattern: adv2e102EnrichedFilePattern,
@@ -118,7 +118,12 @@ function loadBatches() {
   if (!Array.isArray(customQuestions)) fail("custom-questions.json must contain a JSON array.");
   const supplement = JSON.parse(fs.readFileSync(path.join(workDirectory, currentAffairsSourceFile), "utf8"));
   if (!Array.isArray(supplement)) fail(`${currentAffairsSourceFile} must contain a JSON array.`);
-  return questionsWithWgi.concat(customQuestions, supplement);
+  const octoberQuestions = OCTOBER_SOURCE_FILES.flatMap((name) => {
+    const value = JSON.parse(fs.readFileSync(path.join(workDirectory, name), "utf8"));
+    if (!Array.isArray(value)) fail(`${name} must contain a JSON array.`);
+    return value;
+  });
+  return questionsWithWgi.concat(customQuestions, supplement, octoberQuestions);
 }
 
 function canonicalRepeatTargetId(duplicateOf) {

@@ -11,9 +11,15 @@ const BASELINE_SIGNATURE = "v1:11892:57530f77";
 const BASELINE_SHA256 = "1c00a533c855daaf5d7f7547afa90e2f3361a909e5a2f1ac1754545879b3b9fc";
 const CATEGORY_SHA256 = "1a851dee91fed2d537c8ce699266a6806d49a71593f0103e9f5c7b3186bac402";
 const SUPPLEMENT_COUNT = 40;
-const RELEASE_COUNT = BASELINE_COUNT + SUPPLEMENT_COUNT;
+// Freeze the entire release currently being studied, including its first supplement.
+const OCTOBER_BASELINE_COUNT = 11932;
+const OCTOBER_BASELINE_SIGNATURE = "v1:11932:27bcab12";
+const OCTOBER_BASELINE_SHA256 = "1ec0c981c6501c1656205b8be1275c583e1671adc0168eabe52b61273fefaf19";
+const OCTOBER_SUPPLEMENT_COUNT = 20;
+const RELEASE_COUNT = OCTOBER_BASELINE_COUNT + OCTOBER_SUPPLEMENT_COUNT;
 const VERIFIED_ON = "2026-10-21";
 const SOURCE_FILE = "current-affairs-20261021.json";
+const OCTOBER_SOURCE_FILES = ["current-affairs-october-2026-pakistan.json", "current-affairs-october-2026-world.json"];
 
 function sha256(value) {
   return crypto.createHash("sha256").update(JSON.stringify(value)).digest("hex");
@@ -24,6 +30,8 @@ function assertApprovedPrefix(bank) {
   assert.ok(bank.questions.length >= BASELINE_COUNT, "Original question bank is incomplete");
   assert.equal(sha256(bank.questions.slice(0, BASELINE_COUNT)), BASELINE_SHA256,
     "Append-only release: an original question/object/order/repeat count changed");
+  assert.equal(sha256(bank.questions.slice(0, OCTOBER_BASELINE_COUNT)), OCTOBER_BASELINE_SHA256,
+    "Append-only release: a current 11932-question object/order/repeat count changed");
 }
 
 function questionKey(text) {
@@ -66,13 +74,20 @@ function validateSupplement(bank) {
     validateTemporalScope(question.temporalScope, question.question, question.id, fail);
     assert.ok(["event-date", "as-of"].includes(question.temporalScope.type), `${question.id}: date scope required`);
     question.references.forEach((reference) => assert.equal(reference.accessedOn, VERIFIED_ON));
+    if (index >= SUPPLEMENT_COUNT) {
+      assert.equal(question.temporalScope.type, "event-date", `${question.id}: October news must identify a completed event/announcement`);
+      assert.ok(question.temporalScope.eventDate >= "2026-10-01" && question.temporalScope.eventDate <= VERIFIED_ON,
+        `${question.id}: event must fall in 1-21 October 2026`);
+    }
   });
-  assert.equal(bank.questions.filter((question) => question.categoryId === "current-affairs").length, 650);
+  assert.equal(bank.questions.filter((question) => question.categoryId === "current-affairs").length, 650 + OCTOBER_SUPPLEMENT_COUNT);
   return additions;
 }
 
 module.exports = {
   BASELINE_COUNT, BASELINE_SIGNATURE, BASELINE_SHA256, CATEGORY_SHA256,
   SUPPLEMENT_COUNT, RELEASE_COUNT, VERIFIED_ON, SOURCE_FILE,
+  OCTOBER_BASELINE_COUNT, OCTOBER_BASELINE_SIGNATURE, OCTOBER_BASELINE_SHA256,
+  OCTOBER_SUPPLEMENT_COUNT, OCTOBER_SOURCE_FILES,
   assertApprovedPrefix, questionKey, sha256, validateSupplement
 };

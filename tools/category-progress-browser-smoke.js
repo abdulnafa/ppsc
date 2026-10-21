@@ -11,6 +11,9 @@ const vm = require("node:vm");
 const { spawn } = require("node:child_process");
 const { connect, waitForTarget } = require("./browser-smoke");
 const root = path.resolve(__dirname, "..");
+const baselineOption = process.argv.find(argument => argument.startsWith("--baseline="));
+const baselineCount = baselineOption ? Number(baselineOption.split("=")[1]) : 11892;
+assert([11892, 11932].includes(baselineCount), "Use --baseline=11892 or --baseline=11932");
 const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
 const ACTIVE = "ppsc-prep:active-session:v1";
 const ARCHIVE = "ppsc-prep:category-sessions:v1";
@@ -34,8 +37,10 @@ async function main() {
     "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"].find(fs.existsSync);
   assert(chrome, "Chrome or Edge is required");
   const baselineBank = readBank();
-  baselineBank.questions = baselineBank.questions.slice(0, 11892);
-  assert.equal(baselineBank.questions.length, 11892, "pre-release bank prefix is required");
+  if (baselineCount === 11932) assert(baselineBank.questions.length > baselineCount,
+    "The 11,932 migration browser test requires the new appended release");
+  baselineBank.questions = baselineBank.questions.slice(0, baselineCount);
+  assert.equal(baselineBank.questions.length, baselineCount, "pre-release bank prefix is required");
   let releasedBank = false;
   const profile = fs.mkdtempSync(path.join(os.tmpdir(), "ppsc-category-progress-test-"));
   const server = http.createServer((request, response) => {
@@ -127,12 +132,12 @@ async function main() {
       assert.deepEqual(stable(await active()), stable(expected), "Continue must restore exact session " + key);
       assert.equal(await client.evaluate("document.getElementById('question-text').dataset.questionId"), expected.questionIds[expected.currentIndex]);
     };
-    const capture = async (name, width, dark) => {
+    const capture = async (name, width, dark, selector = "#category-sessions-panel") => {
       await client.send("Emulation.setDeviceMetricsOverride", { width, height: 900, deviceScaleFactor: 1, mobile: width < 500 });
-      await client.evaluate(`document.activeElement?.blur();document.documentElement.setAttribute('data-theme','${dark ? "dark" : "light"}');document.getElementById('category-sessions-panel').scrollIntoView({behavior:'instant',block:'start'})`);
+      await client.evaluate(`document.activeElement?.blur();document.documentElement.setAttribute('data-theme','${dark ? "dark" : "light"}');document.querySelector(${JSON.stringify(selector)}).scrollIntoView({behavior:'instant',block:'start'})`);
       await pause(150);
       assert(await client.evaluate("document.documentElement.scrollWidth <= innerWidth + 1"), "Preview layout overflows at " + width);
-      const file = path.join(os.tmpdir(), `ppsc-category-progress-${name}.png`);
+      const file = path.join(os.tmpdir(), `ppsc-category-progress-${baselineCount}-${name}.png`);
       fs.writeFileSync(file, Buffer.from((await client.send("Page.captureScreenshot", { format: "png" })).data, "base64"));
       screenshots.push(file);
     };
@@ -260,10 +265,20 @@ async function main() {
     assert((await archive())[keyFor("general-knowledge", "learn")], "Difficult must not replace ordinary Learn");
 
     // Same-profile deployed bank refresh: frozen current-affairs sessions must not grow.
-    await start("current-affairs", "learn", { end: 3 }); await click("#action-button");
+    const caRange = baselineCount === 11932 ? { begin: 646, end: 650 } : { begin: 1, end: 3 };
+    await start("current-affairs", "learn", caRange); await click("#action-button");
     const caLearn = await active();
-    await start("current-affairs", "quiz", { end: 3 }); await answer(false);
+    await start("current-affairs", "quiz", caRange); await answer(false);
+    if (baselineCount === 11932) {
+      await click("#action-button");
+      await click('#options-container [data-option-index="1"]');
+    }
     const caQuiz = await active();
+    const baselineCaIds = baselineBank.questions.filter(question => question.categoryId === "current-affairs")
+      .slice(caRange.begin - 1, caRange.end).map(question => question.id);
+    assert.deepEqual(caQuiz.questionIds, Array.from(baselineCaIds));
+    assert.equal(caQuiz.rangePoolSize, baselineCount === 11932 ? 650 : 610);
+    await capture("ca-before-release", 1366, false, "#quiz-screen");
     const queueBeforeRelease = JSON.parse(await raw(QUEUE));
     await home();
     const currentBankCount = readBank().questions.length;
@@ -285,8 +300,17 @@ async function main() {
     await click(`[data-continue-category-session="${keyFor("current-affairs", "quiz")}"]`);
     const migratedQuiz = await active();
     assert.deepEqual(releaseStable(migratedQuiz), releaseStable(caQuiz));
-    assert.equal(migratedQuiz.questionIds.length, 3);
-    if (currentBankCount > 11892) {
+    assert.equal(migratedQuiz.questionIds.length, caRange.end - caRange.begin + 1);
+    assert.equal(await client.evaluate("document.getElementById('question-text').dataset.questionId"), caQuiz.questionIds[caQuiz.currentIndex]);
+    if (baselineCount === 11932) {
+      assert.equal(migratedQuiz.currentIndex, 1);
+      assert.equal(migratedQuiz.submitted, false);
+      assert.equal(migratedQuiz.selectedIndex, 1);
+      assert.equal(migratedQuiz.rangePoolSize, 650);
+    }
+    await capture("ca-after-release-desktop", 1366, false, "#quiz-screen");
+    await capture("ca-after-release-mobile-dark", 320, true, "#quiz-screen");
+    if (currentBankCount > baselineCount) {
       assert.notEqual(migratedQuiz.bankSignature, caQuiz.bankSignature);
       assert.equal(migratedQuiz.rangePoolBankSignature, caQuiz.bankSignature,
         "the new bank must explicitly retain the frozen pool's original bank signature");
@@ -295,7 +319,7 @@ async function main() {
     await click(`[data-continue-category-session="${keyFor("current-affairs", "learn")}"]`);
     const migratedLearn = await active();
     assert.deepEqual(releaseStable(migratedLearn), releaseStable(caLearn));
-    if (currentBankCount > 11892) {
+    if (currentBankCount > baselineCount) {
       assert.notEqual(migratedLearn.bankSignature, caLearn.bankSignature);
       assert.equal(migratedLearn.rangePoolBankSignature, caLearn.bankSignature);
     }
@@ -304,6 +328,36 @@ async function main() {
     await wait('document.readyState === "complete" && !document.getElementById("protected-app").hidden');
     await resume("current-affairs", keyFor("current-affairs", "quiz"), migratedQuiz);
     await resume("current-affairs", keyFor("current-affairs", "learn"), migratedLearn);
+
+    // Only after proving old progress survives, intentionally start a fresh
+    // range containing the appended October questions and exercise its UI.
+    let appendedCurrentAffairsTested = false;
+    if (baselineCount === 11932) {
+      const appendedQuestions = Array.from(readBank().questions.slice(baselineCount));
+      assert.equal(appendedQuestions.length, 20);
+      assert(appendedQuestions.every(question => question.categoryId === "current-affairs"));
+      await start("current-affairs", "quiz", { begin: 651, end: 670 });
+      const octoberQuiz = await active();
+      assert.equal(octoberQuiz.rangePoolSize, 670);
+      assert.deepEqual(octoberQuiz.questionIds, appendedQuestions.map(question => question.id));
+      assert.equal(octoberQuiz.questionIds[0], "USR-Q0021-SRC");
+      assert.equal(await client.evaluate("document.getElementById('question-text').dataset.questionId"), "USR-Q0021-SRC");
+      assert.match(await client.evaluate("document.title"), /PPSC Prep/);
+      assert.equal(await client.evaluate("location.origin"), new URL(url).origin);
+      assert(await client.evaluate("document.getElementById('question-text').textContent.trim().length > 20"),
+        "New October quiz must render meaningful question content");
+      assert.equal(await client.evaluate("Boolean(document.querySelector('vite-error-overlay,nextjs-portal'))"), false);
+      await answer(true);
+      const checkedOctober = await active();
+      assert.equal(checkedOctober.submitted, true);
+      assert.equal(checkedOctober.score, 1);
+      assert.equal(await client.evaluate("document.getElementById('feedback').hidden"), false);
+      await capture("october-new-question-desktop", 1366, false, "#quiz-screen");
+      await click("#action-button");
+      assert.equal((await active()).currentIndex, 1);
+      assert.equal(await client.evaluate("document.getElementById('question-text').dataset.questionId"), appendedQuestions[1].id);
+      appendedCurrentAffairsTested = true;
+    }
 
     await client.send("Page.addScriptToEvaluateOnNewDocument", {
       source: `if (location.hostname === 'ppsc-category-progress.test') {localStorage.setItem(${JSON.stringify(ARCHIVE)},'PRIVATE-OWNER-ARCHIVE');localStorage.setItem(${JSON.stringify(ACTIVE)},'PRIVATE-OWNER-ACTIVE');}`
@@ -329,7 +383,9 @@ async function main() {
       previewReadOnly: true, nativeKeyboard: true, checkedAndUncheckedQuizRestore: true,
       globalContinue: true, staleActiveSplitWriteRecovery: true, reload: true, isolatedCompletion: true, wrongQuizSeparate: true,
       sourceImportantAndDifficultProfiles: true, guestIsolation: true, guestReload: true,
-      bankBefore: 11892, bankAfter: currentBankCount, additiveBankReleaseTested: currentBankCount > 11892,
+      bankBefore: baselineCount, bankAfter: currentBankCount, additiveBankReleaseTested: currentBankCount > baselineCount,
+      preservedCurrentAffairsRange: caRange,
+      appendedCurrentAffairsTested,
       queuePreserved: true, errors, cloudRequests, screenshots,
       browser: "Browser plugin unavailable; repository native Chrome/CDP e2e harness" }, null, 2));
   } finally {
