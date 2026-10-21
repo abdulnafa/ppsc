@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-10-21",
+  "sources": [
+    { "id": "pres-pk-na-list", "title": "National Assembly — Presidents and acting Presidents", "url": "https://www.na.gov.pk/en/president_list.php" },
+    { "id": "pres-pk-presidency-list", "title": "Presidency — Former Presidents", "url": "https://president.gov.pk/index.php/former-presidents" },
+    { "id": "pres-pk-cabinet-list", "title": "Cabinet Division — Governors-General and Presidents; historical tenure phases", "url": "https://cabinet.gov.pk/SiteImage/Downloads/president.pdf" },
+    { "id": "pres-pk-na-history", "title": "National Assembly — Parliamentary history", "url": "https://na.gov.pk/en/content.php?id=75" },
+    { "id": "pres-pk-zardari-oath", "title": "Presidency — Asif Ali Zardari takes oath, 10 March 2024", "url": "https://president.gov.pk/news/asif-ali-zardari-sworn-in-as-president-of-pakistan-2" },
+    { "id": "pres-pk-zardari-gazette", "title": "Cabinet Division — Gazette notification of presidential assumption of office, 10 March 2024", "url": "https://cabinet.gov.pk/SiteImage/Misc/files/Latest%20News/Notification_President.pdf" },
+    { "id": "pres-pk-wasim-senate", "title": "Senate — Wasim Sajjad and his two acting presidencies", "url": "https://www.senate.gov.pk/en/profile.php?catid=0&cattitle=0&subcatid=0&uid=333" },
+    { "id": "pres-pk-soomro-senate", "title": "Senate — Muhammad Mian Soomro profile", "url": "https://www.senate.gov.pk/en/profile.php?uid=165" },
+    { "id": "pres-pk-soomro-pm", "title": "National Assembly — Prime Ministers, including caretaker Muhammad Mian Soomro", "url": "https://na.gov.pk/en/priminister_list.php" },
+    { "id": "pres-pk-ayub-treaty", "title": "World Bank Archives — Indus Waters Treaty signing, 19 September 1960", "url": "https://timeline.worldbank.org/en/timeline/eventdetail/1716" },
+    { "id": "pres-pk-rafiq-profile", "title": "Associated Press of Pakistan — Rafiq Tarar's judicial and presidential career", "url": "https://www.app.com.pk/domestic/former-president-rafiq-tarar-passes-away/" },
+    { "id": "pres-pk-1988-election", "title": "Election Commission of Pakistan — 1988 general election report", "url": "https://ecp.gov.pk/storage/files/1/ger-10.pdf" }
+  ],
+  "entries": [
+    {
+      "id": "pres-pk-iskander-mirza", "section": "pakistan", "name": "Iskander Mirza", "country": "Pakistan",
+      "tenures": [{ "start": "1956-03-23", "end": "1958-10-27" }],
+      "summary": "Pakistan ke pehle President; is se pehle aakhri Governor-General the.",
+      "facts": [
+        "23 March 1956 ko Pakistan republic bana aur presidential office shuru hua. Quaid-e-Azam pehle Governor-General the, President nahin.",
+        "7 October 1958 ko pehla martial law lagaya; 27 October ko Ayub Khan un ki jagah President bane.",
+        "Yahan handover ki tareekh 27 October hai; Cabinet ki historical list end date 26 October dikhati hai."
+      ],
+      "sourceIds": ["pres-pk-na-list", "pres-pk-cabinet-list", "pres-pk-na-history"]
+    },
+    {
+      "id": "pres-pk-ayub-khan", "section": "pakistan", "name": "Muhammad Ayub Khan", "country": "Pakistan",
+      "tenures": [{ "start": "1958-10-27", "end": "1969-03-25" }],
+      "summary": "Pakistan ke doosre President; 1962 ka presidential Constitution un ke daur mein aaya.",
+      "facts": [
+        "19 September 1960 ke Indus Waters Treaty par Pakistan ki taraf se Ayub Khan ne dastakhat kiye; India ki taraf se PM Jawaharlal Nehru the.",
+        "Cabinet list end 24 March 1969 dikhati hai; yahan Presidency aur NA ki 25 March handover date hai."
+      ],
+      "sourceIds": ["pres-pk-presidency-list", "pres-pk-cabinet-list", "pres-pk-na-history", "pres-pk-ayub-treaty"]
+    },
+    {
+      "id": "pres-pk-yahya-khan", "section": "pakistan", "name": "Agha Muhammad Yahya Khan", "country": "Pakistan",
+      "tenures": [{ "start": "1969-03-25", "end": "1971-12-20" }],
+      "summary": "Pakistan ke teesre President; 1970 ke pehle aam intikhabat un ke daur mein hue.",
+      "facts": [
+        "National Assembly ke pehle adult-franchise general elections 7 December 1970 ko hue.",
+        "20 December 1971 ko Zulfikar Ali Bhutto ne presidency sambhali; Cabinet list Yahya ki end date 19 December dikhati hai."
+      ],
+      "sourceIds": ["pres-pk-presidency-list", "pres-pk-cabinet-list", "pres-pk-na-history"]
+    },
+    {
+      "id": "pres-pk-zulfikar-ali-bhutto", "section": "pakistan", "name": "Zulfikar Ali Bhutto", "country": "Pakistan",
+      "tenures": [{ "start": "1971-12-20", "end": "1973-08-14" }],
+      "summary": "Pakistan ke chauthe President; baad mein Wazir-e-Azam bane.",
+      "facts": [
+        "20 December 1971 ko pehle civilian Chief Martial Law Administrator bhi bane.",
+        "14 August 1973 ko naye Constitution ke tehat PM bane; Fazal Elahi Chaudhry ne presidency sambhali."
+      ],
+      "sourceIds": ["pres-pk-cabinet-list", "pres-pk-na-history"]
+    },
+    {
+      "id": "pres-pk-fazal-elahi-chaudhry", "section": "pakistan", "name": "Fazal Elahi Chaudhry", "country": "Pakistan",
+      "tenures": [{ "start": "1973-08-14", "end": "1978-09-16" }],
+      "summary": "Pakistan ke paanchwein President; 1973 ke Constitution ke tehat pehle President.",
+      "facts": [
+        "Bhutto ke PM banne ke din presidency sambhali; un ke baad Zia-ul-Haq President bane.",
+        "Yahan NA ki mukammal presidency aur 16 September handover date hai. Cabinet list end date 15 September dikhati hai; Presidency website 1978 ke kuch periods alag dikhati hai."
+      ],
+      "sourceIds": ["pres-pk-na-list", "pres-pk-cabinet-list", "pres-pk-presidency-list", "pres-pk-na-history"]
+    },
+    {
+      "id": "pres-pk-zia-ul-haq", "section": "pakistan", "name": "Muhammad Zia-ul-Haq", "country": "Pakistan",
+      "tenures": [{ "start": "1978-09-16", "end": "1988-08-17" }],
+      "summary": "Pakistan ke chhatay President; presidency 1978 se thi, martial-law takeover 1977 mein hua tha.",
+      "facts": [
+        "5 July 1977 ke martial law aur 16 September 1978 ko President banne ki tareekhon ko alag yaad rakhein.",
+        "17 August 1988 ko Bahawalpur ke qareeb plane crash mein wafat hui; Ghulam Ishaq Khan ne acting zimmedari sambhali."
+      ],
+      "sourceIds": ["pres-pk-presidency-list", "pres-pk-na-history", "pres-pk-1988-election", "pres-pk-cabinet-list"]
+    },
+    {
+      "id": "pres-pk-ghulam-ishaq-khan", "section": "pakistan", "name": "Ghulam Ishaq Khan", "country": "Pakistan",
+      "tenures": [
+        { "start": "1988-08-17", "end": "1988-12-12", "label": "Shuruati acting phase" },
+        { "start": "1988-12-13", "end": "1993-07-18", "label": "Muntakhib President" }
+      ],
+      "summary": "Pakistan ke saatwein President; pehle acting, phir muntakhib President bane.",
+      "facts": [
+        "Cabinet record acting phase aur elected phase ko alag karta hai; dono yahan ek hi shakhs ke neeche hain, do alag Presidents nahin.",
+        "End date 18 July 1993 Presidency aur Cabinet dono se tasdeeq hai; NA summary ki 8 July entry is se mukhtalif hai."
+      ],
+      "sourceIds": ["pres-pk-cabinet-list", "pres-pk-presidency-list", "pres-pk-na-list"]
+    },
+    {
+      "id": "pres-pk-farooq-leghari", "section": "pakistan", "name": "Farooq Ahmad Khan Leghari", "country": "Pakistan",
+      "tenures": [{ "start": "1993-11-14", "end": "1997-12-02" }],
+      "summary": "Pakistan ke aathwein President; un ke dono taraf Wasim Sajjad ke acting daur aaye.",
+      "facts": [
+        "5 November 1996 ko Benazir Bhutto ke doosre daur ki National Assembly barkhast ki.",
+        "Presidency ki handover date 2 December 1997 hai; Cabinet list end date 1 December likhti hai."
+      ],
+      "sourceIds": ["pres-pk-presidency-list", "pres-pk-cabinet-list", "pres-pk-na-history", "pres-pk-wasim-senate"]
+    },
+    {
+      "id": "pres-pk-rafiq-tarar", "section": "pakistan", "name": "Muhammad Rafiq Tarar", "country": "Pakistan",
+      "tenures": [{ "start": "1998-01-01", "end": "2001-06-20" }],
+      "summary": "Pakistan ke nauwein President; pehle Lahore High Court ke Chief Justice aur Supreme Court judge rahe.",
+      "facts": [
+        "1998 ke naye saal ke pehle din presidency sambhali; un ke baad Pervez Musharraf aaye.",
+        "Yahan Presidency ki 20 June handover date hai; Cabinet list end date 19 June dikhati hai."
+      ],
+      "sourceIds": ["pres-pk-presidency-list", "pres-pk-cabinet-list", "pres-pk-rafiq-profile"]
+    },
+    {
+      "id": "pres-pk-pervez-musharraf", "section": "pakistan", "name": "Pervez Musharraf", "country": "Pakistan",
+      "tenures": [{ "start": "2001-06-20", "end": "2008-08-18" }],
+      "summary": "Pakistan ke daswein President; 1999 ka Chief Executive takeover aur 2001 ki presidency alag dates hain.",
+      "facts": [
+        "29 November 2007 ko civilian President ke taur par dobara halaf liya; yahan poori 2001–2008 service ek musalsal daur mein hai.",
+        "18 August 2008 ko isteefa diya. NA summary mein 2007 ke do hisse hain; Presidency ki list mukammal 20 June 2001–18 August 2008 muddat deti hai."
+      ],
+      "sourceIds": ["pres-pk-presidency-list", "pres-pk-cabinet-list", "pres-pk-na-list", "pres-pk-na-history"]
+    },
+    {
+      "id": "pres-pk-asif-ali-zardari", "section": "pakistan", "name": "Asif Ali Zardari", "country": "Pakistan",
+      "tenures": [
+        { "start": "2008-09-09", "end": "2013-09-09", "label": "Pehla daur — 11wein President" },
+        { "start": "2024-03-10", "end": null, "label": "Doosra daur — 14wein President; halaf ki tareekh" }
+      ],
+      "summary": "21 October 2026 ki verification par mojooda President; 2008–2013 ke baad doosra ghair-musalsal daur.",
+      "facts": [
+        "2024 mein intikhab 9 March ko hua; halaf aur office sambhalne ki tareekh 10 March hai.",
+        "Presidency unhein 14wein President kehti hai. Is list mein ek shakhs ka naam ek hi martaba hai; un ke dono daur neeche saath diye hain.",
+        "Pehle daur ka handover 9 September 2013 tha; Cabinet ki historical list end date 8 September dikhati hai."
+      ],
+      "sourceIds": ["pres-pk-na-list", "pres-pk-cabinet-list", "pres-pk-zardari-oath", "pres-pk-zardari-gazette"]
+    },
+    {
+      "id": "pres-pk-mamnoon-hussain", "section": "pakistan", "name": "Mamnoon Hussain", "country": "Pakistan",
+      "tenures": [{ "start": "2013-09-09", "end": "2018-09-09" }],
+      "summary": "Pakistan ke barhwein President; Zardari ke pehle daur ke baad aur Arif Alvi se pehle aaye.",
+      "facts": [
+        "2013–2018 ka paanch saala daur yaad rakhein.",
+        "NA aur Presidency handover 9 September 2018 dikhati hain; Cabinet ki historical list end 8 September hai."
+      ],
+      "sourceIds": ["pres-pk-na-list", "pres-pk-presidency-list", "pres-pk-cabinet-list"]
+    },
+    {
+      "id": "pres-pk-arif-alvi", "section": "pakistan", "name": "Dr Arif-ur-Rehman Alvi", "country": "Pakistan",
+      "tenures": [{ "start": "2018-09-09", "end": "2024-03-10" }],
+      "summary": "Pakistan ke terhwein President; un ke baad Zardari ka doosra daur shuru hua.",
+      "facts": [
+        "2018–2024 ki asal service ko sirf 2018–2023 na samjhein: successor ka halaf 10 March 2024 ko hua.",
+        "Arif Alvi aur Zardari ke handover ki 10 March 2024 tareekh Presidency ke record aur Gazette se milti hai."
+      ],
+      "sourceIds": ["pres-pk-na-list", "pres-pk-presidency-list", "pres-pk-zardari-oath", "pres-pk-zardari-gazette"]
+    },
+    {
+      "id": "pres-pk-wasim-sajjad", "section": "acting", "name": "Wasim Sajjad", "country": "Pakistan",
+      "tenures": [
+        { "start": "1993-07-18", "end": "1993-11-14", "label": "Pehla acting daur — NA handover dates" },
+        { "start": "1997-12-02", "end": "1998-01-01", "label": "Doosra acting daur" }
+      ],
+      "summary": "Senate Chairman ki haisiyat se do martaba Acting President; yeh regular presidential numbering mein shamil nahin.",
+      "facts": [
+        "Pehli martaba Ghulam Ishaq Khan ke baad, doosri martaba Farooq Leghari ke baad zimmedari sambhali.",
+        "Pehle daur ke liye NA 18 July–14 November 1993 deta hai, jabke Senate profile 19 July–13 November deti hai. Yahan NA ki handover dates dikhayi gayi hain.",
+        "Acting ka matlab aarzi zimmedari hai; ise caretaker Prime Minister ke ohday se alag yaad rakhein."
+      ],
+      "sourceIds": ["pres-pk-na-list", "pres-pk-wasim-senate"]
+    },
+    {
+      "id": "pres-pk-muhammad-mian-soomro", "section": "acting", "name": "Muhammad Mian Soomro", "country": "Pakistan",
+      "tenures": [{ "start": "2008-08-18", "end": "2008-09-09", "label": "Acting President" }],
+      "summary": "Musharraf ke isteefay ke baad aur Zardari ke pehle halaf se pehle Acting President.",
+      "facts": [
+        "Senate Chairman bhi rahe; presidency ki aarzi muddat 2008 ki hai.",
+        "2007–2008 mein caretaker Prime Minister bhi the; caretaker PM aur Acting President un ki do alag zimmedariyan thin."
+      ],
+      "sourceIds": ["pres-pk-na-list", "pres-pk-soomro-senate", "pres-pk-soomro-pm"]
+    }
+  ]
+}

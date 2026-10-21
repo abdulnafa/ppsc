@@ -106,7 +106,7 @@ async function main() {
       const card = document.getElementById('prime-ministers-card');
       return card?.parentElement.id === 'study-tools-options'
         && document.querySelectorAll('#prime-ministers-card').length === 1
-        && document.querySelectorAll('#study-tools-options > button').length === 5
+        && document.querySelectorAll('#study-tools-options > button').length === 6
         && document.querySelectorAll('#study-tools-options > button')[4] === card
         && document.querySelectorAll('#category-grid .category-card').length === 11
         && !document.getElementById('study-tools-box').contains(document.getElementById('category-grid'))

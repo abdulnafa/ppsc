@@ -746,7 +746,7 @@ h2[tabindex="-1"]:focus {
 .water-topic-source { color: var(--muted); font-size: .75rem; }
 .water-topic-context { margin-top: 8px; color: var(--muted); font-size: .8rem; line-height: 1.7; }
 .water-topics-message { padding: 0 24px 24px; }
-#water-topics-retry, #articles-topics-retry, #prime-ministers-retry { margin: 0 24px 24px; }
+#water-topics-retry, #articles-topics-retry, #prime-ministers-retry, #presidents-retry { margin: 0 24px 24px; }
 .pm-entry { margin: 10px 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); overflow: hidden; }
 .pm-entry > summary { padding: 17px 18px; cursor: pointer; color: var(--ink); overflow-wrap: anywhere; }
 .pm-entry > summary:focus-visible { outline: 3px solid var(--blue-600); outline-offset: -3px; }

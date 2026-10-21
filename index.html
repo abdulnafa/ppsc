@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261021-1">
+  <link rel="stylesheet" href="styles.css?v=20261021-2">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20261020-2" defer></script>
   <script src="data/questions.js?v=20261018-1" defer></script>
@@ -16,8 +16,8 @@
   <script src="data/detailed-learning.js?v=20260917-1" defer></script>
   <script src="years-topics.js?v=20261020-1" defer></script>
   <script src="water-topics.js?v=20261020-2" defer></script>
-  <script src="prime-ministers.js?v=20261021-1" defer></script>
-  <script src="app.js?v=20261021-1" defer></script>
+  <script src="prime-ministers.js?v=20261021-2" defer></script>
+  <script src="app.js?v=20261021-2" defer></script>
 </head>
 <body>
   <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
@@ -185,7 +185,7 @@
           </span>
           <span class="study-tools-copy">
             <strong>Study Tools</strong>
-            <small lang="ur-Latn">Practice paper, years, dams &amp; rivers, Constitution Articles aur Prime Ministers — options kholein.</small>
+            <small lang="ur-Latn">Practice paper, years, dams &amp; rivers, Constitution Articles, Prime Ministers aur Presidents — options kholein.</small>
           </span>
           <span class="study-tools-chevron" aria-hidden="true">&#9662;</span>
         </summary>
@@ -236,6 +236,14 @@
             <span class="category-copy">
               <strong>Prime Ministers</strong>
               <small lang="ur-Latn">Pakistan ke regular aur caretaker PMs; duniya ke muntakhib PMs, tenure dates aur exam facts.</small>
+            </span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+          <button id="presidents-card" class="category-card water-topics-card" type="button" aria-controls="presidents-screen">
+            <span class="category-icon water-topics-icon" aria-hidden="true">PR</span>
+            <span class="category-copy">
+              <strong>Presidents</strong>
+              <small lang="ur-Latn">Pakistan ke Presidents aur acting office-holders; doosre mulkon ke important naam, dates aur exam facts.</small>
             </span>
             <span class="card-arrow" aria-hidden="true">&rarr;</span>
           </button>
@@ -407,6 +415,42 @@
           <strong>No matching notes found</strong>
           <p>Try another name, date, country or topic, or clear the filters.</p>
         </div>
+      </article>
+    </section>
+
+    <section id="presidents-screen" class="screen" aria-labelledby="presidents-title" hidden>
+      <button id="presidents-back" class="text-button" type="button">&larr; Back to categories</button>
+      <article class="water-topics-shell">
+        <header class="water-topics-header">
+          <span class="eyebrow">STUDY TOOLS · PEOPLE &amp; TENURES</span>
+          <h1 id="presidents-title">Presidents</h1>
+          <p lang="ur-Latn">Naam kholein aur mulk, tenure dates aur Roman Urdu mein aham exam facts parhein.</p>
+          <p class="water-topics-note" lang="ur-Latn">Pakistan: pehli appointment ki tarteeb; repeat terms aik naam ke neeche. Acting section office khaali hone ke darmiyan zimmedari sambhalne walon ka hai, har foreign visit ke temporary substitute ka nahi. Regular President ki acting phase usi naam mein wazeh hai.</p>
+          <p class="water-topics-note" lang="ur-Latn">World list muntakhib exam-related naam hain, mukammal current directory nahi. Sirf saal wali dates source ke mutabiq hain; current maloomat verification date tak hai.</p>
+          <p id="presidents-coverage" class="water-topics-note" lang="ur-Latn">Yeh reading list hai; saved practice aur queue wohi hain.</p>
+        </header>
+        <div class="water-topics-tools">
+          <label for="presidents-search">Search name, country, year or fact
+            <input id="presidents-search" type="search" autocomplete="off" placeholder="e.g. Iskander, Zardari, USA, 1956">
+          </label>
+          <label for="presidents-section">Section
+            <select id="presidents-section">
+              <option value="all">All lists</option>
+              <option value="pakistan">Pakistan — Presidents</option>
+              <option value="acting">Pakistan — acting-only holders</option>
+              <option value="world">World — selected Presidents</option>
+            </select>
+          </label>
+          <button id="presidents-clear" class="secondary-button" type="button" disabled>Clear filters</button>
+        </div>
+        <div class="water-topics-toolbar">
+          <p id="presidents-status" role="status" aria-live="polite"></p>
+          <button id="presidents-collapse" class="text-button" type="button" disabled>Close all names</button>
+        </div>
+        <p id="presidents-error" class="water-topics-message" role="alert" hidden lang="ur-Latn">List load nahi ho saki. Internet check karke dobara koshish karein.</p>
+        <button id="presidents-retry" class="secondary-button" type="button" hidden>Try again</button>
+        <p id="presidents-empty" class="water-topics-message" hidden lang="ur-Latn">Koi naam nahi mila. Search ya section badlein.</p>
+        <div id="presidents-list" class="water-topics-list"></div>
       </article>
     </section>
 

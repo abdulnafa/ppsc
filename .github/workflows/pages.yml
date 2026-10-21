@@ -39,6 +39,7 @@ jobs:
           node tools/build-pakistan-articles-topics.js --check
           node --check prime-ministers.js
           node tools/build-prime-ministers.js --check
+          node tools/build-presidents.js --check
           node tools/validate-wgi.js --complete
           node tools/validate-site-data.js --expected=11892
           node tools/answer-text-migration-smoke.js
@@ -64,6 +65,7 @@ jobs:
           cp data/pakistan-water-topics.js _site/data/
           cp data/pakistan-articles-topics.js _site/data/
           cp data/prime-ministers.js _site/data/
+          cp data/presidents.js _site/data/
           cp assets/fonts/*.woff2 _site/assets/fonts/
 
       - name: Upload static site

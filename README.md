@@ -4,7 +4,15 @@ A category-wise PPSC General Ability practice website for GitHub Pages. Question
 
 ## Study Tools
 
-The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics**, **Pakistan Dams & Rivers**, **Pakistan Constitution Articles** and **Prime Ministers**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
+The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics**, **Pakistan Dams & Rivers**, **Pakistan Constitution Articles**, **Prime Ministers** and **Presidents**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
+
+## Presidents
+
+The **Presidents** reading tool contains 45 names: 13 Pakistan Presidents, 2 acting-only office-holders during vacancies, and 30 selected foreign Presidents across 17 countries. It includes 58 primary/official sources, checked on 21 October 2026. Repeat terms belong to one person, not duplicate person counts. A regular President's initial acting phase is explained inside that person's entry; the acting list is not a list of every temporary substitute during foreign visits. Governor-General and Prime Minister offices are distinguished from President. Source differences, oath versus election dates, year-only precision and date-qualified current offices are explicitly explained.
+
+`prime-ministers.js` now provides isolated Presidents and Prime Ministers instances: filters, loaded data, references and open names remain independent. The Presidents bundle loads only when its card opens. This is read-only study content, with no canonical question, scoring, queue, session, popup, guest/login or cloud changes.
+
+Author sources in `data/pakistan-presidents.json` and `data/world-presidents.json`, then run `node tools/build-presidents.js`. Use `--check` for deterministic output, schema/date/source/canonical-ID checks and deployment coverage. `node tools/presidents-browser-smoke.js` checks Home → Study Tools → Presidents → Back → Continue, filters, lazy-load retry, native keyboard, responsive/dark rendering, guest isolation and independent Prime Ministers state. Editorial source review is still required when updating facts.
 
 ## Prime Ministers
 
