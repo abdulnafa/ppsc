@@ -771,6 +771,18 @@ h2[tabindex="-1"]:focus {
 .world-map-controls input, .world-map-controls select { width: 100%; min-width: 0; min-height: 46px; padding: 10px 12px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; font: inherit; }
 .world-map-zoom { display: flex; gap: 6px; }
 .world-map-zoom .secondary-button { white-space: nowrap; padding-inline: 12px; }
+.world-map-country-index { margin: 0 24px 14px; padding: 14px 16px; background: var(--blue-50); border: 1px solid var(--line); border-radius: 12px; }
+.world-map-skip-index { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.world-map-skip-index:focus { position: static; display: inline-block; width: auto; height: auto; margin-bottom: 10px; padding: 7px 10px; clip-path: none; color: var(--surface); background: var(--blue-600); border-radius: 7px; }
+.world-map-country-index-heading { display: flex; justify-content: space-between; align-items: start; gap: 8px 16px; margin-bottom: 10px; }
+.world-map-country-index h2 { margin: 0; color: var(--ink); font-size: .96rem; line-height: 1.3; }
+.world-map-country-index p { margin: 3px 0 0; color: var(--muted); font-size: .77rem; line-height: 1.4; }
+.world-map-country-index-count { flex: 0 0 auto; color: var(--blue-700); font-size: .76rem; font-weight: 750; }
+.world-map-country-index-list { display: flex; flex-wrap: wrap; align-content: flex-start; gap: 6px; max-height: 135px; overflow-y: auto; overscroll-behavior: contain; scrollbar-color: var(--line) transparent; }
+.world-map-country-index-list button { min-height: 32px; padding: 5px 10px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 7px; font: inherit; font-size: .77rem; font-weight: 600; line-height: 1.2; cursor: pointer; }
+.world-map-country-index-list button:hover { color: var(--blue-700); border-color: var(--blue-600); }
+.world-map-country-index-list button:focus-visible { outline: none; box-shadow: var(--focus); }
+.world-map-country-index-list button.is-selected { color: var(--surface); background: var(--blue-600); border-color: var(--blue-600); }
 .world-map-status, .world-map-error, .world-map-footnote { margin: 0; padding: 0 24px 14px; color: var(--muted); font-size: .83rem; line-height: 1.6; }
 .world-map-error { color: var(--red); }
 #world-map-retry { margin: 0 24px 16px; }
@@ -782,6 +794,9 @@ h2[tabindex="-1"]:focus {
 .world-map-country:hover, .world-map-country:focus-visible { filter: brightness(1.1); stroke: var(--navy-950); stroke-width: 1.6; outline: none; }
 .world-map-country.is-selected { stroke: #ed8b18; stroke-width: 2.2; }
 .world-map-country:focus-visible path { stroke: #f08312; stroke-width: 2; }
+.world-map-labels { pointer-events: none; }
+.world-map-label { fill: #172f42; stroke: #f7fbfc; paint-order: stroke fill; text-anchor: middle; dominant-baseline: middle; font-family: system-ui, sans-serif; font-weight: 700; letter-spacing: .01em; pointer-events: none; user-select: none; }
+.world-map-label.is-selected { fill: #8c4906; stroke: #fff8ed; font-weight: 800; }
 .world-map-level-0 { fill: #cbd8df; }
 .world-map-level-1 { fill: #a8ddcf; }
 .world-map-level-2 { fill: #78c7b5; }
@@ -812,14 +827,19 @@ html[data-theme='dark'] .world-map-level-2 { fill: #318b84; }
 html[data-theme='dark'] .world-map-level-3 { fill: #3daa98; }
 html[data-theme='dark'] .world-map-level-4 { fill: #60c6aa; }
 html[data-theme='dark'] .world-map-level-5 { fill: #85e1b9; }
+html[data-theme='dark'] .world-map-label { fill: #f5fbff; stroke: #152b3a; }
+html[data-theme='dark'] .world-map-label.is-selected { fill: #fff0be; stroke: #382411; }
 @media (max-width: 700px) {
   .organizations-name-list { grid-template-columns: 1fr; padding: 14px 16px 18px 34px; }
   .organizations-question .water-topic-count { margin-left: 0; }
   .world-map-controls { grid-template-columns: 1fr auto; padding: 16px; }
   .world-map-controls label[for='world-map-category'], .world-map-zoom { grid-column: 1 / -1; }
   .world-map-zoom .secondary-button { flex: 1; }
+  .world-map-country-index { margin-inline: 12px; padding: 12px; }
+  .world-map-country-index-heading { flex-wrap: wrap; }
+  .world-map-country-index-list { max-height: 124px; }
   .world-map-status, .world-map-error, .world-map-footnote { padding-inline: 16px; }
-  .world-map-stage { margin-inline: 12px; height: 320px; }
+  .world-map-stage { margin-inline: 12px; height: clamp(180px, 56vw, 340px); }
   .world-map-detail { padding: 18px 16px 22px; }
   .world-map-question-list { grid-template-columns: 1fr; }
 }

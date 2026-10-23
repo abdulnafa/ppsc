@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261023-1">
+  <link rel="stylesheet" href="styles.css?v=20261023-2">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20261021-1" defer></script>
   <script src="data/questions.js?v=20261021-2" defer></script>
@@ -18,7 +18,7 @@
   <script src="water-topics.js?v=20261020-2" defer></script>
   <script src="prime-ministers.js?v=20261021-2" defer></script>
   <script src="organizations-topics.js?v=20261021-1" defer></script>
-  <script src="world-map.js?v=20261023-1" defer></script>
+  <script src="world-map.js?v=20261023-2" defer></script>
   <script src="app.js?v=20261023-1" defer></script>
 </head>
 <body>
@@ -656,7 +656,7 @@
         <header class="world-map-header">
           <p class="eyebrow">STUDY TOOLS / GEOGRAPHY</p>
           <h1 id="world-map-title">World MCQ Map</h1>
-          <p lang="ur-Latn">Country par hover ya tap karein. Rang jitna gehra ho, utne zyada linked MCQs hain. Map ka data kholne par load hota hai.</p>
+          <p lang="ur-Latn">Country par hover ya tap karein. Naam map par dikhte hain aur zoom ke saath mazeed naam nazar aate hain. Rang jitna gehra ho, utne zyada linked MCQs hain.</p>
         </header>
         <div class="world-map-controls">
           <label for="world-map-search">Search country
@@ -673,10 +673,21 @@
             <button id="world-map-reset" class="secondary-button" type="button">Reset view</button>
           </div>
         </div>
+        <section id="world-map-country-index" class="world-map-country-index" aria-labelledby="world-map-country-index-title">
+          <a class="world-map-skip-index" href="#world-map-stage">Skip country list</a>
+          <div class="world-map-country-index-heading">
+            <div>
+              <h2 id="world-map-country-index-title">Countries / regions</h2>
+              <p>Search above or select a country to view its related MCQs. Clear search to show all names.</p>
+            </div>
+            <span id="world-map-country-index-count" class="world-map-country-index-count" aria-live="polite">Loading countries...</span>
+          </div>
+          <div id="world-map-country-index-list" class="world-map-country-index-list" role="group" aria-labelledby="world-map-country-index-title"></div>
+        </section>
         <p id="world-map-status" class="world-map-status" role="status" aria-live="polite">Map tayyar ho raha hai...</p>
         <p id="world-map-error" class="world-map-error" role="alert" hidden>Map load nahi ho saka. Connection check karke dobara koshish karein.</p>
         <button id="world-map-retry" class="secondary-button" type="button" hidden>Try again</button>
-        <div id="world-map-stage" class="world-map-stage" aria-label="Interactive world map">
+        <div id="world-map-stage" class="world-map-stage" aria-label="Interactive world map" tabindex="-1">
           <svg id="world-map-svg" viewBox="0 0 1000 500" role="group" aria-label="World countries colored by related MCQ count"></svg>
           <div id="world-map-tooltip" class="world-map-tooltip" role="status" hidden></div>
         </div>
