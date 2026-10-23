@@ -211,6 +211,7 @@
     elements.primeMinistersScreen = firstElement(["#prime-ministers-screen"]);
     elements.presidentsScreen = firstElement(["#presidents-screen"]);
     elements.organizationsTopicsScreen = firstElement(["#organizations-topics-screen"]);
+    elements.worldMapScreen = firstElement(["#world-map-screen"]);
     elements.paperSetupScreen = firstElement(["#paper-setup-screen", "[data-screen='paper-setup']"]);
     elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
     elements.quizScreen = firstElement(["#quiz-screen", "[data-screen='quiz']"]);
@@ -3909,6 +3910,7 @@
     setHidden(elements.primeMinistersScreen, screenName !== "prime-ministers");
     setHidden(elements.presidentsScreen, screenName !== "presidents");
     setHidden(elements.organizationsTopicsScreen, screenName !== "organizations-topics");
+    setHidden(elements.worldMapScreen, screenName !== "world-map");
     setHidden(elements.paperSetupScreen, screenName !== "paper-setup");
     setHidden(elements.modeScreen, screenName !== "mode");
     setHidden(elements.quizScreen, screenName !== "quiz");
@@ -3934,6 +3936,8 @@
       ? elements.presidentsScreen
       : screenName === "organizations-topics"
       ? elements.organizationsTopicsScreen
+      : screenName === "world-map"
+      ? elements.worldMapScreen
       : screenName === "paper-setup"
       ? elements.paperSetupScreen
       : screenName === "quiz"
@@ -7083,6 +7087,17 @@
   }
 
   function bindEvents() {
+    if (window.PPSC_WORLD_MAP && elements.worldMapScreen) {
+      window.PPSC_WORLD_MAP.init({
+        categories: categories,
+        questions: allQuestions,
+        open: function () { showScreen("world-map"); },
+        close: function () {
+          showScreen("categories");
+          updateContinueSessionUI();
+        }
+      });
+    }
     if (window.PPSC_ORGANIZATIONS_TOPICS && elements.organizationsTopicsScreen) {
       window.PPSC_ORGANIZATIONS_TOPICS.init({
         open: function () { showScreen("organizations-topics"); },

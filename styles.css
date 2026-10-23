@@ -761,9 +761,67 @@ h2[tabindex="-1"]:focus {
 .organizations-question .water-topic-title { flex: 1 1 320px; margin-left: 0; }
 .organizations-question .water-topic-count { margin-left: auto; }
 .organizations-question .water-topic-answer { margin: 0; padding: 14px 18px; border-radius: 0; }
+.world-map-icon { background: #dff3f1; color: #087d78; font-size: .75rem; letter-spacing: .03em; }
+.world-map-shell { margin-top: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
+.world-map-header { padding: clamp(20px, 4vw, 34px); border-bottom: 1px solid var(--line); background: var(--blue-50); }
+.world-map-header h1 { margin: 8px 0 12px; font-size: clamp(1.6rem, 4vw, 2.3rem); }
+.world-map-header p:last-child { max-width: 75ch; margin-bottom: 0; color: var(--muted); }
+.world-map-controls { display: grid; grid-template-columns: minmax(180px, 2fr) auto minmax(170px, 1fr) auto; align-items: end; gap: 12px; padding: 20px 24px; }
+.world-map-controls label { display: grid; gap: 6px; min-width: 0; font-size: .8rem; font-weight: 700; }
+.world-map-controls input, .world-map-controls select { width: 100%; min-width: 0; min-height: 46px; padding: 10px 12px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; font: inherit; }
+.world-map-zoom { display: flex; gap: 6px; }
+.world-map-zoom .secondary-button { white-space: nowrap; padding-inline: 12px; }
+.world-map-status, .world-map-error, .world-map-footnote { margin: 0; padding: 0 24px 14px; color: var(--muted); font-size: .83rem; line-height: 1.6; }
+.world-map-error { color: var(--red); }
+#world-map-retry { margin: 0 24px 16px; }
+.world-map-stage { position: relative; height: clamp(300px, 50vw, 520px); margin: 0 24px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #eaf3f6; }
+.world-map-stage svg { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+.world-map-stage svg:active { cursor: grabbing; }
+.world-map-country { stroke: #f8fbfd; stroke-width: .6; cursor: pointer; }
+.world-map-country { vector-effect: non-scaling-stroke; }
+.world-map-country:hover, .world-map-country:focus-visible { filter: brightness(1.1); stroke: var(--navy-950); stroke-width: 1.6; outline: none; }
+.world-map-country.is-selected { stroke: #ed8b18; stroke-width: 2.2; }
+.world-map-country:focus-visible path { stroke: #f08312; stroke-width: 2; }
+.world-map-level-0 { fill: #cbd8df; }
+.world-map-level-1 { fill: #a8ddcf; }
+.world-map-level-2 { fill: #78c7b5; }
+.world-map-level-3 { fill: #40a994; }
+.world-map-level-4 { fill: #197b73; }
+.world-map-level-5 { fill: #12525d; }
+.world-map-small-marker { stroke: #fff; stroke-width: 1.5; }
+.world-map-tooltip { position: absolute; z-index: 2; width: min(270px, calc(100% - 16px)); padding: 10px 12px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 11px; box-shadow: var(--shadow); pointer-events: none; line-height: 1.4; }
+.world-map-tooltip strong, .world-map-tooltip span, .world-map-tooltip small { display: block; }
+.world-map-tooltip span { color: var(--blue-700); font-size: .8rem; font-weight: 700; }
+.world-map-tooltip small { margin-top: 6px; color: var(--muted); font-size: .74rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.world-map-footnote { padding-top: 12px; }
+.world-map-detail { padding: 20px 24px 28px; border-top: 1px solid var(--line); }
+.world-map-detail h2 { margin: 0 0 5px; font-size: 1.35rem; }
+.world-map-detail > p { margin: 0 0 16px; color: var(--muted); font-size: .86rem; }
+.world-map-question-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.world-map-question { padding: 14px 16px; background: var(--blue-50); border: 1px solid var(--line); border-radius: 12px; min-width: 0; overflow-wrap: anywhere; }
+.world-map-question-meta { color: var(--blue-700); font-size: .73rem; font-weight: 800; }
+.world-map-question-text { margin: 8px 0; font-weight: 700; line-height: 1.55; }
+.world-map-question-answer { margin: 0; color: var(--green); font-size: .85rem; font-weight: 750; }
+.world-map-no-questions { color: var(--muted); }
+#world-map-more { margin-top: 16px; }
+html[data-theme='dark'] .world-map-stage { background: #152b3a; }
+html[data-theme='dark'] .world-map-country { stroke: #152b3a; }
+html[data-theme='dark'] .world-map-level-0 { fill: #42596b; }
+html[data-theme='dark'] .world-map-level-1 { fill: #366d70; }
+html[data-theme='dark'] .world-map-level-2 { fill: #318b84; }
+html[data-theme='dark'] .world-map-level-3 { fill: #3daa98; }
+html[data-theme='dark'] .world-map-level-4 { fill: #60c6aa; }
+html[data-theme='dark'] .world-map-level-5 { fill: #85e1b9; }
 @media (max-width: 700px) {
   .organizations-name-list { grid-template-columns: 1fr; padding: 14px 16px 18px 34px; }
   .organizations-question .water-topic-count { margin-left: 0; }
+  .world-map-controls { grid-template-columns: 1fr auto; padding: 16px; }
+  .world-map-controls label[for='world-map-category'], .world-map-zoom { grid-column: 1 / -1; }
+  .world-map-zoom .secondary-button { flex: 1; }
+  .world-map-status, .world-map-error, .world-map-footnote { padding-inline: 16px; }
+  .world-map-stage { margin-inline: 12px; height: 320px; }
+  .world-map-detail { padding: 18px 16px 22px; }
+  .world-map-question-list { grid-template-columns: 1fr; }
 }
 .category-saved-progress { display: block; margin-top: 6px; color: var(--blue-600); font-size: .75rem; font-weight: 700; }
 .category-sessions-panel { margin: 24px 0; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }

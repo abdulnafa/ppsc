@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261021-5">
+  <link rel="stylesheet" href="styles.css?v=20261023-1">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20261021-1" defer></script>
   <script src="data/questions.js?v=20261021-2" defer></script>
@@ -18,7 +18,8 @@
   <script src="water-topics.js?v=20261020-2" defer></script>
   <script src="prime-ministers.js?v=20261021-2" defer></script>
   <script src="organizations-topics.js?v=20261021-1" defer></script>
-  <script src="app.js?v=20261021-5" defer></script>
+  <script src="world-map.js?v=20261023-1" defer></script>
+  <script src="app.js?v=20261023-1" defer></script>
 </head>
 <body>
   <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
@@ -253,6 +254,14 @@
             <span class="category-copy">
               <strong>Organizations</strong>
               <small lang="ur-Latn">MCQs aur options mein aane wali organizations aur Important sawal-jawab parhein.</small>
+            </span>
+            <span class="card-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+          <button id="world-map-card" class="category-card water-topics-card" type="button" aria-controls="world-map-screen">
+            <span class="category-icon world-map-icon" aria-hidden="true">MAP</span>
+            <span class="category-copy">
+              <strong>World MCQ Map</strong>
+              <small lang="ur-Latn">Countries explore karein; zoom, search aur related MCQs ke answers dekhein.</small>
             </span>
             <span class="card-arrow" aria-hidden="true">&rarr;</span>
           </button>
@@ -638,6 +647,46 @@
         <button id="organizations-topics-retry" class="secondary-button" type="button" hidden>Try again</button>
         <p id="organizations-topics-empty" class="water-topics-message" hidden lang="ur-Latn">Koi organization ya sawal nahi mila. Search ya filter badlein.</p>
         <div id="organizations-topics-list" class="water-topics-list"></div>
+      </article>
+    </section>
+
+    <section id="world-map-screen" class="screen" aria-labelledby="world-map-title" hidden>
+      <button id="world-map-back" class="text-button" type="button"><span aria-hidden="true">&larr;</span> Back to Study Tools</button>
+      <article class="world-map-shell">
+        <header class="world-map-header">
+          <p class="eyebrow">STUDY TOOLS / GEOGRAPHY</p>
+          <h1 id="world-map-title">World MCQ Map</h1>
+          <p lang="ur-Latn">Country par hover ya tap karein. Rang jitna gehra ho, utne zyada linked MCQs hain. Map ka data kholne par load hota hai.</p>
+        </header>
+        <div class="world-map-controls">
+          <label for="world-map-search">Search country
+            <input id="world-map-search" type="search" list="world-map-countries" autocomplete="off" placeholder="e.g. Pakistan, France">
+          </label>
+          <datalist id="world-map-countries"></datalist>
+          <button id="world-map-find" class="secondary-button" type="button">Find</button>
+          <label for="world-map-category">MCQ category
+            <select id="world-map-category"><option value="all">All categories</option></select>
+          </label>
+          <div class="world-map-zoom" role="group" aria-label="Map zoom controls">
+            <button id="world-map-zoom-in" class="secondary-button" type="button" aria-label="Zoom in">+</button>
+            <button id="world-map-zoom-out" class="secondary-button" type="button" aria-label="Zoom out">−</button>
+            <button id="world-map-reset" class="secondary-button" type="button">Reset view</button>
+          </div>
+        </div>
+        <p id="world-map-status" class="world-map-status" role="status" aria-live="polite">Map tayyar ho raha hai...</p>
+        <p id="world-map-error" class="world-map-error" role="alert" hidden>Map load nahi ho saka. Connection check karke dobara koshish karein.</p>
+        <button id="world-map-retry" class="secondary-button" type="button" hidden>Try again</button>
+        <div id="world-map-stage" class="world-map-stage" aria-label="Interactive world map">
+          <svg id="world-map-svg" viewBox="0 0 1000 500" role="group" aria-label="World countries colored by related MCQ count"></svg>
+          <div id="world-map-tooltip" class="world-map-tooltip" role="status" hidden></div>
+        </div>
+        <p class="world-map-footnote" lang="ur-Latn">Linking question aur us ke correct answer mein country/city names se hoti hai; wrong options count nahi hoti. Yeh map fact-check ya border-status reference nahi. Boundary data: Natural Earth (public domain).</p>
+        <section id="world-map-detail" class="world-map-detail" aria-labelledby="world-map-detail-title">
+          <h2 id="world-map-detail-title">Select a country</h2>
+          <p id="world-map-detail-count" role="status" aria-live="polite">Map par country select karein; us se linked MCQs yahan aayenge.</p>
+          <div id="world-map-question-list" class="world-map-question-list"></div>
+          <button id="world-map-more" class="secondary-button" type="button" hidden>Show more MCQs</button>
+        </section>
       </article>
     </section>
 
