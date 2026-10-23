@@ -3,8 +3,11 @@
 
   var SVG_NS = "http://www.w3.org/2000/svg";
   var MAP_URL = "assets/maps/world-countries-50m.geojson?v=20261023-1";
+  var CITIES_URL = "assets/maps/world-major-cities.json?v=20261023-1";
   var WORLD_WIDTH = 1000;
   var WORLD_HEIGHT = 500;
+  var MINI_WIDTH = 800;
+  var MINI_HEIGHT = 420;
   var PAGE_SIZE = 20;
   var MIN_VIEW_WIDTH = WORLD_WIDTH / 8;
   var PROMINENT_LABELS = Object.freeze({
@@ -132,6 +135,117 @@
     return 5;
   }
 
+  function outerRings(geometry) {
+    var polygons = geometry.type === "Polygon" ? [geometry.coordinates] : geometry.coordinates;
+    return polygons.map(function (polygon) { return polygon[0] || []; }).filter(function (ring) { return ring.length >= 3; });
+  }
+
+  function boundsForRing(ring) {
+    var bounds = { left: Infinity, right: -Infinity, top: Infinity, bottom: -Infinity };
+    ring.forEach(function (coordinate) {
+      var point = project(coordinate);
+      bounds.left = Math.min(bounds.left, point[0]);
+      bounds.right = Math.max(bounds.right, point[0]);
+      bounds.top = Math.min(bounds.top, point[1]);
+      bounds.bottom = Math.max(bounds.bottom, point[1]);
+    });
+    return bounds;
+  }
+
+  function boundsForGeometry(geometry) {
+    return outerRings(geometry).reduce(function (whole, ring) {
+      var part = boundsForRing(ring);
+      whole.left = Math.min(whole.left, part.left);
+      whole.right = Math.max(whole.right, part.right);
+      whole.top = Math.min(whole.top, part.top);
+      whole.bottom = Math.max(whole.bottom, part.bottom);
+      return whole;
+    }, { left: Infinity, right: -Infinity, top: Infinity, bottom: -Infinity });
+  }
+
+  function ringContains(point, ring) {
+    var inside = false;
+    for (var index = 0, previous = ring.length - 1; index < ring.length; previous = index, index += 1) {
+      var first = project(ring[index]);
+      var second = project(ring[previous]);
+      if ((first[1] > point[1]) !== (second[1] > point[1]) &&
+        point[0] < (second[0] - first[0]) * (point[1] - first[1]) / (second[1] - first[1]) + first[0]) inside = !inside;
+    }
+    return inside;
+  }
+
+  function focusForCountry(feature, cities) {
+    var capital = cities.find(function (city) { return city.capital; });
+    var anchorCity = capital || cities[0];
+    var anchor = anchorCity ? project([anchorCity.lon, anchorCity.lat]) : project(feature.properties.label);
+    var candidates = outerRings(feature.geometry).map(function (ring) {
+      return { ring: ring, bounds: boundsForRing(ring) };
+    });
+    var chosen = candidates.find(function (candidate) {
+      var b = candidate.bounds;
+      return anchor[0] >= b.left && anchor[0] <= b.right && anchor[1] >= b.top && anchor[1] <= b.bottom &&
+        ringContains(anchor, candidate.ring);
+    });
+    if (!chosen) {
+      chosen = candidates.sort(function (a, b) {
+        function distance(candidate) {
+          var box = candidate.bounds;
+          var dx = Math.max(box.left - anchor[0], 0, anchor[0] - box.right);
+          var dy = Math.max(box.top - anchor[1], 0, anchor[1] - box.bottom);
+          return dx * dx + dy * dy;
+        }
+        return distance(a) - distance(b);
+      })[0];
+    }
+    if (!chosen) return null;
+    var ringWidth = chosen.bounds.right - chosen.bounds.left;
+    var ringHeight = chosen.bounds.bottom - chosen.bounds.top;
+    var box = Object.assign({}, chosen.bounds);
+    // Include nearby city points from other islands without pulling distant
+    // overseas territories into an unreadably small mainland map.
+    cities.forEach(function (city) {
+      var point = project([city.lon, city.lat]);
+      if (Math.abs(point[0] - anchor[0]) > 100 || Math.abs(point[1] - anchor[1]) > 75) return;
+      box.left = Math.min(box.left, point[0]);
+      box.right = Math.max(box.right, point[0]);
+      box.top = Math.min(box.top, point[1]);
+      box.bottom = Math.max(box.bottom, point[1]);
+      var cityRing = candidates.find(function (candidate) {
+        var extent = candidate.bounds;
+        return point[0] >= extent.left && point[0] <= extent.right &&
+          point[1] >= extent.top && point[1] <= extent.bottom && ringContains(point, candidate.ring);
+      });
+      if (cityRing && cityRing.bounds.right - cityRing.bounds.left < 180 &&
+        cityRing.bounds.bottom - cityRing.bounds.top < 110) {
+        box.left = Math.min(box.left, cityRing.bounds.left);
+        box.right = Math.max(box.right, cityRing.bounds.right);
+        box.top = Math.min(box.top, cityRing.bounds.top);
+        box.bottom = Math.max(box.bottom, cityRing.bounds.bottom);
+      }
+    });
+    var rawWidth = box.right - box.left;
+    var rawHeight = box.bottom - box.top;
+    var width = Math.min(280, Math.max(26, rawWidth * 1.25));
+    var height = Math.min(175, Math.max(16, rawHeight * 1.25));
+    var ratio = MINI_WIDTH / MINI_HEIGHT;
+    if (width / height < ratio) width = height * ratio;
+    else height = width / ratio;
+    var centerX = rawWidth > 280 ? anchor[0] : (box.left + box.right) / 2;
+    var centerY = rawHeight > 175 ? anchor[1] : (box.top + box.bottom) / 2;
+    return {
+      x: centerX - width / 2,
+      y: Math.max(0, Math.min(WORLD_HEIGHT - height, centerY - height / 2)),
+      width: width, height: height,
+      tiny: ringWidth < 1 || ringHeight < 1,
+      anchor: anchor
+    };
+  }
+
+  function boundsOverlap(first, second) {
+    return first.left <= second.right && first.right >= second.left &&
+      first.top <= second.bottom && first.bottom >= second.top;
+  }
+
   function createWorldMap() {
     var initialized = false;
     var loading = null;
@@ -154,6 +268,11 @@
     var labelItems = [];
     var labelFrame = null;
     var labelCanvas = document.createElement("canvas").getContext("2d");
+    var countryPaths = new Map();
+    var countryBounds = new Map();
+    var citiesByCountry = null;
+    var cityLoading = null;
+    var cityUnavailable = false;
 
     function addAlias(alias, iso3, toQuestionMap) {
       var key = normalize(alias);
@@ -421,10 +540,15 @@
 
     function renderMap() {
       var fragment = document.createDocumentFragment();
+      countryPaths.clear();
+      countryBounds.clear();
       features.forEach(function (feature) {
         var iso3 = feature.properties.iso3;
+        var pathData = geometryPath(feature.geometry);
+        countryPaths.set(iso3, pathData);
+        countryBounds.set(iso3, boundsForGeometry(feature.geometry));
         var path = document.createElementNS(SVG_NS, "path");
-        path.setAttribute("d", geometryPath(feature.geometry));
+        path.setAttribute("d", pathData);
         path.setAttribute("fill-rule", "evenodd");
         path.setAttribute("class", "world-map-country world-map-level-0");
         path.setAttribute("role", "button");
@@ -469,12 +593,181 @@
       return card;
     }
 
+    function loadCities() {
+      if (citiesByCountry || cityLoading || cityUnavailable) return;
+      cityLoading = fetch(CITIES_URL).then(function (response) {
+        if (!response.ok) throw new Error("City data request failed: " + response.status);
+        return response.json();
+      }).then(function (data) {
+        if (!data || !Array.isArray(data.cities)) throw new Error("City data invalid");
+        var grouped = new Map();
+        data.cities.forEach(function (city) {
+          if (!countries.has(city.iso3) || !city.name || !Number.isFinite(city.lon) || !Number.isFinite(city.lat)) return;
+          if (!grouped.has(city.iso3)) grouped.set(city.iso3, []);
+          grouped.get(city.iso3).push(city);
+        });
+        citiesByCountry = grouped;
+        cityLoading = null;
+        if (selectedIso3) renderCountryMap();
+      }).catch(function () {
+        cityLoading = null;
+        cityUnavailable = true;
+        if (selectedIso3) renderCountryMap();
+      });
+    }
+
+    function renderCountryMap() {
+      if (!selectedIso3 || !countries.has(selectedIso3)) {
+        nodes.countryMap.hidden = true;
+        return;
+      }
+      var feature = countries.get(selectedIso3);
+      var cities = citiesByCountry ? (citiesByCountry.get(selectedIso3) || []) : [];
+      var focus = focusForCountry(feature, cities);
+      nodes.countryMap.hidden = false;
+      nodes.countryMapTitle.textContent = feature.properties.name + " map";
+      nodes.countryMapEmpty.hidden = true;
+      if (!focus) {
+        nodes.countrySvg.replaceChildren();
+        nodes.countryMapEmpty.textContent = "Is country ka map filhal available nahi hai.";
+        nodes.countryMapEmpty.hidden = false;
+        nodes.countryMapSummary.textContent = "Map data unavailable.";
+        nodes.countryCities.replaceChildren();
+        return;
+      }
+      var scale = MINI_WIDTH / focus.width;
+      var transform = "translate(" + (-focus.x * scale).toFixed(3) + " " + (-focus.y * scale).toFixed(3) + ") scale(" + scale.toFixed(5) + ")";
+      var viewport = { left: focus.x, right: focus.x + focus.width, top: focus.y, bottom: focus.y + focus.height };
+      var fragment = document.createDocumentFragment();
+      var land = document.createElementNS(SVG_NS, "g");
+      land.setAttribute("transform", transform);
+      var shifts = [0];
+      if (viewport.left < 0) shifts.push(-WORLD_WIDTH);
+      if (viewport.right > WORLD_WIDTH) shifts.push(WORLD_WIDTH);
+      features.forEach(function (other) {
+        var iso3 = other.properties.iso3;
+        if (iso3 === selectedIso3) return;
+        shifts.forEach(function (shift) {
+          var bounds = countryBounds.get(iso3);
+          if (!boundsOverlap({ left: bounds.left + shift, right: bounds.right + shift,
+            top: bounds.top, bottom: bounds.bottom }, viewport)) return;
+          var path = document.createElementNS(SVG_NS, "path");
+          path.setAttribute("d", countryPaths.get(iso3));
+          path.setAttribute("fill-rule", "evenodd");
+          path.setAttribute("class", "world-map-mini-neighbor");
+          if (shift) path.setAttribute("transform", "translate(" + shift + " 0)");
+          land.appendChild(path);
+        });
+      });
+      shifts.forEach(function (shift) {
+        var bounds = countryBounds.get(selectedIso3);
+        if (!boundsOverlap({ left: bounds.left + shift, right: bounds.right + shift,
+          top: bounds.top, bottom: bounds.bottom }, viewport)) return;
+        var selectedPath = document.createElementNS(SVG_NS, "path");
+        selectedPath.setAttribute("d", countryPaths.get(selectedIso3));
+        selectedPath.setAttribute("fill-rule", "evenodd");
+        selectedPath.setAttribute("class", "world-map-mini-selected");
+        if (shift) selectedPath.setAttribute("transform", "translate(" + shift + " 0)");
+        land.appendChild(selectedPath);
+      });
+      fragment.appendChild(land);
+      if (focus.tiny) {
+        var anchor = focus.anchor;
+        var highlight = document.createElementNS(SVG_NS, "circle");
+        highlight.setAttribute("cx", ((anchor[0] - focus.x) * scale).toFixed(2));
+        highlight.setAttribute("cy", ((anchor[1] - focus.y) * scale).toFixed(2));
+        highlight.setAttribute("r", "7");
+        highlight.setAttribute("class", "world-map-mini-selected");
+        fragment.appendChild(highlight);
+      }
+      var cityList = document.createDocumentFragment();
+      var boxes = [];
+      var cityCountOnMap = 0;
+      var rect = nodes.countrySvg.getBoundingClientRect();
+      var width = rect.width || MINI_WIDTH;
+      var unitPerPixel = MINI_WIDTH / width;
+      var labelSize = 11 * unitPerPixel;
+      var dotRadius = 3.7 * unitPerPixel;
+      var labelLimit = width < 480 ? 0 : 8;
+      cities.forEach(function (city) {
+        cityList.appendChild(make("li", "", city.name));
+        var point = project([city.lon, city.lat]);
+        if (viewport.left < 0 && point[0] > WORLD_WIDTH + viewport.left) point[0] -= WORLD_WIDTH;
+        if (viewport.right > WORLD_WIDTH && point[0] < viewport.right - WORLD_WIDTH) point[0] += WORLD_WIDTH;
+        var x = (point[0] - focus.x) * scale;
+        var y = (point[1] - focus.y) * scale;
+        if (x < dotRadius || x > MINI_WIDTH - dotRadius || y < dotRadius || y > MINI_HEIGHT - dotRadius) return;
+        cityCountOnMap += 1;
+        var marker = document.createElementNS(SVG_NS, "g");
+        var title = document.createElementNS(SVG_NS, "title");
+        title.textContent = city.name;
+        marker.appendChild(title);
+        var dot = document.createElementNS(SVG_NS, "circle");
+        dot.setAttribute("cx", x.toFixed(2));
+        dot.setAttribute("cy", y.toFixed(2));
+        dot.setAttribute("r", (dotRadius * (city.capital ? 1.35 : 1)).toFixed(2));
+        dot.setAttribute("class", "world-map-mini-city-dot");
+        marker.appendChild(dot);
+        if (boxes.length < labelLimit) {
+          labelCanvas.font = "700 11px system-ui";
+          var textWidth = labelCanvas.measureText(city.name).width * unitPerPixel;
+          var placements = [
+            { x: x + dotRadius + 5, y: y - 5 * unitPerPixel, side: "start" },
+            { x: x + dotRadius + 5, y: y + 13 * unitPerPixel, side: "start" },
+            { x: x - dotRadius - 5, y: y - 5 * unitPerPixel, side: "end" },
+            { x: x - dotRadius - 5, y: y + 13 * unitPerPixel, side: "end" }
+          ];
+          var placement = placements.find(function (candidate) {
+            var box = {
+              left: candidate.side === "start" ? candidate.x : candidate.x - textWidth,
+              right: candidate.side === "start" ? candidate.x + textWidth : candidate.x,
+              top: candidate.y - labelSize, bottom: candidate.y + 2 * unitPerPixel
+            };
+            if (box.left < 4 || box.right > MINI_WIDTH - 4 || box.top < 4 || box.bottom > MINI_HEIGHT - 4) return false;
+            if (boxes.some(function (old) {
+              return box.left < old.right + 3 && box.right > old.left - 3 &&
+                box.top < old.bottom + 3 && box.bottom > old.top - 3;
+            })) return false;
+            boxes.push(box);
+            return true;
+          });
+          if (placement) {
+            var label = document.createElementNS(SVG_NS, "text");
+            label.setAttribute("x", placement.x.toFixed(2));
+            label.setAttribute("y", placement.y.toFixed(2));
+            label.setAttribute("text-anchor", placement.side);
+            label.setAttribute("class", "world-map-mini-city-label");
+            label.style.fontSize = labelSize.toFixed(2) + "px";
+            label.textContent = city.name;
+            marker.appendChild(label);
+          }
+        }
+        fragment.appendChild(marker);
+      });
+      nodes.countrySvg.replaceChildren(fragment);
+      nodes.countrySvg.setAttribute("aria-label", "Focused map of " + feature.properties.name + " with " + cityCountOnMap + " major city markers");
+      nodes.countryCities.replaceChildren(cityList);
+      if (cityUnavailable) {
+        nodes.countryMapSummary.textContent = "Country map ready; city data is unavailable right now.";
+      } else if (!citiesByCountry) {
+        nodes.countryMapSummary.textContent = "Country map ready. Major cities load ho rahi hain...";
+        loadCities();
+      } else if (cities.length) {
+        nodes.countryMapSummary.textContent = cityCountOnMap + " of " + cities.length + " major cities on this focused map; remote areas may be outside the frame.";
+      } else {
+        nodes.countryMapSummary.textContent = "Selected country ka focused map.";
+        nodes.countryMapEmpty.textContent = "Is region ke liye major city markers available nahi hain.";
+        nodes.countryMapEmpty.hidden = false;
+      }
+    }
+
     function renderDetail() {
       if (!selectedIso3 || !countries.has(selectedIso3)) return;
       var feature = countries.get(selectedIso3);
       var list = questionsFor(selectedIso3);
       nodes.detailTitle.textContent = feature.properties.name;
       nodes.detailCount.textContent = list.length + " linked MCQs in the selected category.";
+      renderCountryMap();
       var fragment = document.createDocumentFragment();
       if (!list.length) {
         fragment.appendChild(make("p", "world-map-no-questions", "No linked MCQs for this country in this category yet."));
@@ -489,6 +782,7 @@
     function selectCountry(iso3, center) {
       if (!countries.has(iso3)) return;
       selectedIso3 = iso3;
+      if (cityUnavailable) cityUnavailable = false;
       shown = PAGE_SIZE;
       nodes.svg.querySelectorAll(".is-selected").forEach(function (shape) { shape.classList.remove("is-selected"); });
       nodes.svg.querySelectorAll('[data-iso3="' + iso3 + '"]').forEach(function (shape) { shape.classList.add("is-selected"); });
@@ -599,6 +893,8 @@
         linked.clear();
         placeAliases.clear();
         countryNames.clear();
+        countryPaths.clear();
+        countryBounds.clear();
         nodes.countryIndexList.replaceChildren();
         nodes.countryIndexCount.textContent = "Country names unavailable";
         throw error;
@@ -612,6 +908,7 @@
       if (features) {
         updateColors();
         scheduleLabels();
+        if (selectedIso3) renderCountryMap();
         return Promise.resolve();
       }
       nodes.status.textContent = "Map load ho raha hai...";
@@ -630,7 +927,8 @@
       options = config;
       ["screen", "card", "back", "search", "countries", "find", "category", "zoom-in", "zoom-out", "reset",
         "status", "error", "retry", "stage", "svg", "tooltip", "detail", "detail-title", "detail-count",
-        "question-list", "more", "country-index-list", "country-index-count"].forEach(function (key) {
+        "question-list", "more", "country-index-list", "country-index-count", "country-map",
+        "country-map-title", "country-map-summary", "country-svg", "country-cities", "country-map-empty"].forEach(function (key) {
         var camel = key.replace(/-([a-z])/g, function (_, letter) { return letter.toUpperCase(); });
         nodes[camel] = document.getElementById("world-map-" + key);
       });
@@ -738,6 +1036,12 @@
         nodes.detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
       });
       window.addEventListener("resize", scheduleLabels);
+      window.addEventListener("resize", function () { if (selectedIso3 && !nodes.screen.hidden) renderCountryMap(); });
+      window.addEventListener("online", function () {
+        if (!cityUnavailable || !selectedIso3 || nodes.screen.hidden) return;
+        cityUnavailable = false;
+        renderCountryMap();
+      });
     }
 
     return Object.freeze({ init: init });

@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261023-2">
+  <link rel="stylesheet" href="styles.css?v=20261023-3">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20261021-1" defer></script>
   <script src="data/questions.js?v=20261021-2" defer></script>
@@ -18,7 +18,7 @@
   <script src="water-topics.js?v=20261020-2" defer></script>
   <script src="prime-ministers.js?v=20261021-2" defer></script>
   <script src="organizations-topics.js?v=20261021-1" defer></script>
-  <script src="world-map.js?v=20261023-2" defer></script>
+  <script src="world-map.js?v=20261023-3" defer></script>
   <script src="app.js?v=20261023-1" defer></script>
 </head>
 <body>
@@ -695,6 +695,20 @@
         <section id="world-map-detail" class="world-map-detail" aria-labelledby="world-map-detail-title">
           <h2 id="world-map-detail-title">Select a country</h2>
           <p id="world-map-detail-count" role="status" aria-live="polite">Map par country select karein; us se linked MCQs yahan aayenge.</p>
+          <section id="world-map-country-map" class="world-map-country-map" aria-labelledby="world-map-country-map-title" hidden>
+            <div class="world-map-country-map-heading">
+              <div>
+                <h3 id="world-map-country-map-title">Country map</h3>
+                <p id="world-map-country-map-summary" role="status" aria-live="polite">Selected country aur us ke qareebi ilaqe.</p>
+              </div>
+            </div>
+            <div class="world-map-country-map-canvas">
+              <svg id="world-map-country-svg" class="world-map-country-svg" viewBox="0 0 800 420" role="img" aria-label="Selected country map with famous cities"></svg>
+            </div>
+            <p id="world-map-country-map-empty" class="world-map-country-map-empty" hidden>Is country ka map filhal available nahi hai.</p>
+            <ul id="world-map-country-cities" class="world-map-country-cities" aria-label="Major cities for the selected country"></ul>
+            <p class="world-map-country-map-note">City markers Natural Earth ke reference data se hain; yeh poori city list nahi. Borders ko official status reference na samjhein.</p>
+          </section>
           <div id="world-map-question-list" class="world-map-question-list"></div>
           <button id="world-map-more" class="secondary-button" type="button" hidden>Show more MCQs</button>
         </section>

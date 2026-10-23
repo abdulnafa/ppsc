@@ -44,6 +44,7 @@ jobs:
           node tools/validate-wgi.js --complete
           node tools/validate-site-data.js --expected=11952
           node tools/validate-world-map-data.js
+          node tools/validate-world-city-data.js
           node --check world-map.js
           node --check organizations-topics.js
           node tools/current-affairs-smoke.js
@@ -75,6 +76,7 @@ jobs:
           cp data/organizations-topics.js _site/data/
           cp assets/fonts/*.woff2 _site/assets/fonts/
           cp assets/maps/world-countries-50m.geojson _site/assets/maps/
+          cp assets/maps/world-major-cities.json _site/assets/maps/
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v5
