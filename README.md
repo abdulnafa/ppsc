@@ -4,7 +4,7 @@ A category-wise PPSC General Ability practice website for GitHub Pages. Question
 
 ## Study Tools
 
-The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics**, **Pakistan Dams & Rivers**, **Pakistan Provinces**, **Pakistan Constitution Articles**, **Prime Ministers**, **Presidents**, **Organizations** and **World MCQ Map**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
+The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics**, **Pakistan Dams & Rivers**, **Pakistan Provinces**, **Oceans & Seas**, **Pakistan Constitution Articles**, **Prime Ministers**, **Presidents**, **Organizations** and **World MCQ Map**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
 
 ## Per-category Preview & Continue
 
@@ -63,6 +63,12 @@ Content lives in `data/pakistan-water-dams.json` and `data/pakistan-water-rivers
 The **Pakistan Provinces** Study Tool groups 58 verified revision topics under Punjab, Sindh, Khyber Pakhtunkhwa and Balochistan. Each province has native-accordion sections for mountains/plateaus, rivers, barrages/headworks/dams and lakes/wetlands. Open an entry for its short Roman Urdu note, official source, and any explicitly linked existing MCQs with correct answers. Entries without a direct bank MCQ are labelled extra revision, not claimed as past questions. Shared rivers, ranges and Hub Dam have province-specific notes. Gilgit-Baltistan, Azad Kashmir and Islamabad Capital Territory are not assigned to the four provinces.
 
 `pakistan-provinces.js` fetches `data/pakistan-provinces-geography.json` only on first opening and reuses it thereafter. The view is read-only: no questions, answer keys, quiz sequence, queue counts or saved progress change. Run `node tools/validate-pakistan-provinces.js` for schema, province assignment guards, HTTPS source and canonical MCQ-ID checks, plus `node tools/pakistan-provinces-browser-smoke.js` for navigation, search, sources, answer rendering, desktop/mobile dark mode, lazy loading and saved-progress preservation. Editorial source review remains necessary when the list is expanded.
+
+## Oceans & Seas
+
+The read-only **Oceans & Seas** Study Tool groups existing marine-geography MCQs into oceans, seas and their related waterways and phenomena. Each native accordion topic has a short Roman Urdu explanation, a reference source and its explicitly linked bank questions with correct answers. Verified geography without a direct bank question is labelled **Extra revision**, and wrong answer options are not treated as question evidence. Search across topic names, questions and answers; filter topics with saved MCQs versus extra revision; or open the existing World MCQ Map directly in its oceans/seas layer.
+
+`ocean-topics.js` fetches `data/ocean-topics.json` only on first opening and reuses it thereafter. Neither it nor the map shortcut writes quiz, queue, learning or cloud progress. Run `node tools/validate-ocean-topics.js` for schema, HTTPS sources and canonical MCQ-ID checks, and `node tools/ocean-topics-browser-smoke.js` for the rendered flow, mobile/dark layout, linked answers, filters, source links and unchanged saved progress. Editorial source review is still needed for future additions.
 
 ## Years Wise Topics
 

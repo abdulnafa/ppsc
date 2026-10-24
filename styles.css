@@ -843,11 +843,33 @@ h2[tabindex="-1"]:focus {
 .pakistan-provinces-empty { color: var(--muted); font-size: .83rem; }
 .pakistan-provinces-empty { margin: 0; padding: 10px; }
 .pakistan-provinces-footnote { margin: 20px 0 0; color: var(--muted); font-size: .76rem; }
+.ocean-topics-icon { color: var(--blue-700); background: var(--blue-100); }
+.ocean-topics-header { background: linear-gradient(125deg, var(--blue-50), var(--blue-100)); }
+.ocean-topics-map { margin-top: 12px; }
+.ocean-topics-toolbar { padding-top: 20px; }
+.ocean-topics-toolbar label:first-child { flex: 2; }
+.ocean-topics-toolbar label:nth-child(2) { flex: 1; }
+.ocean-topics-toolbar select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font: inherit;
+}
+.ocean-topics-toolbar select:focus-visible,
+.ocean-topics-toolbar input:focus-visible { outline: 2px solid var(--blue-600); outline-offset: 2px; }
 @media (max-width: 700px) {
   .pakistan-provinces-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 15px 14px 10px; }
   .pakistan-provinces-toolbar { padding: 8px 14px 18px; }
   .pakistan-provinces-body { padding: 0 14px 20px; }
   .pakistan-provinces-group-list { padding: 10px; }
+}
+@media (max-width: 620px) {
+  .ocean-topics-toolbar { align-items: stretch; flex-direction: column; }
 }
 @media (max-width: 420px) {
   .pakistan-provinces-toolbar { align-items: stretch; flex-direction: column; }

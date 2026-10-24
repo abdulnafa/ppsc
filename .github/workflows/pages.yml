@@ -49,6 +49,8 @@ jobs:
           node --check world-map.js
           node --check pakistan-provinces.js
           node tools/validate-pakistan-provinces.js
+          node --check ocean-topics.js
+          node tools/validate-ocean-topics.js
           node --check organizations-topics.js
           node tools/current-affairs-smoke.js
           node tools/answer-text-migration-smoke.js
@@ -66,7 +68,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site/data _site/assets/fonts _site/assets/maps
-          cp index.html styles.css app.js world-map.js pakistan-provinces.js organizations-topics.js firebase-config.js firebase-sync.js _site/
+          cp index.html styles.css app.js world-map.js pakistan-provinces.js ocean-topics.js organizations-topics.js firebase-config.js firebase-sync.js _site/
           cp theme.js years-topics.js _site/
           cp water-topics.js _site/
           cp prime-ministers.js _site/
@@ -79,6 +81,7 @@ jobs:
           cp data/organizations-topics.js _site/data/
           cp data/world-physical-water.json data/world-physical-terrain.json _site/data/
           cp data/pakistan-provinces-geography.json _site/data/
+          cp data/ocean-topics.json _site/data/
           cp assets/fonts/*.woff2 _site/assets/fonts/
           cp assets/maps/world-countries-50m.geojson _site/assets/maps/
           cp assets/maps/world-major-cities.json _site/assets/maps/

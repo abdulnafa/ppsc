@@ -213,6 +213,7 @@
     elements.presidentsScreen = firstElement(["#presidents-screen"]);
     elements.organizationsTopicsScreen = firstElement(["#organizations-topics-screen"]);
     elements.pakistanProvincesScreen = firstElement(["#pakistan-provinces-screen"]);
+    elements.oceanTopicsScreen = firstElement(["#ocean-topics-screen"]);
     elements.worldMapScreen = firstElement(["#world-map-screen"]);
     elements.paperSetupScreen = firstElement(["#paper-setup-screen", "[data-screen='paper-setup']"]);
     elements.modeScreen = firstElement(["#mode-screen", "[data-screen='mode']"]);
@@ -3927,6 +3928,7 @@
     setHidden(elements.presidentsScreen, screenName !== "presidents");
     setHidden(elements.organizationsTopicsScreen, screenName !== "organizations-topics");
     setHidden(elements.pakistanProvincesScreen, screenName !== "pakistan-provinces");
+    setHidden(elements.oceanTopicsScreen, screenName !== "ocean-topics");
     setHidden(elements.worldMapScreen, screenName !== "world-map");
     setHidden(elements.paperSetupScreen, screenName !== "paper-setup");
     setHidden(elements.modeScreen, screenName !== "mode");
@@ -3955,6 +3957,8 @@
       ? elements.organizationsTopicsScreen
       : screenName === "pakistan-provinces"
       ? elements.pakistanProvincesScreen
+      : screenName === "ocean-topics"
+      ? elements.oceanTopicsScreen
       : screenName === "world-map"
       ? elements.worldMapScreen
       : screenName === "paper-setup"
@@ -7135,6 +7139,17 @@
   }
 
   function bindEvents() {
+    if (window.PPSC_OCEAN_TOPICS && elements.oceanTopicsScreen) {
+      window.PPSC_OCEAN_TOPICS.init({
+        categories: categories,
+        questions: allQuestions,
+        open: function () { showScreen("ocean-topics"); },
+        close: function () {
+          showScreen("categories");
+          updateContinueSessionUI();
+        }
+      });
+    }
     if (window.PPSC_PROVINCES && elements.pakistanProvincesScreen) {
       window.PPSC_PROVINCES.init({
         categories: categories,
