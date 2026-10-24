@@ -10,6 +10,39 @@
   var MINI_HEIGHT = 420;
   var PAGE_SIZE = 20;
   var MIN_VIEW_WIDTH = WORLD_WIDTH / 8;
+  // These IDs have been checked against the canonical question and its correct
+  // answer. Do not infer an arrow from keywords such as "South Korea" or from
+  // incorrect options: those are not relative-direction questions.
+  var DIRECTION_LESSONS = Object.freeze({
+    "ADV2E102-U0005-Q022-SRC": {
+      from: "PAK", to: ["CHN"], title: "North-East / Shumal-Mashriq",
+      points: { CHN: [76, 39.5] },
+      explanation: "Pakistan (A) se China (B) ki taraf upar aur daein jaate hain. Is liye China Pakistan ke north-east mein hai."
+    },
+    "ADV2E102-U0008-Q046-SRC": {
+      from: "PAK", to: ["IND"], title: "East / Mashriq",
+      points: { IND: [75, 30.5] },
+      explanation: "Pakistan (A) se India (B) ki taraf daein jaate hain. Is sawal mein India eastern neighbour hai."
+    },
+    "ADV2E102-U0008-Q046-SIM": {
+      from: "PAK", to: ["AFG", "IRN"], title: "West side / Maghribi taraf",
+      points: { IRN: [60.87, 29.5] },
+      explanation: "Pakistan (A) se Afghanistan (B1) upar-baein aur Iran (B2) neeche-baein hain. Dono Pakistan ki western side par border karte hain."
+    },
+    "ADV2E102-U0014-Q054-SIM": {
+      from: "AFG", to: ["IRN"], title: "West / Maghrib",
+      explanation: "Afghanistan (A) se Iran (B) ki taraf baein jaate hain. Iran Afghanistan ka western neighbour hai."
+    },
+    "ADV2E102-U0033-Q006-SIM": {
+      from: "PAK", to: ["AFG"], title: "Western neighbour",
+      explanation: "Pakistan (A) se Afghanistan (B) ki taraf baein aur kuch upar jaate hain. Is liye Afghanistan western neighbour hai."
+    },
+    "ADV2E102-U0035-Q043-SIM": {
+      from: "PAK", to: ["CHN"], title: "North-East / Shumal-Mashriq",
+      points: { CHN: [76, 39.5] },
+      explanation: "Pakistan (A) se China (B) ki taraf upar aur daein jaate hain. Yeh north-east direction hai."
+    }
+  });
   var PROMINENT_LABELS = Object.freeze({
     CAN: true, USA: true, MEX: true, BRA: true, ARG: true, COL: true,
     GBR: true, FRA: true, ESP: true, DEU: true, ITA: true, POL: true,
@@ -105,6 +138,13 @@
   function make(tag, className, content) {
     var node = document.createElement(tag);
     if (className) node.className = className;
+    if (content != null) node.textContent = content;
+    return node;
+  }
+
+  function svgNode(tag, attributes, content) {
+    var node = document.createElementNS(SVG_NS, tag);
+    Object.keys(attributes || {}).forEach(function (key) { node.setAttribute(key, attributes[key]); });
     if (content != null) node.textContent = content;
     return node;
   }
@@ -259,6 +299,7 @@
     var placeAliases = new Map();
     var maxAliasWords = 1;
     var selectedIso3 = null;
+    var activeDirectionId = null;
     var shown = PAGE_SIZE;
     var view = { x: 0, y: 0, width: WORLD_WIDTH, height: WORLD_HEIGHT };
     var drag = null;
@@ -578,6 +619,120 @@
       updateColors();
     }
 
+    function directionLessonFor(question) {
+      var lesson = DIRECTION_LESSONS[question.id];
+      return lesson && countries.has(lesson.from) && lesson.to.every(function (iso3) { return countries.has(iso3); })
+        ? lesson : null;
+    }
+
+    function renderDirectionPanel(panel, lesson) {
+      var codes = [lesson.from].concat(lesson.to);
+      function markerPoint(iso3) {
+        var lonLat = lesson.points && lesson.points[iso3] || countries.get(iso3).properties.label;
+        return project(lonLat);
+      }
+      var box = codes.map(markerPoint).reduce(function (whole, point) {
+        whole.left = Math.min(whole.left, point[0]);
+        whole.right = Math.max(whole.right, point[0]);
+        whole.top = Math.min(whole.top, point[1]);
+        whole.bottom = Math.max(whole.bottom, point[1]);
+        return whole;
+      }, { left: Infinity, right: -Infinity, top: Infinity, bottom: -Infinity });
+      var width = Math.max(55, (box.right - box.left) * 1.6);
+      var height = Math.max(30, (box.bottom - box.top) * 1.6);
+      var ratio = MINI_WIDTH / MINI_HEIGHT;
+      if (width / height < ratio) width = height * ratio;
+      else height = width / ratio;
+      var focus = {
+        x: Math.max(0, Math.min(WORLD_WIDTH - width, (box.left + box.right - width) / 2)),
+        y: Math.max(0, Math.min(WORLD_HEIGHT - height, (box.top + box.bottom - height) / 2)),
+        width: width, height: height
+      };
+      var scale = MINI_WIDTH / focus.width;
+      var viewport = { left: focus.x, right: focus.x + focus.width, top: focus.y, bottom: focus.y + focus.height };
+      function displayName(iso3) { return SHORT_MAP_LABELS[iso3] || countries.get(iso3).properties.name; }
+      var originName = displayName(lesson.from);
+      var destinationNames = lesson.to.map(displayName);
+      panel.replaceChildren();
+      panel.appendChild(make("h3", "", lesson.title));
+      var svg = svgNode("svg", {
+        "class": "world-map-direction-svg", "viewBox": "0 0 " + MINI_WIDTH + " " + MINI_HEIGHT,
+        "role": "img", "aria-label": "A " + originName + " se " + destinationNames.join(" aur ") + " tak direction map"
+      });
+      svg.appendChild(svgNode("title", {}, "A " + originName + " to " + destinationNames.join(" and ")));
+      panel.appendChild(svg);
+      var unitPerPixel = MINI_WIDTH / (svg.getBoundingClientRect().width || MINI_WIDTH);
+      var radius = 12 * unitPerPixel;
+      var group = svgNode("g", { transform: "translate(" + (-focus.x * scale).toFixed(3) + " " +
+        (-focus.y * scale).toFixed(3) + ") scale(" + scale.toFixed(5) + ")" });
+      features.forEach(function (feature) {
+        var bounds = countryBounds.get(feature.properties.iso3);
+        if (!boundsOverlap(bounds, viewport)) return;
+        group.appendChild(svgNode("path", { d: countryPaths.get(feature.properties.iso3),
+          "fill-rule": "evenodd", "class": "world-map-direction-basemap" }));
+      });
+      codes.forEach(function (iso3, index) {
+        group.appendChild(svgNode("path", { d: countryPaths.get(iso3), "fill-rule": "evenodd",
+          "class": index ? "world-map-direction-destination" : "world-map-direction-origin" }));
+      });
+      svg.appendChild(group);
+      function screenPoint(iso3) {
+        var point = markerPoint(iso3);
+        return { x: (point[0] - focus.x) * scale, y: (point[1] - focus.y) * scale };
+      }
+      var start = screenPoint(lesson.from);
+      lesson.to.forEach(function (iso3, index) {
+        var end = screenPoint(iso3);
+        var dx = end.x - start.x;
+        var dy = end.y - start.y;
+        var length = Math.hypot(dx, dy) || 1;
+        var ux = dx / length;
+        var uy = dy / length;
+        var tipX = end.x - ux * (radius + 3 * unitPerPixel);
+        var tipY = end.y - uy * (radius + 3 * unitPerPixel);
+        var baseX = tipX - ux * (10 * unitPerPixel);
+        var baseY = tipY - uy * (10 * unitPerPixel);
+        var wing = 5 * unitPerPixel;
+        svg.appendChild(svgNode("line", { x1: (start.x + ux * radius).toFixed(2),
+          y1: (start.y + uy * radius).toFixed(2), x2: tipX.toFixed(2), y2: tipY.toFixed(2),
+          "class": "world-map-direction-route" }));
+        svg.appendChild(svgNode("path", { d: "M" + tipX.toFixed(2) + " " + tipY.toFixed(2) +
+          "L" + (baseX - uy * wing).toFixed(2) + " " + (baseY + ux * wing).toFixed(2) +
+          "M" + tipX.toFixed(2) + " " + tipY.toFixed(2) +
+          "L" + (baseX + uy * wing).toFixed(2) + " " + (baseY - ux * wing).toFixed(2),
+          "class": "world-map-direction-route" }));
+        var badge = svgNode("g", {});
+        badge.appendChild(svgNode("circle", { cx: end.x.toFixed(2), cy: end.y.toFixed(2),
+          r: radius.toFixed(2), "class": "world-map-direction-marker-b" }));
+        var text = svgNode("text", { x: end.x.toFixed(2), y: (end.y + 3.5 * unitPerPixel).toFixed(2),
+          "text-anchor": "middle", style: "fill:#fff;stroke:none;font-size:" + (9 * unitPerPixel).toFixed(2) + "px" },
+          lesson.to.length > 1 ? "B" + (index + 1) : "B");
+        badge.appendChild(text);
+        svg.appendChild(badge);
+      });
+      var originBadge = svgNode("g", {});
+      originBadge.appendChild(svgNode("circle", { cx: start.x.toFixed(2), cy: start.y.toFixed(2),
+        r: radius.toFixed(2), "class": "world-map-direction-marker-a" }));
+      originBadge.appendChild(svgNode("text", { x: start.x.toFixed(2),
+        y: (start.y + 3.5 * unitPerPixel).toFixed(2), "text-anchor": "middle",
+        style: "fill:#fff;stroke:none;font-size:" + (10 * unitPerPixel).toFixed(2) + "px" }, "A"));
+      svg.appendChild(originBadge);
+      var legend = make("ul", "world-map-direction-legend");
+      codes.forEach(function (iso3, index) {
+        var item = make("li");
+        var label = index ? (lesson.to.length > 1 ? "B" + index : "B") : "A";
+        item.appendChild(make("span", index ? "world-map-direction-marker-b" : "world-map-direction-marker-a", label));
+        item.appendChild(make("span", "", displayName(iso3)));
+        legend.appendChild(item);
+      });
+      panel.appendChild(legend);
+      var explanation = make("p", "world-map-direction-explanation", lesson.explanation);
+      explanation.lang = "ur-Latn";
+      panel.appendChild(explanation);
+      panel.appendChild(make("p", "world-map-direction-explanation",
+        "A aur B mulkon ke numayanda points hain; arrow direction samjhane ke liye hai, exact border line nahi."));
+    }
+
     function displayQuestion(question) {
       var isUrdu = question.categoryId === "urdu";
       var card = make("article", "world-map-question");
@@ -590,6 +745,20 @@
       var answerNode = make("p", "world-map-question-answer", "Answer: " + (answer == null ? "—" : answer));
       if (isUrdu) { answerNode.lang = "ur"; answerNode.dir = "rtl"; }
       card.appendChild(answerNode);
+      var lesson = directionLessonFor(question);
+      if (lesson) {
+        var panelId = "world-map-direction-" + question.id.replace(/[^a-z0-9-]/gi, "-");
+        var toggle = make("button", "world-map-direction-toggle", "Map par samjhein");
+        toggle.type = "button";
+        toggle.dataset.directionId = question.id;
+        toggle.setAttribute("aria-controls", panelId);
+        toggle.setAttribute("aria-expanded", "false");
+        card.appendChild(toggle);
+        var panel = make("div", "world-map-direction-panel");
+        panel.id = panelId;
+        panel.hidden = true;
+        card.appendChild(panel);
+      }
       return card;
     }
 
@@ -765,18 +934,37 @@
       if (!selectedIso3 || !countries.has(selectedIso3)) return;
       var feature = countries.get(selectedIso3);
       var list = questionsFor(selectedIso3);
+      var directionList = list.filter(directionLessonFor);
+      var displayList = nodes.directionOnly.checked ? directionList : list;
       nodes.detailTitle.textContent = feature.properties.name;
       nodes.detailCount.textContent = list.length + " linked MCQs in the selected category.";
+      nodes.directionCount.textContent = directionList.length + " direction MCQ" + (directionList.length === 1 ? "" : "s") + " with map explanation.";
       renderCountryMap();
       var fragment = document.createDocumentFragment();
-      if (!list.length) {
-        fragment.appendChild(make("p", "world-map-no-questions", "No linked MCQs for this country in this category yet."));
+      if (!displayList.length) {
+        fragment.appendChild(make("p", "world-map-no-questions", nodes.directionOnly.checked
+          ? "Is country aur category mein verified direction MCQ nahi mila. Compass guide upar available hai."
+          : "No linked MCQs for this country in this category yet."));
       } else {
-        list.slice(0, shown).forEach(function (question) { fragment.appendChild(displayQuestion(question)); });
+        displayList.slice(0, shown).forEach(function (question) { fragment.appendChild(displayQuestion(question)); });
       }
       nodes.questionList.replaceChildren(fragment);
-      nodes.more.hidden = shown >= list.length;
-      nodes.more.textContent = "Show more MCQs (" + Math.min(PAGE_SIZE, Math.max(0, list.length - shown)) + ")";
+      nodes.more.hidden = shown >= displayList.length;
+      nodes.more.textContent = "Show more MCQs (" + Math.min(PAGE_SIZE, Math.max(0, displayList.length - shown)) + ")";
+      if (activeDirectionId) {
+        var openButton = Array.from(nodes.questionList.querySelectorAll("button[data-direction-id]"))
+          .find(function (button) { return button.dataset.directionId === activeDirectionId; });
+        if (openButton) {
+          var panel = document.getElementById(openButton.getAttribute("aria-controls"));
+          var lesson = DIRECTION_LESSONS[activeDirectionId];
+          panel.hidden = false;
+          openButton.setAttribute("aria-expanded", "true");
+          openButton.closest(".world-map-question").classList.add("is-direction-open");
+          renderDirectionPanel(panel, lesson);
+        } else {
+          activeDirectionId = null;
+        }
+      }
     }
 
     function selectCountry(iso3, center) {
@@ -784,6 +972,7 @@
       selectedIso3 = iso3;
       if (cityUnavailable) cityUnavailable = false;
       shown = PAGE_SIZE;
+      activeDirectionId = null;
       nodes.svg.querySelectorAll(".is-selected").forEach(function (shape) { shape.classList.remove("is-selected"); });
       nodes.svg.querySelectorAll('[data-iso3="' + iso3 + '"]').forEach(function (shape) { shape.classList.add("is-selected"); });
       nodes.search.value = countries.get(iso3).properties.name;
@@ -927,7 +1116,7 @@
       options = config;
       ["screen", "card", "back", "search", "countries", "find", "category", "zoom-in", "zoom-out", "reset",
         "status", "error", "retry", "stage", "svg", "tooltip", "detail", "detail-title", "detail-count",
-        "question-list", "more", "country-index-list", "country-index-count", "country-map",
+        "question-list", "more", "direction-only", "direction-count", "country-index-list", "country-index-count", "country-map",
         "country-map-title", "country-map-summary", "country-svg", "country-cities", "country-map-empty"].forEach(function (key) {
         var camel = key.replace(/-([a-z])/g, function (_, letter) { return letter.toUpperCase(); });
         nodes[camel] = document.getElementById("world-map-" + key);
@@ -968,6 +1157,20 @@
         scheduleLabels();
         if (selectedIso3) { shown = PAGE_SIZE; renderDetail(); }
         hideTooltip();
+      });
+      nodes.directionOnly.addEventListener("change", function () {
+        shown = PAGE_SIZE;
+        activeDirectionId = null;
+        if (selectedIso3) renderDetail();
+      });
+      nodes.questionList.addEventListener("click", function (event) {
+        var button = event.target.closest("button[data-direction-id]");
+        if (!button || !nodes.questionList.contains(button)) return;
+        var id = button.dataset.directionId;
+        activeDirectionId = activeDirectionId === id ? null : id;
+        renderDetail();
+        var restored = nodes.questionList.querySelector('[data-direction-id="' + id + '"]');
+        if (restored) restored.focus({ preventScroll: true });
       });
       nodes.more.addEventListener("click", function () { shown += PAGE_SIZE; renderDetail(); });
       nodes.zoomIn.addEventListener("click", function () { zoom(1 / 1.5); });

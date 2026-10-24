@@ -786,6 +786,14 @@ h2[tabindex="-1"]:focus {
 .world-map-status, .world-map-error, .world-map-footnote { margin: 0; padding: 0 24px 14px; color: var(--muted); font-size: .83rem; line-height: 1.6; }
 .world-map-error { color: var(--red); }
 #world-map-retry { margin: 0 24px 16px; }
+.world-map-compass-guide { display: flex; align-items: center; gap: 14px; min-width: 0; margin: 0 24px 16px; padding: 12px 14px; background: var(--blue-50); border: 1px solid var(--line); border-radius: 12px; }
+.world-map-compass { flex: 0 0 94px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 2px; width: 94px; height: 94px; }
+.world-map-compass span { display: grid; place-items: center; min-width: 0; color: var(--blue-700); background: var(--surface); border: 1px solid var(--line); border-radius: 5px; font-size: .69rem; font-weight: 800; }
+.world-map-compass span.is-cardinal { color: var(--ink); background: var(--blue-100); }
+.world-map-compass .world-map-compass-center { color: var(--green); font-size: .88rem; }
+.world-map-compass-copy { flex: 1 1 auto; min-width: 0; }
+.world-map-compass-copy h2 { margin: 0 0 3px; color: var(--ink); font-size: .89rem; line-height: 1.35; }
+.world-map-compass-copy p { margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.5; }
 .world-map-stage { position: relative; height: clamp(300px, 50vw, 520px); margin: 0 24px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #eaf3f6; }
 .world-map-stage svg { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
 .world-map-stage svg:active { cursor: grabbing; }
@@ -829,11 +837,37 @@ h2[tabindex="-1"]:focus {
 .world-map-country-cities:empty { display: none; }
 .world-map-country-cities li { padding: 5px 9px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; font-size: .75rem; font-weight: 650; line-height: 1.3; }
 .world-map-country-map-note { margin: 10px 0 0; color: var(--muted); font-size: .72rem; line-height: 1.45; }
+.world-map-direction-filter { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 14px; margin: 0 0 12px; padding: 9px 12px; background: var(--blue-50); border: 1px solid var(--line); border-radius: 10px; }
+.world-map-direction-filter label { display: inline-flex; align-items: center; gap: 9px; min-width: 0; color: var(--ink); font-size: .83rem; font-weight: 750; cursor: pointer; }
+.world-map-direction-filter input { flex: 0 0 auto; width: 18px; height: 18px; margin: 0; accent-color: var(--blue-600); cursor: pointer; }
+.world-map-direction-filter input:focus-visible { outline: 3px solid var(--blue-600); outline-offset: 3px; }
+.world-map-direction-count { color: var(--muted); font-size: .75rem; line-height: 1.4; }
 .world-map-question-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .world-map-question { padding: 14px 16px; background: var(--blue-50); border: 1px solid var(--line); border-radius: 12px; min-width: 0; overflow-wrap: anywhere; }
 .world-map-question-meta { color: var(--blue-700); font-size: .73rem; font-weight: 800; }
 .world-map-question-text { margin: 8px 0; font-weight: 700; line-height: 1.55; }
 .world-map-question-answer { margin: 0; color: var(--green); font-size: .85rem; font-weight: 750; }
+.world-map-question.is-direction-open { grid-column: 1 / -1; }
+.world-map-direction-toggle { min-height: 36px; margin-top: 12px; padding: 7px 11px; color: var(--blue-700); background: var(--surface); border: 1px solid var(--blue-600); border-radius: 8px; font: inherit; font-size: .8rem; font-weight: 750; line-height: 1.3; cursor: pointer; }
+.world-map-direction-toggle:hover, .world-map-direction-toggle[aria-expanded='true'] { background: var(--blue-100); }
+.world-map-direction-toggle:focus-visible { outline: none; box-shadow: var(--focus); }
+.world-map-direction-panel { display: grid; gap: 10px; min-width: 0; margin-top: 12px; padding: 12px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.world-map-direction-panel[hidden] { display: none; }
+.world-map-direction-panel h3, .world-map-direction-panel h4 { margin: 0; font-size: .92rem; line-height: 1.4; }
+.world-map-direction-svg { display: block; width: 100%; height: auto; max-height: 380px; overflow: hidden; background: #eaf3f6; border: 1px solid var(--line); border-radius: 8px; }
+.world-map-direction-basemap { fill: #d5e0e6; stroke: #fff; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+.world-map-direction-origin { fill: #2f79c1; stroke: #154c7c; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.world-map-direction-destination { fill: #e8922b; stroke: #95520b; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.world-map-direction-route { fill: none; stroke: #12366b; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.world-map-direction-marker-a { fill: #2168aa; stroke: #fff; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.world-map-direction-marker-b { fill: #d87917; stroke: #fff; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.world-map-direction-svg text { fill: #17243b; stroke: #f8fbfd; stroke-width: 3; paint-order: stroke fill; font-size: 13px; font-weight: 800; font-family: system-ui, sans-serif; }
+.world-map-direction-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin: 0; padding: 0; list-style: none; font-size: .78rem; font-weight: 650; }
+.world-map-direction-legend li { display: inline-flex; align-items: center; gap: 6px; min-width: 0; overflow-wrap: anywhere; }
+.world-map-direction-legend .world-map-direction-marker-a, .world-map-direction-legend .world-map-direction-marker-b { display: inline-grid; place-items: center; flex: 0 0 22px; width: 22px; height: 22px; color: #fff; border: 0; border-radius: 50%; font-size: .71rem; line-height: 1; }
+.world-map-direction-legend .world-map-direction-marker-a { background: #2168aa; }
+.world-map-direction-legend .world-map-direction-marker-b { background: #d87917; }
+.world-map-direction-explanation { margin: 0; color: var(--muted); font-size: .82rem; line-height: 1.55; }
 .world-map-no-questions { color: var(--muted); }
 #world-map-more { margin-top: 16px; }
 html[data-theme='dark'] .world-map-stage { background: #152b3a; }
@@ -851,6 +885,14 @@ html[data-theme='dark'] .world-map-mini-neighbor { fill: #435a6b; stroke: #21344
 html[data-theme='dark'] .world-map-mini-selected { fill: #64c9a8; stroke: #b9f1db; }
 html[data-theme='dark'] .world-map-mini-city-dot { fill: #ffaf45; stroke: #192a3d; }
 html[data-theme='dark'] .world-map-mini-city-label { fill: #f5fbff; stroke: #152b3a; }
+html[data-theme='dark'] .world-map-direction-svg { background: #152b3a; }
+html[data-theme='dark'] .world-map-direction-basemap { fill: #435a6b; stroke: #213448; }
+html[data-theme='dark'] .world-map-direction-origin { fill: #5093d4; stroke: #b4dcff; }
+html[data-theme='dark'] .world-map-direction-destination { fill: #ffb75a; stroke: #ffe2a7; }
+html[data-theme='dark'] .world-map-direction-route { stroke: #f6f0c6; }
+html[data-theme='dark'] .world-map-direction-marker-a { fill: #337fc1; stroke: #152b3a; }
+html[data-theme='dark'] .world-map-direction-marker-b { fill: #cf7418; stroke: #152b3a; }
+html[data-theme='dark'] .world-map-direction-svg text { fill: #f5fbff; stroke: #152b3a; }
 @media (max-width: 700px) {
   .organizations-name-list { grid-template-columns: 1fr; padding: 14px 16px 18px 34px; }
   .organizations-question .water-topic-count { margin-left: 0; }
@@ -861,10 +903,19 @@ html[data-theme='dark'] .world-map-mini-city-label { fill: #f5fbff; stroke: #152
   .world-map-country-index-heading { flex-wrap: wrap; }
   .world-map-country-index-list { max-height: 124px; }
   .world-map-status, .world-map-error, .world-map-footnote { padding-inline: 16px; }
+  .world-map-compass-guide { margin-inline: 12px; padding: 10px 12px; }
   .world-map-stage { margin-inline: 12px; height: clamp(180px, 56vw, 340px); }
   .world-map-detail { padding: 18px 16px 22px; }
   .world-map-country-map { padding: 12px; }
   .world-map-question-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 380px) {
+  .world-map-compass-guide { gap: 10px; }
+  .world-map-compass { flex-basis: 76px; width: 76px; height: 76px; }
+  .world-map-compass span { font-size: .59rem; }
+  .world-map-compass-copy h2 { font-size: .82rem; }
+  .world-map-compass-copy p { font-size: .72rem; }
+  .world-map-direction-panel { padding: 9px; }
 }
 .category-saved-progress { display: block; margin-top: 6px; color: var(--blue-600); font-size: .75rem; font-weight: 700; }
 .category-sessions-panel { margin: 24px 0; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }

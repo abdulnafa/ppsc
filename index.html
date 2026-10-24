@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261023-3">
+  <link rel="stylesheet" href="styles.css?v=20261024-1">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20261021-1" defer></script>
   <script src="data/questions.js?v=20261021-2" defer></script>
@@ -18,7 +18,7 @@
   <script src="water-topics.js?v=20261020-2" defer></script>
   <script src="prime-ministers.js?v=20261021-2" defer></script>
   <script src="organizations-topics.js?v=20261021-1" defer></script>
-  <script src="world-map.js?v=20261023-3" defer></script>
+  <script src="world-map.js?v=20261024-1" defer></script>
   <script src="app.js?v=20261023-1" defer></script>
 </head>
 <body>
@@ -685,6 +685,17 @@
           <div id="world-map-country-index-list" class="world-map-country-index-list" role="group" aria-labelledby="world-map-country-index-title"></div>
         </section>
         <p id="world-map-status" class="world-map-status" role="status" aria-live="polite">Map tayyar ho raha hai...</p>
+        <aside id="world-map-compass-guide" class="world-map-compass-guide" aria-labelledby="world-map-compass-title">
+          <div class="world-map-compass" aria-hidden="true">
+            <span>NW</span><span class="is-cardinal">N</span><span>NE</span>
+            <span class="is-cardinal">W</span><span class="world-map-compass-center">&#9679;</span><span class="is-cardinal">E</span>
+            <span>SW</span><span class="is-cardinal">S</span><span>SE</span>
+          </div>
+          <div class="world-map-compass-copy">
+            <h2 id="world-map-compass-title">Directions ko map par samjhein</h2>
+            <p lang="ur-Latn">North-up map mein N = upar, S = neeche, E = daein aur W = baein. NE, NW, SE aur SW in do simton ka mel hain.</p>
+          </div>
+        </aside>
         <p id="world-map-error" class="world-map-error" role="alert" hidden>Map load nahi ho saka. Connection check karke dobara koshish karein.</p>
         <button id="world-map-retry" class="secondary-button" type="button" hidden>Try again</button>
         <div id="world-map-stage" class="world-map-stage" aria-label="Interactive world map" tabindex="-1">
@@ -709,6 +720,13 @@
             <ul id="world-map-country-cities" class="world-map-country-cities" aria-label="Major cities for the selected country"></ul>
             <p class="world-map-country-map-note">City markers Natural Earth ke reference data se hain; yeh poori city list nahi. Borders ko official status reference na samjhein.</p>
           </section>
+          <div id="world-map-direction-filter" class="world-map-direction-filter">
+            <label for="world-map-direction-only">
+              <input id="world-map-direction-only" type="checkbox" aria-describedby="world-map-direction-count">
+              <span>Sirf direction MCQs</span>
+            </label>
+            <span id="world-map-direction-count" class="world-map-direction-count" role="status" aria-live="polite">Country select karein.</span>
+          </div>
           <div id="world-map-question-list" class="world-map-question-list"></div>
           <button id="world-map-more" class="secondary-button" type="button" hidden>Show more MCQs</button>
         </section>
