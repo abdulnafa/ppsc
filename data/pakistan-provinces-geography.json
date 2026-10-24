@@ -1,0 +1,434 @@
+{
+  "schemaVersion": 1,
+  "provinces": [
+    {
+      "id": "punjab",
+      "name": "Punjab",
+      "abbreviation": "PB",
+      "overview": "Punjab ko Salt Range, paanch darya aur un par bane headworks se yaad karein. Jhelum aur Chenab Trimmu ke qareeb milte hain; Indus Punjab ke maghribi kinare se guzarta hai.",
+      "sections": {
+        "mountains": [
+          {
+            "id": "salt-range", "name": "Salt Range", "kind": "range",
+            "detail": "Punjab ke Jhelum, Chakwal, Khushab aur Mianwali ilaqon ka pahari silsila. Rock salt aur Sakesar se is ko jor kar yaad karein.",
+            "sourceUrl": "https://punjmin.punjab.gov.pk/rock-salt",
+            "questionIds": ["ADV2E102-U0151-Q080-SRC"]
+          },
+          {
+            "id": "sakesar", "name": "Sakesar", "kind": "peak",
+            "detail": "Khushab mein Salt Range ki sab se buland choti; sawal mein peak aur range ko alag pehchanein.",
+            "sourceUrl": "https://khushab.punjab.gov.pk/geography",
+            "questionIds": ["ADV2E102-U0151-Q080-SRC"]
+          },
+          {
+            "id": "pothohar-plateau", "name": "Pothohar Plateau", "kind": "plateau",
+            "detail": "Shumali Punjab ka plateau; Soan Valley ke asaar-e-qadeema ka sawal is ilaqe se jura hai. Plateau ko mountain peak na samjhein.",
+            "sourceUrl": "https://punjab.gov.pk/about_punjab_geography",
+            "questionIds": ["ADV2E102-U0016-Q041-SRC"]
+          },
+          {
+            "id": "sulaiman-range", "name": "Sulaiman Range", "kind": "range",
+            "detail": "Maghribi Punjab ke Dera Ghazi Khan ki pahari foothills Sulaiman system se milti hain; silsila Balochistan tak bhi jata hai.",
+            "sourceUrl": "https://mnm.punjab.gov.pk/important_minerals_occurring_in_punjab",
+            "questionIds": ["P239-Q017-SIM", "ADV2E102-U0121-Q040-SRC"],
+            "provinceNote": "Shared mountain system: Punjab ki western foothills aur Balochistan dono se mutalliq hai; isay sirf Punjab ka na samjhein."
+          }
+        ],
+        "rivers": [
+          {
+            "id": "indus-river", "name": "Indus River", "kind": "river",
+            "detail": "Pakistan ka sab se lamba darya; Punjab mein Attock, Kalabagh, Chashma aur Taunsa ke sawalon se jura hai.",
+            "sourceUrl": "https://ffc.gov.pk/time-lag-chart-for-flood-routing/",
+            "questionIds": ["ADV2E102-U0008-Q048-SRC", "ADV2E102-U0001-Q024-SIM", "ADV2E102-U0001-Q028-SIM", "ADV2E102-U0101-Q040-SIM"],
+            "provinceNote": "Indus KP se Punjab aur phir Sindh jata hai; source aur samandar tak ka safar Punjab tak mahdood nahin."
+          },
+          {
+            "id": "jhelum-river", "name": "Jhelum River", "kind": "river",
+            "detail": "Kashmir se Punjab aakar Rasul se guzarta hai aur Trimmu ke qareeb Chenab se milta hai.",
+            "sourceUrl": "https://ffc.gov.pk/time-lag-chart-for-flood-routing/",
+            "questionIds": ["P236-Q019-SIM", "ADV2E102-U0010-Q036-SRC"],
+            "provinceNote": "Darya ka source aur Kashmir Valley Punjab se bahar hain; yahan Punjab wala course aur Trimmu confluence murad hai."
+          },
+          {
+            "id": "chenab-river", "name": "Chenab River", "kind": "river",
+            "detail": "Punjab mein Marala, Khanki, Qadirabad aur Trimmu Chenab ke aham headworks hain.",
+            "sourceUrl": "https://ffc.gov.pk/time-lag-chart-for-flood-routing/",
+            "questionIds": ["P236-Q019-SRC", "ADV2E102-U0013-Q032-SRC", "P239-Q019-SRC"]
+          },
+          {
+            "id": "ravi-river", "name": "Ravi River", "kind": "river",
+            "detail": "Ravi Lahore ke shumali janib behta hai; Harappa purane course ke qareeb tha.",
+            "sourceUrl": "https://lahore.punjab.gov.pk/geographic_conditions",
+            "questionIds": ["ADV2E102-U0101-Q033-SIM", "ADV2E102-U0091-Q029-SIM"]
+          },
+          {
+            "id": "sutlej-river", "name": "Sutlej River", "kind": "river",
+            "detail": "Tibet se shuru hone wala darya Punjab mein Sulemanki aur Islam headworks se guzarta hai.",
+            "sourceUrl": "https://ffc.gov.pk/time-lag-chart-for-flood-routing/",
+            "questionIds": ["ADV2E102-U0002-Q060-SIM"],
+            "provinceNote": "Is ka source Pakistan se bahar hai; Beas darya khud Pakistan mein alag se dakhil nahin hota."
+          }
+        ],
+        "barrages": [
+          {
+            "id": "chashma-barrage", "name": "Chashma Barrage", "kind": "barrage",
+            "detail": "Mianwali District mein Indus par; Chashma-Jhelum Link Canal yahin se pani leta hai.",
+            "sourceUrl": "https://wapda.gov.pk/chashma-hydel-power/",
+            "questionIds": ["ADV2E102-U0081-Q017-SRC", "ADV2E102-U0081-Q017-SIM"]
+          },
+          {
+            "id": "taunsa-barrage", "name": "Taunsa Barrage", "kind": "barrage",
+            "detail": "Dera Ghazi Khan ilaqe mein Indus River par bana barrage; is ke baad pani Guddu ki taraf jata hai.",
+            "sourceUrl": "https://ffc.gov.pk/time-lag-chart-for-flood-routing/",
+            "questionIds": ["ADV2E102-U0101-Q040-SRC", "ADV2E102-U0101-Q040-SIM"]
+          },
+          {
+            "id": "trimmu-barrage", "name": "Trimmu Barrage", "kind": "barrage",
+            "detail": "Jhang mein Jhelum aur Chenab ke milne ki jagah ke bilkul neeche Chenab par hai.",
+            "sourceUrl": "https://jhang.punjab.gov.pk/important-places",
+            "questionIds": ["P236-Q019-SRC", "P236-Q019-SIM", "P239-Q019-SRC", "P239-Q019-SIM"]
+          },
+          {
+            "id": "khanki-barrage", "name": "Khanki Barrage", "kind": "barrage",
+            "detail": "Chenab par Wazirabad/Gujranwala ilaqe ka barrage; Lower Chenab Canal is se pani leti hai.",
+            "sourceUrl": "https://ffc.gov.pk/time-lag-chart-for-flood-routing/",
+            "questionIds": ["ADV2E102-U0013-Q032-SRC", "ADV2E102-U0013-Q032-SIM", "ADV2E102-U0159-Q034-SRC", "ADV2E102-U0159-Q034-SIM"]
+          },
+          {
+            "id": "sulemanki-headworks", "name": "Sulemanki Headworks", "kind": "headworks",
+            "detail": "Punjab mein Sutlej par; Ravi aur Chenab ke barrages se isay mix na karein.",
+            "sourceUrl": "https://ffc.gov.pk/time-lag-chart-for-flood-routing/",
+            "questionIds": []
+          }
+        ],
+        "lakes": [
+          {
+            "id": "kallar-kahar-lake", "name": "Kallar Kahar Lake", "kind": "lake",
+            "detail": "Chakwal ke Salt Range mein Kallar Kahar ki namkeen jheel; Punjab ke lake-location sawalon ke liye yaad rakhein.",
+            "sourceUrl": "https://tdcp.gop.pk/",
+            "questionIds": []
+          },
+          {
+            "id": "uchhali-lake", "name": "Uchhali Lake", "kind": "lake",
+            "detail": "Khushab ki Soon Valley ki saline lake; Sakesar is ilaqe ka aham peak hai.",
+            "sourceUrl": "https://khushab.punjab.gov.pk/prominent%20_places",
+            "questionIds": []
+          },
+          {
+            "id": "khabeki-lake", "name": "Khabeki Lake", "kind": "lake",
+            "detail": "Khushab ki Soon Valley mein Khabeki village ke qareeb lake; Uchhali se alag jheel hai.",
+            "sourceUrl": "https://khushab.punjab.gov.pk/prominent%20_places",
+            "questionIds": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "sindh",
+      "name": "Sindh",
+      "abbreviation": "SD",
+      "overview": "Sindh mein Indus ke teen aham barrages Guddu, Sukkur aur Kotri hain. Kirthar range maghrib mein hai, jabke Manchar aur Keenjhar alag qisam ki lakes hain.",
+      "sections": {
+        "mountains": [
+          {
+            "id": "kirthar-range", "name": "Kirthar Range", "kind": "range",
+            "detail": "Sindh ke maghribi kinare par pahari silsila; Ranikot Fort isi range ke qareeb hai.",
+            "sourceUrl": "https://agri.sindh.gov.pk/function-of-department",
+            "questionIds": ["ADV2E102-U0001-Q042-SRC", "ADV2E102-U0001-Q042-SIM", "ADV2E102-U0014-Q028-SIM"],
+            "provinceNote": "Kirthar Sindh-Balochistan border ke dono taraf se mutalliq hai; sirf ek province ki range nahin."
+          }
+        ],
+        "rivers": [
+          {
+            "id": "indus-river", "name": "Indus River", "kind": "river",
+            "detail": "Sindh ka markazi darya: Guddu, Sukkur aur Kotri se guzarta hua delta ke raste Arabian Sea mein girta hai.",
+            "sourceUrl": "https://irrigation.sindh.gov.pk/public",
+            "questionIds": ["ADV2E102-U0008-Q048-SRC", "ADV2E102-U0008-Q048-SIM", "ADV2E102-U0081-Q030-SIM", "ADV2E102-U0013-Q040-SRC"],
+            "provinceNote": "Indus Sindh se pehle KP aur Punjab se bhi guzarta hai."
+          },
+          {
+            "id": "gaj-river", "name": "Gaj River", "kind": "river",
+            "detail": "Kirthar ilaqe ka seasonal darya; Nai Gaj Dam ke sawal mein Dadu ke qareeb is ka Sindh section yaad rakhein.",
+            "sourceUrl": "https://wapda.gov.pk/nai-gaj-dam/",
+            "questionIds": ["ADV2E102-U0040-Q033-SRC", "ADV2E102-U0040-Q033-SIM"],
+            "provinceNote": "Gaj ka catchment Balochistan ki pahari drainage se bhi jura hai; dam-site Sindh mein hai."
+          },
+          {
+            "id": "hub-river", "name": "Hub River", "kind": "river",
+            "detail": "Hub Dam isi darya par hai; Karachi aur Lasbela ko is project se pani milta hai.",
+            "sourceUrl": "https://wapda.gov.pk/hub-dam/",
+            "questionIds": ["P236-Q022-SIM"],
+            "provinceNote": "Sindh-Balochistan boundary system; river aur dam ko dono provinces ke saath parhein."
+          }
+        ],
+        "barrages": [
+          {
+            "id": "guddu-barrage", "name": "Guddu Barrage", "kind": "barrage",
+            "detail": "Kashmore ke qareeb Indus par Sindh ka upstream barrage; Sukkur se pehle aata hai.",
+            "sourceUrl": "https://irrigation.sindh.gov.pk/public/guddubarrage",
+            "questionIds": ["P234-Q015-SIM"]
+          },
+          {
+            "id": "sukkur-barrage", "name": "Sukkur Barrage", "kind": "barrage",
+            "detail": "Indus par Lloyd Barrage bhi kehte hain; Nara Canal yahin se nikalti hai. Guddu se purana barrage hai.",
+            "sourceUrl": "https://irrigation.sindh.gov.pk/public",
+            "questionIds": ["P234-Q015-SRC", "ADV2E102-U0011-Q023-SRC", "ADV2E102-U0011-Q023-SIM", "ADV2E102-U0023-Q047-SIM"]
+          },
+          {
+            "id": "kotri-barrage", "name": "Kotri Barrage", "kind": "barrage",
+            "detail": "Indus par Sindh ka downstream barrage; is ka tareekhi naam Ghulam Muhammad Barrage hai.",
+            "sourceUrl": "https://irrigation.sindh.gov.pk/public",
+            "questionIds": ["ADV2E102-U0013-Q040-SRC", "ADV2E102-U0013-Q040-SIM"]
+          },
+          {
+            "id": "hub-dam", "name": "Hub Dam", "kind": "dam",
+            "detail": "Hub River par inter-provincial dam; Sindh ke Karachi aur Balochistan ke Lasbela dono ko faida deta hai.",
+            "sourceUrl": "https://wapda.gov.pk/hub-dam/",
+            "questionIds": ["P236-Q022-SRC", "P236-Q022-SIM"],
+            "provinceNote": "Sindh aur Balochistan ka shared project; dono sections mein jaan-boojh kar dikhaya gaya hai."
+          },
+          {
+            "id": "nai-gaj-dam", "name": "Nai Gaj Dam", "kind": "dam",
+            "detail": "Sindh ke Dadu ilaqe mein Gaj River par dam project; sawal district aur province se mutalliq hai.",
+            "sourceUrl": "https://wapda.gov.pk/nai-gaj-dam/",
+            "questionIds": ["ADV2E102-U0040-Q033-SRC", "ADV2E102-U0040-Q033-SIM"]
+          }
+        ],
+        "lakes": [
+          {
+            "id": "manchar-lake", "name": "Manchar Lake", "kind": "lake",
+            "detail": "Sindh mein Indus ke maghrib Jamshoro/Dadu ke ilaqe ki natural freshwater lake; size mausam ke saath badalta hai.",
+            "sourceUrl": "https://irrigation.sindh.gov.pk/MIS/Lakes",
+            "questionIds": ["ADV2E102-U0035-Q044-SRC", "ADV2E102-U0035-Q044-SIM", "ADV2E102-U0071-Q030-SRC", "ADV2E102-U0071-Q030-SIM"]
+          },
+          {
+            "id": "keenjhar-lake", "name": "Keenjhar / Kalri Lake", "kind": "lake",
+            "detail": "Thatta ke qareeb artificial freshwater reservoir; Karachi ko pani dene ke liye aham hai. Manchar se mukhtalif hai.",
+            "sourceUrl": "https://irrigation.sindh.gov.pk/MIS/Lakes",
+            "questionIds": []
+          },
+          {
+            "id": "haleji-lake", "name": "Haleji Lake", "kind": "lake",
+            "detail": "Sindh ki artificial freshwater lake aur Ramsar wetland; waterbirds ki wajah se mashhoor hai.",
+            "sourceUrl": "https://rsis.ramsar.org/sites/default/files/rsiswp_search/exports/Ramsar-Sites-annotated-summary-Pakistan.pdf",
+            "questionIds": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "kpk",
+      "name": "Khyber Pakhtunkhwa",
+      "abbreviation": "KP",
+      "overview": "KP mein Chitral ka Hindu Kush aur Tirich Mir, Kabul-Indus ka milap, aur Tarbela/Warsak/Gomal Zam dams key study links hain.",
+      "sections": {
+        "mountains": [
+          {
+            "id": "hindu-kush", "name": "Hindu Kush", "kind": "range",
+            "detail": "Chitral ka bara pahari silsila; Tirich Mir is ki sab se buland choti hai.",
+            "sourceUrl": "https://tourism.gov.pk/advertisements/Tourism%20in%20Pakistan%20English%20with%20PTDC%20%281%29.pdf",
+            "questionIds": ["ADV2E102-U0002-Q050-SRC", "ADV2E102-U0043-Q059-SRC", "ADV2E102-U0071-Q032-SRC"],
+            "provinceNote": "Hindu Kush Pakistan ke bahar Afghanistan tak bhi phaila hua hai."
+          },
+          {
+            "id": "tirich-mir", "name": "Tirich Mir", "kind": "peak",
+            "detail": "Chitral mein Hindu Kush ki buland tareen choti; K2 ko Karakoram aur Tirich Mir ko Hindu Kush se jor kar yaad karein.",
+            "sourceUrl": "https://tourism.gov.pk/advertisements/Tourism%20in%20Pakistan%20English%20with%20PTDC%20%281%29.pdf",
+            "questionIds": ["ADV2E102-U0002-Q050-SRC", "ADV2E102-U0043-Q059-SRC", "ADV2E102-U0071-Q032-SRC", "ADV2E102-U0071-Q032-SIM"]
+          },
+          {
+            "id": "malika-parbat", "name": "Malika Parbat", "kind": "peak",
+            "detail": "Kaghan Valley mein Lake Saif-ul-Muluk ke upar nazar aane wali choti.",
+            "sourceUrl": "https://tourism.gov.pk/publications/Kaghan%20Booklet.pdf",
+            "questionIds": []
+          }
+        ],
+        "rivers": [
+          {
+            "id": "indus-river", "name": "Indus River", "kind": "river",
+            "detail": "KP mein Tarbela Dam ke neeche Attock ke qareeb Kabul River Indus mein milta hai.",
+            "sourceUrl": "https://ffc.gov.pk/time-lag-chart-for-flood-routing/",
+            "questionIds": ["ADV2E102-U0003-Q011-SRC", "ADV2E102-U0008-Q048-SRC", "P237-Q016-SRC"],
+            "provinceNote": "Indus KP ke baad Punjab aur Sindh se bhi guzarta hai."
+          },
+          {
+            "id": "kabul-river", "name": "Kabul River", "kind": "river",
+            "detail": "Afghanistan se KP mein aane wala darya; Warsak Dam is par hai aur Attock ke qareeb Indus mein milta hai.",
+            "sourceUrl": "https://ffc.gov.pk/flood-classification-of-major-rivers/",
+            "questionIds": ["ADV2E102-U0003-Q011-SRC", "ADV2E102-U0003-Q011-SIM", "ADV2E102-U0011-Q030-SRC"],
+            "provinceNote": "Kabul River ka source Pakistan se bahar hai; yahan KP wala course murad hai."
+          },
+          {
+            "id": "gomal-river", "name": "Gomal River", "kind": "river",
+            "detail": "South Waziristan mein Gomal Zam Dam is darya par hai; Balochistan ka Zhob River is ka tributary hai.",
+            "sourceUrl": "https://wapda.gov.pk/gomal-zam-dam/",
+            "questionIds": ["ADV2E102-U0091-Q041-SIM", "ADV2E102-U0022-Q041-SIM"]
+          },
+          {
+            "id": "kunhar-river", "name": "Kunhar River", "kind": "river",
+            "detail": "Kaghan Valley aur Naran ke paas behta hai; Saif-ul-Muluk aur Kaghan ke location sawalon mein madadgar hai.",
+            "sourceUrl": "https://tourism.gov.pk/publications/northern_pak_guidemap.pdf",
+            "questionIds": []
+          },
+          {
+            "id": "swat-river", "name": "Swat River", "kind": "river",
+            "detail": "KP ki Swat Valley ka darya; Federal Flood Commission Chakdara aur Munda par is ki flood monitoring dikhata hai.",
+            "sourceUrl": "https://ffc.gov.pk/flood-limits-of-major-local-nullahs-in-kp-2/",
+            "questionIds": []
+          }
+        ],
+        "barrages": [
+          {
+            "id": "tarbela-dam", "name": "Tarbela Dam", "kind": "dam",
+            "detail": "KP ke Haripur ilaqe mein Indus par earth-filled dam; Mangla ka darya Jhelum hai, Indus nahin.",
+            "sourceUrl": "https://wapda.gov.pk/hydro-power-and-water-projects/tarbela-dam/",
+            "questionIds": ["P237-Q016-SRC", "P237-Q016-SIM", "ADV2E102-U0018-Q024-SRC", "ADV2E102-U0018-Q024-SIM", "ADV2E102-U0032-Q028-SRC", "ADV2E102-U0032-Q028-SIM"]
+          },
+          {
+            "id": "warsak-dam", "name": "Warsak Dam", "kind": "dam",
+            "detail": "Peshawar ke qareeb Kabul River par dam aur hydropower project.",
+            "sourceUrl": "https://wapda.gov.pk/warsak-dam/",
+            "questionIds": ["ADV2E102-U0011-Q030-SRC", "ADV2E102-U0011-Q030-SIM", "ADV2E102-U0160-Q066-SRC", "ADV2E102-U0160-Q066-SIM"]
+          },
+          {
+            "id": "gomal-zam-dam", "name": "Gomal Zam Dam", "kind": "dam",
+            "detail": "South Waziristan mein Gomal River par; district aur river dono alag sawal ban sakte hain.",
+            "sourceUrl": "https://wapda.gov.pk/gomal-zam-dam/",
+            "questionIds": ["ADV2E102-U0022-Q041-SRC", "ADV2E102-U0022-Q041-SIM"]
+          },
+          {
+            "id": "khanpur-dam", "name": "Khanpur Dam", "kind": "dam",
+            "detail": "KP ke Haripur District mein Haro River par; Rawalpindi/Islamabad ko pani supply se bhi jura hai.",
+            "sourceUrl": "https://wapda.gov.pk/wp-content/uploads/2025/12/Annual-Report-2022-23_compressed-latest.pdf",
+            "questionIds": ["ADV2E102-U0041-Q019-SRC", "ADV2E102-U0041-Q019-SIM"],
+            "provinceNote": "Pani Punjab aur ICT tak jata hai, lekin dam-site KP mein hai."
+          }
+        ],
+        "lakes": [
+          {
+            "id": "saif-ul-muluk-lake", "name": "Lake Saif-ul-Muluk", "kind": "lake",
+            "detail": "Kaghan Valley mein Naran ke qareeb alpine lake; Malika Parbat ko is ke saath yaad karein.",
+            "sourceUrl": "https://tourism.gov.pk/publications/Kaghan%20Booklet.pdf",
+            "questionIds": ["ADV2E102-U0016-Q063-SRC", "ADV2E102-U0016-Q063-SIM"]
+          },
+          {
+            "id": "lulusar-lake", "name": "Lulusar Lake", "kind": "lake",
+            "detail": "Kaghan Valley ki lake; Saif-ul-Muluk se alag aur Naran ke upper valley route par hai.",
+            "sourceUrl": "https://tourism.gov.pk/publications/northern_pak_guidemap.pdf",
+            "questionIds": []
+          },
+          {
+            "id": "mahodand-lake", "name": "Mahodand Lake", "kind": "lake",
+            "detail": "Swat ke Kalam ke upar Mahodand Valley ki lake; Kaghan wali Saif-ul-Muluk se confuse na karein.",
+            "sourceUrl": "https://tourism.gov.pk/publications/Swat%20Booklet.pdf",
+            "questionIds": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "balochistan",
+      "name": "Balochistan",
+      "abbreviation": "BL",
+      "overview": "Balochistan ko plateau aur Kirthar/Sulaiman/Sor ranges, Hingol-Zhob-Dasht-Porali rivers, aur Hub/Mirani dams ke saath revise karein.",
+      "sections": {
+        "mountains": [
+          {
+            "id": "balochistan-plateau", "name": "Balochistan Plateau", "kind": "plateau",
+            "detail": "Balochistan ka zyada tar ilaqa buland, khurdura plateau hai; PPSC mein is ki aam elevation range ka sawal aya hai.",
+            "sourceUrl": "https://balochistan.gov.pk/explore/",
+            "questionIds": ["P239-Q017-SRC", "P239-Q017-SIM"]
+          },
+          {
+            "id": "sulaiman-range", "name": "Sulaiman Range", "kind": "range",
+            "detail": "Balochistan ke mashriqi highlands ka pahari silsila; Takht-e-Sulaiman isi system se jura sawal hai.",
+            "sourceUrl": "https://balochistan.gov.pk/explore/",
+            "questionIds": ["P239-Q017-SIM", "ADV2E102-U0121-Q040-SRC", "ADV2E102-U0121-Q040-SIM"],
+            "provinceNote": "Silsila Punjab aur KP ke western ilaqon tak bhi jata hai; Takht-e-Sulaiman peak ko province-exclusive na samjhein."
+          },
+          {
+            "id": "kirthar-range", "name": "Kirthar Range", "kind": "range",
+            "detail": "Balochistan ke mashriqi hisse aur Sindh ki maghribi boundary se jura pahari silsila.",
+            "sourceUrl": "https://balochistan.gov.pk/explore/",
+            "questionIds": ["ADV2E102-U0001-Q042-SRC", "ADV2E102-U0001-Q042-SIM"],
+            "provinceNote": "Shared Sindh-Balochistan boundary range; dono provinces mein dikhaya gaya hai."
+          },
+          {
+            "id": "sor-range", "name": "Sor Range", "kind": "range",
+            "detail": "Quetta ke qareeb coalfield se jura pahari ilaqa; sawal Sor Range ki mineral association par aya hai.",
+            "sourceUrl": "https://gsp.gov.pk/wp-content/uploads/2022/11/Catalogue-2022.pdf",
+            "questionIds": ["P236-Q024-SRC", "P236-Q024-SIM"]
+          }
+        ],
+        "rivers": [
+          {
+            "id": "hingol-river", "name": "Hingol River", "kind": "river",
+            "detail": "Balochistan ka lamba coastal darya; Hingol National Park ka naam bhi isi se jura hai.",
+            "sourceUrl": "https://balochistan.gov.pk/explore/",
+            "questionIds": ["ADV2E102-U0023-Q042-SRC", "ADV2E102-U0023-Q042-SIM", "ADV2E102-U0162-Q010-SRC"]
+          },
+          {
+            "id": "zhob-river", "name": "Zhob River", "kind": "river",
+            "detail": "Shumali Balochistan ka darya jo Gomal River system ki taraf behta hai.",
+            "sourceUrl": "https://balochistan.gov.pk/explore/",
+            "questionIds": ["ADV2E102-U0091-Q041-SRC", "ADV2E102-U0091-Q041-SIM"]
+          },
+          {
+            "id": "dasht-river", "name": "Dasht River", "kind": "river",
+            "detail": "Kech/Turbat ilaqe ka darya; Mirani Dam isi par bana hai.",
+            "sourceUrl": "https://wapda.gov.pk/mirani-dam/",
+            "questionIds": ["ADV2E102-U0162-Q010-SRC", "ADV2E102-U0162-Q010-SIM", "ADV2E102-U0131-Q025-SRC"]
+          },
+          {
+            "id": "porali-river", "name": "Porali River", "kind": "river",
+            "detail": "Balochistan ka coastal drainage darya; Hingol aur Dasht se alag pehchanein.",
+            "sourceUrl": "https://balochistan.gov.pk/explore/",
+            "questionIds": ["ADV2E102-U0162-Q010-SIM"]
+          },
+          {
+            "id": "hub-river", "name": "Hub River", "kind": "river",
+            "detail": "Sindh-Balochistan boundary system ka darya; Hub Dam isi par hai.",
+            "sourceUrl": "https://wapda.gov.pk/hub-dam/",
+            "questionIds": ["P236-Q022-SIM"],
+            "provinceNote": "Sindh aur Balochistan dono se jura hua; kisi ek province tak mahdood nahin."
+          }
+        ],
+        "barrages": [
+          {
+            "id": "hub-dam", "name": "Hub Dam", "kind": "dam",
+            "detail": "Hub River par inter-provincial dam; Karachi aur Lasbela dono ko pani deta hai.",
+            "sourceUrl": "https://wapda.gov.pk/hub-dam/",
+            "questionIds": ["P236-Q022-SRC", "P236-Q022-SIM"],
+            "provinceNote": "Shared Sindh-Balochistan project; Sindh section mein bhi maujood hai."
+          },
+          {
+            "id": "mirani-dam", "name": "Mirani Dam", "kind": "dam",
+            "detail": "Kech District mein Turbat ke maghrib Dasht River par bana dam.",
+            "sourceUrl": "https://wapda.gov.pk/mirani-dam/",
+            "questionIds": ["ADV2E102-U0009-Q025-SRC", "ADV2E102-U0009-Q025-SIM", "ADV2E102-U0131-Q025-SRC", "ADV2E102-U0131-Q025-SIM"]
+          },
+          {
+            "id": "wali-tangi-dam", "name": "Wali Tangi Dam", "kind": "dam",
+            "detail": "Quetta ke mashriq mein Balochistan ka dam; PPSC ka direct province-location sawal hai.",
+            "sourceUrl": "https://www.pbs.gov.pk/sites/default/files/population/census_reports/pcr_balochistan.pdf",
+            "questionIds": ["ADV2E102-U0016-Q053-SRC", "ADV2E102-U0016-Q053-SIM"]
+          }
+        ],
+        "lakes": [
+          {
+            "id": "hanna-lake", "name": "Hanna Lake", "kind": "lake",
+            "detail": "Quetta ke qareeb lake; sawal mein city Quetta poochi gayi hai.",
+            "sourceUrl": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Provincial-Census-Report-2023-Balochistan-1.pdf",
+            "questionIds": ["ADV2E102-U0040-Q039-SRC", "ADV2E102-U0040-Q039-SIM"]
+          },
+          {
+            "id": "hamun-i-mushkhel", "name": "Hamun-i-Mushkhel", "kind": "saltpan",
+            "detail": "Balochistan ka bara salt lake/saltpan; barish aur khushki ke mutabiq pani ka phelao badalta hai.",
+            "sourceUrl": "https://mocc.gov.pk/SiteImage/Misc/files/Chapter-01.pdf",
+            "questionIds": ["ADV2E102-U0041-Q005-SRC", "ADV2E102-U0041-Q005-SIM"]
+          }
+        ]
+      }
+    }
+  ]
+}

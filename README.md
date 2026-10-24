@@ -4,7 +4,7 @@ A category-wise PPSC General Ability practice website for GitHub Pages. Question
 
 ## Study Tools
 
-The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics**, **Pakistan Dams & Rivers**, **Pakistan Constitution Articles**, **Prime Ministers** and **Presidents**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
+The categories page has one **Study Tools** accordion, initially collapsed. Open it to find **Start Paper Here**, **Years Wise Topics**, **Pakistan Dams & Rivers**, **Pakistan Provinces**, **Pakistan Constitution Articles**, **Prime Ministers**, **Presidents**, **Organizations** and **World MCQ Map**, each with a short description. The eleven subject categories remain outside the box. The accordion supports mouse, touch, Enter and Space; returning from a tool keeps it open during that visit. New cross-category tools should be added inside `#study-tools-options` rather than as standalone homepage cards. This layout does not change practice, guest/login behavior or saved progress.
 
 ## Per-category Preview & Continue
 
@@ -57,6 +57,12 @@ The read-only water library groups **116 existing MCQ references into 43 topics*
 `water-topics.js` loads `data/pakistan-water-topics.js` only when opened; topic bodies render on expansion. The library does not add or change canonical questions, IDs, scoring, queue counts, sessions, guest/owner storage or cloud sync. No automatic popup is added. Existing time qualifiers remain; Warsak commissioning dates and the inherited Baglihar answer-option wording have explicit reading notes rather than silent bank changes.
 
 Content lives in `data/pakistan-water-dams.json` and `data/pakistan-water-rivers.json`. Run `node tools/build-pakistan-water-topics.js` to regenerate or add `--check` to validate references, schema, duplicate MCQ IDs, canonical IDs, deterministic output and deployed assets. These checks do not replace editorial fact checking. `node tools/water-topics-browser-smoke.js` tests search, filters, source-answer fidelity, lazy-load retry, keyboard, responsive layouts, progress preservation and guest access with the existing native Chrome harness.
+
+## Pakistan Provinces
+
+The **Pakistan Provinces** Study Tool groups 58 verified revision topics under Punjab, Sindh, Khyber Pakhtunkhwa and Balochistan. Each province has native-accordion sections for mountains/plateaus, rivers, barrages/headworks/dams and lakes/wetlands. Open an entry for its short Roman Urdu note, official source, and any explicitly linked existing MCQs with correct answers. Entries without a direct bank MCQ are labelled extra revision, not claimed as past questions. Shared rivers, ranges and Hub Dam have province-specific notes. Gilgit-Baltistan, Azad Kashmir and Islamabad Capital Territory are not assigned to the four provinces.
+
+`pakistan-provinces.js` fetches `data/pakistan-provinces-geography.json` only on first opening and reuses it thereafter. The view is read-only: no questions, answer keys, quiz sequence, queue counts or saved progress change. Run `node tools/validate-pakistan-provinces.js` for schema, province assignment guards, HTTPS source and canonical MCQ-ID checks, plus `node tools/pakistan-provinces-browser-smoke.js` for navigation, search, sources, answer rendering, desktop/mobile dark mode, lazy loading and saved-progress preservation. Editorial source review remains necessary when the list is expanded.
 
 ## Years Wise Topics
 
