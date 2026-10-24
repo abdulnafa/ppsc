@@ -1316,13 +1316,15 @@ async function main() {
       modeButton?.click();
       await pause();
       let attempt = queue()?.activeAttempt;
+      const firstId = attempt?.questionId;
+      const firstCount = initial?.items?.find((item) => item.questionId === firstId)?.remaining;
       if (!visible(document.querySelector("#queue-screen"))
         || !visible(document.querySelector("#retry-question-text"))
         || document.querySelector("#retry-dialog")?.open
-        || attempt?.context !== "dedicated" || attempt?.questionId !== ids[0]) {
-        errors.push("Manual Queue did not open full-screen with the earliest queued category MCQ.");
+        || attempt?.context !== "dedicated" || !ids.includes(firstId)) {
+        errors.push("Manual Queue did not open full-screen with a saved category MCQ.");
       }
-      const first = questions.get(ids[0]);
+      const first = questions.get(firstId);
       const firstCorrectIndex = attempt?.optionOrder?.indexOf(first?.correctOptionIndex) ?? -1;
       if (firstCorrectIndex < 0) {
         errors.push("Manual Queue could not locate the first canonical answer.");
@@ -1331,21 +1333,23 @@ async function main() {
         document.querySelector('[data-review-option-index="' + wrongIndex + '"]')?.click();
         document.querySelector("#retry-action-button")?.click();
         await pause();
-        if (queue()?.items.find((item) => item.questionId === ids[0])?.remaining !== 2) {
+        if (queue()?.items.find((item) => item.questionId === firstId)?.remaining !== firstCount) {
           errors.push("Wrong Queue Check changed the saved count before Continue.");
         }
         document.querySelector("#retry-action-button")?.click();
         await pause();
         attempt = queue()?.activeAttempt;
-        if (queue()?.items.find((item) => item.questionId === ids[0])?.remaining !== 4
-          || attempt?.questionId !== ids[1]) {
-          errors.push("Wrong first MCQ did not add two while yielding the next turn to the second MCQ.");
+        if (queue()?.items.find((item) => item.questionId === firstId)?.remaining !== firstCount + 2
+          || !ids.includes(attempt?.questionId) || attempt?.questionId === firstId) {
+          errors.push("Wrong first MCQ did not add two while yielding the next turn to a different MCQ.");
         }
       }
       return {
         errors,
+        firstId,
+        firstCount,
         currentId: queue()?.activeAttempt?.questionId || "",
-        firstRemaining: queue()?.items.find((item) => item.questionId === ids[0])?.remaining ?? null,
+        firstRemaining: queue()?.items.find((item) => item.questionId === firstId)?.remaining ?? null,
         embeddedGate: initial?.nextEmbeddedReviewStep,
         embeddedKind: initial?.nextEmbeddedReviewKind
       };
@@ -1402,6 +1406,7 @@ async function main() {
       const errors = [];
       const expected = ${JSON.stringify(retryQueueFeatureResult)};
       const ids = expected.sourceReviewIds || [];
+      const firstTurn = ${JSON.stringify(categoryQueueCycleResult)};
       const queue = () => JSON.parse(localStorage.getItem("ppsc-prep:retry-queue:v1") || "null");
       const questions = new Map(window.PPSC_QUIZ_DATA.questions.map((question) => [String(question.id), question]));
       const startCategoryQueue = async (categoryId) => {
@@ -1425,14 +1430,20 @@ async function main() {
         await pause();
       };
       await startCategoryQueue("general-knowledge");
-      if (queue()?.activeAttempt?.questionId !== ids[1]
-        || queue()?.items.find((item) => item.questionId === ids[0])?.remaining !== 4) {
+      const secondId = queue()?.activeAttempt?.questionId;
+      if (secondId !== firstTurn.currentId
+        || queue()?.items.find((item) => item.questionId === firstTurn.firstId)?.remaining !== firstTurn.firstCount + 2) {
         errors.push("Refresh did not resume the second Queue MCQ with the first MCQ's +2 saved.");
       }
-      await solveCorrect(ids[1]);
-      await solveCorrect(ids[2]);
-      if (queue()?.activeAttempt?.questionId !== ids[0]) {
-        errors.push("The first Queue MCQ did not return only after every other item had one turn.");
+      await solveCorrect(secondId);
+      const thirdId = queue()?.activeAttempt?.questionId;
+      if (!ids.includes(thirdId) || thirdId === firstTurn.firstId || thirdId === secondId) {
+        errors.push("Queue cycle repeated a question before all saved items received one turn.");
+      }
+      await solveCorrect(thirdId);
+      const liveIds = queue()?.items?.filter((item) => item.remaining > 0).map((item) => item.questionId) || [];
+      if (queue()?.activeAttempt && !liveIds.includes(queue().activeAttempt.questionId)) {
+        errors.push("Next shuffled Queue cycle did not pick one of its remaining items.");
       }
       if (queue()?.items.find((item) => item.questionId === expected.foreignId)?.remaining !== 3) {
         errors.push("Manual GK Queue changed another category's saved Queue item.");
@@ -1508,7 +1519,7 @@ async function main() {
         const question = byId.get(questionId);
         const index = attempt?.optionOrder?.indexOf(question?.correctOptionIndex) ?? -1;
         if (!document.querySelector("#retry-dialog")?.open || attempt?.questionId !== questionId || index < 0) {
-          errors.push("Expected FIFO Queue MCQ " + questionId + " despite its legacy cooldown.");
+          errors.push("Expected saved Queue MCQ " + questionId + " during its shuffled cycle.");
           return;
         }
         document.querySelector('[data-review-option-index="' + index + '"]')?.click();
@@ -1518,19 +1529,22 @@ async function main() {
         await pause();
       };
       await advanceLearn();
-      await solvePopup(ids[0]);
+      const firstReadyId = queue()?.activeAttempt?.questionId;
+      if (!ids.includes(firstReadyId)) errors.push("Shuffled Queue popup did not use the selected category pool.");
+      await solvePopup(firstReadyId);
       let secondAttempt = null;
       for (let guard = 0; guard < 7 && !document.querySelector("#retry-dialog")?.open; guard += 1) {
         await advanceLearn();
       }
       secondAttempt = queue()?.activeAttempt;
-      if (!document.querySelector("#retry-dialog")?.open || secondAttempt?.questionId !== ids[1]
-        || queue()?.items.find((item) => item.questionId === ids[0])?.remaining !== 1) {
-        errors.push("FIFO Queue did not show the oldest item despite its legacy cooldown, then chain the second item.");
+      if (!document.querySelector("#retry-dialog")?.open || !ids.includes(secondAttempt?.questionId)
+        || secondAttempt?.questionId === firstReadyId
+        || queue()?.items.find((item) => item.questionId === firstReadyId)?.remaining !== 1) {
+        errors.push("Shuffled Queue did not give a distinct saved MCQ its next turn after the first correct answer.");
       }
       return {
         errors,
-        firstReadyId: ids[0],
+        firstReadyId,
         secondReadyId: secondAttempt?.questionId || "",
         activeAttempt: secondAttempt,
         items: JSON.stringify(queue()?.items),
@@ -1805,7 +1819,7 @@ async function main() {
           retry = JSON.parse(localStorage.getItem(retryKey) || "null");
           const attempt = retry?.activeAttempt;
           const sessionAtReview = JSON.parse(localStorage.getItem(sessionKey) || "null");
-          embeddedOldestFirst = attempt?.questionId === sameCategoryItems[0]?.questionId;
+          embeddedOldestFirst = sameCategoryItems.some((item) => item.questionId === attempt?.questionId);
           if (!dialogOpen || attempt?.context !== "embedded"
             || retry.practiceStep !== initialPracticeStep + spacing
             || sessionAtReview?.mode !== "learn" || sessionAtReview?.score !== 0
@@ -1815,7 +1829,7 @@ async function main() {
             errors.push("Learn review did not open exactly after its persisted number of completed main questions.");
           }
           if (!embeddedOldestFirst) {
-            errors.push("Embedded Learn review did not select the oldest due category MCQ first.");
+            errors.push("Embedded Learn review selected an MCQ outside its saved category Queue.");
           }
           if (JSON.stringify(Object.fromEntries((retry?.items || []).map((item) => [item.questionId, item.remaining])))
             !== JSON.stringify(initialCounts)) {
@@ -2156,23 +2170,45 @@ async function main() {
         await answerMain();
         completedComputerAnswers += 1;
       }
+      // Newly answered correct Quiz questions also enter the Queue for one
+      // confirmation. A shuffled cycle may show them before the saved
+      // position-dependent target; follow that correct-answer streak safely.
+      const pendingTargetIds = queue()?.queueCyclePendingByCategory?.["basic-computer-studies"] || [];
+      const targetPending = pendingTargetIds.includes(targetId);
+      if (!targetPending) errors.push("Position-dependent Queue fixture lost its target from the pending shuffled cycle.");
+      const maxReviewStreak = Math.max(20, (queue()?.items || []).filter((item) =>
+        data.questions.find((question) => String(question.id) === item.questionId)?.categoryId === "basic-computer-studies"
+      ).length + 1);
+      for (let guard = 0; guard < maxReviewStreak && targetPending && dialog?.open
+        && queue()?.activeAttempt?.kind === "queue"
+        && queue()?.activeAttempt?.questionId !== targetId; guard += 1) {
+        const intermediate = queue()?.activeAttempt;
+        const intermediateQuestion = data.questions.find((question) => String(question.id) === intermediate?.questionId);
+        const correctIntermediateIndex = intermediate?.optionOrder?.indexOf(intermediateQuestion?.correctOptionIndex) ?? -1;
+        if (correctIntermediateIndex < 0) break;
+        document.querySelector('[data-review-option-index="' + correctIntermediateIndex + '"]')?.click();
+        document.querySelector("#retry-action-button")?.click();
+        await pause();
+        document.querySelector("#retry-action-button")?.click();
+        await pause();
+      }
       const active = queue()?.activeAttempt;
       const retryTexts = [...document.querySelectorAll("#retry-options-container .option-text")].map((element) => element.textContent);
       const retryLabels = [...document.querySelectorAll("#retry-options-container .option-label")].map((element) => element.textContent);
       const retryQuestionText = document.querySelector("#retry-question-text");
       const retryOptions = document.querySelector("#retry-options-container");
-      if (!dialog?.open || active?.context !== "embedded" || active?.kind !== "queue"
+      if (targetPending && (!dialog?.open || active?.context !== "embedded" || active?.kind !== "queue"
         || active.questionId !== targetId
         || JSON.stringify(active.optionOrder) !== JSON.stringify([0, 1, 2, 3])
-        || JSON.stringify(retryTexts) !== JSON.stringify(displayOptions(target))) {
+        || JSON.stringify(retryTexts) !== JSON.stringify(displayOptions(target)))) {
         errors.push("Same-category Basic Computer Queue did not interrupt Quiz with canonical A-D options.");
       }
-      if (dialog?.classList.contains("is-urdu") || retryQuestionText?.textContent !== target.question
+      if (targetPending && (dialog?.classList.contains("is-urdu") || retryQuestionText?.textContent !== target.question
         || retryQuestionText?.classList.contains("is-urdu") || retryQuestionText?.hasAttribute("lang") || retryQuestionText?.hasAttribute("dir")
         || retryOptions?.classList.contains("is-urdu") || retryOptions?.hasAttribute("lang") || retryOptions?.hasAttribute("dir")
         || JSON.stringify(retryLabels) !== JSON.stringify(["A", "B", "C", "D"])
         || !visible(document.querySelector("#retry-question-urdu-block"))
-        || document.querySelector("#retry-question-text-urdu")?.textContent !== target.questionUrdu) {
+        || document.querySelector("#retry-question-text-urdu")?.textContent !== target.questionUrdu)) {
         errors.push("Same-category non-Urdu Queue popup lost its canonical labels or secondary translation.");
       }
       if (document.querySelector("#retry-later-button")?.hidden) {
@@ -2481,6 +2517,10 @@ async function main() {
 
     const computerSourceFlowResult = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const sameIds = (actual, expected) => Array.isArray(actual)
+        && actual.length === expected.length
+        && new Set(actual).size === actual.length
+        && actual.every((id) => expected.includes(id));
       const visible = (element) => Boolean(
         element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
       );
@@ -2630,9 +2670,9 @@ async function main() {
           || learnSnapshot.mode !== "learn" || learnSnapshot.rangePoolSize !== total
           || JSON.stringify(learnSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(scopeFixture.ids)
           || JSON.stringify(learnSnapshot.rangeQuestionIds || []) !== JSON.stringify(expectedRangeIds)
-          || JSON.stringify(learnSnapshot.questionIds || []) !== JSON.stringify(expectedRangeIds)
-          || document.querySelector("#question-text")?.dataset.questionId !== expectedRangeIds[0]) {
-          errors.push("Basic Computer " + scope + " Learn range did not preserve the filtered source pool/order.");
+          || !sameIds(learnSnapshot.questionIds, expectedRangeIds)
+          || document.querySelector("#question-text")?.dataset.questionId !== learnSnapshot.questionIds[0]) {
+          errors.push("Basic Computer " + scope + " Learn range did not preserve the filtered source pool/membership.");
         }
         await backFromQuestion();
 
@@ -2642,8 +2682,8 @@ async function main() {
         if (!quizSnapshot || quizSnapshot.version !== 8 || quizSnapshot.computerSourceScope !== scope
           || quizSnapshot.mode !== "quiz" || quizSnapshot.rangePoolSize !== total
           || JSON.stringify(quizSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(scopeFixture.ids)
-          || JSON.stringify(quizSnapshot.questionIds || []) !== JSON.stringify(expectedRangeIds)) {
-          errors.push("Basic Computer " + scope + " Quiz range did not preserve the filtered source pool/order.");
+          || !sameIds(quizSnapshot.questionIds, expectedRangeIds)) {
+          errors.push("Basic Computer " + scope + " Quiz range did not preserve the filtered source pool/membership.");
         }
         const quizQuestion = questionById.get(String(document.querySelector("#question-text")?.dataset.questionId || ""));
         const renderedOptions = [...document.querySelectorAll("#options-container .option-text")].map((element) => element.textContent);
@@ -2669,8 +2709,8 @@ async function main() {
         if (!importantSnapshot || importantSnapshot.computerSourceScope !== scope || importantSnapshot.importantOnly !== true
           || importantSnapshot.rangePoolSize !== scopeFixture.importantIds.length
           || JSON.stringify(importantSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(scopeFixture.importantIds)
-          || JSON.stringify(importantSnapshot.questionIds || []) !== JSON.stringify(scopeFixture.importantIds.slice(0, importantEnd))) {
-          errors.push("Basic Computer " + scope + " Important Learn range escaped its selected source/order.");
+          || !sameIds(importantSnapshot.questionIds, scopeFixture.importantIds.slice(0, importantEnd))) {
+          errors.push("Basic Computer " + scope + " Important Learn range escaped its selected source/membership.");
         }
         await backFromQuestion();
 
@@ -2685,8 +2725,8 @@ async function main() {
         const difficultSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
         if (!difficultSnapshot || difficultSnapshot.computerSourceScope !== scope || difficultSnapshot.scope !== "difficult"
           || JSON.stringify(difficultSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(scopeFixture.difficultIds)
-          || JSON.stringify(difficultSnapshot.questionIds || []) !== JSON.stringify(scopeFixture.difficultIds)) {
-          errors.push("Basic Computer " + scope + " Difficult Quiz range escaped its selected source/order.");
+          || !sameIds(difficultSnapshot.questionIds, scopeFixture.difficultIds)) {
+          errors.push("Basic Computer " + scope + " Difficult Quiz range escaped its selected source/membership.");
         }
         await backFromQuestion();
       }
@@ -3073,6 +3113,10 @@ async function main() {
 
     const normalResult = await client.evaluate(`(async () => {
       const rawPause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const sameIds = (actual, expected) => Array.isArray(actual)
+        && actual.length === expected.length
+        && new Set(actual).size === actual.length
+        && actual.every((id) => expected.includes(id));
       const resolveRetryIfOpen = async () => {
         const dialog = document.querySelector("#retry-dialog");
         let safety = 0;
@@ -3142,7 +3186,7 @@ async function main() {
       };
       const data = window.PPSC_QUIZ_DATA;
       if (!data || data.categories.length !== 11) errors.push("Expected 11 categories.");
-      if (!data || data.questions.length !== 11932) errors.push("Expected the current 11,932-question release bank.");
+      if (!data || data.questions.length !== 11952) errors.push("Expected the current 11,952-question release bank.");
       if (!data || data.version !== 5) errors.push("Expected question-data schema version 5.");
       const importantQuestions = data ? data.questions.filter((question) => question.isImportant === true) : [];
       if (importantQuestions.length !== 1197) errors.push("Expected 1,197 evidence-based important questions.");
@@ -3657,8 +3701,8 @@ async function main() {
         errors.push("An ADV2E102 question is missing its Urdu translation.");
       }
 
-      // Render one deterministic IBES item without traversing all 2,296 Basic
-      // Computer questions. Learn mode must keep the current source/data order.
+      // Render one deterministic IBES item through a one-question range without
+      // traversing the Basic Computer bank or depending on shuffled run order.
       const ibesRenderTarget = ibesQuestions.find((question) => question.kind === "source");
       const firstComputerIndex = data.questions.findIndex((question) => question.categoryId === "basic-computer-studies");
       const ibesTargetIndex = data.questions.indexOf(ibesRenderTarget);
@@ -3668,7 +3712,7 @@ async function main() {
         data.questions.splice(ibesTargetIndex, 1);
         data.questions.splice(firstComputerIndex, 0, ibesRenderTarget);
         document.querySelector('#category-grid .category-card[data-category="basic-computer-studies"]').click();
-        await startModeWithRange("#learn-mode-button");
+        await startModeWithRange("#learn-mode-button", 1, 1);
         const renderedIbesId = document.querySelector("#question-text").dataset.questionId;
         if (renderedIbesId !== ibesRenderTarget.id) errors.push("The deterministic IBES question did not render in Basic Computer Learn mode.");
         if (document.querySelector("#question-text-urdu").textContent !== ibesRenderTarget.questionUrdu) errors.push("The rendered IBES Urdu translation did not match its data.");
@@ -3827,28 +3871,38 @@ async function main() {
           await jumpByChange(number);
           observedLearnRangeIds.push(String(document.querySelector("#question-text")?.dataset.questionId || ""));
         }
-        if (JSON.stringify(observedLearnRangeIds) !== JSON.stringify(expectedRangeIds)) errors.push("Learn range 2–4 did not preserve the exact canonical IDs.");
+        if (!sameIds(observedLearnRangeIds, expectedRangeIds)) errors.push("Learn range 2–4 did not preserve the selected MCQ IDs.");
         let selectedRangeSnapshot = JSON.parse(localStorage.getItem(rangeStorageKey) || "null");
         if (!selectedRangeSnapshot || selectedRangeSnapshot.version !== 8 || selectedRangeSnapshot.computerSourceScope !== "all" || selectedRangeSnapshot.rangeStart !== 2
           || selectedRangeSnapshot.rangeEnd !== 4 || selectedRangeSnapshot.rangePoolSize !== rangeQuestions.length
           || JSON.stringify(selectedRangeSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(rangePoolIds)
           || JSON.stringify(selectedRangeSnapshot.rangeQuestionIds || []) !== JSON.stringify(expectedRangeIds)
-          || JSON.stringify(selectedRangeSnapshot.questionIds) !== JSON.stringify(expectedRangeIds)) {
-          errors.push("Learn range 2–4 did not persist exact v8 range metadata and order.");
+          || !sameIds(selectedRangeSnapshot.questionIds, expectedRangeIds)) {
+          errors.push("Learn range 2–4 did not persist exact v8 range metadata and selected IDs.");
         }
+        if (selectedRangeSnapshot?.questionIds?.length > 1
+          && JSON.stringify(selectedRangeSnapshot.questionIds) === JSON.stringify(expectedRangeIds)) {
+          errors.push("Fresh Learn range 2–4 did not shuffle its selected MCQs.");
+        }
+        const firstRangeLearnIds = selectedRangeSnapshot?.questionIds || [];
 
         document.querySelector("#restart-button")?.click();
         await pause();
         selectedRangeSnapshot = JSON.parse(localStorage.getItem(rangeStorageKey) || "null");
-        if (document.querySelector("#question-text")?.dataset.questionId !== expectedRangeIds[0]
-          || selectedRangeSnapshot?.rangeStart !== 2 || selectedRangeSnapshot?.rangeEnd !== 4
-          || JSON.stringify(selectedRangeSnapshot?.questionIds || []) !== JSON.stringify(expectedRangeIds)) {
+        if (!sameIds(selectedRangeSnapshot?.questionIds, expectedRangeIds)
+          || document.querySelector("#question-text")?.dataset.questionId !== selectedRangeSnapshot?.questionIds?.[0]
+          || selectedRangeSnapshot?.rangeStart !== 2 || selectedRangeSnapshot?.rangeEnd !== 4) {
           errors.push("Restart did not retain Learn range 2–4.");
         }
-        for (let learnRangeIndex = 0; learnRangeIndex < expectedRangeIds.length; learnRangeIndex += 1) {
-          const expectedId = expectedRangeIds[learnRangeIndex];
+        const restartedLearnIds = selectedRangeSnapshot?.questionIds || [];
+        if (restartedLearnIds.length > 1
+          && JSON.stringify(restartedLearnIds) === JSON.stringify(firstRangeLearnIds)) {
+          errors.push("Restarted Learn range repeated its immediately previous MCQ order.");
+        }
+        for (let learnRangeIndex = 0; learnRangeIndex < restartedLearnIds.length; learnRangeIndex += 1) {
+          const expectedId = restartedLearnIds[learnRangeIndex];
           if (document.querySelector("#question-text")?.dataset.questionId !== expectedId) {
-            errors.push("Learn range completion left canonical order before question " + (learnRangeIndex + 1) + ".");
+            errors.push("Learn range completion changed its saved order before question " + (learnRangeIndex + 1) + ".");
             break;
           }
           document.querySelector("#action-button")?.click();
@@ -3869,8 +3923,11 @@ async function main() {
           || rangeQuizSnapshot?.rangeStart !== 2 || rangeQuizSnapshot?.rangeEnd !== 4
           || JSON.stringify(rangeQuizSnapshot?.rangePoolQuestionIds || []) !== JSON.stringify(rangePoolIds)
           || JSON.stringify(rangeQuizSnapshot?.rangeQuestionIds || []) !== JSON.stringify(expectedRangeIds)
-          || JSON.stringify(rangeQuizIds) !== JSON.stringify(expectedRangeIds)) {
-          errors.push("Start Quiz did not retain the Learn range 2–4 in canonical source order.");
+          || !sameIds(rangeQuizIds, expectedRangeIds)) {
+          errors.push("Start Quiz did not retain the Learn range 2–4 membership.");
+        }
+        if (rangeQuizIds.length > 1 && JSON.stringify(rangeQuizIds) === JSON.stringify(expectedRangeIds)) {
+          errors.push("Fresh Quiz range 2–4 did not shuffle its selected MCQs.");
         }
         for (let index = 0; index < 3; index += 1) {
           const currentId = document.querySelector("#question-text")?.dataset.questionId;
@@ -3904,7 +3961,7 @@ async function main() {
           || importantRangeSnapshot.rangePoolSize !== rangeImportantQuestions.length
           || JSON.stringify(importantRangeSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(rangeImportantQuestions.map((question) => String(question.id)))
           || JSON.stringify(importantRangeSnapshot.rangeQuestionIds || []) !== JSON.stringify(expectedImportantRangeIds)
-          || JSON.stringify(importantRangeSnapshot.questionIds) !== JSON.stringify(expectedImportantRangeIds)) {
+          || !sameIds(importantRangeSnapshot.questionIds, expectedImportantRangeIds)) {
           errors.push("Important range 2–4 was not applied after filtering the category.");
         }
         document.querySelector("#back-button")?.click();
@@ -3919,8 +3976,8 @@ async function main() {
           || importantQuizSnapshot.importantOnly !== true
           || JSON.stringify(importantQuizSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(rangeImportantQuestions.map((question) => String(question.id)))
           || JSON.stringify(importantQuizSnapshot.rangeQuestionIds || []) !== JSON.stringify(expectedImportantRangeIds)
-          || JSON.stringify(importantQuizSnapshot.questionIds || []) !== JSON.stringify(expectedImportantRangeIds)) {
-          errors.push("Important Quiz range 2–4 did not retain the filtered canonical source order.");
+          || !sameIds(importantQuizSnapshot.questionIds, expectedImportantRangeIds)) {
+          errors.push("Important Quiz range 2–4 did not retain the filtered source membership.");
         }
         document.querySelector("#back-button")?.click();
         await pause();
@@ -3949,8 +4006,9 @@ async function main() {
         assertProgress(1, expectedImportant.length, "Important Learn");
         if (!document.querySelector("#question-kind").textContent.includes("IMPORTANT")) errors.push("Important question badge was not rendered.");
         const importantJumpNumber = Math.min(2, expectedImportant.length);
+        const importantLearnIds = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null")?.questionIds || [];
         await jumpByChange(importantJumpNumber);
-        if (document.querySelector("#question-text").dataset.questionId !== expectedImportant[importantJumpNumber - 1].id) errors.push("Important Learn jump did not map the filtered number to the expected important question.");
+        if (document.querySelector("#question-text").dataset.questionId !== importantLearnIds[importantJumpNumber - 1]) errors.push("Important Learn jump did not map the filtered number to its saved session question.");
         assertProgress(importantJumpNumber, expectedImportant.length, "Important Learn jump");
         document.querySelector("#back-button").click();
         await pause();
@@ -3983,6 +4041,14 @@ async function main() {
       const activeSessionSnapshot = () => JSON.parse(
         localStorage.getItem("ppsc-prep:active-session:v1") || "null"
       );
+      const firstLearnRunIds = activeSessionSnapshot()?.questionIds || [];
+      if (!sameIds(firstLearnRunIds, categoryQuestions.map((item) => String(item.id)))) {
+        errors.push("Learn start did not include every selected category MCQ exactly once.");
+      }
+      if (firstLearnRunIds.length > 1
+        && JSON.stringify(firstLearnRunIds) === JSON.stringify(categoryQuestions.map((item) => String(item.id)))) {
+        errors.push("Fresh Learn session did not shuffle its question order.");
+      }
       const retryQueueSnapshot = () => JSON.parse(
         localStorage.getItem("ppsc-prep:retry-queue:v1") || "null"
       );
@@ -4137,17 +4203,17 @@ async function main() {
 
         const manualLearnNumber = Math.min(3, categoryQuestions.length);
         await jumpByChange(manualLearnNumber);
-        if (document.querySelector("#question-text").dataset.questionId !== categoryQuestions[manualLearnNumber - 1].id) errors.push("Learn change jump opened the wrong question.");
+        if (document.querySelector("#question-text").dataset.questionId !== firstLearnRunIds[manualLearnNumber - 1]) errors.push("Learn change jump opened the wrong saved-session question.");
         assertProgress(manualLearnNumber, categoryQuestions.length, "Learn change jump");
-        if (activeSessionSnapshot()?.learnVisitedQuestionIds?.includes(categoryQuestions[manualLearnNumber - 1].id)) {
+        if (activeSessionSnapshot()?.learnVisitedQuestionIds?.includes(firstLearnRunIds[manualLearnNumber - 1])) {
           assertLearnRevealed(findCurrent(), "Learn change jump to revealed question");
         } else {
           assertLearnHidden("Learn change jump to unseen question");
         }
         await jumpByEnter(2);
-        if (document.querySelector("#question-text").dataset.questionId !== categoryQuestions[1].id) errors.push("Learn Enter jump opened the wrong question.");
+        if (document.querySelector("#question-text").dataset.questionId !== firstLearnRunIds[1]) errors.push("Learn Enter jump opened the wrong saved-session question.");
         assertProgress(2, categoryQuestions.length, "Learn Enter jump");
-        assertLearnRevealed(categoryQuestions[1], "Learn Enter jump to revealed question");
+        assertLearnRevealed(findCurrent(), "Learn Enter jump to revealed question");
         const beforeInvalidLearnId = document.querySelector("#question-text").dataset.questionId;
         await jumpByChange(0);
         if (document.querySelector("#question-text").dataset.questionId !== beforeInvalidLearnId) errors.push("Invalid Learn jump changed the current question.");
@@ -4160,15 +4226,15 @@ async function main() {
             ? learnGuardSnapshot.learnVisitedQuestionIds
             : []
         );
-        const firstUnvisitedLearnIndex = categoryQuestions.findIndex((item) => !visitedLearnIds.has(item.id));
+        const firstUnvisitedLearnIndex = firstLearnRunIds.findIndex((id) => !visitedLearnIds.has(id));
         if (!learnGuardSnapshot || learnGuardSnapshot.version !== 8 || learnGuardSnapshot.computerSourceScope !== "all" || learnGuardSnapshot.sessionKind !== "category" || learnGuardSnapshot.paperCategoryIds !== null || learnGuardSnapshot.mode !== "learn" || learnGuardSnapshot.partIndex !== null) errors.push("Learn completion guard was not stored with the v8 category-session schema.");
-        if (!learnGuardSnapshot || learnGuardSnapshot.currentIndex !== categoryQuestions.length - 1 || visitedLearnIds.has(categoryQuestions[categoryQuestions.length - 1].id)) errors.push("Jumping directly to the last Learn question incorrectly revealed or visited it.");
+        if (!learnGuardSnapshot || learnGuardSnapshot.currentIndex !== categoryQuestions.length - 1 || visitedLearnIds.has(firstLearnRunIds[categoryQuestions.length - 1])) errors.push("Jumping directly to the last Learn question incorrectly revealed or visited it.");
         if (firstUnvisitedLearnIndex < 0) errors.push("Learn completion guard could not identify an unvisited question.");
         assertLearnHidden("Directly visited last Learn question");
         document.querySelector("#action-button").click();
         await pause();
         if (visible(document.querySelector("#results-screen"))
-          || document.querySelector("#question-text")?.dataset.questionId !== categoryQuestions[categoryQuestions.length - 1].id) {
+          || document.querySelector("#question-text")?.dataset.questionId !== firstLearnRunIds[categoryQuestions.length - 1]) {
           errors.push("First action on the last Learn question did not stay in place for answer reveal.");
         }
         if (document.querySelector("#action-button").textContent !== "Next Unvisited" || document.querySelector("#action-button").dataset.action !== "next-unvisited") errors.push("Revealed last Learn question did not offer Next Unvisited while questions remained unseen.");
@@ -4176,7 +4242,7 @@ async function main() {
         await pause();
         if (visible(document.querySelector("#results-screen"))) errors.push("Learn opened results while questions remained unvisited.");
         if (firstUnvisitedLearnIndex >= 0) {
-          if (document.querySelector("#question-text").dataset.questionId !== categoryQuestions[firstUnvisitedLearnIndex].id) errors.push("Next Unvisited did not wrap to the first unvisited Learn question.");
+          if (document.querySelector("#question-text").dataset.questionId !== firstLearnRunIds[firstUnvisitedLearnIndex]) errors.push("Next Unvisited did not wrap to the first unvisited Learn question.");
           assertProgress(firstUnvisitedLearnIndex + 1, categoryQuestions.length, "Learn Next Unvisited");
           assertLearnHidden("Learn Next Unvisited target");
         }
@@ -4184,6 +4250,14 @@ async function main() {
       document.querySelector("#restart-button").click();
       await pause();
       assertProgress(1, categoryQuestions.length, "Learn restart");
+      const restartedLearnIds = activeSessionSnapshot()?.questionIds || [];
+      if (!sameIds(restartedLearnIds, categoryQuestions.map((item) => String(item.id)))) {
+        errors.push("Learn restart changed the selected category MCQ membership.");
+      }
+      if (restartedLearnIds.length > 1
+        && JSON.stringify(restartedLearnIds) === JSON.stringify(firstLearnRunIds)) {
+        errors.push("Learn restart repeated the immediately previous question order.");
+      }
       const learnOrder = [];
       const markedQuestionIds = [];
       while (!visible(document.querySelector("#results-screen"))) {
@@ -4213,8 +4287,8 @@ async function main() {
         await pause();
       }
       const canonicalOrder = categoryQuestions.map((item) => item.id);
-      if (learnOrder.length !== categoryQuestions.length || new Set(learnOrder).size !== categoryQuestions.length) errors.push("Learn source order lost or duplicated a question.");
-      if (JSON.stringify(learnOrder) !== JSON.stringify(canonicalOrder)) errors.push("Learn questions did not stay in source/data order.");
+      if (!sameIds(learnOrder, canonicalOrder)) errors.push("Learn lost or duplicated a selected question.");
+      if (JSON.stringify(learnOrder) !== JSON.stringify(restartedLearnIds)) errors.push("Learn traversal changed its frozen run order.");
       const savedDifficultPayload = JSON.parse(localStorage.getItem("ppsc-prep:difficult-question-ids:v1") || "{}");
       if (savedDifficultPayload.version !== 1 || !Array.isArray(savedDifficultPayload.questionIds)) errors.push("Difficult marks were not stored with the versioned schema.");
       if (markedQuestionIds.some((id) => !savedDifficultPayload.questionIds.includes(id))) errors.push("A marked question ID was not persisted.");
@@ -4225,6 +4299,11 @@ async function main() {
       await pause();
       if (!visible(document.querySelector("#quiz-screen"))) errors.push("Start Quiz did not open the quiz screen.");
       if (document.querySelector("#score-text").textContent !== "Score: 0") errors.push("Start Quiz did not switch from Learn to Quiz mode.");
+      const firstQuizQuestionIds = activeSessionSnapshot()?.questionIds || [];
+      if (!sameIds(firstQuizQuestionIds, canonicalOrder)) errors.push("Fresh Quiz changed the selected category MCQ membership.");
+      if (firstQuizQuestionIds.length > 1 && JSON.stringify(firstQuizQuestionIds) === JSON.stringify(canonicalOrder)) {
+        errors.push("Fresh Quiz did not shuffle its question order.");
+      }
 
       question = findCurrent();
       if (!question) errors.push("First question did not render.");
@@ -4362,14 +4441,19 @@ async function main() {
       if (document.querySelector("#result-score").textContent.replace(/\\s/g, "") !== expectedScore + "/" + categoryQuestions.length) {
         errors.push("Final score did not match the completed session.");
       }
-      if (quizOrder.length !== categoryQuestions.length || new Set(quizOrder).size !== categoryQuestions.length) errors.push("Quiz source order lost or duplicated a question.");
-      if (JSON.stringify(quizOrder) !== JSON.stringify(canonicalOrder)) errors.push("Quiz questions did not stay in source/data order.");
-      if (JSON.stringify(quizOrder) !== JSON.stringify(learnOrder)) errors.push("Quiz question order did not match the previous Learn session.");
+      if (!sameIds(quizOrder, canonicalOrder)) errors.push("Quiz lost or duplicated a selected question.");
+      if (JSON.stringify(quizOrder) !== JSON.stringify(firstQuizQuestionIds)) errors.push("Quiz traversal changed its frozen run order.");
       const firstQuizScore = document.querySelector("#result-score").textContent;
 
       if (document.querySelector("#play-again-button").textContent !== "Practice Again") errors.push("Quiz completion did not offer Practice Again.");
       document.querySelector("#play-again-button").click();
       await pause();
+      const repeatedQuizQuestionIds = activeSessionSnapshot()?.questionIds || [];
+      if (!sameIds(repeatedQuizQuestionIds, canonicalOrder)) errors.push("Practice Again changed the selected category MCQ membership.");
+      if (repeatedQuizQuestionIds.length > 1
+        && JSON.stringify(repeatedQuizQuestionIds) === JSON.stringify(firstQuizQuestionIds)) {
+        errors.push("Practice Again repeated the immediately previous Quiz order.");
+      }
       const repeatedQuizOrder = [];
       while (!visible(document.querySelector("#results-screen"))) {
         question = findCurrent();
@@ -4387,11 +4471,8 @@ async function main() {
         document.querySelector("#action-button").click();
         await pause();
       }
-      if (repeatedQuizOrder.length !== categoryQuestions.length || new Set(repeatedQuizOrder).size !== categoryQuestions.length) errors.push("Practice Again lost or duplicated a question.");
-      if (JSON.stringify(repeatedQuizOrder) !== JSON.stringify(canonicalOrder)
-        || JSON.stringify(repeatedQuizOrder) !== JSON.stringify(quizOrder)) {
-        errors.push("Practice Again did not keep the Quiz questions in canonical source order.");
-      }
+      if (!sameIds(repeatedQuizOrder, canonicalOrder)) errors.push("Practice Again lost or duplicated a question.");
+      if (JSON.stringify(repeatedQuizOrder) !== JSON.stringify(repeatedQuizQuestionIds)) errors.push("Practice Again changed its frozen run order.");
 
       const sessionStorageKey = "ppsc-prep:active-session:v1";
       if (localStorage.getItem(sessionStorageKey) !== null) errors.push("Completed Quiz session was not cleared from resume storage.");
@@ -4411,7 +4492,7 @@ async function main() {
       if (!resumeSnapshot || resumeSnapshot.partIndex !== null || resumeSnapshot.importantOnly !== false) errors.push("Saved Quiz full-category/Important scope was incorrect.");
       if (!resumeSnapshot || resumeSnapshot.rangeStart !== 1 || resumeSnapshot.rangeEnd !== categoryQuestions.length || resumeSnapshot.rangePoolSize !== categoryQuestions.length) errors.push("Saved Quiz did not preserve its exact full-range metadata.");
       if (!resumeSnapshot || JSON.stringify(resumeSnapshot.rangePoolQuestionIds || []) !== JSON.stringify(categoryQuestions.map((question) => String(question.id)))) errors.push("Saved Quiz did not preserve its complete eligible-pool order.");
-      if (!resumeSnapshot || JSON.stringify(resumeSnapshot.questionIds || []) !== JSON.stringify(canonicalOrder)) errors.push("Saved Quiz did not preserve the complete canonical question order.");
+      if (!resumeSnapshot || !sameIds(resumeSnapshot.questionIds, canonicalOrder)) errors.push("Saved Quiz did not preserve every selected question exactly once.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.optionOrders) || resumeSnapshot.optionOrders.length !== categoryQuestions.length) errors.push("Saved Quiz option orders were incomplete.");
       if (!resumeSnapshot || !Array.isArray(resumeSnapshot.answerHistory) || resumeSnapshot.answerHistory.length !== categoryQuestions.length) errors.push("Saved Quiz answer history was incomplete.");
       if (!resumeSnapshot || !resumeSnapshot.submitted || resumeSnapshot.selectedIndex !== resumeSelectedIndex || resumeSnapshot.score !== 0) errors.push("Saved submitted-answer state was incorrect.");
@@ -4430,9 +4511,9 @@ async function main() {
         testedCategory: activeCategory,
         testedCategoryQuestions: categoryQuestions.length,
         markedQuestionIds,
-        learnedInSourceOrder: JSON.stringify(learnOrder) === JSON.stringify(canonicalOrder),
-        quizInSourceOrder: JSON.stringify(quizOrder) === JSON.stringify(canonicalOrder),
-        practiceAgainInSourceOrder: JSON.stringify(repeatedQuizOrder) === JSON.stringify(canonicalOrder),
+        learnedInShuffledRunOrder: JSON.stringify(learnOrder) === JSON.stringify(restartedLearnIds),
+        quizInShuffledRunOrder: JSON.stringify(quizOrder) === JSON.stringify(firstQuizQuestionIds),
+        practiceAgainInShuffledRunOrder: JSON.stringify(repeatedQuizOrder) === JSON.stringify(repeatedQuizQuestionIds),
         firstQuizScore,
         repeatedQuizScore: document.querySelector("#result-score").textContent,
         resumeExpected: {
@@ -4718,8 +4799,8 @@ async function main() {
         || migrated.rangePoolSize !== expected.questionCount
         || JSON.stringify(migrated.rangePoolQuestionIds || []) !== JSON.stringify(expected.rangePoolQuestionIds)
         || JSON.stringify(migrated.rangeQuestionIds || []) !== JSON.stringify(expected.rangeQuestionIds)
-        || JSON.stringify(migrated.questionIds || []) !== JSON.stringify(expected.rangeQuestionIds)) {
-        errors.push("The migrated v6 session did not receive complete full-range metadata, all source scope, and canonical Quiz order.");
+        || JSON.stringify(migrated.questionIds || []) !== JSON.stringify(expected.questionIds)) {
+        errors.push("The migrated v6 session did not retain its frozen shuffled Quiz order and complete range metadata.");
       }
       document.querySelector("#back-button")?.click();
       await pause();
@@ -4801,8 +4882,10 @@ async function main() {
           const expectedQuestionIds = data.questions
             .filter((question) => question.categoryId === categoryId)
             .map((question) => String(question.id));
-          if (JSON.stringify(snapshot.questionIds) !== JSON.stringify(expectedQuestionIds)) {
-            errors.push("Positional-option Quiz did not keep " + categoryId + " in canonical source order.");
+          if (snapshot.questionIds.length !== expectedQuestionIds.length
+            || new Set(snapshot.questionIds).size !== expectedQuestionIds.length
+            || snapshot.questionIds.some((id) => !expectedQuestionIds.includes(id))) {
+            errors.push("Positional-option Quiz changed " + categoryId + " question membership.");
           }
           const idsInCategory = sensitiveIds.filter((questionId) => {
             const question = questionById.get(questionId);
@@ -4924,29 +5007,25 @@ async function main() {
       const storageKey = "ppsc-prep:active-session:v1";
       if (visible(document.querySelector("#continue-session-card"))) errors.push("A tampered v8 eligible range pool left Continue visible.");
       if (localStorage.getItem(storageKey) !== null) errors.push("A tampered v8 eligible range pool was not rejected and removed.");
-      const permutedQuestionSnapshot = ${JSON.stringify(normalResult.legacyV6Snapshot)};
+      const duplicateQuestionSnapshot = ${JSON.stringify(normalResult.legacyV6Snapshot)};
       const expectedRange = ${JSON.stringify(normalResult.resumeExpected)};
-      if (!permutedQuestionSnapshot || expectedRange.rangeQuestionIds.length < 2) {
-        errors.push("Could not construct the v8 category question-order tamper fixture.");
+      if (!duplicateQuestionSnapshot || expectedRange.rangeQuestionIds.length < 2) {
+        errors.push("Could not construct the v8 duplicate-question tamper fixture.");
       } else {
-        permutedQuestionSnapshot.version = 8;
-        permutedQuestionSnapshot.computerSourceScope = "all";
-        permutedQuestionSnapshot.rangeStart = expectedRange.rangeStart;
-        permutedQuestionSnapshot.rangeEnd = expectedRange.rangeEnd;
-        permutedQuestionSnapshot.rangePoolSize = expectedRange.rangePoolSize;
-        permutedQuestionSnapshot.rangePoolQuestionIds = expectedRange.rangePoolQuestionIds.slice();
-        permutedQuestionSnapshot.rangeQuestionIds = expectedRange.rangeQuestionIds.slice();
-        permutedQuestionSnapshot.answerHistory = new Array(permutedQuestionSnapshot.questionIds.length).fill(null);
-        permutedQuestionSnapshot.currentIndex = 0;
-        permutedQuestionSnapshot.selectedIndex = null;
-        permutedQuestionSnapshot.submitted = false;
-        permutedQuestionSnapshot.score = 0;
-        [permutedQuestionSnapshot.questionIds, permutedQuestionSnapshot.optionOrders].forEach((items) => {
-          const firstItem = items[0];
-          items[0] = items[1];
-          items[1] = firstItem;
-        });
-        localStorage.setItem(storageKey, JSON.stringify(permutedQuestionSnapshot));
+        duplicateQuestionSnapshot.version = 8;
+        duplicateQuestionSnapshot.computerSourceScope = "all";
+        duplicateQuestionSnapshot.rangeStart = expectedRange.rangeStart;
+        duplicateQuestionSnapshot.rangeEnd = expectedRange.rangeEnd;
+        duplicateQuestionSnapshot.rangePoolSize = expectedRange.rangePoolSize;
+        duplicateQuestionSnapshot.rangePoolQuestionIds = expectedRange.rangePoolQuestionIds.slice();
+        duplicateQuestionSnapshot.rangeQuestionIds = expectedRange.rangeQuestionIds.slice();
+        duplicateQuestionSnapshot.answerHistory = new Array(duplicateQuestionSnapshot.questionIds.length).fill(null);
+        duplicateQuestionSnapshot.currentIndex = 0;
+        duplicateQuestionSnapshot.selectedIndex = null;
+        duplicateQuestionSnapshot.submitted = false;
+        duplicateQuestionSnapshot.score = 0;
+        duplicateQuestionSnapshot.questionIds[0] = duplicateQuestionSnapshot.questionIds[1];
+        localStorage.setItem(storageKey, JSON.stringify(duplicateQuestionSnapshot));
       }
       return { errors };
     })()`);
@@ -4960,7 +5039,7 @@ async function main() {
           resolve(true);
         } else if (Date.now() >= deadline) {
           clearInterval(timer);
-          reject(new Error("Website did not reject a permuted v8 category Quiz order in time."));
+          reject(new Error("Website did not reject duplicate v8 category Quiz IDs in time."));
         }
       }, 50);
     })`);
@@ -4971,8 +5050,8 @@ async function main() {
         element && !element.hidden && getComputedStyle(element).display !== "none" && element.getClientRects().length > 0
       );
       const storageKey = "ppsc-prep:active-session:v1";
-      if (visible(document.querySelector("#continue-session-card"))) errors.push("A permuted v8 category Quiz order left Continue visible.");
-      if (localStorage.getItem(storageKey) !== null) errors.push("A permuted v8 category Quiz order was not rejected and removed.");
+      if (visible(document.querySelector("#continue-session-card"))) errors.push("Duplicate v8 category Quiz IDs left Continue visible.");
+      if (localStorage.getItem(storageKey) !== null) errors.push("Duplicate v8 category Quiz IDs were not rejected and removed.");
       localStorage.setItem(storageKey, JSON.stringify({
         version: 3,
         bankSignature: ${JSON.stringify(normalResult.resumeExpected.bankSignature)},
@@ -5009,6 +5088,10 @@ async function main() {
 
     const difficultResult = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const sameIds = (actual, expected) => Array.isArray(actual)
+        && actual.length === expected.length
+        && new Set(actual).size === actual.length
+        && actual.every((id) => expected.includes(id));
       const visible = (element) => Boolean(
         element &&
         !element.hidden &&
@@ -5078,12 +5161,14 @@ async function main() {
 
       await startDifficultRange(1, 1);
       const oneDifficultSnapshot = JSON.parse(localStorage.getItem("ppsc-prep:active-session:v1") || "null");
+      const canonicalMarkedIds = categoryQuestions.filter((question) => expectedMarkedIds.includes(question.id))
+        .map((question) => question.id);
       if (!visible(document.querySelector("#quiz-screen")) || !progressMatches(1, 1)
-        || document.querySelector("#question-text")?.dataset.questionId !== expectedMarkedIds[0]
+        || document.querySelector("#question-text")?.dataset.questionId !== canonicalMarkedIds[0]
         || oneDifficultSnapshot?.rangeStart !== 1 || oneDifficultSnapshot?.rangeEnd !== 1
         || oneDifficultSnapshot?.rangePoolSize !== expectedMarkedIds.length
-        || JSON.stringify(oneDifficultSnapshot?.rangePoolQuestionIds || []) !== JSON.stringify(expectedMarkedIds)
-        || JSON.stringify(oneDifficultSnapshot?.rangeQuestionIds || []) !== JSON.stringify([expectedMarkedIds[0]])) {
+        || JSON.stringify(oneDifficultSnapshot?.rangePoolQuestionIds || []) !== JSON.stringify(canonicalMarkedIds)
+        || JSON.stringify(oneDifficultSnapshot?.rangeQuestionIds || []) !== JSON.stringify([canonicalMarkedIds[0]])) {
         errors.push("Difficult range 1–1 did not select exactly the first marked question.");
       }
       document.querySelector("#back-button")?.click();
@@ -5121,8 +5206,8 @@ async function main() {
         document.querySelector("#action-button").click();
         await pause();
       }
-      if (JSON.stringify(difficultLearnIds) !== JSON.stringify(expectedMarkedIds)) {
-        errors.push("Difficult Learn did not use the marked questions in canonical source order.");
+      if (!sameIds(difficultLearnIds, expectedMarkedIds)) {
+        errors.push("Difficult Learn did not use each marked question exactly once.");
       }
       if (document.querySelector("#results-title").textContent !== "Difficult learning complete!") errors.push("Difficult Learn completion copy was incorrect.");
       if (document.querySelector("#play-again-button").textContent !== "Start Quiz" || document.querySelector("#play-again-button").disabled) errors.push("Difficult Learn did not offer Start Quiz.");
@@ -5161,9 +5246,8 @@ async function main() {
         document.querySelector("#action-button").click();
         await pause();
       }
-      if (JSON.stringify(difficultQuizIds) !== JSON.stringify(expectedMarkedIds)
-        || JSON.stringify(difficultQuizIds) !== JSON.stringify(difficultLearnIds)) {
-        errors.push("Difficult Quiz did not keep the marked questions in canonical source order.");
+      if (!sameIds(difficultQuizIds, expectedMarkedIds)) {
+        errors.push("Difficult Quiz did not use each marked question exactly once.");
       }
       if (document.querySelector("#result-score").textContent.replace(/\\s/g, "") !== expectedMarkedIds.length + "/" + expectedMarkedIds.length) errors.push("Difficult Quiz score was incorrect.");
       if (document.querySelector("#play-again-button").textContent !== "Practice Again" || document.querySelector("#play-again-button").disabled) errors.push("Difficult Quiz did not offer Practice Again for the remaining mark.");
@@ -5372,6 +5456,10 @@ async function main() {
 
     const learnResumeSetup = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const sameIds = (actual, expected) => Array.isArray(actual)
+        && actual.length === expected.length
+        && new Set(actual).size === actual.length
+        && actual.every((id) => expected.includes(id));
       const errors = [];
       const categoryId = ${JSON.stringify(normalResult.testedCategory)};
       document.querySelector("#change-category-button").click();
@@ -5406,7 +5494,7 @@ async function main() {
       if (!snapshot || snapshot.version !== 8 || snapshot.computerSourceScope !== "all" || snapshot.sessionKind !== "category" || snapshot.paperCategoryIds !== null || snapshot.mode !== "learn" || snapshot.scope !== "all" || snapshot.partIndex !== null) errors.push("Learn guard resume setup did not use the v8 category-session schema.");
       if (!snapshot || snapshot.rangeStart !== 1 || snapshot.rangeEnd !== total || snapshot.rangePoolSize !== total) errors.push("Learn guard resume setup did not preserve its full range.");
       if (!snapshot || JSON.stringify(snapshot.rangePoolQuestionIds || []) !== JSON.stringify(snapshot.rangeQuestionIds || [])
-        || JSON.stringify(snapshot.rangeQuestionIds || []) !== JSON.stringify(snapshot.questionIds || [])) errors.push("Learn guard resume setup did not preserve its full eligible pool/slice order.");
+        || !sameIds(snapshot.questionIds, snapshot.rangeQuestionIds || [])) errors.push("Learn guard resume setup did not preserve its full eligible pool/slice membership.");
       if (!snapshot || snapshot.currentIndex !== total - 1 || snapshot.submitted !== false
         || snapshot.selectedIndex !== null || visitedIds.length !== 0
         || visitedIds.includes(snapshot.questionIds[total - 1])) {
@@ -5518,6 +5606,10 @@ async function main() {
 
     const urduSetupResult = await client.evaluate(`(async () => {
       const pause = () => new Promise((resolve) => setTimeout(resolve, 0));
+      const sameIds = (actual, expected) => Array.isArray(actual)
+        && actual.length === expected.length
+        && new Set(actual).size === actual.length
+        && actual.every((id) => expected.includes(id));
       const visible = (element) => Boolean(
         element &&
         !element.hidden &&
@@ -5582,7 +5674,7 @@ async function main() {
       await startFullRange("#learn-mode-button");
       const learnQuestion = questionById.get(String(document.querySelector("#question-text").dataset.questionId));
       assertUrduSurface(learnQuestion, learnQuestion ? learnQuestion.optionsUrdu : [], "Urdu Learn");
-      if (!learnQuestion || learnQuestion.id !== urduQuestions[0].id) errors.push("Urdu Learn did not retain canonical source order.");
+      if (!learnQuestion || !urduQuestions.some((question) => question.id === learnQuestion.id)) errors.push("Urdu Learn rendered a question outside its category.");
       const learnCorrectButton = learnQuestion
         ? document.querySelector('[data-option-index="' + learnQuestion.correctOptionIndex + '"]')
         : null;
@@ -5624,9 +5716,9 @@ async function main() {
       }
       if (!initialSnapshot || initialSnapshot.rangeStart !== 1 || initialSnapshot.rangeEnd !== urduQuestions.length || initialSnapshot.rangePoolSize !== urduQuestions.length) errors.push("Urdu Quiz did not store its full selected range.");
       if (!initialSnapshot
-        || JSON.stringify(initialSnapshot.questionIds || []) !== JSON.stringify(urduQuestions.map((question) => String(question.id)))
-        || !firstQuestion || firstQuestion.id !== urduQuestions[0].id) {
-        errors.push("Urdu Quiz did not retain canonical source order.");
+        || !sameIds(initialSnapshot.questionIds, urduQuestions.map((question) => String(question.id)))
+        || !firstQuestion || firstQuestion.id !== initialSnapshot.questionIds[0]) {
+        errors.push("Urdu Quiz changed its category question membership or first shuffled MCQ.");
       }
       document.querySelector("#action-button").click();
       await pause();
@@ -5983,9 +6075,13 @@ async function main() {
       const dialog = document.querySelector("#retry-dialog");
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       const attempt = retry?.activeAttempt;
-      if (!dialog?.open || !dialog.matches(":modal") || attempt?.questionId !== firstId
+      const reviewedId = attempt?.questionId;
+      const reviewedInitialRemaining = retry?.items.find((item) => item.questionId === reviewedId)?.remaining;
+      if (!dialog?.open || !dialog.matches(":modal")
+        || questionById.get(reviewedId)?.categoryId !== categoryId
+        || !Number.isInteger(reviewedInitialRemaining)
         || attempt?.resumeAction !== "next:" + firstDueStep || attempt?.submitted !== false || attempt?.selectedIndex !== null) {
-        errors.push("Leaving the saved cadence-gate main answer did not open the expected retry attempt.");
+        errors.push("Leaving the saved cadence-gate main answer did not open a queued category retry attempt.");
       }
       if (document.activeElement !== document.querySelector('#retry-options-container [data-review-option-index="0"]')) {
         errors.push("Unsubmitted retry dialog did not focus its first option.");
@@ -6011,9 +6107,9 @@ async function main() {
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (!retry?.activeAttempt?.submitted || retry.activeAttempt.outcome !== "correct"
-        || retry.items[0]?.remaining !== 2 || document.querySelector("#retry-action-button")?.dataset.action !== "continue"
-        || !document.querySelector("#retry-dialog-progress")?.textContent.includes("1 correct review remaining")) {
-        errors.push("Correct retry Check did not persist an unapplied, projected 2-to-1 result.");
+        || retry.items.find((item) => item.questionId === reviewedId)?.remaining !== reviewedInitialRemaining
+        || document.querySelector("#retry-action-button")?.dataset.action !== "continue") {
+        errors.push("Correct retry Check applied the result before Continue or lost its submitted state.");
       }
       if (JSON.stringify(mainSnapshot()) !== JSON.stringify(beforeRetryMain)
         || document.querySelector("#score-text")?.textContent !== beforeRetryScore) {
@@ -6024,6 +6120,8 @@ async function main() {
         errors,
         expected: {
           firstId,
+          reviewedId,
+          reviewedInitialRemaining,
           retryOptionTexts,
           correctReviewIndex,
           main: beforeRetryMain,
@@ -6192,7 +6290,7 @@ async function main() {
       }
       if (document.querySelector("#retry-dialog")?.open) errors.push("Active retry opened before the user chose Continue.");
       if (JSON.stringify(storedBeforeContinue?.activeAttempt) !== JSON.stringify(expected.activeAttempt)
-        || storedBeforeContinue?.items[0]?.remaining !== 2) {
+        || storedBeforeContinue?.items.find((item) => item.questionId === expected.reviewedId)?.remaining !== expected.reviewedInitialRemaining) {
         errors.push("Reload changed the submitted active retry before Continue.");
       }
       document.querySelector("#continue-session-button")?.click();
@@ -6203,7 +6301,7 @@ async function main() {
       const focusedActionRect = document.querySelector("#retry-action-button")?.getBoundingClientRect();
       const dialogCardRect = document.querySelector(".retry-dialog-card")?.getBoundingClientRect();
       const renderedRetryOptions = [...document.querySelectorAll("#retry-options-container .option-text")].map((element) => element.textContent);
-      if (!dialog?.open || document.querySelector("#retry-question-text")?.dataset.questionId !== expected.firstId
+      if (!dialog?.open || document.querySelector("#retry-question-text")?.dataset.questionId !== expected.reviewedId
         || JSON.stringify(renderedRetryOptions) !== JSON.stringify(expected.retryOptionTexts)) {
         errors.push("Continue did not reopen the exact active retry question and option order.");
       }
@@ -6236,7 +6334,7 @@ async function main() {
       await pause();
       let retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       if (!dialog?.open || retry?.activeAttempt?.kind !== "queue"
-        || retry.activeAttempt.questionId === expected.firstId || retry.activeAttempt.submitted
+        || retry.activeAttempt.questionId === expected.reviewedId || retry.activeAttempt.submitted
         || JSON.stringify(mainSnapshot()) !== JSON.stringify(expected.main)) {
         errors.push("Restored correct Queue Continue did not chain another item without advancing the Quiz.");
       }
@@ -6244,11 +6342,11 @@ async function main() {
       await pause();
       retry = JSON.parse(localStorage.getItem(retryKey) || "null");
       const secondGateStep = retry?.nextEmbeddedReviewStep;
-      const reviewedItem = retry?.items.find((item) => item.questionId === expected.firstId);
-      if (dialog?.open || retry?.activeAttempt !== null || reviewedItem?.remaining !== 1
-        || secondGateStep - retry?.practiceStep !== 10 || retry?.nextEmbeddedReviewKind !== "important"
-        || retry?.items[0]?.questionId !== expected.firstId) {
-        errors.push("Correct retry Continue followed by Later did not decrement once, preserve insertion order, and leave Important ten regular questions later.");
+      const reviewedRemaining = retry?.items.find((item) => item.questionId === expected.reviewedId)?.remaining || 0;
+      if (dialog?.open || retry?.activeAttempt !== null
+        || reviewedRemaining !== expected.reviewedInitialRemaining - 1
+        || secondGateStep - retry?.practiceStep !== 10 || retry?.nextEmbeddedReviewKind !== "important") {
+        errors.push("Correct retry Continue followed by Later did not decrement once and leave Important ten regular questions later.");
       }
       if (document.querySelector("#question-number-input")?.value !== String(expected.firstDueStep + 1)
         || document.querySelector("#score-text")?.textContent !== "Score: " + (expected.firstDueStep - 1)) {
@@ -6279,13 +6377,14 @@ async function main() {
         || document.querySelector("#result-score")?.textContent.replace(/\\s/g, "") !== "31/32") {
         errors.push("Retry lifecycle completion changed the 31-of-32 main Quiz result.");
       }
-      if (!retry || retry.items.find((entry) => entry.questionId === expected.firstId)?.remaining !== 1
+      if (!retry || (retry.items.find((entry) => entry.questionId === expected.reviewedId)?.remaining || 0)
+          !== expected.reviewedInitialRemaining - 1
         || retry.activeAttempt !== null || localStorage.getItem(sessionKey) !== null) {
         errors.push("The remaining saved review was lost or changed when the Quiz reached results.");
       }
       return {
         errors,
-        remainingAfterFirstReview: retry?.items.find((entry) => entry.questionId === expected.firstId)?.remaining ?? null,
+        remainingAfterFirstReview: retry?.items.find((entry) => entry.questionId === expected.reviewedId)?.remaining ?? 0,
         finalScore: document.querySelector("#result-score")?.textContent || "",
         mobileWidth: window.innerWidth,
         mobileFocusMetrics: {
@@ -6387,8 +6486,8 @@ async function main() {
       const wrongIndex = (correctIndex + 1) % 4;
       if (document.querySelector("#retry-dialog")?.open
         || document.querySelector("#queue-screen")?.hidden || !firstQuestion || correctIndex < 0
-        || firstAttempt?.questionId !== expected.ids[0]) {
-        errors.push("Migrated category Queue did not open its oldest MCQ in full-screen practice.");
+        || !expected.ids.includes(firstAttempt?.questionId)) {
+        errors.push("Migrated category Queue did not open one of its saved MCQs in full-screen practice.");
       } else {
         document.querySelector('[data-review-option-index="' + wrongIndex + '"]')?.click();
         document.querySelector("#retry-action-button")?.click();
@@ -6404,9 +6503,11 @@ async function main() {
         await new Promise((resolve) => setTimeout(resolve, 0));
         stored = JSON.parse(localStorage.getItem(key) || "null");
         if (stored?.items.find((item) => item.questionId === firstAttempt.questionId)?.remaining !== 7
-          || stored?.activeAttempt?.questionId !== expected.ids[1]) {
-          errors.push("Wrong Continue did not produce seven reviews and give the next turn to the second Queue MCQ.");
+          || !expected.ids.includes(stored?.activeAttempt?.questionId)
+          || stored?.activeAttempt?.questionId === firstAttempt.questionId) {
+          errors.push("Wrong Continue did not produce seven reviews and give the next turn to another Queue MCQ.");
         }
+        var nextEligibleId = stored?.activeAttempt?.questionId || "";
         document.querySelector("#queue-back-button")?.click();
         await new Promise((resolve) => setTimeout(resolve, 0));
       }
@@ -6415,7 +6516,7 @@ async function main() {
       return {
         errors,
         questionId: firstAttempt?.questionId || "",
-        nextEligibleId: stored?.activeAttempt?.questionId || "",
+        nextEligibleId: nextEligibleId || "",
         remaining: stored?.items.find((item) => item.questionId === firstAttempt?.questionId)?.remaining ?? null,
         itemShape: expected.itemShape
       };
@@ -6455,8 +6556,8 @@ async function main() {
       queue = JSON.parse(localStorage.getItem(key) || "null");
       if (document.querySelector("#retry-dialog")?.open
         || document.querySelector("#queue-screen")?.hidden
-        || queue?.activeAttempt?.questionId !== expected.itemShape[1]?.questionId) {
-        errors.push("After reload, category Queue did not resume the next insertion-order MCQ.");
+        || queue?.activeAttempt?.questionId !== expected.nextEligibleId) {
+        errors.push("After reload, category Queue did not resume the saved next shuffled-cycle MCQ.");
       }
       document.querySelector("#queue-back-button")?.click();
       await new Promise((resolve) => setTimeout(resolve, 0));
@@ -7935,21 +8036,28 @@ async function main() {
           }
           const heldSession = localStorage.getItem(sessionKey);
           if (completed === 10) {
+            const queueTurnIds = [];
             for (let turn = 0; turn < 3; turn += 1) {
-              if (queue()?.activeAttempt?.questionId !== fixture.ids[turn]) {
-                errors.push(mode + " Queue ignored insertion order or repeated before completing its round.");
+              const currentQueueId = queue()?.activeAttempt?.questionId;
+              if (!currentQueueId || queueTurnIds.includes(currentQueueId)
+                || byId.get(currentQueueId)?.categoryId !== "general-knowledge") {
+                errors.push(mode + " Queue repeated an MCQ before other pending items got a turn.");
                 break;
               }
+              const beforeCount = queue()?.items.find((item) => item.questionId === currentQueueId)?.remaining;
+              queueTurnIds.push(currentQueueId);
               await answerPopup(turn < 2);
               if (queue()?.practiceStep !== completed) errors.push(mode + " counted a popup answer as a regular MCQ.");
+              const afterCount = queue()?.items.find((item) => item.questionId === currentQueueId)?.remaining || 0;
+              if (afterCount !== beforeCount + (turn < 2 ? -1 : 2)) {
+                errors.push(mode + " Queue changed a shuffled review count incorrectly.");
+              }
               if (turn < 2 && (!dialog?.open || queue()?.activeAttempt?.kind !== "queue"
                 || localStorage.getItem(sessionKey) !== heldSession)) {
                 errors.push(mode + " correct Queue streak failed to keep the underlying session paused.");
               }
             }
-            const counts = fixture.ids.map((id) => queue()?.items.find((item) => item.questionId === id)?.remaining);
-            if (JSON.stringify(counts) !== JSON.stringify([2, 7, 6]) || dialog?.open
-              || session()?.currentIndex !== completed) {
+            if (dialog?.open || session()?.currentIndex !== completed) {
               errors.push(mode + " wrong Queue answer did not add exactly two and resume regular progress.");
             }
           } else if (completed % 20 === 0) {
@@ -7970,9 +8078,6 @@ async function main() {
               errors.push(mode + " wrong Important answer failed to preserve Queue work and leave the next Queue turn ten regular questions later.");
             }
           } else {
-            if (mode === "learn" && attempt.questionId !== fixture.ids[0]) {
-              errors.push("Learn Queue did not restart with its oldest remaining item after the complete first round.");
-            }
             const beforeCount = queue()?.items.find((item) => item.questionId === attempt.questionId)?.remaining;
             await answerPopup(false);
             if (dialog?.open || queue()?.activeAttempt !== null
@@ -9150,34 +9255,39 @@ async function main() {
       if (toggle()?.checked !== false || queue()?.embeddedPopupsEnabled !== false) {
         errors.push("Changing category/mode reset the global Practice popups preference.");
       }
+      const wrongQuizId = session()?.questionIds?.[0];
+      const originalPending = queue()?.queueCyclePendingByCategory?.["general-knowledge"] || [];
       for (let index = 0; index < 21; index += 1) {
         await completeRegular(index !== 0);
         if (dialog?.open) { errors.push("OFF still opened a Quiz popup after " + (index + 1) + " questions."); break; }
       }
       const paused = queue();
-      if (paused?.items.find((item) => item.questionId === expected.wrongId)?.remaining !== 2
+      if (paused?.items.find((item) => item.questionId === wrongQuizId)?.remaining !== 2
         || paused?.practiceStep !== 49 || paused?.nextEmbeddedReviewStep !== 56
         || paused?.nextEmbeddedReviewKind !== "queue" || paused?.activeAttempt
-        || JSON.stringify(paused?.queueCyclePendingByCategory?.["general-knowledge"]) !== JSON.stringify(expected.ids)
+        || JSON.stringify(paused?.queueCyclePendingByCategory?.["general-knowledge"]) !== JSON.stringify(originalPending)
         || JSON.stringify(paused?.importantDeck) !== JSON.stringify(expected.importantIds)
         || expected.ids.some((id, index) => paused?.items.find((item) => item.questionId === id)?.remaining !== (index ? 7 : 4))) {
-        errors.push("OFF Quiz lost wrong-answer +2, original Queue counts/FIFO, Important deck, or paused cadence.");
+        errors.push("OFF Quiz lost wrong-answer +2, original Queue counts/pending cycle, Important deck, or paused cadence.");
       }
       document.querySelector("#back-button")?.click();
       document.querySelector('#category-grid .category-card[data-category="general-knowledge"]')?.click();
       document.querySelector("#queue-mode-button")?.click();
       await pause();
+      const manualFirstId = queue()?.activeAttempt?.questionId;
+      const manualFirstCount = paused?.items.find((item) => item.questionId === manualFirstId)?.remaining;
       if (!visible(document.querySelector("#queue-screen")) || dialog?.open
         || queue()?.activeAttempt?.context !== "dedicated"
-        || queue()?.activeAttempt?.questionId !== expected.ids[0]) {
-        errors.push("OFF blocked manual category Queue Practice or changed its FIFO first item.");
+        || !expected.ids.includes(manualFirstId)) {
+        errors.push("OFF blocked manual category Queue Practice or selected another category.");
       }
       await answerReview(true);
-      if (queue()?.items.find((item) => item.questionId === expected.ids[0])?.remaining !== 3
-        || queue()?.activeAttempt?.questionId !== expected.ids[1]
+      const manualNextId = queue()?.activeAttempt?.questionId;
+      if (queue()?.items.find((item) => item.questionId === manualFirstId)?.remaining !== manualFirstCount - 1
+        || !expected.ids.includes(manualNextId) || manualNextId === manualFirstId
         || queue()?.practiceStep !== 49 || queue()?.nextEmbeddedReviewStep !== 56
         || queue()?.embeddedPopupsEnabled !== false) {
-        errors.push("Manual Queue while OFF failed to update its count/FIFO without moving the popup clock.");
+        errors.push("Manual Queue while OFF failed to update its count/cycle without moving the popup clock.");
       }
       await startRange("general-knowledge", "quiz", 51, 90);
       if (toggle()?.checked !== false) errors.push("Returning from manual Queue unexpectedly enabled Practice popups.");
@@ -9191,14 +9301,17 @@ async function main() {
         await completeRegular();
         if (index < 7 && dialog?.open) errors.push("Re-enabled Queue appeared before its remaining seven questions.");
       }
+      const resumedQueueId = queue()?.activeAttempt?.questionId;
+      const resumedBeforeCount = queue()?.items.find((item) => item.questionId === resumedQueueId)?.remaining;
       if (!dialog?.open || queue()?.activeAttempt?.kind !== "queue"
-        || queue()?.activeAttempt?.questionId !== expected.ids[1]
+        || byId.get(resumedQueueId)?.categoryId !== "general-knowledge"
+        || !Number.isInteger(resumedBeforeCount)
         || queue()?.practiceStep !== 56 || queue()?.nextEmbeddedReviewStep !== 66
         || queue()?.nextEmbeddedReviewKind !== "important") {
-        errors.push("Re-enabled Queue did not resume its paused cadence and next FIFO item exactly.");
+        errors.push("Re-enabled Queue did not resume its paused cadence with a saved category Queue item.");
       }
       await answerReview(false);
-      if (dialog?.open || queue()?.items.find((item) => item.questionId === expected.ids[1])?.remaining !== 9) {
+      if (dialog?.open || queue()?.items.find((item) => item.questionId === resumedQueueId)?.remaining !== resumedBeforeCount + 2) {
         errors.push("Re-enabled wrong Queue answer did not add two and return to main Quiz.");
       }
       for (let index = 1; index <= 10; index += 1) {
@@ -9236,14 +9349,18 @@ async function main() {
       };
       const assertWrongRound = (expectedIds, sourceScope, context) => {
         const saved = session();
+        const sameMembers = Array.isArray(saved?.questionIds)
+          && saved.questionIds.length === expectedIds.length
+          && new Set(saved.questionIds).size === expectedIds.length
+          && saved.questionIds.every((id) => expectedIds.includes(id));
         if (!visible(document.querySelector("#quiz-screen")) || dialog?.open
           || visible(document.querySelector("#question-range-options"))
           || saved?.mode !== "quiz" || saved?.scope !== "wrong" || saved?.sessionKind !== "category"
           || saved?.importantOnly !== false || saved?.computerSourceScope !== sourceScope
-          || JSON.stringify(saved?.questionIds) !== JSON.stringify(expectedIds)
+          || !sameMembers
           || saved?.rangeStart !== 1 || saved?.rangeEnd !== expectedIds.length
-          || document.querySelector("#question-text")?.dataset.questionId !== expectedIds[saved?.currentIndex || 0]) {
-          errors.push(context + " did not open the ordered frozen wrong-only pool in the normal Quiz screen.");
+          || document.querySelector("#question-text")?.dataset.questionId !== saved?.questionIds?.[saved?.currentIndex || 0]) {
+          errors.push(context + " did not open the shuffled frozen wrong-only pool in the normal Quiz screen.");
         }
         if (toggle()?.checked !== false || queue()?.embeddedPopupsEnabled !== false) {
           errors.push(context + " changed the existing Practice popups OFF preference.");
@@ -9293,10 +9410,11 @@ async function main() {
       }
       document.querySelector("#mode-back-button")?.click();
       await startRange("general-knowledge", "quiz", 1, 3);
+      const sourceQuizIds = session()?.questionIds || [];
       await completeRegular(false);
       await completeRegular(true);
       await completeRegular(false);
-      const expectedWrong = [fixture.ids[0], fixture.ids[2]];
+      const expectedWrong = [sourceQuizIds[0], sourceQuizIds[2]];
       if (!visible(document.querySelector("#results-screen")) || dialog?.open
         || JSON.stringify(wrongIds()) !== JSON.stringify(expectedWrong)
         || !visible(document.querySelector("#result-wrong-quiz-button"))
@@ -9305,7 +9423,7 @@ async function main() {
         errors.push("Real category Quiz mistakes did not create its two-item Wrong Quiz result action.");
       }
       if (queue()?.items.find((item) => item.questionId === fixture.foreignId)?.remaining !== 9
-        || fixture.ids.filter((_, index) => index !== 1).some((id) => queue()?.items.find((item) => item.questionId === id)?.remaining !== 2)) {
+        || expectedWrong.some((id) => queue()?.items.find((item) => item.questionId === id)?.remaining !== 2)) {
         errors.push("Recording Wrong Quiz mistakes changed existing Queue counts or lost normal wrong-answer +2.");
       }
       return { errors, expectedWrong, foreignId: fixture.foreignId };
@@ -9337,17 +9455,19 @@ async function main() {
       await pause();
       assertWrongRound(fixture.expectedWrong, "all", "Results Wrong Quiz");
       const before = session();
+      const clearedId = before?.questionIds?.[0];
+      const remainingId = before?.questionIds?.[1];
       const beforeQueue = queue();
       await checkMain(true);
       const checked = session();
-      if (wrongIds().includes(fixture.expectedWrong[0]) || !wrongIds().includes(fixture.expectedWrong[1])
+      if (wrongIds().includes(clearedId) || !wrongIds().includes(remainingId)
         || checked?.submitted !== true || checked?.score !== 1 || checked?.currentIndex !== 0
-        || JSON.stringify(checked?.questionIds) !== JSON.stringify(fixture.expectedWrong)
+        || JSON.stringify(checked?.questionIds) !== JSON.stringify(before?.questionIds)
         || JSON.stringify(checked?.rangePoolQuestionIds) !== JSON.stringify(before?.rangePoolQuestionIds)
         || JSON.stringify(queue()?.items) !== JSON.stringify(beforeQueue?.items)) {
         errors.push("Correct Wrong Quiz answer did not remove only its wrong-pool ID while preserving frozen round and Queue counts.");
       }
-      return { errors, expectedWrong: fixture.expectedWrong, snapshot: checked, foreignId: fixture.foreignId };
+      return { errors, expectedWrong: [clearedId, remainingId], snapshot: checked, foreignId: fixture.foreignId };
     })()`);
     await client.send("Page.reload", { ignoreCache: true });
     await client.evaluate(`new Promise((resolve, reject) => {
@@ -9459,9 +9579,10 @@ async function main() {
       document.querySelector("#wrong-quiz-mode-button")?.click();
       await pause();
       assertWrongRound(fixture.originalIds, "initial-original", "Original Computer Wrong Quiz ignoring Important filter");
+      const clearedOriginalId = session()?.questionIds?.[0];
       await checkMain(true);
-      if (wrongIds().includes(fixture.originalIds[0])
-        || ![fixture.originalIds[1], fixture.relatedId, fixture.otherId, fixture.foreignId].every((id) => wrongIds().includes(id))) {
+      if (wrongIds().includes(clearedOriginalId)
+        || ![...fixture.originalIds.filter((id) => id !== clearedOriginalId), fixture.relatedId, fixture.otherId, fixture.foreignId].every((id) => wrongIds().includes(id))) {
         errors.push("Clearing an original Computer mistake removed another source/category or retained its own ID.");
       }
       document.querySelector("#back-button")?.click();

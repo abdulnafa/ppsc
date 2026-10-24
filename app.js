@@ -17,6 +17,7 @@
   var RANGE_SESSION_STORAGE_VERSION = 7;
   var LEGACY_SESSION_STORAGE_VERSION = 6;
   var RETRY_QUEUE_STORAGE_VERSION = 1;
+  var QUEUE_CYCLE_SHUFFLE_VERSION = 1;
   var RETRY_QUEUE_INCREMENT = 2;
   var LEGACY_RETRY_QUEUE_INCREMENT = 2;
   var PREVIOUS_RETRY_QUEUE_INCREMENT = 5;
@@ -985,8 +986,7 @@
         }
       }
 
-      if (orderKey(questionIds, function (questionId) { return questionId; })
-        !== orderKey(rangeQuestionIds, function (questionId) { return questionId; })) {
+      if (!sameQuestionIdSet(questionIds, rangeQuestionIds)) {
         return null;
       }
     }
@@ -1193,8 +1193,9 @@
       || !Array.isArray(state.rangeQuestionIds)
       || state.rangeQuestionIds.length !== state.questions.length
       || state.rangeQuestionIds.length !== state.rangeEnd - state.rangeStart + 1
-      || orderKey(state.questions, function (question) { return question.id; })
-        !== orderKey(state.rangeQuestionIds, function (questionId) { return questionId; })
+      || !sameQuestionIdSet(
+        state.questions.map(function (question) { return question.id; }), state.rangeQuestionIds
+      )
       || orderKey(state.rangeQuestionIds, function (questionId) { return questionId; })
         !== orderKey(
           state.rangePoolQuestionIds.slice(state.rangeStart - 1, state.rangeEnd),
@@ -1364,6 +1365,7 @@
       importantDeck: [],
       importantLastQuestionId: null,
       importantLastQuestionIdsByCategory: {},
+      queueCycleShuffleVersion: QUEUE_CYCLE_SHUFFLE_VERSION,
       queueCyclePendingByCategory: {},
       items: [],
       activeAttempt: null
@@ -1616,6 +1618,7 @@
     });
     if (items.some(function (entry) { return !entry; })) return null;
     var savedCyclePending = savedValue.queueCyclePendingByCategory;
+    var shuffleSavedCycle = savedValue.queueCycleShuffleVersion !== QUEUE_CYCLE_SHUFFLE_VERSION;
     var queueCyclePendingByCategory = {};
     categories.forEach(function (category) {
       var categoryIds = items.filter(function (item) {
@@ -1629,9 +1632,13 @@
       var pending = savedIds ? savedIds.map(String).filter(function (questionId, index, ids) {
         return allowedIds.has(questionId) && ids.indexOf(questionId) === index;
       }) : [];
-      // Old saves had no cycle marker. Begin with every preserved Queue item,
-      // without modifying its count, due date or original insertion order.
-      queueCyclePendingByCategory[category.id] = pending.length > 0 ? pending : categoryIds;
+      // Shuffle only the still-pending IDs once on upgrade. Counts, due dates
+      // and an already-open attempt remain untouched. Persist this order so a
+      // refresh or another device resumes at the same next Queue question.
+      var cycleIds = pending.length > 0 ? pending : categoryIds;
+      queueCyclePendingByCategory[category.id] = shuffleSavedCycle
+        ? shuffledOrder(cycleIds, function (questionId) { return questionId; })
+        : cycleIds;
     });
     var highestSequence = items.reduce(function (highest, entry) {
       return Math.max(highest, entry.sequence);
@@ -1963,6 +1970,7 @@
       importantDeck: importantDeck,
       importantLastQuestionId: importantLastQuestionId,
       importantLastQuestionIdsByCategory: importantLastQuestionIdsByCategory,
+      queueCycleShuffleVersion: QUEUE_CYCLE_SHUFFLE_VERSION,
       queueCyclePendingByCategory: queueCyclePendingByCategory,
       items: items,
       activeAttempt: activeAttempt
@@ -2002,10 +2010,7 @@
     });
   }
 
-  function oldestRetryItem(items) {
-    // Preserve the saved array order across this upgrade. Older releases
-    // changed both order and `sequence` after reviews, so the original add
-    // order cannot be reconstructed reliably from those legacy saves.
+  function firstPendingRetryItem(items) {
     return items[0] || null;
   }
 
@@ -2016,16 +2021,18 @@
     if (!pendingByCategory || typeof pendingByCategory !== "object") {
       pendingByCategory = retryQueueState.queueCyclePendingByCategory = {};
     }
-    var pending = pendingByCategory[categoryId];
-    if (!Array.isArray(pending) || pending.length === 0) {
-      pending = pendingByCategory[categoryId] = categoryItems.map(function (item) {
-        return item.questionId;
-      });
+    var itemsById = new Map(categoryItems.map(function (item) { return [item.questionId, item]; }));
+    var savedPending = pendingByCategory[categoryId];
+    var pending = Array.isArray(savedPending) ? savedPending.filter(function (id) {
+      return itemsById.has(id);
+    }) : [];
+    if (pending.length === 0) {
+      pending = fisherYates(categoryItems.map(function (item) { return item.questionId; }));
     }
-    var pendingIds = new Set(pending);
-    return categoryItems.filter(function (item) {
-      return pendingIds.has(item.questionId);
-    });
+    if (!Array.isArray(savedPending) || orderKey(savedPending, String) !== orderKey(pending, String)) {
+      pendingByCategory[categoryId] = pending;
+    }
+    return pending.map(function (id) { return itemsById.get(id); });
   }
 
   function addQueueCycleItem(questionId) {
@@ -2037,11 +2044,12 @@
       pendingByCategory = retryQueueState.queueCyclePendingByCategory = {};
     }
     if (!Array.isArray(pendingByCategory[categoryId])) {
-      pendingByCategory[categoryId] = categoryRetryItems(categoryId).map(function (item) {
+      pendingByCategory[categoryId] = fisherYates(categoryRetryItems(categoryId).map(function (item) {
         return item.questionId;
-      });
+      }));
     } else if (!pendingByCategory[categoryId].includes(questionId)) {
-      pendingByCategory[categoryId].push(questionId);
+      var pending = pendingByCategory[categoryId];
+      pending.splice(Math.floor(Math.random() * (pending.length + 1)), 0, questionId);
     }
   }
 
@@ -2057,9 +2065,10 @@
       ? pendingByCategory[categoryId].filter(function (id) { return id !== questionId; })
       : [];
     if (pending.length === 0) {
-      pending = categoryRetryItems(categoryId).map(function (item) {
+      pending = fisherYates(categoryRetryItems(categoryId).map(function (item) {
         return item.questionId;
-      });
+      }));
+      if (pending.length > 1 && pending[0] === questionId) pending.push(pending.shift());
     }
     if (pending.length > 0) pendingByCategory[categoryId] = pending;
     else delete pendingByCategory[categoryId];
@@ -2181,6 +2190,7 @@
         : 0,
       EMBEDDED_RETRY_CADENCE_VERSION
     );
+    retryQueueState.queueCycleShuffleVersion = QUEUE_CYCLE_SHUFFLE_VERSION;
     try {
       progressStorage().setItem(RETRY_QUEUE_STORAGE_KEY, JSON.stringify(retryQueueState));
       notifyLocalStateChanged(RETRY_QUEUE_STORAGE_KEY, "set");
@@ -2209,6 +2219,7 @@
         : savedValue.embeddedCadenceVersion;
       var embeddedCadenceApplied = isSafeWholeNumber(savedEmbeddedCadenceVersion, 0)
         && savedEmbeddedCadenceVersion < EMBEDDED_RETRY_CADENCE_VERSION;
+      var queueCycleShuffleApplied = savedValue.queueCycleShuffleVersion !== QUEUE_CYCLE_SHUFFLE_VERSION;
       var normalized = normalizeRetryQueue(savedValue);
       var embeddedClockRepaired = Boolean(normalized) && (
         savedValue.nextEmbeddedReviewStep !== normalized.nextEmbeddedReviewStep
@@ -2244,6 +2255,7 @@
           || embeddedCadenceApplied
           || embeddedClockRepaired
           || sequentialMigrationApplied
+          || queueCycleShuffleApplied
           || additiveBankMigrationApplied
         ) {
           saveRetryQueue(countBaselineApplied && retryQueueState.items.length > 0
@@ -2256,7 +2268,9 @@
                   ? "Updated MCQs are ready. Your Queue and Important progress were kept unchanged."
                   : (sequentialMigrationApplied
                   ? "Sequential popups are off. Your Queue and Important progress were kept unchanged."
-                  : "")))));
+                  : (queueCycleShuffleApplied
+                  ? "Queue rounds now shuffle. Your saved review counts and answers were kept."
+                  : ""))))));
           return;
         }
       }
@@ -2370,9 +2384,9 @@
     var regularQueueDue = retryQueueState.nextEmbeddedReviewKind === "queue"
       && retryQueueState.practiceStep >= retryQueueState.nextEmbeddedReviewStep;
     if (!continuePractice && !regularQueueDue) return null;
-    // Counts and old cooldowns cannot skip the first pending MCQ. The cycle
-    // marker gives every entry one turn before the preserved order restarts.
-    return oldestRetryItem(pendingQueueCycleItems(categoryId));
+    // Counts and old cooldowns cannot skip the first pending MCQ. The saved
+    // shuffled cycle gives every entry one turn before a new round starts.
+    return firstPendingRetryItem(pendingQueueCycleItems(categoryId));
   }
 
   function refillImportantReviewDeck(categoryId) {
@@ -2906,7 +2920,7 @@
   }
 
   function nextDedicatedRetryItem() {
-    return oldestRetryItem(pendingQueueCycleItems(retryQueuePractice.categoryId));
+    return firstPendingRetryItem(pendingQueueCycleItems(retryQueuePractice.categoryId));
   }
 
   function focusRetryQueueReturnTarget() {
@@ -3640,7 +3654,8 @@
   function wrongQuestionsForCategory(categoryId, computerSourceScope) {
     var wrongIds = new Set(retryQueueState.wrongQuestionIds || []);
     // All wrong answers in the chosen source, regardless of the Important
-    // filter. Use canonical order, not queue counts or the order of mistakes.
+    // filter. Build the eligible pool in canonical order; a new Wrong Quiz
+    // session then shuffles it independently of Queue counts or mistake order.
     return baseQuestionsForSelection(categoryId, null, computerSourceScope).filter(function (question) {
       return wrongIds.has(String(question.id));
     });
@@ -5332,7 +5347,7 @@
     }
     if (elements.questionRangeHelp) {
       elements.questionRangeHelp.textContent = "Both numbers are included and refer to the current selected list (1 to "
-        + poolSize + "). Quiz keeps the chosen questions in this list order while ordinary answer choices may shuffle.";
+        + poolSize + "). The chosen MCQs shuffle at the start of each new Learn or Quiz run; Continue keeps the saved order.";
     }
     [elements.questionRangeStartInput, elements.questionRangeEndInput].forEach(function (input) {
       if (!input) return;
@@ -5764,6 +5779,15 @@
     }).join("|");
   }
 
+  function sameQuestionIdSet(actualIds, expectedIds) {
+    if (!Array.isArray(actualIds) || !Array.isArray(expectedIds)
+      || actualIds.length !== expectedIds.length) return false;
+    var expected = new Set(expectedIds.map(String));
+    var actual = new Set(actualIds.map(String));
+    return expected.size === expectedIds.length && actual.size === actualIds.length
+      && actualIds.every(function (id) { return expected.has(String(id)); });
+  }
+
   function fisherYates(items) {
     var result = items.slice();
     for (var index = result.length - 1; index > 0; index -= 1) {
@@ -5928,7 +5952,27 @@
 
     var selectedMode = mode === "learn" ? "learn" : "quiz";
     var canonicalRangeQuestions = filteredQuestions.slice(rangeStart - 1, rangeEnd);
-    var sessionQuestions = canonicalRangeQuestions.slice();
+    var canonicalRangeIds = canonicalRangeQuestions.map(function (question) { return String(question.id); });
+    var selectedImportantOnly = selectedScope === "wrong" ? false : state.importantOnly;
+    var priorOrderKey = null;
+    var currentIds = state.questions.map(function (question) { return String(question.id); });
+    if (sameQuestionIdSet(currentIds, canonicalRangeIds)) {
+      priorOrderKey = orderKey(currentIds, String);
+    } else {
+      loadCategorySessions();
+      var archiveKey = categorySessionKey({
+        sessionKind: "category", categoryId: categoryId, mode: selectedMode,
+        scope: selectedScope, computerSourceScope: selectedComputerSourceScope,
+        importantOnly: selectedImportantOnly
+      });
+      var previousSnapshot = categorySessions[archiveKey];
+      if (previousSnapshot && sameQuestionIdSet(previousSnapshot.questionIds, canonicalRangeIds)) {
+        priorOrderKey = orderKey(previousSnapshot.questionIds, String);
+      }
+    }
+    var sessionQuestions = shuffledOrder(canonicalRangeQuestions, function (question) {
+      return question.id;
+    }, priorOrderKey);
     if (selectedMode === "quiz") {
       sessionQuestions = sessionQuestions.map(shuffledQuizQuestion);
     }
@@ -5952,7 +5996,7 @@
     state.rangePoolSize = filteredQuestions.length;
     state.rangePoolQuestionIds = currentPoolIds.slice();
     state.rangePoolBankSignature = null;
-    state.rangeQuestionIds = canonicalRangeQuestions.map(function (question) { return String(question.id); });
+    state.rangeQuestionIds = canonicalRangeIds;
     state.responses = new Array(sessionQuestions.length).fill(null);
     state.learnVisitedQuestionIds = new Set();
     state.learnReviewCountedQuestionIds = new Set();

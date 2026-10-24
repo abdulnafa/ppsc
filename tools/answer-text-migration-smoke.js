@@ -417,7 +417,7 @@ function run() {
     checks: [
       "exact seven same-index answer replacements reconstruct both approved original bank fingerprints",
       "Learn, shuffled Quiz and Paper answers survive migration, repeated reload and Continue/save",
-      "finite queue counts/order, FIFO rounds, Important decks, clocks and pending answers survive both old bank origins",
+      "finite queue counts/order, saved rounds, Important decks, clocks and pending answers survive both old bank origins",
       "frozen additive pools retain validated origin across repeat reloads and normal saves",
       "historical Important-only membership survives exact pinned-pool migration without admitting arbitrary subsets",
       "unknown signatures, forged origins/pools and unreviewed bank changes remain rejected",

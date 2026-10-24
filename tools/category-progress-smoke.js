@@ -79,6 +79,23 @@ function equalSession(actual, expected) {
   delete left.savedAt; delete right.savedAt;
   assert.deepEqual(left, right);
 }
+function shuffledFixture(categoryId, mode) {
+  const saved = fixture(categoryId, mode);
+  const canonicalIds = saved.rangeQuestionIds;
+  saved.questionIds = [canonicalIds[2], canonicalIds[4], canonicalIds[0], canonicalIds[3], canonicalIds[1]];
+  if (mode === "learn") {
+    saved.learnVisitedQuestionIds = saved.questionIds.slice(0, saved.currentIndex);
+    saved.learnReviewCountedQuestionIds = saved.learnVisitedQuestionIds.slice();
+  } else {
+    const first = data.questions.find(question => question.id === saved.questionIds[0]);
+    const current = data.questions.find(question => question.id === saved.questionIds[saved.currentIndex]);
+    saved.selectedIndex = current.correctOptionIndex;
+    saved.answerHistory = saved.questionIds.map((_id, index) => index === 0
+      ? [first.correctOptionIndex, true]
+      : index === saved.currentIndex ? [current.correctOptionIndex, false] : null);
+  }
+  return saved;
+}
 
 const sessions = {};
 for (const category of data.categories) {
@@ -128,6 +145,34 @@ assert(app.read(ARCHIVE).sessions["general-knowledge:learn:all:all:all"]);
 assert(app.read(ARCHIVE).sessions["pakistan-studies:quiz:all:all:all"]);
 const reload = harness(app.raw()); reload.api.load();
 assert(!reload.api.archive()["general-knowledge:quiz:all:all:all"], "Completed save resurrected on reload");
+
+// Newly shuffled rounds preserve canonical range metadata but freeze their
+// actual question order through category switches, saving and reloads.
+for (const mode of ["learn", "quiz"]) {
+  const shuffled = shuffledFixture("general-knowledge", mode);
+  assert.notDeepEqual(shuffled.questionIds, shuffled.rangeQuestionIds);
+  const normalized = signatureProbe.api.normalize(shuffled);
+  assert(normalized, mode + " shuffled session must validate");
+  assert.deepEqual(plain(normalized.snapshot.questionIds), shuffled.questionIds);
+  assert.deepEqual(plain(normalized.snapshot.rangeQuestionIds), shuffled.rangeQuestionIds);
+  const shuffledApp = harness({ [SESSION]: JSON.stringify(shuffled) });
+  shuffledApp.api.load();
+  assert(shuffledApp.api.restore(), mode + " shuffled session must Continue");
+  shuffledApp.api.save();
+  equalSession(shuffledApp.read(SESSION), shuffled);
+  const reloadedShuffled = harness(shuffledApp.raw());
+  reloadedShuffled.api.load();
+  assert(reloadedShuffled.api.restore(), mode + " shuffled session must survive reload");
+  equalSession(reloadedShuffled.read(SESSION), shuffled);
+  for (const invalidIds of [
+    [shuffled.questionIds[0], shuffled.questionIds[0], ...shuffled.questionIds.slice(2)],
+    ["missing-question-id", ...shuffled.questionIds.slice(1)],
+    shuffled.questionIds.slice(1)
+  ]) {
+    assert.equal(signatureProbe.api.normalize({ ...shuffled, questionIds: invalidIds }), null,
+      "Shuffled session must reject IDs that are not an exact permutation of the selected range");
+  }
+}
 
 // Selected modes/filters are distinct, and a new range in the same mode is an intentional replacement only.
 const important = fixture("general-knowledge", "quiz", data, true);
@@ -293,7 +338,7 @@ assert.equal(recentProbe.api.normalize({ ...recentQuiz, bankSignature: "v1:11932
 
 console.log(JSON.stringify({ ok: true, categoryModes: 22, migrationCases,
   checks: ["legacy active save copied without replacing it", "newer same-profile archive survives a partial active-slot write", "all categories and Learn/Quiz separately survive switches/reload",
-    "completion deletes only its own save", "filter/source keys distinct", "quota failure preserves previous storage",
+    "shuffled Learn/Quiz rounds preserve frozen order and reject invalid membership", "completion deletes only its own save", "filter/source keys distinct", "quota failure preserves previous storage",
     "malformed archive fails closed without erasing raw data", "append-only CA update freezes old pool/answers/order and queue counts",
     "11,932 release resumes all 22 category/mode saves without changing its 650-question CA pool",
     "11,932 migration preserves supplementary queue items and notifies cloud; altered prefixes and unknown signatures rejected"] }, null, 2));

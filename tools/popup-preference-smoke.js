@@ -112,6 +112,11 @@ function attempt(kind = "queue", outcome = null, context = "embedded") {
 
 function remaining(app, id = "PREF-Q1") { return app.queue().items.find((item) => item.questionId === id)?.remaining || 0; }
 function gap(app) { const queue = app.queue(); return queue.nextEmbeddedReviewStep - queue.practiceStep; }
+function assertPermutation(actual, expected, message) {
+  assert.equal(actual.length, expected.length, message + " must have the same length");
+  assert.equal(new Set(actual).size, expected.length, message + " must not repeat an MCQ");
+  assert.deepEqual(actual.slice().sort(), expected.slice().sort(), message + " must contain each pending MCQ once");
+}
 
 function run() {
   const app = harness();
@@ -126,6 +131,19 @@ function run() {
     assert.deepEqual(plain(normalized.items), saved.items);
     assert.deepEqual(plain(normalized.queueCyclePendingByCategory), saved.queueCyclePendingByCategory);
   }
+
+  const migration = harness();
+  const legacyRound = fixture(migration);
+  delete legacyRound.queueCycleShuffleVersion;
+  migration.api.seed(legacyRound);
+  const migratedRound = migration.queue().queueCyclePendingByCategory["general-knowledge"];
+  assertPermutation(migratedRound, legacyRound.queueCyclePendingByCategory["general-knowledge"],
+    "legacy Queue round after one-time shuffle");
+  assert.notDeepEqual(migratedRound, legacyRound.queueCyclePendingByCategory["general-knowledge"],
+    "legacy Queue round should shuffle once, without resetting any pending review");
+  assert.deepEqual(migration.queue().items, legacyRound.items, "one-time shuffle must preserve Queue counts");
+  assert.deepEqual(harness(migration.raw()).queue(), migration.queue(),
+    "migrated Queue order must persist unchanged after reload");
 
   const saved = fixture(app);
   saved.queueCyclePendingByCategory["general-knowledge"] = ["PREF-Q2"];
@@ -152,7 +170,10 @@ function run() {
   assert.equal(remaining(app, "PREF-Q4"), 2);
   assert.equal(remaining(app, "PREF-Q5"), 9, "foreign-category saved reviews must remain untouched");
   assert.deepEqual(app.queue().items.map((item) => item.questionId), ["PREF-Q1", "PREF-Q2", "PREF-Q5", "PREF-Q3", "PREF-Q4"]);
-  assert.deepEqual(app.queue().queueCyclePendingByCategory["general-knowledge"], ["PREF-Q2", "PREF-Q3", "PREF-Q4"]);
+  const pendingRound = app.queue().queueCyclePendingByCategory["general-knowledge"];
+  assertPermutation(pendingRound, ["PREF-Q2", "PREF-Q3", "PREF-Q4"], "current category Queue round");
+  assert.deepEqual(app.queue().queueCyclePendingByCategory["pakistan-studies"], ["PREF-Q5"],
+    "another category's Queue round must remain unchanged");
   assert.equal(gap(app), countdown);
   assert.equal(app.api.queueLane(), false);
   assert.equal(app.api.importantLane(), false);
@@ -160,13 +181,16 @@ function run() {
   const restored = harness(app.raw());
   assert.equal(restored.api.preference(), false);
   assert.deepEqual(restored.queue(), app.queue(), "OFF preference and paused clock must survive reload exactly");
+  assert.deepEqual(restored.queue().queueCyclePendingByCategory["general-knowledge"], pendingRound,
+    "a reload must keep the current shuffled Queue round frozen");
   restored.api.setPreference(true);
   assert.equal(gap(restored), countdown, "ON must resume remaining work rather than restart the clock");
   for (let index = 1; index <= countdown; index += 1) {
     restored.api.record(0, false);
     assert.equal(restored.api.due(), index === countdown, "popup must resume at its original remaining checkpoint");
   }
-  assert.equal(restored.queue().activeAttempt.questionId, "PREF-Q2", "OFF/ON must not change the pending FIFO head");
+  assert.equal(restored.queue().activeAttempt.questionId, pendingRound[0],
+    "OFF/ON must resume with the saved next Queue MCQ");
   assert.equal(restored.queue().nextEmbeddedReviewKind, "important");
   assert.ok(app.events.some((event) => event.detail?.key === QUEUE_KEY && event.detail.action === "set"));
 
@@ -217,14 +241,15 @@ function run() {
     if (outcome !== null) {
       manual.api.complete();
       assert.equal(remaining(manual), outcome === "correct" ? 3 : 6);
-      assert.equal(manual.queue().activeAttempt.questionId, "PREF-Q2", "manual practice must continue the same FIFO round");
+      assert.equal(manual.queue().activeAttempt.questionId, "PREF-Q2",
+        "manual practice must continue to the only other pending MCQ before repeating");
       assert.equal(manual.queue().nextEmbeddedReviewStep, manualClock);
     }
   }
 
   console.log(JSON.stringify({ ok: true, embeddedToggleAndRestoreCases: embeddedCases,
-    checks: ["legacy and malformed preferences default ON without losing progress", "OFF pauses the remaining cadence but still records main Quiz answers",
-      "OFF/ON and reload preserve the pending FIFO round", "both automatic lanes are suppressed",
+    checks: ["legacy and malformed preferences default ON without losing progress", "legacy Queue rounds shuffle once and persist without resetting counts", "OFF pauses the remaining cadence but still records main Quiz answers",
+      "OFF/ON and reload preserve the current shuffled Queue round", "both automatic lanes are suppressed",
       "submitted embedded outcomes apply exactly once; unanswered work stays pending", "manual full-screen category Queue remains available",
       "preference saves notify cloud synchronization"] }, null, 2));
 }

@@ -1459,7 +1459,19 @@ function validateRetryQueueContract(data) {
     || /item\.(?:dueStep|wrongRetryDueStep|remaining)/.test(queueSelector)
     || /\.sort\(/.test(queueSelector)
   ) {
-    error("app.js: Queue selection must use the next pending insertion-order turn, without cooldown or count priority");
+    error("app.js: Queue selection must use the next saved shuffled round turn, without cooldown or count priority");
+  }
+  const queueCycle = appSection(
+    "function pendingQueueCycleItems(categoryId) {",
+    "function activeRetryAttemptMatchesSession() {"
+  );
+  if (
+    queueCycle === null
+    || !/pending\.map\(function \(id\)/.test(queueCycle)
+    || !/fisherYates\(/.test(queueCycle)
+    || !/queueCyclePendingByCategory/.test(app)
+  ) {
+    error("app.js: category Queue must persist shuffled pending IDs and give each one a turn per round");
   }
   const completeRetry = appSection(
     "function completeRetryAttempt() {",
@@ -1471,7 +1483,7 @@ function validateRetryQueueContract(data) {
   );
   for (const [name, section] of [["completeRetryAttempt", completeRetry], ["releaseActiveRetryAttempt", releaseRetry]]) {
     if (section === null || /moveRetryItemToTail\(item\)/.test(section)) {
-      error(`app.js: ${name} must preserve Queue insertion order while completing a round turn`);
+      error(`app.js: ${name} must preserve Queue round membership while completing a turn`);
     }
   }
   if (

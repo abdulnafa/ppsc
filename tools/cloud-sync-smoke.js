@@ -843,7 +843,7 @@ async function testAlternatingPopupCadenceRoundTripAndOfflineReconnect() {
     "offline popup-preference changes must upload and reach the other device on reconnect");
   assert.equal(restoredQueue.nextEmbeddedReviewKind, "queue");
   assert.equal(restoredQueue.nextEmbeddedReviewStep - restoredQueue.practiceStep, 7, "remaining shared countdown must not restart on another device");
-  assert.deepEqual(restoredQueue.items, initialQueue.items, "finite counts and saved insertion order must remain untouched");
+  assert.deepEqual(restoredQueue.items, initialQueue.items, "finite counts and saved Queue items must remain untouched");
   assert.deepEqual(restoredQueue.wrongQuestionIds, [SECOND_QUESTION_ID],
     "Wrong-list removal must sync independently of existing finite counts and a pending review");
   assert.deepEqual(restoredQueue.queueCyclePendingByCategory, initialQueue.queueCyclePendingByCategory);
@@ -1719,9 +1719,9 @@ async function main() {
       "different local/cloud progress waits for owner choice",
       "unapproved Google account is rejected before Firestore",
       "legacy retry remaining=2 survives upload and restore",
-      "dedicated retry attempt, per-category FIFO cycle, wrong cooldown, cadence, and legacy spacing fields round-trip byte-for-byte",
+      "dedicated retry attempt, per-category saved Queue cycle, wrong cooldown, cadence, and legacy spacing fields round-trip byte-for-byte",
       "permanent Important cadence, count-baseline marker, shuffled deck, and active attempt round-trip byte-for-byte",
-      "alternating popup cadence version=4, ON/OFF preference, next kind, and shared countdown survive device restore and offline reconnect without changing finite counts, FIFO round, or active answer",
+      "alternating popup cadence version=4, ON/OFF preference, next kind, and shared countdown survive device restore and offline reconnect without changing finite counts, saved Queue round, or active answer",
       "Wrong Quiz-only IDs count as progress; offline correct-answer removal syncs without resurrecting IDs or changing the frozen active round and unrelated retry state",
       "retired Sequential gate stays off while legacy cursor fields and finite Queue reviews round-trip byte-for-byte",
       "stale revision cannot overwrite newer cloud progress",

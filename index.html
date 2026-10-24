@@ -19,7 +19,7 @@
   <script src="prime-ministers.js?v=20261021-2" defer></script>
   <script src="organizations-topics.js?v=20261021-1" defer></script>
   <script src="world-map.js?v=20261024-1" defer></script>
-  <script src="app.js?v=20261023-1" defer></script>
+  <script src="app.js?v=20261024-1" defer></script>
 </head>
 <body>
   <section id="auth-gate" class="auth-gate" data-auth-phase="loading" role="dialog" aria-modal="true" aria-labelledby="auth-gate-title" aria-describedby="auth-gate-description">
@@ -914,7 +914,7 @@
             <span class="mode-option-icon" aria-hidden="true">Q</span>
             <span class="mode-option-copy">
               <strong>Quiz</strong>
-              <small>Questions stay in order while choices may shuffle. Use arrows to choose, Enter to check, then Space / Enter / &rarr; to continue.</small>
+              <small>Questions shuffle for each new Quiz. Use arrows to choose, Enter to check, then Space / Enter / &rarr; to continue.</small>
             </span>
             <span class="mode-option-arrow" aria-hidden="true">&rarr;</span>
           </button>
@@ -1031,7 +1031,7 @@
               </label>
             </div>
 
-            <p id="question-range-help" class="question-range-help">Numbers refer to the currently selected list and both are included. For example, 1 to 50 includes questions 1 through 50; Quiz keeps those questions in the selected-list order while ordinary answer choices may shuffle.</p>
+            <p id="question-range-help" class="question-range-help">Numbers refer to the currently selected list and both are included. For example, 1 to 50 selects those 50 MCQs; each new Learn or Quiz run shuffles them. Continue keeps the saved order.</p>
             <p id="question-range-summary" class="question-range-summary" role="status" aria-live="polite"></p>
             <p id="question-range-error" class="question-range-error" role="alert" hidden></p>
 

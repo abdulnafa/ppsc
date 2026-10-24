@@ -25,6 +25,8 @@ const stable = snapshot => {
   delete copy.savedAt;
   return copy;
 };
+const sameMembers = (actual, expected) => Array.isArray(actual) && actual.length === expected.length
+  && JSON.stringify([...actual].sort()) === JSON.stringify([...expected].sort());
 
 function readBank() {
   const context = { window: {} };
@@ -149,6 +151,11 @@ async function main() {
     assert.equal(await client.evaluate("Boolean(document.querySelector('vite-error-overlay,nextjs-portal'))"), false);
 
     await start("general-knowledge", "learn");
+    const firstLearnOrder = (await active()).questionIds;
+    await start("general-knowledge", "learn");
+    const secondLearnOrder = (await active()).questionIds;
+    assert(sameMembers(secondLearnOrder, firstLearnOrder), "A new Learn run must retain the selected MCQ set");
+    assert.notDeepEqual(secondLearnOrder, firstLearnOrder, "A new Learn run should reshuffle the same selected range");
     await click("#action-button"); await click("#action-button"); await click("#action-button");
     const staleLearn = await active();
     assert.equal(staleLearn.currentIndex, 1);
@@ -276,7 +283,10 @@ async function main() {
     const caQuiz = await active();
     const baselineCaIds = baselineBank.questions.filter(question => question.categoryId === "current-affairs")
       .slice(caRange.begin - 1, caRange.end).map(question => question.id);
-    assert.deepEqual(caQuiz.questionIds, Array.from(baselineCaIds));
+    assert(sameMembers(caLearn.questionIds, baselineCaIds), "Fresh Learn must include each selected Current Affairs MCQ once");
+    assert(sameMembers(caQuiz.questionIds, baselineCaIds), "Fresh Quiz must include each selected Current Affairs MCQ once");
+    assert.deepEqual(caLearn.rangeQuestionIds, Array.from(baselineCaIds), "Learn range metadata stays in canonical selection order");
+    assert.deepEqual(caQuiz.rangeQuestionIds, Array.from(baselineCaIds), "Quiz range metadata stays in canonical selection order");
     assert.equal(caQuiz.rangePoolSize, baselineCount === 11932 ? 650 : 610);
     await capture("ca-before-release", 1366, false, "#quiz-screen");
     const queueBeforeRelease = JSON.parse(await raw(QUEUE));
@@ -337,11 +347,18 @@ async function main() {
       assert.equal(appendedQuestions.length, 20);
       assert(appendedQuestions.every(question => question.categoryId === "current-affairs"));
       await start("current-affairs", "quiz", { begin: 651, end: 670 });
-      const octoberQuiz = await active();
+      let octoberQuiz = await active();
       assert.equal(octoberQuiz.rangePoolSize, 670);
-      assert.deepEqual(octoberQuiz.questionIds, appendedQuestions.map(question => question.id));
-      assert.equal(octoberQuiz.questionIds[0], "USR-Q0021-SRC");
-      assert.equal(await client.evaluate("document.getElementById('question-text').dataset.questionId"), "USR-Q0021-SRC");
+      const appendedIds = appendedQuestions.map(question => question.id);
+      assert(sameMembers(octoberQuiz.questionIds, appendedIds), "October Quiz must include every new question exactly once");
+      assert.deepEqual(octoberQuiz.rangeQuestionIds, appendedIds);
+      assert.equal(await client.evaluate("document.getElementById('question-text').dataset.questionId"), octoberQuiz.questionIds[0]);
+      const firstOctoberOrder = octoberQuiz.questionIds.slice();
+      await start("current-affairs", "quiz", { begin: 651, end: 670 });
+      octoberQuiz = await active();
+      assert(sameMembers(octoberQuiz.questionIds, appendedIds));
+      assert.notDeepEqual(octoberQuiz.questionIds, firstOctoberOrder, "A new Quiz run should reshuffle the same selected range");
+      assert.equal(await client.evaluate("document.getElementById('question-text').dataset.questionId"), octoberQuiz.questionIds[0]);
       assert.match(await client.evaluate("document.title"), /PPSC Prep/);
       assert.equal(await client.evaluate("location.origin"), new URL(url).origin);
       assert(await client.evaluate("document.getElementById('question-text').textContent.trim().length > 20"),
@@ -355,7 +372,7 @@ async function main() {
       await capture("october-new-question-desktop", 1366, false, "#quiz-screen");
       await click("#action-button");
       assert.equal((await active()).currentIndex, 1);
-      assert.equal(await client.evaluate("document.getElementById('question-text').dataset.questionId"), appendedQuestions[1].id);
+      assert.equal(await client.evaluate("document.getElementById('question-text').dataset.questionId"), octoberQuiz.questionIds[1]);
       appendedCurrentAffairsTested = true;
     }
 

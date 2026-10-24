@@ -156,20 +156,34 @@ function run() {
   assert.deepEqual(ids(app.api.wrong("pakistan-studies", "all")), ["WRONG-Q5"]);
   assert.deepEqual(ids(app.api.wrong("basic-computer-studies", "initial-original")), ["IBES-Q0001-SRC"]);
   assert.deepEqual(ids(app.api.wrong("basic-computer-studies", "other")), ["WGI-Q0001-SRC"]);
+  const repeat = harness();
+  repeat.api.seed(fixture(repeat, ["WRONG-Q1", "WRONG-Q2", "WRONG-Q3", "WRONG-Q4"]));
+  assert(repeat.api.startWrong("general-knowledge"));
+  const firstRound = ids(repeat.api.state().questions);
+  assert.deepEqual(firstRound.slice().sort(), ["WRONG-Q1", "WRONG-Q2", "WRONG-Q3", "WRONG-Q4"]);
+  assert(repeat.api.startWrong("general-knowledge"));
+  const secondRound = ids(repeat.api.state().questions);
+  assert.deepEqual(secondRound.slice().sort(), firstRound.slice().sort());
+  assert.notDeepEqual(secondRound, firstRound, "A new Wrong Quiz round must reshuffle its MCQs");
   app.api.state().importantOnly = true;
   assert.equal(app.api.startWrong("general-knowledge"), true);
   assert.equal(app.api.state().scope, "wrong");
   assert.equal(app.api.state().mode, "quiz");
   assert.equal(app.api.state().importantOnly, false);
-  assert.deepEqual(ids(app.api.state().questions), ["WRONG-Q1", "WRONG-Q2"], "Wrong round must ignore Important-only filter");
+  assert.deepEqual(ids(app.api.state().questions).sort(), ["WRONG-Q1", "WRONG-Q2"],
+    "Wrong round must shuffle only its own members and ignore Important-only filter");
+  const firstWrongId = app.api.state().questions[0].id;
+  const secondWrongId = app.api.state().questions[1].id;
   app.api.answer(true);
   const checked = app.snapshot();
   assert.equal(checked.submitted, true);
   assert.equal(checked.score, 1);
-  assert.equal(app.queue().wrongQuestionIds.includes("WRONG-Q1"), false);
-  assert.equal(remaining(app, "WRONG-Q1"), 1, "removing Wrong membership must not erase its ordinary confirmation review");
-  assert.deepEqual(checked.questionIds, ["WRONG-Q1", "WRONG-Q2"]);
-  assert.deepEqual(checked.rangePoolQuestionIds, checked.questionIds, "active round remains frozen after a correct removal");
+  assert.equal(app.queue().wrongQuestionIds.includes(firstWrongId), false);
+  assert.equal(remaining(app, firstWrongId), 1, "removing Wrong membership must not erase its ordinary confirmation review");
+  assert.deepEqual(checked.questionIds, [firstWrongId, secondWrongId]);
+  assert.deepEqual(checked.rangePoolQuestionIds, ["WRONG-Q1", "WRONG-Q2"],
+    "canonical range metadata must remain stable while the active round is shuffled");
+  assert.deepEqual(checked.rangeQuestionIds, checked.rangePoolQuestionIds);
   const countedOnce = app.queue();
 
   let reloaded = app;
@@ -186,11 +200,11 @@ function run() {
   reloaded.api.next();
   assert.equal(reloaded.api.state().currentIndex, 1);
   reloaded.api.answer(false);
-  assert.equal(reloaded.queue().wrongQuestionIds.includes("WRONG-Q2"), true);
-  assert.equal(remaining(reloaded, "WRONG-Q2"), 2, "Wrong Quiz mistakes retain the existing finite +2 behavior");
+  assert.equal(reloaded.queue().wrongQuestionIds.includes(secondWrongId), true);
+  assert.equal(remaining(reloaded, secondWrongId), 2, "Wrong Quiz mistakes retain the existing finite +2 behavior");
   reloaded.api.next();
   assert.equal(reloaded.api.startWrong("general-knowledge"), true);
-  assert.deepEqual(ids(reloaded.api.state().questions), ["WRONG-Q2"], "next round must include only remaining wrong answers");
+  assert.deepEqual(ids(reloaded.api.state().questions), [secondWrongId], "next round must include only remaining wrong answers");
   reloaded.api.answer(true);
   reloaded.api.next();
   assert.deepEqual(ids(reloaded.api.wrong("general-knowledge", "all")), []);
@@ -200,6 +214,7 @@ function run() {
   for (const change of [
     { bankSignature: "unknown-bank" }, { mode: "learn" }, { importantOnly: true }, { sessionKind: "paper" },
     { categoryId: "pakistan-studies" }, { rangePoolQuestionIds: ["WRONG-Q2", "WRONG-Q1"] },
+    { questionIds: [firstWrongId, firstWrongId] }, { questionIds: [firstWrongId, "WRONG-Q3"] },
     { optionOrders: [[0, 0, 2, 3], [0, 1, 2, 3]] }
   ]) assert.equal(app.api.normalizeSession({ ...checked, ...change }), null,
     "Wrong scope must retain strict bank, category, mode, ordering and option permutation validation");
@@ -207,6 +222,7 @@ function run() {
   const oldSession = harness();
   oldSession.api.seed(fixture(oldSession));
   assert.equal(oldSession.api.start("general-knowledge"), true);
+  const firstOldSessionId = oldSession.api.state().questions[0].id;
   oldSession.api.answer(false);
   oldSession.api.next();
   for (let index = 1; index < 4; index += 1) {
@@ -220,13 +236,13 @@ function run() {
   oldSession.api.seed(oldQueue);
   assert.deepEqual(oldSession.queue().wrongQuestionIds, []);
   oldSession.api.next();
-  assert.deepEqual(oldSession.queue().wrongQuestionIds, ["WRONG-Q1"],
+  assert.deepEqual(oldSession.queue().wrongQuestionIds, [firstOldSessionId],
     "finishing an existing ordinary Quiz must harvest its actual checked wrong response");
 
   console.log(JSON.stringify({ ok: true, checks: [
     "optional Wrong membership normalizes without inferring finite Queue entries",
     "only category main Quiz answers add distinct wrong IDs; only Wrong Quiz correct answers remove them",
-    "category and Computer source filtering preserve canonical order and ignore Important-only filter",
+    "category and Computer source filtering preserve exact membership and ignore Important-only filter; each new Wrong round reshuffles",
     "checked frozen Wrong sessions survive two reloads after live-list removals",
     "remaining Wrong answers repeat next round; empty and other-category lists remain safe",
     "strict session validation remains in force; old in-progress wrong answers are harvested at results"
