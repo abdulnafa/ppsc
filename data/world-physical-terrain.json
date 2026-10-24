@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 1,
+  "features": [
+    {
+      "id": "ocean-pacific", "kind": "ocean", "name": "Pacific Ocean", "aliases": ["Pacific"], "point": [-150, 0],
+      "sourceUrl": "https://oceanservice.noaa.gov/facts/howmanyoceans.html",
+      "geoNote": "Representative label point in a vast basin, not its centre or boundary.",
+      "questionIds": ["ADV2E102-U0002-Q040-SRC", "ADV2E102-U0002-Q040-SIM", "ADV2E102-U0019-Q049-SRC"]
+    },
+    {
+      "id": "ocean-atlantic", "kind": "ocean", "name": "Atlantic Ocean", "aliases": ["Atlantic"], "point": [-35, 0],
+      "sourceUrl": "https://oceanservice.noaa.gov/facts/howmanyoceans.html",
+      "geoNote": "Representative label point; the basin extends north and south of this marker.",
+      "questionIds": ["ADV2E102-U0160-Q064-SRC", "WGI-Q0119-SIM"]
+    },
+    {
+      "id": "ocean-indian", "kind": "ocean", "name": "Indian Ocean", "aliases": ["Indian"], "point": [80, -15],
+      "sourceUrl": "https://oceanservice.noaa.gov/facts/howmanyoceans.html",
+      "geoNote": "Representative label point, not a boundary.",
+      "questionIds": ["ADV2E102-U0003-Q007-SIM", "WGI-Q0040-SIM"]
+    },
+    {
+      "id": "ocean-arctic", "kind": "ocean", "name": "Arctic Ocean", "aliases": ["Arctic"], "point": [0, 85],
+      "sourceUrl": "https://oceanservice.noaa.gov/facts/howmanyoceans.html",
+      "geoNote": "Representative high-Arctic label point; not a boundary.",
+      "questionIds": ["ADV2E102-U0121-Q002-SIM", "ADV2E102-U0033-Q037-SRC"]
+    },
+    {
+      "id": "ocean-southern", "kind": "ocean", "name": "Southern Ocean", "aliases": ["Antarctic Ocean"], "point": [0, -65],
+      "sourceUrl": "https://oceanservice.noaa.gov/facts/howmanyoceans.html",
+      "geoNote": "Representative label point south of 60°S; national definitions of this ocean vary.",
+      "questionIds": ["ADV2E102-U0002-Q035-SIM", "ADV2E102-U0032-Q069-SIM"]
+    },
+    {
+      "id": "sea-arabian", "kind": "sea", "name": "Arabian Sea", "aliases": ["Bahr-e-Arab"], "point": [64, 16],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative sea label point; not a surveyed boundary.",
+      "questionIds": ["P239-Q021-SRC", "P239-Q021-SIM", "ADV2E102-U0008-Q048-SIM"]
+    },
+    {
+      "id": "sea-mediterranean", "kind": "sea", "name": "Mediterranean Sea", "aliases": ["Mediterranean"], "point": [18, 36],
+      "sourceUrl": "https://iho.int/uploads/user/pubs/standards/s-23/S-23_Ed3_1953_EN.pdf",
+      "geoNote": "Representative label point in the central Mediterranean.",
+      "questionIds": ["ADV2E102-U0009-Q015-SIM", "ADV2E102-U0017-Q063-SIM", "ADV2E102-U0036-Q042-SRC"]
+    },
+    {
+      "id": "sea-red", "kind": "sea", "name": "Red Sea", "aliases": [], "point": [38.5, 20],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative label point, not a boundary.",
+      "questionIds": ["ADV2E102-U0002-Q049-SRC", "ADV2E102-U0002-Q049-SIM", "ADV2E102-U0010-Q100-SRC"]
+    },
+    {
+      "id": "sea-black", "kind": "sea", "name": "Black Sea", "aliases": [], "point": [34, 43],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative label point, not a boundary.",
+      "questionIds": ["ADV2E102-U0018-Q013-SIM", "ADV2E102-U0021-Q046-SRC", "ADV2E102-U0042-Q043-SIM"]
+    },
+    {
+      "id": "sea-caspian", "kind": "sea", "name": "Caspian Sea", "aliases": ["Caspian"], "point": [50, 42],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative inland-water label point; the Caspian is landlocked.",
+      "questionIds": ["ADV2E102-U0016-Q065-SIM", "ADV2E102-U0022-Q053-SIM", "ADV2E102-U0091-Q040-SIM"]
+    },
+    {
+      "id": "sea-aral", "kind": "sea", "name": "Aral Sea", "aliases": ["Aral"], "point": [59.9, 46.6],
+      "sourceUrl": "https://eros.usgs.gov/earthshots/aral-sea-kazakhstan-and-uzbekistan",
+      "geoNote": "Representative point in the surviving northern Aral Sea; historic shoreline has greatly retreated.",
+      "questionIds": ["P238-Q019-SRC", "P238-Q019-SIM"]
+    },
+    {
+      "id": "sea-sulu", "kind": "sea", "name": "Sulu Sea", "aliases": [], "point": [121, 8.5],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative label point, not a boundary.",
+      "questionIds": ["P237-Q013-SRC", "P237-Q013-SIM"]
+    },
+    {
+      "id": "sea-andaman", "kind": "sea", "name": "Andaman Sea", "aliases": [], "point": [95, 11],
+      "sourceUrl": "https://iho.int/uploads/user/pubs/standards/s-23/S-23_Ed3_1953_EN.pdf",
+      "geoNote": "Representative label point in the Andaman basin; not a boundary.",
+      "questionIds": ["ADV2E102-U0021-Q042-SRC", "ADV2E102-U0021-Q043-SIM"]
+    },
+    {
+      "id": "sea-south-china", "kind": "sea", "name": "South China Sea", "aliases": [], "point": [114, 12],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative label point only; it does not encode maritime claims.",
+      "questionIds": ["ADV2E102-U0016-Q024-SRC", "ADV2E102-U0159-Q049-SRC"]
+    },
+    {
+      "id": "sea-east-china", "kind": "sea", "name": "East China Sea", "aliases": [], "point": [125, 29],
+      "sourceUrl": "https://repository.library.noaa.gov/view/noaa/64498/noaa_64498_DS1.pdf",
+      "geoNote": "Representative sea label point, not a boundary.",
+      "questionIds": ["WGI-Q0034-SIM"]
+    },
+    {
+      "id": "sea-yellow", "kind": "sea", "name": "Yellow Sea", "aliases": [], "point": [123, 36],
+      "sourceUrl": "https://repository.library.noaa.gov/view/noaa/64498/noaa_64498_DS1.pdf",
+      "geoNote": "Representative sea label point, not a boundary."
+    },
+    {
+      "id": "sea-bohai", "kind": "sea", "name": "Bohai Sea", "aliases": ["Bohai Gulf"], "point": [119, 39],
+      "sourceUrl": "https://repository.library.noaa.gov/view/noaa/64498/noaa_64498_DS1.pdf",
+      "geoNote": "Representative label point, not a boundary.",
+      "questionIds": ["WGI-Q0043-SIM"]
+    },
+    {
+      "id": "sea-north", "kind": "sea", "name": "North Sea", "aliases": [], "point": [4, 56],
+      "sourceUrl": "https://iho.int/uploads/user/pubs/standards/s-23/S-23_Ed3_1953_EN.pdf",
+      "geoNote": "Representative label point, not a boundary.",
+      "questionIds": ["ADV2E102-U0023-Q007-SIM", "ADV2E102-U0061-Q006-SIM", "ADV2E102-U0159-Q048-SIM"]
+    },
+    {
+      "id": "sea-baltic", "kind": "sea", "name": "Baltic Sea", "aliases": [], "point": [19, 57],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative label point, not a boundary.",
+      "questionIds": ["ADV2E102-U0041-Q047-SRC"]
+    },
+    {
+      "id": "sea-caribbean", "kind": "sea", "name": "Caribbean Sea", "aliases": [], "point": [-75, 16],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative label point, not a boundary.",
+      "questionIds": ["WGI-Q0082-SIM"]
+    },
+    {
+      "id": "sea-sargasso", "kind": "sea", "name": "Sargasso Sea", "aliases": [], "point": [-60, 30],
+      "sourceUrl": "https://oceanservice.noaa.gov/facts/sargassosea.html",
+      "geoNote": "Representative label point; this sea is defined by currents, not a fixed coastline.",
+      "questionIds": ["ADV2E102-U0160-Q064-SIM"]
+    },
+    {
+      "id": "sea-azov", "kind": "sea", "name": "Sea of Azov", "aliases": ["Azov Sea"], "point": [36.7, 46],
+      "sourceUrl": "https://iho.int/uploads/user/pubs/standards/s-23/S-23_Ed3_1953_EN.pdf",
+      "geoNote": "Representative label point; not a boundary or political statement.",
+      "questionIds": ["ADV2E102-U0160-Q072-SIM"]
+    },
+    {
+      "id": "sea-adriatic", "kind": "sea", "name": "Adriatic Sea", "aliases": [], "point": [16, 42.5],
+      "sourceUrl": "https://iho.int/uploads/user/pubs/standards/s-23/S-23_Ed3_1953_EN.pdf",
+      "geoNote": "Representative label point, not a boundary.",
+      "questionIds": ["ADV2E102-U0014-Q057-SIM"]
+    },
+    {
+      "id": "sea-japan", "kind": "sea", "name": "Sea of Japan", "aliases": ["East Sea"], "point": [135, 41],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative label point; geographic naming is disputed."
+    },
+    {
+      "id": "sea-coral", "kind": "sea", "name": "Coral Sea", "aliases": [], "point": [153, -17],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative label point, not a boundary."
+    },
+    {
+      "id": "sea-tasman", "kind": "sea", "name": "Tasman Sea", "aliases": [], "point": [159, -40],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative label point, not a boundary."
+    },
+    {
+      "id": "sea-java", "kind": "sea", "name": "Java Sea", "aliases": [], "point": [113, -5],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative label point, not a boundary."
+    },
+    {
+      "id": "sea-celebes", "kind": "sea", "name": "Celebes Sea", "aliases": ["Sulawesi Sea"], "point": [123, 2],
+      "sourceUrl": "https://www.ncei.noaa.gov/sites/default/files/2022-05/woa18documentation.pdf",
+      "geoNote": "Representative label point, not a boundary."
+    },
+    {
+      "id": "sea-irish", "kind": "sea", "name": "Irish Sea", "aliases": [], "point": [-5, 54],
+      "sourceUrl": "https://iho.int/uploads/user/pubs/standards/s-23/S-23_Ed3_1953_EN.pdf",
+      "geoNote": "Representative label point, not a boundary."
+    },
+    {
+      "id": "sea-timor", "kind": "sea", "name": "Timor Sea", "aliases": [], "point": [128, -10],
+      "sourceUrl": "https://iho.int/uploads/user/pubs/standards/s-23/S-23_Ed3_1953_EN.pdf",
+      "geoNote": "Representative label point, not a boundary."
+    },
+    {
+      "id": "range-karakoram", "kind": "range", "name": "Karakoram", "aliases": ["Karakoram Range", "Karakorams", "Karakorum"], "point": [76, 35.8],
+      "path": [[72.8, 36.7], [74.7, 36.4], [76.7, 35.9], [78.7, 35.2]],
+      "sourceUrl": "https://www.icimod.org/who-we-are/the-hindu-kush-himalaya/",
+      "geoNote": "Schematic range axis and representative label point; not a surveyed extent.",
+      "questionIds": ["ADV2E102-U0007-Q031-SRC", "ADV2E102-U0019-Q047-SRC", "ADV2E102-U0151-Q079-SRC"]
+    },
+    {
+      "id": "range-himalaya", "kind": "range", "name": "Himalaya", "aliases": ["Himalayas", "Himalayan Range"], "point": [85, 28],
+      "path": [[73, 34.5], [79, 30], [86, 27.7], [91, 27.3], [96, 28]],
+      "sourceUrl": "https://www.icimod.org/who-we-are/the-hindu-kush-himalaya/",
+      "geoNote": "Schematic range axis and representative label point; not a surveyed extent.",
+      "questionIds": ["ADV2E102-U0017-Q069-SRC", "ADV2E102-U0022-Q054-SRC", "ADV2E102-U0027-Q045-SRC"]
+    },
+    {
+      "id": "range-hindu-kush", "kind": "range", "name": "Hindu Kush", "aliases": ["Hindukush", "Hindu Kush Range"], "point": [70.5, 36],
+      "path": [[65.5, 35], [69, 35.7], [72.7, 36.6]],
+      "sourceUrl": "https://www.icimod.org/who-we-are/the-hindu-kush-himalaya/",
+      "geoNote": "Schematic range axis and representative label point; not a surveyed extent.",
+      "questionIds": ["ADV2E102-U0071-Q032-SRC", "ADV2E102-U0043-Q059-SRC"]
+    },
+    {
+      "id": "range-andes", "kind": "range", "name": "Andes", "aliases": ["Andes Mountains", "Andean Cordillera"], "point": [-70, -22],
+      "path": [[-76, 8], [-77, -5], [-72, -15], [-69, -28], [-70, -40], [-72, -52]],
+      "sourceUrl": "https://pubs.usgs.gov/cp/49/report.pdf",
+      "geoNote": "Schematic continental range axis and representative label point; not a surveyed extent.",
+      "questionIds": ["ADV2E102-U0002-Q055-SRC", "ADV2E102-U0002-Q055-SIM", "ADV2E102-U0013-Q046-SRC"]
+    },
+    {
+      "id": "range-alps", "kind": "range", "name": "Alps", "aliases": ["Alpine Range"], "point": [10, 46.5],
+      "path": [[5.5, 45.5], [9, 46.5], [13, 47.2], [16.5, 46.5]],
+      "sourceUrl": "https://www.esa.int/Space_in_Member_States/Belgium_-_Francais/La_Terre_vue_de_l_Espace_Sommets_enneiges",
+      "geoNote": "Schematic range axis and representative label point; not a surveyed extent.",
+      "questionIds": ["P237-Q015-SRC", "P237-Q015-SIM"]
+    },
+    {
+      "id": "range-atlas", "kind": "range", "name": "Atlas Mountains", "aliases": ["Atlas Range"], "point": [-6.5, 32],
+      "path": [[-10.5, 31.5], [-6.5, 32.5], [2, 35.5], [9, 36.5]],
+      "sourceUrl": "https://www.visitmorocco.com/en/discover-morocco/geography-morocco",
+      "geoNote": "Schematic mountain-system axis across northwest Africa; not a surveyed extent.",
+      "questionIds": ["ADV2E102-U0041-Q045-SIM"]
+    },
+    {
+      "id": "range-pamir", "kind": "range", "name": "Pamir Mountains", "aliases": ["Pamir", "Pamirs"], "point": [73, 38],
+      "sourceUrl": "https://www.icimod.org/who-we-are/the-hindu-kush-himalaya/",
+      "geoNote": "Representative label point for a broad mountain region, not a boundary.",
+      "questionIds": ["ADV2E102-U0014-Q052-SRC", "ADV2E102-U0014-Q052-SIM"]
+    },
+    {
+      "id": "range-kirthar", "kind": "range", "name": "Kirthar Range", "aliases": ["Kirthar Mountains"], "point": [67.5, 26],
+      "path": [[67.5, 28.2], [67.1, 26.5], [67, 25.2]],
+      "sourceUrl": "https://pubs.usgs.gov/pp/1599/report.pdf",
+      "geoNote": "Schematic range axis near the Sindh–Balochistan boundary; not a surveyed extent.",
+      "questionIds": ["ADV2E102-U0001-Q042-SRC", "ADV2E102-U0001-Q042-SIM", "ADV2E102-U0014-Q028-SIM"]
+    },
+    {
+      "id": "range-sulaiman", "kind": "range", "name": "Sulaiman Range", "aliases": ["Sulaiman Mountains", "Suleiman Range"], "point": [69, 31],
+      "path": [[68.5, 32.4], [69.3, 30.7], [69, 29]],
+      "sourceUrl": "https://pubs.usgs.gov/pp/1599/report.pdf",
+      "geoNote": "Schematic range axis in western Pakistan; not a surveyed extent.",
+      "questionIds": ["P239-Q017-SIM", "ADV2E102-U0121-Q040-SRC", "ADV2E102-U0121-Q040-SIM"]
+    },
+    {
+      "id": "range-salt", "kind": "range", "name": "Salt Range", "aliases": [], "point": [72.6, 32.7],
+      "path": [[71.8, 32.6], [72.7, 32.7], [73.5, 32.6]],
+      "sourceUrl": "https://khushab.punjab.gov.pk/geography",
+      "geoNote": "Schematic range axis in northern Punjab; not a surveyed extent.",
+      "questionIds": ["ADV2E102-U0151-Q080-SRC"]
+    },
+    {
+      "id": "range-pir-panjal", "kind": "range", "name": "Pir Panjal Range", "aliases": ["Pir Panjal Hills"], "point": [75, 33.5],
+      "sourceUrl": "https://www.ncert.nic.in/textbook/pdf/iess102.pdf",
+      "geoNote": "Representative label point in this Himalayan subrange, not a boundary.",
+      "questionIds": ["ADV2E102-U0034-Q045-SRC", "ADV2E102-U0034-Q045-SIM"]
+    },
+    {
+      "id": "range-sor", "kind": "range", "name": "Sor Range", "aliases": ["Degari–Sor Range", "Degari-Sor Range"], "point": [67.1, 30.35],
+      "sourceUrl": "https://pubs.usgs.gov/pp/1599/report.pdf",
+      "geoNote": "Representative marker for the Degari–Sor coalfield near Quetta; not a surveyed range extent.",
+      "questionIds": ["P236-Q024-SRC", "P236-Q024-SIM"]
+    },
+    {
+      "id": "range-hijaz", "kind": "range", "name": "Hijaz Mountains", "aliases": ["Hejaz Mountains", "Hijaz Range"], "point": [39.3, 24.5],
+      "sourceUrl": "https://geosa.gov.sa/Documents/Maps/2023/2m_Eng_11ED.pdf",
+      "geoNote": "Representative label point in the western Saudi mountain belt, not a surveyed extent.",
+      "questionIds": ["ADV2E102-U0044-Q040-SIM"]
+    },
+    {
+      "id": "peak-everest", "kind": "peak", "name": "Mount Everest", "aliases": ["Everest", "Sagarmatha", "Chomolungma"], "point": [86.925, 27.988],
+      "sourceUrl": "https://www.icimod.org/who-we-are/the-hindu-kush-himalaya/",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates."
+    },
+    {
+      "id": "peak-k2", "kind": "peak", "name": "K2", "aliases": ["Mount Godwin-Austen", "Chogori"], "point": [76.513, 35.881],
+      "sourceUrl": "https://tourism.gov.pk/pakistan.html",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0026-Q052-SRC", "ADV2E102-U0009-Q043-SIM"]
+    },
+    {
+      "id": "peak-nanga-parbat", "kind": "peak", "name": "Nanga Parbat", "aliases": ["Diamer", "Killer Mountain"], "point": [74.589, 35.237],
+      "sourceUrl": "https://tourism.gov.pk/pakistan.html",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0017-Q069-SRC", "ADV2E102-U0022-Q054-SRC"]
+    },
+    {
+      "id": "peak-broad", "kind": "peak", "name": "Broad Peak", "aliases": ["Falchan Kangri"], "point": [76.57, 35.81],
+      "sourceUrl": "https://tourism.gov.pk/pakistan.html",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0019-Q048-SRC", "ADV2E102-U0044-Q044-SRC"]
+    },
+    {
+      "id": "peak-rakaposhi", "kind": "peak", "name": "Rakaposhi", "aliases": ["Dumani"], "point": [74.489, 36.143],
+      "sourceUrl": "https://tourism.gov.pk/publications/Brochure.pdf",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0081-Q040-SRC", "WGI-Q0401-SRC"]
+    },
+    {
+      "id": "peak-tirich-mir", "kind": "peak", "name": "Tirich Mir", "aliases": ["Tirch Mir"], "point": [71.83, 36.25],
+      "sourceUrl": "https://www.icimod.org/who-we-are/the-hindu-kush-himalaya/",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0002-Q050-SRC", "ADV2E102-U0043-Q059-SRC", "ADV2E102-U0071-Q032-SRC"]
+    },
+    {
+      "id": "peak-mont-blanc", "kind": "peak", "name": "Mont Blanc", "aliases": ["Monte Bianco"], "point": [6.865, 45.833],
+      "sourceUrl": "https://www.chamonix.com/la-vallee/patrimoine-culture/patrimoine-naturel-de-la-vallee-de-chamonix-mont-blanc/le-mont-blanc",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates.",
+      "questionIds": ["P237-Q015-SIM"]
+    },
+    {
+      "id": "peak-mount-logan", "kind": "peak", "name": "Mount Logan", "aliases": ["Logan"], "point": [-140.405, 60.567],
+      "sourceUrl": "https://parks.canada.ca/pn-np/yt/kluane/culture/designation",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates.",
+      "questionIds": ["P238-Q021-SRC", "P238-Q021-SIM"]
+    },
+    {
+      "id": "peak-denali", "kind": "peak", "name": "Denali / Mount McKinley", "aliases": ["Denali", "Mount McKinley"], "point": [-151.007, 63.069],
+      "sourceUrl": "https://www.nps.gov/dena/planyourvisit/park-brochure.htm",
+      "geoNote": "Approximate summit marker; both historical and current federal names are searchable.",
+      "questionIds": ["ADV2E102-U0035-Q003-SRC", "ADV2E102-U0035-Q003-SIM"]
+    },
+    {
+      "id": "peak-aconcagua", "kind": "peak", "name": "Aconcagua", "aliases": ["Cerro Aconcagua"], "point": [-70.011, -32.653],
+      "sourceUrl": "https://www.argentina.gob.ar/viaja-por-argentina/que-hacer/hacer-trekking-en-la-cumbre-de-america",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0013-Q046-SIM"]
+    },
+    {
+      "id": "peak-toubkal", "kind": "peak", "name": "Mount Toubkal", "aliases": ["Jbel Toubkal", "Toubkal"], "point": [-7.915, 31.06],
+      "sourceUrl": "https://www.visitmorocco.com/en/discover-morocco/geography-morocco",
+      "geoNote": "Approximate summit marker in the High Atlas; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0041-Q045-SIM"]
+    },
+    {
+      "id": "peak-adams", "kind": "peak", "name": "Adam's Peak", "aliases": ["Sri Pada"], "point": [80.499, 6.81],
+      "sourceUrl": "https://srilanka.travel/attraction?attraction_id=150",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0013-Q045-SRC", "ADV2E102-U0013-Q045-SIM"]
+    },
+    {
+      "id": "peak-damavand", "kind": "peak", "name": "Mount Damavand", "aliases": ["Damavand"], "point": [52.109, 35.955],
+      "sourceUrl": "https://earthobservatory.nasa.gov/IOTD/view.php?id=5267",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0121-Q042-SIM"]
+    },
+    {
+      "id": "peak-ladyfinger", "kind": "peak", "name": "Ladyfinger Peak", "aliases": ["Bublimating", "Bubli Motin"], "point": [74.65, 36.37],
+      "sourceUrl": "https://tourism.gov.pk/publications/DISTRICT%20HUNZA.pdf",
+      "geoNote": "Approximate summit marker in Hunza; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0018-Q045-SRC", "ADV2E102-U0018-Q045-SIM"]
+    },
+    {
+      "id": "peak-kilimanjaro", "kind": "peak", "name": "Mount Kilimanjaro", "aliases": ["Kilimanjaro"], "point": [37.356, -3.067],
+      "sourceUrl": "https://whc.unesco.org/document/153391",
+      "geoNote": "Approximate summit marker for learning; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0040-Q040-SIM"]
+    },
+    {
+      "id": "peak-sakesar", "kind": "peak", "name": "Sakesar", "aliases": ["Mount Sakesar"], "point": [72.69, 32.55],
+      "sourceUrl": "https://khushab.punjab.gov.pk/geography",
+      "geoNote": "Approximate summit marker in the Salt Range; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0151-Q080-SRC"]
+    },
+    {
+      "id": "peak-takht-e-sulaiman", "kind": "peak", "name": "Takht-e-Sulaiman", "aliases": ["Takht-i-Sulaiman"], "point": [69.78, 31.69],
+      "sourceUrl": "https://www.ndma.gov.pk/public/storage/publications/July2024/a0tWdE6TrEOl0TX7RdTG.pdf",
+      "geoNote": "Approximate summit marker in the Sulaiman Range; not survey-grade coordinates.",
+      "questionIds": ["ADV2E102-U0121-Q040-SRC"]
+    },
+    {
+      "id": "glacier-siachen", "kind": "glacier", "name": "Siachen Glacier", "aliases": ["Siachen"], "point": [77.12, 35.44],
+      "sourceUrl": "https://tourism.gov.pk/publications/pakistan_guide_map.pdf",
+      "geoNote": "Representative marker on a long glacier, not a terminus, border, or full ice extent.",
+      "questionIds": ["P237-Q014-SRC", "ADV2E102-U0017-Q070-SRC", "ADV2E102-U0043-Q057-SRC"]
+    },
+    {
+      "id": "glacier-baltoro", "kind": "glacier", "name": "Baltoro Glacier", "aliases": ["Baltoro"], "point": [76.3, 35.7],
+      "sourceUrl": "https://tourism.gov.pk/publications/northern_pak_guidemap.pdf",
+      "geoNote": "Representative point along the glacier; not a full ice extent.",
+      "questionIds": ["ADV2E102-U0011-Q045-SRC", "ADV2E102-U0011-Q045-SIM"]
+    },
+    {
+      "id": "glacier-batura", "kind": "glacier", "name": "Batura Glacier", "aliases": ["Batura"], "point": [74.8, 36.5],
+      "sourceUrl": "https://tourism.gov.pk/publications/northern_pak_guidemap.pdf",
+      "geoNote": "Representative point along the glacier; not a full ice extent.",
+      "questionIds": ["ADV2E102-U0001-Q046-SRC", "ADV2E102-U0001-Q046-SIM"]
+    },
+    {
+      "id": "glacier-biafo", "kind": "glacier", "name": "Biafo Glacier", "aliases": ["Biafo"], "point": [75.75, 36.2],
+      "sourceUrl": "https://tourism.gov.pk/publications/northern_pak_guidemap.pdf",
+      "geoNote": "Representative point along the glacier; not a full ice extent."
+    },
+    {
+      "id": "glacier-hispar", "kind": "glacier", "name": "Hispar Glacier", "aliases": ["Hispar"], "point": [75.28, 36.17],
+      "sourceUrl": "https://tourism.gov.pk/publications/northern_pak_guidemap.pdf",
+      "geoNote": "Representative point along the glacier; not a full ice extent."
+    },
+    {
+      "id": "glacier-lambert", "kind": "glacier", "name": "Lambert Glacier", "aliases": ["Lambert"], "point": [69, -72.83],
+      "sourceUrl": "https://www.antarctica.gov.au/about-antarctica/ice-and-atmosphere/ice-sheet/",
+      "geoNote": "Representative point in this vast Antarctic glacier system; not a full ice extent.",
+      "questionIds": ["ADV2E102-U0033-Q039-SRC", "ADV2E102-U0033-Q039-SIM"]
+    },
+    {
+      "id": "glacier-pio-xi", "kind": "glacier", "name": "Pío XI Glacier", "aliases": ["Pio XI Glacier", "Brüggen Glacier", "Bruggen Glacier"], "point": [-73.8, -49.2],
+      "sourceUrl": "https://www.esa.int/ESA_Multimedia/Images/2016/11/Pio_XI_Glacier_Chile",
+      "geoNote": "Representative point on this Patagonian glacier; not a full ice extent.",
+      "questionIds": ["ADV2E102-U0034-Q049-SRC", "ADV2E102-U0034-Q049-SIM"]
+    },
+    {
+      "id": "plateau-tibetan", "kind": "plateau", "name": "Tibetan Plateau", "aliases": ["Qinghai–Tibet Plateau", "Roof of the World"], "point": [89.8, 33.1],
+      "sourceUrl": "https://eros.usgs.gov/media-gallery/earth-as-art/3/roof-of-the-world",
+      "geoNote": "Representative label point in a broad plateau; not its centre or boundary.",
+      "questionIds": ["ADV2E102-U0008-Q051-SIM"]
+    },
+    {
+      "id": "plateau-balochistan", "kind": "plateau", "name": "Balochistan Plateau", "aliases": ["Baluchistan Plateau"], "point": [65.5, 29],
+      "sourceUrl": "https://www.hec.gov.pk/english/services/universities/RevisedCurricula/Documents/2011-2012/Education/PakStudies_Sept13.pdf",
+      "geoNote": "Representative label point in a broad plateau, not a surveyed boundary.",
+      "questionIds": ["P239-Q017-SRC", "P239-Q017-SIM"]
+    },
+    {
+      "id": "plateau-pothohar", "kind": "plateau", "name": "Pothohar Plateau", "aliases": ["Potwar Plateau", "Potohar Plateau"], "point": [73.2, 33.1],
+      "sourceUrl": "https://en.unesco.org/silkroad/sites/default/files/knowledge-bank-article/vol_I%20silk%20road_middle%20palaeolithic%20culture.pdf",
+      "geoNote": "Representative label point, not a plateau boundary.",
+      "questionIds": ["ADV2E102-U0016-Q041-SRC"]
+    },
+    {
+      "id": "plateau-altiplano", "kind": "plateau", "name": "Altiplano", "aliases": ["Andean Altiplano"], "point": [-68, -17],
+      "sourceUrl": "https://pubs.usgs.gov/bul/1975/plate-2.pdf",
+      "geoNote": "Representative label point, not a plateau boundary.",
+      "questionIds": ["WGI-Q0137-SIM"]
+    },
+    {
+      "id": "plateau-giza", "kind": "plateau", "name": "Giza Plateau", "aliases": ["Giza Plateau complex"], "point": [31.133, 29.976],
+      "sourceUrl": "https://egymonuments.gov.eg/en/archaeological-sites/giza-plateau/",
+      "geoNote": "Representative archaeological plateau marker, not a boundary.",
+      "questionIds": ["ADV2E102-U0033-Q014-SIM"]
+    }
+  ]
+}

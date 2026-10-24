@@ -4,6 +4,9 @@
   var SVG_NS = "http://www.w3.org/2000/svg";
   var MAP_URL = "assets/maps/world-countries-50m.geojson?v=20261023-1";
   var CITIES_URL = "assets/maps/world-major-cities.json?v=20261023-1";
+  var PHYSICAL_WATER_URL = "data/world-physical-water.json?v=20261024-1";
+  var PHYSICAL_TERRAIN_URL = "data/world-physical-terrain.json?v=20261024-1";
+  var PHYSICAL_GEOMETRY_URL = "assets/maps/world-physical-geometry.json?v=20261024-1";
   var WORLD_WIDTH = 1000;
   var WORLD_HEIGHT = 500;
   var MINI_WIDTH = 800;
@@ -166,6 +169,16 @@
     return polygons.map(function (polygon) { return polygon.map(ringPath).join(""); }).join("");
   }
 
+  function lineGeometryPath(geometry) {
+    var lines = geometry.type === "LineString" ? [geometry.coordinates] : geometry.coordinates;
+    return lines.map(function (line) {
+      return line.map(function (coordinate, index) {
+        var point = project(coordinate);
+        return (index ? "L" : "M") + point[0].toFixed(2) + " " + point[1].toFixed(2);
+      }).join("");
+    }).join("");
+  }
+
   function levelForCount(count) {
     if (!count) return 0;
     if (count <= 2) return 1;
@@ -314,6 +327,80 @@
     var citiesByCountry = null;
     var cityLoading = null;
     var cityUnavailable = false;
+    var physicalFeatures = null;
+    var physicalById = new Map();
+    var physicalLinked = new Map();
+    var physicalLoading = null;
+    var selectedPhysicalId = null;
+    var physicalGeometry = null;
+    var physicalGeometryLoading = null;
+
+    function physicalLayerFor(kind) {
+      if (["ocean", "sea", "gulf", "strait", "lake"].includes(kind)) return "marine";
+      if (["peak", "mountain", "range", "plateau", "glacier", "desert", "pass"].includes(kind)) return "terrain";
+      if (["river", "canal"].includes(kind)) return "rivers";
+      return "waterworks";
+    }
+
+    function isPhysicalMode() { return nodes.layer && nodes.layer.value !== "countries"; }
+
+    function physicalList() {
+      return (physicalFeatures || []).filter(function (feature) {
+        return physicalLayerFor(feature.kind) === nodes.layer.value;
+      });
+    }
+
+    function physicalQuestionsFor(id) {
+      var list = physicalLinked.get(id) || [];
+      return nodes.category.value === "all" ? list : list.filter(function (question) {
+        return question.categoryId === nodes.category.value;
+      });
+    }
+
+    function aliasInText(alias, text) {
+      var key = normalize(alias);
+      if (["indian", "southern", "western", "eastern", "northern"].includes(key)) return false;
+      if (!key || (key.length < 4 && key !== "k2")) return false;
+      return (" " + text + " ").includes(" " + key + " ");
+    }
+
+    function indexPhysicalQuestions() {
+      var questionById = new Map(options.questions.map(function (question) { return [question.id, question]; }));
+      var searchTexts = options.questions.map(function (question) {
+        var answer = Array.isArray(question.options) ? question.options[question.correctOptionIndex] : "";
+        var urduAnswer = Array.isArray(question.optionsUrdu) ? question.optionsUrdu[question.correctOptionIndex] : "";
+        return normalize([question.question, question.questionUrdu, answer, urduAnswer].filter(Boolean).join(" "));
+      });
+      physicalLinked.clear();
+      physicalFeatures.forEach(function (feature) {
+        var ids = new Set(feature.questionIds || []);
+        var aliases = [feature.name].concat(feature.aliases || []);
+        searchTexts.forEach(function (text, index) {
+          if (aliases.some(function (alias) { return aliasInText(alias, text); })) ids.add(options.questions[index].id);
+        });
+        physicalLinked.set(feature.id, Array.from(ids).map(function (id) { return questionById.get(id); }).filter(Boolean));
+      });
+    }
+
+    function unmatchedPhysicalQuestions() {
+      var layer = nodes.layer.value;
+      var pattern = {
+        marine: /\b(ocean|sea|gulf|strait|bay|coast|island|marine)\b/i,
+        terrain: /\b(mountain|peak|mount|range|plateau|glacier|hill|summit|pass)\b/i,
+        rivers: /\b(river|tributary|canal|confluence|waterway|stream)\b/i,
+        waterworks: /\b(dam|barrage|reservoir|headworks|hydropower|hydel)\b/i
+      }[layer];
+      if (!pattern) return [];
+      var pinned = new Set();
+      physicalList().forEach(function (feature) {
+        physicalQuestionsFor(feature.id).forEach(function (question) { pinned.add(question.id); });
+      });
+      return options.questions.filter(function (question) {
+        return !pinned.has(question.id)
+          && (nodes.category.value === "all" || question.categoryId === nodes.category.value)
+          && pattern.test(question.question || "");
+      });
+    }
 
     function addAlias(alias, iso3, toQuestionMap) {
       var key = normalize(alias);
@@ -396,6 +483,7 @@
     }
 
     function renderCountryIndex() {
+      if (isPhysicalMode()) { renderPhysicalIndex(); return; }
       if (!features) return;
       var previousScroll = nodes.countryIndexList.scrollTop;
       var aliasIso3 = countryNames.get(countryFilter);
@@ -418,6 +506,30 @@
       nodes.countryIndexList.replaceChildren(fragment);
       nodes.countryIndexList.scrollTop = previousScroll;
       nodes.countryIndexCount.textContent = matches.length + " of " + features.length + " countries / regions";
+    }
+
+    function renderPhysicalIndex() {
+      if (!physicalFeatures) return;
+      var previousScroll = nodes.countryIndexList.scrollTop;
+      var all = physicalList();
+      var matches = all.filter(function (feature) {
+        return !countryFilter || [feature.name].concat(feature.aliases || []).some(function (alias) {
+          return normalize(alias).includes(countryFilter);
+        });
+      }).sort(function (a, b) { return a.name.localeCompare(b.name); });
+      var fragment = document.createDocumentFragment();
+      matches.forEach(function (feature) {
+        var count = physicalQuestionsFor(feature.id).length;
+        var button = make("button", feature.id === selectedPhysicalId ? "is-selected" : "", feature.name + (count ? " · " + count : ""));
+        button.type = "button";
+        button.dataset.physicalId = feature.id;
+        button.title = count + " linked MCQs";
+        button.setAttribute("aria-pressed", feature.id === selectedPhysicalId ? "true" : "false");
+        fragment.appendChild(button);
+      });
+      nodes.countryIndexList.replaceChildren(fragment);
+      nodes.countryIndexList.scrollTop = previousScroll;
+      nodes.countryIndexCount.textContent = matches.length + " of " + all.length + " mapped features";
     }
 
     function scheduleLabels() {
@@ -524,7 +636,16 @@
       nodes.svg.setAttribute("viewBox", [view.x, view.y, view.width, view.height].join(" "));
       nodes.zoomIn.disabled = width <= MIN_VIEW_WIDTH + 0.1;
       nodes.zoomOut.disabled = width >= WORLD_WIDTH - 0.1;
+      resizePhysicalMarkers();
       scheduleLabels();
+    }
+
+    function resizePhysicalMarkers() {
+      var rect = nodes.svg.getBoundingClientRect();
+      var radius = Math.max(0.8, Math.min(18, view.width / Math.max(300, rect.width || 800) * 5));
+      nodes.svg.querySelectorAll(".world-map-physical-marker").forEach(function (marker) {
+        marker.setAttribute("r", radius.toFixed(2));
+      });
     }
 
     function screenToWorld(clientX, clientY) {
@@ -560,6 +681,14 @@
     }
 
     function updateColors() {
+      if (isPhysicalMode()) {
+        var physical = physicalList();
+        var matched = physical.filter(function (feature) { return physicalQuestionsFor(feature.id).length; }).length;
+        var links = physical.reduce(function (sum, feature) { return sum + physicalQuestionsFor(feature.id).length; }, 0);
+        var category = nodes.category.value === "all" ? "All categories" : (categoryNames.get(nodes.category.value) || "Selected category");
+        nodes.status.textContent = category + ": " + matched + " of " + physical.length + " mapped features with linked MCQs · " + links + " feature–MCQ links. Points for broad areas are representative, not exact boundaries.";
+        return;
+      }
       var matchedCountries = 0;
       var totalLinks = 0;
       nodes.svg.querySelectorAll("[data-iso3]").forEach(function (shape) {
@@ -583,6 +712,7 @@
       var fragment = document.createDocumentFragment();
       countryPaths.clear();
       countryBounds.clear();
+      fragment.appendChild(svgNode("g", { "class": "world-map-marine-geometry", "id": "world-map-marine-geometry" }));
       features.forEach(function (feature) {
         var iso3 = feature.properties.iso3;
         var pathData = geometryPath(feature.geometry);
@@ -611,12 +741,70 @@
         marker.dataset.iso3 = iso3;
         fragment.appendChild(marker);
       });
+      fragment.appendChild(svgNode("g", { "class": "world-map-physical-layer", "id": "world-map-physical-layer" }));
       buildLabels(fragment);
       nodes.svg.replaceChildren(fragment);
       nodes.svg.setAttribute("role", "group");
       nodes.svg.setAttribute("aria-label", "Interactive world map of countries and regions with linked MCQs");
       setView({ x: 0, y: 0, width: WORLD_WIDTH });
       updateColors();
+    }
+
+    function renderPhysicalLayer() {
+      var layer = document.getElementById("world-map-physical-layer");
+      var marineLayer = document.getElementById("world-map-marine-geometry");
+      if (!layer) return;
+      layer.replaceChildren();
+      if (marineLayer) marineLayer.replaceChildren();
+      nodes.svg.classList.toggle("is-physical-mode", isPhysicalMode());
+      if (!isPhysicalMode() || !physicalFeatures) return;
+      var fragment = document.createDocumentFragment();
+      if (physicalGeometry) {
+        physicalGeometry.forEach(function (shape) {
+          var item = physicalById.get(shape.properties.id);
+          if (!item || physicalLayerFor(item.kind) !== nodes.layer.value) return;
+          var polygon = shape.geometry.type === "Polygon" || shape.geometry.type === "MultiPolygon";
+          var path = svgNode("path", {
+            d: polygon ? geometryPath(shape.geometry) : lineGeometryPath(shape.geometry),
+            "class": polygon ? "world-map-marine-area" : "world-map-physical-river",
+            "data-physical-id": item.id, role: "button", tabindex: "0",
+            "aria-label": item.name + " geographic outline, " + physicalQuestionsFor(item.id).length + " linked MCQs"
+          });
+          if (selectedPhysicalId === item.id) path.classList.add("is-selected");
+          path.appendChild(svgNode("title", {}, item.name + " (generalized Natural Earth geometry)"));
+          (polygon ? marineLayer : fragment).appendChild(path);
+        });
+      }
+      physicalList().forEach(function (feature) {
+        var point = project(feature.point);
+        var marker = svgNode("circle", {
+          cx: point[0].toFixed(2), cy: point[1].toFixed(2), r: "2.5",
+          "class": "world-map-physical-marker" + (selectedPhysicalId === feature.id ? " is-selected" : ""),
+          "data-kind": feature.kind, "data-physical-id": feature.id,
+          role: "button", tabindex: "0", "aria-label": feature.name + ", " + physicalQuestionsFor(feature.id).length + " linked MCQs"
+        });
+        marker.appendChild(svgNode("title", {}, feature.name));
+        fragment.appendChild(marker);
+      });
+      layer.appendChild(fragment);
+      resizePhysicalMarkers();
+    }
+
+    function loadPhysicalGeometry() {
+      if (physicalGeometry || physicalGeometryLoading) return physicalGeometryLoading || Promise.resolve();
+      physicalGeometryLoading = fetch(PHYSICAL_GEOMETRY_URL).then(function (response) {
+        if (!response.ok) throw new Error("Physical geometry request failed: " + response.status);
+        return response.json();
+      }).then(function (data) {
+        if (data && data.type === "FeatureCollection" && Array.isArray(data.features)) {
+          physicalGeometry = data.features;
+          if (isPhysicalMode()) renderPhysicalLayer();
+        }
+      }).catch(function () {
+        // Curated points and MCQs remain usable if an optional outline fails.
+        physicalGeometryLoading = null;
+      });
+      return physicalGeometryLoading;
     }
 
     function directionLessonFor(question) {
@@ -746,7 +934,7 @@
       if (isUrdu) { answerNode.lang = "ur"; answerNode.dir = "rtl"; }
       card.appendChild(answerNode);
       var lesson = directionLessonFor(question);
-      if (lesson) {
+      if (lesson && !isPhysicalMode()) {
         var panelId = "world-map-direction-" + question.id.replace(/[^a-z0-9-]/gi, "-");
         var toggle = make("button", "world-map-direction-toggle", "Map par samjhein");
         toggle.type = "button";
@@ -931,6 +1119,11 @@
     }
 
     function renderDetail() {
+      if (isPhysicalMode()) { renderPhysicalDetail(); return; }
+      nodes.physicalMeta.hidden = true;
+      nodes.physicalUnmatched.hidden = true;
+      nodes.compassGuide.hidden = false;
+      nodes.directionFilter.hidden = false;
       if (!selectedIso3 || !countries.has(selectedIso3)) return;
       var feature = countries.get(selectedIso3);
       var list = questionsFor(selectedIso3);
@@ -965,6 +1158,64 @@
           activeDirectionId = null;
         }
       }
+    }
+
+    function renderPhysicalDetail() {
+      nodes.compassGuide.hidden = true;
+      nodes.directionFilter.hidden = true;
+      nodes.countryMap.hidden = true;
+      activeDirectionId = null;
+      var feature = selectedPhysicalId && physicalById.get(selectedPhysicalId);
+      if (feature && physicalLayerFor(feature.kind) !== nodes.layer.value) feature = null;
+      var list = feature ? physicalQuestionsFor(feature.id) : [];
+      nodes.detailTitle.textContent = feature ? feature.name : "Select a map feature";
+      nodes.detailCount.textContent = feature
+        ? list.length + " linked MCQs in the selected category."
+        : "Map marker ya upar list se koi ocean, mountain, river, barrage ya dam select karein.";
+      nodes.physicalMeta.hidden = !feature;
+      if (feature) {
+        nodes.physicalNote.textContent = feature.geoNote || "Marker is a representative map location; it is not a surveyed boundary or full route.";
+        nodes.physicalSource.href = feature.sourceUrl;
+      }
+      var fragment = document.createDocumentFragment();
+      if (feature && !list.length) {
+        fragment.appendChild(make("p", "world-map-no-questions", "Is feature ke liye selected category mein linked MCQ nahi mila. Location aur source upar available hain."));
+      } else if (feature) {
+        list.slice(0, shown).forEach(function (question) { fragment.appendChild(displayQuestion(question)); });
+      }
+      nodes.questionList.replaceChildren(fragment);
+      nodes.more.hidden = !feature || shown >= list.length;
+      nodes.more.textContent = "Show more MCQs (" + Math.min(PAGE_SIZE, Math.max(0, list.length - shown)) + ")";
+      var unmatched = unmatchedPhysicalQuestions();
+      nodes.physicalUnmatched.hidden = false;
+      nodes.physicalUnmatchedSummary.textContent = unmatched.length + " related MCQs without a verified map pin";
+      var extra = document.createDocumentFragment();
+      unmatched.forEach(function (question) { extra.appendChild(displayQuestion(question)); });
+      nodes.physicalUnmatchedList.replaceChildren(extra);
+    }
+
+    function zoomToPhysical(feature) {
+      var point = project(feature.point);
+      var width = Math.min(view.width, physicalLayerFor(feature.kind) === "marine" ? 310 : 110);
+      var height = width * WORLD_HEIGHT / WORLD_WIDTH;
+      setView({ x: point[0] - width / 2, y: point[1] - height / 2, width: width });
+    }
+
+    function selectPhysical(id, center) {
+      var feature = physicalById.get(id);
+      if (!feature || physicalLayerFor(feature.kind) !== nodes.layer.value) return;
+      selectedPhysicalId = id;
+      shown = PAGE_SIZE;
+      nodes.svg.querySelectorAll("[data-physical-id].is-selected").forEach(function (node) { node.classList.remove("is-selected"); });
+      nodes.svg.querySelectorAll("[data-physical-id]").forEach(function (node) {
+        if (node.dataset.physicalId === id) node.classList.add("is-selected");
+      });
+      nodes.search.value = feature.name;
+      countryFilter = normalize(feature.name);
+      if (center) zoomToPhysical(feature);
+      renderPhysicalIndex();
+      renderPhysicalDetail();
+      hideTooltip();
     }
 
     function selectCountry(iso3, center) {
@@ -1015,13 +1266,32 @@
       nodes.tooltip.style.top = Math.max(6, top) + "px";
     }
 
+    function showPhysicalTooltip(id, clientX, clientY) {
+      var feature = physicalById.get(id);
+      if (!feature || drag && drag.moved) return;
+      if (tooltipIso3 !== "physical:" + id) {
+        tooltipIso3 = "physical:" + id;
+        var questions = physicalQuestionsFor(id);
+        var fragment = document.createDocumentFragment();
+        fragment.appendChild(make("strong", "", feature.name));
+        fragment.appendChild(make("span", "", questions.length + " linked MCQs"));
+        if (questions.length) fragment.appendChild(make("small", "", questions[0].question));
+        nodes.tooltip.replaceChildren(fragment);
+        nodes.tooltip.hidden = false;
+      }
+      var rect = nodes.stage.getBoundingClientRect();
+      nodes.tooltip.style.left = Math.max(6, Math.min(rect.width - nodes.tooltip.offsetWidth - 6, clientX - rect.left + 12)) + "px";
+      nodes.tooltip.style.top = Math.max(6, Math.min(rect.height - nodes.tooltip.offsetHeight - 6, clientY - rect.top + 12)) + "px";
+    }
+
     function shapeFromEvent(event) {
       var target = event.target;
-      var shape = target && typeof target.closest === "function" ? target.closest("[data-iso3]") : null;
+      var shape = target && typeof target.closest === "function" ? target.closest("[data-iso3], [data-physical-id]") : null;
       return shape && nodes.svg.contains(shape) ? shape : null;
     }
 
     function findCountry() {
+      if (isPhysicalMode()) { findPhysical(); return; }
       if (!features) {
         nodes.status.textContent = "Map load hone ke baad country search karein.";
         return;
@@ -1047,6 +1317,18 @@
       nodes.detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
 
+    function findPhysical() {
+      if (!physicalFeatures) { nodes.status.textContent = "Topic map load hone ke baad search karein."; return; }
+      var query = normalize(nodes.search.value);
+      if (!query) { nodes.status.textContent = "Feature ka naam likhein, phir Find dabayein."; return; }
+      var match = physicalList().find(function (feature) {
+        return [feature.name].concat(feature.aliases || []).some(function (alias) { return normalize(alias) === query; });
+      }) || physicalList().find(function (feature) { return normalize(feature.name).includes(query); });
+      if (!match) { nodes.status.textContent = "Is topic mein feature nahi mila. Naam ya spelling check karein."; return; }
+      selectPhysical(match.id, true);
+      nodes.detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+
     function loadMap() {
       if (features) return Promise.resolve(features);
       if (loading) return loading;
@@ -1065,15 +1347,8 @@
         features.forEach(function (feature) { countries.set(feature.properties.iso3, feature); });
         buildAliases();
         indexQuestions();
-        var choices = document.createDocumentFragment();
-        features.slice().sort(function (a, b) { return a.properties.name.localeCompare(b.properties.name); }).forEach(function (feature) {
-          var choice = make("option");
-          choice.value = feature.properties.name;
-          choices.appendChild(choice);
-        });
-        nodes.countries.replaceChildren(choices);
         renderMap();
-        renderCountryIndex();
+        applyLayer();
         return features;
       }).catch(function (error) {
         loading = null;
@@ -1091,13 +1366,120 @@
       return loading;
     }
 
+    function loadPhysical() {
+      if (physicalFeatures) return Promise.resolve(physicalFeatures);
+      if (physicalLoading) return physicalLoading;
+      physicalLoading = Promise.all([PHYSICAL_WATER_URL, PHYSICAL_TERRAIN_URL].map(function (url) {
+        return fetch(url).then(function (response) {
+          if (!response.ok) throw new Error("Physical map data request failed: " + response.status);
+          return response.json();
+        });
+      })).then(function (files) {
+        if (files.some(function (file) { return !file || file.schemaVersion !== 1 || !Array.isArray(file.features); })) {
+          throw new Error("Physical map data invalid");
+        }
+        physicalFeatures = files.flatMap(function (file) { return file.features; }).filter(function (feature) {
+          return feature && feature.id && feature.name && feature.kind && Array.isArray(feature.point) && feature.point.length === 2;
+        });
+        physicalById = new Map(physicalFeatures.map(function (feature) { return [feature.id, feature]; }));
+        indexPhysicalQuestions();
+        nodes.error.hidden = true;
+        nodes.retry.hidden = true;
+        if (isPhysicalMode()) applyLayer();
+        loadPhysicalGeometry();
+        return physicalFeatures;
+      }).catch(function (error) {
+        physicalLoading = null;
+        throw error;
+      });
+      return physicalLoading;
+    }
+
+    function renderSearchOptions() {
+      var choices = document.createDocumentFragment();
+      if (isPhysicalMode()) {
+        physicalList().forEach(function (feature) {
+          var choice = make("option"); choice.value = feature.name; choices.appendChild(choice);
+        });
+      } else if (features) {
+        features.slice().sort(function (a, b) { return a.properties.name.localeCompare(b.properties.name); }).forEach(function (feature) {
+          var choice = make("option"); choice.value = feature.properties.name; choices.appendChild(choice);
+        });
+      }
+      nodes.countries.replaceChildren(choices);
+    }
+
+    function applyLayer() {
+      if (!features) return;
+      var physical = isPhysicalMode();
+      var titles = { marine: "Oceans & seas", terrain: "Mountains & glaciers", rivers: "Rivers & canals", waterworks: "Barrages & dams" };
+      nodes.searchLabel.textContent = physical ? "Search map feature" : "Search country";
+      nodes.search.placeholder = physical ? "e.g. Indus River, K2, Arabian Sea" : "e.g. Pakistan, France";
+      nodes.countryIndexTitle.textContent = physical ? titles[nodes.layer.value] : "Countries / regions";
+      nodes.countryIndexDescription.textContent = physical
+        ? "Naam select karein; map marker, source aur related MCQs neeche dikhenge. Unpinned topic MCQs bhi available hain."
+        : "Search above or select a country to view its related MCQs. Clear search to show all names.";
+      nodes.footnote.textContent = physical
+        ? "Sirf verified feature names aur correct answers/curated MCQ IDs link hote hain; wrong options nahi. Ocean outlines aur kuch river centerlines generalized Natural Earth data se hain. Baqi points representative hain, exact boundaries ya complete routes nahi. Har feature ka source neeche diya hai."
+        : "Linking question aur us ke correct answer mein country/city names se hoti hai; wrong options count nahi hoti. Yeh map fact-check ya border-status reference nahi. Boundary data: Natural Earth (public domain).";
+      nodes.svg.classList.toggle("is-physical-mode", physical);
+      nodes.countryIndexList.replaceChildren();
+      nodes.search.value = "";
+      countryFilter = "";
+      shown = PAGE_SIZE;
+      activeDirectionId = null;
+      if (physical && !physicalFeatures) {
+        nodes.status.textContent = "Topic map load ho raha hai...";
+        nodes.countryIndexCount.textContent = "Loading features...";
+        nodes.detailTitle.textContent = "Loading map features...";
+        nodes.detailCount.textContent = "";
+        nodes.questionList.replaceChildren();
+        nodes.more.hidden = true;
+        nodes.countryMap.hidden = true;
+        nodes.compassGuide.hidden = true;
+        nodes.directionFilter.hidden = true;
+        loadPhysical().catch(function () {
+          nodes.error.hidden = false;
+          nodes.retry.hidden = false;
+          nodes.status.textContent = "Topic map load nahi ho saka. Try again dabayein.";
+        });
+        return;
+      }
+      if (physical) selectedPhysicalId = null;
+      renderSearchOptions();
+      renderPhysicalLayer();
+      updateColors();
+      renderCountryIndex();
+      if (physical || selectedIso3) renderDetail();
+      else {
+        nodes.detailTitle.textContent = "Select a country";
+        nodes.detailCount.textContent = "Map par country select karein; us se linked MCQs yahan aayenge.";
+        nodes.physicalMeta.hidden = true;
+        nodes.physicalUnmatched.hidden = true;
+        nodes.compassGuide.hidden = false;
+        nodes.directionFilter.hidden = false;
+        nodes.countryMap.hidden = true;
+        nodes.questionList.replaceChildren();
+      }
+      if (physical && ["rivers", "waterworks"].includes(nodes.layer.value)) {
+        var pakistan = project([70.7, 30.5]);
+        setView({ x: pakistan[0] - 85, y: pakistan[1] - 42.5, width: 170 });
+      } else setView({ x: 0, y: 0, width: WORLD_WIDTH });
+      hideTooltip();
+    }
+
     function show() {
       nodes.error.hidden = true;
       nodes.retry.hidden = true;
       if (features) {
+        if (isPhysicalMode() && !physicalFeatures) return loadPhysical().catch(function () {
+          nodes.error.hidden = false;
+          nodes.retry.hidden = false;
+          nodes.status.textContent = "Topic map load nahi ho saka.";
+        });
         updateColors();
         scheduleLabels();
-        if (selectedIso3) renderCountryMap();
+        if (selectedIso3 && !isPhysicalMode()) renderCountryMap();
         return Promise.resolve();
       }
       nodes.status.textContent = "Map load ho raha hai...";
@@ -1114,10 +1496,13 @@
       if (initialized) return;
       initialized = true;
       options = config;
-      ["screen", "card", "back", "search", "countries", "find", "category", "zoom-in", "zoom-out", "reset",
-        "status", "error", "retry", "stage", "svg", "tooltip", "detail", "detail-title", "detail-count",
-        "question-list", "more", "direction-only", "direction-count", "country-index-list", "country-index-count", "country-map",
-        "country-map-title", "country-map-summary", "country-svg", "country-cities", "country-map-empty"].forEach(function (key) {
+      ["screen", "card", "back", "layer", "search", "search-label", "countries", "find", "category", "zoom-in", "zoom-out", "reset",
+        "status", "error", "retry", "stage", "svg", "tooltip", "footnote", "detail", "detail-title", "detail-count",
+        "question-list", "more", "direction-only", "direction-count", "direction-filter", "compass-guide",
+        "country-index-list", "country-index-count", "country-index-title", "country-index-description", "country-map",
+        "country-map-title", "country-map-summary", "country-svg", "country-cities", "country-map-empty",
+        "physical-meta", "physical-note", "physical-source", "physical-unmatched", "physical-unmatched-summary",
+        "physical-unmatched-list"].forEach(function (key) {
         var camel = key.replace(/-([a-z])/g, function (_, letter) { return letter.toUpperCase(); });
         nodes[camel] = document.getElementById("world-map-" + key);
       });
@@ -1134,6 +1519,7 @@
         nodes.card.focus({ preventScroll: true });
       });
       nodes.retry.addEventListener("click", show);
+      nodes.layer.addEventListener("change", applyLayer);
       nodes.find.addEventListener("click", findCountry);
       nodes.search.addEventListener("keydown", function (event) {
         if (event.key === "Enter") { event.preventDefault(); findCountry(); }
@@ -1143,6 +1529,14 @@
         renderCountryIndex();
       });
       nodes.countryIndexList.addEventListener("click", function (event) {
+        var physicalButton = event.target.closest("button[data-physical-id]");
+        if (physicalButton && isPhysicalMode()) {
+          selectPhysical(physicalButton.dataset.physicalId, true);
+          var restoredPhysical = Array.from(nodes.countryIndexList.querySelectorAll("button[data-physical-id]"))
+            .find(function (button) { return button.dataset.physicalId === physicalButton.dataset.physicalId; });
+          if (restoredPhysical) restoredPhysical.focus({ preventScroll: true });
+          return;
+        }
         var button = event.target.closest("button[data-iso3]");
         if (!button) return;
         var iso3 = button.dataset.iso3;
@@ -1154,8 +1548,9 @@
         if (!features) return;
         updateColors();
         renderCountryIndex();
+        if (isPhysicalMode()) renderPhysicalLayer();
         scheduleLabels();
-        if (selectedIso3) { shown = PAGE_SIZE; renderDetail(); }
+        if (selectedIso3 || isPhysicalMode()) { shown = PAGE_SIZE; renderDetail(); }
         hideTooltip();
       });
       nodes.directionOnly.addEventListener("change", function () {
@@ -1186,7 +1581,9 @@
         if (!features || event.button !== 0 || drag) return;
         var shape = shapeFromEvent(event);
         drag = { pointerId: event.pointerId, clientX: event.clientX, clientY: event.clientY,
-          iso3: shape ? shape.dataset.iso3 : null, view: Object.assign({}, view), moved: false, captured: false };
+          iso3: shape && !isPhysicalMode() ? shape.dataset.iso3 : null,
+          physicalId: shape && isPhysicalMode() ? shape.dataset.physicalId : null,
+          view: Object.assign({}, view), moved: false, captured: false };
       });
       nodes.svg.addEventListener("pointermove", function (event) {
         if (drag && drag.pointerId === event.pointerId) {
@@ -1206,17 +1603,22 @@
           return;
         }
         var shape = shapeFromEvent(event);
-        if (shape && event.pointerType !== "touch") showTooltip(shape.dataset.iso3, event.clientX, event.clientY);
+        if (shape && event.pointerType !== "touch" && isPhysicalMode() && shape.dataset.physicalId) {
+          showPhysicalTooltip(shape.dataset.physicalId, event.clientX, event.clientY);
+        } else if (shape && event.pointerType !== "touch" && !isPhysicalMode() && shape.dataset.iso3) {
+          showTooltip(shape.dataset.iso3, event.clientX, event.clientY);
+        }
         else hideTooltip();
       });
       function endDrag(event) {
         if (!drag || drag.pointerId !== event.pointerId) return;
-        if (drag.moved || (drag.iso3 && event.type !== "pointercancel" && nodes.svg.contains(event.target))) {
+        if (drag.moved || ((drag.iso3 || drag.physicalId) && event.type !== "pointercancel" && nodes.svg.contains(event.target))) {
           suppressClick = true;
           window.setTimeout(function () { suppressClick = false; }, 350);
         }
-        if (!drag.moved && drag.iso3 && event.type !== "pointercancel" && nodes.svg.contains(event.target)) {
-          selectCountry(drag.iso3, false);
+        if (!drag.moved && event.type !== "pointercancel" && nodes.svg.contains(event.target)) {
+          if (drag.physicalId) selectPhysical(drag.physicalId, false);
+          else if (drag.iso3) selectCountry(drag.iso3, false);
         }
         drag = null;
       }
@@ -1228,17 +1630,19 @@
       nodes.svg.addEventListener("click", function (event) {
         if (suppressClick) { suppressClick = false; return; }
         var shape = shapeFromEvent(event);
-        if (shape) selectCountry(shape.dataset.iso3, false);
+        if (shape && isPhysicalMode() && shape.dataset.physicalId) selectPhysical(shape.dataset.physicalId, false);
+        else if (shape && !isPhysicalMode() && shape.dataset.iso3) selectCountry(shape.dataset.iso3, false);
       });
       nodes.svg.addEventListener("keydown", function (event) {
         if (event.key !== "Enter" && event.key !== " ") return;
         var shape = shapeFromEvent(event);
         if (!shape) return;
         event.preventDefault();
-        selectCountry(shape.dataset.iso3, false);
+        if (isPhysicalMode() && shape.dataset.physicalId) selectPhysical(shape.dataset.physicalId, false);
+        else if (!isPhysicalMode() && shape.dataset.iso3) selectCountry(shape.dataset.iso3, false);
         nodes.detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
       });
-      window.addEventListener("resize", scheduleLabels);
+      window.addEventListener("resize", function () { scheduleLabels(); resizePhysicalMarkers(); });
       window.addEventListener("resize", function () { if (selectedIso3 && !nodes.screen.hidden) renderCountryMap(); });
       window.addEventListener("online", function () {
         if (!cityUnavailable || !selectedIso3 || nodes.screen.hidden) return;

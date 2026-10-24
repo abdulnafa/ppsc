@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#12366b">
   <title>PPSC Prep — Category-wise MCQ Practice</title>
   <script src="theme.js?v=20260923-1"></script>
-  <link rel="stylesheet" href="styles.css?v=20261024-1">
+  <link rel="stylesheet" href="styles.css?v=20261024-2">
   <script src="firebase-config.js?v=20260912-2" defer></script>
   <script src="firebase-sync.js?v=20261021-1" defer></script>
   <script src="data/questions.js?v=20261021-2" defer></script>
@@ -18,7 +18,7 @@
   <script src="water-topics.js?v=20261020-2" defer></script>
   <script src="prime-ministers.js?v=20261021-2" defer></script>
   <script src="organizations-topics.js?v=20261021-1" defer></script>
-  <script src="world-map.js?v=20261024-1" defer></script>
+  <script src="world-map.js?v=20261024-2" defer></script>
   <script src="app.js?v=20261024-1" defer></script>
 </head>
 <body>
@@ -656,10 +656,19 @@
         <header class="world-map-header">
           <p class="eyebrow">STUDY TOOLS / GEOGRAPHY</p>
           <h1 id="world-map-title">World MCQ Map</h1>
-          <p lang="ur-Latn">Country par hover ya tap karein. Naam map par dikhte hain aur zoom ke saath mazeed naam nazar aate hain. Rang jitna gehra ho, utne zyada linked MCQs hain.</p>
+          <p lang="ur-Latn">Countries, samandar, pahaar, rivers aur barrages/dams ko map par dekhein. Kisi naam ya marker par tap karein to us se linked MCQs khul jayenge.</p>
         </header>
         <div class="world-map-controls">
-          <label for="world-map-search">Search country
+          <label for="world-map-layer">Map topic
+            <select id="world-map-layer">
+              <option value="countries">Countries &amp; cities</option>
+              <option value="marine">Oceans &amp; seas</option>
+              <option value="terrain">Mountains &amp; glaciers</option>
+              <option value="rivers">Rivers &amp; canals</option>
+              <option value="waterworks">Barrages &amp; dams</option>
+            </select>
+          </label>
+          <label for="world-map-search"><span id="world-map-search-label">Search country</span>
             <input id="world-map-search" type="search" list="world-map-countries" autocomplete="off" placeholder="e.g. Pakistan, France">
           </label>
           <datalist id="world-map-countries"></datalist>
@@ -678,7 +687,7 @@
           <div class="world-map-country-index-heading">
             <div>
               <h2 id="world-map-country-index-title">Countries / regions</h2>
-              <p>Search above or select a country to view its related MCQs. Clear search to show all names.</p>
+              <p id="world-map-country-index-description">Search above or select a country to view its related MCQs. Clear search to show all names.</p>
             </div>
             <span id="world-map-country-index-count" class="world-map-country-index-count" aria-live="polite">Loading countries...</span>
           </div>
@@ -702,10 +711,14 @@
           <svg id="world-map-svg" viewBox="0 0 1000 500" role="group" aria-label="World countries colored by related MCQ count"></svg>
           <div id="world-map-tooltip" class="world-map-tooltip" role="status" hidden></div>
         </div>
-        <p class="world-map-footnote" lang="ur-Latn">Linking question aur us ke correct answer mein country/city names se hoti hai; wrong options count nahi hoti. Yeh map fact-check ya border-status reference nahi. Boundary data: Natural Earth (public domain).</p>
+        <p id="world-map-footnote" class="world-map-footnote" lang="ur-Latn">Linking question aur us ke correct answer mein country/city names se hoti hai; wrong options count nahi hoti. Yeh map fact-check ya border-status reference nahi. Boundary data: Natural Earth (public domain).</p>
         <section id="world-map-detail" class="world-map-detail" aria-labelledby="world-map-detail-title">
           <h2 id="world-map-detail-title">Select a country</h2>
           <p id="world-map-detail-count" role="status" aria-live="polite">Map par country select karein; us se linked MCQs yahan aayenge.</p>
+          <div id="world-map-physical-meta" class="world-map-physical-meta" hidden>
+            <p id="world-map-physical-note"></p>
+            <a id="world-map-physical-source" href="#" target="_blank" rel="noopener noreferrer">Location source</a>
+          </div>
           <section id="world-map-country-map" class="world-map-country-map" aria-labelledby="world-map-country-map-title" hidden>
             <div class="world-map-country-map-heading">
               <div>
@@ -729,6 +742,11 @@
           </div>
           <div id="world-map-question-list" class="world-map-question-list"></div>
           <button id="world-map-more" class="secondary-button" type="button" hidden>Show more MCQs</button>
+          <details id="world-map-physical-unmatched" class="world-map-physical-unmatched" hidden>
+            <summary id="world-map-physical-unmatched-summary">Related MCQs without a verified map pin</summary>
+            <p>In sawalon ko ghalat jagah pin nahi kiya gaya. Yeh list selected topic/category ke related MCQs ki revision ke liye hai.</p>
+            <div id="world-map-physical-unmatched-list" class="world-map-question-list"></div>
+          </details>
         </section>
       </article>
     </section>

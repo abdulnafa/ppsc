@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "features": [
+    {
+      "id": "river-indus", "kind": "river", "name": "Indus River", "aliases": ["River Indus", "Sindhu", "Darya-e-Sindh"],
+      "point": [70.85, 30.51], "geoNote": "Representative label near Taunsa on the Indus; this is not the river's full course.",
+      "sourceUrl": "https://pakemb.de/about-pakistan/basic-facts/",
+      "questionIds": ["ADV2E102-U0008-Q048-SRC", "ADV2E102-U0008-Q048-SIM", "ADV2E102-U0001-Q024-SIM", "ADV2E102-U0081-Q030-SIM"]
+    },
+    {
+      "id": "river-kabul", "kind": "river", "name": "Kabul River", "aliases": ["River Kabul"],
+      "point": [72.233, 33.917], "geoNote": "Representative label at the Indus confluence near Attock, not the full river course.",
+      "sourceUrl": "https://thedocs.worldbank.org/en/doc/077011426840100622-0560011979/original/WorldBankGroupArchivesfolder1770210.pdf",
+      "questionIds": ["ADV2E102-U0003-Q011-SRC", "ADV2E102-U0003-Q011-SIM"]
+    },
+    {
+      "id": "river-jhelum", "kind": "river", "name": "Jhelum River", "aliases": ["River Jhelum", "Jhelum"],
+      "point": [73.64, 33.13], "geoNote": "Representative label at the Mangla reach; not the full river course.",
+      "sourceUrl": "https://pndajk.gov.pk/uploadfiles/downloads/Statistical%20Year%20Book%202025.pdf",
+      "questionIds": ["ADV2E102-U0010-Q036-SRC", "ADV2E102-U0010-Q036-SIM", "ADV2E102-U0012-Q036-SIM", "ADV2E102-U0035-Q040-SRC"]
+    },
+    {
+      "id": "river-neelum", "kind": "river", "name": "Neelum River", "aliases": ["Kishanganga River", "Neelum"],
+      "point": [73.46, 34.37], "geoNote": "Representative label near its confluence at Muzaffarabad; not the full river course.",
+      "sourceUrl": "https://pndajk.gov.pk/uploadfiles/downloads/Statistical%20Year%20Book%202025.pdf",
+      "questionIds": ["ADV2E102-U0012-Q036-SIM", "ADV2E102-U0024-Q004-SRC", "ADV2E102-U0024-Q004-SIM"]
+    },
+    {
+      "id": "river-poonch", "kind": "river", "name": "Poonch River", "aliases": ["River Poonch"],
+      "point": [73.71, 33.42], "geoNote": "Representative label near the Mangla reservoir arm; not the full river course.",
+      "sourceUrl": "https://archaeology.ajk.gov.pk/geographical-background/",
+      "questionIds": ["ADV2E102-U0035-Q040-SRC", "ADV2E102-U0035-Q040-SIM"]
+    },
+    {
+      "id": "river-ravi", "kind": "river", "name": "Ravi River", "aliases": ["River Ravi", "Ravi"],
+      "point": [74.36, 31.58], "geoNote": "Representative label beside Lahore; ancient Harappa course differed from today's channel.",
+      "sourceUrl": "https://lahore.punjab.gov.pk/geographic_conditions",
+      "questionIds": ["ADV2E102-U0101-Q033-SIM", "ADV2E102-U0091-Q029-SIM", "ADV2E102-U0002-Q060-SRC"]
+    },
+    {
+      "id": "river-chenab", "kind": "river", "name": "Chenab River", "aliases": ["River Chenab", "Chenab"],
+      "point": [73.68, 32.34], "geoNote": "Representative label near Qadirabad Barrage; not the full river course.",
+      "sourceUrl": "https://ffc.gov.pk/wp-content/uploads/2020/07/Breaching-Sections-on-Barrages-Headworks.pdf",
+      "questionIds": ["P236-Q019-SRC", "P239-Q019-SRC", "ADV2E102-U0013-Q032-SRC", "ADV2E102-U0011-Q037-SIM"]
+    },
+    {
+      "id": "river-sutlej", "kind": "river", "name": "Sutlej River", "aliases": ["Satluj", "River Sutlej"],
+      "point": [73.87, 30.38], "geoNote": "Representative label near Sulemanki on the Pakistan reach; not the full river course.",
+      "sourceUrl": "https://cwc.gov.in/en/ibo/about-basins",
+      "questionIds": ["ADV2E102-U0002-Q060-SRC", "ADV2E102-U0002-Q060-SIM"]
+    },
+    {
+      "id": "river-beas", "kind": "river", "name": "Beas River", "aliases": ["River Beas", "Beas"],
+      "point": [74.975, 31.154], "geoNote": "Representative label near Harike in India; the Beas does not enter Pakistan separately.",
+      "sourceUrl": "https://hppcb.hp.gov.in/NGT/RAP-V-Beas.pdf",
+      "questionIds": ["ADV2E102-U0018-Q044-SRC", "ADV2E102-U0018-Q044-SIM", "ADV2E102-U0002-Q041-SRC"]
+    },
+    {
+      "id": "river-hingol", "kind": "river", "name": "Hingol River", "aliases": ["River Hingol"],
+      "point": [65.467, 25.383], "geoNote": "Representative label on the lower Hingol; not the full river course.",
+      "sourceUrl": "https://balochistan.gov.pk/explore/",
+      "questionIds": ["ADV2E102-U0023-Q042-SRC", "ADV2E102-U0023-Q042-SIM", "ADV2E102-U0162-Q010-SRC"]
+    },
+    {
+      "id": "river-zhob", "kind": "river", "name": "Zhob River", "aliases": ["River Zhob"],
+      "point": [69.45, 31.34], "geoNote": "Representative label by Zhob city; not the river's full course.",
+      "sourceUrl": "https://balochistan.gov.pk/explore/",
+      "questionIds": ["ADV2E102-U0091-Q041-SRC", "ADV2E102-U0091-Q041-SIM"]
+    },
+    {
+      "id": "river-gomal", "kind": "river", "name": "Gomal River", "aliases": ["River Gomal"],
+      "point": [69.88, 32.10], "geoNote": "Representative label at Gomal Zam Dam; not the full river course.",
+      "sourceUrl": "https://wapda.gov.pk/gomal-zam-dam/",
+      "questionIds": ["ADV2E102-U0091-Q041-SIM", "ADV2E102-U0022-Q041-SIM"]
+    },
+    {
+      "id": "river-dasht", "kind": "river", "name": "Dasht River", "aliases": ["River Dasht"],
+      "point": [62.69, 25.94], "geoNote": "Representative label at Mirani Dam; not the full river course.",
+      "sourceUrl": "https://wapda.gov.pk/mirani-dam/",
+      "questionIds": ["ADV2E102-U0162-Q010-SRC", "ADV2E102-U0162-Q010-SIM", "ADV2E102-U0131-Q025-SRC"]
+    },
+    {
+      "id": "river-porali", "kind": "river", "name": "Porali River", "aliases": ["River Porali"],
+      "point": [66.31, 26.22], "geoNote": "Representative label by Bela in Lasbela; not the full river course.",
+      "sourceUrl": "https://balochistan.gov.pk/explore/",
+      "questionIds": ["ADV2E102-U0162-Q010-SIM"]
+    },
+    {
+      "id": "river-hub", "kind": "river", "name": "Hub River", "aliases": ["River Hub"],
+      "point": [67.126, 25.28], "geoNote": "Representative label at the Hub Dam reach; not the full river course.",
+      "sourceUrl": "https://wapda.gov.pk/hub-dam/",
+      "questionIds": ["P236-Q022-SIM"]
+    },
+    {
+      "id": "river-haro", "kind": "river", "name": "Haro River", "aliases": ["River Haro"],
+      "point": [72.93, 33.80], "geoNote": "Representative label at Khanpur Dam; not the full river course.",
+      "sourceUrl": "https://wapda.gov.pk/wp-content/uploads/2025/12/Annual-Report-2022-23_compressed-latest.pdf",
+      "questionIds": ["ADV2E102-U0041-Q019-SRC"]
+    },
+    {
+      "id": "river-soan", "kind": "river", "name": "Soan River", "aliases": ["Swan River", "River Soan"],
+      "point": [73.34, 33.72], "geoNote": "Representative label at Simly Dam; not the full river course.",
+      "sourceUrl": "https://pcrwr.gov.pk/wp-content/uploads/2023/02/Water-Quality-Profile-of-Surface-Water-Bodies-in-Pakistan-2022.pdf",
+      "questionIds": ["ADV2E102-U0016-Q048-SRC"]
+    },
+    {
+      "id": "river-korang", "kind": "river", "name": "Korang River", "aliases": ["Kurang River", "River Korang"],
+      "point": [73.12, 33.69], "geoNote": "Representative label at Rawal Dam/Rawal Lake; not the full river course.",
+      "sourceUrl": "https://pcrwr.gov.pk/wp-content/uploads/2023/02/Water-Quality-Profile-of-Surface-Water-Bodies-in-Pakistan-2022.pdf",
+      "questionIds": ["ADV2E102-U0016-Q048-SIM", "ADV2E102-U0071-Q034-SRC"]
+    },
+    {
+      "id": "river-gaj", "kind": "river", "name": "Gaj River", "aliases": ["Nai Gaj", "Gaj hill torrent"],
+      "point": [67.317, 26.867], "geoNote": "Representative label at the Nai Gaj Dam site; not the full river course.",
+      "sourceUrl": "https://wapda.gov.pk/wp-content/uploads/2025/12/Annual-Report-2022-23_compressed-latest.pdf",
+      "questionIds": ["ADV2E102-U0040-Q033-SRC", "ADV2E102-U0040-Q033-SIM"]
+    },
+    {
+      "id": "dam-tarbela", "kind": "dam", "name": "Tarbela Dam", "aliases": ["Tarbela"],
+      "point": [72.694, 34.088], "geoNote": "Approximate dam marker on the Indus, not a surveyed boundary.",
+      "sourceUrl": "https://wapda.gov.pk/hydro-power-and-water-projects/tarbela-dam/",
+      "questionIds": ["P237-Q016-SRC", "P237-Q016-SIM", "ADV2E102-U0018-Q024-SRC", "ADV2E102-U0018-Q024-SIM", "ADV2E102-U0032-Q028-SRC", "ADV2E102-U0032-Q028-SIM"]
+    },
+    {
+      "id": "dam-mangla", "kind": "dam", "name": "Mangla Dam", "aliases": ["Mangla"],
+      "point": [73.644, 33.126], "geoNote": "Approximate dam marker on the Jhelum, not the reservoir outline.",
+      "sourceUrl": "https://wapda.gov.pk/mangla-dam/",
+      "questionIds": ["ADV2E102-U0017-Q048-SRC", "ADV2E102-U0017-Q048-SIM"]
+    },
+    {
+      "id": "dam-warsak", "kind": "dam", "name": "Warsak Dam", "aliases": ["Warsak"],
+      "point": [71.358, 34.164], "geoNote": "Approximate dam marker on the Kabul River northwest of Peshawar.",
+      "sourceUrl": "https://wapda.gov.pk/warsak-dam/",
+      "questionIds": ["ADV2E102-U0011-Q030-SRC", "ADV2E102-U0011-Q030-SIM", "ADV2E102-U0160-Q066-SRC", "ADV2E102-U0160-Q066-SIM"]
+    },
+    {
+      "id": "dam-diamer-basha", "kind": "dam", "name": "Diamer-Bhasha Dam", "aliases": ["Diamer Basha Dam", "Bhasha Dam"],
+      "point": [73.607, 35.542], "geoNote": "Approximate project-site marker on the Indus downstream of Chilas; not the planned reservoir outline.",
+      "sourceUrl": "https://wapda.gov.pk/diamer-basha-dam-project/",
+      "questionIds": ["ADV2E102-U0005-Q016-SRC", "ADV2E102-U0005-Q016-SIM", "ADV2E102-U0021-Q022-SRC", "ADV2E102-U0021-Q022-SIM"]
+    },
+    {
+      "id": "dam-hub", "kind": "dam", "name": "Hub Dam", "aliases": ["Hub River Dam"],
+      "point": [67.126, 25.28], "geoNote": "Approximate dam-area marker on the Sindh-Balochistan border, not the reservoir outline.",
+      "sourceUrl": "https://wapda.gov.pk/hub-dam/",
+      "questionIds": ["P236-Q022-SRC", "P236-Q022-SIM"]
+    },
+    {
+      "id": "dam-mirani", "kind": "dam", "name": "Mirani Dam", "aliases": ["Mirani"],
+      "point": [62.693, 25.941], "geoNote": "Approximate dam marker west of Turbat on the Dasht River.",
+      "sourceUrl": "https://wapda.gov.pk/mirani-dam/",
+      "questionIds": ["ADV2E102-U0009-Q025-SRC", "ADV2E102-U0009-Q025-SIM", "ADV2E102-U0131-Q025-SRC", "ADV2E102-U0131-Q025-SIM"]
+    },
+    {
+      "id": "dam-gomal-zam", "kind": "dam", "name": "Gomal Zam Dam", "aliases": ["Gomal Zam"],
+      "point": [69.881, 32.098], "geoNote": "Approximate dam marker on the Gomal River in South Waziristan.",
+      "sourceUrl": "https://wapda.gov.pk/gomal-zam-dam/",
+      "questionIds": ["ADV2E102-U0022-Q041-SRC", "ADV2E102-U0022-Q041-SIM"]
+    },
+    {
+      "id": "dam-nai-gaj", "kind": "dam", "name": "Nai Gaj Dam", "aliases": ["Nai Gaj"],
+      "point": [67.317, 26.867], "geoNote": "Project-site coordinates given by WAPDA; this does not imply the dam has been completed.",
+      "sourceUrl": "https://wapda.gov.pk/wp-content/uploads/2025/12/Annual-Report-2022-23_compressed-latest.pdf",
+      "questionIds": ["ADV2E102-U0040-Q033-SRC", "ADV2E102-U0040-Q033-SIM"]
+    },
+    {
+      "id": "dam-khanpur", "kind": "dam", "name": "Khanpur Dam", "aliases": ["Khanpur"],
+      "point": [72.929, 33.803], "geoNote": "Approximate dam marker on the Haro River; not the reservoir outline.",
+      "sourceUrl": "https://wapda.gov.pk/wp-content/uploads/2025/12/Annual-Report-2022-23_compressed-latest.pdf",
+      "questionIds": ["ADV2E102-U0041-Q019-SRC", "ADV2E102-U0041-Q019-SIM"]
+    },
+    {
+      "id": "dam-simly", "kind": "dam", "name": "Simly Dam", "aliases": ["Simly"],
+      "point": [73.342, 33.721], "geoNote": "Approximate dam marker on the Soan River near Islamabad.",
+      "sourceUrl": "https://pcrwr.gov.pk/wp-content/uploads/2023/02/Water-Quality-Profile-of-Surface-Water-Bodies-in-Pakistan-2022.pdf",
+      "questionIds": ["ADV2E102-U0016-Q048-SRC"]
+    },
+    {
+      "id": "dam-rawal", "kind": "dam", "name": "Rawal Dam", "aliases": ["Rawal"],
+      "point": [73.122, 33.694], "geoNote": "Approximate marker at Rawal Lake on the Korang River; not the dam-structure footprint.",
+      "sourceUrl": "https://ffc.gov.pk/wp-content/uploads/2022/03/Final-National-Register-of-Dams-Sep.-2018.pdf",
+      "questionIds": ["ADV2E102-U0016-Q048-SIM", "ADV2E102-U0071-Q034-SRC", "ADV2E102-U0071-Q034-SIM", "ADV2E102-U0170-Q036-SRC", "ADV2E102-U0170-Q036-SIM"]
+    },
+    {
+      "id": "dam-satpara", "kind": "dam", "name": "Satpara Dam", "aliases": ["Satpara"],
+      "point": [75.638, 35.244], "geoNote": "Approximate dam marker south of Skardu; not the lake outline.",
+      "sourceUrl": "https://wapda.gov.pk/satpara-dam/",
+      "questionIds": ["ADV2E102-U0024-Q032-SRC", "ADV2E102-U0024-Q032-SIM"]
+    },
+    {
+      "id": "dam-wali-tangi", "kind": "dam", "name": "Wali Tangi Dam", "aliases": ["Wali Tangi Dam Lake", "Wali Tangai"],
+      "point": [67.24, 30.26], "geoNote": "Approximate Urak Valley marker east of Quetta, not a surveyed dam coordinate.",
+      "sourceUrl": "https://www.salampakistan.gov.pk/where-to-go/category/valleys-and-lakes/location/wali-tangi-dam-lake",
+      "questionIds": ["ADV2E102-U0016-Q053-SRC", "ADV2E102-U0016-Q053-SIM"]
+    },
+    {
+      "id": "barrage-sukkur", "kind": "barrage", "name": "Sukkur Barrage", "aliases": ["Lloyd Barrage"],
+      "point": [68.846, 27.677], "geoNote": "Approximate structure marker across the Indus near Sukkur.",
+      "sourceUrl": "https://irrigation.sindh.gov.pk/public/SukkurLeftBankRegion",
+      "questionIds": ["P234-Q015-SRC", "ADV2E102-U0011-Q023-SRC", "ADV2E102-U0011-Q023-SIM", "ADV2E102-U0023-Q047-SIM"]
+    },
+    {
+      "id": "barrage-guddu", "kind": "barrage", "name": "Guddu Barrage", "aliases": ["Guddu"],
+      "point": [69.713, 28.419], "geoNote": "Approximate structure marker across the Indus near Kashmore.",
+      "sourceUrl": "https://irrigation.sindh.gov.pk/public/guddubarrage",
+      "questionIds": ["P234-Q015-SIM"]
+    },
+    {
+      "id": "barrage-kotri", "kind": "barrage", "name": "Kotri Barrage", "aliases": ["Ghulam Muhammad Barrage", "Ghulam Mohammed Barrage"],
+      "point": [68.316, 25.442], "geoNote": "Approximate structure marker across the Indus near Kotri/Hyderabad.",
+      "sourceUrl": "https://irrigation.sindh.gov.pk/public/KotriBarrage",
+      "questionIds": ["ADV2E102-U0013-Q040-SRC", "ADV2E102-U0013-Q040-SIM"]
+    },
+    {
+      "id": "barrage-trimmu", "kind": "barrage", "name": "Trimmu Barrage", "aliases": ["Trimmu Headworks", "Trimmu"],
+      "point": [72.147, 31.145], "geoNote": "Approximate structure marker below the Chenab-Jhelum confluence near Jhang.",
+      "sourceUrl": "https://jhang.punjab.gov.pk/important-places",
+      "questionIds": ["P236-Q019-SRC", "P236-Q019-SIM", "P239-Q019-SRC", "P239-Q019-SIM"]
+    },
+    {
+      "id": "barrage-khanki", "kind": "barrage", "name": "Khanki Barrage", "aliases": ["Khanki Headworks", "New Khanki Barrage"],
+      "point": [73.969, 32.408], "geoNote": "Approximate structure marker across the Chenab near Wazirabad.",
+      "sourceUrl": "https://pmo-pb.gop.pk/pages/resource.php?pid=6",
+      "questionIds": ["ADV2E102-U0013-Q032-SRC", "ADV2E102-U0013-Q032-SIM", "ADV2E102-U0159-Q034-SRC", "ADV2E102-U0159-Q034-SIM"]
+    },
+    {
+      "id": "barrage-taunsa", "kind": "barrage", "name": "Taunsa Barrage", "aliases": ["Taunsa"],
+      "point": [70.849, 30.513], "geoNote": "Approximate structure marker across the Indus near Taunsa.",
+      "sourceUrl": "https://tdcp.gop.pk/districts/taunsa",
+      "questionIds": ["ADV2E102-U0101-Q040-SRC", "ADV2E102-U0101-Q040-SIM"]
+    },
+    {
+      "id": "barrage-chashma", "kind": "barrage", "name": "Chashma Barrage", "aliases": ["Chashma"],
+      "point": [71.38, 32.436], "geoNote": "Approximate structure marker on the Indus at the Chashma-Jhelum Link Canal offtake.",
+      "sourceUrl": "https://wapda.gov.pk/wp-content/uploads/2025/12/Annual-Report-2022-23_compressed-latest.pdf",
+      "questionIds": ["ADV2E102-U0081-Q017-SIM"]
+    },
+    {
+      "id": "canal-nara", "kind": "canal", "name": "Nara Canal", "aliases": ["Nara"],
+      "point": [68.89, 27.65], "geoNote": "Marker at the Sukkur Barrage offtake, not a drawn canal route.",
+      "sourceUrl": "https://irrigation.sindh.gov.pk/public/SukkurLeftBankRegion",
+      "questionIds": ["ADV2E102-U0023-Q047-SRC", "ADV2E102-U0023-Q047-SIM"]
+    },
+    {
+      "id": "canal-lower-chenab", "kind": "canal", "name": "Lower Chenab Canal", "aliases": ["LCC"],
+      "point": [73.98, 32.40], "geoNote": "Marker at its Khanki Barrage offtake, not a drawn canal route.",
+      "sourceUrl": "https://pmo-pb.gop.pk/pages/resource.php?pid=6",
+      "questionIds": ["ADV2E102-U0159-Q034-SIM"]
+    },
+    {
+      "id": "canal-chashma-jhelum", "kind": "canal", "name": "Chashma-Jhelum Link Canal", "aliases": ["CJ Link Canal", "C-J Link Canal"],
+      "point": [71.39, 32.43], "geoNote": "Marker at the Chashma Barrage offtake on the Indus, not a drawn canal route.",
+      "sourceUrl": "https://wapda.gov.pk/wp-content/uploads/2025/12/Annual-Report-2022-23_compressed-latest.pdf",
+      "questionIds": ["ADV2E102-U0081-Q017-SRC", "ADV2E102-U0081-Q017-SIM"]
+    },
+    {
+      "id": "reservoir-banjosa", "kind": "reservoir", "name": "Banjosa Lake", "aliases": ["Banjosa Reservoir"],
+      "point": [73.816, 33.81], "geoNote": "Representative lake-area marker near Rawalakot; not the reservoir boundary.",
+      "sourceUrl": "https://www.salampakistan.gov.pk/where-to-go/category/azad-jamu-khashmir/location/banjosa-lake",
+      "questionIds": ["ADV2E102-U0014-Q056-SRC", "ADV2E102-U0014-Q056-SIM"]
+    }
+  ]
+}
