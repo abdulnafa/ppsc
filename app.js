@@ -64,6 +64,7 @@
     "job-related-finance-taxation:all": "v1:3:26d5ddb"
   };
   var BASIC_COMPUTER_CATEGORY_ID = "basic-computer-studies";
+  var BASIC_MATHEMATICS_CATEGORY_ID = "basic-mathematics";
   var COMPUTER_SOURCE_SCOPES = ["all", "initial-original", "initial-related", "other"];
   var data = window.PPSC_QUIZ_DATA || {};
   var categories = Array.isArray(data.categories) ? data.categories : [];
@@ -507,6 +508,10 @@
 
   function isBasicComputerCategory(categoryId) {
     return String(categoryId || "") === BASIC_COMPUTER_CATEGORY_ID;
+  }
+
+  function isBasicMathematicsCategory(categoryId) {
+    return String(categoryId || "") === BASIC_MATHEMATICS_CATEGORY_ID;
   }
 
   function isComputerSourceScope(value) {
@@ -5354,8 +5359,15 @@
         + state.category.name + ".";
     }
     if (elements.questionRangeHelp) {
+      var mathContextHelp = selectedScope === "all" && !state.importantOnly
+        ? "Include a source MCQ in your range when its related question needs context."
+        : "A filtered list may omit a related question's source MCQ.";
+      var orderHelp = isBasicMathematicsCategory(state.category.id)
+        ? "Math MCQs stay in their original source-to-similar order. " + mathContextHelp
+          + " Continue keeps the saved order."
+        : "The chosen MCQs shuffle at the start of each new Learn or Quiz run; Continue keeps the saved order.";
       elements.questionRangeHelp.textContent = "Both numbers are included and refer to the current selected list (1 to "
-        + poolSize + "). The chosen MCQs shuffle at the start of each new Learn or Quiz run; Continue keeps the saved order.";
+        + poolSize + "). " + orderHelp;
     }
     [elements.questionRangeStartInput, elements.questionRangeEndInput].forEach(function (input) {
       if (!input) return;
@@ -5978,9 +5990,14 @@
         priorOrderKey = orderKey(previousSnapshot.questionIds, String);
       }
     }
-    var sessionQuestions = shuffledOrder(canonicalRangeQuestions, function (question) {
-      return question.id;
-    }, priorOrderKey);
+    // Mathematics related-practice MCQs can refer back to their source MCQ.
+    // Keep their bank order in new category sessions; frozen saved sessions
+    // still restore their exact previous order through the normal resume path.
+    var sessionQuestions = isBasicMathematicsCategory(categoryId)
+      ? canonicalRangeQuestions.slice()
+      : shuffledOrder(canonicalRangeQuestions, function (question) {
+          return question.id;
+        }, priorOrderKey);
     if (selectedMode === "quiz") {
       sessionQuestions = sessionQuestions.map(shuffledQuizQuestion);
     }
